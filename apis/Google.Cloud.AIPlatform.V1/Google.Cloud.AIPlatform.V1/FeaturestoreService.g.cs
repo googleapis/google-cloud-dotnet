@@ -10323,7 +10323,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///
     ///   * `description`
     ///   * `labels`
-    ///   * `disable_monitoring` (Not supported for FeatureRegistry Feature)
+    ///   * `disable_monitoring` (Not supported for FeatureRegistryService Feature)
+    ///   * `point_of_contact` (Not supported for FeaturestoreService FeatureStore)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -44,6 +44,8 @@ namespace GoogleCSharpSnippets
                 Instances = { new wkt::Value(), },
                 Model = "",
                 Contents = { new Content(), },
+                SystemInstruction = new Content(),
+                Tools = { new Tool(), },
             };
             // Make the request
             CountTokensResponse response = await llmUtilityServiceClient.CountTokensAsync(request);

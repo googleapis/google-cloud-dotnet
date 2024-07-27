@@ -3920,7 +3920,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `description`
         /// * `labels`
-        /// * `disable_monitoring` (Not supported for FeatureRegistry Feature)
+        /// * `disable_monitoring` (Not supported for FeatureRegistryService Feature)
+        /// * `point_of_contact` (Not supported for FeaturestoreService FeatureStore)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3954,7 +3955,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `description`
         /// * `labels`
-        /// * `disable_monitoring` (Not supported for FeatureRegistry Feature)
+        /// * `disable_monitoring` (Not supported for FeatureRegistryService Feature)
+        /// * `point_of_contact` (Not supported for FeaturestoreService FeatureStore)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3988,7 +3990,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `description`
         /// * `labels`
-        /// * `disable_monitoring` (Not supported for FeatureRegistry Feature)
+        /// * `disable_monitoring` (Not supported for FeatureRegistryService Feature)
+        /// * `point_of_contact` (Not supported for FeaturestoreService FeatureStore)
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

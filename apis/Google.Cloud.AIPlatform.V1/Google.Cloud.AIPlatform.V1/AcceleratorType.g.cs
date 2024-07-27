@@ -25,19 +25,19 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9hY2NlbGVyYXRvcl90eXBl",
-            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MSqvAgoPQWNjZWxl",
-            "cmF0b3JUeXBlEiAKHEFDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIU",
-            "ChBOVklESUFfVEVTTEFfSzgwEAESFQoRTlZJRElBX1RFU0xBX1AxMDAQAhIV",
-            "ChFOVklESUFfVEVTTEFfVjEwMBADEhMKD05WSURJQV9URVNMQV9QNBAEEhMK",
-            "D05WSURJQV9URVNMQV9UNBAFEhUKEU5WSURJQV9URVNMQV9BMTAwEAgSFAoQ",
-            "TlZJRElBX0ExMDBfODBHQhAJEg0KCU5WSURJQV9MNBALEhQKEE5WSURJQV9I",
-            "MTAwXzgwR0IQDRIKCgZUUFVfVjIQBhIKCgZUUFVfVjMQBxIOCgpUUFVfVjRf",
-            "UE9EEAoSEgoOVFBVX1Y1X0xJVEVQT0QQDELSAQoeY29tLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxQhRBY2NlbGVyYXRvclR5cGVQcm90b1ABWj5jbG91",
-            "ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBi",
-            "O2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIa",
-            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpB",
-            "SVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MSqzAgoPQWNjZWxl",
+            "cmF0b3JUeXBlEiAKHEFDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIY",
+            "ChBOVklESUFfVEVTTEFfSzgwEAEaAggBEhUKEU5WSURJQV9URVNMQV9QMTAw",
+            "EAISFQoRTlZJRElBX1RFU0xBX1YxMDAQAxITCg9OVklESUFfVEVTTEFfUDQQ",
+            "BBITCg9OVklESUFfVEVTTEFfVDQQBRIVChFOVklESUFfVEVTTEFfQTEwMBAI",
+            "EhQKEE5WSURJQV9BMTAwXzgwR0IQCRINCglOVklESUFfTDQQCxIUChBOVklE",
+            "SUFfSDEwMF84MEdCEA0SCgoGVFBVX1YyEAYSCgoGVFBVX1YzEAcSDgoKVFBV",
+            "X1Y0X1BPRBAKEhIKDlRQVV9WNV9MSVRFUE9EEAxC0gEKHmNvbS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIUQWNjZWxlcmF0b3JUeXBlUHJvdG9QAVo+",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZv",
+            "cm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5W",
+            "McoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91",
+            "ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.AcceleratorType), }, null, null));
@@ -57,6 +57,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Nvidia Tesla K80 GPU.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [pbr::OriginalName("NVIDIA_TESLA_K80")] NvidiaTeslaK80 = 1,
     /// <summary>
     /// Nvidia Tesla P100 GPU.

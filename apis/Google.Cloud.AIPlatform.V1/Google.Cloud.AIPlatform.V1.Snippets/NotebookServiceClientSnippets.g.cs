@@ -1957,5 +1957,754 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CreateNotebookExecutionJob</summary>
+        public void CreateNotebookExecutionJobRequestObject()
+        {
+            // Snippet: CreateNotebookExecutionJob(CreateNotebookExecutionJobRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            CreateNotebookExecutionJobRequest request = new CreateNotebookExecutionJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                NotebookExecutionJob = new NotebookExecutionJob(),
+                NotebookExecutionJobId = "",
+            };
+            // Make the request
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> response = notebookServiceClient.CreateNotebookExecutionJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NotebookExecutionJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateNotebookExecutionJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NotebookExecutionJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotebookExecutionJobAsync</summary>
+        public async Task CreateNotebookExecutionJobRequestObjectAsync()
+        {
+            // Snippet: CreateNotebookExecutionJobAsync(CreateNotebookExecutionJobRequest, CallSettings)
+            // Additional: CreateNotebookExecutionJobAsync(CreateNotebookExecutionJobRequest, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateNotebookExecutionJobRequest request = new CreateNotebookExecutionJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                NotebookExecutionJob = new NotebookExecutionJob(),
+                NotebookExecutionJobId = "",
+            };
+            // Make the request
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> response = await notebookServiceClient.CreateNotebookExecutionJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NotebookExecutionJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateNotebookExecutionJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NotebookExecutionJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotebookExecutionJob</summary>
+        public void CreateNotebookExecutionJob()
+        {
+            // Snippet: CreateNotebookExecutionJob(string, NotebookExecutionJob, string, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            NotebookExecutionJob notebookExecutionJob = new NotebookExecutionJob();
+            string notebookExecutionJobId = "";
+            // Make the request
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> response = notebookServiceClient.CreateNotebookExecutionJob(parent, notebookExecutionJob, notebookExecutionJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NotebookExecutionJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateNotebookExecutionJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NotebookExecutionJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotebookExecutionJobAsync</summary>
+        public async Task CreateNotebookExecutionJobAsync()
+        {
+            // Snippet: CreateNotebookExecutionJobAsync(string, NotebookExecutionJob, string, CallSettings)
+            // Additional: CreateNotebookExecutionJobAsync(string, NotebookExecutionJob, string, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            NotebookExecutionJob notebookExecutionJob = new NotebookExecutionJob();
+            string notebookExecutionJobId = "";
+            // Make the request
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> response = await notebookServiceClient.CreateNotebookExecutionJobAsync(parent, notebookExecutionJob, notebookExecutionJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NotebookExecutionJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateNotebookExecutionJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NotebookExecutionJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotebookExecutionJob</summary>
+        public void CreateNotebookExecutionJobResourceNames()
+        {
+            // Snippet: CreateNotebookExecutionJob(LocationName, NotebookExecutionJob, string, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            NotebookExecutionJob notebookExecutionJob = new NotebookExecutionJob();
+            string notebookExecutionJobId = "";
+            // Make the request
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> response = notebookServiceClient.CreateNotebookExecutionJob(parent, notebookExecutionJob, notebookExecutionJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NotebookExecutionJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateNotebookExecutionJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NotebookExecutionJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNotebookExecutionJobAsync</summary>
+        public async Task CreateNotebookExecutionJobResourceNamesAsync()
+        {
+            // Snippet: CreateNotebookExecutionJobAsync(LocationName, NotebookExecutionJob, string, CallSettings)
+            // Additional: CreateNotebookExecutionJobAsync(LocationName, NotebookExecutionJob, string, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            NotebookExecutionJob notebookExecutionJob = new NotebookExecutionJob();
+            string notebookExecutionJobId = "";
+            // Make the request
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> response = await notebookServiceClient.CreateNotebookExecutionJobAsync(parent, notebookExecutionJob, notebookExecutionJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NotebookExecutionJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateNotebookExecutionJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NotebookExecutionJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotebookExecutionJob</summary>
+        public void GetNotebookExecutionJobRequestObject()
+        {
+            // Snippet: GetNotebookExecutionJob(GetNotebookExecutionJobRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            GetNotebookExecutionJobRequest request = new GetNotebookExecutionJobRequest
+            {
+                NotebookExecutionJobName = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]"),
+                View = NotebookExecutionJobView.Unspecified,
+            };
+            // Make the request
+            NotebookExecutionJob response = notebookServiceClient.GetNotebookExecutionJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotebookExecutionJobAsync</summary>
+        public async Task GetNotebookExecutionJobRequestObjectAsync()
+        {
+            // Snippet: GetNotebookExecutionJobAsync(GetNotebookExecutionJobRequest, CallSettings)
+            // Additional: GetNotebookExecutionJobAsync(GetNotebookExecutionJobRequest, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNotebookExecutionJobRequest request = new GetNotebookExecutionJobRequest
+            {
+                NotebookExecutionJobName = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]"),
+                View = NotebookExecutionJobView.Unspecified,
+            };
+            // Make the request
+            NotebookExecutionJob response = await notebookServiceClient.GetNotebookExecutionJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotebookExecutionJob</summary>
+        public void GetNotebookExecutionJob()
+        {
+            // Snippet: GetNotebookExecutionJob(string, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/notebookExecutionJobs/[NOTEBOOK_EXECUTION_JOB]";
+            // Make the request
+            NotebookExecutionJob response = notebookServiceClient.GetNotebookExecutionJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotebookExecutionJobAsync</summary>
+        public async Task GetNotebookExecutionJobAsync()
+        {
+            // Snippet: GetNotebookExecutionJobAsync(string, CallSettings)
+            // Additional: GetNotebookExecutionJobAsync(string, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/notebookExecutionJobs/[NOTEBOOK_EXECUTION_JOB]";
+            // Make the request
+            NotebookExecutionJob response = await notebookServiceClient.GetNotebookExecutionJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotebookExecutionJob</summary>
+        public void GetNotebookExecutionJobResourceNames()
+        {
+            // Snippet: GetNotebookExecutionJob(NotebookExecutionJobName, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            NotebookExecutionJobName name = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]");
+            // Make the request
+            NotebookExecutionJob response = notebookServiceClient.GetNotebookExecutionJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNotebookExecutionJobAsync</summary>
+        public async Task GetNotebookExecutionJobResourceNamesAsync()
+        {
+            // Snippet: GetNotebookExecutionJobAsync(NotebookExecutionJobName, CallSettings)
+            // Additional: GetNotebookExecutionJobAsync(NotebookExecutionJobName, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NotebookExecutionJobName name = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]");
+            // Make the request
+            NotebookExecutionJob response = await notebookServiceClient.GetNotebookExecutionJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotebookExecutionJobs</summary>
+        public void ListNotebookExecutionJobsRequestObject()
+        {
+            // Snippet: ListNotebookExecutionJobs(ListNotebookExecutionJobsRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            ListNotebookExecutionJobsRequest request = new ListNotebookExecutionJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+                View = NotebookExecutionJobView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> response = notebookServiceClient.ListNotebookExecutionJobs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NotebookExecutionJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNotebookExecutionJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotebookExecutionJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotebookExecutionJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotebookExecutionJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotebookExecutionJobsAsync</summary>
+        public async Task ListNotebookExecutionJobsRequestObjectAsync()
+        {
+            // Snippet: ListNotebookExecutionJobsAsync(ListNotebookExecutionJobsRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNotebookExecutionJobsRequest request = new ListNotebookExecutionJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+                View = NotebookExecutionJobView.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> response = notebookServiceClient.ListNotebookExecutionJobsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NotebookExecutionJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNotebookExecutionJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotebookExecutionJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotebookExecutionJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotebookExecutionJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotebookExecutionJobs</summary>
+        public void ListNotebookExecutionJobs()
+        {
+            // Snippet: ListNotebookExecutionJobs(string, string, int?, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> response = notebookServiceClient.ListNotebookExecutionJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NotebookExecutionJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNotebookExecutionJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotebookExecutionJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotebookExecutionJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotebookExecutionJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotebookExecutionJobsAsync</summary>
+        public async Task ListNotebookExecutionJobsAsync()
+        {
+            // Snippet: ListNotebookExecutionJobsAsync(string, string, int?, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> response = notebookServiceClient.ListNotebookExecutionJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NotebookExecutionJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNotebookExecutionJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotebookExecutionJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotebookExecutionJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotebookExecutionJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotebookExecutionJobs</summary>
+        public void ListNotebookExecutionJobsResourceNames()
+        {
+            // Snippet: ListNotebookExecutionJobs(LocationName, string, int?, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> response = notebookServiceClient.ListNotebookExecutionJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NotebookExecutionJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNotebookExecutionJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotebookExecutionJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotebookExecutionJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotebookExecutionJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNotebookExecutionJobsAsync</summary>
+        public async Task ListNotebookExecutionJobsResourceNamesAsync()
+        {
+            // Snippet: ListNotebookExecutionJobsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> response = notebookServiceClient.ListNotebookExecutionJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NotebookExecutionJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNotebookExecutionJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NotebookExecutionJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NotebookExecutionJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NotebookExecutionJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotebookExecutionJob</summary>
+        public void DeleteNotebookExecutionJobRequestObject()
+        {
+            // Snippet: DeleteNotebookExecutionJob(DeleteNotebookExecutionJobRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteNotebookExecutionJobRequest request = new DeleteNotebookExecutionJobRequest
+            {
+                NotebookExecutionJobName = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = notebookServiceClient.DeleteNotebookExecutionJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteNotebookExecutionJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotebookExecutionJobAsync</summary>
+        public async Task DeleteNotebookExecutionJobRequestObjectAsync()
+        {
+            // Snippet: DeleteNotebookExecutionJobAsync(DeleteNotebookExecutionJobRequest, CallSettings)
+            // Additional: DeleteNotebookExecutionJobAsync(DeleteNotebookExecutionJobRequest, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteNotebookExecutionJobRequest request = new DeleteNotebookExecutionJobRequest
+            {
+                NotebookExecutionJobName = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await notebookServiceClient.DeleteNotebookExecutionJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteNotebookExecutionJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotebookExecutionJob</summary>
+        public void DeleteNotebookExecutionJob()
+        {
+            // Snippet: DeleteNotebookExecutionJob(string, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/notebookExecutionJobs/[NOTEBOOK_EXECUTION_JOB]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = notebookServiceClient.DeleteNotebookExecutionJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteNotebookExecutionJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotebookExecutionJobAsync</summary>
+        public async Task DeleteNotebookExecutionJobAsync()
+        {
+            // Snippet: DeleteNotebookExecutionJobAsync(string, CallSettings)
+            // Additional: DeleteNotebookExecutionJobAsync(string, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/notebookExecutionJobs/[NOTEBOOK_EXECUTION_JOB]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await notebookServiceClient.DeleteNotebookExecutionJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteNotebookExecutionJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotebookExecutionJob</summary>
+        public void DeleteNotebookExecutionJobResourceNames()
+        {
+            // Snippet: DeleteNotebookExecutionJob(NotebookExecutionJobName, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            NotebookExecutionJobName name = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = notebookServiceClient.DeleteNotebookExecutionJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteNotebookExecutionJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNotebookExecutionJobAsync</summary>
+        public async Task DeleteNotebookExecutionJobResourceNamesAsync()
+        {
+            // Snippet: DeleteNotebookExecutionJobAsync(NotebookExecutionJobName, CallSettings)
+            // Additional: DeleteNotebookExecutionJobAsync(NotebookExecutionJobName, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NotebookExecutionJobName name = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await notebookServiceClient.DeleteNotebookExecutionJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteNotebookExecutionJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

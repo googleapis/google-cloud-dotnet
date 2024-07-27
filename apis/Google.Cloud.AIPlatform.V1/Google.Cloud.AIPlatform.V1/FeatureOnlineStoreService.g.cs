@@ -51,62 +51,73 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dWVQYWlyTGlzdC5GZWF0dXJlTmFtZVZhbHVlUGFpchpnChRGZWF0dXJlTmFt",
             "ZVZhbHVlUGFpchI5CgV2YWx1ZRgCIAEoCzIoLmdvb2dsZS5jbG91ZC5haXBs",
             "YXRmb3JtLnYxLkZlYXR1cmVWYWx1ZUgAEgwKBG5hbWUYASABKAlCBgoEZGF0",
-            "YUIICgZmb3JtYXQi8wQKFE5lYXJlc3ROZWlnaGJvclF1ZXJ5EhgKCWVudGl0",
+            "YUIICgZmb3JtYXQiowgKFE5lYXJlc3ROZWlnaGJvclF1ZXJ5EhgKCWVudGl0",
             "eV9pZBgBIAEoCUID4EEBSAASVAoJZW1iZWRkaW5nGAIgASgLMjouZ29vZ2xl",
             "LmNsb3VkLmFpcGxhdGZvcm0udjEuTmVhcmVzdE5laWdoYm9yUXVlcnkuRW1i",
             "ZWRkaW5nQgPgQQFIABIbCg5uZWlnaGJvcl9jb3VudBgDIAEoBUID4EEBEloK",
             "DnN0cmluZ19maWx0ZXJzGAQgAygLMj0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
             "cm0udjEuTmVhcmVzdE5laWdoYm9yUXVlcnkuU3RyaW5nRmlsdGVyQgPgQQES",
-            "MgolcGVyX2Nyb3dkaW5nX2F0dHJpYnV0ZV9uZWlnaGJvcl9jb3VudBgFIAEo",
-            "BUID4EEBElQKCnBhcmFtZXRlcnMYByABKAsyOy5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MS5OZWFyZXN0TmVpZ2hib3JRdWVyeS5QYXJhbWV0ZXJzQgPg",
-            "QQEaHwoJRW1iZWRkaW5nEhIKBXZhbHVlGAEgAygCQgPgQQEaVgoMU3RyaW5n",
-            "RmlsdGVyEhEKBG5hbWUYASABKAlCA+BBAhIZCgxhbGxvd190b2tlbnMYAiAD",
-            "KAlCA+BBARIYCgtkZW55X3Rva2VucxgDIAMoCUID4EEBGmMKClBhcmFtZXRl",
-            "cnMSLAofYXBwcm94aW1hdGVfbmVpZ2hib3JfY2FuZGlkYXRlcxgBIAEoBUID",
-            "4EEBEicKGmxlYWZfbm9kZXNfc2VhcmNoX2ZyYWN0aW9uGAIgASgBQgPgQQFC",
-            "CgoIaW5zdGFuY2UiygEKHFNlYXJjaE5lYXJlc3RFbnRpdGllc1JlcXVlc3QS",
-            "QwoMZmVhdHVyZV92aWV3GAEgASgJQi3gQQL6QScKJWFpcGxhdGZvcm0uZ29v",
-            "Z2xlYXBpcy5jb20vRmVhdHVyZVZpZXcSRAoFcXVlcnkYAiABKAsyMC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5OZWFyZXN0TmVpZ2hib3JRdWVyeUID",
-            "4EECEh8KEnJldHVybl9mdWxsX2VudGl0eRgDIAEoCEID4EEBIuEBChBOZWFy",
-            "ZXN0TmVpZ2hib3JzEkgKCW5laWdoYm9ycxgBIAMoCzI1Lmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLk5lYXJlc3ROZWlnaGJvcnMuTmVpZ2hib3IaggEK",
-            "CE5laWdoYm9yEhEKCWVudGl0eV9pZBgBIAEoCRIQCghkaXN0YW5jZRgCIAEo",
-            "ARJRChFlbnRpdHlfa2V5X3ZhbHVlcxgDIAEoCzI2Lmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkZldGNoRmVhdHVyZVZhbHVlc1Jlc3BvbnNlImgKHVNl",
-            "YXJjaE5lYXJlc3RFbnRpdGllc1Jlc3BvbnNlEkcKEW5lYXJlc3RfbmVpZ2hi",
-            "b3JzGAEgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTmVhcmVz",
-            "dE5laWdoYm9ycypiChVGZWF0dXJlVmlld0RhdGFGb3JtYXQSKAokRkVBVFVS",
-            "RV9WSUVXX0RBVEFfRk9STUFUX1VOU1BFQ0lGSUVEEAASDQoJS0VZX1ZBTFVF",
-            "EAESEAoMUFJPVE9fU1RSVUNUEAIy+AQKGUZlYXR1cmVPbmxpbmVTdG9yZVNl",
-            "cnZpY2USiwIKEkZldGNoRmVhdHVyZVZhbHVlcxI1Lmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkZldGNoRmVhdHVyZVZhbHVlc1JlcXVlc3QaNi5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZXRjaEZlYXR1cmVWYWx1ZXNSZXNw",
-            "b25zZSKFAdpBFmZlYXR1cmVfdmlldywgZGF0YV9rZXmC0+STAmYiYS92MS97",
-            "ZmVhdHVyZV92aWV3PXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZU9u",
-            "bGluZVN0b3Jlcy8qL2ZlYXR1cmVWaWV3cy8qfTpmZXRjaEZlYXR1cmVWYWx1",
-            "ZXM6ASoS/QEKFVNlYXJjaE5lYXJlc3RFbnRpdGllcxI4Lmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLlNlYXJjaE5lYXJlc3RFbnRpdGllc1JlcXVlc3Qa",
-            "OS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TZWFyY2hOZWFyZXN0RW50",
-            "aXRpZXNSZXNwb25zZSJvgtPkkwJpImQvdjEve2ZlYXR1cmVfdmlldz1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVPbmxpbmVTdG9yZXMvKi9mZWF0",
-            "dXJlVmlld3MvKn06c2VhcmNoTmVhcmVzdEVudGl0aWVzOgEqGk3KQRlhaXBs",
-            "YXRmb3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULcAQoeY29tLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxQh5GZWF0dXJlT25saW5lU3RvcmVTZXJ2aWNlUHJv",
-            "dG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2Fp",
-            "cGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0",
-            "Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xl",
-            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "XAoPbnVtZXJpY19maWx0ZXJzGAggAygLMj4uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuTmVhcmVzdE5laWdoYm9yUXVlcnkuTnVtZXJpY0ZpbHRlckID",
+            "4EEBEjIKJXBlcl9jcm93ZGluZ19hdHRyaWJ1dGVfbmVpZ2hib3JfY291bnQY",
+            "BSABKAVCA+BBARJUCgpwYXJhbWV0ZXJzGAcgASgLMjsuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuTmVhcmVzdE5laWdoYm9yUXVlcnkuUGFyYW1ldGVy",
+            "c0ID4EEBGh8KCUVtYmVkZGluZxISCgV2YWx1ZRgBIAMoAkID4EEBGlYKDFN0",
+            "cmluZ0ZpbHRlchIRCgRuYW1lGAEgASgJQgPgQQISGQoMYWxsb3dfdG9rZW5z",
+            "GAIgAygJQgPgQQESGAoLZGVueV90b2tlbnMYAyADKAlCA+BBARrPAgoNTnVt",
+            "ZXJpY0ZpbHRlchITCgl2YWx1ZV9pbnQYAiABKANIABIVCgt2YWx1ZV9mbG9h",
+            "dBgDIAEoAkgAEhYKDHZhbHVlX2RvdWJsZRgEIAEoAUgAEhEKBG5hbWUYASAB",
+            "KAlCA+BBAhJdCgJvcBgFIAEoDjJHLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLk5lYXJlc3ROZWlnaGJvclF1ZXJ5Lk51bWVyaWNGaWx0ZXIuT3BlcmF0",
+            "b3JCA+BBAUgBiAEBIngKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lG",
+            "SUVEEAASCAoETEVTUxABEg4KCkxFU1NfRVFVQUwQAhIJCgVFUVVBTBADEhEK",
+            "DUdSRUFURVJfRVFVQUwQBBILCgdHUkVBVEVSEAUSDQoJTk9UX0VRVUFMEAZC",
+            "BwoFVmFsdWVCBQoDX29wGmMKClBhcmFtZXRlcnMSLAofYXBwcm94aW1hdGVf",
+            "bmVpZ2hib3JfY2FuZGlkYXRlcxgBIAEoBUID4EEBEicKGmxlYWZfbm9kZXNf",
+            "c2VhcmNoX2ZyYWN0aW9uGAIgASgBQgPgQQFCCgoIaW5zdGFuY2UiygEKHFNl",
+            "YXJjaE5lYXJlc3RFbnRpdGllc1JlcXVlc3QSQwoMZmVhdHVyZV92aWV3GAEg",
+            "ASgJQi3gQQL6QScKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVy",
+            "ZVZpZXcSRAoFcXVlcnkYAiABKAsyMC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5OZWFyZXN0TmVpZ2hib3JRdWVyeUID4EECEh8KEnJldHVybl9mdWxs",
+            "X2VudGl0eRgDIAEoCEID4EEBIuEBChBOZWFyZXN0TmVpZ2hib3JzEkgKCW5l",
+            "aWdoYm9ycxgBIAMoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk5l",
+            "YXJlc3ROZWlnaGJvcnMuTmVpZ2hib3IaggEKCE5laWdoYm9yEhEKCWVudGl0",
+            "eV9pZBgBIAEoCRIQCghkaXN0YW5jZRgCIAEoARJRChFlbnRpdHlfa2V5X3Zh",
+            "bHVlcxgDIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZldGNo",
+            "RmVhdHVyZVZhbHVlc1Jlc3BvbnNlImgKHVNlYXJjaE5lYXJlc3RFbnRpdGll",
+            "c1Jlc3BvbnNlEkcKEW5lYXJlc3RfbmVpZ2hib3JzGAEgASgLMiwuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuTmVhcmVzdE5laWdoYm9ycypiChVGZWF0",
+            "dXJlVmlld0RhdGFGb3JtYXQSKAokRkVBVFVSRV9WSUVXX0RBVEFfRk9STUFU",
+            "X1VOU1BFQ0lGSUVEEAASDQoJS0VZX1ZBTFVFEAESEAoMUFJPVE9fU1RSVUNU",
+            "EAIy+AQKGUZlYXR1cmVPbmxpbmVTdG9yZVNlcnZpY2USiwIKEkZldGNoRmVh",
+            "dHVyZVZhbHVlcxI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZldGNo",
+            "RmVhdHVyZVZhbHVlc1JlcXVlc3QaNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5GZXRjaEZlYXR1cmVWYWx1ZXNSZXNwb25zZSKFAdpBFmZlYXR1cmVf",
+            "dmlldywgZGF0YV9rZXmC0+STAmYiYS92MS97ZmVhdHVyZV92aWV3PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovZmVhdHVyZU9ubGluZVN0b3Jlcy8qL2ZlYXR1",
+            "cmVWaWV3cy8qfTpmZXRjaEZlYXR1cmVWYWx1ZXM6ASoS/QEKFVNlYXJjaE5l",
+            "YXJlc3RFbnRpdGllcxI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNl",
+            "YXJjaE5lYXJlc3RFbnRpdGllc1JlcXVlc3QaOS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5TZWFyY2hOZWFyZXN0RW50aXRpZXNSZXNwb25zZSJvgtPk",
+            "kwJpImQvdjEve2ZlYXR1cmVfdmlldz1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2ZlYXR1cmVPbmxpbmVTdG9yZXMvKi9mZWF0dXJlVmlld3MvKn06c2VhcmNo",
+            "TmVhcmVzdEVudGl0aWVzOgEqGk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
+            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
+            "bGF0Zm9ybULcAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQh5G",
+            "ZWF0dXJlT25saW5lU3RvcmVTZXJ2aWNlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRm",
+            "b3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxD",
+            "bG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9y",
+            "bTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewDataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewDataKey), global::Google.Cloud.AIPlatform.V1.FeatureViewDataKey.Parser, new[]{ "Key", "CompositeKey" }, new[]{ "KeyOneof" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewDataKey.Types.CompositeKey), global::Google.Cloud.AIPlatform.V1.FeatureViewDataKey.Types.CompositeKey.Parser, new[]{ "Parts" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest.Parser, new[]{ "FeatureView", "DataKey", "DataFormat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Parser, new[]{ "KeyValues", "ProtoStruct", "DataKey" }, new[]{ "Format" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Parser, new[]{ "Features" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Types.FeatureNameValuePair), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Types.FeatureNameValuePair.Parser, new[]{ "Value", "Name" }, new[]{ "Data" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Parser, new[]{ "EntityId", "Embedding", "NeighborCount", "StringFilters", "PerCrowdingAttributeNeighborCount", "Parameters" }, new[]{ "Instance" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Parser, new[]{ "EntityId", "Embedding", "NeighborCount", "StringFilters", "NumericFilters", "PerCrowdingAttributeNeighborCount", "Parameters" }, new[]{ "Instance" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding.Parser, new[]{ "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter.Parser, new[]{ "Name", "AllowTokens", "DenyTokens" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Parser, new[]{ "ValueInt", "ValueFloat", "ValueDouble", "Name", "Op" }, new[]{ "Value", "Op" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters.Parser, new[]{ "ApproximateNeighborCandidates", "LeafNodesSearchFraction" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest), global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest.Parser, new[]{ "FeatureView", "Query", "ReturnFullEntity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighbors), global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Parser, new[]{ "Neighbors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor), global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor.Parser, new[]{ "EntityId", "Distance", "EntityKeyValues" }, null, null, null, null)}),
@@ -1787,6 +1798,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public NearestNeighborQuery(NearestNeighborQuery other) : this() {
       neighborCount_ = other.neighborCount_;
       stringFilters_ = other.stringFilters_.Clone();
+      numericFilters_ = other.numericFilters_.Clone();
       perCrowdingAttributeNeighborCount_ = other.perCrowdingAttributeNeighborCount_;
       parameters_ = other.parameters_ != null ? other.parameters_.Clone() : null;
       switch (other.InstanceCase) {
@@ -1883,6 +1895,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return stringFilters_; }
     }
 
+    /// <summary>Field number for the "numeric_filters" field.</summary>
+    public const int NumericFiltersFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter> _repeated_numericFilters_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter> numericFilters_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter>();
+    /// <summary>
+    /// Optional. The list of numeric filters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter> NumericFilters {
+      get { return numericFilters_; }
+    }
+
     /// <summary>Field number for the "per_crowding_attribute_neighbor_count" field.</summary>
     public const int PerCrowdingAttributeNeighborCountFieldNumber = 5;
     private int perCrowdingAttributeNeighborCount_;
@@ -1956,6 +1982,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(Embedding, other.Embedding)) return false;
       if (NeighborCount != other.NeighborCount) return false;
       if(!stringFilters_.Equals(other.stringFilters_)) return false;
+      if(!numericFilters_.Equals(other.numericFilters_)) return false;
       if (PerCrowdingAttributeNeighborCount != other.PerCrowdingAttributeNeighborCount) return false;
       if (!object.Equals(Parameters, other.Parameters)) return false;
       if (InstanceCase != other.InstanceCase) return false;
@@ -1970,6 +1997,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (instanceCase_ == InstanceOneofCase.Embedding) hash ^= Embedding.GetHashCode();
       if (NeighborCount != 0) hash ^= NeighborCount.GetHashCode();
       hash ^= stringFilters_.GetHashCode();
+      hash ^= numericFilters_.GetHashCode();
       if (PerCrowdingAttributeNeighborCount != 0) hash ^= PerCrowdingAttributeNeighborCount.GetHashCode();
       if (parameters_ != null) hash ^= Parameters.GetHashCode();
       hash ^= (int) instanceCase_;
@@ -2012,6 +2040,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Parameters);
       }
+      numericFilters_.WriteTo(output, _repeated_numericFilters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2043,6 +2072,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Parameters);
       }
+      numericFilters_.WriteTo(ref output, _repeated_numericFilters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2063,6 +2093,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(NeighborCount);
       }
       size += stringFilters_.CalculateSize(_repeated_stringFilters_codec);
+      size += numericFilters_.CalculateSize(_repeated_numericFilters_codec);
       if (PerCrowdingAttributeNeighborCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PerCrowdingAttributeNeighborCount);
       }
@@ -2085,6 +2116,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         NeighborCount = other.NeighborCount;
       }
       stringFilters_.Add(other.stringFilters_);
+      numericFilters_.Add(other.numericFilters_);
       if (other.PerCrowdingAttributeNeighborCount != 0) {
         PerCrowdingAttributeNeighborCount = other.PerCrowdingAttributeNeighborCount;
       }
@@ -2153,6 +2185,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(Parameters);
             break;
           }
+          case 66: {
+            numericFilters_.AddEntriesFrom(input, _repeated_numericFilters_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2198,6 +2234,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               Parameters = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters();
             }
             input.ReadMessage(Parameters);
+            break;
+          }
+          case 66: {
+            numericFilters_.AddEntriesFrom(ref input, _repeated_numericFilters_codec);
             break;
           }
         }
@@ -2659,6 +2699,508 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
+      /// Numeric filter is used to search a subset of the entities by using boolean
+      /// rules on numeric columns.
+      /// For example:
+      /// Database Point 0: {name: “a” value_int: 42} {name: “b” value_float: 1.0}
+      /// Database Point 1:  {name: “a” value_int: 10} {name: “b” value_float: 2.0}
+      /// Database Point 2: {name: “a” value_int: -1} {name: “b” value_float: 3.0}
+      /// Query: {name: “a” value_int: 12 operator: LESS}    // Matches Point 1, 2
+      /// {name: “b” value_float: 2.0 operator: EQUAL} // Matches Point 1
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class NumericFilter : pb::IMessage<NumericFilter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NumericFilter> _parser = new pb::MessageParser<NumericFilter>(() => new NumericFilter());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<NumericFilter> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NumericFilter() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NumericFilter(NumericFilter other) : this() {
+          _hasBits0 = other._hasBits0;
+          name_ = other.name_;
+          op_ = other.op_;
+          switch (other.ValueCase) {
+            case ValueOneofCase.ValueInt:
+              ValueInt = other.ValueInt;
+              break;
+            case ValueOneofCase.ValueFloat:
+              ValueFloat = other.ValueFloat;
+              break;
+            case ValueOneofCase.ValueDouble:
+              ValueDouble = other.ValueDouble;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NumericFilter Clone() {
+          return new NumericFilter(this);
+        }
+
+        /// <summary>Field number for the "value_int" field.</summary>
+        public const int ValueIntFieldNumber = 2;
+        /// <summary>
+        /// int value type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long ValueInt {
+          get { return HasValueInt ? (long) value_ : 0L; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.ValueInt;
+          }
+        }
+        /// <summary>Gets whether the "value_int" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValueInt {
+          get { return valueCase_ == ValueOneofCase.ValueInt; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "value_int" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValueInt() {
+          if (HasValueInt) {
+            ClearValue();
+          }
+        }
+
+        /// <summary>Field number for the "value_float" field.</summary>
+        public const int ValueFloatFieldNumber = 3;
+        /// <summary>
+        /// float value type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float ValueFloat {
+          get { return HasValueFloat ? (float) value_ : 0F; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.ValueFloat;
+          }
+        }
+        /// <summary>Gets whether the "value_float" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValueFloat {
+          get { return valueCase_ == ValueOneofCase.ValueFloat; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "value_float" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValueFloat() {
+          if (HasValueFloat) {
+            ClearValue();
+          }
+        }
+
+        /// <summary>Field number for the "value_double" field.</summary>
+        public const int ValueDoubleFieldNumber = 4;
+        /// <summary>
+        /// double value type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double ValueDouble {
+          get { return HasValueDouble ? (double) value_ : 0D; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.ValueDouble;
+          }
+        }
+        /// <summary>Gets whether the "value_double" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValueDouble {
+          get { return valueCase_ == ValueOneofCase.ValueDouble; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "value_double" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValueDouble() {
+          if (HasValueDouble) {
+            ClearValue();
+          }
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Required. Column name in BigQuery that used as filters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "op" field.</summary>
+        public const int OpFieldNumber = 5;
+        private readonly static global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Types.Operator OpDefaultValue = global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Types.Operator.Unspecified;
+
+        private global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Types.Operator op_;
+        /// <summary>
+        /// Optional. This MUST be specified for queries and must NOT be specified
+        /// for database points.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Types.Operator Op {
+          get { if ((_hasBits0 & 1) != 0) { return op_; } else { return OpDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            op_ = value;
+          }
+        }
+        /// <summary>Gets whether the "op" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOp {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "op" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOp() {
+          _hasBits0 &= ~1;
+        }
+
+        private object value_;
+        /// <summary>Enum of possible cases for the "Value" oneof.</summary>
+        public enum ValueOneofCase {
+          None = 0,
+          ValueInt = 2,
+          ValueFloat = 3,
+          ValueDouble = 4,
+        }
+        private ValueOneofCase valueCase_ = ValueOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ValueOneofCase ValueCase {
+          get { return valueCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          valueCase_ = ValueOneofCase.None;
+          value_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as NumericFilter);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(NumericFilter other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ValueInt != other.ValueInt) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ValueFloat, other.ValueFloat)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ValueDouble, other.ValueDouble)) return false;
+          if (Name != other.Name) return false;
+          if (Op != other.Op) return false;
+          if (ValueCase != other.ValueCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValueInt) hash ^= ValueInt.GetHashCode();
+          if (HasValueFloat) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ValueFloat);
+          if (HasValueDouble) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ValueDouble);
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (HasOp) hash ^= Op.GetHashCode();
+          hash ^= (int) valueCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (HasValueInt) {
+            output.WriteRawTag(16);
+            output.WriteInt64(ValueInt);
+          }
+          if (HasValueFloat) {
+            output.WriteRawTag(29);
+            output.WriteFloat(ValueFloat);
+          }
+          if (HasValueDouble) {
+            output.WriteRawTag(33);
+            output.WriteDouble(ValueDouble);
+          }
+          if (HasOp) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) Op);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (HasValueInt) {
+            output.WriteRawTag(16);
+            output.WriteInt64(ValueInt);
+          }
+          if (HasValueFloat) {
+            output.WriteRawTag(29);
+            output.WriteFloat(ValueFloat);
+          }
+          if (HasValueDouble) {
+            output.WriteRawTag(33);
+            output.WriteDouble(ValueDouble);
+          }
+          if (HasOp) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) Op);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValueInt) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(ValueInt);
+          }
+          if (HasValueFloat) {
+            size += 1 + 4;
+          }
+          if (HasValueDouble) {
+            size += 1 + 8;
+          }
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (HasOp) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(NumericFilter other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.HasOp) {
+            Op = other.Op;
+          }
+          switch (other.ValueCase) {
+            case ValueOneofCase.ValueInt:
+              ValueInt = other.ValueInt;
+              break;
+            case ValueOneofCase.ValueFloat:
+              ValueFloat = other.ValueFloat;
+              break;
+            case ValueOneofCase.ValueDouble:
+              ValueDouble = other.ValueDouble;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 16: {
+                ValueInt = input.ReadInt64();
+                break;
+              }
+              case 29: {
+                ValueFloat = input.ReadFloat();
+                break;
+              }
+              case 33: {
+                ValueDouble = input.ReadDouble();
+                break;
+              }
+              case 40: {
+                Op = (global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Types.Operator) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 16: {
+                ValueInt = input.ReadInt64();
+                break;
+              }
+              case 29: {
+                ValueFloat = input.ReadFloat();
+                break;
+              }
+              case 33: {
+                ValueDouble = input.ReadDouble();
+                break;
+              }
+              case 40: {
+                Op = (global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.NumericFilter.Types.Operator) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the NumericFilter message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Datapoints for which Operator is true relative to the query’s Value
+          /// field will be allowlisted.
+          /// </summary>
+          public enum Operator {
+            /// <summary>
+            /// Unspecified operator.
+            /// </summary>
+            [pbr::OriginalName("OPERATOR_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Entities are eligible if their value is &lt; the query's.
+            /// </summary>
+            [pbr::OriginalName("LESS")] Less = 1,
+            /// <summary>
+            /// Entities are eligible if their value is &lt;= the query's.
+            /// </summary>
+            [pbr::OriginalName("LESS_EQUAL")] LessEqual = 2,
+            /// <summary>
+            /// Entities are eligible if their value is == the query's.
+            /// </summary>
+            [pbr::OriginalName("EQUAL")] Equal = 3,
+            /// <summary>
+            /// Entities are eligible if their value is >= the query's.
+            /// </summary>
+            [pbr::OriginalName("GREATER_EQUAL")] GreaterEqual = 4,
+            /// <summary>
+            /// Entities are eligible if their value is > the query's.
+            /// </summary>
+            [pbr::OriginalName("GREATER")] Greater = 5,
+            /// <summary>
+            /// Entities are eligible if their value is != the query's.
+            /// </summary>
+            [pbr::OriginalName("NOT_EQUAL")] NotEqual = 6,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// Parameters that can be overrided in each query to tune query latency and
       /// recall.
       /// </summary>
@@ -2677,7 +3219,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

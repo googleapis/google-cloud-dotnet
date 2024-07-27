@@ -67,6 +67,12 @@ namespace Google.Cloud.AIPlatform.V1
             UpgradeNotebookRuntimeOperationsSettings = existing.UpgradeNotebookRuntimeOperationsSettings.Clone();
             StartNotebookRuntimeSettings = existing.StartNotebookRuntimeSettings;
             StartNotebookRuntimeOperationsSettings = existing.StartNotebookRuntimeOperationsSettings.Clone();
+            CreateNotebookExecutionJobSettings = existing.CreateNotebookExecutionJobSettings;
+            CreateNotebookExecutionJobOperationsSettings = existing.CreateNotebookExecutionJobOperationsSettings.Clone();
+            GetNotebookExecutionJobSettings = existing.GetNotebookExecutionJobSettings;
+            ListNotebookExecutionJobsSettings = existing.ListNotebookExecutionJobsSettings;
+            DeleteNotebookExecutionJobSettings = existing.DeleteNotebookExecutionJobSettings;
+            DeleteNotebookExecutionJobOperationsSettings = existing.DeleteNotebookExecutionJobOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -320,6 +326,94 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings StartNotebookRuntimeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.CreateNotebookExecutionJob</c> and
+        /// <c>NotebookServiceClient.CreateNotebookExecutionJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateNotebookExecutionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NotebookServiceClient.CreateNotebookExecutionJob</c> and
+        /// <c>NotebookServiceClient.CreateNotebookExecutionJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateNotebookExecutionJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.GetNotebookExecutionJob</c> and
+        /// <c>NotebookServiceClient.GetNotebookExecutionJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNotebookExecutionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.ListNotebookExecutionJobs</c> and
+        /// <c>NotebookServiceClient.ListNotebookExecutionJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNotebookExecutionJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.DeleteNotebookExecutionJob</c> and
+        /// <c>NotebookServiceClient.DeleteNotebookExecutionJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteNotebookExecutionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NotebookServiceClient.DeleteNotebookExecutionJob</c> and
+        /// <c>NotebookServiceClient.DeleteNotebookExecutionJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteNotebookExecutionJobOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2129,6 +2223,583 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<StartNotebookRuntimeResponse, StartNotebookRuntimeOperationMetadata>> StartNotebookRuntimeAsync(NotebookRuntimeName name, st::CancellationToken cancellationToken) =>
             StartNotebookRuntimeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> CreateNotebookExecutionJob(CreateNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>> CreateNotebookExecutionJobAsync(CreateNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>> CreateNotebookExecutionJobAsync(CreateNotebookExecutionJobRequest request, st::CancellationToken cancellationToken) =>
+            CreateNotebookExecutionJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateNotebookExecutionJob</c>.</summary>
+        public virtual lro::OperationsClient CreateNotebookExecutionJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateNotebookExecutionJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> PollOnceCreateNotebookExecutionJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateNotebookExecutionJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateNotebookExecutionJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>> PollOnceCreateNotebookExecutionJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateNotebookExecutionJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the
+        /// NotebookExecutionJob. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="notebookExecutionJob">
+        /// Required. The NotebookExecutionJob to create.
+        /// </param>
+        /// <param name="notebookExecutionJobId">
+        /// Optional. User specified ID for the NotebookExecutionJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> CreateNotebookExecutionJob(string parent, NotebookExecutionJob notebookExecutionJob, string notebookExecutionJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotebookExecutionJob(new CreateNotebookExecutionJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NotebookExecutionJob = gax::GaxPreconditions.CheckNotNull(notebookExecutionJob, nameof(notebookExecutionJob)),
+                NotebookExecutionJobId = notebookExecutionJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the
+        /// NotebookExecutionJob. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="notebookExecutionJob">
+        /// Required. The NotebookExecutionJob to create.
+        /// </param>
+        /// <param name="notebookExecutionJobId">
+        /// Optional. User specified ID for the NotebookExecutionJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>> CreateNotebookExecutionJobAsync(string parent, NotebookExecutionJob notebookExecutionJob, string notebookExecutionJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotebookExecutionJobAsync(new CreateNotebookExecutionJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NotebookExecutionJob = gax::GaxPreconditions.CheckNotNull(notebookExecutionJob, nameof(notebookExecutionJob)),
+                NotebookExecutionJobId = notebookExecutionJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the
+        /// NotebookExecutionJob. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="notebookExecutionJob">
+        /// Required. The NotebookExecutionJob to create.
+        /// </param>
+        /// <param name="notebookExecutionJobId">
+        /// Optional. User specified ID for the NotebookExecutionJob.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>> CreateNotebookExecutionJobAsync(string parent, NotebookExecutionJob notebookExecutionJob, string notebookExecutionJobId, st::CancellationToken cancellationToken) =>
+            CreateNotebookExecutionJobAsync(parent, notebookExecutionJob, notebookExecutionJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the
+        /// NotebookExecutionJob. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="notebookExecutionJob">
+        /// Required. The NotebookExecutionJob to create.
+        /// </param>
+        /// <param name="notebookExecutionJobId">
+        /// Optional. User specified ID for the NotebookExecutionJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> CreateNotebookExecutionJob(gagr::LocationName parent, NotebookExecutionJob notebookExecutionJob, string notebookExecutionJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotebookExecutionJob(new CreateNotebookExecutionJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NotebookExecutionJob = gax::GaxPreconditions.CheckNotNull(notebookExecutionJob, nameof(notebookExecutionJob)),
+                NotebookExecutionJobId = notebookExecutionJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the
+        /// NotebookExecutionJob. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="notebookExecutionJob">
+        /// Required. The NotebookExecutionJob to create.
+        /// </param>
+        /// <param name="notebookExecutionJobId">
+        /// Optional. User specified ID for the NotebookExecutionJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>> CreateNotebookExecutionJobAsync(gagr::LocationName parent, NotebookExecutionJob notebookExecutionJob, string notebookExecutionJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNotebookExecutionJobAsync(new CreateNotebookExecutionJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NotebookExecutionJob = gax::GaxPreconditions.CheckNotNull(notebookExecutionJob, nameof(notebookExecutionJob)),
+                NotebookExecutionJobId = notebookExecutionJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the
+        /// NotebookExecutionJob. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="notebookExecutionJob">
+        /// Required. The NotebookExecutionJob to create.
+        /// </param>
+        /// <param name="notebookExecutionJobId">
+        /// Optional. User specified ID for the NotebookExecutionJob.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>> CreateNotebookExecutionJobAsync(gagr::LocationName parent, NotebookExecutionJob notebookExecutionJob, string notebookExecutionJobId, st::CancellationToken cancellationToken) =>
+            CreateNotebookExecutionJobAsync(parent, notebookExecutionJob, notebookExecutionJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotebookExecutionJob GetNotebookExecutionJob(GetNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookExecutionJob> GetNotebookExecutionJobAsync(GetNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookExecutionJob> GetNotebookExecutionJobAsync(GetNotebookExecutionJobRequest request, st::CancellationToken cancellationToken) =>
+            GetNotebookExecutionJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotebookExecutionJob GetNotebookExecutionJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNotebookExecutionJob(new GetNotebookExecutionJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookExecutionJob> GetNotebookExecutionJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNotebookExecutionJobAsync(new GetNotebookExecutionJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookExecutionJob> GetNotebookExecutionJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNotebookExecutionJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NotebookExecutionJob GetNotebookExecutionJob(NotebookExecutionJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNotebookExecutionJob(new GetNotebookExecutionJobRequest
+            {
+                NotebookExecutionJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookExecutionJob> GetNotebookExecutionJobAsync(NotebookExecutionJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNotebookExecutionJobAsync(new GetNotebookExecutionJobRequest
+            {
+                NotebookExecutionJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NotebookExecutionJob> GetNotebookExecutionJobAsync(NotebookExecutionJobName name, st::CancellationToken cancellationToken) =>
+            GetNotebookExecutionJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists NotebookExecutionJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotebookExecutionJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> ListNotebookExecutionJobs(ListNotebookExecutionJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists NotebookExecutionJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotebookExecutionJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> ListNotebookExecutionJobsAsync(ListNotebookExecutionJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists NotebookExecutionJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to list the
+        /// NotebookExecutionJobs.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotebookExecutionJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> ListNotebookExecutionJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookExecutionJobsRequest request = new ListNotebookExecutionJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookExecutionJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists NotebookExecutionJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to list the
+        /// NotebookExecutionJobs.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotebookExecutionJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> ListNotebookExecutionJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookExecutionJobsRequest request = new ListNotebookExecutionJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookExecutionJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists NotebookExecutionJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to list the
+        /// NotebookExecutionJobs.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotebookExecutionJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> ListNotebookExecutionJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookExecutionJobsRequest request = new ListNotebookExecutionJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookExecutionJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists NotebookExecutionJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to list the
+        /// NotebookExecutionJobs.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotebookExecutionJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> ListNotebookExecutionJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotebookExecutionJobsRequest request = new ListNotebookExecutionJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotebookExecutionJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteNotebookExecutionJob(DeleteNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNotebookExecutionJobAsync(DeleteNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNotebookExecutionJobAsync(DeleteNotebookExecutionJobRequest request, st::CancellationToken cancellationToken) =>
+            DeleteNotebookExecutionJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteNotebookExecutionJob</c>.</summary>
+        public virtual lro::OperationsClient DeleteNotebookExecutionJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteNotebookExecutionJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceDeleteNotebookExecutionJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNotebookExecutionJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteNotebookExecutionJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceDeleteNotebookExecutionJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNotebookExecutionJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource to be deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteNotebookExecutionJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNotebookExecutionJob(new DeleteNotebookExecutionJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource to be deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNotebookExecutionJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNotebookExecutionJobAsync(new DeleteNotebookExecutionJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource to be deleted.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNotebookExecutionJobAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteNotebookExecutionJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource to be deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteNotebookExecutionJob(NotebookExecutionJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNotebookExecutionJob(new DeleteNotebookExecutionJobRequest
+            {
+                NotebookExecutionJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource to be deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNotebookExecutionJobAsync(NotebookExecutionJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNotebookExecutionJobAsync(new DeleteNotebookExecutionJobRequest
+            {
+                NotebookExecutionJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookExecutionJob resource to be deleted.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNotebookExecutionJobAsync(NotebookExecutionJobName name, st::CancellationToken cancellationToken) =>
+            DeleteNotebookExecutionJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>NotebookService client wrapper implementation, for convenient use.</summary>
@@ -2159,6 +2830,14 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<StartNotebookRuntimeRequest, lro::Operation> _callStartNotebookRuntime;
 
+        private readonly gaxgrpc::ApiCall<CreateNotebookExecutionJobRequest, lro::Operation> _callCreateNotebookExecutionJob;
+
+        private readonly gaxgrpc::ApiCall<GetNotebookExecutionJobRequest, NotebookExecutionJob> _callGetNotebookExecutionJob;
+
+        private readonly gaxgrpc::ApiCall<ListNotebookExecutionJobsRequest, ListNotebookExecutionJobsResponse> _callListNotebookExecutionJobs;
+
+        private readonly gaxgrpc::ApiCall<DeleteNotebookExecutionJobRequest, lro::Operation> _callDeleteNotebookExecutionJob;
+
         /// <summary>
         /// Constructs a client wrapper for the NotebookService service, with the specified gRPC client and settings.
         /// </summary>
@@ -2180,6 +2859,8 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteNotebookRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNotebookRuntimeOperationsSettings, logger);
             UpgradeNotebookRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeNotebookRuntimeOperationsSettings, logger);
             StartNotebookRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartNotebookRuntimeOperationsSettings, logger);
+            CreateNotebookExecutionJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNotebookExecutionJobOperationsSettings, logger);
+            DeleteNotebookExecutionJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNotebookExecutionJobOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateNotebookRuntimeTemplate = clientHelper.BuildApiCall<CreateNotebookRuntimeTemplateRequest, lro::Operation>("CreateNotebookRuntimeTemplate", grpcClient.CreateNotebookRuntimeTemplateAsync, grpcClient.CreateNotebookRuntimeTemplate, effectiveSettings.CreateNotebookRuntimeTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2215,6 +2896,18 @@ namespace Google.Cloud.AIPlatform.V1
             _callStartNotebookRuntime = clientHelper.BuildApiCall<StartNotebookRuntimeRequest, lro::Operation>("StartNotebookRuntime", grpcClient.StartNotebookRuntimeAsync, grpcClient.StartNotebookRuntime, effectiveSettings.StartNotebookRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartNotebookRuntime);
             Modify_StartNotebookRuntimeApiCall(ref _callStartNotebookRuntime);
+            _callCreateNotebookExecutionJob = clientHelper.BuildApiCall<CreateNotebookExecutionJobRequest, lro::Operation>("CreateNotebookExecutionJob", grpcClient.CreateNotebookExecutionJobAsync, grpcClient.CreateNotebookExecutionJob, effectiveSettings.CreateNotebookExecutionJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateNotebookExecutionJob);
+            Modify_CreateNotebookExecutionJobApiCall(ref _callCreateNotebookExecutionJob);
+            _callGetNotebookExecutionJob = clientHelper.BuildApiCall<GetNotebookExecutionJobRequest, NotebookExecutionJob>("GetNotebookExecutionJob", grpcClient.GetNotebookExecutionJobAsync, grpcClient.GetNotebookExecutionJob, effectiveSettings.GetNotebookExecutionJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetNotebookExecutionJob);
+            Modify_GetNotebookExecutionJobApiCall(ref _callGetNotebookExecutionJob);
+            _callListNotebookExecutionJobs = clientHelper.BuildApiCall<ListNotebookExecutionJobsRequest, ListNotebookExecutionJobsResponse>("ListNotebookExecutionJobs", grpcClient.ListNotebookExecutionJobsAsync, grpcClient.ListNotebookExecutionJobs, effectiveSettings.ListNotebookExecutionJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListNotebookExecutionJobs);
+            Modify_ListNotebookExecutionJobsApiCall(ref _callListNotebookExecutionJobs);
+            _callDeleteNotebookExecutionJob = clientHelper.BuildApiCall<DeleteNotebookExecutionJobRequest, lro::Operation>("DeleteNotebookExecutionJob", grpcClient.DeleteNotebookExecutionJobAsync, grpcClient.DeleteNotebookExecutionJob, effectiveSettings.DeleteNotebookExecutionJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteNotebookExecutionJob);
+            Modify_DeleteNotebookExecutionJobApiCall(ref _callDeleteNotebookExecutionJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2241,6 +2934,14 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_UpgradeNotebookRuntimeApiCall(ref gaxgrpc::ApiCall<UpgradeNotebookRuntimeRequest, lro::Operation> call);
 
         partial void Modify_StartNotebookRuntimeApiCall(ref gaxgrpc::ApiCall<StartNotebookRuntimeRequest, lro::Operation> call);
+
+        partial void Modify_CreateNotebookExecutionJobApiCall(ref gaxgrpc::ApiCall<CreateNotebookExecutionJobRequest, lro::Operation> call);
+
+        partial void Modify_GetNotebookExecutionJobApiCall(ref gaxgrpc::ApiCall<GetNotebookExecutionJobRequest, NotebookExecutionJob> call);
+
+        partial void Modify_ListNotebookExecutionJobsApiCall(ref gaxgrpc::ApiCall<ListNotebookExecutionJobsRequest, ListNotebookExecutionJobsResponse> call);
+
+        partial void Modify_DeleteNotebookExecutionJobApiCall(ref gaxgrpc::ApiCall<DeleteNotebookExecutionJobRequest, lro::Operation> call);
 
         partial void OnConstruction(NotebookService.NotebookServiceClient grpcClient, NotebookServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2274,6 +2975,14 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_UpgradeNotebookRuntimeRequest(ref UpgradeNotebookRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_StartNotebookRuntimeRequest(ref StartNotebookRuntimeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateNotebookExecutionJobRequest(ref CreateNotebookExecutionJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNotebookExecutionJobRequest(ref GetNotebookExecutionJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListNotebookExecutionJobsRequest(ref ListNotebookExecutionJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteNotebookExecutionJobRequest(ref DeleteNotebookExecutionJobRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateNotebookRuntimeTemplate</c>.</summary>
         public override lro::OperationsClient CreateNotebookRuntimeTemplateOperationsClient { get; }
@@ -2558,6 +3267,108 @@ namespace Google.Cloud.AIPlatform.V1
             Modify_StartNotebookRuntimeRequest(ref request, ref callSettings);
             return new lro::Operation<StartNotebookRuntimeResponse, StartNotebookRuntimeOperationMetadata>(await _callStartNotebookRuntime.Async(request, callSettings).ConfigureAwait(false), StartNotebookRuntimeOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>CreateNotebookExecutionJob</c>.</summary>
+        public override lro::OperationsClient CreateNotebookExecutionJobOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata> CreateNotebookExecutionJob(CreateNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNotebookExecutionJobRequest(ref request, ref callSettings);
+            return new lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>(_callCreateNotebookExecutionJob.Sync(request, callSettings), CreateNotebookExecutionJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>> CreateNotebookExecutionJobAsync(CreateNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNotebookExecutionJobRequest(ref request, ref callSettings);
+            return new lro::Operation<NotebookExecutionJob, CreateNotebookExecutionJobOperationMetadata>(await _callCreateNotebookExecutionJob.Async(request, callSettings).ConfigureAwait(false), CreateNotebookExecutionJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NotebookExecutionJob GetNotebookExecutionJob(GetNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNotebookExecutionJobRequest(ref request, ref callSettings);
+            return _callGetNotebookExecutionJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NotebookExecutionJob> GetNotebookExecutionJobAsync(GetNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNotebookExecutionJobRequest(ref request, ref callSettings);
+            return _callGetNotebookExecutionJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists NotebookExecutionJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NotebookExecutionJob"/> resources.</returns>
+        public override gax::PagedEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> ListNotebookExecutionJobs(ListNotebookExecutionJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNotebookExecutionJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNotebookExecutionJobsRequest, ListNotebookExecutionJobsResponse, NotebookExecutionJob>(_callListNotebookExecutionJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists NotebookExecutionJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NotebookExecutionJob"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListNotebookExecutionJobsResponse, NotebookExecutionJob> ListNotebookExecutionJobsAsync(ListNotebookExecutionJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNotebookExecutionJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNotebookExecutionJobsRequest, ListNotebookExecutionJobsResponse, NotebookExecutionJob>(_callListNotebookExecutionJobs, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteNotebookExecutionJob</c>.</summary>
+        public override lro::OperationsClient DeleteNotebookExecutionJobOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteNotebookExecutionJob(DeleteNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNotebookExecutionJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callDeleteNotebookExecutionJob.Sync(request, callSettings), DeleteNotebookExecutionJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a NotebookExecutionJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNotebookExecutionJobAsync(DeleteNotebookExecutionJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNotebookExecutionJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteNotebookExecutionJob.Async(request, callSettings).ConfigureAwait(false), DeleteNotebookExecutionJobOperationsClient);
+        }
     }
 
     public partial class ListNotebookRuntimeTemplatesRequest : gaxgrpc::IPageRequest
@@ -2565,6 +3376,10 @@ namespace Google.Cloud.AIPlatform.V1
     }
 
     public partial class ListNotebookRuntimesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListNotebookExecutionJobsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2580,6 +3395,14 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<NotebookRuntime> GetEnumerator() => NotebookRuntimes.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListNotebookExecutionJobsResponse : gaxgrpc::IPageResponse<NotebookExecutionJob>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NotebookExecutionJob> GetEnumerator() => NotebookExecutionJobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

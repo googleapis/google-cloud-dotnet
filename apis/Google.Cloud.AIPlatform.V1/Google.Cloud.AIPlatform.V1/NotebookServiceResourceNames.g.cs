@@ -151,4 +151,52 @@ namespace Google.Cloud.AIPlatform.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateNotebookExecutionJobRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetNotebookExecutionJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::NotebookExecutionJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::NotebookExecutionJobName NotebookExecutionJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::NotebookExecutionJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListNotebookExecutionJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteNotebookExecutionJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::NotebookExecutionJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::NotebookExecutionJobName NotebookExecutionJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::NotebookExecutionJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

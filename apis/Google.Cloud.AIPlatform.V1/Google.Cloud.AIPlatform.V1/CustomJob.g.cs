@@ -86,14 +86,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dXRvcl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdlX3VyaXMYAiAD",
             "KAlCA+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPgQQISDAoEYXJncxgE",
             "IAMoCRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5FbnZWYXIifQoKU2NoZWR1bGluZxIqCgd0aW1lb3V0GAEgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEiUKHXJlc3RhcnRfam9iX29uX3dvcmtl",
-            "cl9yZXN0YXJ0GAMgASgIEhwKD2Rpc2FibGVfcmV0cmllcxgFIAEoCEID4EEB",
-            "QswBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDkN1c3RvbUpv",
-            "YlByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
-            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJ",
-            "UGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdv",
-            "b2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "MS5FbnZWYXIiiAIKClNjaGVkdWxpbmcSKgoHdGltZW91dBgBIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIlCh1yZXN0YXJ0X2pvYl9vbl93b3Jr",
+            "ZXJfcmVzdGFydBgDIAEoCBJGCghzdHJhdGVneRgEIAEoDjIvLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlNjaGVkdWxpbmcuU3RyYXRlZ3lCA+BBARIc",
+            "Cg9kaXNhYmxlX3JldHJpZXMYBSABKAhCA+BBASJBCghTdHJhdGVneRIYChRT",
+            "VFJBVEVHWV9VTlNQRUNJRklFRBAAEg0KCU9OX0RFTUFORBABEgwKCExPV19D",
+            "T1NUEAJCzAEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIOQ3Vz",
+            "dG9tSm9iUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
+            "L2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xv",
+            "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
+            "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -102,7 +105,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "NfsMounts", "DiskSpec" }, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ContainerSpec), global::Google.Cloud.AIPlatform.V1.ContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PythonPackageSpec), global::Google.Cloud.AIPlatform.V1.PythonPackageSpec.Parser, new[]{ "ExecutorImageUri", "PackageUris", "PythonModule", "Args", "Env" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Scheduling), global::Google.Cloud.AIPlatform.V1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart", "DisableRetries" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Scheduling), global::Google.Cloud.AIPlatform.V1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart", "Strategy", "DisableRetries" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy) }, null, null)
           }));
     }
     #endregion
@@ -2725,6 +2728,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public Scheduling(Scheduling other) : this() {
       timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       restartJobOnWorkerRestart_ = other.restartJobOnWorkerRestart_;
+      strategy_ = other.strategy_;
       disableRetries_ = other.disableRetries_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2767,6 +2771,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "strategy" field.</summary>
+    public const int StrategyFieldNumber = 4;
+    private global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy strategy_ = global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy.Unspecified;
+    /// <summary>
+    /// Optional. This determines which type of scheduling strategy to use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy Strategy {
+      get { return strategy_; }
+      set {
+        strategy_ = value;
+      }
+    }
+
     /// <summary>Field number for the "disable_retries" field.</summary>
     public const int DisableRetriesFieldNumber = 5;
     private bool disableRetries_;
@@ -2801,6 +2820,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (!object.Equals(Timeout, other.Timeout)) return false;
       if (RestartJobOnWorkerRestart != other.RestartJobOnWorkerRestart) return false;
+      if (Strategy != other.Strategy) return false;
       if (DisableRetries != other.DisableRetries) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2811,6 +2831,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (RestartJobOnWorkerRestart != false) hash ^= RestartJobOnWorkerRestart.GetHashCode();
+      if (Strategy != global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy.Unspecified) hash ^= Strategy.GetHashCode();
       if (DisableRetries != false) hash ^= DisableRetries.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2838,6 +2859,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteBool(RestartJobOnWorkerRestart);
       }
+      if (Strategy != global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Strategy);
+      }
       if (DisableRetries != false) {
         output.WriteRawTag(40);
         output.WriteBool(DisableRetries);
@@ -2860,6 +2885,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteBool(RestartJobOnWorkerRestart);
       }
+      if (Strategy != global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Strategy);
+      }
       if (DisableRetries != false) {
         output.WriteRawTag(40);
         output.WriteBool(DisableRetries);
@@ -2879,6 +2908,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (RestartJobOnWorkerRestart != false) {
         size += 1 + 1;
+      }
+      if (Strategy != global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Strategy);
       }
       if (DisableRetries != false) {
         size += 1 + 1;
@@ -2903,6 +2935,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.RestartJobOnWorkerRestart != false) {
         RestartJobOnWorkerRestart = other.RestartJobOnWorkerRestart;
+      }
+      if (other.Strategy != global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy.Unspecified) {
+        Strategy = other.Strategy;
       }
       if (other.DisableRetries != false) {
         DisableRetries = other.DisableRetries;
@@ -2931,6 +2966,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 24: {
             RestartJobOnWorkerRestart = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Strategy = (global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy) input.ReadEnum();
             break;
           }
           case 40: {
@@ -2963,6 +3002,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             RestartJobOnWorkerRestart = input.ReadBool();
             break;
           }
+          case 32: {
+            Strategy = (global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy) input.ReadEnum();
+            break;
+          }
           case 40: {
             DisableRetries = input.ReadBool();
             break;
@@ -2971,6 +3014,36 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Scheduling message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Optional. This determines which type of scheduling strategy to use. Right
+      /// now users have two options such as ON_DEMAND which will use regular on
+      /// demand resources to schedule the job, the other is LOW_COST which would
+      /// leverage spot resources alongwith regular resources to schedule
+      /// the job.
+      /// </summary>
+      public enum Strategy {
+        /// <summary>
+        /// Strategy will default to ON_DEMAND.
+        /// </summary>
+        [pbr::OriginalName("STRATEGY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Regular on-demand provisioning strategy.
+        /// </summary>
+        [pbr::OriginalName("ON_DEMAND")] OnDemand = 1,
+        /// <summary>
+        /// Low cost by making potential use of spot resources.
+        /// </summary>
+        [pbr::OriginalName("LOW_COST")] LowCost = 2,
+      }
+
+    }
+    #endregion
 
   }
 

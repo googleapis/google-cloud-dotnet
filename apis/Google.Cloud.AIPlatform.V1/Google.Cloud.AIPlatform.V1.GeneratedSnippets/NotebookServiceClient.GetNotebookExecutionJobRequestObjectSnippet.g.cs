@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1_generated_ModelGardenService_GetPublisherModel_async]
+    // [START aiplatform_v1_generated_NotebookService_GetNotebookExecutionJob_sync]
     using Google.Cloud.AIPlatform.V1;
-    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedModelGardenServiceClientSnippets
+    public sealed partial class GeneratedNotebookServiceClientSnippets
     {
-        /// <summary>Snippet for GetPublisherModelAsync</summary>
+        /// <summary>Snippet for GetNotebookExecutionJob</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,21 +29,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetPublisherModelRequestObjectAsync()
+        public void GetNotebookExecutionJobRequestObject()
         {
             // Create client
-            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
             // Initialize request argument(s)
-            GetPublisherModelRequest request = new GetPublisherModelRequest
+            GetNotebookExecutionJobRequest request = new GetNotebookExecutionJobRequest
             {
-                PublisherModelName = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]"),
-                LanguageCode = "",
-                View = PublisherModelView.Unspecified,
-                IsHuggingFaceModel = false,
+                NotebookExecutionJobName = NotebookExecutionJobName.FromProjectLocationNotebookExecutionJob("[PROJECT]", "[LOCATION]", "[NOTEBOOK_EXECUTION_JOB]"),
+                View = NotebookExecutionJobView.Unspecified,
             };
             // Make the request
-            PublisherModel response = await modelGardenServiceClient.GetPublisherModelAsync(request);
+            NotebookExecutionJob response = notebookServiceClient.GetNotebookExecutionJob(request);
         }
     }
-    // [END aiplatform_v1_generated_ModelGardenService_GetPublisherModel_async]
+    // [END aiplatform_v1_generated_NotebookService_GetNotebookExecutionJob_sync]
 }

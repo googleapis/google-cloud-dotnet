@@ -1080,10 +1080,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Updatable fields:
         /// 
-        /// * `big_query_source`
-        /// * `bigtable`
         /// * `labels`
-        /// * `sync_config`
+        /// * `description`
+        /// * `bigtable`
+        /// * `bigtable.auto_scaling`
+        /// * `bigtable.enable_multi_region_replica`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1113,10 +1114,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Updatable fields:
         /// 
-        /// * `big_query_source`
-        /// * `bigtable`
         /// * `labels`
-        /// * `sync_config`
+        /// * `description`
+        /// * `bigtable`
+        /// * `bigtable.auto_scaling`
+        /// * `bigtable.enable_multi_region_replica`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1146,10 +1148,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Updatable fields:
         /// 
-        /// * `big_query_source`
-        /// * `bigtable`
         /// * `labels`
-        /// * `sync_config`
+        /// * `description`
+        /// * `bigtable`
+        /// * `bigtable.auto_scaling`
+        /// * `bigtable.enable_multi_region_replica`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1916,7 +1919,14 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updatable fields:
         /// 
         /// * `labels`
-        /// * `serviceAgentType`
+        /// * `service_agent_type`
+        /// * `big_query_source`
+        /// * `big_query_source.uri`
+        /// * `big_query_source.entity_id_columns`
+        /// * `feature_registry_source`
+        /// * `feature_registry_source.feature_groups`
+        /// * `sync_config`
+        /// * `sync_config.cron`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1947,7 +1957,14 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updatable fields:
         /// 
         /// * `labels`
-        /// * `serviceAgentType`
+        /// * `service_agent_type`
+        /// * `big_query_source`
+        /// * `big_query_source.uri`
+        /// * `big_query_source.entity_id_columns`
+        /// * `feature_registry_source`
+        /// * `feature_registry_source.feature_groups`
+        /// * `sync_config`
+        /// * `sync_config.cron`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1978,7 +1995,14 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updatable fields:
         /// 
         /// * `labels`
-        /// * `serviceAgentType`
+        /// * `service_agent_type`
+        /// * `big_query_source`
+        /// * `big_query_source.uri`
+        /// * `big_query_source.entity_id_columns`
+        /// * `feature_registry_source`
+        /// * `feature_registry_source.feature_groups`
+        /// * `sync_config`
+        /// * `sync_config.cron`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

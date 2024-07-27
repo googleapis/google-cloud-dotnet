@@ -157,6 +157,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return NasJobReflection.Descriptor;
             yield return NetworkSpecReflection.Descriptor;
             yield return NotebookEucConfigReflection.Descriptor;
+            yield return NotebookExecutionJobReflection.Descriptor;
             yield return NotebookIdleShutdownConfigReflection.Descriptor;
             yield return NotebookRuntimeReflection.Descriptor;
             yield return NotebookRuntimeTemplateRefReflection.Descriptor;
