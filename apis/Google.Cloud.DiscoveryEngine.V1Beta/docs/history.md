@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta16, released 2024-07-29
+
+### Bug fixes
+
+- **BREAKING CHANGE** SearchService ([commit 230f777](https://github.com/googleapis/google-cloud-dotnet/commit/230f777a92c82f77668f63168cba320b0949eb4d))
+
+### New features
+
+- Update SearchService ([commit 230f777](https://github.com/googleapis/google-cloud-dotnet/commit/230f777a92c82f77668f63168cba320b0949eb4d))
+- Update CompletionService ([commit 822c10d](https://github.com/googleapis/google-cloud-dotnet/commit/822c10da97bf4597d865c4750b6be278f4912601))
+- Update SearchService ([commit 822c10d](https://github.com/googleapis/google-cloud-dotnet/commit/822c10da97bf4597d865c4750b6be278f4912601))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 230f777](https://github.com/googleapis/google-cloud-dotnet/commit/230f777a92c82f77668f63168cba320b0949eb4d))
+- Keep the API doc up-to-date with recent changes ([commit 822c10d](https://github.com/googleapis/google-cloud-dotnet/commit/822c10da97bf4597d865c4750b6be278f4912601))
+
 ## Version 1.0.0-beta15, released 2024-07-22
 
 ### New features
