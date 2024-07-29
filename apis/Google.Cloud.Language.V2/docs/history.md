@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-07-29
+
+### New features
+
+- Add model_version in ModerateTextRequest and expose severity score in ClassificationCategory ([commit 72d1958](https://github.com/googleapis/google-cloud-dotnet/commit/72d19583e9022fd2a3b41bdc580500d2ab3c965a))
+
+### Documentation improvements
+
+- Minor update on documentation ([commit 72d1958](https://github.com/googleapis/google-cloud-dotnet/commit/72d19583e9022fd2a3b41bdc580500d2ab3c965a))
+
 ## Version 1.0.0-beta04, released 2024-05-08
 
 ### New features
