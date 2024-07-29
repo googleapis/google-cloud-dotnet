@@ -1,5 +1,60 @@
 # Version history
 
+## Version 3.5.0, released 2024-07-29
+
+### New features
+
+- A new field `score` is added to message `.google.cloud.aiplatform.v1.Candidate` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `Segment` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `GroundingChunk` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `GroundingSupport` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `grounding_chunks` is added to message `.google.cloud.aiplatform.v1.GroundingMetadata` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `grounding_supports` is added to message `.google.cloud.aiplatform.v1.GroundingMetadata` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new enum `Strategy` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `strategy` is added to message `.google.cloud.aiplatform.v1.Scheduling` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `dedicated_endpoint_enabled` is added to message `.google.cloud.aiplatform.v1.Endpoint` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `dedicated_endpoint_dns` is added to message `.google.cloud.aiplatform.v1.Endpoint` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `satisfies_pzs` is added to message `.google.cloud.aiplatform.v1.Endpoint` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `satisfies_pzi` is added to message `.google.cloud.aiplatform.v1.Endpoint` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `NumericFilter` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `numeric_filters` is added to message `.google.cloud.aiplatform.v1.NearestNeighborQuery` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `is_hugging_face_model` is added to message `.google.cloud.aiplatform.v1.GetPublisherModelRequest` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `NotebookExecutionJob` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new resource_definition `aiplatform.googleapis.com/NotebookExecutionJob` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new method `CreateNotebookExecutionJob` is added to service `NotebookService` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new method `GetNotebookExecutionJob` is added to service `NotebookService` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new method `ListNotebookExecutionJobs` is added to service `NotebookService` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new method `DeleteNotebookExecutionJob` is added to service `NotebookService` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new enum `NotebookExecutionJobView` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `CreateNotebookExecutionJobRequest` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `CreateNotebookExecutionJobOperationMetadata` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `GetNotebookExecutionJobRequest` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `ListNotebookExecutionJobsRequest` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `ListNotebookExecutionJobsResponse` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `DeleteNotebookExecutionJobRequest` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `ray_logs_spec` is added to message `.google.cloud.aiplatform.v1.RaySpec` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new message `RayLogsSpec` is added ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `system_instruction` is added to message `.google.cloud.aiplatform.v1.CountTokensRequest` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `tools` is added to message `.google.cloud.aiplatform.v1.CountTokensRequest` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `billable_sum` is added to message `.google.cloud.aiplatform.v1.SupervisedTuningDatasetDistribution` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new field `total_billable_token_count` is added to message `.google.cloud.aiplatform.v1.SupervisedTuningDataStats` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A new value `ADAPTER_SIZE_THIRTY_TWO` is added to enum `AdapterSize` ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.aiplatform.v1.Dataset` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `name` in message `.google.cloud.aiplatform.v1.DatasetVersion` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `update_mask` in message `.google.cloud.aiplatform.v1.UpdateFeatureOnlineStoreRequest` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `update_mask` in message `.google.cloud.aiplatform.v1.UpdateFeatureViewRequest` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `update_mask` in message `.google.cloud.aiplatform.v1.UpdateFeatureGroupRequest` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `update_mask` in message `.google.cloud.aiplatform.v1.UpdateFeatureRequest` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `language_code` in message `.google.cloud.aiplatform.v1.GetPublisherModelRequest` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `model` in message `.google.cloud.aiplatform.v1.CountTokensRequest` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `instances` in message `.google.cloud.aiplatform.v1.CountTokensRequest` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `contents` in message `.google.cloud.aiplatform.v1.CountTokensRequest` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for message `TrialContext` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+- A comment for field `disable_attribution` in message `.google.cloud.aiplatform.v1.Retrieval` is changed ([commit 0a28ce6](https://github.com/googleapis/google-cloud-dotnet/commit/0a28ce62eac697ca772aa0d34e55faec1c4cd33b))
+
 ## Version 3.4.0, released 2024-07-08
 
 ### New features
