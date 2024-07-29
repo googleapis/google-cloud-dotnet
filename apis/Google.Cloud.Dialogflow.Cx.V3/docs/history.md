@@ -1,5 +1,23 @@
 # Version history
 
+## Version 2.20.0, released 2024-07-29
+
+### New features
+
+- Exposed DataStoreConnectionSignals ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+- Added support for lock flow ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+- Added support for multi language settings in flow ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+- Added support for service directory in tools ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+- Added support for oauth and service agent auth for webhook. ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+- Expose store tts option in security settings ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+- Expose PersonalizationSettings & SpeechSettings in v3 API. ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+
+### Documentation improvements
+
+- Clarified wording around enable_stackdriver_logging & enable_interaction_logging ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+- Clarified wording around start point of test config. ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+- Clarified wording around audio redaction ([commit 4a52f53](https://github.com/googleapis/google-cloud-dotnet/commit/4a52f533537949ab4f66b4c13e63194f0c48693d))
+
 ## Version 2.19.0, released 2024-06-04
 
 ### New features
