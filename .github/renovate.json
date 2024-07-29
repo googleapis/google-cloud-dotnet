@@ -21,6 +21,7 @@
     "apis/Google.Cloud.AlloyDb.V1Alpha/Google.Cloud.AlloyDb.V1Alpha/**",
     "apis/Google.Cloud.AlloyDb.V1Beta/Google.Cloud.AlloyDb.V1Beta/**",
     "apis/Google.Cloud.ApiGateway.V1/Google.Cloud.ApiGateway.V1/**",
+    "apis/Google.Cloud.AIPlatform.V1Beta1/Google.Cloud.AIPlatform.V1Beta1/**",
     "apis/Google.Cloud.AIPlatform.V1/Google.Cloud.AIPlatform.V1/**",
     "apis/Google.Cloud.ApiHub.V1/Google.Cloud.ApiHub.V1/**",
     "apis/Google.Cloud.ApiKeys.V2/Google.Cloud.ApiKeys.V2/**",
