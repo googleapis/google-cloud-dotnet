@@ -38,10 +38,6 @@ namespace GoogleCSharpSnippets
             TerminateJobRunRequest request = new TerminateJobRunRequest
             {
                 JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
-                OverrideDeployPolicyAsDeployPolicyNames =
-                {
-                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
-                },
             };
             // Make the request
             TerminateJobRunResponse response = await cloudDeployClient.TerminateJobRunAsync(request);

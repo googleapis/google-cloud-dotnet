@@ -37,10 +37,6 @@ namespace GoogleCSharpSnippets
             CancelRolloutRequest request = new CancelRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
-                OverrideDeployPolicyAsDeployPolicyNames =
-                {
-                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
-                },
             };
             // Make the request
             CancelRolloutResponse response = cloudDeployClient.CancelRollout(request);

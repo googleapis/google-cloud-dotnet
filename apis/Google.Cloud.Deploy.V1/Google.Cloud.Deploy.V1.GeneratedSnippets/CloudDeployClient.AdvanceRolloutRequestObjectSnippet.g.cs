@@ -38,10 +38,6 @@ namespace GoogleCSharpSnippets
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 PhaseId = "",
-                OverrideDeployPolicyAsDeployPolicyNames =
-                {
-                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
-                },
             };
             // Make the request
             AdvanceRolloutResponse response = cloudDeployClient.AdvanceRollout(request);
