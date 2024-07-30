@@ -47,7 +47,7 @@ namespace Google.Cloud.NetApp.V1 {
             "Y3RpdmVfZGlyZWN0b3J5GAIgASgLMicuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
             "MS5BY3RpdmVEaXJlY3RvcnlCA+BBAiJbChxEZWxldGVBY3RpdmVEaXJlY3Rv",
             "cnlSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwolbmV0YXBwLmdvb2ds",
-            "ZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeSK9BwoPQWN0aXZlRGlyZWN0b3J5",
+            "ZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeSLaBwoPQWN0aXZlRGlyZWN0b3J5",
             "EhEKBG5hbWUYASABKAlCA+BBCBI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJBCgVzdGF0ZRgDIAEoDjIt",
             "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQWN0aXZlRGlyZWN0b3J5LlN0YXRl",
@@ -55,25 +55,25 @@ namespace Google.Cloud.NetApp.V1 {
             "bnMYBiABKAlCA+BBAhIcCg9uZXRfYmlvc19wcmVmaXgYByABKAlCA+BBAhIb",
             "ChNvcmdhbml6YXRpb25hbF91bml0GAggASgJEhYKDmFlc19lbmNyeXB0aW9u",
             "GAkgASgIEhUKCHVzZXJuYW1lGAogASgJQgPgQQISFQoIcGFzc3dvcmQYCyAB",
-            "KAlCA+BBAhIdChBiYWNrdXBfb3BlcmF0b3JzGAwgAygJQgPgQQESHwoSc2Vj",
-            "dXJpdHlfb3BlcmF0b3JzGA0gAygJQgPgQQESFAoMa2RjX2hvc3RuYW1lGA4g",
-            "ASgJEg4KBmtkY19pcBgPIAEoCRIbChNuZnNfdXNlcnNfd2l0aF9sZGFwGBAg",
-            "ASgIEhMKC2Rlc2NyaXB0aW9uGBEgASgJEhQKDGxkYXBfc2lnbmluZxgSIAEo",
-            "CBIeChZlbmNyeXB0X2RjX2Nvbm5lY3Rpb25zGBMgASgIEkMKBmxhYmVscxgU",
-            "IAMoCzIzLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQWN0aXZlRGlyZWN0b3J5",
-            "LkxhYmVsc0VudHJ5EhoKDXN0YXRlX2RldGFpbHMYFSABKAlCA+BBAxotCgtM",
-            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImoK",
-            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJ",
-            "CgVSRUFEWRACEgwKCFVQREFUSU5HEAMSCgoGSU5fVVNFEAQSDAoIREVMRVRJ",
-            "TkcQBRIJCgVFUlJPUhAGOp0B6kGZAQolbmV0YXBwLmdvb2dsZWFwaXMuY29t",
-            "L0FjdGl2ZURpcmVjdG9yeRJMcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2FjdGl2ZURpcmVjdG9yaWVzL3thY3RpdmVfZGlyZWN0",
-            "b3J5fSoRYWN0aXZlRGlyZWN0b3JpZXMyD2FjdGl2ZURpcmVjdG9yeUK2AQoa",
-            "Y29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCFEFjdGl2ZURpcmVjdG9yeVBy",
-            "b3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFw",
-            "cHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2ds",
-            "ZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYx",
-            "YgZwcm90bzM="));
+            "KAlCA+BBAhIdChBiYWNrdXBfb3BlcmF0b3JzGAwgAygJQgPgQQESGwoOYWRt",
+            "aW5pc3RyYXRvcnMYFiADKAlCA+BBARIfChJzZWN1cml0eV9vcGVyYXRvcnMY",
+            "DSADKAlCA+BBARIUCgxrZGNfaG9zdG5hbWUYDiABKAkSDgoGa2RjX2lwGA8g",
+            "ASgJEhsKE25mc191c2Vyc193aXRoX2xkYXAYECABKAgSEwoLZGVzY3JpcHRp",
+            "b24YESABKAkSFAoMbGRhcF9zaWduaW5nGBIgASgIEh4KFmVuY3J5cHRfZGNf",
+            "Y29ubmVjdGlvbnMYEyABKAgSQwoGbGFiZWxzGBQgAygLMjMuZ29vZ2xlLmNs",
+            "b3VkLm5ldGFwcC52MS5BY3RpdmVEaXJlY3RvcnkuTGFiZWxzRW50cnkSGgoN",
+            "c3RhdGVfZGV0YWlscxgVIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiagoFU3RhdGUSFQoRU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAISDAoIVVBE",
+            "QVRJTkcQAxIKCgZJTl9VU0UQBBIMCghERUxFVElORxAFEgkKBUVSUk9SEAY6",
+            "nQHqQZkBCiVuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQWN0aXZlRGlyZWN0b3J5",
+            "Ekxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWN0",
+            "aXZlRGlyZWN0b3JpZXMve2FjdGl2ZV9kaXJlY3Rvcnl9KhFhY3RpdmVEaXJl",
+            "Y3RvcmllczIPYWN0aXZlRGlyZWN0b3J5QrYBChpjb20uZ29vZ2xlLmNsb3Vk",
+            "Lm5ldGFwcC52MUIUQWN0aXZlRGlyZWN0b3J5UHJvdG9QAVoyY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZH",
+            "b29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxW",
+            "MeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.CreateActiveDirectoryRequest), global::Google.Cloud.NetApp.V1.CreateActiveDirectoryRequest.Parser, new[]{ "Parent", "ActiveDirectory", "ActiveDirectoryId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateActiveDirectoryRequest), global::Google.Cloud.NetApp.V1.UpdateActiveDirectoryRequest.Parser, new[]{ "UpdateMask", "ActiveDirectory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteActiveDirectoryRequest), global::Google.Cloud.NetApp.V1.DeleteActiveDirectoryRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ActiveDirectory), global::Google.Cloud.NetApp.V1.ActiveDirectory.Parser, new[]{ "Name", "CreateTime", "State", "Domain", "Site", "Dns", "NetBiosPrefix", "OrganizationalUnit", "AesEncryption", "Username", "Password", "BackupOperators", "SecurityOperators", "KdcHostname", "KdcIp", "NfsUsersWithLdap", "Description", "LdapSigning", "EncryptDcConnections", "Labels", "StateDetails" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.ActiveDirectory.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ActiveDirectory), global::Google.Cloud.NetApp.V1.ActiveDirectory.Parser, new[]{ "Name", "CreateTime", "State", "Domain", "Site", "Dns", "NetBiosPrefix", "OrganizationalUnit", "AesEncryption", "Username", "Password", "BackupOperators", "Administrators", "SecurityOperators", "KdcHostname", "KdcIp", "NfsUsersWithLdap", "Description", "LdapSigning", "EncryptDcConnections", "Labels", "StateDetails" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.ActiveDirectory.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -981,7 +981,10 @@ namespace Google.Cloud.NetApp.V1 {
     public const int ActiveDirectoryIdFieldNumber = 3;
     private string activeDirectoryId_ = "";
     /// <summary>
-    /// Required. ID of the active directory to create.
+    /// Required. ID of the active directory to create. Must be unique within the
+    /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+    /// with the first character a letter or underscore, the last a letter or
+    /// underscore or a number, and a 63 character maximum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1686,6 +1689,7 @@ namespace Google.Cloud.NetApp.V1 {
       username_ = other.username_;
       password_ = other.password_;
       backupOperators_ = other.backupOperators_.Clone();
+      administrators_ = other.administrators_.Clone();
       securityOperators_ = other.securityOperators_.Clone();
       kdcHostname_ = other.kdcHostname_;
       kdcIp_ = other.kdcIp_;
@@ -1889,6 +1893,20 @@ namespace Google.Cloud.NetApp.V1 {
       get { return backupOperators_; }
     }
 
+    /// <summary>Field number for the "administrators" field.</summary>
+    public const int AdministratorsFieldNumber = 22;
+    private static readonly pb::FieldCodec<string> _repeated_administrators_codec
+        = pb::FieldCodec.ForString(178);
+    private readonly pbc::RepeatedField<string> administrators_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Users to be added to the Built-in Admininstrators group.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Administrators {
+      get { return administrators_; }
+    }
+
     /// <summary>Field number for the "security_operators" field.</summary>
     public const int SecurityOperatorsFieldNumber = 13;
     private static readonly pb::FieldCodec<string> _repeated_securityOperators_codec
@@ -2052,6 +2070,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (Username != other.Username) return false;
       if (Password != other.Password) return false;
       if(!backupOperators_.Equals(other.backupOperators_)) return false;
+      if(!administrators_.Equals(other.administrators_)) return false;
       if(!securityOperators_.Equals(other.securityOperators_)) return false;
       if (KdcHostname != other.KdcHostname) return false;
       if (KdcIp != other.KdcIp) return false;
@@ -2080,6 +2099,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Password.Length != 0) hash ^= Password.GetHashCode();
       hash ^= backupOperators_.GetHashCode();
+      hash ^= administrators_.GetHashCode();
       hash ^= securityOperators_.GetHashCode();
       if (KdcHostname.Length != 0) hash ^= KdcHostname.GetHashCode();
       if (KdcIp.Length != 0) hash ^= KdcIp.GetHashCode();
@@ -2182,6 +2202,7 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(170, 1);
         output.WriteString(StateDetails);
       }
+      administrators_.WriteTo(output, _repeated_administrators_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2267,6 +2288,7 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(170, 1);
         output.WriteString(StateDetails);
       }
+      administrators_.WriteTo(ref output, _repeated_administrators_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2311,6 +2333,7 @@ namespace Google.Cloud.NetApp.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
       }
       size += backupOperators_.CalculateSize(_repeated_backupOperators_codec);
+      size += administrators_.CalculateSize(_repeated_administrators_codec);
       size += securityOperators_.CalculateSize(_repeated_securityOperators_codec);
       if (KdcHostname.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KdcHostname);
@@ -2383,6 +2406,7 @@ namespace Google.Cloud.NetApp.V1 {
         Password = other.Password;
       }
       backupOperators_.Add(other.backupOperators_);
+      administrators_.Add(other.administrators_);
       securityOperators_.Add(other.securityOperators_);
       if (other.KdcHostname.Length != 0) {
         KdcHostname = other.KdcHostname;
@@ -2508,6 +2532,10 @@ namespace Google.Cloud.NetApp.V1 {
             StateDetails = input.ReadString();
             break;
           }
+          case 178: {
+            administrators_.AddEntriesFrom(input, _repeated_administrators_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2608,6 +2636,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 170: {
             StateDetails = input.ReadString();
+            break;
+          }
+          case 178: {
+            administrators_.AddEntriesFrom(ref input, _repeated_administrators_codec);
             break;
           }
         }

@@ -974,9 +974,10 @@ namespace Google.Cloud.NetApp.V1 {
     public const int SnapshotIdFieldNumber = 3;
     private string snapshotId_ = "";
     /// <summary>
-    /// Required. ID of the snapshot to create.
-    /// This value must start with a lowercase letter followed by up to 62
-    /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+    /// Required. ID of the snapshot to create. Must be unique within the parent
+    /// resource. Must contain only letters, numbers, underscore and hyphen, with
+    /// the first character a letter or underscore, the last a letter or underscore
+    /// or a number, and a 63 character maximum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

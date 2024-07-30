@@ -1795,9 +1795,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new storage pool.
         /// </param>
         /// <param name="storagePoolId">
-        /// Required. Id of the requesting storage pool
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting storage pool. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1819,9 +1820,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new storage pool.
         /// </param>
         /// <param name="storagePoolId">
-        /// Required. Id of the requesting storage pool
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting storage pool. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1843,9 +1845,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new storage pool.
         /// </param>
         /// <param name="storagePoolId">
-        /// Required. Id of the requesting storage pool
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting storage pool. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1862,9 +1865,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new storage pool.
         /// </param>
         /// <param name="storagePoolId">
-        /// Required. Id of the requesting storage pool
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting storage pool. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1886,9 +1890,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new storage pool.
         /// </param>
         /// <param name="storagePoolId">
-        /// Required. Id of the requesting storage pool
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting storage pool. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1910,9 +1915,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new storage pool.
         /// </param>
         /// <param name="storagePoolId">
-        /// Required. Id of the requesting storage pool
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting storage pool. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2590,9 +2596,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The volume being created.
         /// </param>
         /// <param name="volumeId">
-        /// Required. Id of the requesting volume
-        /// If auto-generating Id server-side, remove this field and
-        /// Id from the method_signature of Create RPC
+        /// Required. Id of the requesting volume. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2614,9 +2621,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The volume being created.
         /// </param>
         /// <param name="volumeId">
-        /// Required. Id of the requesting volume
-        /// If auto-generating Id server-side, remove this field and
-        /// Id from the method_signature of Create RPC
+        /// Required. Id of the requesting volume. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2638,9 +2646,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The volume being created.
         /// </param>
         /// <param name="volumeId">
-        /// Required. Id of the requesting volume
-        /// If auto-generating Id server-side, remove this field and
-        /// Id from the method_signature of Create RPC
+        /// Required. Id of the requesting volume. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2657,9 +2666,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The volume being created.
         /// </param>
         /// <param name="volumeId">
-        /// Required. Id of the requesting volume
-        /// If auto-generating Id server-side, remove this field and
-        /// Id from the method_signature of Create RPC
+        /// Required. Id of the requesting volume. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2681,9 +2691,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The volume being created.
         /// </param>
         /// <param name="volumeId">
-        /// Required. Id of the requesting volume
-        /// If auto-generating Id server-side, remove this field and
-        /// Id from the method_signature of Create RPC
+        /// Required. Id of the requesting volume. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2705,9 +2716,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The volume being created.
         /// </param>
         /// <param name="volumeId">
-        /// Required. Id of the requesting volume
-        /// If auto-generating Id server-side, remove this field and
-        /// Id from the method_signature of Create RPC
+        /// Required. Id of the requesting volume. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3352,9 +3364,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A snapshot resource
         /// </param>
         /// <param name="snapshotId">
-        /// Required. ID of the snapshot to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the snapshot to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3377,9 +3390,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A snapshot resource
         /// </param>
         /// <param name="snapshotId">
-        /// Required. ID of the snapshot to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the snapshot to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3402,9 +3416,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A snapshot resource
         /// </param>
         /// <param name="snapshotId">
-        /// Required. ID of the snapshot to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the snapshot to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3422,9 +3437,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A snapshot resource
         /// </param>
         /// <param name="snapshotId">
-        /// Required. ID of the snapshot to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the snapshot to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3447,9 +3463,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A snapshot resource
         /// </param>
         /// <param name="snapshotId">
-        /// Required. ID of the snapshot to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the snapshot to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3472,9 +3489,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A snapshot resource
         /// </param>
         /// <param name="snapshotId">
-        /// Required. ID of the snapshot to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the snapshot to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4047,7 +4065,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. Fields of the to be created active directory.
         /// </param>
         /// <param name="activeDirectoryId">
-        /// Required. ID of the active directory to create.
+        /// Required. ID of the active directory to create. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4070,7 +4091,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. Fields of the to be created active directory.
         /// </param>
         /// <param name="activeDirectoryId">
-        /// Required. ID of the active directory to create.
+        /// Required. ID of the active directory to create. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4093,7 +4117,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. Fields of the to be created active directory.
         /// </param>
         /// <param name="activeDirectoryId">
-        /// Required. ID of the active directory to create.
+        /// Required. ID of the active directory to create. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4111,7 +4138,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. Fields of the to be created active directory.
         /// </param>
         /// <param name="activeDirectoryId">
-        /// Required. ID of the active directory to create.
+        /// Required. ID of the active directory to create. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4134,7 +4164,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. Fields of the to be created active directory.
         /// </param>
         /// <param name="activeDirectoryId">
-        /// Required. ID of the active directory to create.
+        /// Required. ID of the active directory to create. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4157,7 +4190,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. Fields of the to be created active directory.
         /// </param>
         /// <param name="activeDirectoryId">
-        /// Required. ID of the active directory to create.
+        /// Required. ID of the active directory to create. Must be unique within the
+        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+        /// with the first character a letter or underscore, the last a letter or
+        /// underscore or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4625,9 +4661,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new KmsConfig.
         /// </param>
         /// <param name="kmsConfigId">
-        /// Required. Id of the requesting KmsConfig
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting KmsConfig. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4649,9 +4686,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new KmsConfig.
         /// </param>
         /// <param name="kmsConfigId">
-        /// Required. Id of the requesting KmsConfig
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting KmsConfig. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4673,9 +4711,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new KmsConfig.
         /// </param>
         /// <param name="kmsConfigId">
-        /// Required. Id of the requesting KmsConfig
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting KmsConfig. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4692,9 +4731,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new KmsConfig.
         /// </param>
         /// <param name="kmsConfigId">
-        /// Required. Id of the requesting KmsConfig
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting KmsConfig. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4716,9 +4756,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new KmsConfig.
         /// </param>
         /// <param name="kmsConfigId">
-        /// Required. Id of the requesting KmsConfig
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting KmsConfig. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4740,9 +4781,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. The required parameters to create a new KmsConfig.
         /// </param>
         /// <param name="kmsConfigId">
-        /// Required. Id of the requesting KmsConfig
-        /// If auto-generating Id server-side, remove this field and
-        /// id from the method_signature of Create RPC
+        /// Required. Id of the requesting KmsConfig. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5517,9 +5559,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A replication resource
         /// </param>
         /// <param name="replicationId">
-        /// Required. ID of the replication to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the replication to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5542,9 +5585,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A replication resource
         /// </param>
         /// <param name="replicationId">
-        /// Required. ID of the replication to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the replication to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5567,9 +5611,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A replication resource
         /// </param>
         /// <param name="replicationId">
-        /// Required. ID of the replication to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the replication to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5587,9 +5632,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A replication resource
         /// </param>
         /// <param name="replicationId">
-        /// Required. ID of the replication to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the replication to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5612,9 +5658,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A replication resource
         /// </param>
         /// <param name="replicationId">
-        /// Required. ID of the replication to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the replication to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5637,9 +5684,10 @@ namespace Google.Cloud.NetApp.V1
         /// Required. A replication resource
         /// </param>
         /// <param name="replicationId">
-        /// Required. ID of the replication to create.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Required. ID of the replication to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6122,11 +6170,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// The max supported length is 63 characters.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6151,11 +6197,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// The max supported length is 63 characters.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6180,11 +6224,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// The max supported length is 63 characters.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6204,11 +6246,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// The max supported length is 63 characters.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6233,11 +6273,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// The max supported length is 63 characters.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6262,11 +6300,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// The max supported length is 63 characters.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6874,10 +6910,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6905,10 +6940,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6936,10 +6970,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6962,10 +6995,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6993,10 +7025,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7024,10 +7055,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
-        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
-        /// error.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7646,8 +7676,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7672,8 +7703,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7698,8 +7730,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7719,8 +7752,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7745,8 +7779,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7771,8 +7806,9 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// This value must start with a lowercase letter followed by up to 62
-        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Must contain only letters, numbers, underscore and hyphen, with the first
+        /// character a letter or underscore, the last a letter or underscore or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
