@@ -7068,7 +7068,7 @@ namespace Google.Cloud.Dlp.V2 {
         /// Specification of the field containing the timestamp of scanned items.
         /// Used for data sources like Datastore and BigQuery.
         ///
-        /// &lt;b>For BigQuery&lt;/b>
+        /// **For BigQuery**
         ///
         /// If this value is not specified and the table was modified between the
         /// given start and end times, the entire table will be scanned. If this
@@ -7083,13 +7083,11 @@ namespace Google.Cloud.Dlp.V2 {
         /// you can use any of the following pseudo-columns as your timestamp field.
         /// When used with Cloud DLP, these pseudo-column names are case sensitive.
         ///
-        /// &lt;ul>
-        /// &lt;li>&lt;code>_PARTITIONTIME&lt;/code>&lt;/li>
-        /// &lt;li>&lt;code>_PARTITIONDATE&lt;/code>&lt;/li>
-        /// &lt;li>&lt;code>_PARTITION_LOAD_TIME&lt;/code>&lt;/li>
-        /// &lt;/ul>
+        /// - `_PARTITIONTIME`
+        /// - `_PARTITIONDATE`
+        /// - `_PARTITION_LOAD_TIME`
         ///
-        /// &lt;b>For Datastore&lt;/b>
+        /// **For Datastore**
         ///
         /// If this value is specified, then entities are filtered based on the given
         /// start and end times. If an entity does not contain the provided timestamp
