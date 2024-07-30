@@ -16,14 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dlp_v2_generated_DlpService_ListConnections_sync]
+    // [START dlp_v2_generated_DlpService_SearchConnections_sync_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Cloud.Dlp.V2;
     using System;
 
     public sealed partial class GeneratedDlpServiceClientSnippets
     {
-        /// <summary>Snippet for ListConnections</summary>
+        /// <summary>Snippet for SearchConnections</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,18 +31,14 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListConnectionsRequestObject()
+        public void SearchConnectionsResourceNames1()
         {
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            ListConnectionsRequest request = new ListConnectionsRequest
-            {
-                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
-                Filter = "",
-            };
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListConnectionsResponse, Connection> response = dlpServiceClient.ListConnections(request);
+            PagedEnumerable<SearchConnectionsResponse, Connection> response = dlpServiceClient.SearchConnections(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Connection item in response)
@@ -52,7 +48,7 @@ namespace GoogleCSharpSnippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListConnectionsResponse page in response.AsRawResponses())
+            foreach (SearchConnectionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -77,5 +73,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END dlp_v2_generated_DlpService_ListConnections_sync]
+    // [END dlp_v2_generated_DlpService_SearchConnections_sync_flattened_resourceNames1]
 }

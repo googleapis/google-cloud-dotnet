@@ -16,14 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dlp_v2_generated_DlpService_CreateConnection_async_flattened_resourceNames]
-    using Google.Api.Gax.ResourceNames;
+    // [START dlp_v2_generated_DlpService_CreateConnection_sync_flattened_resourceNames1]
     using Google.Cloud.Dlp.V2;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedDlpServiceClientSnippets
     {
-        /// <summary>Snippet for CreateConnectionAsync</summary>
+        /// <summary>Snippet for CreateConnection</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,16 +29,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateConnectionResourceNamesAsync()
+        public void CreateConnectionResourceNames1()
         {
             // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             Connection connection = new Connection();
             // Make the request
-            Connection response = await dlpServiceClient.CreateConnectionAsync(parent, connection);
+            Connection response = dlpServiceClient.CreateConnection(parent, connection);
         }
     }
-    // [END dlp_v2_generated_DlpService_CreateConnection_async_flattened_resourceNames]
+    // [END dlp_v2_generated_DlpService_CreateConnection_sync_flattened_resourceNames1]
 }

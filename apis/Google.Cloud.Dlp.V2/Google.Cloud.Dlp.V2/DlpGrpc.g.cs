@@ -1442,7 +1442,8 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Lists Connections in a parent.
+      /// Lists Connections in a parent. Use SearchConnections to see all connections
+      /// within an organization.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -4515,7 +4516,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetConnection, null, options, request);
       }
       /// <summary>
-      /// Lists Connections in a parent.
+      /// Lists Connections in a parent. Use SearchConnections to see all connections
+      /// within an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4528,7 +4530,8 @@ namespace Google.Cloud.Dlp.V2 {
         return ListConnections(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Connections in a parent.
+      /// Lists Connections in a parent. Use SearchConnections to see all connections
+      /// within an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4539,7 +4542,8 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListConnections, null, options, request);
       }
       /// <summary>
-      /// Lists Connections in a parent.
+      /// Lists Connections in a parent. Use SearchConnections to see all connections
+      /// within an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4552,7 +4556,8 @@ namespace Google.Cloud.Dlp.V2 {
         return ListConnectionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Connections in a parent.
+      /// Lists Connections in a parent. Use SearchConnections to see all connections
+      /// within an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

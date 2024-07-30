@@ -16,15 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dlp_v2_generated_DlpService_SearchConnections_sync_flattened_resourceNames]
+    // [START dlp_v2_generated_DlpService_SearchConnections_async_flattened_resourceNames1]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Dlp.V2;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedDlpServiceClientSnippets
     {
-        /// <summary>Snippet for SearchConnections</summary>
+        /// <summary>Snippet for SearchConnectionsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +33,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void SearchConnectionsResourceNames()
+        public async Task SearchConnectionsResourceNames1Async()
         {
             // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<SearchConnectionsResponse, Connection> response = dlpServiceClient.SearchConnections(parent);
+            PagedAsyncEnumerable<SearchConnectionsResponse, Connection> response = dlpServiceClient.SearchConnectionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Connection item in response)
+            await response.ForEachAsync((Connection item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchConnectionsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((SearchConnectionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -58,11 +59,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Connection> singlePage = response.ReadPage(pageSize);
+            Page<Connection> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Connection item in singlePage)
@@ -74,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END dlp_v2_generated_DlpService_SearchConnections_sync_flattened_resourceNames]
+    // [END dlp_v2_generated_DlpService_SearchConnections_async_flattened_resourceNames1]
 }
