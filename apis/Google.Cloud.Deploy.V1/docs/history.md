@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.0.0, released 2024-07-30
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove an API that was mistakenly made public ([commit bac7850](https://github.com/googleapis/google-cloud-dotnet/commit/bac78507ef14cfd9ec7bb0c79b2e2c4dd1d628b2))
+- **BREAKING CHANGE** Make changes to an API that is disabled on the server, but whose client libraries were prematurely published ([commit 18300d9](https://github.com/googleapis/google-cloud-dotnet/commit/18300d937ff8c51e9351077798945307e1dbf0be))
+
+### New features
+
+- Add support for different Pod selector labels when doing canaries ([commit 18300d9](https://github.com/googleapis/google-cloud-dotnet/commit/18300d937ff8c51e9351077798945307e1dbf0be))
+
 ## Version 2.19.0, released 2024-07-22
 
 ### New features
