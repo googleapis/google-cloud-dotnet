@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             Connection connection = new Connection();
             // Make the request
             Connection response = await dlpServiceClient.CreateConnectionAsync(parent, connection);

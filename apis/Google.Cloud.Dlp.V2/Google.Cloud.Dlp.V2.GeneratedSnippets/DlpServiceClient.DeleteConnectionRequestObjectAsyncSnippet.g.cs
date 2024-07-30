@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             DeleteConnectionRequest request = new DeleteConnectionRequest
             {
-                ConnectionName = ConnectionName.FromOrganizationLocationConnection("[ORGANIZATION]", "[LOCATION]", "[CONNECTION]"),
+                ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
             };
             // Make the request
             await dlpServiceClient.DeleteConnectionAsync(request);

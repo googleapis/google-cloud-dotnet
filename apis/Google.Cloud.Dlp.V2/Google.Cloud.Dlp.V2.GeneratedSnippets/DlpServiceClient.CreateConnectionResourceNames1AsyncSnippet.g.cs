@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START dlp_v2_generated_DlpService_CreateConnection_async_flattened_resourceNames1]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Dlp.V2;
     using System.Threading.Tasks;
 
@@ -35,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Connection connection = new Connection();
             // Make the request
             Connection response = await dlpServiceClient.CreateConnectionAsync(parent, connection);

@@ -17,7 +17,6 @@
 namespace GoogleCSharpSnippets
 {
     // [START dlp_v2_generated_DlpService_CreateConnection_sync_flattened_resourceNames2]
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Dlp.V2;
 
     public sealed partial class GeneratedDlpServiceClientSnippets
@@ -35,7 +34,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             Connection connection = new Connection();
             // Make the request
             Connection response = dlpServiceClient.CreateConnection(parent, connection);

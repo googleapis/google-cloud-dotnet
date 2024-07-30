@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START dlp_v2_generated_DlpService_SearchConnections_async]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Dlp.V2;
     using System;
     using System.Linq;
@@ -40,7 +41,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             SearchConnectionsRequest request = new SearchConnectionsRequest
             {
-                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request

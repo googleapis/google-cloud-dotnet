@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UpdateConnectionRequest request = new UpdateConnectionRequest
             {
-                ConnectionName = ConnectionName.FromOrganizationLocationConnection("[ORGANIZATION]", "[LOCATION]", "[CONNECTION]"),
+                ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 Connection = new Connection(),
                 UpdateMask = new FieldMask(),
             };
