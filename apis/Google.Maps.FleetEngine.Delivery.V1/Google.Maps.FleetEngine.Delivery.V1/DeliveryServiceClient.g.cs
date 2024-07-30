@@ -423,6 +423,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// Required. The `DeliveryVehicle` entity to create. When creating a new
         /// delivery vehicle, you may set the following optional fields:
         /// 
+        /// * type
         /// * last_location
         /// * attributes
         /// 
@@ -461,6 +462,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// Required. The `DeliveryVehicle` entity to create. When creating a new
         /// delivery vehicle, you may set the following optional fields:
         /// 
+        /// * type
         /// * last_location
         /// * attributes
         /// 
@@ -499,6 +501,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// Required. The `DeliveryVehicle` entity to create. When creating a new
         /// delivery vehicle, you may set the following optional fields:
         /// 
+        /// * type
         /// * last_location
         /// * attributes
         /// 
