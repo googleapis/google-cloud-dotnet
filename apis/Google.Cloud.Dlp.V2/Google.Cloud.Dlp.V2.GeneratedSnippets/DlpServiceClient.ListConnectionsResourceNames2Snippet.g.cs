@@ -18,7 +18,6 @@ namespace GoogleCSharpSnippets
 {
     // [START dlp_v2_generated_DlpService_ListConnections_sync_flattened_resourceNames2]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Dlp.V2;
     using System;
 
@@ -37,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
             PagedEnumerable<ListConnectionsResponse, Connection> response = dlpServiceClient.ListConnections(parent);
 

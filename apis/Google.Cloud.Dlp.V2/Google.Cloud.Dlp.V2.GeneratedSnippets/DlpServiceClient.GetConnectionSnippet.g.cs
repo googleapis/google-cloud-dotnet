@@ -34,7 +34,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/connections/[CONNECTION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]";
             // Make the request
             Connection response = dlpServiceClient.GetConnection(name);
         }
