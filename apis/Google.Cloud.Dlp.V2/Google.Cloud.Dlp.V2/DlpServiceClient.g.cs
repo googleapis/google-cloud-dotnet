@@ -851,11 +851,20 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListFileStoreDataProfilesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListFileStoreDataProfilesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -863,11 +872,20 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetFileStoreDataProfileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetFileStoreDataProfileSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -876,11 +894,20 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteFileStoreDataProfileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteFileStoreDataProfileSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -11849,8 +11876,15 @@ namespace Google.Cloud.Dlp.V2
         /// Create a Connection to an external data source.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent resource name in the format:
-        /// `projects/{project}/locations/{location}`.
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="connection">
         /// Required. The connection resource.
@@ -11868,8 +11902,15 @@ namespace Google.Cloud.Dlp.V2
         /// Create a Connection to an external data source.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent resource name in the format:
-        /// `projects/{project}/locations/{location}`.
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="connection">
         /// Required. The connection resource.
@@ -11887,8 +11928,15 @@ namespace Google.Cloud.Dlp.V2
         /// Create a Connection to an external data source.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent resource name in the format:
-        /// `projects/{project}/locations/{location}`.
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="connection">
         /// Required. The connection resource.
@@ -11902,8 +11950,89 @@ namespace Google.Cloud.Dlp.V2
         /// Create a Connection to an external data source.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent resource name in the format:
-        /// `projects/{project}/locations/{location}`.
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection CreateConnection(OrganizationLocationName parent, Connection connection, gaxgrpc::CallSettings callSettings = null) =>
+            CreateConnection(new CreateConnectionRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Connection = gax::GaxPreconditions.CheckNotNull(connection, nameof(connection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> CreateConnectionAsync(OrganizationLocationName parent, Connection connection, gaxgrpc::CallSettings callSettings = null) =>
+            CreateConnectionAsync(new CreateConnectionRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Connection = gax::GaxPreconditions.CheckNotNull(connection, nameof(connection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> CreateConnectionAsync(OrganizationLocationName parent, Connection connection, st::CancellationToken cancellationToken) =>
+            CreateConnectionAsync(parent, connection, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="connection">
         /// Required. The connection resource.
@@ -11921,8 +12050,15 @@ namespace Google.Cloud.Dlp.V2
         /// Create a Connection to an external data source.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent resource name in the format:
-        /// `projects/{project}/locations/{location}`.
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="connection">
         /// Required. The connection resource.
@@ -11940,8 +12076,15 @@ namespace Google.Cloud.Dlp.V2
         /// Create a Connection to an external data source.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent resource name in the format:
-        /// `projects/{project}/locations/{location}`.
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project or organization):
+        /// 
+        /// + Projects scope:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// + Organizations scope:
+        /// `organizations/ORG_ID/locations/LOCATION_ID`
         /// </param>
         /// <param name="connection">
         /// Required. The connection resource.
@@ -12063,7 +12206,8 @@ namespace Google.Cloud.Dlp.V2
             GetConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists Connections in a parent.
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12072,7 +12216,8 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Connections in a parent.
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12081,11 +12226,13 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Connections in a parent.
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent name, for example:
-        /// `projects/project-id/locations/global`.
+        /// Required. Resource name of the organization or project, for
+        /// example, `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -12115,11 +12262,13 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists Connections in a parent.
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent name, for example:
-        /// `projects/project-id/locations/global`.
+        /// Required. Resource name of the organization or project, for
+        /// example, `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -12149,11 +12298,85 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists Connections in a parent.
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent name, for example:
-        /// `projects/project-id/locations/global`.
+        /// Required. Resource name of the organization or project, for
+        /// example, `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project, for
+        /// example, `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project, for
+        /// example, `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -12183,11 +12406,13 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists Connections in a parent.
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent name, for example:
-        /// `projects/project-id/locations/global`.
+        /// Required. Resource name of the organization or project, for
+        /// example, `organizations/433245324/locations/europe` or
+        /// `projects/project-id/locations/asia`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -12238,8 +12463,9 @@ namespace Google.Cloud.Dlp.V2
         /// Searches for Connections in a parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent name, typically an organization, without location.
-        /// For example: `organizations/12345678`.
+        /// Required. Resource name of the organization or project with a wildcard
+        /// location, for example, `organizations/433245324/locations/-` or
+        /// `projects/project-id/locations/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -12272,8 +12498,9 @@ namespace Google.Cloud.Dlp.V2
         /// Searches for Connections in a parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent name, typically an organization, without location.
-        /// For example: `organizations/12345678`.
+        /// Required. Resource name of the organization or project with a wildcard
+        /// location, for example, `organizations/433245324/locations/-` or
+        /// `projects/project-id/locations/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -12306,8 +12533,79 @@ namespace Google.Cloud.Dlp.V2
         /// Searches for Connections in a parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent name, typically an organization, without location.
-        /// For example: `organizations/12345678`.
+        /// Required. Resource name of the organization or project with a wildcard
+        /// location, for example, `organizations/433245324/locations/-` or
+        /// `projects/project-id/locations/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchConnectionsRequest request = new SearchConnectionsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchConnections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project with a wildcard
+        /// location, for example, `organizations/433245324/locations/-` or
+        /// `projects/project-id/locations/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchConnectionsRequest request = new SearchConnectionsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchConnectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the organization or project with a wildcard
+        /// location, for example, `organizations/433245324/locations/-` or
+        /// `projects/project-id/locations/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -12340,8 +12638,9 @@ namespace Google.Cloud.Dlp.V2
         /// Searches for Connections in a parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent name, typically an organization, without location.
-        /// For example: `organizations/12345678`.
+        /// Required. Resource name of the organization or project with a wildcard
+        /// location, for example, `organizations/433245324/locations/-` or
+        /// `projects/project-id/locations/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -14630,7 +14929,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists Connections in a parent.
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -14642,7 +14942,8 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists Connections in a parent.
+        /// Lists Connections in a parent. Use SearchConnections to see all connections
+        /// within an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

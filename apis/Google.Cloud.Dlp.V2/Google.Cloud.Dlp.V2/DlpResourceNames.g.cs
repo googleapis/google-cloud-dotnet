@@ -3711,10 +3711,18 @@ namespace Google.Cloud.Dlp.V2
             Unparsed = 0,
 
             /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>.
+            /// </summary>
+            OrganizationLocationConnection = 1,
+
+            /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/connections/{connection}</c>.
             /// </summary>
-            ProjectLocationConnection = 1,
+            ProjectLocationConnection = 2,
         }
+
+        private static gax::PathTemplate s_organizationLocationConnection = new gax::PathTemplate("organizations/{organization}/locations/{location}/connections/{connection}");
 
         private static gax::PathTemplate s_projectLocationConnection = new gax::PathTemplate("projects/{project}/locations/{location}/connections/{connection}");
 
@@ -3729,6 +3737,17 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Creates a <see cref="ConnectionName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ConnectionName"/> constructed from the provided ids.</returns>
+        public static ConnectionName FromOrganizationLocationConnection(string organizationId, string locationId, string connectionId) =>
+            new ConnectionName(ResourceNameType.OrganizationLocationConnection, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), connectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)));
+
+        /// <summary>
+        /// Creates a <see cref="ConnectionName"/> with the pattern
         /// <c>projects/{project}/locations/{location}/connections/{connection}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
@@ -3740,17 +3759,31 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ConnectionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/connections/{connection}</c>.
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>.
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="ConnectionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/connections/{connection}</c>.
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>.
         /// </returns>
-        public static string Format(string projectId, string locationId, string connectionId) =>
-            FormatProjectLocationConnection(projectId, locationId, connectionId);
+        public static string Format(string organizationId, string locationId, string connectionId) =>
+            FormatOrganizationLocationConnection(organizationId, locationId, connectionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ConnectionName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ConnectionName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationConnection(string organizationId, string locationId, string connectionId) =>
+            s_organizationLocationConnection.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ConnectionName"/> with pattern
@@ -3771,6 +3804,11 @@ namespace Google.Cloud.Dlp.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>
+        /// </description>
+        /// </item>
+        /// <item>
         /// <description><c>projects/{project}/locations/{location}/connections/{connection}</c></description>
         /// </item>
         /// </list>
@@ -3786,6 +3824,11 @@ namespace Google.Cloud.Dlp.V2
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>
+        /// </description>
+        /// </item>
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/connections/{connection}</c></description>
         /// </item>
@@ -3809,6 +3852,11 @@ namespace Google.Cloud.Dlp.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>
+        /// </description>
+        /// </item>
+        /// <item>
         /// <description><c>projects/{project}/locations/{location}/connections/{connection}</c></description>
         /// </item>
         /// </list>
@@ -3829,6 +3877,11 @@ namespace Google.Cloud.Dlp.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>
+        /// </description>
+        /// </item>
+        /// <item>
         /// <description><c>projects/{project}/locations/{location}/connections/{connection}</c></description>
         /// </item>
         /// </list>
@@ -3848,6 +3901,11 @@ namespace Google.Cloud.Dlp.V2
         {
             gax::GaxPreconditions.CheckNotNull(connectionName, nameof(connectionName));
             gax::TemplatedResourceName resourceName;
+            if (s_organizationLocationConnection.TryParseName(connectionName, out resourceName))
+            {
+                result = FromOrganizationLocationConnection(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (s_projectLocationConnection.TryParseName(connectionName, out resourceName))
             {
                 result = FromProjectLocationConnection(resourceName[0], resourceName[1], resourceName[2]);
@@ -3865,23 +3923,24 @@ namespace Google.Cloud.Dlp.V2
             return false;
         }
 
-        private ConnectionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string connectionId = null, string locationId = null, string projectId = null)
+        private ConnectionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string connectionId = null, string locationId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             ConnectionId = connectionId;
             LocationId = locationId;
+            OrganizationId = organizationId;
             ProjectId = projectId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="ConnectionName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/connections/{connection}</c>
+        /// <c>organizations/{organization}/locations/{location}/connections/{connection}</c>
         /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
-        public ConnectionName(string projectId, string locationId, string connectionId) : this(ResourceNameType.ProjectLocationConnection, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), connectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)))
+        public ConnectionName(string organizationId, string locationId, string connectionId) : this(ResourceNameType.OrganizationLocationConnection, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), connectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)))
         {
         }
 
@@ -3895,17 +3954,24 @@ namespace Google.Cloud.Dlp.V2
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Connection</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Connection</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string ConnectionId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -3919,6 +3985,7 @@ namespace Google.Cloud.Dlp.V2
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.OrganizationLocationConnection: return s_organizationLocationConnection.Expand(OrganizationId, LocationId, ConnectionId);
                 case ResourceNameType.ProjectLocationConnection: return s_projectLocationConnection.Expand(ProjectId, LocationId, ConnectionId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
@@ -5934,11 +6001,44 @@ namespace Google.Cloud.Dlp.V2
     public partial class CreateConnectionRequest
     {
         /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -5958,6 +6058,15 @@ namespace Google.Cloud.Dlp.V2
     public partial class ListConnectionsRequest
     {
         /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::LocationName ParentAsLocationName
@@ -5965,16 +6074,73 @@ namespace Google.Cloud.Dlp.V2
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
     }
 
     public partial class SearchConnectionsRequest
     {
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

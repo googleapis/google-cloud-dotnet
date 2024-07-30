@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetConnectionRequest request = new GetConnectionRequest
             {
-                ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                ConnectionName = ConnectionName.FromOrganizationLocationConnection("[ORGANIZATION]", "[LOCATION]", "[CONNECTION]"),
             };
             // Make the request
             Connection response = dlpServiceClient.GetConnection(request);

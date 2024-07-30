@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dlp_v2_generated_DlpService_GetConnection_async]
+    // [START dlp_v2_generated_DlpService_CreateConnection_sync_flattened_resourceNames2]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Dlp.V2;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedDlpServiceClientSnippets
     {
-        /// <summary>Snippet for GetConnectionAsync</summary>
+        /// <summary>Snippet for CreateConnection</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,18 +30,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetConnectionRequestObjectAsync()
+        public void CreateConnectionResourceNames2()
         {
             // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            GetConnectionRequest request = new GetConnectionRequest
-            {
-                ConnectionName = ConnectionName.FromOrganizationLocationConnection("[ORGANIZATION]", "[LOCATION]", "[CONNECTION]"),
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Connection connection = new Connection();
             // Make the request
-            Connection response = await dlpServiceClient.GetConnectionAsync(request);
+            Connection response = dlpServiceClient.CreateConnection(parent, connection);
         }
     }
-    // [END dlp_v2_generated_DlpService_GetConnection_async]
+    // [END dlp_v2_generated_DlpService_CreateConnection_sync_flattened_resourceNames2]
 }
