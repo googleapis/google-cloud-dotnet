@@ -28,7 +28,7 @@ namespace Grafeas.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
             "L3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8aF2dy",
             "YWZlYXMvdjEvY29tbW9uLnByb3RvIjwKDURpc2NvdmVyeU5vdGUSKwoNYW5h",
-            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQi6QcKE0Rp",
+            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQi/AoKE0Rp",
             "c2NvdmVyeU9jY3VycmVuY2USTwoTY29udGludW91c19hbmFseXNpcxgBIAEo",
             "DjIyLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5Db250aW51b3Vz",
             "QW5hbHlzaXMSRwoPYW5hbHlzaXNfc3RhdHVzGAIgASgOMi4uZ3JhZmVhcy52",
@@ -40,26 +40,36 @@ namespace Grafeas.V1 {
             "Cg5sYXN0X3NjYW5fdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
             "c3RhbXASNQoMYXJjaGl2ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcEID4EEDEj8KC3Nib21fc3RhdHVzGAkgASgLMiouZ3JhZmVh",
-            "cy52MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLlNCT01TdGF0dXMaKgoRQW5hbHlz",
-            "aXNDb21wbGV0ZWQSFQoNYW5hbHlzaXNfdHlwZRgBIAMoCRqpAQoKU0JPTVN0",
-            "YXR1cxJICgpzYm9tX3N0YXRlGAEgASgOMjQuZ3JhZmVhcy52MS5EaXNjb3Zl",
-            "cnlPY2N1cnJlbmNlLlNCT01TdGF0dXMuU0JPTVN0YXRlEg0KBWVycm9yGAIg",
-            "ASgJIkIKCVNCT01TdGF0ZRIaChZTQk9NX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "CwoHUEVORElORxABEgwKCENPTVBMRVRFEAIiUwoSQ29udGludW91c0FuYWx5",
-            "c2lzEiMKH0NPTlRJTlVPVVNfQU5BTFlTSVNfVU5TUEVDSUZJRUQQABIKCgZB",
-            "Q1RJVkUQARIMCghJTkFDVElWRRACIqMBCg5BbmFseXNpc1N0YXR1cxIfChtB",
-            "TkFMWVNJU19TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoI",
-            "U0NBTk5JTkcQAhIUChBGSU5JU0hFRF9TVUNDRVNTEAMSDAoIQ09NUExFVEUQ",
-            "AxITCg9GSU5JU0hFRF9GQUlMRUQQBBIYChRGSU5JU0hFRF9VTlNVUFBPUlRF",
-            "RBAFGgIQAUJRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JB",
-            "YgZwcm90bzM="));
+            "cy52MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLlNCT01TdGF0dXMSWwoZdnVsbmVy",
+            "YWJpbGl0eV9hdHRlc3RhdGlvbhgKIAEoCzI4LmdyYWZlYXMudjEuRGlzY292",
+            "ZXJ5T2NjdXJyZW5jZS5WdWxuZXJhYmlsaXR5QXR0ZXN0YXRpb24aKgoRQW5h",
+            "bHlzaXNDb21wbGV0ZWQSFQoNYW5hbHlzaXNfdHlwZRgBIAMoCRqpAQoKU0JP",
+            "TVN0YXR1cxJICgpzYm9tX3N0YXRlGAEgASgOMjQuZ3JhZmVhcy52MS5EaXNj",
+            "b3ZlcnlPY2N1cnJlbmNlLlNCT01TdGF0dXMuU0JPTVN0YXRlEg0KBWVycm9y",
+            "GAIgASgJIkIKCVNCT01TdGF0ZRIaChZTQk9NX1NUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASCwoHUEVORElORxABEgwKCENPTVBMRVRFEAIaswIKGFZ1bG5lcmFiaWxp",
+            "dHlBdHRlc3RhdGlvbhI1ChFsYXN0X2F0dGVtcHRfdGltZRgBIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASZQoFc3RhdGUYAiABKA4yVi5ncmFm",
+            "ZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuVnVsbmVyYWJpbGl0eUF0dGVz",
+            "dGF0aW9uLlZ1bG5lcmFiaWxpdHlBdHRlc3RhdGlvblN0YXRlEg0KBWVycm9y",
+            "GAMgASgJImoKHVZ1bG5lcmFiaWxpdHlBdHRlc3RhdGlvblN0YXRlEi8KK1ZV",
+            "TE5FUkFCSUxJVFlfQVRURVNUQVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIL",
+            "CgdTVUNDRVNTEAESCwoHRkFJTFVSRRACIlMKEkNvbnRpbnVvdXNBbmFseXNp",
+            "cxIjCh9DT05USU5VT1VTX0FOQUxZU0lTX1VOU1BFQ0lGSUVEEAASCgoGQUNU",
+            "SVZFEAESDAoISU5BQ1RJVkUQAiKjAQoOQW5hbHlzaXNTdGF0dXMSHwobQU5B",
+            "TFlTSVNfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwKCFND",
+            "QU5OSU5HEAISFAoQRklOSVNIRURfU1VDQ0VTUxADEgwKCENPTVBMRVRFEAMS",
+            "EwoPRklOSVNIRURfRkFJTEVEEAQSGAoURklOSVNIRURfVU5TVVBQT1JURUQQ",
+            "BRoCEAFCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryNote), global::Grafeas.V1.DiscoveryNote.Parser, new[]{ "AnalysisKind" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisCompleted", "AnalysisError", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime", "SbomStatus" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted), global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted.Parser, new[]{ "AnalysisType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus), global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Parser, new[]{ "SbomState", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisCompleted", "AnalysisError", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime", "SbomStatus", "VulnerabilityAttestation" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted), global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted.Parser, new[]{ "AnalysisType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus), global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Parser, new[]{ "SbomState", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation), global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Parser, new[]{ "LastAttemptTime", "State", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState) }, null, null)})
           }));
     }
     #endregion
@@ -312,6 +322,7 @@ namespace Grafeas.V1 {
       lastScanTime_ = other.lastScanTime_ != null ? other.lastScanTime_.Clone() : null;
       archiveTime_ = other.archiveTime_ != null ? other.archiveTime_.Clone() : null;
       sbomStatus_ = other.sbomStatus_ != null ? other.sbomStatus_.Clone() : null;
+      vulnerabilityAttestation_ = other.vulnerabilityAttestation_ != null ? other.vulnerabilityAttestation_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -455,6 +466,21 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "vulnerability_attestation" field.</summary>
+    public const int VulnerabilityAttestationFieldNumber = 10;
+    private global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation vulnerabilityAttestation_;
+    /// <summary>
+    /// The status of an vulnerability attestation generation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation VulnerabilityAttestation {
+      get { return vulnerabilityAttestation_; }
+      set {
+        vulnerabilityAttestation_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -479,6 +505,7 @@ namespace Grafeas.V1 {
       if (!object.Equals(LastScanTime, other.LastScanTime)) return false;
       if (!object.Equals(ArchiveTime, other.ArchiveTime)) return false;
       if (!object.Equals(SbomStatus, other.SbomStatus)) return false;
+      if (!object.Equals(VulnerabilityAttestation, other.VulnerabilityAttestation)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -495,6 +522,7 @@ namespace Grafeas.V1 {
       if (lastScanTime_ != null) hash ^= LastScanTime.GetHashCode();
       if (archiveTime_ != null) hash ^= ArchiveTime.GetHashCode();
       if (sbomStatus_ != null) hash ^= SbomStatus.GetHashCode();
+      if (vulnerabilityAttestation_ != null) hash ^= VulnerabilityAttestation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -546,6 +574,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(SbomStatus);
       }
+      if (vulnerabilityAttestation_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(VulnerabilityAttestation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -589,6 +621,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(SbomStatus);
       }
+      if (vulnerabilityAttestation_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(VulnerabilityAttestation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -623,6 +659,9 @@ namespace Grafeas.V1 {
       }
       if (sbomStatus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SbomStatus);
+      }
+      if (vulnerabilityAttestation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VulnerabilityAttestation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -675,6 +714,12 @@ namespace Grafeas.V1 {
           SbomStatus = new global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus();
         }
         SbomStatus.MergeFrom(other.SbomStatus);
+      }
+      if (other.vulnerabilityAttestation_ != null) {
+        if (vulnerabilityAttestation_ == null) {
+          VulnerabilityAttestation = new global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation();
+        }
+        VulnerabilityAttestation.MergeFrom(other.VulnerabilityAttestation);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -742,6 +787,13 @@ namespace Grafeas.V1 {
             input.ReadMessage(SbomStatus);
             break;
           }
+          case 82: {
+            if (vulnerabilityAttestation_ == null) {
+              VulnerabilityAttestation = new global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation();
+            }
+            input.ReadMessage(VulnerabilityAttestation);
+            break;
+          }
         }
       }
     #endif
@@ -806,6 +858,13 @@ namespace Grafeas.V1 {
               SbomStatus = new global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus();
             }
             input.ReadMessage(SbomStatus);
+            break;
+          }
+          case 82: {
+            if (vulnerabilityAttestation_ == null) {
+              VulnerabilityAttestation = new global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation();
+            }
+            input.ReadMessage(VulnerabilityAttestation);
             break;
           }
         }
@@ -1311,6 +1370,317 @@ namespace Grafeas.V1 {
             /// SBOM scanning has completed.
             /// </summary>
             [pbr::OriginalName("COMPLETE")] Complete = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The status of an vulnerability attestation generation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class VulnerabilityAttestation : pb::IMessage<VulnerabilityAttestation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<VulnerabilityAttestation> _parser = new pb::MessageParser<VulnerabilityAttestation>(() => new VulnerabilityAttestation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<VulnerabilityAttestation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Grafeas.V1.DiscoveryOccurrence.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VulnerabilityAttestation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VulnerabilityAttestation(VulnerabilityAttestation other) : this() {
+          lastAttemptTime_ = other.lastAttemptTime_ != null ? other.lastAttemptTime_.Clone() : null;
+          state_ = other.state_;
+          error_ = other.error_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VulnerabilityAttestation Clone() {
+          return new VulnerabilityAttestation(this);
+        }
+
+        /// <summary>Field number for the "last_attempt_time" field.</summary>
+        public const int LastAttemptTimeFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp lastAttemptTime_;
+        /// <summary>
+        /// The last time we attempted to generate an attestation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp LastAttemptTime {
+          get { return lastAttemptTime_; }
+          set {
+            lastAttemptTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "state" field.</summary>
+        public const int StateFieldNumber = 2;
+        private global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState state_ = global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState.Unspecified;
+        /// <summary>
+        /// The success/failure state of the latest attestation attempt.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState State {
+          get { return state_; }
+          set {
+            state_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "error" field.</summary>
+        public const int ErrorFieldNumber = 3;
+        private string error_ = "";
+        /// <summary>
+        /// If failure, the error reason for why the attestation generation failed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Error {
+          get { return error_; }
+          set {
+            error_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as VulnerabilityAttestation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(VulnerabilityAttestation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(LastAttemptTime, other.LastAttemptTime)) return false;
+          if (State != other.State) return false;
+          if (Error != other.Error) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (lastAttemptTime_ != null) hash ^= LastAttemptTime.GetHashCode();
+          if (State != global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState.Unspecified) hash ^= State.GetHashCode();
+          if (Error.Length != 0) hash ^= Error.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (lastAttemptTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(LastAttemptTime);
+          }
+          if (State != global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) State);
+          }
+          if (Error.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Error);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (lastAttemptTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(LastAttemptTime);
+          }
+          if (State != global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) State);
+          }
+          if (Error.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Error);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (lastAttemptTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastAttemptTime);
+          }
+          if (State != global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+          }
+          if (Error.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Error);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(VulnerabilityAttestation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.lastAttemptTime_ != null) {
+            if (lastAttemptTime_ == null) {
+              LastAttemptTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            LastAttemptTime.MergeFrom(other.LastAttemptTime);
+          }
+          if (other.State != global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState.Unspecified) {
+            State = other.State;
+          }
+          if (other.Error.Length != 0) {
+            Error = other.Error;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (lastAttemptTime_ == null) {
+                  LastAttemptTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LastAttemptTime);
+                break;
+              }
+              case 16: {
+                State = (global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Error = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (lastAttemptTime_ == null) {
+                  LastAttemptTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LastAttemptTime);
+                break;
+              }
+              case 16: {
+                State = (global::Grafeas.V1.DiscoveryOccurrence.Types.VulnerabilityAttestation.Types.VulnerabilityAttestationState) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Error = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the VulnerabilityAttestation message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// An enum indicating the state of the attestation generation.
+          /// </summary>
+          public enum VulnerabilityAttestationState {
+            /// <summary>
+            /// Default unknown state.
+            /// </summary>
+            [pbr::OriginalName("VULNERABILITY_ATTESTATION_STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Attestation was successfully generated and stored.
+            /// </summary>
+            [pbr::OriginalName("SUCCESS")] Success = 1,
+            /// <summary>
+            /// Attestation was unsuccessfully generated and stored.
+            /// </summary>
+            [pbr::OriginalName("FAILURE")] Failure = 2,
           }
 
         }

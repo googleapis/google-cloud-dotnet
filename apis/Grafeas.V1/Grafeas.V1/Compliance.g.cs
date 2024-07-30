@@ -35,19 +35,20 @@ namespace Grafeas.V1 {
             "BRImCghzZXZlcml0eRgCIAEoDjIULmdyYWZlYXMudjEuU2V2ZXJpdHlCEQoP",
             "Y29tcGxpYW5jZV90eXBlQhIKEHBvdGVudGlhbF9pbXBhY3QiUQoRQ29tcGxp",
             "YW5jZVZlcnNpb24SDwoHY3BlX3VyaRgBIAEoCRIaChJiZW5jaG1hcmtfZG9j",
-            "dW1lbnQYAyABKAkSDwoHdmVyc2lvbhgCIAEoCSJwChRDb21wbGlhbmNlT2Nj",
-            "dXJyZW5jZRI5ChNub25fY29tcGxpYW50X2ZpbGVzGAIgAygLMhwuZ3JhZmVh",
-            "cy52MS5Ob25Db21wbGlhbnRGaWxlEh0KFW5vbl9jb21wbGlhbmNlX3JlYXNv",
-            "bhgDIAEoCSJJChBOb25Db21wbGlhbnRGaWxlEgwKBHBhdGgYASABKAkSFwoP",
-            "ZGlzcGxheV9jb21tYW5kGAIgASgJEg4KBnJlYXNvbhgDIAEoCUJRCg1pby5n",
-            "cmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
+            "dW1lbnQYAyABKAkSDwoHdmVyc2lvbhgCIAEoCSKgAQoUQ29tcGxpYW5jZU9j",
+            "Y3VycmVuY2USOQoTbm9uX2NvbXBsaWFudF9maWxlcxgCIAMoCzIcLmdyYWZl",
+            "YXMudjEuTm9uQ29tcGxpYW50RmlsZRIdChVub25fY29tcGxpYW5jZV9yZWFz",
+            "b24YAyABKAkSLgoHdmVyc2lvbhgEIAEoCzIdLmdyYWZlYXMudjEuQ29tcGxp",
+            "YW5jZVZlcnNpb24iSQoQTm9uQ29tcGxpYW50RmlsZRIMCgRwYXRoGAEgASgJ",
+            "EhcKD2Rpc3BsYXlfY29tbWFuZBgCIAEoCRIOCgZyZWFzb24YAyABKAlCUQoN",
+            "aW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grafeas.V1.SeverityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceNote), global::Grafeas.V1.ComplianceNote.Parser, new[]{ "Title", "Description", "Version", "Rationale", "Remediation", "CisBenchmark", "ScanInstructions", "Impact" }, new[]{ "ComplianceType", "PotentialImpact" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceNote.Types.CisBenchmark), global::Grafeas.V1.ComplianceNote.Types.CisBenchmark.Parser, new[]{ "ProfileLevel", "Severity" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceVersion), global::Grafeas.V1.ComplianceVersion.Parser, new[]{ "CpeUri", "BenchmarkDocument", "Version" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceOccurrence), global::Grafeas.V1.ComplianceOccurrence.Parser, new[]{ "NonCompliantFiles", "NonComplianceReason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ComplianceOccurrence), global::Grafeas.V1.ComplianceOccurrence.Parser, new[]{ "NonCompliantFiles", "NonComplianceReason", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.NonCompliantFile), global::Grafeas.V1.NonCompliantFile.Parser, new[]{ "Path", "DisplayCommand", "Reason" }, null, null, null, null)
           }));
     }
@@ -1157,6 +1158,7 @@ namespace Grafeas.V1 {
     public ComplianceOccurrence(ComplianceOccurrence other) : this() {
       nonCompliantFiles_ = other.nonCompliantFiles_.Clone();
       nonComplianceReason_ = other.nonComplianceReason_;
+      version_ = other.version_ != null ? other.version_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1189,6 +1191,21 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 4;
+    private global::Grafeas.V1.ComplianceVersion version_;
+    /// <summary>
+    /// The OS and config version the benchmark was run on.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.ComplianceVersion Version {
+      get { return version_; }
+      set {
+        version_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1206,6 +1223,7 @@ namespace Grafeas.V1 {
       }
       if(!nonCompliantFiles_.Equals(other.nonCompliantFiles_)) return false;
       if (NonComplianceReason != other.NonComplianceReason) return false;
+      if (!object.Equals(Version, other.Version)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1215,6 +1233,7 @@ namespace Grafeas.V1 {
       int hash = 1;
       hash ^= nonCompliantFiles_.GetHashCode();
       if (NonComplianceReason.Length != 0) hash ^= NonComplianceReason.GetHashCode();
+      if (version_ != null) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1238,6 +1257,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(26);
         output.WriteString(NonComplianceReason);
       }
+      if (version_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1253,6 +1276,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(26);
         output.WriteString(NonComplianceReason);
       }
+      if (version_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1266,6 +1293,9 @@ namespace Grafeas.V1 {
       size += nonCompliantFiles_.CalculateSize(_repeated_nonCompliantFiles_codec);
       if (NonComplianceReason.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NonComplianceReason);
+      }
+      if (version_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Version);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1282,6 +1312,12 @@ namespace Grafeas.V1 {
       nonCompliantFiles_.Add(other.nonCompliantFiles_);
       if (other.NonComplianceReason.Length != 0) {
         NonComplianceReason = other.NonComplianceReason;
+      }
+      if (other.version_ != null) {
+        if (version_ == null) {
+          Version = new global::Grafeas.V1.ComplianceVersion();
+        }
+        Version.MergeFrom(other.Version);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1306,6 +1342,13 @@ namespace Grafeas.V1 {
             NonComplianceReason = input.ReadString();
             break;
           }
+          case 34: {
+            if (version_ == null) {
+              Version = new global::Grafeas.V1.ComplianceVersion();
+            }
+            input.ReadMessage(Version);
+            break;
+          }
         }
       }
     #endif
@@ -1327,6 +1370,13 @@ namespace Grafeas.V1 {
           }
           case 26: {
             NonComplianceReason = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (version_ == null) {
+              Version = new global::Grafeas.V1.ComplianceVersion();
+            }
+            input.ReadMessage(Version);
             break;
           }
         }
