@@ -42,10 +42,6 @@ namespace GoogleCSharpSnippets
                 Release = new Release(),
                 RequestId = "",
                 ValidateOnly = false,
-                OverrideDeployPolicyAsDeployPolicyNames =
-                {
-                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
-                },
             };
             // Make the request
             Operation<Release, OperationMetadata> response = cloudDeployClient.CreateRelease(request);

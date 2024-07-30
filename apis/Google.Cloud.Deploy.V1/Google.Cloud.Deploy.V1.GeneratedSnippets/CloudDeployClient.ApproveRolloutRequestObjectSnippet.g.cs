@@ -38,10 +38,6 @@ namespace GoogleCSharpSnippets
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 Approved = false,
-                OverrideDeployPolicyAsDeployPolicyNames =
-                {
-                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
-                },
             };
             // Make the request
             ApproveRolloutResponse response = cloudDeployClient.ApproveRollout(request);

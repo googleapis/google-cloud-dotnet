@@ -58,12 +58,6 @@
                 "CreateDeliveryPipelineAsync"
               ]
             },
-            "CreateDeployPolicy": {
-              "methods": [
-                "CreateDeployPolicy",
-                "CreateDeployPolicyAsync"
-              ]
-            },
             "CreateRelease": {
               "methods": [
                 "CreateRelease",
@@ -100,12 +94,6 @@
                 "DeleteDeliveryPipelineAsync"
               ]
             },
-            "DeleteDeployPolicy": {
-              "methods": [
-                "DeleteDeployPolicy",
-                "DeleteDeployPolicyAsync"
-              ]
-            },
             "DeleteTarget": {
               "methods": [
                 "DeleteTarget",
@@ -140,12 +128,6 @@
               "methods": [
                 "GetDeliveryPipeline",
                 "GetDeliveryPipelineAsync"
-              ]
-            },
-            "GetDeployPolicy": {
-              "methods": [
-                "GetDeployPolicy",
-                "GetDeployPolicyAsync"
               ]
             },
             "GetJobRun": {
@@ -200,12 +182,6 @@
               "methods": [
                 "ListDeliveryPipelines",
                 "ListDeliveryPipelinesAsync"
-              ]
-            },
-            "ListDeployPolicies": {
-              "methods": [
-                "ListDeployPolicies",
-                "ListDeployPoliciesAsync"
               ]
             },
             "ListJobRuns": {
@@ -266,12 +242,6 @@
               "methods": [
                 "UpdateDeliveryPipeline",
                 "UpdateDeliveryPipelineAsync"
-              ]
-            },
-            "UpdateDeployPolicy": {
-              "methods": [
-                "UpdateDeployPolicy",
-                "UpdateDeployPolicyAsync"
               ]
             },
             "UpdateTarget": {
