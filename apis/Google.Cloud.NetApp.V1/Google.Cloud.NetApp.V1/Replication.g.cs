@@ -191,7 +191,7 @@ namespace Google.Cloud.NetApp.V1 {
 
     private long transferBytes_;
     /// <summary>
-    /// bytes trasferred so far in current transfer.
+    /// Cumulative bytes trasferred so far for the replication relatinonship.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -219,7 +219,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int TotalTransferDurationFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Duration totalTransferDuration_;
     /// <summary>
-    /// Total time taken during transfer.
+    /// Cumulative time taken across all transfers for the replication
+    /// relationship.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1569,7 +1570,7 @@ namespace Google.Cloud.NetApp.V1 {
         /// </summary>
         [pbr::OriginalName("STOPPED")] Stopped = 3,
         /// <summary>
-        /// Replication is in progress.
+        /// Incremental replication is in progress.
         /// </summary>
         [pbr::OriginalName("TRANSFERRING")] Transferring = 4,
       }
@@ -2810,9 +2811,10 @@ namespace Google.Cloud.NetApp.V1 {
     public const int ReplicationIdFieldNumber = 3;
     private string replicationId_ = "";
     /// <summary>
-    /// Required. ID of the replication to create.
-    /// This value must start with a lowercase letter followed by up to 62
-    /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+    /// Required. ID of the replication to create. Must be unique within the parent
+    /// resource. Must contain only letters, numbers, underscore and hyphen, with
+    /// the first character a letter or underscore, the last a letter or underscore
+    /// or a number, and a 63 character maximum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -47,7 +47,7 @@ namespace Google.Cloud.NetApp.V1 {
             "dGFwcC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSDQoFZm9yY2UYAiABKAgiYwoT",
             "UmV2ZXJ0Vm9sdW1lUmVxdWVzdBIyCgRuYW1lGAEgASgJQiTgQQL6QR4KHG5l",
             "dGFwcC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSGAoLc25hcHNob3RfaWQYAiAB",
-            "KAlCA+BBAiKEDwoGVm9sdW1lEhEKBG5hbWUYASABKAlCA+BBCBI4CgVzdGF0",
+            "KAlCA+BBAiLwDwoGVm9sdW1lEhEKBG5hbWUYASABKAlCA+BBCBI4CgVzdGF0",
             "ZRgCIAEoDjIkLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuVm9sdW1lLlN0YXRl",
             "QgPgQQMSGgoNc3RhdGVfZGV0YWlscxgDIAEoCUID4EEDEjQKC2NyZWF0ZV90",
             "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhcK",
@@ -81,86 +81,88 @@ namespace Google.Cloud.NetApp.V1 {
             "GB0gASgIQgPgQQMSQAoNYmFja3VwX2NvbmZpZxgeIAEoCzIkLmdvb2dsZS5j",
             "bG91ZC5uZXRhcHAudjEuQmFja3VwQ29uZmlnSACIAQESSQoScmVzdHJpY3Rl",
             "ZF9hY3Rpb25zGB8gAygOMiguZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXN0",
-            "cmljdGVkQWN0aW9uQgPgQQESQgoOdGllcmluZ19wb2xpY3kYIiABKAsyJS5n",
-            "b29nbGUuY2xvdWQubmV0YXBwLnYxLlRpZXJpbmdQb2xpY3lIAYgBARotCgtM",
-            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInsK",
-            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIMCghD",
-            "UkVBVElORxACEgwKCERFTEVUSU5HEAMSDAoIVVBEQVRJTkcQBBINCglSRVNU",
-            "T1JJTkcQBRIMCghESVNBQkxFRBAGEgkKBUVSUk9SEAc6bOpBaQocbmV0YXBw",
-            "Lmdvb2dsZWFwaXMuY29tL1ZvbHVtZRI4cHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L3ZvbHVtZXMve3ZvbHVtZX0qB3ZvbHVtZXMy",
-            "BnZvbHVtZUIQCg5fYmFja3VwX2NvbmZpZ0IRCg9fdGllcmluZ19wb2xpY3ki",
-            "UgoMRXhwb3J0UG9saWN5EkIKBXJ1bGVzGAEgAygLMi4uZ29vZ2xlLmNsb3Vk",
-            "Lm5ldGFwcC52MS5TaW1wbGVFeHBvcnRQb2xpY3lSdWxlQgPgQQIi/AQKFlNp",
-            "bXBsZUV4cG9ydFBvbGljeVJ1bGUSHAoPYWxsb3dlZF9jbGllbnRzGAEgASgJ",
-            "SACIAQESHAoPaGFzX3Jvb3RfYWNjZXNzGAIgASgJSAGIAQESPAoLYWNjZXNz",
-            "X3R5cGUYAyABKA4yIi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkFjY2Vzc1R5",
-            "cGVIAogBARISCgVuZnN2MxgEIAEoCEgDiAEBEhIKBW5mc3Y0GAUgASgISASI",
-            "AQESIQoUa2VyYmVyb3NfNV9yZWFkX29ubHkYBiABKAhIBYgBARIiChVrZXJi",
-            "ZXJvc181X3JlYWRfd3JpdGUYByABKAhIBogBARIiChVrZXJiZXJvc181aV9y",
-            "ZWFkX29ubHkYCCABKAhIB4gBARIjChZrZXJiZXJvc181aV9yZWFkX3dyaXRl",
-            "GAkgASgISAiIAQESIgoVa2VyYmVyb3NfNXBfcmVhZF9vbmx5GAogASgISAmI",
-            "AQESIwoWa2VyYmVyb3NfNXBfcmVhZF93cml0ZRgLIAEoCEgKiAEBQhIKEF9h",
-            "bGxvd2VkX2NsaWVudHNCEgoQX2hhc19yb290X2FjY2Vzc0IOCgxfYWNjZXNz",
-            "X3R5cGVCCAoGX25mc3YzQggKBl9uZnN2NEIXChVfa2VyYmVyb3NfNV9yZWFk",
-            "X29ubHlCGAoWX2tlcmJlcm9zXzVfcmVhZF93cml0ZUIYChZfa2VyYmVyb3Nf",
-            "NWlfcmVhZF9vbmx5QhkKF19rZXJiZXJvc181aV9yZWFkX3dyaXRlQhgKFl9r",
-            "ZXJiZXJvc181cF9yZWFkX29ubHlCGQoXX2tlcmJlcm9zXzVwX3JlYWRfd3Jp",
-            "dGUimgMKDlNuYXBzaG90UG9saWN5EhQKB2VuYWJsZWQYASABKAhIAIgBARJE",
-            "Cg9ob3VybHlfc2NoZWR1bGUYAiABKAsyJi5nb29nbGUuY2xvdWQubmV0YXBw",
-            "LnYxLkhvdXJseVNjaGVkdWxlSAGIAQESQgoOZGFpbHlfc2NoZWR1bGUYAyAB",
-            "KAsyJS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkRhaWx5U2NoZWR1bGVIAogB",
-            "ARJECg93ZWVrbHlfc2NoZWR1bGUYBCABKAsyJi5nb29nbGUuY2xvdWQubmV0",
-            "YXBwLnYxLldlZWtseVNjaGVkdWxlSAOIAQESRgoQbW9udGhseV9zY2hlZHVs",
-            "ZRgFIAEoCzInLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuTW9udGhseVNjaGVk",
-            "dWxlSASIAQFCCgoIX2VuYWJsZWRCEgoQX2hvdXJseV9zY2hlZHVsZUIRCg9f",
-            "ZGFpbHlfc2NoZWR1bGVCEgoQX3dlZWtseV9zY2hlZHVsZUITChFfbW9udGhs",
-            "eV9zY2hlZHVsZSJmCg5Ib3VybHlTY2hlZHVsZRIeChFzbmFwc2hvdHNfdG9f",
-            "a2VlcBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgCIAEoAUgBiAEBQhQKEl9zbmFw",
-            "c2hvdHNfdG9fa2VlcEIJCgdfbWludXRlIoEBCg1EYWlseVNjaGVkdWxlEh4K",
-            "EXNuYXBzaG90c190b19rZWVwGAEgASgBSACIAQESEwoGbWludXRlGAIgASgB",
-            "SAGIAQESEQoEaG91chgDIAEoAUgCiAEBQhQKEl9zbmFwc2hvdHNfdG9fa2Vl",
-            "cEIJCgdfbWludXRlQgcKBV9ob3VyIpwBCg5XZWVrbHlTY2hlZHVsZRIeChFz",
-            "bmFwc2hvdHNfdG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgCIAEoAUgB",
-            "iAEBEhEKBGhvdXIYAyABKAFIAogBARIQCgNkYXkYBCABKAlIA4gBAUIUChJf",
-            "c25hcHNob3RzX3RvX2tlZXBCCQoHX21pbnV0ZUIHCgVfaG91ckIGCgRfZGF5",
-            "IrEBCg9Nb250aGx5U2NoZWR1bGUSHgoRc25hcHNob3RzX3RvX2tlZXAYASAB",
-            "KAFIAIgBARITCgZtaW51dGUYAiABKAFIAYgBARIRCgRob3VyGAMgASgBSAKI",
-            "AQESGgoNZGF5c19vZl9tb250aBgEIAEoCUgDiAEBQhQKEl9zbmFwc2hvdHNf",
-            "dG9fa2VlcEIJCgdfbWludXRlQgcKBV9ob3VyQhAKDl9kYXlzX29mX21vbnRo",
-            "In0KC01vdW50T3B0aW9uEg4KBmV4cG9ydBgBIAEoCRITCgtleHBvcnRfZnVs",
-            "bBgCIAEoCRIzCghwcm90b2NvbBgDIAEoDjIhLmdvb2dsZS5jbG91ZC5uZXRh",
-            "cHAudjEuUHJvdG9jb2xzEhQKDGluc3RydWN0aW9ucxgEIAEoCSJRChFSZXN0",
-            "b3JlUGFyYW1ldGVycxIZCg9zb3VyY2Vfc25hcHNob3QYASABKAlIABIXCg1z",
-            "b3VyY2VfYmFja3VwGAIgASgJSABCCAoGc291cmNlIpoCCgxCYWNrdXBDb25m",
-            "aWcSQwoPYmFja3VwX3BvbGljaWVzGAEgAygJQirgQQH6QSQKIm5ldGFwcC5n",
-            "b29nbGVhcGlzLmNvbS9CYWNrdXBQb2xpY3kSPwoMYmFja3VwX3ZhdWx0GAIg",
-            "ASgJQingQQH6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVs",
-            "dBIqChhzY2hlZHVsZWRfYmFja3VwX2VuYWJsZWQYAyABKAhCA+BBAUgAiAEB",
-            "EiQKEmJhY2t1cF9jaGFpbl9ieXRlcxgEIAEoA0ID4EEDSAGIAQFCGwoZX3Nj",
-            "aGVkdWxlZF9iYWNrdXBfZW5hYmxlZEIVChNfYmFja3VwX2NoYWluX2J5dGVz",
-            "IvkBCg1UaWVyaW5nUG9saWN5Ek8KC3RpZXJfYWN0aW9uGAEgASgOMjAuZ29v",
-            "Z2xlLmNsb3VkLm5ldGFwcC52MS5UaWVyaW5nUG9saWN5LlRpZXJBY3Rpb25C",
-            "A+BBAUgAiAEBEigKFmNvb2xpbmdfdGhyZXNob2xkX2RheXMYAiABKAVCA+BB",
-            "AUgBiAEBIkIKClRpZXJBY3Rpb24SGwoXVElFUl9BQ1RJT05fVU5TUEVDSUZJ",
-            "RUQQABILCgdFTkFCTEVEEAESCgoGUEFVU0VEEAJCDgoMX3RpZXJfYWN0aW9u",
-            "QhkKF19jb29saW5nX3RocmVzaG9sZF9kYXlzKkUKCVByb3RvY29scxIZChVQ",
-            "Uk9UT0NPTFNfVU5TUEVDSUZJRUQQABIJCgVORlNWMxABEgkKBU5GU1Y0EAIS",
-            "BwoDU01CEAMqVwoKQWNjZXNzVHlwZRIbChdBQ0NFU1NfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEg0KCVJFQURfT05MWRABEg4KClJFQURfV1JJVEUQAhINCglSRUFE",
-            "X05PTkUQAyroAQoLU01CU2V0dGluZ3MSHAoYU01CX1NFVFRJTkdTX1VOU1BF",
-            "Q0lGSUVEEAASEAoMRU5DUllQVF9EQVRBEAESDQoJQlJPV1NBQkxFEAISEQoN",
-            "Q0hBTkdFX05PVElGWRADEhEKDU5PTl9CUk9XU0FCTEUQBBILCgdPUExPQ0tT",
-            "EAUSEQoNU0hPV19TTkFQU0hPVBAGEhoKFlNIT1dfUFJFVklPVVNfVkVSU0lP",
-            "TlMQBxIcChhBQ0NFU1NfQkFTRURfRU5VTUVSQVRJT04QCBIaChZDT05USU5V",
-            "T1VTTFlfQVZBSUxBQkxFEAkqQwoNU2VjdXJpdHlTdHlsZRIeChpTRUNVUklU",
-            "WV9TVFlMRV9VTlNQRUNJRklFRBAAEggKBE5URlMQARIICgRVTklYEAIqQQoQ",
-            "UmVzdHJpY3RlZEFjdGlvbhIhCh1SRVNUUklDVEVEX0FDVElPTl9VTlNQRUNJ",
-            "RklFRBAAEgoKBkRFTEVURRABQq0BChpjb20uZ29vZ2xlLmNsb3VkLm5ldGFw",
-            "cC52MUILVm9sdW1lUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRh",
-            "cHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0",
-            "QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xv",
-            "dWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "cmljdGVkQWN0aW9uQgPgQQESGwoObGFyZ2VfY2FwYWNpdHkYICABKAhCA+BB",
+            "ARIfChJtdWx0aXBsZV9lbmRwb2ludHMYISABKAhCA+BBARJCCg50aWVyaW5n",
+            "X3BvbGljeRgiIAEoCzIlLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuVGllcmlu",
+            "Z1BvbGljeUgBiAEBEhkKDHJlcGxpY2Ffem9uZRgkIAEoCUID4EEDEhEKBHpv",
+            "bmUYJSABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBInsKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCERFTEVUSU5HEAMSDAoI",
+            "VVBEQVRJTkcQBBINCglSRVNUT1JJTkcQBRIMCghESVNBQkxFRBAGEgkKBUVS",
+            "Uk9SEAc6bOpBaQocbmV0YXBwLmdvb2dsZWFwaXMuY29tL1ZvbHVtZRI4cHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3ZvbHVtZXMv",
+            "e3ZvbHVtZX0qB3ZvbHVtZXMyBnZvbHVtZUIQCg5fYmFja3VwX2NvbmZpZ0IR",
+            "Cg9fdGllcmluZ19wb2xpY3kiUgoMRXhwb3J0UG9saWN5EkIKBXJ1bGVzGAEg",
+            "AygLMi4uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5TaW1wbGVFeHBvcnRQb2xp",
+            "Y3lSdWxlQgPgQQIi/AQKFlNpbXBsZUV4cG9ydFBvbGljeVJ1bGUSHAoPYWxs",
+            "b3dlZF9jbGllbnRzGAEgASgJSACIAQESHAoPaGFzX3Jvb3RfYWNjZXNzGAIg",
+            "ASgJSAGIAQESPAoLYWNjZXNzX3R5cGUYAyABKA4yIi5nb29nbGUuY2xvdWQu",
+            "bmV0YXBwLnYxLkFjY2Vzc1R5cGVIAogBARISCgVuZnN2MxgEIAEoCEgDiAEB",
+            "EhIKBW5mc3Y0GAUgASgISASIAQESIQoUa2VyYmVyb3NfNV9yZWFkX29ubHkY",
+            "BiABKAhIBYgBARIiChVrZXJiZXJvc181X3JlYWRfd3JpdGUYByABKAhIBogB",
+            "ARIiChVrZXJiZXJvc181aV9yZWFkX29ubHkYCCABKAhIB4gBARIjChZrZXJi",
+            "ZXJvc181aV9yZWFkX3dyaXRlGAkgASgISAiIAQESIgoVa2VyYmVyb3NfNXBf",
+            "cmVhZF9vbmx5GAogASgISAmIAQESIwoWa2VyYmVyb3NfNXBfcmVhZF93cml0",
+            "ZRgLIAEoCEgKiAEBQhIKEF9hbGxvd2VkX2NsaWVudHNCEgoQX2hhc19yb290",
+            "X2FjY2Vzc0IOCgxfYWNjZXNzX3R5cGVCCAoGX25mc3YzQggKBl9uZnN2NEIX",
+            "ChVfa2VyYmVyb3NfNV9yZWFkX29ubHlCGAoWX2tlcmJlcm9zXzVfcmVhZF93",
+            "cml0ZUIYChZfa2VyYmVyb3NfNWlfcmVhZF9vbmx5QhkKF19rZXJiZXJvc181",
+            "aV9yZWFkX3dyaXRlQhgKFl9rZXJiZXJvc181cF9yZWFkX29ubHlCGQoXX2tl",
+            "cmJlcm9zXzVwX3JlYWRfd3JpdGUimgMKDlNuYXBzaG90UG9saWN5EhQKB2Vu",
+            "YWJsZWQYASABKAhIAIgBARJECg9ob3VybHlfc2NoZWR1bGUYAiABKAsyJi5n",
+            "b29nbGUuY2xvdWQubmV0YXBwLnYxLkhvdXJseVNjaGVkdWxlSAGIAQESQgoO",
+            "ZGFpbHlfc2NoZWR1bGUYAyABKAsyJS5nb29nbGUuY2xvdWQubmV0YXBwLnYx",
+            "LkRhaWx5U2NoZWR1bGVIAogBARJECg93ZWVrbHlfc2NoZWR1bGUYBCABKAsy",
+            "Ji5nb29nbGUuY2xvdWQubmV0YXBwLnYxLldlZWtseVNjaGVkdWxlSAOIAQES",
+            "RgoQbW9udGhseV9zY2hlZHVsZRgFIAEoCzInLmdvb2dsZS5jbG91ZC5uZXRh",
+            "cHAudjEuTW9udGhseVNjaGVkdWxlSASIAQFCCgoIX2VuYWJsZWRCEgoQX2hv",
+            "dXJseV9zY2hlZHVsZUIRCg9fZGFpbHlfc2NoZWR1bGVCEgoQX3dlZWtseV9z",
+            "Y2hlZHVsZUITChFfbW9udGhseV9zY2hlZHVsZSJmCg5Ib3VybHlTY2hlZHVs",
+            "ZRIeChFzbmFwc2hvdHNfdG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgC",
+            "IAEoAUgBiAEBQhQKEl9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlIoEB",
+            "Cg1EYWlseVNjaGVkdWxlEh4KEXNuYXBzaG90c190b19rZWVwGAEgASgBSACI",
+            "AQESEwoGbWludXRlGAIgASgBSAGIAQESEQoEaG91chgDIAEoAUgCiAEBQhQK",
+            "El9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlQgcKBV9ob3VyIpwBCg5X",
+            "ZWVrbHlTY2hlZHVsZRIeChFzbmFwc2hvdHNfdG9fa2VlcBgBIAEoAUgAiAEB",
+            "EhMKBm1pbnV0ZRgCIAEoAUgBiAEBEhEKBGhvdXIYAyABKAFIAogBARIQCgNk",
+            "YXkYBCABKAlIA4gBAUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoHX21pbnV0",
+            "ZUIHCgVfaG91ckIGCgRfZGF5IrEBCg9Nb250aGx5U2NoZWR1bGUSHgoRc25h",
+            "cHNob3RzX3RvX2tlZXAYASABKAFIAIgBARITCgZtaW51dGUYAiABKAFIAYgB",
+            "ARIRCgRob3VyGAMgASgBSAKIAQESGgoNZGF5c19vZl9tb250aBgEIAEoCUgD",
+            "iAEBQhQKEl9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlQgcKBV9ob3Vy",
+            "QhAKDl9kYXlzX29mX21vbnRoIn0KC01vdW50T3B0aW9uEg4KBmV4cG9ydBgB",
+            "IAEoCRITCgtleHBvcnRfZnVsbBgCIAEoCRIzCghwcm90b2NvbBgDIAEoDjIh",
+            "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuUHJvdG9jb2xzEhQKDGluc3RydWN0",
+            "aW9ucxgEIAEoCSJRChFSZXN0b3JlUGFyYW1ldGVycxIZCg9zb3VyY2Vfc25h",
+            "cHNob3QYASABKAlIABIXCg1zb3VyY2VfYmFja3VwGAIgASgJSABCCAoGc291",
+            "cmNlIpoCCgxCYWNrdXBDb25maWcSQwoPYmFja3VwX3BvbGljaWVzGAEgAygJ",
+            "QirgQQH6QSQKIm5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBQb2xpY3kS",
+            "PwoMYmFja3VwX3ZhdWx0GAIgASgJQingQQH6QSMKIW5ldGFwcC5nb29nbGVh",
+            "cGlzLmNvbS9CYWNrdXBWYXVsdBIqChhzY2hlZHVsZWRfYmFja3VwX2VuYWJs",
+            "ZWQYAyABKAhCA+BBAUgAiAEBEiQKEmJhY2t1cF9jaGFpbl9ieXRlcxgEIAEo",
+            "A0ID4EEDSAGIAQFCGwoZX3NjaGVkdWxlZF9iYWNrdXBfZW5hYmxlZEIVChNf",
+            "YmFja3VwX2NoYWluX2J5dGVzIvkBCg1UaWVyaW5nUG9saWN5Ek8KC3RpZXJf",
+            "YWN0aW9uGAEgASgOMjAuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5UaWVyaW5n",
+            "UG9saWN5LlRpZXJBY3Rpb25CA+BBAUgAiAEBEigKFmNvb2xpbmdfdGhyZXNo",
+            "b2xkX2RheXMYAiABKAVCA+BBAUgBiAEBIkIKClRpZXJBY3Rpb24SGwoXVElF",
+            "Ul9BQ1RJT05fVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESCgoGUEFVU0VE",
+            "EAJCDgoMX3RpZXJfYWN0aW9uQhkKF19jb29saW5nX3RocmVzaG9sZF9kYXlz",
+            "KkUKCVByb3RvY29scxIZChVQUk9UT0NPTFNfVU5TUEVDSUZJRUQQABIJCgVO",
+            "RlNWMxABEgkKBU5GU1Y0EAISBwoDU01CEAMqVwoKQWNjZXNzVHlwZRIbChdB",
+            "Q0NFU1NfVFlQRV9VTlNQRUNJRklFRBAAEg0KCVJFQURfT05MWRABEg4KClJF",
+            "QURfV1JJVEUQAhINCglSRUFEX05PTkUQAyroAQoLU01CU2V0dGluZ3MSHAoY",
+            "U01CX1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASEAoMRU5DUllQVF9EQVRBEAES",
+            "DQoJQlJPV1NBQkxFEAISEQoNQ0hBTkdFX05PVElGWRADEhEKDU5PTl9CUk9X",
+            "U0FCTEUQBBILCgdPUExPQ0tTEAUSEQoNU0hPV19TTkFQU0hPVBAGEhoKFlNI",
+            "T1dfUFJFVklPVVNfVkVSU0lPTlMQBxIcChhBQ0NFU1NfQkFTRURfRU5VTUVS",
+            "QVRJT04QCBIaChZDT05USU5VT1VTTFlfQVZBSUxBQkxFEAkqQwoNU2VjdXJp",
+            "dHlTdHlsZRIeChpTRUNVUklUWV9TVFlMRV9VTlNQRUNJRklFRBAAEggKBE5U",
+            "RlMQARIICgRVTklYEAIqQQoQUmVzdHJpY3RlZEFjdGlvbhIhCh1SRVNUUklD",
+            "VEVEX0FDVElPTl9VTlNQRUNJRklFRBAAEgoKBkRFTEVURRABQq0BChpjb20u",
+            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MUILVm9sdW1lUHJvdG9QAVoyY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKq",
+            "AhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFw",
+            "cFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.Protocols), typeof(global::Google.Cloud.NetApp.V1.AccessType), typeof(global::Google.Cloud.NetApp.V1.SMBSettings), typeof(global::Google.Cloud.NetApp.V1.SecurityStyle), typeof(global::Google.Cloud.NetApp.V1.RestrictedAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -171,7 +173,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateVolumeRequest), global::Google.Cloud.NetApp.V1.UpdateVolumeRequest.Parser, new[]{ "UpdateMask", "Volume" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteVolumeRequest), global::Google.Cloud.NetApp.V1.DeleteVolumeRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.RevertVolumeRequest), global::Google.Cloud.NetApp.V1.RevertVolumeRequest.Parser, new[]{ "Name", "SnapshotId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Volume), global::Google.Cloud.NetApp.V1.Volume.Parser, new[]{ "Name", "State", "StateDetails", "CreateTime", "ShareName", "PsaRange", "StoragePool", "Network", "ServiceLevel", "CapacityGib", "ExportPolicy", "Protocols", "SmbSettings", "MountOptions", "UnixPermissions", "Labels", "Description", "SnapshotPolicy", "SnapReserve", "SnapshotDirectory", "UsedGib", "SecurityStyle", "KerberosEnabled", "LdapEnabled", "ActiveDirectory", "RestoreParameters", "KmsConfig", "EncryptionType", "HasReplication", "BackupConfig", "RestrictedActions", "TieringPolicy" }, new[]{ "BackupConfig", "TieringPolicy" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Volume.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Volume), global::Google.Cloud.NetApp.V1.Volume.Parser, new[]{ "Name", "State", "StateDetails", "CreateTime", "ShareName", "PsaRange", "StoragePool", "Network", "ServiceLevel", "CapacityGib", "ExportPolicy", "Protocols", "SmbSettings", "MountOptions", "UnixPermissions", "Labels", "Description", "SnapshotPolicy", "SnapReserve", "SnapshotDirectory", "UsedGib", "SecurityStyle", "KerberosEnabled", "LdapEnabled", "ActiveDirectory", "RestoreParameters", "KmsConfig", "EncryptionType", "HasReplication", "BackupConfig", "RestrictedActions", "LargeCapacity", "MultipleEndpoints", "TieringPolicy", "ReplicaZone", "Zone" }, new[]{ "BackupConfig", "TieringPolicy" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Volume.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ExportPolicy), global::Google.Cloud.NetApp.V1.ExportPolicy.Parser, new[]{ "Rules" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule), global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Parser, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite" }, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SnapshotPolicy), global::Google.Cloud.NetApp.V1.SnapshotPolicy.Parser, new[]{ "Enabled", "HourlySchedule", "DailySchedule", "WeeklySchedule", "MonthlySchedule" }, new[]{ "Enabled", "HourlySchedule", "DailySchedule", "WeeklySchedule", "MonthlySchedule" }, null, null, null),
@@ -1191,9 +1193,10 @@ namespace Google.Cloud.NetApp.V1 {
     public const int VolumeIdFieldNumber = 2;
     private string volumeId_ = "";
     /// <summary>
-    /// Required. Id of the requesting volume
-    /// If auto-generating Id server-side, remove this field and
-    /// Id from the method_signature of Create RPC
+    /// Required. Id of the requesting volume. Must be unique within the parent
+    /// resource. Must contain only letters, numbers, underscore and hyphen, with
+    /// the first character a letter or underscore, the last a letter or underscore
+    /// or a number, and a 63 character maximum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2213,7 +2216,11 @@ namespace Google.Cloud.NetApp.V1 {
       hasReplication_ = other.hasReplication_;
       backupConfig_ = other.backupConfig_ != null ? other.backupConfig_.Clone() : null;
       restrictedActions_ = other.restrictedActions_.Clone();
+      largeCapacity_ = other.largeCapacity_;
+      multipleEndpoints_ = other.multipleEndpoints_;
       tieringPolicy_ = other.tieringPolicy_ != null ? other.tieringPolicy_.Clone() : null;
+      replicaZone_ = other.replicaZone_;
+      zone_ = other.zone_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2692,6 +2699,39 @@ namespace Google.Cloud.NetApp.V1 {
       get { return restrictedActions_; }
     }
 
+    /// <summary>Field number for the "large_capacity" field.</summary>
+    public const int LargeCapacityFieldNumber = 32;
+    private bool largeCapacity_;
+    /// <summary>
+    /// Optional. Flag indicating if the volume will be a large capacity volume or
+    /// a regular volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LargeCapacity {
+      get { return largeCapacity_; }
+      set {
+        largeCapacity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "multiple_endpoints" field.</summary>
+    public const int MultipleEndpointsFieldNumber = 33;
+    private bool multipleEndpoints_;
+    /// <summary>
+    /// Optional. Flag indicating if the volume will have an IP address per node
+    /// for volumes supporting multiple IP endpoints. Only the volume with
+    /// large_capacity will be allowed to have multiple endpoints.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MultipleEndpoints {
+      get { return multipleEndpoints_; }
+      set {
+        multipleEndpoints_ = value;
+      }
+    }
+
     /// <summary>Field number for the "tiering_policy" field.</summary>
     public const int TieringPolicyFieldNumber = 34;
     private global::Google.Cloud.NetApp.V1.TieringPolicy tieringPolicy_;
@@ -2704,6 +2744,36 @@ namespace Google.Cloud.NetApp.V1 {
       get { return tieringPolicy_; }
       set {
         tieringPolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "replica_zone" field.</summary>
+    public const int ReplicaZoneFieldNumber = 36;
+    private string replicaZone_ = "";
+    /// <summary>
+    /// Output only. Specifies the replica zone for regional volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReplicaZone {
+      get { return replicaZone_; }
+      set {
+        replicaZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "zone" field.</summary>
+    public const int ZoneFieldNumber = 37;
+    private string zone_ = "";
+    /// <summary>
+    /// Output only. Specifies the active zone for regional volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Zone {
+      get { return zone_; }
+      set {
+        zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2753,7 +2823,11 @@ namespace Google.Cloud.NetApp.V1 {
       if (HasReplication != other.HasReplication) return false;
       if (!object.Equals(BackupConfig, other.BackupConfig)) return false;
       if(!restrictedActions_.Equals(other.restrictedActions_)) return false;
+      if (LargeCapacity != other.LargeCapacity) return false;
+      if (MultipleEndpoints != other.MultipleEndpoints) return false;
       if (!object.Equals(TieringPolicy, other.TieringPolicy)) return false;
+      if (ReplicaZone != other.ReplicaZone) return false;
+      if (Zone != other.Zone) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2792,7 +2866,11 @@ namespace Google.Cloud.NetApp.V1 {
       if (HasReplication != false) hash ^= HasReplication.GetHashCode();
       if (backupConfig_ != null) hash ^= BackupConfig.GetHashCode();
       hash ^= restrictedActions_.GetHashCode();
+      if (LargeCapacity != false) hash ^= LargeCapacity.GetHashCode();
+      if (MultipleEndpoints != false) hash ^= MultipleEndpoints.GetHashCode();
       if (tieringPolicy_ != null) hash ^= TieringPolicy.GetHashCode();
+      if (ReplicaZone.Length != 0) hash ^= ReplicaZone.GetHashCode();
+      if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2920,9 +2998,25 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteMessage(BackupConfig);
       }
       restrictedActions_.WriteTo(output, _repeated_restrictedActions_codec);
+      if (LargeCapacity != false) {
+        output.WriteRawTag(128, 2);
+        output.WriteBool(LargeCapacity);
+      }
+      if (MultipleEndpoints != false) {
+        output.WriteRawTag(136, 2);
+        output.WriteBool(MultipleEndpoints);
+      }
       if (tieringPolicy_ != null) {
         output.WriteRawTag(146, 2);
         output.WriteMessage(TieringPolicy);
+      }
+      if (ReplicaZone.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(ReplicaZone);
+      }
+      if (Zone.Length != 0) {
+        output.WriteRawTag(170, 2);
+        output.WriteString(Zone);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3043,9 +3137,25 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteMessage(BackupConfig);
       }
       restrictedActions_.WriteTo(ref output, _repeated_restrictedActions_codec);
+      if (LargeCapacity != false) {
+        output.WriteRawTag(128, 2);
+        output.WriteBool(LargeCapacity);
+      }
+      if (MultipleEndpoints != false) {
+        output.WriteRawTag(136, 2);
+        output.WriteBool(MultipleEndpoints);
+      }
       if (tieringPolicy_ != null) {
         output.WriteRawTag(146, 2);
         output.WriteMessage(TieringPolicy);
+      }
+      if (ReplicaZone.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(ReplicaZone);
+      }
+      if (Zone.Length != 0) {
+        output.WriteRawTag(170, 2);
+        output.WriteString(Zone);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3140,8 +3250,20 @@ namespace Google.Cloud.NetApp.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BackupConfig);
       }
       size += restrictedActions_.CalculateSize(_repeated_restrictedActions_codec);
+      if (LargeCapacity != false) {
+        size += 2 + 1;
+      }
+      if (MultipleEndpoints != false) {
+        size += 2 + 1;
+      }
       if (tieringPolicy_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TieringPolicy);
+      }
+      if (ReplicaZone.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ReplicaZone);
+      }
+      if (Zone.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Zone);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3253,11 +3375,23 @@ namespace Google.Cloud.NetApp.V1 {
         BackupConfig.MergeFrom(other.BackupConfig);
       }
       restrictedActions_.Add(other.restrictedActions_);
+      if (other.LargeCapacity != false) {
+        LargeCapacity = other.LargeCapacity;
+      }
+      if (other.MultipleEndpoints != false) {
+        MultipleEndpoints = other.MultipleEndpoints;
+      }
       if (other.tieringPolicy_ != null) {
         if (tieringPolicy_ == null) {
           TieringPolicy = new global::Google.Cloud.NetApp.V1.TieringPolicy();
         }
         TieringPolicy.MergeFrom(other.TieringPolicy);
+      }
+      if (other.ReplicaZone.Length != 0) {
+        ReplicaZone = other.ReplicaZone;
+      }
+      if (other.Zone.Length != 0) {
+        Zone = other.Zone;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3416,11 +3550,27 @@ namespace Google.Cloud.NetApp.V1 {
             restrictedActions_.AddEntriesFrom(input, _repeated_restrictedActions_codec);
             break;
           }
+          case 256: {
+            LargeCapacity = input.ReadBool();
+            break;
+          }
+          case 264: {
+            MultipleEndpoints = input.ReadBool();
+            break;
+          }
           case 274: {
             if (tieringPolicy_ == null) {
               TieringPolicy = new global::Google.Cloud.NetApp.V1.TieringPolicy();
             }
             input.ReadMessage(TieringPolicy);
+            break;
+          }
+          case 290: {
+            ReplicaZone = input.ReadString();
+            break;
+          }
+          case 298: {
+            Zone = input.ReadString();
             break;
           }
         }
@@ -3580,11 +3730,27 @@ namespace Google.Cloud.NetApp.V1 {
             restrictedActions_.AddEntriesFrom(ref input, _repeated_restrictedActions_codec);
             break;
           }
+          case 256: {
+            LargeCapacity = input.ReadBool();
+            break;
+          }
+          case 264: {
+            MultipleEndpoints = input.ReadBool();
+            break;
+          }
           case 274: {
             if (tieringPolicy_ == null) {
               TieringPolicy = new global::Google.Cloud.NetApp.V1.TieringPolicy();
             }
             input.ReadMessage(TieringPolicy);
+            break;
+          }
+          case 290: {
+            ReplicaZone = input.ReadString();
+            break;
+          }
+          case 298: {
+            Zone = input.ReadString();
             break;
           }
         }

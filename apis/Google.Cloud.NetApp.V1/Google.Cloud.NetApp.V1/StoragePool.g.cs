@@ -47,7 +47,7 @@ namespace Google.Cloud.NetApp.V1 {
             "cmFnZV9wb29sGAIgASgLMiMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5TdG9y",
             "YWdlUG9vbEID4EECIlMKGERlbGV0ZVN0b3JhZ2VQb29sUmVxdWVzdBI3CgRu",
             "YW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9y",
-            "YWdlUG9vbCLbCAoLU3RvcmFnZVBvb2wSEQoEbmFtZRgBIAEoCUID4EEIEkAK",
+            "YWdlUG9vbCKJCQoLU3RvcmFnZVBvb2wSEQoEbmFtZRgBIAEoCUID4EEIEkAK",
             "DXNlcnZpY2VfbGV2ZWwYAiABKA4yJC5nb29nbGUuY2xvdWQubmV0YXBwLnYx",
             "LlNlcnZpY2VMZXZlbEID4EECEhkKDGNhcGFjaXR5X2dpYhgDIAEoA0ID4EEC",
             "EiAKE3ZvbHVtZV9jYXBhY2l0eV9naWIYBCABKANCA+BBAxIZCgx2b2x1bWVf",
@@ -64,19 +64,20 @@ namespace Google.Cloud.NetApp.V1 {
             "CgxsZGFwX2VuYWJsZWQYDiABKAhCA+BBARIWCglwc2FfcmFuZ2UYDyABKAlC",
             "A+BBARJECg9lbmNyeXB0aW9uX3R5cGUYECABKA4yJi5nb29nbGUuY2xvdWQu",
             "bmV0YXBwLnYxLkVuY3J5cHRpb25UeXBlQgPgQQMSJgoVZ2xvYmFsX2FjY2Vz",
-            "c19hbGxvd2VkGBEgASgIQgIYAUgAiAEBGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiewoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAISDAoIREVM",
-            "RVRJTkcQAxIMCghVUERBVElORxAEEg0KCVJFU1RPUklORxAFEgwKCERJU0FC",
-            "TEVEEAYSCQoFRVJST1IQBzqHAepBgwEKIW5ldGFwcC5nb29nbGVhcGlzLmNv",
-            "bS9TdG9yYWdlUG9vbBJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L3N0b3JhZ2VQb29scy97c3RvcmFnZV9wb29sfSoMc3RvcmFn",
-            "ZVBvb2xzMgtzdG9yYWdlUG9vbEIYChZfZ2xvYmFsX2FjY2Vzc19hbGxvd2Vk",
-            "QrIBChpjb20uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MUIQU3RvcmFnZVBvb2xQ",
-            "cm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFwcC9hcGl2MS9uZXRh",
-            "cHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRBcHAuVjHKAhZHb29n",
-            "bGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91ZDo6TmV0QXBwOjpW",
-            "MWIGcHJvdG8z"));
+            "c19hbGxvd2VkGBEgASgIQgIYAUgAiAEBEhkKDHJlcGxpY2Ffem9uZRgUIAEo",
+            "CUID4EEBEhEKBHpvbmUYFSABKAlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInsKBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCERF",
+            "TEVUSU5HEAMSDAoIVVBEQVRJTkcQBBINCglSRVNUT1JJTkcQBRIMCghESVNB",
+            "QkxFRBAGEgkKBUVSUk9SEAc6hwHqQYMBCiFuZXRhcHAuZ29vZ2xlYXBpcy5j",
+            "b20vU3RvcmFnZVBvb2wSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9zdG9yYWdlUG9vbHMve3N0b3JhZ2VfcG9vbH0qDHN0b3Jh",
+            "Z2VQb29sczILc3RvcmFnZVBvb2xCGAoWX2dsb2JhbF9hY2Nlc3NfYWxsb3dl",
+            "ZEKyAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCEFN0b3JhZ2VQb29s",
+            "UHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0",
+            "YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29v",
+            "Z2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +87,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.CreateStoragePoolRequest), global::Google.Cloud.NetApp.V1.CreateStoragePoolRequest.Parser, new[]{ "Parent", "StoragePoolId", "StoragePool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest), global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest.Parser, new[]{ "UpdateMask", "StoragePool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest), global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed" }, new[]{ "GlobalAccessAllowed" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "ReplicaZone", "Zone" }, new[]{ "GlobalAccessAllowed" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -970,9 +971,10 @@ namespace Google.Cloud.NetApp.V1 {
     public const int StoragePoolIdFieldNumber = 2;
     private string storagePoolId_ = "";
     /// <summary>
-    /// Required. Id of the requesting storage pool
-    /// If auto-generating Id server-side, remove this field and
-    /// id from the method_signature of Create RPC
+    /// Required. Id of the requesting storage pool. Must be unique within the
+    /// parent resource. Must contain only letters, numbers, underscore and hyphen,
+    /// with the first character a letter or underscore, the last a letter or
+    /// underscore or a number, and a 63 character maximum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1701,6 +1703,8 @@ namespace Google.Cloud.NetApp.V1 {
       psaRange_ = other.psaRange_;
       encryptionType_ = other.encryptionType_;
       globalAccessAllowed_ = other.globalAccessAllowed_;
+      replicaZone_ = other.replicaZone_;
+      zone_ = other.zone_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1986,6 +1990,36 @@ namespace Google.Cloud.NetApp.V1 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "replica_zone" field.</summary>
+    public const int ReplicaZoneFieldNumber = 20;
+    private string replicaZone_ = "";
+    /// <summary>
+    /// Optional. Specifies the replica zone for regional storagePool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReplicaZone {
+      get { return replicaZone_; }
+      set {
+        replicaZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "zone" field.</summary>
+    public const int ZoneFieldNumber = 21;
+    private string zone_ = "";
+    /// <summary>
+    /// Optional. Specifies the active zone for regional storagePool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Zone {
+      get { return zone_; }
+      set {
+        zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2018,6 +2052,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (PsaRange != other.PsaRange) return false;
       if (EncryptionType != other.EncryptionType) return false;
       if (GlobalAccessAllowed != other.GlobalAccessAllowed) return false;
+      if (ReplicaZone != other.ReplicaZone) return false;
+      if (Zone != other.Zone) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2042,6 +2078,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (PsaRange.Length != 0) hash ^= PsaRange.GetHashCode();
       if (EncryptionType != global::Google.Cloud.NetApp.V1.EncryptionType.Unspecified) hash ^= EncryptionType.GetHashCode();
       if (HasGlobalAccessAllowed) hash ^= GlobalAccessAllowed.GetHashCode();
+      if (ReplicaZone.Length != 0) hash ^= ReplicaZone.GetHashCode();
+      if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2125,6 +2163,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(136, 1);
         output.WriteBool(GlobalAccessAllowed);
       }
+      if (ReplicaZone.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(ReplicaZone);
+      }
+      if (Zone.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(Zone);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2200,6 +2246,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(136, 1);
         output.WriteBool(GlobalAccessAllowed);
       }
+      if (ReplicaZone.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(ReplicaZone);
+      }
+      if (Zone.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(Zone);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2258,6 +2312,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HasGlobalAccessAllowed) {
         size += 2 + 1;
+      }
+      if (ReplicaZone.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ReplicaZone);
+      }
+      if (Zone.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Zone);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2322,6 +2382,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasGlobalAccessAllowed) {
         GlobalAccessAllowed = other.GlobalAccessAllowed;
+      }
+      if (other.ReplicaZone.Length != 0) {
+        ReplicaZone = other.ReplicaZone;
+      }
+      if (other.Zone.Length != 0) {
+        Zone = other.Zone;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2409,6 +2475,14 @@ namespace Google.Cloud.NetApp.V1 {
             GlobalAccessAllowed = input.ReadBool();
             break;
           }
+          case 162: {
+            ReplicaZone = input.ReadString();
+            break;
+          }
+          case 170: {
+            Zone = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2493,6 +2567,14 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 136: {
             GlobalAccessAllowed = input.ReadBool();
+            break;
+          }
+          case 162: {
+            ReplicaZone = input.ReadString();
+            break;
+          }
+          case 170: {
+            Zone = input.ReadString();
             break;
           }
         }
