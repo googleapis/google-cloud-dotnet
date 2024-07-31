@@ -16190,9 +16190,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 = pb::FieldCodec.ForString(18);
             private readonly pbc::RepeatedField<string> sourceBlockIds_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// DO NOT USE.
-            /// List of all parsed documents layout source blocks used to generate the
-            /// chunk.
+            /// Unused.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
