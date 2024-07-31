@@ -30,7 +30,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "cHJvdG8aLmdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTMvZG9jdW1l",
             "bnQucHJvdG8aMWdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTMvZG9j",
             "dW1lbnRfaW8ucHJvdG8aNWdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0",
-            "YTMvZG9jdW1lbnRfc2NoZW1hLnByb3RvIuQHCgdEYXRhc2V0ElwKEmdjc19t",
+            "YTMvZG9jdW1lbnRfc2NoZW1hLnByb3RvIpwICgdEYXRhc2V0ElwKEmdjc19t",
             "YW5hZ2VkX2NvbmZpZxgDIAEoCzI5Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
             "LnYxYmV0YTMuRGF0YXNldC5HQ1NNYW5hZ2VkQ29uZmlnQgPgQQFIABJsChlk",
             "b2N1bWVudF93YXJlaG91c2VfY29uZmlnGAUgASgLMkAuZ29vZ2xlLmNsb3Vk",
@@ -41,50 +41,51 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "ZGV4aW5nX2NvbmZpZxgEIAEoCzI+Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
             "LnYxYmV0YTMuRGF0YXNldC5TcGFubmVySW5kZXhpbmdDb25maWdCA+BBAUgB",
             "EgwKBG5hbWUYASABKAkSQgoFc3RhdGUYAiABKA4yLi5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MWJldGEzLkRhdGFzZXQuU3RhdGVCA+BBAhpXChBHQ1NN",
-            "YW5hZ2VkQ29uZmlnEkMKCmdjc19wcmVmaXgYASABKAsyKi5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkdjc1ByZWZpeEID4EECGnIKF0RvY3Vt",
-            "ZW50V2FyZWhvdXNlQ29uZmlnEhcKCmNvbGxlY3Rpb24YASABKAlCA+BBAxI+",
-            "CgZzY2hlbWEYAiABKAlCLuBBA/pBKAomY29udGVudHdhcmVob3VzZS5nb29n",
-            "bGVhcGlzLmNvbS9TY2hlbWEaGAoWVW5tYW5hZ2VkRGF0YXNldENvbmZpZxoX",
-            "ChVTcGFubmVySW5kZXhpbmdDb25maWciVAoFU3RhdGUSFQoRU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABIRCg1VTklOSVRJQUxJWkVEEAESEAoMSU5JVElBTElaSU5H",
-            "EAISDwoLSU5JVElBTElaRUQQAzpu6kFrCiFkb2N1bWVudGFpLmdvb2dsZWFw",
-            "aXMuY29tL0RhdGFzZXQSRnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9wcm9jZXNzb3JzL3twcm9jZXNzb3J9L2RhdGFzZXRCEAoO",
-            "c3RvcmFnZV9zb3VyY2VCEQoPaW5kZXhpbmdfc291cmNlIoYDCgpEb2N1bWVu",
-            "dElkEl4KEmdjc19tYW5hZ2VkX2RvY19pZBgBIAEoCzJALmdvb2dsZS5jbG91",
-            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRJZC5HQ1NNYW5hZ2VkRG9j",
-            "dW1lbnRJZEgAElsKEHVubWFuYWdlZF9kb2NfaWQYBCABKAsyPy5nb29nbGUu",
-            "Y2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50SWQuVW5tYW5hZ2Vk",
-            "RG9jdW1lbnRJZEgAEkIKDHJldmlzaW9uX3JlZhgDIAEoCzIsLmdvb2dsZS5j",
-            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuUmV2aXNpb25SZWYaQwoUR0NTTWFu",
-            "YWdlZERvY3VtZW50SWQSFAoHZ2NzX3VyaRgBIAEoCUID4EECEhUKCWN3X2Rv",
-            "Y19pZBgCIAEoCUICGAEaKgoTVW5tYW5hZ2VkRG9jdW1lbnRJZBITCgZkb2Nf",
-            "aWQYASABKAlCA+BBAkIGCgR0eXBlIvEBCg1EYXRhc2V0U2NoZW1hEgwKBG5h",
-            "bWUYASABKAkSTQoPZG9jdW1lbnRfc2NoZW1hGAMgASgLMi8uZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudFNjaGVtYUID4EEBOoIB",
-            "6kF/Cidkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL0RhdGFzZXRTY2hlbWES",
-            "VHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wcm9j",
-            "ZXNzb3JzL3twcm9jZXNzb3J9L2RhdGFzZXQvZGF0YXNldFNjaGVtYSKHAgoV",
-            "QmF0Y2hEYXRhc2V0RG9jdW1lbnRzEm8KF2luZGl2aWR1YWxfZG9jdW1lbnRf",
-            "aWRzGAEgASgLMkwuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5C",
-            "YXRjaERhdGFzZXREb2N1bWVudHMuSW5kaXZpZHVhbERvY3VtZW50SWRzSAAS",
-            "EAoGZmlsdGVyGAIgASgJSAAaXwoVSW5kaXZpZHVhbERvY3VtZW50SWRzEkYK",
-            "DGRvY3VtZW50X2lkcxgBIAMoCzIrLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTMuRG9jdW1lbnRJZEID4EECQgoKCGNyaXRlcmlhQsgCCiNjb20u",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhM0IMRGF0YXNldFByb3Rv",
-            "UAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZG9jdW1lbnRhaS9hcGl2MWJldGEz",
-            "L2RvY3VtZW50YWlwYjtkb2N1bWVudGFpcGKqAh9Hb29nbGUuQ2xvdWQuRG9j",
-            "dW1lbnRBSS5WMUJldGEzygIfR29vZ2xlXENsb3VkXERvY3VtZW50QUlcVjFi",
-            "ZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYmV0YTPqQWIK",
-            "JmNvbnRlbnR3YXJlaG91c2UuZ29vZ2xlYXBpcy5jb20vU2NoZW1hEjhwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2NoZW1hcy97",
-            "c2NoZW1hfWIGcHJvdG8z"));
+            "ZG9jdW1lbnRhaS52MWJldGEzLkRhdGFzZXQuU3RhdGVCA+BBAhIaCg1zYXRp",
+            "c2ZpZXNfcHpzGAggASgIQgPgQQMSGgoNc2F0aXNmaWVzX3B6aRgJIAEoCEID",
+            "4EEDGlcKEEdDU01hbmFnZWRDb25maWcSQwoKZ2NzX3ByZWZpeBgBIAEoCzIq",
+            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuR2NzUHJlZml4QgPg",
+            "QQIacgoXRG9jdW1lbnRXYXJlaG91c2VDb25maWcSFwoKY29sbGVjdGlvbhgB",
+            "IAEoCUID4EEDEj4KBnNjaGVtYRgCIAEoCUIu4EED+kEoCiZjb250ZW50d2Fy",
+            "ZWhvdXNlLmdvb2dsZWFwaXMuY29tL1NjaGVtYRoYChZVbm1hbmFnZWREYXRh",
+            "c2V0Q29uZmlnGhcKFVNwYW5uZXJJbmRleGluZ0NvbmZpZyJUCgVTdGF0ZRIV",
+            "ChFTVEFURV9VTlNQRUNJRklFRBAAEhEKDVVOSU5JVElBTElaRUQQARIQCgxJ",
+            "TklUSUFMSVpJTkcQAhIPCgtJTklUSUFMSVpFRBADOm7qQWsKIWRvY3VtZW50",
+            "YWkuZ29vZ2xlYXBpcy5jb20vRGF0YXNldBJGcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3Byb2Nlc3NvcnMve3Byb2Nlc3Nvcn0v",
+            "ZGF0YXNldEIQCg5zdG9yYWdlX3NvdXJjZUIRCg9pbmRleGluZ19zb3VyY2Ui",
+            "hgMKCkRvY3VtZW50SWQSXgoSZ2NzX21hbmFnZWRfZG9jX2lkGAEgASgLMkAu",
+            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudElkLkdD",
+            "U01hbmFnZWREb2N1bWVudElkSAASWwoQdW5tYW5hZ2VkX2RvY19pZBgEIAEo",
+            "CzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRJ",
+            "ZC5Vbm1hbmFnZWREb2N1bWVudElkSAASQgoMcmV2aXNpb25fcmVmGAMgASgL",
+            "MiwuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5SZXZpc2lvblJl",
+            "ZhpDChRHQ1NNYW5hZ2VkRG9jdW1lbnRJZBIUCgdnY3NfdXJpGAEgASgJQgPg",
+            "QQISFQoJY3dfZG9jX2lkGAIgASgJQgIYARoqChNVbm1hbmFnZWREb2N1bWVu",
+            "dElkEhMKBmRvY19pZBgBIAEoCUID4EECQgYKBHR5cGUi8QEKDURhdGFzZXRT",
+            "Y2hlbWESDAoEbmFtZRgBIAEoCRJNCg9kb2N1bWVudF9zY2hlbWEYAyABKAsy",
+            "Ly5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50U2No",
+            "ZW1hQgPgQQE6ggHqQX8KJ2RvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vRGF0",
+            "YXNldFNjaGVtYRJUcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3Byb2Nlc3NvcnMve3Byb2Nlc3Nvcn0vZGF0YXNldC9kYXRhc2V0",
+            "U2NoZW1hIocCChVCYXRjaERhdGFzZXREb2N1bWVudHMSbwoXaW5kaXZpZHVh",
+            "bF9kb2N1bWVudF9pZHMYASABKAsyTC5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MWJldGEzLkJhdGNoRGF0YXNldERvY3VtZW50cy5JbmRpdmlkdWFsRG9j",
+            "dW1lbnRJZHNIABIQCgZmaWx0ZXIYAiABKAlIABpfChVJbmRpdmlkdWFsRG9j",
+            "dW1lbnRJZHMSRgoMZG9jdW1lbnRfaWRzGAEgAygLMisuZ29vZ2xlLmNsb3Vk",
+            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudElkQgPgQQJCCgoIY3JpdGVy",
+            "aWFCyAIKI2NvbS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzQgxE",
+            "YXRhc2V0UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1bWVudGFp",
+            "L2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoCH0dvb2ds",
+            "ZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9j",
+            "dW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6",
+            "VjFiZXRhM+pBYgomY29udGVudHdhcmVob3VzZS5nb29nbGVhcGlzLmNvbS9T",
+            "Y2hlbWESOHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9zY2hlbWFzL3tzY2hlbWF9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Parser, new[]{ "GcsManagedConfig", "DocumentWarehouseConfig", "UnmanagedDatasetConfig", "SpannerIndexingConfig", "Name", "State" }, new[]{ "StorageSource", "IndexingSource" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.GCSManagedConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.GCSManagedConfig.Parser, new[]{ "GcsPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Parser, new[]{ "GcsManagedConfig", "DocumentWarehouseConfig", "UnmanagedDatasetConfig", "SpannerIndexingConfig", "Name", "State", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "StorageSource", "IndexingSource" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.GCSManagedConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.GCSManagedConfig.Parser, new[]{ "GcsPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.DocumentWarehouseConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.DocumentWarehouseConfig.Parser, new[]{ "Collection", "Schema" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.UnmanagedDatasetConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.UnmanagedDatasetConfig.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig.Parser, null, null, null, null, null)}),
@@ -140,6 +141,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public Dataset(Dataset other) : this() {
       name_ = other.name_;
       state_ = other.state_;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       switch (other.StorageSourceCase) {
         case StorageSourceOneofCase.GcsManagedConfig:
           GcsManagedConfig = other.GcsManagedConfig.Clone();
@@ -267,6 +270,36 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 8;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 9;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     private object storageSource_;
     /// <summary>Enum of possible cases for the "storage_source" oneof.</summary>
     public enum StorageSourceOneofCase {
@@ -330,6 +363,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (!object.Equals(SpannerIndexingConfig, other.SpannerIndexingConfig)) return false;
       if (Name != other.Name) return false;
       if (State != other.State) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (StorageSourceCase != other.StorageSourceCase) return false;
       if (IndexingSourceCase != other.IndexingSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -345,6 +380,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (indexingSourceCase_ == IndexingSourceOneofCase.SpannerIndexingConfig) hash ^= SpannerIndexingConfig.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (State != global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       hash ^= (int) storageSourceCase_;
       hash ^= (int) indexingSourceCase_;
       if (_unknownFields != null) {
@@ -389,6 +426,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(50);
         output.WriteMessage(UnmanagedDatasetConfig);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -423,6 +468,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(50);
         output.WriteMessage(UnmanagedDatasetConfig);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -451,6 +504,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (State != global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -468,6 +527,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (other.State != global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       switch (other.StorageSourceCase) {
         case StorageSourceOneofCase.GcsManagedConfig:
@@ -558,6 +623,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             UnmanagedDatasetConfig = subBuilder;
             break;
           }
+          case 64: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 72: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -615,6 +688,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             }
             input.ReadMessage(subBuilder);
             UnmanagedDatasetConfig = subBuilder;
+            break;
+          }
+          case 64: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 72: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

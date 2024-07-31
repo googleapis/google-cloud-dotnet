@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 FieldMask = new FieldMask(),
                 ProcessOptions = new ProcessOptions(),
                 Labels = { { "", "" }, },
+                ImagelessMode = false,
             };
             // Make the request
             ProcessResponse response = await documentProcessorServiceClient.ProcessDocumentAsync(request);

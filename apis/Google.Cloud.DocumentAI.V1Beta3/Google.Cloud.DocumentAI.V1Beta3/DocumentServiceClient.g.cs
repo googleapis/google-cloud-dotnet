@@ -354,6 +354,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         /// <summary>
         /// Updates metadata associated with a dataset.
+        /// Note that this method requires the
+        /// `documentai.googleapis.com/datasets.update` permission on the project,
+        /// which is highly privileged. A user or service account with this permission
+        /// can create new processors that can interact with any gcs bucket in your
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -363,6 +368,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         /// <summary>
         /// Updates metadata associated with a dataset.
+        /// Note that this method requires the
+        /// `documentai.googleapis.com/datasets.update` permission on the project,
+        /// which is highly privileged. A user or service account with this permission
+        /// can create new processors that can interact with any gcs bucket in your
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -372,6 +382,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         /// <summary>
         /// Updates metadata associated with a dataset.
+        /// Note that this method requires the
+        /// `documentai.googleapis.com/datasets.update` permission on the project,
+        /// which is highly privileged. A user or service account with this permission
+        /// can create new processors that can interact with any gcs bucket in your
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -407,6 +422,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         /// <summary>
         /// Updates metadata associated with a dataset.
+        /// Note that this method requires the
+        /// `documentai.googleapis.com/datasets.update` permission on the project,
+        /// which is highly privileged. A user or service account with this permission
+        /// can create new processors that can interact with any gcs bucket in your
+        /// project.
         /// </summary>
         /// <param name="dataset">
         /// Required. The `name` field of the `Dataset` is used to identify the
@@ -426,6 +446,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         /// <summary>
         /// Updates metadata associated with a dataset.
+        /// Note that this method requires the
+        /// `documentai.googleapis.com/datasets.update` permission on the project,
+        /// which is highly privileged. A user or service account with this permission
+        /// can create new processors that can interact with any gcs bucket in your
+        /// project.
         /// </summary>
         /// <param name="dataset">
         /// Required. The `name` field of the `Dataset` is used to identify the
@@ -445,6 +470,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         /// <summary>
         /// Updates metadata associated with a dataset.
+        /// Note that this method requires the
+        /// `documentai.googleapis.com/datasets.update` permission on the project,
+        /// which is highly privileged. A user or service account with this permission
+        /// can create new processors that can interact with any gcs bucket in your
+        /// project.
         /// </summary>
         /// <param name="dataset">
         /// Required. The `name` field of the `Dataset` is used to identify the
@@ -1279,6 +1309,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         /// <summary>
         /// Updates metadata associated with a dataset.
+        /// Note that this method requires the
+        /// `documentai.googleapis.com/datasets.update` permission on the project,
+        /// which is highly privileged. A user or service account with this permission
+        /// can create new processors that can interact with any gcs bucket in your
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1291,6 +1326,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         /// <summary>
         /// Updates metadata associated with a dataset.
+        /// Note that this method requires the
+        /// `documentai.googleapis.com/datasets.update` permission on the project,
+        /// which is highly privileged. A user or service account with this permission
+        /// can create new processors that can interact with any gcs bucket in your
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
