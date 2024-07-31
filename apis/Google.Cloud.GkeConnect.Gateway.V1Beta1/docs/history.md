@@ -1,5 +1,10 @@
 # Version history
 
+## Version 2.0.0-beta05, released 2024-07-31
+
+This release is being used to publish a new front-page of
+documentation, to indicate package deprecation.
+
 ## Version 2.0.0-beta04, released 2024-05-14
 
 ### New features
