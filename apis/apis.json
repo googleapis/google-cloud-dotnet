@@ -2584,28 +2584,6 @@
       "includeCommonResourcesProto": true
     },
     {
-      "id": "Google.Cloud.GkeConnect.Gateway.V1Beta1",
-      "version": "2.0.0-beta05",
-      "type": "grpc",
-      "productName": "Connect Gateway",
-      "productUrl": "https://cloud.google.com/anthos/multicluster-management/gateway/",
-      "description": "Recommended Google client library to access the GKE Connect Gateway API, which allows connectivity from external parties to connected Kubernetes clusters.",
-      "tags": [
-        "gke",
-        "connect",
-        "anthos",
-        "clusters",
-        "kubernetes",
-        "gateway"
-      ],
-      "dependencies": {},
-      "generator": "micro",
-      "protoPath": "google/cloud/gkeconnect/gateway/v1beta1",
-      "shortName": "connectgateway",
-      "serviceConfigFile": "connectgateway_v1beta1.yaml",
-      "includeCommonResourcesProto": true
-    },
-    {
       "id": "Google.Cloud.GkeHub.V1Beta1",
       "version": "2.0.0-beta07",
       "type": "grpc",
