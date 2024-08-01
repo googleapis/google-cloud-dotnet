@@ -87,6 +87,11 @@ namespace Google.Analytics.Admin.V1Alpha
             GetConversionEventSettings = existing.GetConversionEventSettings;
             DeleteConversionEventSettings = existing.DeleteConversionEventSettings;
             ListConversionEventsSettings = existing.ListConversionEventsSettings;
+            CreateKeyEventSettings = existing.CreateKeyEventSettings;
+            UpdateKeyEventSettings = existing.UpdateKeyEventSettings;
+            GetKeyEventSettings = existing.GetKeyEventSettings;
+            DeleteKeyEventSettings = existing.DeleteKeyEventSettings;
+            ListKeyEventsSettings = existing.ListKeyEventsSettings;
             GetDisplayVideo360AdvertiserLinkSettings = existing.GetDisplayVideo360AdvertiserLinkSettings;
             ListDisplayVideo360AdvertiserLinksSettings = existing.ListDisplayVideo360AdvertiserLinksSettings;
             CreateDisplayVideo360AdvertiserLinkSettings = existing.CreateDisplayVideo360AdvertiserLinkSettings;
@@ -149,8 +154,11 @@ namespace Google.Analytics.Admin.V1Alpha
             DeleteChannelGroupSettings = existing.DeleteChannelGroupSettings;
             SetAutomatedGa4ConfigurationOptOutSettings = existing.SetAutomatedGa4ConfigurationOptOutSettings;
             FetchAutomatedGa4ConfigurationOptOutSettings = existing.FetchAutomatedGa4ConfigurationOptOutSettings;
+            CreateBigQueryLinkSettings = existing.CreateBigQueryLinkSettings;
             GetBigQueryLinkSettings = existing.GetBigQueryLinkSettings;
             ListBigQueryLinksSettings = existing.ListBigQueryLinksSettings;
+            DeleteBigQueryLinkSettings = existing.DeleteBigQueryLinkSettings;
+            UpdateBigQueryLinkSettings = existing.UpdateBigQueryLinkSettings;
             GetEnhancedMeasurementSettingsSettings = existing.GetEnhancedMeasurementSettingsSettings;
             UpdateEnhancedMeasurementSettingsSettings = existing.UpdateEnhancedMeasurementSettingsSettings;
             CreateConnectedSiteTagSettings = existing.CreateConnectedSiteTagSettings;
@@ -166,6 +174,12 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateEventCreateRuleSettings = existing.CreateEventCreateRuleSettings;
             UpdateEventCreateRuleSettings = existing.UpdateEventCreateRuleSettings;
             DeleteEventCreateRuleSettings = existing.DeleteEventCreateRuleSettings;
+            GetEventEditRuleSettings = existing.GetEventEditRuleSettings;
+            ListEventEditRulesSettings = existing.ListEventEditRulesSettings;
+            CreateEventEditRuleSettings = existing.CreateEventEditRuleSettings;
+            UpdateEventEditRuleSettings = existing.UpdateEventEditRuleSettings;
+            DeleteEventEditRuleSettings = existing.DeleteEventEditRuleSettings;
+            ReorderEventEditRulesSettings = existing.ReorderEventEditRulesSettings;
             UpdateDataRedactionSettingsSettings = existing.UpdateDataRedactionSettingsSettings;
             GetDataRedactionSettingsSettings = existing.GetDataRedactionSettingsSettings;
             GetCalculatedMetricSettings = existing.GetCalculatedMetricSettings;
@@ -178,7 +192,7 @@ namespace Google.Analytics.Admin.V1Alpha
             ListRollupPropertySourceLinksSettings = existing.ListRollupPropertySourceLinksSettings;
             CreateRollupPropertySourceLinkSettings = existing.CreateRollupPropertySourceLinkSettings;
             DeleteRollupPropertySourceLinkSettings = existing.DeleteRollupPropertySourceLinkSettings;
-            CreateSubpropertySettings = existing.CreateSubpropertySettings;
+            ProvisionSubpropertySettings = existing.ProvisionSubpropertySettings;
             CreateSubpropertyEventFilterSettings = existing.CreateSubpropertyEventFilterSettings;
             GetSubpropertyEventFilterSettings = existing.GetSubpropertyEventFilterSettings;
             ListSubpropertyEventFiltersSettings = existing.ListSubpropertyEventFiltersSettings;
@@ -879,6 +893,114 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListConversionEventsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateKeyEvent</c> and <c>AnalyticsAdminServiceClient.CreateKeyEventAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateKeyEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateKeyEvent</c> and <c>AnalyticsAdminServiceClient.UpdateKeyEventAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateKeyEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetKeyEvent</c> and <c>AnalyticsAdminServiceClient.GetKeyEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetKeyEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteKeyEvent</c> and <c>AnalyticsAdminServiceClient.DeleteKeyEventAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteKeyEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListKeyEvents</c> and <c>AnalyticsAdminServiceClient.ListKeyEventsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListKeyEventsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2243,6 +2365,28 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateBigQueryLink</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateBigQueryLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBigQueryLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.GetBigQueryLink</c> and <c>AnalyticsAdminServiceClient.GetBigQueryLinkAsync</c>
         /// .
         /// </summary>
@@ -2284,6 +2428,50 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListBigQueryLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteBigQueryLink</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteBigQueryLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBigQueryLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateBigQueryLink</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateBigQueryLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBigQueryLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2599,6 +2787,138 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetEventEditRule</c> and <c>AnalyticsAdminServiceClient.GetEventEditRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEventEditRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListEventEditRules</c> and
+        /// <c>AnalyticsAdminServiceClient.ListEventEditRulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEventEditRulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateEventEditRule</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateEventEditRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateEventEditRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateEventEditRule</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateEventEditRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEventEditRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteEventEditRule</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteEventEditRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteEventEditRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ReorderEventEditRules</c> and
+        /// <c>AnalyticsAdminServiceClient.ReorderEventEditRulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReorderEventEditRulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.UpdateDataRedactionSettings</c> and
         /// <c>AnalyticsAdminServiceClient.UpdateDataRedactionSettingsAsync</c>.
         /// </summary>
@@ -2863,8 +3183,8 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.CreateSubproperty</c> and
-        /// <c>AnalyticsAdminServiceClient.CreateSubpropertyAsync</c>.
+        /// <c>AnalyticsAdminServiceClient.ProvisionSubproperty</c> and
+        /// <c>AnalyticsAdminServiceClient.ProvisionSubpropertyAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -2881,7 +3201,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateSubpropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ProvisionSubpropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4180,7 +4500,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -4201,7 +4522,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -4222,7 +4544,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -4239,7 +4562,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -4260,7 +4584,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -4281,7 +4606,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="firebaseLink">
         /// Required. The Firebase link to create.
@@ -4323,7 +4649,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4338,7 +4665,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4353,7 +4681,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4365,7 +4694,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4380,7 +4710,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4395,7 +4726,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="name">
         /// Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id}
-        /// Example: properties/1234/firebaseLinks/5678
+        /// 
+        /// Example: `properties/1234/firebaseLinks/5678`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4428,7 +4760,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4463,7 +4796,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4498,7 +4832,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4533,7 +4868,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// 
+        /// Example: `properties/1234`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4600,7 +4936,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
         /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/dataStreams/456/globalSiteTag"
+        /// 
+        /// Example: `properties/123/dataStreams/456/globalSiteTag`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4618,7 +4955,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
         /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/dataStreams/456/globalSiteTag"
+        /// 
+        /// Example: `properties/123/dataStreams/456/globalSiteTag`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4636,7 +4974,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
         /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/dataStreams/456/globalSiteTag"
+        /// 
+        /// Example: `properties/123/dataStreams/456/globalSiteTag`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4651,7 +4990,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
         /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/dataStreams/456/globalSiteTag"
+        /// 
+        /// Example: `properties/123/dataStreams/456/globalSiteTag`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4669,7 +5009,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
         /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/dataStreams/456/globalSiteTag"
+        /// 
+        /// Example: `properties/123/dataStreams/456/globalSiteTag`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4687,7 +5028,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The name of the site tag to lookup.
         /// Note that site tags are singletons and do not have unique IDs.
         /// Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
-        /// Example: "properties/123/dataStreams/456/globalSiteTag"
+        /// 
+        /// Example: `properties/123/dataStreams/456/globalSiteTag`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5199,7 +5541,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5216,7 +5559,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5233,7 +5577,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5247,7 +5592,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5264,7 +5610,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5281,7 +5628,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format: accounts/{account}/dataSharingSettings
-        /// Example: "accounts/1000/dataSharingSettings"
+        /// 
+        /// Example: `accounts/1000/dataSharingSettings`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6780,33 +7128,40 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateGoogleSignalsSettingsAsync(googleSignalsSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent CreateConversionEvent(CreateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(CreateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(CreateConversionEventRequest request, st::CancellationToken cancellationToken) =>
             CreateConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -6818,6 +7173,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent CreateConversionEvent(string parent, ConversionEvent conversionEvent, gaxgrpc::CallSettings callSettings = null) =>
             CreateConversionEvent(new CreateConversionEventRequest
             {
@@ -6826,6 +7182,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -6837,6 +7194,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(string parent, ConversionEvent conversionEvent, gaxgrpc::CallSettings callSettings = null) =>
             CreateConversionEventAsync(new CreateConversionEventRequest
             {
@@ -6845,6 +7203,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -6856,10 +7215,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(string parent, ConversionEvent conversionEvent, st::CancellationToken cancellationToken) =>
             CreateConversionEventAsync(parent, conversionEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -6871,6 +7232,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent CreateConversionEvent(PropertyName parent, ConversionEvent conversionEvent, gaxgrpc::CallSettings callSettings = null) =>
             CreateConversionEvent(new CreateConversionEventRequest
             {
@@ -6879,6 +7241,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -6890,6 +7253,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(PropertyName parent, ConversionEvent conversionEvent, gaxgrpc::CallSettings callSettings = null) =>
             CreateConversionEventAsync(new CreateConversionEventRequest
             {
@@ -6898,6 +7262,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
@@ -6909,37 +7274,45 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(PropertyName parent, ConversionEvent conversionEvent, st::CancellationToken cancellationToken) =>
             CreateConversionEventAsync(parent, conversionEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent UpdateConversionEvent(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, st::CancellationToken cancellationToken) =>
             UpdateConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="conversionEvent">
@@ -6954,6 +7327,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent UpdateConversionEvent(ConversionEvent conversionEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateConversionEvent(new UpdateConversionEventRequest
             {
@@ -6962,6 +7336,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="conversionEvent">
@@ -6976,6 +7351,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(ConversionEvent conversionEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateConversionEventAsync(new UpdateConversionEventRequest
             {
@@ -6984,6 +7360,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="conversionEvent">
@@ -6998,37 +7375,45 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(ConversionEvent conversionEvent, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateConversionEventAsync(conversionEvent, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent GetConversionEvent(GetConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(GetConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(GetConversionEventRequest request, st::CancellationToken cancellationToken) =>
             GetConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -7038,6 +7423,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent GetConversionEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetConversionEvent(new GetConversionEventRequest
             {
@@ -7045,6 +7431,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -7054,6 +7441,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetConversionEventAsync(new GetConversionEventRequest
             {
@@ -7061,6 +7449,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -7070,10 +7459,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(string name, st::CancellationToken cancellationToken) =>
             GetConversionEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -7083,6 +7474,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ConversionEvent GetConversionEvent(ConversionEventName name, gaxgrpc::CallSettings callSettings = null) =>
             GetConversionEvent(new GetConversionEventRequest
             {
@@ -7090,6 +7482,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -7099,6 +7492,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(ConversionEventName name, gaxgrpc::CallSettings callSettings = null) =>
             GetConversionEventAsync(new GetConversionEventRequest
             {
@@ -7106,6 +7500,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="name">
@@ -7115,37 +7510,45 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ConversionEvent> GetConversionEventAsync(ConversionEventName name, st::CancellationToken cancellationToken) =>
             GetConversionEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteConversionEvent(DeleteConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(DeleteConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(DeleteConversionEventRequest request, st::CancellationToken cancellationToken) =>
             DeleteConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -7155,6 +7558,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteConversionEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteConversionEvent(new DeleteConversionEventRequest
             {
@@ -7162,6 +7566,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -7171,6 +7576,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteConversionEventAsync(new DeleteConversionEventRequest
             {
@@ -7178,6 +7584,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -7187,10 +7594,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteConversionEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -7200,6 +7609,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteConversionEvent(ConversionEventName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteConversionEvent(new DeleteConversionEventRequest
             {
@@ -7207,6 +7617,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -7216,6 +7627,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(ConversionEventName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteConversionEventAsync(new DeleteConversionEventRequest
             {
@@ -7223,6 +7635,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="name">
@@ -7232,10 +7645,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteConversionEventAsync(ConversionEventName name, st::CancellationToken cancellationToken) =>
             DeleteConversionEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -7243,10 +7658,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(ListConversionEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -7254,10 +7671,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(ListConversionEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -7276,6 +7695,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListConversionEventsRequest request = new ListConversionEventsRequest
@@ -7294,6 +7714,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -7312,6 +7733,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListConversionEventsRequest request = new ListConversionEventsRequest
@@ -7330,6 +7752,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -7348,6 +7771,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListConversionEventsRequest request = new ListConversionEventsRequest
@@ -7366,6 +7790,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -7384,6 +7809,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListConversionEventsRequest request = new ListConversionEventsRequest
@@ -7399,6 +7825,622 @@ namespace Google.Analytics.Admin.V1Alpha
                 request.PageSize = pageSize.Value;
             }
             return ListConversionEventsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent CreateKeyEvent(CreateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(CreateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(CreateKeyEventRequest request, st::CancellationToken cancellationToken) =>
+            CreateKeyEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent CreateKeyEvent(string parent, KeyEvent keyEvent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyEvent(new CreateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(string parent, KeyEvent keyEvent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyEventAsync(new CreateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(string parent, KeyEvent keyEvent, st::CancellationToken cancellationToken) =>
+            CreateKeyEventAsync(parent, keyEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent CreateKeyEvent(PropertyName parent, KeyEvent keyEvent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyEvent(new CreateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(PropertyName parent, KeyEvent keyEvent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyEventAsync(new CreateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property where this Key Event
+        /// will be created. Format: properties/123
+        /// </param>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> CreateKeyEventAsync(PropertyName parent, KeyEvent keyEvent, st::CancellationToken cancellationToken) =>
+            CreateKeyEventAsync(parent, keyEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent UpdateKeyEvent(UpdateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> UpdateKeyEventAsync(UpdateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> UpdateKeyEventAsync(UpdateKeyEventRequest request, st::CancellationToken cancellationToken) =>
+            UpdateKeyEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent UpdateKeyEvent(KeyEvent keyEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateKeyEvent(new UpdateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> UpdateKeyEventAsync(KeyEvent keyEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateKeyEventAsync(new UpdateKeyEventRequest
+            {
+                KeyEvent = gax::GaxPreconditions.CheckNotNull(keyEvent, nameof(keyEvent)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="keyEvent">
+        /// Required. The Key Event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> UpdateKeyEventAsync(KeyEvent keyEvent, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateKeyEventAsync(keyEvent, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent GetKeyEvent(GetKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(GetKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(GetKeyEventRequest request, st::CancellationToken cancellationToken) =>
+            GetKeyEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent GetKeyEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyEvent(new GetKeyEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyEventAsync(new GetKeyEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(string name, st::CancellationToken cancellationToken) =>
+            GetKeyEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual KeyEvent GetKeyEvent(KeyEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyEvent(new GetKeyEventRequest
+            {
+                KeyEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(KeyEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyEventAsync(new GetKeyEventRequest
+            {
+                KeyEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to retrieve.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<KeyEvent> GetKeyEventAsync(KeyEventName name, st::CancellationToken cancellationToken) =>
+            GetKeyEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteKeyEvent(DeleteKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(DeleteKeyEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(DeleteKeyEventRequest request, st::CancellationToken cancellationToken) =>
+            DeleteKeyEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteKeyEvent(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyEvent(new DeleteKeyEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyEventAsync(new DeleteKeyEventRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteKeyEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteKeyEvent(KeyEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyEvent(new DeleteKeyEventRequest
+            {
+                KeyEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(KeyEventName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyEventAsync(new DeleteKeyEventRequest
+            {
+                KeyEventName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Key Event to delete.
+        /// Format: properties/{property}/keyEvents/{key_event}
+        /// Example: "properties/123/keyEvents/456"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyEventAsync(KeyEventName name, st::CancellationToken cancellationToken) =>
+            DeleteKeyEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEvents(ListKeyEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEventsAsync(ListKeyEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property.
+        /// Example: 'properties/123'
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEvents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyEventsRequest request = new ListKeyEventsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyEvents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property.
+        /// Example: 'properties/123'
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEventsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyEventsRequest request = new ListKeyEventsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyEventsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property.
+        /// Example: 'properties/123'
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEvents(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyEventsRequest request = new ListKeyEventsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyEvents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent property.
+        /// Example: 'properties/123'
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEventsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyEventsRequest request = new ListKeyEventsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyEventsAsync(request, callSettings);
         }
 
         /// <summary>
@@ -14059,6 +15101,133 @@ namespace Google.Analytics.Admin.V1Alpha
             FetchAutomatedGa4ConfigurationOptOutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryLink CreateBigQueryLink(CreateBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> CreateBigQueryLinkAsync(CreateBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> CreateBigQueryLinkAsync(CreateBigQueryLinkRequest request, st::CancellationToken cancellationToken) =>
+            CreateBigQueryLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="bigqueryLink">
+        /// Required. The BigQueryLink to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryLink CreateBigQueryLink(string parent, BigQueryLink bigqueryLink, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryLink(new CreateBigQueryLinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BigqueryLink = gax::GaxPreconditions.CheckNotNull(bigqueryLink, nameof(bigqueryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="bigqueryLink">
+        /// Required. The BigQueryLink to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> CreateBigQueryLinkAsync(string parent, BigQueryLink bigqueryLink, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryLinkAsync(new CreateBigQueryLinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BigqueryLink = gax::GaxPreconditions.CheckNotNull(bigqueryLink, nameof(bigqueryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="bigqueryLink">
+        /// Required. The BigQueryLink to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> CreateBigQueryLinkAsync(string parent, BigQueryLink bigqueryLink, st::CancellationToken cancellationToken) =>
+            CreateBigQueryLinkAsync(parent, bigqueryLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="bigqueryLink">
+        /// Required. The BigQueryLink to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryLink CreateBigQueryLink(PropertyName parent, BigQueryLink bigqueryLink, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryLink(new CreateBigQueryLinkRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BigqueryLink = gax::GaxPreconditions.CheckNotNull(bigqueryLink, nameof(bigqueryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="bigqueryLink">
+        /// Required. The BigQueryLink to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> CreateBigQueryLinkAsync(PropertyName parent, BigQueryLink bigqueryLink, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBigQueryLinkAsync(new CreateBigQueryLinkRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BigqueryLink = gax::GaxPreconditions.CheckNotNull(bigqueryLink, nameof(bigqueryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="bigqueryLink">
+        /// Required. The BigQueryLink to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> CreateBigQueryLinkAsync(PropertyName parent, BigQueryLink bigqueryLink, st::CancellationToken cancellationToken) =>
+            CreateBigQueryLinkAsync(parent, bigqueryLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lookup for a single BigQuery Link.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14332,6 +15501,206 @@ namespace Google.Analytics.Admin.V1Alpha
             }
             return ListBigQueryLinksAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBigQueryLink(DeleteBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryLinkAsync(DeleteBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryLinkAsync(DeleteBigQueryLinkRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBigQueryLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The BigQueryLink to delete.
+        /// Example format: properties/1234/bigQueryLinks/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBigQueryLink(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBigQueryLink(new DeleteBigQueryLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The BigQueryLink to delete.
+        /// Example format: properties/1234/bigQueryLinks/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryLinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBigQueryLinkAsync(new DeleteBigQueryLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The BigQueryLink to delete.
+        /// Example format: properties/1234/bigQueryLinks/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryLinkAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBigQueryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The BigQueryLink to delete.
+        /// Example format: properties/1234/bigQueryLinks/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBigQueryLink(BigQueryLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBigQueryLink(new DeleteBigQueryLinkRequest
+            {
+                BigQueryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The BigQueryLink to delete.
+        /// Example format: properties/1234/bigQueryLinks/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryLinkAsync(BigQueryLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBigQueryLinkAsync(new DeleteBigQueryLinkRequest
+            {
+                BigQueryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The BigQueryLink to delete.
+        /// Example format: properties/1234/bigQueryLinks/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBigQueryLinkAsync(BigQueryLinkName name, st::CancellationToken cancellationToken) =>
+            DeleteBigQueryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryLink UpdateBigQueryLink(UpdateBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> UpdateBigQueryLinkAsync(UpdateBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> UpdateBigQueryLinkAsync(UpdateBigQueryLinkRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBigQueryLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a BigQueryLink.
+        /// </summary>
+        /// <param name="bigqueryLink">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryLink UpdateBigQueryLink(BigQueryLink bigqueryLink, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBigQueryLink(new UpdateBigQueryLinkRequest
+            {
+                BigqueryLink = gax::GaxPreconditions.CheckNotNull(bigqueryLink, nameof(bigqueryLink)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a BigQueryLink.
+        /// </summary>
+        /// <param name="bigqueryLink">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> UpdateBigQueryLinkAsync(BigQueryLink bigqueryLink, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBigQueryLinkAsync(new UpdateBigQueryLinkRequest
+            {
+                BigqueryLink = gax::GaxPreconditions.CheckNotNull(bigqueryLink, nameof(bigqueryLink)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a BigQueryLink.
+        /// </summary>
+        /// <param name="bigqueryLink">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> UpdateBigQueryLinkAsync(BigQueryLink bigqueryLink, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBigQueryLinkAsync(bigqueryLink, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the enhanced measurement settings for this data stream.
@@ -15822,6 +17191,618 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteEventCreateRuleAsync(EventCreateRuleName name, st::CancellationToken cancellationToken) =>
             DeleteEventCreateRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventEditRule GetEventEditRule(GetEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> GetEventEditRuleAsync(GetEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> GetEventEditRuleAsync(GetEventEditRuleRequest request, st::CancellationToken cancellationToken) =>
+            GetEventEditRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the EventEditRule to get.
+        /// Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventEditRule GetEventEditRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEventEditRule(new GetEventEditRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the EventEditRule to get.
+        /// Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> GetEventEditRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEventEditRuleAsync(new GetEventEditRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the EventEditRule to get.
+        /// Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> GetEventEditRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEventEditRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the EventEditRule to get.
+        /// Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventEditRule GetEventEditRule(EventEditRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEventEditRule(new GetEventEditRuleRequest
+            {
+                EventEditRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the EventEditRule to get.
+        /// Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> GetEventEditRuleAsync(EventEditRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEventEditRuleAsync(new GetEventEditRuleRequest
+            {
+                EventEditRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the EventEditRule to get.
+        /// Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> GetEventEditRuleAsync(EventEditRuleName name, st::CancellationToken cancellationToken) =>
+            GetEventEditRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists EventEditRules on a web data stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventEditRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEventEditRulesResponse, EventEditRule> ListEventEditRules(ListEventEditRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists EventEditRules on a web data stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EventEditRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEventEditRulesResponse, EventEditRule> ListEventEditRulesAsync(ListEventEditRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists EventEditRules on a web data stream.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventEditRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEventEditRulesResponse, EventEditRule> ListEventEditRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventEditRulesRequest request = new ListEventEditRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventEditRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists EventEditRules on a web data stream.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EventEditRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEventEditRulesResponse, EventEditRule> ListEventEditRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventEditRulesRequest request = new ListEventEditRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventEditRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists EventEditRules on a web data stream.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventEditRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEventEditRulesResponse, EventEditRule> ListEventEditRules(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventEditRulesRequest request = new ListEventEditRulesRequest
+            {
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventEditRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists EventEditRules on a web data stream.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EventEditRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEventEditRulesResponse, EventEditRule> ListEventEditRulesAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEventEditRulesRequest request = new ListEventEditRulesRequest
+            {
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEventEditRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventEditRule CreateEventEditRule(CreateEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> CreateEventEditRuleAsync(CreateEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> CreateEventEditRuleAsync(CreateEventEditRuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateEventEditRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventEditRule CreateEventEditRule(string parent, EventEditRule eventEditRule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEventEditRule(new CreateEventEditRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EventEditRule = gax::GaxPreconditions.CheckNotNull(eventEditRule, nameof(eventEditRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> CreateEventEditRuleAsync(string parent, EventEditRule eventEditRule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEventEditRuleAsync(new CreateEventEditRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EventEditRule = gax::GaxPreconditions.CheckNotNull(eventEditRule, nameof(eventEditRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> CreateEventEditRuleAsync(string parent, EventEditRule eventEditRule, st::CancellationToken cancellationToken) =>
+            CreateEventEditRuleAsync(parent, eventEditRule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventEditRule CreateEventEditRule(DataStreamName parent, EventEditRule eventEditRule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEventEditRule(new CreateEventEditRuleRequest
+            {
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EventEditRule = gax::GaxPreconditions.CheckNotNull(eventEditRule, nameof(eventEditRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> CreateEventEditRuleAsync(DataStreamName parent, EventEditRule eventEditRule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEventEditRuleAsync(new CreateEventEditRuleRequest
+            {
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EventEditRule = gax::GaxPreconditions.CheckNotNull(eventEditRule, nameof(eventEditRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/123/dataStreams/456
+        /// </param>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> CreateEventEditRuleAsync(DataStreamName parent, EventEditRule eventEditRule, st::CancellationToken cancellationToken) =>
+            CreateEventEditRuleAsync(parent, eventEditRule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventEditRule UpdateEventEditRule(UpdateEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> UpdateEventEditRuleAsync(UpdateEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> UpdateEventEditRuleAsync(UpdateEventEditRuleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEventEditRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an EventEditRule.
+        /// </summary>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to update.
+        /// The resource's `name` field is used to identify the EventEditRule to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EventEditRule UpdateEventEditRule(EventEditRule eventEditRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEventEditRule(new UpdateEventEditRuleRequest
+            {
+                EventEditRule = gax::GaxPreconditions.CheckNotNull(eventEditRule, nameof(eventEditRule)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an EventEditRule.
+        /// </summary>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to update.
+        /// The resource's `name` field is used to identify the EventEditRule to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> UpdateEventEditRuleAsync(EventEditRule eventEditRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEventEditRuleAsync(new UpdateEventEditRuleRequest
+            {
+                EventEditRule = gax::GaxPreconditions.CheckNotNull(eventEditRule, nameof(eventEditRule)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an EventEditRule.
+        /// </summary>
+        /// <param name="eventEditRule">
+        /// Required. The EventEditRule to update.
+        /// The resource's `name` field is used to identify the EventEditRule to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EventEditRule> UpdateEventEditRuleAsync(EventEditRule eventEditRule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateEventEditRuleAsync(eventEditRule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEventEditRule(DeleteEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventEditRuleAsync(DeleteEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventEditRuleAsync(DeleteEventEditRuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteEventEditRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEventEditRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEventEditRule(new DeleteEventEditRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventEditRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEventEditRuleAsync(new DeleteEventEditRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventEditRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteEventEditRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteEventEditRule(EventEditRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEventEditRule(new DeleteEventEditRuleRequest
+            {
+                EventEditRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventEditRuleAsync(EventEditRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEventEditRuleAsync(new DeleteEventEditRuleRequest
+            {
+                EventEditRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/123/dataStreams/456/eventEditRules/789
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteEventEditRuleAsync(EventEditRuleName name, st::CancellationToken cancellationToken) =>
+            DeleteEventEditRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Changes the processing order of event edit rules on the specified stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void ReorderEventEditRules(ReorderEventEditRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Changes the processing order of event edit rules on the specified stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ReorderEventEditRulesAsync(ReorderEventEditRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Changes the processing order of event edit rules on the specified stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ReorderEventEditRulesAsync(ReorderEventEditRulesRequest request, st::CancellationToken cancellationToken) =>
+            ReorderEventEditRulesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a DataRedactionSettings on a property.
@@ -17326,7 +19307,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CreateSubpropertyResponse CreateSubproperty(CreateSubpropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ProvisionSubpropertyResponse ProvisionSubproperty(ProvisionSubpropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -17336,7 +19317,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateSubpropertyResponse> CreateSubpropertyAsync(CreateSubpropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ProvisionSubpropertyResponse> ProvisionSubpropertyAsync(ProvisionSubpropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -17346,8 +19327,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateSubpropertyResponse> CreateSubpropertyAsync(CreateSubpropertyRequest request, st::CancellationToken cancellationToken) =>
-            CreateSubpropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<ProvisionSubpropertyResponse> ProvisionSubpropertyAsync(ProvisionSubpropertyRequest request, st::CancellationToken cancellationToken) =>
+            ProvisionSubpropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a subproperty Event Filter.
@@ -18057,6 +20038,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<ListConversionEventsRequest, ListConversionEventsResponse> _callListConversionEvents;
 
+        private readonly gaxgrpc::ApiCall<CreateKeyEventRequest, KeyEvent> _callCreateKeyEvent;
+
+        private readonly gaxgrpc::ApiCall<UpdateKeyEventRequest, KeyEvent> _callUpdateKeyEvent;
+
+        private readonly gaxgrpc::ApiCall<GetKeyEventRequest, KeyEvent> _callGetKeyEvent;
+
+        private readonly gaxgrpc::ApiCall<DeleteKeyEventRequest, wkt::Empty> _callDeleteKeyEvent;
+
+        private readonly gaxgrpc::ApiCall<ListKeyEventsRequest, ListKeyEventsResponse> _callListKeyEvents;
+
         private readonly gaxgrpc::ApiCall<GetDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink> _callGetDisplayVideo360AdvertiserLink;
 
         private readonly gaxgrpc::ApiCall<ListDisplayVideo360AdvertiserLinksRequest, ListDisplayVideo360AdvertiserLinksResponse> _callListDisplayVideo360AdvertiserLinks;
@@ -18181,9 +20172,15 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> _callFetchAutomatedGa4ConfigurationOptOut;
 
+        private readonly gaxgrpc::ApiCall<CreateBigQueryLinkRequest, BigQueryLink> _callCreateBigQueryLink;
+
         private readonly gaxgrpc::ApiCall<GetBigQueryLinkRequest, BigQueryLink> _callGetBigQueryLink;
 
         private readonly gaxgrpc::ApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse> _callListBigQueryLinks;
+
+        private readonly gaxgrpc::ApiCall<DeleteBigQueryLinkRequest, wkt::Empty> _callDeleteBigQueryLink;
+
+        private readonly gaxgrpc::ApiCall<UpdateBigQueryLinkRequest, BigQueryLink> _callUpdateBigQueryLink;
 
         private readonly gaxgrpc::ApiCall<GetEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> _callGetEnhancedMeasurementSettings;
 
@@ -18215,6 +20212,18 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<DeleteEventCreateRuleRequest, wkt::Empty> _callDeleteEventCreateRule;
 
+        private readonly gaxgrpc::ApiCall<GetEventEditRuleRequest, EventEditRule> _callGetEventEditRule;
+
+        private readonly gaxgrpc::ApiCall<ListEventEditRulesRequest, ListEventEditRulesResponse> _callListEventEditRules;
+
+        private readonly gaxgrpc::ApiCall<CreateEventEditRuleRequest, EventEditRule> _callCreateEventEditRule;
+
+        private readonly gaxgrpc::ApiCall<UpdateEventEditRuleRequest, EventEditRule> _callUpdateEventEditRule;
+
+        private readonly gaxgrpc::ApiCall<DeleteEventEditRuleRequest, wkt::Empty> _callDeleteEventEditRule;
+
+        private readonly gaxgrpc::ApiCall<ReorderEventEditRulesRequest, wkt::Empty> _callReorderEventEditRules;
+
         private readonly gaxgrpc::ApiCall<UpdateDataRedactionSettingsRequest, DataRedactionSettings> _callUpdateDataRedactionSettings;
 
         private readonly gaxgrpc::ApiCall<GetDataRedactionSettingsRequest, DataRedactionSettings> _callGetDataRedactionSettings;
@@ -18239,7 +20248,7 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<DeleteRollupPropertySourceLinkRequest, wkt::Empty> _callDeleteRollupPropertySourceLink;
 
-        private readonly gaxgrpc::ApiCall<CreateSubpropertyRequest, CreateSubpropertyResponse> _callCreateSubproperty;
+        private readonly gaxgrpc::ApiCall<ProvisionSubpropertyRequest, ProvisionSubpropertyResponse> _callProvisionSubproperty;
 
         private readonly gaxgrpc::ApiCall<CreateSubpropertyEventFilterRequest, SubpropertyEventFilter> _callCreateSubpropertyEventFilter;
 
@@ -18369,21 +20378,46 @@ namespace Google.Analytics.Admin.V1Alpha
             _callUpdateGoogleSignalsSettings = clientHelper.BuildApiCall<UpdateGoogleSignalsSettingsRequest, GoogleSignalsSettings>("UpdateGoogleSignalsSettings", grpcClient.UpdateGoogleSignalsSettingsAsync, grpcClient.UpdateGoogleSignalsSettings, effectiveSettings.UpdateGoogleSignalsSettingsSettings).WithGoogleRequestParam("google_signals_settings.name", request => request.GoogleSignalsSettings?.Name);
             Modify_ApiCall(ref _callUpdateGoogleSignalsSettings);
             Modify_UpdateGoogleSignalsSettingsApiCall(ref _callUpdateGoogleSignalsSettings);
+#pragma warning disable CS0612
             _callCreateConversionEvent = clientHelper.BuildApiCall<CreateConversionEventRequest, ConversionEvent>("CreateConversionEvent", grpcClient.CreateConversionEventAsync, grpcClient.CreateConversionEvent, effectiveSettings.CreateConversionEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateConversionEvent);
             Modify_CreateConversionEventApiCall(ref _callCreateConversionEvent);
+#pragma warning disable CS0612
             _callUpdateConversionEvent = clientHelper.BuildApiCall<UpdateConversionEventRequest, ConversionEvent>("UpdateConversionEvent", grpcClient.UpdateConversionEventAsync, grpcClient.UpdateConversionEvent, effectiveSettings.UpdateConversionEventSettings).WithGoogleRequestParam("conversion_event.name", request => request.ConversionEvent?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateConversionEvent);
             Modify_UpdateConversionEventApiCall(ref _callUpdateConversionEvent);
+#pragma warning disable CS0612
             _callGetConversionEvent = clientHelper.BuildApiCall<GetConversionEventRequest, ConversionEvent>("GetConversionEvent", grpcClient.GetConversionEventAsync, grpcClient.GetConversionEvent, effectiveSettings.GetConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetConversionEvent);
             Modify_GetConversionEventApiCall(ref _callGetConversionEvent);
+#pragma warning disable CS0612
             _callDeleteConversionEvent = clientHelper.BuildApiCall<DeleteConversionEventRequest, wkt::Empty>("DeleteConversionEvent", grpcClient.DeleteConversionEventAsync, grpcClient.DeleteConversionEvent, effectiveSettings.DeleteConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteConversionEvent);
             Modify_DeleteConversionEventApiCall(ref _callDeleteConversionEvent);
+#pragma warning disable CS0612
             _callListConversionEvents = clientHelper.BuildApiCall<ListConversionEventsRequest, ListConversionEventsResponse>("ListConversionEvents", grpcClient.ListConversionEventsAsync, grpcClient.ListConversionEvents, effectiveSettings.ListConversionEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListConversionEvents);
             Modify_ListConversionEventsApiCall(ref _callListConversionEvents);
+            _callCreateKeyEvent = clientHelper.BuildApiCall<CreateKeyEventRequest, KeyEvent>("CreateKeyEvent", grpcClient.CreateKeyEventAsync, grpcClient.CreateKeyEvent, effectiveSettings.CreateKeyEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateKeyEvent);
+            Modify_CreateKeyEventApiCall(ref _callCreateKeyEvent);
+            _callUpdateKeyEvent = clientHelper.BuildApiCall<UpdateKeyEventRequest, KeyEvent>("UpdateKeyEvent", grpcClient.UpdateKeyEventAsync, grpcClient.UpdateKeyEvent, effectiveSettings.UpdateKeyEventSettings).WithGoogleRequestParam("key_event.name", request => request.KeyEvent?.Name);
+            Modify_ApiCall(ref _callUpdateKeyEvent);
+            Modify_UpdateKeyEventApiCall(ref _callUpdateKeyEvent);
+            _callGetKeyEvent = clientHelper.BuildApiCall<GetKeyEventRequest, KeyEvent>("GetKeyEvent", grpcClient.GetKeyEventAsync, grpcClient.GetKeyEvent, effectiveSettings.GetKeyEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetKeyEvent);
+            Modify_GetKeyEventApiCall(ref _callGetKeyEvent);
+            _callDeleteKeyEvent = clientHelper.BuildApiCall<DeleteKeyEventRequest, wkt::Empty>("DeleteKeyEvent", grpcClient.DeleteKeyEventAsync, grpcClient.DeleteKeyEvent, effectiveSettings.DeleteKeyEventSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteKeyEvent);
+            Modify_DeleteKeyEventApiCall(ref _callDeleteKeyEvent);
+            _callListKeyEvents = clientHelper.BuildApiCall<ListKeyEventsRequest, ListKeyEventsResponse>("ListKeyEvents", grpcClient.ListKeyEventsAsync, grpcClient.ListKeyEvents, effectiveSettings.ListKeyEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListKeyEvents);
+            Modify_ListKeyEventsApiCall(ref _callListKeyEvents);
             _callGetDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<GetDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>("GetDisplayVideo360AdvertiserLink", grpcClient.GetDisplayVideo360AdvertiserLinkAsync, grpcClient.GetDisplayVideo360AdvertiserLink, effectiveSettings.GetDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDisplayVideo360AdvertiserLink);
             Modify_GetDisplayVideo360AdvertiserLinkApiCall(ref _callGetDisplayVideo360AdvertiserLink);
@@ -18570,12 +20604,21 @@ namespace Google.Analytics.Admin.V1Alpha
             _callFetchAutomatedGa4ConfigurationOptOut = clientHelper.BuildApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse>("FetchAutomatedGa4ConfigurationOptOut", grpcClient.FetchAutomatedGa4ConfigurationOptOutAsync, grpcClient.FetchAutomatedGa4ConfigurationOptOut, effectiveSettings.FetchAutomatedGa4ConfigurationOptOutSettings);
             Modify_ApiCall(ref _callFetchAutomatedGa4ConfigurationOptOut);
             Modify_FetchAutomatedGa4ConfigurationOptOutApiCall(ref _callFetchAutomatedGa4ConfigurationOptOut);
+            _callCreateBigQueryLink = clientHelper.BuildApiCall<CreateBigQueryLinkRequest, BigQueryLink>("CreateBigQueryLink", grpcClient.CreateBigQueryLinkAsync, grpcClient.CreateBigQueryLink, effectiveSettings.CreateBigQueryLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBigQueryLink);
+            Modify_CreateBigQueryLinkApiCall(ref _callCreateBigQueryLink);
             _callGetBigQueryLink = clientHelper.BuildApiCall<GetBigQueryLinkRequest, BigQueryLink>("GetBigQueryLink", grpcClient.GetBigQueryLinkAsync, grpcClient.GetBigQueryLink, effectiveSettings.GetBigQueryLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBigQueryLink);
             Modify_GetBigQueryLinkApiCall(ref _callGetBigQueryLink);
             _callListBigQueryLinks = clientHelper.BuildApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse>("ListBigQueryLinks", grpcClient.ListBigQueryLinksAsync, grpcClient.ListBigQueryLinks, effectiveSettings.ListBigQueryLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBigQueryLinks);
             Modify_ListBigQueryLinksApiCall(ref _callListBigQueryLinks);
+            _callDeleteBigQueryLink = clientHelper.BuildApiCall<DeleteBigQueryLinkRequest, wkt::Empty>("DeleteBigQueryLink", grpcClient.DeleteBigQueryLinkAsync, grpcClient.DeleteBigQueryLink, effectiveSettings.DeleteBigQueryLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBigQueryLink);
+            Modify_DeleteBigQueryLinkApiCall(ref _callDeleteBigQueryLink);
+            _callUpdateBigQueryLink = clientHelper.BuildApiCall<UpdateBigQueryLinkRequest, BigQueryLink>("UpdateBigQueryLink", grpcClient.UpdateBigQueryLinkAsync, grpcClient.UpdateBigQueryLink, effectiveSettings.UpdateBigQueryLinkSettings).WithGoogleRequestParam("bigquery_link.name", request => request.BigqueryLink?.Name);
+            Modify_ApiCall(ref _callUpdateBigQueryLink);
+            Modify_UpdateBigQueryLinkApiCall(ref _callUpdateBigQueryLink);
             _callGetEnhancedMeasurementSettings = clientHelper.BuildApiCall<GetEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings>("GetEnhancedMeasurementSettings", grpcClient.GetEnhancedMeasurementSettingsAsync, grpcClient.GetEnhancedMeasurementSettings, effectiveSettings.GetEnhancedMeasurementSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEnhancedMeasurementSettings);
             Modify_GetEnhancedMeasurementSettingsApiCall(ref _callGetEnhancedMeasurementSettings);
@@ -18621,6 +20664,24 @@ namespace Google.Analytics.Admin.V1Alpha
             _callDeleteEventCreateRule = clientHelper.BuildApiCall<DeleteEventCreateRuleRequest, wkt::Empty>("DeleteEventCreateRule", grpcClient.DeleteEventCreateRuleAsync, grpcClient.DeleteEventCreateRule, effectiveSettings.DeleteEventCreateRuleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEventCreateRule);
             Modify_DeleteEventCreateRuleApiCall(ref _callDeleteEventCreateRule);
+            _callGetEventEditRule = clientHelper.BuildApiCall<GetEventEditRuleRequest, EventEditRule>("GetEventEditRule", grpcClient.GetEventEditRuleAsync, grpcClient.GetEventEditRule, effectiveSettings.GetEventEditRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEventEditRule);
+            Modify_GetEventEditRuleApiCall(ref _callGetEventEditRule);
+            _callListEventEditRules = clientHelper.BuildApiCall<ListEventEditRulesRequest, ListEventEditRulesResponse>("ListEventEditRules", grpcClient.ListEventEditRulesAsync, grpcClient.ListEventEditRules, effectiveSettings.ListEventEditRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEventEditRules);
+            Modify_ListEventEditRulesApiCall(ref _callListEventEditRules);
+            _callCreateEventEditRule = clientHelper.BuildApiCall<CreateEventEditRuleRequest, EventEditRule>("CreateEventEditRule", grpcClient.CreateEventEditRuleAsync, grpcClient.CreateEventEditRule, effectiveSettings.CreateEventEditRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateEventEditRule);
+            Modify_CreateEventEditRuleApiCall(ref _callCreateEventEditRule);
+            _callUpdateEventEditRule = clientHelper.BuildApiCall<UpdateEventEditRuleRequest, EventEditRule>("UpdateEventEditRule", grpcClient.UpdateEventEditRuleAsync, grpcClient.UpdateEventEditRule, effectiveSettings.UpdateEventEditRuleSettings).WithGoogleRequestParam("event_edit_rule.name", request => request.EventEditRule?.Name);
+            Modify_ApiCall(ref _callUpdateEventEditRule);
+            Modify_UpdateEventEditRuleApiCall(ref _callUpdateEventEditRule);
+            _callDeleteEventEditRule = clientHelper.BuildApiCall<DeleteEventEditRuleRequest, wkt::Empty>("DeleteEventEditRule", grpcClient.DeleteEventEditRuleAsync, grpcClient.DeleteEventEditRule, effectiveSettings.DeleteEventEditRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteEventEditRule);
+            Modify_DeleteEventEditRuleApiCall(ref _callDeleteEventEditRule);
+            _callReorderEventEditRules = clientHelper.BuildApiCall<ReorderEventEditRulesRequest, wkt::Empty>("ReorderEventEditRules", grpcClient.ReorderEventEditRulesAsync, grpcClient.ReorderEventEditRules, effectiveSettings.ReorderEventEditRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callReorderEventEditRules);
+            Modify_ReorderEventEditRulesApiCall(ref _callReorderEventEditRules);
             _callUpdateDataRedactionSettings = clientHelper.BuildApiCall<UpdateDataRedactionSettingsRequest, DataRedactionSettings>("UpdateDataRedactionSettings", grpcClient.UpdateDataRedactionSettingsAsync, grpcClient.UpdateDataRedactionSettings, effectiveSettings.UpdateDataRedactionSettingsSettings).WithGoogleRequestParam("data_redaction_settings.name", request => request.DataRedactionSettings?.Name);
             Modify_ApiCall(ref _callUpdateDataRedactionSettings);
             Modify_UpdateDataRedactionSettingsApiCall(ref _callUpdateDataRedactionSettings);
@@ -18657,9 +20718,9 @@ namespace Google.Analytics.Admin.V1Alpha
             _callDeleteRollupPropertySourceLink = clientHelper.BuildApiCall<DeleteRollupPropertySourceLinkRequest, wkt::Empty>("DeleteRollupPropertySourceLink", grpcClient.DeleteRollupPropertySourceLinkAsync, grpcClient.DeleteRollupPropertySourceLink, effectiveSettings.DeleteRollupPropertySourceLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRollupPropertySourceLink);
             Modify_DeleteRollupPropertySourceLinkApiCall(ref _callDeleteRollupPropertySourceLink);
-            _callCreateSubproperty = clientHelper.BuildApiCall<CreateSubpropertyRequest, CreateSubpropertyResponse>("CreateSubproperty", grpcClient.CreateSubpropertyAsync, grpcClient.CreateSubproperty, effectiveSettings.CreateSubpropertySettings);
-            Modify_ApiCall(ref _callCreateSubproperty);
-            Modify_CreateSubpropertyApiCall(ref _callCreateSubproperty);
+            _callProvisionSubproperty = clientHelper.BuildApiCall<ProvisionSubpropertyRequest, ProvisionSubpropertyResponse>("ProvisionSubproperty", grpcClient.ProvisionSubpropertyAsync, grpcClient.ProvisionSubproperty, effectiveSettings.ProvisionSubpropertySettings);
+            Modify_ApiCall(ref _callProvisionSubproperty);
+            Modify_ProvisionSubpropertyApiCall(ref _callProvisionSubproperty);
             _callCreateSubpropertyEventFilter = clientHelper.BuildApiCall<CreateSubpropertyEventFilterRequest, SubpropertyEventFilter>("CreateSubpropertyEventFilter", grpcClient.CreateSubpropertyEventFilterAsync, grpcClient.CreateSubpropertyEventFilter, effectiveSettings.CreateSubpropertyEventFilterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSubpropertyEventFilter);
             Modify_CreateSubpropertyEventFilterApiCall(ref _callCreateSubpropertyEventFilter);
@@ -18757,6 +20818,16 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_DeleteConversionEventApiCall(ref gaxgrpc::ApiCall<DeleteConversionEventRequest, wkt::Empty> call);
 
         partial void Modify_ListConversionEventsApiCall(ref gaxgrpc::ApiCall<ListConversionEventsRequest, ListConversionEventsResponse> call);
+
+        partial void Modify_CreateKeyEventApiCall(ref gaxgrpc::ApiCall<CreateKeyEventRequest, KeyEvent> call);
+
+        partial void Modify_UpdateKeyEventApiCall(ref gaxgrpc::ApiCall<UpdateKeyEventRequest, KeyEvent> call);
+
+        partial void Modify_GetKeyEventApiCall(ref gaxgrpc::ApiCall<GetKeyEventRequest, KeyEvent> call);
+
+        partial void Modify_DeleteKeyEventApiCall(ref gaxgrpc::ApiCall<DeleteKeyEventRequest, wkt::Empty> call);
+
+        partial void Modify_ListKeyEventsApiCall(ref gaxgrpc::ApiCall<ListKeyEventsRequest, ListKeyEventsResponse> call);
 
         partial void Modify_GetDisplayVideo360AdvertiserLinkApiCall(ref gaxgrpc::ApiCall<GetDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink> call);
 
@@ -18882,9 +20953,15 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_FetchAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> call);
 
+        partial void Modify_CreateBigQueryLinkApiCall(ref gaxgrpc::ApiCall<CreateBigQueryLinkRequest, BigQueryLink> call);
+
         partial void Modify_GetBigQueryLinkApiCall(ref gaxgrpc::ApiCall<GetBigQueryLinkRequest, BigQueryLink> call);
 
         partial void Modify_ListBigQueryLinksApiCall(ref gaxgrpc::ApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse> call);
+
+        partial void Modify_DeleteBigQueryLinkApiCall(ref gaxgrpc::ApiCall<DeleteBigQueryLinkRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateBigQueryLinkApiCall(ref gaxgrpc::ApiCall<UpdateBigQueryLinkRequest, BigQueryLink> call);
 
         partial void Modify_GetEnhancedMeasurementSettingsApiCall(ref gaxgrpc::ApiCall<GetEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> call);
 
@@ -18916,6 +20993,18 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteEventCreateRuleApiCall(ref gaxgrpc::ApiCall<DeleteEventCreateRuleRequest, wkt::Empty> call);
 
+        partial void Modify_GetEventEditRuleApiCall(ref gaxgrpc::ApiCall<GetEventEditRuleRequest, EventEditRule> call);
+
+        partial void Modify_ListEventEditRulesApiCall(ref gaxgrpc::ApiCall<ListEventEditRulesRequest, ListEventEditRulesResponse> call);
+
+        partial void Modify_CreateEventEditRuleApiCall(ref gaxgrpc::ApiCall<CreateEventEditRuleRequest, EventEditRule> call);
+
+        partial void Modify_UpdateEventEditRuleApiCall(ref gaxgrpc::ApiCall<UpdateEventEditRuleRequest, EventEditRule> call);
+
+        partial void Modify_DeleteEventEditRuleApiCall(ref gaxgrpc::ApiCall<DeleteEventEditRuleRequest, wkt::Empty> call);
+
+        partial void Modify_ReorderEventEditRulesApiCall(ref gaxgrpc::ApiCall<ReorderEventEditRulesRequest, wkt::Empty> call);
+
         partial void Modify_UpdateDataRedactionSettingsApiCall(ref gaxgrpc::ApiCall<UpdateDataRedactionSettingsRequest, DataRedactionSettings> call);
 
         partial void Modify_GetDataRedactionSettingsApiCall(ref gaxgrpc::ApiCall<GetDataRedactionSettingsRequest, DataRedactionSettings> call);
@@ -18940,7 +21029,7 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteRollupPropertySourceLinkApiCall(ref gaxgrpc::ApiCall<DeleteRollupPropertySourceLinkRequest, wkt::Empty> call);
 
-        partial void Modify_CreateSubpropertyApiCall(ref gaxgrpc::ApiCall<CreateSubpropertyRequest, CreateSubpropertyResponse> call);
+        partial void Modify_ProvisionSubpropertyApiCall(ref gaxgrpc::ApiCall<ProvisionSubpropertyRequest, ProvisionSubpropertyResponse> call);
 
         partial void Modify_CreateSubpropertyEventFilterApiCall(ref gaxgrpc::ApiCall<CreateSubpropertyEventFilterRequest, SubpropertyEventFilter> call);
 
@@ -19034,6 +21123,16 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_DeleteConversionEventRequest(ref DeleteConversionEventRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListConversionEventsRequest(ref ListConversionEventsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateKeyEventRequest(ref CreateKeyEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateKeyEventRequest(ref UpdateKeyEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetKeyEventRequest(ref GetKeyEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteKeyEventRequest(ref DeleteKeyEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListKeyEventsRequest(ref ListKeyEventsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDisplayVideo360AdvertiserLinkRequest(ref GetDisplayVideo360AdvertiserLinkRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -19159,9 +21258,15 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_FetchAutomatedGa4ConfigurationOptOutRequest(ref FetchAutomatedGa4ConfigurationOptOutRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateBigQueryLinkRequest(ref CreateBigQueryLinkRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetBigQueryLinkRequest(ref GetBigQueryLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBigQueryLinksRequest(ref ListBigQueryLinksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBigQueryLinkRequest(ref DeleteBigQueryLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBigQueryLinkRequest(ref UpdateBigQueryLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetEnhancedMeasurementSettingsRequest(ref GetEnhancedMeasurementSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -19193,6 +21298,18 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteEventCreateRuleRequest(ref DeleteEventCreateRuleRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetEventEditRuleRequest(ref GetEventEditRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListEventEditRulesRequest(ref ListEventEditRulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateEventEditRuleRequest(ref CreateEventEditRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateEventEditRuleRequest(ref UpdateEventEditRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteEventEditRuleRequest(ref DeleteEventEditRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReorderEventEditRulesRequest(ref ReorderEventEditRulesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_UpdateDataRedactionSettingsRequest(ref UpdateDataRedactionSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDataRedactionSettingsRequest(ref GetDataRedactionSettingsRequest request, ref gaxgrpc::CallSettings settings);
@@ -19217,7 +21334,7 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteRollupPropertySourceLinkRequest(ref DeleteRollupPropertySourceLinkRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_CreateSubpropertyRequest(ref CreateSubpropertyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ProvisionSubpropertyRequest(ref ProvisionSubpropertyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateSubpropertyEventFilterRequest(ref CreateSubpropertyEventFilterRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -20130,11 +22247,13 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override ConversionEvent CreateConversionEvent(CreateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateConversionEventRequest(ref request, ref callSettings);
@@ -20142,11 +22261,13 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `CreateKeyEvent` instead.
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<ConversionEvent> CreateConversionEventAsync(CreateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateConversionEventRequest(ref request, ref callSettings);
@@ -20154,11 +22275,13 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override ConversionEvent UpdateConversionEvent(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateConversionEventRequest(ref request, ref callSettings);
@@ -20166,11 +22289,13 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `UpdateKeyEvent` instead.
         /// Updates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateConversionEventRequest(ref request, ref callSettings);
@@ -20178,11 +22303,13 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override ConversionEvent GetConversionEvent(GetConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetConversionEventRequest(ref request, ref callSettings);
@@ -20190,11 +22317,13 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `GetKeyEvent` instead.
         /// Retrieve a single conversion event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<ConversionEvent> GetConversionEventAsync(GetConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetConversionEventRequest(ref request, ref callSettings);
@@ -20202,11 +22331,13 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override void DeleteConversionEvent(DeleteConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteConversionEventRequest(ref request, ref callSettings);
@@ -20214,11 +22345,13 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `DeleteKeyEvent` instead.
         /// Deletes a conversion event in a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task DeleteConversionEventAsync(DeleteConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteConversionEventRequest(ref request, ref callSettings);
@@ -20226,6 +22359,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -20233,6 +22367,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEvents(ListConversionEventsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListConversionEventsRequest(ref request, ref callSettings);
@@ -20240,6 +22375,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Deprecated: Use `ListKeyEvents` instead.
         /// Returns a list of conversion events in the specified parent property.
         /// 
         /// Returns an empty list if no conversion events are found.
@@ -20247,10 +22383,133 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversionEvent"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> ListConversionEventsAsync(ListConversionEventsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListConversionEventsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListConversionEventsRequest, ListConversionEventsResponse, ConversionEvent>(_callListConversionEvents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override KeyEvent CreateKeyEvent(CreateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateKeyEventRequest(ref request, ref callSettings);
+            return _callCreateKeyEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<KeyEvent> CreateKeyEventAsync(CreateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateKeyEventRequest(ref request, ref callSettings);
+            return _callCreateKeyEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override KeyEvent UpdateKeyEvent(UpdateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateKeyEventRequest(ref request, ref callSettings);
+            return _callUpdateKeyEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<KeyEvent> UpdateKeyEventAsync(UpdateKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateKeyEventRequest(ref request, ref callSettings);
+            return _callUpdateKeyEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override KeyEvent GetKeyEvent(GetKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetKeyEventRequest(ref request, ref callSettings);
+            return _callGetKeyEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a single Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<KeyEvent> GetKeyEventAsync(GetKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetKeyEventRequest(ref request, ref callSettings);
+            return _callGetKeyEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteKeyEvent(DeleteKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteKeyEventRequest(ref request, ref callSettings);
+            _callDeleteKeyEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a Key Event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteKeyEventAsync(DeleteKeyEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteKeyEventRequest(ref request, ref callSettings);
+            return _callDeleteKeyEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="KeyEvent"/> resources.</returns>
+        public override gax::PagedEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEvents(ListKeyEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListKeyEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListKeyEventsRequest, ListKeyEventsResponse, KeyEvent>(_callListKeyEvents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of Key Events in the specified parent property.
+        /// Returns an empty list if no Key Events are found.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyEvent"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListKeyEventsResponse, KeyEvent> ListKeyEventsAsync(ListKeyEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListKeyEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListKeyEventsRequest, ListKeyEventsResponse, KeyEvent>(_callListKeyEvents, request, callSettings);
         }
 
         /// <summary>
@@ -21822,6 +24081,30 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BigQueryLink CreateBigQueryLink(CreateBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBigQueryLinkRequest(ref request, ref callSettings);
+            return _callCreateBigQueryLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BigQueryLink> CreateBigQueryLinkAsync(CreateBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBigQueryLinkRequest(ref request, ref callSettings);
+            return _callCreateBigQueryLink.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Lookup for a single BigQuery Link.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -21867,6 +24150,54 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_ListBigQueryLinksRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBigQueryLinksRequest, ListBigQueryLinksResponse, BigQueryLink>(_callListBigQueryLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteBigQueryLink(DeleteBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBigQueryLinkRequest(ref request, ref callSettings);
+            _callDeleteBigQueryLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a BigQueryLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteBigQueryLinkAsync(DeleteBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBigQueryLinkRequest(ref request, ref callSettings);
+            return _callDeleteBigQueryLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BigQueryLink UpdateBigQueryLink(UpdateBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBigQueryLinkRequest(ref request, ref callSettings);
+            return _callUpdateBigQueryLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a BigQueryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BigQueryLink> UpdateBigQueryLinkAsync(UpdateBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBigQueryLinkRequest(ref request, ref callSettings);
+            return _callUpdateBigQueryLink.Async(request, callSettings);
         }
 
         /// <summary>
@@ -22250,6 +24581,150 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EventEditRule GetEventEditRule(GetEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEventEditRuleRequest(ref request, ref callSettings);
+            return _callGetEventEditRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EventEditRule> GetEventEditRuleAsync(GetEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEventEditRuleRequest(ref request, ref callSettings);
+            return _callGetEventEditRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists EventEditRules on a web data stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EventEditRule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEventEditRulesResponse, EventEditRule> ListEventEditRules(ListEventEditRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEventEditRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEventEditRulesRequest, ListEventEditRulesResponse, EventEditRule>(_callListEventEditRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists EventEditRules on a web data stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EventEditRule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListEventEditRulesResponse, EventEditRule> ListEventEditRulesAsync(ListEventEditRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEventEditRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEventEditRulesRequest, ListEventEditRulesResponse, EventEditRule>(_callListEventEditRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EventEditRule CreateEventEditRule(CreateEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEventEditRuleRequest(ref request, ref callSettings);
+            return _callCreateEventEditRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EventEditRule> CreateEventEditRuleAsync(CreateEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEventEditRuleRequest(ref request, ref callSettings);
+            return _callCreateEventEditRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EventEditRule UpdateEventEditRule(UpdateEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEventEditRuleRequest(ref request, ref callSettings);
+            return _callUpdateEventEditRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EventEditRule> UpdateEventEditRuleAsync(UpdateEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEventEditRuleRequest(ref request, ref callSettings);
+            return _callUpdateEventEditRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteEventEditRule(DeleteEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEventEditRuleRequest(ref request, ref callSettings);
+            _callDeleteEventEditRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an EventEditRule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteEventEditRuleAsync(DeleteEventEditRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEventEditRuleRequest(ref request, ref callSettings);
+            return _callDeleteEventEditRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes the processing order of event edit rules on the specified stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void ReorderEventEditRules(ReorderEventEditRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReorderEventEditRulesRequest(ref request, ref callSettings);
+            _callReorderEventEditRules.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes the processing order of event edit rules on the specified stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task ReorderEventEditRulesAsync(ReorderEventEditRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReorderEventEditRulesRequest(ref request, ref callSettings);
+            return _callReorderEventEditRules.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Updates a DataRedactionSettings on a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -22560,10 +25035,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override CreateSubpropertyResponse CreateSubproperty(CreateSubpropertyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override ProvisionSubpropertyResponse ProvisionSubproperty(ProvisionSubpropertyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_CreateSubpropertyRequest(ref request, ref callSettings);
-            return _callCreateSubproperty.Sync(request, callSettings);
+            Modify_ProvisionSubpropertyRequest(ref request, ref callSettings);
+            return _callProvisionSubproperty.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -22573,10 +25048,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<CreateSubpropertyResponse> CreateSubpropertyAsync(CreateSubpropertyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<ProvisionSubpropertyResponse> ProvisionSubpropertyAsync(ProvisionSubpropertyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_CreateSubpropertyRequest(ref request, ref callSettings);
-            return _callCreateSubproperty.Async(request, callSettings);
+            Modify_ProvisionSubpropertyRequest(ref request, ref callSettings);
+            return _callProvisionSubproperty.Async(request, callSettings);
         }
 
         /// <summary>
@@ -22736,6 +25211,10 @@ namespace Google.Analytics.Admin.V1Alpha
     {
     }
 
+    public partial class ListKeyEventsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDisplayVideo360AdvertiserLinksRequest : gaxgrpc::IPageRequest
     {
     }
@@ -22785,6 +25264,10 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListEventCreateRulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEventEditRulesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -22869,6 +25352,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ConversionEvent> GetEnumerator() => ConversionEvents.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListKeyEventsResponse : gaxgrpc::IPageResponse<KeyEvent>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<KeyEvent> GetEnumerator() => KeyEvents.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -22975,6 +25466,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<EventCreateRule> GetEnumerator() => EventCreateRules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEventEditRulesResponse : gaxgrpc::IPageResponse<EventEditRule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EventEditRule> GetEnumerator() => EventEditRules.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

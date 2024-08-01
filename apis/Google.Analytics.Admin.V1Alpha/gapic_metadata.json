@@ -88,6 +88,12 @@
                 "CreateAudienceAsync"
               ]
             },
+            "CreateBigQueryLink": {
+              "methods": [
+                "CreateBigQueryLink",
+                "CreateBigQueryLinkAsync"
+              ]
+            },
             "CreateCalculatedMetric": {
               "methods": [
                 "CreateCalculatedMetric",
@@ -148,6 +154,12 @@
                 "CreateEventCreateRuleAsync"
               ]
             },
+            "CreateEventEditRule": {
+              "methods": [
+                "CreateEventEditRule",
+                "CreateEventEditRuleAsync"
+              ]
+            },
             "CreateExpandedDataSet": {
               "methods": [
                 "CreateExpandedDataSet",
@@ -164,6 +176,12 @@
               "methods": [
                 "CreateGoogleAdsLink",
                 "CreateGoogleAdsLinkAsync"
+              ]
+            },
+            "CreateKeyEvent": {
+              "methods": [
+                "CreateKeyEvent",
+                "CreateKeyEventAsync"
               ]
             },
             "CreateMeasurementProtocolSecret": {
@@ -202,12 +220,6 @@
                 "CreateSearchAds360LinkAsync"
               ]
             },
-            "CreateSubproperty": {
-              "methods": [
-                "CreateSubproperty",
-                "CreateSubpropertyAsync"
-              ]
-            },
             "CreateSubpropertyEventFilter": {
               "methods": [
                 "CreateSubpropertyEventFilter",
@@ -230,6 +242,12 @@
               "methods": [
                 "DeleteAdSenseLink",
                 "DeleteAdSenseLinkAsync"
+              ]
+            },
+            "DeleteBigQueryLink": {
+              "methods": [
+                "DeleteBigQueryLink",
+                "DeleteBigQueryLinkAsync"
               ]
             },
             "DeleteCalculatedMetric": {
@@ -280,6 +298,12 @@
                 "DeleteEventCreateRuleAsync"
               ]
             },
+            "DeleteEventEditRule": {
+              "methods": [
+                "DeleteEventEditRule",
+                "DeleteEventEditRuleAsync"
+              ]
+            },
             "DeleteExpandedDataSet": {
               "methods": [
                 "DeleteExpandedDataSet",
@@ -296,6 +320,12 @@
               "methods": [
                 "DeleteGoogleAdsLink",
                 "DeleteGoogleAdsLinkAsync"
+              ]
+            },
+            "DeleteKeyEvent": {
+              "methods": [
+                "DeleteKeyEvent",
+                "DeleteKeyEventAsync"
               ]
             },
             "DeleteMeasurementProtocolSecret": {
@@ -460,6 +490,12 @@
                 "GetEventCreateRuleAsync"
               ]
             },
+            "GetEventEditRule": {
+              "methods": [
+                "GetEventEditRule",
+                "GetEventEditRuleAsync"
+              ]
+            },
             "GetExpandedDataSet": {
               "methods": [
                 "GetExpandedDataSet",
@@ -476,6 +512,12 @@
               "methods": [
                 "GetGoogleSignalsSettings",
                 "GetGoogleSignalsSettingsAsync"
+              ]
+            },
+            "GetKeyEvent": {
+              "methods": [
+                "GetKeyEvent",
+                "GetKeyEventAsync"
               ]
             },
             "GetMeasurementProtocolSecret": {
@@ -610,6 +652,12 @@
                 "ListEventCreateRulesAsync"
               ]
             },
+            "ListEventEditRules": {
+              "methods": [
+                "ListEventEditRules",
+                "ListEventEditRulesAsync"
+              ]
+            },
             "ListExpandedDataSets": {
               "methods": [
                 "ListExpandedDataSets",
@@ -626,6 +674,12 @@
               "methods": [
                 "ListGoogleAdsLinks",
                 "ListGoogleAdsLinksAsync"
+              ]
+            },
+            "ListKeyEvents": {
+              "methods": [
+                "ListKeyEvents",
+                "ListKeyEventsAsync"
               ]
             },
             "ListMeasurementProtocolSecrets": {
@@ -670,6 +724,18 @@
                 "ProvisionAccountTicketAsync"
               ]
             },
+            "ProvisionSubproperty": {
+              "methods": [
+                "ProvisionSubproperty",
+                "ProvisionSubpropertyAsync"
+              ]
+            },
+            "ReorderEventEditRules": {
+              "methods": [
+                "ReorderEventEditRules",
+                "ReorderEventEditRulesAsync"
+              ]
+            },
             "RunAccessReport": {
               "methods": [
                 "RunAccessReport",
@@ -710,6 +776,12 @@
               "methods": [
                 "UpdateAudience",
                 "UpdateAudienceAsync"
+              ]
+            },
+            "UpdateBigQueryLink": {
+              "methods": [
+                "UpdateBigQueryLink",
+                "UpdateBigQueryLinkAsync"
               ]
             },
             "UpdateCalculatedMetric": {
@@ -778,6 +850,12 @@
                 "UpdateEventCreateRuleAsync"
               ]
             },
+            "UpdateEventEditRule": {
+              "methods": [
+                "UpdateEventEditRule",
+                "UpdateEventEditRuleAsync"
+              ]
+            },
             "UpdateExpandedDataSet": {
               "methods": [
                 "UpdateExpandedDataSet",
@@ -794,6 +872,12 @@
               "methods": [
                 "UpdateGoogleSignalsSettings",
                 "UpdateGoogleSignalsSettingsAsync"
+              ]
+            },
+            "UpdateKeyEvent": {
+              "methods": [
+                "UpdateKeyEvent",
+                "UpdateKeyEventAsync"
               ]
             },
             "UpdateMeasurementProtocolSecret": {

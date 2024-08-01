@@ -357,6 +357,54 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class CreateKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::KeyEventName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::KeyEventName KeyEventName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::KeyEventName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::KeyEventName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::KeyEventName KeyEventName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::KeyEventName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListKeyEventsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetDisplayVideo360AdvertiserLinkRequest
     {
         /// <summary>
@@ -1193,6 +1241,18 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class CreateBigQueryLinkRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetBigQueryLinkRequest
     {
         /// <summary>
@@ -1214,6 +1274,18 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBigQueryLinkRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::BigQueryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::BigQueryLinkName BigQueryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::BigQueryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
@@ -1362,6 +1434,66 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class CreateEventEditRuleRequest
+    {
+        /// <summary>
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStreamName ParentAsDataStreamName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteEventEditRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::EventEditRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::EventEditRuleName EventEditRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::EventEditRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEventEditRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::EventEditRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::EventEditRuleName EventEditRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::EventEditRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListEventEditRulesRequest
+    {
+        /// <summary>
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStreamName ParentAsDataStreamName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ReorderEventEditRulesRequest
+    {
+        /// <summary>
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStreamName ParentAsDataStreamName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetRollupPropertySourceLinkRequest
     {
         /// <summary>
@@ -1409,18 +1541,6 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::RollupPropertySourceLinkName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class CreateSubpropertyRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public PropertyName ParentAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
         }
     }
 

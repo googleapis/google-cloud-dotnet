@@ -53,16 +53,17 @@ namespace Google.Analytics.Admin.V1Alpha {
             "YS5DaGFubmVsR3JvdXBGaWx0ZXJFeHByZXNzaW9uIoABCgxHcm91cGluZ1J1",
             "bGUSGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQISVQoKZXhwcmVzc2lvbhgC",
             "IAEoCzI8Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DaGFubmVs",
-            "R3JvdXBGaWx0ZXJFeHByZXNzaW9uQgPgQQIingIKDENoYW5uZWxHcm91cBIR",
+            "R3JvdXBGaWx0ZXJFeHByZXNzaW9uQgPgQQIitAIKDENoYW5uZWxHcm91cBIR",
             "CgRuYW1lGAEgASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQIS",
             "EwoLZGVzY3JpcHRpb24YAyABKAkSSAoNZ3JvdXBpbmdfcnVsZRgEIAMoCzIs",
             "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hcm91cGluZ1J1bGVC",
-            "A+BBAhIbCg5zeXN0ZW1fZGVmaW5lZBgFIAEoCEID4EEDOmTqQWEKKmFuYWx5",
-            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0NoYW5uZWxHcm91cBIzcHJvcGVy",
-            "dGllcy97cHJvcGVydHl9L2NoYW5uZWxHcm91cHMve2NoYW5uZWxfZ3JvdXB9",
-            "QnkKImNvbS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGFCEUNoYW5u",
-            "ZWxHcm91cFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYW5hbHl0aWNz",
-            "L2FkbWluL2FwaXYxYWxwaGEvYWRtaW5wYjthZG1pbnBiYgZwcm90bzM="));
+            "A+BBAhIbCg5zeXN0ZW1fZGVmaW5lZBgFIAEoCEID4EEDEhQKB3ByaW1hcnkY",
+            "BiABKAhCA+BBATpk6kFhCiphbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
+            "bS9DaGFubmVsR3JvdXASM3Byb3BlcnRpZXMve3Byb3BlcnR5fS9jaGFubmVs",
+            "R3JvdXBzL3tjaGFubmVsX2dyb3VwfUJ5CiJjb20uZ29vZ2xlLmFuYWx5dGlj",
+            "cy5hZG1pbi52MWFscGhhQhFDaGFubmVsR3JvdXBQcm90b1ABWj5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL2FuYWx5dGljcy9hZG1pbi9hcGl2MWFscGhhL2FkbWlu",
+            "cGI7YWRtaW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -71,7 +72,7 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChannelGroupFilterExpression), global::Google.Analytics.Admin.V1Alpha.ChannelGroupFilterExpression.Parser, new[]{ "AndGroup", "OrGroup", "NotExpression", "Filter" }, new[]{ "Expr" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChannelGroupFilterExpressionList), global::Google.Analytics.Admin.V1Alpha.ChannelGroupFilterExpressionList.Parser, new[]{ "FilterExpressions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GroupingRule), global::Google.Analytics.Admin.V1Alpha.GroupingRule.Parser, new[]{ "DisplayName", "Expression" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChannelGroup), global::Google.Analytics.Admin.V1Alpha.ChannelGroup.Parser, new[]{ "Name", "DisplayName", "Description", "GroupingRule", "SystemDefined" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChannelGroup), global::Google.Analytics.Admin.V1Alpha.ChannelGroup.Parser, new[]{ "Name", "DisplayName", "Description", "GroupingRule", "SystemDefined", "Primary" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1773,6 +1774,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       description_ = other.description_;
       groupingRule_ = other.groupingRule_.Clone();
       systemDefined_ = other.systemDefined_;
+      primary_ = other.primary_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1860,6 +1862,26 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "primary" field.</summary>
+    public const int PrimaryFieldNumber = 6;
+    private bool primary_;
+    /// <summary>
+    /// Optional. If true, this channel group will be used as the default channel
+    /// group for reports. Only one channel group can be set as `primary` at any
+    /// time. If the `primary` field gets set on a channel group, it will get unset
+    /// on the previous primary channel group.
+    ///
+    /// The Google Analytics predefined channel group is the primary by default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Primary {
+      get { return primary_; }
+      set {
+        primary_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1880,6 +1902,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (Description != other.Description) return false;
       if(!groupingRule_.Equals(other.groupingRule_)) return false;
       if (SystemDefined != other.SystemDefined) return false;
+      if (Primary != other.Primary) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1892,6 +1915,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= groupingRule_.GetHashCode();
       if (SystemDefined != false) hash ^= SystemDefined.GetHashCode();
+      if (Primary != false) hash ^= Primary.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1927,6 +1951,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(40);
         output.WriteBool(SystemDefined);
       }
+      if (Primary != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Primary);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1954,6 +1982,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(40);
         output.WriteBool(SystemDefined);
       }
+      if (Primary != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Primary);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1975,6 +2007,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       size += groupingRule_.CalculateSize(_repeated_groupingRule_codec);
       if (SystemDefined != false) {
+        size += 1 + 1;
+      }
+      if (Primary != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -2001,6 +2036,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       groupingRule_.Add(other.groupingRule_);
       if (other.SystemDefined != false) {
         SystemDefined = other.SystemDefined;
+      }
+      if (other.Primary != false) {
+        Primary = other.Primary;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2037,6 +2075,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             SystemDefined = input.ReadBool();
             break;
           }
+          case 48: {
+            Primary = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2070,6 +2112,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 40: {
             SystemDefined = input.ReadBool();
+            break;
+          }
+          case 48: {
+            Primary = input.ReadBool();
             break;
           }
         }
