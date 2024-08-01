@@ -70,7 +70,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 .ConnectionString;
 
             // Sample: CreateDatabaseAsync
-            // Additional: CreateDdlCommand
+            // Additional: CreateDdlCommand(*,*)
             using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
                 SpannerCommand createDbCmd = connection.CreateDdlCommand($"CREATE DATABASE {databaseName}");
