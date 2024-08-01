@@ -147,7 +147,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         [Fact]
         public void DetectLandmarks()
         {
-            Image image = LoadResourceImage("SydneyOperaHouse.jpg");
+            Image image = LoadResourceImage("vision_eiffel_tower.jpg");
             // Snippet: DetectLandmarks
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
             IReadOnlyList<EntityAnnotation> result = client.DetectLandmarks(image);
@@ -159,7 +159,7 @@ namespace Google.Cloud.Vision.V1.Snippets
 
             Assert.InRange(result.Count, 1, 10);
             var descriptions = result.Select(r => r.Description).ToList();
-            Assert.Contains("Sydney Opera House", descriptions);
+            Assert.Contains("Eiffel Tower", descriptions);
         }
 
         // See-also: DetectLandmarks(*, *, *, *)
