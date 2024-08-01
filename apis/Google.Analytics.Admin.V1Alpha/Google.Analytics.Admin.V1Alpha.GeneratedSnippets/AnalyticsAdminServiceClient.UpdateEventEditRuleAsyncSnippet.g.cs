@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubproperty_async]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateEventEditRule_async_flattened]
     using Google.Analytics.Admin.V1Alpha;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for CreateSubpropertyAsync</summary>
+        /// <summary>Snippet for UpdateEventEditRuleAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,20 +31,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateSubpropertyRequestObjectAsync()
+        public async Task UpdateEventEditRuleAsync()
         {
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateSubpropertyRequest request = new CreateSubpropertyRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                Subproperty = new Property(),
-                SubpropertyEventFilter = new SubpropertyEventFilter(),
-            };
+            EventEditRule eventEditRule = new EventEditRule();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            CreateSubpropertyResponse response = await analyticsAdminServiceClient.CreateSubpropertyAsync(request);
+            EventEditRule response = await analyticsAdminServiceClient.UpdateEventEditRuleAsync(eventEditRule, updateMask);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubproperty_async]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateEventEditRule_async_flattened]
 }

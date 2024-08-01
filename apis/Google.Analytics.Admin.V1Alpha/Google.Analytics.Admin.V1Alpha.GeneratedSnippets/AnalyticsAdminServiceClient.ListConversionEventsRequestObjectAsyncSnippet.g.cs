@@ -43,7 +43,9 @@ namespace GoogleCSharpSnippets
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEventsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ConversionEvent item) =>

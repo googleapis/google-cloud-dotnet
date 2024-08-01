@@ -38,26 +38,37 @@ namespace Google.Analytics.Admin.V1Alpha {
             "6kGFAQotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXZlbnRDcmVh",
             "dGVSdWxlElRwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVN0cmVhbXMve2Rh",
             "dGFfc3RyZWFtfS9ldmVudENyZWF0ZVJ1bGVzL3tldmVudF9jcmVhdGVfcnVs",
-            "ZX0irQQKEU1hdGNoaW5nQ29uZGl0aW9uEhIKBWZpZWxkGAEgASgJQgPgQQIS",
-            "XgoPY29tcGFyaXNvbl90eXBlGAIgASgOMkAuZ29vZ2xlLmFuYWx5dGljcy5h",
-            "ZG1pbi52MWFscGhhLk1hdGNoaW5nQ29uZGl0aW9uLkNvbXBhcmlzb25UeXBl",
-            "QgPgQQISEgoFdmFsdWUYAyABKAlCA+BBAhIPCgduZWdhdGVkGAQgASgIIv4C",
-            "Cg5Db21wYXJpc29uVHlwZRIfChtDT01QQVJJU09OX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIKCgZFUVVBTFMQARIbChdFUVVBTFNfQ0FTRV9JTlNFTlNJVElWRRAC",
-            "EgwKCENPTlRBSU5TEAMSHQoZQ09OVEFJTlNfQ0FTRV9JTlNFTlNJVElWRRAE",
-            "Eg8KC1NUQVJUU19XSVRIEAUSIAocU1RBUlRTX1dJVEhfQ0FTRV9JTlNFTlNJ",
-            "VElWRRAGEg0KCUVORFNfV0lUSBAHEh4KGkVORFNfV0lUSF9DQVNFX0lOU0VO",
-            "U0lUSVZFEAgSEAoMR1JFQVRFUl9USEFOEAkSGQoVR1JFQVRFUl9USEFOX09S",
-            "X0VRVUFMEAoSDQoJTEVTU19USEFOEAsSFgoSTEVTU19USEFOX09SX0VRVUFM",
-            "EAwSFgoSUkVHVUxBUl9FWFBSRVNTSU9OEA0SJwojUkVHVUxBUl9FWFBSRVNT",
-            "SU9OX0NBU0VfSU5TRU5TSVRJVkUQDkJmCiJjb20uZ29vZ2xlLmFuYWx5dGlj",
-            "cy5hZG1pbi52MWFscGhhUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYW5hbHl0",
-            "aWNzL2FkbWluL2FwaXYxYWxwaGEvYWRtaW5wYjthZG1pbnBiYgZwcm90bzM="));
+            "ZX0iqAMKDUV2ZW50RWRpdFJ1bGUSEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRp",
+            "c3BsYXlfbmFtZRgCIAEoCUID4EECElAKEGV2ZW50X2NvbmRpdGlvbnMYAyAD",
+            "KAsyMS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuTWF0Y2hpbmdD",
+            "b25kaXRpb25CA+BBAhJTChNwYXJhbWV0ZXJfbXV0YXRpb25zGAQgAygLMjEu",
+            "Z29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlBhcmFtZXRlck11dGF0",
+            "aW9uQgPgQQISHQoQcHJvY2Vzc2luZ19vcmRlchgFIAEoA0ID4EEDOqIB6kGe",
+            "AQorYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXZlbnRFZGl0UnVs",
+            "ZRJQcHJvcGVydGllcy97cHJvcGVydHl9L2RhdGFTdHJlYW1zL3tkYXRhX3N0",
+            "cmVhbX0vZXZlbnRFZGl0UnVsZXMve2V2ZW50X2VkaXRfcnVsZX0qDmV2ZW50",
+            "RWRpdFJ1bGVzMg1ldmVudEVkaXRSdWxlIq0EChFNYXRjaGluZ0NvbmRpdGlv",
+            "bhISCgVmaWVsZBgBIAEoCUID4EECEl4KD2NvbXBhcmlzb25fdHlwZRgCIAEo",
+            "DjJALmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5NYXRjaGluZ0Nv",
+            "bmRpdGlvbi5Db21wYXJpc29uVHlwZUID4EECEhIKBXZhbHVlGAMgASgJQgPg",
+            "QQISDwoHbmVnYXRlZBgEIAEoCCL+AgoOQ29tcGFyaXNvblR5cGUSHwobQ09N",
+            "UEFSSVNPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGRVFVQUxTEAESGwoXRVFV",
+            "QUxTX0NBU0VfSU5TRU5TSVRJVkUQAhIMCghDT05UQUlOUxADEh0KGUNPTlRB",
+            "SU5TX0NBU0VfSU5TRU5TSVRJVkUQBBIPCgtTVEFSVFNfV0lUSBAFEiAKHFNU",
+            "QVJUU19XSVRIX0NBU0VfSU5TRU5TSVRJVkUQBhINCglFTkRTX1dJVEgQBxIe",
+            "ChpFTkRTX1dJVEhfQ0FTRV9JTlNFTlNJVElWRRAIEhAKDEdSRUFURVJfVEhB",
+            "ThAJEhkKFUdSRUFURVJfVEhBTl9PUl9FUVVBTBAKEg0KCUxFU1NfVEhBThAL",
+            "EhYKEkxFU1NfVEhBTl9PUl9FUVVBTBAMEhYKElJFR1VMQVJfRVhQUkVTU0lP",
+            "ThANEicKI1JFR1VMQVJfRVhQUkVTU0lPTl9DQVNFX0lOU0VOU0lUSVZFEA5C",
+            "ZgoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYVABWj5jbG91",
+            "ZC5nb29nbGUuY29tL2dvL2FuYWx5dGljcy9hZG1pbi9hcGl2MWFscGhhL2Fk",
+            "bWlucGI7YWRtaW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ParameterMutation), global::Google.Analytics.Admin.V1Alpha.ParameterMutation.Parser, new[]{ "Parameter", "ParameterValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.EventCreateRule), global::Google.Analytics.Admin.V1Alpha.EventCreateRule.Parser, new[]{ "Name", "DestinationEvent", "EventConditions", "SourceCopyParameters", "ParameterMutations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.EventEditRule), global::Google.Analytics.Admin.V1Alpha.EventEditRule.Parser, new[]{ "Name", "DisplayName", "EventConditions", "ParameterMutations", "ProcessingOrder" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.MatchingCondition), global::Google.Analytics.Admin.V1Alpha.MatchingCondition.Parser, new[]{ "Field", "ComparisonType", "Value", "Negated" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.MatchingCondition.Types.ComparisonType) }, null, null)
           }));
     }
@@ -668,6 +679,358 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
+  /// An Event Edit Rule defines conditions that will trigger the creation of an
+  /// entirely new event based upon matched criteria of a source event. Additional
+  /// mutations of the parameters from the source event can be defined.
+  ///
+  /// Unlike Event Create rules, Event Edit Rules are applied in their defined
+  /// order.
+  ///
+  /// Event Edit rules can't be used to modify an event created from an Event
+  /// Create rule.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EventEditRule : pb::IMessage<EventEditRule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EventEditRule> _parser = new pb::MessageParser<EventEditRule>(() => new EventEditRule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EventEditRule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.EventCreateAndEditReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventEditRule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventEditRule(EventEditRule other) : this() {
+      name_ = other.name_;
+      displayName_ = other.displayName_;
+      eventConditions_ = other.eventConditions_.Clone();
+      parameterMutations_ = other.parameterMutations_.Clone();
+      processingOrder_ = other.processingOrder_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventEditRule Clone() {
+      return new EventEditRule(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. Resource name for this EventEditRule resource.
+    /// Format:
+    /// properties/{property}/dataStreams/{data_stream}/eventEditRules/{event_edit_rule}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// Required. The display name of this event edit rule. Maximum of 255
+    /// characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "event_conditions" field.</summary>
+    public const int EventConditionsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Admin.V1Alpha.MatchingCondition> _repeated_eventConditions_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Analytics.Admin.V1Alpha.MatchingCondition.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.MatchingCondition> eventConditions_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.MatchingCondition>();
+    /// <summary>
+    /// Required. Conditions on the source event must match for this rule to be
+    /// applied. Must have at least one condition, and can have up to 10 max.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.MatchingCondition> EventConditions {
+      get { return eventConditions_; }
+    }
+
+    /// <summary>Field number for the "parameter_mutations" field.</summary>
+    public const int ParameterMutationsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Admin.V1Alpha.ParameterMutation> _repeated_parameterMutations_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Analytics.Admin.V1Alpha.ParameterMutation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ParameterMutation> parameterMutations_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ParameterMutation>();
+    /// <summary>
+    /// Required. Parameter mutations define parameter behavior on the new event,
+    /// and are applied in order. A maximum of 20 mutations can be applied.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ParameterMutation> ParameterMutations {
+      get { return parameterMutations_; }
+    }
+
+    /// <summary>Field number for the "processing_order" field.</summary>
+    public const int ProcessingOrderFieldNumber = 5;
+    private long processingOrder_;
+    /// <summary>
+    /// Output only. The order for which this rule will be processed. Rules with an
+    /// order value lower than this will be processed before this rule, rules with
+    /// an order value higher than this will be processed after this rule. New
+    /// event edit rules will be assigned an order value at the end of the order.
+    ///
+    /// This value does not apply to event create rules.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ProcessingOrder {
+      get { return processingOrder_; }
+      set {
+        processingOrder_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EventEditRule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EventEditRule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if(!eventConditions_.Equals(other.eventConditions_)) return false;
+      if(!parameterMutations_.Equals(other.parameterMutations_)) return false;
+      if (ProcessingOrder != other.ProcessingOrder) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      hash ^= eventConditions_.GetHashCode();
+      hash ^= parameterMutations_.GetHashCode();
+      if (ProcessingOrder != 0L) hash ^= ProcessingOrder.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      eventConditions_.WriteTo(output, _repeated_eventConditions_codec);
+      parameterMutations_.WriteTo(output, _repeated_parameterMutations_codec);
+      if (ProcessingOrder != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(ProcessingOrder);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      eventConditions_.WriteTo(ref output, _repeated_eventConditions_codec);
+      parameterMutations_.WriteTo(ref output, _repeated_parameterMutations_codec);
+      if (ProcessingOrder != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(ProcessingOrder);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      size += eventConditions_.CalculateSize(_repeated_eventConditions_codec);
+      size += parameterMutations_.CalculateSize(_repeated_parameterMutations_codec);
+      if (ProcessingOrder != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ProcessingOrder);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EventEditRule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      eventConditions_.Add(other.eventConditions_);
+      parameterMutations_.Add(other.parameterMutations_);
+      if (other.ProcessingOrder != 0L) {
+        ProcessingOrder = other.ProcessingOrder;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            eventConditions_.AddEntriesFrom(input, _repeated_eventConditions_codec);
+            break;
+          }
+          case 34: {
+            parameterMutations_.AddEntriesFrom(input, _repeated_parameterMutations_codec);
+            break;
+          }
+          case 40: {
+            ProcessingOrder = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            eventConditions_.AddEntriesFrom(ref input, _repeated_eventConditions_codec);
+            break;
+          }
+          case 34: {
+            parameterMutations_.AddEntriesFrom(ref input, _repeated_parameterMutations_codec);
+            break;
+          }
+          case 40: {
+            ProcessingOrder = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Defines a condition for when an Event Edit or Event Creation rule applies to
   /// an event.
   /// </summary>
@@ -686,7 +1049,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.EventCreateAndEditReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.EventCreateAndEditReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubproperty_sync]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_ReorderEventEditRules_sync]
     using Google.Analytics.Admin.V1Alpha;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for CreateSubproperty</summary>
+        /// <summary>Snippet for ReorderEventEditRules</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,20 +29,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateSubpropertyRequestObject()
+        public void ReorderEventEditRulesRequestObject()
         {
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            CreateSubpropertyRequest request = new CreateSubpropertyRequest
+            ReorderEventEditRulesRequest request = new ReorderEventEditRulesRequest
             {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                Subproperty = new Property(),
-                SubpropertyEventFilter = new SubpropertyEventFilter(),
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+                EventEditRules = { "", },
             };
             // Make the request
-            CreateSubpropertyResponse response = analyticsAdminServiceClient.CreateSubproperty(request);
+            analyticsAdminServiceClient.ReorderEventEditRules(request);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubproperty_sync]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_ReorderEventEditRules_sync]
 }
