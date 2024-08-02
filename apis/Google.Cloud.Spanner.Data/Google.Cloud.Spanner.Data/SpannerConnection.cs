@@ -238,11 +238,22 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Opens the connection within a <see cref="System.Transactions.TransactionScope"/> with specific
-        /// <see cref="AmbientTransactionOptions"/>.
+        /// <see cref="SpannerTransactionCreationOptions"/> and <see cref="SpannerTransactionOptions"/>.
         /// </summary>
-        public void Open(AmbientTransactionOptions options)
+        /// <param name="creationOptions">
+        /// Options to be used when creating the ambient <see cref="SpannerTransaction"/>.
+        /// Must not be null.
+        /// </param>
+        /// <param name="options">
+        /// Options to be applied to the ambient <see cref="SpannerTransaction"/> after creation.
+        /// May be null, in which case defaults will be used.
+        /// A copy of this value will be used internally, so any changes to <paramref name="options"/> made after calling this method
+        /// will have no effect on the ambient transaction.
+        /// </param>
+        public void Open(SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions options)
         {
-            GaxPreconditions.CheckNotNull(options, nameof(options));
+            GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
+
             var transaction = Transaction.Current;
             if (transaction == null)
             {
@@ -253,16 +264,31 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(Open)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
 
-            Open(() => EnlistTransaction(transaction, options));
+            // Copy options because SpannerTransactionOptions is mutable.
+            options = options is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(options);
+
+            Open(() => EnlistTransaction(transaction, creationOptions, options));
         }
 
         /// <summary>
         /// Opens the connection within a <see cref="System.Transactions.TransactionScope"/> with specific
-        /// <see cref="AmbientTransactionOptions"/>.
+        /// <see cref="SpannerTransactionCreationOptions"/> and <see cref="SpannerTransactionOptions"/>.
         /// </summary>
-        public Task OpenAsync(AmbientTransactionOptions options, CancellationToken cancellationToken)
+        /// <param name="creationOptions">
+        /// Options to be used when creating the ambient <see cref="SpannerTransaction"/>.
+        /// Must not be null.
+        /// </param>
+        /// <param name="options">
+        /// Options to be applied to the ambient <see cref="SpannerTransaction"/> after creation.
+        /// May be null, in which case defaults will be used.
+        /// A copy of this value will be used internally, so any changes to <paramref name="options"/> made after calling this method
+        /// will have no effect on the ambient transaction.
+        /// </param>
+        /// <param name="cancellationToken">The cancellation token for the operation.</param>
+        public Task OpenAsync(SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions options, CancellationToken cancellationToken)
         {
-            GaxPreconditions.CheckNotNull(options, nameof(options));
+            GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
+
             var transaction = Transaction.Current;
             if (transaction == null)
             {
@@ -273,7 +299,10 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(Open)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
 
-            return OpenAsyncImpl(() => EnlistTransaction(transaction, options), cancellationToken);
+            // Copy options because SpannerTransactionOptions is mutable.
+            options = options is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(options);
+
+            return OpenAsyncImpl(() => EnlistTransaction(transaction, creationOptions, options), cancellationToken);
         }
 
         /// <summary>
@@ -281,18 +310,18 @@ namespace Google.Cloud.Spanner.Data
         /// with a read-only transaction with the given <see cref="TimestampBound" /> settings
         /// </summary>
         /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
-        [Obsolete($"Use the {nameof(Open)} that takes a {nameof(AmbientTransactionOptions)} parameter instead.")]
+        [Obsolete($"Use the {nameof(Open)} overload that takes {nameof(SpannerTransactionCreationOptions)} and {nameof(SpannerTransactionOptions)} parameters instead.")]
         public void OpenAsReadOnly(TimestampBound timestampBound = null) =>
-            Open(AmbientTransactionOptions.ForTimestampBoundReadOnly(timestampBound));
+            Open(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(timestampBound), options: null);
 
         /// <summary>
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this
         /// will connect to an existing transaction identified by <paramref name="transactionId"/>.
         /// </summary>
         /// <param name="transactionId">The <see cref="TransactionId"/> representing an active readonly <see cref="SpannerTransaction"/>.</param>
-        [Obsolete($"Use the {nameof(Open)} that takes a {nameof(AmbientTransactionOptions)} parameter instead.")]
+        [Obsolete($"Use the {nameof(Open)} overload that takes {nameof(SpannerTransactionCreationOptions)} and {nameof(SpannerTransactionOptions)} parameters instead.")]
         public void OpenAsReadOnly(TransactionId transactionId) =>
-            Open(AmbientTransactionOptions.FromReadOnlyTransactionId(transactionId));
+            Open(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId), options: null);
 
         /// <summary>
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
@@ -301,9 +330,9 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        [Obsolete($"Use the {nameof(OpenAsync)} that takes a {nameof(AmbientTransactionOptions)} parameter instead.")]
+        [Obsolete($"Use the {nameof(OpenAsync)} overload that takes {nameof(SpannerTransactionCreationOptions)} and {nameof(SpannerTransactionOptions)} parameters instead.")]
         public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default) =>
-            OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(timestampBound), cancellationToken);
+            OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(timestampBound), options: null, cancellationToken);
 
         /// <summary>
         /// Opens the connection, which involves acquiring a SessionPool,
@@ -367,9 +396,15 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, AmbientTransactionOptions.Default);
+        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, SpannerTransactionCreationOptions.Default, new SpannerTransactionOptions());
 
-        private void EnlistTransaction(Transaction transaction, AmbientTransactionOptions options)
+        /// <summary>
+        /// Enlists this connection in <paramref name="transaction"/>.
+        /// A <see cref="SpannerTransaction"/> will be created from the given options.
+        /// Note that <see cref="SpannerTransactionOptions"/> is mutable and <paramref name="options"/> is not copied.
+        /// Callers should take care to pass an exclusive instance.
+        /// </summary>
+        private void EnlistTransaction(Transaction transaction, SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions options)
         {
             if (!EnlistInTransaction)
             {
@@ -379,7 +414,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("This connection is already enlisted to a transaction.");
             }
-            _volatileResourceManager = new VolatileResourceManager(this, options);
+            _volatileResourceManager = new VolatileResourceManager(this, creationOptions, options);
             transaction.EnlistVolatile(_volatileResourceManager, System.Transactions.EnlistmentOptions.None);
         }
 

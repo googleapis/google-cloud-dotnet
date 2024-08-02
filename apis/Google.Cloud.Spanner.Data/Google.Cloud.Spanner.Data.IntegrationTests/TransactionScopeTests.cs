@@ -82,7 +82,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 using (var connection = _fixture.GetConnection())
                 {
-                    await connection.OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(), default);
+                    await connection.OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(), options: null, cancellationToken: default);
                     AssertReadLatestValue(connection);
                     scope.Complete();
                 }
@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 using (var connection = _fixture.GetConnection())
                 {
-                    connection.OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(), default);
+                    connection.OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(), options: null, cancellationToken: default);
                     AssertReadLatestValue(connection);
                     scope.Complete();
                 }
@@ -136,8 +136,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var readConnection1 = _fixture.GetConnection())
             using (var readConnection2 = _fixture.GetConnection())
             {
-                await readConnection1.OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(), default);
-                await readConnection2.OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(), default);
+                await readConnection1.OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(), options: null, cancellationToken: default);
+                await readConnection2.OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(), options: null, cancellationToken: default);
 
                 await AssertReadLatestValueAsync(readConnection1);
                 await AssertReadLatestValueAsync(readConnection2);
@@ -152,8 +152,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var readConnection1 = _fixture.GetConnection())
             using (var readConnection2 = _fixture.GetConnection())
             {
-                readConnection1.OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(), default);
-                readConnection2.OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(), default);
+                readConnection1.OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(), options: null, cancellationToken: default);
+                readConnection2.OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(), options: null, cancellationToken: default);
 
                 AssertReadLatestValue(readConnection1);
                 AssertReadLatestValue(readConnection2);
@@ -169,7 +169,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var readConnection = _fixture.GetConnection())
                 using (var writeConnection = _fixture.GetConnection())
                 {
-                    await readConnection.OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(), default);
+                    await readConnection.OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(), options: null, cancellationToken: default);
                     await writeConnection.OpenAsync();
 
                     await AssertReadLatestValueAsync(readConnection);
@@ -187,7 +187,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var readConnection = _fixture.GetConnection())
                 using (var writeConnection = _fixture.GetConnection())
                 {
-                    readConnection.OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(), default);
+                    readConnection.OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(), options: null, cancellationToken: default);
                     writeConnection.Open();
 
                     AssertReadLatestValue(readConnection);

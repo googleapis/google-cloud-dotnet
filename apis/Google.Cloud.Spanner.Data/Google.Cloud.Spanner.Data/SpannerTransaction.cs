@@ -563,6 +563,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        // TODO: Move to SpannerTransactionOptions once all transaction types are using it.
         internal static TimeSpan? CheckMaxCommitDelayRange(TimeSpan? maxCommitDelay) =>
             maxCommitDelay is null ? maxCommitDelay : GaxPreconditions.CheckArgumentRange(maxCommitDelay.Value, nameof(MaxCommitDelay), TimeSpan.Zero, TimeSpan.MaxValue);
     }

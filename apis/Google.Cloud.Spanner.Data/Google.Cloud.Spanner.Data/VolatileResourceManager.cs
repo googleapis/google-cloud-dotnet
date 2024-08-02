@@ -26,14 +26,16 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly SpannerConnection _spannerConnection;
         private Lazy<Task<SpannerTransaction>> _transaction;
-        private readonly AmbientTransactionOptions _ambientTransactionOptions;
+        private readonly SpannerTransactionCreationOptions _transactionCreationOptions;
+        private readonly SpannerTransactionOptions _transactionOptions;
         private bool _hasExecutedDml;
 
-        internal VolatileResourceManager(SpannerConnection spannerConnection, AmbientTransactionOptions options)
+        internal VolatileResourceManager(SpannerConnection spannerConnection, SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions options)
         {
             _spannerConnection = spannerConnection;
             _transaction = new Lazy<Task<SpannerTransaction>>(CreateTransactionAsync, LazyThreadSafetyMode.ExecutionAndPublication);
-            _ambientTransactionOptions = options;
+            _transactionCreationOptions = creationOptions;
+            _transactionOptions = options;
         }
 
         private SpannerTransaction SpannerTransaction => SpannerTransactionTask.Result;
@@ -50,13 +52,13 @@ namespace Google.Cloud.Spanner.Data
 
         private async Task<SpannerTransaction> CreateTransactionAsync()
         {
-            SpannerTransaction transaction = _ambientTransactionOptions.TimestampBound != null ? await _spannerConnection.BeginReadOnlyTransactionAsync(_ambientTransactionOptions.TimestampBound).ConfigureAwait(false)
-                : _ambientTransactionOptions.TransactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_ambientTransactionOptions.TransactionId)
+            SpannerTransaction transaction = _transactionCreationOptions.TimestampBound != null ? await _spannerConnection.BeginReadOnlyTransactionAsync(_transactionCreationOptions.TimestampBound).ConfigureAwait(false)
+                : _transactionCreationOptions.TransactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_transactionCreationOptions.TransactionId)
                 : await _spannerConnection.BeginTransactionAsync().ConfigureAwait(false);
 
-            if (_ambientTransactionOptions.MaxCommitDelay is not null)
+            if (_transactionOptions.MaxCommitDelay is not null)
             {
-                transaction.MaxCommitDelay = _ambientTransactionOptions.MaxCommitDelay;
+                transaction.MaxCommitDelay = _transactionOptions.MaxCommitDelay;
             }
             return transaction;
         }
