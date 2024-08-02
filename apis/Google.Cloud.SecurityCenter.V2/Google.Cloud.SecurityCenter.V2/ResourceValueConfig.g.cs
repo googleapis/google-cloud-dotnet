@@ -29,10 +29,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "djIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aLWdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRl",
             "ci92Mi9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byL5CAoTUmVzb3VyY2VWYWx1ZUNvbmZpZxIMCgRuYW1lGAEgASgJ",
-            "EkUKDnJlc291cmNlX3ZhbHVlGAIgASgOMi0uZ29vZ2xlLmNsb3VkLnNlY3Vy",
-            "aXR5Y2VudGVyLnYyLlJlc291cmNlVmFsdWUSFwoKdGFnX3ZhbHVlcxgDIAMo",
-            "CUID4EECEhUKDXJlc291cmNlX3R5cGUYBCABKAkSDQoFc2NvcGUYBSABKAkS",
+            "cC5wcm90byL5CAoTUmVzb3VyY2VWYWx1ZUNvbmZpZxIRCgRuYW1lGAEgASgJ",
+            "QgPgQQgSRQoOcmVzb3VyY2VfdmFsdWUYAiABKA4yLS5nb29nbGUuY2xvdWQu",
+            "c2VjdXJpdHljZW50ZXIudjIuUmVzb3VyY2VWYWx1ZRISCgp0YWdfdmFsdWVz",
+            "GAMgAygJEhUKDXJlc291cmNlX3R5cGUYBCABKAkSDQoFc2NvcGUYBSABKAkS",
             "cQoYcmVzb3VyY2VfbGFiZWxzX3NlbGVjdG9yGAYgAygLMk8uZ29vZ2xlLmNs",
             "b3VkLnNlY3VyaXR5Y2VudGVyLnYyLlJlc291cmNlVmFsdWVDb25maWcuUmVz",
             "b3VyY2VMYWJlbHNTZWxlY3RvckVudHJ5EhMKC2Rlc2NyaXB0aW9uGAcgASgJ",
@@ -166,7 +166,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name for the resource value configuration
+    /// Identifier. Name for the resource value configuration
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,7 +182,8 @@ namespace Google.Cloud.SecurityCenter.V2 {
     private global::Google.Cloud.SecurityCenter.V2.ResourceValue resourceValue_ = global::Google.Cloud.SecurityCenter.V2.ResourceValue.Unspecified;
     /// <summary>
     /// Resource value level this expression represents
-    /// Only required when there is no SDP mapping in the request
+    /// Only required when there is no Sensitive Data Protection mapping in the
+    /// request
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,9 +200,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> tagValues_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Tag values combined with &lt;code>AND&lt;/code> to check against.
+    /// Tag values combined with `AND` to check against.
     /// Values in the form "tagValues/123"
-    /// Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ]
+    /// Example: `[ "tagValues/123", "tagValues/456", "tagValues/789" ]`
     /// https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -215,7 +216,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     private string resourceType_ = "";
     /// <summary>
     /// Apply resource_value only to resources that match resource_type.
-    /// resource_type will be checked with &lt;code>AND&lt;/code> of other resources.
+    /// resource_type will be checked with `AND` of other resources.
     /// For example, "storage.googleapis.com/Bucket" with resource_value "HIGH"
     /// will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
     /// </summary>
@@ -234,8 +235,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     /// <summary>
     /// Project or folder to scope this configuration to.
     /// For example, "project/456" would apply this configuration only to resources
-    /// in "project/456" scope will be checked with &lt;code>AND&lt;/code> of other
-    /// resources.
+    /// in "project/456" scope and will be checked with `AND` of other resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -252,9 +252,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> resourceLabelsSelector_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// List of resource labels to search for, evaluated with &lt;code>AND&lt;/code>.
+    /// List of resource labels to search for, evaluated with `AND`.
     /// For example, "resource_labels_selector": {"key": "value", "env": "prod"}
-    /// will match resources with labels "key": "value" &lt;code>AND&lt;/code> "env":
+    /// will match resources with labels "key": "value" `AND` "env":
     /// "prod"
     /// https://cloud.google.com/resource-manager/docs/creating-managing-labels
     /// </summary>

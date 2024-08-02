@@ -393,7 +393,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// The name of the resource at this point in the attack path.
         /// The format of the name follows the Cloud Asset Inventory [resource
         /// name
-        /// format]("https://cloud.google.com/asset-inventory/docs/resource-name-format")
+        /// format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -409,7 +409,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
         private string resourceType_ = "";
         /// <summary>
         /// The [supported resource
-        /// type](https://cloud.google.com/asset-inventory/docs/supported-asset-types")
+        /// type](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -795,7 +795,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
             private string canonicalFinding_ = "";
             /// <summary>
             /// Canonical name of the associated findings. Example:
-            /// organizations/123/sources/456/findings/789
+            /// `organizations/123/sources/456/findings/789`
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

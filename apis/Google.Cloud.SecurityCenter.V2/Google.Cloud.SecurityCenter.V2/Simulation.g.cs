@@ -112,7 +112,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     private string name_ = "";
     /// <summary>
     /// Full resource name of the Simulation:
-    /// organizations/123/simulations/456
+    /// `organizations/123/simulations/456`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

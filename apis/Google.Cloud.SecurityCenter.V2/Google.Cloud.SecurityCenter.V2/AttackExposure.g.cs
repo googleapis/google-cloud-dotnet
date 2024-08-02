@@ -144,7 +144,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     /// <summary>
     /// The resource name of the attack path simulation result that contains the
     /// details regarding this attack exposure score.
-    /// Example: organizations/123/simulations/456/attackExposureResults/789
+    /// Example: `organizations/123/simulations/456/attackExposureResults/789`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

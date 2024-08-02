@@ -27,28 +27,28 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "Cjhnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvbm90aWZpY2F0aW9u",
             "X2NvbmZpZy5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYy",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
-            "L3Jlc291cmNlLnByb3RvIoQFChJOb3RpZmljYXRpb25Db25maWcSDAoEbmFt",
-            "ZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRI2CgxwdWJzdWJfdG9waWMY",
-            "AyABKAlCIPpBHQobcHVic3ViLmdvb2dsZWFwaXMuY29tL1RvcGljEhwKD3Nl",
-            "cnZpY2VfYWNjb3VudBgEIAEoCUID4EEDEl4KEHN0cmVhbWluZ19jb25maWcY",
-            "BSABKAsyQi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIuTm90aWZp",
-            "Y2F0aW9uQ29uZmlnLlN0cmVhbWluZ0NvbmZpZ0gAGiEKD1N0cmVhbWluZ0Nv",
-            "bmZpZxIOCgZmaWx0ZXIYASABKAk64ALqQdwCCjBzZWN1cml0eWNlbnRlci5n",
-            "b29nbGVhcGlzLmNvbS9Ob3RpZmljYXRpb25Db25maWcSW29yZ2FuaXphdGlv",
-            "bnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbm90aWZp",
-            "Y2F0aW9uQ29uZmlncy97bm90aWZpY2F0aW9uX2NvbmZpZ30ST2ZvbGRlcnMv",
-            "e2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbm90aWZpY2F0aW9uQ29u",
-            "Zmlncy97bm90aWZpY2F0aW9uX2NvbmZpZ30SUXByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9ub3RpZmljYXRpb25Db25maWdzL3tu",
-            "b3RpZmljYXRpb25fY29uZmlnfSoTbm90aWZpY2F0aW9uQ29uZmlnczISbm90",
-            "aWZpY2F0aW9uQ29uZmlnQg8KDW5vdGlmeV9jb25maWdCtAIKImNvbS5nb29n",
-            "bGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjJCF05vdGlmaWNhdGlvbkNvbmZp",
-            "Z1Byb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIv",
-            "YXBpdjIvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRlcnBiqgIeR29v",
-            "Z2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYyygIeR29vZ2xlXENsb3VkXFNl",
-            "Y3VyaXR5Q2VudGVyXFYy6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50",
-            "ZXI6OlYy6kFAChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXByb2pl",
-            "Y3RzL3twcm9qZWN0fS90b3BpY3Mve3RvcGljfWIGcHJvdG8z"));
+            "L3Jlc291cmNlLnByb3RvIokFChJOb3RpZmljYXRpb25Db25maWcSEQoEbmFt",
+            "ZRgBIAEoCUID4EEIEhMKC2Rlc2NyaXB0aW9uGAIgASgJEjYKDHB1YnN1Yl90",
+            "b3BpYxgDIAEoCUIg+kEdChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMS",
+            "HAoPc2VydmljZV9hY2NvdW50GAQgASgJQgPgQQMSXgoQc3RyZWFtaW5nX2Nv",
+            "bmZpZxgFIAEoCzJCLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52Mi5O",
+            "b3RpZmljYXRpb25Db25maWcuU3RyZWFtaW5nQ29uZmlnSAAaIQoPU3RyZWFt",
+            "aW5nQ29uZmlnEg4KBmZpbHRlchgBIAEoCTrgAupB3AIKMHNlY3VyaXR5Y2Vu",
+            "dGVyLmdvb2dsZWFwaXMuY29tL05vdGlmaWNhdGlvbkNvbmZpZxJbb3JnYW5p",
+            "emF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufS9u",
+            "b3RpZmljYXRpb25Db25maWdzL3tub3RpZmljYXRpb25fY29uZmlnfRJPZm9s",
+            "ZGVycy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9ub3RpZmljYXRp",
+            "b25Db25maWdzL3tub3RpZmljYXRpb25fY29uZmlnfRJRcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L25vdGlmaWNhdGlvbkNvbmZp",
+            "Z3Mve25vdGlmaWNhdGlvbl9jb25maWd9KhNub3RpZmljYXRpb25Db25maWdz",
+            "MhJub3RpZmljYXRpb25Db25maWdCDwoNbm90aWZ5X2NvbmZpZ0K0AgoiY29t",
+            "Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MkIXTm90aWZpY2F0aW9u",
+            "Q29uZmlnUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNl",
+            "bnRlci9hcGl2Mi9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVycGKq",
+            "Ah5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjLKAh5Hb29nbGVcQ2xv",
+            "dWRcU2VjdXJpdHlDZW50ZXJcVjLqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0",
+            "eUNlbnRlcjo6VjLqQUAKG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpYxIh",
+            "cHJvamVjdHMve3Byb2plY3R9L3RvcGljcy97dG9waWN9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -123,7 +123,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The relative resource name of this notification config. See:
+    /// Identifier. The relative resource name of this notification config. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
     /// The following list shows some examples:
     /// +
