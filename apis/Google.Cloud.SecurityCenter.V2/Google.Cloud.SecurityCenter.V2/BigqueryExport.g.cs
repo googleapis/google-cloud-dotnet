@@ -28,24 +28,24 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "b3J0LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "nQQKDkJpZ1F1ZXJ5RXhwb3J0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRp",
-            "b24YAiABKAkSDgoGZmlsdGVyGAMgASgJEg8KB2RhdGFzZXQYBCABKAkSNAoL",
-            "Y3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSHwoSbW9zdF9yZWNlbnRfZWRpdG9yGAcgASgJQgPg",
-            "QQMSFgoJcHJpbmNpcGFsGAggASgJQgPgQQM6oQLqQZ0CCixzZWN1cml0eWNl",
-            "bnRlci5nb29nbGVhcGlzLmNvbS9CaWdRdWVyeUV4cG9ydBJKb3JnYW5pemF0",
-            "aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iaWdR",
-            "dWVyeUV4cG9ydHMve2V4cG9ydH0SPmZvbGRlcnMve2ZvbGRlcn0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vYmlnUXVlcnlFeHBvcnRzL3tleHBvcnR9EkBwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYmlnUXVlcnlF",
-            "eHBvcnRzL3tleHBvcnR9Kg9iaWdRdWVyeUV4cG9ydHMyDmJpZ1F1ZXJ5RXhw",
-            "b3J0Qu0BCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyQhNC",
-            "aWdRdWVyeUV4cG9ydFByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2Vj",
-            "dXJpdHljZW50ZXIvYXBpdjIvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNl",
-            "bnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYyygIeR29v",
-            "Z2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYy6gIhR29vZ2xlOjpDbG91ZDo6",
-            "U2VjdXJpdHlDZW50ZXI6OlYyYgZwcm90bzM="));
+            "ogQKDkJpZ1F1ZXJ5RXhwb3J0EhEKBG5hbWUYASABKAlCA+BBCBITCgtkZXNj",
+            "cmlwdGlvbhgCIAEoCRIOCgZmaWx0ZXIYAyABKAkSDwoHZGF0YXNldBgEIAEo",
+            "CRI0CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIfChJtb3N0X3JlY2VudF9lZGl0b3IYByAB",
+            "KAlCA+BBAxIWCglwcmluY2lwYWwYCCABKAlCA+BBAzqhAupBnQIKLHNlY3Vy",
+            "aXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL0JpZ1F1ZXJ5RXhwb3J0Ekpvcmdh",
+            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2JpZ1F1ZXJ5RXhwb3J0cy97ZXhwb3J0fRI+Zm9sZGVycy97Zm9sZGVyfS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9iaWdRdWVyeUV4cG9ydHMve2V4cG9ydH0S",
+            "QHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iaWdR",
+            "dWVyeUV4cG9ydHMve2V4cG9ydH0qD2JpZ1F1ZXJ5RXhwb3J0czIOYmlnUXVl",
+            "cnlFeHBvcnRC7QEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
+            "djJCE0JpZ1F1ZXJ5RXhwb3J0UHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9zZWN1cml0eWNlbnRlci9hcGl2Mi9zZWN1cml0eWNlbnRlcnBiO3NlY3Vy",
+            "aXR5Y2VudGVycGKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjLK",
+            "Ah5Hb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjLqAiFHb29nbGU6OkNs",
+            "b3VkOjpTZWN1cml0eUNlbnRlcjo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,7 +115,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The relative resource name of this export. See:
+    /// Identifier. The relative resource name of this export. See:
     /// https://cloud.google.com/apis/design/resource_names#relative_resource_name.
     /// The following list shows some examples:
     ///
@@ -192,7 +192,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     /// <summary>
     /// The dataset to write findings' updates to. Its format is
     /// "projects/[project_id]/datasets/[bigquery_dataset_id]".
-    /// BigQuery Dataset unique ID  must contain only letters (a-z, A-Z), numbers
+    /// BigQuery dataset unique ID  must contain only letters (a-z, A-Z), numbers
     /// (0-9), or underscores (_).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

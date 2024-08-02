@@ -27,34 +27,36 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "CjBnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvbXV0ZV9jb25maWcu",
             "cHJvdG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MhofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKMBgoK",
-            "TXV0ZUNvbmZpZxIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJ",
-            "EhMKBmZpbHRlchgDIAEoCUID4EECEjQKC2NyZWF0ZV90aW1lGAQgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1l",
-            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEh8KEm1v",
-            "c3RfcmVjZW50X2VkaXRvchgGIAEoCUID4EEDEkwKBHR5cGUYCCABKA4yOS5n",
-            "b29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIuTXV0ZUNvbmZpZy5NdXRl",
-            "Q29uZmlnVHlwZUID4EECIj4KDk11dGVDb25maWdUeXBlEiAKHE1VVEVfQ09O",
-            "RklHX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZTVEFUSUMQATqqA+pBpgMKKHNl",
-            "Y3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL011dGVDb25maWcSNm9yZ2Fu",
-            "aXphdGlvbnMve29yZ2FuaXphdGlvbn0vbXV0ZUNvbmZpZ3Mve211dGVfY29u",
-            "ZmlnfRJLb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9tdXRlQ29uZmlncy97bXV0ZV9jb25maWd9Eipmb2xkZXJz",
-            "L3tmb2xkZXJ9L211dGVDb25maWdzL3ttdXRlX2NvbmZpZ30SP2ZvbGRlcnMv",
-            "e2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbXV0ZUNvbmZpZ3Mve211",
-            "dGVfY29uZmlnfRIscHJvamVjdHMve3Byb2plY3R9L211dGVDb25maWdzL3tt",
-            "dXRlX2NvbmZpZ30SQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9tdXRlQ29uZmlncy97bXV0ZV9jb25maWd9KgttdXRlQ29uZmln",
-            "czIKbXV0ZUNvbmZpZ0LpAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNl",
-            "bnRlci52MkIPTXV0ZUNvbmZpZ1Byb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vc2VjdXJpdHljZW50ZXIvYXBpdjIvc2VjdXJpdHljZW50ZXJwYjtzZWN1",
-            "cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYy",
-            "ygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYy6gIhR29vZ2xlOjpD",
-            "bG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYyYgZwcm90bzM="));
+            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLUBgoK",
+            "TXV0ZUNvbmZpZxIRCgRuYW1lGAEgASgJQgPgQQgSEwoLZGVzY3JpcHRpb24Y",
+            "AiABKAkSEwoGZmlsdGVyGAMgASgJQgPgQQISNAoLY3JlYXRlX3RpbWUYBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
+            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "HwoSbW9zdF9yZWNlbnRfZWRpdG9yGAYgASgJQgPgQQMSTAoEdHlwZRgIIAEo",
+            "DjI5Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52Mi5NdXRlQ29uZmln",
+            "Lk11dGVDb25maWdUeXBlQgPgQQISNAoLZXhwaXJ5X3RpbWUYCSABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQEiSwoOTXV0ZUNvbmZpZ1R5",
+            "cGUSIAocTVVURV9DT05GSUdfVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNUQVRJ",
+            "QxABEgsKB0RZTkFNSUMQAjqqA+pBpgMKKHNlY3VyaXR5Y2VudGVyLmdvb2ds",
+            "ZWFwaXMuY29tL011dGVDb25maWcSNm9yZ2FuaXphdGlvbnMve29yZ2FuaXph",
+            "dGlvbn0vbXV0ZUNvbmZpZ3Mve211dGVfY29uZmlnfRJLb3JnYW5pemF0aW9u",
+            "cy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tdXRlQ29u",
+            "Zmlncy97bXV0ZV9jb25maWd9Eipmb2xkZXJzL3tmb2xkZXJ9L211dGVDb25m",
+            "aWdzL3ttdXRlX2NvbmZpZ30SP2ZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vbXV0ZUNvbmZpZ3Mve211dGVfY29uZmlnfRIscHJvamVj",
+            "dHMve3Byb2plY3R9L211dGVDb25maWdzL3ttdXRlX2NvbmZpZ30SQXByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tdXRlQ29uZmln",
+            "cy97bXV0ZV9jb25maWd9KgttdXRlQ29uZmlnczIKbXV0ZUNvbmZpZ0LpAQoi",
+            "Y29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MkIPTXV0ZUNvbmZp",
+            "Z1Byb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIv",
+            "YXBpdjIvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRlcnBiqgIeR29v",
+            "Z2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYyygIeR29vZ2xlXENsb3VkXFNl",
+            "Y3VyaXR5Q2VudGVyXFYy6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50",
+            "ZXI6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.MuteConfig), global::Google.Cloud.SecurityCenter.V2.MuteConfig.Parser, new[]{ "Name", "Description", "Filter", "CreateTime", "UpdateTime", "MostRecentEditor", "Type" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V2.MuteConfig.Types.MuteConfigType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.MuteConfig), global::Google.Cloud.SecurityCenter.V2.MuteConfig.Parser, new[]{ "Name", "Description", "Filter", "CreateTime", "UpdateTime", "MostRecentEditor", "Type", "ExpiryTime" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V2.MuteConfig.Types.MuteConfigType) }, null, null)
           }));
     }
     #endregion
@@ -107,6 +109,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       mostRecentEditor_ = other.mostRecentEditor_;
       type_ = other.type_;
+      expiryTime_ = other.expiryTime_ != null ? other.expiryTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -120,8 +123,8 @@ namespace Google.Cloud.SecurityCenter.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// This field will be ignored if provided on config creation. The following
-    /// list shows some examples of the format:
+    /// Identifier. This field will be ignored if provided on config creation. The
+    /// following list shows some examples of the format:
     ///
     /// + `organizations/{organization}/muteConfigs/{mute_config}`
     /// +
@@ -256,6 +259,23 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
     }
 
+    /// <summary>Field number for the "expiry_time" field.</summary>
+    public const int ExpiryTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expiryTime_;
+    /// <summary>
+    /// Optional. The expiry of the mute config. Only applicable for dynamic
+    /// configs. If the expiry is set, when the config expires, it is removed from
+    /// all findings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpiryTime {
+      get { return expiryTime_; }
+      set {
+        expiryTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -278,6 +298,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (MostRecentEditor != other.MostRecentEditor) return false;
       if (Type != other.Type) return false;
+      if (!object.Equals(ExpiryTime, other.ExpiryTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -292,6 +313,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (MostRecentEditor.Length != 0) hash ^= MostRecentEditor.GetHashCode();
       if (Type != global::Google.Cloud.SecurityCenter.V2.MuteConfig.Types.MuteConfigType.Unspecified) hash ^= Type.GetHashCode();
+      if (expiryTime_ != null) hash ^= ExpiryTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -338,6 +360,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(64);
         output.WriteEnum((int) Type);
       }
+      if (expiryTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ExpiryTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -376,6 +402,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(64);
         output.WriteEnum((int) Type);
       }
+      if (expiryTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ExpiryTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -406,6 +436,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
       if (Type != global::Google.Cloud.SecurityCenter.V2.MuteConfig.Types.MuteConfigType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (expiryTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpiryTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -445,6 +478,12 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
       if (other.Type != global::Google.Cloud.SecurityCenter.V2.MuteConfig.Types.MuteConfigType.Unspecified) {
         Type = other.Type;
+      }
+      if (other.expiryTime_ != null) {
+        if (expiryTime_ == null) {
+          ExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpiryTime.MergeFrom(other.ExpiryTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -493,6 +532,13 @@ namespace Google.Cloud.SecurityCenter.V2 {
           }
           case 64: {
             Type = (global::Google.Cloud.SecurityCenter.V2.MuteConfig.Types.MuteConfigType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            if (expiryTime_ == null) {
+              ExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpiryTime);
             break;
           }
         }
@@ -544,6 +590,13 @@ namespace Google.Cloud.SecurityCenter.V2 {
             Type = (global::Google.Cloud.SecurityCenter.V2.MuteConfig.Types.MuteConfigType) input.ReadEnum();
             break;
           }
+          case 74: {
+            if (expiryTime_ == null) {
+              ExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpiryTime);
+            break;
+          }
         }
       }
     }
@@ -568,6 +621,15 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// config modifications will not affect the state.
         /// </summary>
         [pbr::OriginalName("STATIC")] Static = 1,
+        /// <summary>
+        /// A dynamic mute config, which is applied to existing and future matching
+        /// findings, setting their dynamic mute state to "muted". If the config is
+        /// updated or deleted, or a matching finding is updated, such that the
+        /// finding doesn't match the config, the config will be removed from the
+        /// finding, and the finding's dynamic mute state may become "unmuted"
+        /// (unless other configs still match).
+        /// </summary>
+        [pbr::OriginalName("DYNAMIC")] Dynamic = 2,
       }
 
     }

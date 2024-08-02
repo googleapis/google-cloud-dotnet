@@ -187,6 +187,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Filter = "",
+                MuteState = BulkMuteFindingsRequest.Types.MuteState.Unspecified,
             };
             // Make the request
             Operation<BulkMuteFindingsResponse, Empty> response = securityCenterClient.BulkMuteFindings(request);
@@ -221,6 +222,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Filter = "",
+                MuteState = BulkMuteFindingsRequest.Types.MuteState.Unspecified,
             };
             // Make the request
             Operation<BulkMuteFindingsResponse, Empty> response = await securityCenterClient.BulkMuteFindingsAsync(request);

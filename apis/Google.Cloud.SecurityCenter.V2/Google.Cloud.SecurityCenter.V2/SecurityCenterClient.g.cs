@@ -1213,9 +1213,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1241,9 +1241,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1269,9 +1269,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1292,9 +1292,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1320,9 +1320,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1348,9 +1348,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1371,9 +1371,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1399,9 +1399,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1427,9 +1427,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1450,9 +1450,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1478,9 +1478,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1506,9 +1506,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource of the new BigQuery export. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="bigQueryExport">
         /// Required. The BigQuery export being created.
@@ -1762,9 +1762,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1790,9 +1790,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1818,9 +1818,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1841,9 +1841,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1869,9 +1869,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1897,9 +1897,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1920,9 +1920,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1948,9 +1948,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1976,9 +1976,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -1999,9 +1999,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2027,9 +2027,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2055,9 +2055,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2078,9 +2078,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2106,9 +2106,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2134,9 +2134,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2157,9 +2157,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2185,9 +2185,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2213,9 +2213,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2236,9 +2236,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2264,9 +2264,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2292,9 +2292,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new mute configs's parent. Its format is
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="muteConfig">
         /// Required. The mute config being created.
@@ -2342,9 +2342,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2372,9 +2372,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2402,9 +2402,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2427,9 +2427,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2457,9 +2457,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2487,9 +2487,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2512,9 +2512,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2542,9 +2542,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2572,9 +2572,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2597,9 +2597,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2627,9 +2627,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2657,9 +2657,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new notification config's parent. Its format
-        /// is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="notificationConfig">
         /// Required. The notification config being created. The name and the service
@@ -2709,7 +2709,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -2729,7 +2729,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -2749,7 +2749,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -2765,7 +2765,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -2785,7 +2785,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -2805,7 +2805,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the new source's parent. Its format should be
-        /// "organizations/[organization_id]".
+        /// `organizations/[organization_id]`.
         /// </param>
         /// <param name="source">
         /// Required. The Source being created, only the display_name and description
@@ -3562,8 +3562,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The organization name or simulation name of this simulation
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/latest"
-        /// "organizations/{organization}/simulations/{simulation}"
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3581,8 +3581,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The organization name or simulation name of this simulation
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/latest"
-        /// "organizations/{organization}/simulations/{simulation}"
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3600,8 +3600,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The organization name or simulation name of this simulation
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/latest"
-        /// "organizations/{organization}/simulations/{simulation}"
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3616,8 +3616,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The organization name or simulation name of this simulation
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/latest"
-        /// "organizations/{organization}/simulations/{simulation}"
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3635,8 +3635,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The organization name or simulation name of this simulation
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/latest"
-        /// "organizations/{organization}/simulations/{simulation}"
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3654,8 +3654,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The organization name or simulation name of this simulation
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/latest"
-        /// "organizations/{organization}/simulations/{simulation}"
+        /// `organizations/{organization}/simulations/latest`
+        /// `organizations/{organization}/simulations/{simulation}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3696,7 +3696,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The name of this valued resource
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3713,7 +3713,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The name of this valued resource
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3730,7 +3730,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The name of this valued resource
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3744,7 +3744,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The name of this valued resource
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3761,7 +3761,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The name of this valued resource
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3778,7 +3778,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. The name of this valued resource
         /// 
         /// Valid format:
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4360,7 +4360,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4375,7 +4375,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4390,7 +4390,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4402,7 +4402,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4417,7 +4417,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4432,7 +4432,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="name">
         /// Required. Relative resource name of the source. Its format is
-        /// "organizations/[organization_id]/source/[source_id]".
+        /// `organizations/[organization_id]/source/[source_id]`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4799,10 +4799,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list attack paths.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4839,10 +4839,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list attack paths.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4879,10 +4879,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list attack paths.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4919,10 +4919,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list attack paths.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4959,10 +4959,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list attack paths.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4999,10 +4999,10 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list attack paths.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-        /// "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /// `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5066,9 +5066,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5106,9 +5106,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5146,9 +5146,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5186,9 +5186,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5226,9 +5226,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5266,9 +5266,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5306,9 +5306,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5346,9 +5346,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of BigQuery exports. Its
-        /// format is "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]", or
-        /// "projects/[project_id]/locations/[location_id]".
+        /// format is `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`, or
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5689,11 +5689,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5728,11 +5728,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5767,11 +5767,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5806,11 +5806,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5845,11 +5845,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5884,11 +5884,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5923,11 +5923,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5962,11 +5962,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6001,11 +6001,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6040,11 +6040,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6079,11 +6079,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6118,11 +6118,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6157,11 +6157,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6196,11 +6196,11 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns the collection of mute configs. Its format
-        /// is "organizations/[organization_id]", "folders/[folder_id]",
-        /// "projects/[project_id]",
-        /// "organizations/[organization_id]/locations/[location_id]",
-        /// "folders/[folder_id]/locations/[location_id]",
-        /// "projects/[project_id]/locations/[location_id]".
+        /// is `organizations/[organization_id]", "folders/[folder_id]`,
+        /// `projects/[project_id]`,
+        /// `organizations/[organization_id]/locations/[location_id]`,
+        /// `folders/[folder_id]/locations/[location_id]`,
+        /// `projects/[project_id]/locations/[location_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6567,7 +6567,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="parent">
         /// Required. The parent, which owns the collection of resource value configs.
         /// Its format is
-        /// "organizations/[organization_id]"
+        /// `organizations/[organization_id]`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6602,7 +6602,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="parent">
         /// Required. The parent, which owns the collection of resource value configs.
         /// Its format is
-        /// "organizations/[organization_id]"
+        /// `organizations/[organization_id]`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6637,7 +6637,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="parent">
         /// Required. The parent, which owns the collection of resource value configs.
         /// Its format is
-        /// "organizations/[organization_id]"
+        /// `organizations/[organization_id]`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6672,7 +6672,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="parent">
         /// Required. The parent, which owns the collection of resource value configs.
         /// Its format is
-        /// "organizations/[organization_id]"
+        /// `organizations/[organization_id]`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6707,7 +6707,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="parent">
         /// Required. The parent, which owns the collection of resource value configs.
         /// Its format is
-        /// "organizations/[organization_id]"
+        /// `organizations/[organization_id]`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6742,7 +6742,7 @@ namespace Google.Cloud.SecurityCenter.V2
         /// <param name="parent">
         /// Required. The parent, which owns the collection of resource value configs.
         /// Its format is
-        /// "organizations/[organization_id]"
+        /// `organizations/[organization_id]`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6794,8 +6794,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6829,8 +6829,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6864,8 +6864,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6899,8 +6899,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6934,8 +6934,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6969,8 +6969,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7004,8 +7004,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7039,8 +7039,8 @@ namespace Google.Cloud.SecurityCenter.V2
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]", "folders/[folder_id]", or
-        /// "projects/[project_id]".
+        /// be `organizations/[organization_id]`, `folders/[folder_id]`, or
+        /// `projects/[project_id]`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7094,9 +7094,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list exposed resources.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7132,9 +7132,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list exposed resources.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7170,9 +7170,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list exposed resources.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7208,9 +7208,9 @@ namespace Google.Cloud.SecurityCenter.V2
         /// Required. Name of parent to list exposed resources.
         /// 
         /// Valid formats:
-        /// "organizations/{organization}",
-        /// "organizations/{organization}/simulations/{simulation}"
-        /// "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+        /// `organizations/{organization}`,
+        /// `organizations/{organization}/simulations/{simulation}`
+        /// `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
