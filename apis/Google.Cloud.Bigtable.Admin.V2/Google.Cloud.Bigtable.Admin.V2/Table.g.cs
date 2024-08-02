@@ -113,7 +113,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "CgVSRUFEWRABEgwKCENSRUFUSU5HEAI6e+pBeAolYmlndGFibGVhZG1pbi5n",
             "b29nbGVhcGlzLmNvbS9TbmFwc2hvdBJPcHJvamVjdHMve3Byb2plY3R9L2lu",
             "c3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfS9zbmFwc2hv",
-            "dHMve3NuYXBzaG90fSK7BAoGQmFja3VwEgwKBG5hbWUYASABKAkSHAoMc291",
+            "dHMve3NuYXBzaG90fSL5BQoGQmFja3VwEgwKBG5hbWUYASABKAkSHAoMc291",
             "cmNlX3RhYmxlGAIgASgJQgbgQQXgQQISGgoNc291cmNlX2JhY2t1cBgKIAEo",
             "CUID4EEDEjQKC2V4cGlyZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcEID4EECEjMKCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUu",
@@ -122,25 +122,29 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "IAEoA0ID4EEDEjoKBXN0YXRlGAcgASgOMiYuZ29vZ2xlLmJpZ3RhYmxlLmFk",
             "bWluLnYyLkJhY2t1cC5TdGF0ZUID4EEDEkYKD2VuY3J5cHRpb25faW5mbxgJ",
             "IAEoCzIoLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5FbmNyeXB0aW9uSW5m",
-            "b0ID4EEDIjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JF",
-            "QVRJTkcQARIJCgVSRUFEWRACOnXqQXIKI2JpZ3RhYmxlYWRtaW4uZ29vZ2xl",
-            "YXBpcy5jb20vQmFja3VwEktwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2Vz",
-            "L3tpbnN0YW5jZX0vY2x1c3RlcnMve2NsdXN0ZXJ9L2JhY2t1cHMve2JhY2t1",
-            "cH0iwAEKCkJhY2t1cEluZm8SEwoGYmFja3VwGAEgASgJQgPgQQMSMwoKc3Rh",
-            "cnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIxCghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxIZCgxzb3VyY2VfdGFibGUYBCABKAlCA+BBAxIaCg1zb3VyY2Vf",
-            "YmFja3VwGAogASgJQgPgQQMqRAoRUmVzdG9yZVNvdXJjZVR5cGUSIwofUkVT",
-            "VE9SRV9TT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkJBQ0tVUBABQvcC",
-            "Chxjb20uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyQgpUYWJsZVByb3RvUAFa",
-            "OGNsb3VkLmdvb2dsZS5jb20vZ28vYmlndGFibGUvYWRtaW4vYXBpdjIvYWRt",
-            "aW5wYjthZG1pbnBiqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYy",
-            "ygIeR29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpD",
-            "bG91ZDo6QmlndGFibGU6OkFkbWluOjpWMupBpgEKKGNsb3Vka21zLmdvb2ds",
-            "ZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SenByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2Ny",
-            "eXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlw",
-            "dG9fa2V5X3ZlcnNpb259YgZwcm90bzM="));
+            "b0ID4EEDEkAKC2JhY2t1cF90eXBlGAsgASgOMisuZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLkJhY2t1cC5CYWNrdXBUeXBlEjgKFGhvdF90b19zdGFuZGFy",
+            "ZF90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI3CgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoF",
+            "UkVBRFkQAiJACgpCYWNrdXBUeXBlEhsKF0JBQ0tVUF9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDAoIU1RBTkRBUkQQARIHCgNIT1QQAjp16kFyCiNiaWd0YWJsZWFk",
+            "bWluLmdvb2dsZWFwaXMuY29tL0JhY2t1cBJLcHJvamVjdHMve3Byb2plY3R9",
+            "L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfS9iYWNr",
+            "dXBzL3tiYWNrdXB9IsABCgpCYWNrdXBJbmZvEhMKBmJhY2t1cBgBIAEoCUID",
+            "4EEDEjMKCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSGQoMc291cmNlX3RhYmxlGAQgASgJQgPgQQMS",
+            "GgoNc291cmNlX2JhY2t1cBgKIAEoCUID4EEDKkQKEVJlc3RvcmVTb3VyY2VU",
+            "eXBlEiMKH1JFU1RPUkVfU09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZC",
+            "QUNLVVAQAUL3AgocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkIKVGFi",
+            "bGVQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2JpZ3RhYmxlL2FkbWlu",
+            "L2FwaXYyL2FkbWlucGI7YWRtaW5wYqoCHkdvb2dsZS5DbG91ZC5CaWd0YWJs",
+            "ZS5BZG1pbi5WMsoCHkdvb2dsZVxDbG91ZFxCaWd0YWJsZVxBZG1pblxWMuoC",
+            "Ikdvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpBZG1pbjo6VjLqQaYBCihjbG91",
+            "ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uEnpwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tl",
+            "eV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fS9jcnlwdG9LZXlWZXJz",
+            "aW9ucy97Y3J5cHRvX2tleV92ZXJzaW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.TypesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Bigtable.Admin.V2.RestoreSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -156,7 +160,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union.Parser, new[]{ "Rules" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo), global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Parser, new[]{ "EncryptionType", "EncryptionStatus", "KmsKeyVersion" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot), global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser, new[]{ "Name", "SourceTable", "DataSizeBytes", "CreateTime", "DeleteTime", "State", "Description" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup), global::Google.Cloud.Bigtable.Admin.V2.Backup.Parser, new[]{ "Name", "SourceTable", "SourceBackup", "ExpireTime", "StartTime", "EndTime", "SizeBytes", "State", "EncryptionInfo" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup), global::Google.Cloud.Bigtable.Admin.V2.Backup.Parser, new[]{ "Name", "SourceTable", "SourceBackup", "ExpireTime", "StartTime", "EndTime", "SizeBytes", "State", "EncryptionInfo", "BackupType", "HotToStandardTime" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.BackupInfo), global::Google.Cloud.Bigtable.Admin.V2.BackupInfo.Parser, new[]{ "Backup", "StartTime", "EndTime", "SourceTable", "SourceBackup" }, null, null, null, null)
           }));
     }
@@ -4556,6 +4560,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       sizeBytes_ = other.sizeBytes_;
       state_ = other.state_;
       encryptionInfo_ = other.encryptionInfo_ != null ? other.encryptionInfo_.Clone() : null;
+      backupType_ = other.backupType_;
+      hotToStandardTime_ = other.hotToStandardTime_ != null ? other.hotToStandardTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4612,7 +4618,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// Output only. Name of the backup from which this backup was copied. If a
     /// backup is not created by copying a backup, this field will be empty. Values
-    /// are of the form: projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>.
+    /// are of the form:
+    /// projects/&lt;project>/instances/&lt;instance>/clusters/&lt;cluster>/backups/&lt;backup>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4627,11 +4634,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ExpireTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// Required. The expiration time of the backup, with microseconds
-    /// granularity that must be at least 6 hours and at most 90 days
-    /// from the time the request is received. Once the `expire_time`
-    /// has passed, Cloud Bigtable will delete the backup and free the
-    /// resources used by the backup.
+    /// Required. The expiration time of the backup.
+    /// When creating a backup or updating its `expire_time`, the value must be
+    /// greater than the backup creation time by:
+    /// - At least 6 hours
+    /// - At most 90 days
+    ///
+    /// Once the `expire_time` has passed, Cloud Bigtable will delete the backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4722,6 +4731,43 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "backup_type" field.</summary>
+    public const int BackupTypeFieldNumber = 11;
+    private global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType backupType_ = global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType.Unspecified;
+    /// <summary>
+    /// Indicates the backup type of the backup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType BackupType {
+      get { return backupType_; }
+      set {
+        backupType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hot_to_standard_time" field.</summary>
+    public const int HotToStandardTimeFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp hotToStandardTime_;
+    /// <summary>
+    /// The time at which the hot backup will be converted to a standard backup.
+    /// Once the `hot_to_standard_time` has passed, Cloud Bigtable will convert the
+    /// hot backup to a standard backup. This value must be greater than the backup
+    /// creation time by:
+    /// - At least 24 hours
+    ///
+    /// This field only applies for hot backups. When creating or updating a
+    /// standard backup, attempting to set this field will fail the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp HotToStandardTime {
+      get { return hotToStandardTime_; }
+      set {
+        hotToStandardTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4746,6 +4792,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (SizeBytes != other.SizeBytes) return false;
       if (State != other.State) return false;
       if (!object.Equals(EncryptionInfo, other.EncryptionInfo)) return false;
+      if (BackupType != other.BackupType) return false;
+      if (!object.Equals(HotToStandardTime, other.HotToStandardTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4762,6 +4810,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (SizeBytes != 0L) hash ^= SizeBytes.GetHashCode();
       if (State != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (encryptionInfo_ != null) hash ^= EncryptionInfo.GetHashCode();
+      if (BackupType != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType.Unspecified) hash ^= BackupType.GetHashCode();
+      if (hotToStandardTime_ != null) hash ^= HotToStandardTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4816,6 +4866,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(82);
         output.WriteString(SourceBackup);
       }
+      if (BackupType != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) BackupType);
+      }
+      if (hotToStandardTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(HotToStandardTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4862,6 +4920,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(82);
         output.WriteString(SourceBackup);
       }
+      if (BackupType != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) BackupType);
+      }
+      if (hotToStandardTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(HotToStandardTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4898,6 +4964,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (encryptionInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionInfo);
+      }
+      if (BackupType != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BackupType);
+      }
+      if (hotToStandardTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HotToStandardTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4949,6 +5021,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           EncryptionInfo = new global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo();
         }
         EncryptionInfo.MergeFrom(other.EncryptionInfo);
+      }
+      if (other.BackupType != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType.Unspecified) {
+        BackupType = other.BackupType;
+      }
+      if (other.hotToStandardTime_ != null) {
+        if (hotToStandardTime_ == null) {
+          HotToStandardTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        HotToStandardTime.MergeFrom(other.HotToStandardTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5011,6 +5092,17 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 82: {
             SourceBackup = input.ReadString();
+            break;
+          }
+          case 88: {
+            BackupType = (global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (hotToStandardTime_ == null) {
+              HotToStandardTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(HotToStandardTime);
             break;
           }
         }
@@ -5076,6 +5168,17 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             SourceBackup = input.ReadString();
             break;
           }
+          case 88: {
+            BackupType = (global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.BackupType) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (hotToStandardTime_ == null) {
+              HotToStandardTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(HotToStandardTime);
+            break;
+          }
         }
       }
     }
@@ -5103,6 +5206,29 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         /// The backup is complete and ready for use.
         /// </summary>
         [pbr::OriginalName("READY")] Ready = 2,
+      }
+
+      /// <summary>
+      /// The type of the backup.
+      /// </summary>
+      public enum BackupType {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("BACKUP_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The default type for Cloud Bigtable managed backups. Supported for
+        /// backups created in both HDD and SSD instances. Requires optimization when
+        /// restored to a table in an SSD instance.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 1,
+        /// <summary>
+        /// A backup type with faster restore to SSD performance. Only supported for
+        /// backups created in SSD instances. A new SSD table restored from a hot
+        /// backup reaches production performance more quickly than a standard
+        /// backup.
+        /// </summary>
+        [pbr::OriginalName("HOT")] Hot = 2,
       }
 
     }
@@ -5230,7 +5356,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// Output only. Name of the backup from which this backup was copied. If a
     /// backup is not created by copying a backup, this field will be empty. Values
-    /// are of the form: projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>.
+    /// are of the form:
+    /// projects/&lt;project>/instances/&lt;instance>/clusters/&lt;cluster>/backups/&lt;backup>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
