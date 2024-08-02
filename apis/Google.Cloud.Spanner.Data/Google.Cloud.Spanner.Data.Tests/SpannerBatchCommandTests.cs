@@ -366,7 +366,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                connection.Open(AmbientTransactionOptions.Default.WithMaxCommitDelay(transactionMaxCommitDelay));
+                connection.Open(SpannerTransactionCreationOptions.Default, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay });
                 var command = connection.CreateBatchDmlCommand();
                 command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
                 command.MaxCommitDelay = commandMaxCommitDelay;

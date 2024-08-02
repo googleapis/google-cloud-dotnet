@@ -995,7 +995,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                connection.Open(AmbientTransactionOptions.Default.WithMaxCommitDelay(maxCommitDelay));
+                connection.Open(SpannerTransactionCreationOptions.Default, new SpannerTransactionOptions { MaxCommitDelay = maxCommitDelay});
                 var command = connection.CreateInsertCommand("FOO");
                 command.ExecuteNonQuery();
 
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                connection.Open(AmbientTransactionOptions.Default.WithMaxCommitDelay(transactionMaxCommitDelay));
+                connection.Open(SpannerTransactionCreationOptions.Default, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay});
                 var command = connection.CreateInsertCommand("FOO");
                 command.MaxCommitDelay = commandMaxCommitDelay;
                 command.ExecuteNonQuery();
