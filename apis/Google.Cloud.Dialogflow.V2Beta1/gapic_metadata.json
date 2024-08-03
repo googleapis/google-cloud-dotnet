@@ -214,6 +214,12 @@
                 "CreateConversationAsync"
               ]
             },
+            "GenerateStatelessSuggestion": {
+              "methods": [
+                "GenerateStatelessSuggestion",
+                "GenerateStatelessSuggestionAsync"
+              ]
+            },
             "GenerateStatelessSummary": {
               "methods": [
                 "GenerateStatelessSummary",
@@ -299,6 +305,27 @@
               "methods": [
                 "UpdateDocument",
                 "UpdateDocumentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "EncryptionSpecService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EncryptionSpecServiceClient",
+          "rpcs": {
+            "GetEncryptionSpec": {
+              "methods": [
+                "GetEncryptionSpec",
+                "GetEncryptionSpecAsync"
+              ]
+            },
+            "InitializeEncryptionSpec": {
+              "methods": [
+                "InitializeEncryptionSpec",
+                "InitializeEncryptionSpecAsync"
               ]
             }
           }
@@ -434,6 +461,45 @@
               "methods": [
                 "UpdateFulfillment",
                 "UpdateFulfillmentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Generators": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GeneratorsClient",
+          "rpcs": {
+            "CreateGenerator": {
+              "methods": [
+                "CreateGenerator",
+                "CreateGeneratorAsync"
+              ]
+            },
+            "DeleteGenerator": {
+              "methods": [
+                "DeleteGenerator",
+                "DeleteGeneratorAsync"
+              ]
+            },
+            "GetGenerator": {
+              "methods": [
+                "GetGenerator",
+                "GetGeneratorAsync"
+              ]
+            },
+            "ListGenerators": {
+              "methods": [
+                "ListGenerators",
+                "ListGeneratorsAsync"
+              ]
+            },
+            "UpdateGenerator": {
+              "methods": [
+                "UpdateGenerator",
+                "UpdateGeneratorAsync"
               ]
             }
           }
@@ -587,6 +653,12 @@
               "methods": [
                 "SuggestFaqAnswers",
                 "SuggestFaqAnswersAsync"
+              ]
+            },
+            "SuggestKnowledgeAssist": {
+              "methods": [
+                "SuggestKnowledgeAssist",
+                "SuggestKnowledgeAssistAsync"
               ]
             },
             "SuggestSmartReplies": {
