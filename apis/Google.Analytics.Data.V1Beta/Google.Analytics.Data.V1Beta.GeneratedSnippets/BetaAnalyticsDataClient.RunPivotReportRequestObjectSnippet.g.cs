@@ -47,6 +47,7 @@ namespace GoogleCSharpSnippets
                 CohortSpec = new CohortSpec(),
                 KeepEmptyRows = false,
                 ReturnPropertyQuota = false,
+                Comparisons = { new Comparison(), },
             };
             // Make the request
             RunPivotReportResponse response = betaAnalyticsDataClient.RunPivotReport(request);
