@@ -71,10 +71,12 @@ namespace Google.Cloud.Dialogflow.V2
             yield return ConversationModelReflection.Descriptor;
             yield return ConversationProfileReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
+            yield return EncryptionSpecReflection.Descriptor;
             yield return EntityTypeReflection.Descriptor;
             yield return EnvironmentReflection.Descriptor;
             yield return FulfillmentReflection.Descriptor;
             yield return GcsReflection.Descriptor;
+            yield return GeneratorReflection.Descriptor;
             yield return HumanAgentAssistantEventReflection.Descriptor;
             yield return IntentReflection.Descriptor;
             yield return KnowledgeBaseReflection.Descriptor;

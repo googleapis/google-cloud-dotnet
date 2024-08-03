@@ -837,4 +837,25 @@ namespace Google.Cloud.Dialogflow.V2
             set => AnswerRecord = value?.ToString() ?? "";
         }
     }
+
+    public partial class SuggestKnowledgeAssistRequest
+    {
+        /// <summary>
+        /// <see cref="ParticipantName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ParticipantName ParentAsParticipantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ParticipantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="MessageName"/>-typed view over the <see cref="LatestMessage"/> resource name property.
+        /// </summary>
+        public MessageName LatestMessageAsMessageName
+        {
+            get => string.IsNullOrEmpty(LatestMessage) ? null : MessageName.Parse(LatestMessage, allowUnparsed: true);
+            set => LatestMessage = value?.ToString() ?? "";
+        }
+    }
 }
