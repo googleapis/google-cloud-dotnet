@@ -54,6 +54,7 @@ namespace GoogleCSharpSnippets
                 CohortSpec = new CohortSpec(),
                 KeepEmptyRows = false,
                 ReturnPropertyQuota = false,
+                Comparisons = { new Comparison(), },
             };
             // Make the request
             RunReportResponse response = await betaAnalyticsDataClient.RunReportAsync(request);

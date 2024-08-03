@@ -52,6 +52,7 @@ namespace GoogleCSharpSnippets
                 CohortSpec = new CohortSpec(),
                 KeepEmptyRows = false,
                 ReturnPropertyQuota = false,
+                Comparisons = { new Comparison(), },
             };
             // Make the request
             RunReportResponse response = betaAnalyticsDataClient.RunReport(request);
@@ -85,6 +86,7 @@ namespace GoogleCSharpSnippets
                 CohortSpec = new CohortSpec(),
                 KeepEmptyRows = false,
                 ReturnPropertyQuota = false,
+                Comparisons = { new Comparison(), },
             };
             // Make the request
             RunReportResponse response = await betaAnalyticsDataClient.RunReportAsync(request);
@@ -111,6 +113,7 @@ namespace GoogleCSharpSnippets
                 CohortSpec = new CohortSpec(),
                 KeepEmptyRows = false,
                 ReturnPropertyQuota = false,
+                Comparisons = { new Comparison(), },
             };
             // Make the request
             RunPivotReportResponse response = betaAnalyticsDataClient.RunPivotReport(request);
@@ -138,6 +141,7 @@ namespace GoogleCSharpSnippets
                 CohortSpec = new CohortSpec(),
                 KeepEmptyRows = false,
                 ReturnPropertyQuota = false,
+                Comparisons = { new Comparison(), },
             };
             // Make the request
             RunPivotReportResponse response = await betaAnalyticsDataClient.RunPivotReportAsync(request);
