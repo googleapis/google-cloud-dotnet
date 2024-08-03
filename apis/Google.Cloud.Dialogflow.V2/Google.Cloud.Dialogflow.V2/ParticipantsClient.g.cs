@@ -57,6 +57,7 @@ namespace Google.Cloud.Dialogflow.V2
             SuggestArticlesSettings = existing.SuggestArticlesSettings;
             SuggestFaqAnswersSettings = existing.SuggestFaqAnswersSettings;
             SuggestSmartRepliesSettings = existing.SuggestSmartRepliesSettings;
+            SuggestKnowledgeAssistSettings = existing.SuggestKnowledgeAssistSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -227,6 +228,24 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SuggestSmartRepliesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParticipantsClient.SuggestKnowledgeAssist</c> and <c>ParticipantsClient.SuggestKnowledgeAssistAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SuggestKnowledgeAssistSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1603,6 +1622,33 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SuggestSmartRepliesResponse> SuggestSmartRepliesAsync(ParticipantName parent, st::CancellationToken cancellationToken) =>
             SuggestSmartRepliesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets knowledge assist suggestions based on historical messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SuggestKnowledgeAssistResponse SuggestKnowledgeAssist(SuggestKnowledgeAssistRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets knowledge assist suggestions based on historical messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestKnowledgeAssistResponse> SuggestKnowledgeAssistAsync(SuggestKnowledgeAssistRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets knowledge assist suggestions based on historical messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestKnowledgeAssistResponse> SuggestKnowledgeAssistAsync(SuggestKnowledgeAssistRequest request, st::CancellationToken cancellationToken) =>
+            SuggestKnowledgeAssistAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Participants client wrapper implementation, for convenient use.</summary>
@@ -1628,6 +1674,8 @@ namespace Google.Cloud.Dialogflow.V2
         private readonly gaxgrpc::ApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse> _callSuggestFaqAnswers;
 
         private readonly gaxgrpc::ApiCall<SuggestSmartRepliesRequest, SuggestSmartRepliesResponse> _callSuggestSmartReplies;
+
+        private readonly gaxgrpc::ApiCall<SuggestKnowledgeAssistRequest, SuggestKnowledgeAssistResponse> _callSuggestKnowledgeAssist;
 
         /// <summary>
         /// Constructs a client wrapper for the Participants service, with the specified gRPC client and settings.
@@ -1672,6 +1720,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callSuggestSmartReplies = clientHelper.BuildApiCall<SuggestSmartRepliesRequest, SuggestSmartRepliesResponse>("SuggestSmartReplies", grpcClient.SuggestSmartRepliesAsync, grpcClient.SuggestSmartReplies, effectiveSettings.SuggestSmartRepliesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSuggestSmartReplies);
             Modify_SuggestSmartRepliesApiCall(ref _callSuggestSmartReplies);
+            _callSuggestKnowledgeAssist = clientHelper.BuildApiCall<SuggestKnowledgeAssistRequest, SuggestKnowledgeAssistResponse>("SuggestKnowledgeAssist", grpcClient.SuggestKnowledgeAssistAsync, grpcClient.SuggestKnowledgeAssist, effectiveSettings.SuggestKnowledgeAssistSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSuggestKnowledgeAssist);
+            Modify_SuggestKnowledgeAssistApiCall(ref _callSuggestKnowledgeAssist);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1696,6 +1747,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_SuggestFaqAnswersApiCall(ref gaxgrpc::ApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse> call);
 
         partial void Modify_SuggestSmartRepliesApiCall(ref gaxgrpc::ApiCall<SuggestSmartRepliesRequest, SuggestSmartRepliesResponse> call);
+
+        partial void Modify_SuggestKnowledgeAssistApiCall(ref gaxgrpc::ApiCall<SuggestKnowledgeAssistRequest, SuggestKnowledgeAssistResponse> call);
 
         partial void OnConstruction(Participants.ParticipantsClient grpcClient, ParticipantsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1724,6 +1777,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_SuggestFaqAnswersRequest(ref SuggestFaqAnswersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SuggestSmartRepliesRequest(ref SuggestSmartRepliesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SuggestKnowledgeAssistRequest(ref SuggestKnowledgeAssistRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new participant in a conversation.
@@ -2005,6 +2060,30 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_SuggestSmartRepliesRequest(ref request, ref callSettings);
             return _callSuggestSmartReplies.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets knowledge assist suggestions based on historical messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SuggestKnowledgeAssistResponse SuggestKnowledgeAssist(SuggestKnowledgeAssistRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SuggestKnowledgeAssistRequest(ref request, ref callSettings);
+            return _callSuggestKnowledgeAssist.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets knowledge assist suggestions based on historical messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SuggestKnowledgeAssistResponse> SuggestKnowledgeAssistAsync(SuggestKnowledgeAssistRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SuggestKnowledgeAssistRequest(ref request, ref callSettings);
+            return _callSuggestKnowledgeAssist.Async(request, callSettings);
         }
     }
 

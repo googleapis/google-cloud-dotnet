@@ -1102,6 +1102,51 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GenerateStatelessSuggestion</summary>
+        public void GenerateStatelessSuggestionRequestObject()
+        {
+            // Snippet: GenerateStatelessSuggestion(GenerateStatelessSuggestionRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            GenerateStatelessSuggestionRequest request = new GenerateStatelessSuggestionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Generator = new Generator(),
+                ConversationContext = new ConversationContext(),
+                TriggerEvents =
+                {
+                    TriggerEvent.Unspecified,
+                },
+            };
+            // Make the request
+            GenerateStatelessSuggestionResponse response = conversationsClient.GenerateStatelessSuggestion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateStatelessSuggestionAsync</summary>
+        public async Task GenerateStatelessSuggestionRequestObjectAsync()
+        {
+            // Snippet: GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest, CallSettings)
+            // Additional: GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateStatelessSuggestionRequest request = new GenerateStatelessSuggestionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Generator = new Generator(),
+                ConversationContext = new ConversationContext(),
+                TriggerEvents =
+                {
+                    TriggerEvent.Unspecified,
+                },
+            };
+            // Make the request
+            GenerateStatelessSuggestionResponse response = await conversationsClient.GenerateStatelessSuggestionAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for SearchKnowledge</summary>
         public void SearchKnowledgeRequestObject()
         {

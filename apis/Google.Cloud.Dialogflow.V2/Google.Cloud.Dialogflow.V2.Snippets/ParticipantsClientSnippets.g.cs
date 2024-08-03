@@ -1043,5 +1043,44 @@ namespace GoogleCSharpSnippets
             SuggestSmartRepliesResponse response = await participantsClient.SuggestSmartRepliesAsync(parent);
             // End snippet
         }
+
+        /// <summary>Snippet for SuggestKnowledgeAssist</summary>
+        public void SuggestKnowledgeAssistRequestObject()
+        {
+            // Snippet: SuggestKnowledgeAssist(SuggestKnowledgeAssistRequest, CallSettings)
+            // Create client
+            ParticipantsClient participantsClient = ParticipantsClient.Create();
+            // Initialize request argument(s)
+            SuggestKnowledgeAssistRequest request = new SuggestKnowledgeAssistRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 0,
+                PreviousSuggestedQuery = "",
+            };
+            // Make the request
+            SuggestKnowledgeAssistResponse response = participantsClient.SuggestKnowledgeAssist(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestKnowledgeAssistAsync</summary>
+        public async Task SuggestKnowledgeAssistRequestObjectAsync()
+        {
+            // Snippet: SuggestKnowledgeAssistAsync(SuggestKnowledgeAssistRequest, CallSettings)
+            // Additional: SuggestKnowledgeAssistAsync(SuggestKnowledgeAssistRequest, CancellationToken)
+            // Create client
+            ParticipantsClient participantsClient = await ParticipantsClient.CreateAsync();
+            // Initialize request argument(s)
+            SuggestKnowledgeAssistRequest request = new SuggestKnowledgeAssistRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 0,
+                PreviousSuggestedQuery = "",
+            };
+            // Make the request
+            SuggestKnowledgeAssistResponse response = await participantsClient.SuggestKnowledgeAssistAsync(request);
+            // End snippet
+        }
     }
 }
