@@ -55,6 +55,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             ListMessagesSettings = existing.ListMessagesSettings;
             SuggestConversationSummarySettings = existing.SuggestConversationSummarySettings;
             GenerateStatelessSummarySettings = existing.GenerateStatelessSummarySettings;
+            GenerateStatelessSuggestionSettings = existing.GenerateStatelessSuggestionSettings;
             SearchKnowledgeSettings = existing.SearchKnowledgeSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
@@ -207,6 +208,25 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GenerateStatelessSummarySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.GenerateStatelessSuggestion</c> and
+        /// <c>ConversationsClient.GenerateStatelessSuggestionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateStatelessSuggestionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1308,60 +1328,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual BatchCreateMessagesResponse BatchCreateMessages(string parent, gaxgrpc::CallSettings callSettings = null) =>
-            BatchCreateMessages(new BatchCreateMessagesRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Batch ingests messages to conversation. Customers can use this RPC to
-        /// ingest historical messages to conversation.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Resource identifier of the conversation to create message.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BatchCreateMessagesResponse> BatchCreateMessagesAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
-            BatchCreateMessagesAsync(new BatchCreateMessagesRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Batch ingests messages to conversation. Customers can use this RPC to
-        /// ingest historical messages to conversation.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Resource identifier of the conversation to create message.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BatchCreateMessagesResponse> BatchCreateMessagesAsync(string parent, st::CancellationToken cancellationToken) =>
-            BatchCreateMessagesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Batch ingests messages to conversation. Customers can use this RPC to
-        /// ingest historical messages to conversation.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Resource identifier of the conversation to create message.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// <param name="requests">
+        /// Required. A maximum of 300 messages can be created in a batch.
+        /// [CreateMessageRequest.message.send_time][] is required. All created
+        /// messages will have identical
+        /// [Message.create_time][google.cloud.dialogflow.v2beta1.Message.create_time].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual BatchCreateMessagesResponse BatchCreateMessages(ConversationName parent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual BatchCreateMessagesResponse BatchCreateMessages(string parent, scg::IEnumerable<CreateMessageRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
             BatchCreateMessages(new BatchCreateMessagesRequest
             {
-                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
             }, callSettings);
 
         /// <summary>
@@ -1372,13 +1354,23 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Required. Resource identifier of the conversation to create message.
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="requests">
+        /// Required. A maximum of 300 messages can be created in a batch.
+        /// [CreateMessageRequest.message.send_time][] is required. All created
+        /// messages will have identical
+        /// [Message.create_time][google.cloud.dialogflow.v2beta1.Message.create_time].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BatchCreateMessagesResponse> BatchCreateMessagesAsync(ConversationName parent, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<BatchCreateMessagesResponse> BatchCreateMessagesAsync(string parent, scg::IEnumerable<CreateMessageRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
             BatchCreateMessagesAsync(new BatchCreateMessagesRequest
             {
-                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
             }, callSettings);
 
         /// <summary>
@@ -1390,10 +1382,90 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
         /// </param>
+        /// <param name="requests">
+        /// Required. A maximum of 300 messages can be created in a batch.
+        /// [CreateMessageRequest.message.send_time][] is required. All created
+        /// messages will have identical
+        /// [Message.create_time][google.cloud.dialogflow.v2beta1.Message.create_time].
+        /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BatchCreateMessagesResponse> BatchCreateMessagesAsync(ConversationName parent, st::CancellationToken cancellationToken) =>
-            BatchCreateMessagesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<BatchCreateMessagesResponse> BatchCreateMessagesAsync(string parent, scg::IEnumerable<CreateMessageRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateMessagesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch ingests messages to conversation. Customers can use this RPC to
+        /// ingest historical messages to conversation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource identifier of the conversation to create message.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="requests">
+        /// Required. A maximum of 300 messages can be created in a batch.
+        /// [CreateMessageRequest.message.send_time][] is required. All created
+        /// messages will have identical
+        /// [Message.create_time][google.cloud.dialogflow.v2beta1.Message.create_time].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateMessagesResponse BatchCreateMessages(ConversationName parent, scg::IEnumerable<CreateMessageRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateMessages(new BatchCreateMessagesRequest
+            {
+                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch ingests messages to conversation. Customers can use this RPC to
+        /// ingest historical messages to conversation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource identifier of the conversation to create message.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="requests">
+        /// Required. A maximum of 300 messages can be created in a batch.
+        /// [CreateMessageRequest.message.send_time][] is required. All created
+        /// messages will have identical
+        /// [Message.create_time][google.cloud.dialogflow.v2beta1.Message.create_time].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateMessagesResponse> BatchCreateMessagesAsync(ConversationName parent, scg::IEnumerable<CreateMessageRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateMessagesAsync(new BatchCreateMessagesRequest
+            {
+                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch ingests messages to conversation. Customers can use this RPC to
+        /// ingest historical messages to conversation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource identifier of the conversation to create message.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="requests">
+        /// Required. A maximum of 300 messages can be created in a batch.
+        /// [CreateMessageRequest.message.send_time][] is required. All created
+        /// messages will have identical
+        /// [Message.create_time][google.cloud.dialogflow.v2beta1.Message.create_time].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateMessagesResponse> BatchCreateMessagesAsync(ConversationName parent, scg::IEnumerable<CreateMessageRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateMessagesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists messages that belong to a given conversation.
@@ -1743,6 +1815,36 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             GenerateStatelessSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateStatelessSuggestionResponse GenerateStatelessSuggestion(GenerateStatelessSuggestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateStatelessSuggestionResponse> GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateStatelessSuggestionResponse> GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest request, st::CancellationToken cancellationToken) =>
+            GenerateStatelessSuggestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Get answers for the given query based on knowledge documents.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1793,6 +1895,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
         private readonly gaxgrpc::ApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse> _callGenerateStatelessSummary;
 
+        private readonly gaxgrpc::ApiCall<GenerateStatelessSuggestionRequest, GenerateStatelessSuggestionResponse> _callGenerateStatelessSuggestion;
+
         private readonly gaxgrpc::ApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse> _callSearchKnowledge;
 
         /// <summary>
@@ -1835,6 +1939,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             _callGenerateStatelessSummary = clientHelper.BuildApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>("GenerateStatelessSummary", grpcClient.GenerateStatelessSummaryAsync, grpcClient.GenerateStatelessSummary, effectiveSettings.GenerateStatelessSummarySettings).WithGoogleRequestParam("stateless_conversation.parent", request => request.StatelessConversation?.Parent);
             Modify_ApiCall(ref _callGenerateStatelessSummary);
             Modify_GenerateStatelessSummaryApiCall(ref _callGenerateStatelessSummary);
+            _callGenerateStatelessSuggestion = clientHelper.BuildApiCall<GenerateStatelessSuggestionRequest, GenerateStatelessSuggestionResponse>("GenerateStatelessSuggestion", grpcClient.GenerateStatelessSuggestionAsync, grpcClient.GenerateStatelessSuggestion, effectiveSettings.GenerateStatelessSuggestionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callGenerateStatelessSuggestion);
+            Modify_GenerateStatelessSuggestionApiCall(ref _callGenerateStatelessSuggestion);
             _callSearchKnowledge = clientHelper.BuildApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse>("SearchKnowledge", grpcClient.SearchKnowledgeAsync, grpcClient.SearchKnowledge, effectiveSettings.SearchKnowledgeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSearchKnowledge);
             Modify_SearchKnowledgeApiCall(ref _callSearchKnowledge);
@@ -1858,6 +1965,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         partial void Modify_SuggestConversationSummaryApiCall(ref gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> call);
 
         partial void Modify_GenerateStatelessSummaryApiCall(ref gaxgrpc::ApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse> call);
+
+        partial void Modify_GenerateStatelessSuggestionApiCall(ref gaxgrpc::ApiCall<GenerateStatelessSuggestionRequest, GenerateStatelessSuggestionResponse> call);
 
         partial void Modify_SearchKnowledgeApiCall(ref gaxgrpc::ApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse> call);
 
@@ -1884,6 +1993,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         partial void Modify_SuggestConversationSummaryRequest(ref SuggestConversationSummaryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GenerateStatelessSummaryRequest(ref GenerateStatelessSummaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateStatelessSuggestionRequest(ref GenerateStatelessSuggestionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SearchKnowledgeRequest(ref SearchKnowledgeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2135,6 +2246,32 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             Modify_GenerateStatelessSummaryRequest(ref request, ref callSettings);
             return _callGenerateStatelessSummary.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateStatelessSuggestionResponse GenerateStatelessSuggestion(GenerateStatelessSuggestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateStatelessSuggestionRequest(ref request, ref callSettings);
+            return _callGenerateStatelessSuggestion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates and returns a suggestion for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateStatelessSuggestionResponse> GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateStatelessSuggestionRequest(ref request, ref callSettings);
+            return _callGenerateStatelessSuggestion.Async(request, callSettings);
         }
 
         /// <summary>

@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Dialogflow.V2Beta1;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -736,54 +737,70 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateMessages</summary>
         public void BatchCreateMessages()
         {
-            // Snippet: BatchCreateMessages(string, CallSettings)
+            // Snippet: BatchCreateMessages(string, IEnumerable<CreateMessageRequest>, CallSettings)
             // Create client
             ConversationsClient conversationsClient = ConversationsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            IEnumerable<CreateMessageRequest> requests = new CreateMessageRequest[]
+            {
+                new CreateMessageRequest(),
+            };
             // Make the request
-            BatchCreateMessagesResponse response = conversationsClient.BatchCreateMessages(parent);
+            BatchCreateMessagesResponse response = conversationsClient.BatchCreateMessages(parent, requests);
             // End snippet
         }
 
         /// <summary>Snippet for BatchCreateMessagesAsync</summary>
         public async Task BatchCreateMessagesAsync()
         {
-            // Snippet: BatchCreateMessagesAsync(string, CallSettings)
-            // Additional: BatchCreateMessagesAsync(string, CancellationToken)
+            // Snippet: BatchCreateMessagesAsync(string, IEnumerable<CreateMessageRequest>, CallSettings)
+            // Additional: BatchCreateMessagesAsync(string, IEnumerable<CreateMessageRequest>, CancellationToken)
             // Create client
             ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            IEnumerable<CreateMessageRequest> requests = new CreateMessageRequest[]
+            {
+                new CreateMessageRequest(),
+            };
             // Make the request
-            BatchCreateMessagesResponse response = await conversationsClient.BatchCreateMessagesAsync(parent);
+            BatchCreateMessagesResponse response = await conversationsClient.BatchCreateMessagesAsync(parent, requests);
             // End snippet
         }
 
         /// <summary>Snippet for BatchCreateMessages</summary>
         public void BatchCreateMessagesResourceNames()
         {
-            // Snippet: BatchCreateMessages(ConversationName, CallSettings)
+            // Snippet: BatchCreateMessages(ConversationName, IEnumerable<CreateMessageRequest>, CallSettings)
             // Create client
             ConversationsClient conversationsClient = ConversationsClient.Create();
             // Initialize request argument(s)
             ConversationName parent = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            IEnumerable<CreateMessageRequest> requests = new CreateMessageRequest[]
+            {
+                new CreateMessageRequest(),
+            };
             // Make the request
-            BatchCreateMessagesResponse response = conversationsClient.BatchCreateMessages(parent);
+            BatchCreateMessagesResponse response = conversationsClient.BatchCreateMessages(parent, requests);
             // End snippet
         }
 
         /// <summary>Snippet for BatchCreateMessagesAsync</summary>
         public async Task BatchCreateMessagesResourceNamesAsync()
         {
-            // Snippet: BatchCreateMessagesAsync(ConversationName, CallSettings)
-            // Additional: BatchCreateMessagesAsync(ConversationName, CancellationToken)
+            // Snippet: BatchCreateMessagesAsync(ConversationName, IEnumerable<CreateMessageRequest>, CallSettings)
+            // Additional: BatchCreateMessagesAsync(ConversationName, IEnumerable<CreateMessageRequest>, CancellationToken)
             // Create client
             ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
             // Initialize request argument(s)
             ConversationName parent = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            IEnumerable<CreateMessageRequest> requests = new CreateMessageRequest[]
+            {
+                new CreateMessageRequest(),
+            };
             // Make the request
-            BatchCreateMessagesResponse response = await conversationsClient.BatchCreateMessagesAsync(parent);
+            BatchCreateMessagesResponse response = await conversationsClient.BatchCreateMessagesAsync(parent, requests);
             // End snippet
         }
 
@@ -1194,6 +1211,51 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             GenerateStatelessSummaryResponse response = await conversationsClient.GenerateStatelessSummaryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateStatelessSuggestion</summary>
+        public void GenerateStatelessSuggestionRequestObject()
+        {
+            // Snippet: GenerateStatelessSuggestion(GenerateStatelessSuggestionRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            GenerateStatelessSuggestionRequest request = new GenerateStatelessSuggestionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Generator = new Generator(),
+                ConversationContext = new ConversationContext(),
+                TriggerEvents =
+                {
+                    TriggerEvent.Unspecified,
+                },
+            };
+            // Make the request
+            GenerateStatelessSuggestionResponse response = conversationsClient.GenerateStatelessSuggestion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateStatelessSuggestionAsync</summary>
+        public async Task GenerateStatelessSuggestionRequestObjectAsync()
+        {
+            // Snippet: GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest, CallSettings)
+            // Additional: GenerateStatelessSuggestionAsync(GenerateStatelessSuggestionRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateStatelessSuggestionRequest request = new GenerateStatelessSuggestionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Generator = new Generator(),
+                ConversationContext = new ConversationContext(),
+                TriggerEvents =
+                {
+                    TriggerEvent.Unspecified,
+                },
+            };
+            // Make the request
+            GenerateStatelessSuggestionResponse response = await conversationsClient.GenerateStatelessSuggestionAsync(request);
             // End snippet
         }
 

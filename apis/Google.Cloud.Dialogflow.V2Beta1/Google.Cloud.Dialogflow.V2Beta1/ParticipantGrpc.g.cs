@@ -97,6 +97,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.SuggestSmartRepliesResponse> __Marshaller_google_cloud_dialogflow_v2beta1_SuggestSmartRepliesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.SuggestSmartRepliesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest> __Marshaller_google_cloud_dialogflow_v2beta1_SuggestKnowledgeAssistRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse> __Marshaller_google_cloud_dialogflow_v2beta1_SuggestKnowledgeAssistResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsRequest> __Marshaller_google_cloud_dialogflow_v2beta1_ListSuggestionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsResponse> __Marshaller_google_cloud_dialogflow_v2beta1_ListSuggestionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsResponse.Parser));
@@ -176,6 +180,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         "SuggestSmartReplies",
         __Marshaller_google_cloud_dialogflow_v2beta1_SuggestSmartRepliesRequest,
         __Marshaller_google_cloud_dialogflow_v2beta1_SuggestSmartRepliesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse> __Method_SuggestKnowledgeAssist = new grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SuggestKnowledgeAssist",
+        __Marshaller_google_cloud_dialogflow_v2beta1_SuggestKnowledgeAssistRequest,
+        __Marshaller_google_cloud_dialogflow_v2beta1_SuggestKnowledgeAssistResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsRequest, global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsResponse> __Method_ListSuggestions = new grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsRequest, global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsResponse>(
@@ -337,6 +349,18 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2Beta1.SuggestSmartRepliesResponse> SuggestSmartReplies(global::Google.Cloud.Dialogflow.V2Beta1.SuggestSmartRepliesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets knowledge assist suggestions based on historical messages.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse> SuggestKnowledgeAssist(global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -924,6 +948,54 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_SuggestSmartReplies, null, options, request);
       }
       /// <summary>
+      /// Gets knowledge assist suggestions based on historical messages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse SuggestKnowledgeAssist(global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SuggestKnowledgeAssist(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets knowledge assist suggestions based on historical messages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse SuggestKnowledgeAssist(global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SuggestKnowledgeAssist, null, options, request);
+      }
+      /// <summary>
+      /// Gets knowledge assist suggestions based on historical messages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse> SuggestKnowledgeAssistAsync(global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SuggestKnowledgeAssistAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets knowledge assist suggestions based on historical messages.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse> SuggestKnowledgeAssistAsync(global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SuggestKnowledgeAssist, null, options, request);
+      }
+      /// <summary>
       /// Deprecated: Use inline suggestion, event based suggestion or
       /// Suggestion* API instead.
       /// See
@@ -1182,6 +1254,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           .AddMethod(__Method_SuggestArticles, serviceImpl.SuggestArticles)
           .AddMethod(__Method_SuggestFaqAnswers, serviceImpl.SuggestFaqAnswers)
           .AddMethod(__Method_SuggestSmartReplies, serviceImpl.SuggestSmartReplies)
+          .AddMethod(__Method_SuggestKnowledgeAssist, serviceImpl.SuggestKnowledgeAssist)
           .AddMethod(__Method_ListSuggestions, serviceImpl.ListSuggestions)
           .AddMethod(__Method_CompileSuggestion, serviceImpl.CompileSuggestion).Build();
     }
@@ -1202,6 +1275,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       serviceBinder.AddMethod(__Method_SuggestArticles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesResponse>(serviceImpl.SuggestArticles));
       serviceBinder.AddMethod(__Method_SuggestFaqAnswers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.SuggestFaqAnswersRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestFaqAnswersResponse>(serviceImpl.SuggestFaqAnswers));
       serviceBinder.AddMethod(__Method_SuggestSmartReplies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.SuggestSmartRepliesRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestSmartRepliesResponse>(serviceImpl.SuggestSmartReplies));
+      serviceBinder.AddMethod(__Method_SuggestKnowledgeAssist, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse>(serviceImpl.SuggestKnowledgeAssist));
       serviceBinder.AddMethod(__Method_ListSuggestions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsRequest, global::Google.Cloud.Dialogflow.V2Beta1.ListSuggestionsResponse>(serviceImpl.ListSuggestions));
       serviceBinder.AddMethod(__Method_CompileSuggestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.CompileSuggestionRequest, global::Google.Cloud.Dialogflow.V2Beta1.CompileSuggestionResponse>(serviceImpl.CompileSuggestion));
     }

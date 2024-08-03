@@ -911,6 +911,17 @@ namespace Google.Cloud.Dialogflow.V2Beta1
     {
         public partial class Types
         {
+            public partial class SuggestionConfig
+            {
+                /// <summary>
+                /// <see cref="GeneratorName"/>-typed view over the <see cref="Generators"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<GeneratorName> GeneratorsAsGeneratorNames
+                {
+                    get => new gax::ResourceNameList<GeneratorName>(Generators, s => string.IsNullOrEmpty(s) ? null : GeneratorName.Parse(s, allowUnparsed: true));
+                }
+            }
+
             public partial class SuggestionQueryConfig
             {
                 public partial class Types

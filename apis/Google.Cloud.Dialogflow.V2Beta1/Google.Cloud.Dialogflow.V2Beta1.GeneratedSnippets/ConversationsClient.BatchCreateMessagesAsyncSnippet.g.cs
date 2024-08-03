@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2beta1_generated_Conversations_BatchCreateMessages_async_flattened]
     using Google.Cloud.Dialogflow.V2Beta1;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedConversationsClientSnippets
@@ -36,8 +37,12 @@ namespace GoogleCSharpSnippets
             ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            IEnumerable<CreateMessageRequest> requests = new CreateMessageRequest[]
+            {
+                new CreateMessageRequest(),
+            };
             // Make the request
-            BatchCreateMessagesResponse response = await conversationsClient.BatchCreateMessagesAsync(parent);
+            BatchCreateMessagesResponse response = await conversationsClient.BatchCreateMessagesAsync(parent, requests);
         }
     }
     // [END dialogflow_v2beta1_generated_Conversations_BatchCreateMessages_async_flattened]

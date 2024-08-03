@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2beta1_generated_Conversations_BatchCreateMessages_sync_flattened_resourceNames]
     using Google.Cloud.Dialogflow.V2Beta1;
+    using System.Collections.Generic;
 
     public sealed partial class GeneratedConversationsClientSnippets
     {
@@ -35,8 +36,12 @@ namespace GoogleCSharpSnippets
             ConversationsClient conversationsClient = ConversationsClient.Create();
             // Initialize request argument(s)
             ConversationName parent = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            IEnumerable<CreateMessageRequest> requests = new CreateMessageRequest[]
+            {
+                new CreateMessageRequest(),
+            };
             // Make the request
-            BatchCreateMessagesResponse response = conversationsClient.BatchCreateMessages(parent);
+            BatchCreateMessagesResponse response = conversationsClient.BatchCreateMessages(parent, requests);
         }
     }
     // [END dialogflow_v2beta1_generated_Conversations_BatchCreateMessages_sync_flattened_resourceNames]
