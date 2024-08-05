@@ -1,5 +1,18 @@
 # Version history
 
+## Version 4.11.0, released 2024-08-05
+
+### New features
+
+- Org-level connection bindings ([commit 2268fa6](https://github.com/googleapis/google-cloud-dotnet/commit/2268fa61a7f338d380c9371defd3547d4df6d55c))
+- GRPC config for get, list, and delete FileStoreDataProfiles ([commit 2268fa6](https://github.com/googleapis/google-cloud-dotnet/commit/2268fa61a7f338d380c9371defd3547d4df6d55c))
+- Add refresh frequency for data profiling ([commit 2268fa6](https://github.com/googleapis/google-cloud-dotnet/commit/2268fa61a7f338d380c9371defd3547d4df6d55c))
+
+### Documentation improvements
+
+- Replace HTML tags with CommonMark notation ([commit 9eb36ce](https://github.com/googleapis/google-cloud-dotnet/commit/9eb36ce1f7e1a41f873983424d20af053c472c28))
+- Small improvements ([commit 2268fa6](https://github.com/googleapis/google-cloud-dotnet/commit/2268fa61a7f338d380c9371defd3547d4df6d55c))
+
 ## Version 4.10.0, released 2024-07-22
 
 ### New features
