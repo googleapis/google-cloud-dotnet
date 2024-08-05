@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.19.0, released 2024-08-05
+
+### New features
+
+- Add fields and the BackupType proto for Hot Backups ([commit d3cf2d8](https://github.com/googleapis/google-cloud-dotnet/commit/d3cf2d81c0db1160f450cb023ff91a7fb680cbc8))
+
+### Documentation improvements
+
+- Clarify comments and fix typos ([commit d3cf2d8](https://github.com/googleapis/google-cloud-dotnet/commit/d3cf2d81c0db1160f450cb023ff91a7fb680cbc8))
+
 ## Version 3.18.0, released 2024-07-22
 
 ### New features
