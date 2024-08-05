@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -65,11 +65,13 @@ namespace Google.Cloud.Spanner.Data.Ycsb
                     await Task.Yield();
                     var sw = Stopwatch.StartNew();
                     var cmd = s_connection.CreateSelectCommand(
-                        s_selectQuery, new SpannerParameterCollection
+                        s_selectQuery,
+                        new SpannerParameterCollection
                         {
                             {"p", SpannerDbType.String, s_keys[Rand.Value.Next(s_keys.Count)]}
                         });
-                    using (var reader = await cmd.ExecuteReaderAsync(s_timestampbound).ConfigureAwait(false))
+                    cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(s_timestampbound);
+                    using (var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false))
                     {
                         while (await reader.ReadAsync().ConfigureAwait(false)) { }
                     }

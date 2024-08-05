@@ -59,6 +59,7 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerTransaction : SpannerTransactionBase, ISpannerTransaction
     {
         private readonly List<Mutation> _mutations = new List<Mutation>();
+        private readonly SpannerTransactionCreationOptions _creationOptions;
         // This value will be true if and only if this transaction was created by RetriableTransaction.
         private readonly bool _isRetriable = false;
         private DisposeBehavior _disposeBehavior = DisposeBehavior.Default;
@@ -102,7 +103,7 @@ namespace Google.Cloud.Spanner.Data
         /// </list>
         /// </para>
         /// </remarks>
-        public TransactionMode Mode { get; }
+        public TransactionMode Mode => _creationOptions.TransactionMode;
 
         private readonly PooledSession _session;
 
@@ -151,7 +152,7 @@ namespace Google.Cloud.Spanner.Data
         /// </list>
         /// </para>
         /// </remarks>
-        public TimestampBound TimestampBound { get; }
+        public TimestampBound TimestampBound => _creationOptions.TimestampBound ?? _creationOptions.TransactionId?.TimestampBound;
 
         /// <inheritdoc />
         protected override DbConnection DbConnection => SpannerConnection;
@@ -208,17 +209,15 @@ namespace Google.Cloud.Spanner.Data
 
         internal SpannerTransaction(
             SpannerConnection connection,
-            TransactionMode mode,
             PooledSession session,
-            TimestampBound timestampBound,
+            SpannerTransactionCreationOptions creationOptions,
             bool isRetriable)
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             CommitTimeout = SpannerConnection.Builder.Timeout;
             LogCommitStats = SpannerConnection.LogCommitStats;
-            Mode = mode;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
-            TimestampBound = timestampBound;
+            _creationOptions = GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
             _isRetriable = isRetriable;
         }
 

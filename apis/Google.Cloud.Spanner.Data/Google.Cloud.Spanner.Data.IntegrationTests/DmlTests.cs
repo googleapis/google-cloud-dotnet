@@ -219,13 +219,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public void ReadOnlyTransaction_Invalid()
+        public async Task ReadOnlyTransaction_Invalid()
         {
             string key = _fixture.CreateTestRows();
             using (var connection = _fixture.GetConnection())
             {
                 connection.Open();
-                using (var transaction = connection.BeginReadOnlyTransaction())
+                using (var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default))
                 {
                     string dml = $"DELETE FROM {_fixture.TableName} WHERE DeleteMe AND Key=@key";
                     using (var command = connection.CreateDmlCommand(dml))

@@ -52,9 +52,7 @@ namespace Google.Cloud.Spanner.Data
 
         private async Task<SpannerTransaction> CreateTransactionAsync()
         {
-            SpannerTransaction transaction = _transactionCreationOptions.TimestampBound != null ? await _spannerConnection.BeginReadOnlyTransactionAsync(_transactionCreationOptions.TimestampBound).ConfigureAwait(false)
-                : _transactionCreationOptions.TransactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_transactionCreationOptions.TransactionId)
-                : await _spannerConnection.BeginTransactionAsync().ConfigureAwait(false);
+            SpannerTransaction transaction = await _spannerConnection.BeginTransactionAsync(_transactionCreationOptions, cancellationToken: default).ConfigureAwait(false);
 
             if (_transactionOptions.MaxCommitDelay is not null)
             {
