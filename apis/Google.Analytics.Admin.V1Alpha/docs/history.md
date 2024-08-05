@@ -1,5 +1,30 @@
 # Version history
 
+## Version 2.0.0-alpha20, released 2024-08-05
+
+### Bug fixes
+
+- **BREAKING CHANGE** Rename custom method `CreateSubpropertyRequest` to `ProvisionSubpropertyRequest` ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+
+### New features
+
+- Add `GetKeyEvent`, `CreateKeyEvent`, `ListKeyEvents`, `UpdateKeyEvent`, and `DeleteKeyEvent` methods ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Mark `GetConversionEvent`, `CreateConversionEvent`, `ListConversionEvents`, `UpdateConversionEvent`, and `DeleteConversionEvent` methods as deprecated ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `create_time` field to the `Audience` resource ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `primary` field to the `ChannelGroup` resource ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add `CreateBigQueryLink`, `UpdateBigQueryLink`, and `DeleteBigQueryLink` methods ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `dataset_location` field to the `BigQueryLink` resource ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `BIGQUERY_LINK` option to the `ChangeHistoryResourceType` enum ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `gmp_organization` field to the `Account` resource ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add `GetEventEditRule`, `CreateEventEditRule`, `ListEventEditRules`, `UpdateEventEditRule`, `DeleteEventEditRule`, and `ReorderEventEditRules` methods to the Admin API v1 alpha ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+
+### Documentation improvements
+
+- Add deprecation comment to `GetConversionEvent`, `CreateConversionEvent`, `ListConversionEvents`, `UpdateConversionEvent`, and `DeleteConversionEvent` methods ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Improve comment formatting of the `parent` field in `CreateFirebaseLinkRequest` and `ListFirebaseLinksRequest` ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Improve comment formatting of the `name` field in `DeleteFirebaseLinkRequest`, `GetGlobalSiteTagRequest`, and `GetDataSharingSettingsRequest` ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Improve comment formatting of `account` and `property` fields in `SearchChangeHistoryEventsRequest` ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+
 ## Version 2.0.0-alpha19, released 2024-05-08
 
 ### New features
