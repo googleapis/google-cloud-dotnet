@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-08-05
+
+### New features
+
+- Add file_stripe_level and directory_stripe_level fields to Instance ([commit 1c3d418](https://github.com/googleapis/google-cloud-dotnet/commit/1c3d4184644c42787fe2bff86b8ae395d3562142))
+
 ## Version 1.0.0-beta04, released 2024-07-08
 
 ### New features
