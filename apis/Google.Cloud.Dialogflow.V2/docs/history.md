@@ -1,5 +1,36 @@
 # Version history
 
+## Version 4.21.0, released 2024-08-05
+
+### Bug fixes
+
+- Changed field behavior for an existing field `parent` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- Changed field behavior for an existing field `session_id` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+
+### New features
+
+- Add Proactive Generative Knowledge Assist endpoints and types ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- Add Generator related services and types ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- Add GenerateStatelessSuggestion related endpoints and types ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.dialogflow.v2.Conversation` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `conversation_stage` in message `.google.cloud.dialogflow.v2.Conversation` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `filter` in message `.google.cloud.dialogflow.v2.ListConversationsRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `latest_message` in message `.google.cloud.dialogflow.v2.SuggestConversationSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `context_size` in message `.google.cloud.dialogflow.v2.SuggestConversationSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `assist_query_params` in message `.google.cloud.dialogflow.v2.SuggestConversationSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `latest_message` in message `.google.cloud.dialogflow.v2.GenerateStatelessSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `max_context_size` in message `.google.cloud.dialogflow.v2.GenerateStatelessSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `parent` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `session_id` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `conversation` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `latest_message` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for message `HumanAgentHandoffConfig` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `live_person_config` in message `.google.cloud.dialogflow.v2.HumanAgentHandoffConfig` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `audio` in message `.google.cloud.dialogflow.v2.AudioInput` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+
 ## Version 4.20.0, released 2024-06-04
 
 ### New features
