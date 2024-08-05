@@ -130,6 +130,16 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Options to be used for creating the ephemeral transaction under which this command will be executed
+        /// if no explicit or ambient transaction is set.
+        /// These options will be ignored if an explicit transaction is set on the command via <see cref="SpannerTransaction.CreateBatchDmlCommand"/>
+        /// or an ambient transaction has been started via <see cref="SpannerConnection.OpenAsync(SpannerTransactionCreationOptions, SpannerTransactionOptions, CancellationToken)"/>
+        /// and similar methods.
+        /// May be null, in which case appropriate defaults will be used when needed.
+        /// </summary>
+        public SpannerTransactionCreationOptions EphemeralTransactionCreationOptions { get; set; }
+
+        /// <summary>
         /// Adds a command to the collection of batch commands to be executed by this <see cref="SpannerBatchCommand"/>.
         /// </summary>
         /// <param name="commandText"> The command text to be added. Must not be null or empty.
