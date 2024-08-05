@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.0.0-beta08, released 2024-08-05
+
+### New features
+
+- Add the `comparisons` field to the `Metadata` resource ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+- Add the `comparisons` field to the `RunReportRequest`, `RunPivotReportRequest` resources ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+- Add the `Comparison` type ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+- Add the `ComparisonMetadata` type ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+
+### Documentation improvements
+
+- A comment for field `custom_definition` in message `DimensionMetadata` is changed ([commit 06b5f26](https://github.com/googleapis/google-cloud-dotnet/commit/06b5f26b32e4914cd8aea9dfc9d000c638c5d0c9))
+
 ## Version 2.0.0-beta07, released 2024-05-08
 
 ### New features
