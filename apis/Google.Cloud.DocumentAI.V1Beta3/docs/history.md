@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta21, released 2024-08-05
+
+### New features
+
+- A new field `imageless_mode` is added to message `.google.cloud.documentai.v1.ProcessRequest` ([commit ca07e67](https://github.com/googleapis/google-cloud-dotnet/commit/ca07e67a242098a759491a65324dc8d45397144e))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit ca07e67](https://github.com/googleapis/google-cloud-dotnet/commit/ca07e67a242098a759491a65324dc8d45397144e))
+
 ## Version 2.0.0-beta20, released 2024-06-04
 
 ### New features
