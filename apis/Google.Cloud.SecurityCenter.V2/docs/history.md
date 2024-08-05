@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-08-05
+
+### New features
+
+- Enable Dynamic Mute ([commit f997eb9](https://github.com/googleapis/google-cloud-dotnet/commit/f997eb9541b23d209614bb46112641dfd38c6ea6))
+- New values `EXPLOITATION_FOR_PRIVILEGE_ESCALATION` corresponding to T1068 and `INDICATOR_REMOVAL_FILE_DELETION` corresponding to T1070.004 are added to enum `Technique` ([commit f997eb9](https://github.com/googleapis/google-cloud-dotnet/commit/f997eb9541b23d209614bb46112641dfd38c6ea6))
+
+### Documentation improvements
+
+- T1068 is added for value `EXPLOITATION_FOR_PRIVILEGE_ESCALATION` and T1070.004 is added for value `INDICATOR_REMOVAL_FILE_DELETION` for enum `Technique ([commit f997eb9](https://github.com/googleapis/google-cloud-dotnet/commit/f997eb9541b23d209614bb46112641dfd38c6ea6))
+
 ## Version 1.0.0-beta04, released 2024-07-08
 
 ### New features
