@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.18.0, released 2024-08-05
+
+### New features
+
+- A new field `imageless_mode` is added to message `.google.cloud.documentai.v1.ProcessRequest` ([commit 8bb3707](https://github.com/googleapis/google-cloud-dotnet/commit/8bb3707919368cf60a6ec33d596ecdc865d13f78))
+- A new field `gen_ai_model_info` is added to message `.google.cloud.documentai.v1.ProcessorVersion` ([commit 8bb3707](https://github.com/googleapis/google-cloud-dotnet/commit/8bb3707919368cf60a6ec33d596ecdc865d13f78))
+
+### Documentation improvements
+
+- Update the comment to add a note about `documentai.processors.create` permission ([commit 885982c](https://github.com/googleapis/google-cloud-dotnet/commit/885982cc55f380091fd5c6d01ff00cb47e02d937))
+
 ## Version 3.17.0, released 2024-06-04
 
 ### New features
