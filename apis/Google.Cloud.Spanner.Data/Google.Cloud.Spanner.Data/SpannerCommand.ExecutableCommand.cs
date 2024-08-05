@@ -58,6 +58,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerCommandTextBuilder CommandTextBuilder { get; }
             internal int CommandTimeout { get; }
             internal SpannerTransaction Transaction { get; }
+            internal SpannerTransactionCreationOptions TransactionCreationOptions { get; }
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
             internal KeySet KeySet { get; }
@@ -78,6 +79,7 @@ namespace Google.Cloud.Spanner.Data
                 Parameters = command.Parameters;
                 KeySet = command.KeySet;
                 Transaction = command._transaction;
+                TransactionCreationOptions = command.EphemeralTransactionCreationOptions;
                 QueryOptions = command.QueryOptions;
                 Priority = command.Priority;
                 Tag = command.Tag;
@@ -95,7 +97,7 @@ namespace Google.Cloud.Spanner.Data
                     throw new InvalidOperationException("ExecuteScalar functionality is only available for queries and reads.");
                 }
 
-                using (var reader = await ExecuteReaderAsync(CommandBehavior.SingleRow, null, cancellationToken).ConfigureAwait(false))
+                using (var reader = await ExecuteReaderAsync(CommandBehavior.SingleRow, cancellationToken).ConfigureAwait(false))
                 {
                     bool readValue = await reader.ReadAsync(cancellationToken).ConfigureAwait(false) && reader.FieldCount > 0;
                     return readValue ? reader.GetFieldValue<T>(0) : default;
@@ -103,20 +105,15 @@ namespace Google.Cloud.Spanner.Data
             }
 
             // Convenience method for upcasting the from SpannerDataReader to DbDataReader.
-            internal async Task<DbDataReader> ExecuteDbDataReaderAsync(CommandBehavior behavior, TimestampBound singleUseReadSettings, CancellationToken cancellationToken) =>
-                await ExecuteReaderAsync(behavior, singleUseReadSettings, cancellationToken).ConfigureAwait(false);
+            internal async Task<DbDataReader> ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) =>
+                await ExecuteReaderAsync(behavior, cancellationToken).ConfigureAwait(false);
 
-            internal async Task<SpannerDataReader> ExecuteReaderAsync(CommandBehavior behavior, TimestampBound singleUseReadSettings, CancellationToken cancellationToken)
+            internal async Task<SpannerDataReader> ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
             {
                 ValidateConnectionAndCommandTextBuilder();
 
                 if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Dml)
                 {
-                    if (singleUseReadSettings != null)
-                    {
-                        throw new NotSupportedException("singleUseReadSettings cannot be used with DML command.");
-                    }
-
                     return await ExecuteDmlReaderAsync(behavior, cancellationToken).ConfigureAwait(false);
                 }
 
@@ -129,16 +126,11 @@ namespace Google.Cloud.Spanner.Data
 
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
 
-                ISpannerTransaction effectiveTransaction = Transaction ?? Connection.AmbientTransaction;
-                if (singleUseReadSettings != null && effectiveTransaction != null)
-                {
-                    throw new InvalidOperationException("singleUseReadSettings cannot be used within another transaction.");
-                }
-                effectiveTransaction = effectiveTransaction
-                    ?? new EphemeralTransaction(Connection, Priority, MaxCommitDelay, singleUseReadSettings?.ToTransactionOptions());
+                ISpannerTransaction effectiveTransaction = Transaction
+                    ?? Connection.AmbientTransaction
+                    ?? new EphemeralTransaction(Connection, Priority, MaxCommitDelay, TransactionCreationOptions);
 
-                var resultSet = await ExecuteReadOrQueryRequestAsync(effectiveTransaction, cancellationToken)
-                        .ConfigureAwait(false);
+                var resultSet = await ExecuteReadOrQueryRequestAsync(effectiveTransaction, cancellationToken).ConfigureAwait(false);
 
                 var enableGetSchemaTable = Connection.Builder.EnableGetSchemaTable;
                 // When the data reader is closed, we may need to dispose of the connection.
@@ -213,7 +205,7 @@ namespace Google.Cloud.Spanner.Data
 
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
 
-                var transaction = new EphemeralTransaction(Connection, Priority, MaxCommitDelay, singleUseTransactionOptions: null);
+                var transaction = new EphemeralTransaction(Connection, Priority, MaxCommitDelay, TransactionCreationOptions);
                 // Note: no commit here. PDML transactions are implicitly committed as they go along.
                 return await transaction.ExecutePartitionedDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
             }
@@ -227,7 +219,7 @@ namespace Google.Cloud.Spanner.Data
             private async Task<int> ExecuteDmlAsync(CancellationToken cancellationToken)
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, MaxCommitDelay, singleUseTransactionOptions: null);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, MaxCommitDelay, TransactionCreationOptions);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
                 long count = await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // This cannot currently exceed int.MaxValue due to Spanner commit limitations anyway.
@@ -237,8 +229,9 @@ namespace Google.Cloud.Spanner.Data
             private async Task<SpannerDataReader> ExecuteDmlReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
             {
                 ValidateCommandBehavior(behavior);
+
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, MaxCommitDelay, singleUseTransactionOptions: null);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, MaxCommitDelay, TransactionCreationOptions);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
                 var resultSet = await transaction.ExecuteDmlReaderAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
 
@@ -341,7 +334,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 var mutations = GetMutations();
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, MaxCommitDelay, singleUseTransactionOptions: null);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, MaxCommitDelay, TransactionCreationOptions);
                 // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
                 await transaction.ExecuteMutationsAsync(mutations, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // Return the number of records affected.

@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
             finally
             {
-                DisposeTransaction(transactionId);
+                await DisposeTransactionAsync(transactionId);
             }
 
         }
@@ -70,7 +70,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
             finally
             {
-                DisposeTransaction(transactionId);
+                await DisposeTransactionAsync(transactionId);
             }
         }
 
@@ -86,7 +86,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using var connection = new SpannerConnection(_fixture.ConnectionString);
             await connection.OpenAsync();
 
-            using var transaction = await connection.BeginDetachedReadOnlyTransactionAsync();
+            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
 
             using var cmd = commandFactory(connection);
             cmd.Transaction = transaction;
@@ -102,7 +102,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             // Note: we only use state provided by the arguments here.
             using var connection = new SpannerConnection(id.ConnectionString);
-            using var transaction = connection.BeginReadOnlyTransaction(id);
+            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(id), cancellationToken: default);
             using var cmd = connection.CreateCommandWithPartition(readPartition, transaction);
             using (var reader = await cmd.ExecuteReaderAsync())
             while (await reader.ReadAsync())
@@ -112,14 +112,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             return readRows;
         }
 
-        private static void DisposeTransaction(TransactionId transactionId)
+        private static async Task DisposeTransactionAsync(TransactionId transactionId)
         {
             if (transactionId is null)
             {
                 return;
             }
             using var connection = new SpannerConnection(transactionId.ConnectionString);
-            using var transaction = connection.BeginReadOnlyTransaction(transactionId);
+            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId), cancellationToken: default);
             transaction.DisposeBehavior = DisposeBehavior.CloseResources;
         }
     }

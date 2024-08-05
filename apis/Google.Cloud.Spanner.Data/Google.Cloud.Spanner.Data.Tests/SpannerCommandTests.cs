@@ -272,16 +272,17 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupStreamingRead();
 
             var connection = BuildSpannerConnection(spannerClientMock);
-            var transaction = await connection.BeginDetachedReadOnlyTransactionAsync();
+            var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
             var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10));
 
+            // Normally we would send this information to another client to read, but we are just simulating it here
+            // by serializing and deserializing the information locally.
+            var existingTransactionOptions = SpannerTransactionCreationOptions.FromReadOnlyTransactionId(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
             foreach (var partition in partitions)
             {
-                // Normally we would send this information to another client to read, but we are just simulating it here
-                // by serializing and deserializing the information locally.
-                var tx = connection.BeginReadOnlyTransaction(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
+                var tx = await connection.BeginTransactionAsync(existingTransactionOptions, cancellationToken: default);
                 var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
                 cmd.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
                 using var reader = await cmd.ExecuteReaderAsync();
@@ -405,13 +406,13 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void CommitPriorityCannotBeSetForReadOnlyTransaction()
+        public async Task CommitPriorityCannotBeSetForReadOnlyTransaction()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = connection.BeginReadOnlyTransaction();
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default);
             Assert.Throws<InvalidOperationException>(() => transaction.CommitPriority = Priority.High);
         }
 
@@ -457,12 +458,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
 
-            connection.RunWithRetriableTransaction(tx =>
+            await connection.RunWithRetriableTransactionAsync(async tx =>
             {
                 tx.CommitPriority = priority;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
-                using (var reader = command.ExecuteReader())
+                using (var reader = await command.ExecuteReaderAsync())
                 {
                     Assert.True(reader.HasRows);
                 }
@@ -655,13 +656,13 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void TransactionTagCannotBeSetForReadOnlyTransaction()
+        public async Task TransactionTagCannotBeSetForReadOnlyTransaction()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = connection.BeginReadOnlyTransaction();
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default);
             Assert.Throws<InvalidOperationException>(() => transaction.Tag = "transaction-tag-1");
         }
 
@@ -707,13 +708,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
 
-            connection.RunWithRetriableTransaction(tx =>
+            await connection.RunWithRetriableTransactionAsync(async tx =>
             {
                 tx.Tag = transactionTag;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
                 command.Tag = null;
-                using (var reader = command.ExecuteReader())
+                using (var reader = await command.ExecuteReaderAsync())
                 {
                     Assert.True(reader.HasRows);
                 }
@@ -848,12 +849,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
 
-            connection.RunWithRetriableTransaction(tx =>
+            await connection.RunWithRetriableTransactionAsync(async tx =>
             {
                 tx.MaxCommitDelay = maxCommitDelay;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
-                using (var reader = command.ExecuteReader())
+                using (var reader = await command.ExecuteReaderAsync())
                 {
                     Assert.True(reader.HasRows);
                 }
@@ -995,7 +996,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                connection.Open(SpannerTransactionCreationOptions.Default, new SpannerTransactionOptions { MaxCommitDelay = maxCommitDelay});
+                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = maxCommitDelay});
                 var command = connection.CreateInsertCommand("FOO");
                 command.ExecuteNonQuery();
 
@@ -1022,7 +1023,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                connection.Open(SpannerTransactionCreationOptions.Default, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay});
+                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay});
                 var command = connection.CreateInsertCommand("FOO");
                 command.MaxCommitDelay = commandMaxCommitDelay;
                 command.ExecuteNonQuery();
@@ -1339,18 +1340,19 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupStreamingRead();
 
             var connection = BuildSpannerConnection(spannerClientMock);
-            var transaction = await connection.BeginDetachedReadOnlyTransactionAsync();
+            var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
             var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10).WithDataBoostEnabled(dataBoostEnabled));
 
             Assert.Equal(dataBoostEnabled, CommandPartition.FromBase64String(partitions.FirstOrDefault().ToBase64String()).Request.DataBoostEnabled);
 
+            // Normally we would send this information to another client to read, but we are just simulating it here
+            // by serializing and deserializing the information locally.
+            var existingTransactionOptions = SpannerTransactionCreationOptions.FromReadOnlyTransactionId(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
             foreach (var partition in partitions)
             {
-                // Normally we would send this information to another client to read, but we are just simulating it here
-                // by serializing and deserializing the information locally.
-                var tx = connection.BeginReadOnlyTransaction(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
+                var tx = await connection.BeginTransactionAsync(existingTransactionOptions, cancellationToken: default);
                 var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
                 var reader = await cmd.ExecuteReaderAsync();
                 Assert.True(reader.HasRows);

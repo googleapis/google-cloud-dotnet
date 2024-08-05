@@ -25,14 +25,29 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerConnection _connection;
         private readonly IClock _clock;
         private readonly IScheduler _scheduler;
-        private readonly RetriableTransactionOptions _options;
+        private readonly SpannerTransactionCreationOptions _creationOptions;
+        private readonly RetriableTransactionOptions _retryOptions;
 
-        internal RetriableTransaction(SpannerConnection connection, IClock clock, IScheduler scheduler, RetriableTransactionOptions options = null)
+        internal RetriableTransaction(SpannerConnection connection, IClock clock, IScheduler scheduler, SpannerTransactionCreationOptions creationOptions, RetriableTransactionOptions retryOptions)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             _clock = GaxPreconditions.CheckNotNull(clock, nameof(clock));
             _scheduler = GaxPreconditions.CheckNotNull(scheduler, nameof(scheduler));
-            _options = options ?? RetriableTransactionOptions.CreateDefault();
+            if (creationOptions is null)
+            {
+                _creationOptions = SpannerTransactionCreationOptions.ReadWrite;
+            }
+            else
+            {
+                GaxPreconditions.CheckArgument(
+                creationOptions.TransactionMode == TransactionMode.ReadWrite
+                && !creationOptions.IsDetached
+                && !creationOptions.IsPartitionedDml,
+                nameof(creationOptions),
+                "Retriable transactions must be read-write and may not be detached or partioned DML transactions.");
+                _creationOptions = creationOptions;
+            }
+            _retryOptions = retryOptions ?? RetriableTransactionOptions.CreateDefault();
         }
 
         internal async Task<TResult> RunAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
@@ -59,8 +74,8 @@ namespace Google.Cloud.Spanner.Data
 
                         try
                         {
-                            session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireReadWriteSessionAsync(cancellationToken)).ConfigureAwait(false);
-                            transaction = new SpannerTransaction(_connection, TransactionMode.ReadWrite, session, null, true);
+                            session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions.TransactionOptios, _creationOptions.IsSingleUse, _creationOptions.IsDetached, cancellationToken)).ConfigureAwait(false);
+                            transaction = new SpannerTransaction(_connection, session, _creationOptions, isRetriable: true);
 
                             TResult result = await asyncWork(transaction).ConfigureAwait(false);
                             await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
@@ -107,8 +122,8 @@ namespace Google.Cloud.Spanner.Data
         {
             // Note: the way that we sometimes use the recommended retry delay, and base
             // further delays on that, means we can't use RetryAttempt easily here.
-            DateTime? overallDeadline = _options.CalculateDeadline(_clock);
-            TimeSpan retryDelay = _options.InitialDelay;
+            DateTime? overallDeadline = _retryOptions.CalculateDeadline(_clock);
+            TimeSpan retryDelay = _retryOptions.InitialDelay;
             while (true)
             {
                 try
@@ -122,14 +137,14 @@ namespace Google.Cloud.Spanner.Data
                     // we should respect it.
                     retryDelay = e.RecommendedRetryDelay ?? retryDelay;
 
-                    TimeSpan actualDelay = _options.Jitter(retryDelay);
+                    TimeSpan actualDelay = _retryOptions.Jitter(retryDelay);
                     DateTime expectedRetryTime = _clock.GetCurrentDateTimeUtc() + actualDelay;
                     if (expectedRetryTime > overallDeadline)
                     {
                         throw;
                     }
                     await _scheduler.Delay(actualDelay, cancellationToken).ConfigureAwait(false);
-                    retryDelay = _options.NextDelay(retryDelay);
+                    retryDelay = _retryOptions.NextDelay(retryDelay);
                 }
             }
         }

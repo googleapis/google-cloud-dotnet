@@ -44,6 +44,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Same(connection, command.Connection);
             Assert.Null(command.Transaction);
             Assert.Equal(SpannerBatchCommandType.None, command.CommandType);
+            Assert.Null(command.EphemeralTransactionCreationOptions);
         }
 
         [Fact]
@@ -53,13 +54,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             var pool = new FakeSessionPool();
             var session = PooledSession.FromSessionName(pool, new SessionName("project", "instance", "database", "session"));
 
-            var transaction = new SpannerTransaction(connection, TransactionMode.ReadWrite, session: session, timestampBound: null, isRetriable: false);
+            var transaction = new SpannerTransaction(connection, session, SpannerTransactionCreationOptions.ReadWrite, isRetriable: false);
             var command = new SpannerBatchCommand(transaction);
 
             Assert.Empty(command.Commands);
             Assert.Same(connection, command.Connection);
             Assert.Same(transaction, command.Transaction);
             Assert.Equal(SpannerBatchCommandType.None, command.CommandType);
+            Assert.Null(command.EphemeralTransactionCreationOptions);
         }
 
         public static IEnumerable<object[]> ValidCommands
@@ -366,7 +368,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                connection.Open(SpannerTransactionCreationOptions.Default, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay });
+                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay });
                 var command = connection.CreateBatchDmlCommand();
                 command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
                 command.MaxCommitDelay = commandMaxCommitDelay;
