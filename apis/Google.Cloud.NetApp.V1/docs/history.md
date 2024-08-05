@@ -1,5 +1,32 @@
 # Version history
 
+## Version 1.4.0, released 2024-08-05
+
+### New features
+
+- A new field `administrators` is added to message `.google.cloud.netapp.v1.ActiveDirectory` ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A new field `replica_zone` is added to message `.google.cloud.netapp.v1.StoragePool` ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A new field `zone` is added to message `.google.cloud.netapp.v1.StoragePool` ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A new field `large_capacity` is added to message `.google.cloud.netapp.v1.Volume` ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A new field `multiple_endpoints` is added to message `.google.cloud.netapp.v1.Volume` ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A new field `replica_zone` is added to message `.google.cloud.netapp.v1.Volume` ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A new field `zone` is added to message `.google.cloud.netapp.v1.Volume` ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+
+### Documentation improvements
+
+- A comment for field `active_directory_id` in message `.google.cloud.netapp.v1.CreateActiveDirectoryRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `backup_id` in message `.google.cloud.netapp.v1.CreateBackupRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `backup_policy_id` in message `.google.cloud.netapp.v1.CreateBackupPolicyRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `backup_vault_id` in message `.google.cloud.netapp.v1.CreateBackupVaultRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `kms_config_id` in message `.google.cloud.netapp.v1.CreateKmsConfigRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `transfer_bytes` in message `.google.cloud.netapp.v1.TransferStats` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `total_transfer_duration` in message `.google.cloud.netapp.v1.TransferStats` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for enum value `TRANSFERRING` in enum `MirrorState` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `replication_id` in message `.google.cloud.netapp.v1.CreateReplicationRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `snapshot_id` in message `.google.cloud.netapp.v1.CreateSnapshotRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `storage_pool_id` in message `.google.cloud.netapp.v1.CreateStoragePoolRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+- A comment for field `volume_id` in message `.google.cloud.netapp.v1.CreateVolumeRequest` is changed ([commit 9d56122](https://github.com/googleapis/google-cloud-dotnet/commit/9d561227111b97734496715af709b36ffd9be526))
+
 ## Version 1.3.0, released 2024-05-17
 
 ### New features

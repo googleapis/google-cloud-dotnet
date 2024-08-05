@@ -3252,7 +3252,7 @@
     },
     {
       "id": "Google.Cloud.NetApp.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "NetApp",
       "productUrl": "https://cloud.google.com/netapp/volumes/docs/discover/overview",
