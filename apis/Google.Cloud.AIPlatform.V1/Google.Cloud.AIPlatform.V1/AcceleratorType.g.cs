@@ -55,7 +55,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// </summary>
     [pbr::OriginalName("ACCELERATOR_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Nvidia Tesla K80 GPU.
+    /// Deprecated: Nvidia Tesla K80 GPU has reached end of support,
+    /// see https://cloud.google.com/compute/docs/eol/k80-eol.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [pbr::OriginalName("NVIDIA_TESLA_K80")] NvidiaTeslaK80 = 1,

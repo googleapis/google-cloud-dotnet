@@ -86,17 +86,18 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dXRvcl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdlX3VyaXMYAiAD",
             "KAlCA+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPgQQISDAoEYXJncxgE",
             "IAMoCRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5FbnZWYXIiiAIKClNjaGVkdWxpbmcSKgoHdGltZW91dBgBIAEoCzIZLmdv",
+            "MS5FbnZWYXIipAIKClNjaGVkdWxpbmcSKgoHdGltZW91dBgBIAEoCzIZLmdv",
             "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIlCh1yZXN0YXJ0X2pvYl9vbl93b3Jr",
             "ZXJfcmVzdGFydBgDIAEoCBJGCghzdHJhdGVneRgEIAEoDjIvLmdvb2dsZS5j",
             "bG91ZC5haXBsYXRmb3JtLnYxLlNjaGVkdWxpbmcuU3RyYXRlZ3lCA+BBARIc",
-            "Cg9kaXNhYmxlX3JldHJpZXMYBSABKAhCA+BBASJBCghTdHJhdGVneRIYChRT",
-            "VFJBVEVHWV9VTlNQRUNJRklFRBAAEg0KCU9OX0RFTUFORBABEgwKCExPV19D",
-            "T1NUEAJCzAEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIOQ3Vz",
-            "dG9tSm9iUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
-            "L2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xv",
-            "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
-            "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "Cg9kaXNhYmxlX3JldHJpZXMYBSABKAhCA+BBASJdCghTdHJhdGVneRIYChRT",
+            "VFJBVEVHWV9VTlNQRUNJRklFRBAAEg0KCU9OX0RFTUFORBABEhAKCExPV19D",
+            "T1NUEAIaAggBEgwKCFNUQU5EQVJEEAMSCAoEU1BPVBAEQswBCh5jb20uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDkN1c3RvbUpvYlByb3RvUAFaPmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3Jt",
+            "cGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
+            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -3039,7 +3040,16 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// <summary>
         /// Low cost by making potential use of spot resources.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("LOW_COST")] LowCost = 2,
+        /// <summary>
+        /// Standard provisioning strategy uses regular on-demand resources.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 3,
+        /// <summary>
+        /// Spot provisioning strategy uses spot resources.
+        /// </summary>
+        [pbr::OriginalName("SPOT")] Spot = 4,
       }
 
     }
