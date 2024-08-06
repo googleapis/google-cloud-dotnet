@@ -34,10 +34,28 @@
                 "CreateAdaptiveMtDatasetAsync"
               ]
             },
+            "CreateDataset": {
+              "methods": [
+                "CreateDataset",
+                "CreateDatasetAsync"
+              ]
+            },
             "CreateGlossary": {
               "methods": [
                 "CreateGlossary",
                 "CreateGlossaryAsync"
+              ]
+            },
+            "CreateGlossaryEntry": {
+              "methods": [
+                "CreateGlossaryEntry",
+                "CreateGlossaryEntryAsync"
+              ]
+            },
+            "CreateModel": {
+              "methods": [
+                "CreateModel",
+                "CreateModelAsync"
               ]
             },
             "DeleteAdaptiveMtDataset": {
@@ -52,16 +70,40 @@
                 "DeleteAdaptiveMtFileAsync"
               ]
             },
+            "DeleteDataset": {
+              "methods": [
+                "DeleteDataset",
+                "DeleteDatasetAsync"
+              ]
+            },
             "DeleteGlossary": {
               "methods": [
                 "DeleteGlossary",
                 "DeleteGlossaryAsync"
               ]
             },
+            "DeleteGlossaryEntry": {
+              "methods": [
+                "DeleteGlossaryEntry",
+                "DeleteGlossaryEntryAsync"
+              ]
+            },
+            "DeleteModel": {
+              "methods": [
+                "DeleteModel",
+                "DeleteModelAsync"
+              ]
+            },
             "DetectLanguage": {
               "methods": [
                 "DetectLanguage",
                 "DetectLanguageAsync"
+              ]
+            },
+            "ExportData": {
+              "methods": [
+                "ExportData",
+                "ExportDataAsync"
               ]
             },
             "GetAdaptiveMtDataset": {
@@ -76,10 +118,28 @@
                 "GetAdaptiveMtFileAsync"
               ]
             },
+            "GetDataset": {
+              "methods": [
+                "GetDataset",
+                "GetDatasetAsync"
+              ]
+            },
             "GetGlossary": {
               "methods": [
                 "GetGlossary",
                 "GetGlossaryAsync"
+              ]
+            },
+            "GetGlossaryEntry": {
+              "methods": [
+                "GetGlossaryEntry",
+                "GetGlossaryEntryAsync"
+              ]
+            },
+            "GetModel": {
+              "methods": [
+                "GetModel",
+                "GetModelAsync"
               ]
             },
             "GetSupportedLanguages": {
@@ -92,6 +152,12 @@
               "methods": [
                 "ImportAdaptiveMtFile",
                 "ImportAdaptiveMtFileAsync"
+              ]
+            },
+            "ImportData": {
+              "methods": [
+                "ImportData",
+                "ImportDataAsync"
               ]
             },
             "ListAdaptiveMtDatasets": {
@@ -112,10 +178,40 @@
                 "ListAdaptiveMtSentencesAsync"
               ]
             },
+            "ListDatasets": {
+              "methods": [
+                "ListDatasets",
+                "ListDatasetsAsync"
+              ]
+            },
+            "ListExamples": {
+              "methods": [
+                "ListExamples",
+                "ListExamplesAsync"
+              ]
+            },
             "ListGlossaries": {
               "methods": [
                 "ListGlossaries",
                 "ListGlossariesAsync"
+              ]
+            },
+            "ListGlossaryEntries": {
+              "methods": [
+                "ListGlossaryEntries",
+                "ListGlossaryEntriesAsync"
+              ]
+            },
+            "ListModels": {
+              "methods": [
+                "ListModels",
+                "ListModelsAsync"
+              ]
+            },
+            "RomanizeText": {
+              "methods": [
+                "RomanizeText",
+                "RomanizeTextAsync"
               ]
             },
             "TranslateDocument": {
@@ -128,6 +224,18 @@
               "methods": [
                 "TranslateText",
                 "TranslateTextAsync"
+              ]
+            },
+            "UpdateGlossary": {
+              "methods": [
+                "UpdateGlossary",
+                "UpdateGlossaryAsync"
+              ]
+            },
+            "UpdateGlossaryEntry": {
+              "methods": [
+                "UpdateGlossaryEntry",
+                "UpdateGlossaryEntryAsync"
               ]
             }
           }

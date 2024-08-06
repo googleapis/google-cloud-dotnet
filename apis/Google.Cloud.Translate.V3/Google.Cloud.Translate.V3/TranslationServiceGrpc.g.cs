@@ -68,6 +68,10 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.TranslateTextResponse> __Marshaller_google_cloud_translation_v3_TranslateTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.TranslateTextResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.RomanizeTextRequest> __Marshaller_google_cloud_translation_v3_RomanizeTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.RomanizeTextRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.RomanizeTextResponse> __Marshaller_google_cloud_translation_v3_RomanizeTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.RomanizeTextResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DetectLanguageRequest> __Marshaller_google_cloud_translation_v3_DetectLanguageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DetectLanguageRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DetectLanguageResponse> __Marshaller_google_cloud_translation_v3_DetectLanguageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DetectLanguageResponse.Parser));
@@ -88,6 +92,8 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateGlossaryRequest> __Marshaller_google_cloud_translation_v3_CreateGlossaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.CreateGlossaryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.UpdateGlossaryRequest> __Marshaller_google_cloud_translation_v3_UpdateGlossaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.UpdateGlossaryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossariesRequest> __Marshaller_google_cloud_translation_v3_ListGlossariesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListGlossariesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossariesResponse> __Marshaller_google_cloud_translation_v3_ListGlossariesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListGlossariesResponse.Parser));
@@ -98,13 +104,39 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteGlossaryRequest> __Marshaller_google_cloud_translation_v3_DeleteGlossaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteGlossaryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest> __Marshaller_google_cloud_translation_v3_GetGlossaryEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GlossaryEntry> __Marshaller_google_cloud_translation_v3_GlossaryEntry = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GlossaryEntry.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest> __Marshaller_google_cloud_translation_v3_ListGlossaryEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse> __Marshaller_google_cloud_translation_v3_ListGlossaryEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest> __Marshaller_google_cloud_translation_v3_CreateGlossaryEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest> __Marshaller_google_cloud_translation_v3_UpdateGlossaryEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest> __Marshaller_google_cloud_translation_v3_DeleteGlossaryEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateDatasetRequest> __Marshaller_google_cloud_translation_v3_CreateDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.CreateDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetDatasetRequest> __Marshaller_google_cloud_translation_v3_GetDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.Dataset> __Marshaller_google_cloud_translation_v3_Dataset = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.Dataset.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListDatasetsRequest> __Marshaller_google_cloud_translation_v3_ListDatasetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListDatasetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListDatasetsResponse> __Marshaller_google_cloud_translation_v3_ListDatasetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListDatasetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteDatasetRequest> __Marshaller_google_cloud_translation_v3_DeleteDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest> __Marshaller_google_cloud_translation_v3_CreateAdaptiveMtDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.AdaptiveMtDataset> __Marshaller_google_cloud_translation_v3_AdaptiveMtDataset = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.AdaptiveMtDataset.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest> __Marshaller_google_cloud_translation_v3_DeleteAdaptiveMtDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest> __Marshaller_google_cloud_translation_v3_GetAdaptiveMtDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -133,6 +165,26 @@ namespace Google.Cloud.Translate.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest> __Marshaller_google_cloud_translation_v3_ListAdaptiveMtSentencesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse> __Marshaller_google_cloud_translation_v3_ListAdaptiveMtSentencesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ImportDataRequest> __Marshaller_google_cloud_translation_v3_ImportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ImportDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ExportDataRequest> __Marshaller_google_cloud_translation_v3_ExportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ExportDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListExamplesRequest> __Marshaller_google_cloud_translation_v3_ListExamplesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListExamplesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListExamplesResponse> __Marshaller_google_cloud_translation_v3_ListExamplesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListExamplesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateModelRequest> __Marshaller_google_cloud_translation_v3_CreateModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.CreateModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListModelsRequest> __Marshaller_google_cloud_translation_v3_ListModelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListModelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListModelsResponse> __Marshaller_google_cloud_translation_v3_ListModelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListModelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetModelRequest> __Marshaller_google_cloud_translation_v3_GetModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.Model> __Marshaller_google_cloud_translation_v3_Model = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.Model.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteModelRequest> __Marshaller_google_cloud_translation_v3_DeleteModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteModelRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Translate.V3.TranslateTextRequest, global::Google.Cloud.Translate.V3.TranslateTextResponse> __Method_TranslateText = new grpc::Method<global::Google.Cloud.Translate.V3.TranslateTextRequest, global::Google.Cloud.Translate.V3.TranslateTextResponse>(
@@ -141,6 +193,14 @@ namespace Google.Cloud.Translate.V3 {
         "TranslateText",
         __Marshaller_google_cloud_translation_v3_TranslateTextRequest,
         __Marshaller_google_cloud_translation_v3_TranslateTextResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.RomanizeTextRequest, global::Google.Cloud.Translate.V3.RomanizeTextResponse> __Method_RomanizeText = new grpc::Method<global::Google.Cloud.Translate.V3.RomanizeTextRequest, global::Google.Cloud.Translate.V3.RomanizeTextResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RomanizeText",
+        __Marshaller_google_cloud_translation_v3_RomanizeTextRequest,
+        __Marshaller_google_cloud_translation_v3_RomanizeTextResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Translate.V3.DetectLanguageRequest, global::Google.Cloud.Translate.V3.DetectLanguageResponse> __Method_DetectLanguage = new grpc::Method<global::Google.Cloud.Translate.V3.DetectLanguageRequest, global::Google.Cloud.Translate.V3.DetectLanguageResponse>(
@@ -191,6 +251,14 @@ namespace Google.Cloud.Translate.V3 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.UpdateGlossaryRequest, global::Google.LongRunning.Operation> __Method_UpdateGlossary = new grpc::Method<global::Google.Cloud.Translate.V3.UpdateGlossaryRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGlossary",
+        __Marshaller_google_cloud_translation_v3_UpdateGlossaryRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Translate.V3.ListGlossariesRequest, global::Google.Cloud.Translate.V3.ListGlossariesResponse> __Method_ListGlossaries = new grpc::Method<global::Google.Cloud.Translate.V3.ListGlossariesRequest, global::Google.Cloud.Translate.V3.ListGlossariesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -212,6 +280,78 @@ namespace Google.Cloud.Translate.V3 {
         __ServiceName,
         "DeleteGlossary",
         __Marshaller_google_cloud_translation_v3_DeleteGlossaryRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry> __Method_GetGlossaryEntry = new grpc::Method<global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetGlossaryEntry",
+        __Marshaller_google_cloud_translation_v3_GetGlossaryEntryRequest,
+        __Marshaller_google_cloud_translation_v3_GlossaryEntry);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest, global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse> __Method_ListGlossaryEntries = new grpc::Method<global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest, global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListGlossaryEntries",
+        __Marshaller_google_cloud_translation_v3_ListGlossaryEntriesRequest,
+        __Marshaller_google_cloud_translation_v3_ListGlossaryEntriesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry> __Method_CreateGlossaryEntry = new grpc::Method<global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateGlossaryEntry",
+        __Marshaller_google_cloud_translation_v3_CreateGlossaryEntryRequest,
+        __Marshaller_google_cloud_translation_v3_GlossaryEntry);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry> __Method_UpdateGlossaryEntry = new grpc::Method<global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGlossaryEntry",
+        __Marshaller_google_cloud_translation_v3_UpdateGlossaryEntryRequest,
+        __Marshaller_google_cloud_translation_v3_GlossaryEntry);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteGlossaryEntry = new grpc::Method<global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteGlossaryEntry",
+        __Marshaller_google_cloud_translation_v3_DeleteGlossaryEntryRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.CreateDatasetRequest, global::Google.LongRunning.Operation> __Method_CreateDataset = new grpc::Method<global::Google.Cloud.Translate.V3.CreateDatasetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDataset",
+        __Marshaller_google_cloud_translation_v3_CreateDatasetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.GetDatasetRequest, global::Google.Cloud.Translate.V3.Dataset> __Method_GetDataset = new grpc::Method<global::Google.Cloud.Translate.V3.GetDatasetRequest, global::Google.Cloud.Translate.V3.Dataset>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDataset",
+        __Marshaller_google_cloud_translation_v3_GetDatasetRequest,
+        __Marshaller_google_cloud_translation_v3_Dataset);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ListDatasetsRequest, global::Google.Cloud.Translate.V3.ListDatasetsResponse> __Method_ListDatasets = new grpc::Method<global::Google.Cloud.Translate.V3.ListDatasetsRequest, global::Google.Cloud.Translate.V3.ListDatasetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDatasets",
+        __Marshaller_google_cloud_translation_v3_ListDatasetsRequest,
+        __Marshaller_google_cloud_translation_v3_ListDatasetsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.DeleteDatasetRequest, global::Google.LongRunning.Operation> __Method_DeleteDataset = new grpc::Method<global::Google.Cloud.Translate.V3.DeleteDatasetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDataset",
+        __Marshaller_google_cloud_translation_v3_DeleteDatasetRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -294,6 +434,62 @@ namespace Google.Cloud.Translate.V3 {
         __Marshaller_google_cloud_translation_v3_ListAdaptiveMtSentencesRequest,
         __Marshaller_google_cloud_translation_v3_ListAdaptiveMtSentencesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ImportDataRequest, global::Google.LongRunning.Operation> __Method_ImportData = new grpc::Method<global::Google.Cloud.Translate.V3.ImportDataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportData",
+        __Marshaller_google_cloud_translation_v3_ImportDataRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ExportDataRequest, global::Google.LongRunning.Operation> __Method_ExportData = new grpc::Method<global::Google.Cloud.Translate.V3.ExportDataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportData",
+        __Marshaller_google_cloud_translation_v3_ExportDataRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ListExamplesRequest, global::Google.Cloud.Translate.V3.ListExamplesResponse> __Method_ListExamples = new grpc::Method<global::Google.Cloud.Translate.V3.ListExamplesRequest, global::Google.Cloud.Translate.V3.ListExamplesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListExamples",
+        __Marshaller_google_cloud_translation_v3_ListExamplesRequest,
+        __Marshaller_google_cloud_translation_v3_ListExamplesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.CreateModelRequest, global::Google.LongRunning.Operation> __Method_CreateModel = new grpc::Method<global::Google.Cloud.Translate.V3.CreateModelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateModel",
+        __Marshaller_google_cloud_translation_v3_CreateModelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ListModelsRequest, global::Google.Cloud.Translate.V3.ListModelsResponse> __Method_ListModels = new grpc::Method<global::Google.Cloud.Translate.V3.ListModelsRequest, global::Google.Cloud.Translate.V3.ListModelsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListModels",
+        __Marshaller_google_cloud_translation_v3_ListModelsRequest,
+        __Marshaller_google_cloud_translation_v3_ListModelsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.GetModelRequest, global::Google.Cloud.Translate.V3.Model> __Method_GetModel = new grpc::Method<global::Google.Cloud.Translate.V3.GetModelRequest, global::Google.Cloud.Translate.V3.Model>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetModel",
+        __Marshaller_google_cloud_translation_v3_GetModelRequest,
+        __Marshaller_google_cloud_translation_v3_Model);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.DeleteModelRequest, global::Google.LongRunning.Operation> __Method_DeleteModel = new grpc::Method<global::Google.Cloud.Translate.V3.DeleteModelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteModel",
+        __Marshaller_google_cloud_translation_v3_DeleteModelRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -312,6 +508,18 @@ namespace Google.Cloud.Translate.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.TranslateTextResponse> TranslateText(global::Google.Cloud.Translate.V3.TranslateTextRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Romanize input text written in non-Latin scripts to Latin text.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.RomanizeTextResponse> RomanizeText(global::Google.Cloud.Translate.V3.RomanizeTextRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -402,6 +610,19 @@ namespace Google.Cloud.Translate.V3 {
       }
 
       /// <summary>
+      /// Updates a glossary. A LRO is used since the update can be async if the
+      /// glossary's entry file is updated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGlossary(global::Google.Cloud.Translate.V3.UpdateGlossaryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
       /// exist.
       /// </summary>
@@ -437,6 +658,114 @@ namespace Google.Cloud.Translate.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteGlossary(global::Google.Cloud.Translate.V3.DeleteGlossaryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a single glossary entry by the given id.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.GlossaryEntry> GetGlossaryEntry(global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List the entries for the glossary.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse> ListGlossaryEntries(global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.GlossaryEntry> CreateGlossaryEntry(global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.GlossaryEntry> UpdateGlossaryEntry(global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single entry from the glossary
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGlossaryEntry(global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDataset(global::Google.Cloud.Translate.V3.CreateDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a Dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.Dataset> GetDataset(global::Google.Cloud.Translate.V3.GetDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists datasets.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.ListDatasetsResponse> ListDatasets(global::Google.Cloud.Translate.V3.ListDatasetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a dataset and all of its contents.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDataset(global::Google.Cloud.Translate.V3.DeleteDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -563,6 +892,90 @@ namespace Google.Cloud.Translate.V3 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Import sentence pairs into translation Dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportData(global::Google.Cloud.Translate.V3.ImportDataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports dataset's data to the provided output location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportData(global::Google.Cloud.Translate.V3.ExportDataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists sentence pairs in the dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.ListExamplesResponse> ListExamples(global::Google.Cloud.Translate.V3.ListExamplesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Model.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateModel(global::Google.Cloud.Translate.V3.CreateModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists models.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.ListModelsResponse> ListModels(global::Google.Cloud.Translate.V3.ListModelsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a model.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.Model> GetModel(global::Google.Cloud.Translate.V3.GetModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a model.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteModel(global::Google.Cloud.Translate.V3.DeleteModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for TranslationService</summary>
@@ -639,6 +1052,54 @@ namespace Google.Cloud.Translate.V3 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.TranslateTextResponse> TranslateTextAsync(global::Google.Cloud.Translate.V3.TranslateTextRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TranslateText, null, options, request);
+      }
+      /// <summary>
+      /// Romanize input text written in non-Latin scripts to Latin text.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.RomanizeTextResponse RomanizeText(global::Google.Cloud.Translate.V3.RomanizeTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RomanizeText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Romanize input text written in non-Latin scripts to Latin text.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.RomanizeTextResponse RomanizeText(global::Google.Cloud.Translate.V3.RomanizeTextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RomanizeText, null, options, request);
+      }
+      /// <summary>
+      /// Romanize input text written in non-Latin scripts to Latin text.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.RomanizeTextResponse> RomanizeTextAsync(global::Google.Cloud.Translate.V3.RomanizeTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RomanizeTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Romanize input text written in non-Latin scripts to Latin text.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.RomanizeTextResponse> RomanizeTextAsync(global::Google.Cloud.Translate.V3.RomanizeTextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RomanizeText, null, options, request);
       }
       /// <summary>
       /// Detects the language of text within a request.
@@ -981,6 +1442,58 @@ namespace Google.Cloud.Translate.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGlossary, null, options, request);
       }
       /// <summary>
+      /// Updates a glossary. A LRO is used since the update can be async if the
+      /// glossary's entry file is updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGlossary(global::Google.Cloud.Translate.V3.UpdateGlossaryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGlossary(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a glossary. A LRO is used since the update can be async if the
+      /// glossary's entry file is updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGlossary(global::Google.Cloud.Translate.V3.UpdateGlossaryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGlossary, null, options, request);
+      }
+      /// <summary>
+      /// Updates a glossary. A LRO is used since the update can be async if the
+      /// glossary's entry file is updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGlossaryAsync(global::Google.Cloud.Translate.V3.UpdateGlossaryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGlossaryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a glossary. A LRO is used since the update can be async if the
+      /// glossary's entry file is updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGlossaryAsync(global::Google.Cloud.Translate.V3.UpdateGlossaryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGlossary, null, options, request);
+      }
+      /// <summary>
       /// Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
       /// exist.
       /// </summary>
@@ -1139,6 +1652,438 @@ namespace Google.Cloud.Translate.V3 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteGlossaryAsync(global::Google.Cloud.Translate.V3.DeleteGlossaryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteGlossary, null, options, request);
+      }
+      /// <summary>
+      /// Gets a single glossary entry by the given id.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.GlossaryEntry GetGlossaryEntry(global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGlossaryEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a single glossary entry by the given id.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.GlossaryEntry GetGlossaryEntry(global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetGlossaryEntry, null, options, request);
+      }
+      /// <summary>
+      /// Gets a single glossary entry by the given id.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.GlossaryEntry> GetGlossaryEntryAsync(global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGlossaryEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a single glossary entry by the given id.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.GlossaryEntry> GetGlossaryEntryAsync(global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetGlossaryEntry, null, options, request);
+      }
+      /// <summary>
+      /// List the entries for the glossary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse ListGlossaryEntries(global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListGlossaryEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List the entries for the glossary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse ListGlossaryEntries(global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListGlossaryEntries, null, options, request);
+      }
+      /// <summary>
+      /// List the entries for the glossary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse> ListGlossaryEntriesAsync(global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListGlossaryEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List the entries for the glossary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse> ListGlossaryEntriesAsync(global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListGlossaryEntries, null, options, request);
+      }
+      /// <summary>
+      /// Creates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.GlossaryEntry CreateGlossaryEntry(global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateGlossaryEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.GlossaryEntry CreateGlossaryEntry(global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateGlossaryEntry, null, options, request);
+      }
+      /// <summary>
+      /// Creates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.GlossaryEntry> CreateGlossaryEntryAsync(global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateGlossaryEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.GlossaryEntry> CreateGlossaryEntryAsync(global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateGlossaryEntry, null, options, request);
+      }
+      /// <summary>
+      /// Updates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.GlossaryEntry UpdateGlossaryEntry(global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGlossaryEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.GlossaryEntry UpdateGlossaryEntry(global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGlossaryEntry, null, options, request);
+      }
+      /// <summary>
+      /// Updates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.GlossaryEntry> UpdateGlossaryEntryAsync(global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGlossaryEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a glossary entry.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.GlossaryEntry> UpdateGlossaryEntryAsync(global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGlossaryEntry, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single entry from the glossary
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGlossaryEntry(global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteGlossaryEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single entry from the glossary
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGlossaryEntry(global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteGlossaryEntry, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single entry from the glossary
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGlossaryEntryAsync(global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteGlossaryEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single entry from the glossary
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGlossaryEntryAsync(global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteGlossaryEntry, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDataset(global::Google.Cloud.Translate.V3.CreateDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDataset(global::Google.Cloud.Translate.V3.CreateDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDataset, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatasetAsync(global::Google.Cloud.Translate.V3.CreateDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatasetAsync(global::Google.Cloud.Translate.V3.CreateDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDataset, null, options, request);
+      }
+      /// <summary>
+      /// Gets a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.Dataset GetDataset(global::Google.Cloud.Translate.V3.GetDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.Dataset GetDataset(global::Google.Cloud.Translate.V3.GetDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDataset, null, options, request);
+      }
+      /// <summary>
+      /// Gets a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.Dataset> GetDatasetAsync(global::Google.Cloud.Translate.V3.GetDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.Dataset> GetDatasetAsync(global::Google.Cloud.Translate.V3.GetDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDataset, null, options, request);
+      }
+      /// <summary>
+      /// Lists datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListDatasetsResponse ListDatasets(global::Google.Cloud.Translate.V3.ListDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatasets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListDatasetsResponse ListDatasets(global::Google.Cloud.Translate.V3.ListDatasetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDatasets, null, options, request);
+      }
+      /// <summary>
+      /// Lists datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListDatasetsResponse> ListDatasetsAsync(global::Google.Cloud.Translate.V3.ListDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatasetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListDatasetsResponse> ListDatasetsAsync(global::Google.Cloud.Translate.V3.ListDatasetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDatasets, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a dataset and all of its contents.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDataset(global::Google.Cloud.Translate.V3.DeleteDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a dataset and all of its contents.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDataset(global::Google.Cloud.Translate.V3.DeleteDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDataset, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a dataset and all of its contents.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatasetAsync(global::Google.Cloud.Translate.V3.DeleteDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a dataset and all of its contents.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatasetAsync(global::Google.Cloud.Translate.V3.DeleteDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDataset, null, options, request);
       }
       /// <summary>
       /// Creates an Adaptive MT dataset.
@@ -1628,6 +2573,342 @@ namespace Google.Cloud.Translate.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAdaptiveMtSentences, null, options, request);
       }
+      /// <summary>
+      /// Import sentence pairs into translation Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportData(global::Google.Cloud.Translate.V3.ImportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Import sentence pairs into translation Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportData(global::Google.Cloud.Translate.V3.ImportDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportData, null, options, request);
+      }
+      /// <summary>
+      /// Import sentence pairs into translation Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDataAsync(global::Google.Cloud.Translate.V3.ImportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Import sentence pairs into translation Dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDataAsync(global::Google.Cloud.Translate.V3.ImportDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportData, null, options, request);
+      }
+      /// <summary>
+      /// Exports dataset's data to the provided output location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportData(global::Google.Cloud.Translate.V3.ExportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports dataset's data to the provided output location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportData(global::Google.Cloud.Translate.V3.ExportDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportData, null, options, request);
+      }
+      /// <summary>
+      /// Exports dataset's data to the provided output location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDataAsync(global::Google.Cloud.Translate.V3.ExportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports dataset's data to the provided output location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDataAsync(global::Google.Cloud.Translate.V3.ExportDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportData, null, options, request);
+      }
+      /// <summary>
+      /// Lists sentence pairs in the dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListExamplesResponse ListExamples(global::Google.Cloud.Translate.V3.ListExamplesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExamples(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists sentence pairs in the dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListExamplesResponse ListExamples(global::Google.Cloud.Translate.V3.ListExamplesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListExamples, null, options, request);
+      }
+      /// <summary>
+      /// Lists sentence pairs in the dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListExamplesResponse> ListExamplesAsync(global::Google.Cloud.Translate.V3.ListExamplesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExamplesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists sentence pairs in the dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListExamplesResponse> ListExamplesAsync(global::Google.Cloud.Translate.V3.ListExamplesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListExamples, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateModel(global::Google.Cloud.Translate.V3.CreateModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateModel(global::Google.Cloud.Translate.V3.CreateModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateModel, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateModelAsync(global::Google.Cloud.Translate.V3.CreateModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateModelAsync(global::Google.Cloud.Translate.V3.CreateModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateModel, null, options, request);
+      }
+      /// <summary>
+      /// Lists models.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListModelsResponse ListModels(global::Google.Cloud.Translate.V3.ListModelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListModels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists models.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListModelsResponse ListModels(global::Google.Cloud.Translate.V3.ListModelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListModels, null, options, request);
+      }
+      /// <summary>
+      /// Lists models.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListModelsResponse> ListModelsAsync(global::Google.Cloud.Translate.V3.ListModelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListModelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists models.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListModelsResponse> ListModelsAsync(global::Google.Cloud.Translate.V3.ListModelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListModels, null, options, request);
+      }
+      /// <summary>
+      /// Gets a model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.Model GetModel(global::Google.Cloud.Translate.V3.GetModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.Model GetModel(global::Google.Cloud.Translate.V3.GetModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetModel, null, options, request);
+      }
+      /// <summary>
+      /// Gets a model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.Model> GetModelAsync(global::Google.Cloud.Translate.V3.GetModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.Model> GetModelAsync(global::Google.Cloud.Translate.V3.GetModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetModel, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteModel(global::Google.Cloud.Translate.V3.DeleteModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteModel(global::Google.Cloud.Translate.V3.DeleteModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteModel, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelAsync(global::Google.Cloud.Translate.V3.DeleteModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelAsync(global::Google.Cloud.Translate.V3.DeleteModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteModel, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TranslationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1643,15 +2924,26 @@ namespace Google.Cloud.Translate.V3 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_TranslateText, serviceImpl.TranslateText)
+          .AddMethod(__Method_RomanizeText, serviceImpl.RomanizeText)
           .AddMethod(__Method_DetectLanguage, serviceImpl.DetectLanguage)
           .AddMethod(__Method_GetSupportedLanguages, serviceImpl.GetSupportedLanguages)
           .AddMethod(__Method_TranslateDocument, serviceImpl.TranslateDocument)
           .AddMethod(__Method_BatchTranslateText, serviceImpl.BatchTranslateText)
           .AddMethod(__Method_BatchTranslateDocument, serviceImpl.BatchTranslateDocument)
           .AddMethod(__Method_CreateGlossary, serviceImpl.CreateGlossary)
+          .AddMethod(__Method_UpdateGlossary, serviceImpl.UpdateGlossary)
           .AddMethod(__Method_ListGlossaries, serviceImpl.ListGlossaries)
           .AddMethod(__Method_GetGlossary, serviceImpl.GetGlossary)
           .AddMethod(__Method_DeleteGlossary, serviceImpl.DeleteGlossary)
+          .AddMethod(__Method_GetGlossaryEntry, serviceImpl.GetGlossaryEntry)
+          .AddMethod(__Method_ListGlossaryEntries, serviceImpl.ListGlossaryEntries)
+          .AddMethod(__Method_CreateGlossaryEntry, serviceImpl.CreateGlossaryEntry)
+          .AddMethod(__Method_UpdateGlossaryEntry, serviceImpl.UpdateGlossaryEntry)
+          .AddMethod(__Method_DeleteGlossaryEntry, serviceImpl.DeleteGlossaryEntry)
+          .AddMethod(__Method_CreateDataset, serviceImpl.CreateDataset)
+          .AddMethod(__Method_GetDataset, serviceImpl.GetDataset)
+          .AddMethod(__Method_ListDatasets, serviceImpl.ListDatasets)
+          .AddMethod(__Method_DeleteDataset, serviceImpl.DeleteDataset)
           .AddMethod(__Method_CreateAdaptiveMtDataset, serviceImpl.CreateAdaptiveMtDataset)
           .AddMethod(__Method_DeleteAdaptiveMtDataset, serviceImpl.DeleteAdaptiveMtDataset)
           .AddMethod(__Method_GetAdaptiveMtDataset, serviceImpl.GetAdaptiveMtDataset)
@@ -1661,7 +2953,14 @@ namespace Google.Cloud.Translate.V3 {
           .AddMethod(__Method_DeleteAdaptiveMtFile, serviceImpl.DeleteAdaptiveMtFile)
           .AddMethod(__Method_ImportAdaptiveMtFile, serviceImpl.ImportAdaptiveMtFile)
           .AddMethod(__Method_ListAdaptiveMtFiles, serviceImpl.ListAdaptiveMtFiles)
-          .AddMethod(__Method_ListAdaptiveMtSentences, serviceImpl.ListAdaptiveMtSentences).Build();
+          .AddMethod(__Method_ListAdaptiveMtSentences, serviceImpl.ListAdaptiveMtSentences)
+          .AddMethod(__Method_ImportData, serviceImpl.ImportData)
+          .AddMethod(__Method_ExportData, serviceImpl.ExportData)
+          .AddMethod(__Method_ListExamples, serviceImpl.ListExamples)
+          .AddMethod(__Method_CreateModel, serviceImpl.CreateModel)
+          .AddMethod(__Method_ListModels, serviceImpl.ListModels)
+          .AddMethod(__Method_GetModel, serviceImpl.GetModel)
+          .AddMethod(__Method_DeleteModel, serviceImpl.DeleteModel).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1672,15 +2971,26 @@ namespace Google.Cloud.Translate.V3 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TranslationServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_TranslateText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.TranslateTextRequest, global::Google.Cloud.Translate.V3.TranslateTextResponse>(serviceImpl.TranslateText));
+      serviceBinder.AddMethod(__Method_RomanizeText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.RomanizeTextRequest, global::Google.Cloud.Translate.V3.RomanizeTextResponse>(serviceImpl.RomanizeText));
       serviceBinder.AddMethod(__Method_DetectLanguage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DetectLanguageRequest, global::Google.Cloud.Translate.V3.DetectLanguageResponse>(serviceImpl.DetectLanguage));
       serviceBinder.AddMethod(__Method_GetSupportedLanguages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetSupportedLanguagesRequest, global::Google.Cloud.Translate.V3.SupportedLanguages>(serviceImpl.GetSupportedLanguages));
       serviceBinder.AddMethod(__Method_TranslateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.TranslateDocumentRequest, global::Google.Cloud.Translate.V3.TranslateDocumentResponse>(serviceImpl.TranslateDocument));
       serviceBinder.AddMethod(__Method_BatchTranslateText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.BatchTranslateTextRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchTranslateText));
       serviceBinder.AddMethod(__Method_BatchTranslateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchTranslateDocument));
       serviceBinder.AddMethod(__Method_CreateGlossary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.CreateGlossaryRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateGlossary));
+      serviceBinder.AddMethod(__Method_UpdateGlossary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.UpdateGlossaryRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateGlossary));
       serviceBinder.AddMethod(__Method_ListGlossaries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListGlossariesRequest, global::Google.Cloud.Translate.V3.ListGlossariesResponse>(serviceImpl.ListGlossaries));
       serviceBinder.AddMethod(__Method_GetGlossary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetGlossaryRequest, global::Google.Cloud.Translate.V3.Glossary>(serviceImpl.GetGlossary));
       serviceBinder.AddMethod(__Method_DeleteGlossary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DeleteGlossaryRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteGlossary));
+      serviceBinder.AddMethod(__Method_GetGlossaryEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry>(serviceImpl.GetGlossaryEntry));
+      serviceBinder.AddMethod(__Method_ListGlossaryEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListGlossaryEntriesRequest, global::Google.Cloud.Translate.V3.ListGlossaryEntriesResponse>(serviceImpl.ListGlossaryEntries));
+      serviceBinder.AddMethod(__Method_CreateGlossaryEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.CreateGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry>(serviceImpl.CreateGlossaryEntry));
+      serviceBinder.AddMethod(__Method_UpdateGlossaryEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest, global::Google.Cloud.Translate.V3.GlossaryEntry>(serviceImpl.UpdateGlossaryEntry));
+      serviceBinder.AddMethod(__Method_DeleteGlossaryEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteGlossaryEntry));
+      serviceBinder.AddMethod(__Method_CreateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.CreateDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDataset));
+      serviceBinder.AddMethod(__Method_GetDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetDatasetRequest, global::Google.Cloud.Translate.V3.Dataset>(serviceImpl.GetDataset));
+      serviceBinder.AddMethod(__Method_ListDatasets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListDatasetsRequest, global::Google.Cloud.Translate.V3.ListDatasetsResponse>(serviceImpl.ListDatasets));
+      serviceBinder.AddMethod(__Method_DeleteDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DeleteDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDataset));
       serviceBinder.AddMethod(__Method_CreateAdaptiveMtDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest, global::Google.Cloud.Translate.V3.AdaptiveMtDataset>(serviceImpl.CreateAdaptiveMtDataset));
       serviceBinder.AddMethod(__Method_DeleteAdaptiveMtDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAdaptiveMtDataset));
       serviceBinder.AddMethod(__Method_GetAdaptiveMtDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest, global::Google.Cloud.Translate.V3.AdaptiveMtDataset>(serviceImpl.GetAdaptiveMtDataset));
@@ -1691,6 +3001,13 @@ namespace Google.Cloud.Translate.V3 {
       serviceBinder.AddMethod(__Method_ImportAdaptiveMtFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest, global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse>(serviceImpl.ImportAdaptiveMtFile));
       serviceBinder.AddMethod(__Method_ListAdaptiveMtFiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse>(serviceImpl.ListAdaptiveMtFiles));
       serviceBinder.AddMethod(__Method_ListAdaptiveMtSentences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse>(serviceImpl.ListAdaptiveMtSentences));
+      serviceBinder.AddMethod(__Method_ImportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ImportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportData));
+      serviceBinder.AddMethod(__Method_ExportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ExportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportData));
+      serviceBinder.AddMethod(__Method_ListExamples, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListExamplesRequest, global::Google.Cloud.Translate.V3.ListExamplesResponse>(serviceImpl.ListExamples));
+      serviceBinder.AddMethod(__Method_CreateModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.CreateModelRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateModel));
+      serviceBinder.AddMethod(__Method_ListModels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListModelsRequest, global::Google.Cloud.Translate.V3.ListModelsResponse>(serviceImpl.ListModels));
+      serviceBinder.AddMethod(__Method_GetModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetModelRequest, global::Google.Cloud.Translate.V3.Model>(serviceImpl.GetModel));
+      serviceBinder.AddMethod(__Method_DeleteModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DeleteModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteModel));
     }
 
   }

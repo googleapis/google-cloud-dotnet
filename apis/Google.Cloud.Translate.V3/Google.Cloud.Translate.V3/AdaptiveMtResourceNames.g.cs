@@ -927,6 +927,21 @@ namespace Google.Cloud.Translate.V3
             get => string.IsNullOrEmpty(Dataset) ? null : AdaptiveMtDatasetName.Parse(Dataset, allowUnparsed: true);
             set => Dataset = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class GlossaryConfig
+            {
+                /// <summary>
+                /// <see cref="GlossaryName"/>-typed view over the <see cref="Glossary"/> resource name property.
+                /// </summary>
+                public GlossaryName GlossaryAsGlossaryName
+                {
+                    get => string.IsNullOrEmpty(Glossary) ? null : GlossaryName.Parse(Glossary, allowUnparsed: true);
+                    set => Glossary = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 
     public partial class AdaptiveMtFile

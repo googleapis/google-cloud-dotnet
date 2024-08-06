@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Translate.V3;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -45,6 +46,7 @@ namespace GoogleCSharpSnippets
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels = { { "", "" }, },
+                TransliterationConfig = new TransliterationConfig(),
             };
             // Make the request
             TranslateTextResponse response = translationServiceClient.TranslateText(request);
@@ -69,6 +71,7 @@ namespace GoogleCSharpSnippets
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels = { { "", "" }, },
+                TransliterationConfig = new TransliterationConfig(),
             };
             // Make the request
             TranslateTextResponse response = await translationServiceClient.TranslateTextAsync(request);
@@ -208,6 +211,101 @@ namespace GoogleCSharpSnippets
             IEnumerable<string> contents = new string[] { "", };
             // Make the request
             TranslateTextResponse response = await translationServiceClient.TranslateTextAsync(parent, model, mimeType, sourceLanguageCode, targetLanguageCode, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RomanizeText</summary>
+        public void RomanizeTextRequestObject()
+        {
+            // Snippet: RomanizeText(RomanizeTextRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            RomanizeTextRequest request = new RomanizeTextRequest
+            {
+                Contents = { "", },
+                SourceLanguageCode = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            RomanizeTextResponse response = translationServiceClient.RomanizeText(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RomanizeTextAsync</summary>
+        public async Task RomanizeTextRequestObjectAsync()
+        {
+            // Snippet: RomanizeTextAsync(RomanizeTextRequest, CallSettings)
+            // Additional: RomanizeTextAsync(RomanizeTextRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RomanizeTextRequest request = new RomanizeTextRequest
+            {
+                Contents = { "", },
+                SourceLanguageCode = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            RomanizeTextResponse response = await translationServiceClient.RomanizeTextAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RomanizeText</summary>
+        public void RomanizeText()
+        {
+            // Snippet: RomanizeText(string, IEnumerable<string>, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> contents = new string[] { "", };
+            // Make the request
+            RomanizeTextResponse response = translationServiceClient.RomanizeText(parent, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RomanizeTextAsync</summary>
+        public async Task RomanizeTextAsync()
+        {
+            // Snippet: RomanizeTextAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: RomanizeTextAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> contents = new string[] { "", };
+            // Make the request
+            RomanizeTextResponse response = await translationServiceClient.RomanizeTextAsync(parent, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RomanizeText</summary>
+        public void RomanizeTextResourceNames()
+        {
+            // Snippet: RomanizeText(LocationName, IEnumerable<string>, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<string> contents = new string[] { "", };
+            // Make the request
+            RomanizeTextResponse response = translationServiceClient.RomanizeText(parent, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RomanizeTextAsync</summary>
+        public async Task RomanizeTextResourceNamesAsync()
+        {
+            // Snippet: RomanizeTextAsync(LocationName, IEnumerable<string>, CallSettings)
+            // Additional: RomanizeTextAsync(LocationName, IEnumerable<string>, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<string> contents = new string[] { "", };
+            // Make the request
+            RomanizeTextResponse response = await translationServiceClient.RomanizeTextAsync(parent, contents);
             // End snippet
         }
 
@@ -1001,6 +1099,134 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGlossary</summary>
+        public void UpdateGlossaryRequestObject()
+        {
+            // Snippet: UpdateGlossary(UpdateGlossaryRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateGlossaryRequest request = new UpdateGlossaryRequest
+            {
+                Glossary = new Glossary(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Glossary, UpdateGlossaryMetadata> response = translationServiceClient.UpdateGlossary(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Glossary, UpdateGlossaryMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Glossary result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Glossary, UpdateGlossaryMetadata> retrievedResponse = translationServiceClient.PollOnceUpdateGlossary(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Glossary retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGlossaryAsync</summary>
+        public async Task UpdateGlossaryRequestObjectAsync()
+        {
+            // Snippet: UpdateGlossaryAsync(UpdateGlossaryRequest, CallSettings)
+            // Additional: UpdateGlossaryAsync(UpdateGlossaryRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGlossaryRequest request = new UpdateGlossaryRequest
+            {
+                Glossary = new Glossary(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Glossary, UpdateGlossaryMetadata> response = await translationServiceClient.UpdateGlossaryAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Glossary, UpdateGlossaryMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Glossary result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Glossary, UpdateGlossaryMetadata> retrievedResponse = await translationServiceClient.PollOnceUpdateGlossaryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Glossary retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGlossary</summary>
+        public void UpdateGlossary()
+        {
+            // Snippet: UpdateGlossary(Glossary, FieldMask, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            Glossary glossary = new Glossary();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Glossary, UpdateGlossaryMetadata> response = translationServiceClient.UpdateGlossary(glossary, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Glossary, UpdateGlossaryMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Glossary result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Glossary, UpdateGlossaryMetadata> retrievedResponse = translationServiceClient.PollOnceUpdateGlossary(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Glossary retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGlossaryAsync</summary>
+        public async Task UpdateGlossaryAsync()
+        {
+            // Snippet: UpdateGlossaryAsync(Glossary, FieldMask, CallSettings)
+            // Additional: UpdateGlossaryAsync(Glossary, FieldMask, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Glossary glossary = new Glossary();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Glossary, UpdateGlossaryMetadata> response = await translationServiceClient.UpdateGlossaryAsync(glossary, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Glossary, UpdateGlossaryMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Glossary result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Glossary, UpdateGlossaryMetadata> retrievedResponse = await translationServiceClient.PollOnceUpdateGlossaryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Glossary retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListGlossaries</summary>
         public void ListGlossariesRequestObject()
         {
@@ -1545,6 +1771,1344 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 DeleteGlossaryResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGlossaryEntry</summary>
+        public void GetGlossaryEntryRequestObject()
+        {
+            // Snippet: GetGlossaryEntry(GetGlossaryEntryRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GetGlossaryEntryRequest request = new GetGlossaryEntryRequest
+            {
+                GlossaryEntryName = GlossaryEntryName.FromProjectLocationGlossaryGlossaryEntry("[PROJECT]", "[LOCATION]", "[GLOSSARY]", "[GLOSSARY_ENTRY]"),
+            };
+            // Make the request
+            GlossaryEntry response = translationServiceClient.GetGlossaryEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGlossaryEntryAsync</summary>
+        public async Task GetGlossaryEntryRequestObjectAsync()
+        {
+            // Snippet: GetGlossaryEntryAsync(GetGlossaryEntryRequest, CallSettings)
+            // Additional: GetGlossaryEntryAsync(GetGlossaryEntryRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGlossaryEntryRequest request = new GetGlossaryEntryRequest
+            {
+                GlossaryEntryName = GlossaryEntryName.FromProjectLocationGlossaryGlossaryEntry("[PROJECT]", "[LOCATION]", "[GLOSSARY]", "[GLOSSARY_ENTRY]"),
+            };
+            // Make the request
+            GlossaryEntry response = await translationServiceClient.GetGlossaryEntryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGlossaryEntry</summary>
+        public void GetGlossaryEntry()
+        {
+            // Snippet: GetGlossaryEntry(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/glossaries/[GLOSSARY]/glossaryEntries/[GLOSSARY_ENTRY]";
+            // Make the request
+            GlossaryEntry response = translationServiceClient.GetGlossaryEntry(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGlossaryEntryAsync</summary>
+        public async Task GetGlossaryEntryAsync()
+        {
+            // Snippet: GetGlossaryEntryAsync(string, CallSettings)
+            // Additional: GetGlossaryEntryAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/glossaries/[GLOSSARY]/glossaryEntries/[GLOSSARY_ENTRY]";
+            // Make the request
+            GlossaryEntry response = await translationServiceClient.GetGlossaryEntryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGlossaryEntry</summary>
+        public void GetGlossaryEntryResourceNames()
+        {
+            // Snippet: GetGlossaryEntry(GlossaryEntryName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GlossaryEntryName name = GlossaryEntryName.FromProjectLocationGlossaryGlossaryEntry("[PROJECT]", "[LOCATION]", "[GLOSSARY]", "[GLOSSARY_ENTRY]");
+            // Make the request
+            GlossaryEntry response = translationServiceClient.GetGlossaryEntry(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGlossaryEntryAsync</summary>
+        public async Task GetGlossaryEntryResourceNamesAsync()
+        {
+            // Snippet: GetGlossaryEntryAsync(GlossaryEntryName, CallSettings)
+            // Additional: GetGlossaryEntryAsync(GlossaryEntryName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GlossaryEntryName name = GlossaryEntryName.FromProjectLocationGlossaryGlossaryEntry("[PROJECT]", "[LOCATION]", "[GLOSSARY]", "[GLOSSARY_ENTRY]");
+            // Make the request
+            GlossaryEntry response = await translationServiceClient.GetGlossaryEntryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGlossaryEntries</summary>
+        public void ListGlossaryEntriesRequestObject()
+        {
+            // Snippet: ListGlossaryEntries(ListGlossaryEntriesRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ListGlossaryEntriesRequest request = new ListGlossaryEntriesRequest
+            {
+                ParentAsGlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListGlossaryEntriesResponse, GlossaryEntry> response = translationServiceClient.ListGlossaryEntries(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GlossaryEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGlossaryEntriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GlossaryEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GlossaryEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GlossaryEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGlossaryEntriesAsync</summary>
+        public async Task ListGlossaryEntriesRequestObjectAsync()
+        {
+            // Snippet: ListGlossaryEntriesAsync(ListGlossaryEntriesRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGlossaryEntriesRequest request = new ListGlossaryEntriesRequest
+            {
+                ParentAsGlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGlossaryEntriesResponse, GlossaryEntry> response = translationServiceClient.ListGlossaryEntriesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GlossaryEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGlossaryEntriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GlossaryEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GlossaryEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GlossaryEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGlossaryEntries</summary>
+        public void ListGlossaryEntries()
+        {
+            // Snippet: ListGlossaryEntries(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/glossaries/[GLOSSARY]";
+            // Make the request
+            PagedEnumerable<ListGlossaryEntriesResponse, GlossaryEntry> response = translationServiceClient.ListGlossaryEntries(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GlossaryEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGlossaryEntriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GlossaryEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GlossaryEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GlossaryEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGlossaryEntriesAsync</summary>
+        public async Task ListGlossaryEntriesAsync()
+        {
+            // Snippet: ListGlossaryEntriesAsync(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/glossaries/[GLOSSARY]";
+            // Make the request
+            PagedAsyncEnumerable<ListGlossaryEntriesResponse, GlossaryEntry> response = translationServiceClient.ListGlossaryEntriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GlossaryEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGlossaryEntriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GlossaryEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GlossaryEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GlossaryEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGlossaryEntries</summary>
+        public void ListGlossaryEntriesResourceNames()
+        {
+            // Snippet: ListGlossaryEntries(GlossaryName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GlossaryName parent = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            // Make the request
+            PagedEnumerable<ListGlossaryEntriesResponse, GlossaryEntry> response = translationServiceClient.ListGlossaryEntries(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GlossaryEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGlossaryEntriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GlossaryEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GlossaryEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GlossaryEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGlossaryEntriesAsync</summary>
+        public async Task ListGlossaryEntriesResourceNamesAsync()
+        {
+            // Snippet: ListGlossaryEntriesAsync(GlossaryName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GlossaryName parent = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            // Make the request
+            PagedAsyncEnumerable<ListGlossaryEntriesResponse, GlossaryEntry> response = translationServiceClient.ListGlossaryEntriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GlossaryEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGlossaryEntriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GlossaryEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GlossaryEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GlossaryEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGlossaryEntry</summary>
+        public void CreateGlossaryEntryRequestObject()
+        {
+            // Snippet: CreateGlossaryEntry(CreateGlossaryEntryRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            CreateGlossaryEntryRequest request = new CreateGlossaryEntryRequest
+            {
+                ParentAsGlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryEntry = new GlossaryEntry(),
+            };
+            // Make the request
+            GlossaryEntry response = translationServiceClient.CreateGlossaryEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGlossaryEntryAsync</summary>
+        public async Task CreateGlossaryEntryRequestObjectAsync()
+        {
+            // Snippet: CreateGlossaryEntryAsync(CreateGlossaryEntryRequest, CallSettings)
+            // Additional: CreateGlossaryEntryAsync(CreateGlossaryEntryRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateGlossaryEntryRequest request = new CreateGlossaryEntryRequest
+            {
+                ParentAsGlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
+                GlossaryEntry = new GlossaryEntry(),
+            };
+            // Make the request
+            GlossaryEntry response = await translationServiceClient.CreateGlossaryEntryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGlossaryEntry</summary>
+        public void CreateGlossaryEntry()
+        {
+            // Snippet: CreateGlossaryEntry(string, GlossaryEntry, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/glossaries/[GLOSSARY]";
+            GlossaryEntry glossaryEntry = new GlossaryEntry();
+            // Make the request
+            GlossaryEntry response = translationServiceClient.CreateGlossaryEntry(parent, glossaryEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGlossaryEntryAsync</summary>
+        public async Task CreateGlossaryEntryAsync()
+        {
+            // Snippet: CreateGlossaryEntryAsync(string, GlossaryEntry, CallSettings)
+            // Additional: CreateGlossaryEntryAsync(string, GlossaryEntry, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/glossaries/[GLOSSARY]";
+            GlossaryEntry glossaryEntry = new GlossaryEntry();
+            // Make the request
+            GlossaryEntry response = await translationServiceClient.CreateGlossaryEntryAsync(parent, glossaryEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGlossaryEntry</summary>
+        public void CreateGlossaryEntryResourceNames()
+        {
+            // Snippet: CreateGlossaryEntry(GlossaryName, GlossaryEntry, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GlossaryName parent = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            GlossaryEntry glossaryEntry = new GlossaryEntry();
+            // Make the request
+            GlossaryEntry response = translationServiceClient.CreateGlossaryEntry(parent, glossaryEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGlossaryEntryAsync</summary>
+        public async Task CreateGlossaryEntryResourceNamesAsync()
+        {
+            // Snippet: CreateGlossaryEntryAsync(GlossaryName, GlossaryEntry, CallSettings)
+            // Additional: CreateGlossaryEntryAsync(GlossaryName, GlossaryEntry, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GlossaryName parent = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]");
+            GlossaryEntry glossaryEntry = new GlossaryEntry();
+            // Make the request
+            GlossaryEntry response = await translationServiceClient.CreateGlossaryEntryAsync(parent, glossaryEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGlossaryEntry</summary>
+        public void UpdateGlossaryEntryRequestObject()
+        {
+            // Snippet: UpdateGlossaryEntry(UpdateGlossaryEntryRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateGlossaryEntryRequest request = new UpdateGlossaryEntryRequest
+            {
+                GlossaryEntry = new GlossaryEntry(),
+            };
+            // Make the request
+            GlossaryEntry response = translationServiceClient.UpdateGlossaryEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGlossaryEntryAsync</summary>
+        public async Task UpdateGlossaryEntryRequestObjectAsync()
+        {
+            // Snippet: UpdateGlossaryEntryAsync(UpdateGlossaryEntryRequest, CallSettings)
+            // Additional: UpdateGlossaryEntryAsync(UpdateGlossaryEntryRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGlossaryEntryRequest request = new UpdateGlossaryEntryRequest
+            {
+                GlossaryEntry = new GlossaryEntry(),
+            };
+            // Make the request
+            GlossaryEntry response = await translationServiceClient.UpdateGlossaryEntryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGlossaryEntry</summary>
+        public void UpdateGlossaryEntry()
+        {
+            // Snippet: UpdateGlossaryEntry(GlossaryEntry, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GlossaryEntry glossaryEntry = new GlossaryEntry();
+            // Make the request
+            GlossaryEntry response = translationServiceClient.UpdateGlossaryEntry(glossaryEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGlossaryEntryAsync</summary>
+        public async Task UpdateGlossaryEntryAsync()
+        {
+            // Snippet: UpdateGlossaryEntryAsync(GlossaryEntry, CallSettings)
+            // Additional: UpdateGlossaryEntryAsync(GlossaryEntry, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GlossaryEntry glossaryEntry = new GlossaryEntry();
+            // Make the request
+            GlossaryEntry response = await translationServiceClient.UpdateGlossaryEntryAsync(glossaryEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGlossaryEntry</summary>
+        public void DeleteGlossaryEntryRequestObject()
+        {
+            // Snippet: DeleteGlossaryEntry(DeleteGlossaryEntryRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteGlossaryEntryRequest request = new DeleteGlossaryEntryRequest
+            {
+                GlossaryEntryName = GlossaryEntryName.FromProjectLocationGlossaryGlossaryEntry("[PROJECT]", "[LOCATION]", "[GLOSSARY]", "[GLOSSARY_ENTRY]"),
+            };
+            // Make the request
+            translationServiceClient.DeleteGlossaryEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGlossaryEntryAsync</summary>
+        public async Task DeleteGlossaryEntryRequestObjectAsync()
+        {
+            // Snippet: DeleteGlossaryEntryAsync(DeleteGlossaryEntryRequest, CallSettings)
+            // Additional: DeleteGlossaryEntryAsync(DeleteGlossaryEntryRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteGlossaryEntryRequest request = new DeleteGlossaryEntryRequest
+            {
+                GlossaryEntryName = GlossaryEntryName.FromProjectLocationGlossaryGlossaryEntry("[PROJECT]", "[LOCATION]", "[GLOSSARY]", "[GLOSSARY_ENTRY]"),
+            };
+            // Make the request
+            await translationServiceClient.DeleteGlossaryEntryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGlossaryEntry</summary>
+        public void DeleteGlossaryEntry()
+        {
+            // Snippet: DeleteGlossaryEntry(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/glossaries/[GLOSSARY]/glossaryEntries/[GLOSSARY_ENTRY]";
+            // Make the request
+            translationServiceClient.DeleteGlossaryEntry(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGlossaryEntryAsync</summary>
+        public async Task DeleteGlossaryEntryAsync()
+        {
+            // Snippet: DeleteGlossaryEntryAsync(string, CallSettings)
+            // Additional: DeleteGlossaryEntryAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/glossaries/[GLOSSARY]/glossaryEntries/[GLOSSARY_ENTRY]";
+            // Make the request
+            await translationServiceClient.DeleteGlossaryEntryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGlossaryEntry</summary>
+        public void DeleteGlossaryEntryResourceNames()
+        {
+            // Snippet: DeleteGlossaryEntry(GlossaryEntryName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GlossaryEntryName name = GlossaryEntryName.FromProjectLocationGlossaryGlossaryEntry("[PROJECT]", "[LOCATION]", "[GLOSSARY]", "[GLOSSARY_ENTRY]");
+            // Make the request
+            translationServiceClient.DeleteGlossaryEntry(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGlossaryEntryAsync</summary>
+        public async Task DeleteGlossaryEntryResourceNamesAsync()
+        {
+            // Snippet: DeleteGlossaryEntryAsync(GlossaryEntryName, CallSettings)
+            // Additional: DeleteGlossaryEntryAsync(GlossaryEntryName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GlossaryEntryName name = GlossaryEntryName.FromProjectLocationGlossaryGlossaryEntry("[PROJECT]", "[LOCATION]", "[GLOSSARY]", "[GLOSSARY_ENTRY]");
+            // Make the request
+            await translationServiceClient.DeleteGlossaryEntryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDataset</summary>
+        public void CreateDatasetRequestObject()
+        {
+            // Snippet: CreateDataset(CreateDatasetRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            CreateDatasetRequest request = new CreateDatasetRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Dataset = new Dataset(),
+            };
+            // Make the request
+            Operation<Dataset, CreateDatasetMetadata> response = translationServiceClient.CreateDataset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, CreateDatasetMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, CreateDatasetMetadata> retrievedResponse = translationServiceClient.PollOnceCreateDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetAsync</summary>
+        public async Task CreateDatasetRequestObjectAsync()
+        {
+            // Snippet: CreateDatasetAsync(CreateDatasetRequest, CallSettings)
+            // Additional: CreateDatasetAsync(CreateDatasetRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDatasetRequest request = new CreateDatasetRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Dataset = new Dataset(),
+            };
+            // Make the request
+            Operation<Dataset, CreateDatasetMetadata> response = await translationServiceClient.CreateDatasetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, CreateDatasetMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, CreateDatasetMetadata> retrievedResponse = await translationServiceClient.PollOnceCreateDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDataset</summary>
+        public void CreateDataset()
+        {
+            // Snippet: CreateDataset(string, Dataset, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Dataset dataset = new Dataset();
+            // Make the request
+            Operation<Dataset, CreateDatasetMetadata> response = translationServiceClient.CreateDataset(parent, dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, CreateDatasetMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, CreateDatasetMetadata> retrievedResponse = translationServiceClient.PollOnceCreateDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetAsync</summary>
+        public async Task CreateDatasetAsync()
+        {
+            // Snippet: CreateDatasetAsync(string, Dataset, CallSettings)
+            // Additional: CreateDatasetAsync(string, Dataset, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Dataset dataset = new Dataset();
+            // Make the request
+            Operation<Dataset, CreateDatasetMetadata> response = await translationServiceClient.CreateDatasetAsync(parent, dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, CreateDatasetMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, CreateDatasetMetadata> retrievedResponse = await translationServiceClient.PollOnceCreateDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDataset</summary>
+        public void CreateDatasetResourceNames()
+        {
+            // Snippet: CreateDataset(LocationName, Dataset, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Dataset dataset = new Dataset();
+            // Make the request
+            Operation<Dataset, CreateDatasetMetadata> response = translationServiceClient.CreateDataset(parent, dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, CreateDatasetMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, CreateDatasetMetadata> retrievedResponse = translationServiceClient.PollOnceCreateDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetAsync</summary>
+        public async Task CreateDatasetResourceNamesAsync()
+        {
+            // Snippet: CreateDatasetAsync(LocationName, Dataset, CallSettings)
+            // Additional: CreateDatasetAsync(LocationName, Dataset, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Dataset dataset = new Dataset();
+            // Make the request
+            Operation<Dataset, CreateDatasetMetadata> response = await translationServiceClient.CreateDatasetAsync(parent, dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Dataset, CreateDatasetMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Dataset result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Dataset, CreateDatasetMetadata> retrievedResponse = await translationServiceClient.PollOnceCreateDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Dataset retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataset</summary>
+        public void GetDatasetRequestObject()
+        {
+            // Snippet: GetDataset(GetDatasetRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GetDatasetRequest request = new GetDatasetRequest
+            {
+                DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            Dataset response = translationServiceClient.GetDataset(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetAsync</summary>
+        public async Task GetDatasetRequestObjectAsync()
+        {
+            // Snippet: GetDatasetAsync(GetDatasetRequest, CallSettings)
+            // Additional: GetDatasetAsync(GetDatasetRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDatasetRequest request = new GetDatasetRequest
+            {
+                DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            Dataset response = await translationServiceClient.GetDatasetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataset</summary>
+        public void GetDataset()
+        {
+            // Snippet: GetDataset(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            // Make the request
+            Dataset response = translationServiceClient.GetDataset(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetAsync</summary>
+        public async Task GetDatasetAsync()
+        {
+            // Snippet: GetDatasetAsync(string, CallSettings)
+            // Additional: GetDatasetAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            // Make the request
+            Dataset response = await translationServiceClient.GetDatasetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataset</summary>
+        public void GetDatasetResourceNames()
+        {
+            // Snippet: GetDataset(DatasetName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetName name = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            Dataset response = translationServiceClient.GetDataset(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetAsync</summary>
+        public async Task GetDatasetResourceNamesAsync()
+        {
+            // Snippet: GetDatasetAsync(DatasetName, CallSettings)
+            // Additional: GetDatasetAsync(DatasetName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName name = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            Dataset response = await translationServiceClient.GetDatasetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasets</summary>
+        public void ListDatasetsRequestObject()
+        {
+            // Snippet: ListDatasets(ListDatasetsRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ListDatasetsRequest request = new ListDatasetsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListDatasetsResponse, Dataset> response = translationServiceClient.ListDatasets(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Dataset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Dataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Dataset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Dataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetsAsync</summary>
+        public async Task ListDatasetsRequestObjectAsync()
+        {
+            // Snippet: ListDatasetsAsync(ListDatasetsRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDatasetsRequest request = new ListDatasetsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetsResponse, Dataset> response = translationServiceClient.ListDatasetsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Dataset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Dataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Dataset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Dataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasets</summary>
+        public void ListDatasets()
+        {
+            // Snippet: ListDatasets(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDatasetsResponse, Dataset> response = translationServiceClient.ListDatasets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Dataset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Dataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Dataset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Dataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetsAsync</summary>
+        public async Task ListDatasetsAsync()
+        {
+            // Snippet: ListDatasetsAsync(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetsResponse, Dataset> response = translationServiceClient.ListDatasetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Dataset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Dataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Dataset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Dataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasets</summary>
+        public void ListDatasetsResourceNames()
+        {
+            // Snippet: ListDatasets(LocationName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDatasetsResponse, Dataset> response = translationServiceClient.ListDatasets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Dataset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Dataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Dataset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Dataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetsAsync</summary>
+        public async Task ListDatasetsResourceNamesAsync()
+        {
+            // Snippet: ListDatasetsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetsResponse, Dataset> response = translationServiceClient.ListDatasetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Dataset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Dataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Dataset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Dataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataset</summary>
+        public void DeleteDatasetRequestObject()
+        {
+            // Snippet: DeleteDataset(DeleteDatasetRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteDatasetRequest request = new DeleteDatasetRequest
+            {
+                DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteDatasetMetadata> response = translationServiceClient.DeleteDataset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteDatasetMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteDatasetMetadata> retrievedResponse = translationServiceClient.PollOnceDeleteDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetAsync</summary>
+        public async Task DeleteDatasetRequestObjectAsync()
+        {
+            // Snippet: DeleteDatasetAsync(DeleteDatasetRequest, CallSettings)
+            // Additional: DeleteDatasetAsync(DeleteDatasetRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDatasetRequest request = new DeleteDatasetRequest
+            {
+                DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteDatasetMetadata> response = await translationServiceClient.DeleteDatasetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteDatasetMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteDatasetMetadata> retrievedResponse = await translationServiceClient.PollOnceDeleteDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataset</summary>
+        public void DeleteDataset()
+        {
+            // Snippet: DeleteDataset(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            // Make the request
+            Operation<Empty, DeleteDatasetMetadata> response = translationServiceClient.DeleteDataset(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteDatasetMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteDatasetMetadata> retrievedResponse = translationServiceClient.PollOnceDeleteDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetAsync</summary>
+        public async Task DeleteDatasetAsync()
+        {
+            // Snippet: DeleteDatasetAsync(string, CallSettings)
+            // Additional: DeleteDatasetAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            // Make the request
+            Operation<Empty, DeleteDatasetMetadata> response = await translationServiceClient.DeleteDatasetAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteDatasetMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteDatasetMetadata> retrievedResponse = await translationServiceClient.PollOnceDeleteDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDataset</summary>
+        public void DeleteDatasetResourceNames()
+        {
+            // Snippet: DeleteDataset(DatasetName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetName name = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            Operation<Empty, DeleteDatasetMetadata> response = translationServiceClient.DeleteDataset(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteDatasetMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteDatasetMetadata> retrievedResponse = translationServiceClient.PollOnceDeleteDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetAsync</summary>
+        public async Task DeleteDatasetResourceNamesAsync()
+        {
+            // Snippet: DeleteDatasetAsync(DatasetName, CallSettings)
+            // Additional: DeleteDatasetAsync(DatasetName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName name = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            Operation<Empty, DeleteDatasetMetadata> response = await translationServiceClient.DeleteDatasetAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteDatasetMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteDatasetMetadata> retrievedResponse = await translationServiceClient.PollOnceDeleteDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2106,6 +3670,8 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DatasetAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 Content = { "", },
+                ReferenceSentenceConfig = new AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig(),
+                GlossaryConfig = new AdaptiveMtTranslateRequest.Types.GlossaryConfig(),
             };
             // Make the request
             AdaptiveMtTranslateResponse response = translationServiceClient.AdaptiveMtTranslate(request);
@@ -2125,6 +3691,8 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DatasetAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 Content = { "", },
+                ReferenceSentenceConfig = new AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig(),
+                GlossaryConfig = new AdaptiveMtTranslateRequest.Types.GlossaryConfig(),
             };
             // Make the request
             AdaptiveMtTranslateResponse response = await translationServiceClient.AdaptiveMtTranslateAsync(request);
@@ -3001,6 +4569,1277 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportData</summary>
+        public void ImportDataRequestObject()
+        {
+            // Snippet: ImportData(ImportDataRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ImportDataRequest request = new ImportDataRequest
+            {
+                Dataset = "",
+                InputConfig = new DatasetInputConfig(),
+            };
+            // Make the request
+            Operation<Empty, ImportDataMetadata> response = translationServiceClient.ImportData(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDataMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDataMetadata> retrievedResponse = translationServiceClient.PollOnceImportData(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDataAsync</summary>
+        public async Task ImportDataRequestObjectAsync()
+        {
+            // Snippet: ImportDataAsync(ImportDataRequest, CallSettings)
+            // Additional: ImportDataAsync(ImportDataRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportDataRequest request = new ImportDataRequest
+            {
+                Dataset = "",
+                InputConfig = new DatasetInputConfig(),
+            };
+            // Make the request
+            Operation<Empty, ImportDataMetadata> response = await translationServiceClient.ImportDataAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDataMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDataMetadata> retrievedResponse = await translationServiceClient.PollOnceImportDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportData</summary>
+        public void ImportData()
+        {
+            // Snippet: ImportData(string, DatasetInputConfig, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string dataset = "";
+            DatasetInputConfig inputConfig = new DatasetInputConfig();
+            // Make the request
+            Operation<Empty, ImportDataMetadata> response = translationServiceClient.ImportData(dataset, inputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDataMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDataMetadata> retrievedResponse = translationServiceClient.PollOnceImportData(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDataAsync</summary>
+        public async Task ImportDataAsync()
+        {
+            // Snippet: ImportDataAsync(string, DatasetInputConfig, CallSettings)
+            // Additional: ImportDataAsync(string, DatasetInputConfig, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string dataset = "";
+            DatasetInputConfig inputConfig = new DatasetInputConfig();
+            // Make the request
+            Operation<Empty, ImportDataMetadata> response = await translationServiceClient.ImportDataAsync(dataset, inputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ImportDataMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ImportDataMetadata> retrievedResponse = await translationServiceClient.PollOnceImportDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportData</summary>
+        public void ExportDataRequestObject()
+        {
+            // Snippet: ExportData(ExportDataRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ExportDataRequest request = new ExportDataRequest
+            {
+                Dataset = "",
+                OutputConfig = new DatasetOutputConfig(),
+            };
+            // Make the request
+            Operation<Empty, ExportDataMetadata> response = translationServiceClient.ExportData(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ExportDataMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ExportDataMetadata> retrievedResponse = translationServiceClient.PollOnceExportData(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportDataAsync</summary>
+        public async Task ExportDataRequestObjectAsync()
+        {
+            // Snippet: ExportDataAsync(ExportDataRequest, CallSettings)
+            // Additional: ExportDataAsync(ExportDataRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportDataRequest request = new ExportDataRequest
+            {
+                Dataset = "",
+                OutputConfig = new DatasetOutputConfig(),
+            };
+            // Make the request
+            Operation<Empty, ExportDataMetadata> response = await translationServiceClient.ExportDataAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ExportDataMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ExportDataMetadata> retrievedResponse = await translationServiceClient.PollOnceExportDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportData</summary>
+        public void ExportData()
+        {
+            // Snippet: ExportData(string, DatasetOutputConfig, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string dataset = "";
+            DatasetOutputConfig outputConfig = new DatasetOutputConfig();
+            // Make the request
+            Operation<Empty, ExportDataMetadata> response = translationServiceClient.ExportData(dataset, outputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ExportDataMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ExportDataMetadata> retrievedResponse = translationServiceClient.PollOnceExportData(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportDataAsync</summary>
+        public async Task ExportDataAsync()
+        {
+            // Snippet: ExportDataAsync(string, DatasetOutputConfig, CallSettings)
+            // Additional: ExportDataAsync(string, DatasetOutputConfig, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string dataset = "";
+            DatasetOutputConfig outputConfig = new DatasetOutputConfig();
+            // Make the request
+            Operation<Empty, ExportDataMetadata> response = await translationServiceClient.ExportDataAsync(dataset, outputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, ExportDataMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, ExportDataMetadata> retrievedResponse = await translationServiceClient.PollOnceExportDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExamples</summary>
+        public void ListExamplesRequestObject()
+        {
+            // Snippet: ListExamples(ListExamplesRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ListExamplesRequest request = new ListExamplesRequest
+            {
+                ParentAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListExamplesResponse, Example> response = translationServiceClient.ListExamples(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Example item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExamplesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Example item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Example> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Example item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExamplesAsync</summary>
+        public async Task ListExamplesRequestObjectAsync()
+        {
+            // Snippet: ListExamplesAsync(ListExamplesRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListExamplesRequest request = new ListExamplesRequest
+            {
+                ParentAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListExamplesResponse, Example> response = translationServiceClient.ListExamplesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Example item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExamplesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Example item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Example> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Example item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExamples</summary>
+        public void ListExamples()
+        {
+            // Snippet: ListExamples(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            // Make the request
+            PagedEnumerable<ListExamplesResponse, Example> response = translationServiceClient.ListExamples(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Example item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExamplesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Example item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Example> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Example item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExamplesAsync</summary>
+        public async Task ListExamplesAsync()
+        {
+            // Snippet: ListExamplesAsync(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            // Make the request
+            PagedAsyncEnumerable<ListExamplesResponse, Example> response = translationServiceClient.ListExamplesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Example item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExamplesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Example item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Example> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Example item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExamples</summary>
+        public void ListExamplesResourceNames()
+        {
+            // Snippet: ListExamples(DatasetName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetName parent = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            PagedEnumerable<ListExamplesResponse, Example> response = translationServiceClient.ListExamples(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Example item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExamplesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Example item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Example> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Example item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExamplesAsync</summary>
+        public async Task ListExamplesResourceNamesAsync()
+        {
+            // Snippet: ListExamplesAsync(DatasetName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName parent = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            PagedAsyncEnumerable<ListExamplesResponse, Example> response = translationServiceClient.ListExamplesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Example item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExamplesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Example item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Example> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Example item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModel</summary>
+        public void CreateModelRequestObject()
+        {
+            // Snippet: CreateModel(CreateModelRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            CreateModelRequest request = new CreateModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Model = new Model(),
+            };
+            // Make the request
+            Operation<Model, CreateModelMetadata> response = translationServiceClient.CreateModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Model, CreateModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Model result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Model, CreateModelMetadata> retrievedResponse = translationServiceClient.PollOnceCreateModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Model retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModelAsync</summary>
+        public async Task CreateModelRequestObjectAsync()
+        {
+            // Snippet: CreateModelAsync(CreateModelRequest, CallSettings)
+            // Additional: CreateModelAsync(CreateModelRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateModelRequest request = new CreateModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Model = new Model(),
+            };
+            // Make the request
+            Operation<Model, CreateModelMetadata> response = await translationServiceClient.CreateModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Model, CreateModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Model result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Model, CreateModelMetadata> retrievedResponse = await translationServiceClient.PollOnceCreateModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Model retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModel</summary>
+        public void CreateModel()
+        {
+            // Snippet: CreateModel(string, Model, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Model model = new Model();
+            // Make the request
+            Operation<Model, CreateModelMetadata> response = translationServiceClient.CreateModel(parent, model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Model, CreateModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Model result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Model, CreateModelMetadata> retrievedResponse = translationServiceClient.PollOnceCreateModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Model retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModelAsync</summary>
+        public async Task CreateModelAsync()
+        {
+            // Snippet: CreateModelAsync(string, Model, CallSettings)
+            // Additional: CreateModelAsync(string, Model, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Model model = new Model();
+            // Make the request
+            Operation<Model, CreateModelMetadata> response = await translationServiceClient.CreateModelAsync(parent, model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Model, CreateModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Model result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Model, CreateModelMetadata> retrievedResponse = await translationServiceClient.PollOnceCreateModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Model retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModel</summary>
+        public void CreateModelResourceNames()
+        {
+            // Snippet: CreateModel(LocationName, Model, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Model model = new Model();
+            // Make the request
+            Operation<Model, CreateModelMetadata> response = translationServiceClient.CreateModel(parent, model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Model, CreateModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Model result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Model, CreateModelMetadata> retrievedResponse = translationServiceClient.PollOnceCreateModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Model retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModelAsync</summary>
+        public async Task CreateModelResourceNamesAsync()
+        {
+            // Snippet: CreateModelAsync(LocationName, Model, CallSettings)
+            // Additional: CreateModelAsync(LocationName, Model, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Model model = new Model();
+            // Make the request
+            Operation<Model, CreateModelMetadata> response = await translationServiceClient.CreateModelAsync(parent, model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Model, CreateModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Model result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Model, CreateModelMetadata> retrievedResponse = await translationServiceClient.PollOnceCreateModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Model retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModels</summary>
+        public void ListModelsRequestObject()
+        {
+            // Snippet: ListModels(ListModelsRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ListModelsRequest request = new ListModelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListModelsResponse, Model> response = translationServiceClient.ListModels(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Model item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelsAsync</summary>
+        public async Task ListModelsRequestObjectAsync()
+        {
+            // Snippet: ListModelsAsync(ListModelsRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListModelsRequest request = new ListModelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListModelsResponse, Model> response = translationServiceClient.ListModelsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Model item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModels</summary>
+        public void ListModels()
+        {
+            // Snippet: ListModels(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListModelsResponse, Model> response = translationServiceClient.ListModels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Model item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelsAsync</summary>
+        public async Task ListModelsAsync()
+        {
+            // Snippet: ListModelsAsync(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListModelsResponse, Model> response = translationServiceClient.ListModelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Model item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModels</summary>
+        public void ListModelsResourceNames()
+        {
+            // Snippet: ListModels(LocationName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListModelsResponse, Model> response = translationServiceClient.ListModels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Model item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelsAsync</summary>
+        public async Task ListModelsResourceNamesAsync()
+        {
+            // Snippet: ListModelsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListModelsResponse, Model> response = translationServiceClient.ListModelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Model item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Model item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Model> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Model item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModel</summary>
+        public void GetModelRequestObject()
+        {
+            // Snippet: GetModel(GetModelRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GetModelRequest request = new GetModelRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Model response = translationServiceClient.GetModel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelAsync</summary>
+        public async Task GetModelRequestObjectAsync()
+        {
+            // Snippet: GetModelAsync(GetModelRequest, CallSettings)
+            // Additional: GetModelAsync(GetModelRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetModelRequest request = new GetModelRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Model response = await translationServiceClient.GetModelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModel</summary>
+        public void GetModel()
+        {
+            // Snippet: GetModel(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Model response = translationServiceClient.GetModel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelAsync</summary>
+        public async Task GetModelAsync()
+        {
+            // Snippet: GetModelAsync(string, CallSettings)
+            // Additional: GetModelAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Model response = await translationServiceClient.GetModelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModel</summary>
+        public void GetModelResourceNames()
+        {
+            // Snippet: GetModel(ModelName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Model response = translationServiceClient.GetModel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelAsync</summary>
+        public async Task GetModelResourceNamesAsync()
+        {
+            // Snippet: GetModelAsync(ModelName, CallSettings)
+            // Additional: GetModelAsync(ModelName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Model response = await translationServiceClient.GetModelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModel</summary>
+        public void DeleteModelRequestObject()
+        {
+            // Snippet: DeleteModel(DeleteModelRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteModelRequest request = new DeleteModelRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteModelMetadata> response = translationServiceClient.DeleteModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteModelMetadata> retrievedResponse = translationServiceClient.PollOnceDeleteModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelAsync</summary>
+        public async Task DeleteModelRequestObjectAsync()
+        {
+            // Snippet: DeleteModelAsync(DeleteModelRequest, CallSettings)
+            // Additional: DeleteModelAsync(DeleteModelRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteModelRequest request = new DeleteModelRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteModelMetadata> response = await translationServiceClient.DeleteModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteModelMetadata> retrievedResponse = await translationServiceClient.PollOnceDeleteModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModel</summary>
+        public void DeleteModel()
+        {
+            // Snippet: DeleteModel(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<Empty, DeleteModelMetadata> response = translationServiceClient.DeleteModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteModelMetadata> retrievedResponse = translationServiceClient.PollOnceDeleteModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelAsync</summary>
+        public async Task DeleteModelAsync()
+        {
+            // Snippet: DeleteModelAsync(string, CallSettings)
+            // Additional: DeleteModelAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<Empty, DeleteModelMetadata> response = await translationServiceClient.DeleteModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteModelMetadata> retrievedResponse = await translationServiceClient.PollOnceDeleteModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModel</summary>
+        public void DeleteModelResourceNames()
+        {
+            // Snippet: DeleteModel(ModelName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<Empty, DeleteModelMetadata> response = translationServiceClient.DeleteModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteModelMetadata> retrievedResponse = translationServiceClient.PollOnceDeleteModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelAsync</summary>
+        public async Task DeleteModelResourceNamesAsync()
+        {
+            // Snippet: DeleteModelAsync(ModelName, CallSettings)
+            // Additional: DeleteModelAsync(ModelName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<Empty, DeleteModelMetadata> response = await translationServiceClient.DeleteModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteModelMetadata> retrievedResponse = await translationServiceClient.PollOnceDeleteModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

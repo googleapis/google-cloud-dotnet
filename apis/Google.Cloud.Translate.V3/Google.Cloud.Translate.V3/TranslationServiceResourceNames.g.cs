@@ -284,6 +284,18 @@ namespace Google.Cloud.Translate.V3
         }
     }
 
+    public partial class RomanizeTextRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DetectLanguageRequest
     {
         /// <summary>
@@ -380,6 +392,54 @@ namespace Google.Cloud.Translate.V3
         }
     }
 
+    public partial class GetGlossaryEntryRequest
+    {
+        /// <summary>
+        /// <see cref="gctv::GlossaryEntryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gctv::GlossaryEntryName GlossaryEntryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gctv::GlossaryEntryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteGlossaryEntryRequest
+    {
+        /// <summary>
+        /// <see cref="gctv::GlossaryEntryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gctv::GlossaryEntryName GlossaryEntryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gctv::GlossaryEntryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListGlossaryEntriesRequest
+    {
+        /// <summary>
+        /// <see cref="GlossaryName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public GlossaryName ParentAsGlossaryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : GlossaryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateGlossaryEntryRequest
+    {
+        /// <summary>
+        /// <see cref="GlossaryName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public GlossaryName ParentAsGlossaryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : GlossaryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class BatchTranslateDocumentRequest
     {
         /// <summary>
@@ -389,6 +449,18 @@ namespace Google.Cloud.Translate.V3
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TranslateTextGlossaryConfig
+    {
+        /// <summary>
+        /// <see cref="GlossaryName"/>-typed view over the <see cref="Glossary"/> resource name property.
+        /// </summary>
+        public GlossaryName GlossaryAsGlossaryName
+        {
+            get => string.IsNullOrEmpty(Glossary) ? null : GlossaryName.Parse(Glossary, allowUnparsed: true);
+            set => Glossary = value?.ToString() ?? "";
         }
     }
 }
