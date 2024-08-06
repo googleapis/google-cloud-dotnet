@@ -53,6 +53,8 @@ namespace Google.Cloud.Batch.V1Alpha
             GetJobSettings = existing.GetJobSettings;
             DeleteJobSettings = existing.DeleteJobSettings;
             DeleteJobOperationsSettings = existing.DeleteJobOperationsSettings.Clone();
+            CancelJobSettings = existing.CancelJobSettings;
+            CancelJobOperationsSettings = existing.CancelJobOperationsSettings.Clone();
             UpdateJobSettings = existing.UpdateJobSettings;
             ListJobsSettings = existing.ListJobsSettings;
             GetTaskSettings = existing.GetTaskSettings;
@@ -125,6 +127,36 @@ namespace Google.Cloud.Batch.V1Alpha
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BatchServiceClient.CancelJob</c> and <c>BatchServiceClient.CancelJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BatchServiceClient.CancelJob</c> and
+        /// <c>BatchServiceClient.CancelJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CancelJobOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -831,6 +863,137 @@ namespace Google.Cloud.Batch.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteJobAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CancelJobResponse, OperationMetadata> CancelJob(CancelJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelJobResponse, OperationMetadata>> CancelJobAsync(CancelJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelJobResponse, OperationMetadata>> CancelJobAsync(CancelJobRequest request, st::CancellationToken cancellationToken) =>
+            CancelJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CancelJob</c>.</summary>
+        public virtual lro::OperationsClient CancelJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CancelJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CancelJobResponse, OperationMetadata> PollOnceCancelJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CancelJobResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CancelJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CancelJobResponse, OperationMetadata>> PollOnceCancelJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CancelJobResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Job name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CancelJobResponse, OperationMetadata> CancelJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelJob(new CancelJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Job name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelJobResponse, OperationMetadata>> CancelJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelJobAsync(new CancelJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Job name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelJobResponse, OperationMetadata>> CancelJobAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Job name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CancelJobResponse, OperationMetadata> CancelJob(JobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelJob(new CancelJobRequest
+            {
+                JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Job name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelJobResponse, OperationMetadata>> CancelJobAsync(JobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelJobAsync(new CancelJobRequest
+            {
+                JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Job name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelJobResponse, OperationMetadata>> CancelJobAsync(JobName name, st::CancellationToken cancellationToken) =>
+            CancelJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Update a Job.
@@ -2019,6 +2182,8 @@ namespace Google.Cloud.Batch.V1Alpha
 
         private readonly gaxgrpc::ApiCall<DeleteJobRequest, lro::Operation> _callDeleteJob;
 
+        private readonly gaxgrpc::ApiCall<CancelJobRequest, lro::Operation> _callCancelJob;
+
         private readonly gaxgrpc::ApiCall<UpdateJobRequest, Job> _callUpdateJob;
 
         private readonly gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> _callListJobs;
@@ -2053,6 +2218,7 @@ namespace Google.Cloud.Batch.V1Alpha
                 Logger = logger,
             });
             DeleteJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteJobOperationsSettings, logger);
+            CancelJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelJobOperationsSettings, logger);
             DeleteResourceAllowanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteResourceAllowanceOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>("CreateJob", grpcClient.CreateJobAsync, grpcClient.CreateJob, effectiveSettings.CreateJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2064,6 +2230,9 @@ namespace Google.Cloud.Batch.V1Alpha
             _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, lro::Operation>("DeleteJob", grpcClient.DeleteJobAsync, grpcClient.DeleteJob, effectiveSettings.DeleteJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteJob);
             Modify_DeleteJobApiCall(ref _callDeleteJob);
+            _callCancelJob = clientHelper.BuildApiCall<CancelJobRequest, lro::Operation>("CancelJob", grpcClient.CancelJobAsync, grpcClient.CancelJob, effectiveSettings.CancelJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelJob);
+            Modify_CancelJobApiCall(ref _callCancelJob);
             _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>("UpdateJob", grpcClient.UpdateJobAsync, grpcClient.UpdateJob, effectiveSettings.UpdateJobSettings).WithGoogleRequestParam("job.name", request => request.Job?.Name);
             Modify_ApiCall(ref _callUpdateJob);
             Modify_UpdateJobApiCall(ref _callUpdateJob);
@@ -2102,6 +2271,8 @@ namespace Google.Cloud.Batch.V1Alpha
 
         partial void Modify_DeleteJobApiCall(ref gaxgrpc::ApiCall<DeleteJobRequest, lro::Operation> call);
 
+        partial void Modify_CancelJobApiCall(ref gaxgrpc::ApiCall<CancelJobRequest, lro::Operation> call);
+
         partial void Modify_UpdateJobApiCall(ref gaxgrpc::ApiCall<UpdateJobRequest, Job> call);
 
         partial void Modify_ListJobsApiCall(ref gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> call);
@@ -2133,6 +2304,8 @@ namespace Google.Cloud.Batch.V1Alpha
         partial void Modify_GetJobRequest(ref GetJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteJobRequest(ref DeleteJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelJobRequest(ref CancelJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateJobRequest(ref UpdateJobRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2225,6 +2398,33 @@ namespace Google.Cloud.Batch.V1Alpha
         {
             Modify_DeleteJobRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteJob.Async(request, callSettings).ConfigureAwait(false), DeleteJobOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CancelJob</c>.</summary>
+        public override lro::OperationsClient CancelJobOperationsClient { get; }
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CancelJobResponse, OperationMetadata> CancelJob(CancelJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelJobRequest(ref request, ref callSettings);
+            return new lro::Operation<CancelJobResponse, OperationMetadata>(_callCancelJob.Sync(request, callSettings), CancelJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Cancel a Job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CancelJobResponse, OperationMetadata>> CancelJobAsync(CancelJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelJobRequest(ref request, ref callSettings);
+            return new lro::Operation<CancelJobResponse, OperationMetadata>(await _callCancelJob.Async(request, callSettings).ConfigureAwait(false), CancelJobOperationsClient);
         }
 
         /// <summary>
