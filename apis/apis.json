@@ -348,6 +348,32 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.ApiHub.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "API hub",
+      "productUrl": "https://cloud.google.com/apigee/docs/apihub/what-is-api-hub",
+      "description": "Recommended Google client library to access the Apigee API hub API, which lets you consolidate and organize information about all of the APIs of interest to your organization.",
+      "tags": [
+        "api",
+        "apis",
+        "apigee",
+        "consolidation",
+        "organization"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/apihub/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "apihub",
+      "serviceConfigFile": "apihub_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ApiKeys.V2",
       "version": "1.4.0",
       "type": "grpc",
