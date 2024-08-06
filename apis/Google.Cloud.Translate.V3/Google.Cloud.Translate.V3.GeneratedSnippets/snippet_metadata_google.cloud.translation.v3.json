@@ -48,12 +48,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 52,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 50,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -97,12 +97,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 53,
+          "end": 54,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 51,
+          "end": 52,
           "type": "SHORT"
         }
       ]
@@ -595,6 +595,309 @@
         {
           "start": 37,
           "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_RomanizeText_sync",
+      "title": "RomanizeTextRequestObject",
+      "description": "Snippet for RomanizeText",
+      "file": "TranslationServiceClient.RomanizeTextRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RomanizeText",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.RomanizeText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.RomanizeTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.RomanizeTextResponse",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "RomanizeText",
+          "fullName": "google.cloud.translation.v3.TranslationService.RomanizeText",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_RomanizeText_async",
+      "title": "RomanizeTextRequestObjectAsync",
+      "description": "Snippet for RomanizeTextAsync",
+      "file": "TranslationServiceClient.RomanizeTextRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RomanizeTextAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.RomanizeTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.RomanizeTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.RomanizeTextResponse>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "RomanizeText",
+          "fullName": "google.cloud.translation.v3.TranslationService.RomanizeText",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_RomanizeText_sync_flattened",
+      "title": "RomanizeText",
+      "description": "Snippet for RomanizeText",
+      "file": "TranslationServiceClient.RomanizeTextSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RomanizeText",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.RomanizeText",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "contents"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.RomanizeTextResponse",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "RomanizeText",
+          "fullName": "google.cloud.translation.v3.TranslationService.RomanizeText",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_RomanizeText_async_flattened",
+      "title": "RomanizeTextAsync",
+      "description": "Snippet for RomanizeTextAsync",
+      "file": "TranslationServiceClient.RomanizeTextAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RomanizeTextAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.RomanizeTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "contents"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.RomanizeTextResponse>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "RomanizeText",
+          "fullName": "google.cloud.translation.v3.TranslationService.RomanizeText",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_RomanizeText_sync_flattened_resourceNames",
+      "title": "RomanizeTextResourceNames",
+      "description": "Snippet for RomanizeText",
+      "file": "TranslationServiceClient.RomanizeTextResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RomanizeText",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.RomanizeText",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "contents"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.RomanizeTextResponse",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "RomanizeText",
+          "fullName": "google.cloud.translation.v3.TranslationService.RomanizeText",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_RomanizeText_async_flattened_resourceNames",
+      "title": "RomanizeTextResourceNamesAsync",
+      "description": "Snippet for RomanizeTextAsync",
+      "file": "TranslationServiceClient.RomanizeTextResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RomanizeTextAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.RomanizeTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "contents"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.RomanizeTextResponse>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "RomanizeText",
+          "fullName": "google.cloud.translation.v3.TranslationService.RomanizeText",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -2102,6 +2405,206 @@
       ]
     },
     {
+      "regionTag": "translate_v3_generated_TranslationService_UpdateGlossary_sync",
+      "title": "UpdateGlossaryRequestObject",
+      "description": "Snippet for UpdateGlossary",
+      "file": "TranslationServiceClient.UpdateGlossaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossary",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.UpdateGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.UpdateGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Translate.V3.Glossary, Google.Cloud.Translate.V3.UpdateGlossaryMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossary",
+          "fullName": "google.cloud.translation.v3.TranslationService.UpdateGlossary",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_UpdateGlossary_async",
+      "title": "UpdateGlossaryRequestObjectAsync",
+      "description": "Snippet for UpdateGlossaryAsync",
+      "file": "TranslationServiceClient.UpdateGlossaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.UpdateGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.UpdateGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Translate.V3.Glossary, Google.Cloud.Translate.V3.UpdateGlossaryMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossary",
+          "fullName": "google.cloud.translation.v3.TranslationService.UpdateGlossary",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_UpdateGlossary_sync_flattened",
+      "title": "UpdateGlossary",
+      "description": "Snippet for UpdateGlossary",
+      "file": "TranslationServiceClient.UpdateGlossarySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossary",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.UpdateGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.Glossary",
+            "name": "glossary"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Translate.V3.Glossary, Google.Cloud.Translate.V3.UpdateGlossaryMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossary",
+          "fullName": "google.cloud.translation.v3.TranslationService.UpdateGlossary",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_UpdateGlossary_async_flattened",
+      "title": "UpdateGlossaryAsync",
+      "description": "Snippet for UpdateGlossaryAsync",
+      "file": "TranslationServiceClient.UpdateGlossaryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.UpdateGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.Glossary",
+            "name": "glossary"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Translate.V3.Glossary, Google.Cloud.Translate.V3.UpdateGlossaryMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossary",
+          "fullName": "google.cloud.translation.v3.TranslationService.UpdateGlossary",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "translate_v3_generated_TranslationService_ListGlossaries_sync",
       "title": "ListGlossariesRequestObject",
       "description": "Snippet for ListGlossaries",
@@ -2990,6 +3493,2587 @@
         {
           "start": 36,
           "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetGlossaryEntry_sync",
+      "title": "GetGlossaryEntryRequestObject",
+      "description": "Snippet for GetGlossaryEntry",
+      "file": "TranslationServiceClient.GetGlossaryEntryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetGlossaryEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GetGlossaryEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.GlossaryEntry",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetGlossaryEntry_async",
+      "title": "GetGlossaryEntryRequestObjectAsync",
+      "description": "Snippet for GetGlossaryEntryAsync",
+      "file": "TranslationServiceClient.GetGlossaryEntryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GetGlossaryEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetGlossaryEntry_sync_flattened",
+      "title": "GetGlossaryEntry",
+      "description": "Snippet for GetGlossaryEntry",
+      "file": "TranslationServiceClient.GetGlossaryEntrySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetGlossaryEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.GlossaryEntry",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetGlossaryEntry_async_flattened",
+      "title": "GetGlossaryEntryAsync",
+      "description": "Snippet for GetGlossaryEntryAsync",
+      "file": "TranslationServiceClient.GetGlossaryEntryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetGlossaryEntry_sync_flattened_resourceNames",
+      "title": "GetGlossaryEntryResourceNames",
+      "description": "Snippet for GetGlossaryEntry",
+      "file": "TranslationServiceClient.GetGlossaryEntryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetGlossaryEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.GlossaryEntry",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetGlossaryEntry_async_flattened_resourceNames",
+      "title": "GetGlossaryEntryResourceNamesAsync",
+      "description": "Snippet for GetGlossaryEntryAsync",
+      "file": "TranslationServiceClient.GetGlossaryEntryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListGlossaryEntries_sync",
+      "title": "ListGlossaryEntriesRequestObject",
+      "description": "Snippet for ListGlossaryEntries",
+      "file": "TranslationServiceClient.ListGlossaryEntriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryEntries",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListGlossaryEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ListGlossaryEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListGlossaryEntriesResponse, Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryEntries",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListGlossaryEntries",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListGlossaryEntries_async",
+      "title": "ListGlossaryEntriesRequestObjectAsync",
+      "description": "Snippet for ListGlossaryEntriesAsync",
+      "file": "TranslationServiceClient.ListGlossaryEntriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryEntriesAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListGlossaryEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ListGlossaryEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListGlossaryEntriesResponse, Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryEntries",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListGlossaryEntries",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListGlossaryEntries_sync_flattened",
+      "title": "ListGlossaryEntries",
+      "description": "Snippet for ListGlossaryEntries",
+      "file": "TranslationServiceClient.ListGlossaryEntriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryEntries",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListGlossaryEntries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListGlossaryEntriesResponse, Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryEntries",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListGlossaryEntries",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListGlossaryEntries_async_flattened",
+      "title": "ListGlossaryEntriesAsync",
+      "description": "Snippet for ListGlossaryEntriesAsync",
+      "file": "TranslationServiceClient.ListGlossaryEntriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryEntriesAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListGlossaryEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListGlossaryEntriesResponse, Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryEntries",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListGlossaryEntries",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListGlossaryEntries_sync_flattened_resourceNames",
+      "title": "ListGlossaryEntriesResourceNames",
+      "description": "Snippet for ListGlossaryEntries",
+      "file": "TranslationServiceClient.ListGlossaryEntriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryEntries",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListGlossaryEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListGlossaryEntriesResponse, Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryEntries",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListGlossaryEntries",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListGlossaryEntries_async_flattened_resourceNames",
+      "title": "ListGlossaryEntriesResourceNamesAsync",
+      "description": "Snippet for ListGlossaryEntriesAsync",
+      "file": "TranslationServiceClient.ListGlossaryEntriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryEntriesAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListGlossaryEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListGlossaryEntriesResponse, Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryEntries",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListGlossaryEntries",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateGlossaryEntry_sync",
+      "title": "CreateGlossaryEntryRequestObject",
+      "description": "Snippet for CreateGlossaryEntry",
+      "file": "TranslationServiceClient.CreateGlossaryEntryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateGlossaryEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.CreateGlossaryEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.GlossaryEntry",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateGlossaryEntry_async",
+      "title": "CreateGlossaryEntryRequestObjectAsync",
+      "description": "Snippet for CreateGlossaryEntryAsync",
+      "file": "TranslationServiceClient.CreateGlossaryEntryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.CreateGlossaryEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateGlossaryEntry_sync_flattened",
+      "title": "CreateGlossaryEntry",
+      "description": "Snippet for CreateGlossaryEntry",
+      "file": "TranslationServiceClient.CreateGlossaryEntrySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateGlossaryEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntry",
+            "name": "glossaryEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.GlossaryEntry",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateGlossaryEntry_async_flattened",
+      "title": "CreateGlossaryEntryAsync",
+      "description": "Snippet for CreateGlossaryEntryAsync",
+      "file": "TranslationServiceClient.CreateGlossaryEntryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntry",
+            "name": "glossaryEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateGlossaryEntry_sync_flattened_resourceNames",
+      "title": "CreateGlossaryEntryResourceNames",
+      "description": "Snippet for CreateGlossaryEntry",
+      "file": "TranslationServiceClient.CreateGlossaryEntryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateGlossaryEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntry",
+            "name": "glossaryEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.GlossaryEntry",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateGlossaryEntry_async_flattened_resourceNames",
+      "title": "CreateGlossaryEntryResourceNamesAsync",
+      "description": "Snippet for CreateGlossaryEntryAsync",
+      "file": "TranslationServiceClient.CreateGlossaryEntryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntry",
+            "name": "glossaryEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_UpdateGlossaryEntry_sync",
+      "title": "UpdateGlossaryEntryRequestObject",
+      "description": "Snippet for UpdateGlossaryEntry",
+      "file": "TranslationServiceClient.UpdateGlossaryEntryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.UpdateGlossaryEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.GlossaryEntry",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.UpdateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_UpdateGlossaryEntry_async",
+      "title": "UpdateGlossaryEntryRequestObjectAsync",
+      "description": "Snippet for UpdateGlossaryEntryAsync",
+      "file": "TranslationServiceClient.UpdateGlossaryEntryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.UpdateGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.UpdateGlossaryEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.UpdateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_UpdateGlossaryEntry_sync_flattened",
+      "title": "UpdateGlossaryEntry",
+      "description": "Snippet for UpdateGlossaryEntry",
+      "file": "TranslationServiceClient.UpdateGlossaryEntrySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.UpdateGlossaryEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntry",
+            "name": "glossaryEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.GlossaryEntry",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.UpdateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_UpdateGlossaryEntry_async_flattened",
+      "title": "UpdateGlossaryEntryAsync",
+      "description": "Snippet for UpdateGlossaryEntryAsync",
+      "file": "TranslationServiceClient.UpdateGlossaryEntryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.UpdateGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntry",
+            "name": "glossaryEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.GlossaryEntry>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.UpdateGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteGlossaryEntry_sync",
+      "title": "DeleteGlossaryEntryRequestObject",
+      "description": "Snippet for DeleteGlossaryEntry",
+      "file": "TranslationServiceClient.DeleteGlossaryEntryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteGlossaryEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteGlossaryEntry_async",
+      "title": "DeleteGlossaryEntryRequestObjectAsync",
+      "description": "Snippet for DeleteGlossaryEntryAsync",
+      "file": "TranslationServiceClient.DeleteGlossaryEntryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DeleteGlossaryEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteGlossaryEntry_sync_flattened",
+      "title": "DeleteGlossaryEntry",
+      "description": "Snippet for DeleteGlossaryEntry",
+      "file": "TranslationServiceClient.DeleteGlossaryEntrySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteGlossaryEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteGlossaryEntry_async_flattened",
+      "title": "DeleteGlossaryEntryAsync",
+      "description": "Snippet for DeleteGlossaryEntryAsync",
+      "file": "TranslationServiceClient.DeleteGlossaryEntryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteGlossaryEntry_sync_flattened_resourceNames",
+      "title": "DeleteGlossaryEntryResourceNames",
+      "description": "Snippet for DeleteGlossaryEntry",
+      "file": "TranslationServiceClient.DeleteGlossaryEntryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryEntry",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteGlossaryEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteGlossaryEntry_async_flattened_resourceNames",
+      "title": "DeleteGlossaryEntryResourceNamesAsync",
+      "description": "Snippet for DeleteGlossaryEntryAsync",
+      "file": "TranslationServiceClient.DeleteGlossaryEntryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryEntryAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteGlossaryEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GlossaryEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryEntry",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteGlossaryEntry",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateDataset_sync",
+      "title": "CreateDatasetRequestObject",
+      "description": "Snippet for CreateDataset",
+      "file": "TranslationServiceClient.CreateDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.CreateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Translate.V3.Dataset, Google.Cloud.Translate.V3.CreateDatasetMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateDataset_async",
+      "title": "CreateDatasetRequestObjectAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "TranslationServiceClient.CreateDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.CreateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Translate.V3.Dataset, Google.Cloud.Translate.V3.CreateDatasetMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateDataset_sync_flattened",
+      "title": "CreateDataset",
+      "description": "Snippet for CreateDataset",
+      "file": "TranslationServiceClient.CreateDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Translate.V3.Dataset, Google.Cloud.Translate.V3.CreateDatasetMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateDataset_async_flattened",
+      "title": "CreateDatasetAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "TranslationServiceClient.CreateDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Translate.V3.Dataset, Google.Cloud.Translate.V3.CreateDatasetMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateDataset_sync_flattened_resourceNames",
+      "title": "CreateDatasetResourceNames",
+      "description": "Snippet for CreateDataset",
+      "file": "TranslationServiceClient.CreateDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Translate.V3.Dataset, Google.Cloud.Translate.V3.CreateDatasetMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateDataset_async_flattened_resourceNames",
+      "title": "CreateDatasetResourceNamesAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "TranslationServiceClient.CreateDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Translate.V3.Dataset, Google.Cloud.Translate.V3.CreateDatasetMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetDataset_sync",
+      "title": "GetDatasetRequestObject",
+      "description": "Snippet for GetDataset",
+      "file": "TranslationServiceClient.GetDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GetDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.Dataset",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetDataset_async",
+      "title": "GetDatasetRequestObjectAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "TranslationServiceClient.GetDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GetDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetDataset_sync_flattened",
+      "title": "GetDataset",
+      "description": "Snippet for GetDataset",
+      "file": "TranslationServiceClient.GetDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.Dataset",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetDataset_async_flattened",
+      "title": "GetDatasetAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "TranslationServiceClient.GetDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetDataset_sync_flattened_resourceNames",
+      "title": "GetDatasetResourceNames",
+      "description": "Snippet for GetDataset",
+      "file": "TranslationServiceClient.GetDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.Dataset",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetDataset_async_flattened_resourceNames",
+      "title": "GetDatasetResourceNamesAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "TranslationServiceClient.GetDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListDatasets_sync",
+      "title": "ListDatasetsRequestObject",
+      "description": "Snippet for ListDatasets",
+      "file": "TranslationServiceClient.ListDatasetsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ListDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListDatasetsResponse, Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListDatasets",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListDatasets_async",
+      "title": "ListDatasetsRequestObjectAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "TranslationServiceClient.ListDatasetsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListDatasetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ListDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListDatasetsResponse, Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListDatasets",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListDatasets_sync_flattened",
+      "title": "ListDatasets",
+      "description": "Snippet for ListDatasets",
+      "file": "TranslationServiceClient.ListDatasetsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListDatasetsResponse, Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListDatasets",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListDatasets_async_flattened",
+      "title": "ListDatasetsAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "TranslationServiceClient.ListDatasetsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListDatasetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListDatasetsResponse, Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListDatasets",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListDatasets_sync_flattened_resourceNames",
+      "title": "ListDatasetsResourceNames",
+      "description": "Snippet for ListDatasets",
+      "file": "TranslationServiceClient.ListDatasetsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListDatasetsResponse, Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListDatasets",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListDatasets_async_flattened_resourceNames",
+      "title": "ListDatasetsResourceNamesAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "TranslationServiceClient.ListDatasetsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListDatasetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListDatasetsResponse, Google.Cloud.Translate.V3.Dataset>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListDatasets",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteDataset_sync",
+      "title": "DeleteDatasetRequestObject",
+      "description": "Snippet for DeleteDataset",
+      "file": "TranslationServiceClient.DeleteDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DeleteDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteDatasetMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteDataset_async",
+      "title": "DeleteDatasetRequestObjectAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "TranslationServiceClient.DeleteDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DeleteDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteDatasetMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteDataset_sync_flattened",
+      "title": "DeleteDataset",
+      "description": "Snippet for DeleteDataset",
+      "file": "TranslationServiceClient.DeleteDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteDatasetMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteDataset_async_flattened",
+      "title": "DeleteDatasetAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "TranslationServiceClient.DeleteDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteDatasetMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteDataset_sync_flattened_resourceNames",
+      "title": "DeleteDatasetResourceNames",
+      "description": "Snippet for DeleteDataset",
+      "file": "TranslationServiceClient.DeleteDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteDatasetMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteDataset_async_flattened_resourceNames",
+      "title": "DeleteDatasetResourceNamesAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "TranslationServiceClient.DeleteDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteDatasetMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteDataset",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
           "type": "SHORT"
         }
       ]
@@ -4225,12 +7309,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -4274,12 +7358,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 50,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 46,
+          "end": 48,
           "type": "SHORT"
         }
       ]
@@ -5982,6 +9066,1921 @@
         {
           "start": 38,
           "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ImportData_sync",
+      "title": "ImportDataRequestObject",
+      "description": "Snippet for ImportData",
+      "file": "TranslationServiceClient.ImportDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ImportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.ImportDataMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.translation.v3.TranslationService.ImportData",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ImportData_async",
+      "title": "ImportDataRequestObjectAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "TranslationServiceClient.ImportDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.ImportDataMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.translation.v3.TranslationService.ImportData",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ImportData_sync_flattened",
+      "title": "ImportData",
+      "description": "Snippet for ImportData",
+      "file": "TranslationServiceClient.ImportDataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ImportData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.ImportDataMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.translation.v3.TranslationService.ImportData",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ImportData_async_flattened",
+      "title": "ImportDataAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "TranslationServiceClient.ImportDataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.ImportDataMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.translation.v3.TranslationService.ImportData",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ExportData_sync",
+      "title": "ExportDataRequestObject",
+      "description": "Snippet for ExportData",
+      "file": "TranslationServiceClient.ExportDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportData",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ExportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.ExportDataMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.translation.v3.TranslationService.ExportData",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ExportData_async",
+      "title": "ExportDataRequestObjectAsync",
+      "description": "Snippet for ExportDataAsync",
+      "file": "TranslationServiceClient.ExportDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ExportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.ExportDataMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.translation.v3.TranslationService.ExportData",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ExportData_sync_flattened",
+      "title": "ExportData",
+      "description": "Snippet for ExportData",
+      "file": "TranslationServiceClient.ExportDataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportData",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ExportData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.ExportDataMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.translation.v3.TranslationService.ExportData",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ExportData_async_flattened",
+      "title": "ExportDataAsync",
+      "description": "Snippet for ExportDataAsync",
+      "file": "TranslationServiceClient.ExportDataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ExportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.ExportDataMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.translation.v3.TranslationService.ExportData",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListExamples_sync",
+      "title": "ListExamplesRequestObject",
+      "description": "Snippet for ListExamples",
+      "file": "TranslationServiceClient.ListExamplesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExamples",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListExamples",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ListExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListExamplesResponse, Google.Cloud.Translate.V3.Example>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListExamples",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListExamples",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListExamples_async",
+      "title": "ListExamplesRequestObjectAsync",
+      "description": "Snippet for ListExamplesAsync",
+      "file": "TranslationServiceClient.ListExamplesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExamplesAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListExamplesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ListExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListExamplesResponse, Google.Cloud.Translate.V3.Example>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListExamples",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListExamples",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListExamples_sync_flattened",
+      "title": "ListExamples",
+      "description": "Snippet for ListExamples",
+      "file": "TranslationServiceClient.ListExamplesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExamples",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListExamples",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListExamplesResponse, Google.Cloud.Translate.V3.Example>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListExamples",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListExamples",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListExamples_async_flattened",
+      "title": "ListExamplesAsync",
+      "description": "Snippet for ListExamplesAsync",
+      "file": "TranslationServiceClient.ListExamplesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExamplesAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListExamplesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListExamplesResponse, Google.Cloud.Translate.V3.Example>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListExamples",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListExamples",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListExamples_sync_flattened_resourceNames",
+      "title": "ListExamplesResourceNames",
+      "description": "Snippet for ListExamples",
+      "file": "TranslationServiceClient.ListExamplesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExamples",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListExamples",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListExamplesResponse, Google.Cloud.Translate.V3.Example>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListExamples",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListExamples",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListExamples_async_flattened_resourceNames",
+      "title": "ListExamplesResourceNamesAsync",
+      "description": "Snippet for ListExamplesAsync",
+      "file": "TranslationServiceClient.ListExamplesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExamplesAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListExamplesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListExamplesResponse, Google.Cloud.Translate.V3.Example>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListExamples",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListExamples",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateModel_sync",
+      "title": "CreateModelRequestObject",
+      "description": "Snippet for CreateModel",
+      "file": "TranslationServiceClient.CreateModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.CreateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Translate.V3.Model, Google.Cloud.Translate.V3.CreateModelMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateModel_async",
+      "title": "CreateModelRequestObjectAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "TranslationServiceClient.CreateModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.CreateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Translate.V3.Model, Google.Cloud.Translate.V3.CreateModelMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateModel_sync_flattened",
+      "title": "CreateModel",
+      "description": "Snippet for CreateModel",
+      "file": "TranslationServiceClient.CreateModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Translate.V3.Model, Google.Cloud.Translate.V3.CreateModelMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateModel_async_flattened",
+      "title": "CreateModelAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "TranslationServiceClient.CreateModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Translate.V3.Model, Google.Cloud.Translate.V3.CreateModelMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateModel_sync_flattened_resourceNames",
+      "title": "CreateModelResourceNames",
+      "description": "Snippet for CreateModel",
+      "file": "TranslationServiceClient.CreateModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateModel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Translate.V3.Model, Google.Cloud.Translate.V3.CreateModelMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_CreateModel_async_flattened_resourceNames",
+      "title": "CreateModelResourceNamesAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "TranslationServiceClient.CreateModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Translate.V3.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Translate.V3.Model, Google.Cloud.Translate.V3.CreateModelMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.CreateModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListModels_sync",
+      "title": "ListModelsRequestObject",
+      "description": "Snippet for ListModels",
+      "file": "TranslationServiceClient.ListModelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListModels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ListModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListModelsResponse, Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListModels",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListModels_async",
+      "title": "ListModelsRequestObjectAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "TranslationServiceClient.ListModelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ListModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListModelsResponse, Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListModels",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListModels_sync_flattened",
+      "title": "ListModels",
+      "description": "Snippet for ListModels",
+      "file": "TranslationServiceClient.ListModelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListModels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListModelsResponse, Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListModels",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListModels_async_flattened",
+      "title": "ListModelsAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "TranslationServiceClient.ListModelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListModelsResponse, Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListModels",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListModels_sync_flattened_resourceNames",
+      "title": "ListModelsResourceNames",
+      "description": "Snippet for ListModels",
+      "file": "TranslationServiceClient.ListModelsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListModels",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Translate.V3.ListModelsResponse, Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListModels",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_ListModels_async_flattened_resourceNames",
+      "title": "ListModelsResourceNamesAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "TranslationServiceClient.ListModelsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Translate.V3.ListModelsResponse, Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.translation.v3.TranslationService.ListModels",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetModel_sync",
+      "title": "GetModelRequestObject",
+      "description": "Snippet for GetModel",
+      "file": "TranslationServiceClient.GetModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GetModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.Model",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetModel_async",
+      "title": "GetModelRequestObjectAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "TranslationServiceClient.GetModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.GetModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetModel_sync_flattened",
+      "title": "GetModel",
+      "description": "Snippet for GetModel",
+      "file": "TranslationServiceClient.GetModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.Model",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetModel_async_flattened",
+      "title": "GetModelAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "TranslationServiceClient.GetModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetModel_sync_flattened_resourceNames",
+      "title": "GetModelResourceNames",
+      "description": "Snippet for GetModel",
+      "file": "TranslationServiceClient.GetModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Translate.V3.Model",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_GetModel_async_flattened_resourceNames",
+      "title": "GetModelResourceNamesAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "TranslationServiceClient.GetModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Translate.V3.Model>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.GetModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteModel_sync",
+      "title": "DeleteModelRequestObject",
+      "description": "Snippet for DeleteModel",
+      "file": "TranslationServiceClient.DeleteModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DeleteModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteModelMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteModel_async",
+      "title": "DeleteModelRequestObjectAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "TranslationServiceClient.DeleteModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.DeleteModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteModelMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteModel_sync_flattened",
+      "title": "DeleteModel",
+      "description": "Snippet for DeleteModel",
+      "file": "TranslationServiceClient.DeleteModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteModelMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteModel_async_flattened",
+      "title": "DeleteModelAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "TranslationServiceClient.DeleteModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteModelMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteModel_sync_flattened_resourceNames",
+      "title": "DeleteModelResourceNames",
+      "description": "Snippet for DeleteModel",
+      "file": "TranslationServiceClient.DeleteModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteModelMetadata>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "translate_v3_generated_TranslationService_DeleteModel_async_flattened_resourceNames",
+      "title": "DeleteModelResourceNamesAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "TranslationServiceClient.DeleteModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Translate.V3.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Translate.V3.DeleteModelMetadata>>",
+        "client": {
+          "shortName": "TranslationServiceClient",
+          "fullName": "Google.Cloud.Translate.V3.TranslationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.translation.v3.TranslationService.DeleteModel",
+          "service": {
+            "shortName": "TranslationService",
+            "fullName": "google.cloud.translation.v3.TranslationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
           "type": "SHORT"
         }
       ]

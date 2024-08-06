@@ -46,6 +46,7 @@ namespace GoogleCSharpSnippets
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels = { { "", "" }, },
+                TransliterationConfig = new TransliterationConfig(),
             };
             // Make the request
             TranslateTextResponse response = await translationServiceClient.TranslateTextAsync(request);

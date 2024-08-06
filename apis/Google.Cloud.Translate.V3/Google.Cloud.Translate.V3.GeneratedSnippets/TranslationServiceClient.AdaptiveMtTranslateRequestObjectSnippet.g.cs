@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DatasetAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 Content = { "", },
+                ReferenceSentenceConfig = new AdaptiveMtTranslateRequest.Types.ReferenceSentenceConfig(),
+                GlossaryConfig = new AdaptiveMtTranslateRequest.Types.GlossaryConfig(),
             };
             // Make the request
             AdaptiveMtTranslateResponse response = translationServiceClient.AdaptiveMtTranslate(request);
