@@ -432,7 +432,7 @@ namespace Google.Cloud.Batch.V1 {
   }
 
   /// <summary>
-  /// Status event
+  /// Status event.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StatusEvent : pb::IMessage<StatusEvent>
@@ -532,7 +532,9 @@ namespace Google.Cloud.Batch.V1 {
     public const int TaskExecutionFieldNumber = 4;
     private global::Google.Cloud.Batch.V1.TaskExecution taskExecution_;
     /// <summary>
-    /// Task Execution
+    /// Task Execution.
+    /// This field is only defined for task-level status events where the task
+    /// fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -547,7 +549,8 @@ namespace Google.Cloud.Batch.V1 {
     public const int TaskStateFieldNumber = 5;
     private global::Google.Cloud.Batch.V1.TaskStatus.Types.State taskState_ = global::Google.Cloud.Batch.V1.TaskStatus.Types.State.Unspecified;
     /// <summary>
-    /// Task State
+    /// Task State.
+    /// This field is only defined for task-level status events.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1013,7 +1016,7 @@ namespace Google.Cloud.Batch.V1 {
   }
 
   /// <summary>
-  /// Status of a task
+  /// Status of a task.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaskStatus : pb::IMessage<TaskStatus>
@@ -1065,7 +1068,7 @@ namespace Google.Cloud.Batch.V1 {
     public const int StateFieldNumber = 1;
     private global::Google.Cloud.Batch.V1.TaskStatus.Types.State state_ = global::Google.Cloud.Batch.V1.TaskStatus.Types.State.Unspecified;
     /// <summary>
-    /// Task state
+    /// Task state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
