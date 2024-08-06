@@ -27,40 +27,44 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNl",
             "cy5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aMWdvb2dsZS9jbG91ZC9haXBsYXRm",
-            "b3JtL3YxL2FjY2VsZXJhdG9yX3R5cGUucHJvdG8iqgEKC01hY2hpbmVTcGVj",
-            "EhkKDG1hY2hpbmVfdHlwZRgBIAEoCUID4EEFEkoKEGFjY2VsZXJhdG9yX3R5",
-            "cGUYAiABKA4yKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BY2NlbGVy",
-            "YXRvclR5cGVCA+BBBRIZChFhY2NlbGVyYXRvcl9jb3VudBgDIAEoBRIZCgx0",
-            "cHVfdG9wb2xvZ3kYBCABKAlCA+BBBSL4AQoSRGVkaWNhdGVkUmVzb3VyY2Vz",
-            "EkUKDG1hY2hpbmVfc3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLk1hY2hpbmVTcGVjQgbgQQLgQQUSIQoRbWluX3JlcGxpY2FfY291",
-            "bnQYAiABKAVCBuBBAuBBBRIeChFtYXhfcmVwbGljYV9jb3VudBgDIAEoBUID",
-            "4EEFElgKGGF1dG9zY2FsaW5nX21ldHJpY19zcGVjcxgEIAMoCzIxLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkF1dG9zY2FsaW5nTWV0cmljU3BlY0ID",
-            "4EEFIlQKEkF1dG9tYXRpY1Jlc291cmNlcxIeChFtaW5fcmVwbGljYV9jb3Vu",
-            "dBgBIAEoBUID4EEFEh4KEW1heF9yZXBsaWNhX2NvdW50GAIgASgFQgPgQQUi",
-            "pQEKF0JhdGNoRGVkaWNhdGVkUmVzb3VyY2VzEkUKDG1hY2hpbmVfc3BlYxgB",
-            "IAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1hY2hpbmVTcGVj",
-            "QgbgQQLgQQUSIwoWc3RhcnRpbmdfcmVwbGljYV9jb3VudBgCIAEoBUID4EEF",
-            "Eh4KEW1heF9yZXBsaWNhX2NvdW50GAMgASgFQgPgQQUiLwoRUmVzb3VyY2Vz",
-            "Q29uc3VtZWQSGgoNcmVwbGljYV9ob3VycxgBIAEoAUID4EEDIj0KCERpc2tT",
-            "cGVjEhYKDmJvb3RfZGlza190eXBlGAEgASgJEhkKEWJvb3RfZGlza19zaXpl",
-            "X2diGAIgASgFIj0KElBlcnNpc3RlbnREaXNrU3BlYxIRCglkaXNrX3R5cGUY",
-            "ASABKAkSFAoMZGlza19zaXplX2diGAIgASgDIkwKCE5mc01vdW50EhMKBnNl",
-            "cnZlchgBIAEoCUID4EECEhEKBHBhdGgYAiABKAlCA+BBAhIYCgttb3VudF9w",
-            "b2ludBgDIAEoCUID4EECIkEKFUF1dG9zY2FsaW5nTWV0cmljU3BlYxIYCgtt",
-            "ZXRyaWNfbmFtZRgBIAEoCUID4EECEg4KBnRhcmdldBgCIAEoBSIuChBTaGll",
-            "bGRlZFZtQ29uZmlnEhoKEmVuYWJsZV9zZWN1cmVfYm9vdBgBIAEoCELTAQoe",
-            "Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhVNYWNoaW5lUmVzb3Vy",
-            "Y2VzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2Fw",
-            "aXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQu",
-            "QUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gId",
-            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "b3JtL3YxL2FjY2VsZXJhdG9yX3R5cGUucHJvdG8aNWdvb2dsZS9jbG91ZC9h",
+            "aXBsYXRmb3JtL3YxL3Jlc2VydmF0aW9uX2FmZmluaXR5LnByb3RvIoECCgtN",
+            "YWNoaW5lU3BlYxIZCgxtYWNoaW5lX3R5cGUYASABKAlCA+BBBRJKChBhY2Nl",
+            "bGVyYXRvcl90eXBlGAIgASgOMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuQWNjZWxlcmF0b3JUeXBlQgPgQQUSGQoRYWNjZWxlcmF0b3JfY291bnQY",
+            "AyABKAUSGQoMdHB1X3RvcG9sb2d5GAQgASgJQgPgQQUSVQoUcmVzZXJ2YXRp",
+            "b25fYWZmaW5pdHkYBSABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5SZXNlcnZhdGlvbkFmZmluaXR5QgbgQQXgQQEiiwIKEkRlZGljYXRlZFJl",
+            "c291cmNlcxJFCgxtYWNoaW5lX3NwZWMYASABKAsyJy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5NYWNoaW5lU3BlY0IG4EEC4EEFEiEKEW1pbl9yZXBs",
+            "aWNhX2NvdW50GAIgASgFQgbgQQLgQQUSHgoRbWF4X3JlcGxpY2FfY291bnQY",
+            "AyABKAVCA+BBBRJYChhhdXRvc2NhbGluZ19tZXRyaWNfc3BlY3MYBCADKAsy",
+            "MS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvc2NhbGluZ01ldHJp",
+            "Y1NwZWNCA+BBBRIRCgRzcG90GAUgASgIQgPgQQEiVAoSQXV0b21hdGljUmVz",
+            "b3VyY2VzEh4KEW1pbl9yZXBsaWNhX2NvdW50GAEgASgFQgPgQQUSHgoRbWF4",
+            "X3JlcGxpY2FfY291bnQYAiABKAVCA+BBBSKlAQoXQmF0Y2hEZWRpY2F0ZWRS",
+            "ZXNvdXJjZXMSRQoMbWFjaGluZV9zcGVjGAEgASgLMicuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuTWFjaGluZVNwZWNCBuBBAuBBBRIjChZzdGFydGlu",
+            "Z19yZXBsaWNhX2NvdW50GAIgASgFQgPgQQUSHgoRbWF4X3JlcGxpY2FfY291",
+            "bnQYAyABKAVCA+BBBSIvChFSZXNvdXJjZXNDb25zdW1lZBIaCg1yZXBsaWNh",
+            "X2hvdXJzGAEgASgBQgPgQQMiPQoIRGlza1NwZWMSFgoOYm9vdF9kaXNrX3R5",
+            "cGUYASABKAkSGQoRYm9vdF9kaXNrX3NpemVfZ2IYAiABKAUiPQoSUGVyc2lz",
+            "dGVudERpc2tTcGVjEhEKCWRpc2tfdHlwZRgBIAEoCRIUCgxkaXNrX3NpemVf",
+            "Z2IYAiABKAMiTAoITmZzTW91bnQSEwoGc2VydmVyGAEgASgJQgPgQQISEQoE",
+            "cGF0aBgCIAEoCUID4EECEhgKC21vdW50X3BvaW50GAMgASgJQgPgQQIiQQoV",
+            "QXV0b3NjYWxpbmdNZXRyaWNTcGVjEhgKC21ldHJpY19uYW1lGAEgASgJQgPg",
+            "QQISDgoGdGFyZ2V0GAIgASgFIi4KEFNoaWVsZGVkVm1Db25maWcSGgoSZW5h",
+            "YmxlX3NlY3VyZV9ib290GAEgASgIQtMBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCFU1hY2hpbmVSZXNvdXJjZXNQcm90b1ABWj5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
+            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
+            "YXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ReservationAffinityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MachineSpec), global::Google.Cloud.AIPlatform.V1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount", "TpuTopology" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DedicatedResources), global::Google.Cloud.AIPlatform.V1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "AutoscalingMetricSpecs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MachineSpec), global::Google.Cloud.AIPlatform.V1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount", "TpuTopology", "ReservationAffinity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DedicatedResources), global::Google.Cloud.AIPlatform.V1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "AutoscalingMetricSpecs", "Spot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.AutomaticResources), global::Google.Cloud.AIPlatform.V1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ResourcesConsumed), global::Google.Cloud.AIPlatform.V1.ResourcesConsumed.Parser, new[]{ "ReplicaHours" }, null, null, null, null),
@@ -117,6 +121,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       acceleratorType_ = other.acceleratorType_;
       acceleratorCount_ = other.acceleratorCount_;
       tpuTopology_ = other.tpuTopology_;
+      reservationAffinity_ = other.reservationAffinity_ != null ? other.reservationAffinity_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -201,6 +206,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "reservation_affinity" field.</summary>
+    public const int ReservationAffinityFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1.ReservationAffinity reservationAffinity_;
+    /// <summary>
+    /// Optional. Immutable. Configuration controlling how this resource pool
+    /// consumes reservation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.ReservationAffinity ReservationAffinity {
+      get { return reservationAffinity_; }
+      set {
+        reservationAffinity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -220,6 +241,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AcceleratorType != other.AcceleratorType) return false;
       if (AcceleratorCount != other.AcceleratorCount) return false;
       if (TpuTopology != other.TpuTopology) return false;
+      if (!object.Equals(ReservationAffinity, other.ReservationAffinity)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -231,6 +253,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AcceleratorType != global::Google.Cloud.AIPlatform.V1.AcceleratorType.Unspecified) hash ^= AcceleratorType.GetHashCode();
       if (AcceleratorCount != 0) hash ^= AcceleratorCount.GetHashCode();
       if (TpuTopology.Length != 0) hash ^= TpuTopology.GetHashCode();
+      if (reservationAffinity_ != null) hash ^= ReservationAffinity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -265,6 +288,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(34);
         output.WriteString(TpuTopology);
       }
+      if (reservationAffinity_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReservationAffinity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -291,6 +318,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(34);
         output.WriteString(TpuTopology);
       }
+      if (reservationAffinity_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReservationAffinity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -312,6 +343,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (TpuTopology.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TpuTopology);
+      }
+      if (reservationAffinity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReservationAffinity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -336,6 +370,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.TpuTopology.Length != 0) {
         TpuTopology = other.TpuTopology;
+      }
+      if (other.reservationAffinity_ != null) {
+        if (reservationAffinity_ == null) {
+          ReservationAffinity = new global::Google.Cloud.AIPlatform.V1.ReservationAffinity();
+        }
+        ReservationAffinity.MergeFrom(other.ReservationAffinity);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -368,6 +408,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             TpuTopology = input.ReadString();
             break;
           }
+          case 42: {
+            if (reservationAffinity_ == null) {
+              ReservationAffinity = new global::Google.Cloud.AIPlatform.V1.ReservationAffinity();
+            }
+            input.ReadMessage(ReservationAffinity);
+            break;
+          }
         }
       }
     #endif
@@ -397,6 +444,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 34: {
             TpuTopology = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (reservationAffinity_ == null) {
+              ReservationAffinity = new global::Google.Cloud.AIPlatform.V1.ReservationAffinity();
+            }
+            input.ReadMessage(ReservationAffinity);
             break;
           }
         }
@@ -449,6 +503,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       minReplicaCount_ = other.minReplicaCount_;
       maxReplicaCount_ = other.maxReplicaCount_;
       autoscalingMetricSpecs_ = other.autoscalingMetricSpecs_.Clone();
+      spot_ = other.spot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -559,6 +614,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return autoscalingMetricSpecs_; }
     }
 
+    /// <summary>Field number for the "spot" field.</summary>
+    public const int SpotFieldNumber = 5;
+    private bool spot_;
+    /// <summary>
+    /// Optional. If true, schedule the deployment workload on [spot
+    /// VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Spot {
+      get { return spot_; }
+      set {
+        spot_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -578,6 +649,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MinReplicaCount != other.MinReplicaCount) return false;
       if (MaxReplicaCount != other.MaxReplicaCount) return false;
       if(!autoscalingMetricSpecs_.Equals(other.autoscalingMetricSpecs_)) return false;
+      if (Spot != other.Spot) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -589,6 +661,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MinReplicaCount != 0) hash ^= MinReplicaCount.GetHashCode();
       if (MaxReplicaCount != 0) hash ^= MaxReplicaCount.GetHashCode();
       hash ^= autoscalingMetricSpecs_.GetHashCode();
+      if (Spot != false) hash ^= Spot.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -620,6 +693,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteInt32(MaxReplicaCount);
       }
       autoscalingMetricSpecs_.WriteTo(output, _repeated_autoscalingMetricSpecs_codec);
+      if (Spot != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Spot);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -643,6 +720,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteInt32(MaxReplicaCount);
       }
       autoscalingMetricSpecs_.WriteTo(ref output, _repeated_autoscalingMetricSpecs_codec);
+      if (Spot != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Spot);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -663,6 +744,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxReplicaCount);
       }
       size += autoscalingMetricSpecs_.CalculateSize(_repeated_autoscalingMetricSpecs_codec);
+      if (Spot != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -688,6 +772,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         MaxReplicaCount = other.MaxReplicaCount;
       }
       autoscalingMetricSpecs_.Add(other.autoscalingMetricSpecs_);
+      if (other.Spot != false) {
+        Spot = other.Spot;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -722,6 +809,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             autoscalingMetricSpecs_.AddEntriesFrom(input, _repeated_autoscalingMetricSpecs_codec);
             break;
           }
+          case 40: {
+            Spot = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -754,6 +845,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 34: {
             autoscalingMetricSpecs_.AddEntriesFrom(ref input, _repeated_autoscalingMetricSpecs_codec);
+            break;
+          }
+          case 40: {
+            Spot = input.ReadBool();
             break;
           }
         }
