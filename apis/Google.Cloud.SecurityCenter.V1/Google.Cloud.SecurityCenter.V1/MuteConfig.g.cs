@@ -27,32 +27,36 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "CjBnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbXV0ZV9jb25maWcu",
             "cHJvdG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKYBQoK",
+            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLpBgoK",
             "TXV0ZUNvbmZpZxIMCgRuYW1lGAEgASgJEhgKDGRpc3BsYXlfbmFtZRgCIAEo",
             "CUICGAESEwoLZGVzY3JpcHRpb24YAyABKAkSEwoGZmlsdGVyGAQgASgJQgPg",
             "QQISNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
             "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
             "dG9idWYuVGltZXN0YW1wQgPgQQMSHwoSbW9zdF9yZWNlbnRfZWRpdG9yGAcg",
-            "ASgJQgPgQQM6qgPqQaYDCihzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNv",
-            "bS9NdXRlQ29uZmlnEjZvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L211",
-            "dGVDb25maWdzL3ttdXRlX2NvbmZpZ30SKmZvbGRlcnMve2ZvbGRlcn0vbXV0",
-            "ZUNvbmZpZ3Mve211dGVfY29uZmlnfRIscHJvamVjdHMve3Byb2plY3R9L211",
-            "dGVDb25maWdzL3ttdXRlX2NvbmZpZ30SS29yZ2FuaXphdGlvbnMve29yZ2Fu",
-            "aXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbXV0ZUNvbmZpZ3Mve211",
-            "dGVfY29uZmlnfRI/Zm9sZGVycy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9tdXRlQ29uZmlncy97bXV0ZV9jb25maWd9EkFwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbXV0ZUNvbmZpZ3Mve211dGVf",
-            "Y29uZmlnfSoLbXV0ZUNvbmZpZ3MyCm11dGVDb25maWdC6QEKImNvbS5nb29n",
-            "bGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFCD011dGVDb25maWdQcm90b1AB",
-            "WkpjbG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYxL3Nl",
-            "Y3VyaXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91",
-            "ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNl",
-            "bnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIG",
-            "cHJvdG8z"));
+            "ASgJQgPgQQMSTAoEdHlwZRgIIAEoDjI5Lmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MS5NdXRlQ29uZmlnLk11dGVDb25maWdUeXBlQgPgQQESNAoL",
+            "ZXhwaXJ5X3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQEiSwoOTXV0ZUNvbmZpZ1R5cGUSIAocTVVURV9DT05GSUdfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgoKBlNUQVRJQxABEgsKB0RZTkFNSUMQAjqqA+pBpgMK",
+            "KHNlY3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL011dGVDb25maWcSNm9y",
+            "Z2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbXV0ZUNvbmZpZ3Mve211dGVf",
+            "Y29uZmlnfRIqZm9sZGVycy97Zm9sZGVyfS9tdXRlQ29uZmlncy97bXV0ZV9j",
+            "b25maWd9Eixwcm9qZWN0cy97cHJvamVjdH0vbXV0ZUNvbmZpZ3Mve211dGVf",
+            "Y29uZmlnfRJLb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9tdXRlQ29uZmlncy97bXV0ZV9jb25maWd9Ej9mb2xk",
+            "ZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259L211dGVDb25maWdz",
+            "L3ttdXRlX2NvbmZpZ30SQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9tdXRlQ29uZmlncy97bXV0ZV9jb25maWd9KgttdXRlQ29u",
+            "ZmlnczIKbXV0ZUNvbmZpZ0LpAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MUIPTXV0ZUNvbmZpZ1Byb3RvUAFaSmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjEvc2VjdXJpdHljZW50ZXJwYjtz",
+            "ZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVy",
+            "LlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xl",
+            "OjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.MuteConfig), global::Google.Cloud.SecurityCenter.V1.MuteConfig.Parser, new[]{ "Name", "DisplayName", "Description", "Filter", "CreateTime", "UpdateTime", "MostRecentEditor" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.MuteConfig), global::Google.Cloud.SecurityCenter.V1.MuteConfig.Parser, new[]{ "Name", "DisplayName", "Description", "Filter", "CreateTime", "UpdateTime", "MostRecentEditor", "Type", "ExpiryTime" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType) }, null, null)
           }));
     }
     #endregion
@@ -105,6 +109,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       mostRecentEditor_ = other.mostRecentEditor_;
+      type_ = other.type_;
+      expiryTime_ = other.expiryTime_ != null ? other.expiryTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -251,6 +257,41 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 8;
+    private global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType type_ = global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType.Unspecified;
+    /// <summary>
+    /// Optional. The type of the mute config, which determines what type of mute
+    /// state the config affects. The static mute state takes precedence over the
+    /// dynamic mute state. Immutable after creation. STATIC by default if not set
+    /// during creation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expiry_time" field.</summary>
+    public const int ExpiryTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expiryTime_;
+    /// <summary>
+    /// Optional. The expiry of the mute config. Only applicable for dynamic
+    /// configs. If the expiry is set, when the config expires, it is removed from
+    /// all findings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpiryTime {
+      get { return expiryTime_; }
+      set {
+        expiryTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -273,6 +314,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (MostRecentEditor != other.MostRecentEditor) return false;
+      if (Type != other.Type) return false;
+      if (!object.Equals(ExpiryTime, other.ExpiryTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -287,6 +330,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (MostRecentEditor.Length != 0) hash ^= MostRecentEditor.GetHashCode();
+      if (Type != global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType.Unspecified) hash ^= Type.GetHashCode();
+      if (expiryTime_ != null) hash ^= ExpiryTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -333,6 +378,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(58);
         output.WriteString(MostRecentEditor);
       }
+      if (Type != global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) Type);
+      }
+      if (expiryTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ExpiryTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -371,6 +424,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(58);
         output.WriteString(MostRecentEditor);
       }
+      if (Type != global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) Type);
+      }
+      if (expiryTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ExpiryTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -401,6 +462,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (MostRecentEditor.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MostRecentEditor);
+      }
+      if (Type != global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (expiryTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpiryTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -440,6 +507,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.MostRecentEditor.Length != 0) {
         MostRecentEditor = other.MostRecentEditor;
+      }
+      if (other.Type != global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.expiryTime_ != null) {
+        if (expiryTime_ == null) {
+          ExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpiryTime.MergeFrom(other.ExpiryTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -488,6 +564,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 58: {
             MostRecentEditor = input.ReadString();
+            break;
+          }
+          case 64: {
+            Type = (global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            if (expiryTime_ == null) {
+              ExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpiryTime);
             break;
           }
         }
@@ -539,10 +626,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
             MostRecentEditor = input.ReadString();
             break;
           }
+          case 64: {
+            Type = (global::Google.Cloud.SecurityCenter.V1.MuteConfig.Types.MuteConfigType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            if (expiryTime_ == null) {
+              ExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpiryTime);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MuteConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of MuteConfig.
+      /// </summary>
+      public enum MuteConfigType {
+        /// <summary>
+        /// Unused.
+        /// </summary>
+        [pbr::OriginalName("MUTE_CONFIG_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// A static mute config, which sets the static mute state of future matching
+        /// findings to muted. Once the static mute state has been set, finding or
+        /// config modifications will not affect the state.
+        /// </summary>
+        [pbr::OriginalName("STATIC")] Static = 1,
+        /// <summary>
+        /// A dynamic mute config, which is applied to existing and future matching
+        /// findings, setting their dynamic mute state to "muted". If the config is
+        /// updated or deleted, or a matching finding is updated, such that the
+        /// finding doesn't match the config, the config will be removed from the
+        /// finding, and the finding's dynamic mute state may become "unmuted"
+        /// (unless other configs still match).
+        /// </summary>
+        [pbr::OriginalName("DYNAMIC")] Dynamic = 2,
+      }
+
+    }
+    #endregion
 
   }
 

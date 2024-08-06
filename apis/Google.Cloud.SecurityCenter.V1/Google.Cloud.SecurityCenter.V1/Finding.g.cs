@@ -62,7 +62,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "b2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS90b3hpY19jb21iaW5hdGlv",
             "bi5wcm90bxoyZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL3Z1bG5l",
             "cmFiaWxpdHkucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iqx0KB0ZpbmRpbmcS",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iiyEKB0ZpbmRpbmcS",
             "DAoEbmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkSFQoNcmVzb3VyY2VfbmFt",
             "ZRgDIAEoCRI8CgVzdGF0ZRgEIAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1cml0",
             "eWNlbnRlci52MS5GaW5kaW5nLlN0YXRlEhAKCGNhdGVnb3J5GAUgASgJEhQK",
@@ -88,74 +88,86 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "ZUF0dGFjaxI2CgZhY2Nlc3MYGiABKAsyJi5nb29nbGUuY2xvdWQuc2VjdXJp",
             "dHljZW50ZXIudjEuQWNjZXNzEj8KC2Nvbm5lY3Rpb25zGB8gAygLMiouZ29v",
             "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkNvbm5lY3Rpb24SFgoObXV0",
-            "ZV9pbml0aWF0b3IYHCABKAkSOgoJcHJvY2Vzc2VzGB4gAygLMicuZ29vZ2xl",
-            "LmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlByb2Nlc3MSTAoIY29udGFjdHMY",
-            "ISADKAsyNS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRmluZGlu",
-            "Zy5Db250YWN0c0VudHJ5QgPgQQMSPwoLY29tcGxpYW5jZXMYIiADKAsyKi5n",
-            "b29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuQ29tcGxpYW5jZRIgChNw",
-            "YXJlbnRfZGlzcGxheV9uYW1lGCQgASgJQgPgQQMSEwoLZGVzY3JpcHRpb24Y",
-            "JSABKAkSQgoMZXhmaWx0cmF0aW9uGCYgASgLMiwuZ29vZ2xlLmNsb3VkLnNl",
-            "Y3VyaXR5Y2VudGVyLnYxLkV4ZmlsdHJhdGlvbhJACgxpYW1fYmluZGluZ3MY",
-            "JyADKAsyKi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuSWFtQmlu",
-            "ZGluZxISCgpuZXh0X3N0ZXBzGCggASgJEhMKC21vZHVsZV9uYW1lGCkgASgJ",
-            "Ej0KCmNvbnRhaW5lcnMYKiADKAsyKS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
-            "ZW50ZXIudjEuQ29udGFpbmVyEj4KCmt1YmVybmV0ZXMYKyABKAsyKi5nb29n",
-            "bGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuS3ViZXJuZXRlcxI6CghkYXRh",
-            "YmFzZRgsIAEoCzIoLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5E",
-            "YXRhYmFzZRJHCg9hdHRhY2tfZXhwb3N1cmUYLSABKAsyLi5nb29nbGUuY2xv",
-            "dWQuc2VjdXJpdHljZW50ZXIudjEuQXR0YWNrRXhwb3N1cmUSMwoFZmlsZXMY",
-            "LiADKAsyJC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRmlsZRJQ",
-            "ChRjbG91ZF9kbHBfaW5zcGVjdGlvbhgwIAEoCzIyLmdvb2dsZS5jbG91ZC5z",
-            "ZWN1cml0eWNlbnRlci52MS5DbG91ZERscEluc3BlY3Rpb24SUwoWY2xvdWRf",
-            "ZGxwX2RhdGFfcHJvZmlsZRgxIAEoCzIzLmdvb2dsZS5jbG91ZC5zZWN1cml0",
-            "eWNlbnRlci52MS5DbG91ZERscERhdGFQcm9maWxlEkUKDmtlcm5lbF9yb290",
-            "a2l0GDIgASgLMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLktl",
-            "cm5lbFJvb3RraXQSPwoMb3JnX3BvbGljaWVzGDMgAygLMikuZ29vZ2xlLmNs",
-            "b3VkLnNlY3VyaXR5Y2VudGVyLnYxLk9yZ1BvbGljeRJACgthcHBsaWNhdGlv",
-            "bhg1IAEoCzIrLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5BcHBs",
-            "aWNhdGlvbhJYChhiYWNrdXBfZGlzYXN0ZXJfcmVjb3ZlcnkYNyABKAsyNi5n",
-            "b29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuQmFja3VwRGlzYXN0ZXJS",
-            "ZWNvdmVyeRJJChBzZWN1cml0eV9wb3N0dXJlGDggASgLMi8uZ29vZ2xlLmNs",
-            "b3VkLnNlY3VyaXR5Y2VudGVyLnYxLlNlY3VyaXR5UG9zdHVyZRI9Cgtsb2df",
-            "ZW50cmllcxg5IAMoCzIoLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
-            "MS5Mb2dFbnRyeRJECg5sb2FkX2JhbGFuY2Vycxg6IAMoCzIsLmdvb2dsZS5j",
-            "bG91ZC5zZWN1cml0eWNlbnRlci52MS5Mb2FkQmFsYW5jZXISPwoLY2xvdWRf",
-            "YXJtb3IYOyABKAsyKi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEu",
-            "Q2xvdWRBcm1vchI6Cghub3RlYm9vaxg/IAEoCzIoLmdvb2dsZS5jbG91ZC5z",
-            "ZWN1cml0eWNlbnRlci52MS5Ob3RlYm9vaxJLChF0b3hpY19jb21iaW5hdGlv",
-            "bhhAIAEoCzIwLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5Ub3hp",
-            "Y0NvbWJpbmF0aW9uEkoKEWdyb3VwX21lbWJlcnNoaXBzGEEgAygLMi8uZ29v",
-            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkdyb3VwTWVtYmVyc2hpcBpP",
-            "ChVTb3VyY2VQcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVl",
-            "GAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlOgI4ARpmChRFeHRlcm5h",
-            "bFN5c3RlbXNFbnRyeRILCgNrZXkYASABKAkSPQoFdmFsdWUYAiABKAsyLi5n",
-            "b29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRXh0ZXJuYWxTeXN0ZW06",
-            "AjgBGl8KDUNvbnRhY3RzRW50cnkSCwoDa2V5GAEgASgJEj0KBXZhbHVlGAIg",
-            "ASgLMi4uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkNvbnRhY3RE",
-            "ZXRhaWxzOgI4ASI4CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoK",
-            "BkFDVElWRRABEgwKCElOQUNUSVZFEAIiUQoIU2V2ZXJpdHkSGAoUU0VWRVJJ",
-            "VFlfVU5TUEVDSUZJRUQQABIMCghDUklUSUNBTBABEggKBEhJR0gQAhIKCgZN",
-            "RURJVU0QAxIHCgNMT1cQBCJDCgRNdXRlEhQKEE1VVEVfVU5TUEVDSUZJRUQQ",
-            "ABIJCgVNVVRFRBABEgsKB1VOTVVURUQQAhINCglVTkRFRklORUQQBCKwAQoM",
-            "RmluZGluZ0NsYXNzEh0KGUZJTkRJTkdfQ0xBU1NfVU5TUEVDSUZJRUQQABIK",
-            "CgZUSFJFQVQQARIRCg1WVUxORVJBQklMSVRZEAISFAoQTUlTQ09ORklHVVJB",
-            "VElPThADEg8KC09CU0VSVkFUSU9OEAQSDQoJU0NDX0VSUk9SEAUSFQoRUE9T",
-            "VFVSRV9WSU9MQVRJT04QBhIVChFUT1hJQ19DT01CSU5BVElPThAHOu4B6kHq",
-            "AQolc2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBpcy5jb20vRmluZGluZxJAb3Jn",
-            "YW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9zb3VyY2VzL3tzb3VyY2V9L2Zp",
-            "bmRpbmdzL3tmaW5kaW5nfRI0Zm9sZGVycy97Zm9sZGVyfS9zb3VyY2VzL3tz",
-            "b3VyY2V9L2ZpbmRpbmdzL3tmaW5kaW5nfRI2cHJvamVjdHMve3Byb2plY3R9",
-            "L3NvdXJjZXMve3NvdXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9KghmaW5kaW5n",
-            "czIHZmluZGluZ0LYAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRl",
-            "ci52MVABWkpjbG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVyL2Fw",
-            "aXYxL3NlY3VyaXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJwYqoCHkdvb2ds",
-            "ZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1",
-            "cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVy",
-            "OjpWMWIGcHJvdG8z"));
+            "ZV9pbml0aWF0b3IYHCABKAkSSAoJbXV0ZV9pbmZvGD0gASgLMjAuZ29vZ2xl",
+            "LmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZpbmRpbmcuTXV0ZUluZm9CA+BB",
+            "AxI6Cglwcm9jZXNzZXMYHiADKAsyJy5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
+            "ZW50ZXIudjEuUHJvY2VzcxJMCghjb250YWN0cxghIAMoCzI1Lmdvb2dsZS5j",
+            "bG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLkNvbnRhY3RzRW50cnlC",
+            "A+BBAxI/Cgtjb21wbGlhbmNlcxgiIAMoCzIqLmdvb2dsZS5jbG91ZC5zZWN1",
+            "cml0eWNlbnRlci52MS5Db21wbGlhbmNlEiAKE3BhcmVudF9kaXNwbGF5X25h",
+            "bWUYJCABKAlCA+BBAxITCgtkZXNjcmlwdGlvbhglIAEoCRJCCgxleGZpbHRy",
+            "YXRpb24YJiABKAsyLC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEu",
+            "RXhmaWx0cmF0aW9uEkAKDGlhbV9iaW5kaW5ncxgnIAMoCzIqLmdvb2dsZS5j",
+            "bG91ZC5zZWN1cml0eWNlbnRlci52MS5JYW1CaW5kaW5nEhIKCm5leHRfc3Rl",
+            "cHMYKCABKAkSEwoLbW9kdWxlX25hbWUYKSABKAkSPQoKY29udGFpbmVycxgq",
+            "IAMoCzIpLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5Db250YWlu",
+            "ZXISPgoKa3ViZXJuZXRlcxgrIAEoCzIqLmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MS5LdWJlcm5ldGVzEjoKCGRhdGFiYXNlGCwgASgLMiguZ29v",
+            "Z2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkRhdGFiYXNlEkcKD2F0dGFj",
+            "a19leHBvc3VyZRgtIAEoCzIuLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRl",
+            "ci52MS5BdHRhY2tFeHBvc3VyZRIzCgVmaWxlcxguIAMoCzIkLmdvb2dsZS5j",
+            "bG91ZC5zZWN1cml0eWNlbnRlci52MS5GaWxlElAKFGNsb3VkX2RscF9pbnNw",
+            "ZWN0aW9uGDAgASgLMjIuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
+            "LkNsb3VkRGxwSW5zcGVjdGlvbhJTChZjbG91ZF9kbHBfZGF0YV9wcm9maWxl",
+            "GDEgASgLMjMuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkNsb3Vk",
+            "RGxwRGF0YVByb2ZpbGUSRQoOa2VybmVsX3Jvb3RraXQYMiABKAsyLS5nb29n",
+            "bGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuS2VybmVsUm9vdGtpdBI/Cgxv",
+            "cmdfcG9saWNpZXMYMyADKAsyKS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
+            "ZXIudjEuT3JnUG9saWN5EkAKC2FwcGxpY2F0aW9uGDUgASgLMisuZ29vZ2xl",
+            "LmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkFwcGxpY2F0aW9uElgKGGJhY2t1",
+            "cF9kaXNhc3Rlcl9yZWNvdmVyeRg3IAEoCzI2Lmdvb2dsZS5jbG91ZC5zZWN1",
+            "cml0eWNlbnRlci52MS5CYWNrdXBEaXNhc3RlclJlY292ZXJ5EkkKEHNlY3Vy",
+            "aXR5X3Bvc3R1cmUYOCABKAsyLy5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
+            "ZXIudjEuU2VjdXJpdHlQb3N0dXJlEj0KC2xvZ19lbnRyaWVzGDkgAygLMigu",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkxvZ0VudHJ5EkQKDmxv",
+            "YWRfYmFsYW5jZXJzGDogAygLMiwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
+            "dGVyLnYxLkxvYWRCYWxhbmNlchI/CgtjbG91ZF9hcm1vchg7IAEoCzIqLmdv",
+            "b2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5DbG91ZEFybW9yEjoKCG5v",
+            "dGVib29rGD8gASgLMiguZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
+            "Lk5vdGVib29rEksKEXRveGljX2NvbWJpbmF0aW9uGEAgASgLMjAuZ29vZ2xl",
+            "LmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlRveGljQ29tYmluYXRpb24SSgoR",
+            "Z3JvdXBfbWVtYmVyc2hpcHMYQSADKAsyLy5nb29nbGUuY2xvdWQuc2VjdXJp",
+            "dHljZW50ZXIudjEuR3JvdXBNZW1iZXJzaGlwGpMDCghNdXRlSW5mbxJQCgtz",
+            "dGF0aWNfbXV0ZRgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRl",
+            "ci52MS5GaW5kaW5nLk11dGVJbmZvLlN0YXRpY011dGUSYAoUZHluYW1pY19t",
+            "dXRlX3JlY29yZHMYAiADKAsyQi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
+            "ZXIudjEuRmluZGluZy5NdXRlSW5mby5EeW5hbWljTXV0ZVJlY29yZBp5CgpT",
+            "dGF0aWNNdXRlEjsKBXN0YXRlGAEgASgOMiwuZ29vZ2xlLmNsb3VkLnNlY3Vy",
+            "aXR5Y2VudGVyLnYxLkZpbmRpbmcuTXV0ZRIuCgphcHBseV90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBpYChFEeW5hbWljTXV0ZVJl",
+            "Y29yZBITCgttdXRlX2NvbmZpZxgBIAEoCRIuCgptYXRjaF90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBpPChVTb3VyY2VQcm9wZXJ0",
+            "aWVzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuZ29vZ2xl",
+            "LnByb3RvYnVmLlZhbHVlOgI4ARpmChRFeHRlcm5hbFN5c3RlbXNFbnRyeRIL",
+            "CgNrZXkYASABKAkSPQoFdmFsdWUYAiABKAsyLi5nb29nbGUuY2xvdWQuc2Vj",
+            "dXJpdHljZW50ZXIudjEuRXh0ZXJuYWxTeXN0ZW06AjgBGl8KDUNvbnRhY3Rz",
+            "RW50cnkSCwoDa2V5GAEgASgJEj0KBXZhbHVlGAIgASgLMi4uZ29vZ2xlLmNs",
+            "b3VkLnNlY3VyaXR5Y2VudGVyLnYxLkNvbnRhY3REZXRhaWxzOgI4ASI4CgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgwKCElO",
+            "QUNUSVZFEAIiUQoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQ",
+            "ABIMCghDUklUSUNBTBABEggKBEhJR0gQAhIKCgZNRURJVU0QAxIHCgNMT1cQ",
+            "BCJDCgRNdXRlEhQKEE1VVEVfVU5TUEVDSUZJRUQQABIJCgVNVVRFRBABEgsK",
+            "B1VOTVVURUQQAhINCglVTkRFRklORUQQBCKwAQoMRmluZGluZ0NsYXNzEh0K",
+            "GUZJTkRJTkdfQ0xBU1NfVU5TUEVDSUZJRUQQABIKCgZUSFJFQVQQARIRCg1W",
+            "VUxORVJBQklMSVRZEAISFAoQTUlTQ09ORklHVVJBVElPThADEg8KC09CU0VS",
+            "VkFUSU9OEAQSDQoJU0NDX0VSUk9SEAUSFQoRUE9TVFVSRV9WSU9MQVRJT04Q",
+            "BhIVChFUT1hJQ19DT01CSU5BVElPThAHOu4B6kHqAQolc2VjdXJpdHljZW50",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vRmluZGluZxJAb3JnYW5pemF0aW9ucy97b3Jn",
+            "YW5pemF0aW9ufS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5kaW5n",
+            "fRI0Zm9sZGVycy97Zm9sZGVyfS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdz",
+            "L3tmaW5kaW5nfRI2cHJvamVjdHMve3Byb2plY3R9L3NvdXJjZXMve3NvdXJj",
+            "ZX0vZmluZGluZ3Mve2ZpbmRpbmd9KghmaW5kaW5nczIHZmluZGluZ0LYAQoi",
+            "Y29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MVABWkpjbG91ZC5n",
+            "b29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYxL3NlY3VyaXR5Y2Vu",
+            "dGVycGI7c2VjdXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0",
+            "eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoC",
+            "IUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AccessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ApplicationReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AttackExposureReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.BackupDisasterRecoveryReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.CloudArmorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfileReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.CloudDlpInspectionReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ComplianceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ConnectionReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ContactDetailsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ContainerReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.DatabaseReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExfiltrationReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExternalSystemReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FileReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.GroupMembershipReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IamBindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IndicatorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.KernelRootkitReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.KubernetesReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.LoadBalancerReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.LogEntryReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.MitreAttackReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.NotebookReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.OrgPolicyReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ProcessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityPostureReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ToxicCombinationReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.VulnerabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "ExternalSystems", "MitreAttack", "Access", "Connections", "MuteInitiator", "Processes", "Contacts", "Compliances", "ParentDisplayName", "Description", "Exfiltration", "IamBindings", "NextSteps", "ModuleName", "Containers", "Kubernetes", "Database", "AttackExposure", "Files", "CloudDlpInspection", "CloudDlpDataProfile", "KernelRootkit", "OrgPolicies", "Application", "BackupDisasterRecovery", "SecurityPosture", "LogEntries", "LoadBalancers", "CloudArmor", "Notebook", "ToxicCombination", "GroupMemberships" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "ExternalSystems", "MitreAttack", "Access", "Connections", "MuteInitiator", "MuteInfo", "Processes", "Contacts", "Compliances", "ParentDisplayName", "Description", "Exfiltration", "IamBindings", "NextSteps", "ModuleName", "Containers", "Kubernetes", "Database", "AttackExposure", "Files", "CloudDlpInspection", "CloudDlpDataProfile", "KernelRootkit", "OrgPolicies", "Application", "BackupDisasterRecovery", "SecurityPosture", "LogEntries", "LoadBalancers", "CloudArmor", "Notebook", "ToxicCombination", "GroupMemberships" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo), global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Parser, new[]{ "StaticMute", "DynamicMuteRecords" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.StaticMute), global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.StaticMute.Parser, new[]{ "State", "ApplyTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.DynamicMuteRecord), global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.DynamicMuteRecord.Parser, new[]{ "MuteConfig", "MatchTime" }, null, null, null, null)}),
+            null, null, null, })
           }));
     }
     #endregion
@@ -228,6 +240,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       access_ = other.access_ != null ? other.access_.Clone() : null;
       connections_ = other.connections_.Clone();
       muteInitiator_ = other.muteInitiator_;
+      muteInfo_ = other.muteInfo_ != null ? other.muteInfo_.Clone() : null;
       processes_ = other.processes_.Clone();
       contacts_ = other.contacts_.Clone();
       compliances_ = other.compliances_.Clone();
@@ -636,6 +649,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return muteInitiator_; }
       set {
         muteInitiator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mute_info" field.</summary>
+    public const int MuteInfoFieldNumber = 61;
+    private global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo muteInfo_;
+    /// <summary>
+    /// Output only. The mute information regarding this finding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo MuteInfo {
+      get { return muteInfo_; }
+      set {
+        muteInfo_ = value;
       }
     }
 
@@ -1099,6 +1127,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (!object.Equals(Access, other.Access)) return false;
       if(!connections_.Equals(other.connections_)) return false;
       if (MuteInitiator != other.MuteInitiator) return false;
+      if (!object.Equals(MuteInfo, other.MuteInfo)) return false;
       if(!processes_.Equals(other.processes_)) return false;
       if (!Contacts.Equals(other.Contacts)) return false;
       if(!compliances_.Equals(other.compliances_)) return false;
@@ -1155,6 +1184,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (access_ != null) hash ^= Access.GetHashCode();
       hash ^= connections_.GetHashCode();
       if (MuteInitiator.Length != 0) hash ^= MuteInitiator.GetHashCode();
+      if (muteInfo_ != null) hash ^= MuteInfo.GetHashCode();
       hash ^= processes_.GetHashCode();
       hash ^= Contacts.GetHashCode();
       hash ^= compliances_.GetHashCode();
@@ -1348,6 +1378,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(218, 3);
         output.WriteMessage(CloudArmor);
       }
+      if (muteInfo_ != null) {
+        output.WriteRawTag(234, 3);
+        output.WriteMessage(MuteInfo);
+      }
       if (notebook_ != null) {
         output.WriteRawTag(250, 3);
         output.WriteMessage(Notebook);
@@ -1515,6 +1549,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(218, 3);
         output.WriteMessage(CloudArmor);
       }
+      if (muteInfo_ != null) {
+        output.WriteRawTag(234, 3);
+        output.WriteMessage(MuteInfo);
+      }
       if (notebook_ != null) {
         output.WriteRawTag(250, 3);
         output.WriteMessage(Notebook);
@@ -1593,6 +1631,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       size += connections_.CalculateSize(_repeated_connections_codec);
       if (MuteInitiator.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(MuteInitiator);
+      }
+      if (muteInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MuteInfo);
       }
       size += processes_.CalculateSize(_repeated_processes_codec);
       size += contacts_.CalculateSize(_map_contacts_codec);
@@ -1750,6 +1791,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       connections_.Add(other.connections_);
       if (other.MuteInitiator.Length != 0) {
         MuteInitiator = other.MuteInitiator;
+      }
+      if (other.muteInfo_ != null) {
+        if (muteInfo_ == null) {
+          MuteInfo = new global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo();
+        }
+        MuteInfo.MergeFrom(other.MuteInfo);
       }
       processes_.Add(other.processes_);
       contacts_.MergeFrom(other.contacts_);
@@ -2107,6 +2154,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             input.ReadMessage(CloudArmor);
             break;
           }
+          case 490: {
+            if (muteInfo_ == null) {
+              MuteInfo = new global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo();
+            }
+            input.ReadMessage(MuteInfo);
+            break;
+          }
           case 506: {
             if (notebook_ == null) {
               Notebook = new global::Google.Cloud.SecurityCenter.V1.Notebook();
@@ -2381,6 +2435,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             input.ReadMessage(CloudArmor);
             break;
           }
+          case 490: {
+            if (muteInfo_ == null) {
+              MuteInfo = new global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo();
+            }
+            input.ReadMessage(MuteInfo);
+            break;
+          }
           case 506: {
             if (notebook_ == null) {
               Notebook = new global::Google.Cloud.SecurityCenter.V1.Notebook();
@@ -2560,6 +2621,746 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// combination.
         /// </summary>
         [pbr::OriginalName("TOXIC_COMBINATION")] ToxicCombination = 7,
+      }
+
+      /// <summary>
+      /// Mute information about the finding, including whether the finding has a
+      /// static mute or any matching dynamic mute rules.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MuteInfo : pb::IMessage<MuteInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MuteInfo> _parser = new pb::MessageParser<MuteInfo>(() => new MuteInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MuteInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecurityCenter.V1.Finding.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MuteInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MuteInfo(MuteInfo other) : this() {
+          staticMute_ = other.staticMute_ != null ? other.staticMute_.Clone() : null;
+          dynamicMuteRecords_ = other.dynamicMuteRecords_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MuteInfo Clone() {
+          return new MuteInfo(this);
+        }
+
+        /// <summary>Field number for the "static_mute" field.</summary>
+        public const int StaticMuteFieldNumber = 1;
+        private global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.StaticMute staticMute_;
+        /// <summary>
+        /// If set, the static mute applied to this finding. Static mutes override
+        /// dynamic mutes. If unset, there is no static mute.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.StaticMute StaticMute {
+          get { return staticMute_; }
+          set {
+            staticMute_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "dynamic_mute_records" field.</summary>
+        public const int DynamicMuteRecordsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.DynamicMuteRecord> _repeated_dynamicMuteRecords_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.DynamicMuteRecord.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.DynamicMuteRecord> dynamicMuteRecords_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.DynamicMuteRecord>();
+        /// <summary>
+        /// The list of dynamic mute rules that currently match the finding.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.DynamicMuteRecord> DynamicMuteRecords {
+          get { return dynamicMuteRecords_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MuteInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MuteInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(StaticMute, other.StaticMute)) return false;
+          if(!dynamicMuteRecords_.Equals(other.dynamicMuteRecords_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (staticMute_ != null) hash ^= StaticMute.GetHashCode();
+          hash ^= dynamicMuteRecords_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (staticMute_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StaticMute);
+          }
+          dynamicMuteRecords_.WriteTo(output, _repeated_dynamicMuteRecords_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (staticMute_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StaticMute);
+          }
+          dynamicMuteRecords_.WriteTo(ref output, _repeated_dynamicMuteRecords_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (staticMute_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StaticMute);
+          }
+          size += dynamicMuteRecords_.CalculateSize(_repeated_dynamicMuteRecords_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MuteInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.staticMute_ != null) {
+            if (staticMute_ == null) {
+              StaticMute = new global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.StaticMute();
+            }
+            StaticMute.MergeFrom(other.StaticMute);
+          }
+          dynamicMuteRecords_.Add(other.dynamicMuteRecords_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (staticMute_ == null) {
+                  StaticMute = new global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.StaticMute();
+                }
+                input.ReadMessage(StaticMute);
+                break;
+              }
+              case 18: {
+                dynamicMuteRecords_.AddEntriesFrom(input, _repeated_dynamicMuteRecords_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (staticMute_ == null) {
+                  StaticMute = new global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Types.StaticMute();
+                }
+                input.ReadMessage(StaticMute);
+                break;
+              }
+              case 18: {
+                dynamicMuteRecords_.AddEntriesFrom(ref input, _repeated_dynamicMuteRecords_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the MuteInfo message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Information about the static mute state. A static mute state overrides
+          /// any dynamic mute rules that apply to this finding. The static mute state
+          /// can be set by a static mute rule or by muting the finding directly.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class StaticMute : pb::IMessage<StaticMute>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<StaticMute> _parser = new pb::MessageParser<StaticMute>(() => new StaticMute());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<StaticMute> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StaticMute() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StaticMute(StaticMute other) : this() {
+              state_ = other.state_;
+              applyTime_ = other.applyTime_ != null ? other.applyTime_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StaticMute Clone() {
+              return new StaticMute(this);
+            }
+
+            /// <summary>Field number for the "state" field.</summary>
+            public const int StateFieldNumber = 1;
+            private global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute state_ = global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified;
+            /// <summary>
+            /// The static mute state. If the value is `MUTED` or `UNMUTED`, then the
+            /// finding's overall mute state will have the same value.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute State {
+              get { return state_; }
+              set {
+                state_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "apply_time" field.</summary>
+            public const int ApplyTimeFieldNumber = 2;
+            private global::Google.Protobuf.WellKnownTypes.Timestamp applyTime_;
+            /// <summary>
+            /// When the static mute was applied.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Timestamp ApplyTime {
+              get { return applyTime_; }
+              set {
+                applyTime_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as StaticMute);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(StaticMute other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (State != other.State) return false;
+              if (!object.Equals(ApplyTime, other.ApplyTime)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) hash ^= State.GetHashCode();
+              if (applyTime_ != null) hash ^= ApplyTime.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) State);
+              }
+              if (applyTime_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(ApplyTime);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) State);
+              }
+              if (applyTime_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(ApplyTime);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+              }
+              if (applyTime_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplyTime);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(StaticMute other) {
+              if (other == null) {
+                return;
+              }
+              if (other.State != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) {
+                State = other.State;
+              }
+              if (other.applyTime_ != null) {
+                if (applyTime_ == null) {
+                  ApplyTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                ApplyTime.MergeFrom(other.ApplyTime);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    State = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute) input.ReadEnum();
+                    break;
+                  }
+                  case 18: {
+                    if (applyTime_ == null) {
+                      ApplyTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                    }
+                    input.ReadMessage(ApplyTime);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    State = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute) input.ReadEnum();
+                    break;
+                  }
+                  case 18: {
+                    if (applyTime_ == null) {
+                      ApplyTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                    }
+                    input.ReadMessage(ApplyTime);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// The record of a dynamic mute rule that matches the finding.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class DynamicMuteRecord : pb::IMessage<DynamicMuteRecord>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<DynamicMuteRecord> _parser = new pb::MessageParser<DynamicMuteRecord>(() => new DynamicMuteRecord());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<DynamicMuteRecord> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.SecurityCenter.V1.Finding.Types.MuteInfo.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DynamicMuteRecord() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DynamicMuteRecord(DynamicMuteRecord other) : this() {
+              muteConfig_ = other.muteConfig_;
+              matchTime_ = other.matchTime_ != null ? other.matchTime_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DynamicMuteRecord Clone() {
+              return new DynamicMuteRecord(this);
+            }
+
+            /// <summary>Field number for the "mute_config" field.</summary>
+            public const int MuteConfigFieldNumber = 1;
+            private string muteConfig_ = "";
+            /// <summary>
+            /// The relative resource name of the mute rule, represented by a mute
+            /// config, that created this record, for example
+            /// `organizations/123/muteConfigs/mymuteconfig` or
+            /// `organizations/123/locations/global/muteConfigs/mymuteconfig`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string MuteConfig {
+              get { return muteConfig_; }
+              set {
+                muteConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "match_time" field.</summary>
+            public const int MatchTimeFieldNumber = 2;
+            private global::Google.Protobuf.WellKnownTypes.Timestamp matchTime_;
+            /// <summary>
+            /// When the dynamic mute rule first matched the finding.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Timestamp MatchTime {
+              get { return matchTime_; }
+              set {
+                matchTime_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as DynamicMuteRecord);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(DynamicMuteRecord other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (MuteConfig != other.MuteConfig) return false;
+              if (!object.Equals(MatchTime, other.MatchTime)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (MuteConfig.Length != 0) hash ^= MuteConfig.GetHashCode();
+              if (matchTime_ != null) hash ^= MatchTime.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (MuteConfig.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(MuteConfig);
+              }
+              if (matchTime_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(MatchTime);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (MuteConfig.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(MuteConfig);
+              }
+              if (matchTime_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(MatchTime);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (MuteConfig.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(MuteConfig);
+              }
+              if (matchTime_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(MatchTime);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(DynamicMuteRecord other) {
+              if (other == null) {
+                return;
+              }
+              if (other.MuteConfig.Length != 0) {
+                MuteConfig = other.MuteConfig;
+              }
+              if (other.matchTime_ != null) {
+                if (matchTime_ == null) {
+                  MatchTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                MatchTime.MergeFrom(other.MatchTime);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    MuteConfig = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (matchTime_ == null) {
+                      MatchTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                    }
+                    input.ReadMessage(MatchTime);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    MuteConfig = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (matchTime_ == null) {
+                      MatchTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                    }
+                    input.ReadMessage(MatchTime);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
       }
 
     }

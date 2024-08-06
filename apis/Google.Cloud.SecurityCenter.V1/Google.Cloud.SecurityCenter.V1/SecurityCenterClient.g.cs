@@ -9809,9 +9809,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -9831,9 +9831,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9853,9 +9853,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9872,9 +9872,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -9894,9 +9894,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9916,9 +9916,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// 
         /// Its format is:
         /// 
-        /// * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}".
-        /// * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+        /// * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`.
+        /// * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
