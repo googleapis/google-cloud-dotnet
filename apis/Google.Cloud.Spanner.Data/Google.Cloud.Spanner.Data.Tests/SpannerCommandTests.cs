@@ -346,7 +346,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void CommitIncludesPriority()
+        public async Task CommitIncludesPriority()
         {
             var commitPriority = Priority.Medium;
             var commandPriority = Priority.High;
@@ -371,13 +371,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received(1).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(commandPriority)),
                 Arg.Any<CallSettings>());
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(commitPriority)),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void CommitPriorityCanBeSetAfterCommandExecution()
+        public async Task CommitPriorityCanBeSetAfterCommandExecution()
         {
             var priority = Priority.Medium;
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -399,7 +399,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             transaction.CommitPriority = priority;
             transaction.Commit();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
                 Arg.Any<CallSettings>());
         }
@@ -416,7 +416,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void PriorityCanBeSetToUnspecified()
+        public async Task PriorityCanBeSetToUnspecified()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
@@ -439,13 +439,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received(1).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
                 Arg.Any<CallSettings>());
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void RunWithRetryableTransactionWithCommitPriority()
+        public async Task RunWithRetryableTransactionWithCommitPriority()
         {
             var priority = Priority.Low;
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -470,13 +470,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received(2).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
                 Arg.Any<CallSettings>());
-            spannerClientMock.Received(2).CommitAsync(
+            await spannerClientMock.Received(2).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MutationCommandIncludesPriority()
+        public async Task MutationCommandIncludesPriority()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
@@ -489,7 +489,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.Priority = Priority.High;
             command.ExecuteNonQuery();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.High),
                 Arg.Any<CallSettings>());
         }
@@ -514,7 +514,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void EphemeralTransactionIncludesPriorityOnDmlCommandAndCommit()
+        public async Task EphemeralTransactionIncludesPriorityOnDmlCommandAndCommit()
         {
             var priority = Priority.Medium;
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -531,7 +531,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received(1).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
                 Arg.Any<CallSettings>());
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
                 Arg.Any<CallSettings>());
         }
@@ -570,7 +570,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void CommandIncludesRequestAndTransactionTag()
+        public async Task CommandIncludesRequestAndTransactionTag()
         {
             var requestTag1 = "request-tag-1";
             var requestTag2 = "request-tag-2";
@@ -618,13 +618,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received(1).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
                 Arg.Any<CallSettings>());
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void TransactionTagCannotBeSetAfterCommandExecution()
+        public async Task TransactionTagCannotBeSetAfterCommandExecution()
         {
             var transactionTag = "transaction-tag-1";
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -649,7 +649,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received(1).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
                 Arg.Any<CallSettings>());
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
                 Arg.Any<CallSettings>());
         }
@@ -666,7 +666,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void TagsCanBeSetToNull()
+        public async Task TagsCanBeSetToNull()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
@@ -689,13 +689,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received(1).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
                 Arg.Any<CallSettings>());
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void RunWithRetryableTransactionWithTransactionTag()
+        public async Task RunWithRetryableTransactionWithTransactionTag()
         {
             var transactionTag = "retryable-tx-tag";
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -721,7 +721,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received(2).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
                 Arg.Any<CallSettings>());
-            spannerClientMock.Received(2).CommitAsync(
+            await spannerClientMock.Received(2).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
                 Arg.Any<CallSettings>());
         }
@@ -757,7 +757,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void MaxCommitDelay_DefaultsToNull_ExplicitTransaction()
+        public async Task MaxCommitDelay_DefaultsToNull_ExplicitTransaction()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
@@ -775,13 +775,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             transaction.Commit();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_Propagates_ExplicitTransaction()
+        public async Task MaxCommitDelay_Propagates_ExplicitTransaction()
         {
             var maxCommitDelay = TimeSpan.FromMilliseconds(100);
 
@@ -802,13 +802,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             transaction.Commit();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_CanBeSetAfterCommandExecution_ExplicitTransaction()
+        public async Task MaxCommitDelay_CanBeSetAfterCommandExecution_ExplicitTransaction()
         {
             var maxCommitDelay = TimeSpan.FromMilliseconds(100);
 
@@ -829,13 +829,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             transaction.MaxCommitDelay = maxCommitDelay;
             transaction.Commit();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_Propagates_RunWithRetryableTransaction()
+        public async Task MaxCommitDelay_Propagates_RunWithRetryableTransaction()
         {
             var maxCommitDelay = TimeSpan.FromMilliseconds(100);
 
@@ -859,13 +859,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                 }
             });
 
-            spannerClientMock.Received(2).CommitAsync(
+            await spannerClientMock.Received(2).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_DefaultsToNull_ImplicitTransaction()
+        public async Task MaxCommitDelay_DefaultsToNull_ImplicitTransaction()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
@@ -877,13 +877,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             var command = connection.CreateInsertCommand("FOO");
             command.ExecuteNonQuery();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_Propagates_ImplicitTransaction()
+        public async Task MaxCommitDelay_Propagates_ImplicitTransaction()
         {
             var maxCommitDelay = TimeSpan.FromMilliseconds(100);
 
@@ -898,13 +898,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.MaxCommitDelay = maxCommitDelay;
             command.ExecuteNonQuery();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_SetOnCommand_SetOnExplicitTransaction_CommandIgnored()
+        public async Task MaxCommitDelay_SetOnCommand_SetOnExplicitTransaction_CommandIgnored()
         {
             var transactionMaxCommitDelay = TimeSpan.FromMilliseconds(100);
             var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
@@ -926,13 +926,13 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             transaction.Commit();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(transactionMaxCommitDelay))),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_SetOnCommand_UnsetOnExplicitTransaction_CommandIgnored()
+        public async Task MaxCommitDelay_SetOnCommand_UnsetOnExplicitTransaction_CommandIgnored()
         {
             var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
 
@@ -952,13 +952,13 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             transaction.Commit();
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_DefaultsToNull_AmbientTransaction()
+        public async Task MaxCommitDelay_DefaultsToNull_AmbientTransaction()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
@@ -976,13 +976,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                 scope.Complete();
             }
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_Propagates_AmbientTransaction()
+        public async Task MaxCommitDelay_Propagates_AmbientTransaction()
         {
             var maxCommitDelay = TimeSpan.FromMilliseconds(100);
 
@@ -1002,13 +1002,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                 scope.Complete();
             }
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(maxCommitDelay))),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_SetOnCommand_SetOnAmbientTransaction_CommandIgnored()
+        public async Task MaxCommitDelay_SetOnCommand_SetOnAmbientTransaction_CommandIgnored()
         {
             var transactionMaxCommitDelay = TimeSpan.FromMilliseconds(100);
             var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
@@ -1030,13 +1030,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                 scope.Complete();
             }
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(transactionMaxCommitDelay))),
                 Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public void MaxCommitDelay_SetOnCommand_UnsetOnAmbientTransaction_CommandIgnored()
+        public async Task MaxCommitDelay_SetOnCommand_UnsetOnAmbientTransaction_CommandIgnored()
         {
             var commandMaxCommitDelay = TimeSpan.FromMilliseconds(300);
 
@@ -1057,7 +1057,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 scope.Complete();
             }
 
-            spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
                 Arg.Any<CallSettings>());
         }
@@ -1163,8 +1163,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                 scope.Complete();
             }
 
-            _ = spannerClientMock.Received(1).CommitAsync(Arg.Any<CommitRequest>(), Arg.Any<CallSettings>());
-            _ = spannerClientMock.Received(1).CommitAsync(
+            await spannerClientMock.Received(1).CommitAsync(Arg.Any<CommitRequest>(), Arg.Any<CallSettings>());
+            await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.Mutations.Count == 3),
                 Arg.Any<CallSettings>());
         }
