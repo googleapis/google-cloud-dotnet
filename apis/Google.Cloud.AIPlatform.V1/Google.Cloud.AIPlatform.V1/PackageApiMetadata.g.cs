@@ -110,6 +110,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return EntityTypeReflection.Descriptor;
             yield return EnvVarReflection.Descriptor;
             yield return EvaluatedAnnotationReflection.Descriptor;
+            yield return EvaluationServiceReflection.Descriptor;
             yield return EventReflection.Descriptor;
             yield return ExecutionReflection.Descriptor;
             yield return ExplanationReflection.Descriptor;

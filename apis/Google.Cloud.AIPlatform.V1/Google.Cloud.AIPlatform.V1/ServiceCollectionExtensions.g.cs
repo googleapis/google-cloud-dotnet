@@ -135,6 +135,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcav::EvaluationServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddEvaluationServiceClient(this IServiceCollection services, sys::Action<gcav::EvaluationServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::EvaluationServiceClientBuilder builder = new gcav::EvaluationServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::EvaluationServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddEvaluationServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::EvaluationServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::EvaluationServiceClientBuilder builder = new gcav::EvaluationServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcav::FeatureOnlineStoreAdminServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
