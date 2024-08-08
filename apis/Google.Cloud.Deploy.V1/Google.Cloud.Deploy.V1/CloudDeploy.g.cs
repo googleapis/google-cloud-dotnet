@@ -19589,9 +19589,8 @@ namespace Google.Cloud.Deploy.V1 {
     /// ID of the `Target`. The value of this field could be one of the
     /// following:
     ///
-    /// * The last segment of a target name. It only needs the ID to determine
-    /// which target is being referred to
-    /// * "*", all targets in a location.
+    /// * The last segment of a target name
+    /// * "*", all targets in a location
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -40539,10 +40538,8 @@ namespace Google.Cloud.Deploy.V1 {
     /// deploying. If unspecified, default it to the next stage in the promotion
     /// flow. The value of this field could be one of the following:
     ///
-    /// * The last segment of a target name. It only needs the ID to determine
-    /// if the target is one of the stages in the promotion sequence defined
-    /// in the pipeline.
-    /// * "@next", the next target in the promotion sequence.
+    /// * The last segment of a target name
+    /// * "@next", the next target in the promotion sequence
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
