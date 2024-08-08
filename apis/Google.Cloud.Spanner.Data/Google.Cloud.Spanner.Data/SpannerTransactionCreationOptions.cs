@@ -24,24 +24,23 @@ namespace Google.Cloud.Spanner.Data;
 /// </summary>
 public sealed class SpannerTransactionCreationOptions
 {
-    // Transaction options; no additional state, so can be reused.
-    internal static TransactionOptions ReadWriteTransactionOptions { get; } = new TransactionOptions { ReadWrite = new ReadWrite() };
-    internal static TransactionOptions PartitionedDmlTransactionOptions { get; } = new TransactionOptions { PartitionedDml = new PartitionedDml() };
-
     /// <summary>
     /// Options that will result in a read-write transaction.
     /// </summary>
-    public static SpannerTransactionCreationOptions ReadWrite { get; } = new SpannerTransactionCreationOptions(timestampBound: null, transactionId: null, isDetached: false, isSingleUse: false, isPartitionedDml: false);
+    public static SpannerTransactionCreationOptions ReadWrite { get; } = new SpannerTransactionCreationOptions(
+        timestampBound: null, transactionId: null, isDetached: false, isSingleUse: false, isPartitionedDml: false, excludeFromChangeStreams: false);
 
     /// <summary>
     /// Options that will result in a read-write transaction suitable for executing partioned DML.
     /// </summary>
-    public static SpannerTransactionCreationOptions PartitionedDml { get; } = new SpannerTransactionCreationOptions(timestampBound: null, transactionId: null, isDetached: false, isSingleUse: false, isPartitionedDml: true);
+    public static SpannerTransactionCreationOptions PartitionedDml { get; } = new SpannerTransactionCreationOptions(
+        timestampBound: null, transactionId: null, isDetached: false, isSingleUse: false, isPartitionedDml: true, excludeFromChangeStreams: false);
 
     /// <summary>
     /// Options that will result in a read-only transaction bound by <see cref="TimestampBound.Strong"/>.
     /// </summary>
-    public static SpannerTransactionCreationOptions ReadOnly { get; } = new SpannerTransactionCreationOptions(TimestampBound.Strong, transactionId: null, isDetached: false, isSingleUse: false, isPartitionedDml: false);
+    public static SpannerTransactionCreationOptions ReadOnly { get; } = new SpannerTransactionCreationOptions(
+        TimestampBound.Strong, transactionId: null, isDetached: false, isSingleUse: false, isPartitionedDml: false, excludeFromChangeStreams: false);
 
     /// <summary>
     /// Timestamp bound settings for the transaction. May be null.
@@ -94,15 +93,37 @@ public sealed class SpannerTransactionCreationOptions
     public bool IsPartitionedDml { get; }
 
     /// <summary>
+    /// Whether changes executed within this transaction are recorded in change streams or not.
+    /// May only be true for read-write and partioned DML transactions.
+    /// </summary>
+    /// <remarks>
+    /// Note that changes may only be excluded from change stream that allow transaction exlcusion.
+    /// Changes executed within this transaction will be recorded in change streams that do not allow
+    /// transaction exclusion regardless of the value of this field.
+    /// </remarks>
+    public bool ExcludeFromChangeStreams { get; }
+
+    /// <summary>
     /// Options used to acquire the transaction's underlying session.
     /// </summary>
-    internal TransactionOptions TransactionOptios => IsPartitionedDml
-        ? PartitionedDmlTransactionOptions
-        : TransactionMode == TransactionMode.ReadWrite
-        ? ReadWriteTransactionOptions
-        : TimestampBound?.ToTransactionOptions();
+    internal TransactionOptions TransactionOptios
+    {
+        get
+        {
+            var options = IsPartitionedDml
+                ? new TransactionOptions { PartitionedDml = new PartitionedDml() }
+                : TransactionMode == TransactionMode.ReadWrite
+                ? new TransactionOptions { ReadWrite = new ReadWrite()  }
+                : TimestampBound?.ToTransactionOptions();
+            if (options is not null)
+            {
+                options.ExcludeTxnFromChangeStreams = ExcludeFromChangeStreams;
+            }
+            return options;
+        }
+    }
 
-    private SpannerTransactionCreationOptions(TimestampBound timestampBound, TransactionId transactionId, bool isDetached, bool isSingleUse, bool isPartitionedDml)
+    private SpannerTransactionCreationOptions(TimestampBound timestampBound, TransactionId transactionId, bool isDetached, bool isSingleUse, bool isPartitionedDml, bool excludeFromChangeStreams)
     {
         GaxPreconditions.CheckArgument(
             timestampBound is null || transactionId is null,
@@ -129,6 +150,11 @@ public sealed class SpannerTransactionCreationOptions
             nameof(isPartitionedDml),
             "Read-only transaction cannot be used for partitioned DML queries.");
         IsPartitionedDml = isPartitionedDml;
+        GaxPreconditions.CheckArgument(
+            TransactionMode == TransactionMode.ReadWrite || !excludeFromChangeStreams,
+            nameof(excludeFromChangeStreams),
+            "Only read-write and partioned DML transactions can be marked for change stream exclusion.");
+        ExcludeFromChangeStreams = excludeFromChangeStreams;
     }
 
     /// <summary>
@@ -146,7 +172,8 @@ public sealed class SpannerTransactionCreationOptions
             transactionId: null,
             isDetached: false,
             isSingleUse: timestampBound?.Mode == TimestampBoundMode.MinReadTimestamp || timestampBound?.Mode == TimestampBoundMode.MaxStaleness,
-            isPartitionedDml: false);
+            isPartitionedDml: false,
+            excludeFromChangeStreams: false);
 
     /// <summary>
     /// Creates transaction options with the given <paramref name="transactionId"/>.
@@ -155,14 +182,20 @@ public sealed class SpannerTransactionCreationOptions
     /// The transaction ID to use for the transaction. Must not be null.
     /// </param>
     public static SpannerTransactionCreationOptions FromReadOnlyTransactionId(TransactionId transactionId) =>
-        new SpannerTransactionCreationOptions(timestampBound: null, transactionId: GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)), isDetached: true, isSingleUse: false, isPartitionedDml: false);
+        new SpannerTransactionCreationOptions(
+            timestampBound: null,
+            transactionId: GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
+            isDetached: true,
+            isSingleUse: false,
+            isPartitionedDml: false,
+            excludeFromChangeStreams: false);
 
     /// <summary>
     /// Returns a new instance identical to this one except for the value of <see cref="IsDetached"/>.
     /// If <see cref="TransactionId"/> is set, <see cref="IsDetached"/> cannot be false.
     /// </summary>
     public SpannerTransactionCreationOptions WithIsDetached(bool isDetached) =>
-        isDetached == IsDetached ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, isDetached, IsSingleUse, IsPartitionedDml);
+        isDetached == IsDetached ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, isDetached, IsSingleUse, IsPartitionedDml, ExcludeFromChangeStreams);
 
     /// <summary>
     /// Returns a new instance identical to this one except for the value of <see cref="IsSingleUse"/>.
@@ -171,5 +204,13 @@ public sealed class SpannerTransactionCreationOptions
     /// <see cref="IsSingleUse"/> cannot be false.
     /// </summary>
     public SpannerTransactionCreationOptions WithIsSingleUse(bool isSingleUse) =>
-        isSingleUse == IsSingleUse ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, IsDetached, isSingleUse, IsPartitionedDml);
+        isSingleUse == IsSingleUse ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, IsDetached, isSingleUse, IsPartitionedDml, ExcludeFromChangeStreams);
+
+    /// <summary>
+    /// Returns a new instance identical to this one except for the value of <see cref="ExcludeFromChangeStreams"/>.
+    /// </summary>
+    /// <param name="excludeFromChangeStreams"></param>
+    /// <returns></returns>
+    public SpannerTransactionCreationOptions WithExcludeFromChangeStreams(bool excludeFromChangeStreams) =>
+        excludeFromChangeStreams == ExcludeFromChangeStreams ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, IsDetached, IsSingleUse, IsPartitionedDml, excludeFromChangeStreams);
 }
