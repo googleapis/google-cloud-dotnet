@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Environment = Environment.Unspecified,
             };
             // Make the request
             GenerateUploadUrlResponse response = functionServiceClient.GenerateUploadUrl(request);
