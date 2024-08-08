@@ -14,16 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
-    using Google.Cloud.Functions.V2;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcfv = Google.Cloud.Functions.V2;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedFunctionServiceClientSnippets
@@ -33,14 +35,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFunction(GetFunctionRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            GetFunctionRequest request = new GetFunctionRequest
+            gcfv::GetFunctionRequest request = new gcfv::GetFunctionRequest
             {
-                FunctionName = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                FunctionName = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                Revision = "",
             };
             // Make the request
-            Function response = functionServiceClient.GetFunction(request);
+            gcfv::Function response = functionServiceClient.GetFunction(request);
             // End snippet
         }
 
@@ -50,14 +53,15 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFunctionAsync(GetFunctionRequest, CallSettings)
             // Additional: GetFunctionAsync(GetFunctionRequest, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetFunctionRequest request = new GetFunctionRequest
+            gcfv::GetFunctionRequest request = new gcfv::GetFunctionRequest
             {
-                FunctionName = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                FunctionName = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                Revision = "",
             };
             // Make the request
-            Function response = await functionServiceClient.GetFunctionAsync(request);
+            gcfv::Function response = await functionServiceClient.GetFunctionAsync(request);
             // End snippet
         }
 
@@ -66,11 +70,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFunction(string, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/functions/[FUNCTION]";
             // Make the request
-            Function response = functionServiceClient.GetFunction(name);
+            gcfv::Function response = functionServiceClient.GetFunction(name);
             // End snippet
         }
 
@@ -80,11 +84,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFunctionAsync(string, CallSettings)
             // Additional: GetFunctionAsync(string, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/functions/[FUNCTION]";
             // Make the request
-            Function response = await functionServiceClient.GetFunctionAsync(name);
+            gcfv::Function response = await functionServiceClient.GetFunctionAsync(name);
             // End snippet
         }
 
@@ -93,11 +97,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFunction(FunctionName, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            FunctionName name = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]");
+            gcfv::FunctionName name = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]");
             // Make the request
-            Function response = functionServiceClient.GetFunction(name);
+            gcfv::Function response = functionServiceClient.GetFunction(name);
             // End snippet
         }
 
@@ -107,11 +111,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFunctionAsync(FunctionName, CallSettings)
             // Additional: GetFunctionAsync(FunctionName, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            FunctionName name = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]");
+            gcfv::FunctionName name = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]");
             // Make the request
-            Function response = await functionServiceClient.GetFunctionAsync(name);
+            gcfv::Function response = await functionServiceClient.GetFunctionAsync(name);
             // End snippet
         }
 
@@ -120,30 +124,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFunctions(ListFunctionsRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            ListFunctionsRequest request = new ListFunctionsRequest
+            gcfv::ListFunctionsRequest request = new gcfv::ListFunctionsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListFunctionsResponse, Function> response = functionServiceClient.ListFunctions(request);
+            PagedEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Function item in response)
+            foreach (gcfv::Function item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFunctionsResponse page in response.AsRawResponses())
+            foreach (gcfv::ListFunctionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Function item in page)
+                foreach (gcfv::Function item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -152,10 +156,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Function> singlePage = response.ReadPage(pageSize);
+            Page<gcfv::Function> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Function item in singlePage)
+            foreach (gcfv::Function item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -170,30 +174,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFunctionsAsync(ListFunctionsRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListFunctionsRequest request = new ListFunctionsRequest
+            gcfv::ListFunctionsRequest request = new gcfv::ListFunctionsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListFunctionsResponse, Function> response = functionServiceClient.ListFunctionsAsync(request);
+            PagedAsyncEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Function item) =>
+            await response.ForEachAsync((gcfv::Function item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFunctionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcfv::ListFunctionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Function item in page)
+                foreach (gcfv::Function item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -202,10 +206,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Function> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcfv::Function> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Function item in singlePage)
+            foreach (gcfv::Function item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -220,25 +224,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFunctions(string, string, int?, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListFunctionsResponse, Function> response = functionServiceClient.ListFunctions(parent);
+            PagedEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Function item in response)
+            foreach (gcfv::Function item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFunctionsResponse page in response.AsRawResponses())
+            foreach (gcfv::ListFunctionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Function item in page)
+                foreach (gcfv::Function item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -247,10 +251,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Function> singlePage = response.ReadPage(pageSize);
+            Page<gcfv::Function> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Function item in singlePage)
+            foreach (gcfv::Function item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -265,25 +269,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFunctionsAsync(string, string, int?, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListFunctionsResponse, Function> response = functionServiceClient.ListFunctionsAsync(parent);
+            PagedAsyncEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Function item) =>
+            await response.ForEachAsync((gcfv::Function item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFunctionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcfv::ListFunctionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Function item in page)
+                foreach (gcfv::Function item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -292,10 +296,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Function> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcfv::Function> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Function item in singlePage)
+            foreach (gcfv::Function item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -310,25 +314,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFunctions(LocationName, string, int?, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListFunctionsResponse, Function> response = functionServiceClient.ListFunctions(parent);
+            PagedEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Function item in response)
+            foreach (gcfv::Function item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFunctionsResponse page in response.AsRawResponses())
+            foreach (gcfv::ListFunctionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Function item in page)
+                foreach (gcfv::Function item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -337,10 +341,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Function> singlePage = response.ReadPage(pageSize);
+            Page<gcfv::Function> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Function item in singlePage)
+            foreach (gcfv::Function item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -355,25 +359,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFunctionsAsync(LocationName, string, int?, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListFunctionsResponse, Function> response = functionServiceClient.ListFunctionsAsync(parent);
+            PagedAsyncEnumerable<gcfv::ListFunctionsResponse, gcfv::Function> response = functionServiceClient.ListFunctionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Function item) =>
+            await response.ForEachAsync((gcfv::Function item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFunctionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcfv::ListFunctionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Function item in page)
+                foreach (gcfv::Function item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -382,10 +386,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Function> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcfv::Function> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Function item in singlePage)
+            foreach (gcfv::Function item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -400,31 +404,31 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateFunction(CreateFunctionRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            CreateFunctionRequest request = new CreateFunctionRequest
+            gcfv::CreateFunctionRequest request = new gcfv::CreateFunctionRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Function = new Function(),
+                Function = new gcfv::Function(),
                 FunctionId = "",
             };
             // Make the request
-            Operation<Function, OperationMetadata> response = functionServiceClient.CreateFunction(request);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = functionServiceClient.CreateFunction(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = functionServiceClient.PollOnceCreateFunction(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = functionServiceClient.PollOnceCreateFunction(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -435,31 +439,31 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateFunctionAsync(CreateFunctionRequest, CallSettings)
             // Additional: CreateFunctionAsync(CreateFunctionRequest, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateFunctionRequest request = new CreateFunctionRequest
+            gcfv::CreateFunctionRequest request = new gcfv::CreateFunctionRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Function = new Function(),
+                Function = new gcfv::Function(),
                 FunctionId = "",
             };
             // Make the request
-            Operation<Function, OperationMetadata> response = await functionServiceClient.CreateFunctionAsync(request);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = await functionServiceClient.CreateFunctionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceCreateFunctionAsync(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceCreateFunctionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -469,28 +473,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateFunction(string, Function, string, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Function function = new Function();
+            gcfv::Function function = new gcfv::Function();
             string functionId = "";
             // Make the request
-            Operation<Function, OperationMetadata> response = functionServiceClient.CreateFunction(parent, function, functionId);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = functionServiceClient.CreateFunction(parent, function, functionId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = functionServiceClient.PollOnceCreateFunction(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = functionServiceClient.PollOnceCreateFunction(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -501,28 +505,28 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateFunctionAsync(string, Function, string, CallSettings)
             // Additional: CreateFunctionAsync(string, Function, string, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Function function = new Function();
+            gcfv::Function function = new gcfv::Function();
             string functionId = "";
             // Make the request
-            Operation<Function, OperationMetadata> response = await functionServiceClient.CreateFunctionAsync(parent, function, functionId);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = await functionServiceClient.CreateFunctionAsync(parent, function, functionId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceCreateFunctionAsync(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceCreateFunctionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -532,28 +536,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateFunction(LocationName, Function, string, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Function function = new Function();
+            gcfv::Function function = new gcfv::Function();
             string functionId = "";
             // Make the request
-            Operation<Function, OperationMetadata> response = functionServiceClient.CreateFunction(parent, function, functionId);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = functionServiceClient.CreateFunction(parent, function, functionId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = functionServiceClient.PollOnceCreateFunction(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = functionServiceClient.PollOnceCreateFunction(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -564,28 +568,28 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateFunctionAsync(LocationName, Function, string, CallSettings)
             // Additional: CreateFunctionAsync(LocationName, Function, string, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Function function = new Function();
+            gcfv::Function function = new gcfv::Function();
             string functionId = "";
             // Make the request
-            Operation<Function, OperationMetadata> response = await functionServiceClient.CreateFunctionAsync(parent, function, functionId);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = await functionServiceClient.CreateFunctionAsync(parent, function, functionId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceCreateFunctionAsync(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceCreateFunctionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -595,30 +599,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateFunction(UpdateFunctionRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            UpdateFunctionRequest request = new UpdateFunctionRequest
+            gcfv::UpdateFunctionRequest request = new gcfv::UpdateFunctionRequest
             {
-                Function = new Function(),
+                Function = new gcfv::Function(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<Function, OperationMetadata> response = functionServiceClient.UpdateFunction(request);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = functionServiceClient.UpdateFunction(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = functionServiceClient.PollOnceUpdateFunction(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = functionServiceClient.PollOnceUpdateFunction(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -629,30 +633,30 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateFunctionAsync(UpdateFunctionRequest, CallSettings)
             // Additional: UpdateFunctionAsync(UpdateFunctionRequest, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateFunctionRequest request = new UpdateFunctionRequest
+            gcfv::UpdateFunctionRequest request = new gcfv::UpdateFunctionRequest
             {
-                Function = new Function(),
+                Function = new gcfv::Function(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<Function, OperationMetadata> response = await functionServiceClient.UpdateFunctionAsync(request);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = await functionServiceClient.UpdateFunctionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceUpdateFunctionAsync(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceUpdateFunctionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -662,27 +666,27 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateFunction(Function, FieldMask, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            Function function = new Function();
+            gcfv::Function function = new gcfv::Function();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Function, OperationMetadata> response = functionServiceClient.UpdateFunction(function, updateMask);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = functionServiceClient.UpdateFunction(function, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = functionServiceClient.PollOnceUpdateFunction(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = functionServiceClient.PollOnceUpdateFunction(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -693,27 +697,27 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateFunctionAsync(Function, FieldMask, CallSettings)
             // Additional: UpdateFunctionAsync(Function, FieldMask, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Function function = new Function();
+            gcfv::Function function = new gcfv::Function();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Function, OperationMetadata> response = await functionServiceClient.UpdateFunctionAsync(function, updateMask);
+            Operation<gcfv::Function, gcfv::OperationMetadata> response = await functionServiceClient.UpdateFunctionAsync(function, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Function, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfv::Function, gcfv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Function result = completedResponse.Result;
+            gcfv::Function result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Function, OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceUpdateFunctionAsync(operationName);
+            Operation<gcfv::Function, gcfv::OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceUpdateFunctionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Function retrievedResult = retrievedResponse.Result;
+                gcfv::Function retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -723,24 +727,24 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFunction(DeleteFunctionRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            DeleteFunctionRequest request = new DeleteFunctionRequest
+            gcfv::DeleteFunctionRequest request = new gcfv::DeleteFunctionRequest
             {
-                FunctionName = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                FunctionName = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = functionServiceClient.DeleteFunction(request);
+            Operation<Empty, gcfv::OperationMetadata> response = functionServiceClient.DeleteFunction(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcfv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = functionServiceClient.PollOnceDeleteFunction(operationName);
+            Operation<Empty, gcfv::OperationMetadata> retrievedResponse = functionServiceClient.PollOnceDeleteFunction(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -756,24 +760,24 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFunctionAsync(DeleteFunctionRequest, CallSettings)
             // Additional: DeleteFunctionAsync(DeleteFunctionRequest, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteFunctionRequest request = new DeleteFunctionRequest
+            gcfv::DeleteFunctionRequest request = new gcfv::DeleteFunctionRequest
             {
-                FunctionName = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                FunctionName = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await functionServiceClient.DeleteFunctionAsync(request);
+            Operation<Empty, gcfv::OperationMetadata> response = await functionServiceClient.DeleteFunctionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcfv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceDeleteFunctionAsync(operationName);
+            Operation<Empty, gcfv::OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceDeleteFunctionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -788,21 +792,21 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFunction(string, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/functions/[FUNCTION]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = functionServiceClient.DeleteFunction(name);
+            Operation<Empty, gcfv::OperationMetadata> response = functionServiceClient.DeleteFunction(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcfv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = functionServiceClient.PollOnceDeleteFunction(operationName);
+            Operation<Empty, gcfv::OperationMetadata> retrievedResponse = functionServiceClient.PollOnceDeleteFunction(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -818,21 +822,21 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFunctionAsync(string, CallSettings)
             // Additional: DeleteFunctionAsync(string, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/functions/[FUNCTION]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await functionServiceClient.DeleteFunctionAsync(name);
+            Operation<Empty, gcfv::OperationMetadata> response = await functionServiceClient.DeleteFunctionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcfv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceDeleteFunctionAsync(operationName);
+            Operation<Empty, gcfv::OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceDeleteFunctionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -847,21 +851,21 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFunction(FunctionName, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            FunctionName name = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]");
+            gcfv::FunctionName name = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = functionServiceClient.DeleteFunction(name);
+            Operation<Empty, gcfv::OperationMetadata> response = functionServiceClient.DeleteFunction(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcfv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = functionServiceClient.PollOnceDeleteFunction(operationName);
+            Operation<Empty, gcfv::OperationMetadata> retrievedResponse = functionServiceClient.PollOnceDeleteFunction(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -877,21 +881,21 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFunctionAsync(FunctionName, CallSettings)
             // Additional: DeleteFunctionAsync(FunctionName, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            FunctionName name = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]");
+            gcfv::FunctionName name = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await functionServiceClient.DeleteFunctionAsync(name);
+            Operation<Empty, gcfv::OperationMetadata> response = await functionServiceClient.DeleteFunctionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcfv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceDeleteFunctionAsync(operationName);
+            Operation<Empty, gcfv::OperationMetadata> retrievedResponse = await functionServiceClient.PollOnceDeleteFunctionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -906,15 +910,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GenerateUploadUrl(GenerateUploadUrlRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            GenerateUploadUrlRequest request = new GenerateUploadUrlRequest
+            gcfv::GenerateUploadUrlRequest request = new gcfv::GenerateUploadUrlRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                KmsKeyNameAsCryptoKeyName = gcfv::CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Environment = gcfv::Environment.Unspecified,
             };
             // Make the request
-            GenerateUploadUrlResponse response = functionServiceClient.GenerateUploadUrl(request);
+            gcfv::GenerateUploadUrlResponse response = functionServiceClient.GenerateUploadUrl(request);
             // End snippet
         }
 
@@ -924,15 +929,16 @@ namespace GoogleCSharpSnippets
             // Snippet: GenerateUploadUrlAsync(GenerateUploadUrlRequest, CallSettings)
             // Additional: GenerateUploadUrlAsync(GenerateUploadUrlRequest, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateUploadUrlRequest request = new GenerateUploadUrlRequest
+            gcfv::GenerateUploadUrlRequest request = new gcfv::GenerateUploadUrlRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                KmsKeyNameAsCryptoKeyName = gcfv::CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Environment = gcfv::Environment.Unspecified,
             };
             // Make the request
-            GenerateUploadUrlResponse response = await functionServiceClient.GenerateUploadUrlAsync(request);
+            gcfv::GenerateUploadUrlResponse response = await functionServiceClient.GenerateUploadUrlAsync(request);
             // End snippet
         }
 
@@ -941,14 +947,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GenerateDownloadUrl(GenerateDownloadUrlRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            GenerateDownloadUrlRequest request = new GenerateDownloadUrlRequest
+            gcfv::GenerateDownloadUrlRequest request = new gcfv::GenerateDownloadUrlRequest
             {
-                FunctionName = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                FunctionName = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
             };
             // Make the request
-            GenerateDownloadUrlResponse response = functionServiceClient.GenerateDownloadUrl(request);
+            gcfv::GenerateDownloadUrlResponse response = functionServiceClient.GenerateDownloadUrl(request);
             // End snippet
         }
 
@@ -958,14 +964,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GenerateDownloadUrlAsync(GenerateDownloadUrlRequest, CallSettings)
             // Additional: GenerateDownloadUrlAsync(GenerateDownloadUrlRequest, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateDownloadUrlRequest request = new GenerateDownloadUrlRequest
+            gcfv::GenerateDownloadUrlRequest request = new gcfv::GenerateDownloadUrlRequest
             {
-                FunctionName = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                FunctionName = gcfv::FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
             };
             // Make the request
-            GenerateDownloadUrlResponse response = await functionServiceClient.GenerateDownloadUrlAsync(request);
+            gcfv::GenerateDownloadUrlResponse response = await functionServiceClient.GenerateDownloadUrlAsync(request);
             // End snippet
         }
 
@@ -974,15 +980,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListRuntimes(ListRuntimesRequest, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
-            ListRuntimesRequest request = new ListRuntimesRequest
+            gcfv::ListRuntimesRequest request = new gcfv::ListRuntimesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
-            ListRuntimesResponse response = functionServiceClient.ListRuntimes(request);
+            gcfv::ListRuntimesResponse response = functionServiceClient.ListRuntimes(request);
             // End snippet
         }
 
@@ -992,15 +998,15 @@ namespace GoogleCSharpSnippets
             // Snippet: ListRuntimesAsync(ListRuntimesRequest, CallSettings)
             // Additional: ListRuntimesAsync(ListRuntimesRequest, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListRuntimesRequest request = new ListRuntimesRequest
+            gcfv::ListRuntimesRequest request = new gcfv::ListRuntimesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
-            ListRuntimesResponse response = await functionServiceClient.ListRuntimesAsync(request);
+            gcfv::ListRuntimesResponse response = await functionServiceClient.ListRuntimesAsync(request);
             // End snippet
         }
 
@@ -1009,11 +1015,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListRuntimes(string, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            ListRuntimesResponse response = functionServiceClient.ListRuntimes(parent);
+            gcfv::ListRuntimesResponse response = functionServiceClient.ListRuntimes(parent);
             // End snippet
         }
 
@@ -1023,11 +1029,11 @@ namespace GoogleCSharpSnippets
             // Snippet: ListRuntimesAsync(string, CallSettings)
             // Additional: ListRuntimesAsync(string, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            ListRuntimesResponse response = await functionServiceClient.ListRuntimesAsync(parent);
+            gcfv::ListRuntimesResponse response = await functionServiceClient.ListRuntimesAsync(parent);
             // End snippet
         }
 
@@ -1036,11 +1042,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListRuntimes(LocationName, CallSettings)
             // Create client
-            FunctionServiceClient functionServiceClient = FunctionServiceClient.Create();
+            gcfv::FunctionServiceClient functionServiceClient = gcfv::FunctionServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            ListRuntimesResponse response = functionServiceClient.ListRuntimes(parent);
+            gcfv::ListRuntimesResponse response = functionServiceClient.ListRuntimes(parent);
             // End snippet
         }
 
@@ -1050,11 +1056,11 @@ namespace GoogleCSharpSnippets
             // Snippet: ListRuntimesAsync(LocationName, CallSettings)
             // Additional: ListRuntimesAsync(LocationName, CancellationToken)
             // Create client
-            FunctionServiceClient functionServiceClient = await FunctionServiceClient.CreateAsync();
+            gcfv::FunctionServiceClient functionServiceClient = await gcfv::FunctionServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            ListRuntimesResponse response = await functionServiceClient.ListRuntimesAsync(parent);
+            gcfv::ListRuntimesResponse response = await functionServiceClient.ListRuntimesAsync(parent);
             // End snippet
         }
     }
