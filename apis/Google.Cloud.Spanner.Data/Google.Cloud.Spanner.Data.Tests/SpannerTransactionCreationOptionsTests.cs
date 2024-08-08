@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using System;
 using Xunit;
+using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 
 namespace Google.Cloud.Spanner.Data.Tests;
 public class SpannerTransactionCreationOptionsTests
@@ -56,7 +58,8 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(readWrite.IsDetached);
         Assert.False(readWrite.IsSingleUse);
         Assert.False(readWrite.IsPartitionedDml);
-        Assert.Equal(SpannerTransactionCreationOptions.ReadWriteTransactionOptions, readWrite.TransactionOptios);
+        Assert.False(readWrite.ExcludeFromChangeStreams);
+        Assert.Equal(new TransactionOptions { ReadWrite = new ReadWrite() }, readWrite.GetTransactionOptions());
     }
 
     [Fact]
@@ -70,7 +73,8 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(partitionedDml.IsDetached);
         Assert.False(partitionedDml.IsSingleUse);
         Assert.True(partitionedDml.IsPartitionedDml);
-        Assert.Equal(SpannerTransactionCreationOptions.PartitionedDmlTransactionOptions, partitionedDml.TransactionOptios);
+        Assert.False(partitionedDml.ExcludeFromChangeStreams);
+        Assert.Equal(new TransactionOptions { PartitionedDml = new PartitionedDml() }, partitionedDml.GetTransactionOptions());
     }
 
     [Fact]
@@ -84,7 +88,8 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(readOnly.IsDetached);
         Assert.False(readOnly.IsSingleUse);
         Assert.False (readOnly.IsPartitionedDml);
-        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), readOnly.TransactionOptios);
+        Assert.False(readOnly.ExcludeFromChangeStreams);
+        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), readOnly.GetTransactionOptions());
     }
 
     [Fact]
@@ -97,7 +102,8 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.IsDetached);
         Assert.False(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
-        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), options.TransactionOptios);
+        Assert.False(options.ExcludeFromChangeStreams);
+        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), options.GetTransactionOptions());
     }
 
     [Fact]
@@ -111,7 +117,8 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.IsDetached);
         Assert.True(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
-        Assert.Equal(timestampBound.ToTransactionOptions(), options.TransactionOptios);
+        Assert.False(options.ExcludeFromChangeStreams);
+        Assert.Equal(timestampBound.ToTransactionOptions(), options.GetTransactionOptions());
     }
 
     [Fact]
@@ -130,7 +137,8 @@ public class SpannerTransactionCreationOptionsTests
         Assert.True(options.IsDetached);
         Assert.False(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
-        Assert.Null(options.TransactionOptios);
+        Assert.False(options.ExcludeFromChangeStreams);
+        Assert.Null(options.GetTransactionOptions());
     }
 
     [Fact]
@@ -192,5 +200,23 @@ public class SpannerTransactionCreationOptionsTests
 
         Assert.False(options.IsSingleUse);
         Assert.Throws<ArgumentException>(() => options.WithIsSingleUse(true));
+    }
+
+    [Fact]
+    public void ExcludeFromChangeStream_ReadOnly() =>
+        Assert.Throws<ArgumentException>(() => SpannerTransactionCreationOptions.ReadOnly.WithExcludeFromChangeStreams(true));
+
+    [Fact]
+    public void ExcludeFromChangeStream_ReadWrite()
+    {
+        var options = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+        Assert.True(options.ExcludeFromChangeStreams);
+    }
+
+    [Fact]
+    public void ExcludeFromChangeStream_PartitionedDml()
+    {
+        var options = SpannerTransactionCreationOptions.PartitionedDml.WithExcludeFromChangeStreams(true);
+        Assert.True(options.ExcludeFromChangeStreams);
     }
 }
