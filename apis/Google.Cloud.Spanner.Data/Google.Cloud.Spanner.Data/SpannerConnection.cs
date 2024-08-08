@@ -578,7 +578,7 @@ namespace Google.Cloud.Spanner.Data
                     PooledSession session;
                     if (transactionCreationOptions.TransactionId is null)
                     {
-                        session = await AcquireSessionAsync(transactionCreationOptions.TransactionOptios, transactionCreationOptions.IsSingleUse, transactionCreationOptions.IsDetached, cancellationToken).ConfigureAwait(false);
+                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken).ConfigureAwait(false);
                     }
                     else
                     {
@@ -752,8 +752,8 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(work, nameof(work));
             RunWithRetriableTransaction(transaction =>
-                {
-                    work(transaction);
+            {
+                work(transaction);
                 return (true);
             }, transactionCreationOptions);
         }
@@ -950,7 +950,7 @@ namespace Google.Cloud.Spanner.Data
             await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
-        internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, bool singleUse, bool detached, CancellationToken cancellationToken)
+        internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken)
         {
             SessionPool pool;
             DatabaseName databaseName;
@@ -965,9 +965,9 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException("Unable to acquire session on connection with no database name");
             }
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
-            return detached ?
-                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, options, singleUse, cancellationToken) :
-                pool.AcquireSessionAsync(sessionPoolSegmentKey, options, singleUse, cancellationToken);
+            return creationOptions?.IsDetached == true ?
+                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, creationOptions?.GetTransactionOptions(), creationOptions?.IsSingleUse == true, cancellationToken) :
+                pool.AcquireSessionAsync(sessionPoolSegmentKey, creationOptions?.GetTransactionOptions(), creationOptions?.IsSingleUse == true, cancellationToken);
         }
 
         /// <summary>

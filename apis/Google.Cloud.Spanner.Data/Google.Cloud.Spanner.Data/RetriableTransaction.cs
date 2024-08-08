@@ -40,11 +40,11 @@ namespace Google.Cloud.Spanner.Data
             else
             {
                 GaxPreconditions.CheckArgument(
-                creationOptions.TransactionMode == TransactionMode.ReadWrite
-                && !creationOptions.IsDetached
-                && !creationOptions.IsPartitionedDml,
-                nameof(creationOptions),
-                "Retriable transactions must be read-write and may not be detached or partioned DML transactions.");
+                    creationOptions.TransactionMode == TransactionMode.ReadWrite
+                        && !creationOptions.IsDetached
+                        && !creationOptions.IsPartitionedDml,
+                    nameof(creationOptions),
+                    "Retriable transactions must be read-write and may not be detached or partioned DML transactions.");
                 _creationOptions = creationOptions;
             }
             _retryOptions = retryOptions ?? RetriableTransactionOptions.CreateDefault();
@@ -74,7 +74,7 @@ namespace Google.Cloud.Spanner.Data
 
                         try
                         {
-                            session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions.TransactionOptios, _creationOptions.IsSingleUse, _creationOptions.IsDetached, cancellationToken)).ConfigureAwait(false);
+                            session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions, cancellationToken)).ConfigureAwait(false);
                             transaction = new SpannerTransaction(_connection, session, _creationOptions, isRetriable: true);
 
                             TResult result = await asyncWork(transaction).ConfigureAwait(false);

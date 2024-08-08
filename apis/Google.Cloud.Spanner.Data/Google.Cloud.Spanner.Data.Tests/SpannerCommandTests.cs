@@ -1064,6 +1064,137 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public async Task TransactionOptions_Propagates_ExplicitTransaction()
+        {
+            SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+            TransactionSelector expectedTransactionSelector = new TransactionSelector
+            {
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
+            };
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(transactionCreationOptions, cancellationToken: default);
+
+            var command = connection.CreateDmlCommand("DELETE FROM Foo");
+            command.Transaction = transaction;
+            await command.ExecuteNonQueryAsync();
+
+            transaction.Commit();
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task TransactionOptions_Propagates_RunWithRetryableTransaction()
+        {
+            SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+            TransactionSelector expectedTransactionSelector = new TransactionSelector
+            {
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
+            };
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            await connection.RunWithRetriableTransactionAsync(async tx =>
+            {
+                var command = connection.CreateDmlCommand("DELETE FROM Foo");
+                command.Transaction = tx;
+                await command.ExecuteNonQueryAsync();
+            }, transactionCreationOptions, cancellationToken: default);
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task TransactionOptions_Propagates_ImplicitTransaction()
+        {
+            SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+            TransactionSelector expectedTransactionSelector = new TransactionSelector
+            {
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
+            };
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateDmlCommand("DELETE FROM Foo");
+            command.EphemeralTransactionCreationOptions = transactionCreationOptions;
+            await command.ExecuteNonQueryAsync();
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task TransactionOptions_Propagates_AmbientTransaction()
+        {
+            SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
+            TransactionSelector expectedTransactionSelector = new TransactionSelector
+            {
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
+            };
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                await connection.OpenAsync(transactionCreationOptions, options: null, cancellationToken: default);
+                var command = connection.CreateDmlCommand("DELETE FROM Foo");
+                await command.ExecuteNonQueryAsync();
+
+                scope.Complete();
+            }
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
         public void ClientCreatedWithEmulatorDetection()
         {
             SpannerClient spannerClient = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
