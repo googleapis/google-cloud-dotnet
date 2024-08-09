@@ -30,7 +30,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Y2UucHJvdG8aMGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2VuY3J5cHRp",
             "b25fc3BlYy5wcm90bxozZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2Vy",
             "dmljZV9uZXR3b3JraW5nLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvItEKChJGZWF0dXJlT25saW5lU3RvcmUSSwoIYmlndGFibGUY",
+            "YW1wLnByb3RvIokLChJGZWF0dXJlT25saW5lU3RvcmUSSwoIYmlndGFibGUY",
             "CCABKAsyNy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlT25s",
             "aW5lU3RvcmUuQmlndGFibGVIABJNCglvcHRpbWl6ZWQYDCABKAsyOC5nb29n",
             "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlT25saW5lU3RvcmUuT3B0",
@@ -45,31 +45,32 @@ namespace Google.Cloud.AIPlatform.V1 {
             "LmFpcGxhdGZvcm0udjEuRmVhdHVyZU9ubGluZVN0b3JlLkRlZGljYXRlZFNl",
             "cnZpbmdFbmRwb2ludEID4EEBEkgKD2VuY3J5cHRpb25fc3BlYxgNIAEoCzIq",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5cHRpb25TcGVjQgPg",
-            "QQEa2AEKCEJpZ3RhYmxlEl4KDGF1dG9fc2NhbGluZxgBIAEoCzJDLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVPbmxpbmVTdG9yZS5CaWd0",
-            "YWJsZS5BdXRvU2NhbGluZ0ID4EECGmwKC0F1dG9TY2FsaW5nEhsKDm1pbl9u",
-            "b2RlX2NvdW50GAEgASgFQgPgQQISGwoObWF4X25vZGVfY291bnQYAiABKAVC",
-            "A+BBAhIjChZjcHVfdXRpbGl6YXRpb25fdGFyZ2V0GAMgASgFQgPgQQEaCwoJ",
-            "T3B0aW1pemVkGssBChhEZWRpY2F0ZWRTZXJ2aW5nRW5kcG9pbnQSKAobcHVi",
-            "bGljX2VuZHBvaW50X2RvbWFpbl9uYW1lGAIgASgJQgPgQQMSZAoecHJpdmF0",
-            "ZV9zZXJ2aWNlX2Nvbm5lY3RfY29uZmlnGAMgASgLMjcuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuUHJpdmF0ZVNlcnZpY2VDb25uZWN0Q29uZmlnQgPg",
-            "QQESHwoSc2VydmljZV9hdHRhY2htZW50GAQgASgJQgPgQQMaLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI4CgVTdGF0",
-            "ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBlNUQUJMRRABEgwKCFVQREFU",
-            "SU5HEAI6hgHqQYIBCixhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1",
-            "cmVPbmxpbmVTdG9yZRJScHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2ZlYXR1cmVPbmxpbmVTdG9yZXMve2ZlYXR1cmVfb25saW5l",
-            "X3N0b3JlfUIOCgxzdG9yYWdlX3R5cGVC1QEKHmNvbS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MUIXRmVhdHVyZU9ubGluZVN0b3JlUHJvdG9QAVo+Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1w",
-            "YjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
-            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
-            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "QQESGgoNc2F0aXNmaWVzX3B6cxgPIAEoCEID4EEDEhoKDXNhdGlzZmllc19w",
+            "emkYECABKAhCA+BBAxrYAQoIQmlndGFibGUSXgoMYXV0b19zY2FsaW5nGAEg",
+            "ASgLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZU9ubGlu",
+            "ZVN0b3JlLkJpZ3RhYmxlLkF1dG9TY2FsaW5nQgPgQQIabAoLQXV0b1NjYWxp",
+            "bmcSGwoObWluX25vZGVfY291bnQYASABKAVCA+BBAhIbCg5tYXhfbm9kZV9j",
+            "b3VudBgCIAEoBUID4EECEiMKFmNwdV91dGlsaXphdGlvbl90YXJnZXQYAyAB",
+            "KAVCA+BBARoLCglPcHRpbWl6ZWQaywEKGERlZGljYXRlZFNlcnZpbmdFbmRw",
+            "b2ludBIoChtwdWJsaWNfZW5kcG9pbnRfZG9tYWluX25hbWUYAiABKAlCA+BB",
+            "AxJkCh5wcml2YXRlX3NlcnZpY2VfY29ubmVjdF9jb25maWcYAyABKAsyNy5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qcml2YXRlU2VydmljZUNvbm5l",
+            "Y3RDb25maWdCA+BBARIfChJzZXJ2aWNlX2F0dGFjaG1lbnQYBCABKAlCA+BB",
+            "AxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBIjgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGU1RBQkxF",
+            "EAESDAoIVVBEQVRJTkcQAjqGAepBggEKLGFpcGxhdGZvcm0uZ29vZ2xlYXBp",
+            "cy5jb20vRmVhdHVyZU9ubGluZVN0b3JlElJwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97ZmVh",
+            "dHVyZV9vbmxpbmVfc3RvcmV9Qg4KDHN0b3JhZ2VfdHlwZULVAQoeY29tLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhdGZWF0dXJlT25saW5lU3RvcmVQ",
+            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEv",
+            "YWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBs",
+            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Parser, new[]{ "Bigtable", "Optimized", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "State", "DedicatedServingEndpoint", "EncryptionSpec" }, new[]{ "StorageType" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Parser, new[]{ "AutoScaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Parser, new[]{ "Bigtable", "Optimized", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "State", "DedicatedServingEndpoint", "EncryptionSpec", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "StorageType" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Parser, new[]{ "AutoScaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint.Parser, new[]{ "PublicEndpointDomainName", "PrivateServiceConnectConfig", "ServiceAttachment" }, null, null, null, null),
             null, })
@@ -127,6 +128,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       state_ = other.state_;
       dedicatedServingEndpoint_ = other.dedicatedServingEndpoint_ != null ? other.dedicatedServingEndpoint_.Clone() : null;
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       switch (other.StorageTypeCase) {
         case StorageTypeOneofCase.Bigtable:
           Bigtable = other.Bigtable.Clone();
@@ -314,6 +317,36 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 15;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 16;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     private object storageType_;
     /// <summary>Enum of possible cases for the "storage_type" oneof.</summary>
     public enum StorageTypeOneofCase {
@@ -360,6 +393,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (State != other.State) return false;
       if (!object.Equals(DedicatedServingEndpoint, other.DedicatedServingEndpoint)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (StorageTypeCase != other.StorageTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -378,6 +413,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (State != global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (dedicatedServingEndpoint_ != null) hash ^= DedicatedServingEndpoint.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       hash ^= (int) storageTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -434,6 +471,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(EncryptionSpec);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -481,6 +526,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(EncryptionSpec);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -518,6 +571,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (encryptionSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -564,6 +623,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
         }
         EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       switch (other.StorageTypeCase) {
         case StorageTypeOneofCase.Bigtable:
@@ -657,6 +722,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 120: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 128: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -732,6 +805,14 @@ namespace Google.Cloud.AIPlatform.V1 {
               EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
             }
             input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 120: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 128: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

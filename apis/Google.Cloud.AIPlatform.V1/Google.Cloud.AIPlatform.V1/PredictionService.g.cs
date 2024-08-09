@@ -5785,9 +5785,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelFieldNumber = 5;
     private string model_ = "";
     /// <summary>
-    /// Required. The name of the publisher model requested to serve the
-    /// prediction. Format:
+    /// Required. The fully qualified name of the publisher model or tuned model
+    /// endpoint to use.
+    ///
+    /// Publisher model format:
     /// `projects/{project}/locations/{location}/publishers/*/models/*`
+    ///
+    /// Tuned model endpoint format:
+    /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

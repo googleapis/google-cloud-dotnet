@@ -27,7 +27,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Ci1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJlX3ZpZXcucHJv",
             "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuQOCgtGZWF0dXJl",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpwPCgtGZWF0dXJl",
             "VmlldxJXChBiaWdfcXVlcnlfc291cmNlGAYgASgLMjYuZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuQmlnUXVlcnlTb3VyY2VCA+BB",
             "AUgAEmUKF2ZlYXR1cmVfcmVnaXN0cnlfc291cmNlGAkgASgLMj0uZ29vZ2xl",
@@ -40,45 +40,46 @@ namespace Google.Cloud.AIPlatform.V1 {
             "c0VudHJ5QgPgQQESRwoLc3luY19jb25maWcYByABKAsyMi5nb29nbGUuY2xv",
             "dWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlldy5TeW5jQ29uZmlnEk4KDGlu",
             "ZGV4X2NvbmZpZxgPIAEoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LkZlYXR1cmVWaWV3LkluZGV4Q29uZmlnQgPgQQEaQgoOQmlnUXVlcnlTb3Vy",
-            "Y2USEAoDdXJpGAEgASgJQgPgQQISHgoRZW50aXR5X2lkX2NvbHVtbnMYAiAD",
-            "KAlCA+BBAhoaCgpTeW5jQ29uZmlnEgwKBGNyb24YASABKAka5wUKC0luZGV4",
-            "Q29uZmlnEl8KDnRyZWVfYWhfY29uZmlnGAYgASgLMkAuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuSW5kZXhDb25maWcuVHJlZUFI",
-            "Q29uZmlnQgPgQQFIABJnChJicnV0ZV9mb3JjZV9jb25maWcYByABKAsyRC5n",
+            "LkZlYXR1cmVWaWV3LkluZGV4Q29uZmlnQgPgQQESGgoNc2F0aXNmaWVzX3B6",
+            "cxgTIAEoCEID4EEDEhoKDXNhdGlzZmllc19wemkYFCABKAhCA+BBAxpCCg5C",
+            "aWdRdWVyeVNvdXJjZRIQCgN1cmkYASABKAlCA+BBAhIeChFlbnRpdHlfaWRf",
+            "Y29sdW1ucxgCIAMoCUID4EECGhoKClN5bmNDb25maWcSDAoEY3JvbhgBIAEo",
+            "CRrnBQoLSW5kZXhDb25maWcSXwoOdHJlZV9haF9jb25maWcYBiABKAsyQC5n",
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlldy5JbmRleENv",
-            "bmZpZy5CcnV0ZUZvcmNlQ29uZmlnQgPgQQFIABIdChBlbWJlZGRpbmdfY29s",
-            "dW1uGAEgASgJQgPgQQESGwoOZmlsdGVyX2NvbHVtbnMYAiADKAlCA+BBARIc",
-            "Cg9jcm93ZGluZ19jb2x1bW4YAyABKAlCA+BBARIlChNlbWJlZGRpbmdfZGlt",
-            "ZW5zaW9uGAQgASgFQgPgQQFIAYgBARJrChVkaXN0YW5jZV9tZWFzdXJlX3R5",
-            "cGUYBSABKA4yRy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJl",
-            "Vmlldy5JbmRleENvbmZpZy5EaXN0YW5jZU1lYXN1cmVUeXBlQgPgQQEaEgoQ",
-            "QnJ1dGVGb3JjZUNvbmZpZxpZCgxUcmVlQUhDb25maWcSKwoZbGVhZl9ub2Rl",
-            "X2VtYmVkZGluZ19jb3VudBgBIAEoA0ID4EEBSACIAQFCHAoaX2xlYWZfbm9k",
-            "ZV9lbWJlZGRpbmdfY291bnQihAEKE0Rpc3RhbmNlTWVhc3VyZVR5cGUSJQoh",
-            "RElTVEFOQ0VfTUVBU1VSRV9UWVBFX1VOU1BFQ0lGSUVEEAASFwoTU1FVQVJF",
-            "RF9MMl9ESVNUQU5DRRABEhMKD0NPU0lORV9ESVNUQU5DRRACEhgKFERPVF9Q",
-            "Uk9EVUNUX0RJU1RBTkNFEANCEgoQYWxnb3JpdGhtX2NvbmZpZ0IWChRfZW1i",
-            "ZWRkaW5nX2RpbWVuc2lvbhr+AQoVRmVhdHVyZVJlZ2lzdHJ5U291cmNlEmcK",
-            "DmZlYXR1cmVfZ3JvdXBzGAEgAygLMkouZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuRmVhdHVyZVZpZXcuRmVhdHVyZVJlZ2lzdHJ5U291cmNlLkZlYXR1",
-            "cmVHcm91cEID4EECEiAKDnByb2plY3RfbnVtYmVyGAIgASgDQgPgQQFIAIgB",
-            "ARpHCgxGZWF0dXJlR3JvdXASHQoQZmVhdHVyZV9ncm91cF9pZBgBIAEoCUID",
-            "4EECEhgKC2ZlYXR1cmVfaWRzGAIgAygJQgPgQQJCEQoPX3Byb2plY3RfbnVt",
-            "YmVyGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAE6mwHqQZcBCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1",
-            "cmVWaWV3Em5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97ZmVhdHVyZV9vbmxpbmVfc3RvcmV9",
-            "L2ZlYXR1cmVWaWV3cy97ZmVhdHVyZV92aWV3fUIICgZzb3VyY2VCzgEKHmNv",
-            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIQRmVhdHVyZVZpZXdQcm90",
-            "b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlw",
-            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRm",
-            "b3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6",
-            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "bmZpZy5UcmVlQUhDb25maWdCA+BBAUgAEmcKEmJydXRlX2ZvcmNlX2NvbmZp",
+            "ZxgHIAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVW",
+            "aWV3LkluZGV4Q29uZmlnLkJydXRlRm9yY2VDb25maWdCA+BBAUgAEh0KEGVt",
+            "YmVkZGluZ19jb2x1bW4YASABKAlCA+BBARIbCg5maWx0ZXJfY29sdW1ucxgC",
+            "IAMoCUID4EEBEhwKD2Nyb3dkaW5nX2NvbHVtbhgDIAEoCUID4EEBEiUKE2Vt",
+            "YmVkZGluZ19kaW1lbnNpb24YBCABKAVCA+BBAUgBiAEBEmsKFWRpc3RhbmNl",
+            "X21lYXN1cmVfdHlwZRgFIAEoDjJHLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLkZlYXR1cmVWaWV3LkluZGV4Q29uZmlnLkRpc3RhbmNlTWVhc3VyZVR5",
+            "cGVCA+BBARoSChBCcnV0ZUZvcmNlQ29uZmlnGlkKDFRyZWVBSENvbmZpZxIr",
+            "ChlsZWFmX25vZGVfZW1iZWRkaW5nX2NvdW50GAEgASgDQgPgQQFIAIgBAUIc",
+            "ChpfbGVhZl9ub2RlX2VtYmVkZGluZ19jb3VudCKEAQoTRGlzdGFuY2VNZWFz",
+            "dXJlVHlwZRIlCiFESVNUQU5DRV9NRUFTVVJFX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIXChNTUVVBUkVEX0wyX0RJU1RBTkNFEAESEwoPQ09TSU5FX0RJU1RBTkNF",
+            "EAISGAoURE9UX1BST0RVQ1RfRElTVEFOQ0UQA0ISChBhbGdvcml0aG1fY29u",
+            "ZmlnQhYKFF9lbWJlZGRpbmdfZGltZW5zaW9uGv4BChVGZWF0dXJlUmVnaXN0",
+            "cnlTb3VyY2USZwoOZmVhdHVyZV9ncm91cHMYASADKAsySi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlldy5GZWF0dXJlUmVnaXN0cnlT",
+            "b3VyY2UuRmVhdHVyZUdyb3VwQgPgQQISIAoOcHJvamVjdF9udW1iZXIYAiAB",
+            "KANCA+BBAUgAiAEBGkcKDEZlYXR1cmVHcm91cBIdChBmZWF0dXJlX2dyb3Vw",
+            "X2lkGAEgASgJQgPgQQISGAoLZmVhdHVyZV9pZHMYAiADKAlCA+BBAkIRCg9f",
+            "cHJvamVjdF9udW1iZXIaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ATqbAepBlwEKJWFpcGxhdGZvcm0uZ29vZ2xlYXBp",
+            "cy5jb20vRmVhdHVyZVZpZXcSbnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9mZWF0dXJlT25saW5lU3RvcmVzL3tmZWF0dXJlX29u",
+            "bGluZV9zdG9yZX0vZmVhdHVyZVZpZXdzL3tmZWF0dXJlX3ZpZXd9QggKBnNv",
+            "dXJjZULOAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhBGZWF0",
+            "dXJlVmlld1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9y",
+            "bS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNs",
+            "b3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
+            "MeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig", "IndexConfig" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig", "IndexConfig", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig.Parser, new[]{ "Cron" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Parser, new[]{ "TreeAhConfig", "BruteForceConfig", "EmbeddingColumn", "FilterColumns", "CrowdingColumn", "EmbeddingDimension", "DistanceMeasureType" }, new[]{ "AlgorithmConfig", "EmbeddingDimension" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig.Parser, new[]{ "LeafNodeEmbeddingCount" }, new[]{ "LeafNodeEmbeddingCount" }, null, null, null)}),
@@ -136,6 +137,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       labels_ = other.labels_.Clone();
       syncConfig_ = other.syncConfig_ != null ? other.syncConfig_.Clone() : null;
       indexConfig_ = other.indexConfig_ != null ? other.indexConfig_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       switch (other.SourceCase) {
         case SourceOneofCase.BigQuerySource:
           BigQuerySource = other.BigQuerySource.Clone();
@@ -307,6 +310,36 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 19;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 20;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     private object source_;
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
@@ -352,6 +385,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(SyncConfig, other.SyncConfig)) return false;
       if (!object.Equals(IndexConfig, other.IndexConfig)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -369,6 +404,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= Labels.GetHashCode();
       if (syncConfig_ != null) hash ^= SyncConfig.GetHashCode();
       if (indexConfig_ != null) hash ^= IndexConfig.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -421,6 +458,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(IndexConfig);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -464,6 +509,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(IndexConfig);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -498,6 +551,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (indexConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IndexConfig);
+      }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -541,6 +600,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           IndexConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig();
         }
         IndexConfig.MergeFrom(other.IndexConfig);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       switch (other.SourceCase) {
         case SourceOneofCase.BigQuerySource:
@@ -630,6 +695,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(IndexConfig);
             break;
           }
+          case 152: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 160: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -701,6 +774,14 @@ namespace Google.Cloud.AIPlatform.V1 {
               IndexConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig();
             }
             input.ReadMessage(IndexConfig);
+            break;
+          }
+          case 152: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 160: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

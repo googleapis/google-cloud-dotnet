@@ -2259,7 +2259,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Default model behavior, model decides to predict either a function call
-        /// or a natural language repspose.
+        /// or a natural language response.
         /// </summary>
         [pbr::OriginalName("AUTO")] Auto = 1,
         /// <summary>

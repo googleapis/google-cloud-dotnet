@@ -29,27 +29,29 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2ds",
             "ZS9ycGMvc3RhdHVzLnByb3RvGhpnb29nbGUvdHlwZS9pbnRlcnZhbC5wcm90",
-            "byKSBAoPRmVhdHVyZVZpZXdTeW5jEhEKBG5hbWUYASABKAlCA+BBCBI0Cgtj",
+            "byLKBAoPRmVhdHVyZVZpZXdTeW5jEhEKBG5hbWUYASABKAlCA+BBCBI0Cgtj",
             "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
             "A+BBAxIsCghydW5fdGltZRgFIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFs",
             "QgPgQQMSLQoMZmluYWxfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
             "dXNCA+BBAxJSCgxzeW5jX3N1bW1hcnkYBiABKAsyNy5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlld1N5bmMuU3luY1N1bW1hcnlCA+BB",
-            "Axo/CgtTeW5jU3VtbWFyeRIXCgpyb3dfc3luY2VkGAEgASgDQgPgQQMSFwoK",
-            "dG90YWxfc2xvdBgCIAEoA0ID4EEDOsMB6kG/AQopYWlwbGF0Zm9ybS5nb29n",
-            "bGVhcGlzLmNvbS9GZWF0dXJlVmlld1N5bmMSkQFwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97",
-            "ZmVhdHVyZV9vbmxpbmVfc3RvcmV9L2ZlYXR1cmVWaWV3cy97ZmVhdHVyZV92",
-            "aWV3fS9mZWF0dXJlVmlld1N5bmNzL2ZlYXR1cmVfdmlld19zeW5jQtIBCh5j",
-            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFEZlYXR1cmVWaWV3U3lu",
-            "Y1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
-            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJ",
-            "UGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdv",
-            "b2dsZTo6Q2xvdWQ6OkFpcGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "AxIaCg1zYXRpc2ZpZXNfcHpzGAcgASgIQgPgQQMSGgoNc2F0aXNmaWVzX3B6",
+            "aRgIIAEoCEID4EEDGj8KC1N5bmNTdW1tYXJ5EhcKCnJvd19zeW5jZWQYASAB",
+            "KANCA+BBAxIXCgp0b3RhbF9zbG90GAIgASgDQgPgQQM6wwHqQb8BCilhaXBs",
+            "YXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1cmVWaWV3U3luYxKRAXByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlT25s",
+            "aW5lU3RvcmVzL3tmZWF0dXJlX29ubGluZV9zdG9yZX0vZmVhdHVyZVZpZXdz",
+            "L3tmZWF0dXJlX3ZpZXd9L2ZlYXR1cmVWaWV3U3luY3MvZmVhdHVyZV92aWV3",
+            "X3N5bmNC0gEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIURmVh",
+            "dHVyZVZpZXdTeW5jUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
+            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
+            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QWlwbGF0Zm9ybTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Parser, new[]{ "Name", "CreateTime", "RunTime", "FinalStatus", "SyncSummary" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary.Parser, new[]{ "RowSynced", "TotalSlot" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Parser, new[]{ "Name", "CreateTime", "RunTime", "FinalStatus", "SyncSummary", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary.Parser, new[]{ "RowSynced", "TotalSlot" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -100,6 +102,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       runTime_ = other.runTime_ != null ? other.runTime_.Clone() : null;
       finalStatus_ = other.finalStatus_ != null ? other.finalStatus_.Clone() : null;
       syncSummary_ = other.syncSummary_ != null ? other.syncSummary_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -187,6 +191,36 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 7;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 8;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -207,6 +241,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(RunTime, other.RunTime)) return false;
       if (!object.Equals(FinalStatus, other.FinalStatus)) return false;
       if (!object.Equals(SyncSummary, other.SyncSummary)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -219,6 +255,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (runTime_ != null) hash ^= RunTime.GetHashCode();
       if (finalStatus_ != null) hash ^= FinalStatus.GetHashCode();
       if (syncSummary_ != null) hash ^= SyncSummary.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -257,6 +295,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(SyncSummary);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -287,6 +333,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(SyncSummary);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -311,6 +365,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (syncSummary_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SyncSummary);
+      }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -350,6 +410,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           SyncSummary = new global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary();
         }
         SyncSummary.MergeFrom(other.SyncSummary);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -398,6 +464,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(SyncSummary);
             break;
           }
+          case 56: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 64: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -443,6 +517,14 @@ namespace Google.Cloud.AIPlatform.V1 {
               SyncSummary = new global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary();
             }
             input.ReadMessage(SyncSummary);
+            break;
+          }
+          case 56: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 64: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

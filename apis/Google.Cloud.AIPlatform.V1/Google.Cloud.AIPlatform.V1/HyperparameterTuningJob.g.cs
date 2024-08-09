@@ -32,7 +32,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cnlwdGlvbl9zcGVjLnByb3RvGipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92",
             "MS9qb2Jfc3RhdGUucHJvdG8aJmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3Yx",
             "L3N0dWR5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghdnb29nbGUvcnBjL3N0YXR1cy5wcm90byL7BwoXSHlwZXJwYXJhbWV0ZXJU",
+            "Ghdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKzCAoXSHlwZXJwYXJhbWV0ZXJU",
             "dW5pbmdKb2ISEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgC",
             "IAEoCUID4EECEj4KCnN0dWR5X3NwZWMYBCABKAsyJS5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MS5TdHVkeVNwZWNCA+BBAhIcCg9tYXhfdHJpYWxfY291",
@@ -50,21 +50,22 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Lmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMSTwoGbGFiZWxzGBAgAygLMj8uZ29v",
             "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSHlwZXJwYXJhbWV0ZXJUdW5pbmdK",
             "b2IuTGFiZWxzRW50cnkSQwoPZW5jcnlwdGlvbl9zcGVjGBEgASgLMiouZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMaLQoLTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqVAepB",
-            "kQEKMWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vSHlwZXJwYXJhbWV0ZXJU",
-            "dW5pbmdKb2ISXHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9oeXBlcnBhcmFtZXRlclR1bmluZ0pvYnMve2h5cGVycGFyYW1ldGVy",
-            "X3R1bmluZ19qb2J9QtoBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFCHEh5cGVycGFyYW1ldGVyVHVuaW5nSm9iUHJvdG9QAVo+Y2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBs",
-            "YXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2ds",
-            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
-            "Zm9ybTo6VjFiBnByb3RvMw=="));
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMSGgoNc2F0",
+            "aXNmaWVzX3B6cxgTIAEoCEID4EEDEhoKDXNhdGlzZmllc19wemkYFCABKAhC",
+            "A+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBOpUB6kGRAQoxYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9IeXBl",
+            "cnBhcmFtZXRlclR1bmluZ0pvYhJccHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2h5cGVycGFyYW1ldGVyVHVuaW5nSm9icy97aHlw",
+            "ZXJwYXJhbWV0ZXJfdHVuaW5nX2pvYn1C2gEKHmNvbS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MUIcSHlwZXJwYXJhbWV0ZXJUdW5pbmdKb2JQcm90b1AB",
+            "Wj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0",
+            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
+            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
+            "b3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.CustomJobReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.StudyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.HyperparameterTuningJob), global::Google.Cloud.AIPlatform.V1.HyperparameterTuningJob.Parser, new[]{ "Name", "DisplayName", "StudySpec", "MaxTrialCount", "ParallelTrialCount", "MaxFailedTrialCount", "TrialJobSpec", "Trials", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.HyperparameterTuningJob), global::Google.Cloud.AIPlatform.V1.HyperparameterTuningJob.Parser, new[]{ "Name", "DisplayName", "StudySpec", "MaxTrialCount", "ParallelTrialCount", "MaxFailedTrialCount", "TrialJobSpec", "Trials", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -127,6 +128,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       error_ = other.error_ != null ? other.error_.Clone() : null;
       labels_ = other.labels_.Clone();
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -394,6 +397,36 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 19;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 20;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -425,6 +458,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(Error, other.Error)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -448,6 +483,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (error_ != null) hash ^= Error.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -524,6 +561,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(138, 1);
         output.WriteMessage(EncryptionSpec);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -592,6 +637,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(138, 1);
         output.WriteMessage(EncryptionSpec);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -645,6 +698,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += labels_.CalculateSize(_map_labels_codec);
       if (encryptionSpec_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -725,6 +784,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
         }
         EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -829,6 +894,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 152: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 160: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -930,6 +1003,14 @@ namespace Google.Cloud.AIPlatform.V1 {
               EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
             }
             input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 152: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 160: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }
