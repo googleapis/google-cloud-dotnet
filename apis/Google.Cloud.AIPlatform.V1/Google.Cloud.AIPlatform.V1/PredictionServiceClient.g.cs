@@ -1586,9 +1586,14 @@ namespace Google.Cloud.AIPlatform.V1
         /// Generate content with multimodal inputs.
         /// </summary>
         /// <param name="model">
-        /// Required. The name of the publisher model requested to serve the
-        /// prediction. Format:
+        /// Required. The fully qualified name of the publisher model or tuned model
+        /// endpoint to use.
+        /// 
+        /// Publisher model format:
         /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// 
+        /// Tuned model endpoint format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="contents">
         /// Required. The content of the current conversation with the model.
@@ -1613,9 +1618,14 @@ namespace Google.Cloud.AIPlatform.V1
         /// Generate content with multimodal inputs.
         /// </summary>
         /// <param name="model">
-        /// Required. The name of the publisher model requested to serve the
-        /// prediction. Format:
+        /// Required. The fully qualified name of the publisher model or tuned model
+        /// endpoint to use.
+        /// 
+        /// Publisher model format:
         /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// 
+        /// Tuned model endpoint format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="contents">
         /// Required. The content of the current conversation with the model.
@@ -1640,9 +1650,14 @@ namespace Google.Cloud.AIPlatform.V1
         /// Generate content with multimodal inputs.
         /// </summary>
         /// <param name="model">
-        /// Required. The name of the publisher model requested to serve the
-        /// prediction. Format:
+        /// Required. The fully qualified name of the publisher model or tuned model
+        /// endpoint to use.
+        /// 
+        /// Publisher model format:
         /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// 
+        /// Tuned model endpoint format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="contents">
         /// Required. The content of the current conversation with the model.
@@ -1677,9 +1692,14 @@ namespace Google.Cloud.AIPlatform.V1
         /// Generate content with multimodal inputs with streaming support.
         /// </summary>
         /// <param name="model">
-        /// Required. The name of the publisher model requested to serve the
-        /// prediction. Format:
+        /// Required. The fully qualified name of the publisher model or tuned model
+        /// endpoint to use.
+        /// 
+        /// Publisher model format:
         /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// 
+        /// Tuned model endpoint format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="contents">
         /// Required. The content of the current conversation with the model.

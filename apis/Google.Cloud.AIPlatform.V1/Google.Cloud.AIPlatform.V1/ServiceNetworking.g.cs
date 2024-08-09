@@ -27,20 +27,23 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zZXJ2aWNlX25ldHdvcmtp",
             "bmcucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvImUKG1ByaXZhdGVTZXJ2aWNlQ29ubmVjdENvbmZpZxIrCh5lbmFi",
-            "bGVfcHJpdmF0ZV9zZXJ2aWNlX2Nvbm5lY3QYASABKAhCA+BBAhIZChFwcm9q",
-            "ZWN0X2FsbG93bGlzdBgCIAMoCSJTChVQc2NBdXRvbWF0ZWRFbmRwb2ludHMS",
-            "EgoKcHJvamVjdF9pZBgBIAEoCRIPCgduZXR3b3JrGAIgASgJEhUKDW1hdGNo",
-            "X2FkZHJlc3MYAyABKAlC1AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MUIWU2VydmljZU5ldHdvcmtpbmdQcm90b1ABWj5jbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZv",
-            "cm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENs",
-            "b3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3Jt",
-            "OjpWMWIGcHJvdG8z"));
+            "LnByb3RvIoYBChtQcml2YXRlU2VydmljZUNvbm5lY3RDb25maWcSKwoeZW5h",
+            "YmxlX3ByaXZhdGVfc2VydmljZV9jb25uZWN0GAEgASgIQgPgQQISGQoRcHJv",
+            "amVjdF9hbGxvd2xpc3QYAiADKAkSHwoSc2VydmljZV9hdHRhY2htZW50GAUg",
+            "ASgJQgPgQQMiUwoVUHNjQXV0b21hdGVkRW5kcG9pbnRzEhIKCnByb2plY3Rf",
+            "aWQYASABKAkSDwoHbmV0d29yaxgCIAEoCRIVCg1tYXRjaF9hZGRyZXNzGAMg",
+            "ASgJQs0CCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFlNlcnZp",
+            "Y2VOZXR3b3JraW5nUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
+            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
+            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjHqQXYKKGNv",
+            "bXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29ya0F0dGFjaG1lbnQSSnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9yZWdpb25zL3tyZWdpb259L25ldHdvcmtBdHRhY2ht",
+            "ZW50cy97bmV0d29ya2F0dGFjaG1lbnR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig), global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig.Parser, new[]{ "EnablePrivateServiceConnect", "ProjectAllowlist" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig), global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig.Parser, new[]{ "EnablePrivateServiceConnect", "ProjectAllowlist", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints), global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints.Parser, new[]{ "ProjectId", "Network", "MatchAddress" }, null, null, null, null)
           }));
     }
@@ -88,6 +91,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public PrivateServiceConnectConfig(PrivateServiceConnectConfig other) : this() {
       enablePrivateServiceConnect_ = other.enablePrivateServiceConnect_;
       projectAllowlist_ = other.projectAllowlist_.Clone();
+      serviceAttachment_ = other.serviceAttachment_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -127,6 +131,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return projectAllowlist_; }
     }
 
+    /// <summary>Field number for the "service_attachment" field.</summary>
+    public const int ServiceAttachmentFieldNumber = 5;
+    private string serviceAttachment_ = "";
+    /// <summary>
+    /// Output only. The name of the generated service attachment resource.
+    /// This is only populated if the endpoint is deployed with
+    /// PrivateServiceConnect.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAttachment {
+      get { return serviceAttachment_; }
+      set {
+        serviceAttachment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -144,6 +165,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (EnablePrivateServiceConnect != other.EnablePrivateServiceConnect) return false;
       if(!projectAllowlist_.Equals(other.projectAllowlist_)) return false;
+      if (ServiceAttachment != other.ServiceAttachment) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -153,6 +175,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (EnablePrivateServiceConnect != false) hash ^= EnablePrivateServiceConnect.GetHashCode();
       hash ^= projectAllowlist_.GetHashCode();
+      if (ServiceAttachment.Length != 0) hash ^= ServiceAttachment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -176,6 +199,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteBool(EnablePrivateServiceConnect);
       }
       projectAllowlist_.WriteTo(output, _repeated_projectAllowlist_codec);
+      if (ServiceAttachment.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ServiceAttachment);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -191,6 +218,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteBool(EnablePrivateServiceConnect);
       }
       projectAllowlist_.WriteTo(ref output, _repeated_projectAllowlist_codec);
+      if (ServiceAttachment.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ServiceAttachment);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,6 +236,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + 1;
       }
       size += projectAllowlist_.CalculateSize(_repeated_projectAllowlist_codec);
+      if (ServiceAttachment.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAttachment);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -221,6 +255,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         EnablePrivateServiceConnect = other.EnablePrivateServiceConnect;
       }
       projectAllowlist_.Add(other.projectAllowlist_);
+      if (other.ServiceAttachment.Length != 0) {
+        ServiceAttachment = other.ServiceAttachment;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -244,6 +281,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             projectAllowlist_.AddEntriesFrom(input, _repeated_projectAllowlist_codec);
             break;
           }
+          case 42: {
+            ServiceAttachment = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -265,6 +306,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             projectAllowlist_.AddEntriesFrom(ref input, _repeated_projectAllowlist_codec);
+            break;
+          }
+          case 42: {
+            ServiceAttachment = input.ReadString();
             break;
           }
         }

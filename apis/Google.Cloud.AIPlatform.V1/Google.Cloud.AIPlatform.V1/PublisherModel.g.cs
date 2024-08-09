@@ -29,7 +29,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291",
             "cmNlcy5wcm90bxomZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbW9kZWwu",
-            "cHJvdG8iziMKDlB1Ymxpc2hlck1vZGVsEhEKBG5hbWUYASABKAlCA+BBAxIa",
+            "cHJvdG8i6yMKDlB1Ymxpc2hlck1vZGVsEhEKBG5hbWUYASABKAlCA+BBAxIa",
             "Cgp2ZXJzaW9uX2lkGAIgASgJQgbgQQXgQQMSYAoUb3Blbl9zb3VyY2VfY2F0",
             "ZWdvcnkYByABKA4yPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QdWJs",
             "aXNoZXJNb2RlbC5PcGVuU291cmNlQ2F0ZWdvcnlCA+BBAhJXChFzdXBwb3J0",
@@ -45,7 +45,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cmVuY2USDQoDdXJpGAEgASgJSAASFwoNcmVzb3VyY2VfbmFtZRgCIAEoCUgA",
             "EhYKCHVzZV9jYXNlGAMgASgJQgIYAUgAEhkKC2Rlc2NyaXB0aW9uGAQgASgJ",
             "QgIYAUgAQgsKCXJlZmVyZW5jZRo5Cg1Eb2N1bWVudGF0aW9uEhIKBXRpdGxl",
-            "GAEgASgJQgPgQQISFAoHY29udGVudBgCIAEoCUID4EECGtkZCgxDYWxsVG9B",
+            "GAEgASgJQgPgQQISFAoHY29udGVudBgCIAEoCUID4EECGvYZCgxDYWxsVG9B",
             "Y3Rpb24SXwoNdmlld19yZXN0X2FwaRgBIAEoCzJDLmdvb2dsZS5jbG91ZC5h",
             "aXBsYXRmb3JtLnYxLlB1Ymxpc2hlck1vZGVsLkNhbGxUb0FjdGlvbi5WaWV3",
             "UmVzdEFwaUID4EEBEm4KDW9wZW5fbm90ZWJvb2sYAiABKAsyUi5nb29nbGUu",
@@ -97,7 +97,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZXJlbmNlc0ID4EECGpEBChdPcGVuRmluZVR1bmluZ1BpcGVsaW5lcxJ2ChVm",
             "aW5lX3R1bmluZ19waXBlbGluZXMYASADKAsyUi5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MS5QdWJsaXNoZXJNb2RlbC5DYWxsVG9BY3Rpb24uUmVnaW9u",
-            "YWxSZXNvdXJjZVJlZmVyZW5jZXNCA+BBAhrfBgoGRGVwbG95Ek0KE2RlZGlj",
+            "YWxSZXNvdXJjZVJlZmVyZW5jZXNCA+BBAhr8BgoGRGVwbG95Ek0KE2RlZGlj",
             "YXRlZF9yZXNvdXJjZXMYBSABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
             "bS52MS5EZWRpY2F0ZWRSZXNvdXJjZXNIABJNChNhdXRvbWF0aWNfcmVzb3Vy",
             "Y2VzGAYgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQXV0b21h",
@@ -111,31 +111,31 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZGF0YRgLIAEoCzJNLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlB1Ymxp",
             "c2hlck1vZGVsLkNhbGxUb0FjdGlvbi5EZXBsb3kuRGVwbG95TWV0YWRhdGFC",
             "A+BBAUgCiAEBEhIKBXRpdGxlGAggASgJQgPgQQISIAoTcHVibGljX2FydGlm",
-            "YWN0X3VyaRgJIAEoCUID4EEBGq8BCg5EZXBsb3lNZXRhZGF0YRJuCgZsYWJl",
+            "YWN0X3VyaRgJIAEoCUID4EEBGswBCg5EZXBsb3lNZXRhZGF0YRJuCgZsYWJl",
             "bHMYASADKAsyWS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QdWJsaXNo",
             "ZXJNb2RlbC5DYWxsVG9BY3Rpb24uRGVwbG95LkRlcGxveU1ldGFkYXRhLkxh",
-            "YmVsc0VudHJ5QgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4AUIWChRwcmVkaWN0aW9uX3Jlc291cmNlc0ITChFf",
-            "ZGVwbG95X3Rhc2tfbmFtZUISChBfZGVwbG95X21ldGFkYXRhGioKCURlcGxv",
-            "eUdrZRIdChBna2VfeWFtbF9jb25maWdzGAEgAygJQgPgQQFCEQoPX29wZW5f",
-            "bm90ZWJvb2tzQh0KG19vcGVuX2ZpbmVfdHVuaW5nX3BpcGVsaW5lcyLbAQoS",
-            "T3BlblNvdXJjZUNhdGVnb3J5EiQKIE9QRU5fU09VUkNFX0NBVEVHT1JZX1VO",
-            "U1BFQ0lGSUVEEAASDwoLUFJPUFJJRVRBUlkQARIrCidHT09HTEVfT1dORURf",
-            "T1NTX1dJVEhfR09PR0xFX0NIRUNLUE9JTlQQAhIwCixUSElSRF9QQVJUWV9P",
-            "V05FRF9PU1NfV0lUSF9HT09HTEVfQ0hFQ0tQT0lOVBADEhQKEEdPT0dMRV9P",
-            "V05FRF9PU1MQBBIZChVUSElSRF9QQVJUWV9PV05FRF9PU1MQBSJuCgtMYXVu",
-            "Y2hTdGFnZRIcChhMQVVOQ0hfU1RBR0VfVU5TUEVDSUZJRUQQABIQCgxFWFBF",
-            "UklNRU5UQUwQARITCg9QUklWQVRFX1BSRVZJRVcQAhISCg5QVUJMSUNfUFJF",
-            "VklFVxADEgYKAkdBEAQiYwoMVmVyc2lvblN0YXRlEh0KGVZFUlNJT05fU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIYChRWRVJTSU9OX1NUQVRFX1NUQUJMRRABEhoK",
-            "FlZFUlNJT05fU1RBVEVfVU5TVEFCTEUQAjpU6kFRCihhaXBsYXRmb3JtLmdv",
-            "b2dsZWFwaXMuY29tL1B1Ymxpc2hlck1vZGVsEiVwdWJsaXNoZXJzL3twdWJs",
-            "aXNoZXJ9L21vZGVscy97bW9kZWx9QtEBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFCE1B1Ymxpc2hlck1vZGVsUHJvdG9QAVo+Y2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBs",
-            "YXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2ds",
-            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
-            "Zm9ybTo6VjFiBnByb3RvMw=="));
+            "YmVsc0VudHJ5QgPgQQESGwoOc2FtcGxlX3JlcXVlc3QYAiABKAlCA+BBARot",
+            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "QhYKFHByZWRpY3Rpb25fcmVzb3VyY2VzQhMKEV9kZXBsb3lfdGFza19uYW1l",
+            "QhIKEF9kZXBsb3lfbWV0YWRhdGEaKgoJRGVwbG95R2tlEh0KEGdrZV95YW1s",
+            "X2NvbmZpZ3MYASADKAlCA+BBAUIRCg9fb3Blbl9ub3RlYm9va3NCHQobX29w",
+            "ZW5fZmluZV90dW5pbmdfcGlwZWxpbmVzItsBChJPcGVuU291cmNlQ2F0ZWdv",
+            "cnkSJAogT1BFTl9TT1VSQ0VfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIPCgtQ",
+            "Uk9QUklFVEFSWRABEisKJ0dPT0dMRV9PV05FRF9PU1NfV0lUSF9HT09HTEVf",
+            "Q0hFQ0tQT0lOVBACEjAKLFRISVJEX1BBUlRZX09XTkVEX09TU19XSVRIX0dP",
+            "T0dMRV9DSEVDS1BPSU5UEAMSFAoQR09PR0xFX09XTkVEX09TUxAEEhkKFVRI",
+            "SVJEX1BBUlRZX09XTkVEX09TUxAFIm4KC0xhdW5jaFN0YWdlEhwKGExBVU5D",
+            "SF9TVEFHRV9VTlNQRUNJRklFRBAAEhAKDEVYUEVSSU1FTlRBTBABEhMKD1BS",
+            "SVZBVEVfUFJFVklFVxACEhIKDlBVQkxJQ19QUkVWSUVXEAMSBgoCR0EQBCJj",
+            "CgxWZXJzaW9uU3RhdGUSHQoZVkVSU0lPTl9TVEFURV9VTlNQRUNJRklFRBAA",
+            "EhgKFFZFUlNJT05fU1RBVEVfU1RBQkxFEAESGgoWVkVSU0lPTl9TVEFURV9V",
+            "TlNUQUJMRRACOlTqQVEKKGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUHVi",
+            "bGlzaGVyTW9kZWwSJXB1Ymxpc2hlcnMve3B1Ymxpc2hlcn0vbW9kZWxzL3tt",
+            "b2RlbH1C0QEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUITUHVi",
+            "bGlzaGVyTW9kZWxQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxh",
+            "dGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2ds",
+            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZv",
+            "cm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -145,7 +145,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.ViewRestApi), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.ViewRestApi.Parser, new[]{ "Documentations", "Title" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.OpenNotebooks), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.OpenNotebooks.Parser, new[]{ "Notebooks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.OpenFineTuningPipelines), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.OpenFineTuningPipelines.Parser, new[]{ "FineTuningPipelines" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "ModelDisplayName", "LargeModelReference", "ContainerSpec", "ArtifactUri", "DeployTaskName", "DeployMetadata", "Title", "PublicArtifactUri" }, new[]{ "PredictionResources", "DeployTaskName", "DeployMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Types.DeployMetadata), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Types.DeployMetadata.Parser, new[]{ "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "ModelDisplayName", "LargeModelReference", "ContainerSpec", "ArtifactUri", "DeployTaskName", "DeployMetadata", "Title", "PublicArtifactUri" }, new[]{ "PredictionResources", "DeployTaskName", "DeployMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Types.DeployMetadata), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Types.DeployMetadata.Parser, new[]{ "Labels", "SampleRequest" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.DeployGke), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.DeployGke.Parser, new[]{ "GkeYamlConfigs" }, null, null, null, null)})})
           }));
     }
@@ -3969,6 +3969,7 @@ namespace Google.Cloud.AIPlatform.V1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public DeployMetadata(DeployMetadata other) : this() {
                   labels_ = other.labels_.Clone();
+                  sampleRequest_ = other.sampleRequest_;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
@@ -3993,6 +3994,21 @@ namespace Google.Cloud.AIPlatform.V1 {
                   get { return labels_; }
                 }
 
+                /// <summary>Field number for the "sample_request" field.</summary>
+                public const int SampleRequestFieldNumber = 2;
+                private string sampleRequest_ = "";
+                /// <summary>
+                /// Optional. Sample request for deployed endpoint.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string SampleRequest {
+                  get { return sampleRequest_; }
+                  set {
+                    sampleRequest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
@@ -4009,6 +4025,7 @@ namespace Google.Cloud.AIPlatform.V1 {
                     return true;
                   }
                   if (!Labels.Equals(other.Labels)) return false;
+                  if (SampleRequest != other.SampleRequest) return false;
                   return Equals(_unknownFields, other._unknownFields);
                 }
 
@@ -4017,6 +4034,7 @@ namespace Google.Cloud.AIPlatform.V1 {
                 public override int GetHashCode() {
                   int hash = 1;
                   hash ^= Labels.GetHashCode();
+                  if (SampleRequest.Length != 0) hash ^= SampleRequest.GetHashCode();
                   if (_unknownFields != null) {
                     hash ^= _unknownFields.GetHashCode();
                   }
@@ -4036,6 +4054,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                   output.WriteRawMessage(this);
                 #else
                   labels_.WriteTo(output, _map_labels_codec);
+                  if (SampleRequest.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(SampleRequest);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
@@ -4047,6 +4069,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   labels_.WriteTo(ref output, _map_labels_codec);
+                  if (SampleRequest.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(SampleRequest);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(ref output);
                   }
@@ -4058,6 +4084,9 @@ namespace Google.Cloud.AIPlatform.V1 {
                 public int CalculateSize() {
                   int size = 0;
                   size += labels_.CalculateSize(_map_labels_codec);
+                  if (SampleRequest.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(SampleRequest);
+                  }
                   if (_unknownFields != null) {
                     size += _unknownFields.CalculateSize();
                   }
@@ -4071,6 +4100,9 @@ namespace Google.Cloud.AIPlatform.V1 {
                     return;
                   }
                   labels_.MergeFrom(other.labels_);
+                  if (other.SampleRequest.Length != 0) {
+                    SampleRequest = other.SampleRequest;
+                  }
                   _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
                 }
 
@@ -4090,6 +4122,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                         labels_.AddEntriesFrom(input, _map_labels_codec);
                         break;
                       }
+                      case 18: {
+                        SampleRequest = input.ReadString();
+                        break;
+                      }
                     }
                   }
                 #endif
@@ -4107,6 +4143,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                         break;
                       case 10: {
                         labels_.AddEntriesFrom(ref input, _map_labels_codec);
+                        break;
+                      }
+                      case 18: {
+                        SampleRequest = input.ReadString();
                         break;
                       }
                     }

@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 LanguageCode = "",
                 View = PublisherModelView.Unspecified,
                 IsHuggingFaceModel = false,
+                HuggingFaceToken = "",
             };
             // Make the request
             PublisherModel response = await modelGardenServiceClient.GetPublisherModelAsync(request);

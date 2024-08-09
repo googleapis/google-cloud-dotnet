@@ -30,26 +30,27 @@ namespace Google.Cloud.AIPlatform.V1 {
             "c291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbmNy",
             "eXB0aW9uX3NwZWMucHJvdG8aMmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3Yx",
             "L21hY2hpbmVfcmVzb3VyY2VzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
-            "ZXN0YW1wLnByb3RvIskDChZEZXBsb3ltZW50UmVzb3VyY2VQb29sEhEKBG5h",
+            "ZXN0YW1wLnByb3RvIoEEChZEZXBsb3ltZW50UmVzb3VyY2VQb29sEhEKBG5h",
             "bWUYASABKAlCA+BBBRJQChNkZWRpY2F0ZWRfcmVzb3VyY2VzGAIgASgLMi4u",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVkaWNhdGVkUmVzb3VyY2Vz",
             "QgPgQQISQwoPZW5jcnlwdGlvbl9zcGVjGAUgASgLMiouZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMSFwoPc2VydmljZV9hY2Nv",
             "dW50GAYgASgJEiEKGWRpc2FibGVfY29udGFpbmVyX2xvZ2dpbmcYByABKAgS",
             "NAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQM6kgHqQY4BCjBhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0Rl",
-            "cGxveW1lbnRSZXNvdXJjZVBvb2wSWnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9kZXBsb3ltZW50UmVzb3VyY2VQb29scy97ZGVw",
-            "bG95bWVudF9yZXNvdXJjZV9wb29sfULZAQoeY29tLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxQhtEZXBsb3ltZW50UmVzb3VyY2VQb29sUHJvdG9QAVo+",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZv",
-            "cm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5W",
-            "McoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91",
-            "ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "YW1wQgPgQQMSGgoNc2F0aXNmaWVzX3B6cxgIIAEoCEID4EEDEhoKDXNhdGlz",
+            "Zmllc19wemkYCSABKAhCA+BBAzqSAepBjgEKMGFpcGxhdGZvcm0uZ29vZ2xl",
+            "YXBpcy5jb20vRGVwbG95bWVudFJlc291cmNlUG9vbBJacHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RlcGxveW1lbnRSZXNvdXJj",
+            "ZVBvb2xzL3tkZXBsb3ltZW50X3Jlc291cmNlX3Bvb2x9QtkBCh5jb20uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCG0RlcGxveW1lbnRSZXNvdXJjZVBv",
+            "b2xQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBp",
+            "djEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5B",
+            "SVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1H",
+            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool), global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool.Parser, new[]{ "Name", "DedicatedResources", "EncryptionSpec", "ServiceAccount", "DisableContainerLogging", "CreateTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool), global::Google.Cloud.AIPlatform.V1.DeploymentResourcePool.Parser, new[]{ "Name", "DedicatedResources", "EncryptionSpec", "ServiceAccount", "DisableContainerLogging", "CreateTime", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, null)
           }));
     }
     #endregion
@@ -101,6 +102,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceAccount_ = other.serviceAccount_;
       disableContainerLogging_ = other.disableContainerLogging_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -217,6 +220,36 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 8;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 9;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -238,6 +271,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccount != other.ServiceAccount) return false;
       if (DisableContainerLogging != other.DisableContainerLogging) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -251,6 +286,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (DisableContainerLogging != false) hash ^= DisableContainerLogging.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -293,6 +330,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(56);
         output.WriteBool(DisableContainerLogging);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -327,6 +372,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(56);
         output.WriteBool(DisableContainerLogging);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -354,6 +407,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -393,6 +452,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -442,6 +507,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             DisableContainerLogging = input.ReadBool();
             break;
           }
+          case 64: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 72: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -488,6 +561,14 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 56: {
             DisableContainerLogging = input.ReadBool();
+            break;
+          }
+          case 64: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 72: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

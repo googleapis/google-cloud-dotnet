@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9m",
             "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
             "bxojZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvaW8ucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ikwUKDEZlYXR1cmVHcm91cBJG",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8imQYKDEZlYXR1cmVHcm91cBJG",
             "CgliaWdfcXVlcnkYByABKAsyMS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
             "MS5GZWF0dXJlR3JvdXAuQmlnUXVlcnlIABIRCgRuYW1lGAEgASgJQgPgQQgS",
             "NAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
@@ -36,23 +36,26 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dWYuVGltZXN0YW1wQgPgQQMSEQoEZXRhZxgEIAEoCUID4EEBEkkKBmxhYmVs",
             "cxgFIAMoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVH",
             "cm91cC5MYWJlbHNFbnRyeUID4EEBEhgKC2Rlc2NyaXB0aW9uGAYgASgJQgPg",
-            "QQEaeAoIQmlnUXVlcnkSTAoQYmlnX3F1ZXJ5X3NvdXJjZRgBIAEoCzIqLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJpZ1F1ZXJ5U291cmNlQgbgQQXg",
-            "QQISHgoRZW50aXR5X2lkX2NvbHVtbnMYAiADKAlCA+BBARotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOpAB6kGMAQom",
-            "YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9GZWF0dXJlR3JvdXASRXByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlR3Jv",
-            "dXBzL3tmZWF0dXJlX2dyb3VwfSoNZmVhdHVyZUdyb3VwczIMZmVhdHVyZUdy",
-            "b3VwQggKBnNvdXJjZULPAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxQhFGZWF0dXJlR3JvdXBQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dv",
-            "L2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoC",
-            "Gkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJ",
-            "UGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIG",
-            "cHJvdG8z"));
+            "QQEa/QEKCEJpZ1F1ZXJ5EkwKEGJpZ19xdWVyeV9zb3VyY2UYASABKAsyKi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CaWdRdWVyeVNvdXJjZUIG4EEF",
+            "4EECEh4KEWVudGl0eV9pZF9jb2x1bW5zGAIgAygJQgPgQQESVgoLdGltZV9z",
+            "ZXJpZXMYBCABKAsyPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0",
+            "dXJlR3JvdXAuQmlnUXVlcnkuVGltZVNlcmllc0ID4EEBGisKClRpbWVTZXJp",
+            "ZXMSHQoQdGltZXN0YW1wX2NvbHVtbhgBIAEoCUID4EEBGi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6kAHqQYwBCiZh",
+            "aXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1cmVHcm91cBJFcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlYXR1cmVHcm91",
+            "cHMve2ZlYXR1cmVfZ3JvdXB9Kg1mZWF0dXJlR3JvdXBzMgxmZWF0dXJlR3Jv",
+            "dXBCCAoGc291cmNlQs8BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFCEUZlYXR1cmVHcm91cFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "YWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIa",
+            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureGroup), global::Google.Cloud.AIPlatform.V1.FeatureGroup.Parser, new[]{ "BigQuery", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "Description" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery), global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Parser, new[]{ "BigQuerySource", "EntityIdColumns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureGroup), global::Google.Cloud.AIPlatform.V1.FeatureGroup.Parser, new[]{ "BigQuery", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "Description" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery), global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Parser, new[]{ "BigQuerySource", "EntityIdColumns", "TimeSeries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Types.TimeSeries), global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Types.TimeSeries.Parser, new[]{ "TimestampColumn" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -604,6 +607,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public BigQuery(BigQuery other) : this() {
           bigQuerySource_ = other.bigQuerySource_ != null ? other.bigQuerySource_.Clone() : null;
           entityIdColumns_ = other.entityIdColumns_.Clone();
+          timeSeries_ = other.timeSeries_ != null ? other.timeSeries_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -644,6 +648,25 @@ namespace Google.Cloud.AIPlatform.V1 {
           get { return entityIdColumns_; }
         }
 
+        /// <summary>Field number for the "time_series" field.</summary>
+        public const int TimeSeriesFieldNumber = 4;
+        private global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Types.TimeSeries timeSeries_;
+        /// <summary>
+        /// Optional. If the source is a time-series source, this can be set to
+        /// control how downstream sources (ex:
+        /// [FeatureView][google.cloud.aiplatform.v1.FeatureView] ) will treat
+        /// time-series sources. If not set, will treat the source as a time-series
+        /// source with `feature_timestamp` as timestamp column and no scan boundary.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Types.TimeSeries TimeSeries {
+          get { return timeSeries_; }
+          set {
+            timeSeries_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -661,6 +684,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (!object.Equals(BigQuerySource, other.BigQuerySource)) return false;
           if(!entityIdColumns_.Equals(other.entityIdColumns_)) return false;
+          if (!object.Equals(TimeSeries, other.TimeSeries)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -670,6 +694,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           if (bigQuerySource_ != null) hash ^= BigQuerySource.GetHashCode();
           hash ^= entityIdColumns_.GetHashCode();
+          if (timeSeries_ != null) hash ^= TimeSeries.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -693,6 +718,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteMessage(BigQuerySource);
           }
           entityIdColumns_.WriteTo(output, _repeated_entityIdColumns_codec);
+          if (timeSeries_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(TimeSeries);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -708,6 +737,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteMessage(BigQuerySource);
           }
           entityIdColumns_.WriteTo(ref output, _repeated_entityIdColumns_codec);
+          if (timeSeries_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(TimeSeries);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -722,6 +755,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigQuerySource);
           }
           size += entityIdColumns_.CalculateSize(_repeated_entityIdColumns_codec);
+          if (timeSeries_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeSeries);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -741,6 +777,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             BigQuerySource.MergeFrom(other.BigQuerySource);
           }
           entityIdColumns_.Add(other.entityIdColumns_);
+          if (other.timeSeries_ != null) {
+            if (timeSeries_ == null) {
+              TimeSeries = new global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Types.TimeSeries();
+            }
+            TimeSeries.MergeFrom(other.TimeSeries);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -765,6 +807,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 18: {
                 entityIdColumns_.AddEntriesFrom(input, _repeated_entityIdColumns_codec);
+                break;
+              }
+              case 34: {
+                if (timeSeries_ == null) {
+                  TimeSeries = new global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Types.TimeSeries();
+                }
+                input.ReadMessage(TimeSeries);
                 break;
               }
             }
@@ -793,10 +842,221 @@ namespace Google.Cloud.AIPlatform.V1 {
                 entityIdColumns_.AddEntriesFrom(ref input, _repeated_entityIdColumns_codec);
                 break;
               }
+              case 34: {
+                if (timeSeries_ == null) {
+                  TimeSeries = new global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Types.TimeSeries();
+                }
+                input.ReadMessage(TimeSeries);
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the BigQuery message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class TimeSeries : pb::IMessage<TimeSeries>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<TimeSeries> _parser = new pb::MessageParser<TimeSeries>(() => new TimeSeries());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<TimeSeries> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1.FeatureGroup.Types.BigQuery.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TimeSeries() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TimeSeries(TimeSeries other) : this() {
+              timestampColumn_ = other.timestampColumn_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TimeSeries Clone() {
+              return new TimeSeries(this);
+            }
+
+            /// <summary>Field number for the "timestamp_column" field.</summary>
+            public const int TimestampColumnFieldNumber = 1;
+            private string timestampColumn_ = "";
+            /// <summary>
+            /// Optional. Column hosting timestamp values for a time-series source.
+            /// Will be used to determine the latest `feature_values` for each entity.
+            /// Optional. If not provided, column named `feature_timestamp` of
+            /// type `TIMESTAMP` will be used.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string TimestampColumn {
+              get { return timestampColumn_; }
+              set {
+                timestampColumn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as TimeSeries);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(TimeSeries other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (TimestampColumn != other.TimestampColumn) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (TimestampColumn.Length != 0) hash ^= TimestampColumn.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (TimestampColumn.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(TimestampColumn);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (TimestampColumn.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(TimestampColumn);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (TimestampColumn.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(TimestampColumn);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(TimeSeries other) {
+              if (other == null) {
+                return;
+              }
+              if (other.TimestampColumn.Length != 0) {
+                TimestampColumn = other.TimestampColumn;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    TimestampColumn = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    TimestampColumn = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 
