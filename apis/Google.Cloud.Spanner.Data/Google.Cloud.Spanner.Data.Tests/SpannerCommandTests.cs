@@ -1069,7 +1069,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
             TransactionSelector expectedTransactionSelector = new TransactionSelector
             {
-                Begin = transactionCreationOptions.TransactionOptios
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
             };
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -1098,7 +1102,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
             TransactionSelector expectedTransactionSelector = new TransactionSelector
             {
-                Begin = transactionCreationOptions.TransactionOptios
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
             };
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -1127,7 +1135,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
             TransactionSelector expectedTransactionSelector = new TransactionSelector
             {
-                Begin = transactionCreationOptions.TransactionOptios
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
             };
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -1153,7 +1165,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerTransactionCreationOptions transactionCreationOptions = SpannerTransactionCreationOptions.ReadWrite.WithExcludeFromChangeStreams(true);
             TransactionSelector expectedTransactionSelector = new TransactionSelector
             {
-                Begin = transactionCreationOptions.TransactionOptios
+                Begin = new V1.TransactionOptions
+                {
+                    ExcludeTxnFromChangeStreams = true,
+                    ReadWrite = new V1.TransactionOptions.Types.ReadWrite()
+                }
             };
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);

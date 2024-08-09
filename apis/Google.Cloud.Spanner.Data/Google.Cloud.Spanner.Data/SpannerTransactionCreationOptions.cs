@@ -94,34 +94,16 @@ public sealed class SpannerTransactionCreationOptions
 
     /// <summary>
     /// Whether changes executed within this transaction are recorded in change streams or not.
-    /// May only be true for read-write and partioned DML transactions.
+    /// This will always be false for read-only transactions.
     /// </summary>
     /// <remarks>
-    /// Note that changes may only be excluded from change stream that allow transaction exlcusion.
-    /// Changes executed within this transaction will be recorded in change streams that do not allow
-    /// transaction exclusion regardless of the value of this field.
+    /// A change stream may allow or not transaction exclusion. Setting this value to true will only
+    /// have effect on change streams that allow transaction exclusion. That is, if this value is set to true
+    /// changes executed withing this transaction will be excluded from change streams that
+    /// allow transaction exclusion but will be tracked by change streams that do not explicitly
+    /// allow transaction exclusion.
     /// </remarks>
     public bool ExcludeFromChangeStreams { get; }
-
-    /// <summary>
-    /// Options used to acquire the transaction's underlying session.
-    /// </summary>
-    internal TransactionOptions TransactionOptios
-    {
-        get
-        {
-            var options = IsPartitionedDml
-                ? new TransactionOptions { PartitionedDml = new PartitionedDml() }
-                : TransactionMode == TransactionMode.ReadWrite
-                ? new TransactionOptions { ReadWrite = new ReadWrite()  }
-                : TimestampBound?.ToTransactionOptions();
-            if (options is not null)
-            {
-                options.ExcludeTxnFromChangeStreams = ExcludeFromChangeStreams;
-            }
-            return options;
-        }
-    }
 
     private SpannerTransactionCreationOptions(TimestampBound timestampBound, TransactionId transactionId, bool isDetached, bool isSingleUse, bool isPartitionedDml, bool excludeFromChangeStreams)
     {
@@ -191,6 +173,21 @@ public sealed class SpannerTransactionCreationOptions
             excludeFromChangeStreams: false);
 
     /// <summary>
+    /// Options used to acquire the transaction's underlying session.
+    /// </summary>
+    internal TransactionOptions GetTransactionOptions()
+    {
+        var options = IsPartitionedDml ? new TransactionOptions { PartitionedDml = new PartitionedDml() } :
+            TransactionMode == TransactionMode.ReadWrite ? new TransactionOptions { ReadWrite = new ReadWrite() } :
+            TimestampBound?.ToTransactionOptions();
+        if (options is not null)
+        {
+            options.ExcludeTxnFromChangeStreams = ExcludeFromChangeStreams;
+        }
+        return options;
+    }
+
+    /// <summary>
     /// Returns a new instance identical to this one except for the value of <see cref="IsDetached"/>.
     /// If <see cref="TransactionId"/> is set, <see cref="IsDetached"/> cannot be false.
     /// </summary>
@@ -208,9 +205,8 @@ public sealed class SpannerTransactionCreationOptions
 
     /// <summary>
     /// Returns a new instance identical to this one except for the value of <see cref="ExcludeFromChangeStreams"/>.
+    /// <see cref="ExcludeFromChangeStreams"/> can only be true for read-write transactions.
     /// </summary>
-    /// <param name="excludeFromChangeStreams"></param>
-    /// <returns></returns>
     public SpannerTransactionCreationOptions WithExcludeFromChangeStreams(bool excludeFromChangeStreams) =>
         excludeFromChangeStreams == ExcludeFromChangeStreams ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, IsDetached, IsSingleUse, IsPartitionedDml, excludeFromChangeStreams);
 }

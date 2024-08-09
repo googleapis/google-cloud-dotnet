@@ -59,7 +59,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(readWrite.IsSingleUse);
         Assert.False(readWrite.IsPartitionedDml);
         Assert.False(readWrite.ExcludeFromChangeStreams);
-        Assert.Equal(new TransactionOptions { ReadWrite = new ReadWrite() }, readWrite.TransactionOptios);
+        Assert.Equal(new TransactionOptions { ReadWrite = new ReadWrite() }, readWrite.GetTransactionOptions());
     }
 
     [Fact]
@@ -74,7 +74,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(partitionedDml.IsSingleUse);
         Assert.True(partitionedDml.IsPartitionedDml);
         Assert.False(partitionedDml.ExcludeFromChangeStreams);
-        Assert.Equal(new TransactionOptions { PartitionedDml = new PartitionedDml() }, partitionedDml.TransactionOptios);
+        Assert.Equal(new TransactionOptions { PartitionedDml = new PartitionedDml() }, partitionedDml.GetTransactionOptions());
     }
 
     [Fact]
@@ -89,7 +89,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(readOnly.IsSingleUse);
         Assert.False (readOnly.IsPartitionedDml);
         Assert.False(readOnly.ExcludeFromChangeStreams);
-        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), readOnly.TransactionOptios);
+        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), readOnly.GetTransactionOptions());
     }
 
     [Fact]
@@ -103,7 +103,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
         Assert.False(options.ExcludeFromChangeStreams);
-        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), options.TransactionOptios);
+        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), options.GetTransactionOptions());
     }
 
     [Fact]
@@ -118,7 +118,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.True(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
         Assert.False(options.ExcludeFromChangeStreams);
-        Assert.Equal(timestampBound.ToTransactionOptions(), options.TransactionOptios);
+        Assert.Equal(timestampBound.ToTransactionOptions(), options.GetTransactionOptions());
     }
 
     [Fact]
@@ -138,7 +138,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
         Assert.False(options.ExcludeFromChangeStreams);
-        Assert.Null(options.TransactionOptios);
+        Assert.Null(options.GetTransactionOptions());
     }
 
     [Fact]
