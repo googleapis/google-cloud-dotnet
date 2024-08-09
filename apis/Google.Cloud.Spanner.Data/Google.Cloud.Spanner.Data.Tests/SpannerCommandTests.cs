@@ -164,10 +164,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                     .WithOptimizerStatisticsPackage(connOptimizerStatisticsPackage);
 
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-                using (var reader = command.ExecuteReader())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = command.ExecuteReader();
+                Assert.True(reader.HasRows);
             }, envOptimizerVersion, envOptimizerStatisticsPackage);
 
             spannerClientMock.Received(1).ExecuteStreamingSql(
@@ -202,10 +200,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                 command.QueryOptions = QueryOptions.Empty
                     .WithOptimizerVersion(cmdOptimizerVersion)
                     .WithOptimizerStatisticsPackage(cmdOptimizerStatisticsPackage);
-                using (var reader = command.ExecuteReader())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = command.ExecuteReader();
+                Assert.True(reader.HasRows);
             }, envOptimizerVersion, envOptimizerStatisticsPackage);
 
             // Optimizer version set at a command level has higher precedence
@@ -463,10 +459,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                 tx.CommitPriority = priority;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
-                using (var reader = await command.ExecuteReaderAsync())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = await command.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
             });
             spannerClientMock.Received(2).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
@@ -714,10 +708,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
                 command.Tag = null;
-                using (var reader = await command.ExecuteReaderAsync())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = await command.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
             });
             spannerClientMock.Received(2).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
@@ -854,10 +846,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                 tx.MaxCommitDelay = maxCommitDelay;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
-                using (var reader = await command.ExecuteReaderAsync())
-                {
-                    Assert.True(reader.HasRows);
-                }
+                using var reader = await command.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
             });
 
             await spannerClientMock.Received(2).CommitAsync(
