@@ -88,7 +88,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
         /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
         /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
-        /// created through <see cref="SpannerConnection.BeginTransactionAsync" />. May be null.</param>
+        /// created through <see cref="SpannerConnection.BeginTransactionAsync(SpannerTransactionCreationOptions, CancellationToken)" />. May be null.</param>
         /// <param name="parameters">An optional collection of <see cref="SpannerParameter"/>
         /// that is used in the command. May be null.</param>
         public SpannerCommand(
@@ -116,7 +116,7 @@ namespace Google.Cloud.Spanner.Data
         /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
         /// <param name="keySet">The <see cref="KeySet"/> that is used to select rows. Must not be null.</param>
         /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
-        /// created through <see cref="SpannerConnection.BeginTransactionAsync" />. May be null.</param>
+        /// created through <see cref="SpannerConnection.BeginTransactionAsync(SpannerTransactionCreationOptions, CancellationToken)" />. May be null.</param>
         internal SpannerCommand(
             SpannerCommandTextBuilder commandTextBuilder,
             SpannerConnection connection,
@@ -332,6 +332,16 @@ namespace Google.Cloud.Spanner.Data
         public CommandPartition Partition { get; set; }
 
         /// <summary>
+        /// Options to be used for creating the ephemeral transaction under which this command will be executed
+        /// if no explicit or ambient transaction is set.
+        /// These options will be ignored if an explicit transaction is set on the command via <see cref="DbCommand.Transaction"/>
+        /// or an ambient transaction has been started via <see cref="SpannerConnection.OpenAsync(SpannerTransactionCreationOptions, SpannerTransactionOptions, CancellationToken)"/>
+        /// and similar methods.
+        /// May be null, in which case appropriate defaults will be used when needed.
+        /// </summary>
+        public SpannerTransactionCreationOptions EphemeralTransactionCreationOptions { get; set; }
+
+        /// <summary>
         /// Returns a copy of this <see cref="SpannerCommand"/>.
         /// </summary>
         /// <returns>a copy of this <see cref="SpannerCommand"/>.</returns>
@@ -345,6 +355,7 @@ namespace Google.Cloud.Spanner.Data
             Tag = Tag,
             DirectedReadOptions = DirectedReadOptions?.Clone(),
             MaxCommitDelay = MaxCommitDelay,
+            EphemeralTransactionCreationOptions = EphemeralTransactionCreationOptions,
         };
 
         /// <inheritdoc />
@@ -363,11 +374,14 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="singleUseReadSettings">The settings to use for the implicit single-use read-only transaction.</param>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>A <see cref="SpannerDataReader"/>.</returns>
-        public Task<DbDataReader> ExecuteReaderAsync(TimestampBound singleUseReadSettings, CancellationToken cancellationToken = default) =>
-            CreateExecutableCommand().ExecuteDbDataReaderAsync(
-                CommandBehavior.Default,
-                GaxPreconditions.CheckNotNull(singleUseReadSettings, nameof(singleUseReadSettings)),
-                cancellationToken);
+        [Obsolete("Please set EphemeralTransactionCreationOptions to SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(singleUseReadSettings) and call any of the other ExecuteReaderAsync overloads.")]
+        public Task<DbDataReader> ExecuteReaderAsync(TimestampBound singleUseReadSettings, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(singleUseReadSettings, nameof(singleUseReadSettings));
+            var copy = Clone() as SpannerCommand;
+            copy.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(singleUseReadSettings);
+            return copy.CreateExecutableCommand().ExecuteDbDataReaderAsync(CommandBehavior.Default,cancellationToken);
+        }
 
         /// <inheritdoc />
         public override Task<int> ExecuteNonQueryAsync(CancellationToken cancellationToken) =>
@@ -457,11 +471,11 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior) =>
-            Task.Run(() => CreateExecutableCommand().ExecuteDbDataReaderAsync(behavior, null, _synchronousCancellationTokenSource.Token)).ResultWithUnwrappedExceptions();
+            Task.Run(() => CreateExecutableCommand().ExecuteDbDataReaderAsync(behavior, _synchronousCancellationTokenSource.Token)).ResultWithUnwrappedExceptions();
 
         /// <inheritdoc />
         protected override Task<DbDataReader> ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) =>
-            CreateExecutableCommand().ExecuteDbDataReaderAsync(behavior, null, cancellationToken);
+            CreateExecutableCommand().ExecuteDbDataReaderAsync(behavior, cancellationToken);
 
         /// <summary>
         /// Executes this command as a partitioned update. The command must be a generalized DML command;
