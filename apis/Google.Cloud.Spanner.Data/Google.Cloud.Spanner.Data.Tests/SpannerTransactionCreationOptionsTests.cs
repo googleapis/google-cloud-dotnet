@@ -28,7 +28,7 @@ public class SpannerTransactionCreationOptionsTests
     }
 
     [Fact]
-    public void ParttionedDml_Singleton()
+    public void PartitionedDml_Singleton()
     {
         var one = SpannerTransactionCreationOptions.PartitionedDml;
         Assert.NotNull(one);

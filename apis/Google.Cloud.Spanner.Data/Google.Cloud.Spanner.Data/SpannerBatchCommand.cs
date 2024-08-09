@@ -135,7 +135,7 @@ namespace Google.Cloud.Spanner.Data
         /// These options will be ignored if an explicit transaction is set on the command via <see cref="SpannerTransaction.CreateBatchDmlCommand"/>
         /// or an ambient transaction has been started via <see cref="SpannerConnection.OpenAsync(SpannerTransactionCreationOptions, SpannerTransactionOptions, CancellationToken)"/>
         /// and similar methods.
-        /// May be null, in which case appropiate defaults will be used when needed.
+        /// May be null, in which case appropriate defaults will be used when needed.
         /// </summary>
         public SpannerTransactionCreationOptions EphemeralTransactionCreationOptions { get; set; }
 

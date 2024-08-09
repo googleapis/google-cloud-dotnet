@@ -62,27 +62,28 @@ public sealed class SpannerTransactionCreationOptions
 
     /// <summary>
     /// Whether these options should result in a detached transaction or in one that's tracked by a session pool.
-    /// This will be false by default.
+    /// This will always be true when <see cref="TransactionId"/> is set. Otherwise it will be false unless explicitly
+    /// set via <see cref="WithIsDetached(bool)"/>.
     /// </summary>
     /// <remarks>
     /// Resources of transactions that are tracked by a session pool will be returned to the pool once the
-    /// transaction is commited or rolledback, for later re-use.
+    /// transaction is committed or rolled back, for later re-use.
     /// Alternatively, a transaction that will be shared across processes, for instance for partitioned reads,
     /// should be detached so that resources are not returned to a local pool and attempted to be re-used there.
-    /// This will always be true when <see cref="TransactionId"/> is set.
     /// </remarks>
     public bool IsDetached { get; }
 
     /// <summary>
     /// Whether these options should result in a single-use transaction or not.
+    /// Only timestamp bound transactions may be single-use.
     /// A read-only transaction of <see cref="TimestampBoundMode.MinReadTimestamp"/> or <see cref="TimestampBoundMode.MaxStaleness"/>
     /// is always single-use.
-    /// All other transactions are not single-use.
+    /// All other transactions are not single-use by default.
     /// </summary>
     public bool IsSingleUse { get; }
 
     /// <summary>
-    /// The mode for the resulting transaction.
+    /// The read-only or read-write mode for the resulting transaction.
     /// </summary>
     internal TransactionMode TransactionMode => TransactionId is null && TimestampBound is null ? TransactionMode.ReadWrite : TransactionMode.ReadOnly;
 
@@ -157,13 +158,17 @@ public sealed class SpannerTransactionCreationOptions
         new SpannerTransactionCreationOptions(timestampBound: null, transactionId: GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)), isDetached: true, isSingleUse: false, isPartitionedDml: false);
 
     /// <summary>
-    /// Returns a new instance identical to this one except for the value for <see cref="IsDetached"/>.
+    /// Returns a new instance identical to this one except for the value of <see cref="IsDetached"/>.
+    /// If <see cref="TransactionId"/> is set, <see cref="IsDetached"/> cannot be false.
     /// </summary>
     public SpannerTransactionCreationOptions WithIsDetached(bool isDetached) =>
         isDetached == IsDetached ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, isDetached, IsSingleUse, IsPartitionedDml);
 
     /// <summary>
-    /// Returns a new instance identical to this one except for the value for <see cref="IsSingleUse"/>.
+    /// Returns a new instance identical to this one except for the value of <see cref="IsSingleUse"/>.
+    /// <see cref="IsSingleUse"/> can only be true for timestamp bound transactions.
+    /// If timestamp bounds are of <see cref="TimestampBoundMode.MinReadTimestamp"/> or <see cref="TimestampBoundMode.MaxStaleness"/>,
+    /// <see cref="IsSingleUse"/> cannot be false.
     /// </summary>
     public SpannerTransactionCreationOptions WithIsSingleUse(bool isSingleUse) =>
         isSingleUse == IsSingleUse ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, IsDetached, isSingleUse, IsPartitionedDml);

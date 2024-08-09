@@ -459,11 +459,8 @@ namespace Google.Cloud.Spanner.Data
         /// <para>This method is thread safe.</para>
         /// </remarks>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
-        [Obsolete($"Use the {nameof(BeginTransactionAsync)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
-        public SpannerTransaction BeginReadOnlyTransaction() =>
-            Task.Run(
-                () => BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default))
-            .ResultWithUnwrappedExceptions();
+        [Obsolete($"Use the {nameof(BeginTransaction)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
+        public SpannerTransaction BeginReadOnlyTransaction() => BeginTransaction(SpannerTransactionCreationOptions.ReadOnly);
 
         /// <summary>
         /// Begins a read-only transaction using the provided <see cref="TimestampBound"/> to control the read timestamp
@@ -478,11 +475,8 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
-        [Obsolete($"Use the {nameof(BeginTransactionAsync)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
-        public SpannerTransaction BeginReadOnlyTransaction(TimestampBound targetReadTimestamp) =>
-            Task.Run(
-                () => BeginTransactionAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(targetReadTimestamp), cancellationToken: default))
-            .ResultWithUnwrappedExceptions();
+        [Obsolete($"Use the {nameof(BeginTransaction)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
+        public SpannerTransaction BeginReadOnlyTransaction(TimestampBound targetReadTimestamp) => BeginTransaction(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(targetReadTimestamp));
 
         /// <summary>
         /// Begins a read-only transaction using the provided <see cref="TransactionId" /> to refer to an existing server-side transaction.
@@ -497,11 +491,8 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="transactionId">Specifies the transaction ID of an existing read-only transaction.</param>
         /// <returns>A <see cref="SpannerTransaction"/> attached to the existing transaction represented by
         /// <paramref name="transactionId"/>.</returns>
-        [Obsolete($"Use the {nameof(BeginTransactionAsync)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
-        public SpannerTransaction BeginReadOnlyTransaction(TransactionId transactionId) =>
-            Task.Run(
-                () =>BeginTransactionAsync(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId), cancellationToken: default))
-            .ResultWithUnwrappedExceptions();
+        [Obsolete($"Use the {nameof(BeginTransaction)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
+        public SpannerTransaction BeginReadOnlyTransaction(TransactionId transactionId) => BeginTransaction(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId));
 
         /// <summary>
         /// Begins a new Spanner transaction synchronously. This method hides <see cref="DbConnection.BeginTransaction()"/>, but behaves
@@ -546,6 +537,13 @@ namespace Google.Cloud.Spanner.Data
             return await BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
         }
 #endif
+        /// <summary>
+        /// Creates a <see cref="SpannerTransaction"/> based on the given creation options.
+        /// </summary>
+        public SpannerTransaction BeginTransaction(SpannerTransactionCreationOptions transactionCreationOptions) =>
+              Task.Run(
+                () => BeginTransactionAsync(transactionCreationOptions, cancellationToken: default))
+            .ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Creates a <see cref="SpannerTransaction"/> based on the given creation options.
@@ -704,13 +702,16 @@ namespace Google.Cloud.Spanner.Data
         /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
         /// <param name="work">The work to perform in each transaction attempt.</param>
+        /// <param name="transactionCreationOptions">
+        /// Options for creating transactions. These options should be for a read-write transaction that
+        /// is not detached. May be null in which case defaults will be used.
+        /// </param>
         /// <returns>The value returned by <paramref name="work"/> if the transaction commits successfully.</returns>
-        [Obsolete($"Use the {nameof(RunWithRetriableTransactionAsync)} overload that takes a {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
-        public TResult RunWithRetriableTransaction<TResult>(Func<SpannerTransaction, TResult> work)
+        public TResult RunWithRetriableTransaction<TResult>(Func<SpannerTransaction, TResult> work, SpannerTransactionCreationOptions transactionCreationOptions)
         {
             GaxPreconditions.CheckNotNull(work, nameof(work));
             return Task.Run(
-                () => RunWithRetriableTransactionAsync(transaction => Task.FromResult(work(transaction)), transactionCreationOptions: null, CancellationToken.None))
+                () => RunWithRetriableTransactionAsync(transaction => Task.FromResult(work(transaction)), transactionCreationOptions, CancellationToken.None))
             .ResultWithUnwrappedExceptions();
         }
 
@@ -727,20 +728,50 @@ namespace Google.Cloud.Spanner.Data
         /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
         /// <param name="work">The work to perform in each transaction attempt.</param>
-        [Obsolete($"Use the {nameof(RunWithRetriableTransactionAsync)} overload that takes a {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
-        public void RunWithRetriableTransaction(Action<SpannerTransaction> work)
+        /// <returns>The value returned by <paramref name="work"/> if the transaction commits successfully.</returns>
+        public TResult RunWithRetriableTransaction<TResult>(Func<SpannerTransaction, TResult> work) => RunWithRetriableTransaction(work, transactionCreationOptions: null);
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="work"/>.
+        /// </summary>
+        /// <remarks><paramref name="work"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="work"/> won't be retried if any other errors occur.
+        /// <paramref name="work"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
+        /// each time it is rerun.
+        /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
+        /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
+        /// <param name="work">The work to perform in each transaction attempt.</param>
+        /// <param name="transactionCreationOptions">
+        /// Options for creating transactions. These options should be for a read-write transaction that
+        /// is not detached. May be null in which case defaults will be used.
+        /// </param>
+        public void RunWithRetriableTransaction(Action<SpannerTransaction> work, SpannerTransactionCreationOptions transactionCreationOptions)
         {
             GaxPreconditions.CheckNotNull(work, nameof(work));
-            Task.Run(
-                () => RunWithRetriableTransactionAsync(transaction =>
+            RunWithRetriableTransaction(transaction =>
                 {
                     work(transaction);
-                    return Task.FromResult(true);
-                },
-                transactionCreationOptions: null,
-                CancellationToken.None))
-            .WaitWithUnwrappedExceptions();
+                return (true);
+            }, transactionCreationOptions);
         }
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="work"/>.
+        /// </summary>
+        /// <remarks><paramref name="work"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="work"/> won't be retried if any other errors occur.
+        /// <paramref name="work"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
+        /// each time it is rerun.
+        /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
+        /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
+        /// <param name="work">The work to perform in each transaction attempt.</param>
+        public void RunWithRetriableTransaction(Action<SpannerTransaction> work) => RunWithRetriableTransaction(work, transactionCreationOptions: null);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to read rows from a Spanner database table. The rows will be

@@ -97,7 +97,7 @@ namespace Google.Cloud.Spanner.Data
             else
             {
                 GaxPreconditions.CheckState(
-                    _creationOptions.TransactionOptios?.ModeCase == TransactionOptions.ModeOneofCase.PartitionedDml,
+                    _creationOptions.IsPartitionedDml,
                     $"Only transactions with mode {TransactionOptions.ModeOneofCase.PartitionedDml} may be used to execute partioned DML statements.");
                 effectiveOptions = _creationOptions;
             }
