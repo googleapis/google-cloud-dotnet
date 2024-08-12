@@ -4495,7 +4495,7 @@ namespace Google.Cloud.Translate.V3 {
     private string name_ = "";
     /// <summary>
     /// Output only. The resource name of the example, in form of
-    /// `projects/{project-number-or-id}/locations/{location_id}/datasets/{dataset_id}/examples/{example_id}'
+    /// `projects/{project-number-or-id}/locations/{location_id}/datasets/{dataset_id}/examples/{example_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
