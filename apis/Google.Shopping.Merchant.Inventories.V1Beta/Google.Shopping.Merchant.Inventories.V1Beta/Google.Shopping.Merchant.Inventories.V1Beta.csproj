@@ -8,9 +8,9 @@
     <PackageTags>shopping;inventory;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.8.0, 5.0.0)" />
-    <PackageReference Include="Google.Shopping.Type" Version="[1.0.0-beta05, 2.0.0)" />
-    <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="[4.8.0, 5.0.0)" />
+    <PackageReference Include="Google.Shopping.Type" VersionOverride="[1.0.0-beta05, 2.0.0)" />
+    <PackageReference Include="Grpc.Core" VersionOverride="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>

@@ -8,9 +8,9 @@
     <PackageTags>DLP;data loss prevention;privacy;pii;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.8.0, 5.0.0)" />
-    <PackageReference Include="Google.Cloud.Location" Version="[2.3.0, 3.0.0)" />
-    <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="[4.8.0, 5.0.0)" />
+    <PackageReference Include="Google.Cloud.Location" VersionOverride="[2.3.0, 3.0.0)" />
+    <PackageReference Include="Grpc.Core" VersionOverride="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
