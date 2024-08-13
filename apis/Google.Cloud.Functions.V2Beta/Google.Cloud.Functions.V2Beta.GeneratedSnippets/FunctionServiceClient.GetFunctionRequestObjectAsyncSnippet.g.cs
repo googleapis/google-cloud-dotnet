@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GetFunctionRequest request = new GetFunctionRequest
             {
                 FunctionName = FunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                Revision = "",
             };
             // Make the request
             Function response = await functionServiceClient.GetFunctionAsync(request);
