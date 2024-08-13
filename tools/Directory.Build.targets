@@ -1,6 +1,6 @@
 <Project>
   <!-- Use the SourceLink package just so that tools can still build when DeterministicSourcePaths is true -->
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All"/>
   </ItemGroup>
 </Project>

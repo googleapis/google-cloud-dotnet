@@ -1,14 +1,9 @@
 <Project>
-
-  <!-- 
-    - Import the parent Directory.Build.props file; MSBuild isn't
-    - naturally hierarchichal. See
-    - https://stackoverflow.com/questions/45974279 for details.
-    -->
-  <ImportGroup>
-    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)..\'))" />
-  </ImportGroup>
-
+  <!-- Allow Directory.Packages.props to do its magic -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  
   <!--
     - Common properties for all tools projects.
     -->
