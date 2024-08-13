@@ -1,5 +1,43 @@
 # Version history
 
+## Version 5.0.0-beta04, released 2024-08-13
+
+### Bug fixes
+
+- Retriable transactions should be released after successful commit ([commit f2c7840](https://github.com/googleapis/google-cloud-dotnet/commit/f2c78404d6d1ee99bcaef082c8bf925ba98c4f47))
+- Partitioned updates are only executed on an ephemeral transaction ([commit d88a807](https://github.com/googleapis/google-cloud-dotnet/commit/d88a80788f89e6d74a96c506718769c88dd1a05d))
+- Timestamp bound reads and queries are only executed on an ephemeral transaction ([commit f8f8235](https://github.com/googleapis/google-cloud-dotnet/commit/f8f8235bff3ecd1e7dc063827bbf974415cee9cd))
+
+### New features
+
+- Add resource reference annotation to backup schedules ([commit 8403eb4](https://github.com/googleapis/google-cloud-dotnet/commit/8403eb449930743ba57bb941bf9d329ab243051e))
+- Add edition field to the instance proto ([commit 2b59065](https://github.com/googleapis/google-cloud-dotnet/commit/2b590658f970c1eea63b665277fd0b42220daac1))
+- **BREAKING CHANGE** Fully support SpannerTransactionCreationOptoins ([commit 34a25d3](https://github.com/googleapis/google-cloud-dotnet/commit/34a25d3ad1f828fe8a525edf65b10a0ea2b7916e))
+- Support excluding a transaction from change streams ([commit 9e3ec98](https://github.com/googleapis/google-cloud-dotnet/commit/9e3ec986e54d0d0a8a74351fd671f7596437a2e0))
+- Add protobuf column support for the data layer ([commit 8646000](https://github.com/googleapis/google-cloud-dotnet/commit/8646000144c4e661a4a0b0d18b16765cbd18429c))
+- Add support for protobuf typed colums for DDL ([commit 551d519](https://github.com/googleapis/google-cloud-dotnet/commit/551d519f3088310272cb0380c51a0bb3f2bc1140))
+- Add support for Cloud Spanner Incremental Backups ([commit aa5a584](https://github.com/googleapis/google-cloud-dotnet/commit/aa5a584c2d0b704d5c50164c3ab5e76147b9efd1))
+- Add support for Cloud Spanner Scheduled Backups ([commit ac15c11](https://github.com/googleapis/google-cloud-dotnet/commit/ac15c11c2a4c1d4b77510556ff863079ac5567f0))
+- **BREAKING CHANGE** Commit/Rollback releases sessions to the pool ([commit 86fa6a6](https://github.com/googleapis/google-cloud-dotnet/commit/86fa6a69c8732be25cc7c95b567ab4f358f76007))
+- **BREAKING CHANGE** Support detached sessions/transactions ([commit cfa961e](https://github.com/googleapis/google-cloud-dotnet/commit/cfa961e9bf2a8987c4573afa9815d99295c6eb2c))
+- Add field order_by in spanner.proto ([commit a5f7b22](https://github.com/googleapis/google-cloud-dotnet/commit/a5f7b229a89681c1a884fc8ee72d6835882353da))
+- Add field lock_hint in spanner.proto ([commit a5f7b22](https://github.com/googleapis/google-cloud-dotnet/commit/a5f7b229a89681c1a884fc8ee72d6835882353da))
+- Add support for multi region encryption config ([commit bb95bbf](https://github.com/googleapis/google-cloud-dotnet/commit/bb95bbf3c64499e17a4dcfc27fa6e6a789e5cb79))
+- Add `RESOURCE_EXHAUSTED` to the list of retryable error codes ([commit fbb0099](https://github.com/googleapis/google-cloud-dotnet/commit/fbb0099a03371b08c194e2fada0ca63bd98fec00))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Add an example to filter backups based on schedule name ([commit 8403eb4](https://github.com/googleapis/google-cloud-dotnet/commit/8403eb449930743ba57bb941bf9d329ab243051e))
+- Clarify documentation around session acquisition vs. transaction creation ([commit 9aae25e](https://github.com/googleapis/google-cloud-dotnet/commit/9aae25e896a9034845142792de2df69e55b6105b))
+- Fix linting for several doc comments ([commit bb95bbf](https://github.com/googleapis/google-cloud-dotnet/commit/bb95bbf3c64499e17a4dcfc27fa6e6a789e5cb79))
+
+### Breaking changes
+
+- Some SpannerConnection begin transaction methods that had only been released in beta versions of the library have been removed. ([commit 34a25d3](https://github.com/googleapis/google-cloud-dotnet/commit/34a25d3ad1f828fe8a525edf65b10a0ea2b7916e))
+- The AmbientTransactionOptions class is split in SpannerTransactionCreationOptions and SpannerTransactionOptions, with all original options moving to one or the other. The SpannerConnection.Open set of methods that received an AmbientTransactionOptions before now receive one SpannerTransactionCreationOptions and one SpannerTransactionOptions. ([commit 1541b99](https://github.com/googleapis/google-cloud-dotnet/commit/1541b99ee7b835b27d9329d91a2477b8461d739a))
+- After a successfull commit or rollback, the transaction is disposed and may not be used again. See the Google.Cloud.Spanner.Data.SpannerTransaction.DisposeBehavior documentation for more information. ([commit 86fa6a6](https://github.com/googleapis/google-cloud-dotnet/commit/86fa6a69c8732be25cc7c95b567ab4f358f76007))
+
 ## Version 5.0.0-beta03, released 2024-04-19
 
 ### New features
