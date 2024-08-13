@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.7.0, released 2024-08-13
+
+### New features
+
+- Optional field for specifying a service account to use for the build. This helps navigate the change of historical default on new projects. For more details, see https://cloud.google.com/build/docs/cloud-build-service-account-updates ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+- Optional fields for setting up automatic base image updates. ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+- Optional field for specifying a revision on GetFunction. ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+- Optional field for binary authorization policy. ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+- Optional field for deploying a source from a GitHub repository. ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+- Additional field on the output that specified whether the deployment supports Physical Zone Separation. ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+- Generate upload URL now supports for specifying the GCF generation that the generated upload url will be used for. ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+- ListRuntimes response now includes deprecation and decommissioning dates. ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+
+### Documentation improvements
+
+- Refined description in several fields. ([commit d169759](https://github.com/googleapis/google-cloud-dotnet/commit/d1697594643e72eecbec96b932458873cb6845c5))
+
 ## Version 1.6.0, released 2024-05-14
 
 ### New features
