@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>5.0.0-beta03</Version>
+    <Version>5.0.0-beta04</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud Spanner Database Admin API.</Description>
@@ -10,9 +10,9 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.8.0, 5.0.0)" />
-    <PackageReference Include="Google.Cloud.Iam.V1" Version="[3.2.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Iam.V1" Version="[3.3.0, 4.0.0)" />
     <ProjectReference Include="..\..\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1.csproj" />
-    <PackageReference Include="Google.LongRunning" Version="[3.2.0, 4.0.0)" />
+    <PackageReference Include="Google.LongRunning" Version="[3.3.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
