@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="NSubstitute" />
     <PackageReference Include="System.Linq.Async" />
+    <PackageReference Include="System.ValueTuple" />
     <PackageReference Include="Xunit.Combinatorial" VersionOverride="1.6.24" />
     <PackageReference Include="Xunit.SkippableFact" />
     <PackageReference Include="xunit" />
@@ -24,11 +25,10 @@
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
-    <PackageReference Include="MySql.ConnectorNET.Data" Version="6.8.3.2" />
+    <PackageReference Include="MySql.ConnectorNET.Data" VersionOverride="6.8.3.2" />
     <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj" />
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 </Project>

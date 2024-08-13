@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.13.12" />
+    <PackageReference Include="BenchmarkDotNet" />
     <ProjectReference Include="../Google.Cloud.BigQuery.V2/Google.Cloud.BigQuery.V2.csproj" />
   </ItemGroup>
 
