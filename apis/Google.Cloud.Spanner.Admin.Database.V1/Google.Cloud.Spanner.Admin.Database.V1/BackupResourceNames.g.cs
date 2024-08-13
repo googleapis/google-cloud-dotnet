@@ -300,6 +300,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             get => new gax::ResourceNameList<gcsadv::BackupName>(ReferencingBackups, s => string.IsNullOrEmpty(s) ? null : gcsadv::BackupName.Parse(s, allowUnparsed: true));
         }
+
+        /// <summary>
+        /// <see cref="BackupScheduleName"/>-typed view over the <see cref="BackupSchedules"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<BackupScheduleName> BackupSchedulesAsBackupScheduleNames
+        {
+            get => new gax::ResourceNameList<BackupScheduleName>(BackupSchedules, s => string.IsNullOrEmpty(s) ? null : BackupScheduleName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class CreateBackupRequest
