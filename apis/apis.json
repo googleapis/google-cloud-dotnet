@@ -1045,7 +1045,7 @@
       },
       "testDependencies": {
         "Google.Cloud.Storage.V1": "project",
-        "Xunit.Combinatorial": "1.6.24"
+        "Xunit.Combinatorial": "default"
       },
       "tags": [
         "BigQuery"
@@ -2439,8 +2439,8 @@
         "Google.Api.Gax.Testing": "default",
         "Google.Cloud.Firestore.Admin.V1": "3.9.0",
         "Grpc.Core.Testing": "2.46.6",
-        "System.ValueTuple": "4.5.0",
-        "Xunit.Combinatorial": "1.6.24"
+        "System.ValueTuple": "default",
+        "Xunit.Combinatorial": "default"
       },
       "shortName": "firestore"
     },
@@ -3882,8 +3882,8 @@
         "Microsoft.Extensions.DependencyInjection": "6.0.1",
         "Microsoft.Extensions.Hosting": "6.0.1",
         "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
-        "System.ValueTuple": "4.5.0",
-        "Xunit.Combinatorial": "1.6.24"
+        "System.ValueTuple": "default",
+        "Xunit.Combinatorial": "default"
       },
       "tags": [
         "PubSub"
@@ -4677,7 +4677,8 @@
         "Google.Api.Gax.Testing": "default",
         "Microsoft.Extensions.Configuration": "6.0.1",
         "Microsoft.Extensions.DependencyInjection": "6.0.1",
-        "Xunit.Combinatorial": "1.6.24"
+        "System.ValueTuple": "default",
+        "Xunit.Combinatorial": "default"
       }
     },
     {
@@ -4711,7 +4712,7 @@
         "Google.Cloud.Spanner.Common.V1": "project"
       },
       "testDependencies": {
-        "Xunit.Combinatorial": "1.6.24"
+        "Xunit.Combinatorial": "default"
       },
       "noVersionHistory": true,
       "shortName": "spanner",
