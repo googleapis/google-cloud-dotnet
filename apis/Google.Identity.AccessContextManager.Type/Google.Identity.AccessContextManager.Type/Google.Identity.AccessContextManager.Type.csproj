@@ -8,7 +8,7 @@
     <PackageTags>identity;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.CommonProtos" Version="[2.15.0, 3.0.0)" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="[2.15.0, 3.0.0)" />
   </ItemGroup>
 </Project>
