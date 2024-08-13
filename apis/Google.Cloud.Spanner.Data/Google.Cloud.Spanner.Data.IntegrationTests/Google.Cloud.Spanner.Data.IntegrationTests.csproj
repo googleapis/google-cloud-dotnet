@@ -18,7 +18,7 @@
     <PackageReference Include="NSubstitute" />
     <PackageReference Include="System.Linq.Async" />
     <PackageReference Include="System.ValueTuple" />
-    <PackageReference Include="Xunit.Combinatorial" VersionOverride="1.6.24" />
+    <PackageReference Include="Xunit.Combinatorial" />
     <PackageReference Include="Xunit.SkippableFact" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
