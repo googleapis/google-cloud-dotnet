@@ -753,4 +753,25 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class MoveInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="InstanceConfigName"/>-typed view over the <see cref="TargetConfig"/> resource name property.
+        /// </summary>
+        public InstanceConfigName TargetConfigAsInstanceConfigName
+        {
+            get => string.IsNullOrEmpty(TargetConfig) ? null : InstanceConfigName.Parse(TargetConfig, allowUnparsed: true);
+            set => TargetConfig = value?.ToString() ?? "";
+        }
+    }
 }
