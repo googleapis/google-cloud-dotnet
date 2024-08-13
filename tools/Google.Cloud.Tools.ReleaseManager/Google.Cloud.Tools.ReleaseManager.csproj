@@ -6,10 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.CommonProtos" Version="2.15.0" />
-    <PackageReference Include="LibGit2Sharp" Version="0.30.0" />
-    <PackageReference Include="NuGet.Protocol" Version="6.10.1" />
-    <PackageReference Include="Octokit" Version="13.0.1" />
+    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="2.15.0" />
+    <PackageReference Include="LibGit2Sharp" />
+    <PackageReference Include="NuGet.Protocol" />
+    <PackageReference Include="Octokit" />
     <ProjectReference Include="..\Google.Cloud.Tools.ApiIndex.V1\Google.Cloud.Tools.ApiIndex.V1.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj" />
@@ -20,7 +20,7 @@
      - this binary refers to. Without this, we end up loading the netstandard2.0 TFM
      - for libraries which target that, and that then fails to use the channel.
      -->
-    <PackageReference Include="Grpc.Net.Client" Version="2.61.0" />
+    <PackageReference Include="Grpc.Net.Client" VersionOverride="2.61.0" />
   </ItemGroup>
 
 </Project>
