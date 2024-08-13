@@ -14,10 +14,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LibGit2Sharp" Version="0.30.0" />
+    <PackageReference Include="LibGit2Sharp" />
     <EmbeddedResource Include="publish_reporter.sh" />
-    <PackageReference Include="GitHubJwt" Version="0.0.6" />
-    <PackageReference Include="Octokit" Version="13.0.1" />
+    <PackageReference Include="GitHubJwt" />
+    <PackageReference Include="Octokit" />
   </ItemGroup>
 
 </Project>

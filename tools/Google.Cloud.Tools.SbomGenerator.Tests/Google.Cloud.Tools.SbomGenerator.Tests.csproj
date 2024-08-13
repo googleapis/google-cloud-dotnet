@@ -9,12 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(TestSdkVersion)" />
-      <PackageReference Include="xunit" Version="$(XUnitVersion)" />
-      <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVersion)" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
     <ProjectReference Include="..\Google.Cloud.Tools.SbomGenerator\Google.Cloud.Tools.SbomGenerator.csproj" />
   </ItemGroup>
 
