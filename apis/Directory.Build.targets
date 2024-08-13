@@ -22,8 +22,8 @@
   
   <!-- Common references and items that are fine to include in all API projects -->
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" PrivateAssets="All" />
     <None Include="$(RepoRoot)/LICENSE" Pack="true" PackagePath="" />
     <None Include="$(RepoRoot)/NuGetIcon.png" Pack="true" PackagePath="" />
   </ItemGroup>
