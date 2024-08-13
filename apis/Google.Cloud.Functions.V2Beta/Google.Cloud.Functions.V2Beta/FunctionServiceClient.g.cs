@@ -939,8 +939,7 @@ namespace Google.Cloud.Functions.V2Beta
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
-        /// If no field mask is provided, all provided fields in the request will be
-        /// updated.
+        /// If no field mask is provided, all fields will be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -959,8 +958,7 @@ namespace Google.Cloud.Functions.V2Beta
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
-        /// If no field mask is provided, all provided fields in the request will be
-        /// updated.
+        /// If no field mask is provided, all fields will be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -979,8 +977,7 @@ namespace Google.Cloud.Functions.V2Beta
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
-        /// If no field mask is provided, all provided fields in the request will be
-        /// updated.
+        /// If no field mask is provided, all fields will be updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1153,11 +1150,11 @@ namespace Google.Cloud.Functions.V2Beta
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making a HTTP PUT request, these two headers need to be specified:
+        /// When making a HTTP PUT request, specify this header:
         /// 
         /// * `content-type: application/zip`
         /// 
-        /// And this header SHOULD NOT be specified:
+        /// Do not specify this header:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1184,11 +1181,11 @@ namespace Google.Cloud.Functions.V2Beta
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making a HTTP PUT request, these two headers need to be specified:
+        /// When making a HTTP PUT request, specify this header:
         /// 
         /// * `content-type: application/zip`
         /// 
-        /// And this header SHOULD NOT be specified:
+        /// Do not specify this header:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1215,11 +1212,11 @@ namespace Google.Cloud.Functions.V2Beta
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making a HTTP PUT request, these two headers need to be specified:
+        /// When making a HTTP PUT request, specify this header:
         /// 
         /// * `content-type: application/zip`
         /// 
-        /// And this header SHOULD NOT be specified:
+        /// Do not specify this header:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1653,11 +1650,11 @@ namespace Google.Cloud.Functions.V2Beta
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making a HTTP PUT request, these two headers need to be specified:
+        /// When making a HTTP PUT request, specify this header:
         /// 
         /// * `content-type: application/zip`
         /// 
-        /// And this header SHOULD NOT be specified:
+        /// Do not specify this header:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1687,11 +1684,11 @@ namespace Google.Cloud.Functions.V2Beta
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making a HTTP PUT request, these two headers need to be specified:
+        /// When making a HTTP PUT request, specify this header:
         /// 
         /// * `content-type: application/zip`
         /// 
-        /// And this header SHOULD NOT be specified:
+        /// Do not specify this header:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
