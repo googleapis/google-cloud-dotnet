@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-alpha30, released 2024-08-13
+
+### New features
+
+- Add block_project_ssh_keys field to the v1alpha job API to block project level ssh keys access to Batch created VMs ([commit 3a1b85f](https://github.com/googleapis/google-cloud-dotnet/commit/3a1b85f77544b42ef731e07c7f1d382daf84469b))
+- Remove visibility restriction of cancel job api, allow in v1alpha ([commit 3a1b85f](https://github.com/googleapis/google-cloud-dotnet/commit/3a1b85f77544b42ef731e07c7f1d382daf84469b))
+- Update Go Datastore import path ([commit 3a1b85f](https://github.com/googleapis/google-cloud-dotnet/commit/3a1b85f77544b42ef731e07c7f1d382daf84469b))
+- Update Go Bigtable import path ([commit 3a1b85f](https://github.com/googleapis/google-cloud-dotnet/commit/3a1b85f77544b42ef731e07c7f1d382daf84469b))
+
+### Documentation improvements
+
+- Refine usage scope for field `task_execution` and `task_state` in `status_events` ([commit 3a1b85f](https://github.com/googleapis/google-cloud-dotnet/commit/3a1b85f77544b42ef731e07c7f1d382daf84469b))
+- Add instructions on how to configure cross-project pubsub publisher ([commit 5e272cf](https://github.com/googleapis/google-cloud-dotnet/commit/5e272cfb0d5d740cd383e1a3d64988f02f647a09))
+- Document default disk type: pd-standard for non boot disk, pd-balanced for boot disk ([commit 5e272cf](https://github.com/googleapis/google-cloud-dotnet/commit/5e272cfb0d5d740cd383e1a3d64988f02f647a09))
+- Update list of volume.mount_options field ([commit 5e272cf](https://github.com/googleapis/google-cloud-dotnet/commit/5e272cfb0d5d740cd383e1a3d64988f02f647a09))
+- Update GCS description of volume.mount_options field ([commit 5e272cf](https://github.com/googleapis/google-cloud-dotnet/commit/5e272cfb0d5d740cd383e1a3d64988f02f647a09))
+- Update links in the description of volume.mount_options field ([commit 5e272cf](https://github.com/googleapis/google-cloud-dotnet/commit/5e272cfb0d5d740cd383e1a3d64988f02f647a09))
+
 ## Version 1.0.0-alpha29, released 2024-06-04
 
 ### New features
