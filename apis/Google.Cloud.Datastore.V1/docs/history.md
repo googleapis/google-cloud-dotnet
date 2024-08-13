@@ -1,5 +1,12 @@
 # Version history
 
+## Version 4.13.0, released 2024-08-13
+
+### New features
+
+- Update Go Datastore import path ([commit eb3a95f](https://github.com/googleapis/google-cloud-dotnet/commit/eb3a95f79d6af2ca0b183f6d63ea2a60fdca279c))
+- Update Go Bigtable import path ([commit eb3a95f](https://github.com/googleapis/google-cloud-dotnet/commit/eb3a95f79d6af2ca0b183f6d63ea2a60fdca279c))
+
 ## Version 4.12.0, released 2024-05-30
 
 ### New features
