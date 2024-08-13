@@ -1,5 +1,19 @@
 # Version history
 
+## Version 3.8.0, released 2024-08-13
+
+### New features
+
+- Add BigQuery Metastore Partition Service API version v1alpha ([commit 3bd0dfb](https://github.com/googleapis/google-cloud-dotnet/commit/3bd0dfb945087291bd84d226caf1d3dd93ddb033))
+- Adds AdaptiveMt HTML/Glossary support ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+- Adds protos for Custom Translation API (AutoML) ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+- Adds protos for Transliteration in V3 Advanced translate text ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+- Adds protos for Romanization APIs ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+
+### Documentation improvements
+
+- Fixes typos in docs ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+
 ## Version 3.7.0, released 2024-05-14
 
 ### New features

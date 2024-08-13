@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>3.7.0</Version>
+    <Version>3.8.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Translate v3 API. The Translate API translates text from one language to another.</Description>
@@ -12,7 +12,7 @@
     <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.8.0, 5.0.0)" />
     <PackageReference Include="Google.Cloud.Iam.V1" Version="[3.3.0, 4.0.0)" />
     <PackageReference Include="Google.Cloud.Location" Version="[2.3.0, 3.0.0)" />
-    <PackageReference Include="Google.LongRunning" Version="[3.2.0, 4.0.0)" />
+    <PackageReference Include="Google.LongRunning" Version="[3.3.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
