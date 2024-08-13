@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.7.0, released 2024-08-13
+
+### New features
+
+- Added `build_service_account` field to CloudFunction ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+
+### Documentation improvements
+
+- A comment for field `runtime_version` in message `.google.cloud.functions.v1.CloudFunction` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `docker_repository` in message `.google.cloud.functions.v1.CloudFunction` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `automatic_update_policy` in message `.google.cloud.functions.v1.CloudFunction` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `on_deploy_update_policy` in message `.google.cloud.functions.v1.CloudFunction` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `url` in message `.google.cloud.functions.v1.SourceRepository` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+- A comment for field `url` in message `.google.cloud.functions.v1.HttpsTrigger` is changed ([commit 079e5b0](https://github.com/googleapis/google-cloud-dotnet/commit/079e5b09d5f5eda0408af303685bada9e2c0f97e))
+
 ## Version 2.6.0, released 2024-05-14
 
 ### New features
