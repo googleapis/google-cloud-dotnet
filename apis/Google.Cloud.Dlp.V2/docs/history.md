@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.12.0, released 2024-08-13
+
+### New features
+
+- Add the TagResources API ([commit 1be7ce3](https://github.com/googleapis/google-cloud-dotnet/commit/1be7ce396894cac23dc57f3bb33f7bdd4eb780fb))
+
 ## Version 4.11.0, released 2024-08-05
 
 ### New features
