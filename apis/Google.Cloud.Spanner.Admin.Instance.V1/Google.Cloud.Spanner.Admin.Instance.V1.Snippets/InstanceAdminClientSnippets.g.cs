@@ -3202,5 +3202,72 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for MoveInstance</summary>
+        public void MoveInstanceRequestObject()
+        {
+            // Snippet: MoveInstance(MoveInstanceRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            MoveInstanceRequest request = new MoveInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                TargetConfigAsInstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
+            };
+            // Make the request
+            Operation<MoveInstanceResponse, MoveInstanceMetadata> response = instanceAdminClient.MoveInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MoveInstanceResponse, MoveInstanceMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MoveInstanceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MoveInstanceResponse, MoveInstanceMetadata> retrievedResponse = instanceAdminClient.PollOnceMoveInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MoveInstanceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveInstanceAsync</summary>
+        public async Task MoveInstanceRequestObjectAsync()
+        {
+            // Snippet: MoveInstanceAsync(MoveInstanceRequest, CallSettings)
+            // Additional: MoveInstanceAsync(MoveInstanceRequest, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            MoveInstanceRequest request = new MoveInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                TargetConfigAsInstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
+            };
+            // Make the request
+            Operation<MoveInstanceResponse, MoveInstanceMetadata> response = await instanceAdminClient.MoveInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MoveInstanceResponse, MoveInstanceMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MoveInstanceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MoveInstanceResponse, MoveInstanceMetadata> retrievedResponse = await instanceAdminClient.PollOnceMoveInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MoveInstanceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

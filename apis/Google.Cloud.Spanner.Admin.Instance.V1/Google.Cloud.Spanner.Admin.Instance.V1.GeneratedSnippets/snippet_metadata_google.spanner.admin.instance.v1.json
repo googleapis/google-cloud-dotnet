@@ -5767,6 +5767,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_MoveInstance_sync",
+      "title": "MoveInstanceRequestObject",
+      "description": "Snippet for MoveInstance",
+      "file": "InstanceAdminClient.MoveInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveInstance",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.MoveInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceResponse, Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "MoveInstance",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.MoveInstance",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_MoveInstance_async",
+      "title": "MoveInstanceRequestObjectAsync",
+      "description": "Snippet for MoveInstanceAsync",
+      "file": "InstanceAdminClient.MoveInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveInstanceAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.MoveInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceResponse, Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "MoveInstance",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.MoveInstance",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

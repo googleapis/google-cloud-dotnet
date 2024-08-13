@@ -147,6 +147,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsRequest> __Marshaller_google_spanner_admin_instance_v1_ListInstancePartitionOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse> __Marshaller_google_spanner_admin_instance_v1_ListInstancePartitionOperationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest> __Marshaller_google_spanner_admin_instance_v1_MoveInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> __Method_ListInstanceConfigs = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse>(
@@ -308,6 +310,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         __Marshaller_google_spanner_admin_instance_v1_ListInstancePartitionOperationsRequest,
         __Marshaller_google_spanner_admin_instance_v1_ListInstancePartitionOperationsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest, global::Google.LongRunning.Operation> __Method_MoveInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MoveInstance",
+        __Marshaller_google_spanner_admin_instance_v1_MoveInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -343,38 +353,38 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
 
       /// <summary>
-      /// Creates an instance config and begins preparing it to be used. The
+      /// Creates an instance configuration and begins preparing it to be used. The
       /// returned [long-running operation][google.longrunning.Operation]
       /// can be used to track the progress of preparing the new
-      /// instance config. The instance config name is assigned by the caller. If the
-      /// named instance config already exists, `CreateInstanceConfig` returns
-      /// `ALREADY_EXISTS`.
+      /// instance configuration. The instance configuration name is assigned by the
+      /// caller. If the named instance configuration already exists,
+      /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config is readable via the API, with all requested
-      ///     attributes. The instance config's
+      ///   * The instance configuration is readable via the API, with all requested
+      ///     attributes. The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true. Its state is `CREATING`.
       ///
       /// While the operation is pending:
       ///
-      ///   * Cancelling the operation renders the instance config immediately
+      ///   * Cancelling the operation renders the instance configuration immediately
       ///     unreadable via the API.
       ///   * Except for deleting the creating resource, all other attempts to modify
-      ///     the instance config are rejected.
+      ///     the instance configuration are rejected.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Instances can be created using the instance configuration.
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false. Its state becomes `READY`.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// creation of the instance config. The
+      /// creation of the instance configuration. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -395,16 +405,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
 
       /// <summary>
-      /// Updates an instance config. The returned
+      /// Updates an instance configuration. The returned
       /// [long-running operation][google.longrunning.Operation] can be used to track
-      /// the progress of updating the instance. If the named instance config does
-      /// not exist, returns `NOT_FOUND`.
+      /// the progress of updating the instance. If the named instance configuration
+      /// does not exist, returns `NOT_FOUND`.
       ///
-      /// Only user managed configurations can be updated.
+      /// Only user-managed configurations can be updated.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true.
       ///
@@ -414,23 +424,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
       ///     The operation is guaranteed to succeed at undoing all changes, after
       ///     which point it terminates with a `CANCELLED` status.
-      ///   * All other attempts to modify the instance config are rejected.
-      ///   * Reading the instance config via the API continues to give the
+      ///   * All other attempts to modify the instance configuration are rejected.
+      ///   * Reading the instance configuration via the API continues to give the
       ///     pre-request values.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Creating instances using the instance configuration uses the new
       ///     values.
-      ///   * The instance config's new values are readable via the API.
-      ///   * The instance config's
+      ///   * The new values of the instance configuration are readable via the API.
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// the instance config modification.  The
+      /// the instance configuration modification.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -450,11 +460,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
 
       /// <summary>
-      /// Deletes the instance config. Deletion is only allowed when no
+      /// Deletes the instance configuration. Deletion is only allowed when no
       /// instances are using the configuration. If any instances are using
-      /// the config, returns `FAILED_PRECONDITION`.
+      /// the configuration, returns `FAILED_PRECONDITION`.
       ///
-      /// Only user managed configurations can be deleted.
+      /// Only user-managed configurations can be deleted.
       ///
       /// Authorization requires `spanner.instanceConfigs.delete` permission on
       /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -469,9 +479,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
 
       /// <summary>
-      /// Lists the user-managed instance config [long-running
+      /// Lists the user-managed instance configuration [long-running
       /// operations][google.longrunning.Operation] in the given project. An instance
-      /// config operation has a name of the form
+      /// configuration operation has a name of the form
       /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
       /// The long-running operation
       /// [metadata][google.longrunning.Operation.metadata] field type
@@ -852,6 +862,78 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Moves an instance to the target instance configuration. You can use the
+      /// returned [long-running operation][google.longrunning.Operation] to track
+      /// the progress of moving the instance.
+      ///
+      /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+      /// the following criteria:
+      ///
+      ///   * Is undergoing a move to a different instance configuration
+      ///   * Has backups
+      ///   * Has an ongoing update
+      ///   * Contains any CMEK-enabled databases
+      ///   * Is a free trial instance
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * All other attempts to modify the instance, including changes to its
+      ///     compute capacity, are rejected.
+      ///   * The following database and backup admin operations are rejected:
+      ///
+      ///     * `DatabaseAdmin.CreateDatabase`
+      ///     * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+      ///        specified in the request.)
+      ///     * `DatabaseAdmin.RestoreDatabase`
+      ///     * `DatabaseAdmin.CreateBackup`
+      ///     * `DatabaseAdmin.CopyBackup`
+      ///
+      ///   * Both the source and target instance configurations are subject to
+      ///     hourly compute and storage charges.
+      ///   * The instance might experience higher read-write latencies and a higher
+      ///     transaction abort rate. However, moving an instance doesn't cause any
+      ///     downtime.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] has
+      /// a name of the format
+      /// `&lt;instance_name>/operations/&lt;operation_id>` and can be used to track
+      /// the move instance operation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance],
+      /// if successful.
+      /// Cancelling the operation sets its metadata's
+      /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+      /// Cancellation is not immediate because it involves moving any data
+      /// previously moved to the target instance configuration back to the original
+      /// instance configuration. You can use this operation to track the progress of
+      /// the cancellation. Upon successful completion of the cancellation, the
+      /// operation terminates with `CANCELLED` status.
+      ///
+      /// If not cancelled, upon completion of the returned operation:
+      ///
+      ///   * The instance successfully moves to the target instance
+      ///     configuration.
+      ///   * You are billed for compute and storage in target instance
+      ///   configuration.
+      ///
+      /// Authorization requires the `spanner.instances.update` permission on
+      /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+      ///
+      /// For more details, see
+      /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> MoveInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for InstanceAdmin</summary>
@@ -978,38 +1060,38 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstanceConfig, null, options, request);
       }
       /// <summary>
-      /// Creates an instance config and begins preparing it to be used. The
+      /// Creates an instance configuration and begins preparing it to be used. The
       /// returned [long-running operation][google.longrunning.Operation]
       /// can be used to track the progress of preparing the new
-      /// instance config. The instance config name is assigned by the caller. If the
-      /// named instance config already exists, `CreateInstanceConfig` returns
-      /// `ALREADY_EXISTS`.
+      /// instance configuration. The instance configuration name is assigned by the
+      /// caller. If the named instance configuration already exists,
+      /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config is readable via the API, with all requested
-      ///     attributes. The instance config's
+      ///   * The instance configuration is readable via the API, with all requested
+      ///     attributes. The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true. Its state is `CREATING`.
       ///
       /// While the operation is pending:
       ///
-      ///   * Cancelling the operation renders the instance config immediately
+      ///   * Cancelling the operation renders the instance configuration immediately
       ///     unreadable via the API.
       ///   * Except for deleting the creating resource, all other attempts to modify
-      ///     the instance config are rejected.
+      ///     the instance configuration are rejected.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Instances can be created using the instance configuration.
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false. Its state becomes `READY`.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// creation of the instance config. The
+      /// creation of the instance configuration. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -1031,38 +1113,38 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CreateInstanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an instance config and begins preparing it to be used. The
+      /// Creates an instance configuration and begins preparing it to be used. The
       /// returned [long-running operation][google.longrunning.Operation]
       /// can be used to track the progress of preparing the new
-      /// instance config. The instance config name is assigned by the caller. If the
-      /// named instance config already exists, `CreateInstanceConfig` returns
-      /// `ALREADY_EXISTS`.
+      /// instance configuration. The instance configuration name is assigned by the
+      /// caller. If the named instance configuration already exists,
+      /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config is readable via the API, with all requested
-      ///     attributes. The instance config's
+      ///   * The instance configuration is readable via the API, with all requested
+      ///     attributes. The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true. Its state is `CREATING`.
       ///
       /// While the operation is pending:
       ///
-      ///   * Cancelling the operation renders the instance config immediately
+      ///   * Cancelling the operation renders the instance configuration immediately
       ///     unreadable via the API.
       ///   * Except for deleting the creating resource, all other attempts to modify
-      ///     the instance config are rejected.
+      ///     the instance configuration are rejected.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Instances can be created using the instance configuration.
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false. Its state becomes `READY`.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// creation of the instance config. The
+      /// creation of the instance configuration. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -1082,38 +1164,38 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInstanceConfig, null, options, request);
       }
       /// <summary>
-      /// Creates an instance config and begins preparing it to be used. The
+      /// Creates an instance configuration and begins preparing it to be used. The
       /// returned [long-running operation][google.longrunning.Operation]
       /// can be used to track the progress of preparing the new
-      /// instance config. The instance config name is assigned by the caller. If the
-      /// named instance config already exists, `CreateInstanceConfig` returns
-      /// `ALREADY_EXISTS`.
+      /// instance configuration. The instance configuration name is assigned by the
+      /// caller. If the named instance configuration already exists,
+      /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config is readable via the API, with all requested
-      ///     attributes. The instance config's
+      ///   * The instance configuration is readable via the API, with all requested
+      ///     attributes. The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true. Its state is `CREATING`.
       ///
       /// While the operation is pending:
       ///
-      ///   * Cancelling the operation renders the instance config immediately
+      ///   * Cancelling the operation renders the instance configuration immediately
       ///     unreadable via the API.
       ///   * Except for deleting the creating resource, all other attempts to modify
-      ///     the instance config are rejected.
+      ///     the instance configuration are rejected.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Instances can be created using the instance configuration.
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false. Its state becomes `READY`.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// creation of the instance config. The
+      /// creation of the instance configuration. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -1135,38 +1217,38 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CreateInstanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an instance config and begins preparing it to be used. The
+      /// Creates an instance configuration and begins preparing it to be used. The
       /// returned [long-running operation][google.longrunning.Operation]
       /// can be used to track the progress of preparing the new
-      /// instance config. The instance config name is assigned by the caller. If the
-      /// named instance config already exists, `CreateInstanceConfig` returns
-      /// `ALREADY_EXISTS`.
+      /// instance configuration. The instance configuration name is assigned by the
+      /// caller. If the named instance configuration already exists,
+      /// `CreateInstanceConfig` returns `ALREADY_EXISTS`.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config is readable via the API, with all requested
-      ///     attributes. The instance config's
+      ///   * The instance configuration is readable via the API, with all requested
+      ///     attributes. The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true. Its state is `CREATING`.
       ///
       /// While the operation is pending:
       ///
-      ///   * Cancelling the operation renders the instance config immediately
+      ///   * Cancelling the operation renders the instance configuration immediately
       ///     unreadable via the API.
       ///   * Except for deleting the creating resource, all other attempts to modify
-      ///     the instance config are rejected.
+      ///     the instance configuration are rejected.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Instances can be created using the instance configuration.
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false. Its state becomes `READY`.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// creation of the instance config. The
+      /// creation of the instance configuration. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -1186,16 +1268,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInstanceConfig, null, options, request);
       }
       /// <summary>
-      /// Updates an instance config. The returned
+      /// Updates an instance configuration. The returned
       /// [long-running operation][google.longrunning.Operation] can be used to track
-      /// the progress of updating the instance. If the named instance config does
-      /// not exist, returns `NOT_FOUND`.
+      /// the progress of updating the instance. If the named instance configuration
+      /// does not exist, returns `NOT_FOUND`.
       ///
-      /// Only user managed configurations can be updated.
+      /// Only user-managed configurations can be updated.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true.
       ///
@@ -1205,23 +1287,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
       ///     The operation is guaranteed to succeed at undoing all changes, after
       ///     which point it terminates with a `CANCELLED` status.
-      ///   * All other attempts to modify the instance config are rejected.
-      ///   * Reading the instance config via the API continues to give the
+      ///   * All other attempts to modify the instance configuration are rejected.
+      ///   * Reading the instance configuration via the API continues to give the
       ///     pre-request values.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Creating instances using the instance configuration uses the new
       ///     values.
-      ///   * The instance config's new values are readable via the API.
-      ///   * The instance config's
+      ///   * The new values of the instance configuration are readable via the API.
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// the instance config modification.  The
+      /// the instance configuration modification.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -1242,16 +1324,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return UpdateInstanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an instance config. The returned
+      /// Updates an instance configuration. The returned
       /// [long-running operation][google.longrunning.Operation] can be used to track
-      /// the progress of updating the instance. If the named instance config does
-      /// not exist, returns `NOT_FOUND`.
+      /// the progress of updating the instance. If the named instance configuration
+      /// does not exist, returns `NOT_FOUND`.
       ///
-      /// Only user managed configurations can be updated.
+      /// Only user-managed configurations can be updated.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true.
       ///
@@ -1261,23 +1343,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
       ///     The operation is guaranteed to succeed at undoing all changes, after
       ///     which point it terminates with a `CANCELLED` status.
-      ///   * All other attempts to modify the instance config are rejected.
-      ///   * Reading the instance config via the API continues to give the
+      ///   * All other attempts to modify the instance configuration are rejected.
+      ///   * Reading the instance configuration via the API continues to give the
       ///     pre-request values.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Creating instances using the instance configuration uses the new
       ///     values.
-      ///   * The instance config's new values are readable via the API.
-      ///   * The instance config's
+      ///   * The new values of the instance configuration are readable via the API.
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// the instance config modification.  The
+      /// the instance configuration modification.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -1296,16 +1378,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateInstanceConfig, null, options, request);
       }
       /// <summary>
-      /// Updates an instance config. The returned
+      /// Updates an instance configuration. The returned
       /// [long-running operation][google.longrunning.Operation] can be used to track
-      /// the progress of updating the instance. If the named instance config does
-      /// not exist, returns `NOT_FOUND`.
+      /// the progress of updating the instance. If the named instance configuration
+      /// does not exist, returns `NOT_FOUND`.
       ///
-      /// Only user managed configurations can be updated.
+      /// Only user-managed configurations can be updated.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true.
       ///
@@ -1315,23 +1397,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
       ///     The operation is guaranteed to succeed at undoing all changes, after
       ///     which point it terminates with a `CANCELLED` status.
-      ///   * All other attempts to modify the instance config are rejected.
-      ///   * Reading the instance config via the API continues to give the
+      ///   * All other attempts to modify the instance configuration are rejected.
+      ///   * Reading the instance configuration via the API continues to give the
       ///     pre-request values.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Creating instances using the instance configuration uses the new
       ///     values.
-      ///   * The instance config's new values are readable via the API.
-      ///   * The instance config's
+      ///   * The new values of the instance configuration are readable via the API.
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// the instance config modification.  The
+      /// the instance configuration modification.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -1352,16 +1434,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return UpdateInstanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an instance config. The returned
+      /// Updates an instance configuration. The returned
       /// [long-running operation][google.longrunning.Operation] can be used to track
-      /// the progress of updating the instance. If the named instance config does
-      /// not exist, returns `NOT_FOUND`.
+      /// the progress of updating the instance. If the named instance configuration
+      /// does not exist, returns `NOT_FOUND`.
       ///
-      /// Only user managed configurations can be updated.
+      /// Only user-managed configurations can be updated.
       ///
       /// Immediately after the request returns:
       ///
-      ///   * The instance config's
+      ///   * The instance configuration's
       ///     [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///     field is set to true.
       ///
@@ -1371,23 +1453,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata.cancel_time].
       ///     The operation is guaranteed to succeed at undoing all changes, after
       ///     which point it terminates with a `CANCELLED` status.
-      ///   * All other attempts to modify the instance config are rejected.
-      ///   * Reading the instance config via the API continues to give the
+      ///   * All other attempts to modify the instance configuration are rejected.
+      ///   * Reading the instance configuration via the API continues to give the
       ///     pre-request values.
       ///
       /// Upon completion of the returned operation:
       ///
       ///   * Creating instances using the instance configuration uses the new
       ///     values.
-      ///   * The instance config's new values are readable via the API.
-      ///   * The instance config's
+      ///   * The new values of the instance configuration are readable via the API.
+      ///   * The instance configuration's
       ///   [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
       ///   field becomes false.
       ///
       /// The returned [long-running operation][google.longrunning.Operation] will
       /// have a name of the format
       /// `&lt;instance_config_name>/operations/&lt;operation_id>` and can be used to track
-      /// the instance config modification.  The
+      /// the instance configuration modification.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
@@ -1406,11 +1488,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstanceConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes the instance config. Deletion is only allowed when no
+      /// Deletes the instance configuration. Deletion is only allowed when no
       /// instances are using the configuration. If any instances are using
-      /// the config, returns `FAILED_PRECONDITION`.
+      /// the configuration, returns `FAILED_PRECONDITION`.
       ///
-      /// Only user managed configurations can be deleted.
+      /// Only user-managed configurations can be deleted.
       ///
       /// Authorization requires `spanner.instanceConfigs.delete` permission on
       /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1426,11 +1508,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return DeleteInstanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the instance config. Deletion is only allowed when no
+      /// Deletes the instance configuration. Deletion is only allowed when no
       /// instances are using the configuration. If any instances are using
-      /// the config, returns `FAILED_PRECONDITION`.
+      /// the configuration, returns `FAILED_PRECONDITION`.
       ///
-      /// Only user managed configurations can be deleted.
+      /// Only user-managed configurations can be deleted.
       ///
       /// Authorization requires `spanner.instanceConfigs.delete` permission on
       /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1444,11 +1526,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInstanceConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes the instance config. Deletion is only allowed when no
+      /// Deletes the instance configuration. Deletion is only allowed when no
       /// instances are using the configuration. If any instances are using
-      /// the config, returns `FAILED_PRECONDITION`.
+      /// the configuration, returns `FAILED_PRECONDITION`.
       ///
-      /// Only user managed configurations can be deleted.
+      /// Only user-managed configurations can be deleted.
       ///
       /// Authorization requires `spanner.instanceConfigs.delete` permission on
       /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1464,11 +1546,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return DeleteInstanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the instance config. Deletion is only allowed when no
+      /// Deletes the instance configuration. Deletion is only allowed when no
       /// instances are using the configuration. If any instances are using
-      /// the config, returns `FAILED_PRECONDITION`.
+      /// the configuration, returns `FAILED_PRECONDITION`.
       ///
-      /// Only user managed configurations can be deleted.
+      /// Only user-managed configurations can be deleted.
       ///
       /// Authorization requires `spanner.instanceConfigs.delete` permission on
       /// the resource [name][google.spanner.admin.instance.v1.InstanceConfig.name].
@@ -1482,9 +1564,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstanceConfig, null, options, request);
       }
       /// <summary>
-      /// Lists the user-managed instance config [long-running
+      /// Lists the user-managed instance configuration [long-running
       /// operations][google.longrunning.Operation] in the given project. An instance
-      /// config operation has a name of the form
+      /// configuration operation has a name of the form
       /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
       /// The long-running operation
       /// [metadata][google.longrunning.Operation.metadata] field type
@@ -1505,9 +1587,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return ListInstanceConfigOperations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the user-managed instance config [long-running
+      /// Lists the user-managed instance configuration [long-running
       /// operations][google.longrunning.Operation] in the given project. An instance
-      /// config operation has a name of the form
+      /// configuration operation has a name of the form
       /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
       /// The long-running operation
       /// [metadata][google.longrunning.Operation.metadata] field type
@@ -1526,9 +1608,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstanceConfigOperations, null, options, request);
       }
       /// <summary>
-      /// Lists the user-managed instance config [long-running
+      /// Lists the user-managed instance configuration [long-running
       /// operations][google.longrunning.Operation] in the given project. An instance
-      /// config operation has a name of the form
+      /// configuration operation has a name of the form
       /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
       /// The long-running operation
       /// [metadata][google.longrunning.Operation.metadata] field type
@@ -1549,9 +1631,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         return ListInstanceConfigOperationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the user-managed instance config [long-running
+      /// Lists the user-managed instance configuration [long-running
       /// operations][google.longrunning.Operation] in the given project. An instance
-      /// config operation has a name of the form
+      /// configuration operation has a name of the form
       /// `projects/&lt;project>/instanceConfigs/&lt;instance_config>/operations/&lt;operation>`.
       /// The long-running operation
       /// [metadata][google.longrunning.Operation.metadata] field type
@@ -3017,6 +3099,294 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstancePartitionOperations, null, options, request);
       }
+      /// <summary>
+      /// Moves an instance to the target instance configuration. You can use the
+      /// returned [long-running operation][google.longrunning.Operation] to track
+      /// the progress of moving the instance.
+      ///
+      /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+      /// the following criteria:
+      ///
+      ///   * Is undergoing a move to a different instance configuration
+      ///   * Has backups
+      ///   * Has an ongoing update
+      ///   * Contains any CMEK-enabled databases
+      ///   * Is a free trial instance
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * All other attempts to modify the instance, including changes to its
+      ///     compute capacity, are rejected.
+      ///   * The following database and backup admin operations are rejected:
+      ///
+      ///     * `DatabaseAdmin.CreateDatabase`
+      ///     * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+      ///        specified in the request.)
+      ///     * `DatabaseAdmin.RestoreDatabase`
+      ///     * `DatabaseAdmin.CreateBackup`
+      ///     * `DatabaseAdmin.CopyBackup`
+      ///
+      ///   * Both the source and target instance configurations are subject to
+      ///     hourly compute and storage charges.
+      ///   * The instance might experience higher read-write latencies and a higher
+      ///     transaction abort rate. However, moving an instance doesn't cause any
+      ///     downtime.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] has
+      /// a name of the format
+      /// `&lt;instance_name>/operations/&lt;operation_id>` and can be used to track
+      /// the move instance operation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance],
+      /// if successful.
+      /// Cancelling the operation sets its metadata's
+      /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+      /// Cancellation is not immediate because it involves moving any data
+      /// previously moved to the target instance configuration back to the original
+      /// instance configuration. You can use this operation to track the progress of
+      /// the cancellation. Upon successful completion of the cancellation, the
+      /// operation terminates with `CANCELLED` status.
+      ///
+      /// If not cancelled, upon completion of the returned operation:
+      ///
+      ///   * The instance successfully moves to the target instance
+      ///     configuration.
+      ///   * You are billed for compute and storage in target instance
+      ///   configuration.
+      ///
+      /// Authorization requires the `spanner.instances.update` permission on
+      /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+      ///
+      /// For more details, see
+      /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MoveInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MoveInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Moves an instance to the target instance configuration. You can use the
+      /// returned [long-running operation][google.longrunning.Operation] to track
+      /// the progress of moving the instance.
+      ///
+      /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+      /// the following criteria:
+      ///
+      ///   * Is undergoing a move to a different instance configuration
+      ///   * Has backups
+      ///   * Has an ongoing update
+      ///   * Contains any CMEK-enabled databases
+      ///   * Is a free trial instance
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * All other attempts to modify the instance, including changes to its
+      ///     compute capacity, are rejected.
+      ///   * The following database and backup admin operations are rejected:
+      ///
+      ///     * `DatabaseAdmin.CreateDatabase`
+      ///     * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+      ///        specified in the request.)
+      ///     * `DatabaseAdmin.RestoreDatabase`
+      ///     * `DatabaseAdmin.CreateBackup`
+      ///     * `DatabaseAdmin.CopyBackup`
+      ///
+      ///   * Both the source and target instance configurations are subject to
+      ///     hourly compute and storage charges.
+      ///   * The instance might experience higher read-write latencies and a higher
+      ///     transaction abort rate. However, moving an instance doesn't cause any
+      ///     downtime.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] has
+      /// a name of the format
+      /// `&lt;instance_name>/operations/&lt;operation_id>` and can be used to track
+      /// the move instance operation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance],
+      /// if successful.
+      /// Cancelling the operation sets its metadata's
+      /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+      /// Cancellation is not immediate because it involves moving any data
+      /// previously moved to the target instance configuration back to the original
+      /// instance configuration. You can use this operation to track the progress of
+      /// the cancellation. Upon successful completion of the cancellation, the
+      /// operation terminates with `CANCELLED` status.
+      ///
+      /// If not cancelled, upon completion of the returned operation:
+      ///
+      ///   * The instance successfully moves to the target instance
+      ///     configuration.
+      ///   * You are billed for compute and storage in target instance
+      ///   configuration.
+      ///
+      /// Authorization requires the `spanner.instances.update` permission on
+      /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+      ///
+      /// For more details, see
+      /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MoveInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MoveInstance, null, options, request);
+      }
+      /// <summary>
+      /// Moves an instance to the target instance configuration. You can use the
+      /// returned [long-running operation][google.longrunning.Operation] to track
+      /// the progress of moving the instance.
+      ///
+      /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+      /// the following criteria:
+      ///
+      ///   * Is undergoing a move to a different instance configuration
+      ///   * Has backups
+      ///   * Has an ongoing update
+      ///   * Contains any CMEK-enabled databases
+      ///   * Is a free trial instance
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * All other attempts to modify the instance, including changes to its
+      ///     compute capacity, are rejected.
+      ///   * The following database and backup admin operations are rejected:
+      ///
+      ///     * `DatabaseAdmin.CreateDatabase`
+      ///     * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+      ///        specified in the request.)
+      ///     * `DatabaseAdmin.RestoreDatabase`
+      ///     * `DatabaseAdmin.CreateBackup`
+      ///     * `DatabaseAdmin.CopyBackup`
+      ///
+      ///   * Both the source and target instance configurations are subject to
+      ///     hourly compute and storage charges.
+      ///   * The instance might experience higher read-write latencies and a higher
+      ///     transaction abort rate. However, moving an instance doesn't cause any
+      ///     downtime.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] has
+      /// a name of the format
+      /// `&lt;instance_name>/operations/&lt;operation_id>` and can be used to track
+      /// the move instance operation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance],
+      /// if successful.
+      /// Cancelling the operation sets its metadata's
+      /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+      /// Cancellation is not immediate because it involves moving any data
+      /// previously moved to the target instance configuration back to the original
+      /// instance configuration. You can use this operation to track the progress of
+      /// the cancellation. Upon successful completion of the cancellation, the
+      /// operation terminates with `CANCELLED` status.
+      ///
+      /// If not cancelled, upon completion of the returned operation:
+      ///
+      ///   * The instance successfully moves to the target instance
+      ///     configuration.
+      ///   * You are billed for compute and storage in target instance
+      ///   configuration.
+      ///
+      /// Authorization requires the `spanner.instances.update` permission on
+      /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+      ///
+      /// For more details, see
+      /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MoveInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MoveInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Moves an instance to the target instance configuration. You can use the
+      /// returned [long-running operation][google.longrunning.Operation] to track
+      /// the progress of moving the instance.
+      ///
+      /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
+      /// the following criteria:
+      ///
+      ///   * Is undergoing a move to a different instance configuration
+      ///   * Has backups
+      ///   * Has an ongoing update
+      ///   * Contains any CMEK-enabled databases
+      ///   * Is a free trial instance
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * All other attempts to modify the instance, including changes to its
+      ///     compute capacity, are rejected.
+      ///   * The following database and backup admin operations are rejected:
+      ///
+      ///     * `DatabaseAdmin.CreateDatabase`
+      ///     * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is
+      ///        specified in the request.)
+      ///     * `DatabaseAdmin.RestoreDatabase`
+      ///     * `DatabaseAdmin.CreateBackup`
+      ///     * `DatabaseAdmin.CopyBackup`
+      ///
+      ///   * Both the source and target instance configurations are subject to
+      ///     hourly compute and storage charges.
+      ///   * The instance might experience higher read-write latencies and a higher
+      ///     transaction abort rate. However, moving an instance doesn't cause any
+      ///     downtime.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] has
+      /// a name of the format
+      /// `&lt;instance_name>/operations/&lt;operation_id>` and can be used to track
+      /// the move instance operation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance],
+      /// if successful.
+      /// Cancelling the operation sets its metadata's
+      /// [cancel_time][google.spanner.admin.instance.v1.MoveInstanceMetadata.cancel_time].
+      /// Cancellation is not immediate because it involves moving any data
+      /// previously moved to the target instance configuration back to the original
+      /// instance configuration. You can use this operation to track the progress of
+      /// the cancellation. Upon successful completion of the cancellation, the
+      /// operation terminates with `CANCELLED` status.
+      ///
+      /// If not cancelled, upon completion of the returned operation:
+      ///
+      ///   * The instance successfully moves to the target instance
+      ///     configuration.
+      ///   * You are billed for compute and storage in target instance
+      ///   configuration.
+      ///
+      /// Authorization requires the `spanner.instances.update` permission on
+      /// the resource [instance][google.spanner.admin.instance.v1.Instance].
+      ///
+      /// For more details, see
+      /// [Move an instance](https://cloud.google.com/spanner/docs/move-instance).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MoveInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MoveInstance, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override InstanceAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -3050,7 +3420,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           .AddMethod(__Method_CreateInstancePartition, serviceImpl.CreateInstancePartition)
           .AddMethod(__Method_DeleteInstancePartition, serviceImpl.DeleteInstancePartition)
           .AddMethod(__Method_UpdateInstancePartition, serviceImpl.UpdateInstancePartition)
-          .AddMethod(__Method_ListInstancePartitionOperations, serviceImpl.ListInstancePartitionOperations).Build();
+          .AddMethod(__Method_ListInstancePartitionOperations, serviceImpl.ListInstancePartitionOperations)
+          .AddMethod(__Method_MoveInstance, serviceImpl.MoveInstance).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3080,6 +3451,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       serviceBinder.AddMethod(__Method_DeleteInstancePartition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstancePartitionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteInstancePartition));
       serviceBinder.AddMethod(__Method_UpdateInstancePartition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstancePartition));
       serviceBinder.AddMethod(__Method_ListInstancePartitionOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse>(serviceImpl.ListInstancePartitionOperations));
+      serviceBinder.AddMethod(__Method_MoveInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Instance.V1.MoveInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.MoveInstance));
     }
 
   }
