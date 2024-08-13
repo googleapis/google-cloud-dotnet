@@ -2517,7 +2517,7 @@
     },
     {
       "id": "Google.Cloud.Functions.V2Beta",
-      "version": "1.0.0-beta06",
+      "version": "1.0.0-beta07",
       "type": "grpc",
       "productName": "Cloud Functions",
       "productUrl": "https://cloud.google.com/functions",
@@ -2526,9 +2526,9 @@
         "functions"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/functions/v2beta",

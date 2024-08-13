@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2024-08-13
+
+### New features
+
+- Optional field for specifying a service account to use for the build. This helps navigate the change of historical default on new projects. For more details, see https://cloud.google.com/build/docs/cloud-build-service-account-updates ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+- Optional fields for setting up automatic base image updates. ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+- Optional field for specifying a revision on GetFunction. ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+- Optional field for binary authorization policy. ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+- Optional field for deploying a source from a GitHub repository. ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+- Additional field on the output that specified whether the deployment supports Physical Zone Separation. ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+- Generate upload URL now supports for specifying the GCF generation that the generated upload url will be used for. ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+- ListRuntimes response now includes deprecation and decommissioning dates. ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+
+### Documentation improvements
+
+- Refined description in several fields. ([commit f6efb2e](https://github.com/googleapis/google-cloud-dotnet/commit/f6efb2e55db0631e884803c9268ef9c1c15c85fd))
+
 ## Version 1.0.0-beta06, released 2024-05-08
 
 ### New features
