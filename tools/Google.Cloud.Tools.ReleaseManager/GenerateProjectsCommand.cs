@@ -27,6 +27,11 @@ namespace Google.Cloud.Tools.ReleaseManager
 {
     public class GenerateProjectsCommand : CommandBase
     {
+        private static readonly Dictionary<string, string> s_centralledVersionedProjects =
+            XDocument.Load(Path.Combine(DirectoryLayout.DetermineRootDirectory(), "Directory.Packages.props"))
+                .Root.Element("ItemGroup").Elements("PackageVersion")
+                .ToDictionary(p => p.Attribute("Include").Value, p => p.Attribute("Version").Value);
+
         private const string ProductDocumentationStub = @"{{title}}
 
 {{description}}
@@ -109,19 +114,19 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
             // These versions are in the top-level Directory.Build.props
-            { "Microsoft.NET.Test.Sdk", "$(TestSdkVersion)" },
-            { "xunit", "$(XUnitVersion)" },
-            { "xunit.runner.visualstudio", "$(XUnitRunnerVersion)" },
-            { "Xunit.SkippableFact", "$(XUnitSkippableFactVersion)" },
-            { "NSubstitute", "$(NSubstituteVersion)" },
-            { "System.Linq.Async", "$(SystemLinqAsyncVersion)" },
+            { "Microsoft.NET.Test.Sdk", DefaultVersionValue },
+            { "xunit", DefaultVersionValue },
+            { "xunit.runner.visualstudio", DefaultVersionValue },
+            { "Xunit.SkippableFact", DefaultVersionValue },
+            { "NSubstitute", DefaultVersionValue },
+            { "System.Linq.Async", DefaultVersionValue },
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
         // The relationship between this and PrivateAssets is tested on startup.
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
-            { ConfigureAwaitAnalyzer, "5.0.0" },
+            { ConfigureAwaitAnalyzer, DefaultVersionValue },
         };
 
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
@@ -795,6 +800,12 @@ api-name: {api.Id}
                 return new XElement("ProjectReference", new XAttribute("Include", path));
             }
 
+            // "Default" version can refer to the centrally-managed version.
+            if (dependencyVersion == DefaultVersionValue && s_centralledVersionedProjects.TryGetValue(package, out var centralVersion))
+            {
+                dependencyVersion = centralVersion;
+            }
+
             if (dependencyVersion == DefaultVersionValue)
             {
                 if (projectVersion.IsStable && projectVersion.Patch > 0)
@@ -818,9 +829,7 @@ api-name: {api.Id}
             {
                 throw new UserErrorException($"Project {project} uses prerelease version '{dependencyVersion}' for package {package}");
             }
-            var element = new XElement("PackageReference",
-                new XAttribute("Include", package),
-                new XAttribute("Version", GetDependencyVersionRange(package, dependencyVersion)));
+            var element = new XElement("PackageReference", new XAttribute("Include", package), MaybeGetVersionOverrideAttribute(package, dependencyVersion));
             if (privateAssetValue != null)
             {
                 element.Add(new XAttribute("PrivateAssets", privateAssetValue));
@@ -836,10 +845,13 @@ api-name: {api.Id}
 
             return element;
 
-            // We allow MSBuild properties, e.g. $(XUnitVersion), just for test dependencies.
-            bool IsValidVersion() =>
-                (testProject && dependencyVersion.StartsWith('$')) ||
-                AnyVersionPattern.IsMatch(dependencyVersion);
+            bool IsValidVersion() => AnyVersionPattern.IsMatch(dependencyVersion);
+
+            // We only need a VersionOverride for packages that aren't centrally managed or where we're targeting a different version.
+            static XAttribute MaybeGetVersionOverrideAttribute(string package, string version) =>
+                s_centralledVersionedProjects.TryGetValue(package, out var centralVersion) && centralVersion == version
+                ? null
+                : new XAttribute("VersionOverride", GetDependencyVersionRange(package, version));
         }
 
         /// <summary>
