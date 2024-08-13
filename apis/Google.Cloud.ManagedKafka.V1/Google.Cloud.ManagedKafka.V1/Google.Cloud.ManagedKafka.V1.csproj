@@ -4,7 +4,7 @@
     <Version>1.0.0-beta00</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the Apache Kafka for BigQuery service, which lets you ingest Kafka streams directly into Google Cloud.</Description>
+    <Description>Recommended Google client library to access the Managed Service for Apache Kafka API, which lets you ingest Kafka streams directly into Google Cloud.</Description>
     <PackageTags>kafka;bigquery;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>

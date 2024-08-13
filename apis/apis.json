@@ -3077,7 +3077,7 @@
       "type": "grpc",
       "productName": "Apache Kafka for BigQuery",
       "productUrl": "https://cloud.google.com/managed-kafka",
-      "description": "Recommended Google client library to access the Apache Kafka for BigQuery service, which lets you ingest Kafka streams directly into Google Cloud.",
+      "description": "Recommended Google client library to access the Managed Service for Apache Kafka API, which lets you ingest Kafka streams directly into Google Cloud.",
       "tags": [
         "kafka",
         "bigquery"
