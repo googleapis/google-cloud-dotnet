@@ -1,0 +1,74 @@
+[
+  {
+    "method": "ListDatasets",
+    "client": "DatasetServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  },
+  {
+    "method": "ListEndpoints",
+    "client": "EndpointServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  },
+  {
+    "method": "ListBatchPredictionJobs",
+    "client": "JobServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  },
+  {
+    "method": "ListCustomJobs",
+    "client": "JobServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  },
+  {
+    "method": "ListHyperparameterTuningJobs",
+    "client": "JobServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  },
+  {
+    "method": "SearchMigratableResources",
+    "client": "MigrationServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  },
+  {
+    "method": "ListModels",
+    "client": "ModelServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  },
+  {
+    "method": "ListTrainingPipelines",
+    "client": "PipelineServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  },
+  {
+    "method": "ListSpecialistPools",
+    "client": "SpecialistPoolServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    },
+    "endpoint": "us-east1-aiplatform.googleapis.com"
+  }
+]
