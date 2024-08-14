@@ -2335,7 +2335,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int ImageUriFieldNumber = 1;
         private string imageUri_ = "";
         /// <summary>
-        /// The URI to pull the container image from.
+        /// Required. The URI to pull the container image from.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2352,9 +2352,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> commands_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Overrides the `CMD` specified in the container. If there is an ENTRYPOINT
-        /// (either in the container image or with the entrypoint field below) then
-        /// commands are appended as arguments to the ENTRYPOINT.
+        /// Required for some container images. Overrides the `CMD` specified in the
+        /// container. If there is an `ENTRYPOINT` (either in the container image or
+        /// with the `entrypoint` field below) then these commands are appended as
+        /// arguments to the `ENTRYPOINT`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2366,7 +2367,8 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int EntrypointFieldNumber = 3;
         private string entrypoint_ = "";
         /// <summary>
-        /// Overrides the `ENTRYPOINT` specified in the container.
+        /// Required for some container images. Overrides the `ENTRYPOINT` specified
+        /// in the container.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2384,16 +2386,16 @@ namespace Google.Cloud.Batch.V1Alpha {
         private readonly pbc::RepeatedField<string> volumes_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// Volumes to mount (bind mount) from the host machine files or directories
-        /// into the container, formatted to match docker run's --volume option,
-        /// e.g. /foo:/bar, or /foo:/bar:ro
+        /// into the container, formatted to match `--volume` option for the
+        /// `docker run` command&amp;mdash;for example, `/foo:/bar` or `/foo:/bar:ro`.
         ///
         /// If the `TaskSpec.Volumes` field is specified but this field is not, Batch
         /// will mount each volume from the host machine to the container with the
         /// same mount path by default. In this case, the default mount option for
-        /// containers will be read-only (ro) for existing persistent disks and
-        /// read-write (rw) for other volume types, regardless of the original mount
-        /// options specified in `TaskSpec.Volumes`. If you need different mount
-        /// settings, you can explicitly configure them in this field.
+        /// containers will be read-only (`ro`) for existing persistent disks and
+        /// read-write (`rw`) for other volume types, regardless of the original
+        /// mount options specified in `TaskSpec.Volumes`. If you need different
+        /// mount settings, you can explicitly configure them in this field.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2405,8 +2407,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int OptionsFieldNumber = 8;
         private string options_ = "";
         /// <summary>
-        /// Arbitrary additional options to include in the "docker run" command when
-        /// running this container, e.g. "--network host".
+        /// Required for some container images. Arbitrary additional options to
+        /// include in the `docker run` command when running this container&amp;mdash;for
+        /// example, `--network host`. For the `--volume` option, use the `volumes`
+        /// field for the container.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2889,15 +2893,15 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>Field number for the "path" field.</summary>
         public const int PathFieldNumber = 1;
         /// <summary>
-        /// Script file path on the host VM.
+        /// The path to a script file that is accessible from the host VM(s).
         ///
-        /// To specify an interpreter, please add a `#!&lt;interpreter>`(also known as
-        /// [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
-        /// first line of the file.(For example, to execute the script using bash,
-        /// `#!/bin/bash` should be the first line of the file. To execute the
-        /// script using`Python3`, `#!/usr/bin/env python3` should be the first
-        /// line of the file.) Otherwise, the file will by default be executed by
-        /// `/bin/sh`.
+        /// Unless the script file supports the default `#!/bin/sh` shell
+        /// interpreter, you must specify an interpreter by including a
+        /// [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix) as the
+        /// first line of the file. For example, to execute the script using bash,
+        /// include `#!/bin/bash` as the first line of the file. Alternatively,
+        /// to execute the script using Python3, include `#!/usr/bin/env python3`
+        /// as the first line of the file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2926,13 +2930,15 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>Field number for the "text" field.</summary>
         public const int TextFieldNumber = 2;
         /// <summary>
-        /// Shell script text.
+        /// The text for a script.
         ///
-        /// To specify an interpreter, please add a `#!&lt;interpreter>\n` at the
-        /// beginning of the text.(For example, to execute the script using bash,
-        /// `#!/bin/bash\n` should be added. To execute the script using`Python3`,
-        /// `#!/usr/bin/env python3\n` should be added.) Otherwise, the script will
-        /// by default be executed by `/bin/sh`.
+        /// Unless the script text supports the default `#!/bin/sh` shell
+        /// interpreter, you must specify an interpreter by including a
+        /// [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix) at the
+        /// beginning of the text. For example, to execute the script using bash,
+        /// include `#!/bin/bash\n` at the beginning of the text. Alternatively,
+        /// to execute the script using Python3, include `#!/usr/bin/env python3\n`
+        /// at the beginning of the text.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3142,7 +3148,8 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
 
       /// <summary>
-      /// Barrier runnable blocks until all tasks in a taskgroup reach it.
+      /// A barrier runnable automatically blocks the execution of subsequent
+      /// runnables until all the tasks in the task group reach the barrier.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Barrier : pb::IMessage<Barrier>
@@ -3404,10 +3411,12 @@ namespace Google.Cloud.Batch.V1Alpha {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Batch.V1Alpha.Runnable.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.Runnable> runnables_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.Runnable>();
     /// <summary>
-    /// The sequence of scripts or containers to run for this Task. Each Task using
-    /// this TaskSpec executes its list of runnables in order. The Task succeeds if
-    /// all of its runnables either exit with a zero status or any that exit with a
-    /// non-zero status have the ignore_exit_status flag.
+    /// Required. The sequence of one or more runnables (executable scripts,
+    /// executable containers, and/or barriers) for each task in this task group to
+    /// run. Each task runs this list of runnables in order. For a task to succeed,
+    /// all of its script and container runnables each must either exit with a zero
+    /// status or enable the `ignore_exit_status` subfield and exit with any
+    /// status.
     ///
     /// Background runnables are killed automatically (if they have not already
     /// exited) a short time after all foreground runnables have completed. Even

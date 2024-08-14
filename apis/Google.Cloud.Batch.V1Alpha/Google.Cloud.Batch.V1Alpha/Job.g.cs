@@ -4362,9 +4362,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// The following image values are supported for a boot disk:
         ///
         /// * `batch-debian`: use Batch Debian images.
-        /// * `batch-centos`: use Batch CentOS images.
         /// * `batch-cos`: use Batch Container-Optimized images.
-        /// * `batch-hpc-centos`: use Batch HPC CentOS images.
         /// * `batch-hpc-rocky`: use Batch HPC Rocky Linux images.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
