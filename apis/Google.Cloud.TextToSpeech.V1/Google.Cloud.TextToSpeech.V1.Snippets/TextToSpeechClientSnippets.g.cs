@@ -16,6 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Api.Gax.Grpc;
     using Google.Cloud.TextToSpeech.V1;
     using System.Threading.Tasks;
 
@@ -141,6 +142,53 @@ namespace GoogleCSharpSnippets
             AudioConfig audioConfig = new AudioConfig();
             // Make the request
             SynthesizeSpeechResponse response = await textToSpeechClient.SynthesizeSpeechAsync(input, voice, audioConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamingSynthesize</summary>
+        public async Task StreamingSynthesize()
+        {
+            // Snippet: StreamingSynthesize(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            TextToSpeechClient textToSpeechClient = TextToSpeechClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using TextToSpeechClient.StreamingSynthesizeStream response = textToSpeechClient.StreamingSynthesize();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<StreamingSynthesizeResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    StreamingSynthesizeResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                StreamingSynthesizeRequest request = new StreamingSynthesizeRequest
+                {
+                    StreamingConfig = new StreamingSynthesizeConfig(),
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
             // End snippet
         }
     }
