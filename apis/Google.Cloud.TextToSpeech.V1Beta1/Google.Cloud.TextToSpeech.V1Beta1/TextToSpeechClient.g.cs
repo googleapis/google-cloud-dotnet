@@ -46,6 +46,8 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListVoicesSettings = existing.ListVoicesSettings;
             SynthesizeSpeechSettings = existing.SynthesizeSpeechSettings;
+            StreamingSynthesizeSettings = existing.StreamingSynthesizeSettings;
+            StreamingSynthesizeStreamingSettings = existing.StreamingSynthesizeStreamingSettings;
             OnCopy(existing);
         }
 
@@ -92,6 +94,20 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SynthesizeSpeechSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TextToSpeechClient.StreamingSynthesize</c> and <c>TextToSpeechClient.StreamingSynthesizeAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 300 seconds.</remarks>
+        public gaxgrpc::CallSettings StreamingSynthesizeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to <c>TextToSpeechClient.StreamingSynthesize</c>
+        ///  and <c>TextToSpeechClient.StreamingSynthesizeAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings StreamingSynthesizeStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TextToSpeechSettings"/> object.</returns>
@@ -413,6 +429,24 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SynthesizeSpeechResponse> SynthesizeSpeechAsync(SynthesisInput input, VoiceSelectionParams voice, AudioConfig audioConfig, st::CancellationToken cancellationToken) =>
             SynthesizeSpeechAsync(input, voice, audioConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="StreamingSynthesize(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamingSynthesizeStream : gaxgrpc::BidirectionalStreamingBase<StreamingSynthesizeRequest, StreamingSynthesizeResponse>
+        {
+        }
+
+        /// <summary>
+        /// Performs bidirectional streaming speech synthesis: receive audio while
+        /// sending text.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual StreamingSynthesizeStream StreamingSynthesize(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>TextToSpeech client wrapper implementation, for convenient use.</summary>
@@ -424,6 +458,8 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         private readonly gaxgrpc::ApiCall<ListVoicesRequest, ListVoicesResponse> _callListVoices;
 
         private readonly gaxgrpc::ApiCall<SynthesizeSpeechRequest, SynthesizeSpeechResponse> _callSynthesizeSpeech;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingSynthesizeRequest, StreamingSynthesizeResponse> _callStreamingSynthesize;
 
         /// <summary>
         /// Constructs a client wrapper for the TextToSpeech service, with the specified gRPC client and settings.
@@ -446,14 +482,21 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
             _callSynthesizeSpeech = clientHelper.BuildApiCall<SynthesizeSpeechRequest, SynthesizeSpeechResponse>("SynthesizeSpeech", grpcClient.SynthesizeSpeechAsync, grpcClient.SynthesizeSpeech, effectiveSettings.SynthesizeSpeechSettings);
             Modify_ApiCall(ref _callSynthesizeSpeech);
             Modify_SynthesizeSpeechApiCall(ref _callSynthesizeSpeech);
+            _callStreamingSynthesize = clientHelper.BuildApiCall<StreamingSynthesizeRequest, StreamingSynthesizeResponse>("StreamingSynthesize", grpcClient.StreamingSynthesize, effectiveSettings.StreamingSynthesizeSettings, effectiveSettings.StreamingSynthesizeStreamingSettings);
+            Modify_ApiCall(ref _callStreamingSynthesize);
+            Modify_StreamingSynthesizeApiCall(ref _callStreamingSynthesize);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
         partial void Modify_ListVoicesApiCall(ref gaxgrpc::ApiCall<ListVoicesRequest, ListVoicesResponse> call);
 
         partial void Modify_SynthesizeSpeechApiCall(ref gaxgrpc::ApiCall<SynthesizeSpeechRequest, SynthesizeSpeechResponse> call);
+
+        partial void Modify_StreamingSynthesizeApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingSynthesizeRequest, StreamingSynthesizeResponse> call);
 
         partial void OnConstruction(TextToSpeech.TextToSpeechClient grpcClient, TextToSpeechSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -463,6 +506,10 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         partial void Modify_ListVoicesRequest(ref ListVoicesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SynthesizeSpeechRequest(ref SynthesizeSpeechRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamingSynthesizeRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamingSynthesizeRequestRequest(ref StreamingSynthesizeRequest request);
 
         /// <summary>
         /// Returns a list of Voice supported for synthesis.
@@ -512,6 +559,67 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         {
             Modify_SynthesizeSpeechRequest(ref request, ref callSettings);
             return _callSynthesizeSpeech.Async(request, callSettings);
+        }
+
+        internal sealed partial class StreamingSynthesizeStreamImpl : StreamingSynthesizeStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>StreamingSynthesize</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{StreamingSynthesizeRequest}"/> instance associated
+            /// with this streaming call.
+            /// </param>
+            public StreamingSynthesizeStreamImpl(TextToSpeechClientImpl service, grpccore::AsyncDuplexStreamingCall<StreamingSynthesizeRequest, StreamingSynthesizeResponse> call, gaxgrpc::BufferedClientStreamWriter<StreamingSynthesizeRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private TextToSpeechClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<StreamingSynthesizeRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<StreamingSynthesizeRequest, StreamingSynthesizeResponse> GrpcCall { get; }
+
+            private StreamingSynthesizeRequest ModifyRequest(StreamingSynthesizeRequest request)
+            {
+                _service.Modify_StreamingSynthesizeRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(StreamingSynthesizeRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(StreamingSynthesizeRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(StreamingSynthesizeRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(StreamingSynthesizeRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Performs bidirectional streaming speech synthesis: receive audio while
+        /// sending text.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override TextToSpeechClient.StreamingSynthesizeStream StreamingSynthesize(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_StreamingSynthesizeRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callStreamingSynthesize.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<StreamingSynthesizeRequest, StreamingSynthesizeResponse> call = _callStreamingSynthesize.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<StreamingSynthesizeRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<StreamingSynthesizeRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamingSynthesizeStreamImpl(this, call, writeBuffer);
         }
     }
 }
