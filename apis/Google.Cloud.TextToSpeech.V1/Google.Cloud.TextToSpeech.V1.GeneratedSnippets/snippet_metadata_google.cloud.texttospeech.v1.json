@@ -411,6 +411,54 @@
       ]
     },
     {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_StreamingSynthesize_sync",
+      "title": "StreamingSynthesize",
+      "description": "Snippet for StreamingSynthesize",
+      "file": "TextToSpeechClient.StreamingSynthesizeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingSynthesize",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.StreamingSynthesize",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient+StreamingSynthesizeStream",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "StreamingSynthesize",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.StreamingSynthesize",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "texttospeech_v1_generated_TextToSpeechLongAudioSynthesize_SynthesizeLongAudio_sync",
       "title": "SynthesizeLongAudioRequestObject",
       "description": "Snippet for SynthesizeLongAudio",

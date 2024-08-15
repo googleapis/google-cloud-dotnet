@@ -16,6 +16,12 @@
                 "ListVoicesAsync"
               ]
             },
+            "StreamingSynthesize": {
+              "methods": [
+                "StreamingSynthesize",
+                "StreamingSynthesizeAsync"
+              ]
+            },
             "SynthesizeSpeech": {
               "methods": [
                 "SynthesizeSpeech",
