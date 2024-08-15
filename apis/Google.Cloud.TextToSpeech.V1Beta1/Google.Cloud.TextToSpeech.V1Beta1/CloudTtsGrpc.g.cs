@@ -71,6 +71,10 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1Beta1.SynthesizeSpeechRequest> __Marshaller_google_cloud_texttospeech_v1beta1_SynthesizeSpeechRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.TextToSpeech.V1Beta1.SynthesizeSpeechRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1Beta1.SynthesizeSpeechResponse> __Marshaller_google_cloud_texttospeech_v1beta1_SynthesizeSpeechResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.TextToSpeech.V1Beta1.SynthesizeSpeechResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeRequest> __Marshaller_google_cloud_texttospeech_v1beta1_StreamingSynthesizeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeResponse> __Marshaller_google_cloud_texttospeech_v1beta1_StreamingSynthesizeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.TextToSpeech.V1Beta1.ListVoicesRequest, global::Google.Cloud.TextToSpeech.V1Beta1.ListVoicesResponse> __Method_ListVoices = new grpc::Method<global::Google.Cloud.TextToSpeech.V1Beta1.ListVoicesRequest, global::Google.Cloud.TextToSpeech.V1Beta1.ListVoicesResponse>(
@@ -87,6 +91,14 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
         "SynthesizeSpeech",
         __Marshaller_google_cloud_texttospeech_v1beta1_SynthesizeSpeechRequest,
         __Marshaller_google_cloud_texttospeech_v1beta1_SynthesizeSpeechResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeRequest, global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeResponse> __Method_StreamingSynthesize = new grpc::Method<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeRequest, global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "StreamingSynthesize",
+        __Marshaller_google_cloud_texttospeech_v1beta1_StreamingSynthesizeRequest,
+        __Marshaller_google_cloud_texttospeech_v1beta1_StreamingSynthesizeResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -119,6 +131,20 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.TextToSpeech.V1Beta1.SynthesizeSpeechResponse> SynthesizeSpeech(global::Google.Cloud.TextToSpeech.V1Beta1.SynthesizeSpeechRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Performs bidirectional streaming speech synthesis: receive audio while
+      /// sending text.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamingSynthesize(grpc::IAsyncStreamReader<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -252,6 +278,30 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SynthesizeSpeech, null, options, request);
       }
+      /// <summary>
+      /// Performs bidirectional streaming speech synthesis: receive audio while
+      /// sending text.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeRequest, global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeResponse> StreamingSynthesize(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamingSynthesize(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Performs bidirectional streaming speech synthesis: receive audio while
+      /// sending text.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeRequest, global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeResponse> StreamingSynthesize(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamingSynthesize, null, options);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TextToSpeechClient NewInstance(ClientBaseConfiguration configuration)
@@ -267,7 +317,8 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListVoices, serviceImpl.ListVoices)
-          .AddMethod(__Method_SynthesizeSpeech, serviceImpl.SynthesizeSpeech).Build();
+          .AddMethod(__Method_SynthesizeSpeech, serviceImpl.SynthesizeSpeech)
+          .AddMethod(__Method_StreamingSynthesize, serviceImpl.StreamingSynthesize).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -279,6 +330,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     {
       serviceBinder.AddMethod(__Method_ListVoices, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.TextToSpeech.V1Beta1.ListVoicesRequest, global::Google.Cloud.TextToSpeech.V1Beta1.ListVoicesResponse>(serviceImpl.ListVoices));
       serviceBinder.AddMethod(__Method_SynthesizeSpeech, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.TextToSpeech.V1Beta1.SynthesizeSpeechRequest, global::Google.Cloud.TextToSpeech.V1Beta1.SynthesizeSpeechResponse>(serviceImpl.SynthesizeSpeech));
+      serviceBinder.AddMethod(__Method_StreamingSynthesize, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeRequest, global::Google.Cloud.TextToSpeech.V1Beta1.StreamingSynthesizeResponse>(serviceImpl.StreamingSynthesize));
     }
 
   }
