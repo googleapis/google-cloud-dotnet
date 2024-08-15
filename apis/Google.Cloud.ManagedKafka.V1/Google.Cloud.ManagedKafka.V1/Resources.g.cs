@@ -2345,7 +2345,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     public const int OffsetFieldNumber = 1;
     private long offset_;
     /// <summary>
-    /// Required. The offset for this partition, or 0 if no offset has been
+    /// Required. The current offset for this partition, or 0 if no offset has been
     /// committed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
