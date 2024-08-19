@@ -142,7 +142,6 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private global::Google.Cloud.TextToSpeech.V1.SynthesisInput input_;
     /// <summary>
     /// Required. The Synthesizer requires either plain text or SSML as input.
-    /// While Long Audio is in preview, SSML is temporarily unsupported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
