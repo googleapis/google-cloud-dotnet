@@ -1728,6 +1728,18 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         }
     }
 
+    public partial class AddIpOverrideRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::KeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::KeyName KeyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class RelatedAccountGroupMembership
     {
         /// <summary>

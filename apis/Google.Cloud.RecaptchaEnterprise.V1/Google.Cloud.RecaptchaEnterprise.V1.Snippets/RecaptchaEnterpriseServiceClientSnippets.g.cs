@@ -958,6 +958,99 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for AddIpOverride</summary>
+        public void AddIpOverrideRequestObject()
+        {
+            // Snippet: AddIpOverride(AddIpOverrideRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            AddIpOverrideRequest request = new AddIpOverrideRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                IpOverrideData = new IpOverrideData(),
+            };
+            // Make the request
+            AddIpOverrideResponse response = recaptchaEnterpriseServiceClient.AddIpOverride(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverrideAsync</summary>
+        public async Task AddIpOverrideRequestObjectAsync()
+        {
+            // Snippet: AddIpOverrideAsync(AddIpOverrideRequest, CallSettings)
+            // Additional: AddIpOverrideAsync(AddIpOverrideRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AddIpOverrideRequest request = new AddIpOverrideRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                IpOverrideData = new IpOverrideData(),
+            };
+            // Make the request
+            AddIpOverrideResponse response = await recaptchaEnterpriseServiceClient.AddIpOverrideAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverride</summary>
+        public void AddIpOverride()
+        {
+            // Snippet: AddIpOverride(string, IpOverrideData, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]";
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            AddIpOverrideResponse response = recaptchaEnterpriseServiceClient.AddIpOverride(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverrideAsync</summary>
+        public async Task AddIpOverrideAsync()
+        {
+            // Snippet: AddIpOverrideAsync(string, IpOverrideData, CallSettings)
+            // Additional: AddIpOverrideAsync(string, IpOverrideData, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]";
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            AddIpOverrideResponse response = await recaptchaEnterpriseServiceClient.AddIpOverrideAsync(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverride</summary>
+        public void AddIpOverrideResourceNames()
+        {
+            // Snippet: AddIpOverride(KeyName, IpOverrideData, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            AddIpOverrideResponse response = recaptchaEnterpriseServiceClient.AddIpOverride(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverrideAsync</summary>
+        public async Task AddIpOverrideResourceNamesAsync()
+        {
+            // Snippet: AddIpOverrideAsync(KeyName, IpOverrideData, CallSettings)
+            // Additional: AddIpOverrideAsync(KeyName, IpOverrideData, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            AddIpOverrideResponse response = await recaptchaEnterpriseServiceClient.AddIpOverrideAsync(name, ipOverrideData);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetMetrics</summary>
         public void GetMetricsRequestObject()
         {
