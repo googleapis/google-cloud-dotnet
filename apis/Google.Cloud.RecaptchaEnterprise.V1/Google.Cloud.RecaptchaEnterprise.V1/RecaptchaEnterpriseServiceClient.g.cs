@@ -58,6 +58,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             UpdateKeySettings = existing.UpdateKeySettings;
             DeleteKeySettings = existing.DeleteKeySettings;
             MigrateKeySettings = existing.MigrateKeySettings;
+            AddIpOverrideSettings = existing.AddIpOverrideSettings;
             GetMetricsSettings = existing.GetMetricsSettings;
             CreateFirewallPolicySettings = existing.CreateFirewallPolicySettings;
             ListFirewallPoliciesSettings = existing.ListFirewallPoliciesSettings;
@@ -187,6 +188,19 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings MigrateKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.AddIpOverride</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.AddIpOverrideAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddIpOverrideSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1508,6 +1522,166 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Key> MigrateKeyAsync(MigrateKeyRequest request, st::CancellationToken cancellationToken) =>
             MigrateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddIpOverrideResponse AddIpOverride(AddIpOverrideRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddIpOverrideResponse> AddIpOverrideAsync(AddIpOverrideRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddIpOverrideResponse> AddIpOverrideAsync(AddIpOverrideRequest request, st::CancellationToken cancellationToken) =>
+            AddIpOverrideAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to which the IP override is added, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override added to the key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddIpOverrideResponse AddIpOverride(string name, IpOverrideData ipOverrideData, gaxgrpc::CallSettings callSettings = null) =>
+            AddIpOverride(new AddIpOverrideRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                IpOverrideData = gax::GaxPreconditions.CheckNotNull(ipOverrideData, nameof(ipOverrideData)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to which the IP override is added, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override added to the key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddIpOverrideResponse> AddIpOverrideAsync(string name, IpOverrideData ipOverrideData, gaxgrpc::CallSettings callSettings = null) =>
+            AddIpOverrideAsync(new AddIpOverrideRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                IpOverrideData = gax::GaxPreconditions.CheckNotNull(ipOverrideData, nameof(ipOverrideData)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to which the IP override is added, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override added to the key.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddIpOverrideResponse> AddIpOverrideAsync(string name, IpOverrideData ipOverrideData, st::CancellationToken cancellationToken) =>
+            AddIpOverrideAsync(name, ipOverrideData, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to which the IP override is added, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override added to the key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddIpOverrideResponse AddIpOverride(KeyName name, IpOverrideData ipOverrideData, gaxgrpc::CallSettings callSettings = null) =>
+            AddIpOverride(new AddIpOverrideRequest
+            {
+                KeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                IpOverrideData = gax::GaxPreconditions.CheckNotNull(ipOverrideData, nameof(ipOverrideData)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to which the IP override is added, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override added to the key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddIpOverrideResponse> AddIpOverrideAsync(KeyName name, IpOverrideData ipOverrideData, gaxgrpc::CallSettings callSettings = null) =>
+            AddIpOverrideAsync(new AddIpOverrideRequest
+            {
+                KeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                IpOverrideData = gax::GaxPreconditions.CheckNotNull(ipOverrideData, nameof(ipOverrideData)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to which the IP override is added, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override added to the key.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddIpOverrideResponse> AddIpOverrideAsync(KeyName name, IpOverrideData ipOverrideData, st::CancellationToken cancellationToken) =>
+            AddIpOverrideAsync(name, ipOverrideData, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Get some aggregated metrics for a Key. This data can be used to build
@@ -2926,6 +3100,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         private readonly gaxgrpc::ApiCall<MigrateKeyRequest, Key> _callMigrateKey;
 
+        private readonly gaxgrpc::ApiCall<AddIpOverrideRequest, AddIpOverrideResponse> _callAddIpOverride;
+
         private readonly gaxgrpc::ApiCall<GetMetricsRequest, Metrics> _callGetMetrics;
 
         private readonly gaxgrpc::ApiCall<CreateFirewallPolicyRequest, FirewallPolicy> _callCreateFirewallPolicy;
@@ -2991,6 +3167,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callMigrateKey = clientHelper.BuildApiCall<MigrateKeyRequest, Key>("MigrateKey", grpcClient.MigrateKeyAsync, grpcClient.MigrateKey, effectiveSettings.MigrateKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMigrateKey);
             Modify_MigrateKeyApiCall(ref _callMigrateKey);
+            _callAddIpOverride = clientHelper.BuildApiCall<AddIpOverrideRequest, AddIpOverrideResponse>("AddIpOverride", grpcClient.AddIpOverrideAsync, grpcClient.AddIpOverride, effectiveSettings.AddIpOverrideSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callAddIpOverride);
+            Modify_AddIpOverrideApiCall(ref _callAddIpOverride);
             _callGetMetrics = clientHelper.BuildApiCall<GetMetricsRequest, Metrics>("GetMetrics", grpcClient.GetMetricsAsync, grpcClient.GetMetrics, effectiveSettings.GetMetricsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetrics);
             Modify_GetMetricsApiCall(ref _callGetMetrics);
@@ -3044,6 +3223,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         partial void Modify_MigrateKeyApiCall(ref gaxgrpc::ApiCall<MigrateKeyRequest, Key> call);
 
+        partial void Modify_AddIpOverrideApiCall(ref gaxgrpc::ApiCall<AddIpOverrideRequest, AddIpOverrideResponse> call);
+
         partial void Modify_GetMetricsApiCall(ref gaxgrpc::ApiCall<GetMetricsRequest, Metrics> call);
 
         partial void Modify_CreateFirewallPolicyApiCall(ref gaxgrpc::ApiCall<CreateFirewallPolicyRequest, FirewallPolicy> call);
@@ -3086,6 +3267,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         partial void Modify_DeleteKeyRequest(ref DeleteKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MigrateKeyRequest(ref MigrateKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddIpOverrideRequest(ref AddIpOverrideRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetMetricsRequest(ref GetMetricsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3337,6 +3520,36 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         {
             Modify_MigrateKeyRequest(ref request, ref callSettings);
             return _callMigrateKey.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AddIpOverrideResponse AddIpOverride(AddIpOverrideRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddIpOverrideRequest(ref request, ref callSettings);
+            return _callAddIpOverride.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds an IP override to a key. The following restrictions hold:
+        /// * The maximum number of IP overrides per key is 100.
+        /// * For any conflict (such as IP already exists or IP part of an existing
+        /// IP range), an error will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AddIpOverrideResponse> AddIpOverrideAsync(AddIpOverrideRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddIpOverrideRequest(ref request, ref callSettings);
+            return _callAddIpOverride.Async(request, callSettings);
         }
 
         /// <summary>

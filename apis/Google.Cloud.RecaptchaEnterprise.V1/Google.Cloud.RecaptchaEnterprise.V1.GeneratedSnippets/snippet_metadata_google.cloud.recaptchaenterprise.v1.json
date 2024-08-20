@@ -2394,6 +2394,309 @@
       ]
     },
     {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_AddIpOverride_sync",
+      "title": "AddIpOverrideRequestObject",
+      "description": "Snippet for AddIpOverride",
+      "file": "RecaptchaEnterpriseServiceClient.AddIpOverrideRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddIpOverride",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AddIpOverride",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "AddIpOverride",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.AddIpOverride",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_AddIpOverride_async",
+      "title": "AddIpOverrideRequestObjectAsync",
+      "description": "Snippet for AddIpOverrideAsync",
+      "file": "RecaptchaEnterpriseServiceClient.AddIpOverrideRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddIpOverrideAsync",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AddIpOverrideAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse>",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "AddIpOverride",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.AddIpOverride",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_AddIpOverride_sync_flattened",
+      "title": "AddIpOverride",
+      "description": "Snippet for AddIpOverride",
+      "file": "RecaptchaEnterpriseServiceClient.AddIpOverrideSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddIpOverride",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AddIpOverride",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.IpOverrideData",
+            "name": "ipOverrideData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "AddIpOverride",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.AddIpOverride",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_AddIpOverride_async_flattened",
+      "title": "AddIpOverrideAsync",
+      "description": "Snippet for AddIpOverrideAsync",
+      "file": "RecaptchaEnterpriseServiceClient.AddIpOverrideAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddIpOverrideAsync",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AddIpOverrideAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.IpOverrideData",
+            "name": "ipOverrideData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse>",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "AddIpOverride",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.AddIpOverride",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_AddIpOverride_sync_flattened_resourceNames",
+      "title": "AddIpOverrideResourceNames",
+      "description": "Snippet for AddIpOverride",
+      "file": "RecaptchaEnterpriseServiceClient.AddIpOverrideResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddIpOverride",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AddIpOverride",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.KeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.IpOverrideData",
+            "name": "ipOverrideData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "AddIpOverride",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.AddIpOverride",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_AddIpOverride_async_flattened_resourceNames",
+      "title": "AddIpOverrideResourceNamesAsync",
+      "description": "Snippet for AddIpOverrideAsync",
+      "file": "RecaptchaEnterpriseServiceClient.AddIpOverrideResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddIpOverrideAsync",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AddIpOverrideAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.KeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.IpOverrideData",
+            "name": "ipOverrideData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse>",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "AddIpOverride",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.AddIpOverride",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_GetMetrics_sync",
       "title": "GetMetricsRequestObject",
       "description": "Snippet for GetMetrics",

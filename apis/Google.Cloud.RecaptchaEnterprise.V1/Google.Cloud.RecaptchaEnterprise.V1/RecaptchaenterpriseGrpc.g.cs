@@ -94,6 +94,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_MigrateKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_AddIpOverrideRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_AddIpOverrideResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_GetMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> __Marshaller_google_cloud_recaptchaenterprise_v1_Metrics = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics.Parser));
@@ -199,6 +203,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         "MigrateKey",
         __Marshaller_google_cloud_recaptchaenterprise_v1_MigrateKeyRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1_Key);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> __Method_AddIpOverride = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddIpOverride",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_AddIpOverrideRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_AddIpOverrideResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> __Method_GetMetrics = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics>(
@@ -402,6 +414,21 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.Key> MigrateKey(global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error will be returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> AddIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1023,6 +1050,66 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_MigrateKey, null, options, request);
       }
       /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error will be returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse AddIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddIpOverride(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error will be returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse AddIpOverride(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddIpOverride, null, options, request);
+      }
+      /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error will be returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> AddIpOverrideAsync(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddIpOverrideAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds an IP override to a key. The following restrictions hold:
+      /// * The maximum number of IP overrides per key is 100.
+      /// * For any conflict (such as IP already exists or IP part of an existing
+      ///   IP range), an error will be returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse> AddIpOverrideAsync(global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddIpOverride, null, options, request);
+      }
+      /// <summary>
       /// Get some aggregated metrics for a Key. This data can be used to build
       /// dashboards.
       /// </summary>
@@ -1537,6 +1624,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
           .AddMethod(__Method_UpdateKey, serviceImpl.UpdateKey)
           .AddMethod(__Method_DeleteKey, serviceImpl.DeleteKey)
           .AddMethod(__Method_MigrateKey, serviceImpl.MigrateKey)
+          .AddMethod(__Method_AddIpOverride, serviceImpl.AddIpOverride)
           .AddMethod(__Method_GetMetrics, serviceImpl.GetMetrics)
           .AddMethod(__Method_CreateFirewallPolicy, serviceImpl.CreateFirewallPolicy)
           .AddMethod(__Method_ListFirewallPolicies, serviceImpl.ListFirewallPolicies)
@@ -1565,6 +1653,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       serviceBinder.AddMethod(__Method_UpdateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.UpdateKey));
       serviceBinder.AddMethod(__Method_DeleteKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteKey));
       serviceBinder.AddMethod(__Method_MigrateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.MigrateKey));
+      serviceBinder.AddMethod(__Method_AddIpOverride, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideRequest, global::Google.Cloud.RecaptchaEnterprise.V1.AddIpOverrideResponse>(serviceImpl.AddIpOverride));
       serviceBinder.AddMethod(__Method_GetMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics>(serviceImpl.GetMetrics));
       serviceBinder.AddMethod(__Method_CreateFirewallPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.CreateFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(serviceImpl.CreateFirewallPolicy));
       serviceBinder.AddMethod(__Method_ListFirewallPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListFirewallPoliciesResponse>(serviceImpl.ListFirewallPolicies));
