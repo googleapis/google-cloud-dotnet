@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 VersionInfo = "",
                 ServiceAccountName = "",
             };
