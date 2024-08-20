@@ -2660,7 +2660,8 @@ namespace Google.Shopping.Css.V1 {
   }
 
   /// <summary>
-  /// The certification for the product.
+  /// The certification for the product. Use the this attribute to describe
+  /// certifications, such as energy efficiency ratings, associated with a product.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Certification : pb::IMessage<Certification>
@@ -2713,7 +2714,9 @@ namespace Google.Shopping.Css.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of the certification.
+    /// The name of the certification. At this time, the most common value is
+    /// "EPREL", which represents energy efficiency certifications in the EU
+    /// European Registry for Energy Labeling (EPREL) database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2728,7 +2731,9 @@ namespace Google.Shopping.Css.V1 {
     public const int AuthorityFieldNumber = 2;
     private string authority_ = "";
     /// <summary>
-    /// Name of the certification body.
+    /// The authority or certification body responsible for issuing the
+    /// certification. At this time, the most common value is "EC" or
+    /// “European_Commission” for energy labels in the EU.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2743,7 +2748,9 @@ namespace Google.Shopping.Css.V1 {
     public const int CodeFieldNumber = 3;
     private string code_ = "";
     /// <summary>
-    /// A unique code to identify the certification.
+    /// The code of the certification. For example, for the EPREL certificate with
+    /// the link https://eprel.ec.europa.eu/screen/product/dishwashers2019/123456
+    /// the code is 123456. The code is required for European Energy Labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
