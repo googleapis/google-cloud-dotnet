@@ -38,7 +38,6 @@ namespace GoogleCSharpSnippets
             UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 UpdateMask = new FieldMask(),
                 VersionInfo = "",
                 ServiceAccountName = "",

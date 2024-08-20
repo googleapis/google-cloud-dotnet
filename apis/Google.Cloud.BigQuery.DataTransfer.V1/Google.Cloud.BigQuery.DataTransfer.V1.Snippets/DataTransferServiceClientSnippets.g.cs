@@ -491,7 +491,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 VersionInfo = "",
                 ServiceAccountName = "",
             };
@@ -512,7 +511,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 VersionInfo = "",
                 ServiceAccountName = "",
             };
@@ -618,7 +616,6 @@ namespace GoogleCSharpSnippets
             UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 UpdateMask = new FieldMask(),
                 VersionInfo = "",
                 ServiceAccountName = "",
@@ -639,7 +636,6 @@ namespace GoogleCSharpSnippets
             UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 UpdateMask = new FieldMask(),
                 VersionInfo = "",
                 ServiceAccountName = "",
