@@ -2633,6 +2633,29 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.GkeConnect.Gateway.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Connect Gateway",
+      "productUrl": "https://cloud.google.com/kubernetes-engine/enterprise/multicluster-management/gateway",
+      "description": "Recommended Google client library to access the GKE Connect Gateway API, which allows connectivity from external parties to connected Kubernetes clusters.",
+      "tags": [
+        "gke",
+        "gateway",
+        "connectivity",
+        "k8s",
+        "kubernetes"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/gkeconnect/gateway/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "connectgateway",
+      "serviceConfigFile": "connectgateway_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.GkeHub.V1Beta1",
       "version": "2.0.0-beta07",
       "type": "grpc",
