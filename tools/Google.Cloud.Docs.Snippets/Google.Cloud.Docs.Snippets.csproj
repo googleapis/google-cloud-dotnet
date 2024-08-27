@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Apache.Avro" VersionOverride="1.11.3" />      
+    <PackageReference Include="Apache.Avro" VersionOverride="1.12.0" />      
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit.runner.visualstudio" />
     <PackageReference Include="xunit" />
