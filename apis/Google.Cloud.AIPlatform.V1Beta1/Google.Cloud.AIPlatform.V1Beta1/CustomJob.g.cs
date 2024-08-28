@@ -89,19 +89,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "EVB5dGhvblBhY2thZ2VTcGVjEh8KEmV4ZWN1dG9yX2ltYWdlX3VyaRgBIAEo",
             "CUID4EECEhkKDHBhY2thZ2VfdXJpcxgCIAMoCUID4EECEhoKDXB5dGhvbl9t",
             "b2R1bGUYAyABKAlCA+BBAhIMCgRhcmdzGAQgAygJEjQKA2VudhgFIAMoCzIn",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRW52VmFyIq0CCgpT",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRW52VmFyIugCCgpT",
             "Y2hlZHVsaW5nEioKB3RpbWVvdXQYASABKAsyGS5nb29nbGUucHJvdG9idWYu",
             "RHVyYXRpb24SJQodcmVzdGFydF9qb2Jfb25fd29ya2VyX3Jlc3RhcnQYAyAB",
             "KAgSSwoIc3RyYXRlZ3kYBCABKA4yNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
             "bS52MWJldGExLlNjaGVkdWxpbmcuU3RyYXRlZ3lCA+BBARIcCg9kaXNhYmxl",
-            "X3JldHJpZXMYBSABKAhCA+BBASJhCghTdHJhdGVneRIYChRTVFJBVEVHWV9V",
-            "TlNQRUNJRklFRBAAEhEKCU9OX0RFTUFORBABGgIIARIQCghMT1dfQ09TVBAC",
-            "GgIIARIMCghTVEFOREFSRBADEggKBFNQT1QQBELlAQojY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCDkN1c3RvbUpvYlByb3RvUAFaQ2Ns",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
-            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
-            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
-            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "X3JldHJpZXMYBSABKAhCA+BBARI5ChFtYXhfd2FpdF9kdXJhdGlvbhgGIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBImEKCFN0cmF0ZWd5",
+            "EhgKFFNUUkFURUdZX1VOU1BFQ0lGSUVEEAASEQoJT05fREVNQU5EEAEaAggB",
+            "EhAKCExPV19DT1NUEAIaAggBEgwKCFNUQU5EQVJEEAMSCAoEU1BPVBAEQuUB",
+            "CiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIOQ3VzdG9t",
+            "Sm9iUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2Fw",
+            "aXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5D",
+            "bG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0",
+            "Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
+            "ZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,7 +112,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1Beta1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "NfsMounts", "DiskSpec" }, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ContainerSpec), global::Google.Cloud.AIPlatform.V1Beta1.ContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PythonPackageSpec), global::Google.Cloud.AIPlatform.V1Beta1.PythonPackageSpec.Parser, new[]{ "ExecutorImageUri", "PackageUris", "PythonModule", "Args", "Env" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Scheduling), global::Google.Cloud.AIPlatform.V1Beta1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart", "Strategy", "DisableRetries" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Scheduling.Types.Strategy) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Scheduling), global::Google.Cloud.AIPlatform.V1Beta1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart", "Strategy", "DisableRetries", "MaxWaitDuration" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Scheduling.Types.Strategy) }, null, null)
           }));
     }
     #endregion
@@ -2815,6 +2817,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       restartJobOnWorkerRestart_ = other.restartJobOnWorkerRestart_;
       strategy_ = other.strategy_;
       disableRetries_ = other.disableRetries_;
+      maxWaitDuration_ = other.maxWaitDuration_ != null ? other.maxWaitDuration_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2888,6 +2891,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "max_wait_duration" field.</summary>
+    public const int MaxWaitDurationFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Duration maxWaitDuration_;
+    /// <summary>
+    /// Optional. This is the maximum duration that a job will wait for the
+    /// requested resources to be provisioned if the scheduling strategy is set to
+    /// [Strategy.DWS_FLEX_START].
+    /// If set to 0, the job will wait indefinitely. The default is 24 hours.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration MaxWaitDuration {
+      get { return maxWaitDuration_; }
+      set {
+        maxWaitDuration_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2907,6 +2928,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (RestartJobOnWorkerRestart != other.RestartJobOnWorkerRestart) return false;
       if (Strategy != other.Strategy) return false;
       if (DisableRetries != other.DisableRetries) return false;
+      if (!object.Equals(MaxWaitDuration, other.MaxWaitDuration)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2918,6 +2940,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (RestartJobOnWorkerRestart != false) hash ^= RestartJobOnWorkerRestart.GetHashCode();
       if (Strategy != global::Google.Cloud.AIPlatform.V1Beta1.Scheduling.Types.Strategy.Unspecified) hash ^= Strategy.GetHashCode();
       if (DisableRetries != false) hash ^= DisableRetries.GetHashCode();
+      if (maxWaitDuration_ != null) hash ^= MaxWaitDuration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2952,6 +2975,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(40);
         output.WriteBool(DisableRetries);
       }
+      if (maxWaitDuration_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MaxWaitDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2978,6 +3005,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(40);
         output.WriteBool(DisableRetries);
       }
+      if (maxWaitDuration_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MaxWaitDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2999,6 +3030,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (DisableRetries != false) {
         size += 1 + 1;
+      }
+      if (maxWaitDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaxWaitDuration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3026,6 +3060,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.DisableRetries != false) {
         DisableRetries = other.DisableRetries;
+      }
+      if (other.maxWaitDuration_ != null) {
+        if (maxWaitDuration_ == null) {
+          MaxWaitDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        MaxWaitDuration.MergeFrom(other.MaxWaitDuration);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3061,6 +3101,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             DisableRetries = input.ReadBool();
             break;
           }
+          case 50: {
+            if (maxWaitDuration_ == null) {
+              MaxWaitDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxWaitDuration);
+            break;
+          }
         }
       }
     #endif
@@ -3093,6 +3140,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 40: {
             DisableRetries = input.ReadBool();
+            break;
+          }
+          case 50: {
+            if (maxWaitDuration_ == null) {
+              MaxWaitDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxWaitDuration);
             break;
           }
         }
