@@ -662,7 +662,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project in which the assessment will be created,
+    /// Required. The name of the project in which the assessment is created,
     /// in the format `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     public const int AnnotationFieldNumber = 2;
     private global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest.Types.Annotation annotation_ = global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest.Types.Annotation.Unspecified;
     /// <summary>
-    /// Optional. The annotation that will be assigned to the Event. This field can
+    /// Optional. The annotation that is assigned to the Event. This field can
     /// be left empty to provide reasons that apply to an event without concluding
     /// whether the event is legitimate or fraudulent.
     /// </summary>
@@ -3984,7 +3984,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     private bool express_;
     /// <summary>
     /// Optional. Flag for a reCAPTCHA express request for an assessment without a
-    /// token. If enabled, `site_key` must reference an Express site key.
+    /// token. If enabled, `site_key` must reference an express key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4061,8 +4061,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     private bool firewallPolicyEvaluation_;
     /// <summary>
     /// Optional. Flag for enabling firewall policy config assessment.
-    /// If this flag is enabled, the firewall policy will be evaluated and a
-    /// suggested firewall action will be returned in the response.
+    /// If this flag is enabled, the firewall policy is evaluated and a
+    /// suggested firewall action is returned in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4078,7 +4078,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     private global::Google.Cloud.RecaptchaEnterprise.V1.TransactionData transactionData_;
     /// <summary>
     /// Optional. Data describing a payment transaction to be assessed. Sending
-    /// this data enables reCAPTCHA Enterprise Fraud Prevention and the
+    /// this data enables reCAPTCHA Fraud Prevention and the
     /// FraudPreventionAssessment component in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10627,7 +10627,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project in which the key will be created, in the
+    /// Required. The name of the project in which the key is created, in the
     /// format `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10874,7 +10874,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project that contains the keys that will be
+    /// Required. The name of the project that contains the keys that are
     /// listed, in the format `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11788,7 +11788,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Optional. The mask to control which fields of the key get updated. If the
-    /// mask is not present, all fields will be updated.
+    /// mask is not present, all fields are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13188,7 +13188,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Optional. The mask to control which fields of the policy get updated. If
-    /// the mask is not present, all fields will be updated.
+    /// the mask is not present, all fields are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14483,7 +14483,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.RecaptchaEnterprise.V1.ScoreMetrics.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1.ScoreMetrics> scoreMetrics_ = new pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1.ScoreMetrics>();
     /// <summary>
-    /// Metrics will be continuous and in order by dates, and in the granularity
+    /// Metrics are continuous and in order by dates, and in the granularity
     /// of day. All Key types should have score-based data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14498,7 +14498,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.RecaptchaEnterprise.V1.ChallengeMetrics.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1.ChallengeMetrics> challengeMetrics_ = new pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1.ChallengeMetrics>();
     /// <summary>
-    /// Metrics will be continuous and in order by dates, and in the granularity
+    /// Metrics are continuous and in order by dates, and in the granularity
     /// of day. Only challenge-based keys (CHECKBOX, INVISIBLE), will have
     /// challenge-based data.
     /// </summary>
@@ -15050,7 +15050,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     /// <summary>Field number for the "express_settings" field.</summary>
     public const int ExpressSettingsFieldNumber = 11;
     /// <summary>
-    /// Settings for keys that can be used by reCAPTCHA Express.
+    /// Settings specific to keys that can be used for reCAPTCHA Express.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18023,8 +18023,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     public const int ErrorFieldNumber = 5;
     private global::Google.Rpc.Status error_;
     /// <summary>
-    /// Output only. If the processing of a policy config fails, an error will be
-    /// populated and the firewall_policy will be left empty.
+    /// Output only. If the processing of a policy config fails, an error is
+    /// populated and the firewall_policy is left empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18041,7 +18041,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     /// <summary>
     /// Output only. The policy that matched the request. If more than one policy
     /// may match, this is the first match. If no policy matches the incoming
-    /// request, the policy field will be left empty.
+    /// request, the policy field is left empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
