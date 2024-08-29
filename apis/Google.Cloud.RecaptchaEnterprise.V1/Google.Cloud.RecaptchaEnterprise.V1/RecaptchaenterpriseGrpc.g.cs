@@ -422,7 +422,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Adds an IP override to a key. The following restrictions hold:
       /// * The maximum number of IP overrides per key is 100.
       /// * For any conflict (such as IP already exists or IP part of an existing
-      ///   IP range), an error will be returned.
+      ///   IP range), an error is returned.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1053,7 +1053,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Adds an IP override to a key. The following restrictions hold:
       /// * The maximum number of IP overrides per key is 100.
       /// * For any conflict (such as IP already exists or IP part of an existing
-      ///   IP range), an error will be returned.
+      ///   IP range), an error is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1069,7 +1069,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Adds an IP override to a key. The following restrictions hold:
       /// * The maximum number of IP overrides per key is 100.
       /// * For any conflict (such as IP already exists or IP part of an existing
-      ///   IP range), an error will be returned.
+      ///   IP range), an error is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1083,7 +1083,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Adds an IP override to a key. The following restrictions hold:
       /// * The maximum number of IP overrides per key is 100.
       /// * For any conflict (such as IP already exists or IP part of an existing
-      ///   IP range), an error will be returned.
+      ///   IP range), an error is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1099,7 +1099,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// Adds an IP override to a key. The following restrictions hold:
       /// * The maximum number of IP overrides per key is 100.
       /// * For any conflict (such as IP already exists or IP part of an existing
-      ///   IP range), an error will be returned.
+      ///   IP range), an error is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

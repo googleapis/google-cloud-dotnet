@@ -507,7 +507,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
@@ -526,7 +526,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
@@ -545,7 +545,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
@@ -560,7 +560,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
@@ -579,7 +579,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
@@ -598,7 +598,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
@@ -648,7 +648,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -670,7 +670,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -692,7 +692,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -710,7 +710,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -732,7 +732,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -754,7 +754,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -794,7 +794,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates a new reCAPTCHA Enterprise key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the key will be created, in the
+        /// Required. The name of the project in which the key is created, in the
         /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
@@ -813,7 +813,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates a new reCAPTCHA Enterprise key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the key will be created, in the
+        /// Required. The name of the project in which the key is created, in the
         /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
@@ -832,7 +832,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates a new reCAPTCHA Enterprise key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the key will be created, in the
+        /// Required. The name of the project in which the key is created, in the
         /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
@@ -847,7 +847,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates a new reCAPTCHA Enterprise key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the key will be created, in the
+        /// Required. The name of the project in which the key is created, in the
         /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
@@ -866,7 +866,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates a new reCAPTCHA Enterprise key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the key will be created, in the
+        /// Required. The name of the project in which the key is created, in the
         /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
@@ -885,7 +885,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Creates a new reCAPTCHA Enterprise key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the key will be created, in the
+        /// Required. The name of the project in which the key is created, in the
         /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
@@ -918,7 +918,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that contains the keys that will be
+        /// Required. The name of the project that contains the keys that are
         /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
@@ -952,7 +952,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that contains the keys that will be
+        /// Required. The name of the project that contains the keys that are
         /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
@@ -986,7 +986,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that contains the keys that will be
+        /// Required. The name of the project that contains the keys that are
         /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
@@ -1020,7 +1020,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that contains the keys that will be
+        /// Required. The name of the project that contains the keys that are
         /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
@@ -1325,7 +1325,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields of the key get updated. If the
-        /// mask is not present, all fields will be updated.
+        /// mask is not present, all fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1344,7 +1344,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields of the key get updated. If the
-        /// mask is not present, all fields will be updated.
+        /// mask is not present, all fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields of the key get updated. If the
-        /// mask is not present, all fields will be updated.
+        /// mask is not present, all fields are updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1527,7 +1527,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1539,7 +1539,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1551,7 +1551,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1563,7 +1563,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to which the IP override is added, in the
@@ -1585,7 +1585,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to which the IP override is added, in the
@@ -1607,7 +1607,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to which the IP override is added, in the
@@ -1625,7 +1625,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to which the IP override is added, in the
@@ -1647,7 +1647,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to which the IP override is added, in the
@@ -1669,7 +1669,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to which the IP override is added, in the
@@ -2254,7 +2254,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields of the policy get updated. If
-        /// the mask is not present, all fields will be updated.
+        /// the mask is not present, all fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2273,7 +2273,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields of the policy get updated. If
-        /// the mask is not present, all fields will be updated.
+        /// the mask is not present, all fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2292,7 +2292,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields of the policy get updated. If
-        /// the mask is not present, all fields will be updated.
+        /// the mask is not present, all fields are updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3526,7 +3526,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3541,7 +3541,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Adds an IP override to a key. The following restrictions hold:
         /// * The maximum number of IP overrides per key is 100.
         /// * For any conflict (such as IP already exists or IP part of an existing
-        /// IP range), an error will be returned.
+        /// IP range), an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
