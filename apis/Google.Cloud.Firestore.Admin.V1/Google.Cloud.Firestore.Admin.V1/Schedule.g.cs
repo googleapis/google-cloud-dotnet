@@ -184,6 +184,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// <summary>
     /// At what relative time in the future, compared to its creation time,
     /// the backup should be deleted, e.g. keep backups for 7 days.
+    ///
+    /// The maximum supported retention period is 14 weeks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -557,7 +559,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
 
   /// <summary>
-  /// Represents a recurring schedule that runs at a specific time every day.
+  /// Represents a recurring schedule that runs every day.
   ///
   /// The time zone is UTC.
   /// </summary>

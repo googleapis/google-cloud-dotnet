@@ -1757,7 +1757,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> collectionIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Which collection ids are being exported.
+    /// Which collection IDs are being exported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1786,7 +1786,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> namespaceIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Which namespace ids are being exported.
+    /// Which namespace IDs are being exported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2300,7 +2300,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> collectionIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Which collection ids are being imported.
+    /// Which collection IDs are being imported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2329,7 +2329,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> namespaceIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Which namespace ids are being imported.
+    /// Which namespace IDs are being imported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2793,7 +2793,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> collectionIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The ids of the collection groups that are being deleted.
+    /// The IDs of the collection groups that are being deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2807,7 +2807,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForString(58);
     private readonly pbc::RepeatedField<string> namespaceIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Which namespace ids are being deleted.
+    /// Which namespace IDs are being deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
