@@ -259,7 +259,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
@@ -278,7 +278,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
@@ -297,7 +297,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
@@ -312,7 +312,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
@@ -331,7 +331,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
@@ -350,7 +350,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project in which the assessment will be created,
+        /// Required. The name of the project in which the assessment is created,
         /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
@@ -400,7 +400,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -422,7 +422,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -444,7 +444,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -462,7 +462,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -484,7 +484,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
@@ -506,7 +506,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// Optional. The annotation that is assigned to the Event. This field can
         /// be left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
