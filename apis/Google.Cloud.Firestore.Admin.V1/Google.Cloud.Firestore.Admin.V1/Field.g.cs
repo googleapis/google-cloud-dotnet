@@ -61,7 +61,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// Represents a single field in the database.
   ///
   /// Fields are grouped by their "Collection Group", which represent all
-  /// collections in the database with the same id.
+  /// collections in the database with the same ID.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Field : pb::IMessage<Field>
