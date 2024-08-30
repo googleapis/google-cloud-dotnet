@@ -1607,11 +1607,11 @@ namespace Google.Cloud.EdgeNetwork.V1 {
         /// </summary>
         [pbr::OriginalName("BONDING_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Single homed.
+        /// Multi homed.
         /// </summary>
         [pbr::OriginalName("BONDED")] Bonded = 1,
         /// <summary>
-        /// Multi homed.
+        /// Single homed.
         /// </summary>
         [pbr::OriginalName("NON_BONDED")] NonBonded = 2,
       }
