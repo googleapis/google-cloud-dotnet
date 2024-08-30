@@ -27,43 +27,46 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Cilnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zY2hlZHVsZS5wcm90bxIa",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aMWdv",
-            "b2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL3BpcGVsaW5lX3NlcnZpY2UucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ihQkKCFNjaGVk",
-            "dWxlEg4KBGNyb24YCiABKAlIABJbChtjcmVhdGVfcGlwZWxpbmVfam9iX3Jl",
-            "cXVlc3QYDiABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5DcmVh",
-            "dGVQaXBlbGluZUpvYlJlcXVlc3RIARIRCgRuYW1lGAEgASgJQgPgQQUSGQoM",
-            "ZGlzcGxheV9uYW1lGAIgASgJQgPgQQISMwoKc3RhcnRfdGltZRgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARIxCghlbmRfdGltZRgE",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARIaCg1tYXhf",
-            "cnVuX2NvdW50GBAgASgDQgPgQQESHgoRc3RhcnRlZF9ydW5fY291bnQYESAB",
-            "KANCA+BBAxI+CgVzdGF0ZRgFIAEoDjIqLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLlNjaGVkdWxlLlN0YXRlQgPgQQMSNAoLY3JlYXRlX3RpbWUYBiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
-            "X3RpbWUYEyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "NgoNbmV4dF9ydW5fdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxI4Cg9sYXN0X3BhdXNlX3RpbWUYCCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOQoQbGFzdF9yZXN1bWVfdGltZRgJ",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIlChhtYXhf",
-            "Y29uY3VycmVudF9ydW5fY291bnQYCyABKANCA+BBAhIbCg5hbGxvd19xdWV1",
-            "ZWluZxgMIAEoCEID4EEBEhUKCGNhdGNoX3VwGA0gASgIQgPgQQMSWgobbGFz",
-            "dF9zY2hlZHVsZWRfcnVuX3Jlc3BvbnNlGBIgASgLMjAuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuU2NoZWR1bGUuUnVuUmVzcG9uc2VCA+BBAxpbCgtS",
-            "dW5SZXNwb25zZRI2ChJzY2hlZHVsZWRfcnVuX3RpbWUYASABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEhQKDHJ1bl9yZXNwb25zZRgCIAEoCSJF",
-            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgoK",
-            "BlBBVVNFRBACEg0KCUNPTVBMRVRFRBADOmXqQWIKImFpcGxhdGZvcm0uZ29v",
-            "Z2xlYXBpcy5jb20vU2NoZWR1bGUSPHByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9zY2hlZHVsZXMve3NjaGVkdWxlfUIUChJ0aW1l",
-            "X3NwZWNpZmljYXRpb25CCQoHcmVxdWVzdELLAQoeY29tLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxQg1TY2hlZHVsZVByb3RvUAFaPmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0",
-            "Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVc",
-            "Q2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZv",
-            "cm06OlYxYgZwcm90bzM="));
+            "b2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL25vdGVib29rX3NlcnZpY2UucHJv",
+            "dG8aMWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL3BpcGVsaW5lX3NlcnZp",
+            "Y2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i9QkK",
+            "CFNjaGVkdWxlEg4KBGNyb24YCiABKAlIABJbChtjcmVhdGVfcGlwZWxpbmVf",
+            "am9iX3JlcXVlc3QYDiABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5DcmVhdGVQaXBlbGluZUpvYlJlcXVlc3RIARJuCiVjcmVhdGVfbm90ZWJv",
+            "b2tfZXhlY3V0aW9uX2pvYl9yZXF1ZXN0GBQgASgLMj0uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuQ3JlYXRlTm90ZWJvb2tFeGVjdXRpb25Kb2JSZXF1",
+            "ZXN0SAESEQoEbmFtZRgBIAEoCUID4EEFEhkKDGRpc3BsYXlfbmFtZRgCIAEo",
+            "CUID4EECEjMKCnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQESMQoIZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQESGgoNbWF4X3J1bl9jb3VudBgQIAEoA0ID",
+            "4EEBEh4KEXN0YXJ0ZWRfcnVuX2NvdW50GBEgASgDQgPgQQMSPgoFc3RhdGUY",
+            "BSABKA4yKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TY2hlZHVsZS5T",
+            "dGF0ZUID4EEDEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGBMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjYKDW5leHRfcnVuX3RpbWUY",
+            "ByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOAoPbGFz",
+            "dF9wYXVzZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDEjkKEGxhc3RfcmVzdW1lX3RpbWUYCSABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSJQoYbWF4X2NvbmN1cnJlbnRfcnVuX2Nv",
+            "dW50GAsgASgDQgPgQQISGwoOYWxsb3dfcXVldWVpbmcYDCABKAhCA+BBARIV",
+            "CghjYXRjaF91cBgNIAEoCEID4EEDEloKG2xhc3Rfc2NoZWR1bGVkX3J1bl9y",
+            "ZXNwb25zZRgSIAEoCzIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNj",
+            "aGVkdWxlLlJ1blJlc3BvbnNlQgPgQQMaWwoLUnVuUmVzcG9uc2USNgoSc2No",
+            "ZWR1bGVkX3J1bl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIUCgxydW5fcmVzcG9uc2UYAiABKAkiRQoFU3RhdGUSFQoRU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIKCgZQQVVTRUQQAhINCglDT01Q",
+            "TEVURUQQAzpl6kFiCiJhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1NjaGVk",
+            "dWxlEjxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "c2NoZWR1bGVzL3tzY2hlZHVsZX1CFAoSdGltZV9zcGVjaWZpY2F0aW9uQgkK",
+            "B3JlcXVlc3RCywEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIN",
+            "U2NoZWR1bGVQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZv",
+            "cm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5D",
+            "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
+            "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.NotebookServiceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schedule), global::Google.Cloud.AIPlatform.V1.Schedule.Parser, new[]{ "Cron", "CreatePipelineJobRequest", "Name", "DisplayName", "StartTime", "EndTime", "MaxRunCount", "StartedRunCount", "State", "CreateTime", "UpdateTime", "NextRunTime", "LastPauseTime", "LastResumeTime", "MaxConcurrentRunCount", "AllowQueueing", "CatchUp", "LastScheduledRunResponse" }, new[]{ "TimeSpecification", "Request" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Schedule.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schedule.Types.RunResponse), global::Google.Cloud.AIPlatform.V1.Schedule.Types.RunResponse.Parser, new[]{ "ScheduledRunTime", "RunResponse_" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schedule), global::Google.Cloud.AIPlatform.V1.Schedule.Parser, new[]{ "Cron", "CreatePipelineJobRequest", "CreateNotebookExecutionJobRequest", "Name", "DisplayName", "StartTime", "EndTime", "MaxRunCount", "StartedRunCount", "State", "CreateTime", "UpdateTime", "NextRunTime", "LastPauseTime", "LastResumeTime", "MaxConcurrentRunCount", "AllowQueueing", "CatchUp", "LastScheduledRunResponse" }, new[]{ "TimeSpecification", "Request" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Schedule.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schedule.Types.RunResponse), global::Google.Cloud.AIPlatform.V1.Schedule.Types.RunResponse.Parser, new[]{ "ScheduledRunTime", "RunResponse_" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -135,6 +138,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         case RequestOneofCase.CreatePipelineJobRequest:
           CreatePipelineJobRequest = other.CreatePipelineJobRequest.Clone();
           break;
+        case RequestOneofCase.CreateNotebookExecutionJobRequest:
+          CreateNotebookExecutionJobRequest = other.CreateNotebookExecutionJobRequest.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -195,6 +201,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       set {
         request_ = value;
         requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.CreatePipelineJobRequest;
+      }
+    }
+
+    /// <summary>Field number for the "create_notebook_execution_job_request" field.</summary>
+    public const int CreateNotebookExecutionJobRequestFieldNumber = 20;
+    /// <summary>
+    /// Request for
+    /// [NotebookService.CreateNotebookExecutionJob][google.cloud.aiplatform.v1.NotebookService.CreateNotebookExecutionJob].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest CreateNotebookExecutionJobRequest {
+      get { return requestCase_ == RequestOneofCase.CreateNotebookExecutionJobRequest ? (global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.CreateNotebookExecutionJobRequest;
       }
     }
 
@@ -489,6 +511,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public enum RequestOneofCase {
       None = 0,
       CreatePipelineJobRequest = 14,
+      CreateNotebookExecutionJobRequest = 20,
     }
     private RequestOneofCase requestCase_ = RequestOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -521,6 +544,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Cron != other.Cron) return false;
       if (!object.Equals(CreatePipelineJobRequest, other.CreatePipelineJobRequest)) return false;
+      if (!object.Equals(CreateNotebookExecutionJobRequest, other.CreateNotebookExecutionJobRequest)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
@@ -548,6 +572,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (HasCron) hash ^= Cron.GetHashCode();
       if (requestCase_ == RequestOneofCase.CreatePipelineJobRequest) hash ^= CreatePipelineJobRequest.GetHashCode();
+      if (requestCase_ == RequestOneofCase.CreateNotebookExecutionJobRequest) hash ^= CreateNotebookExecutionJobRequest.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
@@ -656,6 +681,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(UpdateTime);
       }
+      if (requestCase_ == RequestOneofCase.CreateNotebookExecutionJobRequest) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(CreateNotebookExecutionJobRequest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -738,6 +767,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(UpdateTime);
       }
+      if (requestCase_ == RequestOneofCase.CreateNotebookExecutionJobRequest) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(CreateNotebookExecutionJobRequest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -753,6 +786,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (requestCase_ == RequestOneofCase.CreatePipelineJobRequest) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatePipelineJobRequest);
+      }
+      if (requestCase_ == RequestOneofCase.CreateNotebookExecutionJobRequest) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CreateNotebookExecutionJobRequest);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -899,6 +935,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           CreatePipelineJobRequest.MergeFrom(other.CreatePipelineJobRequest);
           break;
+        case RequestOneofCase.CreateNotebookExecutionJobRequest:
+          if (CreateNotebookExecutionJobRequest == null) {
+            CreateNotebookExecutionJobRequest = new global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest();
+          }
+          CreateNotebookExecutionJobRequest.MergeFrom(other.CreateNotebookExecutionJobRequest);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1017,6 +1059,15 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 162: {
+            global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest subBuilder = new global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest();
+            if (requestCase_ == RequestOneofCase.CreateNotebookExecutionJobRequest) {
+              subBuilder.MergeFrom(CreateNotebookExecutionJobRequest);
+            }
+            input.ReadMessage(subBuilder);
+            CreateNotebookExecutionJobRequest = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1131,6 +1182,15 @@ namespace Google.Cloud.AIPlatform.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest subBuilder = new global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest();
+            if (requestCase_ == RequestOneofCase.CreateNotebookExecutionJobRequest) {
+              subBuilder.MergeFrom(CreateNotebookExecutionJobRequest);
+            }
+            input.ReadMessage(subBuilder);
+            CreateNotebookExecutionJobRequest = subBuilder;
             break;
           }
         }
