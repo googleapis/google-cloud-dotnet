@@ -27,18 +27,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Ci5nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL2FwaV9hdXRoLnBy",
             "b3RvEh9nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvIm0KB0FwaUF1dGgaYgoMQXBpS2V5Q29uZmlnElIKFmFwaV9rZXlf",
-            "c2VjcmV0X3ZlcnNpb24YASABKAlCMuBBAvpBLAoqc2VjcmV0bWFuYWdlci5n",
-            "b29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uQuMBCiNjb20uZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMUIMQXBpQXV0aFByb3RvUAFaQ2Nsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZv",
-            "cm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5W",
-            "MUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdv",
-            "b2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "LnByb3RvIs0BCgdBcGlBdXRoEk8KDmFwaV9rZXlfY29uZmlnGAEgASgLMjUu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5BcGlBdXRoLkFwaUtl",
+            "eUNvbmZpZ0gAGmIKDEFwaUtleUNvbmZpZxJSChZhcGlfa2V5X3NlY3JldF92",
+            "ZXJzaW9uGAEgASgJQjLgQQL6QSwKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBp",
+            "cy5jb20vU2VjcmV0VmVyc2lvbkINCgthdXRoX2NvbmZpZ0LjAQojY29tLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCDEFwaUF1dGhQcm90b1AB",
+            "WkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9h",
+            "aXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxh",
+            "dGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0",
+            "YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth), global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Parser, null, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig), global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig.Parser, new[]{ "ApiKeySecretVersion" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth), global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Parser, new[]{ "ApiKeyConfig" }, new[]{ "AuthConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig), global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig.Parser, new[]{ "ApiKeySecretVersion" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -83,6 +86,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApiAuth(ApiAuth other) : this() {
+      switch (other.AuthConfigCase) {
+        case AuthConfigOneofCase.ApiKeyConfig:
+          ApiKeyConfig = other.ApiKeyConfig.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,6 +99,41 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApiAuth Clone() {
       return new ApiAuth(this);
+    }
+
+    /// <summary>Field number for the "api_key_config" field.</summary>
+    public const int ApiKeyConfigFieldNumber = 1;
+    /// <summary>
+    /// The API secret.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig ApiKeyConfig {
+      get { return authConfigCase_ == AuthConfigOneofCase.ApiKeyConfig ? (global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig) authConfig_ : null; }
+      set {
+        authConfig_ = value;
+        authConfigCase_ = value == null ? AuthConfigOneofCase.None : AuthConfigOneofCase.ApiKeyConfig;
+      }
+    }
+
+    private object authConfig_;
+    /// <summary>Enum of possible cases for the "auth_config" oneof.</summary>
+    public enum AuthConfigOneofCase {
+      None = 0,
+      ApiKeyConfig = 1,
+    }
+    private AuthConfigOneofCase authConfigCase_ = AuthConfigOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuthConfigOneofCase AuthConfigCase {
+      get { return authConfigCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAuthConfig() {
+      authConfigCase_ = AuthConfigOneofCase.None;
+      authConfig_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -107,6 +151,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ApiKeyConfig, other.ApiKeyConfig)) return false;
+      if (AuthConfigCase != other.AuthConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -114,6 +160,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (authConfigCase_ == AuthConfigOneofCase.ApiKeyConfig) hash ^= ApiKeyConfig.GetHashCode();
+      hash ^= (int) authConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -132,6 +180,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (authConfigCase_ == AuthConfigOneofCase.ApiKeyConfig) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ApiKeyConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -142,6 +194,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (authConfigCase_ == AuthConfigOneofCase.ApiKeyConfig) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ApiKeyConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -152,6 +208,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (authConfigCase_ == AuthConfigOneofCase.ApiKeyConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApiKeyConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -164,6 +223,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other == null) {
         return;
       }
+      switch (other.AuthConfigCase) {
+        case AuthConfigOneofCase.ApiKeyConfig:
+          if (ApiKeyConfig == null) {
+            ApiKeyConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig();
+          }
+          ApiKeyConfig.MergeFrom(other.ApiKeyConfig);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -179,6 +247,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig();
+            if (authConfigCase_ == AuthConfigOneofCase.ApiKeyConfig) {
+              subBuilder.MergeFrom(ApiKeyConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ApiKeyConfig = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -194,6 +271,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth.Types.ApiKeyConfig();
+            if (authConfigCase_ == AuthConfigOneofCase.ApiKeyConfig) {
+              subBuilder.MergeFrom(ApiKeyConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ApiKeyConfig = subBuilder;
+            break;
+          }
         }
       }
     }

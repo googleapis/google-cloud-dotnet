@@ -52,6 +52,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateRagCorpusSettings = existing.CreateRagCorpusSettings;
             CreateRagCorpusOperationsSettings = existing.CreateRagCorpusOperationsSettings.Clone();
+            UpdateRagCorpusSettings = existing.UpdateRagCorpusSettings;
+            UpdateRagCorpusOperationsSettings = existing.UpdateRagCorpusOperationsSettings.Clone();
             GetRagCorpusSettings = existing.GetRagCorpusSettings;
             ListRagCorporaSettings = existing.ListRagCorporaSettings;
             DeleteRagCorpusSettings = existing.DeleteRagCorpusSettings;
@@ -97,6 +99,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateRagCorpusOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.UpdateRagCorpus</c> and <c>VertexRagDataServiceClient.UpdateRagCorpusAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRagCorpusSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VertexRagDataServiceClient.UpdateRagCorpus</c> and
+        /// <c>VertexRagDataServiceClient.UpdateRagCorpusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateRagCorpusOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -570,6 +603,98 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<RagCorpus, CreateRagCorpusOperationMetadata>> CreateRagCorpusAsync(gagr::LocationName parent, RagCorpus ragCorpus, st::CancellationToken cancellationToken) =>
             CreateRagCorpusAsync(parent, ragCorpus, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a RagCorpus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata> UpdateRagCorpus(UpdateRagCorpusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a RagCorpus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>> UpdateRagCorpusAsync(UpdateRagCorpusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a RagCorpus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>> UpdateRagCorpusAsync(UpdateRagCorpusRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRagCorpusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateRagCorpus</c>.</summary>
+        public virtual lro::OperationsClient UpdateRagCorpusOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateRagCorpus</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata> PollOnceUpdateRagCorpus(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRagCorpusOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateRagCorpus</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>> PollOnceUpdateRagCorpusAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRagCorpusOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a RagCorpus.
+        /// </summary>
+        /// <param name="ragCorpus">
+        /// Required. The RagCorpus which replaces the resource on the server.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata> UpdateRagCorpus(RagCorpus ragCorpus, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRagCorpus(new UpdateRagCorpusRequest
+            {
+                RagCorpus = gax::GaxPreconditions.CheckNotNull(ragCorpus, nameof(ragCorpus)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a RagCorpus.
+        /// </summary>
+        /// <param name="ragCorpus">
+        /// Required. The RagCorpus which replaces the resource on the server.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>> UpdateRagCorpusAsync(RagCorpus ragCorpus, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRagCorpusAsync(new UpdateRagCorpusRequest
+            {
+                RagCorpus = gax::GaxPreconditions.CheckNotNull(ragCorpus, nameof(ragCorpus)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a RagCorpus.
+        /// </summary>
+        /// <param name="ragCorpus">
+        /// Required. The RagCorpus which replaces the resource on the server.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>> UpdateRagCorpusAsync(RagCorpus ragCorpus, st::CancellationToken cancellationToken) =>
+            UpdateRagCorpusAsync(ragCorpus, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a RagCorpus.
@@ -1756,6 +1881,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     {
         private readonly gaxgrpc::ApiCall<CreateRagCorpusRequest, lro::Operation> _callCreateRagCorpus;
 
+        private readonly gaxgrpc::ApiCall<UpdateRagCorpusRequest, lro::Operation> _callUpdateRagCorpus;
+
         private readonly gaxgrpc::ApiCall<GetRagCorpusRequest, RagCorpus> _callGetRagCorpus;
 
         private readonly gaxgrpc::ApiCall<ListRagCorporaRequest, ListRagCorporaResponse> _callListRagCorpora;
@@ -1789,6 +1916,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 Logger = logger,
             });
             CreateRagCorpusOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRagCorpusOperationsSettings, logger);
+            UpdateRagCorpusOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRagCorpusOperationsSettings, logger);
             DeleteRagCorpusOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRagCorpusOperationsSettings, logger);
             ImportRagFilesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportRagFilesOperationsSettings, logger);
             DeleteRagFileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRagFileOperationsSettings, logger);
@@ -1797,6 +1925,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callCreateRagCorpus = clientHelper.BuildApiCall<CreateRagCorpusRequest, lro::Operation>("CreateRagCorpus", grpcClient.CreateRagCorpusAsync, grpcClient.CreateRagCorpus, effectiveSettings.CreateRagCorpusSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRagCorpus);
             Modify_CreateRagCorpusApiCall(ref _callCreateRagCorpus);
+            _callUpdateRagCorpus = clientHelper.BuildApiCall<UpdateRagCorpusRequest, lro::Operation>("UpdateRagCorpus", grpcClient.UpdateRagCorpusAsync, grpcClient.UpdateRagCorpus, effectiveSettings.UpdateRagCorpusSettings).WithGoogleRequestParam("rag_corpus.name", request => request.RagCorpus?.Name);
+            Modify_ApiCall(ref _callUpdateRagCorpus);
+            Modify_UpdateRagCorpusApiCall(ref _callUpdateRagCorpus);
             _callGetRagCorpus = clientHelper.BuildApiCall<GetRagCorpusRequest, RagCorpus>("GetRagCorpus", grpcClient.GetRagCorpusAsync, grpcClient.GetRagCorpus, effectiveSettings.GetRagCorpusSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRagCorpus);
             Modify_GetRagCorpusApiCall(ref _callGetRagCorpus);
@@ -1828,6 +1959,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         partial void Modify_CreateRagCorpusApiCall(ref gaxgrpc::ApiCall<CreateRagCorpusRequest, lro::Operation> call);
 
+        partial void Modify_UpdateRagCorpusApiCall(ref gaxgrpc::ApiCall<UpdateRagCorpusRequest, lro::Operation> call);
+
         partial void Modify_GetRagCorpusApiCall(ref gaxgrpc::ApiCall<GetRagCorpusRequest, RagCorpus> call);
 
         partial void Modify_ListRagCorporaApiCall(ref gaxgrpc::ApiCall<ListRagCorporaRequest, ListRagCorporaResponse> call);
@@ -1856,6 +1989,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateRagCorpusRequest(ref CreateRagCorpusRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRagCorpusRequest(ref UpdateRagCorpusRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRagCorpusRequest(ref GetRagCorpusRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1898,6 +2033,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_CreateRagCorpusRequest(ref request, ref callSettings);
             return new lro::Operation<RagCorpus, CreateRagCorpusOperationMetadata>(await _callCreateRagCorpus.Async(request, callSettings).ConfigureAwait(false), CreateRagCorpusOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateRagCorpus</c>.</summary>
+        public override lro::OperationsClient UpdateRagCorpusOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a RagCorpus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata> UpdateRagCorpus(UpdateRagCorpusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRagCorpusRequest(ref request, ref callSettings);
+            return new lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>(_callUpdateRagCorpus.Sync(request, callSettings), UpdateRagCorpusOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a RagCorpus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>> UpdateRagCorpusAsync(UpdateRagCorpusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRagCorpusRequest(ref request, ref callSettings);
+            return new lro::Operation<RagCorpus, UpdateRagCorpusOperationMetadata>(await _callUpdateRagCorpus.Async(request, callSettings).ConfigureAwait(false), UpdateRagCorpusOperationsClient);
         }
 
         /// <summary>

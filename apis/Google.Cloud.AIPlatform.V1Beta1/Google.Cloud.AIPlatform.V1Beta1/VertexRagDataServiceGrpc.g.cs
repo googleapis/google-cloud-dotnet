@@ -68,6 +68,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest> __Marshaller_google_cloud_aiplatform_v1beta1_UpdateRagCorpusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GetRagCorpusRequest> __Marshaller_google_cloud_aiplatform_v1beta1_GetRagCorpusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GetRagCorpusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus> __Marshaller_google_cloud_aiplatform_v1beta1_RagCorpus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Parser));
@@ -100,6 +102,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         __ServiceName,
         "CreateRagCorpus",
         __Marshaller_google_cloud_aiplatform_v1beta1_CreateRagCorpusRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest, global::Google.LongRunning.Operation> __Method_UpdateRagCorpus = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRagCorpus",
+        __Marshaller_google_cloud_aiplatform_v1beta1_UpdateRagCorpusRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -184,6 +194,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateRagCorpus(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagCorpusRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a RagCorpus.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateRagCorpus(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -360,6 +382,54 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRagCorpusAsync(global::Google.Cloud.AIPlatform.V1Beta1.CreateRagCorpusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRagCorpus, null, options, request);
+      }
+      /// <summary>
+      /// Updates a RagCorpus.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRagCorpus(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRagCorpus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a RagCorpus.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRagCorpus(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRagCorpus, null, options, request);
+      }
+      /// <summary>
+      /// Updates a RagCorpus.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRagCorpusAsync(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRagCorpusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a RagCorpus.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRagCorpusAsync(global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRagCorpus, null, options, request);
       }
       /// <summary>
       /// Gets a RagCorpus.
@@ -760,6 +830,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateRagCorpus, serviceImpl.CreateRagCorpus)
+          .AddMethod(__Method_UpdateRagCorpus, serviceImpl.UpdateRagCorpus)
           .AddMethod(__Method_GetRagCorpus, serviceImpl.GetRagCorpus)
           .AddMethod(__Method_ListRagCorpora, serviceImpl.ListRagCorpora)
           .AddMethod(__Method_DeleteRagCorpus, serviceImpl.DeleteRagCorpus)
@@ -778,6 +849,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, VertexRagDataServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateRagCorpus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CreateRagCorpusRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRagCorpus));
+      serviceBinder.AddMethod(__Method_UpdateRagCorpus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRagCorpus));
       serviceBinder.AddMethod(__Method_GetRagCorpus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetRagCorpusRequest, global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus>(serviceImpl.GetRagCorpus));
       serviceBinder.AddMethod(__Method_ListRagCorpora, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ListRagCorporaRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListRagCorporaResponse>(serviceImpl.ListRagCorpora));
       serviceBinder.AddMethod(__Method_DeleteRagCorpus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeleteRagCorpusRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRagCorpus));

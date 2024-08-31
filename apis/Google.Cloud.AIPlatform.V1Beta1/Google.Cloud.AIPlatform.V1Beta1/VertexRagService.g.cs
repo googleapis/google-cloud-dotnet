@@ -28,46 +28,49 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "c2VydmljZS5wcm90bxIfZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
             "MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9j",
             "bGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
-            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iRwoIUmFnUXVlcnkSEwoEdGV4",
-            "dBgBIAEoCUID4EEBSAASHQoQc2ltaWxhcml0eV90b3BfaxgCIAEoBUID4EEB",
-            "QgcKBXF1ZXJ5It0EChdSZXRyaWV2ZUNvbnRleHRzUmVxdWVzdBJjChB2ZXJ0",
-            "ZXhfcmFnX3N0b3JlGAIgASgLMkcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMS5SZXRyaWV2ZUNvbnRleHRzUmVxdWVzdC5WZXJ0ZXhSYWdTdG9y",
-            "ZUgAEjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
-            "YXBpcy5jb20vTG9jYXRpb24SPQoFcXVlcnkYAyABKAsyKS5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ1F1ZXJ5QgPgQQIa0wIKDlZlcnRl",
-            "eFJhZ1N0b3JlEhoKC3JhZ19jb3Jwb3JhGAEgAygJQgUYAeBBARJvCg1yYWdf",
-            "cmVzb3VyY2VzGAMgAygLMlMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
-            "ZXRhMS5SZXRyaWV2ZUNvbnRleHRzUmVxdWVzdC5WZXJ0ZXhSYWdTdG9yZS5S",
-            "YWdSZXNvdXJjZUID4EEBEisKGXZlY3Rvcl9kaXN0YW5jZV90aHJlc2hvbGQY",
-            "AiABKAFCA+BBAUgAiAEBGmkKC1JhZ1Jlc291cmNlEj8KCnJhZ19jb3JwdXMY",
-            "ASABKAlCK+BBAfpBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SYWdD",
-            "b3JwdXMSGQoMcmFnX2ZpbGVfaWRzGAIgAygJQgPgQQFCHAoaX3ZlY3Rvcl9k",
-            "aXN0YW5jZV90aHJlc2hvbGRCDQoLZGF0YV9zb3VyY2UilAEKC1JhZ0NvbnRl",
-            "eHRzEkYKCGNvbnRleHRzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5SYWdDb250ZXh0cy5Db250ZXh0Gj0KB0NvbnRleHQSEgoK",
-            "c291cmNlX3VyaRgBIAEoCRIMCgR0ZXh0GAIgASgJEhAKCGRpc3RhbmNlGAMg",
-            "ASgBIloKGFJldHJpZXZlQ29udGV4dHNSZXNwb25zZRI+Cghjb250ZXh0cxgB",
-            "IAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnQ29u",
-            "dGV4dHMywAIKEFZlcnRleFJhZ1NlcnZpY2US3AEKEFJldHJpZXZlQ29udGV4",
-            "dHMSOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJldHJpZXZl",
-            "Q29udGV4dHNSZXF1ZXN0GjkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
-            "ZXRhMS5SZXRyaWV2ZUNvbnRleHRzUmVzcG9uc2UiU9pBDHBhcmVudCxxdWVy",
-            "eYLT5JMCPiI5L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfTpyZXRyaWV2ZUNvbnRleHRzOgEqGk3KQRlhaXBsYXRmb3JtLmdvb2ds",
-            "ZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybULsAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTFCFVZlcnRleFJhZ1NlcnZpY2VQcm90b1ABWkNjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7",
-            "YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRh",
-            "McoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6",
-            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
+            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ivgEKCFJhZ1F1ZXJ5EhMKBHRl",
+            "eHQYASABKAlCA+BBAUgAEh0KEHNpbWlsYXJpdHlfdG9wX2sYAiABKAVCA+BB",
+            "ARJHCgdyYW5raW5nGAQgASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5SYWdRdWVyeS5SYW5raW5nQgPgQQEaLAoHUmFua2luZxIXCgVh",
+            "bHBoYRgBIAEoAkID4EEBSACIAQFCCAoGX2FscGhhQgcKBXF1ZXJ5It0EChdS",
+            "ZXRyaWV2ZUNvbnRleHRzUmVxdWVzdBJjChB2ZXJ0ZXhfcmFnX3N0b3JlGAIg",
+            "ASgLMkcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZXRyaWV2",
+            "ZUNvbnRleHRzUmVxdWVzdC5WZXJ0ZXhSYWdTdG9yZUgAEjkKBnBhcmVudBgB",
+            "IAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
+            "b24SPQoFcXVlcnkYAyABKAsyKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLlJhZ1F1ZXJ5QgPgQQIa0wIKDlZlcnRleFJhZ1N0b3JlEhoKC3Jh",
+            "Z19jb3Jwb3JhGAEgAygJQgUYAeBBARJvCg1yYWdfcmVzb3VyY2VzGAMgAygL",
+            "MlMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZXRyaWV2ZUNv",
+            "bnRleHRzUmVxdWVzdC5WZXJ0ZXhSYWdTdG9yZS5SYWdSZXNvdXJjZUID4EEB",
+            "EisKGXZlY3Rvcl9kaXN0YW5jZV90aHJlc2hvbGQYAiABKAFCA+BBAUgAiAEB",
+            "GmkKC1JhZ1Jlc291cmNlEj8KCnJhZ19jb3JwdXMYASABKAlCK+BBAfpBJQoj",
+            "YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SYWdDb3JwdXMSGQoMcmFnX2Zp",
+            "bGVfaWRzGAIgAygJQgPgQQFCHAoaX3ZlY3Rvcl9kaXN0YW5jZV90aHJlc2hv",
+            "bGRCDQoLZGF0YV9zb3VyY2UirQEKC1JhZ0NvbnRleHRzEkYKCGNvbnRleHRz",
+            "GAEgAygLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdD",
+            "b250ZXh0cy5Db250ZXh0GlYKB0NvbnRleHQSEgoKc291cmNlX3VyaRgBIAEo",
+            "CRIMCgR0ZXh0GAIgASgJEhAKCGRpc3RhbmNlGAMgASgBEhcKD3NwYXJzZV9k",
+            "aXN0YW5jZRgEIAEoASJaChhSZXRyaWV2ZUNvbnRleHRzUmVzcG9uc2USPgoI",
+            "Y29udGV4dHMYASABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
+            "dGExLlJhZ0NvbnRleHRzMsACChBWZXJ0ZXhSYWdTZXJ2aWNlEtwBChBSZXRy",
+            "aWV2ZUNvbnRleHRzEjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MS5SZXRyaWV2ZUNvbnRleHRzUmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuUmV0cmlldmVDb250ZXh0c1Jlc3BvbnNlIlPaQQxw",
+            "YXJlbnQscXVlcnmC0+STAj4iOS92MWJldGExL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn06cmV0cmlldmVDb250ZXh0czoBKhpNykEZYWlwbGF0",
+            "Zm9ybS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C7AEKI2NvbS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExQhVWZXJ0ZXhSYWdTZXJ2aWNlUHJvdG9QAVpD",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlw",
+            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRm",
+            "b3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx",
+            "6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagQuery), global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Parser, new[]{ "Text", "SimilarityTopK" }, new[]{ "Query" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagQuery), global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Parser, new[]{ "Text", "SimilarityTopK", "Ranking" }, new[]{ "Query" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Types.Ranking), global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Types.Ranking.Parser, new[]{ "Alpha" }, new[]{ "Alpha" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest), global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest.Parser, new[]{ "VertexRagStore", "Parent", "Query" }, new[]{ "DataSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest.Types.VertexRagStore), global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest.Types.VertexRagStore.Parser, new[]{ "RagCorpora", "RagResources", "VectorDistanceThreshold" }, new[]{ "VectorDistanceThreshold" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest.Types.VertexRagStore.Types.RagResource), global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest.Types.VertexRagStore.Types.RagResource.Parser, new[]{ "RagCorpus", "RagFileIds" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagContexts), global::Google.Cloud.AIPlatform.V1Beta1.RagContexts.Parser, new[]{ "Contexts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagContexts.Types.Context), global::Google.Cloud.AIPlatform.V1Beta1.RagContexts.Types.Context.Parser, new[]{ "SourceUri", "Text", "Distance" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagContexts), global::Google.Cloud.AIPlatform.V1Beta1.RagContexts.Parser, new[]{ "Contexts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagContexts.Types.Context), global::Google.Cloud.AIPlatform.V1Beta1.RagContexts.Types.Context.Parser, new[]{ "SourceUri", "Text", "Distance", "SparseDistance" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse), global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse.Parser, new[]{ "Contexts" }, null, null, null, null)
           }));
     }
@@ -114,6 +117,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RagQuery(RagQuery other) : this() {
       similarityTopK_ = other.similarityTopK_;
+      ranking_ = other.ranking_ != null ? other.ranking_.Clone() : null;
       switch (other.QueryCase) {
         case QueryOneofCase.Text:
           Text = other.Text;
@@ -173,6 +177,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "ranking" field.</summary>
+    public const int RankingFieldNumber = 4;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Types.Ranking ranking_;
+    /// <summary>
+    /// Optional. Configurations for hybrid search results ranking.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Types.Ranking Ranking {
+      get { return ranking_; }
+      set {
+        ranking_ = value;
+      }
+    }
+
     private object query_;
     /// <summary>Enum of possible cases for the "query" oneof.</summary>
     public enum QueryOneofCase {
@@ -210,6 +229,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (Text != other.Text) return false;
       if (SimilarityTopK != other.SimilarityTopK) return false;
+      if (!object.Equals(Ranking, other.Ranking)) return false;
       if (QueryCase != other.QueryCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -220,6 +240,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int hash = 1;
       if (HasText) hash ^= Text.GetHashCode();
       if (SimilarityTopK != 0) hash ^= SimilarityTopK.GetHashCode();
+      if (ranking_ != null) hash ^= Ranking.GetHashCode();
       hash ^= (int) queryCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -247,6 +268,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(16);
         output.WriteInt32(SimilarityTopK);
       }
+      if (ranking_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Ranking);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -265,6 +290,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(16);
         output.WriteInt32(SimilarityTopK);
       }
+      if (ranking_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Ranking);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -281,6 +310,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (SimilarityTopK != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SimilarityTopK);
       }
+      if (ranking_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ranking);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -295,6 +327,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.SimilarityTopK != 0) {
         SimilarityTopK = other.SimilarityTopK;
+      }
+      if (other.ranking_ != null) {
+        if (ranking_ == null) {
+          Ranking = new global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Types.Ranking();
+        }
+        Ranking.MergeFrom(other.Ranking);
       }
       switch (other.QueryCase) {
         case QueryOneofCase.Text:
@@ -325,6 +363,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             SimilarityTopK = input.ReadInt32();
             break;
           }
+          case 34: {
+            if (ranking_ == null) {
+              Ranking = new global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Types.Ranking();
+            }
+            input.ReadMessage(Ranking);
+            break;
+          }
         }
       }
     #endif
@@ -348,10 +393,241 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             SimilarityTopK = input.ReadInt32();
             break;
           }
+          case 34: {
+            if (ranking_ == null) {
+              Ranking = new global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Types.Ranking();
+            }
+            input.ReadMessage(Ranking);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RagQuery message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Configurations for hybrid search results ranking.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Ranking : pb::IMessage<Ranking>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Ranking> _parser = new pb::MessageParser<Ranking>(() => new Ranking());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Ranking> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.RagQuery.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Ranking() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Ranking(Ranking other) : this() {
+          _hasBits0 = other._hasBits0;
+          alpha_ = other.alpha_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Ranking Clone() {
+          return new Ranking(this);
+        }
+
+        /// <summary>Field number for the "alpha" field.</summary>
+        public const int AlphaFieldNumber = 1;
+        private readonly static float AlphaDefaultValue = 0F;
+
+        private float alpha_;
+        /// <summary>
+        /// Optional. Alpha value controls the weight between dense and sparse vector
+        /// search results. The range is [0, 1], while 0 means sparse vector search
+        /// only and 1 means dense vector search only. The default value is 0.5 which
+        /// balances sparse and dense vector search equally.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float Alpha {
+          get { if ((_hasBits0 & 1) != 0) { return alpha_; } else { return AlphaDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            alpha_ = value;
+          }
+        }
+        /// <summary>Gets whether the "alpha" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAlpha {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "alpha" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAlpha() {
+          _hasBits0 &= ~1;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Ranking);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Ranking other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Alpha, other.Alpha)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasAlpha) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Alpha);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasAlpha) {
+            output.WriteRawTag(13);
+            output.WriteFloat(Alpha);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasAlpha) {
+            output.WriteRawTag(13);
+            output.WriteFloat(Alpha);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasAlpha) {
+            size += 1 + 4;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Ranking other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasAlpha) {
+            Alpha = other.Alpha;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 13: {
+                Alpha = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 13: {
+                Alpha = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -1437,6 +1713,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           sourceUri_ = other.sourceUri_;
           text_ = other.text_;
           distance_ = other.distance_;
+          sparseDistance_ = other.sparseDistance_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1482,7 +1759,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         public const int DistanceFieldNumber = 3;
         private double distance_;
         /// <summary>
-        /// The distance between the query vector and the context text vector.
+        /// The distance between the query dense embedding vector and the context
+        /// text vector.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1490,6 +1768,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           get { return distance_; }
           set {
             distance_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "sparse_distance" field.</summary>
+        public const int SparseDistanceFieldNumber = 4;
+        private double sparseDistance_;
+        /// <summary>
+        /// The distance between the query sparse embedding vector and the context
+        /// text vector.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double SparseDistance {
+          get { return sparseDistance_; }
+          set {
+            sparseDistance_ = value;
           }
         }
 
@@ -1511,6 +1805,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (SourceUri != other.SourceUri) return false;
           if (Text != other.Text) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Distance, other.Distance)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SparseDistance, other.SparseDistance)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1521,6 +1816,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (SourceUri.Length != 0) hash ^= SourceUri.GetHashCode();
           if (Text.Length != 0) hash ^= Text.GetHashCode();
           if (Distance != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Distance);
+          if (SparseDistance != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SparseDistance);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1551,6 +1847,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(25);
             output.WriteDouble(Distance);
           }
+          if (SparseDistance != 0D) {
+            output.WriteRawTag(33);
+            output.WriteDouble(SparseDistance);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1573,6 +1873,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(25);
             output.WriteDouble(Distance);
           }
+          if (SparseDistance != 0D) {
+            output.WriteRawTag(33);
+            output.WriteDouble(SparseDistance);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1590,6 +1894,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
           }
           if (Distance != 0D) {
+            size += 1 + 8;
+          }
+          if (SparseDistance != 0D) {
             size += 1 + 8;
           }
           if (_unknownFields != null) {
@@ -1612,6 +1919,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (other.Distance != 0D) {
             Distance = other.Distance;
+          }
+          if (other.SparseDistance != 0D) {
+            SparseDistance = other.SparseDistance;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1640,6 +1950,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 Distance = input.ReadDouble();
                 break;
               }
+              case 33: {
+                SparseDistance = input.ReadDouble();
+                break;
+              }
             }
           }
         #endif
@@ -1665,6 +1979,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 25: {
                 Distance = input.ReadDouble();
+                break;
+              }
+              case 33: {
+                SparseDistance = input.ReadDouble();
                 break;
               }
             }
