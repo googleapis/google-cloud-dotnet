@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 ClusterName = "",
                 Region = "",
                 TarballGcsDir = "",
+                TarballAccess = DiagnoseClusterRequest.Types.TarballAccess.Unspecified,
                 DiagnosisInterval = new Interval(),
                 Jobs = { "", },
                 YarnApplicationIds = { "", },
