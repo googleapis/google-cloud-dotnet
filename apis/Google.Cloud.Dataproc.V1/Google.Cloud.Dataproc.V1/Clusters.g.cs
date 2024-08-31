@@ -264,69 +264,74 @@ namespace Google.Cloud.Dataproc.V1 {
             "emUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEibgoUTGlz",
             "dENsdXN0ZXJzUmVzcG9uc2USOAoIY2x1c3RlcnMYASADKAsyIS5nb29nbGUu",
             "Y2xvdWQuZGF0YXByb2MudjEuQ2x1c3RlckID4EEDEhwKD25leHRfcGFnZV90",
-            "b2tlbhgCIAEoCUID4EEDIu0BChZEaWFnbm9zZUNsdXN0ZXJSZXF1ZXN0EhcK",
+            "b2tlbhgCIAEoCUID4EEDIrMDChZEaWFnbm9zZUNsdXN0ZXJSZXF1ZXN0EhcK",
             "CnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24YAyABKAlCA+BBAhIZ",
             "CgxjbHVzdGVyX25hbWUYAiABKAlCA+BBAhIcCg90YXJiYWxsX2djc19kaXIY",
-            "BCABKAlCA+BBARI2ChJkaWFnbm9zaXNfaW50ZXJ2YWwYBiABKAsyFS5nb29n",
-            "bGUudHlwZS5JbnRlcnZhbEID4EEBEhEKBGpvYnMYCiADKAlCA+BBARIhChR5",
-            "YXJuX2FwcGxpY2F0aW9uX2lkcxgLIAMoCUID4EEBIjEKFkRpYWdub3NlQ2x1",
-            "c3RlclJlc3VsdHMSFwoKb3V0cHV0X3VyaRgBIAEoCUID4EEDIvgBChNSZXNl",
-            "cnZhdGlvbkFmZmluaXR5ElkKGGNvbnN1bWVfcmVzZXJ2YXRpb25fdHlwZRgB",
-            "IAEoDjIyLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5SZXNlcnZhdGlvbkFm",
-            "ZmluaXR5LlR5cGVCA+BBARIQCgNrZXkYAiABKAlCA+BBARITCgZ2YWx1ZXMY",
-            "AyADKAlCA+BBASJfCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABISCg5O",
-            "T19SRVNFUlZBVElPThABEhMKD0FOWV9SRVNFUlZBVElPThACEhgKFFNQRUNJ",
-            "RklDX1JFU0VSVkFUSU9OEAMy5BAKEUNsdXN0ZXJDb250cm9sbGVyEoACCg1D",
-            "cmVhdGVDbHVzdGVyEi4uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNyZWF0",
-            "ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKfAcpBPAoHQ2x1c3RlchIxZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNs",
-            "dXN0ZXJPcGVyYXRpb25NZXRhZGF0YdpBGXByb2plY3RfaWQscmVnaW9uLGNs",
-            "dXN0ZXKC0+STAj4iMy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9u",
-            "cy97cmVnaW9ufS9jbHVzdGVyczoHY2x1c3RlchKoAgoNVXBkYXRlQ2x1c3Rl",
-            "chIuLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5VcGRhdGVDbHVzdGVyUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ixwHKQTwKB0Ns",
-            "dXN0ZXISMWdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0",
-            "aW9uTWV0YWRhdGHaQTJwcm9qZWN0X2lkLHJlZ2lvbixjbHVzdGVyX25hbWUs",
-            "Y2x1c3Rlcix1cGRhdGVfbWFza4LT5JMCTTJCL3YxL3Byb2plY3RzL3twcm9q",
-            "ZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2NsdXN0ZXJzL3tjbHVzdGVyX25h",
-            "bWV9OgdjbHVzdGVyEu4BCgtTdG9wQ2x1c3RlchIsLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcHJvYy52MS5TdG9wQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uIpEBykE8CgdDbHVzdGVyEjFnb29nbGUuY2xvdWQu",
-            "ZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFkYXRhgtPkkwJMIkcv",
-            "djEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1",
-            "c3RlcnMve2NsdXN0ZXJfbmFtZX06c3RvcDoBKhLxAQoMU3RhcnRDbHVzdGVy",
-            "Ei0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlN0YXJ0Q2x1c3RlclJlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpIBykE8CgdDbHVz",
+            "BCABKAlCA+BBARJbCg50YXJiYWxsX2FjY2VzcxgFIAEoDjI+Lmdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MS5EaWFnbm9zZUNsdXN0ZXJSZXF1ZXN0LlRhcmJh",
+            "bGxBY2Nlc3NCA+BBARI2ChJkaWFnbm9zaXNfaW50ZXJ2YWwYBiABKAsyFS5n",
+            "b29nbGUudHlwZS5JbnRlcnZhbEID4EEBEhEKBGpvYnMYCiADKAlCA+BBARIh",
+            "ChR5YXJuX2FwcGxpY2F0aW9uX2lkcxgLIAMoCUID4EEBImcKDVRhcmJhbGxB",
+            "Y2Nlc3MSHgoaVEFSQkFMTF9BQ0NFU1NfVU5TUEVDSUZJRUQQABIYChRHT09H",
+            "TEVfQ0xPVURfU1VQUE9SVBABEhwKGEdPT0dMRV9EQVRBUFJPQ19ESUFHTk9T",
+            "RRACIjEKFkRpYWdub3NlQ2x1c3RlclJlc3VsdHMSFwoKb3V0cHV0X3VyaRgB",
+            "IAEoCUID4EEDIvgBChNSZXNlcnZhdGlvbkFmZmluaXR5ElkKGGNvbnN1bWVf",
+            "cmVzZXJ2YXRpb25fdHlwZRgBIAEoDjIyLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
+            "Yy52MS5SZXNlcnZhdGlvbkFmZmluaXR5LlR5cGVCA+BBARIQCgNrZXkYAiAB",
+            "KAlCA+BBARITCgZ2YWx1ZXMYAyADKAlCA+BBASJfCgRUeXBlEhQKEFRZUEVf",
+            "VU5TUEVDSUZJRUQQABISCg5OT19SRVNFUlZBVElPThABEhMKD0FOWV9SRVNF",
+            "UlZBVElPThACEhgKFFNQRUNJRklDX1JFU0VSVkFUSU9OEAMy5BAKEUNsdXN0",
+            "ZXJDb250cm9sbGVyEoACCg1DcmVhdGVDbHVzdGVyEi4uZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwcm9jLnYxLkNyZWF0ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiKfAcpBPAoHQ2x1c3RlchIxZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25NZXRhZGF0YdpBGXBy",
+            "b2plY3RfaWQscmVnaW9uLGNsdXN0ZXKC0+STAj4iMy92MS9wcm9qZWN0cy97",
+            "cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVyczoHY2x1c3Rl",
+            "chKoAgoNVXBkYXRlQ2x1c3RlchIuLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5VcGRhdGVDbHVzdGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
+            "cGVyYXRpb24ixwHKQTwKB0NsdXN0ZXISMWdvb2dsZS5jbG91ZC5kYXRhcHJv",
+            "Yy52MS5DbHVzdGVyT3BlcmF0aW9uTWV0YWRhdGHaQTJwcm9qZWN0X2lkLHJl",
+            "Z2lvbixjbHVzdGVyX25hbWUsY2x1c3Rlcix1cGRhdGVfbWFza4LT5JMCTTJC",
+            "L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2Ns",
+            "dXN0ZXJzL3tjbHVzdGVyX25hbWV9OgdjbHVzdGVyEu4BCgtTdG9wQ2x1c3Rl",
+            "chIsLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5TdG9wQ2x1c3RlclJlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpEBykE8CgdDbHVz",
             "dGVyEjFnb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlv",
-            "bk1ldGFkYXRhgtPkkwJNIkgvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3Jl",
-            "Z2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2NsdXN0ZXJfbmFtZX06c3RhcnQ6",
-            "ASoSmQIKDURlbGV0ZUNsdXN0ZXISLi5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
-            "djEuRGVsZXRlQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uIrgBykFKChVnb29nbGUucHJvdG9idWYuRW1wdHkSMWdvb2ds",
-            "ZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uTWV0YWRhdGHa",
-            "QR5wcm9qZWN0X2lkLHJlZ2lvbixjbHVzdGVyX25hbWWC0+STAkQqQi92MS9w",
-            "cm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVy",
-            "cy97Y2x1c3Rlcl9uYW1lfRLJAQoKR2V0Q2x1c3RlchIrLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcHJvYy52MS5HZXRDbHVzdGVyUmVxdWVzdBohLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcHJvYy52MS5DbHVzdGVyImvaQR5wcm9qZWN0X2lkLHJlZ2lvbixj",
-            "bHVzdGVyX25hbWWC0+STAkQSQi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0v",
-            "cmVnaW9ucy97cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9uYW1lfRLZAQoM",
-            "TGlzdENsdXN0ZXJzEi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxpc3RD",
-            "bHVzdGVyc1JlcXVlc3QaLi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTGlz",
-            "dENsdXN0ZXJzUmVzcG9uc2UiatpBEXByb2plY3RfaWQscmVnaW9u2kEYcHJv",
-            "amVjdF9pZCxyZWdpb24sZmlsdGVygtPkkwI1EjMvdjEvcHJvamVjdHMve3By",
-            "b2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMSqgIKD0RpYWdu",
-            "b3NlQ2x1c3RlchIwLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5EaWFnbm9z",
-            "ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biLFAcpBSwoWRGlhZ25vc2VDbHVzdGVyUmVzdWx0cxIxZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25NZXRhZGF0YdpBHnByb2pl",
-            "Y3RfaWQscmVnaW9uLGNsdXN0ZXJfbmFtZYLT5JMCUCJLL3YxL3Byb2plY3Rz",
-            "L3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2NsdXN0ZXJzL3tjbHVz",
-            "dGVyX25hbWV9OmRpYWdub3NlOgEqGkvKQRdkYXRhcHJvYy5nb29nbGVhcGlz",
-            "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
-            "cGxhdGZvcm1CbAocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUINQ2x1",
-            "c3RlcnNQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwcm9jL3Yy",
-            "L2FwaXYxL2RhdGFwcm9jcGI7ZGF0YXByb2NwYmIGcHJvdG8z"));
+            "bk1ldGFkYXRhgtPkkwJMIkcvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3Jl",
+            "Z2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2NsdXN0ZXJfbmFtZX06c3RvcDoB",
+            "KhLxAQoMU3RhcnRDbHVzdGVyEi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
+            "LlN0YXJ0Q2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIpIBykE8CgdDbHVzdGVyEjFnb29nbGUuY2xvdWQuZGF0YXByb2Mu",
+            "djEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFkYXRhgtPkkwJNIkgvdjEvcHJvamVj",
+            "dHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2Ns",
+            "dXN0ZXJfbmFtZX06c3RhcnQ6ASoSmQIKDURlbGV0ZUNsdXN0ZXISLi5nb29n",
+            "bGUuY2xvdWQuZGF0YXByb2MudjEuRGVsZXRlQ2x1c3RlclJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrgBykFKChVnb29nbGUucHJv",
+            "dG9idWYuRW1wdHkSMWdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVy",
+            "T3BlcmF0aW9uTWV0YWRhdGHaQR5wcm9qZWN0X2lkLHJlZ2lvbixjbHVzdGVy",
+            "X25hbWWC0+STAkQqQi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9u",
+            "cy97cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9uYW1lfRLJAQoKR2V0Q2x1",
+            "c3RlchIrLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5HZXRDbHVzdGVyUmVx",
+            "dWVzdBohLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyImvaQR5w",
+            "cm9qZWN0X2lkLHJlZ2lvbixjbHVzdGVyX25hbWWC0+STAkQSQi92MS9wcm9q",
+            "ZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVycy97",
+            "Y2x1c3Rlcl9uYW1lfRLZAQoMTGlzdENsdXN0ZXJzEi0uZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwcm9jLnYxLkxpc3RDbHVzdGVyc1JlcXVlc3QaLi5nb29nbGUuY2xv",
+            "dWQuZGF0YXByb2MudjEuTGlzdENsdXN0ZXJzUmVzcG9uc2UiatpBEXByb2pl",
+            "Y3RfaWQscmVnaW9u2kEYcHJvamVjdF9pZCxyZWdpb24sZmlsdGVygtPkkwI1",
+            "EjMvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0v",
+            "Y2x1c3RlcnMSqgIKD0RpYWdub3NlQ2x1c3RlchIwLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcHJvYy52MS5EaWFnbm9zZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiLFAcpBSwoWRGlhZ25vc2VDbHVzdGVyUmVz",
+            "dWx0cxIxZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRp",
+            "b25NZXRhZGF0YdpBHnByb2plY3RfaWQscmVnaW9uLGNsdXN0ZXJfbmFtZYLT",
+            "5JMCUCJLL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdp",
+            "b259L2NsdXN0ZXJzL3tjbHVzdGVyX25hbWV9OmRpYWdub3NlOgEqGkvKQRdk",
+            "YXRhcHJvYy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CbAocY29tLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcHJvYy52MUINQ2x1c3RlcnNQcm90b1ABWjtjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2RhdGFwcm9jL3YyL2FwaXYxL2RhdGFwcm9jcGI7ZGF0YXByb2Nw",
+            "YmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor, global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -369,7 +374,7 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetClusterRequest), global::Google.Cloud.Dataproc.V1.GetClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListClustersRequest), global::Google.Cloud.Dataproc.V1.ListClustersRequest.Parser, new[]{ "ProjectId", "Region", "Filter", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListClustersResponse), global::Google.Cloud.Dataproc.V1.ListClustersResponse.Parser, new[]{ "Clusters", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest), global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName", "TarballGcsDir", "DiagnosisInterval", "Jobs", "YarnApplicationIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest), global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName", "TarballGcsDir", "TarballAccess", "DiagnosisInterval", "Jobs", "YarnApplicationIds" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DiagnoseClusterResults), global::Google.Cloud.Dataproc.V1.DiagnoseClusterResults.Parser, new[]{ "OutputUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ReservationAffinity), global::Google.Cloud.Dataproc.V1.ReservationAffinity.Parser, new[]{ "ConsumeReservationType", "Key", "Values" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ReservationAffinity.Types.Type) }, null, null)
           }));
@@ -14552,6 +14557,7 @@ namespace Google.Cloud.Dataproc.V1 {
       region_ = other.region_;
       clusterName_ = other.clusterName_;
       tarballGcsDir_ = other.tarballGcsDir_;
+      tarballAccess_ = other.tarballAccess_;
       diagnosisInterval_ = other.diagnosisInterval_ != null ? other.diagnosisInterval_.Clone() : null;
       jobs_ = other.jobs_.Clone();
       yarnApplicationIds_ = other.yarnApplicationIds_.Clone();
@@ -14627,6 +14633,22 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "tarball_access" field.</summary>
+    public const int TarballAccessFieldNumber = 5;
+    private global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess tarballAccess_ = global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess.Unspecified;
+    /// <summary>
+    /// Optional. (Optional) The access type to the diagnostic tarball. If not
+    /// specified, falls back to default access of the bucket
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess TarballAccess {
+      get { return tarballAccess_; }
+      set {
+        tarballAccess_ = value;
+      }
+    }
+
     /// <summary>Field number for the "diagnosis_interval" field.</summary>
     public const int DiagnosisIntervalFieldNumber = 6;
     private global::Google.Type.Interval diagnosisInterval_;
@@ -14692,6 +14714,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Region != other.Region) return false;
       if (ClusterName != other.ClusterName) return false;
       if (TarballGcsDir != other.TarballGcsDir) return false;
+      if (TarballAccess != other.TarballAccess) return false;
       if (!object.Equals(DiagnosisInterval, other.DiagnosisInterval)) return false;
       if(!jobs_.Equals(other.jobs_)) return false;
       if(!yarnApplicationIds_.Equals(other.yarnApplicationIds_)) return false;
@@ -14706,6 +14729,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Region.Length != 0) hash ^= Region.GetHashCode();
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
       if (TarballGcsDir.Length != 0) hash ^= TarballGcsDir.GetHashCode();
+      if (TarballAccess != global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess.Unspecified) hash ^= TarballAccess.GetHashCode();
       if (diagnosisInterval_ != null) hash ^= DiagnosisInterval.GetHashCode();
       hash ^= jobs_.GetHashCode();
       hash ^= yarnApplicationIds_.GetHashCode();
@@ -14743,6 +14767,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(34);
         output.WriteString(TarballGcsDir);
       }
+      if (TarballAccess != global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) TarballAccess);
+      }
       if (diagnosisInterval_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(DiagnosisInterval);
@@ -14775,6 +14803,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(34);
         output.WriteString(TarballGcsDir);
       }
+      if (TarballAccess != global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) TarballAccess);
+      }
       if (diagnosisInterval_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(DiagnosisInterval);
@@ -14802,6 +14834,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (TarballGcsDir.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TarballGcsDir);
+      }
+      if (TarballAccess != global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TarballAccess);
       }
       if (diagnosisInterval_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiagnosisInterval);
@@ -14831,6 +14866,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.TarballGcsDir.Length != 0) {
         TarballGcsDir = other.TarballGcsDir;
+      }
+      if (other.TarballAccess != global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess.Unspecified) {
+        TarballAccess = other.TarballAccess;
       }
       if (other.diagnosisInterval_ != null) {
         if (diagnosisInterval_ == null) {
@@ -14869,6 +14907,10 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 34: {
             TarballGcsDir = input.ReadString();
+            break;
+          }
+          case 40: {
+            TarballAccess = (global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess) input.ReadEnum();
             break;
           }
           case 50: {
@@ -14917,6 +14959,10 @@ namespace Google.Cloud.Dataproc.V1 {
             TarballGcsDir = input.ReadString();
             break;
           }
+          case 40: {
+            TarballAccess = (global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Types.TarballAccess) input.ReadEnum();
+            break;
+          }
           case 50: {
             if (diagnosisInterval_ == null) {
               DiagnosisInterval = new global::Google.Type.Interval();
@@ -14936,6 +14982,34 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DiagnoseClusterRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Defines who has access to the diagnostic tarball
+      /// </summary>
+      public enum TarballAccess {
+        /// <summary>
+        /// Tarball Access unspecified. Falls back to default access of the bucket
+        /// </summary>
+        [pbr::OriginalName("TARBALL_ACCESS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Google Cloud Support group has read access to the
+        /// diagnostic tarball
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_CLOUD_SUPPORT")] GoogleCloudSupport = 1,
+        /// <summary>
+        /// Google Cloud Dataproc Diagnose service account has read access to the
+        /// diagnostic tarball
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_DATAPROC_DIAGNOSE")] GoogleDataprocDiagnose = 2,
+      }
+
+    }
+    #endregion
 
   }
 
