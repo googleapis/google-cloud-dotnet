@@ -217,6 +217,130 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateRagCorpus</summary>
+        public void UpdateRagCorpusRequestObject()
+        {
+            // Snippet: UpdateRagCorpus(UpdateRagCorpusRequest, CallSettings)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = VertexRagDataServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateRagCorpusRequest request = new UpdateRagCorpusRequest
+            {
+                RagCorpus = new RagCorpus(),
+            };
+            // Make the request
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> response = vertexRagDataServiceClient.UpdateRagCorpus(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RagCorpus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> retrievedResponse = vertexRagDataServiceClient.PollOnceUpdateRagCorpus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RagCorpus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRagCorpusAsync</summary>
+        public async Task UpdateRagCorpusRequestObjectAsync()
+        {
+            // Snippet: UpdateRagCorpusAsync(UpdateRagCorpusRequest, CallSettings)
+            // Additional: UpdateRagCorpusAsync(UpdateRagCorpusRequest, CancellationToken)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = await VertexRagDataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRagCorpusRequest request = new UpdateRagCorpusRequest
+            {
+                RagCorpus = new RagCorpus(),
+            };
+            // Make the request
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> response = await vertexRagDataServiceClient.UpdateRagCorpusAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RagCorpus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> retrievedResponse = await vertexRagDataServiceClient.PollOnceUpdateRagCorpusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RagCorpus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRagCorpus</summary>
+        public void UpdateRagCorpus()
+        {
+            // Snippet: UpdateRagCorpus(RagCorpus, CallSettings)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = VertexRagDataServiceClient.Create();
+            // Initialize request argument(s)
+            RagCorpus ragCorpus = new RagCorpus();
+            // Make the request
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> response = vertexRagDataServiceClient.UpdateRagCorpus(ragCorpus);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RagCorpus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> retrievedResponse = vertexRagDataServiceClient.PollOnceUpdateRagCorpus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RagCorpus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRagCorpusAsync</summary>
+        public async Task UpdateRagCorpusAsync()
+        {
+            // Snippet: UpdateRagCorpusAsync(RagCorpus, CallSettings)
+            // Additional: UpdateRagCorpusAsync(RagCorpus, CancellationToken)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = await VertexRagDataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RagCorpus ragCorpus = new RagCorpus();
+            // Make the request
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> response = await vertexRagDataServiceClient.UpdateRagCorpusAsync(ragCorpus);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RagCorpus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RagCorpus, UpdateRagCorpusOperationMetadata> retrievedResponse = await vertexRagDataServiceClient.PollOnceUpdateRagCorpusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RagCorpus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetRagCorpus</summary>
         public void GetRagCorpusRequestObject()
         {

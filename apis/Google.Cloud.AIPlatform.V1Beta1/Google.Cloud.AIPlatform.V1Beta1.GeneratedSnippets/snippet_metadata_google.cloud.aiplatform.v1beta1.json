@@ -89261,6 +89261,198 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagDataService_UpdateRagCorpus_sync",
+      "title": "UpdateRagCorpusRequestObject",
+      "description": "Snippet for UpdateRagCorpus",
+      "file": "VertexRagDataServiceClient.UpdateRagCorpusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagDataServiceClient.UpdateRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.RagCorpus, Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagDataService.UpdateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagDataService_UpdateRagCorpus_async",
+      "title": "UpdateRagCorpusRequestObjectAsync",
+      "description": "Snippet for UpdateRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.UpdateRagCorpusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagDataServiceClient.UpdateRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.RagCorpus, Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagDataService.UpdateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagDataService_UpdateRagCorpus_sync_flattened",
+      "title": "UpdateRagCorpus",
+      "description": "Snippet for UpdateRagCorpus",
+      "file": "VertexRagDataServiceClient.UpdateRagCorpusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagDataServiceClient.UpdateRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagCorpus",
+            "name": "ragCorpus"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.RagCorpus, Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagDataService.UpdateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_VertexRagDataService_UpdateRagCorpus_async_flattened",
+      "title": "UpdateRagCorpusAsync",
+      "description": "Snippet for UpdateRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.UpdateRagCorpusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagDataServiceClient.UpdateRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RagCorpus",
+            "name": "ragCorpus"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.RagCorpus, Google.Cloud.AIPlatform.V1Beta1.UpdateRagCorpusOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1beta1.VertexRagDataService.UpdateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1beta1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_VertexRagDataService_GetRagCorpus_sync",
       "title": "GetRagCorpusRequestObject",
       "description": "Snippet for GetRagCorpus",
