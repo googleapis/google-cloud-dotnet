@@ -89,21 +89,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "EVB5dGhvblBhY2thZ2VTcGVjEh8KEmV4ZWN1dG9yX2ltYWdlX3VyaRgBIAEo",
             "CUID4EECEhkKDHBhY2thZ2VfdXJpcxgCIAMoCUID4EECEhoKDXB5dGhvbl9t",
             "b2R1bGUYAyABKAlCA+BBAhIMCgRhcmdzGAQgAygJEjQKA2VudhgFIAMoCzIn",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRW52VmFyIugCCgpT",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRW52VmFyIvgCCgpT",
             "Y2hlZHVsaW5nEioKB3RpbWVvdXQYASABKAsyGS5nb29nbGUucHJvdG9idWYu",
             "RHVyYXRpb24SJQodcmVzdGFydF9qb2Jfb25fd29ya2VyX3Jlc3RhcnQYAyAB",
             "KAgSSwoIc3RyYXRlZ3kYBCABKA4yNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
             "bS52MWJldGExLlNjaGVkdWxpbmcuU3RyYXRlZ3lCA+BBARIcCg9kaXNhYmxl",
             "X3JldHJpZXMYBSABKAhCA+BBARI5ChFtYXhfd2FpdF9kdXJhdGlvbhgGIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBImEKCFN0cmF0ZWd5",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBInEKCFN0cmF0ZWd5",
             "EhgKFFNUUkFURUdZX1VOU1BFQ0lGSUVEEAASEQoJT05fREVNQU5EEAEaAggB",
-            "EhAKCExPV19DT1NUEAIaAggBEgwKCFNUQU5EQVJEEAMSCAoEU1BPVBAEQuUB",
-            "CiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIOQ3VzdG9t",
-            "Sm9iUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2Fw",
-            "aXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5D",
-            "bG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0",
-            "Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
-            "ZXRhMWIGcHJvdG8z"));
+            "EhAKCExPV19DT1NUEAIaAggBEgwKCFNUQU5EQVJEEAMSCAoEU1BPVBAEEg4K",
+            "CkZMRVhfU1RBUlQQBkLlAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTFCDkN1c3RvbUpvYlByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRm",
+            "b3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -3172,12 +3172,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("STRATEGY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Regular on-demand provisioning strategy.
+        /// Deprecated. Regular on-demand provisioning strategy.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [pbr::OriginalName("ON_DEMAND")] OnDemand = 1,
         /// <summary>
-        /// Low cost by making potential use of spot resources.
+        /// Deprecated. Low cost by making potential use of spot resources.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [pbr::OriginalName("LOW_COST")] LowCost = 2,
@@ -3189,6 +3189,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         /// Spot provisioning strategy uses spot resources.
         /// </summary>
         [pbr::OriginalName("SPOT")] Spot = 4,
+        /// <summary>
+        /// Flex Start strategy uses DWS to queue for resources.
+        /// </summary>
+        [pbr::OriginalName("FLEX_START")] FlexStart = 6,
       }
 
     }
