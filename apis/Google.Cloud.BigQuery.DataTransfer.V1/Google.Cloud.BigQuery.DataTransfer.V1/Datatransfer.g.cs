@@ -2780,6 +2780,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// associated with the user id corresponding to the authorization info.
   /// Otherwise, the transfer configuration will be associated with the calling
   /// user.
+  ///
+  /// When using a cross project service account for creating a transfer config,
+  /// you must enable cross project service account usage. For more information,
+  /// see [Disable attachment of service accounts to resources in other
+  /// projects](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-service-accounts#disable_cross_project_service_accounts).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTransferConfigRequest : pb::IMessage<CreateTransferConfigRequest>
@@ -3190,6 +3195,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// <summary>
   /// A request to update a transfer configuration. To update the user id of the
   /// transfer configuration, authorization info needs to be provided.
+  ///
+  /// When using a cross project service account for updating a transfer config,
+  /// you must enable cross project service account usage. For more information,
+  /// see [Disable attachment of service accounts to resources in other
+  /// projects](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-service-accounts#disable_cross_project_service_accounts).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateTransferConfigRequest : pb::IMessage<UpdateTransferConfigRequest>
