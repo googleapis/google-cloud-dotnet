@@ -1,0 +1,40 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "ApiHubClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListHostProjectRegistrations",
+    "client": "HostProjectRegistrationServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "LookupApiHubInstance",
+    "client": "ProvisioningClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListRuntimeProjectAttachments",
+    "client": "RuntimeProjectAttachmentServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "LookupRuntimeProjectAttachment",
+    "client": "RuntimeProjectAttachmentServiceClient",
+    "arguments": {
+      "name": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]

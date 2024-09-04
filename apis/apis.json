@@ -372,7 +372,7 @@
     },
     {
       "id": "Google.Cloud.ApiHub.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "API hub",
       "productUrl": "https://cloud.google.com/apigee/docs/apihub/what-is-api-hub",
@@ -393,7 +393,7 @@
       "includeCommonResourcesProto": true,
       "shortName": "apihub",
       "serviceConfigFile": "apihub_v1.yaml",
-      "transport": "grpc+rest",
+      "transport": "rest",
       "restNumericEnums": true
     },
     {
