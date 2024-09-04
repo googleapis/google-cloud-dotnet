@@ -30,7 +30,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "c291cmNlLnByb3RvGi1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGEx",
             "L2NvbnRlbnQucHJvdG8aKmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0",
             "YTEvdG9vbC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvEFCg1DYWNoZWRD",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuIHCg1DYWNoZWRD",
             "b250ZW50EjEKC2V4cGlyZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcEgAEi0KA3R0bBgKIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
             "dXJhdGlvbkID4EEESAASFAoEbmFtZRgBIAEoCUIG4EEI4EEFEhwKDGRpc3Bs",
@@ -43,20 +43,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZmlnGAYgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5U",
             "b29sQ29uZmlnQgngQQHgQQXgQQQSNAoLY3JlYXRlX3RpbWUYByABKAsyGi5n",
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUY",
-            "CCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6lQHqQZEB",
-            "CidhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0NhY2hlZENvbnRlbnQSR3By",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYWNoZWRD",
-            "b250ZW50cy97Y2FjaGVkX2NvbnRlbnR9Kg5jYWNoZWRDb250ZW50czINY2Fj",
-            "aGVkQ29udGVudEIMCgpleHBpcmF0aW9uQukBCiNjb20uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMUISQ2FjaGVkQ29udGVudFByb3RvUAFaQ2Ns",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
-            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
-            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
-            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "CCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSWQoOdXNh",
+            "Z2VfbWV0YWRhdGEYDCABKAsyPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLkNhY2hlZENvbnRlbnQuVXNhZ2VNZXRhZGF0YUID4EEDGpMBCg1V",
+            "c2FnZU1ldGFkYXRhEhkKEXRvdGFsX3Rva2VuX2NvdW50GAEgASgFEhIKCnRl",
+            "eHRfY291bnQYAiABKAUSEwoLaW1hZ2VfY291bnQYAyABKAUSHgoWdmlkZW9f",
+            "ZHVyYXRpb25fc2Vjb25kcxgEIAEoBRIeChZhdWRpb19kdXJhdGlvbl9zZWNv",
+            "bmRzGAUgASgFOpUB6kGRAQonYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9D",
+            "YWNoZWRDb250ZW50Ekdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vY2FjaGVkQ29udGVudHMve2NhY2hlZF9jb250ZW50fSoOY2Fj",
+            "aGVkQ29udGVudHMyDWNhY2hlZENvbnRlbnRCDAoKZXhwaXJhdGlvbkLpAQoj",
+            "Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCEkNhY2hlZENv",
+            "bnRlbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
+            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
+            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
+            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
+            "MWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CachedContent), global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Parser, new[]{ "ExpireTime", "Ttl", "Name", "DisplayName", "Model", "SystemInstruction", "Contents", "Tools", "ToolConfig", "CreateTime", "UpdateTime" }, new[]{ "Expiration" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CachedContent), global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Parser, new[]{ "ExpireTime", "Ttl", "Name", "DisplayName", "Model", "SystemInstruction", "Contents", "Tools", "ToolConfig", "CreateTime", "UpdateTime", "UsageMetadata" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Types.UsageMetadata), global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Types.UsageMetadata.Parser, new[]{ "TotalTokenCount", "TextCount", "ImageCount", "VideoDurationSeconds", "AudioDurationSeconds" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -111,6 +117,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       toolConfig_ = other.toolConfig_ != null ? other.toolConfig_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      usageMetadata_ = other.usageMetadata_ != null ? other.usageMetadata_.Clone() : null;
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           ExpireTime = other.ExpireTime.Clone();
@@ -303,6 +310,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "usage_metadata" field.</summary>
+    public const int UsageMetadataFieldNumber = 12;
+    private global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Types.UsageMetadata usageMetadata_;
+    /// <summary>
+    /// Output only. Metadata on the usage of the cached content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Types.UsageMetadata UsageMetadata {
+      get { return usageMetadata_; }
+      set {
+        usageMetadata_ = value;
+      }
+    }
+
     private object expiration_;
     /// <summary>Enum of possible cases for the "expiration" oneof.</summary>
     public enum ExpirationOneofCase {
@@ -350,6 +372,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(ToolConfig, other.ToolConfig)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!object.Equals(UsageMetadata, other.UsageMetadata)) return false;
       if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -369,6 +392,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (toolConfig_ != null) hash ^= ToolConfig.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (usageMetadata_ != null) hash ^= UsageMetadata.GetHashCode();
       hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -426,6 +450,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(90);
         output.WriteString(DisplayName);
       }
+      if (usageMetadata_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(UsageMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -474,6 +502,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(90);
         output.WriteString(DisplayName);
       }
+      if (usageMetadata_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(UsageMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -512,6 +544,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (usageMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UsageMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -559,6 +594,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.usageMetadata_ != null) {
+        if (usageMetadata_ == null) {
+          UsageMetadata = new global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Types.UsageMetadata();
+        }
+        UsageMetadata.MergeFrom(other.UsageMetadata);
       }
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
@@ -656,6 +697,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 98: {
+            if (usageMetadata_ == null) {
+              UsageMetadata = new global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Types.UsageMetadata();
+            }
+            input.ReadMessage(UsageMetadata);
+            break;
+          }
         }
       }
     #endif
@@ -737,10 +785,381 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 98: {
+            if (usageMetadata_ == null) {
+              UsageMetadata = new global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Types.UsageMetadata();
+            }
+            input.ReadMessage(UsageMetadata);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CachedContent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Metadata on the usage of the cached content.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class UsageMetadata : pb::IMessage<UsageMetadata>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<UsageMetadata> _parser = new pb::MessageParser<UsageMetadata>(() => new UsageMetadata());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<UsageMetadata> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.CachedContent.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UsageMetadata() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UsageMetadata(UsageMetadata other) : this() {
+          totalTokenCount_ = other.totalTokenCount_;
+          textCount_ = other.textCount_;
+          imageCount_ = other.imageCount_;
+          videoDurationSeconds_ = other.videoDurationSeconds_;
+          audioDurationSeconds_ = other.audioDurationSeconds_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UsageMetadata Clone() {
+          return new UsageMetadata(this);
+        }
+
+        /// <summary>Field number for the "total_token_count" field.</summary>
+        public const int TotalTokenCountFieldNumber = 1;
+        private int totalTokenCount_;
+        /// <summary>
+        /// Total number of tokens that the cached content consumes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int TotalTokenCount {
+          get { return totalTokenCount_; }
+          set {
+            totalTokenCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "text_count" field.</summary>
+        public const int TextCountFieldNumber = 2;
+        private int textCount_;
+        /// <summary>
+        /// Number of text characters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int TextCount {
+          get { return textCount_; }
+          set {
+            textCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "image_count" field.</summary>
+        public const int ImageCountFieldNumber = 3;
+        private int imageCount_;
+        /// <summary>
+        /// Number of images.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ImageCount {
+          get { return imageCount_; }
+          set {
+            imageCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "video_duration_seconds" field.</summary>
+        public const int VideoDurationSecondsFieldNumber = 4;
+        private int videoDurationSeconds_;
+        /// <summary>
+        /// Duration of video in seconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int VideoDurationSeconds {
+          get { return videoDurationSeconds_; }
+          set {
+            videoDurationSeconds_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "audio_duration_seconds" field.</summary>
+        public const int AudioDurationSecondsFieldNumber = 5;
+        private int audioDurationSeconds_;
+        /// <summary>
+        /// Duration of audio in seconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int AudioDurationSeconds {
+          get { return audioDurationSeconds_; }
+          set {
+            audioDurationSeconds_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as UsageMetadata);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(UsageMetadata other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TotalTokenCount != other.TotalTokenCount) return false;
+          if (TextCount != other.TextCount) return false;
+          if (ImageCount != other.ImageCount) return false;
+          if (VideoDurationSeconds != other.VideoDurationSeconds) return false;
+          if (AudioDurationSeconds != other.AudioDurationSeconds) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TotalTokenCount != 0) hash ^= TotalTokenCount.GetHashCode();
+          if (TextCount != 0) hash ^= TextCount.GetHashCode();
+          if (ImageCount != 0) hash ^= ImageCount.GetHashCode();
+          if (VideoDurationSeconds != 0) hash ^= VideoDurationSeconds.GetHashCode();
+          if (AudioDurationSeconds != 0) hash ^= AudioDurationSeconds.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (TotalTokenCount != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(TotalTokenCount);
+          }
+          if (TextCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(TextCount);
+          }
+          if (ImageCount != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(ImageCount);
+          }
+          if (VideoDurationSeconds != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(VideoDurationSeconds);
+          }
+          if (AudioDurationSeconds != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(AudioDurationSeconds);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (TotalTokenCount != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(TotalTokenCount);
+          }
+          if (TextCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(TextCount);
+          }
+          if (ImageCount != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(ImageCount);
+          }
+          if (VideoDurationSeconds != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(VideoDurationSeconds);
+          }
+          if (AudioDurationSeconds != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(AudioDurationSeconds);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (TotalTokenCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalTokenCount);
+          }
+          if (TextCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TextCount);
+          }
+          if (ImageCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ImageCount);
+          }
+          if (VideoDurationSeconds != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(VideoDurationSeconds);
+          }
+          if (AudioDurationSeconds != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(AudioDurationSeconds);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(UsageMetadata other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TotalTokenCount != 0) {
+            TotalTokenCount = other.TotalTokenCount;
+          }
+          if (other.TextCount != 0) {
+            TextCount = other.TextCount;
+          }
+          if (other.ImageCount != 0) {
+            ImageCount = other.ImageCount;
+          }
+          if (other.VideoDurationSeconds != 0) {
+            VideoDurationSeconds = other.VideoDurationSeconds;
+          }
+          if (other.AudioDurationSeconds != 0) {
+            AudioDurationSeconds = other.AudioDurationSeconds;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                TotalTokenCount = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                TextCount = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                ImageCount = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                VideoDurationSeconds = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                AudioDurationSeconds = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                TotalTokenCount = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                TextCount = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                ImageCount = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                VideoDurationSeconds = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                AudioDurationSeconds = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
