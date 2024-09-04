@@ -62,4 +62,14 @@ namespace Google.Cloud.DiscoveryEngine.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class BatchGetDocumentsMetadataRequest
+    {
+        /// <summary><see cref="BranchName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public BranchName ParentAsBranchName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BranchName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

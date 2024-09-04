@@ -206,6 +206,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// layout parsing are supported.
     /// * `pptx`: Override parsing config for PPTX files, only digital parsing and
     /// layout parsing are supported.
+    /// * `xlsx`: Override parsing config for XLSX files, only digital parsing and
+    /// layout parsing are supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

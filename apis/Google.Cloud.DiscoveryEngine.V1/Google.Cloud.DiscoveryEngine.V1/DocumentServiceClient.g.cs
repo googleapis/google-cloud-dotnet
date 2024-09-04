@@ -57,6 +57,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
             PurgeDocumentsSettings = existing.PurgeDocumentsSettings;
             PurgeDocumentsOperationsSettings = existing.PurgeDocumentsOperationsSettings.Clone();
+            BatchGetDocumentsMetadataSettings = existing.BatchGetDocumentsMetadataSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -224,6 +225,25 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentServiceClient.BatchGetDocumentsMetadata</c> and
+        /// <c>DocumentServiceClient.BatchGetDocumentsMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchGetDocumentsMetadataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1407,6 +1427,135 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>> PollOncePurgeDocumentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchGetDocumentsMetadataResponse BatchGetDocumentsMetadata(BatchGetDocumentsMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(BatchGetDocumentsMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(BatchGetDocumentsMetadataRequest request, st::CancellationToken cancellationToken) =>
+            BatchGetDocumentsMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchGetDocumentsMetadataResponse BatchGetDocumentsMetadata(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchGetDocumentsMetadata(new BatchGetDocumentsMetadataRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchGetDocumentsMetadataAsync(new BatchGetDocumentsMetadataRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(string parent, st::CancellationToken cancellationToken) =>
+            BatchGetDocumentsMetadataAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchGetDocumentsMetadataResponse BatchGetDocumentsMetadata(BranchName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchGetDocumentsMetadata(new BatchGetDocumentsMetadataRequest
+            {
+                ParentAsBranchName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(BranchName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchGetDocumentsMetadataAsync(new BatchGetDocumentsMetadataRequest
+            {
+                ParentAsBranchName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(BranchName parent, st::CancellationToken cancellationToken) =>
+            BatchGetDocumentsMetadataAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DocumentService client wrapper implementation, for convenient use.</summary>
@@ -1429,6 +1578,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         private readonly gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> _callImportDocuments;
 
         private readonly gaxgrpc::ApiCall<PurgeDocumentsRequest, lro::Operation> _callPurgeDocuments;
+
+        private readonly gaxgrpc::ApiCall<BatchGetDocumentsMetadataRequest, BatchGetDocumentsMetadataResponse> _callBatchGetDocumentsMetadata;
 
         /// <summary>
         /// Constructs a client wrapper for the DocumentService service, with the specified gRPC client and settings.
@@ -1469,6 +1620,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
             _callPurgeDocuments = clientHelper.BuildApiCall<PurgeDocumentsRequest, lro::Operation>("PurgeDocuments", grpcClient.PurgeDocumentsAsync, grpcClient.PurgeDocuments, effectiveSettings.PurgeDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPurgeDocuments);
             Modify_PurgeDocumentsApiCall(ref _callPurgeDocuments);
+            _callBatchGetDocumentsMetadata = clientHelper.BuildApiCall<BatchGetDocumentsMetadataRequest, BatchGetDocumentsMetadataResponse>("BatchGetDocumentsMetadata", grpcClient.BatchGetDocumentsMetadataAsync, grpcClient.BatchGetDocumentsMetadata, effectiveSettings.BatchGetDocumentsMetadataSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchGetDocumentsMetadata);
+            Modify_BatchGetDocumentsMetadataApiCall(ref _callBatchGetDocumentsMetadata);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1487,6 +1641,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         partial void Modify_ImportDocumentsApiCall(ref gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> call);
 
         partial void Modify_PurgeDocumentsApiCall(ref gaxgrpc::ApiCall<PurgeDocumentsRequest, lro::Operation> call);
+
+        partial void Modify_BatchGetDocumentsMetadataApiCall(ref gaxgrpc::ApiCall<BatchGetDocumentsMetadataRequest, BatchGetDocumentsMetadataResponse> call);
 
         partial void OnConstruction(DocumentService.DocumentServiceClient grpcClient, DocumentServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1509,6 +1665,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         partial void Modify_ImportDocumentsRequest(ref ImportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PurgeDocumentsRequest(ref PurgeDocumentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchGetDocumentsMetadataRequest(ref BatchGetDocumentsMetadataRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a [Document][google.cloud.discoveryengine.v1.Document].
@@ -1724,6 +1882,34 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             Modify_PurgeDocumentsRequest(ref request, ref callSettings);
             return new lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>(await _callPurgeDocuments.Async(request, callSettings).ConfigureAwait(false), PurgeDocumentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchGetDocumentsMetadataResponse BatchGetDocumentsMetadata(BatchGetDocumentsMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchGetDocumentsMetadataRequest(ref request, ref callSettings);
+            return _callBatchGetDocumentsMetadata.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets index freshness metadata for
+        /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+        /// website search only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(BatchGetDocumentsMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchGetDocumentsMetadataRequest(ref request, ref callSettings);
+            return _callBatchGetDocumentsMetadata.Async(request, callSettings);
         }
     }
 

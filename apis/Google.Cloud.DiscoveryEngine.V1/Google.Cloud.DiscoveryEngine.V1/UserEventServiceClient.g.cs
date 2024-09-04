@@ -49,6 +49,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             WriteUserEventSettings = existing.WriteUserEventSettings;
             CollectUserEventSettings = existing.CollectUserEventSettings;
+            PurgeUserEventsSettings = existing.PurgeUserEventsSettings;
+            PurgeUserEventsOperationsSettings = existing.PurgeUserEventsOperationsSettings.Clone();
             ImportUserEventsSettings = existing.ImportUserEventsSettings;
             ImportUserEventsOperationsSettings = existing.ImportUserEventsOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
@@ -92,6 +94,42 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CollectUserEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>UserEventServiceClient.PurgeUserEvents</c> and <c>UserEventServiceClient.PurgeUserEventsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PurgeUserEventsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>UserEventServiceClient.PurgeUserEvents</c> and
+        /// <c>UserEventServiceClient.PurgeUserEventsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PurgeUserEventsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -345,6 +383,68 @@ namespace Google.Cloud.DiscoveryEngine.V1
             CollectUserEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes permanently all user events specified by the filter provided.
+        /// Depending on the number of events specified by the filter, this operation
+        /// could take hours or days to complete. To test a filter, use the list
+        /// command first.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> PurgeUserEvents(PurgeUserEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes permanently all user events specified by the filter provided.
+        /// Depending on the number of events specified by the filter, this operation
+        /// could take hours or days to complete. To test a filter, use the list
+        /// command first.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata>> PurgeUserEventsAsync(PurgeUserEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes permanently all user events specified by the filter provided.
+        /// Depending on the number of events specified by the filter, this operation
+        /// could take hours or days to complete. To test a filter, use the list
+        /// command first.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata>> PurgeUserEventsAsync(PurgeUserEventsRequest request, st::CancellationToken cancellationToken) =>
+            PurgeUserEventsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PurgeUserEvents</c>.</summary>
+        public virtual lro::OperationsClient PurgeUserEventsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PurgeUserEvents</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> PollOncePurgeUserEvents(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeUserEventsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PurgeUserEvents</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata>> PollOncePurgeUserEventsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeUserEventsOperationsClient, callSettings);
+
+        /// <summary>
         /// Bulk import of user events. Request processing might be
         /// synchronous. Events that already exist are skipped.
         /// Use this method for backfilling historical user events.
@@ -426,6 +526,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         private readonly gaxgrpc::ApiCall<CollectUserEventRequest, ga::HttpBody> _callCollectUserEvent;
 
+        private readonly gaxgrpc::ApiCall<PurgeUserEventsRequest, lro::Operation> _callPurgeUserEvents;
+
         private readonly gaxgrpc::ApiCall<ImportUserEventsRequest, lro::Operation> _callImportUserEvents;
 
         /// <summary>
@@ -443,6 +545,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            PurgeUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeUserEventsOperationsSettings, logger);
             ImportUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportUserEventsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callWriteUserEvent = clientHelper.BuildApiCall<WriteUserEventRequest, UserEvent>("WriteUserEvent", grpcClient.WriteUserEventAsync, grpcClient.WriteUserEvent, effectiveSettings.WriteUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -451,6 +554,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
             _callCollectUserEvent = clientHelper.BuildApiCall<CollectUserEventRequest, ga::HttpBody>("CollectUserEvent", grpcClient.CollectUserEventAsync, grpcClient.CollectUserEvent, effectiveSettings.CollectUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCollectUserEvent);
             Modify_CollectUserEventApiCall(ref _callCollectUserEvent);
+            _callPurgeUserEvents = clientHelper.BuildApiCall<PurgeUserEventsRequest, lro::Operation>("PurgeUserEvents", grpcClient.PurgeUserEventsAsync, grpcClient.PurgeUserEvents, effectiveSettings.PurgeUserEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callPurgeUserEvents);
+            Modify_PurgeUserEventsApiCall(ref _callPurgeUserEvents);
             _callImportUserEvents = clientHelper.BuildApiCall<ImportUserEventsRequest, lro::Operation>("ImportUserEvents", grpcClient.ImportUserEventsAsync, grpcClient.ImportUserEvents, effectiveSettings.ImportUserEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportUserEvents);
             Modify_ImportUserEventsApiCall(ref _callImportUserEvents);
@@ -462,6 +568,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         partial void Modify_WriteUserEventApiCall(ref gaxgrpc::ApiCall<WriteUserEventRequest, UserEvent> call);
 
         partial void Modify_CollectUserEventApiCall(ref gaxgrpc::ApiCall<CollectUserEventRequest, ga::HttpBody> call);
+
+        partial void Modify_PurgeUserEventsApiCall(ref gaxgrpc::ApiCall<PurgeUserEventsRequest, lro::Operation> call);
 
         partial void Modify_ImportUserEventsApiCall(ref gaxgrpc::ApiCall<ImportUserEventsRequest, lro::Operation> call);
 
@@ -476,6 +584,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         partial void Modify_WriteUserEventRequest(ref WriteUserEventRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CollectUserEventRequest(ref CollectUserEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PurgeUserEventsRequest(ref PurgeUserEventsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportUserEventsRequest(ref ImportUserEventsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -533,6 +643,39 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             Modify_CollectUserEventRequest(ref request, ref callSettings);
             return _callCollectUserEvent.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>PurgeUserEvents</c>.</summary>
+        public override lro::OperationsClient PurgeUserEventsOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes permanently all user events specified by the filter provided.
+        /// Depending on the number of events specified by the filter, this operation
+        /// could take hours or days to complete. To test a filter, use the list
+        /// command first.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata> PurgeUserEvents(PurgeUserEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeUserEventsRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata>(_callPurgeUserEvents.Sync(request, callSettings), PurgeUserEventsOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes permanently all user events specified by the filter provided.
+        /// Depending on the number of events specified by the filter, this operation
+        /// could take hours or days to complete. To test a filter, use the list
+        /// command first.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata>> PurgeUserEventsAsync(PurgeUserEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeUserEventsRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeUserEventsResponse, PurgeUserEventsMetadata>(await _callPurgeUserEvents.Async(request, callSettings).ConfigureAwait(false), PurgeUserEventsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>ImportUserEvents</c>.</summary>

@@ -141,7 +141,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int ServingConfigFieldNumber = 1;
     private string servingConfig_ = "";
     /// <summary>
-    /// Required. Full resource name of a [ServingConfig][]:
+    /// Required. Full resource name of a
+    /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]:
     /// `projects/*/locations/global/collections/*/engines/*/servingConfigs/*`, or
     /// `projects/*/locations/global/collections/*/dataStores/*/servingConfigs/*`
     ///

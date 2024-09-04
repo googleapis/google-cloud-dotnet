@@ -63,24 +63,25 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "ASABKAJCA+BBAkgAiAEBEhUKCGN1cnJlbmN5GAIgASgJQgPgQQISFgoOdHJh",
             "bnNhY3Rpb25faWQYAyABKAkSEAoDdGF4GAQgASgCSAGIAQESEQoEY29zdBgF",
             "IAEoAkgCiAEBEhsKDmRpc2NvdW50X3ZhbHVlGAYgASgCSAOIAQFCCAoGX3Zh",
-            "bHVlQgYKBF90YXhCBwoFX2Nvc3RCEQoPX2Rpc2NvdW50X3ZhbHVlIrsBCgxE",
+            "bHVlQgYKBF90YXhCBwoFX2Nvc3RCEQoPX2Rpc2NvdW50X3ZhbHVlItABCgxE",
             "b2N1bWVudEluZm8SDAoCaWQYASABKAlIABI8CgRuYW1lGAIgASgJQiz6QSkK",
             "J2Rpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudEgAEg0K",
             "A3VyaRgGIAEoCUgAEhUKCHF1YW50aXR5GAMgASgFSAGIAQESFQoNcHJvbW90",
-            "aW9uX2lkcxgEIAMoCUIVChNkb2N1bWVudF9kZXNjcmlwdG9yQgsKCV9xdWFu",
-            "dGl0eSKUAQoJUGFuZWxJbmZvEhUKCHBhbmVsX2lkGAIgASgJQgPgQQISFAoM",
-            "ZGlzcGxheV9uYW1lGAMgASgJEhsKDnBhbmVsX3Bvc2l0aW9uGAQgASgFSACI",
-            "AQESGQoMdG90YWxfcGFuZWxzGAUgASgFSAGIAQFCEQoPX3BhbmVsX3Bvc2l0",
-            "aW9uQg8KDV90b3RhbF9wYW5lbHMijQEKCU1lZGlhSW5mbxI6ChdtZWRpYV9w",
-            "cm9ncmVzc19kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbhImChltZWRpYV9wcm9ncmVzc19wZXJjZW50YWdlGAIgASgCSACIAQFC",
-            "HAoaX21lZGlhX3Byb2dyZXNzX3BlcmNlbnRhZ2VCgQIKI2NvbS5nb29nbGUu",
-            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQg5Vc2VyRXZlbnRQcm90b1ABWk1j",
-            "bG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNj",
-            "b3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVO",
-            "R0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29n",
-            "bGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6",
-            "RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
+            "aW9uX2lkcxgEIAMoCRITCgZqb2luZWQYBSABKAhCA+BBA0IVChNkb2N1bWVu",
+            "dF9kZXNjcmlwdG9yQgsKCV9xdWFudGl0eSKUAQoJUGFuZWxJbmZvEhUKCHBh",
+            "bmVsX2lkGAIgASgJQgPgQQISFAoMZGlzcGxheV9uYW1lGAMgASgJEhsKDnBh",
+            "bmVsX3Bvc2l0aW9uGAQgASgFSACIAQESGQoMdG90YWxfcGFuZWxzGAUgASgF",
+            "SAGIAQFCEQoPX3BhbmVsX3Bvc2l0aW9uQg8KDV90b3RhbF9wYW5lbHMijQEK",
+            "CU1lZGlhSW5mbxI6ChdtZWRpYV9wcm9ncmVzc19kdXJhdGlvbhgBIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhImChltZWRpYV9wcm9ncmVzc19w",
+            "ZXJjZW50YWdlGAIgASgCSACIAQFCHAoaX21lZGlhX3Byb2dyZXNzX3BlcmNl",
+            "bnRhZ2VCgQIKI2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "Qg5Vc2VyRXZlbnRQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2Nv",
+            "dmVyeWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnll",
+            "bmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNj",
+            "b3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5l",
+            "XFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +90,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchInfo), global::Google.Cloud.DiscoveryEngine.V1.SearchInfo.Parser, new[]{ "SearchQuery", "OrderBy", "Offset" }, new[]{ "Offset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompletionInfo), global::Google.Cloud.DiscoveryEngine.V1.CompletionInfo.Parser, new[]{ "SelectedSuggestion", "SelectedPosition" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.TransactionInfo), global::Google.Cloud.DiscoveryEngine.V1.TransactionInfo.Parser, new[]{ "Value", "Currency", "TransactionId", "Tax", "Cost", "DiscountValue" }, new[]{ "Value", "Tax", "Cost", "DiscountValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo), global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo.Parser, new[]{ "Id", "Name", "Uri", "Quantity", "PromotionIds" }, new[]{ "DocumentDescriptor", "Quantity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo), global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo.Parser, new[]{ "Id", "Name", "Uri", "Quantity", "PromotionIds", "Joined" }, new[]{ "DocumentDescriptor", "Quantity" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PanelInfo), global::Google.Cloud.DiscoveryEngine.V1.PanelInfo.Parser, new[]{ "PanelId", "DisplayName", "PanelPosition", "TotalPanels" }, new[]{ "PanelPosition", "TotalPanels" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.MediaInfo), global::Google.Cloud.DiscoveryEngine.V1.MediaInfo.Parser, new[]{ "MediaProgressDuration", "MediaProgressPercentage" }, new[]{ "MediaProgressPercentage" }, null, null, null)
           }));
@@ -2681,6 +2682,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       _hasBits0 = other._hasBits0;
       quantity_ = other.quantity_;
       promotionIds_ = other.promotionIds_.Clone();
+      joined_ = other.joined_;
       switch (other.DocumentDescriptorCase) {
         case DocumentDescriptorOneofCase.Id:
           Id = other.Id;
@@ -2845,6 +2847,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return promotionIds_; }
     }
 
+    /// <summary>Field number for the "joined" field.</summary>
+    public const int JoinedFieldNumber = 5;
+    private bool joined_;
+    /// <summary>
+    /// Output only. Whether the referenced Document can be found in the data
+    /// store.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Joined {
+      get { return joined_; }
+      set {
+        joined_ = value;
+      }
+    }
+
     private object documentDescriptor_;
     /// <summary>Enum of possible cases for the "document_descriptor" oneof.</summary>
     public enum DocumentDescriptorOneofCase {
@@ -2887,6 +2905,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Uri != other.Uri) return false;
       if (Quantity != other.Quantity) return false;
       if(!promotionIds_.Equals(other.promotionIds_)) return false;
+      if (Joined != other.Joined) return false;
       if (DocumentDescriptorCase != other.DocumentDescriptorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2900,6 +2919,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (HasUri) hash ^= Uri.GetHashCode();
       if (HasQuantity) hash ^= Quantity.GetHashCode();
       hash ^= promotionIds_.GetHashCode();
+      if (Joined != false) hash ^= Joined.GetHashCode();
       hash ^= (int) documentDescriptorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2932,6 +2952,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteInt32(Quantity);
       }
       promotionIds_.WriteTo(output, _repeated_promotionIds_codec);
+      if (Joined != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Joined);
+      }
       if (HasUri) {
         output.WriteRawTag(50);
         output.WriteString(Uri);
@@ -2959,6 +2983,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteInt32(Quantity);
       }
       promotionIds_.WriteTo(ref output, _repeated_promotionIds_codec);
+      if (Joined != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Joined);
+      }
       if (HasUri) {
         output.WriteRawTag(50);
         output.WriteString(Uri);
@@ -2986,6 +3014,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
       }
       size += promotionIds_.CalculateSize(_repeated_promotionIds_codec);
+      if (Joined != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3002,6 +3033,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         Quantity = other.Quantity;
       }
       promotionIds_.Add(other.promotionIds_);
+      if (other.Joined != false) {
+        Joined = other.Joined;
+      }
       switch (other.DocumentDescriptorCase) {
         case DocumentDescriptorOneofCase.Id:
           Id = other.Id;
@@ -3045,6 +3079,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             promotionIds_.AddEntriesFrom(input, _repeated_promotionIds_codec);
             break;
           }
+          case 40: {
+            Joined = input.ReadBool();
+            break;
+          }
           case 50: {
             Uri = input.ReadString();
             break;
@@ -3078,6 +3116,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 34: {
             promotionIds_.AddEntriesFrom(ref input, _repeated_promotionIds_codec);
+            break;
+          }
+          case 40: {
+            Joined = input.ReadBool();
             break;
           }
           case 50: {

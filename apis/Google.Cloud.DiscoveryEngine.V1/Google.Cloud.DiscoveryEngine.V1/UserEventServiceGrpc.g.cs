@@ -72,9 +72,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.HttpBody.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ImportUserEventsRequest> __Marshaller_google_cloud_discoveryengine_v1_ImportUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ImportUserEventsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest> __Marshaller_google_cloud_discoveryengine_v1_PurgeUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ImportUserEventsRequest> __Marshaller_google_cloud_discoveryengine_v1_ImportUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ImportUserEventsRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.WriteUserEventRequest, global::Google.Cloud.DiscoveryEngine.V1.UserEvent> __Method_WriteUserEvent = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.WriteUserEventRequest, global::Google.Cloud.DiscoveryEngine.V1.UserEvent>(
@@ -91,6 +93,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         "CollectUserEvent",
         __Marshaller_google_cloud_discoveryengine_v1_CollectUserEventRequest,
         __Marshaller_google_api_HttpBody);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest, global::Google.LongRunning.Operation> __Method_PurgeUserEvents = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PurgeUserEvents",
+        __Marshaller_google_cloud_discoveryengine_v1_PurgeUserEventsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ImportUserEventsRequest, global::Google.LongRunning.Operation> __Method_ImportUserEvents = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ImportUserEventsRequest, global::Google.LongRunning.Operation>(
@@ -134,6 +144,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.HttpBody> CollectUserEvent(global::Google.Cloud.DiscoveryEngine.V1.CollectUserEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes permanently all user events specified by the filter provided.
+      /// Depending on the number of events specified by the filter, this operation
+      /// could take hours or days to complete. To test a filter, use the list
+      /// command first.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PurgeUserEvents(global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -298,6 +323,66 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CollectUserEvent, null, options, request);
       }
       /// <summary>
+      /// Deletes permanently all user events specified by the filter provided.
+      /// Depending on the number of events specified by the filter, this operation
+      /// could take hours or days to complete. To test a filter, use the list
+      /// command first.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PurgeUserEvents(global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PurgeUserEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes permanently all user events specified by the filter provided.
+      /// Depending on the number of events specified by the filter, this operation
+      /// could take hours or days to complete. To test a filter, use the list
+      /// command first.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PurgeUserEvents(global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PurgeUserEvents, null, options, request);
+      }
+      /// <summary>
+      /// Deletes permanently all user events specified by the filter provided.
+      /// Depending on the number of events specified by the filter, this operation
+      /// could take hours or days to complete. To test a filter, use the list
+      /// command first.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeUserEventsAsync(global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PurgeUserEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes permanently all user events specified by the filter provided.
+      /// Depending on the number of events specified by the filter, this operation
+      /// could take hours or days to complete. To test a filter, use the list
+      /// command first.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeUserEventsAsync(global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PurgeUserEvents, null, options, request);
+      }
+      /// <summary>
       /// Bulk import of user events. Request processing might be
       /// synchronous. Events that already exist are skipped.
       /// Use this method for backfilling historical user events.
@@ -385,6 +470,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_WriteUserEvent, serviceImpl.WriteUserEvent)
           .AddMethod(__Method_CollectUserEvent, serviceImpl.CollectUserEvent)
+          .AddMethod(__Method_PurgeUserEvents, serviceImpl.PurgeUserEvents)
           .AddMethod(__Method_ImportUserEvents, serviceImpl.ImportUserEvents).Build();
     }
 
@@ -397,6 +483,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     {
       serviceBinder.AddMethod(__Method_WriteUserEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.WriteUserEventRequest, global::Google.Cloud.DiscoveryEngine.V1.UserEvent>(serviceImpl.WriteUserEvent));
       serviceBinder.AddMethod(__Method_CollectUserEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.CollectUserEventRequest, global::Google.Api.HttpBody>(serviceImpl.CollectUserEvent));
+      serviceBinder.AddMethod(__Method_PurgeUserEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest, global::Google.LongRunning.Operation>(serviceImpl.PurgeUserEvents));
       serviceBinder.AddMethod(__Method_ImportUserEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ImportUserEventsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportUserEvents));
     }
 

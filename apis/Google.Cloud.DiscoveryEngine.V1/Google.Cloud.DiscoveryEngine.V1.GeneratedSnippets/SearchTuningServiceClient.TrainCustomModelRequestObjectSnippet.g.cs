@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_DocumentService_PurgeDocuments_async]
+    // [START discoveryengine_v1_generated_SearchTuningService_TrainCustomModel_sync]
     using Google.Cloud.DiscoveryEngine.V1;
     using Google.LongRunning;
-    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedDocumentServiceClientSnippets
+    public sealed partial class GeneratedSearchTuningServiceClientSnippets
     {
-        /// <summary>Snippet for PurgeDocumentsAsync</summary>
+        /// <summary>Snippet for TrainCustomModel</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,38 +30,38 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task PurgeDocumentsRequestObjectAsync()
+        public void TrainCustomModelRequestObject()
         {
             // Create client
-            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            SearchTuningServiceClient searchTuningServiceClient = SearchTuningServiceClient.Create();
             // Initialize request argument(s)
-            PurgeDocumentsRequest request = new PurgeDocumentsRequest
+            TrainCustomModelRequest request = new TrainCustomModelRequest
             {
-                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
-                Filter = "",
-                Force = false,
-                GcsSource = new GcsSource(),
-                ErrorConfig = new PurgeErrorConfig(),
+                DataStoreAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                GcsTrainingInput = new TrainCustomModelRequest.Types.GcsTrainingInput(),
+                ModelType = "",
+                ErrorConfig = new ImportErrorConfig(),
+                ModelId = "",
             };
             // Make the request
-            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> response = await documentServiceClient.PurgeDocumentsAsync(request);
+            Operation<TrainCustomModelResponse, TrainCustomModelMetadata> response = searchTuningServiceClient.TrainCustomModel(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<TrainCustomModelResponse, TrainCustomModelMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            PurgeDocumentsResponse result = completedResponse.Result;
+            TrainCustomModelResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> retrievedResponse = await documentServiceClient.PollOncePurgeDocumentsAsync(operationName);
+            Operation<TrainCustomModelResponse, TrainCustomModelMetadata> retrievedResponse = searchTuningServiceClient.PollOnceTrainCustomModel(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                PurgeDocumentsResponse retrievedResult = retrievedResponse.Result;
+                TrainCustomModelResponse retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END discoveryengine_v1_generated_DocumentService_PurgeDocuments_async]
+    // [END discoveryengine_v1_generated_SearchTuningService_TrainCustomModel_sync]
 }
