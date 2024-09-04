@@ -39,6 +39,20 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             get => string.IsNullOrEmpty(Parent) ? null : BranchName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class InlineSource
+            {
+                /// <summary>
+                /// <see cref="DocumentName"/>-typed view over the <see cref="Documents"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<DocumentName> DocumentsAsDocumentNames
+                {
+                    get => new gax::ResourceNameList<DocumentName>(Documents, s => string.IsNullOrEmpty(s) ? null : DocumentName.Parse(s, allowUnparsed: true));
+                }
+            }
+        }
     }
 
     public partial class PurgeDocumentsResponse

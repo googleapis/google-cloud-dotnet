@@ -72,6 +72,7 @@ namespace GoogleCSharpSnippets
                 RegionCode = "",
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
+                RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);

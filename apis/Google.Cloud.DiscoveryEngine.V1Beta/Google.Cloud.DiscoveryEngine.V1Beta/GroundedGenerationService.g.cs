@@ -1098,8 +1098,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         /// field will be set to false. In that case, no grounding check was done for
         /// the claim and therefore
         /// [citation_indices][google.cloud.discoveryengine.v1beta.CheckGroundingResponse.Claim.citation_indices],
+        /// [anti_citation_indices][google.cloud.discoveryengine.v1beta.CheckGroundingResponse.Claim.anti_citation_indices],
         /// and
-        /// [anti_citation_indices][google.cloud.discoveryengine.v1beta.CheckGroundingResponse.Claim.anti_citation_indices]
+        /// [score][google.cloud.discoveryengine.v1beta.CheckGroundingResponse.Claim.score]
         /// should not be returned.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

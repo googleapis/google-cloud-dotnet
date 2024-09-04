@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_DocumentService_PurgeDocuments_sync]
+    // [START discoveryengine_v1beta_generated_DocumentService_BatchGetDocumentsMetadata_sync]
     using Google.Cloud.DiscoveryEngine.V1Beta;
-    using Google.LongRunning;
 
     public sealed partial class GeneratedDocumentServiceClientSnippets
     {
-        /// <summary>Snippet for PurgeDocuments</summary>
+        /// <summary>Snippet for BatchGetDocumentsMetadata</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,38 +29,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void PurgeDocumentsRequestObject()
+        public void BatchGetDocumentsMetadataRequestObject()
         {
             // Create client
             DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
             // Initialize request argument(s)
-            PurgeDocumentsRequest request = new PurgeDocumentsRequest
+            BatchGetDocumentsMetadataRequest request = new BatchGetDocumentsMetadataRequest
             {
                 ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
-                Filter = "",
-                Force = false,
-                GcsSource = new GcsSource(),
-                ErrorConfig = new PurgeErrorConfig(),
+                Matcher = new BatchGetDocumentsMetadataRequest.Types.Matcher(),
             };
             // Make the request
-            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> response = documentServiceClient.PurgeDocuments(request);
-
-            // Poll until the returned long-running operation is complete
-            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            PurgeDocumentsResponse result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> retrievedResponse = documentServiceClient.PollOncePurgeDocuments(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                PurgeDocumentsResponse retrievedResult = retrievedResponse.Result;
-            }
+            BatchGetDocumentsMetadataResponse response = documentServiceClient.BatchGetDocumentsMetadata(request);
         }
     }
-    // [END discoveryengine_v1beta_generated_DocumentService_PurgeDocuments_sync]
+    // [END discoveryengine_v1beta_generated_DocumentService_BatchGetDocumentsMetadata_sync]
 }
