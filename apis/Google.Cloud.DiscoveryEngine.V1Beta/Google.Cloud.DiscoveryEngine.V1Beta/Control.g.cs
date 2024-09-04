@@ -988,7 +988,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private readonly pbc::RepeatedField<string> associatedServingConfigIds_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Output only. List of all
-    /// [ServingConfig][google.cloud.discoveryengine.v1beta.ServingConfig] ids this
+    /// [ServingConfig][google.cloud.discoveryengine.v1beta.ServingConfig] IDs this
     /// control is attached to. May take up to 10 minutes to update after changes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

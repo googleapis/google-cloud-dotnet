@@ -28,7 +28,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "dHVuaW5nX21vZGVsLnByb3RvEiNnb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
             "aW5lLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZ",
             "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90byKhBwoRQ3VzdG9tVHVuaW5nTW9kZWwSRgoEbmFtZRgB",
+            "bWVzdGFtcC5wcm90byK+BwoRQ3VzdG9tVHVuaW5nTW9kZWwSRgoEbmFtZRgB",
             "IAEoCUI44EEC+kEyCjBkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20v",
             "Q3VzdG9tVHVuaW5nTW9kZWwSFAoMZGlzcGxheV9uYW1lGAIgASgJEhUKDW1v",
             "ZGVsX3ZlcnNpb24YAyABKAMSVgoLbW9kZWxfc3RhdGUYBCABKA4yQS5nb29n",
@@ -38,24 +38,25 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASVAoHbWV0cmlj",
             "cxgHIAMoCzJDLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
             "LkN1c3RvbVR1bmluZ01vZGVsLk1ldHJpY3NFbnRyeRouCgxNZXRyaWNzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgBOgI4ASKjAQoKTW9kZWxT",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgBOgI4ASLAAQoKTW9kZWxT",
             "dGF0ZRIbChdNT0RFTF9TVEFURV9VTlNQRUNJRklFRBAAEhMKD1RSQUlOSU5H",
             "X1BBVVNFRBABEgwKCFRSQUlOSU5HEAISFQoRVFJBSU5JTkdfQ09NUExFVEUQ",
             "AxIVChFSRUFEWV9GT1JfU0VSVklORxAEEhMKD1RSQUlOSU5HX0ZBSUxFRBAF",
-            "EhIKDk5PX0lNUFJPVkVNRU5UEAY6pALqQaACCjBkaXNjb3ZlcnllbmdpbmUu",
-            "Z29vZ2xlYXBpcy5jb20vQ3VzdG9tVHVuaW5nTW9kZWwSaHByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRh",
-            "X3N0b3JlfS9jdXN0b21UdW5pbmdNb2RlbHMve2N1c3RvbV90dW5pbmdfbW9k",
-            "ZWx9EoEBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0",
-            "b3JlfS9jdXN0b21UdW5pbmdNb2RlbHMve2N1c3RvbV90dW5pbmdfbW9kZWx9",
-            "Qp0CCidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFC",
-            "FkN1c3RvbVR1bmluZ01vZGVsUHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9kaXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2luZXBi",
-            "O2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29vZ2xl",
-            "LkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xvdWRc",
-            "RGlzY292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRpc2Nv",
-            "dmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90bzM="));
+            "EhIKDk5PX0lNUFJPVkVNRU5UEAYSGwoXSU5QVVRfVkFMSURBVElPTl9GQUlM",
+            "RUQQBzqkAupBoAIKMGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9D",
+            "dXN0b21UdW5pbmdNb2RlbBJocHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L2N1c3RvbVR1",
+            "bmluZ01vZGVscy97Y3VzdG9tX3R1bmluZ19tb2RlbH0SgQFwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2Nv",
+            "bGxlY3Rpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L2N1c3RvbVR1bmlu",
+            "Z01vZGVscy97Y3VzdG9tX3R1bmluZ19tb2RlbH1CnQIKJ2NvbS5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUIWQ3VzdG9tVHVuaW5nTW9k",
+            "ZWxQcm90b1ABWlFjbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2lu",
+            "ZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5l",
+            "cGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5",
+            "RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVc",
+            "VjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJl",
+            "dGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -549,6 +550,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         /// The model training finished successfully but metrics did not improve.
         /// </summary>
         [pbr::OriginalName("NO_IMPROVEMENT")] NoImprovement = 6,
+        /// <summary>
+        /// Input data validation failed. Model training didn't start.
+        /// </summary>
+        [pbr::OriginalName("INPUT_VALIDATION_FAILED")] InputValidationFailed = 7,
       }
 
     }

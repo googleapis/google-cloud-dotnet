@@ -8555,12 +8555,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 61,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -8604,12 +8604,299 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_BatchGetDocumentsMetadata_sync",
+      "title": "BatchGetDocumentsMetadataRequestObject",
+      "description": "Snippet for BatchGetDocumentsMetadata",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadata",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.BatchGetDocumentsMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_BatchGetDocumentsMetadata_async",
+      "title": "BatchGetDocumentsMetadataRequestObjectAsync",
+      "description": "Snippet for BatchGetDocumentsMetadataAsync",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadataAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.BatchGetDocumentsMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_BatchGetDocumentsMetadata_sync_flattened",
+      "title": "BatchGetDocumentsMetadata",
+      "description": "Snippet for BatchGetDocumentsMetadata",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadata",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.BatchGetDocumentsMetadata",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_BatchGetDocumentsMetadata_async_flattened",
+      "title": "BatchGetDocumentsMetadataAsync",
+      "description": "Snippet for BatchGetDocumentsMetadataAsync",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadataAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.BatchGetDocumentsMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_BatchGetDocumentsMetadata_sync_flattened_resourceNames",
+      "title": "BatchGetDocumentsMetadataResourceNames",
+      "description": "Snippet for BatchGetDocumentsMetadata",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadata",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.BatchGetDocumentsMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_BatchGetDocumentsMetadata_async_flattened_resourceNames",
+      "title": "BatchGetDocumentsMetadataResourceNamesAsync",
+      "description": "Snippet for BatchGetDocumentsMetadataAsync",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadataAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.BatchGetDocumentsMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
@@ -16955,12 +17242,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 111,
+          "end": 112,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 109,
+          "end": 110,
           "type": "SHORT"
         }
       ]
@@ -17004,12 +17291,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 113,
+          "end": 114,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 111,
+          "end": 112,
           "type": "SHORT"
         }
       ]
