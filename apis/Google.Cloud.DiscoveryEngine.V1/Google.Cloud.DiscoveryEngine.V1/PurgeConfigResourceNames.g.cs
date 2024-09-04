@@ -19,6 +19,18 @@ using gax = Google.Api.Gax;
 
 namespace Google.Cloud.DiscoveryEngine.V1
 {
+    public partial class PurgeUserEventsRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class PurgeDocumentsRequest
     {
         /// <summary><see cref="BranchName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
@@ -26,6 +38,20 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : BranchName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class InlineSource
+            {
+                /// <summary>
+                /// <see cref="DocumentName"/>-typed view over the <see cref="Documents"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<DocumentName> DocumentsAsDocumentNames
+                {
+                    get => new gax::ResourceNameList<DocumentName>(Documents, s => string.IsNullOrEmpty(s) ? null : DocumentName.Parse(s, allowUnparsed: true));
+                }
+            }
         }
     }
 

@@ -524,6 +524,19 @@ namespace Google.Cloud.DiscoveryEngine.V1
                             }
                         }
                     }
+
+                    public partial class StructuredDocumentInfo
+                    {
+                        /// <summary>
+                        /// <see cref="DocumentName"/>-typed view over the <see cref="Document"/> resource name
+                        /// property.
+                        /// </summary>
+                        public DocumentName DocumentAsDocumentName
+                        {
+                            get => string.IsNullOrEmpty(Document) ? null : DocumentName.Parse(Document, allowUnparsed: true);
+                            set => Document = value?.ToString() ?? "";
+                        }
+                    }
                 }
             }
         }

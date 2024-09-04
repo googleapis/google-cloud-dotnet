@@ -5637,12 +5637,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -5686,12 +5686,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -8555,12 +8555,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 61,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -8604,12 +8604,299 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DocumentService_BatchGetDocumentsMetadata_sync",
+      "title": "BatchGetDocumentsMetadataRequestObject",
+      "description": "Snippet for BatchGetDocumentsMetadata",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadata",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient.BatchGetDocumentsMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DocumentService_BatchGetDocumentsMetadata_async",
+      "title": "BatchGetDocumentsMetadataRequestObjectAsync",
+      "description": "Snippet for BatchGetDocumentsMetadataAsync",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadataAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient.BatchGetDocumentsMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DocumentService_BatchGetDocumentsMetadata_sync_flattened",
+      "title": "BatchGetDocumentsMetadata",
+      "description": "Snippet for BatchGetDocumentsMetadata",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadata",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient.BatchGetDocumentsMetadata",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DocumentService_BatchGetDocumentsMetadata_async_flattened",
+      "title": "BatchGetDocumentsMetadataAsync",
+      "description": "Snippet for BatchGetDocumentsMetadataAsync",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadataAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient.BatchGetDocumentsMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DocumentService_BatchGetDocumentsMetadata_sync_flattened_resourceNames",
+      "title": "BatchGetDocumentsMetadataResourceNames",
+      "description": "Snippet for BatchGetDocumentsMetadata",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadata",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient.BatchGetDocumentsMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DocumentService_BatchGetDocumentsMetadata_async_flattened_resourceNames",
+      "title": "BatchGetDocumentsMetadataResourceNamesAsync",
+      "description": "Snippet for BatchGetDocumentsMetadataAsync",
+      "file": "DocumentServiceClient.BatchGetDocumentsMetadataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocumentsMetadataAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient.BatchGetDocumentsMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocumentsMetadata",
+          "fullName": "google.cloud.discoveryengine.v1.DocumentService.BatchGetDocumentsMetadata",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
@@ -12011,6 +12298,200 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1_generated_SearchTuningService_TrainCustomModel_sync",
+      "title": "TrainCustomModelRequestObject",
+      "description": "Snippet for TrainCustomModel",
+      "file": "SearchTuningServiceClient.TrainCustomModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TrainCustomModel",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchTuningServiceClient.TrainCustomModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TrainCustomModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TrainCustomModelResponse, Google.Cloud.DiscoveryEngine.V1.TrainCustomModelMetadata>",
+        "client": {
+          "shortName": "SearchTuningServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchTuningServiceClient"
+        },
+        "method": {
+          "shortName": "TrainCustomModel",
+          "fullName": "google.cloud.discoveryengine.v1.SearchTuningService.TrainCustomModel",
+          "service": {
+            "shortName": "SearchTuningService",
+            "fullName": "google.cloud.discoveryengine.v1.SearchTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SearchTuningService_TrainCustomModel_async",
+      "title": "TrainCustomModelRequestObjectAsync",
+      "description": "Snippet for TrainCustomModelAsync",
+      "file": "SearchTuningServiceClient.TrainCustomModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TrainCustomModelAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchTuningServiceClient.TrainCustomModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TrainCustomModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TrainCustomModelResponse, Google.Cloud.DiscoveryEngine.V1.TrainCustomModelMetadata>>",
+        "client": {
+          "shortName": "SearchTuningServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchTuningServiceClient"
+        },
+        "method": {
+          "shortName": "TrainCustomModel",
+          "fullName": "google.cloud.discoveryengine.v1.SearchTuningService.TrainCustomModel",
+          "service": {
+            "shortName": "SearchTuningService",
+            "fullName": "google.cloud.discoveryengine.v1.SearchTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SearchTuningService_ListCustomModels_sync",
+      "title": "ListCustomModelsRequestObject",
+      "description": "Snippet for ListCustomModels",
+      "file": "SearchTuningServiceClient.ListCustomModelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomModels",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchTuningServiceClient.ListCustomModels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListCustomModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.ListCustomModelsResponse",
+        "client": {
+          "shortName": "SearchTuningServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomModels",
+          "fullName": "google.cloud.discoveryengine.v1.SearchTuningService.ListCustomModels",
+          "service": {
+            "shortName": "SearchTuningService",
+            "fullName": "google.cloud.discoveryengine.v1.SearchTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SearchTuningService_ListCustomModels_async",
+      "title": "ListCustomModelsRequestObjectAsync",
+      "description": "Snippet for ListCustomModelsAsync",
+      "file": "SearchTuningServiceClient.ListCustomModelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomModelsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchTuningServiceClient.ListCustomModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListCustomModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.ListCustomModelsResponse>",
+        "client": {
+          "shortName": "SearchTuningServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomModels",
+          "fullName": "google.cloud.discoveryengine.v1.SearchTuningService.ListCustomModels",
+          "service": {
+            "shortName": "SearchTuningService",
+            "fullName": "google.cloud.discoveryengine.v1.SearchTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetSiteSearchEngine_sync",
       "title": "GetSiteSearchEngineRequestObject",
       "description": "Snippet for GetSiteSearchEngine",
@@ -14457,6 +14938,103 @@
         {
           "start": 36,
           "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserEventService_PurgeUserEvents_sync",
+      "title": "PurgeUserEventsRequestObject",
+      "description": "Snippet for PurgeUserEvents",
+      "file": "UserEventServiceClient.PurgeUserEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeUserEvents",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserEventServiceClient.PurgeUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsResponse, Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsMetadata>",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeUserEvents",
+          "fullName": "google.cloud.discoveryengine.v1.UserEventService.PurgeUserEvents",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserEventService_PurgeUserEvents_async",
+      "title": "PurgeUserEventsRequestObjectAsync",
+      "description": "Snippet for PurgeUserEventsAsync",
+      "file": "UserEventServiceClient.PurgeUserEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeUserEventsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserEventServiceClient.PurgeUserEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsResponse, Google.Cloud.DiscoveryEngine.V1.PurgeUserEventsMetadata>>",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeUserEvents",
+          "fullName": "google.cloud.discoveryengine.v1.UserEventService.PurgeUserEvents",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
           "type": "SHORT"
         }
       ]

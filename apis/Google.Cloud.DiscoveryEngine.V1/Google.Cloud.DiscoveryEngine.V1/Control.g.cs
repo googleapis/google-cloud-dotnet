@@ -815,8 +815,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
 
   /// <summary>
   /// Defines a conditioned behavior to employ during serving.
-  /// Must be attached to a [ServingConfig][] to be considered at serving time.
-  /// Permitted actions dependent on `SolutionType`.
+  /// Must be attached to a
+  /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig] to be
+  /// considered at serving time. Permitted actions dependent on `SolutionType`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Control : pb::IMessage<Control>
@@ -984,8 +985,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> associatedServingConfigIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. List of all [ServingConfig][] ids this control is attached to.
-    /// May take up to 10 minutes to update after changes.
+    /// Output only. List of all
+    /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig] IDs this
+    /// control is attached to. May take up to 10 minutes to update after changes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

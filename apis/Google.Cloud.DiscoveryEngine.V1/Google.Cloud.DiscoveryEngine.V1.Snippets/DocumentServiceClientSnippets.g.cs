@@ -731,6 +731,8 @@ namespace GoogleCSharpSnippets
                 ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
                 Filter = "",
                 Force = false,
+                GcsSource = new GcsSource(),
+                ErrorConfig = new PurgeErrorConfig(),
             };
             // Make the request
             Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> response = documentServiceClient.PurgeDocuments(request);
@@ -766,6 +768,8 @@ namespace GoogleCSharpSnippets
                 ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
                 Filter = "",
                 Force = false,
+                GcsSource = new GcsSource(),
+                ErrorConfig = new PurgeErrorConfig(),
             };
             // Make the request
             Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> response = await documentServiceClient.PurgeDocumentsAsync(request);
@@ -785,6 +789,95 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 PurgeDocumentsResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadata</summary>
+        public void BatchGetDocumentsMetadataRequestObject()
+        {
+            // Snippet: BatchGetDocumentsMetadata(BatchGetDocumentsMetadataRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            BatchGetDocumentsMetadataRequest request = new BatchGetDocumentsMetadataRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Matcher = new BatchGetDocumentsMetadataRequest.Types.Matcher(),
+            };
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = documentServiceClient.BatchGetDocumentsMetadata(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadataAsync</summary>
+        public async Task BatchGetDocumentsMetadataRequestObjectAsync()
+        {
+            // Snippet: BatchGetDocumentsMetadataAsync(BatchGetDocumentsMetadataRequest, CallSettings)
+            // Additional: BatchGetDocumentsMetadataAsync(BatchGetDocumentsMetadataRequest, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchGetDocumentsMetadataRequest request = new BatchGetDocumentsMetadataRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Matcher = new BatchGetDocumentsMetadataRequest.Types.Matcher(),
+            };
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = await documentServiceClient.BatchGetDocumentsMetadataAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadata</summary>
+        public void BatchGetDocumentsMetadata()
+        {
+            // Snippet: BatchGetDocumentsMetadata(string, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/branches/[BRANCH]";
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = documentServiceClient.BatchGetDocumentsMetadata(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadataAsync</summary>
+        public async Task BatchGetDocumentsMetadataAsync()
+        {
+            // Snippet: BatchGetDocumentsMetadataAsync(string, CallSettings)
+            // Additional: BatchGetDocumentsMetadataAsync(string, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/branches/[BRANCH]";
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = await documentServiceClient.BatchGetDocumentsMetadataAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadata</summary>
+        public void BatchGetDocumentsMetadataResourceNames()
+        {
+            // Snippet: BatchGetDocumentsMetadata(BranchName, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            BranchName parent = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]");
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = documentServiceClient.BatchGetDocumentsMetadata(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadataAsync</summary>
+        public async Task BatchGetDocumentsMetadataResourceNamesAsync()
+        {
+            // Snippet: BatchGetDocumentsMetadataAsync(BranchName, CallSettings)
+            // Additional: BatchGetDocumentsMetadataAsync(BranchName, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BranchName parent = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]");
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = await documentServiceClient.BatchGetDocumentsMetadataAsync(parent);
             // End snippet
         }
     }

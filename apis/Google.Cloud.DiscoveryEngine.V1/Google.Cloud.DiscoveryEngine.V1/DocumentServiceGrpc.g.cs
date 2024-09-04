@@ -86,6 +86,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsRequest> __Marshaller_google_cloud_discoveryengine_v1_PurgeDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest> __Marshaller_google_cloud_discoveryengine_v1_BatchGetDocumentsMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse> __Marshaller_google_cloud_discoveryengine_v1_BatchGetDocumentsMetadataResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GetDocumentRequest, global::Google.Cloud.DiscoveryEngine.V1.Document> __Method_GetDocument = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GetDocumentRequest, global::Google.Cloud.DiscoveryEngine.V1.Document>(
@@ -142,6 +146,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         "PurgeDocuments",
         __Marshaller_google_cloud_discoveryengine_v1_PurgeDocumentsRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest, global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse> __Method_BatchGetDocumentsMetadata = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest, global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchGetDocumentsMetadata",
+        __Marshaller_google_cloud_discoveryengine_v1_BatchGetDocumentsMetadataRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_BatchGetDocumentsMetadataResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -254,6 +266,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PurgeDocuments(global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets index freshness metadata for
+      /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+      /// website search only.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadata(global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -707,6 +733,62 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_PurgeDocuments, null, options, request);
       }
+      /// <summary>
+      /// Gets index freshness metadata for
+      /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+      /// website search only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse BatchGetDocumentsMetadata(global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchGetDocumentsMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets index freshness metadata for
+      /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+      /// website search only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse BatchGetDocumentsMetadata(global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchGetDocumentsMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Gets index freshness metadata for
+      /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+      /// website search only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchGetDocumentsMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets index freshness metadata for
+      /// [Document][google.cloud.discoveryengine.v1.Document]s. Supported for
+      /// website search only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse> BatchGetDocumentsMetadataAsync(global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchGetDocumentsMetadata, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DocumentServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -727,7 +809,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           .AddMethod(__Method_UpdateDocument, serviceImpl.UpdateDocument)
           .AddMethod(__Method_DeleteDocument, serviceImpl.DeleteDocument)
           .AddMethod(__Method_ImportDocuments, serviceImpl.ImportDocuments)
-          .AddMethod(__Method_PurgeDocuments, serviceImpl.PurgeDocuments).Build();
+          .AddMethod(__Method_PurgeDocuments, serviceImpl.PurgeDocuments)
+          .AddMethod(__Method_BatchGetDocumentsMetadata, serviceImpl.BatchGetDocumentsMetadata).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -744,6 +827,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       serviceBinder.AddMethod(__Method_DeleteDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.DeleteDocumentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDocument));
       serviceBinder.AddMethod(__Method_ImportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ImportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportDocuments));
       serviceBinder.AddMethod(__Method_PurgeDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.PurgeDocuments));
+      serviceBinder.AddMethod(__Method_BatchGetDocumentsMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataRequest, global::Google.Cloud.DiscoveryEngine.V1.BatchGetDocumentsMetadataResponse>(serviceImpl.BatchGetDocumentsMetadata));
     }
 
   }

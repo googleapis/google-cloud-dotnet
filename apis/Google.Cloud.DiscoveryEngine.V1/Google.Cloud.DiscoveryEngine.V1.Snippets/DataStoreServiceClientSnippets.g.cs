@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 DataStore = new DataStore(),
                 DataStoreId = "",
                 CreateAdvancedSiteSearch = false,
+                SkipDefaultSchemaCreation = false,
             };
             // Make the request
             Operation<DataStore, CreateDataStoreMetadata> response = dataStoreServiceClient.CreateDataStore(request);
@@ -76,6 +77,7 @@ namespace GoogleCSharpSnippets
                 DataStore = new DataStore(),
                 DataStoreId = "",
                 CreateAdvancedSiteSearch = false,
+                SkipDefaultSchemaCreation = false,
             };
             // Make the request
             Operation<DataStore, CreateDataStoreMetadata> response = await dataStoreServiceClient.CreateDataStoreAsync(request);

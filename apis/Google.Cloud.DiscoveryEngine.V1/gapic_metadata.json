@@ -214,6 +214,12 @@
         "grpc": {
           "libraryClient": "DocumentServiceClient",
           "rpcs": {
+            "BatchGetDocumentsMetadata": {
+              "methods": [
+                "BatchGetDocumentsMetadata",
+                "BatchGetDocumentsMetadataAsync"
+              ]
+            },
             "CreateDocument": {
               "methods": [
                 "CreateDocument",
@@ -413,6 +419,27 @@
         }
       }
     },
+    "SearchTuningService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SearchTuningServiceClient",
+          "rpcs": {
+            "ListCustomModels": {
+              "methods": [
+                "ListCustomModels",
+                "ListCustomModelsAsync"
+              ]
+            },
+            "TrainCustomModel": {
+              "methods": [
+                "TrainCustomModel",
+                "TrainCustomModelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "SiteSearchEngineService": {
       "clients": {
         "grpc": {
@@ -509,6 +536,12 @@
               "methods": [
                 "ImportUserEvents",
                 "ImportUserEventsAsync"
+              ]
+            },
+            "PurgeUserEvents": {
+              "methods": [
+                "PurgeUserEvents",
+                "PurgeUserEventsAsync"
               ]
             },
             "WriteUserEvent": {
