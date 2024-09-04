@@ -393,7 +393,7 @@
       "includeCommonResourcesProto": true,
       "shortName": "apihub",
       "serviceConfigFile": "apihub_v1.yaml",
-      "transport": "grpc+rest",
+      "transport": "rest",
       "restNumericEnums": true
     },
     {
