@@ -43,28 +43,35 @@ namespace Google.Apps.Chat.V1 {
             "Q29tbWFuZE1ldGFkYXRhLlR5cGUSFAoMY29tbWFuZF9uYW1lGAMgASgJEhIK",
             "CmNvbW1hbmRfaWQYBCABKAMSFwoPdHJpZ2dlcnNfZGlhbG9nGAUgASgIIjEK",
             "BFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FERBABEgoKBklOVk9L",
-            "RRACIugBChBSaWNoTGlua01ldGFkYXRhEgsKA3VyaRgBIAEoCRJFCg5yaWNo",
+            "RRACIrsCChBSaWNoTGlua01ldGFkYXRhEgsKA3VyaRgBIAEoCRJFCg5yaWNo",
             "X2xpbmtfdHlwZRgCIAEoDjItLmdvb2dsZS5jaGF0LnYxLlJpY2hMaW5rTWV0",
             "YWRhdGEuUmljaExpbmtUeXBlEjgKD2RyaXZlX2xpbmtfZGF0YRgDIAEoCzId",
-            "Lmdvb2dsZS5jaGF0LnYxLkRyaXZlTGlua0RhdGFIACI+CgxSaWNoTGlua1R5",
-            "cGUSHgoaUklDSF9MSU5LX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpEUklWRV9G",
-            "SUxFEAFCBgoEZGF0YSJYCg1Ecml2ZUxpbmtEYXRhEjQKDmRyaXZlX2RhdGFf",
-            "cmVmGAEgASgLMhwuZ29vZ2xlLmNoYXQudjEuRHJpdmVEYXRhUmVmEhEKCW1p",
-            "bWVfdHlwZRgCIAEoCSplCg5Bbm5vdGF0aW9uVHlwZRIfChtBTk5PVEFUSU9O",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIQCgxVU0VSX01FTlRJT04QARIRCg1TTEFT",
-            "SF9DT01NQU5EEAISDQoJUklDSF9MSU5LEANCqAEKEmNvbS5nb29nbGUuY2hh",
-            "dC52MUIPQW5ub3RhdGlvblByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "Y2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29n",
-            "bGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2ds",
-            "ZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
+            "Lmdvb2dsZS5jaGF0LnYxLkRyaXZlTGlua0RhdGFIABJBChRjaGF0X3NwYWNl",
+            "X2xpbmtfZGF0YRgEIAEoCzIhLmdvb2dsZS5jaGF0LnYxLkNoYXRTcGFjZUxp",
+            "bmtEYXRhSAAiTgoMUmljaExpbmtUeXBlEh4KGlJJQ0hfTElOS19UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASDgoKRFJJVkVfRklMRRABEg4KCkNIQVRfU1BBQ0UQAkIG",
+            "CgRkYXRhIlgKDURyaXZlTGlua0RhdGESNAoOZHJpdmVfZGF0YV9yZWYYASAB",
+            "KAsyHC5nb29nbGUuY2hhdC52MS5Ecml2ZURhdGFSZWYSEQoJbWltZV90eXBl",
+            "GAIgASgJIqYBChFDaGF0U3BhY2VMaW5rRGF0YRItCgVzcGFjZRgBIAEoCUIe",
+            "+kEbChljaGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNlEi8KBnRocmVhZBgCIAEo",
+            "CUIf+kEcChpjaGF0Lmdvb2dsZWFwaXMuY29tL1RocmVhZBIxCgdtZXNzYWdl",
+            "GAMgASgJQiD6QR0KG2NoYXQuZ29vZ2xlYXBpcy5jb20vTWVzc2FnZSplCg5B",
+            "bm5vdGF0aW9uVHlwZRIfChtBTk5PVEFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIQCgxVU0VSX01FTlRJT04QARIRCg1TTEFTSF9DT01NQU5EEAISDQoJUklD",
+            "SF9MSU5LEANCqAEKEmNvbS5nb29nbGUuY2hhdC52MUIPQW5ub3RhdGlvblBy",
+            "b3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9jaGF0cGI7",
+            "Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0LlYxygIT",
+            "R29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Apps.Chat.V1.AnnotationType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Annotation), global::Google.Apps.Chat.V1.Annotation.Parser, new[]{ "Type", "StartIndex", "Length", "UserMention", "SlashCommand", "RichLinkMetadata" }, new[]{ "Metadata", "StartIndex" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.UserMentionMetadata), global::Google.Apps.Chat.V1.UserMentionMetadata.Parser, new[]{ "User", "Type" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.UserMentionMetadata.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.SlashCommandMetadata), global::Google.Apps.Chat.V1.SlashCommandMetadata.Parser, new[]{ "Bot", "Type", "CommandName", "CommandId", "TriggersDialog" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.SlashCommandMetadata.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.RichLinkMetadata), global::Google.Apps.Chat.V1.RichLinkMetadata.Parser, new[]{ "Uri", "RichLinkType", "DriveLinkData" }, new[]{ "Data" }, new[]{ typeof(global::Google.Apps.Chat.V1.RichLinkMetadata.Types.RichLinkType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.DriveLinkData), global::Google.Apps.Chat.V1.DriveLinkData.Parser, new[]{ "DriveDataRef", "MimeType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.RichLinkMetadata), global::Google.Apps.Chat.V1.RichLinkMetadata.Parser, new[]{ "Uri", "RichLinkType", "DriveLinkData", "ChatSpaceLinkData" }, new[]{ "Data" }, new[]{ typeof(global::Google.Apps.Chat.V1.RichLinkMetadata.Types.RichLinkType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.DriveLinkData), global::Google.Apps.Chat.V1.DriveLinkData.Parser, new[]{ "DriveDataRef", "MimeType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ChatSpaceLinkData), global::Google.Apps.Chat.V1.ChatSpaceLinkData.Parser, new[]{ "Space", "Thread", "Message" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1312,6 +1319,9 @@ namespace Google.Apps.Chat.V1 {
         case DataOneofCase.DriveLinkData:
           DriveLinkData = other.DriveLinkData.Clone();
           break;
+        case DataOneofCase.ChatSpaceLinkData:
+          ChatSpaceLinkData = other.ChatSpaceLinkData.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1368,11 +1378,27 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "chat_space_link_data" field.</summary>
+    public const int ChatSpaceLinkDataFieldNumber = 4;
+    /// <summary>
+    /// Data for a chat space link.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.ChatSpaceLinkData ChatSpaceLinkData {
+      get { return dataCase_ == DataOneofCase.ChatSpaceLinkData ? (global::Google.Apps.Chat.V1.ChatSpaceLinkData) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ChatSpaceLinkData;
+      }
+    }
+
     private object data_;
     /// <summary>Enum of possible cases for the "data" oneof.</summary>
     public enum DataOneofCase {
       None = 0,
       DriveLinkData = 3,
+      ChatSpaceLinkData = 4,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1406,6 +1432,7 @@ namespace Google.Apps.Chat.V1 {
       if (Uri != other.Uri) return false;
       if (RichLinkType != other.RichLinkType) return false;
       if (!object.Equals(DriveLinkData, other.DriveLinkData)) return false;
+      if (!object.Equals(ChatSpaceLinkData, other.ChatSpaceLinkData)) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1417,6 +1444,7 @@ namespace Google.Apps.Chat.V1 {
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
       if (RichLinkType != global::Google.Apps.Chat.V1.RichLinkMetadata.Types.RichLinkType.Unspecified) hash ^= RichLinkType.GetHashCode();
       if (dataCase_ == DataOneofCase.DriveLinkData) hash ^= DriveLinkData.GetHashCode();
+      if (dataCase_ == DataOneofCase.ChatSpaceLinkData) hash ^= ChatSpaceLinkData.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1448,6 +1476,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(DriveLinkData);
       }
+      if (dataCase_ == DataOneofCase.ChatSpaceLinkData) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ChatSpaceLinkData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1470,6 +1502,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(DriveLinkData);
       }
+      if (dataCase_ == DataOneofCase.ChatSpaceLinkData) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ChatSpaceLinkData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1488,6 +1524,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (dataCase_ == DataOneofCase.DriveLinkData) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DriveLinkData);
+      }
+      if (dataCase_ == DataOneofCase.ChatSpaceLinkData) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChatSpaceLinkData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1513,6 +1552,12 @@ namespace Google.Apps.Chat.V1 {
             DriveLinkData = new global::Google.Apps.Chat.V1.DriveLinkData();
           }
           DriveLinkData.MergeFrom(other.DriveLinkData);
+          break;
+        case DataOneofCase.ChatSpaceLinkData:
+          if (ChatSpaceLinkData == null) {
+            ChatSpaceLinkData = new global::Google.Apps.Chat.V1.ChatSpaceLinkData();
+          }
+          ChatSpaceLinkData.MergeFrom(other.ChatSpaceLinkData);
           break;
       }
 
@@ -1548,6 +1593,15 @@ namespace Google.Apps.Chat.V1 {
             DriveLinkData = subBuilder;
             break;
           }
+          case 34: {
+            global::Google.Apps.Chat.V1.ChatSpaceLinkData subBuilder = new global::Google.Apps.Chat.V1.ChatSpaceLinkData();
+            if (dataCase_ == DataOneofCase.ChatSpaceLinkData) {
+              subBuilder.MergeFrom(ChatSpaceLinkData);
+            }
+            input.ReadMessage(subBuilder);
+            ChatSpaceLinkData = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1580,6 +1634,15 @@ namespace Google.Apps.Chat.V1 {
             DriveLinkData = subBuilder;
             break;
           }
+          case 34: {
+            global::Google.Apps.Chat.V1.ChatSpaceLinkData subBuilder = new global::Google.Apps.Chat.V1.ChatSpaceLinkData();
+            if (dataCase_ == DataOneofCase.ChatSpaceLinkData) {
+              subBuilder.MergeFrom(ChatSpaceLinkData);
+            }
+            input.ReadMessage(subBuilder);
+            ChatSpaceLinkData = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1602,6 +1665,10 @@ namespace Google.Apps.Chat.V1 {
         /// A Google Drive rich link type.
         /// </summary>
         [pbr::OriginalName("DRIVE_FILE")] DriveFile = 1,
+        /// <summary>
+        /// A Chat space rich link type. For example, a space smart chip.
+        /// </summary>
+        [pbr::OriginalName("CHAT_SPACE")] ChatSpace = 2,
       }
 
     }
@@ -1847,6 +1914,288 @@ namespace Google.Apps.Chat.V1 {
           }
           case 18: {
             MimeType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Data for Chat space links.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ChatSpaceLinkData : pb::IMessage<ChatSpaceLinkData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChatSpaceLinkData> _parser = new pb::MessageParser<ChatSpaceLinkData>(() => new ChatSpaceLinkData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ChatSpaceLinkData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChatSpaceLinkData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChatSpaceLinkData(ChatSpaceLinkData other) : this() {
+      space_ = other.space_;
+      thread_ = other.thread_;
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChatSpaceLinkData Clone() {
+      return new ChatSpaceLinkData(this);
+    }
+
+    /// <summary>Field number for the "space" field.</summary>
+    public const int SpaceFieldNumber = 1;
+    private string space_ = "";
+    /// <summary>
+    /// The space of the linked Chat space resource.
+    ///
+    /// Format: `spaces/{space}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Space {
+      get { return space_; }
+      set {
+        space_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "thread" field.</summary>
+    public const int ThreadFieldNumber = 2;
+    private string thread_ = "";
+    /// <summary>
+    /// The thread of the linked Chat space resource.
+    ///
+    /// Format: `spaces/{space}/threads/{thread}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Thread {
+      get { return thread_; }
+      set {
+        thread_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 3;
+    private string message_ = "";
+    /// <summary>
+    /// The message of the linked Chat space resource.
+    ///
+    /// Format: `spaces/{space}/messages/{message}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ChatSpaceLinkData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ChatSpaceLinkData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Space != other.Space) return false;
+      if (Thread != other.Thread) return false;
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Space.Length != 0) hash ^= Space.GetHashCode();
+      if (Thread.Length != 0) hash ^= Thread.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Space.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Space);
+      }
+      if (Thread.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Thread);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Space.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Space);
+      }
+      if (Thread.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Thread);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Space.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Space);
+      }
+      if (Thread.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Thread);
+      }
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ChatSpaceLinkData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Space.Length != 0) {
+        Space = other.Space;
+      }
+      if (other.Thread.Length != 0) {
+        Thread = other.Thread;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Space = input.ReadString();
+            break;
+          }
+          case 18: {
+            Thread = input.ReadString();
+            break;
+          }
+          case 26: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Space = input.ReadString();
+            break;
+          }
+          case 18: {
+            Thread = input.ReadString();
+            break;
+          }
+          case 26: {
+            Message = input.ReadString();
             break;
           }
         }
