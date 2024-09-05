@@ -284,7 +284,10 @@
     "apis/Grafeas.V1/Grafeas.V1/**"
   ],
   "ignoreDeps": [
-    "Grpc.Core"
+    "Grpc.Core",
+    "Microsoft.CodeAnalysis.CSharp.Workspaces",
+    "Microsoft.CodeAnalysis.Workspaces.MSBuild",
+    "dotnet-sdk"
   ],
   "packageRules": [
     {
