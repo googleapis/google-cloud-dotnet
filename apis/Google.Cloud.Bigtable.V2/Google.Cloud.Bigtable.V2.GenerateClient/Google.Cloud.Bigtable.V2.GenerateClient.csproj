@@ -15,8 +15,8 @@
       - or https://github.com/dotnet/roslyn/issues/71784 is fixed.
       - See b/328172159 as an example of the failure.
       -->
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" VersionOverride="4.8.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" VersionOverride="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" VersionOverride="4.11.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" VersionOverride="4.11.0" />
 
     <!--
       - For some reason, the above packages introduce a dependency somewhere on version 3.0.3
