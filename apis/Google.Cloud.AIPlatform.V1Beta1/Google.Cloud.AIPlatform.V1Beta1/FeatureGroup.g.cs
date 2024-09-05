@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "dXAucHJvdG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aKGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0YTEv",
-            "aW8ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8irQYK",
+            "aW8ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i4gYK",
             "DEZlYXR1cmVHcm91cBJLCgliaWdfcXVlcnkYByABKAsyNi5nb29nbGUuY2xv",
             "dWQuYWlwbGF0Zm9ybS52MWJldGExLkZlYXR1cmVHcm91cC5CaWdRdWVyeUgA",
             "EhEKBG5hbWUYASABKAlCA+BBCBI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
@@ -36,27 +36,28 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRldGFn",
             "GAQgASgJQgPgQQESTgoGbGFiZWxzGAUgAygLMjkuZ29vZ2xlLmNsb3VkLmFp",
             "cGxhdGZvcm0udjFiZXRhMS5GZWF0dXJlR3JvdXAuTGFiZWxzRW50cnlCA+BB",
-            "ARIYCgtkZXNjcmlwdGlvbhgGIAEoCUID4EEBGocCCghCaWdRdWVyeRJRChBi",
+            "ARIYCgtkZXNjcmlwdGlvbhgGIAEoCUID4EEBGrwCCghCaWdRdWVyeRJRChBi",
             "aWdfcXVlcnlfc291cmNlGAEgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
             "cm0udjFiZXRhMS5CaWdRdWVyeVNvdXJjZUIG4EEF4EECEh4KEWVudGl0eV9p",
-            "ZF9jb2x1bW5zGAIgAygJQgPgQQESWwoLdGltZV9zZXJpZXMYBCABKAsyQS5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkZlYXR1cmVHcm91cC5C",
-            "aWdRdWVyeS5UaW1lU2VyaWVzQgPgQQEaKwoKVGltZVNlcmllcxIdChB0aW1l",
-            "c3RhbXBfY29sdW1uGAEgASgJQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqQAepBjAEKJmFpcGxhdGZvcm0u",
-            "Z29vZ2xlYXBpcy5jb20vRmVhdHVyZUdyb3VwEkVwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVyZUdyb3Vwcy97ZmVhdHVy",
-            "ZV9ncm91cH0qDWZlYXR1cmVHcm91cHMyDGZlYXR1cmVHcm91cEIICgZzb3Vy",
-            "Y2VC6AEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhFG",
-            "ZWF0dXJlR3JvdXBQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxh",
-            "dGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIf",
-            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91",
-            "ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRm",
-            "b3JtOjpWMWJldGExYgZwcm90bzM="));
+            "ZF9jb2x1bW5zGAIgAygJQgPgQQESHwoSc3RhdGljX2RhdGFfc291cmNlGAMg",
+            "ASgIQgPgQQESWwoLdGltZV9zZXJpZXMYBCABKAsyQS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLkZlYXR1cmVHcm91cC5CaWdRdWVyeS5UaW1l",
+            "U2VyaWVzQgPgQQESEgoFZGVuc2UYBSABKAhCA+BBARorCgpUaW1lU2VyaWVz",
+            "Eh0KEHRpbWVzdGFtcF9jb2x1bW4YASABKAlCA+BBARotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOpAB6kGMAQomYWlw",
+            "bGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9GZWF0dXJlR3JvdXASRXByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlR3JvdXBz",
+            "L3tmZWF0dXJlX2dyb3VwfSoNZmVhdHVyZUdyb3VwczIMZmVhdHVyZUdyb3Vw",
+            "QggKBnNvdXJjZULoAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTFCEUZlYXR1cmVHcm91cFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRm",
+            "b3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup), global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Parser, new[]{ "BigQuery", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "Description" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery), global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Parser, new[]{ "BigQuerySource", "EntityIdColumns", "TimeSeries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Types.TimeSeries), global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Types.TimeSeries.Parser, new[]{ "TimestampColumn" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup), global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Parser, new[]{ "BigQuery", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "Description" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery), global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Parser, new[]{ "BigQuerySource", "EntityIdColumns", "StaticDataSource", "TimeSeries", "Dense" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Types.TimeSeries), global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Types.TimeSeries.Parser, new[]{ "TimestampColumn" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -608,7 +609,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         public BigQuery(BigQuery other) : this() {
           bigQuerySource_ = other.bigQuerySource_ != null ? other.bigQuerySource_.Clone() : null;
           entityIdColumns_ = other.entityIdColumns_.Clone();
+          staticDataSource_ = other.staticDataSource_;
           timeSeries_ = other.timeSeries_ != null ? other.timeSeries_.Clone() : null;
+          dense_ = other.dense_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -649,6 +652,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           get { return entityIdColumns_; }
         }
 
+        /// <summary>Field number for the "static_data_source" field.</summary>
+        public const int StaticDataSourceFieldNumber = 3;
+        private bool staticDataSource_;
+        /// <summary>
+        /// Optional. Set if the data source is not a time-series.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool StaticDataSource {
+          get { return staticDataSource_; }
+          set {
+            staticDataSource_ = value;
+          }
+        }
+
         /// <summary>Field number for the "time_series" field.</summary>
         public const int TimeSeriesFieldNumber = 4;
         private global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Types.TimeSeries timeSeries_;
@@ -665,6 +683,31 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           get { return timeSeries_; }
           set {
             timeSeries_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "dense" field.</summary>
+        public const int DenseFieldNumber = 5;
+        private bool dense_;
+        /// <summary>
+        /// Optional. If set, all feature values will be fetched
+        /// from a single row per unique entityId including nulls.
+        /// If not set, will collapse all rows for each unique entityId into a singe
+        /// row with any non-null values if present, if no non-null values are
+        /// present will sync null.
+        /// ex: If source has schema
+        /// `(entity_id, feature_timestamp, f0, f1)` and the following rows:
+        /// `(e1, 2020-01-01T10:00:00.123Z, 10, 15)`
+        /// `(e1, 2020-02-01T10:00:00.123Z, 20, null)`
+        /// If dense is set, `(e1, 20, null)` is synced to online stores. If dense is
+        /// not set, `(e1, 20, 15)` is synced to online stores.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Dense {
+          get { return dense_; }
+          set {
+            dense_ = value;
           }
         }
 
@@ -685,7 +728,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (!object.Equals(BigQuerySource, other.BigQuerySource)) return false;
           if(!entityIdColumns_.Equals(other.entityIdColumns_)) return false;
+          if (StaticDataSource != other.StaticDataSource) return false;
           if (!object.Equals(TimeSeries, other.TimeSeries)) return false;
+          if (Dense != other.Dense) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -695,7 +740,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           if (bigQuerySource_ != null) hash ^= BigQuerySource.GetHashCode();
           hash ^= entityIdColumns_.GetHashCode();
+          if (StaticDataSource != false) hash ^= StaticDataSource.GetHashCode();
           if (timeSeries_ != null) hash ^= TimeSeries.GetHashCode();
+          if (Dense != false) hash ^= Dense.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -719,9 +766,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteMessage(BigQuerySource);
           }
           entityIdColumns_.WriteTo(output, _repeated_entityIdColumns_codec);
+          if (StaticDataSource != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(StaticDataSource);
+          }
           if (timeSeries_ != null) {
             output.WriteRawTag(34);
             output.WriteMessage(TimeSeries);
+          }
+          if (Dense != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(Dense);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -738,9 +793,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteMessage(BigQuerySource);
           }
           entityIdColumns_.WriteTo(ref output, _repeated_entityIdColumns_codec);
+          if (StaticDataSource != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(StaticDataSource);
+          }
           if (timeSeries_ != null) {
             output.WriteRawTag(34);
             output.WriteMessage(TimeSeries);
+          }
+          if (Dense != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(Dense);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -756,8 +819,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigQuerySource);
           }
           size += entityIdColumns_.CalculateSize(_repeated_entityIdColumns_codec);
+          if (StaticDataSource != false) {
+            size += 1 + 1;
+          }
           if (timeSeries_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeSeries);
+          }
+          if (Dense != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -778,11 +847,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             BigQuerySource.MergeFrom(other.BigQuerySource);
           }
           entityIdColumns_.Add(other.entityIdColumns_);
+          if (other.StaticDataSource != false) {
+            StaticDataSource = other.StaticDataSource;
+          }
           if (other.timeSeries_ != null) {
             if (timeSeries_ == null) {
               TimeSeries = new global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Types.TimeSeries();
             }
             TimeSeries.MergeFrom(other.TimeSeries);
+          }
+          if (other.Dense != false) {
+            Dense = other.Dense;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -810,11 +885,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 entityIdColumns_.AddEntriesFrom(input, _repeated_entityIdColumns_codec);
                 break;
               }
+              case 24: {
+                StaticDataSource = input.ReadBool();
+                break;
+              }
               case 34: {
                 if (timeSeries_ == null) {
                   TimeSeries = new global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Types.TimeSeries();
                 }
                 input.ReadMessage(TimeSeries);
+                break;
+              }
+              case 40: {
+                Dense = input.ReadBool();
                 break;
               }
             }
@@ -843,11 +926,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 entityIdColumns_.AddEntriesFrom(ref input, _repeated_entityIdColumns_codec);
                 break;
               }
+              case 24: {
+                StaticDataSource = input.ReadBool();
+                break;
+              }
               case 34: {
                 if (timeSeries_ == null) {
                   TimeSeries = new global::Google.Cloud.AIPlatform.V1Beta1.FeatureGroup.Types.BigQuery.Types.TimeSeries();
                 }
                 input.ReadMessage(TimeSeries);
+                break;
+              }
+              case 40: {
+                Dense = input.ReadBool();
                 break;
               }
             }
