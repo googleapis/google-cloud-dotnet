@@ -29,29 +29,30 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2ds",
             "ZS9ycGMvc3RhdHVzLnByb3RvGhpnb29nbGUvdHlwZS9pbnRlcnZhbC5wcm90",
-            "byLKBAoPRmVhdHVyZVZpZXdTeW5jEhEKBG5hbWUYASABKAlCA+BBCBI0Cgtj",
+            "byKFBQoPRmVhdHVyZVZpZXdTeW5jEhEKBG5hbWUYASABKAlCA+BBCBI0Cgtj",
             "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
             "A+BBAxIsCghydW5fdGltZRgFIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFs",
             "QgPgQQMSLQoMZmluYWxfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
             "dXNCA+BBAxJSCgxzeW5jX3N1bW1hcnkYBiABKAsyNy5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlld1N5bmMuU3luY1N1bW1hcnlCA+BB",
             "AxIaCg1zYXRpc2ZpZXNfcHpzGAcgASgIQgPgQQMSGgoNc2F0aXNmaWVzX3B6",
-            "aRgIIAEoCEID4EEDGj8KC1N5bmNTdW1tYXJ5EhcKCnJvd19zeW5jZWQYASAB",
-            "KANCA+BBAxIXCgp0b3RhbF9zbG90GAIgASgDQgPgQQM6wwHqQb8BCilhaXBs",
-            "YXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1cmVWaWV3U3luYxKRAXByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlT25s",
-            "aW5lU3RvcmVzL3tmZWF0dXJlX29ubGluZV9zdG9yZX0vZmVhdHVyZVZpZXdz",
-            "L3tmZWF0dXJlX3ZpZXd9L2ZlYXR1cmVWaWV3U3luY3MvZmVhdHVyZV92aWV3",
-            "X3N5bmNC0gEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIURmVh",
-            "dHVyZVZpZXdTeW5jUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
-            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
-            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
-            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QWlwbGF0Zm9ybTo6VjFiBnByb3Rv",
-            "Mw=="));
+            "aRgIIAEoCEID4EEDGnoKC1N5bmNTdW1tYXJ5EhcKCnJvd19zeW5jZWQYASAB",
+            "KANCA+BBAxIXCgp0b3RhbF9zbG90GAIgASgDQgPgQQMSOQoVc3lzdGVtX3dh",
+            "dGVybWFya190aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cDrDAepBvwEKKWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVyZVZp",
+            "ZXdTeW5jEpEBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2ZlYXR1cmVPbmxpbmVTdG9yZXMve2ZlYXR1cmVfb25saW5lX3N0b3Jl",
+            "fS9mZWF0dXJlVmlld3Mve2ZlYXR1cmVfdmlld30vZmVhdHVyZVZpZXdTeW5j",
+            "cy9mZWF0dXJlX3ZpZXdfc3luY0LSAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxQhRGZWF0dXJlVmlld1N5bmNQcm90b1ABWj5jbG91ZC5nb29n",
+            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxh",
+            "dGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xl",
+            "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBaXBsYXRm",
+            "b3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Parser, new[]{ "Name", "CreateTime", "RunTime", "FinalStatus", "SyncSummary", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary.Parser, new[]{ "RowSynced", "TotalSlot" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Parser, new[]{ "Name", "CreateTime", "RunTime", "FinalStatus", "SyncSummary", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary.Parser, new[]{ "RowSynced", "TotalSlot", "SystemWatermarkTime" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -578,6 +579,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public SyncSummary(SyncSummary other) : this() {
           rowSynced_ = other.rowSynced_;
           totalSlot_ = other.totalSlot_;
+          systemWatermarkTime_ = other.systemWatermarkTime_ != null ? other.systemWatermarkTime_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -617,6 +619,22 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "system_watermark_time" field.</summary>
+        public const int SystemWatermarkTimeFieldNumber = 5;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp systemWatermarkTime_;
+        /// <summary>
+        /// Lower bound of the system time watermark for the sync job. This is only
+        /// set for continuously syncing feature views.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp SystemWatermarkTime {
+          get { return systemWatermarkTime_; }
+          set {
+            systemWatermarkTime_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -634,6 +652,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (RowSynced != other.RowSynced) return false;
           if (TotalSlot != other.TotalSlot) return false;
+          if (!object.Equals(SystemWatermarkTime, other.SystemWatermarkTime)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -643,6 +662,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           if (RowSynced != 0L) hash ^= RowSynced.GetHashCode();
           if (TotalSlot != 0L) hash ^= TotalSlot.GetHashCode();
+          if (systemWatermarkTime_ != null) hash ^= SystemWatermarkTime.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -669,6 +689,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(16);
             output.WriteInt64(TotalSlot);
           }
+          if (systemWatermarkTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(SystemWatermarkTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -687,6 +711,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(16);
             output.WriteInt64(TotalSlot);
           }
+          if (systemWatermarkTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(SystemWatermarkTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -702,6 +730,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (TotalSlot != 0L) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalSlot);
+          }
+          if (systemWatermarkTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SystemWatermarkTime);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -720,6 +751,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (other.TotalSlot != 0L) {
             TotalSlot = other.TotalSlot;
+          }
+          if (other.systemWatermarkTime_ != null) {
+            if (systemWatermarkTime_ == null) {
+              SystemWatermarkTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            SystemWatermarkTime.MergeFrom(other.SystemWatermarkTime);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -744,6 +781,13 @@ namespace Google.Cloud.AIPlatform.V1 {
                 TotalSlot = input.ReadInt64();
                 break;
               }
+              case 42: {
+                if (systemWatermarkTime_ == null) {
+                  SystemWatermarkTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(SystemWatermarkTime);
+                break;
+              }
             }
           }
         #endif
@@ -765,6 +809,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 16: {
                 TotalSlot = input.ReadInt64();
+                break;
+              }
+              case 42: {
+                if (systemWatermarkTime_ == null) {
+                  SystemWatermarkTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(SystemWatermarkTime);
                 break;
               }
             }
