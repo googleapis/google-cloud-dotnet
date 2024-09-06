@@ -256,7 +256,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project in which the assessment is created,
+    /// Required. The name of the project in which the assessment will be created,
     /// in the format `projects/{project_number}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -979,7 +979,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int AnnotationFieldNumber = 2;
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation annotation_ = global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation.Unspecified;
     /// <summary>
-    /// Optional. The annotation that is assigned to the Event. This field can
+    /// Optional. The annotation that will be assigned to the Event. This field can
     /// be left empty to provide reasons that apply to an event without concluding
     /// whether the event is legitimate or fraudulent.
     /// </summary>
