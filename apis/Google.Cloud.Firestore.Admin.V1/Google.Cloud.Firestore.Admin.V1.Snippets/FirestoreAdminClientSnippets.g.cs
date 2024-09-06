@@ -2686,6 +2686,7 @@ namespace GoogleCSharpSnippets
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 DatabaseId = "",
                 BackupAsBackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
+                EncryptionConfig = new gcfav::Database.Types.EncryptionConfig(),
             };
             // Make the request
             Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> response = firestoreAdminClient.RestoreDatabase(request);
@@ -2721,6 +2722,7 @@ namespace GoogleCSharpSnippets
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 DatabaseId = "",
                 BackupAsBackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
+                EncryptionConfig = new gcfav::Database.Types.EncryptionConfig(),
             };
             // Make the request
             Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> response = await firestoreAdminClient.RestoreDatabaseAsync(request);

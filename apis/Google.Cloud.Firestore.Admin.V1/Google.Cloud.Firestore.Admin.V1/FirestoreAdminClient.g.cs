@@ -2499,7 +2499,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// with first character a letter and the last a letter or a number. Must not
         /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
         /// 
-        /// "(default)" database id is also valid.
+        /// "(default)" database ID is also valid.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2529,7 +2529,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// with first character a letter and the last a letter or a number. Must not
         /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
         /// 
-        /// "(default)" database id is also valid.
+        /// "(default)" database ID is also valid.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2559,7 +2559,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// with first character a letter and the last a letter or a number. Must not
         /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
         /// 
-        /// "(default)" database id is also valid.
+        /// "(default)" database ID is also valid.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2584,7 +2584,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// with first character a letter and the last a letter or a number. Must not
         /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
         /// 
-        /// "(default)" database id is also valid.
+        /// "(default)" database ID is also valid.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2614,7 +2614,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// with first character a letter and the last a letter or a number. Must not
         /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
         /// 
-        /// "(default)" database id is also valid.
+        /// "(default)" database ID is also valid.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2644,7 +2644,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// with first character a letter and the last a letter or a number. Must not
         /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
         /// 
-        /// "(default)" database id is also valid.
+        /// "(default)" database ID is also valid.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
