@@ -38,38 +38,39 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "ChBQcm9wZXJ0eU1ldGFkYXRhEhAKCGluYWN0aXZlGAMgASgIElsKGWZpZWxk",
             "X2V4dHJhY3Rpb25fbWV0YWRhdGEYCSABKAsyOC5nb29nbGUuY2xvdWQuZG9j",
             "dW1lbnRhaS52MWJldGEzLkZpZWxkRXh0cmFjdGlvbk1ldGFkYXRhIiYKEkVu",
-            "dGl0eVR5cGVNZXRhZGF0YRIQCghpbmFjdGl2ZRgFIAEoCCL3CAoORG9jdW1l",
+            "dGl0eVR5cGVNZXRhZGF0YRIQCghpbmFjdGl2ZRgFIAEoCCKhCQoORG9jdW1l",
             "bnRTY2hlbWESFAoMZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9u",
             "GAIgASgJElAKDGVudGl0eV90eXBlcxgDIAMoCzI6Lmdvb2dsZS5jbG91ZC5k",
             "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZRJK",
             "CghtZXRhZGF0YRgEIAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuRG9jdW1lbnRTY2hlbWEuTWV0YWRhdGEahAYKCkVudGl0eVR5cGUS",
+            "YmV0YTMuRG9jdW1lbnRTY2hlbWEuTWV0YWRhdGEargYKCkVudGl0eVR5cGUS",
             "XAoLZW51bV92YWx1ZXMYDiABKAsyRS5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
             "aS52MWJldGEzLkRvY3VtZW50U2NoZW1hLkVudGl0eVR5cGUuRW51bVZhbHVl",
-            "c0gAEhQKDGRpc3BsYXlfbmFtZRgNIAEoCRIMCgRuYW1lGAEgASgJEhIKCmJh",
-            "c2VfdHlwZXMYAiADKAkSVwoKcHJvcGVydGllcxgGIAMoCzJDLmdvb2dsZS5j",
-            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50aXR5",
-            "VHlwZS5Qcm9wZXJ0eRJRChRlbnRpdHlfdHlwZV9tZXRhZGF0YRgLIAEoCzIz",
-            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRW50aXR5VHlwZU1l",
-            "dGFkYXRhGhwKCkVudW1WYWx1ZXMSDgoGdmFsdWVzGAEgAygJGoUDCghQcm9w",
-            "ZXJ0eRIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRISCgp2",
-            "YWx1ZV90eXBlGAIgASgJEmsKD29jY3VycmVuY2VfdHlwZRgDIAEoDjJSLmdv",
-            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEu",
-            "RW50aXR5VHlwZS5Qcm9wZXJ0eS5PY2N1cnJlbmNlVHlwZRJMChFwcm9wZXJ0",
-            "eV9tZXRhZGF0YRgFIAEoCzIxLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuUHJvcGVydHlNZXRhZGF0YSKFAQoOT2NjdXJyZW5jZVR5cGUSHwob",
-            "T0NDVVJSRU5DRV9UWVBFX1VOU1BFQ0lGSUVEEAASEQoNT1BUSU9OQUxfT05D",
-            "RRABEhUKEU9QVElPTkFMX01VTFRJUExFEAISEQoNUkVRVUlSRURfT05DRRAD",
-            "EhUKEVJFUVVJUkVEX01VTFRJUExFEARCDgoMdmFsdWVfc291cmNlGpQBCghN",
-            "ZXRhZGF0YRIZChFkb2N1bWVudF9zcGxpdHRlchgBIAEoCBImCh5kb2N1bWVu",
-            "dF9hbGxvd19tdWx0aXBsZV9sYWJlbHMYAiABKAgSJQodcHJlZml4ZWRfbmFt",
-            "aW5nX29uX3Byb3BlcnRpZXMYBiABKAgSHgoWc2tpcF9uYW1pbmdfdmFsaWRh",
-            "dGlvbhgHIAEoCELvAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTNCGERvY3VtZW50QWlEb2N1bWVudFNjaGVtYVABWkNjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2RvY3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7",
-            "ZG9jdW1lbnRhaXBiqgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRh",
-            "M8oCH0dvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6",
-            "OkNsb3VkOjpEb2N1bWVudEFJOjpWMWJldGEzYgZwcm90bzM="));
+            "c0gAEhQKDGRpc3BsYXlfbmFtZRgNIAEoCRIMCgRuYW1lGAEgASgJEhMKC2Rl",
+            "c2NyaXB0aW9uGA8gASgJEhIKCmJhc2VfdHlwZXMYAiADKAkSVwoKcHJvcGVy",
+            "dGllcxgGIAMoCzJDLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
+            "RG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZS5Qcm9wZXJ0eRJRChRlbnRpdHlf",
+            "dHlwZV9tZXRhZGF0YRgLIAEoCzIzLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
+            "LnYxYmV0YTMuRW50aXR5VHlwZU1ldGFkYXRhGhwKCkVudW1WYWx1ZXMSDgoG",
+            "dmFsdWVzGAEgAygJGpoDCghQcm9wZXJ0eRIMCgRuYW1lGAEgASgJEhMKC2Rl",
+            "c2NyaXB0aW9uGAcgASgJEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRISCgp2YWx1",
+            "ZV90eXBlGAIgASgJEmsKD29jY3VycmVuY2VfdHlwZRgDIAEoDjJSLmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50",
+            "aXR5VHlwZS5Qcm9wZXJ0eS5PY2N1cnJlbmNlVHlwZRJMChFwcm9wZXJ0eV9t",
+            "ZXRhZGF0YRgFIAEoCzIxLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
+            "YTMuUHJvcGVydHlNZXRhZGF0YSKFAQoOT2NjdXJyZW5jZVR5cGUSHwobT0ND",
+            "VVJSRU5DRV9UWVBFX1VOU1BFQ0lGSUVEEAASEQoNT1BUSU9OQUxfT05DRRAB",
+            "EhUKEU9QVElPTkFMX01VTFRJUExFEAISEQoNUkVRVUlSRURfT05DRRADEhUK",
+            "EVJFUVVJUkVEX01VTFRJUExFEARCDgoMdmFsdWVfc291cmNlGpQBCghNZXRh",
+            "ZGF0YRIZChFkb2N1bWVudF9zcGxpdHRlchgBIAEoCBImCh5kb2N1bWVudF9h",
+            "bGxvd19tdWx0aXBsZV9sYWJlbHMYAiABKAgSJQodcHJlZml4ZWRfbmFtaW5n",
+            "X29uX3Byb3BlcnRpZXMYBiABKAgSHgoWc2tpcF9uYW1pbmdfdmFsaWRhdGlv",
+            "bhgHIAEoCELvAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
+            "YTNCGERvY3VtZW50QWlEb2N1bWVudFNjaGVtYVABWkNjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2RvY3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9j",
+            "dW1lbnRhaXBiqgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oC",
+            "H0dvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNs",
+            "b3VkOjpEb2N1bWVudEFJOjpWMWJldGEzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -77,8 +78,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata), global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata.Parser, new[]{ "SummaryOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata), global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata.Parser, new[]{ "Inactive", "FieldExtractionMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata), global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata.Parser, new[]{ "Inactive" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Parser, new[]{ "DisplayName", "Description", "EntityTypes", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Parser, new[]{ "EnumValues", "DisplayName", "Name", "BaseTypes", "Properties", "EntityTypeMetadata" }, new[]{ "ValueSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues.Parser, new[]{ "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "DisplayName", "ValueType", "OccurrenceType", "PropertyMetadata" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Parser, new[]{ "DisplayName", "Description", "EntityTypes", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Parser, new[]{ "EnumValues", "DisplayName", "Name", "Description", "BaseTypes", "Properties", "EntityTypeMetadata" }, new[]{ "ValueSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues.Parser, new[]{ "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "Description", "DisplayName", "ValueType", "OccurrenceType", "PropertyMetadata" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata.Parser, new[]{ "DocumentSplitter", "DocumentAllowMultipleLabels", "PrefixedNamingOnProperties", "SkipNamingValidation" }, null, null, null, null)})
           }));
     }
@@ -1375,6 +1376,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public EntityType(EntityType other) : this() {
           displayName_ = other.displayName_;
           name_ = other.name_;
+          description_ = other.description_;
           baseTypes_ = other.baseTypes_.Clone();
           properties_ = other.properties_.Clone();
           entityTypeMetadata_ = other.entityTypeMetadata_ != null ? other.entityTypeMetadata_.Clone() : null;
@@ -1451,6 +1453,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           get { return name_; }
           set {
             name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "description" field.</summary>
+        public const int DescriptionFieldNumber = 15;
+        private string description_ = "";
+        /// <summary>
+        /// The description of the entity type. Could be used to provide more
+        /// information about the entity type for model calls.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Description {
+          get { return description_; }
+          set {
+            description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -1536,6 +1554,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (!object.Equals(EnumValues, other.EnumValues)) return false;
           if (DisplayName != other.DisplayName) return false;
           if (Name != other.Name) return false;
+          if (Description != other.Description) return false;
           if(!baseTypes_.Equals(other.baseTypes_)) return false;
           if(!properties_.Equals(other.properties_)) return false;
           if (!object.Equals(EntityTypeMetadata, other.EntityTypeMetadata)) return false;
@@ -1550,6 +1569,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (valueSourceCase_ == ValueSourceOneofCase.EnumValues) hash ^= EnumValues.GetHashCode();
           if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
           if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Description.Length != 0) hash ^= Description.GetHashCode();
           hash ^= baseTypes_.GetHashCode();
           hash ^= properties_.GetHashCode();
           if (entityTypeMetadata_ != null) hash ^= EntityTypeMetadata.GetHashCode();
@@ -1590,6 +1610,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteRawTag(114);
             output.WriteMessage(EnumValues);
           }
+          if (Description.Length != 0) {
+            output.WriteRawTag(122);
+            output.WriteString(Description);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1618,6 +1642,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             output.WriteRawTag(114);
             output.WriteMessage(EnumValues);
           }
+          if (Description.Length != 0) {
+            output.WriteRawTag(122);
+            output.WriteString(Description);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1636,6 +1664,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Description.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
           }
           size += baseTypes_.CalculateSize(_repeated_baseTypes_codec);
           size += properties_.CalculateSize(_repeated_properties_codec);
@@ -1659,6 +1690,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           if (other.Name.Length != 0) {
             Name = other.Name;
+          }
+          if (other.Description.Length != 0) {
+            Description = other.Description;
           }
           baseTypes_.Add(other.baseTypes_);
           properties_.Add(other.properties_);
@@ -1724,6 +1758,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 EnumValues = subBuilder;
                 break;
               }
+              case 122: {
+                Description = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1769,6 +1807,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 }
                 input.ReadMessage(subBuilder);
                 EnumValues = subBuilder;
+                break;
+              }
+              case 122: {
+                Description = input.ReadString();
                 break;
               }
             }
@@ -2005,6 +2047,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Property(Property other) : this() {
               name_ = other.name_;
+              description_ = other.description_;
               displayName_ = other.displayName_;
               valueType_ = other.valueType_;
               occurrenceType_ = other.occurrenceType_;
@@ -2031,6 +2074,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               get { return name_; }
               set {
                 name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "description" field.</summary>
+            public const int DescriptionFieldNumber = 7;
+            private string description_ = "";
+            /// <summary>
+            /// The description of the property. Could be used to provide more
+            /// information about the property for model calls.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Description {
+              get { return description_; }
+              set {
+                description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
               }
             }
 
@@ -2112,6 +2171,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 return true;
               }
               if (Name != other.Name) return false;
+              if (Description != other.Description) return false;
               if (DisplayName != other.DisplayName) return false;
               if (ValueType != other.ValueType) return false;
               if (OccurrenceType != other.OccurrenceType) return false;
@@ -2124,6 +2184,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public override int GetHashCode() {
               int hash = 1;
               if (Name.Length != 0) hash ^= Name.GetHashCode();
+              if (Description.Length != 0) hash ^= Description.GetHashCode();
               if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
               if (ValueType.Length != 0) hash ^= ValueType.GetHashCode();
               if (OccurrenceType != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType.Unspecified) hash ^= OccurrenceType.GetHashCode();
@@ -2166,6 +2227,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(50);
                 output.WriteString(DisplayName);
               }
+              if (Description.Length != 0) {
+                output.WriteRawTag(58);
+                output.WriteString(Description);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2196,6 +2261,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(50);
                 output.WriteString(DisplayName);
               }
+              if (Description.Length != 0) {
+                output.WriteRawTag(58);
+                output.WriteString(Description);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2208,6 +2277,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               int size = 0;
               if (Name.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+              }
+              if (Description.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
               }
               if (DisplayName.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
@@ -2235,6 +2307,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
               if (other.Name.Length != 0) {
                 Name = other.Name;
+              }
+              if (other.Description.Length != 0) {
+                Description = other.Description;
               }
               if (other.DisplayName.Length != 0) {
                 DisplayName = other.DisplayName;
@@ -2289,6 +2364,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                     DisplayName = input.ReadString();
                     break;
                   }
+                  case 58: {
+                    Description = input.ReadString();
+                    break;
+                  }
                 }
               }
             #endif
@@ -2325,6 +2404,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                   }
                   case 50: {
                     DisplayName = input.ReadString();
+                    break;
+                  }
+                  case 58: {
+                    Description = input.ReadString();
                     break;
                   }
                 }
