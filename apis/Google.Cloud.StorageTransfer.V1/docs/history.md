@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.7.0, released 2024-09-09
+
+### New features
+
+- Add HDFS configuration ([commit 5c69ed3](https://github.com/googleapis/google-cloud-dotnet/commit/5c69ed3b8486cabbec36853f4489d3b8d77a93a6))
+- Add GCS Managed Folders ([commit 5c69ed3](https://github.com/googleapis/google-cloud-dotnet/commit/5c69ed3b8486cabbec36853f4489d3b8d77a93a6))
+- Add S3 Managed Private Network ([commit 5c69ed3](https://github.com/googleapis/google-cloud-dotnet/commit/5c69ed3b8486cabbec36853f4489d3b8d77a93a6))
+- Add S3 Cloudfront Domain ([commit 5c69ed3](https://github.com/googleapis/google-cloud-dotnet/commit/5c69ed3b8486cabbec36853f4489d3b8d77a93a6))
+
 ## Version 2.6.0, released 2024-05-14
 
 ### New features
