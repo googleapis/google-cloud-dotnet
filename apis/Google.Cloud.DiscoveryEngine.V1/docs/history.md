@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.4.0, released 2024-09-09
+
+### New features
+
+- Promote search tuning service to v1 ([commit a266c61](https://github.com/googleapis/google-cloud-dotnet/commit/a266c618438f66605485d54ad99066eb19825107))
+- Promot user event purge to v1 ([commit a266c61](https://github.com/googleapis/google-cloud-dotnet/commit/a266c618438f66605485d54ad99066eb19825107))
+- Return structured document info in answers ([commit a266c61](https://github.com/googleapis/google-cloud-dotnet/commit/a266c618438f66605485d54ad99066eb19825107))
+- Return index status in document ([commit a266c61](https://github.com/googleapis/google-cloud-dotnet/commit/a266c618438f66605485d54ad99066eb19825107))
+- Support batch documents purge with GCS input ([commit a266c61](https://github.com/googleapis/google-cloud-dotnet/commit/a266c618438f66605485d54ad99066eb19825107))
+- Support batch get documents metadata by uri patterns ([commit a266c61](https://github.com/googleapis/google-cloud-dotnet/commit/a266c618438f66605485d54ad99066eb19825107))
+- Return joined status in user event ([commit a266c61](https://github.com/googleapis/google-cloud-dotnet/commit/a266c618438f66605485d54ad99066eb19825107))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit a266c61](https://github.com/googleapis/google-cloud-dotnet/commit/a266c618438f66605485d54ad99066eb19825107))
+
 ## Version 1.3.0, released 2024-07-08
 
 ### New features
