@@ -1,5 +1,16 @@
 # Version history
 
+## Version 4.13.0, released 2024-09-09
+
+### New features
+
+- Inspect template modified cadence discovery config for Cloud SQL ([commit 23f8df4](https://github.com/googleapis/google-cloud-dotnet/commit/23f8df41b49a13da263184e7723468f680120326))
+- File store data profiles can now be filtered by type and storage location ([commit 23f8df4](https://github.com/googleapis/google-cloud-dotnet/commit/23f8df41b49a13da263184e7723468f680120326))
+
+### Documentation improvements
+
+- Small improvements ([commit 23f8df4](https://github.com/googleapis/google-cloud-dotnet/commit/23f8df41b49a13da263184e7723468f680120326))
+
 ## Version 4.12.0, released 2024-08-13
 
 ### New features
