@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta22, released 2024-09-09
+
+### New features
+
+- Add API fields for the descriptions of entity type and property in the document schema ([commit 34114a8](https://github.com/googleapis/google-cloud-dotnet/commit/34114a8656b03efe274c47e6628eb2996e23e61f))
+
 ## Version 2.0.0-beta21, released 2024-08-05
 
 ### New features
