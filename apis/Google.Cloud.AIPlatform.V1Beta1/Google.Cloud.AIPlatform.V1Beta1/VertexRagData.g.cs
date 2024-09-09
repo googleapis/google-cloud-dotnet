@@ -111,24 +111,31 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "EiAKGHVzZV9hZHZhbmNlZF9wZGZfcGFyc2luZxgCIAEoCCJvChNVcGxvYWRS",
             "YWdGaWxlQ29uZmlnElgKGHJhZ19maWxlX2NodW5raW5nX2NvbmZpZxgBIAEo",
             "CzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZUNo",
-            "dW5raW5nQ29uZmlnIqUEChRJbXBvcnRSYWdGaWxlc0NvbmZpZxJACgpnY3Nf",
+            "dW5raW5nQ29uZmlnIsQGChRJbXBvcnRSYWdGaWxlc0NvbmZpZxJACgpnY3Nf",
             "c291cmNlGAIgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
             "MS5HY3NTb3VyY2VIABJRChNnb29nbGVfZHJpdmVfc291cmNlGAMgASgLMjIu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Hb29nbGVEcml2ZVNv",
             "dXJjZUgAEkQKDHNsYWNrX3NvdXJjZRgGIAEoCzIsLmdvb2dsZS5jbG91ZC5h",
             "aXBsYXRmb3JtLnYxYmV0YTEuU2xhY2tTb3VyY2VIABJCCgtqaXJhX3NvdXJj",
             "ZRgHIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuSmly",
-            "YVNvdXJjZUgAElgKGHJhZ19maWxlX2NodW5raW5nX2NvbmZpZxgEIAEoCzI2",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZUNodW5r",
-            "aW5nQ29uZmlnElYKF3JhZ19maWxlX3BhcnNpbmdfY29uZmlnGAggASgLMjUu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlUGFyc2lu",
-            "Z0NvbmZpZxIrCh5tYXhfZW1iZWRkaW5nX3JlcXVlc3RzX3Blcl9taW4YBSAB",
-            "KAVCA+BBAUIPCg1pbXBvcnRfc291cmNlQukBCiNjb20uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMUISVmVydGV4UmFnRGF0YVByb3RvUAFaQ2Ns",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
-            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
-            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
-            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "YVNvdXJjZUgAElEKE3NoYXJlX3BvaW50X3NvdXJjZXMYDSABKAsyMi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNoYXJlUG9pbnRTb3VyY2Vz",
+            "SAASUwoYcGFydGlhbF9mYWlsdXJlX2djc19zaW5rGAsgASgLMi8uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HY3NEZXN0aW5hdGlvbkgBEl0K",
+            "HXBhcnRpYWxfZmFpbHVyZV9iaWdxdWVyeV9zaW5rGAwgASgLMjQuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5CaWdRdWVyeURlc3RpbmF0aW9u",
+            "SAESWAoYcmFnX2ZpbGVfY2h1bmtpbmdfY29uZmlnGAQgASgLMjYuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlQ2h1bmtpbmdDb25m",
+            "aWcSVgoXcmFnX2ZpbGVfcGFyc2luZ19jb25maWcYCCABKAsyNS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVQYXJzaW5nQ29uZmln",
+            "EisKHm1heF9lbWJlZGRpbmdfcmVxdWVzdHNfcGVyX21pbhgFIAEoBUID4EEB",
+            "Qg8KDWltcG9ydF9zb3VyY2VCFgoUcGFydGlhbF9mYWlsdXJlX3NpbmtC6QEK",
+            "I2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhJWZXJ0ZXhS",
+            "YWdEYXRhUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
+            "L2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2ds",
+            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
+            "VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ApiAuthReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -145,7 +152,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Parser, new[]{ "ChunkSize", "ChunkOverlap" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Parser, new[]{ "UseAdvancedPdfParsing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig), global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig.Parser, new[]{ "RagFileChunkingConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "RagFileChunkingConfig", "RagFileParsingConfig", "MaxEmbeddingRequestsPerMin" }, new[]{ "ImportSource" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "RagFileChunkingConfig", "RagFileParsingConfig", "MaxEmbeddingRequestsPerMin" }, new[]{ "ImportSource", "PartialFailureSink" }, null, null, null)
           }));
     }
     #endregion
@@ -5146,6 +5153,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         case ImportSourceOneofCase.JiraSource:
           JiraSource = other.JiraSource.Clone();
           break;
+        case ImportSourceOneofCase.SharePointSources:
+          SharePointSources = other.SharePointSources.Clone();
+          break;
+      }
+
+      switch (other.PartialFailureSinkCase) {
+        case PartialFailureSinkOneofCase.PartialFailureGcsSink:
+          PartialFailureGcsSink = other.PartialFailureGcsSink.Clone();
+          break;
+        case PartialFailureSinkOneofCase.PartialFailureBigquerySink:
+          PartialFailureBigquerySink = other.PartialFailureBigquerySink.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -5221,6 +5240,56 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "share_point_sources" field.</summary>
+    public const int SharePointSourcesFieldNumber = 13;
+    /// <summary>
+    /// SharePoint sources.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources SharePointSources {
+      get { return importSourceCase_ == ImportSourceOneofCase.SharePointSources ? (global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources) importSource_ : null; }
+      set {
+        importSource_ = value;
+        importSourceCase_ = value == null ? ImportSourceOneofCase.None : ImportSourceOneofCase.SharePointSources;
+      }
+    }
+
+    /// <summary>Field number for the "partial_failure_gcs_sink" field.</summary>
+    public const int PartialFailureGcsSinkFieldNumber = 11;
+    /// <summary>
+    /// The Cloud Storage path to write partial failures to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.GcsDestination PartialFailureGcsSink {
+      get { return partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink ? (global::Google.Cloud.AIPlatform.V1Beta1.GcsDestination) partialFailureSink_ : null; }
+      set {
+        partialFailureSink_ = value;
+        partialFailureSinkCase_ = value == null ? PartialFailureSinkOneofCase.None : PartialFailureSinkOneofCase.PartialFailureGcsSink;
+      }
+    }
+
+    /// <summary>Field number for the "partial_failure_bigquery_sink" field.</summary>
+    public const int PartialFailureBigquerySinkFieldNumber = 12;
+    /// <summary>
+    /// The BigQuery destination to write partial failures to. It should be a
+    /// bigquery table resource name (e.g.
+    /// "bq://projectId.bqDatasetId.bqTableId"). If the dataset id does not
+    /// exist, it will be created. If the table does not exist, it will be
+    /// created with the expected schema. If the table exists, the schema will be
+    /// validated and data will be added to this existing table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination PartialFailureBigquerySink {
+      get { return partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink ? (global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination) partialFailureSink_ : null; }
+      set {
+        partialFailureSink_ = value;
+        partialFailureSinkCase_ = value == null ? PartialFailureSinkOneofCase.None : PartialFailureSinkOneofCase.PartialFailureBigquerySink;
+      }
+    }
+
     /// <summary>Field number for the "rag_file_chunking_config" field.</summary>
     public const int RagFileChunkingConfigFieldNumber = 4;
     private global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig ragFileChunkingConfig_;
@@ -5278,6 +5347,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       GoogleDriveSource = 3,
       SlackSource = 6,
       JiraSource = 7,
+      SharePointSources = 13,
     }
     private ImportSourceOneofCase importSourceCase_ = ImportSourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5291,6 +5361,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public void ClearImportSource() {
       importSourceCase_ = ImportSourceOneofCase.None;
       importSource_ = null;
+    }
+
+    private object partialFailureSink_;
+    /// <summary>Enum of possible cases for the "partial_failure_sink" oneof.</summary>
+    public enum PartialFailureSinkOneofCase {
+      None = 0,
+      PartialFailureGcsSink = 11,
+      PartialFailureBigquerySink = 12,
+    }
+    private PartialFailureSinkOneofCase partialFailureSinkCase_ = PartialFailureSinkOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PartialFailureSinkOneofCase PartialFailureSinkCase {
+      get { return partialFailureSinkCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPartialFailureSink() {
+      partialFailureSinkCase_ = PartialFailureSinkOneofCase.None;
+      partialFailureSink_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5312,10 +5403,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(GoogleDriveSource, other.GoogleDriveSource)) return false;
       if (!object.Equals(SlackSource, other.SlackSource)) return false;
       if (!object.Equals(JiraSource, other.JiraSource)) return false;
+      if (!object.Equals(SharePointSources, other.SharePointSources)) return false;
+      if (!object.Equals(PartialFailureGcsSink, other.PartialFailureGcsSink)) return false;
+      if (!object.Equals(PartialFailureBigquerySink, other.PartialFailureBigquerySink)) return false;
       if (!object.Equals(RagFileChunkingConfig, other.RagFileChunkingConfig)) return false;
       if (!object.Equals(RagFileParsingConfig, other.RagFileParsingConfig)) return false;
       if (MaxEmbeddingRequestsPerMin != other.MaxEmbeddingRequestsPerMin) return false;
       if (ImportSourceCase != other.ImportSourceCase) return false;
+      if (PartialFailureSinkCase != other.PartialFailureSinkCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5327,10 +5422,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (importSourceCase_ == ImportSourceOneofCase.GoogleDriveSource) hash ^= GoogleDriveSource.GetHashCode();
       if (importSourceCase_ == ImportSourceOneofCase.SlackSource) hash ^= SlackSource.GetHashCode();
       if (importSourceCase_ == ImportSourceOneofCase.JiraSource) hash ^= JiraSource.GetHashCode();
+      if (importSourceCase_ == ImportSourceOneofCase.SharePointSources) hash ^= SharePointSources.GetHashCode();
+      if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) hash ^= PartialFailureGcsSink.GetHashCode();
+      if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink) hash ^= PartialFailureBigquerySink.GetHashCode();
       if (ragFileChunkingConfig_ != null) hash ^= RagFileChunkingConfig.GetHashCode();
       if (ragFileParsingConfig_ != null) hash ^= RagFileParsingConfig.GetHashCode();
       if (MaxEmbeddingRequestsPerMin != 0) hash ^= MaxEmbeddingRequestsPerMin.GetHashCode();
       hash ^= (int) importSourceCase_;
+      hash ^= (int) partialFailureSinkCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5377,6 +5476,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(RagFileParsingConfig);
       }
+      if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) {
+        output.WriteRawTag(90);
+        output.WriteMessage(PartialFailureGcsSink);
+      }
+      if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PartialFailureBigquerySink);
+      }
+      if (importSourceCase_ == ImportSourceOneofCase.SharePointSources) {
+        output.WriteRawTag(106);
+        output.WriteMessage(SharePointSources);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5415,6 +5526,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(RagFileParsingConfig);
       }
+      if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) {
+        output.WriteRawTag(90);
+        output.WriteMessage(PartialFailureGcsSink);
+      }
+      if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PartialFailureBigquerySink);
+      }
+      if (importSourceCase_ == ImportSourceOneofCase.SharePointSources) {
+        output.WriteRawTag(106);
+        output.WriteMessage(SharePointSources);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5436,6 +5559,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (importSourceCase_ == ImportSourceOneofCase.JiraSource) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(JiraSource);
+      }
+      if (importSourceCase_ == ImportSourceOneofCase.SharePointSources) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SharePointSources);
+      }
+      if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartialFailureGcsSink);
+      }
+      if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartialFailureBigquerySink);
       }
       if (ragFileChunkingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileChunkingConfig);
@@ -5497,6 +5629,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             JiraSource = new global::Google.Cloud.AIPlatform.V1Beta1.JiraSource();
           }
           JiraSource.MergeFrom(other.JiraSource);
+          break;
+        case ImportSourceOneofCase.SharePointSources:
+          if (SharePointSources == null) {
+            SharePointSources = new global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources();
+          }
+          SharePointSources.MergeFrom(other.SharePointSources);
+          break;
+      }
+
+      switch (other.PartialFailureSinkCase) {
+        case PartialFailureSinkOneofCase.PartialFailureGcsSink:
+          if (PartialFailureGcsSink == null) {
+            PartialFailureGcsSink = new global::Google.Cloud.AIPlatform.V1Beta1.GcsDestination();
+          }
+          PartialFailureGcsSink.MergeFrom(other.PartialFailureGcsSink);
+          break;
+        case PartialFailureSinkOneofCase.PartialFailureBigquerySink:
+          if (PartialFailureBigquerySink == null) {
+            PartialFailureBigquerySink = new global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination();
+          }
+          PartialFailureBigquerySink.MergeFrom(other.PartialFailureBigquerySink);
           break;
       }
 
@@ -5569,6 +5722,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(RagFileParsingConfig);
             break;
           }
+          case 90: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GcsDestination subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GcsDestination();
+            if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) {
+              subBuilder.MergeFrom(PartialFailureGcsSink);
+            }
+            input.ReadMessage(subBuilder);
+            PartialFailureGcsSink = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination();
+            if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink) {
+              subBuilder.MergeFrom(PartialFailureBigquerySink);
+            }
+            input.ReadMessage(subBuilder);
+            PartialFailureBigquerySink = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources();
+            if (importSourceCase_ == ImportSourceOneofCase.SharePointSources) {
+              subBuilder.MergeFrom(SharePointSources);
+            }
+            input.ReadMessage(subBuilder);
+            SharePointSources = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -5636,6 +5816,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               RagFileParsingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig();
             }
             input.ReadMessage(RagFileParsingConfig);
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GcsDestination subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GcsDestination();
+            if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) {
+              subBuilder.MergeFrom(PartialFailureGcsSink);
+            }
+            input.ReadMessage(subBuilder);
+            PartialFailureGcsSink = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination();
+            if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink) {
+              subBuilder.MergeFrom(PartialFailureBigquerySink);
+            }
+            input.ReadMessage(subBuilder);
+            PartialFailureBigquerySink = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources();
+            if (importSourceCase_ == ImportSourceOneofCase.SharePointSources) {
+              subBuilder.MergeFrom(SharePointSources);
+            }
+            input.ReadMessage(subBuilder);
+            SharePointSources = subBuilder;
             break;
           }
         }
