@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.12.0, released 2024-09-09
+
+### New features
+
+- Promote block_project_ssh_keys support to batch v1 API ([commit 6030568](https://github.com/googleapis/google-cloud-dotnet/commit/60305681af67012fa79e4c3713193fef99bad371))
+
+### Documentation improvements
+
+- Clarify tasks success criteria for background runnable ([commit 78ba76d](https://github.com/googleapis/google-cloud-dotnet/commit/78ba76d5029d509ea6e3eb509033350c51482986))
+- Batch CentOS images and HPC CentOS images are EOS ([commit f739754](https://github.com/googleapis/google-cloud-dotnet/commit/f7397543f18e1abed42ad38146d756f5a587b768))
+- Clarify required fields for Runnable.Container ([commit f739754](https://github.com/googleapis/google-cloud-dotnet/commit/f7397543f18e1abed42ad38146d756f5a587b768))
+- Clarify required oneof fields for Runnable.Script ([commit f739754](https://github.com/googleapis/google-cloud-dotnet/commit/f7397543f18e1abed42ad38146d756f5a587b768))
+- Clarify TaskSpec requires one or more runnables ([commit f739754](https://github.com/googleapis/google-cloud-dotnet/commit/f7397543f18e1abed42ad38146d756f5a587b768))
+- Refine usage scope for fields `task_execution` and `task_state` in StatusEvent ([commit fcfba8b](https://github.com/googleapis/google-cloud-dotnet/commit/fcfba8b509922bc275130bd77bea7945f7f42247))
+
 ## Version 2.11.0, released 2024-07-01
 
 ### New features
