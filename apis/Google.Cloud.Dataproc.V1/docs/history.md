@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.13.0, released 2024-09-09
+
+### New features
+
+- Add optional parameters (tarball-access) in DiagnoseClusterRequest ([commit 8e5af66](https://github.com/googleapis/google-cloud-dotnet/commit/8e5af666cfaf9193af598b9d4f05a8650433c1f5))
+
 ## Version 5.12.0, released 2024-07-08
 
 ### New features
