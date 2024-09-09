@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.31.0, released 2024-09-09
+
+### New features
+
+- Add ReleaseChannel EXTENDED value ([commit 4224abe](https://github.com/googleapis/google-cloud-dotnet/commit/4224abe8f61f1a0d8cf154b15841f4190099f7da))
+
+### Documentation improvements
+
+- Minor updates to reference documentation ([commit 863421b](https://github.com/googleapis/google-cloud-dotnet/commit/863421b016199052dae2363577079bb5cadf09c2))
+
 ## Version 3.30.0, released 2024-07-22
 
 ### Bug fixes
