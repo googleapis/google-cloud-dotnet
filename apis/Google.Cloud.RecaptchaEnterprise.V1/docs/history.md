@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.15.0, released 2024-09-09
+
+### New features
+
+- Add AssessmentEnvironment for CreateAssessement to explicitly describe the environment of the assessment ([commit 7b03dd8](https://github.com/googleapis/google-cloud-dotnet/commit/7b03dd893eba021c62dd623dcd41a61c553c8fe4))
+- Add AddIpOverride RPC ([commit 419e3a5](https://github.com/googleapis/google-cloud-dotnet/commit/419e3a561944b153250baf595773a5d34a4168ec))
+- Add `express_settings` to `Key` ([commit 419e3a5](https://github.com/googleapis/google-cloud-dotnet/commit/419e3a561944b153250baf595773a5d34a4168ec))
+
+### Documentation improvements
+
+- Minor doc fixes ([commit fa9d5b1](https://github.com/googleapis/google-cloud-dotnet/commit/fa9d5b197ff03ba1d05a8ded8d6a3e71c78e7f00))
+- Clarify `Event.express` field ([commit 419e3a5](https://github.com/googleapis/google-cloud-dotnet/commit/419e3a561944b153250baf595773a5d34a4168ec))
+- Fix billing, quota, and usecase links ([commit 419e3a5](https://github.com/googleapis/google-cloud-dotnet/commit/419e3a561944b153250baf595773a5d34a4168ec))
+
 ## Version 2.14.0, released 2024-07-08
 
 ### New features
