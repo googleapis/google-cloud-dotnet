@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta17, released 2024-09-09
+
+### New features
+
+- Support natural language understanding in search ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+- Allow set relevance threshold on search ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+- Support one box search ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+- Return structured document info in answers ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+- Return index status in document ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+- Support batch documents purge with GCS input ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+- Support batch get documents metadata by uri patterns ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+- Return joined status in user event ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit ab4c17a](https://github.com/googleapis/google-cloud-dotnet/commit/ab4c17a2c3d9fa4b885aa1eeba921e02de1e91ff))
+
 ## Version 1.0.0-beta16, released 2024-07-29
 
 ### Bug fixes
