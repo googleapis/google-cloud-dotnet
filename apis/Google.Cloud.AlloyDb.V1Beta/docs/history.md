@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2024-09-09
+
+### New features
+
+- Support for enabling outbound public IP on an instance ([commit 189b96d](https://github.com/googleapis/google-cloud-dotnet/commit/189b96d0f47ffeabf37a4c1144f6e06cd570778c))
+- Support for getting outbound public IP addresses of an instance ([commit 189b96d](https://github.com/googleapis/google-cloud-dotnet/commit/189b96d0f47ffeabf37a4c1144f6e06cd570778c))
+- Support for setting maintenance update policy on a cluster ([commit 189b96d](https://github.com/googleapis/google-cloud-dotnet/commit/189b96d0f47ffeabf37a4c1144f6e06cd570778c))
+- Support for getting maintenance schedule of a cluster ([commit 189b96d](https://github.com/googleapis/google-cloud-dotnet/commit/189b96d0f47ffeabf37a4c1144f6e06cd570778c))
+
 ## Version 1.0.0-beta07, released 2024-06-04
 
 ### New features
