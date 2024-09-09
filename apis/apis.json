@@ -5109,7 +5109,7 @@
     },
     {
       "id": "Google.Cloud.TextToSpeech.V1Beta1",
-      "version": "2.0.0-beta07",
+      "version": "2.0.0-beta08",
       "type": "grpc",
       "productName": "Google Cloud Text-to-Speech",
       "productUrl": "https://cloud.google.com/text-to-speech",
@@ -5119,7 +5119,7 @@
         "Text-to-speech"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/texttospeech/v1beta1",
