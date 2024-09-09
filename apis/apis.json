@@ -4931,7 +4931,7 @@
     },
     {
       "id": "Google.Cloud.StorageTransfer.V1",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "type": "grpc",
       "productName": "Storage Transfer",
       "productUrl": "https://cloud.google.com/storage-transfer-service",
@@ -4943,7 +4943,7 @@
         "gcs"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/storagetransfer/v1",
