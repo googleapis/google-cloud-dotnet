@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.11.0, released 2024-09-09
+
+### New features
+
+- Add Database.SourceInfo and Database.source_info (information about database provenance, specifically for restored databases) ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Add Database.CmekConfig and Database.cmek_config (information about CMEK enablement) ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Allow specifying an encryption_config when restoring a database ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Add Database.delete_time (the time a database was deleted, if it ever was) ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Add Database.previous_id (if a database was deleted, what ID it was using beforehand) ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+
+### Documentation improvements
+
+- Fix assorted capitalization issues with the word "ID" ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Clarify restore details ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Clarify maximum retention of backups (max 14 weeks) ([commit 48c7024](https://github.com/googleapis/google-cloud-dotnet/commit/48c7024dbf85147a3cb3024681c86ed2f64fa0d2))
+- Remove note about backups running at a specific time ([commit 48c7024](https://github.com/googleapis/google-cloud-dotnet/commit/48c7024dbf85147a3cb3024681c86ed2f64fa0d2))
+- Standardize on the capitalization of "ID" ([commit 48c7024](https://github.com/googleapis/google-cloud-dotnet/commit/48c7024dbf85147a3cb3024681c86ed2f64fa0d2))
+
 ## Version 3.10.0, released 2024-06-24
 
 ### New features
