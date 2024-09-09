@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.7.0, released 2024-09-09
+
+### New features
+
+- A new method `StreamingSynthesize` is added to service `TextToSpeech` ([commit 7a34ef0](https://github.com/googleapis/google-cloud-dotnet/commit/7a34ef081baa8b944e2d8d689336ce6b15e5b5e2))
+
+### Documentation improvements
+
+- Update Long Audio capabilities to include SSML ([commit 05630e2](https://github.com/googleapis/google-cloud-dotnet/commit/05630e2e7806e8894ab892a428b83cbeb187ee37))
+- A comment for field `name` in message `.google.cloud.texttospeech.v1.VoiceSelectionParams` is changed ([commit 7a34ef0](https://github.com/googleapis/google-cloud-dotnet/commit/7a34ef081baa8b944e2d8d689336ce6b15e5b5e2))
+
 ## Version 3.6.0, released 2024-05-14
 
 ### New features
