@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.7.0, released 2024-09-09
+
+### New features
+
+- Add OFF to HarmBlockThreshold ([commit bba431e](https://github.com/googleapis/google-cloud-dotnet/commit/bba431edd175a9a968164a02868ee80027576cdb))
+- Add more configurability to feature_group.proto ([commit fa557a4](https://github.com/googleapis/google-cloud-dotnet/commit/fa557a4671ef84bae4b7f5d4772ba249117c372f))
+- Add ragSource to feature_view.proto ([commit fa557a4](https://github.com/googleapis/google-cloud-dotnet/commit/fa557a4671ef84bae4b7f5d4772ba249117c372f))
+- Add sync watermark to feature_view_sync.proto ([commit fa557a4](https://github.com/googleapis/google-cloud-dotnet/commit/fa557a4671ef84bae4b7f5d4772ba249117c372f))
+- Add FLEX_START to Scheduling.strategy ([commit 971a41a](https://github.com/googleapis/google-cloud-dotnet/commit/971a41a3c707eab021f60fd026812c29de19a371))
+- Add v1 NotebookExecutionJob to Schedule ([commit 8774035](https://github.com/googleapis/google-cloud-dotnet/commit/877403533fc9c890a9d2c9b217e48c4fb2bbc15e))
+- Add max_wait_duration to Scheduling ([commit 20099e6](https://github.com/googleapis/google-cloud-dotnet/commit/20099e6810cb3f67476284df526071a441861883))
+
+### Documentation improvements
+
+- Fix typo in feature_online_store_admin_service.proto ([commit fa557a4](https://github.com/googleapis/google-cloud-dotnet/commit/fa557a4671ef84bae4b7f5d4772ba249117c372f))
+
 ## Version 3.6.0, released 2024-08-13
 
 ### New features
