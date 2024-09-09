@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2024-09-09
+
+### New features
+
+- Add CHAT_SPACE link type support for GA launch ([commit e661468](https://github.com/googleapis/google-cloud-dotnet/commit/e661468ce2b7ec57d3cd786a88ead2eac14c792e))
+
 ## Version 1.0.0-beta05, released 2024-07-22
 
 ### New features
