@@ -1,0 +1,21 @@
+[
+  {
+    "method": "ComputeInsights",
+    "client": "AreaInsightsClient",
+    "arguments": {
+      "request": {
+        "insights": [ "INSIGHT_PLACES" ],
+        "filter": {
+          "locationFilter": {
+            "region": {
+              "place": "places/ChIJiQHsW0m3j4ARm69rRkrUF3w"
+            }
+          },
+          "typeFilter": {
+            "includedTypes": [ "brunch_restaurant" ]
+          }
+        }
+      }
+    }
+  }
+]
