@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Maps.AreaInsights.V1",
-  "release_level": "unreleased",
+  "release_level": "preview",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Maps.AreaInsights.V1/latest",
   "library_type": "GAPIC_AUTO",
   "language": "dotnet",
