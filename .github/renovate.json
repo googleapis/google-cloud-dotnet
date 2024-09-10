@@ -263,6 +263,7 @@
     "apis/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1/**",
     "apis/Google.LongRunning/Google.LongRunning/**",
     "apis/Google.Maps.AddressValidation.V1/Google.Maps.AddressValidation.V1/**",
+    "apis/Google.Maps.AreaInsights.V1/Google.Maps.AreaInsights.V1/**",
     "apis/Google.Maps.FleetEngine.Delivery.V1/Google.Maps.FleetEngine.Delivery.V1/**",
     "apis/Google.Maps.FleetEngine.V1/Google.Maps.FleetEngine.V1/**",
     "apis/Google.Maps.MapsPlatformDatasets.V1/Google.Maps.MapsPlatformDatasets.V1/**",
