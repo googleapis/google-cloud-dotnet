@@ -3684,7 +3684,6 @@ namespace Google.Cloud.Asset.V1 {
 
   /// <summary>
   /// A result of Resource Search, containing information of a cloud resource.
-  /// Next ID: 34
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceSearchResult : pb::IMessage<ResourceSearchResult>
@@ -3939,8 +3938,8 @@ namespace Google.Cloud.Asset.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Labels associated with this resource. See [Labelling and grouping Google
-    /// Cloud
+    /// User labels associated with this resource. See [Labelling and grouping
+    /// Google Cloud
     /// resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-platform-resources)
     /// for more information. This field is available only when the resource's
     /// Protobuf contains it.

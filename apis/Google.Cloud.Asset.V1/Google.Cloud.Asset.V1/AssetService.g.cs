@@ -17113,10 +17113,12 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The query response, which can be either an `error` or a valid `response`.
     ///
-    /// If `done` == `false` and the query result is being saved in a output, the
+    /// If `done` == `false` and the query result is being saved in an output, the
     /// output_config field will be set.
     /// If `done` == `true`, exactly one of
     /// `error`, `query_result` or `output_config` will be set.
+    /// [done] is unset unless the [QueryAssetsResponse] contains a
+    /// [QueryAssetsResponse.job_reference].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17160,8 +17162,9 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "output_config" field.</summary>
     public const int OutputConfigFieldNumber = 5;
     /// <summary>
-    /// Output configuration which indicates instead of being returned in API
-    /// response on the fly, the query result will be saved in a specific output.
+    /// Output configuration, which indicates that instead of being returned in
+    /// an API response on the fly, the query result will be saved in a specific
+    /// output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
