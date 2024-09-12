@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             DeleteSpaceRequest request = new DeleteSpaceRequest
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
+                UseAdminAccess = false,
             };
             // Make the request
             chatServiceClient.DeleteSpace(request);

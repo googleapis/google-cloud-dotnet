@@ -101,6 +101,10 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ListSpacesResponse> __Marshaller_google_chat_v1_ListSpacesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ListSpacesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SearchSpacesRequest> __Marshaller_google_chat_v1_SearchSpacesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SearchSpacesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SearchSpacesResponse> __Marshaller_google_chat_v1_SearchSpacesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SearchSpacesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetSpaceRequest> __Marshaller_google_chat_v1_GetSpaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetSpaceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.Space> __Marshaller_google_chat_v1_Space = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.Space.Parser));
@@ -232,6 +236,14 @@ namespace Google.Apps.Chat.V1 {
         "ListSpaces",
         __Marshaller_google_chat_v1_ListSpacesRequest,
         __Marshaller_google_chat_v1_ListSpacesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.SearchSpacesRequest, global::Google.Apps.Chat.V1.SearchSpacesResponse> __Method_SearchSpaces = new grpc::Method<global::Google.Apps.Chat.V1.SearchSpacesRequest, global::Google.Apps.Chat.V1.SearchSpacesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchSpaces",
+        __Marshaller_google_chat_v1_SearchSpacesRequest,
+        __Marshaller_google_chat_v1_SearchSpacesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Chat.V1.GetSpaceRequest, global::Google.Apps.Chat.V1.Space> __Method_GetSpace = new grpc::Method<global::Google.Apps.Chat.V1.GetSpaceRequest, global::Google.Apps.Chat.V1.Space>(
@@ -618,6 +630,22 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.ListSpacesResponse> ListSpaces(global::Google.Apps.Chat.V1.ListSpacesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of spaces in a Google Workspace organization based on an
+      /// administrator's search. Requires [user
+      /// authentication with administrator
+      /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+      /// In the request, set `use_admin_access` to `true`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.SearchSpacesResponse> SearchSpaces(global::Google.Apps.Chat.V1.SearchSpacesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2014,6 +2042,70 @@ namespace Google.Apps.Chat.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.ListSpacesResponse> ListSpacesAsync(global::Google.Apps.Chat.V1.ListSpacesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSpaces, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of spaces in a Google Workspace organization based on an
+      /// administrator's search. Requires [user
+      /// authentication with administrator
+      /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+      /// In the request, set `use_admin_access` to `true`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SearchSpacesResponse SearchSpaces(global::Google.Apps.Chat.V1.SearchSpacesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchSpaces(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of spaces in a Google Workspace organization based on an
+      /// administrator's search. Requires [user
+      /// authentication with administrator
+      /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+      /// In the request, set `use_admin_access` to `true`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SearchSpacesResponse SearchSpaces(global::Google.Apps.Chat.V1.SearchSpacesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchSpaces, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of spaces in a Google Workspace organization based on an
+      /// administrator's search. Requires [user
+      /// authentication with administrator
+      /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+      /// In the request, set `use_admin_access` to `true`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SearchSpacesResponse> SearchSpacesAsync(global::Google.Apps.Chat.V1.SearchSpacesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchSpacesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of spaces in a Google Workspace organization based on an
+      /// administrator's search. Requires [user
+      /// authentication with administrator
+      /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+      /// In the request, set `use_admin_access` to `true`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SearchSpacesResponse> SearchSpacesAsync(global::Google.Apps.Chat.V1.SearchSpacesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchSpaces, null, options, request);
       }
       /// <summary>
       /// Returns details about a space. For an example, see
@@ -3735,6 +3827,7 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_GetAttachment, serviceImpl.GetAttachment)
           .AddMethod(__Method_UploadAttachment, serviceImpl.UploadAttachment)
           .AddMethod(__Method_ListSpaces, serviceImpl.ListSpaces)
+          .AddMethod(__Method_SearchSpaces, serviceImpl.SearchSpaces)
           .AddMethod(__Method_GetSpace, serviceImpl.GetSpace)
           .AddMethod(__Method_CreateSpace, serviceImpl.CreateSpace)
           .AddMethod(__Method_SetUpSpace, serviceImpl.SetUpSpace)
@@ -3772,6 +3865,7 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_GetAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetAttachmentRequest, global::Google.Apps.Chat.V1.Attachment>(serviceImpl.GetAttachment));
       serviceBinder.AddMethod(__Method_UploadAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UploadAttachmentRequest, global::Google.Apps.Chat.V1.UploadAttachmentResponse>(serviceImpl.UploadAttachment));
       serviceBinder.AddMethod(__Method_ListSpaces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListSpacesRequest, global::Google.Apps.Chat.V1.ListSpacesResponse>(serviceImpl.ListSpaces));
+      serviceBinder.AddMethod(__Method_SearchSpaces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.SearchSpacesRequest, global::Google.Apps.Chat.V1.SearchSpacesResponse>(serviceImpl.SearchSpaces));
       serviceBinder.AddMethod(__Method_GetSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceRequest, global::Google.Apps.Chat.V1.Space>(serviceImpl.GetSpace));
       serviceBinder.AddMethod(__Method_CreateSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CreateSpaceRequest, global::Google.Apps.Chat.V1.Space>(serviceImpl.CreateSpace));
       serviceBinder.AddMethod(__Method_SetUpSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.SetUpSpaceRequest, global::Google.Apps.Chat.V1.Space>(serviceImpl.SetUpSpace));

@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 Membership = new Membership(),
                 UpdateMask = new FieldMask(),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = await chatServiceClient.UpdateMembershipAsync(request);

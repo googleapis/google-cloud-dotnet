@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             DeleteMembershipRequest request = new DeleteMembershipRequest
             {
                 MembershipName = MembershipName.FromSpaceMember("[SPACE]", "[MEMBER]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = chatServiceClient.DeleteMembership(request);

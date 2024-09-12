@@ -56,6 +56,7 @@ namespace Google.Apps.Chat.V1
             GetAttachmentSettings = existing.GetAttachmentSettings;
             UploadAttachmentSettings = existing.UploadAttachmentSettings;
             ListSpacesSettings = existing.ListSpacesSettings;
+            SearchSpacesSettings = existing.SearchSpacesSettings;
             GetSpaceSettings = existing.GetSpaceSettings;
             CreateSpaceSettings = existing.CreateSpaceSettings;
             SetUpSpaceSettings = existing.SetUpSpaceSettings;
@@ -258,6 +259,24 @@ namespace Google.Apps.Chat.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSpacesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.SearchSpaces</c> and <c>ChatServiceClient.SearchSpacesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchSpacesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ChatServiceClient.GetSpace</c>
@@ -2921,6 +2940,94 @@ namespace Google.Apps.Chat.V1
                 request.PageSize = pageSize.Value;
             }
             return ListSpacesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of spaces in a Google Workspace organization based on an
+        /// administrator's search. Requires [user
+        /// authentication with administrator
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// In the request, set `use_admin_access` to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Space"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchSpacesResponse, Space> SearchSpaces(SearchSpacesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of spaces in a Google Workspace organization based on an
+        /// administrator's search. Requires [user
+        /// authentication with administrator
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// In the request, set `use_admin_access` to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Space"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchSpacesResponse, Space> SearchSpacesAsync(SearchSpacesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of spaces in a Google Workspace organization based on an
+        /// administrator's search. Requires [user
+        /// authentication with administrator
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// In the request, set `use_admin_access` to `true`.
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Space"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchSpacesResponse, Space> SearchSpaces(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchSpacesRequest request = new SearchSpacesRequest { };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchSpaces(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of spaces in a Google Workspace organization based on an
+        /// administrator's search. Requires [user
+        /// authentication with administrator
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// In the request, set `use_admin_access` to `true`.
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Space"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchSpacesResponse, Space> SearchSpacesAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchSpacesRequest request = new SearchSpacesRequest { };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchSpacesAsync(request, callSettings);
         }
 
         /// <summary>
@@ -6854,6 +6961,8 @@ namespace Google.Apps.Chat.V1
 
         private readonly gaxgrpc::ApiCall<ListSpacesRequest, ListSpacesResponse> _callListSpaces;
 
+        private readonly gaxgrpc::ApiCall<SearchSpacesRequest, SearchSpacesResponse> _callSearchSpaces;
+
         private readonly gaxgrpc::ApiCall<GetSpaceRequest, Space> _callGetSpace;
 
         private readonly gaxgrpc::ApiCall<CreateSpaceRequest, Space> _callCreateSpace;
@@ -6935,6 +7044,9 @@ namespace Google.Apps.Chat.V1
             _callListSpaces = clientHelper.BuildApiCall<ListSpacesRequest, ListSpacesResponse>("ListSpaces", grpcClient.ListSpacesAsync, grpcClient.ListSpaces, effectiveSettings.ListSpacesSettings);
             Modify_ApiCall(ref _callListSpaces);
             Modify_ListSpacesApiCall(ref _callListSpaces);
+            _callSearchSpaces = clientHelper.BuildApiCall<SearchSpacesRequest, SearchSpacesResponse>("SearchSpaces", grpcClient.SearchSpacesAsync, grpcClient.SearchSpaces, effectiveSettings.SearchSpacesSettings);
+            Modify_ApiCall(ref _callSearchSpaces);
+            Modify_SearchSpacesApiCall(ref _callSearchSpaces);
             _callGetSpace = clientHelper.BuildApiCall<GetSpaceRequest, Space>("GetSpace", grpcClient.GetSpaceAsync, grpcClient.GetSpace, effectiveSettings.GetSpaceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSpace);
             Modify_GetSpaceApiCall(ref _callGetSpace);
@@ -7014,6 +7126,8 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_ListSpacesApiCall(ref gaxgrpc::ApiCall<ListSpacesRequest, ListSpacesResponse> call);
 
+        partial void Modify_SearchSpacesApiCall(ref gaxgrpc::ApiCall<SearchSpacesRequest, SearchSpacesResponse> call);
+
         partial void Modify_GetSpaceApiCall(ref gaxgrpc::ApiCall<GetSpaceRequest, Space> call);
 
         partial void Modify_CreateSpaceApiCall(ref gaxgrpc::ApiCall<CreateSpaceRequest, Space> call);
@@ -7074,6 +7188,8 @@ namespace Google.Apps.Chat.V1
         partial void Modify_UploadAttachmentRequest(ref UploadAttachmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSpacesRequest(ref ListSpacesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchSpacesRequest(ref SearchSpacesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetSpaceRequest(ref GetSpaceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7579,6 +7695,38 @@ namespace Google.Apps.Chat.V1
         {
             Modify_ListSpacesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSpacesRequest, ListSpacesResponse, Space>(_callListSpaces, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of spaces in a Google Workspace organization based on an
+        /// administrator's search. Requires [user
+        /// authentication with administrator
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// In the request, set `use_admin_access` to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Space"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchSpacesResponse, Space> SearchSpaces(SearchSpacesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchSpacesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchSpacesRequest, SearchSpacesResponse, Space>(_callSearchSpaces, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of spaces in a Google Workspace organization based on an
+        /// administrator's search. Requires [user
+        /// authentication with administrator
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// In the request, set `use_admin_access` to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Space"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchSpacesResponse, Space> SearchSpacesAsync(SearchSpacesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchSpacesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchSpacesRequest, SearchSpacesResponse, Space>(_callSearchSpaces, request, callSettings);
         }
 
         /// <summary>
@@ -8442,6 +8590,10 @@ namespace Google.Apps.Chat.V1
     {
     }
 
+    public partial class SearchSpacesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListReactionsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -8467,6 +8619,14 @@ namespace Google.Apps.Chat.V1
     }
 
     public partial class ListSpacesResponse : gaxgrpc::IPageResponse<Space>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Space> GetEnumerator() => Spaces.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchSpacesResponse : gaxgrpc::IPageResponse<Space>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Space> GetEnumerator() => Spaces.GetEnumerator();

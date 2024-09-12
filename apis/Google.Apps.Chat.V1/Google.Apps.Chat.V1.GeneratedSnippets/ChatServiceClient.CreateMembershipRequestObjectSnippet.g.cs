@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
                 Membership = new Membership(),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = chatServiceClient.CreateMembership(request);
