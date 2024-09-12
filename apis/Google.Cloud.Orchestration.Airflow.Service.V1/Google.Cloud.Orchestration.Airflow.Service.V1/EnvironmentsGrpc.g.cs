@@ -96,6 +96,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_ListWorkloadsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_CheckUpgradeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_CreateUserWorkloadsSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsSecret = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret.Parser));
@@ -207,6 +209,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         "ListWorkloads",
         __Marshaller_google_cloud_orchestration_airflow_service_v1_ListWorkloadsRequest,
         __Marshaller_google_cloud_orchestration_airflow_service_v1_ListWorkloadsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest, global::Google.LongRunning.Operation> __Method_CheckUpgrade = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CheckUpgrade",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_CheckUpgradeRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> __Method_CreateUserWorkloadsSecret = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(
@@ -438,6 +448,20 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse> ListWorkloads(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Check if an upgrade operation on the environment will succeed.
+      ///
+      /// In case of problems detailed info can be found in the returned Operation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CheckUpgrade(global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1123,6 +1147,62 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse> ListWorkloadsAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListWorkloads, null, options, request);
+      }
+      /// <summary>
+      /// Check if an upgrade operation on the environment will succeed.
+      ///
+      /// In case of problems detailed info can be found in the returned Operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CheckUpgrade(global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckUpgrade(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Check if an upgrade operation on the environment will succeed.
+      ///
+      /// In case of problems detailed info can be found in the returned Operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CheckUpgrade(global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CheckUpgrade, null, options, request);
+      }
+      /// <summary>
+      /// Check if an upgrade operation on the environment will succeed.
+      ///
+      /// In case of problems detailed info can be found in the returned Operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CheckUpgradeAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckUpgradeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Check if an upgrade operation on the environment will succeed.
+      ///
+      /// In case of problems detailed info can be found in the returned Operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CheckUpgradeAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CheckUpgrade, null, options, request);
       }
       /// <summary>
       /// Creates a user workloads Secret.
@@ -1967,6 +2047,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
           .AddMethod(__Method_StopAirflowCommand, serviceImpl.StopAirflowCommand)
           .AddMethod(__Method_PollAirflowCommand, serviceImpl.PollAirflowCommand)
           .AddMethod(__Method_ListWorkloads, serviceImpl.ListWorkloads)
+          .AddMethod(__Method_CheckUpgrade, serviceImpl.CheckUpgrade)
           .AddMethod(__Method_CreateUserWorkloadsSecret, serviceImpl.CreateUserWorkloadsSecret)
           .AddMethod(__Method_GetUserWorkloadsSecret, serviceImpl.GetUserWorkloadsSecret)
           .AddMethod(__Method_ListUserWorkloadsSecrets, serviceImpl.ListUserWorkloadsSecrets)
@@ -1999,6 +2080,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       serviceBinder.AddMethod(__Method_StopAirflowCommand, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse>(serviceImpl.StopAirflowCommand));
       serviceBinder.AddMethod(__Method_PollAirflowCommand, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse>(serviceImpl.PollAirflowCommand));
       serviceBinder.AddMethod(__Method_ListWorkloads, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse>(serviceImpl.ListWorkloads));
+      serviceBinder.AddMethod(__Method_CheckUpgrade, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest, global::Google.LongRunning.Operation>(serviceImpl.CheckUpgrade));
       serviceBinder.AddMethod(__Method_CreateUserWorkloadsSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(serviceImpl.CreateUserWorkloadsSecret));
       serviceBinder.AddMethod(__Method_GetUserWorkloadsSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(serviceImpl.GetUserWorkloadsSecret));
       serviceBinder.AddMethod(__Method_ListUserWorkloadsSecrets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse>(serviceImpl.ListUserWorkloadsSecrets));

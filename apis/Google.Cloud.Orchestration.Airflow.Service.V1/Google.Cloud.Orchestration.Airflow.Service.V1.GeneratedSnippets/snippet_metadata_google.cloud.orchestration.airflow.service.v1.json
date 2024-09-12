@@ -1621,6 +1621,103 @@
       ]
     },
     {
+      "regionTag": "composer_v1_generated_Environments_CheckUpgrade_sync",
+      "title": "CheckUpgradeRequestObject",
+      "description": "Snippet for CheckUpgrade",
+      "file": "EnvironmentsClient.CheckUpgradeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckUpgrade",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CheckUpgrade",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CheckUpgrade",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CheckUpgrade",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CheckUpgrade_async",
+      "title": "CheckUpgradeRequestObjectAsync",
+      "description": "Snippet for CheckUpgradeAsync",
+      "file": "EnvironmentsClient.CheckUpgradeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckUpgradeAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CheckUpgradeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CheckUpgrade",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CheckUpgrade",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsSecret_sync",
       "title": "CreateUserWorkloadsSecretRequestObject",
       "description": "Snippet for CreateUserWorkloadsSecret",

@@ -59,6 +59,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             StopAirflowCommandSettings = existing.StopAirflowCommandSettings;
             PollAirflowCommandSettings = existing.PollAirflowCommandSettings;
             ListWorkloadsSettings = existing.ListWorkloadsSettings;
+            CheckUpgradeSettings = existing.CheckUpgradeSettings;
+            CheckUpgradeOperationsSettings = existing.CheckUpgradeOperationsSettings.Clone();
             CreateUserWorkloadsSecretSettings = existing.CreateUserWorkloadsSecretSettings;
             GetUserWorkloadsSecretSettings = existing.GetUserWorkloadsSecretSettings;
             ListUserWorkloadsSecretsSettings = existing.ListUserWorkloadsSecretsSettings;
@@ -242,6 +244,36 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListWorkloadsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.CheckUpgrade</c> and <c>EnvironmentsClient.CheckUpgradeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CheckUpgradeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EnvironmentsClient.CheckUpgrade</c> and
+        /// <c>EnvironmentsClient.CheckUpgradeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CheckUpgradeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1712,6 +1744,65 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             }
             return ListWorkloadsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Check if an upgrade operation on the environment will succeed.
+        /// 
+        /// In case of problems detailed info can be found in the returned Operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CheckUpgradeResponse, OperationMetadata> CheckUpgrade(CheckUpgradeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Check if an upgrade operation on the environment will succeed.
+        /// 
+        /// In case of problems detailed info can be found in the returned Operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CheckUpgradeResponse, OperationMetadata>> CheckUpgradeAsync(CheckUpgradeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Check if an upgrade operation on the environment will succeed.
+        /// 
+        /// In case of problems detailed info can be found in the returned Operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CheckUpgradeResponse, OperationMetadata>> CheckUpgradeAsync(CheckUpgradeRequest request, st::CancellationToken cancellationToken) =>
+            CheckUpgradeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CheckUpgrade</c>.</summary>
+        public virtual lro::OperationsClient CheckUpgradeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CheckUpgrade</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CheckUpgradeResponse, OperationMetadata> PollOnceCheckUpgrade(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CheckUpgradeResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CheckUpgradeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CheckUpgrade</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CheckUpgradeResponse, OperationMetadata>> PollOnceCheckUpgradeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CheckUpgradeResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CheckUpgradeOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a user workloads Secret.
@@ -3335,6 +3426,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         private readonly gaxgrpc::ApiCall<ListWorkloadsRequest, ListWorkloadsResponse> _callListWorkloads;
 
+        private readonly gaxgrpc::ApiCall<CheckUpgradeRequest, lro::Operation> _callCheckUpgrade;
+
         private readonly gaxgrpc::ApiCall<CreateUserWorkloadsSecretRequest, UserWorkloadsSecret> _callCreateUserWorkloadsSecret;
 
         private readonly gaxgrpc::ApiCall<GetUserWorkloadsSecretRequest, UserWorkloadsSecret> _callGetUserWorkloadsSecret;
@@ -3381,6 +3474,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings, logger);
             UpdateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnvironmentOperationsSettings, logger);
             DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings, logger);
+            CheckUpgradeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CheckUpgradeOperationsSettings, logger);
             SaveSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SaveSnapshotOperationsSettings, logger);
             LoadSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LoadSnapshotOperationsSettings, logger);
             DatabaseFailoverOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DatabaseFailoverOperationsSettings, logger);
@@ -3411,6 +3505,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             _callListWorkloads = clientHelper.BuildApiCall<ListWorkloadsRequest, ListWorkloadsResponse>("ListWorkloads", grpcClient.ListWorkloadsAsync, grpcClient.ListWorkloads, effectiveSettings.ListWorkloadsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkloads);
             Modify_ListWorkloadsApiCall(ref _callListWorkloads);
+            _callCheckUpgrade = clientHelper.BuildApiCall<CheckUpgradeRequest, lro::Operation>("CheckUpgrade", grpcClient.CheckUpgradeAsync, grpcClient.CheckUpgrade, effectiveSettings.CheckUpgradeSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callCheckUpgrade);
+            Modify_CheckUpgradeApiCall(ref _callCheckUpgrade);
             _callCreateUserWorkloadsSecret = clientHelper.BuildApiCall<CreateUserWorkloadsSecretRequest, UserWorkloadsSecret>("CreateUserWorkloadsSecret", grpcClient.CreateUserWorkloadsSecretAsync, grpcClient.CreateUserWorkloadsSecret, effectiveSettings.CreateUserWorkloadsSecretSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateUserWorkloadsSecret);
             Modify_CreateUserWorkloadsSecretApiCall(ref _callCreateUserWorkloadsSecret);
@@ -3476,6 +3573,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         partial void Modify_ListWorkloadsApiCall(ref gaxgrpc::ApiCall<ListWorkloadsRequest, ListWorkloadsResponse> call);
 
+        partial void Modify_CheckUpgradeApiCall(ref gaxgrpc::ApiCall<CheckUpgradeRequest, lro::Operation> call);
+
         partial void Modify_CreateUserWorkloadsSecretApiCall(ref gaxgrpc::ApiCall<CreateUserWorkloadsSecretRequest, UserWorkloadsSecret> call);
 
         partial void Modify_GetUserWorkloadsSecretApiCall(ref gaxgrpc::ApiCall<GetUserWorkloadsSecretRequest, UserWorkloadsSecret> call);
@@ -3526,6 +3625,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         partial void Modify_PollAirflowCommandRequest(ref PollAirflowCommandRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListWorkloadsRequest(ref ListWorkloadsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CheckUpgradeRequest(ref CheckUpgradeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateUserWorkloadsSecretRequest(ref CreateUserWorkloadsSecretRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3790,6 +3891,37 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         {
             Modify_ListWorkloadsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWorkloadsRequest, ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload>(_callListWorkloads, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CheckUpgrade</c>.</summary>
+        public override lro::OperationsClient CheckUpgradeOperationsClient { get; }
+
+        /// <summary>
+        /// Check if an upgrade operation on the environment will succeed.
+        /// 
+        /// In case of problems detailed info can be found in the returned Operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CheckUpgradeResponse, OperationMetadata> CheckUpgrade(CheckUpgradeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckUpgradeRequest(ref request, ref callSettings);
+            return new lro::Operation<CheckUpgradeResponse, OperationMetadata>(_callCheckUpgrade.Sync(request, callSettings), CheckUpgradeOperationsClient);
+        }
+
+        /// <summary>
+        /// Check if an upgrade operation on the environment will succeed.
+        /// 
+        /// In case of problems detailed info can be found in the returned Operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CheckUpgradeResponse, OperationMetadata>> CheckUpgradeAsync(CheckUpgradeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckUpgradeRequest(ref request, ref callSettings);
+            return new lro::Operation<CheckUpgradeResponse, OperationMetadata>(await _callCheckUpgrade.Async(request, callSettings).ConfigureAwait(false), CheckUpgradeOperationsClient);
         }
 
         /// <summary>
