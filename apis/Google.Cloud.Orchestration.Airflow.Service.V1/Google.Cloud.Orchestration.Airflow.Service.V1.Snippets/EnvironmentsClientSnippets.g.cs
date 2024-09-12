@@ -1040,6 +1040,73 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CheckUpgrade</summary>
+        public void CheckUpgradeRequestObject()
+        {
+            // Snippet: CheckUpgrade(CheckUpgradeRequest, CallSettings)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            gcoasv::CheckUpgradeRequest request = new gcoasv::CheckUpgradeRequest
+            {
+                Environment = "",
+                ImageVersion = "",
+            };
+            // Make the request
+            Operation<gcoasv::CheckUpgradeResponse, gcoasv::OperationMetadata> response = environmentsClient.CheckUpgrade(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcoasv::CheckUpgradeResponse, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcoasv::CheckUpgradeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcoasv::CheckUpgradeResponse, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceCheckUpgrade(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcoasv::CheckUpgradeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckUpgradeAsync</summary>
+        public async Task CheckUpgradeRequestObjectAsync()
+        {
+            // Snippet: CheckUpgradeAsync(CheckUpgradeRequest, CallSettings)
+            // Additional: CheckUpgradeAsync(CheckUpgradeRequest, CancellationToken)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            gcoasv::CheckUpgradeRequest request = new gcoasv::CheckUpgradeRequest
+            {
+                Environment = "",
+                ImageVersion = "",
+            };
+            // Make the request
+            Operation<gcoasv::CheckUpgradeResponse, gcoasv::OperationMetadata> response = await environmentsClient.CheckUpgradeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcoasv::CheckUpgradeResponse, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcoasv::CheckUpgradeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcoasv::CheckUpgradeResponse, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceCheckUpgradeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcoasv::CheckUpgradeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateUserWorkloadsSecret</summary>
         public void CreateUserWorkloadsSecretRequestObject()
         {
