@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 Space = new Space(),
                 UpdateMask = new FieldMask(),
+                UseAdminAccess = false,
             };
             // Make the request
             Space response = await chatServiceClient.UpdateSpaceAsync(request);

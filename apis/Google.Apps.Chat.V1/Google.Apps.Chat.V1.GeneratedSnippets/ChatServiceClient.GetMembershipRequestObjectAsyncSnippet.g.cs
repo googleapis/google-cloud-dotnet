@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GetMembershipRequest request = new GetMembershipRequest
             {
                 MembershipName = MembershipName.FromSpaceMember("[SPACE]", "[MEMBER]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = await chatServiceClient.GetMembershipAsync(request);

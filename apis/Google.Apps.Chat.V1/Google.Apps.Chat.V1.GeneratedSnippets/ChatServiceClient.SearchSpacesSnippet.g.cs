@@ -16,14 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START chat_v1_generated_ChatService_ListMemberships_sync]
+    // [START chat_v1_generated_ChatService_SearchSpaces_sync_flattened]
     using Google.Api.Gax;
     using Google.Apps.Chat.V1;
     using System;
 
     public sealed partial class GeneratedChatServiceClientSnippets
     {
-        /// <summary>Snippet for ListMemberships</summary>
+        /// <summary>Snippet for SearchSpaces</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,35 +31,26 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListMembershipsRequestObject()
+        public void SearchSpaces()
         {
             // Create client
             ChatServiceClient chatServiceClient = ChatServiceClient.Create();
-            // Initialize request argument(s)
-            ListMembershipsRequest request = new ListMembershipsRequest
-            {
-                ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
-                Filter = "",
-                ShowGroups = false,
-                ShowInvited = false,
-                UseAdminAccess = false,
-            };
             // Make the request
-            PagedEnumerable<ListMembershipsResponse, Membership> response = chatServiceClient.ListMemberships(request);
+            PagedEnumerable<SearchSpacesResponse, Space> response = chatServiceClient.SearchSpaces();
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Membership item in response)
+            foreach (Space item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListMembershipsResponse page in response.AsRawResponses())
+            foreach (SearchSpacesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Membership item in page)
+                foreach (Space item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -68,10 +59,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Membership> singlePage = response.ReadPage(pageSize);
+            Page<Space> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Membership item in singlePage)
+            foreach (Space item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -80,5 +71,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END chat_v1_generated_ChatService_ListMemberships_sync]
+    // [END chat_v1_generated_ChatService_SearchSpaces_sync_flattened]
 }

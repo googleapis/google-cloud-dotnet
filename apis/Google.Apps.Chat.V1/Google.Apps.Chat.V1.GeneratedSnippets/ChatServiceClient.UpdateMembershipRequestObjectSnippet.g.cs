@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Membership = new Membership(),
                 UpdateMask = new FieldMask(),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = chatServiceClient.UpdateMembership(request);

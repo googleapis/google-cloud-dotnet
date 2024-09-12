@@ -424,6 +424,7 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 ShowGroups = false,
                 ShowInvited = false,
+                UseAdminAccess = false,
             };
             // Make the request
             PagedEnumerable<ListMembershipsResponse, Membership> response = chatServiceClient.ListMemberships(request);
@@ -475,6 +476,7 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 ShowGroups = false,
                 ShowInvited = false,
+                UseAdminAccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListMembershipsResponse, Membership> response = chatServiceClient.ListMembershipsAsync(request);
@@ -703,6 +705,7 @@ namespace GoogleCSharpSnippets
             GetMembershipRequest request = new GetMembershipRequest
             {
                 MembershipName = MembershipName.FromSpaceMember("[SPACE]", "[MEMBER]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = chatServiceClient.GetMembership(request);
@@ -720,6 +723,7 @@ namespace GoogleCSharpSnippets
             GetMembershipRequest request = new GetMembershipRequest
             {
                 MembershipName = MembershipName.FromSpaceMember("[SPACE]", "[MEMBER]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = await chatServiceClient.GetMembershipAsync(request);
@@ -1320,6 +1324,192 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for SearchSpaces</summary>
+        public void SearchSpacesRequestObject()
+        {
+            // Snippet: SearchSpaces(SearchSpacesRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SearchSpacesRequest request = new SearchSpacesRequest
+            {
+                UseAdminAccess = false,
+                Query = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<SearchSpacesResponse, Space> response = chatServiceClient.SearchSpaces(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Space item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchSpacesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Space item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Space> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Space item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchSpacesAsync</summary>
+        public async Task SearchSpacesRequestObjectAsync()
+        {
+            // Snippet: SearchSpacesAsync(SearchSpacesRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchSpacesRequest request = new SearchSpacesRequest
+            {
+                UseAdminAccess = false,
+                Query = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<SearchSpacesResponse, Space> response = chatServiceClient.SearchSpacesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Space item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchSpacesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Space item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Space> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Space item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchSpaces</summary>
+        public void SearchSpaces()
+        {
+            // Snippet: SearchSpaces(string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Make the request
+            PagedEnumerable<SearchSpacesResponse, Space> response = chatServiceClient.SearchSpaces();
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Space item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchSpacesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Space item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Space> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Space item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchSpacesAsync</summary>
+        public async Task SearchSpacesAsync()
+        {
+            // Snippet: SearchSpacesAsync(string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Make the request
+            PagedAsyncEnumerable<SearchSpacesResponse, Space> response = chatServiceClient.SearchSpacesAsync();
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Space item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchSpacesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Space item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Space> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Space item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetSpace</summary>
         public void GetSpaceRequestObject()
         {
@@ -1330,6 +1520,7 @@ namespace GoogleCSharpSnippets
             GetSpaceRequest request = new GetSpaceRequest
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Space response = chatServiceClient.GetSpace(request);
@@ -1347,6 +1538,7 @@ namespace GoogleCSharpSnippets
             GetSpaceRequest request = new GetSpaceRequest
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Space response = await chatServiceClient.GetSpaceAsync(request);
@@ -1517,6 +1709,7 @@ namespace GoogleCSharpSnippets
             {
                 Space = new Space(),
                 UpdateMask = new FieldMask(),
+                UseAdminAccess = false,
             };
             // Make the request
             Space response = chatServiceClient.UpdateSpace(request);
@@ -1535,6 +1728,7 @@ namespace GoogleCSharpSnippets
             {
                 Space = new Space(),
                 UpdateMask = new FieldMask(),
+                UseAdminAccess = false,
             };
             // Make the request
             Space response = await chatServiceClient.UpdateSpaceAsync(request);
@@ -1580,6 +1774,7 @@ namespace GoogleCSharpSnippets
             DeleteSpaceRequest request = new DeleteSpaceRequest
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
+                UseAdminAccess = false,
             };
             // Make the request
             chatServiceClient.DeleteSpace(request);
@@ -1597,6 +1792,7 @@ namespace GoogleCSharpSnippets
             DeleteSpaceRequest request = new DeleteSpaceRequest
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
+                UseAdminAccess = false,
             };
             // Make the request
             await chatServiceClient.DeleteSpaceAsync(request);
@@ -1728,6 +1924,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
                 Membership = new Membership(),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = chatServiceClient.CreateMembership(request);
@@ -1746,6 +1943,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
                 Membership = new Membership(),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = await chatServiceClient.CreateMembershipAsync(request);
@@ -1821,6 +2019,7 @@ namespace GoogleCSharpSnippets
             {
                 Membership = new Membership(),
                 UpdateMask = new FieldMask(),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = chatServiceClient.UpdateMembership(request);
@@ -1839,6 +2038,7 @@ namespace GoogleCSharpSnippets
             {
                 Membership = new Membership(),
                 UpdateMask = new FieldMask(),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = await chatServiceClient.UpdateMembershipAsync(request);
@@ -1884,6 +2084,7 @@ namespace GoogleCSharpSnippets
             DeleteMembershipRequest request = new DeleteMembershipRequest
             {
                 MembershipName = MembershipName.FromSpaceMember("[SPACE]", "[MEMBER]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = chatServiceClient.DeleteMembership(request);
@@ -1901,6 +2102,7 @@ namespace GoogleCSharpSnippets
             DeleteMembershipRequest request = new DeleteMembershipRequest
             {
                 MembershipName = MembershipName.FromSpaceMember("[SPACE]", "[MEMBER]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Membership response = await chatServiceClient.DeleteMembershipAsync(request);

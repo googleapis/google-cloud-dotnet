@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 ShowGroups = false,
                 ShowInvited = false,
+                UseAdminAccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListMembershipsResponse, Membership> response = chatServiceClient.ListMembershipsAsync(request);

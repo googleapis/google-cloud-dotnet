@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GetSpaceRequest request = new GetSpaceRequest
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
+                UseAdminAccess = false,
             };
             // Make the request
             Space response = await chatServiceClient.GetSpaceAsync(request);

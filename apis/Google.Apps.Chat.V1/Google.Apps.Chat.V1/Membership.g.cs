@@ -43,38 +43,41 @@ namespace Google.Apps.Chat.V1 {
             "IlQKDk1lbWJlcnNoaXBSb2xlEh8KG01FTUJFUlNISVBfUk9MRV9VTlNQRUNJ",
             "RklFRBAAEg8KC1JPTEVfTUVNQkVSEAESEAoMUk9MRV9NQU5BR0VSEAI6ROpB",
             "QQoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEh9zcGFjZXMve3Nw",
-            "YWNlfS9tZW1iZXJzL3ttZW1iZXJ9QgwKCm1lbWJlclR5cGUihgEKF0NyZWF0",
+            "YWNlfS9tZW1iZXJzL3ttZW1iZXJ9QgwKCm1lbWJlclR5cGUioAEKF0NyZWF0",
             "ZU1lbWJlcnNoaXBSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC+kEgEh5j",
             "aGF0Lmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXASMwoKbWVtYmVyc2hpcBgC",
-            "IAEoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAiKEAQoXVXBk",
-            "YXRlTWVtYmVyc2hpcFJlcXVlc3QSMwoKbWVtYmVyc2hpcBgBIAEoCzIaLmdv",
-            "b2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAhI0Cgt1cGRhdGVfbWFzaxgC",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiLLAQoWTGlz",
-            "dE1lbWJlcnNoaXBzUmVxdWVzdBI2CgZwYXJlbnQYASABKAlCJuBBAvpBIBIe",
-            "Y2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEhYKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIY",
-            "BSABKAlCA+BBARIYCgtzaG93X2dyb3VwcxgGIAEoCEID4EEBEhkKDHNob3df",
-            "aW52aXRlZBgHIAEoCEID4EEBImgKF0xpc3RNZW1iZXJzaGlwc1Jlc3BvbnNl",
-            "EjQKC21lbWJlcnNoaXBzGAEgAygLMhouZ29vZ2xlLmNoYXQudjEuTWVtYmVy",
-            "c2hpcEID4EEGEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJMChRHZXRNZW1i",
-            "ZXJzaGlwUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29v",
-            "Z2xlYXBpcy5jb20vTWVtYmVyc2hpcCJPChdEZWxldGVNZW1iZXJzaGlwUmVx",
-            "dWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29vZ2xlYXBpcy5j",
-            "b20vTWVtYmVyc2hpcEKoAQoSY29tLmdvb2dsZS5jaGF0LnYxQg9NZW1iZXJz",
-            "aGlwUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2No",
-            "YXRwYjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQu",
-            "VjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0",
-            "OjpWMWIGcHJvdG8z"));
+            "IAEoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAhIYChB1c2Vf",
+            "YWRtaW5fYWNjZXNzGAUgASgIIp4BChdVcGRhdGVNZW1iZXJzaGlwUmVxdWVz",
+            "dBIzCgptZW1iZXJzaGlwGAEgASgLMhouZ29vZ2xlLmNoYXQudjEuTWVtYmVy",
+            "c2hpcEID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkZpZWxkTWFza0ID4EECEhgKEHVzZV9hZG1pbl9hY2Nlc3MYAyABKAgi",
+            "5QEKFkxpc3RNZW1iZXJzaGlwc1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibg",
+            "QQL6QSASHmNoYXQuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIWCglwYWdl",
+            "X3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoG",
+            "ZmlsdGVyGAUgASgJQgPgQQESGAoLc2hvd19ncm91cHMYBiABKAhCA+BBARIZ",
+            "CgxzaG93X2ludml0ZWQYByABKAhCA+BBARIYChB1c2VfYWRtaW5fYWNjZXNz",
+            "GAggASgIImgKF0xpc3RNZW1iZXJzaGlwc1Jlc3BvbnNlEjQKC21lbWJlcnNo",
+            "aXBzGAEgAygLMhouZ29vZ2xlLmNoYXQudjEuTWVtYmVyc2hpcEID4EEGEhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJmChRHZXRNZW1iZXJzaGlwUmVxdWVz",
+            "dBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29vZ2xlYXBpcy5jb20v",
+            "TWVtYmVyc2hpcBIYChB1c2VfYWRtaW5fYWNjZXNzGAMgASgIImkKF0RlbGV0",
+            "ZU1lbWJlcnNoaXBSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeY2hh",
+            "dC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEhgKEHVzZV9hZG1pbl9hY2Nl",
+            "c3MYAiABKAhCqAEKEmNvbS5nb29nbGUuY2hhdC52MUIPTWVtYmVyc2hpcFBy",
+            "b3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9jaGF0cGI7",
+            "Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0LlYxygIT",
+            "R29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.GroupReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Membership), global::Google.Apps.Chat.V1.Membership.Parser, new[]{ "Name", "State", "Role", "Member", "GroupMember", "CreateTime", "DeleteTime" }, new[]{ "MemberType" }, new[]{ typeof(global::Google.Apps.Chat.V1.Membership.Types.MembershipState), typeof(global::Google.Apps.Chat.V1.Membership.Types.MembershipRole) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateMembershipRequest), global::Google.Apps.Chat.V1.CreateMembershipRequest.Parser, new[]{ "Parent", "Membership" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.UpdateMembershipRequest), global::Google.Apps.Chat.V1.UpdateMembershipRequest.Parser, new[]{ "Membership", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListMembershipsRequest), global::Google.Apps.Chat.V1.ListMembershipsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "ShowGroups", "ShowInvited" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateMembershipRequest), global::Google.Apps.Chat.V1.CreateMembershipRequest.Parser, new[]{ "Parent", "Membership", "UseAdminAccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.UpdateMembershipRequest), global::Google.Apps.Chat.V1.UpdateMembershipRequest.Parser, new[]{ "Membership", "UpdateMask", "UseAdminAccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListMembershipsRequest), global::Google.Apps.Chat.V1.ListMembershipsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "ShowGroups", "ShowInvited", "UseAdminAccess" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListMembershipsResponse), global::Google.Apps.Chat.V1.ListMembershipsResponse.Parser, new[]{ "Memberships", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.GetMembershipRequest), global::Google.Apps.Chat.V1.GetMembershipRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.DeleteMembershipRequest), global::Google.Apps.Chat.V1.DeleteMembershipRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.GetMembershipRequest), global::Google.Apps.Chat.V1.GetMembershipRequest.Parser, new[]{ "Name", "UseAdminAccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.DeleteMembershipRequest), global::Google.Apps.Chat.V1.DeleteMembershipRequest.Parser, new[]{ "Name", "UseAdminAccess" }, null, null, null, null)
           }));
     }
     #endregion
@@ -708,6 +711,7 @@ namespace Google.Apps.Chat.V1 {
     public CreateMembershipRequest(CreateMembershipRequest other) : this() {
       parent_ = other.parent_;
       membership_ = other.membership_ != null ? other.membership_.Clone() : null;
+      useAdminAccess_ = other.useAdminAccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -765,6 +769,33 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "use_admin_access" field.</summary>
+    public const int UseAdminAccessFieldNumber = 5;
+    private bool useAdminAccess_;
+    /// <summary>
+    /// When `true`, the method runs using the user's Google Workspace
+    /// administrator privileges.
+    ///
+    /// The calling user must be a Google Workspace administrator with the
+    /// [manage chat and spaces conversations
+    /// privilege](https://support.google.com/a/answer/13369245).
+    ///
+    /// Requires the `chat.admin.memberships` [OAuth 2.0
+    /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+    ///
+    /// Creating app memberships or creating memberships for users outside the
+    /// administrator's Google Workspace organization isn't supported using admin
+    /// access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseAdminAccess {
+      get { return useAdminAccess_; }
+      set {
+        useAdminAccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -782,6 +813,7 @@ namespace Google.Apps.Chat.V1 {
       }
       if (Parent != other.Parent) return false;
       if (!object.Equals(Membership, other.Membership)) return false;
+      if (UseAdminAccess != other.UseAdminAccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -791,6 +823,7 @@ namespace Google.Apps.Chat.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (membership_ != null) hash ^= Membership.GetHashCode();
+      if (UseAdminAccess != false) hash ^= UseAdminAccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -817,6 +850,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Membership);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -835,6 +872,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Membership);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -850,6 +891,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (membership_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Membership);
+      }
+      if (UseAdminAccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -871,6 +915,9 @@ namespace Google.Apps.Chat.V1 {
           Membership = new global::Google.Apps.Chat.V1.Membership();
         }
         Membership.MergeFrom(other.Membership);
+      }
+      if (other.UseAdminAccess != false) {
+        UseAdminAccess = other.UseAdminAccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -898,6 +945,10 @@ namespace Google.Apps.Chat.V1 {
             input.ReadMessage(Membership);
             break;
           }
+          case 40: {
+            UseAdminAccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -922,6 +973,10 @@ namespace Google.Apps.Chat.V1 {
               Membership = new global::Google.Apps.Chat.V1.Membership();
             }
             input.ReadMessage(Membership);
+            break;
+          }
+          case 40: {
+            UseAdminAccess = input.ReadBool();
             break;
           }
         }
@@ -971,6 +1026,7 @@ namespace Google.Apps.Chat.V1 {
     public UpdateMembershipRequest(UpdateMembershipRequest other) : this() {
       membership_ = other.membership_ != null ? other.membership_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      useAdminAccess_ = other.useAdminAccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1016,6 +1072,29 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "use_admin_access" field.</summary>
+    public const int UseAdminAccessFieldNumber = 3;
+    private bool useAdminAccess_;
+    /// <summary>
+    /// When `true`, the method runs using the user's Google Workspace
+    /// administrator privileges.
+    ///
+    /// The calling user must be a Google Workspace administrator with the
+    /// [manage chat and spaces conversations
+    /// privilege](https://support.google.com/a/answer/13369245).
+    ///
+    /// Requires the `chat.admin.memberships` [OAuth 2.0
+    /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseAdminAccess {
+      get { return useAdminAccess_; }
+      set {
+        useAdminAccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1033,6 +1112,7 @@ namespace Google.Apps.Chat.V1 {
       }
       if (!object.Equals(Membership, other.Membership)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (UseAdminAccess != other.UseAdminAccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1042,6 +1122,7 @@ namespace Google.Apps.Chat.V1 {
       int hash = 1;
       if (membership_ != null) hash ^= Membership.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (UseAdminAccess != false) hash ^= UseAdminAccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1068,6 +1149,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1086,6 +1171,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1101,6 +1190,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (UseAdminAccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1125,6 +1217,9 @@ namespace Google.Apps.Chat.V1 {
           UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.UseAdminAccess != false) {
+        UseAdminAccess = other.UseAdminAccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1155,6 +1250,10 @@ namespace Google.Apps.Chat.V1 {
             input.ReadMessage(UpdateMask);
             break;
           }
+          case 24: {
+            UseAdminAccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1182,6 +1281,10 @@ namespace Google.Apps.Chat.V1 {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 24: {
+            UseAdminAccess = input.ReadBool();
             break;
           }
         }
@@ -1235,6 +1338,7 @@ namespace Google.Apps.Chat.V1 {
       filter_ = other.filter_;
       showGroups_ = other.showGroups_;
       showInvited_ = other.showInvited_;
+      useAdminAccess_ = other.useAdminAccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1318,8 +1422,8 @@ namespace Google.Apps.Chat.V1 {
     ///
     /// To filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`.
     ///
-    /// To filter by type, set `member.type` to `HUMAN` or `BOT`. Developer
-    /// Preview: You can also filter for `member.type` using the `!=` operator.
+    /// To filter by type, set `member.type` to `HUMAN` or `BOT`. You can also
+    /// filter for `member.type` using the `!=` operator.
     ///
     /// To filter by both role and type, use the `AND` operator. To filter by
     /// either role or type, use the `OR` operator.
@@ -1399,6 +1503,32 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "use_admin_access" field.</summary>
+    public const int UseAdminAccessFieldNumber = 8;
+    private bool useAdminAccess_;
+    /// <summary>
+    /// When `true`, the method runs using the user's Google Workspace
+    /// administrator privileges.
+    ///
+    /// The calling user must be a Google Workspace administrator with the
+    /// [manage chat and spaces conversations
+    /// privilege](https://support.google.com/a/answer/13369245).
+    ///
+    /// Requires either the `chat.admin.memberships.readonly` or
+    /// `chat.admin.memberships` [OAuth 2.0
+    /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+    ///
+    /// Listing app memberships in a space isn't supported when using admin access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseAdminAccess {
+      get { return useAdminAccess_; }
+      set {
+        useAdminAccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1420,6 +1550,7 @@ namespace Google.Apps.Chat.V1 {
       if (Filter != other.Filter) return false;
       if (ShowGroups != other.ShowGroups) return false;
       if (ShowInvited != other.ShowInvited) return false;
+      if (UseAdminAccess != other.UseAdminAccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1433,6 +1564,7 @@ namespace Google.Apps.Chat.V1 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (ShowGroups != false) hash ^= ShowGroups.GetHashCode();
       if (ShowInvited != false) hash ^= ShowInvited.GetHashCode();
+      if (UseAdminAccess != false) hash ^= UseAdminAccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1475,6 +1607,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(56);
         output.WriteBool(ShowInvited);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1509,6 +1645,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(56);
         output.WriteBool(ShowInvited);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1535,6 +1675,9 @@ namespace Google.Apps.Chat.V1 {
         size += 1 + 1;
       }
       if (ShowInvited != false) {
+        size += 1 + 1;
+      }
+      if (UseAdminAccess != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -1566,6 +1709,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (other.ShowInvited != false) {
         ShowInvited = other.ShowInvited;
+      }
+      if (other.UseAdminAccess != false) {
+        UseAdminAccess = other.UseAdminAccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1606,6 +1752,10 @@ namespace Google.Apps.Chat.V1 {
             ShowInvited = input.ReadBool();
             break;
           }
+          case 64: {
+            UseAdminAccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1643,6 +1793,10 @@ namespace Google.Apps.Chat.V1 {
           }
           case 56: {
             ShowInvited = input.ReadBool();
+            break;
+          }
+          case 64: {
+            UseAdminAccess = input.ReadBool();
             break;
           }
         }
@@ -1917,6 +2071,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMembershipRequest(GetMembershipRequest other) : this() {
       name_ = other.name_;
+      useAdminAccess_ = other.useAdminAccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1953,6 +2108,32 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "use_admin_access" field.</summary>
+    public const int UseAdminAccessFieldNumber = 3;
+    private bool useAdminAccess_;
+    /// <summary>
+    /// When `true`, the method runs using the user's Google Workspace
+    /// administrator privileges.
+    ///
+    /// The calling user must be a Google Workspace administrator with the
+    /// [manage chat and spaces conversations
+    /// privilege](https://support.google.com/a/answer/13369245).
+    ///
+    /// Requires the `chat.admin.memberships` or `chat.admin.memberships.readonly`
+    /// [OAuth 2.0
+    /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+    ///
+    /// Getting app memberships in a space isn't supported when using admin access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseAdminAccess {
+      get { return useAdminAccess_; }
+      set {
+        useAdminAccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1969,6 +2150,7 @@ namespace Google.Apps.Chat.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (UseAdminAccess != other.UseAdminAccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1977,6 +2159,7 @@ namespace Google.Apps.Chat.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (UseAdminAccess != false) hash ^= UseAdminAccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1999,6 +2182,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2013,6 +2200,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2025,6 +2216,9 @@ namespace Google.Apps.Chat.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (UseAdminAccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2040,6 +2234,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.UseAdminAccess != false) {
+        UseAdminAccess = other.UseAdminAccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2060,6 +2257,10 @@ namespace Google.Apps.Chat.V1 {
             Name = input.ReadString();
             break;
           }
+          case 24: {
+            UseAdminAccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2077,6 +2278,10 @@ namespace Google.Apps.Chat.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            UseAdminAccess = input.ReadBool();
             break;
           }
         }
@@ -2125,6 +2330,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteMembershipRequest(DeleteMembershipRequest other) : this() {
       name_ = other.name_;
+      useAdminAccess_ = other.useAdminAccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2162,6 +2368,31 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "use_admin_access" field.</summary>
+    public const int UseAdminAccessFieldNumber = 2;
+    private bool useAdminAccess_;
+    /// <summary>
+    /// When `true`, the method runs using the user's Google Workspace
+    /// administrator privileges.
+    ///
+    /// The calling user must be a Google Workspace administrator with the
+    /// [manage chat and spaces conversations
+    /// privilege](https://support.google.com/a/answer/13369245).
+    ///
+    /// Requires the `chat.admin.memberships` [OAuth 2.0
+    /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+    ///
+    /// Deleting app memberships in a space isn't supported using admin access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseAdminAccess {
+      get { return useAdminAccess_; }
+      set {
+        useAdminAccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2178,6 +2409,7 @@ namespace Google.Apps.Chat.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (UseAdminAccess != other.UseAdminAccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2186,6 +2418,7 @@ namespace Google.Apps.Chat.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (UseAdminAccess != false) hash ^= UseAdminAccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2208,6 +2441,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2222,6 +2459,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (UseAdminAccess != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(UseAdminAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2234,6 +2475,9 @@ namespace Google.Apps.Chat.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (UseAdminAccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2249,6 +2493,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.UseAdminAccess != false) {
+        UseAdminAccess = other.UseAdminAccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2269,6 +2516,10 @@ namespace Google.Apps.Chat.V1 {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            UseAdminAccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2286,6 +2537,10 @@ namespace Google.Apps.Chat.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            UseAdminAccess = input.ReadBool();
             break;
           }
         }
