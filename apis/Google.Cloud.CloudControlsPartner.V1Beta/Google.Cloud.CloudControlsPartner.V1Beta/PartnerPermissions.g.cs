@@ -27,28 +27,29 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
             "CkJnb29nbGUvY2xvdWQvY2xvdWRjb250cm9sc3BhcnRuZXIvdjFiZXRhL3Bh",
             "cnRuZXJfcGVybWlzc2lvbnMucHJvdG8SKGdvb2dsZS5jbG91ZC5jbG91ZGNv",
             "bnRyb2xzcGFydG5lci52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
-            "b3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ihwQKElBhcnRu",
+            "b3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iuQQKElBhcnRu",
             "ZXJQZXJtaXNzaW9ucxIRCgRuYW1lGAEgASgJQgPgQQgSZAoTcGFydG5lcl9w",
             "ZXJtaXNzaW9ucxgCIAMoDjJHLmdvb2dsZS5jbG91ZC5jbG91ZGNvbnRyb2xz",
             "cGFydG5lci52MWJldGEuUGFydG5lclBlcm1pc3Npb25zLlBlcm1pc3Npb24i",
-            "yAEKClBlcm1pc3Npb24SGgoWUEVSTUlTU0lPTl9VTlNQRUNJRklFRBAAEjEK",
+            "+gEKClBlcm1pc3Npb24SGgoWUEVSTUlTU0lPTl9VTlNQRUNJRklFRBAAEjEK",
             "LUFDQ0VTU19UUkFOU1BBUkVOQ1lfQU5EX0VNRVJHRU5DWV9BQ0NFU1NfTE9H",
             "UxABEiAKHEFTU1VSRURfV09SS0xPQURTX01PTklUT1JJTkcQAhIcChhBQ0NF",
             "U1NfQVBQUk9WQUxfUkVRVUVTVFMQAxIrCidBU1NVUkVEX1dPUktMT0FEU19F",
-            "S01fQ09OTkVDVElPTl9TVEFUVVMQBDqsAepBqAEKNmNsb3VkY29udHJvbHNw",
-            "YXJ0bmVyLmdvb2dsZWFwaXMuY29tL1BhcnRuZXJQZXJtaXNzaW9ucxJub3Jn",
-            "YW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9jdXN0b21lcnMve2N1c3RvbWVyfS93b3JrbG9hZHMve3dvcmtsb2FkfS9w",
-            "YXJ0bmVyUGVybWlzc2lvbnMibAocR2V0UGFydG5lclBlcm1pc3Npb25zUmVx",
-            "dWVzdBJMCgRuYW1lGAEgASgJQj7gQQL6QTgKNmNsb3VkY29udHJvbHNwYXJ0",
-            "bmVyLmdvb2dsZWFwaXMuY29tL1BhcnRuZXJQZXJtaXNzaW9uc0KvAgosY29t",
-            "Lmdvb2dsZS5jbG91ZC5jbG91ZGNvbnRyb2xzcGFydG5lci52MWJldGFCF1Bh",
-            "cnRuZXJQZXJtaXNzaW9uc1Byb3RvUAFaYGNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "Y2xvdWRjb250cm9sc3BhcnRuZXIvYXBpdjFiZXRhL2Nsb3VkY29udHJvbHNw",
-            "YXJ0bmVycGI7Y2xvdWRjb250cm9sc3BhcnRuZXJwYqoCKEdvb2dsZS5DbG91",
-            "ZC5DbG91ZENvbnRyb2xzUGFydG5lci5WMUJldGHKAihHb29nbGVcQ2xvdWRc",
-            "Q2xvdWRDb250cm9sc1BhcnRuZXJcVjFiZXRh6gIrR29vZ2xlOjpDbG91ZDo6",
-            "Q2xvdWRDb250cm9sc1BhcnRuZXI6OlYxYmV0YWIGcHJvdG8z"));
+            "S01fQ09OTkVDVElPTl9TVEFUVVMQBBIwCixBQ0NFU1NfVFJBTlNQQVJFTkNZ",
+            "X0xPR1NfU1VQUE9SVF9DQVNFX1ZJRVdFUhAFOqwB6kGoAQo2Y2xvdWRjb250",
+            "cm9sc3BhcnRuZXIuZ29vZ2xlYXBpcy5jb20vUGFydG5lclBlcm1pc3Npb25z",
+            "Em5vcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2N1c3RvbWVycy97Y3VzdG9tZXJ9L3dvcmtsb2Fkcy97d29ya2xv",
+            "YWR9L3BhcnRuZXJQZXJtaXNzaW9ucyJsChxHZXRQYXJ0bmVyUGVybWlzc2lv",
+            "bnNSZXF1ZXN0EkwKBG5hbWUYASABKAlCPuBBAvpBOAo2Y2xvdWRjb250cm9s",
+            "c3BhcnRuZXIuZ29vZ2xlYXBpcy5jb20vUGFydG5lclBlcm1pc3Npb25zQq8C",
+            "Cixjb20uZ29vZ2xlLmNsb3VkLmNsb3VkY29udHJvbHNwYXJ0bmVyLnYxYmV0",
+            "YUIXUGFydG5lclBlcm1pc3Npb25zUHJvdG9QAVpgY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9jbG91ZGNvbnRyb2xzcGFydG5lci9hcGl2MWJldGEvY2xvdWRjb250",
+            "cm9sc3BhcnRuZXJwYjtjbG91ZGNvbnRyb2xzcGFydG5lcnBiqgIoR29vZ2xl",
+            "LkNsb3VkLkNsb3VkQ29udHJvbHNQYXJ0bmVyLlYxQmV0YcoCKEdvb2dsZVxD",
+            "bG91ZFxDbG91ZENvbnRyb2xzUGFydG5lclxWMWJldGHqAitHb29nbGU6OkNs",
+            "b3VkOjpDbG91ZENvbnRyb2xzUGFydG5lcjo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -312,6 +313,10 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
         /// Permission for External Key Manager connection status
         /// </summary>
         [pbr::OriginalName("ASSURED_WORKLOADS_EKM_CONNECTION_STATUS")] AssuredWorkloadsEkmConnectionStatus = 4,
+        /// <summary>
+        /// Permission for support case details for Access Transparency log entries
+        /// </summary>
+        [pbr::OriginalName("ACCESS_TRANSPARENCY_LOGS_SUPPORT_CASE_VIEWER")] AccessTransparencyLogsSupportCaseViewer = 5,
       }
 
     }

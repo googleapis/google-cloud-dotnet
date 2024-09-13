@@ -29,41 +29,42 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
             "bmVyLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZ",
             "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo/Z29vZ2xlL2Nsb3VkL2Nsb3Vk",
             "Y29udHJvbHNwYXJ0bmVyL3YxYmV0YS9jb21wbGV0aW9uX3N0YXRlLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsECCghDdXN0b21l",
-            "chIRCgRuYW1lGAEgASgJQgPgQQgSFAoMZGlzcGxheV9uYW1lGAIgASgJEmQK",
-            "GWN1c3RvbWVyX29uYm9hcmRpbmdfc3RhdGUYAyABKAsyQS5nb29nbGUuY2xv",
-            "dWQuY2xvdWRjb250cm9sc3BhcnRuZXIudjFiZXRhLkN1c3RvbWVyT25ib2Fy",
-            "ZGluZ1N0YXRlEhQKDGlzX29uYm9hcmRlZBgEIAEoCDqPAepBiwEKLGNsb3Vk",
-            "Y29udHJvbHNwYXJ0bmVyLmdvb2dsZWFwaXMuY29tL0N1c3RvbWVyEkZvcmdh",
-            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2N1c3RvbWVycy97Y3VzdG9tZXJ9KgljdXN0b21lcnMyCGN1c3RvbWVyIq8B",
-            "ChRMaXN0Q3VzdG9tZXJzUmVxdWVzdBJECgZwYXJlbnQYASABKAlCNOBBAvpB",
-            "LhIsY2xvdWRjb250cm9sc3BhcnRuZXIuZ29vZ2xlYXBpcy5jb20vQ3VzdG9t",
-            "ZXISEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSEwoG",
-            "ZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKMAQoV",
-            "TGlzdEN1c3RvbWVyc1Jlc3BvbnNlEkUKCWN1c3RvbWVycxgBIAMoCzIyLmdv",
-            "b2dsZS5jbG91ZC5jbG91ZGNvbnRyb2xzcGFydG5lci52MWJldGEuQ3VzdG9t",
-            "ZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMg",
-            "AygJIlgKEkdldEN1c3RvbWVyUmVxdWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6",
-            "QS4KLGNsb3VkY29udHJvbHNwYXJ0bmVyLmdvb2dsZWFwaXMuY29tL0N1c3Rv",
-            "bWVyInUKF0N1c3RvbWVyT25ib2FyZGluZ1N0YXRlEloKEG9uYm9hcmRpbmdf",
-            "c3RlcHMYASADKAsyQC5nb29nbGUuY2xvdWQuY2xvdWRjb250cm9sc3BhcnRu",
-            "ZXIudjFiZXRhLkN1c3RvbWVyT25ib2FyZGluZ1N0ZXAi+AIKFkN1c3RvbWVy",
-            "T25ib2FyZGluZ1N0ZXASUwoEc3RlcBgBIAEoDjJFLmdvb2dsZS5jbG91ZC5j",
-            "bG91ZGNvbnRyb2xzcGFydG5lci52MWJldGEuQ3VzdG9tZXJPbmJvYXJkaW5n",
-            "U3RlcC5TdGVwEi4KCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEjMKD2NvbXBsZXRpb25fdGltZRgDIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASWAoQY29tcGxldGlvbl9zdGF0ZRgEIAEo",
-            "DjI5Lmdvb2dsZS5jbG91ZC5jbG91ZGNvbnRyb2xzcGFydG5lci52MWJldGEu",
-            "Q29tcGxldGlvblN0YXRlQgPgQQMiSgoEU3RlcBIUChBTVEVQX1VOU1BFQ0lG",
-            "SUVEEAASEgoOS0FKX0VOUk9MTE1FTlQQARIYChRDVVNUT01FUl9FTlZJUk9O",
-            "TUVOVBACQqYCCixjb20uZ29vZ2xlLmNsb3VkLmNsb3VkY29udHJvbHNwYXJ0",
-            "bmVyLnYxYmV0YUIOQ3VzdG9tZXJzUHJvdG9QAVpgY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9jbG91ZGNvbnRyb2xzcGFydG5lci9hcGl2MWJldGEvY2xvdWRjb250",
-            "cm9sc3BhcnRuZXJwYjtjbG91ZGNvbnRyb2xzcGFydG5lcnBiqgIoR29vZ2xl",
-            "LkNsb3VkLkNsb3VkQ29udHJvbHNQYXJ0bmVyLlYxQmV0YcoCKEdvb2dsZVxD",
-            "bG91ZFxDbG91ZENvbnRyb2xzUGFydG5lclxWMWJldGHqAitHb29nbGU6OkNs",
-            "b3VkOjpDbG91ZENvbnRyb2xzUGFydG5lcjo6VjFiZXRhYgZwcm90bzM="));
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItACCghDdXN0b21l",
+            "chIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPg",
+            "QQISaQoZY3VzdG9tZXJfb25ib2FyZGluZ19zdGF0ZRgDIAEoCzJBLmdvb2ds",
+            "ZS5jbG91ZC5jbG91ZGNvbnRyb2xzcGFydG5lci52MWJldGEuQ3VzdG9tZXJP",
+            "bmJvYXJkaW5nU3RhdGVCA+BBAxIZCgxpc19vbmJvYXJkZWQYBCABKAhCA+BB",
+            "AzqPAepBiwEKLGNsb3VkY29udHJvbHNwYXJ0bmVyLmdvb2dsZWFwaXMuY29t",
+            "L0N1c3RvbWVyEkZvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2N1c3RvbWVycy97Y3VzdG9tZXJ9KgljdXN0b21l",
+            "cnMyCGN1c3RvbWVyIq8BChRMaXN0Q3VzdG9tZXJzUmVxdWVzdBJECgZwYXJl",
+            "bnQYASABKAlCNOBBAvpBLhIsY2xvdWRjb250cm9sc3BhcnRuZXIuZ29vZ2xl",
+            "YXBpcy5jb20vQ3VzdG9tZXISEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2Vf",
+            "dG9rZW4YAyABKAkSEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkY",
+            "BSABKAlCA+BBASKMAQoVTGlzdEN1c3RvbWVyc1Jlc3BvbnNlEkUKCWN1c3Rv",
+            "bWVycxgBIAMoCzIyLmdvb2dsZS5jbG91ZC5jbG91ZGNvbnRyb2xzcGFydG5l",
+            "ci52MWJldGEuQ3VzdG9tZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMK",
+            "C3VucmVhY2hhYmxlGAMgAygJIlgKEkdldEN1c3RvbWVyUmVxdWVzdBJCCgRu",
+            "YW1lGAEgASgJQjTgQQL6QS4KLGNsb3VkY29udHJvbHNwYXJ0bmVyLmdvb2ds",
+            "ZWFwaXMuY29tL0N1c3RvbWVyInUKF0N1c3RvbWVyT25ib2FyZGluZ1N0YXRl",
+            "EloKEG9uYm9hcmRpbmdfc3RlcHMYASADKAsyQC5nb29nbGUuY2xvdWQuY2xv",
+            "dWRjb250cm9sc3BhcnRuZXIudjFiZXRhLkN1c3RvbWVyT25ib2FyZGluZ1N0",
+            "ZXAi+AIKFkN1c3RvbWVyT25ib2FyZGluZ1N0ZXASUwoEc3RlcBgBIAEoDjJF",
+            "Lmdvb2dsZS5jbG91ZC5jbG91ZGNvbnRyb2xzcGFydG5lci52MWJldGEuQ3Vz",
+            "dG9tZXJPbmJvYXJkaW5nU3RlcC5TdGVwEi4KCnN0YXJ0X3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjMKD2NvbXBsZXRpb25fdGlt",
+            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASWAoQY29tcGxl",
+            "dGlvbl9zdGF0ZRgEIAEoDjI5Lmdvb2dsZS5jbG91ZC5jbG91ZGNvbnRyb2xz",
+            "cGFydG5lci52MWJldGEuQ29tcGxldGlvblN0YXRlQgPgQQMiSgoEU3RlcBIU",
+            "ChBTVEVQX1VOU1BFQ0lGSUVEEAASEgoOS0FKX0VOUk9MTE1FTlQQARIYChRD",
+            "VVNUT01FUl9FTlZJUk9OTUVOVBACQqYCCixjb20uZ29vZ2xlLmNsb3VkLmNs",
+            "b3VkY29udHJvbHNwYXJ0bmVyLnYxYmV0YUIOQ3VzdG9tZXJzUHJvdG9QAVpg",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZGNvbnRyb2xzcGFydG5lci9hcGl2",
+            "MWJldGEvY2xvdWRjb250cm9sc3BhcnRuZXJwYjtjbG91ZGNvbnRyb2xzcGFy",
+            "dG5lcnBiqgIoR29vZ2xlLkNsb3VkLkNsb3VkQ29udHJvbHNQYXJ0bmVyLlYx",
+            "QmV0YcoCKEdvb2dsZVxDbG91ZFxDbG91ZENvbnRyb2xzUGFydG5lclxWMWJl",
+            "dGHqAitHb29nbGU6OkNsb3VkOjpDbG91ZENvbnRyb2xzUGFydG5lcjo6VjFi",
+            "ZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.CloudControlsPartner.V1Beta.CompletionStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -150,7 +151,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// The customer organization's display name. E.g. "google.com".
+    /// Required. Display name for the customer
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -165,7 +166,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     public const int CustomerOnboardingStateFieldNumber = 3;
     private global::Google.Cloud.CloudControlsPartner.V1Beta.CustomerOnboardingState customerOnboardingState_;
     /// <summary>
-    /// Container for customer onboarding steps
+    /// Output only. Container for customer onboarding steps
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -180,7 +181,7 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta {
     public const int IsOnboardedFieldNumber = 4;
     private bool isOnboarded_;
     /// <summary>
-    /// Indicates whether a customer is fully onboarded
+    /// Output only. Indicates whether a customer is fully onboarded
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
