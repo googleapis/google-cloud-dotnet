@@ -122,14 +122,16 @@ namespace Google.Cloud.Dataproc.V1 {
             "VE8QBhIJCgVUUklOTxAREgoKBlJBTkdFUhAMEggKBFNPTFIQChIMCghaRVBQ",
             "RUxJThAEEg0KCVpPT0tFRVBFUhAIKkoKDUZhaWx1cmVBY3Rpb24SHgoaRkFJ",
             "TFVSRV9BQ1RJT05fVU5TUEVDSUZJRUQQABINCglOT19BQ1RJT04QARIKCgZE",
-            "RUxFVEUQAkKsAgocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUILU2hh",
+            "RUxFVEUQAkKnAwocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUILU2hh",
             "cmVkUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcHJvYy92Mi9h",
             "cGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGLqQV4KIGNvbnRhaW5lci5nb29n",
             "bGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
             "b25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0ZXJ96kFeCiBtZXRhc3Rv",
             "cmUuZ29vZ2xlYXBpcy5jb20vU2VydmljZRI6cHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfWIGcHJv",
-            "dG8z"));
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfepBeAoh",
+            "Y2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9y",
+            "aW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), typeof(global::Google.Cloud.Dataproc.V1.FailureAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -166,10 +168,11 @@ namespace Google.Cloud.Dataproc.V1 {
     /// </summary>
     [pbr::OriginalName("COMPONENT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// The Anaconda python distribution. The Anaconda component is not supported
-    /// in the Dataproc [2.0 image]
-    /// (/https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-release-2.0).
-    /// The 2.0 image is pre-installed with Miniconda.
+    /// The Anaconda component is no longer supported or applicable to
+    /// [supported Dataproc on Compute Engine image versions]
+    /// (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-version-clusters#supported-dataproc-image-versions).
+    /// It cannot be activated on clusters created with supported Dataproc on
+    /// Compute Engine image versions.
     /// </summary>
     [pbr::OriginalName("ANACONDA")] Anaconda = 5,
     /// <summary>
