@@ -65,22 +65,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "dWVyaWVzEhAKCHByb2plY3RzGAMgAygJEhYKDmN1c3RvbV9xdWVyaWVzGAQg",
             "AygJEhIKBWVtYWlsGAUgASgJQgPgQQISFwoKc2VydmVyX3VyaRgGIAEoCUID",
             "4EECElIKDmFwaV9rZXlfY29uZmlnGAcgASgLMjUuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5BcGlBdXRoLkFwaUtleUNvbmZpZ0ID4EECIqkD",
+            "cGxhdGZvcm0udjFiZXRhMS5BcGlBdXRoLkFwaUtleUNvbmZpZ0ID4EECIr8D",
             "ChFTaGFyZVBvaW50U291cmNlcxJgChNzaGFyZV9wb2ludF9zb3VyY2VzGAEg",
             "AygLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TaGFyZVBv",
-            "aW50U291cmNlcy5TaGFyZVBvaW50U291cmNlGrECChBTaGFyZVBvaW50U291",
+            "aW50U291cmNlcy5TaGFyZVBvaW50U291cmNlGscCChBTaGFyZVBvaW50U291",
             "cmNlEiAKFnNoYXJlcG9pbnRfZm9sZGVyX3BhdGgYBSABKAlIABIeChRzaGFy",
             "ZXBvaW50X2ZvbGRlcl9pZBgGIAEoCUgAEhQKCmRyaXZlX25hbWUYByABKAlI",
             "ARISCghkcml2ZV9pZBgIIAEoCUgBEhEKCWNsaWVudF9pZBgBIAEoCRJMCg1j",
             "bGllbnRfc2VjcmV0GAIgASgLMjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
             "djFiZXRhMS5BcGlBdXRoLkFwaUtleUNvbmZpZxIRCgl0ZW5hbnRfaWQYAyAB",
-            "KAkSHAoUc2hhcmVwb2ludF9zaXRlX25hbWUYBCABKAlCDwoNZm9sZGVyX3Nv",
-            "dXJjZUIOCgxkcml2ZV9zb3VyY2VC3gEKI2NvbS5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MWJldGExQgdJb1Byb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
-            "Z28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRm",
-            "b3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29v",
-            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6",
-            "OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "KAkSHAoUc2hhcmVwb2ludF9zaXRlX25hbWUYBCABKAkSFAoHZmlsZV9pZBgJ",
+            "IAEoCUID4EEDQg8KDWZvbGRlcl9zb3VyY2VCDgoMZHJpdmVfc291cmNlQt4B",
+            "CiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIHSW9Qcm90",
+            "b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRh",
+            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJ",
+            "UGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
+            "YmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ApiAuthReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -97,7 +98,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DirectUploadSource), global::Google.Cloud.AIPlatform.V1Beta1.DirectUploadSource.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SlackSource), global::Google.Cloud.AIPlatform.V1Beta1.SlackSource.Parser, new[]{ "Channels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SlackSource.Types.SlackChannels), global::Google.Cloud.AIPlatform.V1Beta1.SlackSource.Types.SlackChannels.Parser, new[]{ "Channels", "ApiKeyConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SlackSource.Types.SlackChannels.Types.SlackChannel), global::Google.Cloud.AIPlatform.V1Beta1.SlackSource.Types.SlackChannels.Types.SlackChannel.Parser, new[]{ "ChannelId", "StartTime", "EndTime" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.JiraSource), global::Google.Cloud.AIPlatform.V1Beta1.JiraSource.Parser, new[]{ "JiraQueries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.JiraSource.Types.JiraQueries), global::Google.Cloud.AIPlatform.V1Beta1.JiraSource.Types.JiraQueries.Parser, new[]{ "Projects", "CustomQueries", "Email", "ServerUri", "ApiKeyConfig" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources), global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources.Parser, new[]{ "SharePointSources_" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources.Types.SharePointSource), global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources.Types.SharePointSource.Parser, new[]{ "SharepointFolderPath", "SharepointFolderId", "DriveName", "DriveId", "ClientId", "ClientSecret", "TenantId", "SharepointSiteName" }, new[]{ "FolderSource", "DriveSource" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources), global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources.Parser, new[]{ "SharePointSources_" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources.Types.SharePointSource), global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources.Types.SharePointSource.Parser, new[]{ "SharepointFolderPath", "SharepointFolderId", "DriveName", "DriveId", "ClientId", "ClientSecret", "TenantId", "SharepointSiteName", "FileId" }, new[]{ "FolderSource", "DriveSource" }, null, null, null)})
           }));
     }
     #endregion
@@ -4035,6 +4036,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           clientSecret_ = other.clientSecret_ != null ? other.clientSecret_.Clone() : null;
           tenantId_ = other.tenantId_;
           sharepointSiteName_ = other.sharepointSiteName_;
+          fileId_ = other.fileId_;
           switch (other.FolderSourceCase) {
             case FolderSourceOneofCase.SharepointFolderPath:
               SharepointFolderPath = other.SharepointFolderPath;
@@ -4241,6 +4243,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "file_id" field.</summary>
+        public const int FileIdFieldNumber = 9;
+        private string fileId_ = "";
+        /// <summary>
+        /// Output only. The SharePoint file id. Output only.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FileId {
+          get { return fileId_; }
+          set {
+            fileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         private object folderSource_;
         /// <summary>Enum of possible cases for the "folder_source" oneof.</summary>
         public enum FolderSourceOneofCase {
@@ -4306,6 +4323,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (!object.Equals(ClientSecret, other.ClientSecret)) return false;
           if (TenantId != other.TenantId) return false;
           if (SharepointSiteName != other.SharepointSiteName) return false;
+          if (FileId != other.FileId) return false;
           if (FolderSourceCase != other.FolderSourceCase) return false;
           if (DriveSourceCase != other.DriveSourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -4323,6 +4341,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (clientSecret_ != null) hash ^= ClientSecret.GetHashCode();
           if (TenantId.Length != 0) hash ^= TenantId.GetHashCode();
           if (SharepointSiteName.Length != 0) hash ^= SharepointSiteName.GetHashCode();
+          if (FileId.Length != 0) hash ^= FileId.GetHashCode();
           hash ^= (int) folderSourceCase_;
           hash ^= (int) driveSourceCase_;
           if (_unknownFields != null) {
@@ -4375,6 +4394,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(66);
             output.WriteString(DriveId);
           }
+          if (FileId.Length != 0) {
+            output.WriteRawTag(74);
+            output.WriteString(FileId);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4417,6 +4440,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(66);
             output.WriteString(DriveId);
           }
+          if (FileId.Length != 0) {
+            output.WriteRawTag(74);
+            output.WriteString(FileId);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4451,6 +4478,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (SharepointSiteName.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(SharepointSiteName);
           }
+          if (FileId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FileId);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4477,6 +4507,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (other.SharepointSiteName.Length != 0) {
             SharepointSiteName = other.SharepointSiteName;
+          }
+          if (other.FileId.Length != 0) {
+            FileId = other.FileId;
           }
           switch (other.FolderSourceCase) {
             case FolderSourceOneofCase.SharepointFolderPath:
@@ -4546,6 +4579,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 DriveId = input.ReadString();
                 break;
               }
+              case 74: {
+                FileId = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -4594,6 +4631,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 66: {
                 DriveId = input.ReadString();
+                break;
+              }
+              case 74: {
+                FileId = input.ReadString();
                 break;
               }
             }
