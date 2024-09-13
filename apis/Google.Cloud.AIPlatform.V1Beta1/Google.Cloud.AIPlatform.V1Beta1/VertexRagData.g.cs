@@ -89,7 +89,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Zm9ybS52MWJldGExLkNvcnB1c1N0YXR1c0ID4EEDOoAB6kF9CiNhaXBsYXRm",
             "b3JtLmdvb2dsZWFwaXMuY29tL1JhZ0NvcnB1cxI/cHJvamVjdHMve3Byb2pl",
             "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JhZ0NvcnBvcmEve3JhZ19jb3Jw",
-            "dXN9KgpyYWdDb3Jwb3JhMglyYWdDb3JwdXMi8wcKB1JhZ0ZpbGUSRQoKZ2Nz",
+            "dXN9KgpyYWdDb3Jwb3JhMglyYWdDb3JwdXMixggKB1JhZ0ZpbGUSRQoKZ2Nz",
             "X3NvdXJjZRgIIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
             "YTEuR2NzU291cmNlQgPgQQNIABJWChNnb29nbGVfZHJpdmVfc291cmNlGAkg",
             "ASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Hb29nbGVE",
@@ -98,50 +98,52 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "bG9hZFNvdXJjZUID4EEDSAASRAoMc2xhY2tfc291cmNlGAsgASgLMiwuZ29v",
             "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TbGFja1NvdXJjZUgAEkIK",
             "C2ppcmFfc291cmNlGAwgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMS5KaXJhU291cmNlSAASEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRp",
-            "c3BsYXlfbmFtZRgCIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPg",
-            "QQESFwoKc2l6ZV9ieXRlcxgEIAEoA0ID4EEDElAKDXJhZ19maWxlX3R5cGUY",
-            "BSABKA4yNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0Zp",
-            "bGUuUmFnRmlsZVR5cGVCA+BBAxI0CgtjcmVhdGVfdGltZRgGIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgH",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJFCgtmaWxl",
-            "X3N0YXR1cxgNIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuRmlsZVN0YXR1c0ID4EEDIloKC1JhZ0ZpbGVUeXBlEh0KGVJBR19GSUxF",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIVChFSQUdfRklMRV9UWVBFX1RYVBABEhUK",
-            "EVJBR19GSUxFX1RZUEVfUERGEAI6jwHqQYsBCiFhaXBsYXRmb3JtLmdvb2ds",
-            "ZWFwaXMuY29tL1JhZ0ZpbGUSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9yYWdDb3Jwb3JhL3tyYWdfY29ycHVzfS9yYWdGaWxl",
-            "cy97cmFnX2ZpbGV9KghyYWdGaWxlczIHcmFnRmlsZUIRCg9yYWdfZmlsZV9z",
-            "b3VyY2UiQgoVUmFnRmlsZUNodW5raW5nQ29uZmlnEhIKCmNodW5rX3NpemUY",
-            "ASABKAUSFQoNY2h1bmtfb3ZlcmxhcBgCIAEoBSI4ChRSYWdGaWxlUGFyc2lu",
-            "Z0NvbmZpZxIgChh1c2VfYWR2YW5jZWRfcGRmX3BhcnNpbmcYAiABKAgibwoT",
-            "VXBsb2FkUmFnRmlsZUNvbmZpZxJYChhyYWdfZmlsZV9jaHVua2luZ19jb25m",
-            "aWcYASABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJh",
-            "Z0ZpbGVDaHVua2luZ0NvbmZpZyLEBgoUSW1wb3J0UmFnRmlsZXNDb25maWcS",
-            "QAoKZ2NzX3NvdXJjZRgCIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuR2NzU291cmNlSAASUQoTZ29vZ2xlX2RyaXZlX3NvdXJjZRgD",
-            "IAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR29vZ2xl",
-            "RHJpdmVTb3VyY2VIABJECgxzbGFja19zb3VyY2UYBiABKAsyLC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNsYWNrU291cmNlSAASQgoLamly",
-            "YV9zb3VyY2UYByABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLkppcmFTb3VyY2VIABJRChNzaGFyZV9wb2ludF9zb3VyY2VzGA0gASgL",
-            "MjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TaGFyZVBvaW50",
-            "U291cmNlc0gAElMKGHBhcnRpYWxfZmFpbHVyZV9nY3Nfc2luaxgLIAEoCzIv",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2NzRGVzdGluYXRp",
-            "b25IARJdCh1wYXJ0aWFsX2ZhaWx1cmVfYmlncXVlcnlfc2luaxgMIAEoCzI0",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQmlnUXVlcnlEZXN0",
-            "aW5hdGlvbkgBElgKGHJhZ19maWxlX2NodW5raW5nX2NvbmZpZxgEIAEoCzI2",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZUNodW5r",
-            "aW5nQ29uZmlnElYKF3JhZ19maWxlX3BhcnNpbmdfY29uZmlnGAggASgLMjUu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlUGFyc2lu",
-            "Z0NvbmZpZxIrCh5tYXhfZW1iZWRkaW5nX3JlcXVlc3RzX3Blcl9taW4YBSAB",
-            "KAVCA+BBAUIPCg1pbXBvcnRfc291cmNlQhYKFHBhcnRpYWxfZmFpbHVyZV9z",
-            "aW5rQukBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIS",
-            "VmVydGV4UmFnRGF0YVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlw",
-            "bGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKq",
-            "Ah9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENs",
-            "b3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
-            "dGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "djFiZXRhMS5KaXJhU291cmNlSAASUQoTc2hhcmVfcG9pbnRfc291cmNlcxgO",
+            "IAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU2hhcmVQ",
+            "b2ludFNvdXJjZXNIABIRCgRuYW1lGAEgASgJQgPgQQMSGQoMZGlzcGxheV9u",
+            "YW1lGAIgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARIXCgpz",
+            "aXplX2J5dGVzGAQgASgDQgPgQQMSUAoNcmFnX2ZpbGVfdHlwZRgFIAEoDjI0",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZS5SYWdG",
+            "aWxlVHlwZUID4EEDEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkUKC2ZpbGVfc3RhdHVz",
+            "GA0gASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5GaWxl",
+            "U3RhdHVzQgPgQQMiWgoLUmFnRmlsZVR5cGUSHQoZUkFHX0ZJTEVfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEhUKEVJBR19GSUxFX1RZUEVfVFhUEAESFQoRUkFHX0ZJ",
+            "TEVfVFlQRV9QREYQAjqPAepBiwEKIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
+            "b20vUmFnRmlsZRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3JhZ0NvcnBvcmEve3JhZ19jb3JwdXN9L3JhZ0ZpbGVzL3tyYWdf",
+            "ZmlsZX0qCHJhZ0ZpbGVzMgdyYWdGaWxlQhEKD3JhZ19maWxlX3NvdXJjZSJC",
+            "ChVSYWdGaWxlQ2h1bmtpbmdDb25maWcSEgoKY2h1bmtfc2l6ZRgBIAEoBRIV",
+            "Cg1jaHVua19vdmVybGFwGAIgASgFIjgKFFJhZ0ZpbGVQYXJzaW5nQ29uZmln",
+            "EiAKGHVzZV9hZHZhbmNlZF9wZGZfcGFyc2luZxgCIAEoCCJvChNVcGxvYWRS",
+            "YWdGaWxlQ29uZmlnElgKGHJhZ19maWxlX2NodW5raW5nX2NvbmZpZxgBIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZUNo",
+            "dW5raW5nQ29uZmlnIsQGChRJbXBvcnRSYWdGaWxlc0NvbmZpZxJACgpnY3Nf",
+            "c291cmNlGAIgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MS5HY3NTb3VyY2VIABJRChNnb29nbGVfZHJpdmVfc291cmNlGAMgASgLMjIu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Hb29nbGVEcml2ZVNv",
+            "dXJjZUgAEkQKDHNsYWNrX3NvdXJjZRgGIAEoCzIsLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxYmV0YTEuU2xhY2tTb3VyY2VIABJCCgtqaXJhX3NvdXJj",
+            "ZRgHIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuSmly",
+            "YVNvdXJjZUgAElEKE3NoYXJlX3BvaW50X3NvdXJjZXMYDSABKAsyMi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNoYXJlUG9pbnRTb3VyY2Vz",
+            "SAASUwoYcGFydGlhbF9mYWlsdXJlX2djc19zaW5rGAsgASgLMi8uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HY3NEZXN0aW5hdGlvbkgBEl0K",
+            "HXBhcnRpYWxfZmFpbHVyZV9iaWdxdWVyeV9zaW5rGAwgASgLMjQuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5CaWdRdWVyeURlc3RpbmF0aW9u",
+            "SAESWAoYcmFnX2ZpbGVfY2h1bmtpbmdfY29uZmlnGAQgASgLMjYuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlQ2h1bmtpbmdDb25m",
+            "aWcSVgoXcmFnX2ZpbGVfcGFyc2luZ19jb25maWcYCCABKAsyNS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVQYXJzaW5nQ29uZmln",
+            "EisKHm1heF9lbWJlZGRpbmdfcmVxdWVzdHNfcGVyX21pbhgFIAEoBUID4EEB",
+            "Qg8KDWltcG9ydF9zb3VyY2VCFgoUcGFydGlhbF9mYWlsdXJlX3NpbmtC6QEK",
+            "I2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhJWZXJ0ZXhS",
+            "YWdEYXRhUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
+            "L2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2ds",
+            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
+            "VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ApiAuthReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -156,7 +158,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FileStatus), global::Google.Cloud.AIPlatform.V1Beta1.FileStatus.Parser, new[]{ "State", "ErrorStatus" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.FileStatus.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus), global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus.Parser, new[]{ "State", "ErrorStatus" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus), global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Parser, new[]{ "Name", "DisplayName", "Description", "RagEmbeddingModelConfig", "RagVectorDbConfig", "CreateTime", "UpdateTime", "CorpusStatus" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile), global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Parser, new[]{ "GcsSource", "GoogleDriveSource", "DirectUploadSource", "SlackSource", "JiraSource", "Name", "DisplayName", "Description", "SizeBytes", "RagFileType", "CreateTime", "UpdateTime", "FileStatus" }, new[]{ "RagFileSource" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Types.RagFileType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile), global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Parser, new[]{ "GcsSource", "GoogleDriveSource", "DirectUploadSource", "SlackSource", "JiraSource", "SharePointSources", "Name", "DisplayName", "Description", "SizeBytes", "RagFileType", "CreateTime", "UpdateTime", "FileStatus" }, new[]{ "RagFileSource" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Types.RagFileType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Parser, new[]{ "ChunkSize", "ChunkOverlap" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Parser, new[]{ "UseAdvancedPdfParsing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig), global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig.Parser, new[]{ "RagFileChunkingConfig" }, null, null, null, null),
@@ -4240,6 +4242,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         case RagFileSourceOneofCase.JiraSource:
           JiraSource = other.JiraSource.Clone();
           break;
+        case RagFileSourceOneofCase.SharePointSources:
+          SharePointSources = other.SharePointSources.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4326,6 +4331,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       set {
         ragFileSource_ = value;
         ragFileSourceCase_ = value == null ? RagFileSourceOneofCase.None : RagFileSourceOneofCase.JiraSource;
+      }
+    }
+
+    /// <summary>Field number for the "share_point_sources" field.</summary>
+    public const int SharePointSourcesFieldNumber = 14;
+    /// <summary>
+    /// The RagFile is imported from a SharePoint source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources SharePointSources {
+      get { return ragFileSourceCase_ == RagFileSourceOneofCase.SharePointSources ? (global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources) ragFileSource_ : null; }
+      set {
+        ragFileSource_ = value;
+        ragFileSourceCase_ = value == null ? RagFileSourceOneofCase.None : RagFileSourceOneofCase.SharePointSources;
       }
     }
 
@@ -4460,6 +4480,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       DirectUploadSource = 10,
       SlackSource = 11,
       JiraSource = 12,
+      SharePointSources = 14,
     }
     private RagFileSourceOneofCase ragFileSourceCase_ = RagFileSourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4495,6 +4516,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(DirectUploadSource, other.DirectUploadSource)) return false;
       if (!object.Equals(SlackSource, other.SlackSource)) return false;
       if (!object.Equals(JiraSource, other.JiraSource)) return false;
+      if (!object.Equals(SharePointSources, other.SharePointSources)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
@@ -4516,6 +4538,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ragFileSourceCase_ == RagFileSourceOneofCase.DirectUploadSource) hash ^= DirectUploadSource.GetHashCode();
       if (ragFileSourceCase_ == RagFileSourceOneofCase.SlackSource) hash ^= SlackSource.GetHashCode();
       if (ragFileSourceCase_ == RagFileSourceOneofCase.JiraSource) hash ^= JiraSource.GetHashCode();
+      if (ragFileSourceCase_ == RagFileSourceOneofCase.SharePointSources) hash ^= SharePointSources.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -4595,6 +4618,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(106);
         output.WriteMessage(FileStatus);
       }
+      if (ragFileSourceCase_ == RagFileSourceOneofCase.SharePointSources) {
+        output.WriteRawTag(114);
+        output.WriteMessage(SharePointSources);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4657,6 +4684,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(106);
         output.WriteMessage(FileStatus);
       }
+      if (ragFileSourceCase_ == RagFileSourceOneofCase.SharePointSources) {
+        output.WriteRawTag(114);
+        output.WriteMessage(SharePointSources);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4681,6 +4712,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (ragFileSourceCase_ == RagFileSourceOneofCase.JiraSource) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(JiraSource);
+      }
+      if (ragFileSourceCase_ == RagFileSourceOneofCase.SharePointSources) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SharePointSources);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -4781,6 +4815,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             JiraSource = new global::Google.Cloud.AIPlatform.V1Beta1.JiraSource();
           }
           JiraSource.MergeFrom(other.JiraSource);
+          break;
+        case RagFileSourceOneofCase.SharePointSources:
+          if (SharePointSources == null) {
+            SharePointSources = new global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources();
+          }
+          SharePointSources.MergeFrom(other.SharePointSources);
           break;
       }
 
@@ -4885,6 +4925,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(FileStatus);
             break;
           }
+          case 114: {
+            global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources();
+            if (ragFileSourceCase_ == RagFileSourceOneofCase.SharePointSources) {
+              subBuilder.MergeFrom(SharePointSources);
+            }
+            input.ReadMessage(subBuilder);
+            SharePointSources = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -4984,6 +5033,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               FileStatus = new global::Google.Cloud.AIPlatform.V1Beta1.FileStatus();
             }
             input.ReadMessage(FileStatus);
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.SharePointSources();
+            if (ragFileSourceCase_ == RagFileSourceOneofCase.SharePointSources) {
+              subBuilder.MergeFrom(SharePointSources);
+            }
+            input.ReadMessage(subBuilder);
+            SharePointSources = subBuilder;
             break;
           }
         }
