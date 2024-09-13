@@ -1351,12 +1351,12 @@ namespace Google.Cloud.Dataproc.V1
         /// where **field** is one of `status.state`, `clusterName`, or `labels.[KEY]`,
         /// and `[KEY]` is a label key. **value** can be `*` to match all values.
         /// `status.state` can be one of the following: `ACTIVE`, `INACTIVE`,
-        /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, or `UPDATING`. `ACTIVE`
-        /// contains the `CREATING`, `UPDATING`, and `RUNNING` states. `INACTIVE`
-        /// contains the `DELETING` and `ERROR` states.
-        /// `clusterName` is the name of the cluster provided at creation time.
-        /// Only the logical `AND` operator is supported; space-separated items are
-        /// treated as having an implicit `AND` operator.
+        /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, `UPDATING`, `STOPPING`, or
+        /// `STOPPED`. `ACTIVE` contains the `CREATING`, `UPDATING`, and `RUNNING`
+        /// states. `INACTIVE` contains the `DELETING`, `ERROR`, `STOPPING`, and
+        /// `STOPPED` states. `clusterName` is the name of the cluster provided at
+        /// creation time. Only the logical `AND` operator is supported;
+        /// space-separated items are treated as having an implicit `AND` operator.
         /// 
         /// Example filter:
         /// 
@@ -1411,12 +1411,12 @@ namespace Google.Cloud.Dataproc.V1
         /// where **field** is one of `status.state`, `clusterName`, or `labels.[KEY]`,
         /// and `[KEY]` is a label key. **value** can be `*` to match all values.
         /// `status.state` can be one of the following: `ACTIVE`, `INACTIVE`,
-        /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, or `UPDATING`. `ACTIVE`
-        /// contains the `CREATING`, `UPDATING`, and `RUNNING` states. `INACTIVE`
-        /// contains the `DELETING` and `ERROR` states.
-        /// `clusterName` is the name of the cluster provided at creation time.
-        /// Only the logical `AND` operator is supported; space-separated items are
-        /// treated as having an implicit `AND` operator.
+        /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, `UPDATING`, `STOPPING`, or
+        /// `STOPPED`. `ACTIVE` contains the `CREATING`, `UPDATING`, and `RUNNING`
+        /// states. `INACTIVE` contains the `DELETING`, `ERROR`, `STOPPING`, and
+        /// `STOPPED` states. `clusterName` is the name of the cluster provided at
+        /// creation time. Only the logical `AND` operator is supported;
+        /// space-separated items are treated as having an implicit `AND` operator.
         /// 
         /// Example filter:
         /// 

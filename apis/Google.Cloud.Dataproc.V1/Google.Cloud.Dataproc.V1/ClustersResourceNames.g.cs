@@ -290,6 +290,18 @@ namespace Google.Cloud.Dataproc.V1
         public static bool operator !=(NodeGroupName a, NodeGroupName b) => !(a == b);
     }
 
+    public partial class EncryptionConfig
+    {
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKey"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKey) ? null : CryptoKeyName.Parse(KmsKey, allowUnparsed: true);
+            set => KmsKey = value?.ToString() ?? "";
+        }
+    }
+
     public partial class NodeGroup
     {
         /// <summary>
