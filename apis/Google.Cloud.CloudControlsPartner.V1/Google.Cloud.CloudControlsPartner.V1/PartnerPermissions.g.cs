@@ -27,28 +27,29 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
             "Cj5nb29nbGUvY2xvdWQvY2xvdWRjb250cm9sc3BhcnRuZXIvdjEvcGFydG5l",
             "cl9wZXJtaXNzaW9ucy5wcm90bxIkZ29vZ2xlLmNsb3VkLmNsb3VkY29udHJv",
             "bHNwYXJ0bmVyLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
-            "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIoMEChJQYXJ0bmVyUGVybWlz",
+            "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIrUEChJQYXJ0bmVyUGVybWlz",
             "c2lvbnMSEQoEbmFtZRgBIAEoCUID4EEIEmAKE3BhcnRuZXJfcGVybWlzc2lv",
             "bnMYAiADKA4yQy5nb29nbGUuY2xvdWQuY2xvdWRjb250cm9sc3BhcnRuZXIu",
-            "djEuUGFydG5lclBlcm1pc3Npb25zLlBlcm1pc3Npb24iyAEKClBlcm1pc3Np",
+            "djEuUGFydG5lclBlcm1pc3Npb25zLlBlcm1pc3Npb24i+gEKClBlcm1pc3Np",
             "b24SGgoWUEVSTUlTU0lPTl9VTlNQRUNJRklFRBAAEjEKLUFDQ0VTU19UUkFO",
             "U1BBUkVOQ1lfQU5EX0VNRVJHRU5DWV9BQ0NFU1NfTE9HUxABEiAKHEFTU1VS",
             "RURfV09SS0xPQURTX01PTklUT1JJTkcQAhIcChhBQ0NFU1NfQVBQUk9WQUxf",
             "UkVRVUVTVFMQAxIrCidBU1NVUkVEX1dPUktMT0FEU19FS01fQ09OTkVDVElP",
-            "Tl9TVEFUVVMQBDqsAepBqAEKNmNsb3VkY29udHJvbHNwYXJ0bmVyLmdvb2ds",
-            "ZWFwaXMuY29tL1BhcnRuZXJQZXJtaXNzaW9ucxJub3JnYW5pemF0aW9ucy97",
-            "b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jdXN0b21lcnMv",
-            "e2N1c3RvbWVyfS93b3JrbG9hZHMve3dvcmtsb2FkfS9wYXJ0bmVyUGVybWlz",
-            "c2lvbnMibAocR2V0UGFydG5lclBlcm1pc3Npb25zUmVxdWVzdBJMCgRuYW1l",
-            "GAEgASgJQj7gQQL6QTgKNmNsb3VkY29udHJvbHNwYXJ0bmVyLmdvb2dsZWFw",
-            "aXMuY29tL1BhcnRuZXJQZXJtaXNzaW9uc0KbAgooY29tLmdvb2dsZS5jbG91",
-            "ZC5jbG91ZGNvbnRyb2xzcGFydG5lci52MUIXUGFydG5lclBlcm1pc3Npb25z",
-            "UHJvdG9QAVpcY2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZGNvbnRyb2xzcGFy",
-            "dG5lci9hcGl2MS9jbG91ZGNvbnRyb2xzcGFydG5lcnBiO2Nsb3VkY29udHJv",
-            "bHNwYXJ0bmVycGKqAiRHb29nbGUuQ2xvdWQuQ2xvdWRDb250cm9sc1BhcnRu",
-            "ZXIuVjHKAiRHb29nbGVcQ2xvdWRcQ2xvdWRDb250cm9sc1BhcnRuZXJcVjHq",
-            "AidHb29nbGU6OkNsb3VkOjpDbG91ZENvbnRyb2xzUGFydG5lcjo6VjFiBnBy",
-            "b3RvMw=="));
+            "Tl9TVEFUVVMQBBIwCixBQ0NFU1NfVFJBTlNQQVJFTkNZX0xPR1NfU1VQUE9S",
+            "VF9DQVNFX1ZJRVdFUhAFOqwB6kGoAQo2Y2xvdWRjb250cm9sc3BhcnRuZXIu",
+            "Z29vZ2xlYXBpcy5jb20vUGFydG5lclBlcm1pc3Npb25zEm5vcmdhbml6YXRp",
+            "b25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259L2N1c3Rv",
+            "bWVycy97Y3VzdG9tZXJ9L3dvcmtsb2Fkcy97d29ya2xvYWR9L3BhcnRuZXJQ",
+            "ZXJtaXNzaW9ucyJsChxHZXRQYXJ0bmVyUGVybWlzc2lvbnNSZXF1ZXN0EkwK",
+            "BG5hbWUYASABKAlCPuBBAvpBOAo2Y2xvdWRjb250cm9sc3BhcnRuZXIuZ29v",
+            "Z2xlYXBpcy5jb20vUGFydG5lclBlcm1pc3Npb25zQpsCCihjb20uZ29vZ2xl",
+            "LmNsb3VkLmNsb3VkY29udHJvbHNwYXJ0bmVyLnYxQhdQYXJ0bmVyUGVybWlz",
+            "c2lvbnNQcm90b1ABWlxjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3VkY29udHJv",
+            "bHNwYXJ0bmVyL2FwaXYxL2Nsb3VkY29udHJvbHNwYXJ0bmVycGI7Y2xvdWRj",
+            "b250cm9sc3BhcnRuZXJwYqoCJEdvb2dsZS5DbG91ZC5DbG91ZENvbnRyb2xz",
+            "UGFydG5lci5WMcoCJEdvb2dsZVxDbG91ZFxDbG91ZENvbnRyb2xzUGFydG5l",
+            "clxWMeoCJ0dvb2dsZTo6Q2xvdWQ6OkNsb3VkQ29udHJvbHNQYXJ0bmVyOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -312,6 +313,10 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
         /// Permission for External Key Manager connection status
         /// </summary>
         [pbr::OriginalName("ASSURED_WORKLOADS_EKM_CONNECTION_STATUS")] AssuredWorkloadsEkmConnectionStatus = 4,
+        /// <summary>
+        /// Permission for support case details for Access Transparency log entries
+        /// </summary>
+        [pbr::OriginalName("ACCESS_TRANSPARENCY_LOGS_SUPPORT_CASE_VIEWER")] AccessTransparencyLogsSupportCaseViewer = 5,
       }
 
     }
