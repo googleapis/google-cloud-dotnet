@@ -161,228 +161,234 @@ namespace Google.Maps.RouteOptimization.V1 {
             "D1JlcXVpcmVtZW50TW9kZRIgChxSRVFVSVJFTUVOVF9NT0RFX1VOU1BFQ0lG",
             "SUVEEAASHQoZUEVSRk9STUVEX0JZX1NBTUVfVkVISUNMRRABEiIKHklOX1NB",
             "TUVfVkVISUNMRV9BVF9QSUNLVVBfVElNRRACEiQKIElOX1NBTUVfVkVISUNM",
-            "RV9BVF9ERUxJVkVSWV9USU1FEAMihhMKB1ZlaGljbGUSFAoMZGlzcGxheV9u",
-            "YW1lGCAgASgJEkkKC3RyYXZlbF9tb2RlGAEgASgOMjQuZ29vZ2xlLm1hcHMu",
-            "cm91dGVvcHRpbWl6YXRpb24udjEuVmVoaWNsZS5UcmF2ZWxNb2RlEisKDnN0",
-            "YXJ0X2xvY2F0aW9uGAMgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEkIKDnN0",
-            "YXJ0X3dheXBvaW50GAQgASgLMiouZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6",
-            "YXRpb24udjEuV2F5cG9pbnQSKQoMZW5kX2xvY2F0aW9uGAUgASgLMhMuZ29v",
-            "Z2xlLnR5cGUuTGF0TG5nEkAKDGVuZF93YXlwb2ludBgGIAEoCzIqLmdvb2ds",
-            "ZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLldheXBvaW50EhIKCnN0YXJ0",
-            "X3RhZ3MYByADKAkSEAoIZW5kX3RhZ3MYCCADKAkSSAoSc3RhcnRfdGltZV93",
-            "aW5kb3dzGAkgAygLMiwuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
-            "djEuVGltZVdpbmRvdxJGChBlbmRfdGltZV93aW5kb3dzGAogAygLMiwuZ29v",
-            "Z2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuVGltZVdpbmRvdxIlChh0",
-            "cmF2ZWxfZHVyYXRpb25fbXVsdGlwbGUYCyABKAFIAIgBARJTChB1bmxvYWRp",
-            "bmdfcG9saWN5GAwgASgOMjkuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRp",
-            "b24udjEuVmVoaWNsZS5VbmxvYWRpbmdQb2xpY3kSTgoLbG9hZF9saW1pdHMY",
-            "HiADKAsyOS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5WZWhp",
-            "Y2xlLkxvYWRMaW1pdHNFbnRyeRIVCg1jb3N0X3Blcl9ob3VyGBAgASgBEh4K",
-            "FmNvc3RfcGVyX3RyYXZlbGVkX2hvdXIYESABKAESGgoSY29zdF9wZXJfa2ls",
-            "b21ldGVyGBIgASgBEhIKCmZpeGVkX2Nvc3QYEyABKAESHgoWdXNlZF9pZl9y",
-            "b3V0ZV9pc19lbXB0eRgUIAEoCBJVChRyb3V0ZV9kdXJhdGlvbl9saW1pdBgV",
-            "IAEoCzI3Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlZlaGlj",
-            "bGUuRHVyYXRpb25MaW1pdBJWChV0cmF2ZWxfZHVyYXRpb25fbGltaXQYFiAB",
-            "KAsyNy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5WZWhpY2xl",
-            "LkR1cmF0aW9uTGltaXQSTQoUcm91dGVfZGlzdGFuY2VfbGltaXQYFyABKAsy",
-            "Ly5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5EaXN0YW5jZUxp",
-            "bWl0EnoKI2V4dHJhX3Zpc2l0X2R1cmF0aW9uX2Zvcl92aXNpdF90eXBlGBgg",
-            "AygLMk0uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuVmVoaWNs",
-            "ZS5FeHRyYVZpc2l0RHVyYXRpb25Gb3JWaXNpdFR5cGVFbnRyeRI/CgpicmVh",
-            "a19ydWxlGBkgASgLMisuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
-            "djEuQnJlYWtSdWxlEg0KBWxhYmVsGBsgASgJEg4KBmlnbm9yZRgcIAEoCBrT",
-            "AgoJTG9hZExpbWl0EhUKCG1heF9sb2FkGAEgASgDSACIAQESFQoNc29mdF9t",
-            "YXhfbG9hZBgCIAEoAxIkChxjb3N0X3Blcl91bml0X2Fib3ZlX3NvZnRfbWF4",
-            "GAMgASgBElkKE3N0YXJ0X2xvYWRfaW50ZXJ2YWwYBCABKAsyPC5nb29nbGUu",
-            "bWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5WZWhpY2xlLkxvYWRMaW1pdC5J",
-            "bnRlcnZhbBJXChFlbmRfbG9hZF9pbnRlcnZhbBgFIAEoCzI8Lmdvb2dsZS5t",
-            "YXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlZlaGljbGUuTG9hZExpbWl0Lklu",
-            "dGVydmFsGjEKCEludGVydmFsEgsKA21pbhgBIAEoAxIQCgNtYXgYAiABKANI",
-            "AIgBAUIGCgRfbWF4QgsKCV9tYXhfbG9hZBrwAgoNRHVyYXRpb25MaW1pdBIv",
-            "CgxtYXhfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SNAoRc29mdF9tYXhfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb24SKQocY29zdF9wZXJfaG91cl9hZnRlcl9zb2Z0X21heBgD",
-            "IAEoAUgAiAEBEj4KG3F1YWRyYXRpY19zb2Z0X21heF9kdXJhdGlvbhgEIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI6Ci1jb3N0X3Blcl9zcXVh",
-            "cmVfaG91cl9hZnRlcl9xdWFkcmF0aWNfc29mdF9tYXgYBSABKAFIAYgBAUIf",
-            "Ch1fY29zdF9wZXJfaG91cl9hZnRlcl9zb2Z0X21heEIwCi5fY29zdF9wZXJf",
-            "c3F1YXJlX2hvdXJfYWZ0ZXJfcXVhZHJhdGljX3NvZnRfbWF4GmYKD0xvYWRM",
-            "aW1pdHNFbnRyeRILCgNrZXkYASABKAkSQgoFdmFsdWUYAiABKAsyMy5nb29n",
-            "bGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5WZWhpY2xlLkxvYWRMaW1p",
-            "dDoCOAEaYAojRXh0cmFWaXNpdER1cmF0aW9uRm9yVmlzaXRUeXBlRW50cnkS",
-            "CwoDa2V5GAEgASgJEigKBXZhbHVlGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uOgI4ASJDCgpUcmF2ZWxNb2RlEhsKF1RSQVZFTF9NT0RFX1VO",
-            "U1BFQ0lGSUVEEAASCwoHRFJJVklORxABEgsKB1dBTEtJTkcQAiJiCg9Vbmxv",
-            "YWRpbmdQb2xpY3kSIAocVU5MT0FESU5HX1BPTElDWV9VTlNQRUNJRklFRBAA",
-            "EhUKEUxBU1RfSU5fRklSU1RfT1VUEAESFgoSRklSU1RfSU5fRklSU1RfT1VU",
-            "EAJCGwoZX3RyYXZlbF9kdXJhdGlvbl9tdWx0aXBsZSKEAwoKVGltZVdpbmRv",
-            "dxIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASMwoPc29mdF9zdGFydF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIxCg1zb2Z0X2VuZF90aW1lGAQgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIxCiRjb3N0X3Blcl9ob3VyX2JlZm9yZV9z",
-            "b2Z0X3N0YXJ0X3RpbWUYBSABKAFIAIgBARIuCiFjb3N0X3Blcl9ob3VyX2Fm",
-            "dGVyX3NvZnRfZW5kX3RpbWUYBiABKAFIAYgBAUInCiVfY29zdF9wZXJfaG91",
-            "cl9iZWZvcmVfc29mdF9zdGFydF90aW1lQiQKIl9jb3N0X3Blcl9ob3VyX2Fm",
-            "dGVyX3NvZnRfZW5kX3RpbWUivwEKDURpc3RhbmNlTGltaXQSFwoKbWF4X21l",
-            "dGVycxgBIAEoA0gAiAEBEhwKD3NvZnRfbWF4X21ldGVycxgCIAEoA0gBiAEB",
-            "Ei4KIWNvc3RfcGVyX2tpbG9tZXRlcl9hYm92ZV9zb2Z0X21heBgDIAEoAUgC",
-            "iAEBQg0KC19tYXhfbWV0ZXJzQhIKEF9zb2Z0X21heF9tZXRlcnNCJAoiX2Nv",
-            "c3RfcGVyX2tpbG9tZXRlcl9hYm92ZV9zb2Z0X21heCKJAgoUVHJhbnNpdGlv",
-            "bkF0dHJpYnV0ZXMSDwoHc3JjX3RhZxgBIAEoCRIYChBleGNsdWRlZF9zcmNf",
-            "dGFnGAIgASgJEg8KB2RzdF90YWcYAyABKAkSGAoQZXhjbHVkZWRfZHN0X3Rh",
-            "ZxgEIAEoCRIMCgRjb3N0GAUgASgBEhoKEmNvc3RfcGVyX2tpbG9tZXRlchgG",
-            "IAEoARJHCg5kaXN0YW5jZV9saW1pdBgHIAEoCzIvLmdvb2dsZS5tYXBzLnJv",
-            "dXRlb3B0aW1pemF0aW9uLnYxLkRpc3RhbmNlTGltaXQSKAoFZGVsYXkYCCAB",
-            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iigEKCFdheXBvaW50Ej4K",
-            "CGxvY2F0aW9uGAEgASgLMiouZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRp",
-            "b24udjEuTG9jYXRpb25IABISCghwbGFjZV9pZBgCIAEoCUgAEhkKDHNpZGVf",
-            "b2Zfcm9hZBgDIAEoCEID4EEBQg8KDWxvY2F0aW9uX3R5cGUiUgoITG9jYXRp",
-            "b24SJAoHbGF0X2xuZxgBIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxIUCgdo",
-            "ZWFkaW5nGAIgASgFSACIAQFCCgoIX2hlYWRpbmcilAQKCUJyZWFrUnVsZRJQ",
-            "Cg5icmVha19yZXF1ZXN0cxgBIAMoCzI4Lmdvb2dsZS5tYXBzLnJvdXRlb3B0",
-            "aW1pemF0aW9uLnYxLkJyZWFrUnVsZS5CcmVha1JlcXVlc3QSXgoVZnJlcXVl",
-            "bmN5X2NvbnN0cmFpbnRzGAIgAygLMj8uZ29vZ2xlLm1hcHMucm91dGVvcHRp",
-            "bWl6YXRpb24udjEuQnJlYWtSdWxlLkZyZXF1ZW5jeUNvbnN0cmFpbnQavgEK",
-            "DEJyZWFrUmVxdWVzdBI8ChNlYXJsaWVzdF9zdGFydF90aW1lGAEgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjoKEWxhdGVzdF9zdGFy",
-            "dF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEC",
-            "EjQKDG1pbl9kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbkID4EECGpMBChNGcmVxdWVuY3lDb25zdHJhaW50EjoKEm1pbl9icmVh",
-            "a19kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID",
-            "4EECEkAKGG1heF9pbnRlcl9icmVha19kdXJhdGlvbhgCIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECIuYPCg1TaGlwbWVudFJvdXRlEhUK",
-            "DXZlaGljbGVfaW5kZXgYASABKAUSFQoNdmVoaWNsZV9sYWJlbBgCIAEoCRI2",
-            "ChJ2ZWhpY2xlX3N0YXJ0X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEjQKEHZlaGljbGVfZW5kX3RpbWUYBiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEkUKBnZpc2l0cxgHIAMoCzI1Lmdvb2dsZS5t",
-            "YXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuVmlzaXQS",
-            "TwoLdHJhbnNpdGlvbnMYCCADKAsyOi5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
-            "aXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlRyYW5zaXRpb24SIwobaGFzX3Ry",
-            "YWZmaWNfaW5mZWFzaWJpbGl0aWVzGAkgASgIElcKDnJvdXRlX3BvbHlsaW5l",
-            "GAogASgLMj8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hp",
-            "cG1lbnRSb3V0ZS5FbmNvZGVkUG9seWxpbmUSRQoGYnJlYWtzGAsgAygLMjUu",
-            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0",
-            "ZS5CcmVhaxJECgdtZXRyaWNzGAwgASgLMjMuZ29vZ2xlLm1hcHMucm91dGVv",
-            "cHRpbWl6YXRpb24udjEuQWdncmVnYXRlZE1ldHJpY3MSVAoLcm91dGVfY29z",
-            "dHMYESADKAsyPy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5T",
-            "aGlwbWVudFJvdXRlLlJvdXRlQ29zdHNFbnRyeRIYChByb3V0ZV90b3RhbF9j",
-            "b3N0GBIgASgBGpoDCgVWaXNpdBIWCg5zaGlwbWVudF9pbmRleBgBIAEoBRIR",
-            "Cglpc19waWNrdXAYAiABKAgSGwoTdmlzaXRfcmVxdWVzdF9pbmRleBgDIAEo",
-            "BRIuCgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBJcCgxsb2FkX2RlbWFuZHMYCyADKAsyRi5nb29nbGUubWFwcy5yb3V0",
-            "ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlZpc2l0LkxvYWREZW1h",
-            "bmRzRW50cnkSKQoGZGV0b3VyGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uEhYKDnNoaXBtZW50X2xhYmVsGAcgASgJEhMKC3Zpc2l0X2xhYmVs",
-            "GAggASgJGmMKEExvYWREZW1hbmRzRW50cnkSCwoDa2V5GAEgASgJEj4KBXZh",
-            "bHVlGAIgASgLMi8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEu",
-            "U2hpcG1lbnQuTG9hZDoCOAEarQUKClRyYW5zaXRpb24SMgoPdHJhdmVsX2R1",
-            "cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEh4KFnRy",
-            "YXZlbF9kaXN0YW5jZV9tZXRlcnMYAiABKAESIAoYdHJhZmZpY19pbmZvX3Vu",
-            "YXZhaWxhYmxlGAMgASgIEjEKDmRlbGF5X2R1cmF0aW9uGAQgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDmJyZWFrX2R1cmF0aW9uGAUgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjAKDXdhaXRfZHVyYXRpb24Y",
-            "BiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoOdG90YWxfZHVy",
-            "YXRpb24YByABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLgoKc3Rh",
-            "cnRfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASVwoO",
-            "cm91dGVfcG9seWxpbmUYCSABKAsyPy5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
-            "aXphdGlvbi52MS5TaGlwbWVudFJvdXRlLkVuY29kZWRQb2x5bGluZRJjCg12",
-            "ZWhpY2xlX2xvYWRzGAsgAygLMkwuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6",
-            "YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5UcmFuc2l0aW9uLlZlaGljbGVMb2Fk",
-            "c0VudHJ5GnAKEVZlaGljbGVMb2Fkc0VudHJ5EgsKA2tleRgBIAEoCRJKCgV2",
-            "YWx1ZRgCIAEoCzI7Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
-            "LlNoaXBtZW50Um91dGUuVmVoaWNsZUxvYWQ6AjgBGh0KC1ZlaGljbGVMb2Fk",
-            "Eg4KBmFtb3VudBgBIAEoAxohCg9FbmNvZGVkUG9seWxpbmUSDgoGcG9pbnRz",
-            "GAEgASgJGmQKBUJyZWFrEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uGjEKD1JvdXRlQ29zdHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAE6AjgBIoYFCg9Ta2lwcGVkU2hpcG1lbnQS",
-            "DQoFaW5kZXgYASABKAUSDQoFbGFiZWwYAiABKAkSSQoHcmVhc29ucxgDIAMo",
-            "CzI4Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNraXBwZWRT",
-            "aGlwbWVudC5SZWFzb24aiQQKBlJlYXNvbhJLCgRjb2RlGAEgASgOMj0uZ29v",
-            "Z2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2tpcHBlZFNoaXBtZW50",
-            "LlJlYXNvbi5Db2RlEiIKFWV4YW1wbGVfdmVoaWNsZV9pbmRleBgCIAEoBUgA",
-            "iAEBEiYKHmV4YW1wbGVfZXhjZWVkZWRfY2FwYWNpdHlfdHlwZRgDIAEoCSLL",
-            "AgoEQ29kZRIUChBDT0RFX1VOU1BFQ0lGSUVEEAASDgoKTk9fVkVISUNMRRAB",
-            "EiMKH0RFTUFORF9FWENFRURTX1ZFSElDTEVfQ0FQQUNJVFkQAhI1CjFDQU5O",
-            "T1RfQkVfUEVSRk9STUVEX1dJVEhJTl9WRUhJQ0xFX0RJU1RBTkNFX0xJTUlU",
-            "EAMSNQoxQ0FOTk9UX0JFX1BFUkZPUk1FRF9XSVRISU5fVkVISUNMRV9EVVJB",
-            "VElPTl9MSU1JVBAEEjwKOENBTk5PVF9CRV9QRVJGT1JNRURfV0lUSElOX1ZF",
-            "SElDTEVfVFJBVkVMX0RVUkFUSU9OX0xJTUlUEAUSMwovQ0FOTk9UX0JFX1BF",
-            "UkZPUk1FRF9XSVRISU5fVkVISUNMRV9USU1FX1dJTkRPV1MQBhIXChNWRUhJ",
-            "Q0xFX05PVF9BTExPV0VEEAdCGAoWX2V4YW1wbGVfdmVoaWNsZV9pbmRleCLL",
-            "BAoRQWdncmVnYXRlZE1ldHJpY3MSIAoYcGVyZm9ybWVkX3NoaXBtZW50X2Nv",
-            "dW50GAEgASgFEjIKD3RyYXZlbF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbhIwCg13YWl0X2R1cmF0aW9uGAMgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDmRlbGF5X2R1cmF0aW9uGAQgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDmJyZWFrX2R1cmF0aW9u",
-            "GAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDnZpc2l0X2R1",
-            "cmF0aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDnRv",
-            "dGFsX2R1cmF0aW9uGAcgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "Eh4KFnRyYXZlbF9kaXN0YW5jZV9tZXRlcnMYCCABKAESVAoJbWF4X2xvYWRz",
-            "GAkgAygLMkEuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuQWdn",
-            "cmVnYXRlZE1ldHJpY3MuTWF4TG9hZHNFbnRyeRpsCg1NYXhMb2Fkc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRJKCgV2YWx1ZRgCIAEoCzI7Lmdvb2dsZS5tYXBzLnJv",
-            "dXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuVmVoaWNsZUxvYWQ6",
-            "AjgBIrMGChpJbmplY3RlZFNvbHV0aW9uQ29uc3RyYWludBI/CgZyb3V0ZXMY",
-            "ASADKAsyLy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlw",
-            "bWVudFJvdXRlEkwKEXNraXBwZWRfc2hpcG1lbnRzGAIgAygLMjEuZ29vZ2xl",
-            "Lm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2tpcHBlZFNoaXBtZW50EnEK",
-            "FmNvbnN0cmFpbnRfcmVsYXhhdGlvbnMYAyADKAsyUS5nb29nbGUubWFwcy5y",
-            "b3V0ZW9wdGltaXphdGlvbi52MS5JbmplY3RlZFNvbHV0aW9uQ29uc3RyYWlu",
-            "dC5Db25zdHJhaW50UmVsYXhhdGlvbhqSBAoUQ29uc3RyYWludFJlbGF4YXRp",
-            "b24ScQoLcmVsYXhhdGlvbnMYASADKAsyXC5nb29nbGUubWFwcy5yb3V0ZW9w",
-            "dGltaXphdGlvbi52MS5JbmplY3RlZFNvbHV0aW9uQ29uc3RyYWludC5Db25z",
-            "dHJhaW50UmVsYXhhdGlvbi5SZWxheGF0aW9uEhcKD3ZlaGljbGVfaW5kaWNl",
-            "cxgCIAMoBRrtAgoKUmVsYXhhdGlvbhJxCgVsZXZlbBgBIAEoDjJiLmdvb2ds",
-            "ZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkluamVjdGVkU29sdXRpb25D",
-            "b25zdHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9uLlJlbGF4YXRpb24uTGV2",
-            "ZWwSMgoOdGhyZXNob2xkX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEh0KFXRocmVzaG9sZF92aXNpdF9jb3VudBgDIAEoBSKYAQoF",
-            "TGV2ZWwSFQoRTEVWRUxfVU5TUEVDSUZJRUQQABIlCiFSRUxBWF9WSVNJVF9U",
-            "SU1FU19BRlRFUl9USFJFU0hPTEQQARIyCi5SRUxBWF9WSVNJVF9USU1FU19B",
-            "TkRfU0VRVUVOQ0VfQUZURVJfVEhSRVNIT0xEEAISHQoZUkVMQVhfQUxMX0FG",
-            "VEVSX1RIUkVTSE9MRBADIoUDChxPcHRpbWl6ZVRvdXJzVmFsaWRhdGlvbkVy",
-            "cm9yEgwKBGNvZGUYASABKAUSFAoMZGlzcGxheV9uYW1lGAIgASgJEl0KBmZp",
-            "ZWxkcxgDIAMoCzJNLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
-            "Lk9wdGltaXplVG91cnNWYWxpZGF0aW9uRXJyb3IuRmllbGRSZWZlcmVuY2US",
-            "FQoNZXJyb3JfbWVzc2FnZRgEIAEoCRIYChBvZmZlbmRpbmdfdmFsdWVzGAUg",
-            "ASgJGrABCg5GaWVsZFJlZmVyZW5jZRIMCgRuYW1lGAEgASgJEg8KBWluZGV4",
-            "GAIgASgFSAASDQoDa2V5GAQgASgJSAASYAoJc3ViX2ZpZWxkGAMgASgLMk0u",
-            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuT3B0aW1pemVUb3Vy",
-            "c1ZhbGlkYXRpb25FcnJvci5GaWVsZFJlZmVyZW5jZUIOCgxpbmRleF9vcl9r",
-            "ZXkiogEKC0lucHV0Q29uZmlnEkEKCmdjc19zb3VyY2UYASABKAsyKy5nb29n",
-            "bGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5HY3NTb3VyY2VIABJGCgtk",
+            "RV9BVF9ERUxJVkVSWV9USU1FEAMibwoOUm91dGVNb2RpZmllcnMSEwoLYXZv",
+            "aWRfdG9sbHMYAiABKAgSFgoOYXZvaWRfaGlnaHdheXMYAyABKAgSFQoNYXZv",
+            "aWRfZmVycmllcxgEIAEoCBIZCgxhdm9pZF9pbmRvb3IYBSABKAhCA+BBASLR",
+            "EwoHVmVoaWNsZRIUCgxkaXNwbGF5X25hbWUYICABKAkSSQoLdHJhdmVsX21v",
+            "ZGUYASABKA4yNC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5W",
+            "ZWhpY2xlLlRyYXZlbE1vZGUSSQoPcm91dGVfbW9kaWZpZXJzGAIgASgLMjAu",
+            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuUm91dGVNb2RpZmll",
+            "cnMSKwoOc3RhcnRfbG9jYXRpb24YAyABKAsyEy5nb29nbGUudHlwZS5MYXRM",
+            "bmcSQgoOc3RhcnRfd2F5cG9pbnQYBCABKAsyKi5nb29nbGUubWFwcy5yb3V0",
+            "ZW9wdGltaXphdGlvbi52MS5XYXlwb2ludBIpCgxlbmRfbG9jYXRpb24YBSAB",
+            "KAsyEy5nb29nbGUudHlwZS5MYXRMbmcSQAoMZW5kX3dheXBvaW50GAYgASgL",
+            "MiouZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuV2F5cG9pbnQS",
+            "EgoKc3RhcnRfdGFncxgHIAMoCRIQCghlbmRfdGFncxgIIAMoCRJIChJzdGFy",
+            "dF90aW1lX3dpbmRvd3MYCSADKAsyLC5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
+            "aXphdGlvbi52MS5UaW1lV2luZG93EkYKEGVuZF90aW1lX3dpbmRvd3MYCiAD",
+            "KAsyLC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5UaW1lV2lu",
+            "ZG93EiUKGHRyYXZlbF9kdXJhdGlvbl9tdWx0aXBsZRgLIAEoAUgAiAEBElMK",
+            "EHVubG9hZGluZ19wb2xpY3kYDCABKA4yOS5nb29nbGUubWFwcy5yb3V0ZW9w",
+            "dGltaXphdGlvbi52MS5WZWhpY2xlLlVubG9hZGluZ1BvbGljeRJOCgtsb2Fk",
+            "X2xpbWl0cxgeIAMoCzI5Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9u",
+            "LnYxLlZlaGljbGUuTG9hZExpbWl0c0VudHJ5EhUKDWNvc3RfcGVyX2hvdXIY",
+            "ECABKAESHgoWY29zdF9wZXJfdHJhdmVsZWRfaG91chgRIAEoARIaChJjb3N0",
+            "X3Blcl9raWxvbWV0ZXIYEiABKAESEgoKZml4ZWRfY29zdBgTIAEoARIeChZ1",
+            "c2VkX2lmX3JvdXRlX2lzX2VtcHR5GBQgASgIElUKFHJvdXRlX2R1cmF0aW9u",
+            "X2xpbWl0GBUgASgLMjcuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
+            "djEuVmVoaWNsZS5EdXJhdGlvbkxpbWl0ElYKFXRyYXZlbF9kdXJhdGlvbl9s",
+            "aW1pdBgWIAEoCzI3Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
+            "LlZlaGljbGUuRHVyYXRpb25MaW1pdBJNChRyb3V0ZV9kaXN0YW5jZV9saW1p",
+            "dBgXIAEoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkRp",
+            "c3RhbmNlTGltaXQSegojZXh0cmFfdmlzaXRfZHVyYXRpb25fZm9yX3Zpc2l0",
+            "X3R5cGUYGCADKAsyTS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
+            "MS5WZWhpY2xlLkV4dHJhVmlzaXREdXJhdGlvbkZvclZpc2l0VHlwZUVudHJ5",
+            "Ej8KCmJyZWFrX3J1bGUYGSABKAsyKy5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
+            "aXphdGlvbi52MS5CcmVha1J1bGUSDQoFbGFiZWwYGyABKAkSDgoGaWdub3Jl",
+            "GBwgASgIGtMCCglMb2FkTGltaXQSFQoIbWF4X2xvYWQYASABKANIAIgBARIV",
+            "Cg1zb2Z0X21heF9sb2FkGAIgASgDEiQKHGNvc3RfcGVyX3VuaXRfYWJvdmVf",
+            "c29mdF9tYXgYAyABKAESWQoTc3RhcnRfbG9hZF9pbnRlcnZhbBgEIAEoCzI8",
+            "Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlZlaGljbGUuTG9h",
+            "ZExpbWl0LkludGVydmFsElcKEWVuZF9sb2FkX2ludGVydmFsGAUgASgLMjwu",
+            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuVmVoaWNsZS5Mb2Fk",
+            "TGltaXQuSW50ZXJ2YWwaMQoISW50ZXJ2YWwSCwoDbWluGAEgASgDEhAKA21h",
+            "eBgCIAEoA0gAiAEBQgYKBF9tYXhCCwoJX21heF9sb2FkGvACCg1EdXJhdGlv",
+            "bkxpbWl0Ei8KDG1heF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhI0ChFzb2Z0X21heF9kdXJhdGlvbhgCIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbhIpChxjb3N0X3Blcl9ob3VyX2FmdGVyX3Nv",
+            "ZnRfbWF4GAMgASgBSACIAQESPgobcXVhZHJhdGljX3NvZnRfbWF4X2R1cmF0",
+            "aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjoKLWNvc3Rf",
+            "cGVyX3NxdWFyZV9ob3VyX2FmdGVyX3F1YWRyYXRpY19zb2Z0X21heBgFIAEo",
+            "AUgBiAEBQh8KHV9jb3N0X3Blcl9ob3VyX2FmdGVyX3NvZnRfbWF4QjAKLl9j",
+            "b3N0X3Blcl9zcXVhcmVfaG91cl9hZnRlcl9xdWFkcmF0aWNfc29mdF9tYXga",
+            "ZgoPTG9hZExpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRJCCgV2YWx1ZRgCIAEo",
+            "CzIzLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlZlaGljbGUu",
+            "TG9hZExpbWl0OgI4ARpgCiNFeHRyYVZpc2l0RHVyYXRpb25Gb3JWaXNpdFR5",
+            "cGVFbnRyeRILCgNrZXkYASABKAkSKAoFdmFsdWUYAiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb246AjgBIkMKClRyYXZlbE1vZGUSGwoXVFJBVkVM",
+            "X01PREVfVU5TUEVDSUZJRUQQABILCgdEUklWSU5HEAESCwoHV0FMS0lORxAC",
+            "ImIKD1VubG9hZGluZ1BvbGljeRIgChxVTkxPQURJTkdfUE9MSUNZX1VOU1BF",
+            "Q0lGSUVEEAASFQoRTEFTVF9JTl9GSVJTVF9PVVQQARIWChJGSVJTVF9JTl9G",
+            "SVJTVF9PVVQQAkIbChlfdHJhdmVsX2R1cmF0aW9uX211bHRpcGxlIoQDCgpU",
+            "aW1lV2luZG93Ei4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIzCg9zb2Z0X3N0YXJ0X3RpbWUYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEjEKDXNvZnRfZW5kX3RpbWUYBCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKJGNvc3RfcGVyX2hvdXJf",
+            "YmVmb3JlX3NvZnRfc3RhcnRfdGltZRgFIAEoAUgAiAEBEi4KIWNvc3RfcGVy",
+            "X2hvdXJfYWZ0ZXJfc29mdF9lbmRfdGltZRgGIAEoAUgBiAEBQicKJV9jb3N0",
+            "X3Blcl9ob3VyX2JlZm9yZV9zb2Z0X3N0YXJ0X3RpbWVCJAoiX2Nvc3RfcGVy",
+            "X2hvdXJfYWZ0ZXJfc29mdF9lbmRfdGltZSKVAgoNRGlzdGFuY2VMaW1pdBIX",
+            "CgptYXhfbWV0ZXJzGAEgASgDSACIAQESHAoPc29mdF9tYXhfbWV0ZXJzGAIg",
+            "ASgDSAGIAQESLgohY29zdF9wZXJfa2lsb21ldGVyX2JlbG93X3NvZnRfbWF4",
+            "GAQgASgBSAKIAQESLgohY29zdF9wZXJfa2lsb21ldGVyX2Fib3ZlX3NvZnRf",
+            "bWF4GAMgASgBSAOIAQFCDQoLX21heF9tZXRlcnNCEgoQX3NvZnRfbWF4X21l",
+            "dGVyc0IkCiJfY29zdF9wZXJfa2lsb21ldGVyX2JlbG93X3NvZnRfbWF4QiQK",
+            "Il9jb3N0X3Blcl9raWxvbWV0ZXJfYWJvdmVfc29mdF9tYXgiiQIKFFRyYW5z",
+            "aXRpb25BdHRyaWJ1dGVzEg8KB3NyY190YWcYASABKAkSGAoQZXhjbHVkZWRf",
+            "c3JjX3RhZxgCIAEoCRIPCgdkc3RfdGFnGAMgASgJEhgKEGV4Y2x1ZGVkX2Rz",
+            "dF90YWcYBCABKAkSDAoEY29zdBgFIAEoARIaChJjb3N0X3Blcl9raWxvbWV0",
+            "ZXIYBiABKAESRwoOZGlzdGFuY2VfbGltaXQYByABKAsyLy5nb29nbGUubWFw",
+            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5EaXN0YW5jZUxpbWl0EigKBWRlbGF5",
+            "GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIooBCghXYXlwb2lu",
+            "dBI+Cghsb2NhdGlvbhgBIAEoCzIqLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1p",
+            "emF0aW9uLnYxLkxvY2F0aW9uSAASEgoIcGxhY2VfaWQYAiABKAlIABIZCgxz",
+            "aWRlX29mX3JvYWQYAyABKAhCA+BBAUIPCg1sb2NhdGlvbl90eXBlIlIKCExv",
+            "Y2F0aW9uEiQKB2xhdF9sbmcYASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmcS",
+            "FAoHaGVhZGluZxgCIAEoBUgAiAEBQgoKCF9oZWFkaW5nIpQECglCcmVha1J1",
+            "bGUSUAoOYnJlYWtfcmVxdWVzdHMYASADKAsyOC5nb29nbGUubWFwcy5yb3V0",
+            "ZW9wdGltaXphdGlvbi52MS5CcmVha1J1bGUuQnJlYWtSZXF1ZXN0El4KFWZy",
+            "ZXF1ZW5jeV9jb25zdHJhaW50cxgCIAMoCzI/Lmdvb2dsZS5tYXBzLnJvdXRl",
+            "b3B0aW1pemF0aW9uLnYxLkJyZWFrUnVsZS5GcmVxdWVuY3lDb25zdHJhaW50",
+            "Gr4BCgxCcmVha1JlcXVlc3QSPAoTZWFybGllc3Rfc3RhcnRfdGltZRgBIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI6ChFsYXRlc3Rf",
+            "c3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAhI0CgxtaW5fZHVyYXRpb24YAyABKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb25CA+BBAhqTAQoTRnJlcXVlbmN5Q29uc3RyYWludBI6ChJtaW5f",
+            "YnJlYWtfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
+            "b25CA+BBAhJAChhtYXhfaW50ZXJfYnJlYWtfZHVyYXRpb24YAiABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAiLmDwoNU2hpcG1lbnRSb3V0",
+            "ZRIVCg12ZWhpY2xlX2luZGV4GAEgASgFEhUKDXZlaGljbGVfbGFiZWwYAiAB",
+            "KAkSNgoSdmVoaWNsZV9zdGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBI0ChB2ZWhpY2xlX2VuZF90aW1lGAYgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJFCgZ2aXNpdHMYByADKAsyNS5nb29n",
+            "bGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlZp",
+            "c2l0Ek8KC3RyYW5zaXRpb25zGAggAygLMjouZ29vZ2xlLm1hcHMucm91dGVv",
+            "cHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5UcmFuc2l0aW9uEiMKG2hh",
+            "c190cmFmZmljX2luZmVhc2liaWxpdGllcxgJIAEoCBJXCg5yb3V0ZV9wb2x5",
+            "bGluZRgKIAEoCzI/Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
+            "LlNoaXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lEkUKBmJyZWFrcxgLIAMo",
+            "CzI1Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50",
+            "Um91dGUuQnJlYWsSRAoHbWV0cmljcxgMIAEoCzIzLmdvb2dsZS5tYXBzLnJv",
+            "dXRlb3B0aW1pemF0aW9uLnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzElQKC3JvdXRl",
+            "X2Nvc3RzGBEgAygLMj8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
+            "djEuU2hpcG1lbnRSb3V0ZS5Sb3V0ZUNvc3RzRW50cnkSGAoQcm91dGVfdG90",
+            "YWxfY29zdBgSIAEoARqaAwoFVmlzaXQSFgoOc2hpcG1lbnRfaW5kZXgYASAB",
+            "KAUSEQoJaXNfcGlja3VwGAIgASgIEhsKE3Zpc2l0X3JlcXVlc3RfaW5kZXgY",
+            "AyABKAUSLgoKc3RhcnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASXAoMbG9hZF9kZW1hbmRzGAsgAygLMkYuZ29vZ2xlLm1hcHMu",
+            "cm91dGVvcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5WaXNpdC5Mb2Fk",
+            "RGVtYW5kc0VudHJ5EikKBmRldG91chgGIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhIWCg5zaGlwbWVudF9sYWJlbBgHIAEoCRITCgt2aXNpdF9s",
+            "YWJlbBgIIAEoCRpjChBMb2FkRGVtYW5kc0VudHJ5EgsKA2tleRgBIAEoCRI+",
+            "CgV2YWx1ZRgCIAEoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9u",
+            "LnYxLlNoaXBtZW50LkxvYWQ6AjgBGq0FCgpUcmFuc2l0aW9uEjIKD3RyYXZl",
+            "bF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIe",
+            "ChZ0cmF2ZWxfZGlzdGFuY2VfbWV0ZXJzGAIgASgBEiAKGHRyYWZmaWNfaW5m",
+            "b191bmF2YWlsYWJsZRgDIAEoCBIxCg5kZWxheV9kdXJhdGlvbhgEIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5icmVha19kdXJhdGlvbhgF",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIwCg13YWl0X2R1cmF0",
+            "aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDnRvdGFs",
+            "X2R1cmF0aW9uGAcgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEi4K",
+            "CnN0YXJ0X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "ElcKDnJvdXRlX3BvbHlsaW5lGAkgASgLMj8uZ29vZ2xlLm1hcHMucm91dGVv",
+            "cHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5FbmNvZGVkUG9seWxpbmUS",
+            "YwoNdmVoaWNsZV9sb2FkcxgLIAMoCzJMLmdvb2dsZS5tYXBzLnJvdXRlb3B0",
+            "aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuVHJhbnNpdGlvbi5WZWhpY2xl",
+            "TG9hZHNFbnRyeRpwChFWZWhpY2xlTG9hZHNFbnRyeRILCgNrZXkYASABKAkS",
+            "SgoFdmFsdWUYAiABKAsyOy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
+            "bi52MS5TaGlwbWVudFJvdXRlLlZlaGljbGVMb2FkOgI4ARodCgtWZWhpY2xl",
+            "TG9hZBIOCgZhbW91bnQYASABKAMaIQoPRW5jb2RlZFBvbHlsaW5lEg4KBnBv",
+            "aW50cxgBIAEoCRpkCgVCcmVhaxIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCghkdXJhdGlvbhgCIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhoxCg9Sb3V0ZUNvc3RzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgBOgI4ASKGBQoPU2tpcHBlZFNoaXBt",
+            "ZW50Eg0KBWluZGV4GAEgASgFEg0KBWxhYmVsGAIgASgJEkkKB3JlYXNvbnMY",
+            "AyADKAsyOC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5Ta2lw",
+            "cGVkU2hpcG1lbnQuUmVhc29uGokECgZSZWFzb24SSwoEY29kZRgBIAEoDjI9",
+            "Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlw",
+            "bWVudC5SZWFzb24uQ29kZRIiChVleGFtcGxlX3ZlaGljbGVfaW5kZXgYAiAB",
+            "KAVIAIgBARImCh5leGFtcGxlX2V4Y2VlZGVkX2NhcGFjaXR5X3R5cGUYAyAB",
+            "KAkiywIKBENvZGUSFAoQQ09ERV9VTlNQRUNJRklFRBAAEg4KCk5PX1ZFSElD",
+            "TEUQARIjCh9ERU1BTkRfRVhDRUVEU19WRUhJQ0xFX0NBUEFDSVRZEAISNQox",
+            "Q0FOTk9UX0JFX1BFUkZPUk1FRF9XSVRISU5fVkVISUNMRV9ESVNUQU5DRV9M",
+            "SU1JVBADEjUKMUNBTk5PVF9CRV9QRVJGT1JNRURfV0lUSElOX1ZFSElDTEVf",
+            "RFVSQVRJT05fTElNSVQQBBI8CjhDQU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJ",
+            "Tl9WRUhJQ0xFX1RSQVZFTF9EVVJBVElPTl9MSU1JVBAFEjMKL0NBTk5PVF9C",
+            "RV9QRVJGT1JNRURfV0lUSElOX1ZFSElDTEVfVElNRV9XSU5ET1dTEAYSFwoT",
+            "VkVISUNMRV9OT1RfQUxMT1dFRBAHQhgKFl9leGFtcGxlX3ZlaGljbGVfaW5k",
+            "ZXgiywQKEUFnZ3JlZ2F0ZWRNZXRyaWNzEiAKGHBlcmZvcm1lZF9zaGlwbWVu",
+            "dF9jb3VudBgBIAEoBRIyCg90cmF2ZWxfZHVyYXRpb24YAiABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb24SMAoNd2FpdF9kdXJhdGlvbhgDIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5kZWxheV9kdXJhdGlvbhgE",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5icmVha19kdXJh",
+            "dGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg52aXNp",
+            "dF9kdXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIx",
+            "Cg50b3RhbF9kdXJhdGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhIeChZ0cmF2ZWxfZGlzdGFuY2VfbWV0ZXJzGAggASgBElQKCW1heF9s",
+            "b2FkcxgJIAMoCzJBLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
+            "LkFnZ3JlZ2F0ZWRNZXRyaWNzLk1heExvYWRzRW50cnkabAoNTWF4TG9hZHNF",
+            "bnRyeRILCgNrZXkYASABKAkSSgoFdmFsdWUYAiABKAsyOy5nb29nbGUubWFw",
+            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlZlaGljbGVM",
+            "b2FkOgI4ASKzBgoaSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQSPwoGcm91",
+            "dGVzGAEgAygLMi8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEu",
+            "U2hpcG1lbnRSb3V0ZRJMChFza2lwcGVkX3NoaXBtZW50cxgCIAMoCzIxLmdv",
+            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlwbWVu",
+            "dBJxChZjb25zdHJhaW50X3JlbGF4YXRpb25zGAMgAygLMlEuZ29vZ2xlLm1h",
+            "cHMucm91dGVvcHRpbWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0",
+            "cmFpbnQuQ29uc3RyYWludFJlbGF4YXRpb24akgQKFENvbnN0cmFpbnRSZWxh",
+            "eGF0aW9uEnEKC3JlbGF4YXRpb25zGAEgAygLMlwuZ29vZ2xlLm1hcHMucm91",
+            "dGVvcHRpbWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQu",
+            "Q29uc3RyYWludFJlbGF4YXRpb24uUmVsYXhhdGlvbhIXCg92ZWhpY2xlX2lu",
+            "ZGljZXMYAiADKAUa7QIKClJlbGF4YXRpb24ScQoFbGV2ZWwYASABKA4yYi5n",
+            "b29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5JbmplY3RlZFNvbHV0",
+            "aW9uQ29uc3RyYWludC5Db25zdHJhaW50UmVsYXhhdGlvbi5SZWxheGF0aW9u",
+            "LkxldmVsEjIKDnRocmVzaG9sZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIdChV0aHJlc2hvbGRfdmlzaXRfY291bnQYAyABKAUi",
+            "mAEKBUxldmVsEhUKEUxFVkVMX1VOU1BFQ0lGSUVEEAASJQohUkVMQVhfVklT",
+            "SVRfVElNRVNfQUZURVJfVEhSRVNIT0xEEAESMgouUkVMQVhfVklTSVRfVElN",
+            "RVNfQU5EX1NFUVVFTkNFX0FGVEVSX1RIUkVTSE9MRBACEh0KGVJFTEFYX0FM",
+            "TF9BRlRFUl9USFJFU0hPTEQQAyKFAwocT3B0aW1pemVUb3Vyc1ZhbGlkYXRp",
+            "b25FcnJvchIMCgRjb2RlGAEgASgFEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRJd",
+            "CgZmaWVsZHMYAyADKAsyTS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
+            "bi52MS5PcHRpbWl6ZVRvdXJzVmFsaWRhdGlvbkVycm9yLkZpZWxkUmVmZXJl",
+            "bmNlEhUKDWVycm9yX21lc3NhZ2UYBCABKAkSGAoQb2ZmZW5kaW5nX3ZhbHVl",
+            "cxgFIAEoCRqwAQoORmllbGRSZWZlcmVuY2USDAoEbmFtZRgBIAEoCRIPCgVp",
+            "bmRleBgCIAEoBUgAEg0KA2tleRgEIAEoCUgAEmAKCXN1Yl9maWVsZBgDIAEo",
+            "CzJNLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9wdGltaXpl",
+            "VG91cnNWYWxpZGF0aW9uRXJyb3IuRmllbGRSZWZlcmVuY2VCDgoMaW5kZXhf",
+            "b3Jfa2V5IqIBCgtJbnB1dENvbmZpZxJBCgpnY3Nfc291cmNlGAEgASgLMisu",
+            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuR2NzU291cmNlSAAS",
+            "RgoLZGF0YV9mb3JtYXQYAiABKA4yLC5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
+            "aXphdGlvbi52MS5EYXRhRm9ybWF0QgPgQQJCCAoGc291cmNlIrIBCgxPdXRw",
+            "dXRDb25maWcSSwoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMjAuZ29vZ2xlLm1h",
+            "cHMucm91dGVvcHRpbWl6YXRpb24udjEuR2NzRGVzdGluYXRpb25IABJGCgtk",
             "YXRhX2Zvcm1hdBgCIAEoDjIsLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0",
-            "aW9uLnYxLkRhdGFGb3JtYXRCA+BBAkIICgZzb3VyY2UisgEKDE91dHB1dENv",
-            "bmZpZxJLCg9nY3NfZGVzdGluYXRpb24YASABKAsyMC5nb29nbGUubWFwcy5y",
-            "b3V0ZW9wdGltaXphdGlvbi52MS5HY3NEZXN0aW5hdGlvbkgAEkYKC2RhdGFf",
-            "Zm9ybWF0GAIgASgOMiwuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
-            "djEuRGF0YUZvcm1hdEID4EECQg0KC2Rlc3RpbmF0aW9uIh0KCUdjc1NvdXJj",
-            "ZRIQCgN1cmkYASABKAlCA+BBAiIiCg5HY3NEZXN0aW5hdGlvbhIQCgN1cmkY",
-            "ASABKAlCA+BBAipDCgpEYXRhRm9ybWF0EhsKF0RBVEFfRk9STUFUX1VOU1BF",
-            "Q0lGSUVEEAASCAoESlNPThABEg4KClBST1RPX1RFWFQQAjL5BAoRUm91dGVP",
-            "cHRpbWl6YXRpb24S6gEKDU9wdGltaXplVG91cnMSNi5nb29nbGUubWFwcy5y",
-            "b3V0ZW9wdGltaXphdGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdBo3Lmdv",
-            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNS",
-            "ZXNwb25zZSJogtPkkwJiIjEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfTpvcHRpbWl6ZVRvdXJzOgEqWioiJS92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyp9Om9wdGltaXplVG91cnM6ASoSoAIKEkJhdGNoT3B0aW1pemVUb3Vy",
-            "cxI7Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkJhdGNoT3B0",
-            "aW1pemVUb3Vyc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIq0BykE4ChpCYXRjaE9wdGltaXplVG91cnNSZXNwb25zZRIaQmF0Y2hP",
-            "cHRpbWl6ZVRvdXJzTWV0YWRhdGGC0+STAmwiNi92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9OmJhdGNoT3B0aW1pemVUb3VyczoBKlovIiov",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qfTpiYXRjaE9wdGltaXplVG91cnM6ASoa",
-            "VMpBIHJvdXRlb3B0aW1pemF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKNAgok",
-            "Y29tLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxQh1Sb3V0ZU9w",
-            "dGltaXphdGlvblNlcnZpY2VQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dv",
-            "L21hcHMvcm91dGVvcHRpbWl6YXRpb24vYXBpdjEvcm91dGVvcHRpbWl6YXRp",
-            "b25wYjtyb3V0ZW9wdGltaXphdGlvbnBiqgIgR29vZ2xlLk1hcHMuUm91dGVP",
-            "cHRpbWl6YXRpb24uVjHKAiBHb29nbGVcTWFwc1xSb3V0ZU9wdGltaXphdGlv",
-            "blxWMeoCI0dvb2dsZTo6TWFwczo6Um91dGVPcHRpbWl6YXRpb246OlYxYgZw",
-            "cm90bzM="));
+            "aW9uLnYxLkRhdGFGb3JtYXRCA+BBAkINCgtkZXN0aW5hdGlvbiIdCglHY3NT",
+            "b3VyY2USEAoDdXJpGAEgASgJQgPgQQIiIgoOR2NzRGVzdGluYXRpb24SEAoD",
+            "dXJpGAEgASgJQgPgQQIqQwoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9V",
+            "TlNQRUNJRklFRBAAEggKBEpTT04QARIOCgpQUk9UT19URVhUEAIy+QQKEVJv",
+            "dXRlT3B0aW1pemF0aW9uEuoBCg1PcHRpbWl6ZVRvdXJzEjYuZ29vZ2xlLm1h",
+            "cHMucm91dGVvcHRpbWl6YXRpb24udjEuT3B0aW1pemVUb3Vyc1JlcXVlc3Qa",
+            "Ny5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5PcHRpbWl6ZVRv",
+            "dXJzUmVzcG9uc2UiaILT5JMCYiIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn06b3B0aW1pemVUb3VyczoBKloqIiUvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qfTpvcHRpbWl6ZVRvdXJzOgEqEqACChJCYXRjaE9wdGltaXpl",
+            "VG91cnMSOy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5CYXRj",
+            "aE9wdGltaXplVG91cnNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiKtAcpBOAoaQmF0Y2hPcHRpbWl6ZVRvdXJzUmVzcG9uc2USGkJh",
+            "dGNoT3B0aW1pemVUb3Vyc01ldGFkYXRhgtPkkwJsIjYvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpiYXRjaE9wdGltaXplVG91cnM6ASpa",
+            "LyIqL3YxL3twYXJlbnQ9cHJvamVjdHMvKn06YmF0Y2hPcHRpbWl6ZVRvdXJz",
+            "OgEqGlTKQSByb3V0ZW9wdGltaXphdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
+            "jQIKJGNvbS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MUIdUm91",
+            "dGVPcHRpbWl6YXRpb25TZXJ2aWNlUHJvdG9QAVpYY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9tYXBzL3JvdXRlb3B0aW1pemF0aW9uL2FwaXYxL3JvdXRlb3B0aW1p",
+            "emF0aW9ucGI7cm91dGVvcHRpbWl6YXRpb25wYqoCIEdvb2dsZS5NYXBzLlJv",
+            "dXRlT3B0aW1pemF0aW9uLlYxygIgR29vZ2xlXE1hcHNcUm91dGVPcHRpbWl6",
+            "YXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OlJvdXRlT3B0aW1pemF0aW9uOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.RouteOptimization.V1.DataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -398,11 +404,12 @@ namespace Google.Maps.RouteOptimization.V1 {
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentTypeIncompatibility), global::Google.Maps.RouteOptimization.V1.ShipmentTypeIncompatibility.Parser, new[]{ "Types_", "IncompatibilityMode" }, null, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.ShipmentTypeIncompatibility.Types.IncompatibilityMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentTypeRequirement), global::Google.Maps.RouteOptimization.V1.ShipmentTypeRequirement.Parser, new[]{ "RequiredShipmentTypeAlternatives", "DependentShipmentTypes", "RequirementMode" }, null, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.ShipmentTypeRequirement.Types.RequirementMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle), global::Google.Maps.RouteOptimization.V1.Vehicle.Parser, new[]{ "DisplayName", "TravelMode", "StartLocation", "StartWaypoint", "EndLocation", "EndWaypoint", "StartTags", "EndTags", "StartTimeWindows", "EndTimeWindows", "TravelDurationMultiple", "UnloadingPolicy", "LoadLimits", "CostPerHour", "CostPerTraveledHour", "CostPerKilometer", "FixedCost", "UsedIfRouteIsEmpty", "RouteDurationLimit", "TravelDurationLimit", "RouteDistanceLimit", "ExtraVisitDurationForVisitType", "BreakRule", "Label", "Ignore" }, new[]{ "TravelDurationMultiple" }, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode), typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.UnloadingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Parser, new[]{ "MaxLoad", "SoftMaxLoad", "CostPerUnitAboveSoftMax", "StartLoadInterval", "EndLoadInterval" }, new[]{ "MaxLoad" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval.Parser, new[]{ "Min", "Max" }, new[]{ "Max" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.RouteModifiers), global::Google.Maps.RouteOptimization.V1.RouteModifiers.Parser, new[]{ "AvoidTolls", "AvoidHighways", "AvoidFerries", "AvoidIndoor" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle), global::Google.Maps.RouteOptimization.V1.Vehicle.Parser, new[]{ "DisplayName", "TravelMode", "RouteModifiers", "StartLocation", "StartWaypoint", "EndLocation", "EndWaypoint", "StartTags", "EndTags", "StartTimeWindows", "EndTimeWindows", "TravelDurationMultiple", "UnloadingPolicy", "LoadLimits", "CostPerHour", "CostPerTraveledHour", "CostPerKilometer", "FixedCost", "UsedIfRouteIsEmpty", "RouteDurationLimit", "TravelDurationLimit", "RouteDistanceLimit", "ExtraVisitDurationForVisitType", "BreakRule", "Label", "Ignore" }, new[]{ "TravelDurationMultiple" }, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode), typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.UnloadingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Parser, new[]{ "MaxLoad", "SoftMaxLoad", "CostPerUnitAboveSoftMax", "StartLoadInterval", "EndLoadInterval" }, new[]{ "MaxLoad" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval.Parser, new[]{ "Min", "Max" }, new[]{ "Max" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.DurationLimit), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.DurationLimit.Parser, new[]{ "MaxDuration", "SoftMaxDuration", "CostPerHourAfterSoftMax", "QuadraticSoftMaxDuration", "CostPerSquareHourAfterQuadraticSoftMax" }, new[]{ "CostPerHourAfterSoftMax", "CostPerSquareHourAfterQuadraticSoftMax" }, null, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.TimeWindow), global::Google.Maps.RouteOptimization.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime", "SoftStartTime", "SoftEndTime", "CostPerHourBeforeSoftStartTime", "CostPerHourAfterSoftEndTime" }, new[]{ "CostPerHourBeforeSoftStartTime", "CostPerHourAfterSoftEndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.DistanceLimit), global::Google.Maps.RouteOptimization.V1.DistanceLimit.Parser, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerAboveSoftMax" }, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerAboveSoftMax" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.DistanceLimit), global::Google.Maps.RouteOptimization.V1.DistanceLimit.Parser, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerBelowSoftMax", "CostPerKilometerAboveSoftMax" }, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerBelowSoftMax", "CostPerKilometerAboveSoftMax" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.TransitionAttributes), global::Google.Maps.RouteOptimization.V1.TransitionAttributes.Parser, new[]{ "SrcTag", "ExcludedSrcTag", "DstTag", "ExcludedDstTag", "Cost", "CostPerKilometer", "DistanceLimit", "Delay" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Waypoint), global::Google.Maps.RouteOptimization.V1.Waypoint.Parser, new[]{ "Location", "PlaceId", "SideOfRoad" }, new[]{ "LocationType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Location), global::Google.Maps.RouteOptimization.V1.Location.Parser, new[]{ "LatLng", "Heading" }, new[]{ "Heading" }, null, null, null),
@@ -2336,7 +2343,8 @@ namespace Google.Maps.RouteOptimization.V1 {
       /// </summary>
       public enum SolvingMode {
         /// <summary>
-        /// Solve the model.
+        /// Solve the model. Warnings may be issued in
+        /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors].
         /// </summary>
         [pbr::OriginalName("DEFAULT_SOLVE")] DefaultSolve = 0,
         /// <summary>
@@ -2498,7 +2506,8 @@ namespace Google.Maps.RouteOptimization.V1 {
     /// List of all the validation errors that we were able to detect
     /// independently. See the "MULTIPLE ERRORS" explanation for the
     /// [OptimizeToursValidationError][google.maps.routeoptimization.v1.OptimizeToursValidationError]
-    /// message.
+    /// message. Instead of errors, this will include warnings in the case
+    /// `solving_mode` is `DEFAULT_SOLVE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7046,6 +7055,333 @@ namespace Google.Maps.RouteOptimization.V1 {
   }
 
   /// <summary>
+  /// Encapsulates a set of optional conditions to satisfy when calculating
+  /// vehicle routes. This is similar to `RouteModifiers` in the Google Maps
+  /// Platform Routes Preferred API; see:
+  /// https://developers.google.com/maps/documentation/routes/reference/rest/v2/RouteModifiers.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RouteModifiers : pb::IMessage<RouteModifiers>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RouteModifiers> _parser = new pb::MessageParser<RouteModifiers>(() => new RouteModifiers());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RouteModifiers> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteModifiers() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteModifiers(RouteModifiers other) : this() {
+      avoidTolls_ = other.avoidTolls_;
+      avoidHighways_ = other.avoidHighways_;
+      avoidFerries_ = other.avoidFerries_;
+      avoidIndoor_ = other.avoidIndoor_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteModifiers Clone() {
+      return new RouteModifiers(this);
+    }
+
+    /// <summary>Field number for the "avoid_tolls" field.</summary>
+    public const int AvoidTollsFieldNumber = 2;
+    private bool avoidTolls_;
+    /// <summary>
+    /// Specifies whether to avoid toll roads where reasonable. Preference will be
+    /// given to routes not containing toll roads. Applies only to motorized travel
+    /// modes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidTolls {
+      get { return avoidTolls_; }
+      set {
+        avoidTolls_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avoid_highways" field.</summary>
+    public const int AvoidHighwaysFieldNumber = 3;
+    private bool avoidHighways_;
+    /// <summary>
+    /// Specifies whether to avoid highways where reasonable. Preference will be
+    /// given to routes not containing highways. Applies only to motorized travel
+    /// modes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidHighways {
+      get { return avoidHighways_; }
+      set {
+        avoidHighways_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avoid_ferries" field.</summary>
+    public const int AvoidFerriesFieldNumber = 4;
+    private bool avoidFerries_;
+    /// <summary>
+    /// Specifies whether to avoid ferries where reasonable. Preference will be
+    /// given to routes not containing travel by ferries. Applies only to motorized
+    /// travel modes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidFerries {
+      get { return avoidFerries_; }
+      set {
+        avoidFerries_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avoid_indoor" field.</summary>
+    public const int AvoidIndoorFieldNumber = 5;
+    private bool avoidIndoor_;
+    /// <summary>
+    /// Optional. Specifies whether to avoid navigating indoors where reasonable.
+    /// Preference will be given to routes not containing indoor navigation.
+    /// Applies only to the `WALKING` travel mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidIndoor {
+      get { return avoidIndoor_; }
+      set {
+        avoidIndoor_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RouteModifiers);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RouteModifiers other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AvoidTolls != other.AvoidTolls) return false;
+      if (AvoidHighways != other.AvoidHighways) return false;
+      if (AvoidFerries != other.AvoidFerries) return false;
+      if (AvoidIndoor != other.AvoidIndoor) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AvoidTolls != false) hash ^= AvoidTolls.GetHashCode();
+      if (AvoidHighways != false) hash ^= AvoidHighways.GetHashCode();
+      if (AvoidFerries != false) hash ^= AvoidFerries.GetHashCode();
+      if (AvoidIndoor != false) hash ^= AvoidIndoor.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AvoidTolls != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AvoidTolls);
+      }
+      if (AvoidHighways != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AvoidHighways);
+      }
+      if (AvoidFerries != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AvoidFerries);
+      }
+      if (AvoidIndoor != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AvoidIndoor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AvoidTolls != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AvoidTolls);
+      }
+      if (AvoidHighways != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AvoidHighways);
+      }
+      if (AvoidFerries != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AvoidFerries);
+      }
+      if (AvoidIndoor != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AvoidIndoor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AvoidTolls != false) {
+        size += 1 + 1;
+      }
+      if (AvoidHighways != false) {
+        size += 1 + 1;
+      }
+      if (AvoidFerries != false) {
+        size += 1 + 1;
+      }
+      if (AvoidIndoor != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RouteModifiers other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AvoidTolls != false) {
+        AvoidTolls = other.AvoidTolls;
+      }
+      if (other.AvoidHighways != false) {
+        AvoidHighways = other.AvoidHighways;
+      }
+      if (other.AvoidFerries != false) {
+        AvoidFerries = other.AvoidFerries;
+      }
+      if (other.AvoidIndoor != false) {
+        AvoidIndoor = other.AvoidIndoor;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            AvoidTolls = input.ReadBool();
+            break;
+          }
+          case 24: {
+            AvoidHighways = input.ReadBool();
+            break;
+          }
+          case 32: {
+            AvoidFerries = input.ReadBool();
+            break;
+          }
+          case 40: {
+            AvoidIndoor = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            AvoidTolls = input.ReadBool();
+            break;
+          }
+          case 24: {
+            AvoidHighways = input.ReadBool();
+            break;
+          }
+          case 32: {
+            AvoidFerries = input.ReadBool();
+            break;
+          }
+          case 40: {
+            AvoidIndoor = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Models a vehicle in a shipment problem. Solving a shipment problem will
   /// build a route starting from `start_location` and ending at `end_location`
   /// for this vehicle. A route is a sequence of visits (see `ShipmentRoute`).
@@ -7066,7 +7402,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7089,6 +7425,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       _hasBits0 = other._hasBits0;
       displayName_ = other.displayName_;
       travelMode_ = other.travelMode_;
+      routeModifiers_ = other.routeModifiers_ != null ? other.routeModifiers_.Clone() : null;
       startLocation_ = other.startLocation_ != null ? other.startLocation_.Clone() : null;
       startWaypoint_ = other.startWaypoint_ != null ? other.startWaypoint_.Clone() : null;
       endLocation_ = other.endLocation_ != null ? other.endLocation_.Clone() : null;
@@ -7150,6 +7487,22 @@ namespace Google.Maps.RouteOptimization.V1 {
       get { return travelMode_; }
       set {
         travelMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "route_modifiers" field.</summary>
+    public const int RouteModifiersFieldNumber = 2;
+    private global::Google.Maps.RouteOptimization.V1.RouteModifiers routeModifiers_;
+    /// <summary>
+    /// A set of conditions to satisfy that affect the way routes are calculated
+    /// for the given vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.RouteOptimization.V1.RouteModifiers RouteModifiers {
+      get { return routeModifiers_; }
+      set {
+        routeModifiers_ = value;
       }
     }
 
@@ -7636,6 +7989,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (DisplayName != other.DisplayName) return false;
       if (TravelMode != other.TravelMode) return false;
+      if (!object.Equals(RouteModifiers, other.RouteModifiers)) return false;
       if (!object.Equals(StartLocation, other.StartLocation)) return false;
       if (!object.Equals(StartWaypoint, other.StartWaypoint)) return false;
       if (!object.Equals(EndLocation, other.EndLocation)) return false;
@@ -7668,6 +8022,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       int hash = 1;
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (TravelMode != global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode.Unspecified) hash ^= TravelMode.GetHashCode();
+      if (routeModifiers_ != null) hash ^= RouteModifiers.GetHashCode();
       if (startLocation_ != null) hash ^= StartLocation.GetHashCode();
       if (startWaypoint_ != null) hash ^= StartWaypoint.GetHashCode();
       if (endLocation_ != null) hash ^= EndLocation.GetHashCode();
@@ -7712,6 +8067,10 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (TravelMode != global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TravelMode);
+      }
+      if (routeModifiers_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RouteModifiers);
       }
       if (startLocation_ != null) {
         output.WriteRawTag(26);
@@ -7804,6 +8163,10 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (TravelMode != global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TravelMode);
+      }
+      if (routeModifiers_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RouteModifiers);
       }
       if (startLocation_ != null) {
         output.WriteRawTag(26);
@@ -7899,6 +8262,9 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (TravelMode != global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TravelMode);
       }
+      if (routeModifiers_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RouteModifiers);
+      }
       if (startLocation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartLocation);
       }
@@ -7973,6 +8339,12 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (other.TravelMode != global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode.Unspecified) {
         TravelMode = other.TravelMode;
+      }
+      if (other.routeModifiers_ != null) {
+        if (routeModifiers_ == null) {
+          RouteModifiers = new global::Google.Maps.RouteOptimization.V1.RouteModifiers();
+        }
+        RouteModifiers.MergeFrom(other.RouteModifiers);
       }
       if (other.startLocation_ != null) {
         if (startLocation_ == null) {
@@ -8072,6 +8444,13 @@ namespace Google.Maps.RouteOptimization.V1 {
             break;
           case 8: {
             TravelMode = (global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (routeModifiers_ == null) {
+              RouteModifiers = new global::Google.Maps.RouteOptimization.V1.RouteModifiers();
+            }
+            input.ReadMessage(RouteModifiers);
             break;
           }
           case 26: {
@@ -8211,6 +8590,13 @@ namespace Google.Maps.RouteOptimization.V1 {
             break;
           case 8: {
             TravelMode = (global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (routeModifiers_ == null) {
+              RouteModifiers = new global::Google.Maps.RouteOptimization.V1.RouteModifiers();
+            }
+            input.ReadMessage(RouteModifiers);
             break;
           }
           case 26: {
@@ -9533,8 +9919,9 @@ namespace Google.Maps.RouteOptimization.V1 {
   /// [ShipmentModel.global_end_time][google.maps.routeoptimization.v1.ShipmentModel.global_end_time])
   /// and should respect:
   /// ```
-  ///   0 &lt;= `start_time` &lt;= `soft_start_time` &lt;= `end_time` and
-  ///   0 &lt;= `start_time` &lt;= `soft_end_time` &lt;= `end_time`.
+  ///   0 &lt;= `start_time` &lt;= `end_time` and
+  ///   0 &lt;= `start_time` &lt;= `soft_start_time` and
+  ///   0 &lt;= `soft_end_time` &lt;= `end_time`.
   /// ```
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -9553,7 +9940,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10043,7 +10430,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10066,6 +10453,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       _hasBits0 = other._hasBits0;
       maxMeters_ = other.maxMeters_;
       softMaxMeters_ = other.softMaxMeters_;
+      costPerKilometerBelowSoftMax_ = other.costPerKilometerBelowSoftMax_;
       costPerKilometerAboveSoftMax_ = other.costPerKilometerAboveSoftMax_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -10142,6 +10530,42 @@ namespace Google.Maps.RouteOptimization.V1 {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "cost_per_kilometer_below_soft_max" field.</summary>
+    public const int CostPerKilometerBelowSoftMaxFieldNumber = 4;
+    private readonly static double CostPerKilometerBelowSoftMaxDefaultValue = 0D;
+
+    private double costPerKilometerBelowSoftMax_;
+    /// <summary>
+    /// Cost per kilometer incurred, increasing up to `soft_max_meters`, with
+    /// formula:
+    /// ```
+    ///   min(distance_meters, soft_max_meters) / 1000.0 *
+    ///   cost_per_kilometer_below_soft_max.
+    /// ```
+    /// This cost is not supported in `route_distance_limit`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double CostPerKilometerBelowSoftMax {
+      get { if ((_hasBits0 & 8) != 0) { return costPerKilometerBelowSoftMax_; } else { return CostPerKilometerBelowSoftMaxDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        costPerKilometerBelowSoftMax_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cost_per_kilometer_below_soft_max" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCostPerKilometerBelowSoftMax {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "cost_per_kilometer_below_soft_max" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCostPerKilometerBelowSoftMax() {
+      _hasBits0 &= ~8;
+    }
+
     /// <summary>Field number for the "cost_per_kilometer_above_soft_max" field.</summary>
     public const int CostPerKilometerAboveSoftMaxFieldNumber = 3;
     private readonly static double CostPerKilometerAboveSoftMaxDefaultValue = 0D;
@@ -10196,6 +10620,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (MaxMeters != other.MaxMeters) return false;
       if (SoftMaxMeters != other.SoftMaxMeters) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerKilometerBelowSoftMax, other.CostPerKilometerBelowSoftMax)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerKilometerAboveSoftMax, other.CostPerKilometerAboveSoftMax)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -10206,6 +10631,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       int hash = 1;
       if (HasMaxMeters) hash ^= MaxMeters.GetHashCode();
       if (HasSoftMaxMeters) hash ^= SoftMaxMeters.GetHashCode();
+      if (HasCostPerKilometerBelowSoftMax) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerKilometerBelowSoftMax);
       if (HasCostPerKilometerAboveSoftMax) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerKilometerAboveSoftMax);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10237,6 +10663,10 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteRawTag(25);
         output.WriteDouble(CostPerKilometerAboveSoftMax);
       }
+      if (HasCostPerKilometerBelowSoftMax) {
+        output.WriteRawTag(33);
+        output.WriteDouble(CostPerKilometerBelowSoftMax);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10259,6 +10689,10 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteRawTag(25);
         output.WriteDouble(CostPerKilometerAboveSoftMax);
       }
+      if (HasCostPerKilometerBelowSoftMax) {
+        output.WriteRawTag(33);
+        output.WriteDouble(CostPerKilometerBelowSoftMax);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10274,6 +10708,9 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (HasSoftMaxMeters) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(SoftMaxMeters);
+      }
+      if (HasCostPerKilometerBelowSoftMax) {
+        size += 1 + 8;
       }
       if (HasCostPerKilometerAboveSoftMax) {
         size += 1 + 8;
@@ -10295,6 +10732,9 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (other.HasSoftMaxMeters) {
         SoftMaxMeters = other.SoftMaxMeters;
+      }
+      if (other.HasCostPerKilometerBelowSoftMax) {
+        CostPerKilometerBelowSoftMax = other.CostPerKilometerBelowSoftMax;
       }
       if (other.HasCostPerKilometerAboveSoftMax) {
         CostPerKilometerAboveSoftMax = other.CostPerKilometerAboveSoftMax;
@@ -10326,6 +10766,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             CostPerKilometerAboveSoftMax = input.ReadDouble();
             break;
           }
+          case 33: {
+            CostPerKilometerBelowSoftMax = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -10351,6 +10795,10 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
           case 25: {
             CostPerKilometerAboveSoftMax = input.ReadDouble();
+            break;
+          }
+          case 33: {
+            CostPerKilometerBelowSoftMax = input.ReadDouble();
             break;
           }
         }
@@ -10381,7 +10829,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10900,7 +11348,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11243,7 +11691,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11516,7 +11964,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12418,7 +12866,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14903,7 +15351,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14975,7 +15423,8 @@ namespace Google.Maps.RouteOptimization.V1 {
     private readonly pbc::RepeatedField<global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason> reasons_ = new pbc::RepeatedField<global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason>();
     /// <summary>
     /// A list of reasons that explain why the shipment was skipped. See comment
-    /// above `Reason`.
+    /// above `Reason`. If we are unable to understand why a shipment was skipped,
+    /// reasons will not be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15487,8 +15936,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           /// </summary>
           public enum Code {
             /// <summary>
-            /// This should never be used. If we are unable to understand why a
-            /// shipment was skipped, we simply return an empty set of reasons.
+            /// This should never be used.
             /// </summary>
             [pbr::OriginalName("CODE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
@@ -15572,7 +16020,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16144,7 +16592,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16965,7 +17413,8 @@ namespace Google.Maps.RouteOptimization.V1 {
                 [pbr::OriginalName("RELAX_VISIT_TIMES_AFTER_THRESHOLD")] RelaxVisitTimesAfterThreshold = 1,
                 /// <summary>
                 /// Same as `RELAX_VISIT_TIMES_AFTER_THRESHOLD`, but the visit sequence
-                /// is also relaxed: visits remain simply bound to their vehicle.
+                /// is also relaxed: visits can only be performed by this vehicle, but
+                /// can potentially become unperformed.
                 /// </summary>
                 [pbr::OriginalName("RELAX_VISIT_TIMES_AND_SEQUENCE_AFTER_THRESHOLD")] RelaxVisitTimesAndSequenceAfterThreshold = 2,
                 /// <summary>
@@ -16992,7 +17441,8 @@ namespace Google.Maps.RouteOptimization.V1 {
   }
 
   /// <summary>
-  /// Describes an error encountered when validating an `OptimizeToursRequest`.
+  /// Describes an error or warning encountered when validating an
+  /// `OptimizeToursRequest`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OptimizeToursValidationError : pb::IMessage<OptimizeToursValidationError>
@@ -17009,7 +17459,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17126,8 +17576,8 @@ namespace Google.Maps.RouteOptimization.V1 {
     ///     * TIME_WINDOW_SOFT_END_TIME_WITHOUT_COST_AFTER_SOFT_END_TIME = 2811;
     ///     * TIME_WINDOW_OVERLAPPING_ADJACENT_OR_EARLIER_THAN_PREVIOUS = 2812;
     ///     * TIME_WINDOW_START_TIME_AFTER_SOFT_START_TIME = 2813;
-    ///     * TIME_WINDOW_SOFT_START_TIME_AFTER_END_TIME = 2814;
-    ///     * TIME_WINDOW_START_TIME_AFTER_SOFT_END_TIME = 2815;
+    ///     * TIME_WINDOW_SOFT_START_TIME_OUTSIDE_GLOBAL_TIME_WINDOW = 2819;
+    ///     * TIME_WINDOW_SOFT_END_TIME_OUTSIDE_GLOBAL_TIME_WINDOW = 2820;
     ///     * TIME_WINDOW_SOFT_END_TIME_AFTER_END_TIME = 2816;
     ///     * TIME_WINDOW_COST_BEFORE_SOFT_START_TIME_SET_AND_MULTIPLE_WINDOWS
     ///       = 2817;
@@ -17239,6 +17689,13 @@ namespace Google.Maps.RouteOptimization.V1 {
     ///     * VISIT_REQUEST_DURATION_NEGATIVE_OR_NAN = 4404;
     ///     * VISIT_REQUEST_DURATION_EXCEEDS_GLOBAL_DURATION = 4405;
     /// * PRECEDENCE_ERROR = 46;
+    ///     * PRECEDENCE_RULE_MISSING_FIRST_INDEX = 4600;
+    ///     * PRECEDENCE_RULE_MISSING_SECOND_INDEX = 4601;
+    ///     * PRECEDENCE_RULE_FIRST_INDEX_OUT_OF_BOUNDS = 4602;
+    ///     * PRECEDENCE_RULE_SECOND_INDEX_OUT_OF_BOUNDS = 4603;
+    ///     * PRECEDENCE_RULE_DUPLICATE_INDEX = 4604;
+    ///     * PRECEDENCE_RULE_INEXISTENT_FIRST_VISIT_REQUEST = 4605;
+    ///     * PRECEDENCE_RULE_INEXISTENT_SECOND_VISIT_REQUEST = 4606;
     /// * BREAK_ERROR = 48;
     ///     * BREAK_RULE_EMPTY = 4800;
     ///     * BREAK_REQUEST_UNSPECIFIED_DURATION = 4801;
@@ -17284,6 +17741,12 @@ namespace Google.Maps.RouteOptimization.V1 {
     /// * DURATION_SECONDS_MATRIX_ERROR = 56;
     ///     * DURATION_SECONDS_MATRIX_DURATION_NEGATIVE_OR_NAN = 5600;
     ///     * DURATION_SECONDS_MATRIX_DURATION_EXCEEDS_GLOBAL_DURATION = 5601;
+    /// * WARNING = 9;
+    ///     * WARNING_INJECTED_FIRST_SOLUTION = 90;
+    ///         * WARNING_INJECTED_FIRST_SOLUTION_INFEASIBLE_SHIPMENTS_REMOVED
+    ///           = 9000;
+    ///         * WARNING_INJECTED_FIRST_SOLUTION_INFEASIBLE_AFTER_GETTING_TRAVEL_TIMES
+    ///           = 9001;
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18008,7 +18471,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18289,7 +18752,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18568,7 +19031,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18766,7 +19229,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

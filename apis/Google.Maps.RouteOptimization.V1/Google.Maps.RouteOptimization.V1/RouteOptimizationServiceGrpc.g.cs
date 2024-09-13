@@ -150,6 +150,18 @@ namespace Google.Maps.RouteOptimization.V1 {
       /// contains a `ShipmentModel` and returns an `OptimizeToursResponse`
       /// containing `ShipmentRoute`s, which are a set of routes to be performed by
       /// vehicles minimizing the overall cost.
+      ///
+      /// The user can poll `operations.get` to check the status of the LRO:
+      ///
+      /// If the LRO's `done` field is false, then at least one request is still
+      /// being processed. Other requests may have completed successfully and their
+      /// results are available in GCS.
+      ///
+      /// If the LRO's `done` field is true, then all requests have been processed.
+      /// Any successfully processed requests will have their results available in
+      /// GCS. Any requests that failed will not have their results available in
+      /// GCS. If the LRO's `error` field is set, then it contains the error from
+      /// one of the failed requests.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -300,6 +312,18 @@ namespace Google.Maps.RouteOptimization.V1 {
       /// contains a `ShipmentModel` and returns an `OptimizeToursResponse`
       /// containing `ShipmentRoute`s, which are a set of routes to be performed by
       /// vehicles minimizing the overall cost.
+      ///
+      /// The user can poll `operations.get` to check the status of the LRO:
+      ///
+      /// If the LRO's `done` field is false, then at least one request is still
+      /// being processed. Other requests may have completed successfully and their
+      /// results are available in GCS.
+      ///
+      /// If the LRO's `done` field is true, then all requests have been processed.
+      /// Any successfully processed requests will have their results available in
+      /// GCS. Any requests that failed will not have their results available in
+      /// GCS. If the LRO's `error` field is set, then it contains the error from
+      /// one of the failed requests.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -322,6 +346,18 @@ namespace Google.Maps.RouteOptimization.V1 {
       /// contains a `ShipmentModel` and returns an `OptimizeToursResponse`
       /// containing `ShipmentRoute`s, which are a set of routes to be performed by
       /// vehicles minimizing the overall cost.
+      ///
+      /// The user can poll `operations.get` to check the status of the LRO:
+      ///
+      /// If the LRO's `done` field is false, then at least one request is still
+      /// being processed. Other requests may have completed successfully and their
+      /// results are available in GCS.
+      ///
+      /// If the LRO's `done` field is true, then all requests have been processed.
+      /// Any successfully processed requests will have their results available in
+      /// GCS. Any requests that failed will not have their results available in
+      /// GCS. If the LRO's `error` field is set, then it contains the error from
+      /// one of the failed requests.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -342,6 +378,18 @@ namespace Google.Maps.RouteOptimization.V1 {
       /// contains a `ShipmentModel` and returns an `OptimizeToursResponse`
       /// containing `ShipmentRoute`s, which are a set of routes to be performed by
       /// vehicles minimizing the overall cost.
+      ///
+      /// The user can poll `operations.get` to check the status of the LRO:
+      ///
+      /// If the LRO's `done` field is false, then at least one request is still
+      /// being processed. Other requests may have completed successfully and their
+      /// results are available in GCS.
+      ///
+      /// If the LRO's `done` field is true, then all requests have been processed.
+      /// Any successfully processed requests will have their results available in
+      /// GCS. Any requests that failed will not have their results available in
+      /// GCS. If the LRO's `error` field is set, then it contains the error from
+      /// one of the failed requests.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -364,6 +412,18 @@ namespace Google.Maps.RouteOptimization.V1 {
       /// contains a `ShipmentModel` and returns an `OptimizeToursResponse`
       /// containing `ShipmentRoute`s, which are a set of routes to be performed by
       /// vehicles minimizing the overall cost.
+      ///
+      /// The user can poll `operations.get` to check the status of the LRO:
+      ///
+      /// If the LRO's `done` field is false, then at least one request is still
+      /// being processed. Other requests may have completed successfully and their
+      /// results are available in GCS.
+      ///
+      /// If the LRO's `done` field is true, then all requests have been processed.
+      /// Any successfully processed requests will have their results available in
+      /// GCS. Any requests that failed will not have their results available in
+      /// GCS. If the LRO's `error` field is set, then it contains the error from
+      /// one of the failed requests.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
