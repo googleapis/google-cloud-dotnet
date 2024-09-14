@@ -835,6 +835,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `platform_version`.
         /// *   `proxy_config.kubernetes_secret.name`.
         /// *   `proxy_config.kubernetes_secret.namespace`.
+        /// *   `security_posture_config.vulnerability_mode`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -870,6 +871,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `platform_version`.
         /// *   `proxy_config.kubernetes_secret.name`.
         /// *   `proxy_config.kubernetes_secret.namespace`.
+        /// *   `security_posture_config.vulnerability_mode`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -905,6 +907,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `platform_version`.
         /// *   `proxy_config.kubernetes_secret.name`.
         /// *   `proxy_config.kubernetes_secret.namespace`.
+        /// *   `security_posture_config.vulnerability_mode`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

@@ -100,7 +100,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "d3NDbHVzdGVyTmV0d29ya2luZxITCgZ2cGNfaWQYASABKAlCA+BBAhIkChdw",
             "b2RfYWRkcmVzc19jaWRyX2Jsb2NrcxgCIAMoCUID4EECEigKG3NlcnZpY2Vf",
             "YWRkcmVzc19jaWRyX2Jsb2NrcxgDIAMoCUID4EECEiwKH3Blcl9ub2RlX3Bv",
-            "b2xfc2dfcnVsZXNfZGlzYWJsZWQYBSABKAhCA+BBASKOCQoLQXdzTm9kZVBv",
+            "b2xfc2dfcnVsZXNfZGlzYWJsZWQYBSABKAhCA+BBASLdCQoLQXdzTm9kZVBv",
             "b2wSDAoEbmFtZRgBIAEoCRIUCgd2ZXJzaW9uGAMgASgJQgPgQQISQQoGY29u",
             "ZmlnGBwgASgLMiwuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdz",
             "Tm9kZUNvbmZpZ0ID4EECEk8KC2F1dG9zY2FsaW5nGBkgASgLMjUuZ29vZ2xl",
@@ -117,79 +117,80 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "aWNsb3VkLnYxLk1heFBvZHNDb25zdHJhaW50QgPgQQISRAoGZXJyb3JzGB0g",
             "AygLMi8uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzTm9kZVBv",
             "b2xFcnJvckID4EEDEkkKCm1hbmFnZW1lbnQYHiABKAsyMC5nb29nbGUuY2xv",
-            "dWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NOb2RlTWFuYWdlbWVudEID4EEBEksK",
-            "D3VwZGF0ZV9zZXR0aW5ncxggIAEoCzItLmdvb2dsZS5jbG91ZC5na2VtdWx0",
-            "aWNsb3VkLnYxLlVwZGF0ZVNldHRpbmdzQgPgQQEaMgoQQW5ub3RhdGlvbnNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInUKBVN0YXRl",
-            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESCwoH",
-            "UlVOTklORxACEg8KC1JFQ09OQ0lMSU5HEAMSDAoIU1RPUFBJTkcQBBIJCgVF",
-            "UlJPUhAFEgwKCERFR1JBREVEEAY6jgHqQYoBCihna2VtdWx0aWNsb3VkLmdv",
-            "b2dsZWFwaXMuY29tL0F3c05vZGVQb29sEl5wcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vYXdzQ2x1c3RlcnMve2F3c19jbHVzdGVy",
-            "fS9hd3NOb2RlUG9vbHMve2F3c19ub2RlX3Bvb2x9IlsKDlVwZGF0ZVNldHRp",
-            "bmdzEkkKDnN1cmdlX3NldHRpbmdzGAEgASgLMiwuZ29vZ2xlLmNsb3VkLmdr",
-            "ZW11bHRpY2xvdWQudjEuU3VyZ2VTZXR0aW5nc0ID4EEBIkUKDVN1cmdlU2V0",
-            "dGluZ3MSFgoJbWF4X3N1cmdlGAEgASgFQgPgQQESHAoPbWF4X3VuYXZhaWxh",
-            "YmxlGAIgASgFQgPgQQEiLQoRQXdzTm9kZU1hbmFnZW1lbnQSGAoLYXV0b19y",
-            "ZXBhaXIYASABKAhCA+BBASL6BwoNQXdzTm9kZUNvbmZpZxIaCg1pbnN0YW5j",
-            "ZV90eXBlGAEgASgJQgPgQQESSgoLcm9vdF92b2x1bWUYAiABKAsyMC5nb29n",
-            "bGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NWb2x1bWVUZW1wbGF0ZUID",
-            "4EEBEj0KBnRhaW50cxgDIAMoCzIoLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNs",
-            "b3VkLnYxLk5vZGVUYWludEID4EEBEk0KBmxhYmVscxgEIAMoCzI4Lmdvb2ds",
-            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c05vZGVDb25maWcuTGFiZWxz",
-            "RW50cnlCA+BBARJJCgR0YWdzGAUgAygLMjYuZ29vZ2xlLmNsb3VkLmdrZW11",
-            "bHRpY2xvdWQudjEuQXdzTm9kZUNvbmZpZy5UYWdzRW50cnlCA+BBARIhChRp",
-            "YW1faW5zdGFuY2VfcHJvZmlsZRgGIAEoCUID4EECEhcKCmltYWdlX3R5cGUY",
-            "CyABKAlCA+BBARJECgpzc2hfY29uZmlnGAkgASgLMisuZ29vZ2xlLmNsb3Vk",
-            "LmdrZW11bHRpY2xvdWQudjEuQXdzU3NoQ29uZmlnQgPgQQESHwoSc2VjdXJp",
-            "dHlfZ3JvdXBfaWRzGAogAygJQgPgQQESSAoMcHJveHlfY29uZmlnGAwgASgL",
-            "Mi0uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzUHJveHlDb25m",
-            "aWdCA+BBARJSChFjb25maWdfZW5jcnlwdGlvbhgNIAEoCzIyLmdvb2dsZS5j",
-            "bG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c0NvbmZpZ0VuY3J5cHRpb25CA+BB",
-            "AhJUChJpbnN0YW5jZV9wbGFjZW1lbnQYDiABKAsyMy5nb29nbGUuY2xvdWQu",
-            "Z2tlbXVsdGljbG91ZC52MS5Bd3NJbnN0YW5jZVBsYWNlbWVudEID4EEBEnAK",
-            "HmF1dG9zY2FsaW5nX21ldHJpY3NfY29sbGVjdGlvbhgPIAEoCzJDLmdvb2ds",
-            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c0F1dG9zY2FsaW5nR3JvdXBN",
-            "ZXRyaWNzQ29sbGVjdGlvbkID4EEBEkMKC3Nwb3RfY29uZmlnGBAgASgLMiku",
-            "Z29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuU3BvdENvbmZpZ0ID4EEB",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEaKwoJVGFnc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEiUgoWQXdzTm9kZVBvb2xBdXRvc2NhbGluZxIbCg5taW5fbm9kZV9jb3Vu",
-            "dBgBIAEoBUID4EECEhsKDm1heF9ub2RlX2NvdW50GAIgASgFQgPgQQIi1AEK",
-            "D0F3c09wZW5JZENvbmZpZxIOCgZpc3N1ZXIYASABKAkSEAoIandrc191cmkY",
-            "AiABKAkSIAoYcmVzcG9uc2VfdHlwZXNfc3VwcG9ydGVkGAMgAygJEh8KF3N1",
-            "YmplY3RfdHlwZXNfc3VwcG9ydGVkGAQgAygJEi0KJWlkX3Rva2VuX3NpZ25p",
-            "bmdfYWxnX3ZhbHVlc19zdXBwb3J0ZWQYBSADKAkSGAoQY2xhaW1zX3N1cHBv",
-            "cnRlZBgGIAMoCRITCgtncmFudF90eXBlcxgHIAMoCSJCCg5Bd3NKc29uV2Vi",
-            "S2V5cxIwCgRrZXlzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xv",
-            "dWQudjEuSndrIvQBCg9Bd3NTZXJ2ZXJDb25maWcSDAoEbmFtZRgBIAEoCRJI",
-            "Cg52YWxpZF92ZXJzaW9ucxgCIAMoCzIwLmdvb2dsZS5jbG91ZC5na2VtdWx0",
-            "aWNsb3VkLnYxLkF3c0s4c1ZlcnNpb25JbmZvEh0KFXN1cHBvcnRlZF9hd3Nf",
-            "cmVnaW9ucxgDIAMoCTpq6kFnCixna2VtdWx0aWNsb3VkLmdvb2dsZWFwaXMu",
-            "Y29tL0F3c1NlcnZlckNvbmZpZxI3cHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2F3c1NlcnZlckNvbmZpZyK0AQoRQXdzSzhzVmVy",
-            "c2lvbkluZm8SDwoHdmVyc2lvbhgBIAEoCRIUCgdlbmFibGVkGAMgASgIQgPg",
-            "QQESGAoLZW5kX29mX2xpZmUYBCABKAhCA+BBARIwChBlbmRfb2ZfbGlmZV9k",
-            "YXRlGAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EEBEiwKDHJlbGVhc2Vf",
-            "ZGF0ZRgGIAEoCzIRLmdvb2dsZS50eXBlLkRhdGVCA+BBASIpCgxBd3NTc2hD",
-            "b25maWcSGQoMZWMyX2tleV9wYWlyGAEgASgJQgPgQQIiPAoOQXdzUHJveHlD",
-            "b25maWcSEgoKc2VjcmV0X2FybhgBIAEoCRIWCg5zZWNyZXRfdmVyc2lvbhgC",
-            "IAEoCSIvChNBd3NDb25maWdFbmNyeXB0aW9uEhgKC2ttc19rZXlfYXJuGAEg",
-            "ASgJQgPgQQIiswEKFEF3c0luc3RhbmNlUGxhY2VtZW50ElEKB3RlbmFuY3kY",
-            "ASABKA4yOy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NJbnN0",
-            "YW5jZVBsYWNlbWVudC5UZW5hbmN5QgPgQQIiSAoHVGVuYW5jeRIXChNURU5B",
-            "TkNZX1VOU1BFQ0lGSUVEEAASCwoHREVGQVVMVBABEg0KCURFRElDQVRFRBAC",
-            "EggKBEhPU1QQAyJWCiRBd3NBdXRvc2NhbGluZ0dyb3VwTWV0cmljc0NvbGxl",
-            "Y3Rpb24SGAoLZ3JhbnVsYXJpdHkYASABKAlCA+BBAhIUCgdtZXRyaWNzGAIg",
-            "AygJQgPgQQEiKQoKU3BvdENvbmZpZxIbCg5pbnN0YW5jZV90eXBlcxgBIAMo",
-            "CUID4EECIiIKD0F3c0NsdXN0ZXJFcnJvchIPCgdtZXNzYWdlGAEgASgJIiMK",
-            "EEF3c05vZGVQb29sRXJyb3ISDwoHbWVzc2FnZRgBIAEoCULkAQohY29tLmdv",
-            "b2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxQhFBd3NSZXNvdXJjZXNQcm90",
-            "b1ABWkdjbG91ZC5nb29nbGUuY29tL2dvL2drZW11bHRpY2xvdWQvYXBpdjEv",
-            "Z2tlbXVsdGljbG91ZHBiO2drZW11bHRpY2xvdWRwYqoCHUdvb2dsZS5DbG91",
-            "ZC5Ha2VNdWx0aUNsb3VkLlYxygIdR29vZ2xlXENsb3VkXEdrZU11bHRpQ2xv",
-            "dWRcVjHqAiBHb29nbGU6OkNsb3VkOjpHa2VNdWx0aUNsb3VkOjpWMWIGcHJv",
-            "dG8z"));
+            "dWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NOb2RlTWFuYWdlbWVudEID4EEBEk0K",
+            "Dmt1YmVsZXRfY29uZmlnGB8gASgLMjAuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
+            "Y2xvdWQudjEuTm9kZUt1YmVsZXRDb25maWdCA+BBARJLCg91cGRhdGVfc2V0",
+            "dGluZ3MYICABKAsyLS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5V",
+            "cGRhdGVTZXR0aW5nc0ID4EEBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ1CgVTdGF0ZRIVChFTVEFURV9V",
+            "TlNQRUNJRklFRBAAEhAKDFBST1ZJU0lPTklORxABEgsKB1JVTk5JTkcQAhIP",
+            "CgtSRUNPTkNJTElORxADEgwKCFNUT1BQSU5HEAQSCQoFRVJST1IQBRIMCghE",
+            "RUdSQURFRBAGOo4B6kGKAQooZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNv",
+            "bS9Bd3NOb2RlUG9vbBJecHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2F3c0NsdXN0ZXJzL3thd3NfY2x1c3Rlcn0vYXdzTm9kZVBv",
+            "b2xzL3thd3Nfbm9kZV9wb29sfSJbCg5VcGRhdGVTZXR0aW5ncxJJCg5zdXJn",
+            "ZV9zZXR0aW5ncxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3Vk",
+            "LnYxLlN1cmdlU2V0dGluZ3NCA+BBASJFCg1TdXJnZVNldHRpbmdzEhYKCW1h",
+            "eF9zdXJnZRgBIAEoBUID4EEBEhwKD21heF91bmF2YWlsYWJsZRgCIAEoBUID",
+            "4EEBIi0KEUF3c05vZGVNYW5hZ2VtZW50EhgKC2F1dG9fcmVwYWlyGAEgASgI",
+            "QgPgQQEi+gcKDUF3c05vZGVDb25maWcSGgoNaW5zdGFuY2VfdHlwZRgBIAEo",
+            "CUID4EEBEkoKC3Jvb3Rfdm9sdW1lGAIgASgLMjAuZ29vZ2xlLmNsb3VkLmdr",
+            "ZW11bHRpY2xvdWQudjEuQXdzVm9sdW1lVGVtcGxhdGVCA+BBARI9CgZ0YWlu",
+            "dHMYAyADKAsyKC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Ob2Rl",
+            "VGFpbnRCA+BBARJNCgZsYWJlbHMYBCADKAsyOC5nb29nbGUuY2xvdWQuZ2tl",
+            "bXVsdGljbG91ZC52MS5Bd3NOb2RlQ29uZmlnLkxhYmVsc0VudHJ5QgPgQQES",
+            "SQoEdGFncxgFIAMoCzI2Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYx",
+            "LkF3c05vZGVDb25maWcuVGFnc0VudHJ5QgPgQQESIQoUaWFtX2luc3RhbmNl",
+            "X3Byb2ZpbGUYBiABKAlCA+BBAhIXCgppbWFnZV90eXBlGAsgASgJQgPgQQES",
+            "RAoKc3NoX2NvbmZpZxgJIAEoCzIrLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNs",
+            "b3VkLnYxLkF3c1NzaENvbmZpZ0ID4EEBEh8KEnNlY3VyaXR5X2dyb3VwX2lk",
+            "cxgKIAMoCUID4EEBEkgKDHByb3h5X2NvbmZpZxgMIAEoCzItLmdvb2dsZS5j",
+            "bG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Byb3h5Q29uZmlnQgPgQQESUgoR",
+            "Y29uZmlnX2VuY3J5cHRpb24YDSABKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVs",
+            "dGljbG91ZC52MS5Bd3NDb25maWdFbmNyeXB0aW9uQgPgQQISVAoSaW5zdGFu",
+            "Y2VfcGxhY2VtZW50GA4gASgLMjMuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xv",
+            "dWQudjEuQXdzSW5zdGFuY2VQbGFjZW1lbnRCA+BBARJwCh5hdXRvc2NhbGlu",
+            "Z19tZXRyaWNzX2NvbGxlY3Rpb24YDyABKAsyQy5nb29nbGUuY2xvdWQuZ2tl",
+            "bXVsdGljbG91ZC52MS5Bd3NBdXRvc2NhbGluZ0dyb3VwTWV0cmljc0NvbGxl",
+            "Y3Rpb25CA+BBARJDCgtzcG90X2NvbmZpZxgQIAEoCzIpLmdvb2dsZS5jbG91",
+            "ZC5na2VtdWx0aWNsb3VkLnYxLlNwb3RDb25maWdCA+BBARotCgtMYWJlbHNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGisKCVRhZ3NF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlIKFkF3c05v",
+            "ZGVQb29sQXV0b3NjYWxpbmcSGwoObWluX25vZGVfY291bnQYASABKAVCA+BB",
+            "AhIbCg5tYXhfbm9kZV9jb3VudBgCIAEoBUID4EECItQBCg9Bd3NPcGVuSWRD",
+            "b25maWcSDgoGaXNzdWVyGAEgASgJEhAKCGp3a3NfdXJpGAIgASgJEiAKGHJl",
+            "c3BvbnNlX3R5cGVzX3N1cHBvcnRlZBgDIAMoCRIfChdzdWJqZWN0X3R5cGVz",
+            "X3N1cHBvcnRlZBgEIAMoCRItCiVpZF90b2tlbl9zaWduaW5nX2FsZ192YWx1",
+            "ZXNfc3VwcG9ydGVkGAUgAygJEhgKEGNsYWltc19zdXBwb3J0ZWQYBiADKAkS",
+            "EwoLZ3JhbnRfdHlwZXMYByADKAkiQgoOQXdzSnNvbldlYktleXMSMAoEa2V5",
+            "cxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkp3ayL0",
+            "AQoPQXdzU2VydmVyQ29uZmlnEgwKBG5hbWUYASABKAkSSAoOdmFsaWRfdmVy",
+            "c2lvbnMYAiADKAsyMC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5B",
+            "d3NLOHNWZXJzaW9uSW5mbxIdChVzdXBwb3J0ZWRfYXdzX3JlZ2lvbnMYAyAD",
+            "KAk6aupBZwosZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbS9Bd3NTZXJ2",
+            "ZXJDb25maWcSN3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9hd3NTZXJ2ZXJDb25maWcitAEKEUF3c0s4c1ZlcnNpb25JbmZvEg8K",
+            "B3ZlcnNpb24YASABKAkSFAoHZW5hYmxlZBgDIAEoCEID4EEBEhgKC2VuZF9v",
+            "Zl9saWZlGAQgASgIQgPgQQESMAoQZW5kX29mX2xpZmVfZGF0ZRgFIAEoCzIR",
+            "Lmdvb2dsZS50eXBlLkRhdGVCA+BBARIsCgxyZWxlYXNlX2RhdGUYBiABKAsy",
+            "ES5nb29nbGUudHlwZS5EYXRlQgPgQQEiKQoMQXdzU3NoQ29uZmlnEhkKDGVj",
+            "Ml9rZXlfcGFpchgBIAEoCUID4EECIjwKDkF3c1Byb3h5Q29uZmlnEhIKCnNl",
+            "Y3JldF9hcm4YASABKAkSFgoOc2VjcmV0X3ZlcnNpb24YAiABKAkiLwoTQXdz",
+            "Q29uZmlnRW5jcnlwdGlvbhIYCgtrbXNfa2V5X2FybhgBIAEoCUID4EECIrMB",
+            "ChRBd3NJbnN0YW5jZVBsYWNlbWVudBJRCgd0ZW5hbmN5GAEgASgOMjsuZ29v",
+            "Z2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzSW5zdGFuY2VQbGFjZW1l",
+            "bnQuVGVuYW5jeUID4EECIkgKB1RlbmFuY3kSFwoTVEVOQU5DWV9VTlNQRUNJ",
+            "RklFRBAAEgsKB0RFRkFVTFQQARINCglERURJQ0FURUQQAhIICgRIT1NUEAMi",
+            "VgokQXdzQXV0b3NjYWxpbmdHcm91cE1ldHJpY3NDb2xsZWN0aW9uEhgKC2dy",
+            "YW51bGFyaXR5GAEgASgJQgPgQQISFAoHbWV0cmljcxgCIAMoCUID4EEBIikK",
+            "ClNwb3RDb25maWcSGwoOaW5zdGFuY2VfdHlwZXMYASADKAlCA+BBAiIiCg9B",
+            "d3NDbHVzdGVyRXJyb3ISDwoHbWVzc2FnZRgBIAEoCSIjChBBd3NOb2RlUG9v",
+            "bEVycm9yEg8KB21lc3NhZ2UYASABKAlC5AEKIWNvbS5nb29nbGUuY2xvdWQu",
+            "Z2tlbXVsdGljbG91ZC52MUIRQXdzUmVzb3VyY2VzUHJvdG9QAVpHY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9na2VtdWx0aWNsb3VkL2FwaXYxL2drZW11bHRpY2xv",
+            "dWRwYjtna2VtdWx0aWNsb3VkcGKqAh1Hb29nbGUuQ2xvdWQuR2tlTXVsdGlD",
+            "bG91ZC5WMcoCHUdvb2dsZVxDbG91ZFxHa2VNdWx0aUNsb3VkXFYx6gIgR29v",
+            "Z2xlOjpDbG91ZDo6R2tlTXVsdGlDbG91ZDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeMultiCloud.V1.CommonResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -202,7 +203,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsDatabaseEncryption), global::Google.Cloud.GkeMultiCloud.V1.AwsDatabaseEncryption.Parser, new[]{ "KmsKeyArn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate), global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate.Parser, new[]{ "SizeGib", "VolumeType", "Iops", "Throughput", "KmsKeyArn" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate.Types.VolumeType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsClusterNetworking), global::Google.Cloud.GkeMultiCloud.V1.AwsClusterNetworking.Parser, new[]{ "VpcId", "PodAddressCidrBlocks", "ServiceAddressCidrBlocks", "PerNodePoolSgRulesDisabled" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool), global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Parser, new[]{ "Name", "Version", "Config", "Autoscaling", "SubnetId", "State", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "Annotations", "MaxPodsConstraint", "Errors", "Management", "UpdateSettings" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool), global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Parser, new[]{ "Name", "Version", "Config", "Autoscaling", "SubnetId", "State", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "Annotations", "MaxPodsConstraint", "Errors", "Management", "KubeletConfig", "UpdateSettings" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.UpdateSettings), global::Google.Cloud.GkeMultiCloud.V1.UpdateSettings.Parser, new[]{ "SurgeSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.SurgeSettings), global::Google.Cloud.GkeMultiCloud.V1.SurgeSettings.Parser, new[]{ "MaxSurge", "MaxUnavailable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodeManagement), global::Google.Cloud.GkeMultiCloud.V1.AwsNodeManagement.Parser, new[]{ "AutoRepair" }, null, null, null, null),
@@ -3958,6 +3959,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       maxPodsConstraint_ = other.maxPodsConstraint_ != null ? other.maxPodsConstraint_.Clone() : null;
       errors_ = other.errors_.Clone();
       management_ = other.management_ != null ? other.management_.Clone() : null;
+      kubeletConfig_ = other.kubeletConfig_ != null ? other.kubeletConfig_.Clone() : null;
       updateSettings_ = other.updateSettings_ != null ? other.updateSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4216,6 +4218,21 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
     }
 
+    /// <summary>Field number for the "kubelet_config" field.</summary>
+    public const int KubeletConfigFieldNumber = 31;
+    private global::Google.Cloud.GkeMultiCloud.V1.NodeKubeletConfig kubeletConfig_;
+    /// <summary>
+    /// Optional. Node kubelet configs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeMultiCloud.V1.NodeKubeletConfig KubeletConfig {
+      get { return kubeletConfig_; }
+      set {
+        kubeletConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "update_settings" field.</summary>
     public const int UpdateSettingsFieldNumber = 32;
     private global::Google.Cloud.GkeMultiCloud.V1.UpdateSettings updateSettings_;
@@ -4261,6 +4278,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (!object.Equals(MaxPodsConstraint, other.MaxPodsConstraint)) return false;
       if(!errors_.Equals(other.errors_)) return false;
       if (!object.Equals(Management, other.Management)) return false;
+      if (!object.Equals(KubeletConfig, other.KubeletConfig)) return false;
       if (!object.Equals(UpdateSettings, other.UpdateSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4284,6 +4302,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (maxPodsConstraint_ != null) hash ^= MaxPodsConstraint.GetHashCode();
       hash ^= errors_.GetHashCode();
       if (management_ != null) hash ^= Management.GetHashCode();
+      if (kubeletConfig_ != null) hash ^= KubeletConfig.GetHashCode();
       if (updateSettings_ != null) hash ^= UpdateSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4357,6 +4376,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(242, 1);
         output.WriteMessage(Management);
       }
+      if (kubeletConfig_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(KubeletConfig);
+      }
       if (updateSettings_ != null) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(UpdateSettings);
@@ -4425,6 +4448,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(242, 1);
         output.WriteMessage(Management);
       }
+      if (kubeletConfig_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(KubeletConfig);
+      }
       if (updateSettings_ != null) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(UpdateSettings);
@@ -4479,6 +4506,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       size += errors_.CalculateSize(_repeated_errors_codec);
       if (management_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Management);
+      }
+      if (kubeletConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KubeletConfig);
       }
       if (updateSettings_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpdateSettings);
@@ -4553,6 +4583,12 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
           Management = new global::Google.Cloud.GkeMultiCloud.V1.AwsNodeManagement();
         }
         Management.MergeFrom(other.Management);
+      }
+      if (other.kubeletConfig_ != null) {
+        if (kubeletConfig_ == null) {
+          KubeletConfig = new global::Google.Cloud.GkeMultiCloud.V1.NodeKubeletConfig();
+        }
+        KubeletConfig.MergeFrom(other.KubeletConfig);
       }
       if (other.updateSettings_ != null) {
         if (updateSettings_ == null) {
@@ -4653,6 +4689,13 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             input.ReadMessage(Management);
             break;
           }
+          case 250: {
+            if (kubeletConfig_ == null) {
+              KubeletConfig = new global::Google.Cloud.GkeMultiCloud.V1.NodeKubeletConfig();
+            }
+            input.ReadMessage(KubeletConfig);
+            break;
+          }
           case 258: {
             if (updateSettings_ == null) {
               UpdateSettings = new global::Google.Cloud.GkeMultiCloud.V1.UpdateSettings();
@@ -4751,6 +4794,13 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
               Management = new global::Google.Cloud.GkeMultiCloud.V1.AwsNodeManagement();
             }
             input.ReadMessage(Management);
+            break;
+          }
+          case 250: {
+            if (kubeletConfig_ == null) {
+              KubeletConfig = new global::Google.Cloud.GkeMultiCloud.V1.NodeKubeletConfig();
+            }
+            input.ReadMessage(KubeletConfig);
             break;
           }
           case 258: {
@@ -7939,7 +7989,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///
     /// The secret must be a JSON encoded proxy configuration
     /// as described in
-    /// https://cloud.google.com/anthos/clusters/docs/multi-cloud/aws/how-to/use-a-proxy#create_a_proxy_configuration_file
+    /// https://cloud.google.com/kubernetes-engine/multi-cloud/docs/aws/how-to/use-a-proxy#create_a_proxy_configuration_file
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

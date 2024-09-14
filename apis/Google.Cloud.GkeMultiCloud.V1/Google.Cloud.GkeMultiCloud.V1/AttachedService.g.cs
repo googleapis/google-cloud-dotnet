@@ -1181,7 +1181,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. The Kubernetes distribution of the underlying attached cluster.
     ///
-    /// Supported values: ["eks", "aks"].
+    /// Supported values: ["eks", "aks", "generic"].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1570,6 +1570,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///  *   `platform_version`.
     ///  *   `proxy_config.kubernetes_secret.name`.
     ///  *   `proxy_config.kubernetes_secret.namespace`.
+    ///  *   `security_posture_config.vulnerability_mode`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
