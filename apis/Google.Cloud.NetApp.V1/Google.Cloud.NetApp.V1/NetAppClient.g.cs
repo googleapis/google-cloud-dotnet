@@ -57,6 +57,8 @@ namespace Google.Cloud.NetApp.V1
             UpdateStoragePoolOperationsSettings = existing.UpdateStoragePoolOperationsSettings.Clone();
             DeleteStoragePoolSettings = existing.DeleteStoragePoolSettings;
             DeleteStoragePoolOperationsSettings = existing.DeleteStoragePoolOperationsSettings.Clone();
+            SwitchActiveReplicaZoneSettings = existing.SwitchActiveReplicaZoneSettings;
+            SwitchActiveReplicaZoneOperationsSettings = existing.SwitchActiveReplicaZoneOperationsSettings.Clone();
             ListVolumesSettings = existing.ListVolumesSettings;
             GetVolumeSettings = existing.GetVolumeSettings;
             CreateVolumeSettings = existing.CreateVolumeSettings;
@@ -260,6 +262,36 @@ namespace Google.Cloud.NetApp.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteStoragePoolOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.SwitchActiveReplicaZone</c> and <c>NetAppClient.SwitchActiveReplicaZoneAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SwitchActiveReplicaZoneSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.SwitchActiveReplicaZone</c> and
+        /// <c>NetAppClient.SwitchActiveReplicaZoneAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SwitchActiveReplicaZoneOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2277,6 +2309,63 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteStoragePoolAsync(StoragePoolName name, st::CancellationToken cancellationToken) =>
             DeleteStoragePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This operation will switch the active/replica zone for a regional
+        /// storagePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<StoragePool, OperationMetadata> SwitchActiveReplicaZone(SwitchActiveReplicaZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This operation will switch the active/replica zone for a regional
+        /// storagePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<StoragePool, OperationMetadata>> SwitchActiveReplicaZoneAsync(SwitchActiveReplicaZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This operation will switch the active/replica zone for a regional
+        /// storagePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<StoragePool, OperationMetadata>> SwitchActiveReplicaZoneAsync(SwitchActiveReplicaZoneRequest request, st::CancellationToken cancellationToken) =>
+            SwitchActiveReplicaZoneAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SwitchActiveReplicaZone</c>.</summary>
+        public virtual lro::OperationsClient SwitchActiveReplicaZoneOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SwitchActiveReplicaZone</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<StoragePool, OperationMetadata> PollOnceSwitchActiveReplicaZone(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<StoragePool, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SwitchActiveReplicaZoneOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SwitchActiveReplicaZone</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<StoragePool, OperationMetadata>> PollOnceSwitchActiveReplicaZoneAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<StoragePool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SwitchActiveReplicaZoneOperationsClient, callSettings);
 
         /// <summary>
         /// Lists Volumes in a given project.
@@ -8347,6 +8436,8 @@ namespace Google.Cloud.NetApp.V1
 
         private readonly gaxgrpc::ApiCall<DeleteStoragePoolRequest, lro::Operation> _callDeleteStoragePool;
 
+        private readonly gaxgrpc::ApiCall<SwitchActiveReplicaZoneRequest, lro::Operation> _callSwitchActiveReplicaZone;
+
         private readonly gaxgrpc::ApiCall<ListVolumesRequest, ListVolumesResponse> _callListVolumes;
 
         private readonly gaxgrpc::ApiCall<GetVolumeRequest, Volume> _callGetVolume;
@@ -8457,6 +8548,7 @@ namespace Google.Cloud.NetApp.V1
             CreateStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateStoragePoolOperationsSettings, logger);
             UpdateStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateStoragePoolOperationsSettings, logger);
             DeleteStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteStoragePoolOperationsSettings, logger);
+            SwitchActiveReplicaZoneOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SwitchActiveReplicaZoneOperationsSettings, logger);
             CreateVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateVolumeOperationsSettings, logger);
             UpdateVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateVolumeOperationsSettings, logger);
             DeleteVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVolumeOperationsSettings, logger);
@@ -8502,6 +8594,9 @@ namespace Google.Cloud.NetApp.V1
             _callDeleteStoragePool = clientHelper.BuildApiCall<DeleteStoragePoolRequest, lro::Operation>("DeleteStoragePool", grpcClient.DeleteStoragePoolAsync, grpcClient.DeleteStoragePool, effectiveSettings.DeleteStoragePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteStoragePool);
             Modify_DeleteStoragePoolApiCall(ref _callDeleteStoragePool);
+            _callSwitchActiveReplicaZone = clientHelper.BuildApiCall<SwitchActiveReplicaZoneRequest, lro::Operation>("SwitchActiveReplicaZone", grpcClient.SwitchActiveReplicaZoneAsync, grpcClient.SwitchActiveReplicaZone, effectiveSettings.SwitchActiveReplicaZoneSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callSwitchActiveReplicaZone);
+            Modify_SwitchActiveReplicaZoneApiCall(ref _callSwitchActiveReplicaZone);
             _callListVolumes = clientHelper.BuildApiCall<ListVolumesRequest, ListVolumesResponse>("ListVolumes", grpcClient.ListVolumesAsync, grpcClient.ListVolumes, effectiveSettings.ListVolumesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVolumes);
             Modify_ListVolumesApiCall(ref _callListVolumes);
@@ -8655,6 +8750,8 @@ namespace Google.Cloud.NetApp.V1
 
         partial void Modify_DeleteStoragePoolApiCall(ref gaxgrpc::ApiCall<DeleteStoragePoolRequest, lro::Operation> call);
 
+        partial void Modify_SwitchActiveReplicaZoneApiCall(ref gaxgrpc::ApiCall<SwitchActiveReplicaZoneRequest, lro::Operation> call);
+
         partial void Modify_ListVolumesApiCall(ref gaxgrpc::ApiCall<ListVolumesRequest, ListVolumesResponse> call);
 
         partial void Modify_GetVolumeApiCall(ref gaxgrpc::ApiCall<GetVolumeRequest, Volume> call);
@@ -8764,6 +8861,8 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_UpdateStoragePoolRequest(ref UpdateStoragePoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteStoragePoolRequest(ref DeleteStoragePoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SwitchActiveReplicaZoneRequest(ref SwitchActiveReplicaZoneRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListVolumesRequest(ref ListVolumesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8984,6 +9083,35 @@ namespace Google.Cloud.NetApp.V1
         {
             Modify_DeleteStoragePoolRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteStoragePool.Async(request, callSettings).ConfigureAwait(false), DeleteStoragePoolOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SwitchActiveReplicaZone</c>.</summary>
+        public override lro::OperationsClient SwitchActiveReplicaZoneOperationsClient { get; }
+
+        /// <summary>
+        /// This operation will switch the active/replica zone for a regional
+        /// storagePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<StoragePool, OperationMetadata> SwitchActiveReplicaZone(SwitchActiveReplicaZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SwitchActiveReplicaZoneRequest(ref request, ref callSettings);
+            return new lro::Operation<StoragePool, OperationMetadata>(_callSwitchActiveReplicaZone.Sync(request, callSettings), SwitchActiveReplicaZoneOperationsClient);
+        }
+
+        /// <summary>
+        /// This operation will switch the active/replica zone for a regional
+        /// storagePool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<StoragePool, OperationMetadata>> SwitchActiveReplicaZoneAsync(SwitchActiveReplicaZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SwitchActiveReplicaZoneRequest(ref request, ref callSettings);
+            return new lro::Operation<StoragePool, OperationMetadata>(await _callSwitchActiveReplicaZone.Async(request, callSettings).ConfigureAwait(false), SwitchActiveReplicaZoneOperationsClient);
         }
 
         /// <summary>

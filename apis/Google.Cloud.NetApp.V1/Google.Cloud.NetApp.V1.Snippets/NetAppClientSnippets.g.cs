@@ -901,6 +901,71 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for SwitchActiveReplicaZone</summary>
+        public void SwitchActiveReplicaZoneRequestObject()
+        {
+            // Snippet: SwitchActiveReplicaZone(SwitchActiveReplicaZoneRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            SwitchActiveReplicaZoneRequest request = new SwitchActiveReplicaZoneRequest
+            {
+                StoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+            };
+            // Make the request
+            Operation<StoragePool, OperationMetadata> response = netAppClient.SwitchActiveReplicaZone(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<StoragePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            StoragePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<StoragePool, OperationMetadata> retrievedResponse = netAppClient.PollOnceSwitchActiveReplicaZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                StoragePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SwitchActiveReplicaZoneAsync</summary>
+        public async Task SwitchActiveReplicaZoneRequestObjectAsync()
+        {
+            // Snippet: SwitchActiveReplicaZoneAsync(SwitchActiveReplicaZoneRequest, CallSettings)
+            // Additional: SwitchActiveReplicaZoneAsync(SwitchActiveReplicaZoneRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            SwitchActiveReplicaZoneRequest request = new SwitchActiveReplicaZoneRequest
+            {
+                StoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+            };
+            // Make the request
+            Operation<StoragePool, OperationMetadata> response = await netAppClient.SwitchActiveReplicaZoneAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<StoragePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            StoragePool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<StoragePool, OperationMetadata> retrievedResponse = await netAppClient.PollOnceSwitchActiveReplicaZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                StoragePool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListVolumes</summary>
         public void ListVolumesRequestObject()
         {

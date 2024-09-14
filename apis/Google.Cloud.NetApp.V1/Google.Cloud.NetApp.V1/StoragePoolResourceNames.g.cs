@@ -321,6 +321,18 @@ namespace Google.Cloud.NetApp.V1
         }
     }
 
+    public partial class SwitchActiveReplicaZoneRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::StoragePoolName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::StoragePoolName StoragePoolName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::StoragePoolName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class StoragePool
     {
         /// <summary>

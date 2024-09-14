@@ -256,6 +256,12 @@
                 "StopReplicationAsync"
               ]
             },
+            "SwitchActiveReplicaZone": {
+              "methods": [
+                "SwitchActiveReplicaZone",
+                "SwitchActiveReplicaZoneAsync"
+              ]
+            },
             "UpdateActiveDirectory": {
               "methods": [
                 "UpdateActiveDirectory",
