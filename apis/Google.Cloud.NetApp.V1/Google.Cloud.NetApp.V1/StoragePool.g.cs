@@ -47,37 +47,39 @@ namespace Google.Cloud.NetApp.V1 {
             "cmFnZV9wb29sGAIgASgLMiMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5TdG9y",
             "YWdlUG9vbEID4EECIlMKGERlbGV0ZVN0b3JhZ2VQb29sUmVxdWVzdBI3CgRu",
             "YW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9y",
-            "YWdlUG9vbCKJCQoLU3RvcmFnZVBvb2wSEQoEbmFtZRgBIAEoCUID4EEIEkAK",
-            "DXNlcnZpY2VfbGV2ZWwYAiABKA4yJC5nb29nbGUuY2xvdWQubmV0YXBwLnYx",
-            "LlNlcnZpY2VMZXZlbEID4EECEhkKDGNhcGFjaXR5X2dpYhgDIAEoA0ID4EEC",
-            "EiAKE3ZvbHVtZV9jYXBhY2l0eV9naWIYBCABKANCA+BBAxIZCgx2b2x1bWVf",
-            "Y291bnQYBSABKAVCA+BBAxI9CgVzdGF0ZRgGIAEoDjIpLmdvb2dsZS5jbG91",
-            "ZC5uZXRhcHAudjEuU3RvcmFnZVBvb2wuU3RhdGVCA+BBAxIaCg1zdGF0ZV9k",
-            "ZXRhaWxzGAcgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYCCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGAoLZGVzY3JpcHRpb24YCSAB",
-            "KAlCA+BBARJECgZsYWJlbHMYCiADKAsyLy5nb29nbGUuY2xvdWQubmV0YXBw",
-            "LnYxLlN0b3JhZ2VQb29sLkxhYmVsc0VudHJ5QgPgQQESNwoHbmV0d29yaxgL",
-            "IAEoCUIm4EEC+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsS",
-            "RwoQYWN0aXZlX2RpcmVjdG9yeRgMIAEoCUIt4EEB+kEnCiVuZXRhcHAuZ29v",
-            "Z2xlYXBpcy5jb20vQWN0aXZlRGlyZWN0b3J5EjsKCmttc19jb25maWcYDSAB",
-            "KAlCJ+BBAfpBIQofbmV0YXBwLmdvb2dsZWFwaXMuY29tL0ttc0NvbmZpZxIZ",
-            "CgxsZGFwX2VuYWJsZWQYDiABKAhCA+BBARIWCglwc2FfcmFuZ2UYDyABKAlC",
-            "A+BBARJECg9lbmNyeXB0aW9uX3R5cGUYECABKA4yJi5nb29nbGUuY2xvdWQu",
-            "bmV0YXBwLnYxLkVuY3J5cHRpb25UeXBlQgPgQQMSJgoVZ2xvYmFsX2FjY2Vz",
-            "c19hbGxvd2VkGBEgASgIQgIYAUgAiAEBEhkKDHJlcGxpY2Ffem9uZRgUIAEo",
-            "CUID4EEBEhEKBHpvbmUYFSABKAlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInsKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCERF",
-            "TEVUSU5HEAMSDAoIVVBEQVRJTkcQBBINCglSRVNUT1JJTkcQBRIMCghESVNB",
-            "QkxFRBAGEgkKBUVSUk9SEAc6hwHqQYMBCiFuZXRhcHAuZ29vZ2xlYXBpcy5j",
-            "b20vU3RvcmFnZVBvb2wSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9zdG9yYWdlUG9vbHMve3N0b3JhZ2VfcG9vbH0qDHN0b3Jh",
-            "Z2VQb29sczILc3RvcmFnZVBvb2xCGAoWX2dsb2JhbF9hY2Nlc3NfYWxsb3dl",
-            "ZEKyAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCEFN0b3JhZ2VQb29s",
-            "UHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0",
-            "YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29v",
-            "Z2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6",
-            "VjFiBnByb3RvMw=="));
+            "YWdlUG9vbCJZCh5Td2l0Y2hBY3RpdmVSZXBsaWNhWm9uZVJlcXVlc3QSNwoE",
+            "bmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3Rv",
+            "cmFnZVBvb2wiqgkKC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
+            "Cg1zZXJ2aWNlX2xldmVsGAIgASgOMiQuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
+            "MS5TZXJ2aWNlTGV2ZWxCA+BBAhIZCgxjYXBhY2l0eV9naWIYAyABKANCA+BB",
+            "AhIgChN2b2x1bWVfY2FwYWNpdHlfZ2liGAQgASgDQgPgQQMSGQoMdm9sdW1l",
+            "X2NvdW50GAUgASgFQgPgQQMSPQoFc3RhdGUYBiABKA4yKS5nb29nbGUuY2xv",
+            "dWQubmV0YXBwLnYxLlN0b3JhZ2VQb29sLlN0YXRlQgPgQQMSGgoNc3RhdGVf",
+            "ZGV0YWlscxgHIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAggASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhgKC2Rlc2NyaXB0aW9uGAkg",
+            "ASgJQgPgQQESRAoGbGFiZWxzGAogAygLMi8uZ29vZ2xlLmNsb3VkLm5ldGFw",
+            "cC52MS5TdG9yYWdlUG9vbC5MYWJlbHNFbnRyeUID4EEBEjcKB25ldHdvcmsY",
+            "CyABKAlCJuBBAvpBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3Jr",
+            "EkcKEGFjdGl2ZV9kaXJlY3RvcnkYDCABKAlCLeBBAfpBJwolbmV0YXBwLmdv",
+            "b2dsZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeRI7CgprbXNfY29uZmlnGA0g",
+            "ASgJQifgQQH6QSEKH25ldGFwcC5nb29nbGVhcGlzLmNvbS9LbXNDb25maWcS",
+            "GQoMbGRhcF9lbmFibGVkGA4gASgIQgPgQQESFgoJcHNhX3JhbmdlGA8gASgJ",
+            "QgPgQQESRAoPZW5jcnlwdGlvbl90eXBlGBAgASgOMiYuZ29vZ2xlLmNsb3Vk",
+            "Lm5ldGFwcC52MS5FbmNyeXB0aW9uVHlwZUID4EEDEiYKFWdsb2JhbF9hY2Nl",
+            "c3NfYWxsb3dlZBgRIAEoCEICGAFIAIgBARIfChJhbGxvd19hdXRvX3RpZXJp",
+            "bmcYEiABKAhCA+BBARIZCgxyZXBsaWNhX3pvbmUYFCABKAlCA+BBARIRCgR6",
+            "b25lGBUgASgJQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ASJ7CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
+            "RBAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIMCghERUxFVElORxADEgwK",
+            "CFVQREFUSU5HEAQSDQoJUkVTVE9SSU5HEAUSDAoIRElTQUJMRUQQBhIJCgVF",
+            "UlJPUhAHOocB6kGDAQohbmV0YXBwLmdvb2dsZWFwaXMuY29tL1N0b3JhZ2VQ",
+            "b29sEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "c3RvcmFnZVBvb2xzL3tzdG9yYWdlX3Bvb2x9KgxzdG9yYWdlUG9vbHMyC3N0",
+            "b3JhZ2VQb29sQhgKFl9nbG9iYWxfYWNjZXNzX2FsbG93ZWRCsgEKGmNvbS5n",
+            "b29nbGUuY2xvdWQubmV0YXBwLnYxQhBTdG9yYWdlUG9vbFByb3RvUAFaMmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFw",
+            "cHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxO",
+            "ZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,7 +89,8 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.CreateStoragePoolRequest), global::Google.Cloud.NetApp.V1.CreateStoragePoolRequest.Parser, new[]{ "Parent", "StoragePoolId", "StoragePool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest), global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest.Parser, new[]{ "UpdateMask", "StoragePool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest), global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "ReplicaZone", "Zone" }, new[]{ "GlobalAccessAllowed" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest), global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone" }, new[]{ "GlobalAccessAllowed" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -1645,6 +1648,203 @@ namespace Google.Cloud.NetApp.V1 {
   }
 
   /// <summary>
+  /// SwitchActiveReplicaZoneRequest switch the active/replica zone for a regional
+  /// storagePool.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SwitchActiveReplicaZoneRequest : pb::IMessage<SwitchActiveReplicaZoneRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SwitchActiveReplicaZoneRequest> _parser = new pb::MessageParser<SwitchActiveReplicaZoneRequest>(() => new SwitchActiveReplicaZoneRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SwitchActiveReplicaZoneRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetApp.V1.StoragePoolReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SwitchActiveReplicaZoneRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SwitchActiveReplicaZoneRequest(SwitchActiveReplicaZoneRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SwitchActiveReplicaZoneRequest Clone() {
+      return new SwitchActiveReplicaZoneRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Name of the storage pool
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SwitchActiveReplicaZoneRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SwitchActiveReplicaZoneRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SwitchActiveReplicaZoneRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// StoragePool is a container for volumes with a service level and capacity.
   /// Volumes can be created in a pool of sufficient available capacity.
   /// StoragePool capacity is what you are billed for.
@@ -1665,7 +1865,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.StoragePoolReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.NetApp.V1.StoragePoolReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1703,6 +1903,7 @@ namespace Google.Cloud.NetApp.V1 {
       psaRange_ = other.psaRange_;
       encryptionType_ = other.encryptionType_;
       globalAccessAllowed_ = other.globalAccessAllowed_;
+      allowAutoTiering_ = other.allowAutoTiering_;
       replicaZone_ = other.replicaZone_;
       zone_ = other.zone_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1990,6 +2191,23 @@ namespace Google.Cloud.NetApp.V1 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "allow_auto_tiering" field.</summary>
+    public const int AllowAutoTieringFieldNumber = 18;
+    private bool allowAutoTiering_;
+    /// <summary>
+    /// Optional. True if the storage pool supports Auto Tiering enabled volumes.
+    /// Default is false. Auto-tiering can be enabled after storage pool creation
+    /// but it can't be disabled once enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowAutoTiering {
+      get { return allowAutoTiering_; }
+      set {
+        allowAutoTiering_ = value;
+      }
+    }
+
     /// <summary>Field number for the "replica_zone" field.</summary>
     public const int ReplicaZoneFieldNumber = 20;
     private string replicaZone_ = "";
@@ -2052,6 +2270,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (PsaRange != other.PsaRange) return false;
       if (EncryptionType != other.EncryptionType) return false;
       if (GlobalAccessAllowed != other.GlobalAccessAllowed) return false;
+      if (AllowAutoTiering != other.AllowAutoTiering) return false;
       if (ReplicaZone != other.ReplicaZone) return false;
       if (Zone != other.Zone) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2078,6 +2297,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (PsaRange.Length != 0) hash ^= PsaRange.GetHashCode();
       if (EncryptionType != global::Google.Cloud.NetApp.V1.EncryptionType.Unspecified) hash ^= EncryptionType.GetHashCode();
       if (HasGlobalAccessAllowed) hash ^= GlobalAccessAllowed.GetHashCode();
+      if (AllowAutoTiering != false) hash ^= AllowAutoTiering.GetHashCode();
       if (ReplicaZone.Length != 0) hash ^= ReplicaZone.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (_unknownFields != null) {
@@ -2163,6 +2383,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(136, 1);
         output.WriteBool(GlobalAccessAllowed);
       }
+      if (AllowAutoTiering != false) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(AllowAutoTiering);
+      }
       if (ReplicaZone.Length != 0) {
         output.WriteRawTag(162, 1);
         output.WriteString(ReplicaZone);
@@ -2246,6 +2470,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(136, 1);
         output.WriteBool(GlobalAccessAllowed);
       }
+      if (AllowAutoTiering != false) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(AllowAutoTiering);
+      }
       if (ReplicaZone.Length != 0) {
         output.WriteRawTag(162, 1);
         output.WriteString(ReplicaZone);
@@ -2311,6 +2539,9 @@ namespace Google.Cloud.NetApp.V1 {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EncryptionType);
       }
       if (HasGlobalAccessAllowed) {
+        size += 2 + 1;
+      }
+      if (AllowAutoTiering != false) {
         size += 2 + 1;
       }
       if (ReplicaZone.Length != 0) {
@@ -2382,6 +2613,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasGlobalAccessAllowed) {
         GlobalAccessAllowed = other.GlobalAccessAllowed;
+      }
+      if (other.AllowAutoTiering != false) {
+        AllowAutoTiering = other.AllowAutoTiering;
       }
       if (other.ReplicaZone.Length != 0) {
         ReplicaZone = other.ReplicaZone;
@@ -2473,6 +2707,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 136: {
             GlobalAccessAllowed = input.ReadBool();
+            break;
+          }
+          case 144: {
+            AllowAutoTiering = input.ReadBool();
             break;
           }
           case 162: {
@@ -2567,6 +2805,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 136: {
             GlobalAccessAllowed = input.ReadBool();
+            break;
+          }
+          case 144: {
+            AllowAutoTiering = input.ReadBool();
             break;
           }
           case 162: {

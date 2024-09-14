@@ -1423,6 +1423,103 @@
       ]
     },
     {
+      "regionTag": "netapp_v1_generated_NetApp_SwitchActiveReplicaZone_sync",
+      "title": "SwitchActiveReplicaZoneRequestObject",
+      "description": "Snippet for SwitchActiveReplicaZone",
+      "file": "NetAppClient.SwitchActiveReplicaZoneRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SwitchActiveReplicaZone",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.SwitchActiveReplicaZone",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.StoragePool, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "SwitchActiveReplicaZone",
+          "fullName": "google.cloud.netapp.v1.NetApp.SwitchActiveReplicaZone",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_SwitchActiveReplicaZone_async",
+      "title": "SwitchActiveReplicaZoneRequestObjectAsync",
+      "description": "Snippet for SwitchActiveReplicaZoneAsync",
+      "file": "NetAppClient.SwitchActiveReplicaZoneRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SwitchActiveReplicaZoneAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.SwitchActiveReplicaZoneAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.StoragePool, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "SwitchActiveReplicaZone",
+          "fullName": "google.cloud.netapp.v1.NetApp.SwitchActiveReplicaZone",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "netapp_v1_generated_NetApp_ListVolumes_sync",
       "title": "ListVolumesRequestObject",
       "description": "Snippet for ListVolumes",
