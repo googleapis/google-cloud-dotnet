@@ -29,7 +29,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
             "c291cmNlLnByb3RvGjRnb29nbGUvY2xvdWQvZ2tlbXVsdGljbG91ZC92MS9j",
             "b21tb25fcmVzb3VyY2VzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIvILCg9BdHRhY2hlZENsdXN0ZXISDAoEbmFtZRgBIAEoCRIY",
+            "YW1wLnByb3RvIs4MCg9BdHRhY2hlZENsdXN0ZXISDAoEbmFtZRgBIAEoCRIY",
             "CgtkZXNjcmlwdGlvbhgCIAEoCUID4EEBEksKC29pZGNfY29uZmlnGAMgASgL",
             "MjEuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXR0YWNoZWRPaWRj",
             "Q29uZmlnQgPgQQISHQoQcGxhdGZvcm1fdmVyc2lvbhgEIAEoCUID4EECEhkK",
@@ -56,41 +56,43 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "b25maWcYGCABKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5B",
             "dHRhY2hlZFByb3h5Q29uZmlnQgPgQQESVQoUYmluYXJ5X2F1dGhvcml6YXRp",
             "b24YGSABKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5CaW5h",
-            "cnlBdXRob3JpemF0aW9uQgPgQQEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInUKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESCwoHUlVOTklORxAC",
-            "Eg8KC1JFQ09OQ0lMSU5HEAMSDAoIU1RPUFBJTkcQBBIJCgVFUlJPUhAFEgwK",
-            "CERFR1JBREVEEAY6fupBewosZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNv",
-            "bS9BdHRhY2hlZENsdXN0ZXISS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9hdHRhY2hlZENsdXN0ZXJzL3thdHRhY2hlZF9jbHVz",
-            "dGVyfSK9AQodQXR0YWNoZWRDbHVzdGVyc0F1dGhvcml6YXRpb24STAoLYWRt",
-            "aW5fdXNlcnMYASADKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52",
-            "MS5BdHRhY2hlZENsdXN0ZXJVc2VyQgPgQQESTgoMYWRtaW5fZ3JvdXBzGAIg",
-            "AygLMjMuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXR0YWNoZWRD",
-            "bHVzdGVyR3JvdXBCA+BBASIsChNBdHRhY2hlZENsdXN0ZXJVc2VyEhUKCHVz",
-            "ZXJuYW1lGAEgASgJQgPgQQIiKgoUQXR0YWNoZWRDbHVzdGVyR3JvdXASEgoF",
-            "Z3JvdXAYASABKAlCA+BBAiI7ChJBdHRhY2hlZE9pZGNDb25maWcSEgoKaXNz",
-            "dWVyX3VybBgBIAEoCRIRCgRqd2tzGAIgASgMQgPgQQEi7gEKFEF0dGFjaGVk",
-            "U2VydmVyQ29uZmlnEgwKBG5hbWUYASABKAkSUgoOdmFsaWRfdmVyc2lvbnMY",
-            "AiADKAsyOi5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5BdHRhY2hl",
-            "ZFBsYXRmb3JtVmVyc2lvbkluZm86dOpBcQoxZ2tlbXVsdGljbG91ZC5nb29n",
-            "bGVhcGlzLmNvbS9BdHRhY2hlZFNlcnZlckNvbmZpZxI8cHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2F0dGFjaGVkU2VydmVyQ29u",
-            "ZmlnIi4KG0F0dGFjaGVkUGxhdGZvcm1WZXJzaW9uSW5mbxIPCgd2ZXJzaW9u",
-            "GAEgASgJIicKFEF0dGFjaGVkQ2x1c3RlckVycm9yEg8KB21lc3NhZ2UYASAB",
-            "KAkiYQoTQXR0YWNoZWRQcm94eUNvbmZpZxJKChFrdWJlcm5ldGVzX3NlY3Jl",
-            "dBgBIAEoCzIvLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkt1YmVy",
-            "bmV0ZXNTZWNyZXQiMwoQS3ViZXJuZXRlc1NlY3JldBIMCgRuYW1lGAEgASgJ",
-            "EhEKCW5hbWVzcGFjZRgCIAEoCULpAQohY29tLmdvb2dsZS5jbG91ZC5na2Vt",
-            "dWx0aWNsb3VkLnYxQhZBdHRhY2hlZFJlc291cmNlc1Byb3RvUAFaR2Nsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vZ2tlbXVsdGljbG91ZC9hcGl2MS9na2VtdWx0aWNs",
-            "b3VkcGI7Z2tlbXVsdGljbG91ZHBiqgIdR29vZ2xlLkNsb3VkLkdrZU11bHRp",
-            "Q2xvdWQuVjHKAh1Hb29nbGVcQ2xvdWRcR2tlTXVsdGlDbG91ZFxWMeoCIEdv",
-            "b2dsZTo6Q2xvdWQ6OkdrZU11bHRpQ2xvdWQ6OlYxYgZwcm90bzM="));
+            "cnlBdXRob3JpemF0aW9uQgPgQQESWgoXc2VjdXJpdHlfcG9zdHVyZV9jb25m",
+            "aWcYGiABKAsyNC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5TZWN1",
+            "cml0eVBvc3R1cmVDb25maWdCA+BBARoyChBBbm5vdGF0aW9uc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEidQoFU3RhdGUSFQoRU1RB",
+            "VEVfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARILCgdSVU5OSU5H",
+            "EAISDwoLUkVDT05DSUxJTkcQAxIMCghTVE9QUElORxAEEgkKBUVSUk9SEAUS",
+            "DAoIREVHUkFERUQQBjp+6kF7Cixna2VtdWx0aWNsb3VkLmdvb2dsZWFwaXMu",
+            "Y29tL0F0dGFjaGVkQ2x1c3RlchJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2F0dGFjaGVkQ2x1c3RlcnMve2F0dGFjaGVkX2Ns",
+            "dXN0ZXJ9Ir0BCh1BdHRhY2hlZENsdXN0ZXJzQXV0aG9yaXphdGlvbhJMCgth",
+            "ZG1pbl91c2VycxgBIAMoCzIyLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3Vk",
+            "LnYxLkF0dGFjaGVkQ2x1c3RlclVzZXJCA+BBARJOCgxhZG1pbl9ncm91cHMY",
+            "AiADKAsyMy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5BdHRhY2hl",
+            "ZENsdXN0ZXJHcm91cEID4EEBIiwKE0F0dGFjaGVkQ2x1c3RlclVzZXISFQoI",
+            "dXNlcm5hbWUYASABKAlCA+BBAiIqChRBdHRhY2hlZENsdXN0ZXJHcm91cBIS",
+            "CgVncm91cBgBIAEoCUID4EECIjsKEkF0dGFjaGVkT2lkY0NvbmZpZxISCgpp",
+            "c3N1ZXJfdXJsGAEgASgJEhEKBGp3a3MYAiABKAxCA+BBASLuAQoUQXR0YWNo",
+            "ZWRTZXJ2ZXJDb25maWcSDAoEbmFtZRgBIAEoCRJSCg52YWxpZF92ZXJzaW9u",
+            "cxgCIAMoCzI6Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF0dGFj",
+            "aGVkUGxhdGZvcm1WZXJzaW9uSW5mbzp06kFxCjFna2VtdWx0aWNsb3VkLmdv",
+            "b2dsZWFwaXMuY29tL0F0dGFjaGVkU2VydmVyQ29uZmlnEjxwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXR0YWNoZWRTZXJ2ZXJD",
+            "b25maWciLgobQXR0YWNoZWRQbGF0Zm9ybVZlcnNpb25JbmZvEg8KB3ZlcnNp",
+            "b24YASABKAkiJwoUQXR0YWNoZWRDbHVzdGVyRXJyb3ISDwoHbWVzc2FnZRgB",
+            "IAEoCSJhChNBdHRhY2hlZFByb3h5Q29uZmlnEkoKEWt1YmVybmV0ZXNfc2Vj",
+            "cmV0GAEgASgLMi8uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuS3Vi",
+            "ZXJuZXRlc1NlY3JldCIzChBLdWJlcm5ldGVzU2VjcmV0EgwKBG5hbWUYASAB",
+            "KAkSEQoJbmFtZXNwYWNlGAIgASgJQukBCiFjb20uZ29vZ2xlLmNsb3VkLmdr",
+            "ZW11bHRpY2xvdWQudjFCFkF0dGFjaGVkUmVzb3VyY2VzUHJvdG9QAVpHY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9na2VtdWx0aWNsb3VkL2FwaXYxL2drZW11bHRp",
+            "Y2xvdWRwYjtna2VtdWx0aWNsb3VkcGKqAh1Hb29nbGUuQ2xvdWQuR2tlTXVs",
+            "dGlDbG91ZC5WMcoCHUdvb2dsZVxDbG91ZFxHa2VNdWx0aUNsb3VkXFYx6gIg",
+            "R29vZ2xlOjpDbG91ZDo6R2tlTXVsdGlDbG91ZDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeMultiCloud.V1.CommonResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster), global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster.Parser, new[]{ "Name", "Description", "OidcConfig", "PlatformVersion", "Distribution", "ClusterRegion", "Fleet", "State", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "KubernetesVersion", "Annotations", "WorkloadIdentityConfig", "LoggingConfig", "Errors", "Authorization", "MonitoringConfig", "ProxyConfig", "BinaryAuthorization" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster), global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster.Parser, new[]{ "Name", "Description", "OidcConfig", "PlatformVersion", "Distribution", "ClusterRegion", "Fleet", "State", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "KubernetesVersion", "Annotations", "WorkloadIdentityConfig", "LoggingConfig", "Errors", "Authorization", "MonitoringConfig", "ProxyConfig", "BinaryAuthorization", "SecurityPostureConfig" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedClustersAuthorization), global::Google.Cloud.GkeMultiCloud.V1.AttachedClustersAuthorization.Parser, new[]{ "AdminUsers", "AdminGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedClusterUser), global::Google.Cloud.GkeMultiCloud.V1.AttachedClusterUser.Parser, new[]{ "Username" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedClusterGroup), global::Google.Cloud.GkeMultiCloud.V1.AttachedClusterGroup.Parser, new[]{ "Group" }, null, null, null, null),
@@ -166,6 +168,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       monitoringConfig_ = other.monitoringConfig_ != null ? other.monitoringConfig_.Clone() : null;
       proxyConfig_ = other.proxyConfig_ != null ? other.proxyConfig_.Clone() : null;
       binaryAuthorization_ = other.binaryAuthorization_ != null ? other.binaryAuthorization_.Clone() : null;
+      securityPostureConfig_ = other.securityPostureConfig_ != null ? other.securityPostureConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -531,6 +534,21 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
     }
 
+    /// <summary>Field number for the "security_posture_config" field.</summary>
+    public const int SecurityPostureConfigFieldNumber = 26;
+    private global::Google.Cloud.GkeMultiCloud.V1.SecurityPostureConfig securityPostureConfig_;
+    /// <summary>
+    /// Optional. Security Posture configuration for this cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeMultiCloud.V1.SecurityPostureConfig SecurityPostureConfig {
+      get { return securityPostureConfig_; }
+      set {
+        securityPostureConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -568,6 +586,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (!object.Equals(MonitoringConfig, other.MonitoringConfig)) return false;
       if (!object.Equals(ProxyConfig, other.ProxyConfig)) return false;
       if (!object.Equals(BinaryAuthorization, other.BinaryAuthorization)) return false;
+      if (!object.Equals(SecurityPostureConfig, other.SecurityPostureConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -597,6 +616,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (monitoringConfig_ != null) hash ^= MonitoringConfig.GetHashCode();
       if (proxyConfig_ != null) hash ^= ProxyConfig.GetHashCode();
       if (binaryAuthorization_ != null) hash ^= BinaryAuthorization.GetHashCode();
+      if (securityPostureConfig_ != null) hash ^= SecurityPostureConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -697,6 +717,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(202, 1);
         output.WriteMessage(BinaryAuthorization);
       }
+      if (securityPostureConfig_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(SecurityPostureConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -789,6 +813,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(202, 1);
         output.WriteMessage(BinaryAuthorization);
       }
+      if (securityPostureConfig_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(SecurityPostureConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -860,6 +888,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
       if (binaryAuthorization_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BinaryAuthorization);
+      }
+      if (securityPostureConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SecurityPostureConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -964,6 +995,12 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
           BinaryAuthorization = new global::Google.Cloud.GkeMultiCloud.V1.BinaryAuthorization();
         }
         BinaryAuthorization.MergeFrom(other.BinaryAuthorization);
+      }
+      if (other.securityPostureConfig_ != null) {
+        if (securityPostureConfig_ == null) {
+          SecurityPostureConfig = new global::Google.Cloud.GkeMultiCloud.V1.SecurityPostureConfig();
+        }
+        SecurityPostureConfig.MergeFrom(other.SecurityPostureConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1098,6 +1135,13 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             input.ReadMessage(BinaryAuthorization);
             break;
           }
+          case 210: {
+            if (securityPostureConfig_ == null) {
+              SecurityPostureConfig = new global::Google.Cloud.GkeMultiCloud.V1.SecurityPostureConfig();
+            }
+            input.ReadMessage(SecurityPostureConfig);
+            break;
+          }
         }
       }
     #endif
@@ -1229,6 +1273,13 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
               BinaryAuthorization = new global::Google.Cloud.GkeMultiCloud.V1.BinaryAuthorization();
             }
             input.ReadMessage(BinaryAuthorization);
+            break;
+          }
+          case 210: {
+            if (securityPostureConfig_ == null) {
+              SecurityPostureConfig = new global::Google.Cloud.GkeMultiCloud.V1.SecurityPostureConfig();
+            }
+            input.ReadMessage(SecurityPostureConfig);
             break;
           }
         }
