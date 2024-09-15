@@ -27,7 +27,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Ci1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL29wZW5hcGkucHJv",
             "dG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1",
-            "Y3QucHJvdG8ihwYKDU9wZW5BcGlTY2hlbWESOAoEdHlwZRgBIAEoDjIlLmdv",
+            "Y3QucHJvdG8ipwYKDU9wZW5BcGlTY2hlbWESOAoEdHlwZRgBIAEoDjIlLmdv",
             "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuVHlwZUID4EEBEhMKBmZv",
             "cm1hdBgHIAEoCUID4EEBEhIKBXRpdGxlGBggASgJQgPgQQESGAoLZGVzY3Jp",
             "cHRpb24YCCABKAlCA+BBARIVCghudWxsYWJsZRgGIAEoCEID4EEBEiwKB2Rl",
@@ -36,27 +36,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "T3BlbkFwaVNjaGVtYUID4EEBEhYKCW1pbl9pdGVtcxgVIAEoA0ID4EEBEhYK",
             "CW1heF9pdGVtcxgWIAEoA0ID4EEBEhEKBGVudW0YCSADKAlCA+BBARJXCgpw",
             "cm9wZXJ0aWVzGAMgAygLMj4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
-            "ZXRhMS5PcGVuQXBpU2NoZW1hLlByb3BlcnRpZXNFbnRyeUID4EEBEhUKCHJl",
-            "cXVpcmVkGAUgAygJQgPgQQESGwoObWluX3Byb3BlcnRpZXMYDiABKANCA+BB",
-            "ARIbCg5tYXhfcHJvcGVydGllcxgPIAEoA0ID4EEBEhQKB21pbmltdW0YECAB",
-            "KAFCA+BBARIUCgdtYXhpbXVtGBEgASgBQgPgQQESFwoKbWluX2xlbmd0aBgS",
-            "IAEoA0ID4EEBEhcKCm1heF9sZW5ndGgYEyABKANCA+BBARIUCgdwYXR0ZXJu",
-            "GBQgASgJQgPgQQESLAoHZXhhbXBsZRgEIAEoCzIWLmdvb2dsZS5wcm90b2J1",
-            "Zi5WYWx1ZUID4EEBGmEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkS",
-            "PQoFdmFsdWUYAiABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLk9wZW5BcGlTY2hlbWE6AjgBKmUKBFR5cGUSFAoQVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEgoKBlNUUklORxABEgoKBk5VTUJFUhACEgsKB0lOVEVHRVIQAxIL",
-            "CgdCT09MRUFOEAQSCQoFQVJSQVkQBRIKCgZPQkpFQ1QQBkLjAQojY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCDE9wZW5BcGlQcm90b1AB",
-            "WkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9h",
-            "aXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxh",
-            "dGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0",
-            "YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90",
-            "bzM="));
+            "ZXRhMS5PcGVuQXBpU2NoZW1hLlByb3BlcnRpZXNFbnRyeUID4EEBEh4KEXBy",
+            "b3BlcnR5X29yZGVyaW5nGBkgAygJQgPgQQESFQoIcmVxdWlyZWQYBSADKAlC",
+            "A+BBARIbCg5taW5fcHJvcGVydGllcxgOIAEoA0ID4EEBEhsKDm1heF9wcm9w",
+            "ZXJ0aWVzGA8gASgDQgPgQQESFAoHbWluaW11bRgQIAEoAUID4EEBEhQKB21h",
+            "eGltdW0YESABKAFCA+BBARIXCgptaW5fbGVuZ3RoGBIgASgDQgPgQQESFwoK",
+            "bWF4X2xlbmd0aBgTIAEoA0ID4EEBEhQKB3BhdHRlcm4YFCABKAlCA+BBARIs",
+            "CgdleGFtcGxlGAQgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQEa",
+            "YQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRI9CgV2YWx1ZRgCIAEo",
+            "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuT3BlbkFwaVNj",
+            "aGVtYToCOAEqZQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGU1RS",
+            "SU5HEAESCgoGTlVNQkVSEAISCwoHSU5URUdFUhADEgsKB0JPT0xFQU4QBBIJ",
+            "CgVBUlJBWRAFEgoKBk9CSkVDVBAGQuMBCiNjb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFiZXRhMUIMT3BlbkFwaVByb3RvUAFaQ2Nsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjth",
+            "aXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGEx",
+            "ygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6",
+            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.Type), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema), global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema.Parser, new[]{ "Type", "Format", "Title", "Description", "Nullable", "Default", "Items", "MinItems", "MaxItems", "Enum", "Properties", "Required", "MinProperties", "MaxProperties", "Minimum", "Maximum", "MinLength", "MaxLength", "Pattern", "Example" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema), global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema.Parser, new[]{ "Type", "Format", "Title", "Description", "Nullable", "Default", "Items", "MinItems", "MaxItems", "Enum", "Properties", "PropertyOrdering", "Required", "MinProperties", "MaxProperties", "Minimum", "Maximum", "MinLength", "MaxLength", "Pattern", "Example" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -104,8 +104,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   /// <summary>
   /// Schema is used to define the format of input/output data. Represents a select
   /// subset of an [OpenAPI 3.0 schema
-  /// object](https://spec.openapis.org/oas/v3.0.3#schema). More fields may be
-  /// added in the future as needed.
+  /// object](https://spec.openapis.org/oas/v3.0.3#schema-object). More fields may
+  /// be added in the future as needed.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OpenApiSchema : pb::IMessage<OpenApiSchema>
@@ -153,6 +153,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       maxItems_ = other.maxItems_;
       enum_ = other.enum_.Clone();
       properties_ = other.properties_.Clone();
+      propertyOrdering_ = other.propertyOrdering_.Clone();
       required_ = other.required_.Clone();
       minProperties_ = other.minProperties_;
       maxProperties_ = other.maxProperties_;
@@ -342,6 +343,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return properties_; }
     }
 
+    /// <summary>Field number for the "property_ordering" field.</summary>
+    public const int PropertyOrderingFieldNumber = 25;
+    private static readonly pb::FieldCodec<string> _repeated_propertyOrdering_codec
+        = pb::FieldCodec.ForString(202);
+    private readonly pbc::RepeatedField<string> propertyOrdering_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The order of the properties.
+    /// Not a standard field in open api spec. Only used to support the order of
+    /// the properties.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> PropertyOrdering {
+      get { return propertyOrdering_; }
+    }
+
     /// <summary>Field number for the "required" field.</summary>
     public const int RequiredFieldNumber = 5;
     private static readonly pb::FieldCodec<string> _repeated_required_codec
@@ -506,6 +523,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (MaxItems != other.MaxItems) return false;
       if(!enum_.Equals(other.enum_)) return false;
       if (!Properties.Equals(other.Properties)) return false;
+      if(!propertyOrdering_.Equals(other.propertyOrdering_)) return false;
       if(!required_.Equals(other.required_)) return false;
       if (MinProperties != other.MinProperties) return false;
       if (MaxProperties != other.MaxProperties) return false;
@@ -533,6 +551,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (MaxItems != 0L) hash ^= MaxItems.GetHashCode();
       hash ^= enum_.GetHashCode();
       hash ^= Properties.GetHashCode();
+      hash ^= propertyOrdering_.GetHashCode();
       hash ^= required_.GetHashCode();
       if (MinProperties != 0L) hash ^= MinProperties.GetHashCode();
       if (MaxProperties != 0L) hash ^= MaxProperties.GetHashCode();
@@ -631,6 +650,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(194, 1);
         output.WriteString(Title);
       }
+      propertyOrdering_.WriteTo(output, _repeated_propertyOrdering_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -712,6 +732,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(194, 1);
         output.WriteString(Title);
       }
+      propertyOrdering_.WriteTo(ref output, _repeated_propertyOrdering_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -751,6 +772,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       size += enum_.CalculateSize(_repeated_enum_codec);
       size += properties_.CalculateSize(_map_properties_codec);
+      size += propertyOrdering_.CalculateSize(_repeated_propertyOrdering_codec);
       size += required_.CalculateSize(_repeated_required_codec);
       if (MinProperties != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinProperties);
@@ -823,6 +845,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       enum_.Add(other.enum_);
       properties_.MergeFrom(other.properties_);
+      propertyOrdering_.Add(other.propertyOrdering_);
       required_.Add(other.required_);
       if (other.MinProperties != 0L) {
         MinProperties = other.MinProperties;
@@ -955,6 +978,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             Title = input.ReadString();
             break;
           }
+          case 202: {
+            propertyOrdering_.AddEntriesFrom(input, _repeated_propertyOrdering_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1057,6 +1084,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 194: {
             Title = input.ReadString();
+            break;
+          }
+          case 202: {
+            propertyOrdering_.AddEntriesFrom(ref input, _repeated_propertyOrdering_codec);
             break;
           }
         }
