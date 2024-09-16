@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-alpha31, released 2024-09-16
+
+### New features
+
+- A new value `CANCELLATION_IN_PROGRESS` is added to enum `State` ([commit 7fbb002](https://github.com/googleapis/google-cloud-dotnet/commit/7fbb002c34e55831c8aba719a637756a2bc7981b))
+- A new value `CANCELLED` is added to enum `State` ([commit 7fbb002](https://github.com/googleapis/google-cloud-dotnet/commit/7fbb002c34e55831c8aba719a637756a2bc7981b))
+
+### Documentation improvements
+
+- Clarify tasks success criteria for background runnable ([commit 3b490fe](https://github.com/googleapis/google-cloud-dotnet/commit/3b490fe4d77e8d6624cf20759314d770548ff4d7))
+- Batch CentOS images and HPC CentOS images are EOS ([commit 5cbb834](https://github.com/googleapis/google-cloud-dotnet/commit/5cbb83416de1f5828179356ae16247bb09bb1829))
+
 ## Version 1.0.0-alpha30, released 2024-08-13
 
 ### New features
