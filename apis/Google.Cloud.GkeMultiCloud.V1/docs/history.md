@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.7.0, released 2024-09-16
+
+### New features
+
+- An optional field `security_posture_config` in message `.google.cloud.gkemulticloud.v1.AttachedCluster` is added ([commit d8adaac](https://github.com/googleapis/google-cloud-dotnet/commit/d8adaac06030ce3fb83da05f4f0931111d3e56b7))
+- An optional field `kubelet_config` in message `.google.cloud.gkemulticloud.v1.AwsNodePool` is added ([commit d8adaac](https://github.com/googleapis/google-cloud-dotnet/commit/d8adaac06030ce3fb83da05f4f0931111d3e56b7))
+
 ## Version 2.6.0, released 2024-05-14
 
 ### New features
