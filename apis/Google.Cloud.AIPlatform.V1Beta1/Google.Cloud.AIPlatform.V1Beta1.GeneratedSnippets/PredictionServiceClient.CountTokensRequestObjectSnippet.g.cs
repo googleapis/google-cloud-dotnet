@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 Contents = { new Content(), },
                 SystemInstruction = new Content(),
                 Tools = { new Tool(), },
+                GenerationConfig = new GenerationConfig(),
             };
             // Make the request
             CountTokensResponse response = predictionServiceClient.CountTokens(request);
