@@ -1359,7 +1359,7 @@
     },
     {
       "id": "Google.Cloud.CloudControlsPartner.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Cloud Controls Partner",
       "productUrl": "https://cloud.google.com/sovereign-controls-by-partners/docs/sovereign-partners/reference/rest",
