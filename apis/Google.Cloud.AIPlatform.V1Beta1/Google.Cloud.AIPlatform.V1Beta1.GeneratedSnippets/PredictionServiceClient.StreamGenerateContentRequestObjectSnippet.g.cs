@@ -49,6 +49,7 @@ namespace GoogleCSharpSnippets
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
                 CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
+                Labels = { { "", "" }, },
             };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamGenerateContentStream response = predictionServiceClient.StreamGenerateContent(request);

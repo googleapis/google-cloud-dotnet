@@ -730,6 +730,7 @@ namespace GoogleCSharpSnippets
                 Contents = { new Content(), },
                 SystemInstruction = new Content(),
                 Tools = { new Tool(), },
+                GenerationConfig = new GenerationConfig(),
             };
             // Make the request
             CountTokensResponse response = predictionServiceClient.CountTokens(request);
@@ -752,6 +753,7 @@ namespace GoogleCSharpSnippets
                 Contents = { new Content(), },
                 SystemInstruction = new Content(),
                 Tools = { new Tool(), },
+                GenerationConfig = new GenerationConfig(),
             };
             // Make the request
             CountTokensResponse response = await predictionServiceClient.CountTokensAsync(request);
@@ -836,6 +838,7 @@ namespace GoogleCSharpSnippets
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
                 CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
+                Labels = { { "", "" }, },
             };
             // Make the request
             GenerateContentResponse response = predictionServiceClient.GenerateContent(request);
@@ -863,6 +866,7 @@ namespace GoogleCSharpSnippets
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
                 CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
+                Labels = { { "", "" }, },
             };
             // Make the request
             GenerateContentResponse response = await predictionServiceClient.GenerateContentAsync(request);
@@ -918,6 +922,7 @@ namespace GoogleCSharpSnippets
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
                 CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
+                Labels = { { "", "" }, },
             };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamGenerateContentStream response = predictionServiceClient.StreamGenerateContent(request);

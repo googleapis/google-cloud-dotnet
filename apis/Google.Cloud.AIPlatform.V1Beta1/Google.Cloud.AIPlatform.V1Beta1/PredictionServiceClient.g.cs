@@ -1782,9 +1782,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Generate content with multimodal inputs.
         /// </summary>
         /// <param name="model">
-        /// Required. The name of the publisher model requested to serve the
-        /// prediction. Format:
+        /// Required. The fully qualified name of the publisher model or tuned model
+        /// endpoint to use.
+        /// 
+        /// Publisher model format:
         /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// 
+        /// Tuned model endpoint format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="contents">
         /// Required. The content of the current conversation with the model.
@@ -1809,9 +1814,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Generate content with multimodal inputs.
         /// </summary>
         /// <param name="model">
-        /// Required. The name of the publisher model requested to serve the
-        /// prediction. Format:
+        /// Required. The fully qualified name of the publisher model or tuned model
+        /// endpoint to use.
+        /// 
+        /// Publisher model format:
         /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// 
+        /// Tuned model endpoint format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="contents">
         /// Required. The content of the current conversation with the model.
@@ -1836,9 +1846,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Generate content with multimodal inputs.
         /// </summary>
         /// <param name="model">
-        /// Required. The name of the publisher model requested to serve the
-        /// prediction. Format:
+        /// Required. The fully qualified name of the publisher model or tuned model
+        /// endpoint to use.
+        /// 
+        /// Publisher model format:
         /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// 
+        /// Tuned model endpoint format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="contents">
         /// Required. The content of the current conversation with the model.
@@ -1873,9 +1888,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Generate content with multimodal inputs with streaming support.
         /// </summary>
         /// <param name="model">
-        /// Required. The name of the publisher model requested to serve the
-        /// prediction. Format:
+        /// Required. The fully qualified name of the publisher model or tuned model
+        /// endpoint to use.
+        /// 
+        /// Publisher model format:
         /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// 
+        /// Tuned model endpoint format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="contents">
         /// Required. The content of the current conversation with the model.
@@ -1916,9 +1936,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Exposes an OpenAI-compatible endpoint for chat completions.
         /// </summary>
         /// <param name="endpoint">
-        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Required. The name of the endpoint requested to serve the prediction.
         /// Format:
-        /// `projects/{project}/locations/{location}/endpoints/openapi`
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="httpBody">
         /// Optional. The prediction input. Supports HTTP headers and arbitrary data
@@ -1937,9 +1957,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Exposes an OpenAI-compatible endpoint for chat completions.
         /// </summary>
         /// <param name="endpoint">
-        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Required. The name of the endpoint requested to serve the prediction.
         /// Format:
-        /// `projects/{project}/locations/{location}/endpoints/openapi`
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
         /// <param name="httpBody">
         /// Optional. The prediction input. Supports HTTP headers and arbitrary data
