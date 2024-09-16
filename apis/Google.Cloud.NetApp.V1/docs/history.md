@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.5.0, released 2024-09-16
+
+### New features
+
+- A new rpc 'SwitchActiveReplicaZone' is added to service 'google.cloud.netapp.v1.NetApp' ([commit ba31386](https://github.com/googleapis/google-cloud-dotnet/commit/ba313865bce91eaafad141e100b10afb67d683cf))
+- A new message 'google.cloud.netapp.v1.SwitchActiveReplicaZoneRequest' is added ([commit ba31386](https://github.com/googleapis/google-cloud-dotnet/commit/ba313865bce91eaafad141e100b10afb67d683cf))
+- A new field 'allow_auto_tiering' in message 'google.cloud.netapp.v1.StoragePool' is added ([commit ba31386](https://github.com/googleapis/google-cloud-dotnet/commit/ba313865bce91eaafad141e100b10afb67d683cf))
+- A new field 'cold_tier_size_gib' in message 'google.cloud.netapp.v1.Volume' is added ([commit ba31386](https://github.com/googleapis/google-cloud-dotnet/commit/ba313865bce91eaafad141e100b10afb67d683cf))
+
 ## Version 1.4.0, released 2024-08-05
 
 ### New features
