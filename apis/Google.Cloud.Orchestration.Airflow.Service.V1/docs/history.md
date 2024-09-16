@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.9.0, released 2024-09-16
+
+### New features
+
+- A new method `CheckUpgrade` is added to service `Environments` ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A new field `satisfies_pzi` is added to message `.google.cloud.orchestration.airflow.service.v1.Environment` ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A new message `CheckUpgradeRequest` is added ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A new field `airflow_metadata_retention_config` is added to message `.google.cloud.orchestration.airflow.service.v1.DataRetentionConfig` ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A new message `AirflowMetadataRetentionPolicyConfig` is added ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+
+### Documentation improvements
+
+- A comment for field `maintenance_window` in message `.google.cloud.orchestration.airflow.service.v1.EnvironmentConfig` is changed ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A comment for message `WorkloadsConfig` is changed ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+- A comment for field `storage_mode` in message `.google.cloud.orchestration.airflow.service.v1.TaskLogsRetentionConfig` is changed ([commit a8d79de](https://github.com/googleapis/google-cloud-dotnet/commit/a8d79de02811259f0014ac96c553da388b6b0cc8))
+
 ## Version 2.8.0, released 2024-05-14
 
 ### New features
