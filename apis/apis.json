@@ -3564,7 +3564,7 @@
     },
     {
       "id": "Google.Cloud.Orchestration.Airflow.Service.V1",
-      "version": "2.8.0",
+      "version": "2.9.0",
       "type": "grpc",
       "productName": "Cloud Composer",
       "productUrl": "https://cloud.google.com/composer/docs/",
@@ -3575,7 +3575,7 @@
         "orchestration"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/orchestration/airflow/service/v1",
