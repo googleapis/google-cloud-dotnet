@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2024-09-16
+
+### New features
+
+- If you're a domain administrator or a delegated administrator, you can now include the `useAdminAccess` parameter when you call the Chat API with your administrator privileges with the following methods to manage Chat spaces and memberships in your Workspace organization: ([commit a6692fa](https://github.com/googleapis/google-cloud-dotnet/commit/a6692fa38db1a6e484574a834a8abc797fdc12e8))
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.chat.v1.ListMembershipsRequest` is updated to support `!=` operator ([commit a6692fa](https://github.com/googleapis/google-cloud-dotnet/commit/a6692fa38db1a6e484574a834a8abc797fdc12e8))
+
 ## Version 1.0.0-beta06, released 2024-09-09
 
 ### New features
