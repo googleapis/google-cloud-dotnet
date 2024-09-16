@@ -5827,7 +5827,7 @@
     },
     {
       "id": "Google.Maps.RouteOptimization.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Route Optimization",
       "productUrl": "https://developers.google.com/maps/documentation/route-optimization",
