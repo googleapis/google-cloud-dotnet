@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.20.0, released 2024-09-16
+
+### New features
+
+- Add support for Cloud Bigtable Row Affinity in App Profiles ([commit 5a08cf4](https://github.com/googleapis/google-cloud-dotnet/commit/5a08cf49142149d6d38f5a0eea517f362df7eb11))
+
 ## Version 3.19.0, released 2024-08-05
 
 ### New features
