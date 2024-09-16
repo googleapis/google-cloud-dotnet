@@ -1,5 +1,13 @@
 # Version history
 
+## Version 5.14.0, released 2024-09-16
+
+### New features
+
+- Add resource reference for KMS keys and fix comments ([commit 2a39cfd](https://github.com/googleapis/google-cloud-dotnet/commit/2a39cfd6e0994f9aeeec70fae4af878d22a29d09))
+- Add support for new Dataproc features ([commit 2a8cd75](https://github.com/googleapis/google-cloud-dotnet/commit/2a8cd7532c01b59e5f62dfe7655a991dab958181))
+- Add support for new Dataproc features ([commit 25f2519](https://github.com/googleapis/google-cloud-dotnet/commit/25f2519badff8e1691db0efc8af634102493b2e8))
+
 ## Version 5.13.0, released 2024-09-09
 
 ### New features
