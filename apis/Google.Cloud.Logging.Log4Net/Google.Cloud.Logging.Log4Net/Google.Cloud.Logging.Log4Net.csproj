@@ -15,7 +15,4 @@
     <PackageReference Include="Grpc.Core" VersionOverride="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
     <PackageReference Include="log4net" VersionOverride="2.0.14" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
-    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.1.9" />
-  </ItemGroup>
 </Project>
