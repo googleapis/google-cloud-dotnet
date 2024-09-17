@@ -165,6 +165,7 @@
     "apis/Google.Cloud.Notebooks.V1Beta1/Google.Cloud.Notebooks.V1Beta1/**",
     "apis/Google.Cloud.Notebooks.V2/Google.Cloud.Notebooks.V2/**",
     "apis/Google.Cloud.Optimization.V1/Google.Cloud.Optimization.V1/**",
+    "apis/Google.Cloud.OracleDatabase.V1/Google.Cloud.OracleDatabase.V1/**",
     "apis/Google.Cloud.Orchestration.Airflow.Service.V1/Google.Cloud.Orchestration.Airflow.Service.V1/**",
     "apis/Google.Cloud.OrgPolicy.V1/Google.Cloud.OrgPolicy.V1/**",
     "apis/Google.Cloud.OrgPolicy.V2/Google.Cloud.OrgPolicy.V2/**",
