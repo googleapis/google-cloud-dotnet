@@ -166,6 +166,12 @@
                 "ListZonesAsync"
               ]
             },
+            "RecordActionOnComment": {
+              "methods": [
+                "RecordActionOnComment",
+                "RecordActionOnCommentAsync"
+              ]
+            },
             "SignalZoneState": {
               "methods": [
                 "SignalZoneState",

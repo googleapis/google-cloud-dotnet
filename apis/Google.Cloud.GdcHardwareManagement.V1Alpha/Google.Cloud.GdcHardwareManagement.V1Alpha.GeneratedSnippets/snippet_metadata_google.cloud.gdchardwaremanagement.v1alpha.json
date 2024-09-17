@@ -1460,12 +1460,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 62,
+          "end": 63,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 60,
+          "end": 61,
           "type": "SHORT"
         }
       ]
@@ -1509,12 +1509,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]
@@ -6579,6 +6579,309 @@
         {
           "start": 36,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RecordActionOnComment_sync",
+      "title": "RecordActionOnCommentRequestObject",
+      "description": "Snippet for RecordActionOnComment",
+      "file": "GDCHardwareManagementClient.RecordActionOnCommentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecordActionOnComment",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RecordActionOnComment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GdcHardwareManagement.V1Alpha.Comment",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RecordActionOnComment",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RecordActionOnComment",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RecordActionOnComment_async",
+      "title": "RecordActionOnCommentRequestObjectAsync",
+      "description": "Snippet for RecordActionOnCommentAsync",
+      "file": "GDCHardwareManagementClient.RecordActionOnCommentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecordActionOnCommentAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RecordActionOnCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GdcHardwareManagement.V1Alpha.Comment>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RecordActionOnComment",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RecordActionOnComment",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RecordActionOnComment_sync_flattened",
+      "title": "RecordActionOnComment",
+      "description": "Snippet for RecordActionOnComment",
+      "file": "GDCHardwareManagementClient.RecordActionOnCommentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecordActionOnComment",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RecordActionOnComment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest+Types+ActionType",
+            "name": "actionType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GdcHardwareManagement.V1Alpha.Comment",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RecordActionOnComment",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RecordActionOnComment",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RecordActionOnComment_async_flattened",
+      "title": "RecordActionOnCommentAsync",
+      "description": "Snippet for RecordActionOnCommentAsync",
+      "file": "GDCHardwareManagementClient.RecordActionOnCommentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecordActionOnCommentAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RecordActionOnCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest+Types+ActionType",
+            "name": "actionType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GdcHardwareManagement.V1Alpha.Comment>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RecordActionOnComment",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RecordActionOnComment",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RecordActionOnComment_sync_flattened_resourceNames",
+      "title": "RecordActionOnCommentResourceNames",
+      "description": "Snippet for RecordActionOnComment",
+      "file": "GDCHardwareManagementClient.RecordActionOnCommentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecordActionOnComment",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RecordActionOnComment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.CommentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest+Types+ActionType",
+            "name": "actionType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GdcHardwareManagement.V1Alpha.Comment",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RecordActionOnComment",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RecordActionOnComment",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RecordActionOnComment_async_flattened_resourceNames",
+      "title": "RecordActionOnCommentResourceNamesAsync",
+      "description": "Snippet for RecordActionOnCommentAsync",
+      "file": "GDCHardwareManagementClient.RecordActionOnCommentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecordActionOnCommentAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RecordActionOnCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.CommentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest+Types+ActionType",
+            "name": "actionType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GdcHardwareManagement.V1Alpha.Comment>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RecordActionOnComment",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RecordActionOnComment",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
           "type": "SHORT"
         }
       ]

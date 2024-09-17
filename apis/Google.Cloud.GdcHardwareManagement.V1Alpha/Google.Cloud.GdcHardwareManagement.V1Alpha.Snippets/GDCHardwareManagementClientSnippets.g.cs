@@ -920,6 +920,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderName = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]"),
                 RequestId = "",
+                Type = SubmitOrderRequest.Types.Type.Unspecified,
             };
             // Make the request
             Operation<Order, OperationMetadata> response = gDCHardwareManagementClient.SubmitOrder(request);
@@ -954,6 +955,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderName = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]"),
                 RequestId = "",
+                Type = SubmitOrderRequest.Types.Type.Unspecified,
             };
             // Make the request
             Operation<Order, OperationMetadata> response = await gDCHardwareManagementClient.SubmitOrderAsync(request);
@@ -4105,6 +4107,99 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Comment retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RecordActionOnComment</summary>
+        public void RecordActionOnCommentRequestObject()
+        {
+            // Snippet: RecordActionOnComment(RecordActionOnCommentRequest, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            RecordActionOnCommentRequest request = new RecordActionOnCommentRequest
+            {
+                CommentName = CommentName.FromProjectLocationOrderComment("[PROJECT]", "[LOCATION]", "[ORDER]", "[COMMENT]"),
+                ActionType = RecordActionOnCommentRequest.Types.ActionType.Unspecified,
+            };
+            // Make the request
+            Comment response = gDCHardwareManagementClient.RecordActionOnComment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RecordActionOnCommentAsync</summary>
+        public async Task RecordActionOnCommentRequestObjectAsync()
+        {
+            // Snippet: RecordActionOnCommentAsync(RecordActionOnCommentRequest, CallSettings)
+            // Additional: RecordActionOnCommentAsync(RecordActionOnCommentRequest, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            RecordActionOnCommentRequest request = new RecordActionOnCommentRequest
+            {
+                CommentName = CommentName.FromProjectLocationOrderComment("[PROJECT]", "[LOCATION]", "[ORDER]", "[COMMENT]"),
+                ActionType = RecordActionOnCommentRequest.Types.ActionType.Unspecified,
+            };
+            // Make the request
+            Comment response = await gDCHardwareManagementClient.RecordActionOnCommentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RecordActionOnComment</summary>
+        public void RecordActionOnComment()
+        {
+            // Snippet: RecordActionOnComment(string, RecordActionOnCommentRequest.Types.ActionType, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/orders/[ORDER]/comments/[COMMENT]";
+            RecordActionOnCommentRequest.Types.ActionType actionType = RecordActionOnCommentRequest.Types.ActionType.Unspecified;
+            // Make the request
+            Comment response = gDCHardwareManagementClient.RecordActionOnComment(name, actionType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RecordActionOnCommentAsync</summary>
+        public async Task RecordActionOnCommentAsync()
+        {
+            // Snippet: RecordActionOnCommentAsync(string, RecordActionOnCommentRequest.Types.ActionType, CallSettings)
+            // Additional: RecordActionOnCommentAsync(string, RecordActionOnCommentRequest.Types.ActionType, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/orders/[ORDER]/comments/[COMMENT]";
+            RecordActionOnCommentRequest.Types.ActionType actionType = RecordActionOnCommentRequest.Types.ActionType.Unspecified;
+            // Make the request
+            Comment response = await gDCHardwareManagementClient.RecordActionOnCommentAsync(name, actionType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RecordActionOnComment</summary>
+        public void RecordActionOnCommentResourceNames()
+        {
+            // Snippet: RecordActionOnComment(CommentName, RecordActionOnCommentRequest.Types.ActionType, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            CommentName name = CommentName.FromProjectLocationOrderComment("[PROJECT]", "[LOCATION]", "[ORDER]", "[COMMENT]");
+            RecordActionOnCommentRequest.Types.ActionType actionType = RecordActionOnCommentRequest.Types.ActionType.Unspecified;
+            // Make the request
+            Comment response = gDCHardwareManagementClient.RecordActionOnComment(name, actionType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RecordActionOnCommentAsync</summary>
+        public async Task RecordActionOnCommentResourceNamesAsync()
+        {
+            // Snippet: RecordActionOnCommentAsync(CommentName, RecordActionOnCommentRequest.Types.ActionType, CallSettings)
+            // Additional: RecordActionOnCommentAsync(CommentName, RecordActionOnCommentRequest.Types.ActionType, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            CommentName name = CommentName.FromProjectLocationOrderComment("[PROJECT]", "[LOCATION]", "[ORDER]", "[COMMENT]");
+            RecordActionOnCommentRequest.Types.ActionType actionType = RecordActionOnCommentRequest.Types.ActionType.Unspecified;
+            // Make the request
+            Comment response = await gDCHardwareManagementClient.RecordActionOnCommentAsync(name, actionType);
             // End snippet
         }
 

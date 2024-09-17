@@ -240,6 +240,18 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         }
     }
 
+    public partial class RecordActionOnCommentRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::CommentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::CommentName CommentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::CommentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListChangeLogEntriesRequest
     {
         /// <summary><see cref="OrderName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>

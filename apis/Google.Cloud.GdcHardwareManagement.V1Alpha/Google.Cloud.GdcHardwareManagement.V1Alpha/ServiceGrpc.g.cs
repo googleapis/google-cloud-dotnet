@@ -132,6 +132,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CreateCommentRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_CreateCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.CreateCommentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_RecordActionOnCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_ListChangeLogEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesResponse> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_ListChangeLogEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesResponse.Parser));
@@ -347,6 +349,14 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         "CreateComment",
         __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_CreateCommentRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment> __Method_RecordActionOnComment = new grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RecordActionOnComment",
+        __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_RecordActionOnCommentRequest,
+        __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_Comment);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesResponse> __Method_ListChangeLogEntries = new grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesResponse>(
@@ -710,6 +720,21 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateComment(global::Google.Cloud.GdcHardwareManagement.V1Alpha.CreateCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Record Action on a Comment. If the Action specified in the request is READ,
+      /// the viewed time in the comment is set to the time the request was received.
+      /// If the comment is already marked as read, subsequent calls will be ignored.
+      /// If the Action is UNREAD, the viewed time is cleared from the comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment> RecordActionOnComment(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1968,6 +1993,66 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_CreateComment, null, options, request);
       }
       /// <summary>
+      /// Record Action on a Comment. If the Action specified in the request is READ,
+      /// the viewed time in the comment is set to the time the request was received.
+      /// If the comment is already marked as read, subsequent calls will be ignored.
+      /// If the Action is UNREAD, the viewed time is cleared from the comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment RecordActionOnComment(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RecordActionOnComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Record Action on a Comment. If the Action specified in the request is READ,
+      /// the viewed time in the comment is set to the time the request was received.
+      /// If the comment is already marked as read, subsequent calls will be ignored.
+      /// If the Action is UNREAD, the viewed time is cleared from the comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment RecordActionOnComment(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RecordActionOnComment, null, options, request);
+      }
+      /// <summary>
+      /// Record Action on a Comment. If the Action specified in the request is READ,
+      /// the viewed time in the comment is set to the time the request was received.
+      /// If the comment is already marked as read, subsequent calls will be ignored.
+      /// If the Action is UNREAD, the viewed time is cleared from the comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment> RecordActionOnCommentAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RecordActionOnCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Record Action on a Comment. If the Action specified in the request is READ,
+      /// the viewed time in the comment is set to the time the request was received.
+      /// If the comment is already marked as read, subsequent calls will be ignored.
+      /// If the Action is UNREAD, the viewed time is cleared from the comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment> RecordActionOnCommentAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RecordActionOnComment, null, options, request);
+      }
+      /// <summary>
       /// Lists the changes made to an order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2484,6 +2569,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
           .AddMethod(__Method_ListComments, serviceImpl.ListComments)
           .AddMethod(__Method_GetComment, serviceImpl.GetComment)
           .AddMethod(__Method_CreateComment, serviceImpl.CreateComment)
+          .AddMethod(__Method_RecordActionOnComment, serviceImpl.RecordActionOnComment)
           .AddMethod(__Method_ListChangeLogEntries, serviceImpl.ListChangeLogEntries)
           .AddMethod(__Method_GetChangeLogEntry, serviceImpl.GetChangeLogEntry)
           .AddMethod(__Method_ListSkus, serviceImpl.ListSkus)
@@ -2526,6 +2612,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       serviceBinder.AddMethod(__Method_ListComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListCommentsRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListCommentsResponse>(serviceImpl.ListComments));
       serviceBinder.AddMethod(__Method_GetComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.GetCommentRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment>(serviceImpl.GetComment));
       serviceBinder.AddMethod(__Method_CreateComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CreateCommentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateComment));
+      serviceBinder.AddMethod(__Method_RecordActionOnComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.RecordActionOnCommentRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment>(serviceImpl.RecordActionOnComment));
       serviceBinder.AddMethod(__Method_ListChangeLogEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListChangeLogEntriesResponse>(serviceImpl.ListChangeLogEntries));
       serviceBinder.AddMethod(__Method_GetChangeLogEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.GetChangeLogEntryRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ChangeLogEntry>(serviceImpl.GetChangeLogEntry));
       serviceBinder.AddMethod(__Method_ListSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListSkusRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListSkusResponse>(serviceImpl.ListSkus));
