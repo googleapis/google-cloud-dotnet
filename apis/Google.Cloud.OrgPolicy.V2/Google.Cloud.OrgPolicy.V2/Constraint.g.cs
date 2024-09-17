@@ -43,7 +43,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
             "dHJhaW50Eitwcm9qZWN0cy97cHJvamVjdH0vY29uc3RyYWludHMve2NvbnN0",
             "cmFpbnR9Eilmb2xkZXJzL3tmb2xkZXJ9L2NvbnN0cmFpbnRzL3tjb25zdHJh",
             "aW50fRI1b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9jb25zdHJhaW50",
-            "cy97Y29uc3RyYWludH1CEQoPY29uc3RyYWludF90eXBlItQEChBDdXN0b21D",
+            "cy97Y29uc3RyYWludH1CEQoPY29uc3RyYWludF90eXBlIvcEChBDdXN0b21D",
             "b25zdHJhaW50EhEKBG5hbWUYASABKAlCA+BBBRIbCg5yZXNvdXJjZV90eXBl",
             "cxgCIAMoCUID4EEFEkwKDG1ldGhvZF90eXBlcxgDIAMoDjI2Lmdvb2dsZS5j",
             "bG91ZC5vcmdwb2xpY3kudjIuQ3VzdG9tQ29uc3RyYWludC5NZXRob2RUeXBl",
@@ -51,17 +51,18 @@ namespace Google.Cloud.OrgPolicy.V2 {
             "b2dsZS5jbG91ZC5vcmdwb2xpY3kudjIuQ3VzdG9tQ29uc3RyYWludC5BY3Rp",
             "b25UeXBlEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRITCgtkZXNjcmlwdGlvbhgH",
             "IAEoCRI0Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAyJNCgpNZXRob2RUeXBlEhsKF01FVEhPRF9UWVBFX1VO",
+            "aW1lc3RhbXBCA+BBAyJwCgpNZXRob2RUeXBlEhsKF01FVEhPRF9UWVBFX1VO",
             "U1BFQ0lGSUVEEAASCgoGQ1JFQVRFEAESCgoGVVBEQVRFEAISCgoGREVMRVRF",
-            "EAMiPgoKQWN0aW9uVHlwZRIbChdBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAA",
-            "EgkKBUFMTE9XEAESCAoEREVOWRACOnLqQW8KKW9yZ3BvbGljeS5nb29nbGVh",
-            "cGlzLmNvbS9DdXN0b21Db25zdHJhaW50EkJvcmdhbml6YXRpb25zL3tvcmdh",
-            "bml6YXRpb259L2N1c3RvbUNvbnN0cmFpbnRzL3tjdXN0b21fY29uc3RyYWlu",
-            "dH1CxgEKHWNvbS5nb29nbGUuY2xvdWQub3JncG9saWN5LnYyQg9Db25zdHJh",
-            "aW50UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9vcmdwb2xpY3kvYXBp",
-            "djIvb3JncG9saWN5cGI7b3JncG9saWN5cGKqAhlHb29nbGUuQ2xvdWQuT3Jn",
-            "UG9saWN5LlYyygIZR29vZ2xlXENsb3VkXE9yZ1BvbGljeVxWMuoCHEdvb2ds",
-            "ZTo6Q2xvdWQ6Ok9yZ1BvbGljeTo6VjJiBnByb3RvMw=="));
+            "EAMSEAoMUkVNT1ZFX0dSQU5UEAQSDwoLR09WRVJOX1RBR1MQBSI+CgpBY3Rp",
+            "b25UeXBlEhsKF0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFQUxMT1cQ",
+            "ARIICgRERU5ZEAI6cupBbwopb3JncG9saWN5Lmdvb2dsZWFwaXMuY29tL0N1",
+            "c3RvbUNvbnN0cmFpbnQSQm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0v",
+            "Y3VzdG9tQ29uc3RyYWludHMve2N1c3RvbV9jb25zdHJhaW50fULGAQodY29t",
+            "Lmdvb2dsZS5jbG91ZC5vcmdwb2xpY3kudjJCD0NvbnN0cmFpbnRQcm90b1AB",
+            "WjtjbG91ZC5nb29nbGUuY29tL2dvL29yZ3BvbGljeS9hcGl2Mi9vcmdwb2xp",
+            "Y3lwYjtvcmdwb2xpY3lwYqoCGUdvb2dsZS5DbG91ZC5PcmdQb2xpY3kuVjLK",
+            "AhlHb29nbGVcQ2xvdWRcT3JnUG9saWN5XFYy6gIcR29vZ2xlOjpDbG91ZDo6",
+            "T3JnUG9saWN5OjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1547,6 +1548,14 @@ namespace Google.Cloud.OrgPolicy.V2 {
         /// Not supported yet.
         /// </summary>
         [pbr::OriginalName("DELETE")] Delete = 3,
+        /// <summary>
+        /// Constraint applied when removing an IAM grant.
+        /// </summary>
+        [pbr::OriginalName("REMOVE_GRANT")] RemoveGrant = 4,
+        /// <summary>
+        /// Constraint applied when enforcing forced tagging.
+        /// </summary>
+        [pbr::OriginalName("GOVERN_TAGS")] GovernTags = 5,
       }
 
       /// <summary>
