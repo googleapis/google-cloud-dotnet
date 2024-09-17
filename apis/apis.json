@@ -3563,6 +3563,31 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.OracleDatabase.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Oracle Database@Google Cloud",
+      "productUrl": "https://cloud.google.com/oracle/database/docs",
+      "description": "Recommended Google client library to access the Oracle Database@Google Cloud API which provides a set of APIs to manage Oracle database services, such as Exadata and Autonomous Databases.",
+      "tags": [
+        "oracle",
+        "database",
+        "management",
+        "sql"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/oracledatabase/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "oracledatabase",
+      "serviceConfigFile": "oracledatabase_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Orchestration.Airflow.Service.V1",
       "version": "2.9.0",
       "type": "grpc",
