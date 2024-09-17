@@ -9,7 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="Google.Cloud.Bigtable.V2" Version="3.6.0" />
-        <PackageReference Include="Google.Api.Gax.Grpc" Version="4.4.0" />
+        <PackageReference Include="Google.Api.Gax.Grpc" Version="4.8.0" />
     </ItemGroup>
 
 </Project>
