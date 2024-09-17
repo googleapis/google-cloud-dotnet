@@ -3584,9 +3584,8 @@
       "includeCommonResourcesProto": true,
       "shortName": "oracledatabase",
       "serviceConfigFile": "oracledatabase_v1.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true,
-      "blockRelease": "See b/367525370"
+      "transport": "rest",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.Orchestration.Airflow.Service.V1",
