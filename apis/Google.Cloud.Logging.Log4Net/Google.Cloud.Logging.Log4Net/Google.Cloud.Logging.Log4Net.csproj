@@ -13,7 +13,7 @@
     <PackageReference Include="Google.Cloud.DevTools.Common" VersionOverride="[3.2.0, 4.0.0)" />
     <PackageReference Include="Google.Cloud.Logging.V2" VersionOverride="[4.3.0, 5.0.0)" />
     <PackageReference Include="Grpc.Core" VersionOverride="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
-    <PackageReference Include="log4net" VersionOverride="2.0.17" />
+    <PackageReference Include="log4net" VersionOverride="2.0.14" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.1.1" />
