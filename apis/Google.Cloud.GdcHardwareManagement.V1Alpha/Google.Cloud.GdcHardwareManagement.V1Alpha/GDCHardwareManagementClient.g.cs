@@ -87,6 +87,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             GetCommentSettings = existing.GetCommentSettings;
             CreateCommentSettings = existing.CreateCommentSettings;
             CreateCommentOperationsSettings = existing.CreateCommentOperationsSettings.Clone();
+            RecordActionOnCommentSettings = existing.RecordActionOnCommentSettings;
             ListChangeLogEntriesSettings = existing.ListChangeLogEntriesSettings;
             GetChangeLogEntrySettings = existing.GetChangeLogEntrySettings;
             ListSkusSettings = existing.ListSkusSettings;
@@ -732,6 +733,19 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GDCHardwareManagementClient.RecordActionOnComment</c> and
+        /// <c>GDCHardwareManagementClient.RecordActionOnCommentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RecordActionOnCommentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4583,6 +4597,172 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             CreateCommentAsync(parent, comment, commentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Comment RecordActionOnComment(RecordActionOnCommentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> RecordActionOnCommentAsync(RecordActionOnCommentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> RecordActionOnCommentAsync(RecordActionOnCommentRequest request, st::CancellationToken cancellationToken) =>
+            RecordActionOnCommentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment.
+        /// Format:
+        /// `projects/{project}/locations/{location}/orders/{order}/comments/{comment}`
+        /// </param>
+        /// <param name="actionType">
+        /// Required. The action type of the recorded action.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Comment RecordActionOnComment(string name, RecordActionOnCommentRequest.Types.ActionType actionType, gaxgrpc::CallSettings callSettings = null) =>
+            RecordActionOnComment(new RecordActionOnCommentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                ActionType = actionType,
+            }, callSettings);
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment.
+        /// Format:
+        /// `projects/{project}/locations/{location}/orders/{order}/comments/{comment}`
+        /// </param>
+        /// <param name="actionType">
+        /// Required. The action type of the recorded action.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> RecordActionOnCommentAsync(string name, RecordActionOnCommentRequest.Types.ActionType actionType, gaxgrpc::CallSettings callSettings = null) =>
+            RecordActionOnCommentAsync(new RecordActionOnCommentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                ActionType = actionType,
+            }, callSettings);
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment.
+        /// Format:
+        /// `projects/{project}/locations/{location}/orders/{order}/comments/{comment}`
+        /// </param>
+        /// <param name="actionType">
+        /// Required. The action type of the recorded action.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> RecordActionOnCommentAsync(string name, RecordActionOnCommentRequest.Types.ActionType actionType, st::CancellationToken cancellationToken) =>
+            RecordActionOnCommentAsync(name, actionType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment.
+        /// Format:
+        /// `projects/{project}/locations/{location}/orders/{order}/comments/{comment}`
+        /// </param>
+        /// <param name="actionType">
+        /// Required. The action type of the recorded action.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Comment RecordActionOnComment(CommentName name, RecordActionOnCommentRequest.Types.ActionType actionType, gaxgrpc::CallSettings callSettings = null) =>
+            RecordActionOnComment(new RecordActionOnCommentRequest
+            {
+                CommentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ActionType = actionType,
+            }, callSettings);
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment.
+        /// Format:
+        /// `projects/{project}/locations/{location}/orders/{order}/comments/{comment}`
+        /// </param>
+        /// <param name="actionType">
+        /// Required. The action type of the recorded action.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> RecordActionOnCommentAsync(CommentName name, RecordActionOnCommentRequest.Types.ActionType actionType, gaxgrpc::CallSettings callSettings = null) =>
+            RecordActionOnCommentAsync(new RecordActionOnCommentRequest
+            {
+                CommentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ActionType = actionType,
+            }, callSettings);
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment.
+        /// Format:
+        /// `projects/{project}/locations/{location}/orders/{order}/comments/{comment}`
+        /// </param>
+        /// <param name="actionType">
+        /// Required. The action type of the recorded action.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> RecordActionOnCommentAsync(CommentName name, RecordActionOnCommentRequest.Types.ActionType actionType, st::CancellationToken cancellationToken) =>
+            RecordActionOnCommentAsync(name, actionType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists the changes made to an order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6067,6 +6247,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
 
         private readonly gaxgrpc::ApiCall<CreateCommentRequest, lro::Operation> _callCreateComment;
 
+        private readonly gaxgrpc::ApiCall<RecordActionOnCommentRequest, Comment> _callRecordActionOnComment;
+
         private readonly gaxgrpc::ApiCall<ListChangeLogEntriesRequest, ListChangeLogEntriesResponse> _callListChangeLogEntries;
 
         private readonly gaxgrpc::ApiCall<GetChangeLogEntryRequest, ChangeLogEntry> _callGetChangeLogEntry;
@@ -6190,6 +6372,9 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             _callCreateComment = clientHelper.BuildApiCall<CreateCommentRequest, lro::Operation>("CreateComment", grpcClient.CreateCommentAsync, grpcClient.CreateComment, effectiveSettings.CreateCommentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateComment);
             Modify_CreateCommentApiCall(ref _callCreateComment);
+            _callRecordActionOnComment = clientHelper.BuildApiCall<RecordActionOnCommentRequest, Comment>("RecordActionOnComment", grpcClient.RecordActionOnCommentAsync, grpcClient.RecordActionOnComment, effectiveSettings.RecordActionOnCommentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRecordActionOnComment);
+            Modify_RecordActionOnCommentApiCall(ref _callRecordActionOnComment);
             _callListChangeLogEntries = clientHelper.BuildApiCall<ListChangeLogEntriesRequest, ListChangeLogEntriesResponse>("ListChangeLogEntries", grpcClient.ListChangeLogEntriesAsync, grpcClient.ListChangeLogEntries, effectiveSettings.ListChangeLogEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListChangeLogEntries);
             Modify_ListChangeLogEntriesApiCall(ref _callListChangeLogEntries);
@@ -6271,6 +6456,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
 
         partial void Modify_CreateCommentApiCall(ref gaxgrpc::ApiCall<CreateCommentRequest, lro::Operation> call);
 
+        partial void Modify_RecordActionOnCommentApiCall(ref gaxgrpc::ApiCall<RecordActionOnCommentRequest, Comment> call);
+
         partial void Modify_ListChangeLogEntriesApiCall(ref gaxgrpc::ApiCall<ListChangeLogEntriesRequest, ListChangeLogEntriesResponse> call);
 
         partial void Modify_GetChangeLogEntryApiCall(ref gaxgrpc::ApiCall<GetChangeLogEntryRequest, ChangeLogEntry> call);
@@ -6344,6 +6531,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         partial void Modify_GetCommentRequest(ref GetCommentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateCommentRequest(ref CreateCommentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RecordActionOnCommentRequest(ref RecordActionOnCommentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListChangeLogEntriesRequest(ref ListChangeLogEntriesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6954,6 +7143,36 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         {
             Modify_CreateCommentRequest(ref request, ref callSettings);
             return new lro::Operation<Comment, OperationMetadata>(await _callCreateComment.Async(request, callSettings).ConfigureAwait(false), CreateCommentOperationsClient);
+        }
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Comment RecordActionOnComment(RecordActionOnCommentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RecordActionOnCommentRequest(ref request, ref callSettings);
+            return _callRecordActionOnComment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Record Action on a Comment. If the Action specified in the request is READ,
+        /// the viewed time in the comment is set to the time the request was received.
+        /// If the comment is already marked as read, subsequent calls will be ignored.
+        /// If the Action is UNREAD, the viewed time is cleared from the comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Comment> RecordActionOnCommentAsync(RecordActionOnCommentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RecordActionOnCommentRequest(ref request, ref callSettings);
+            return _callRecordActionOnComment.Async(request, callSettings);
         }
 
         /// <summary>

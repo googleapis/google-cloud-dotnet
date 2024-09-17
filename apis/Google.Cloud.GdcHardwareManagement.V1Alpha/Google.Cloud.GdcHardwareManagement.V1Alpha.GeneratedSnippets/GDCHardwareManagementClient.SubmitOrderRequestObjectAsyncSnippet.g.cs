@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderName = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]"),
                 RequestId = "",
+                Type = SubmitOrderRequest.Types.Type.Unspecified,
             };
             // Make the request
             Operation<Order, OperationMetadata> response = await gDCHardwareManagementClient.SubmitOrderAsync(request);
