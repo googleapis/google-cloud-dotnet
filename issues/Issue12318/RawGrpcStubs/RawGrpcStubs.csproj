@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Api.CommonProtos" Version="2.15.0" />
-    <PackageReference Include="Google.Apis.Auth" Version="1.67.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
     <PackageReference Include="Grpc.Auth" Version="2.62.0" />
     <PackageReference Include="Grpc.Net.Client" Version="2.62.0" />
   </ItemGroup>
