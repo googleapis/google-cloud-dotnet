@@ -3012,7 +3012,7 @@
         "Google.Cloud.DevTools.Common": "3.2.0",
         "Google.Cloud.Logging.V2": "4.3.0",
         "Grpc.Core": "default",
-        "log4net": "2.0.14"
+        "log4net": "default"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "default"
