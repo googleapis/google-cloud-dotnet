@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListCloudExadataInfrastructures",
+    "client": "OracleDatabaseClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east4"
+    }
+  }
+]
