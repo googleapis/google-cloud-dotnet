@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Cloud.Datastore.V1" Version="4.7.0" />
+    <PackageReference Include="Google.Cloud.Datastore.V1" Version="4.13.0" />
   </ItemGroup>
 
 </Project>
