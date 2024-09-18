@@ -53,6 +53,8 @@ namespace GoogleCSharpSnippets
                 LocationBias = new SearchTextRequest.Types.LocationBias(),
                 LocationRestriction = new SearchTextRequest.Types.LocationRestriction(),
                 EvOptions = new SearchTextRequest.Types.EVOptions(),
+                RoutingParameters = new RoutingParameters(),
+                SearchAlongRouteParameters = new SearchTextRequest.Types.SearchAlongRouteParameters(),
             };
             // Make the request
             SearchTextResponse response = await placesClient.SearchTextAsync(request);

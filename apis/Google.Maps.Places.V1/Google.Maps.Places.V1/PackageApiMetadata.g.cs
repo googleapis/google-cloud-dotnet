@@ -39,8 +39,13 @@ namespace Google.Maps.Places.V1
             yield return PhotoReflection.Descriptor;
             yield return PlaceReflection.Descriptor;
             yield return PlacesServiceReflection.Descriptor;
+            yield return PolylineReflection.Descriptor;
             yield return ReferenceReflection.Descriptor;
             yield return ReviewReflection.Descriptor;
+            yield return RouteModifiersReflection.Descriptor;
+            yield return RoutingPreferenceReflection.Descriptor;
+            yield return RoutingSummaryReflection.Descriptor;
+            yield return TravelModeReflection.Descriptor;
         }
     }
 }

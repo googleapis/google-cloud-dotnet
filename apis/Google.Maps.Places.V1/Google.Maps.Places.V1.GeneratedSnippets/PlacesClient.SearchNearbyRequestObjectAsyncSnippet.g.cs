@@ -46,6 +46,7 @@ namespace GoogleCSharpSnippets
                 MaxResultCount = 0,
                 LocationRestriction = new SearchNearbyRequest.Types.LocationRestriction(),
                 RankPreference = SearchNearbyRequest.Types.RankPreference.Unspecified,
+                RoutingParameters = new RoutingParameters(),
             };
             // Make the request
             SearchNearbyResponse response = await placesClient.SearchNearbyAsync(request);
