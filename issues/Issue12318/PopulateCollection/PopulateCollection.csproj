@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Cloud.Firestore" Version="3.5.1" />
+    <PackageReference Include="Google.Cloud.Firestore" Version="3.8.0" />
   </ItemGroup>
 
 </Project>
