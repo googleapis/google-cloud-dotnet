@@ -4018,8 +4018,10 @@ namespace Google.Maps.Places.V1 {
 
         private bool openNow_;
         /// <summary>
-        /// Is this place open right now?  Always present unless we lack time-of-day
-        /// or timezone data for these opening hours.
+        /// Whether the opening hours period is currently active. For regular opening
+        /// hours and current opening hours, this field means whether the place is
+        /// open. For secondary opening hours and current secondary opening hours,
+        /// this field means whether the secondary hours of this place is active.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

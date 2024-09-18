@@ -32,132 +32,156 @@ namespace Google.Maps.Places.V1 {
             "cHMvcGxhY2VzL3YxL2NvbnRleHR1YWxfY29udGVudC5wcm90bxonZ29vZ2xl",
             "L21hcHMvcGxhY2VzL3YxL2V2X2NoYXJnaW5nLnByb3RvGiRnb29nbGUvbWFw",
             "cy9wbGFjZXMvdjEvZ2VvbWV0cnkucHJvdG8aIWdvb2dsZS9tYXBzL3BsYWNl",
-            "cy92MS9wbGFjZS5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvIqME",
-            "ChNTZWFyY2hOZWFyYnlSZXF1ZXN0EhUKDWxhbmd1YWdlX2NvZGUYASABKAkS",
-            "EwoLcmVnaW9uX2NvZGUYAiABKAkSFgoOaW5jbHVkZWRfdHlwZXMYAyADKAkS",
-            "FgoOZXhjbHVkZWRfdHlwZXMYBCADKAkSHgoWaW5jbHVkZWRfcHJpbWFyeV90",
-            "eXBlcxgFIAMoCRIeChZleGNsdWRlZF9wcmltYXJ5X3R5cGVzGAYgAygJEhgK",
-            "EG1heF9yZXN1bHRfY291bnQYByABKAUSYQoUbG9jYXRpb25fcmVzdHJpY3Rp",
-            "b24YCCABKAsyPi5nb29nbGUubWFwcy5wbGFjZXMudjEuU2VhcmNoTmVhcmJ5",
-            "UmVxdWVzdC5Mb2NhdGlvblJlc3RyaWN0aW9uQgPgQQISUgoPcmFua19wcmVm",
-            "ZXJlbmNlGAkgASgOMjkuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJjaE5l",
-            "YXJieVJlcXVlc3QuUmFua1ByZWZlcmVuY2UaTgoTTG9jYXRpb25SZXN0cmlj",
-            "dGlvbhIvCgZjaXJjbGUYAiABKAsyHS5nb29nbGUubWFwcy5wbGFjZXMudjEu",
-            "Q2lyY2xlSABCBgoEdHlwZSJPCg5SYW5rUHJlZmVyZW5jZRIfChtSQU5LX1BS",
-            "RUZFUkVOQ0VfVU5TUEVDSUZJRUQQABIMCghESVNUQU5DRRABEg4KClBPUFVM",
-            "QVJJVFkQAiJEChRTZWFyY2hOZWFyYnlSZXNwb25zZRIsCgZwbGFjZXMYASAD",
-            "KAsyHC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2Ui4gcKEVNlYXJjaFRl",
-            "eHRSZXF1ZXN0EhcKCnRleHRfcXVlcnkYASABKAlCA+BBAhIVCg1sYW5ndWFn",
-            "ZV9jb2RlGAIgASgJEhMKC3JlZ2lvbl9jb2RlGAMgASgJElAKD3JhbmtfcHJl",
-            "ZmVyZW5jZRgEIAEoDjI3Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5TZWFyY2hU",
-            "ZXh0UmVxdWVzdC5SYW5rUHJlZmVyZW5jZRIVCg1pbmNsdWRlZF90eXBlGAYg",
-            "ASgJEhAKCG9wZW5fbm93GAcgASgIEhIKCm1pbl9yYXRpbmcYCSABKAESGAoQ",
-            "bWF4X3Jlc3VsdF9jb3VudBgKIAEoBRI3CgxwcmljZV9sZXZlbHMYCyADKA4y",
-            "IS5nb29nbGUubWFwcy5wbGFjZXMudjEuUHJpY2VMZXZlbBIdChVzdHJpY3Rf",
-            "dHlwZV9maWx0ZXJpbmcYDCABKAgSTAoNbG9jYXRpb25fYmlhcxgNIAEoCzI1",
-            "Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5TZWFyY2hUZXh0UmVxdWVzdC5Mb2Nh",
-            "dGlvbkJpYXMSWgoUbG9jYXRpb25fcmVzdHJpY3Rpb24YDiABKAsyPC5nb29n",
-            "bGUubWFwcy5wbGFjZXMudjEuU2VhcmNoVGV4dFJlcXVlc3QuTG9jYXRpb25S",
-            "ZXN0cmljdGlvbhJLCgpldl9vcHRpb25zGA8gASgLMjIuZ29vZ2xlLm1hcHMu",
-            "cGxhY2VzLnYxLlNlYXJjaFRleHRSZXF1ZXN0LkVWT3B0aW9uc0ID4EEBGncK",
-            "DExvY2F0aW9uQmlhcxIuCglyZWN0YW5nbGUYASABKAsyGS5nb29nbGUuZ2Vv",
-            "LnR5cGUuVmlld3BvcnRIABIvCgZjaXJjbGUYAiABKAsyHS5nb29nbGUubWFw",
-            "cy5wbGFjZXMudjEuQ2lyY2xlSABCBgoEdHlwZRpNChNMb2NhdGlvblJlc3Ry",
-            "aWN0aW9uEi4KCXJlY3RhbmdsZRgBIAEoCzIZLmdvb2dsZS5nZW8udHlwZS5W",
-            "aWV3cG9ydEgAQgYKBHR5cGUaeAoJRVZPcHRpb25zEiUKGG1pbmltdW1fY2hh",
-            "cmdpbmdfcmF0ZV9rdxgBIAEoAUID4EEBEkQKD2Nvbm5lY3Rvcl90eXBlcxgC",
-            "IAMoDjImLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5FVkNvbm5lY3RvclR5cGVC",
-            "A+BBASJOCg5SYW5rUHJlZmVyZW5jZRIfChtSQU5LX1BSRUZFUkVOQ0VfVU5T",
-            "UEVDSUZJRUQQABIMCghESVNUQU5DRRABEg0KCVJFTEVWQU5DRRACIokBChJT",
-            "ZWFyY2hUZXh0UmVzcG9uc2USLAoGcGxhY2VzGAEgAygLMhwuZ29vZ2xlLm1h",
-            "cHMucGxhY2VzLnYxLlBsYWNlEkUKE2NvbnRleHR1YWxfY29udGVudHMYAyAD",
-            "KAsyKC5nb29nbGUubWFwcy5wbGFjZXMudjEuQ29udGV4dHVhbENvbnRlbnQi",
-            "pgEKFEdldFBob3RvTWVkaWFSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpB",
-            "IgogcGxhY2VzLmdvb2dsZWFwaXMuY29tL1Bob3RvTWVkaWESGQoMbWF4X3dp",
-            "ZHRoX3B4GAIgASgFQgPgQQESGgoNbWF4X2hlaWdodF9weBgDIAEoBUID4EEB",
-            "Eh8KEnNraXBfaHR0cF9yZWRpcmVjdBgEIAEoCEID4EEBIp8BCgpQaG90b01l",
-            "ZGlhEgwKBG5hbWUYASABKAkSEQoJcGhvdG9fdXJpGAIgASgJOnDqQW0KIHBs",
-            "YWNlcy5nb29nbGVhcGlzLmNvbS9QaG90b01lZGlhEjBwbGFjZXMve3BsYWNl",
-            "X2lkfS9waG90b3Mve3Bob3RvX3JlZmVyZW5jZX0vbWVkaWEqC3Bob3RvTWVk",
-            "aWFzMgpwaG90b01lZGlhIpYBCg9HZXRQbGFjZVJlcXVlc3QSMQoEbmFtZRgB",
-            "IAEoCUIj4EEC+kEdChtwbGFjZXMuZ29vZ2xlYXBpcy5jb20vUGxhY2USGgoN",
-            "bGFuZ3VhZ2VfY29kZRgCIAEoCUID4EEBEhgKC3JlZ2lvbl9jb2RlGAMgASgJ",
-            "QgPgQQESGgoNc2Vzc2lvbl90b2tlbhgEIAEoCUID4EEBIvQFChlBdXRvY29t",
-            "cGxldGVQbGFjZXNSZXF1ZXN0EhIKBWlucHV0GAEgASgJQgPgQQISWQoNbG9j",
-            "YXRpb25fYmlhcxgCIAEoCzI9Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5BdXRv",
-            "Y29tcGxldGVQbGFjZXNSZXF1ZXN0LkxvY2F0aW9uQmlhc0ID4EEBEmcKFGxv",
-            "Y2F0aW9uX3Jlc3RyaWN0aW9uGAMgASgLMkQuZ29vZ2xlLm1hcHMucGxhY2Vz",
-            "LnYxLkF1dG9jb21wbGV0ZVBsYWNlc1JlcXVlc3QuTG9jYXRpb25SZXN0cmlj",
-            "dGlvbkID4EEBEiMKFmluY2x1ZGVkX3ByaW1hcnlfdHlwZXMYBCADKAlCA+BB",
-            "ARIiChVpbmNsdWRlZF9yZWdpb25fY29kZXMYBSADKAlCA+BBARIaCg1sYW5n",
-            "dWFnZV9jb2RlGAYgASgJQgPgQQESGAoLcmVnaW9uX2NvZGUYByABKAlCA+BB",
-            "ARIoCgZvcmlnaW4YCCABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBARIZ",
-            "CgxpbnB1dF9vZmZzZXQYCSABKAVCA+BBARImChlpbmNsdWRlX3F1ZXJ5X3By",
-            "ZWRpY3Rpb25zGAogASgIQgPgQQESGgoNc2Vzc2lvbl90b2tlbhgLIAEoCUID",
+            "cy92MS9wbGFjZS5wcm90bxokZ29vZ2xlL21hcHMvcGxhY2VzL3YxL3BvbHls",
+            "aW5lLnByb3RvGitnb29nbGUvbWFwcy9wbGFjZXMvdjEvcm91dGVfbW9kaWZp",
+            "ZXJzLnByb3RvGi5nb29nbGUvbWFwcy9wbGFjZXMvdjEvcm91dGluZ19wcmVm",
+            "ZXJlbmNlLnByb3RvGitnb29nbGUvbWFwcy9wbGFjZXMvdjEvcm91dGluZ19z",
+            "dW1tYXJ5LnByb3RvGidnb29nbGUvbWFwcy9wbGFjZXMvdjEvdHJhdmVsX21v",
+            "ZGUucHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90byKKAgoRUm91dGlu",
+            "Z1BhcmFtZXRlcnMSKAoGb3JpZ2luGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0",
+            "TG5nQgPgQQESOwoLdHJhdmVsX21vZGUYAiABKA4yIS5nb29nbGUubWFwcy5w",
+            "bGFjZXMudjEuVHJhdmVsTW9kZUID4EEBEkMKD3JvdXRlX21vZGlmaWVycxgD",
+            "IAEoCzIlLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Sb3V0ZU1vZGlmaWVyc0ID",
+            "4EEBEkkKEnJvdXRpbmdfcHJlZmVyZW5jZRgEIAEoDjIoLmdvb2dsZS5tYXBz",
+            "LnBsYWNlcy52MS5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBIu4EChNTZWFyY2hO",
+            "ZWFyYnlSZXF1ZXN0EhUKDWxhbmd1YWdlX2NvZGUYASABKAkSEwoLcmVnaW9u",
+            "X2NvZGUYAiABKAkSFgoOaW5jbHVkZWRfdHlwZXMYAyADKAkSFgoOZXhjbHVk",
+            "ZWRfdHlwZXMYBCADKAkSHgoWaW5jbHVkZWRfcHJpbWFyeV90eXBlcxgFIAMo",
+            "CRIeChZleGNsdWRlZF9wcmltYXJ5X3R5cGVzGAYgAygJEhgKEG1heF9yZXN1",
+            "bHRfY291bnQYByABKAUSYQoUbG9jYXRpb25fcmVzdHJpY3Rpb24YCCABKAsy",
+            "Pi5nb29nbGUubWFwcy5wbGFjZXMudjEuU2VhcmNoTmVhcmJ5UmVxdWVzdC5M",
+            "b2NhdGlvblJlc3RyaWN0aW9uQgPgQQISUgoPcmFua19wcmVmZXJlbmNlGAkg",
+            "ASgOMjkuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJjaE5lYXJieVJlcXVl",
+            "c3QuUmFua1ByZWZlcmVuY2USSQoScm91dGluZ19wYXJhbWV0ZXJzGAogASgL",
+            "MiguZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlJvdXRpbmdQYXJhbWV0ZXJzQgPg",
+            "QQEaTgoTTG9jYXRpb25SZXN0cmljdGlvbhIvCgZjaXJjbGUYAiABKAsyHS5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuQ2lyY2xlSABCBgoEdHlwZSJPCg5SYW5r",
+            "UHJlZmVyZW5jZRIfChtSQU5LX1BSRUZFUkVOQ0VfVU5TUEVDSUZJRUQQABIM",
+            "CghESVNUQU5DRRABEg4KClBPUFVMQVJJVFkQAiKGAQoUU2VhcmNoTmVhcmJ5",
+            "UmVzcG9uc2USLAoGcGxhY2VzGAEgAygLMhwuZ29vZ2xlLm1hcHMucGxhY2Vz",
+            "LnYxLlBsYWNlEkAKEXJvdXRpbmdfc3VtbWFyaWVzGAIgAygLMiUuZ29vZ2xl",
+            "Lm1hcHMucGxhY2VzLnYxLlJvdXRpbmdTdW1tYXJ5IvQJChFTZWFyY2hUZXh0",
+            "UmVxdWVzdBIXCgp0ZXh0X3F1ZXJ5GAEgASgJQgPgQQISFQoNbGFuZ3VhZ2Vf",
+            "Y29kZRgCIAEoCRITCgtyZWdpb25fY29kZRgDIAEoCRJQCg9yYW5rX3ByZWZl",
+            "cmVuY2UYBCABKA4yNy5nb29nbGUubWFwcy5wbGFjZXMudjEuU2VhcmNoVGV4",
+            "dFJlcXVlc3QuUmFua1ByZWZlcmVuY2USFQoNaW5jbHVkZWRfdHlwZRgGIAEo",
+            "CRIQCghvcGVuX25vdxgHIAEoCBISCgptaW5fcmF0aW5nGAkgASgBEhgKEG1h",
+            "eF9yZXN1bHRfY291bnQYCiABKAUSNwoMcHJpY2VfbGV2ZWxzGAsgAygOMiEu",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlByaWNlTGV2ZWwSHQoVc3RyaWN0X3R5",
+            "cGVfZmlsdGVyaW5nGAwgASgIEkwKDWxvY2F0aW9uX2JpYXMYDSABKAsyNS5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuU2VhcmNoVGV4dFJlcXVlc3QuTG9jYXRp",
+            "b25CaWFzEloKFGxvY2F0aW9uX3Jlc3RyaWN0aW9uGA4gASgLMjwuZ29vZ2xl",
+            "Lm1hcHMucGxhY2VzLnYxLlNlYXJjaFRleHRSZXF1ZXN0LkxvY2F0aW9uUmVz",
+            "dHJpY3Rpb24SSwoKZXZfb3B0aW9ucxgPIAEoCzIyLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5TZWFyY2hUZXh0UmVxdWVzdC5FVk9wdGlvbnNCA+BBARJJChJy",
+            "b3V0aW5nX3BhcmFtZXRlcnMYECABKAsyKC5nb29nbGUubWFwcy5wbGFjZXMu",
+            "djEuUm91dGluZ1BhcmFtZXRlcnNCA+BBARJvCh1zZWFyY2hfYWxvbmdfcm91",
+            "dGVfcGFyYW1ldGVycxgRIAEoCzJDLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5T",
+            "ZWFyY2hUZXh0UmVxdWVzdC5TZWFyY2hBbG9uZ1JvdXRlUGFyYW1ldGVyc0ID",
             "4EEBGncKDExvY2F0aW9uQmlhcxIuCglyZWN0YW5nbGUYASABKAsyGS5nb29n",
             "bGUuZ2VvLnR5cGUuVmlld3BvcnRIABIvCgZjaXJjbGUYAiABKAsyHS5nb29n",
-            "bGUubWFwcy5wbGFjZXMudjEuQ2lyY2xlSABCBgoEdHlwZRp+ChNMb2NhdGlv",
+            "bGUubWFwcy5wbGFjZXMudjEuQ2lyY2xlSABCBgoEdHlwZRpNChNMb2NhdGlv",
             "blJlc3RyaWN0aW9uEi4KCXJlY3RhbmdsZRgBIAEoCzIZLmdvb2dsZS5nZW8u",
-            "dHlwZS5WaWV3cG9ydEgAEi8KBmNpcmNsZRgCIAEoCzIdLmdvb2dsZS5tYXBz",
-            "LnBsYWNlcy52MS5DaXJjbGVIAEIGCgR0eXBlIooKChpBdXRvY29tcGxldGVQ",
-            "bGFjZXNSZXNwb25zZRJRCgtzdWdnZXN0aW9ucxgBIAMoCzI8Lmdvb2dsZS5t",
-            "YXBzLnBsYWNlcy52MS5BdXRvY29tcGxldGVQbGFjZXNSZXNwb25zZS5TdWdn",
-            "ZXN0aW9uGpgJCgpTdWdnZXN0aW9uEmgKEHBsYWNlX3ByZWRpY3Rpb24YASAB",
-            "KAsyTC5nb29nbGUubWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRlUGxhY2Vz",
-            "UmVzcG9uc2UuU3VnZ2VzdGlvbi5QbGFjZVByZWRpY3Rpb25IABJoChBxdWVy",
-            "eV9wcmVkaWN0aW9uGAIgASgLMkwuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1",
-            "dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dlc3Rpb24uUXVlcnlQcmVk",
-            "aWN0aW9uSAAaNwoLU3RyaW5nUmFuZ2USFAoMc3RhcnRfb2Zmc2V0GAEgASgF",
-            "EhIKCmVuZF9vZmZzZXQYAiABKAUaegoPRm9ybWF0dGFibGVUZXh0EgwKBHRl",
-            "eHQYASABKAkSWQoHbWF0Y2hlcxgCIAMoCzJILmdvb2dsZS5tYXBzLnBsYWNl",
-            "cy52MS5BdXRvY29tcGxldGVQbGFjZXNSZXNwb25zZS5TdWdnZXN0aW9uLlN0",
-            "cmluZ1JhbmdlGtkBChBTdHJ1Y3R1cmVkRm9ybWF0El8KCW1haW5fdGV4dBgB",
-            "IAEoCzJMLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5BdXRvY29tcGxldGVQbGFj",
-            "ZXNSZXNwb25zZS5TdWdnZXN0aW9uLkZvcm1hdHRhYmxlVGV4dBJkCg5zZWNv",
-            "bmRhcnlfdGV4dBgCIAEoCzJMLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5BdXRv",
-            "Y29tcGxldGVQbGFjZXNSZXNwb25zZS5TdWdnZXN0aW9uLkZvcm1hdHRhYmxl",
-            "VGV4dBrCAgoPUGxhY2VQcmVkaWN0aW9uEi8KBXBsYWNlGAEgASgJQiD6QR0K",
-            "G3BsYWNlcy5nb29nbGVhcGlzLmNvbS9QbGFjZRIQCghwbGFjZV9pZBgCIAEo",
-            "CRJaCgR0ZXh0GAMgASgLMkwuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1dG9j",
-            "b21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dlc3Rpb24uRm9ybWF0dGFibGVU",
-            "ZXh0EmgKEXN0cnVjdHVyZWRfZm9ybWF0GAQgASgLMk0uZ29vZ2xlLm1hcHMu",
-            "cGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dlc3Rp",
-            "b24uU3RydWN0dXJlZEZvcm1hdBINCgV0eXBlcxgFIAMoCRIXCg9kaXN0YW5j",
-            "ZV9tZXRlcnMYBiABKAUa1wEKD1F1ZXJ5UHJlZGljdGlvbhJaCgR0ZXh0GAEg",
-            "ASgLMkwuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNl",
-            "c1Jlc3BvbnNlLlN1Z2dlc3Rpb24uRm9ybWF0dGFibGVUZXh0EmgKEXN0cnVj",
-            "dHVyZWRfZm9ybWF0GAIgASgLMk0uZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1",
-            "dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dlc3Rpb24uU3RydWN0dXJl",
-            "ZEZvcm1hdEIGCgRraW5kMuEFCgZQbGFjZXMSiwEKDFNlYXJjaE5lYXJieRIq",
-            "Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5TZWFyY2hOZWFyYnlSZXF1ZXN0Gisu",
-            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJjaE5lYXJieVJlc3BvbnNlIiKC",
-            "0+STAhwiFy92MS9wbGFjZXM6c2VhcmNoTmVhcmJ5OgEqEoMBCgpTZWFyY2hU",
-            "ZXh0EiguZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJjaFRleHRSZXF1ZXN0",
-            "GikuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJjaFRleHRSZXNwb25zZSIg",
-            "gtPkkwIaIhUvdjEvcGxhY2VzOnNlYXJjaFRleHQ6ASoSkgEKDUdldFBob3Rv",
-            "TWVkaWESKy5nb29nbGUubWFwcy5wbGFjZXMudjEuR2V0UGhvdG9NZWRpYVJl",
-            "cXVlc3QaIS5nb29nbGUubWFwcy5wbGFjZXMudjEuUGhvdG9NZWRpYSIx2kEE",
-            "bmFtZYLT5JMCJBIiL3YxL3tuYW1lPXBsYWNlcy8qL3Bob3Rvcy8qL21lZGlh",
-            "fRJ0CghHZXRQbGFjZRImLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5HZXRQbGFj",
-            "ZVJlcXVlc3QaHC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UiItpBBG5h",
-            "bWWC0+STAhUSEy92MS97bmFtZT1wbGFjZXMvKn0SnQEKEkF1dG9jb21wbGV0",
-            "ZVBsYWNlcxIwLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5BdXRvY29tcGxldGVQ",
-            "bGFjZXNSZXF1ZXN0GjEuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21w",
-            "bGV0ZVBsYWNlc1Jlc3BvbnNlIiKC0+STAhwiFy92MS9wbGFjZXM6YXV0b2Nv",
-            "bXBsZXRlOgEqGhjKQRVwbGFjZXMuZ29vZ2xlYXBpcy5jb21CpgEKGWNvbS5n",
-            "b29nbGUubWFwcy5wbGFjZXMudjFCElBsYWNlc1NlcnZpY2VQcm90b1ABWjdj",
-            "bG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3Bi",
-            "O3BsYWNlc3Bi+AEBogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYx",
-            "ygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
+            "dHlwZS5WaWV3cG9ydEgAQgYKBHR5cGUaeAoJRVZPcHRpb25zEiUKGG1pbmlt",
+            "dW1fY2hhcmdpbmdfcmF0ZV9rdxgBIAEoAUID4EEBEkQKD2Nvbm5lY3Rvcl90",
+            "eXBlcxgCIAMoDjImLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5FVkNvbm5lY3Rv",
+            "clR5cGVCA+BBARpUChpTZWFyY2hBbG9uZ1JvdXRlUGFyYW1ldGVycxI2Cghw",
+            "b2x5bGluZRgBIAEoCzIfLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Qb2x5bGlu",
+            "ZUID4EECIk4KDlJhbmtQcmVmZXJlbmNlEh8KG1JBTktfUFJFRkVSRU5DRV9V",
+            "TlNQRUNJRklFRBAAEgwKCERJU1RBTkNFEAESDQoJUkVMRVZBTkNFEAIiywEK",
+            "ElNlYXJjaFRleHRSZXNwb25zZRIsCgZwbGFjZXMYASADKAsyHC5nb29nbGUu",
+            "bWFwcy5wbGFjZXMudjEuUGxhY2USQAoRcm91dGluZ19zdW1tYXJpZXMYAiAD",
+            "KAsyJS5nb29nbGUubWFwcy5wbGFjZXMudjEuUm91dGluZ1N1bW1hcnkSRQoT",
+            "Y29udGV4dHVhbF9jb250ZW50cxgDIAMoCzIoLmdvb2dsZS5tYXBzLnBsYWNl",
+            "cy52MS5Db250ZXh0dWFsQ29udGVudCKmAQoUR2V0UGhvdG9NZWRpYVJlcXVl",
+            "c3QSNgoEbmFtZRgBIAEoCUIo4EEC+kEiCiBwbGFjZXMuZ29vZ2xlYXBpcy5j",
+            "b20vUGhvdG9NZWRpYRIZCgxtYXhfd2lkdGhfcHgYAiABKAVCA+BBARIaCg1t",
+            "YXhfaGVpZ2h0X3B4GAMgASgFQgPgQQESHwoSc2tpcF9odHRwX3JlZGlyZWN0",
+            "GAQgASgIQgPgQQEinwEKClBob3RvTWVkaWESDAoEbmFtZRgBIAEoCRIRCglw",
+            "aG90b191cmkYAiABKAk6cOpBbQogcGxhY2VzLmdvb2dsZWFwaXMuY29tL1Bo",
+            "b3RvTWVkaWESMHBsYWNlcy97cGxhY2VfaWR9L3Bob3Rvcy97cGhvdG9fcmVm",
+            "ZXJlbmNlfS9tZWRpYSoLcGhvdG9NZWRpYXMyCnBob3RvTWVkaWEilgEKD0dl",
+            "dFBsYWNlUmVxdWVzdBIxCgRuYW1lGAEgASgJQiPgQQL6QR0KG3BsYWNlcy5n",
+            "b29nbGVhcGlzLmNvbS9QbGFjZRIaCg1sYW5ndWFnZV9jb2RlGAIgASgJQgPg",
+            "QQESGAoLcmVnaW9uX2NvZGUYAyABKAlCA+BBARIaCg1zZXNzaW9uX3Rva2Vu",
+            "GAQgASgJQgPgQQEi9AUKGUF1dG9jb21wbGV0ZVBsYWNlc1JlcXVlc3QSEgoF",
+            "aW5wdXQYASABKAlCA+BBAhJZCg1sb2NhdGlvbl9iaWFzGAIgASgLMj0uZ29v",
+            "Z2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1JlcXVlc3Qu",
+            "TG9jYXRpb25CaWFzQgPgQQESZwoUbG9jYXRpb25fcmVzdHJpY3Rpb24YAyAB",
+            "KAsyRC5nb29nbGUubWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRlUGxhY2Vz",
+            "UmVxdWVzdC5Mb2NhdGlvblJlc3RyaWN0aW9uQgPgQQESIwoWaW5jbHVkZWRf",
+            "cHJpbWFyeV90eXBlcxgEIAMoCUID4EEBEiIKFWluY2x1ZGVkX3JlZ2lvbl9j",
+            "b2RlcxgFIAMoCUID4EEBEhoKDWxhbmd1YWdlX2NvZGUYBiABKAlCA+BBARIY",
+            "CgtyZWdpb25fY29kZRgHIAEoCUID4EEBEigKBm9yaWdpbhgIIAEoCzITLmdv",
+            "b2dsZS50eXBlLkxhdExuZ0ID4EEBEhkKDGlucHV0X29mZnNldBgJIAEoBUID",
+            "4EEBEiYKGWluY2x1ZGVfcXVlcnlfcHJlZGljdGlvbnMYCiABKAhCA+BBARIa",
+            "Cg1zZXNzaW9uX3Rva2VuGAsgASgJQgPgQQEadwoMTG9jYXRpb25CaWFzEi4K",
+            "CXJlY3RhbmdsZRgBIAEoCzIZLmdvb2dsZS5nZW8udHlwZS5WaWV3cG9ydEgA",
+            "Ei8KBmNpcmNsZRgCIAEoCzIdLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5DaXJj",
+            "bGVIAEIGCgR0eXBlGn4KE0xvY2F0aW9uUmVzdHJpY3Rpb24SLgoJcmVjdGFu",
+            "Z2xlGAEgASgLMhkuZ29vZ2xlLmdlby50eXBlLlZpZXdwb3J0SAASLwoGY2ly",
+            "Y2xlGAIgASgLMh0uZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkNpcmNsZUgAQgYK",
+            "BHR5cGUiigoKGkF1dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlElEKC3N1Z2dl",
+            "c3Rpb25zGAEgAygLMjwuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21w",
+            "bGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dlc3Rpb24amAkKClN1Z2dlc3Rpb24S",
+            "aAoQcGxhY2VfcHJlZGljdGlvbhgBIAEoCzJMLmdvb2dsZS5tYXBzLnBsYWNl",
+            "cy52MS5BdXRvY29tcGxldGVQbGFjZXNSZXNwb25zZS5TdWdnZXN0aW9uLlBs",
+            "YWNlUHJlZGljdGlvbkgAEmgKEHF1ZXJ5X3ByZWRpY3Rpb24YAiABKAsyTC5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRlUGxhY2VzUmVzcG9u",
+            "c2UuU3VnZ2VzdGlvbi5RdWVyeVByZWRpY3Rpb25IABo3CgtTdHJpbmdSYW5n",
+            "ZRIUCgxzdGFydF9vZmZzZXQYASABKAUSEgoKZW5kX29mZnNldBgCIAEoBRp6",
+            "Cg9Gb3JtYXR0YWJsZVRleHQSDAoEdGV4dBgBIAEoCRJZCgdtYXRjaGVzGAIg",
+            "AygLMkguZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNl",
+            "c1Jlc3BvbnNlLlN1Z2dlc3Rpb24uU3RyaW5nUmFuZ2Ua2QEKEFN0cnVjdHVy",
+            "ZWRGb3JtYXQSXwoJbWFpbl90ZXh0GAEgASgLMkwuZ29vZ2xlLm1hcHMucGxh",
+            "Y2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dlc3Rpb24u",
+            "Rm9ybWF0dGFibGVUZXh0EmQKDnNlY29uZGFyeV90ZXh0GAIgASgLMkwuZ29v",
+            "Z2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNl",
+            "LlN1Z2dlc3Rpb24uRm9ybWF0dGFibGVUZXh0GsICCg9QbGFjZVByZWRpY3Rp",
+            "b24SLwoFcGxhY2UYASABKAlCIPpBHQobcGxhY2VzLmdvb2dsZWFwaXMuY29t",
+            "L1BsYWNlEhAKCHBsYWNlX2lkGAIgASgJEloKBHRleHQYAyABKAsyTC5nb29n",
+            "bGUubWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRlUGxhY2VzUmVzcG9uc2Uu",
+            "U3VnZ2VzdGlvbi5Gb3JtYXR0YWJsZVRleHQSaAoRc3RydWN0dXJlZF9mb3Jt",
+            "YXQYBCABKAsyTS5nb29nbGUubWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRl",
+            "UGxhY2VzUmVzcG9uc2UuU3VnZ2VzdGlvbi5TdHJ1Y3R1cmVkRm9ybWF0Eg0K",
+            "BXR5cGVzGAUgAygJEhcKD2Rpc3RhbmNlX21ldGVycxgGIAEoBRrXAQoPUXVl",
+            "cnlQcmVkaWN0aW9uEloKBHRleHQYASABKAsyTC5nb29nbGUubWFwcy5wbGFj",
+            "ZXMudjEuQXV0b2NvbXBsZXRlUGxhY2VzUmVzcG9uc2UuU3VnZ2VzdGlvbi5G",
+            "b3JtYXR0YWJsZVRleHQSaAoRc3RydWN0dXJlZF9mb3JtYXQYAiABKAsyTS5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRlUGxhY2VzUmVzcG9u",
+            "c2UuU3VnZ2VzdGlvbi5TdHJ1Y3R1cmVkRm9ybWF0QgYKBGtpbmQy4QUKBlBs",
+            "YWNlcxKLAQoMU2VhcmNoTmVhcmJ5EiouZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "LlNlYXJjaE5lYXJieVJlcXVlc3QaKy5nb29nbGUubWFwcy5wbGFjZXMudjEu",
+            "U2VhcmNoTmVhcmJ5UmVzcG9uc2UiIoLT5JMCHCIXL3YxL3BsYWNlczpzZWFy",
+            "Y2hOZWFyYnk6ASoSgwEKClNlYXJjaFRleHQSKC5nb29nbGUubWFwcy5wbGFj",
+            "ZXMudjEuU2VhcmNoVGV4dFJlcXVlc3QaKS5nb29nbGUubWFwcy5wbGFjZXMu",
+            "djEuU2VhcmNoVGV4dFJlc3BvbnNlIiCC0+STAhoiFS92MS9wbGFjZXM6c2Vh",
+            "cmNoVGV4dDoBKhKSAQoNR2V0UGhvdG9NZWRpYRIrLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5HZXRQaG90b01lZGlhUmVxdWVzdBohLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5QaG90b01lZGlhIjHaQQRuYW1lgtPkkwIkEiIvdjEve25hbWU9",
+            "cGxhY2VzLyovcGhvdG9zLyovbWVkaWF9EnQKCEdldFBsYWNlEiYuZ29vZ2xl",
+            "Lm1hcHMucGxhY2VzLnYxLkdldFBsYWNlUmVxdWVzdBocLmdvb2dsZS5tYXBz",
+            "LnBsYWNlcy52MS5QbGFjZSIi2kEEbmFtZYLT5JMCFRITL3YxL3tuYW1lPXBs",
+            "YWNlcy8qfRKdAQoSQXV0b2NvbXBsZXRlUGxhY2VzEjAuZ29vZ2xlLm1hcHMu",
+            "cGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1JlcXVlc3QaMS5nb29nbGUu",
+            "bWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRlUGxhY2VzUmVzcG9uc2UiIoLT",
+            "5JMCHCIXL3YxL3BsYWNlczphdXRvY29tcGxldGU6ASoaGMpBFXBsYWNlcy5n",
+            "b29nbGVhcGlzLmNvbUKmAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIS",
+            "UGxhY2VzU2VydmljZVByb3RvUAFaN2Nsb3VkLmdvb2dsZS5jb20vZ28vbWFw",
+            "cy9wbGFjZXMvYXBpdjEvcGxhY2VzcGI7cGxhY2VzcGL4AQGiAgZHTVBTVjGq",
+            "AhVHb29nbGUuTWFwcy5QbGFjZXMuVjHKAhVHb29nbGVcTWFwc1xQbGFjZXNc",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.ContextualContentReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.GeometryReflection.Descriptor, global::Google.Maps.Places.V1.PlaceReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.ContextualContentReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.GeometryReflection.Descriptor, global::Google.Maps.Places.V1.PlaceReflection.Descriptor, global::Google.Maps.Places.V1.PolylineReflection.Descriptor, global::Google.Maps.Places.V1.RouteModifiersReflection.Descriptor, global::Google.Maps.Places.V1.RoutingPreferenceReflection.Descriptor, global::Google.Maps.Places.V1.RoutingSummaryReflection.Descriptor, global::Google.Maps.Places.V1.TravelModeReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyRequest), global::Google.Maps.Places.V1.SearchNearbyRequest.Parser, new[]{ "LanguageCode", "RegionCode", "IncludedTypes", "ExcludedTypes", "IncludedPrimaryTypes", "ExcludedPrimaryTypes", "MaxResultCount", "LocationRestriction", "RankPreference" }, null, new[]{ typeof(global::Google.Maps.Places.V1.SearchNearbyRequest.Types.RankPreference) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyRequest.Types.LocationRestriction), global::Google.Maps.Places.V1.SearchNearbyRequest.Types.LocationRestriction.Parser, new[]{ "Circle" }, new[]{ "Type" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyResponse), global::Google.Maps.Places.V1.SearchNearbyResponse.Parser, new[]{ "Places" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest), global::Google.Maps.Places.V1.SearchTextRequest.Parser, new[]{ "TextQuery", "LanguageCode", "RegionCode", "RankPreference", "IncludedType", "OpenNow", "MinRating", "MaxResultCount", "PriceLevels", "StrictTypeFiltering", "LocationBias", "LocationRestriction", "EvOptions" }, null, new[]{ typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.RankPreference) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationBias), global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationBias.Parser, new[]{ "Rectangle", "Circle" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.RoutingParameters), global::Google.Maps.Places.V1.RoutingParameters.Parser, new[]{ "Origin", "TravelMode", "RouteModifiers", "RoutingPreference" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyRequest), global::Google.Maps.Places.V1.SearchNearbyRequest.Parser, new[]{ "LanguageCode", "RegionCode", "IncludedTypes", "ExcludedTypes", "IncludedPrimaryTypes", "ExcludedPrimaryTypes", "MaxResultCount", "LocationRestriction", "RankPreference", "RoutingParameters" }, null, new[]{ typeof(global::Google.Maps.Places.V1.SearchNearbyRequest.Types.RankPreference) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyRequest.Types.LocationRestriction), global::Google.Maps.Places.V1.SearchNearbyRequest.Types.LocationRestriction.Parser, new[]{ "Circle" }, new[]{ "Type" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyResponse), global::Google.Maps.Places.V1.SearchNearbyResponse.Parser, new[]{ "Places", "RoutingSummaries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest), global::Google.Maps.Places.V1.SearchTextRequest.Parser, new[]{ "TextQuery", "LanguageCode", "RegionCode", "RankPreference", "IncludedType", "OpenNow", "MinRating", "MaxResultCount", "PriceLevels", "StrictTypeFiltering", "LocationBias", "LocationRestriction", "EvOptions", "RoutingParameters", "SearchAlongRouteParameters" }, null, new[]{ typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.RankPreference) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationBias), global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationBias.Parser, new[]{ "Rectangle", "Circle" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationRestriction), global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationRestriction.Parser, new[]{ "Rectangle" }, new[]{ "Type" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions), global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions.Parser, new[]{ "MinimumChargingRateKw", "ConnectorTypes" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextResponse), global::Google.Maps.Places.V1.SearchTextResponse.Parser, new[]{ "Places", "ContextualContents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions), global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions.Parser, new[]{ "MinimumChargingRateKw", "ConnectorTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.SearchAlongRouteParameters), global::Google.Maps.Places.V1.SearchTextRequest.Types.SearchAlongRouteParameters.Parser, new[]{ "Polyline" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextResponse), global::Google.Maps.Places.V1.SearchTextResponse.Parser, new[]{ "Places", "RoutingSummaries", "ContextualContents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.GetPhotoMediaRequest), global::Google.Maps.Places.V1.GetPhotoMediaRequest.Parser, new[]{ "Name", "MaxWidthPx", "MaxHeightPx", "SkipHttpRedirect" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.PhotoMedia), global::Google.Maps.Places.V1.PhotoMedia.Parser, new[]{ "Name", "PhotoUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.GetPlaceRequest), global::Google.Maps.Places.V1.GetPlaceRequest.Parser, new[]{ "Name", "LanguageCode", "RegionCode", "SessionToken" }, null, null, null, null),
@@ -174,6 +198,346 @@ namespace Google.Maps.Places.V1 {
 
   }
   #region Messages
+  /// <summary>
+  /// Parameters to configure the routing calculations to the places in the
+  /// response, both along a route (where result ranking will be influenced) and
+  /// for calculating travel times on results.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RoutingParameters : pb::IMessage<RoutingParameters>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RoutingParameters> _parser = new pb::MessageParser<RoutingParameters>(() => new RoutingParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RoutingParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RoutingParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RoutingParameters(RoutingParameters other) : this() {
+      origin_ = other.origin_ != null ? other.origin_.Clone() : null;
+      travelMode_ = other.travelMode_;
+      routeModifiers_ = other.routeModifiers_ != null ? other.routeModifiers_.Clone() : null;
+      routingPreference_ = other.routingPreference_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RoutingParameters Clone() {
+      return new RoutingParameters(this);
+    }
+
+    /// <summary>Field number for the "origin" field.</summary>
+    public const int OriginFieldNumber = 1;
+    private global::Google.Type.LatLng origin_;
+    /// <summary>
+    /// Optional. An explicit routing origin that overrides the origin defined in
+    /// the polyline. By default, the polyline origin is used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.LatLng Origin {
+      get { return origin_; }
+      set {
+        origin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "travel_mode" field.</summary>
+    public const int TravelModeFieldNumber = 2;
+    private global::Google.Maps.Places.V1.TravelMode travelMode_ = global::Google.Maps.Places.V1.TravelMode.Unspecified;
+    /// <summary>
+    /// Optional. The travel mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.TravelMode TravelMode {
+      get { return travelMode_; }
+      set {
+        travelMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "route_modifiers" field.</summary>
+    public const int RouteModifiersFieldNumber = 3;
+    private global::Google.Maps.Places.V1.RouteModifiers routeModifiers_;
+    /// <summary>
+    /// Optional. The route modifiers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.RouteModifiers RouteModifiers {
+      get { return routeModifiers_; }
+      set {
+        routeModifiers_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "routing_preference" field.</summary>
+    public const int RoutingPreferenceFieldNumber = 4;
+    private global::Google.Maps.Places.V1.RoutingPreference routingPreference_ = global::Google.Maps.Places.V1.RoutingPreference.Unspecified;
+    /// <summary>
+    /// Optional. Specifies how to compute the routing summaries. The server
+    /// attempts to use the selected routing preference to compute the route. The
+    /// traffic aware routing preference is only available for the `DRIVE` or
+    /// `TWO_WHEELER` `travelMode`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.RoutingPreference RoutingPreference {
+      get { return routingPreference_; }
+      set {
+        routingPreference_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RoutingParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RoutingParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Origin, other.Origin)) return false;
+      if (TravelMode != other.TravelMode) return false;
+      if (!object.Equals(RouteModifiers, other.RouteModifiers)) return false;
+      if (RoutingPreference != other.RoutingPreference) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (origin_ != null) hash ^= Origin.GetHashCode();
+      if (TravelMode != global::Google.Maps.Places.V1.TravelMode.Unspecified) hash ^= TravelMode.GetHashCode();
+      if (routeModifiers_ != null) hash ^= RouteModifiers.GetHashCode();
+      if (RoutingPreference != global::Google.Maps.Places.V1.RoutingPreference.Unspecified) hash ^= RoutingPreference.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (origin_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Origin);
+      }
+      if (TravelMode != global::Google.Maps.Places.V1.TravelMode.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) TravelMode);
+      }
+      if (routeModifiers_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RouteModifiers);
+      }
+      if (RoutingPreference != global::Google.Maps.Places.V1.RoutingPreference.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) RoutingPreference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (origin_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Origin);
+      }
+      if (TravelMode != global::Google.Maps.Places.V1.TravelMode.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) TravelMode);
+      }
+      if (routeModifiers_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RouteModifiers);
+      }
+      if (RoutingPreference != global::Google.Maps.Places.V1.RoutingPreference.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) RoutingPreference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (origin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Origin);
+      }
+      if (TravelMode != global::Google.Maps.Places.V1.TravelMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TravelMode);
+      }
+      if (routeModifiers_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RouteModifiers);
+      }
+      if (RoutingPreference != global::Google.Maps.Places.V1.RoutingPreference.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RoutingPreference);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RoutingParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.origin_ != null) {
+        if (origin_ == null) {
+          Origin = new global::Google.Type.LatLng();
+        }
+        Origin.MergeFrom(other.Origin);
+      }
+      if (other.TravelMode != global::Google.Maps.Places.V1.TravelMode.Unspecified) {
+        TravelMode = other.TravelMode;
+      }
+      if (other.routeModifiers_ != null) {
+        if (routeModifiers_ == null) {
+          RouteModifiers = new global::Google.Maps.Places.V1.RouteModifiers();
+        }
+        RouteModifiers.MergeFrom(other.RouteModifiers);
+      }
+      if (other.RoutingPreference != global::Google.Maps.Places.V1.RoutingPreference.Unspecified) {
+        RoutingPreference = other.RoutingPreference;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (origin_ == null) {
+              Origin = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(Origin);
+            break;
+          }
+          case 16: {
+            TravelMode = (global::Google.Maps.Places.V1.TravelMode) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (routeModifiers_ == null) {
+              RouteModifiers = new global::Google.Maps.Places.V1.RouteModifiers();
+            }
+            input.ReadMessage(RouteModifiers);
+            break;
+          }
+          case 32: {
+            RoutingPreference = (global::Google.Maps.Places.V1.RoutingPreference) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (origin_ == null) {
+              Origin = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(Origin);
+            break;
+          }
+          case 16: {
+            TravelMode = (global::Google.Maps.Places.V1.TravelMode) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (routeModifiers_ == null) {
+              RouteModifiers = new global::Google.Maps.Places.V1.RouteModifiers();
+            }
+            input.ReadMessage(RouteModifiers);
+            break;
+          }
+          case 32: {
+            RoutingPreference = (global::Google.Maps.Places.V1.RoutingPreference) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   /// <summary>
   /// Request proto for Search Nearby.
   /// </summary>
@@ -192,7 +556,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -221,6 +585,7 @@ namespace Google.Maps.Places.V1 {
       maxResultCount_ = other.maxResultCount_;
       locationRestriction_ = other.locationRestriction_ != null ? other.locationRestriction_.Clone() : null;
       rankPreference_ = other.rankPreference_;
+      routingParameters_ = other.routingParameters_ != null ? other.routingParameters_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -444,6 +809,21 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
+    /// <summary>Field number for the "routing_parameters" field.</summary>
+    public const int RoutingParametersFieldNumber = 10;
+    private global::Google.Maps.Places.V1.RoutingParameters routingParameters_;
+    /// <summary>
+    /// Optional. Parameters that affect the routing to the search results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.RoutingParameters RoutingParameters {
+      get { return routingParameters_; }
+      set {
+        routingParameters_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -468,6 +848,7 @@ namespace Google.Maps.Places.V1 {
       if (MaxResultCount != other.MaxResultCount) return false;
       if (!object.Equals(LocationRestriction, other.LocationRestriction)) return false;
       if (RankPreference != other.RankPreference) return false;
+      if (!object.Equals(RoutingParameters, other.RoutingParameters)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -484,6 +865,7 @@ namespace Google.Maps.Places.V1 {
       if (MaxResultCount != 0) hash ^= MaxResultCount.GetHashCode();
       if (locationRestriction_ != null) hash ^= LocationRestriction.GetHashCode();
       if (RankPreference != global::Google.Maps.Places.V1.SearchNearbyRequest.Types.RankPreference.Unspecified) hash ^= RankPreference.GetHashCode();
+      if (routingParameters_ != null) hash ^= RoutingParameters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -526,6 +908,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) RankPreference);
       }
+      if (routingParameters_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RoutingParameters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -560,6 +946,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) RankPreference);
       }
+      if (routingParameters_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RoutingParameters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -588,6 +978,9 @@ namespace Google.Maps.Places.V1 {
       }
       if (RankPreference != global::Google.Maps.Places.V1.SearchNearbyRequest.Types.RankPreference.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RankPreference);
+      }
+      if (routingParameters_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RoutingParameters);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -622,6 +1015,12 @@ namespace Google.Maps.Places.V1 {
       }
       if (other.RankPreference != global::Google.Maps.Places.V1.SearchNearbyRequest.Types.RankPreference.Unspecified) {
         RankPreference = other.RankPreference;
+      }
+      if (other.routingParameters_ != null) {
+        if (routingParameters_ == null) {
+          RoutingParameters = new global::Google.Maps.Places.V1.RoutingParameters();
+        }
+        RoutingParameters.MergeFrom(other.RoutingParameters);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -677,6 +1076,13 @@ namespace Google.Maps.Places.V1 {
             RankPreference = (global::Google.Maps.Places.V1.SearchNearbyRequest.Types.RankPreference) input.ReadEnum();
             break;
           }
+          case 82: {
+            if (routingParameters_ == null) {
+              RoutingParameters = new global::Google.Maps.Places.V1.RoutingParameters();
+            }
+            input.ReadMessage(RoutingParameters);
+            break;
+          }
         }
       }
     #endif
@@ -729,6 +1135,13 @@ namespace Google.Maps.Places.V1 {
           }
           case 72: {
             RankPreference = (global::Google.Maps.Places.V1.SearchNearbyRequest.Types.RankPreference) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            if (routingParameters_ == null) {
+              RoutingParameters = new global::Google.Maps.Places.V1.RoutingParameters();
+            }
+            input.ReadMessage(RoutingParameters);
             break;
           }
         }
@@ -1021,7 +1434,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1042,6 +1455,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchNearbyResponse(SearchNearbyResponse other) : this() {
       places_ = other.places_.Clone();
+      routingSummaries_ = other.routingSummaries_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1066,6 +1480,24 @@ namespace Google.Maps.Places.V1 {
       get { return places_; }
     }
 
+    /// <summary>Field number for the "routing_summaries" field.</summary>
+    public const int RoutingSummariesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.RoutingSummary> _repeated_routingSummaries_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Maps.Places.V1.RoutingSummary.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.RoutingSummary> routingSummaries_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.RoutingSummary>();
+    /// <summary>
+    /// A list of routing summaries where each entry associates to the
+    /// corresponding place in the same index in the places field. If the routing
+    /// summary is not available for one of the places, it will contain an empty
+    /// entry. This list should have as many entries as the list of places if
+    /// requested.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Places.V1.RoutingSummary> RoutingSummaries {
+      get { return routingSummaries_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1082,6 +1514,7 @@ namespace Google.Maps.Places.V1 {
         return true;
       }
       if(!places_.Equals(other.places_)) return false;
+      if(!routingSummaries_.Equals(other.routingSummaries_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1090,6 +1523,7 @@ namespace Google.Maps.Places.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= places_.GetHashCode();
+      hash ^= routingSummaries_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1109,6 +1543,7 @@ namespace Google.Maps.Places.V1 {
       output.WriteRawMessage(this);
     #else
       places_.WriteTo(output, _repeated_places_codec);
+      routingSummaries_.WriteTo(output, _repeated_routingSummaries_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1120,6 +1555,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       places_.WriteTo(ref output, _repeated_places_codec);
+      routingSummaries_.WriteTo(ref output, _repeated_routingSummaries_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1131,6 +1567,7 @@ namespace Google.Maps.Places.V1 {
     public int CalculateSize() {
       int size = 0;
       size += places_.CalculateSize(_repeated_places_codec);
+      size += routingSummaries_.CalculateSize(_repeated_routingSummaries_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1144,6 +1581,7 @@ namespace Google.Maps.Places.V1 {
         return;
       }
       places_.Add(other.places_);
+      routingSummaries_.Add(other.routingSummaries_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1163,6 +1601,10 @@ namespace Google.Maps.Places.V1 {
             places_.AddEntriesFrom(input, _repeated_places_codec);
             break;
           }
+          case 18: {
+            routingSummaries_.AddEntriesFrom(input, _repeated_routingSummaries_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1180,6 +1622,10 @@ namespace Google.Maps.Places.V1 {
             break;
           case 10: {
             places_.AddEntriesFrom(ref input, _repeated_places_codec);
+            break;
+          }
+          case 18: {
+            routingSummaries_.AddEntriesFrom(ref input, _repeated_routingSummaries_codec);
             break;
           }
         }
@@ -1207,7 +1653,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1240,6 +1686,8 @@ namespace Google.Maps.Places.V1 {
       locationBias_ = other.locationBias_ != null ? other.locationBias_.Clone() : null;
       locationRestriction_ = other.locationRestriction_ != null ? other.locationRestriction_.Clone() : null;
       evOptions_ = other.evOptions_ != null ? other.evOptions_.Clone() : null;
+      routingParameters_ = other.routingParameters_ != null ? other.routingParameters_.Clone() : null;
+      searchAlongRouteParameters_ = other.searchAlongRouteParameters_ != null ? other.searchAlongRouteParameters_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1474,6 +1922,36 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
+    /// <summary>Field number for the "routing_parameters" field.</summary>
+    public const int RoutingParametersFieldNumber = 16;
+    private global::Google.Maps.Places.V1.RoutingParameters routingParameters_;
+    /// <summary>
+    /// Optional. Additional parameters for routing to results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.RoutingParameters RoutingParameters {
+      get { return routingParameters_; }
+      set {
+        routingParameters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "search_along_route_parameters" field.</summary>
+    public const int SearchAlongRouteParametersFieldNumber = 17;
+    private global::Google.Maps.Places.V1.SearchTextRequest.Types.SearchAlongRouteParameters searchAlongRouteParameters_;
+    /// <summary>
+    /// Optional. Additional parameters proto for searching along a route.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.SearchTextRequest.Types.SearchAlongRouteParameters SearchAlongRouteParameters {
+      get { return searchAlongRouteParameters_; }
+      set {
+        searchAlongRouteParameters_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1502,6 +1980,8 @@ namespace Google.Maps.Places.V1 {
       if (!object.Equals(LocationBias, other.LocationBias)) return false;
       if (!object.Equals(LocationRestriction, other.LocationRestriction)) return false;
       if (!object.Equals(EvOptions, other.EvOptions)) return false;
+      if (!object.Equals(RoutingParameters, other.RoutingParameters)) return false;
+      if (!object.Equals(SearchAlongRouteParameters, other.SearchAlongRouteParameters)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1522,6 +2002,8 @@ namespace Google.Maps.Places.V1 {
       if (locationBias_ != null) hash ^= LocationBias.GetHashCode();
       if (locationRestriction_ != null) hash ^= LocationRestriction.GetHashCode();
       if (evOptions_ != null) hash ^= EvOptions.GetHashCode();
+      if (routingParameters_ != null) hash ^= RoutingParameters.GetHashCode();
+      if (searchAlongRouteParameters_ != null) hash ^= SearchAlongRouteParameters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1589,6 +2071,14 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(EvOptions);
       }
+      if (routingParameters_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(RoutingParameters);
+      }
+      if (searchAlongRouteParameters_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(SearchAlongRouteParameters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1648,6 +2138,14 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(EvOptions);
       }
+      if (routingParameters_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(RoutingParameters);
+      }
+      if (searchAlongRouteParameters_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(SearchAlongRouteParameters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1694,6 +2192,12 @@ namespace Google.Maps.Places.V1 {
       }
       if (evOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EvOptions);
+      }
+      if (routingParameters_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RoutingParameters);
+      }
+      if (searchAlongRouteParameters_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SearchAlongRouteParameters);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1752,6 +2256,18 @@ namespace Google.Maps.Places.V1 {
           EvOptions = new global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions();
         }
         EvOptions.MergeFrom(other.EvOptions);
+      }
+      if (other.routingParameters_ != null) {
+        if (routingParameters_ == null) {
+          RoutingParameters = new global::Google.Maps.Places.V1.RoutingParameters();
+        }
+        RoutingParameters.MergeFrom(other.RoutingParameters);
+      }
+      if (other.searchAlongRouteParameters_ != null) {
+        if (searchAlongRouteParameters_ == null) {
+          SearchAlongRouteParameters = new global::Google.Maps.Places.V1.SearchTextRequest.Types.SearchAlongRouteParameters();
+        }
+        SearchAlongRouteParameters.MergeFrom(other.SearchAlongRouteParameters);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1830,6 +2346,20 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(EvOptions);
             break;
           }
+          case 130: {
+            if (routingParameters_ == null) {
+              RoutingParameters = new global::Google.Maps.Places.V1.RoutingParameters();
+            }
+            input.ReadMessage(RoutingParameters);
+            break;
+          }
+          case 138: {
+            if (searchAlongRouteParameters_ == null) {
+              SearchAlongRouteParameters = new global::Google.Maps.Places.V1.SearchTextRequest.Types.SearchAlongRouteParameters();
+            }
+            input.ReadMessage(SearchAlongRouteParameters);
+            break;
+          }
         }
       }
     #endif
@@ -1905,6 +2435,20 @@ namespace Google.Maps.Places.V1 {
               EvOptions = new global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions();
             }
             input.ReadMessage(EvOptions);
+            break;
+          }
+          case 130: {
+            if (routingParameters_ == null) {
+              RoutingParameters = new global::Google.Maps.Places.V1.RoutingParameters();
+            }
+            input.ReadMessage(RoutingParameters);
+            break;
+          }
+          case 138: {
+            if (searchAlongRouteParameters_ == null) {
+              SearchAlongRouteParameters = new global::Google.Maps.Places.V1.SearchTextRequest.Types.SearchAlongRouteParameters();
+            }
+            input.ReadMessage(SearchAlongRouteParameters);
             break;
           }
         }
@@ -2713,6 +3257,224 @@ namespace Google.Maps.Places.V1 {
 
       }
 
+      /// <summary>
+      /// Specifies a precalculated polyline from the [Routes
+      /// API](https://developers.google.com/maps/documentation/routes) defining the
+      /// route to search. Searching along a route is similar to using the
+      /// `locationBias` or `locationRestriction` request option to bias the search
+      /// results. However, while the `locationBias` and `locationRestriction`
+      /// options let you specify a region to bias the search results, this option
+      /// lets you bias the results along a trip route.
+      ///
+      /// Results are not guaranteed to be along the route provided, but rather are
+      /// ranked within the search area defined by the polyline and, optionally, by
+      /// the `locationBias` or `locationRestriction` based on minimal detour times
+      /// from origin to destination. The results might be along an alternate route,
+      /// especially if the provided polyline does not define an optimal route from
+      /// origin to destination.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SearchAlongRouteParameters : pb::IMessage<SearchAlongRouteParameters>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SearchAlongRouteParameters> _parser = new pb::MessageParser<SearchAlongRouteParameters>(() => new SearchAlongRouteParameters());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SearchAlongRouteParameters> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.SearchTextRequest.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchAlongRouteParameters() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchAlongRouteParameters(SearchAlongRouteParameters other) : this() {
+          polyline_ = other.polyline_ != null ? other.polyline_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchAlongRouteParameters Clone() {
+          return new SearchAlongRouteParameters(this);
+        }
+
+        /// <summary>Field number for the "polyline" field.</summary>
+        public const int PolylineFieldNumber = 1;
+        private global::Google.Maps.Places.V1.Polyline polyline_;
+        /// <summary>
+        /// Required. The route polyline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.Polyline Polyline {
+          get { return polyline_; }
+          set {
+            polyline_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SearchAlongRouteParameters);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SearchAlongRouteParameters other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Polyline, other.Polyline)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (polyline_ != null) hash ^= Polyline.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (polyline_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Polyline);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (polyline_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Polyline);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (polyline_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Polyline);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SearchAlongRouteParameters other) {
+          if (other == null) {
+            return;
+          }
+          if (other.polyline_ != null) {
+            if (polyline_ == null) {
+              Polyline = new global::Google.Maps.Places.V1.Polyline();
+            }
+            Polyline.MergeFrom(other.Polyline);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (polyline_ == null) {
+                  Polyline = new global::Google.Maps.Places.V1.Polyline();
+                }
+                input.ReadMessage(Polyline);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (polyline_ == null) {
+                  Polyline = new global::Google.Maps.Places.V1.Polyline();
+                }
+                input.ReadMessage(Polyline);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -2736,7 +3498,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2757,6 +3519,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchTextResponse(SearchTextResponse other) : this() {
       places_ = other.places_.Clone();
+      routingSummaries_ = other.routingSummaries_.Clone();
       contextualContents_ = other.contextualContents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2781,6 +3544,24 @@ namespace Google.Maps.Places.V1 {
       get { return places_; }
     }
 
+    /// <summary>Field number for the "routing_summaries" field.</summary>
+    public const int RoutingSummariesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.RoutingSummary> _repeated_routingSummaries_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Maps.Places.V1.RoutingSummary.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.RoutingSummary> routingSummaries_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.RoutingSummary>();
+    /// <summary>
+    /// A list of routing summaries where each entry associates to the
+    /// corresponding place in the same index in the places field. If the routing
+    /// summary is not available for one of the places, it will contain an empty
+    /// entry. This list will have as many entries as the list of places if
+    /// requested.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Places.V1.RoutingSummary> RoutingSummaries {
+      get { return routingSummaries_; }
+    }
+
     /// <summary>Field number for the "contextual_contents" field.</summary>
     public const int ContextualContentsFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.ContextualContent> _repeated_contextualContents_codec
@@ -2796,7 +3577,7 @@ namespace Google.Maps.Places.V1 {
     /// that are relevant to the `text_query` in the request are preferred. If the
     /// contextual content is not available for one of the places, it will return
     /// non-contextual content. It will be empty only when the content is
-    /// unavailable for this place. This list should have as many entries as the
+    /// unavailable for this place. This list will have as many entries as the
     /// list of places if requested.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2821,6 +3602,7 @@ namespace Google.Maps.Places.V1 {
         return true;
       }
       if(!places_.Equals(other.places_)) return false;
+      if(!routingSummaries_.Equals(other.routingSummaries_)) return false;
       if(!contextualContents_.Equals(other.contextualContents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2830,6 +3612,7 @@ namespace Google.Maps.Places.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= places_.GetHashCode();
+      hash ^= routingSummaries_.GetHashCode();
       hash ^= contextualContents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2850,6 +3633,7 @@ namespace Google.Maps.Places.V1 {
       output.WriteRawMessage(this);
     #else
       places_.WriteTo(output, _repeated_places_codec);
+      routingSummaries_.WriteTo(output, _repeated_routingSummaries_codec);
       contextualContents_.WriteTo(output, _repeated_contextualContents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2862,6 +3646,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       places_.WriteTo(ref output, _repeated_places_codec);
+      routingSummaries_.WriteTo(ref output, _repeated_routingSummaries_codec);
       contextualContents_.WriteTo(ref output, _repeated_contextualContents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2874,6 +3659,7 @@ namespace Google.Maps.Places.V1 {
     public int CalculateSize() {
       int size = 0;
       size += places_.CalculateSize(_repeated_places_codec);
+      size += routingSummaries_.CalculateSize(_repeated_routingSummaries_codec);
       size += contextualContents_.CalculateSize(_repeated_contextualContents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2888,6 +3674,7 @@ namespace Google.Maps.Places.V1 {
         return;
       }
       places_.Add(other.places_);
+      routingSummaries_.Add(other.routingSummaries_);
       contextualContents_.Add(other.contextualContents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2906,6 +3693,10 @@ namespace Google.Maps.Places.V1 {
             break;
           case 10: {
             places_.AddEntriesFrom(input, _repeated_places_codec);
+            break;
+          }
+          case 18: {
+            routingSummaries_.AddEntriesFrom(input, _repeated_routingSummaries_codec);
             break;
           }
           case 26: {
@@ -2929,6 +3720,10 @@ namespace Google.Maps.Places.V1 {
             break;
           case 10: {
             places_.AddEntriesFrom(ref input, _repeated_places_codec);
+            break;
+          }
+          case 18: {
+            routingSummaries_.AddEntriesFrom(ref input, _repeated_routingSummaries_codec);
             break;
           }
           case 26: {
@@ -2960,7 +3755,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3305,7 +4100,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3543,7 +4338,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3895,7 +4690,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5152,7 +5947,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
