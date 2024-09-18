@@ -139,16 +139,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dXBwb3J0cxgGIAMoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdy",
             "b3VuZGluZ1N1cHBvcnRCA+BBAUIVChNfc2VhcmNoX2VudHJ5X3BvaW50IkgK",
             "EFNlYXJjaEVudHJ5UG9pbnQSHQoQcmVuZGVyZWRfY29udGVudBgBIAEoCUID",
-            "4EEBEhUKCHNka19ibG9iGAIgASgMQgPgQQEqtAEKDEhhcm1DYXRlZ29yeRId",
+            "4EEBEhUKCHNka19ibG9iGAIgASgMQgPgQQEq1wEKDEhhcm1DYXRlZ29yeRId",
             "ChlIQVJNX0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAASHQoZSEFSTV9DQVRFR09S",
             "WV9IQVRFX1NQRUVDSBABEiMKH0hBUk1fQ0FURUdPUllfREFOR0VST1VTX0NP",
             "TlRFTlQQAhIcChhIQVJNX0NBVEVHT1JZX0hBUkFTU01FTlQQAxIjCh9IQVJN",
-            "X0NBVEVHT1JZX1NFWFVBTExZX0VYUExJQ0lUEARCygEKHmNvbS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIMQ29udGVudFByb3RvUAFaPmNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlw",
-            "bGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
-            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
-            "dGZvcm06OlYxYgZwcm90bzM="));
+            "X0NBVEVHT1JZX1NFWFVBTExZX0VYUExJQ0lUEAQSIQodSEFSTV9DQVRFR09S",
+            "WV9DSVZJQ19JTlRFR1JJVFkQBULKAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxQgxDb250ZW50UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKq",
+            "AhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxB",
+            "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.HarmCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -200,6 +201,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The harm category is sexually explicit content.
     /// </summary>
     [pbr::OriginalName("HARM_CATEGORY_SEXUALLY_EXPLICIT")] SexuallyExplicit = 4,
+    /// <summary>
+    /// The harm category is civic integrity.
+    /// </summary>
+    [pbr::OriginalName("HARM_CATEGORY_CIVIC_INTEGRITY")] CivicIntegrity = 5,
   }
 
   #endregion
