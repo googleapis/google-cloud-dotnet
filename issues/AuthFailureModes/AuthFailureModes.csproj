@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Cloud.Language.V1" Version="3.6.0" />
+    <PackageReference Include="Google.Cloud.Language.V1" Version="3.7.0" />
     <PackageReference Include="Grpc.Core" Version="2.46.6" />
   </ItemGroup>
 
