@@ -46,6 +46,7 @@ namespace GoogleCSharpSnippets
                 Tools = { new Tool(), },
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
+                Labels = { { "", "" }, },
             };
             // Make the request
             GenerateContentResponse response = predictionServiceClient.GenerateContent(request);

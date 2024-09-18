@@ -48,6 +48,7 @@ namespace GoogleCSharpSnippets
                 Tools = { new Tool(), },
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
+                Labels = { { "", "" }, },
             };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamGenerateContentStream response = predictionServiceClient.StreamGenerateContent(request);
