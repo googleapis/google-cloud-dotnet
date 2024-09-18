@@ -2,7 +2,7 @@
   "apis": [
     {
       "id": "Google.Ads.MarketingPlatform.Admin.V1Alpha",
-      "version": "1.0.0-alpha00",
+      "version": "1.0.0-alpha01",
       "type": "grpc",
       "productName": "Google Marketing Platform Admin",
       "productUrl": "https://developers.google.com/analytics/devguides/config/gmp/v1",
