@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Ads.MarketingPlatform.Admin.V1Alpha",
+  "release_level": "preview",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Ads.MarketingPlatform.Admin.V1Alpha/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "marketingplatformadmin"
+}

@@ -13,6 +13,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
+| [Google.Ads.MarketingPlatform.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Ads.MarketingPlatform.Admin.V1Alpha/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Ads.MarketingPlatform.Admin.V1Alpha)](https://nuget.org/packages/Google.Ads.MarketingPlatform.Admin.V1Alpha) | [Google Marketing Platform Admin](https://developers.google.com/analytics/devguides/config/gmp/v1) |
 | [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Analytics.Admin.V1Alpha)](https://nuget.org/packages/Google.Analytics.Admin.V1Alpha) | [Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Admin.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Beta/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Analytics.Admin.V1Beta)](https://nuget.org/packages/Google.Analytics.Admin.V1Beta) | [Google Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Analytics.Data.V1Beta)](https://nuget.org/packages/Google.Analytics.Data.V1Beta) | [Google Analytics Data](https://developers.google.com/analytics) |
