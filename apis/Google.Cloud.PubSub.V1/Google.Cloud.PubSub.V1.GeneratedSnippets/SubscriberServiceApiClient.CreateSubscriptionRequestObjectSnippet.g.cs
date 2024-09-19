@@ -55,6 +55,7 @@ namespace GoogleCSharpSnippets
                 BigqueryConfig = new BigQueryConfig(),
                 State = Subscription.Types.State.Unspecified,
                 CloudStorageConfig = new CloudStorageConfig(),
+                AnalyticsHubSubscriptionInfo = new Subscription.Types.AnalyticsHubSubscriptionInfo(),
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
