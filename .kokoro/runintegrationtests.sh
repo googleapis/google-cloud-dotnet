@@ -18,6 +18,11 @@ populate_all_secrets
 export GOOGLE_APPLICATION_CREDENTIALS="$SECRETS_LOCATION/cloud-sharp-jenkins-compute-service-account"
 export REQUESTER_PAYS_CREDENTIALS="$SECRETS_LOCATION/gcloud-devel-service-account"
 
+export TEST_UNIVERSE_DOMAIN_CREDENTIAL=$(realpath $SECRETS_LOCATION/client-library-test-universe-domain-credential)
+export TEST_UNIVERSE_DOMAIN=$(cat $SECRETS_LOCATION/client-library-test-universe-domain)
+export TEST_UNIVERSE_PROJECT_ID=$(cat $SECRETS_LOCATION/client-library-test-universe-project-id)
+export TEST_UNIVERSE_LOCATION=$(cat $SECRETS_LOCATION/client-library-test-universe-storage-location)
+
 echo "Available disk space after populating secrets"
 df -h
 
