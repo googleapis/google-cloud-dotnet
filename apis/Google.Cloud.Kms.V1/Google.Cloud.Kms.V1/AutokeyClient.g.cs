@@ -25,6 +25,7 @@ using grpcinter = Grpc.Core.Interceptors;
 using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -199,7 +200,8 @@ namespace Google.Cloud.Kms.V1
 
     /// <summary>Autokey client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Provides interfaces for using Cloud KMS Autokey to provision new
+    /// Provides interfaces for using [Cloud KMS
+    /// Autokey](https://cloud.google.com/kms/help/autokey) to provision new
     /// [CryptoKeys][google.cloud.kms.v1.CryptoKey], ready for Customer Managed
     /// Encryption Key (CMEK) use, on-demand. To support certain client tooling, this
     /// feature is modeled around a [KeyHandle][google.cloud.kms.v1.KeyHandle]
@@ -680,8 +682,8 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ListKeyHandlesResponse ListKeyHandles(ListKeyHandlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="KeyHandle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyHandlesResponse, KeyHandle> ListKeyHandles(ListKeyHandlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -689,34 +691,44 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListKeyHandlesResponse> ListKeyHandlesAsync(ListKeyHandlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyHandle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyHandlesResponse, KeyHandle> ListKeyHandlesAsync(ListKeyHandlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists [KeyHandles][google.cloud.kms.v1.KeyHandle].
         /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListKeyHandlesResponse> ListKeyHandlesAsync(ListKeyHandlesRequest request, st::CancellationToken cancellationToken) =>
-            ListKeyHandlesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lists [KeyHandles][google.cloud.kms.v1.KeyHandle].
-        /// </summary>
         /// <param name="parent">
         /// Required. Name of the resource project and location from which to list
         /// [KeyHandles][google.cloud.kms.v1.KeyHandle], e.g.
         /// `projects/{PROJECT_ID}/locations/{LOCATION}`.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ListKeyHandlesResponse ListKeyHandles(string parent, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeyHandles(new ListKeyHandlesRequest
+        /// <returns>A pageable sequence of <see cref="KeyHandle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyHandlesResponse, KeyHandle> ListKeyHandles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyHandlesRequest request = new ListKeyHandlesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyHandles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [KeyHandles][google.cloud.kms.v1.KeyHandle].
@@ -726,13 +738,32 @@ namespace Google.Cloud.Kms.V1
         /// [KeyHandles][google.cloud.kms.v1.KeyHandle], e.g.
         /// `projects/{PROJECT_ID}/locations/{LOCATION}`.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListKeyHandlesResponse> ListKeyHandlesAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeyHandlesAsync(new ListKeyHandlesRequest
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyHandle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyHandlesResponse, KeyHandle> ListKeyHandlesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyHandlesRequest request = new ListKeyHandlesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyHandlesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [KeyHandles][google.cloud.kms.v1.KeyHandle].
@@ -742,26 +773,32 @@ namespace Google.Cloud.Kms.V1
         /// [KeyHandles][google.cloud.kms.v1.KeyHandle], e.g.
         /// `projects/{PROJECT_ID}/locations/{LOCATION}`.
         /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListKeyHandlesResponse> ListKeyHandlesAsync(string parent, st::CancellationToken cancellationToken) =>
-            ListKeyHandlesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lists [KeyHandles][google.cloud.kms.v1.KeyHandle].
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Name of the resource project and location from which to list
-        /// [KeyHandles][google.cloud.kms.v1.KeyHandle], e.g.
-        /// `projects/{PROJECT_ID}/locations/{LOCATION}`.
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ListKeyHandlesResponse ListKeyHandles(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeyHandles(new ListKeyHandlesRequest
+        /// <returns>A pageable sequence of <see cref="KeyHandle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeyHandlesResponse, KeyHandle> ListKeyHandles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyHandlesRequest request = new ListKeyHandlesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyHandles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [KeyHandles][google.cloud.kms.v1.KeyHandle].
@@ -770,32 +807,39 @@ namespace Google.Cloud.Kms.V1
         /// Required. Name of the resource project and location from which to list
         /// [KeyHandles][google.cloud.kms.v1.KeyHandle], e.g.
         /// `projects/{PROJECT_ID}/locations/{LOCATION}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListKeyHandlesResponse> ListKeyHandlesAsync(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
-            ListKeyHandlesAsync(new ListKeyHandlesRequest
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyHandle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeyHandlesResponse, KeyHandle> ListKeyHandlesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListKeyHandlesRequest request = new ListKeyHandlesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Lists [KeyHandles][google.cloud.kms.v1.KeyHandle].
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Name of the resource project and location from which to list
-        /// [KeyHandles][google.cloud.kms.v1.KeyHandle], e.g.
-        /// `projects/{PROJECT_ID}/locations/{LOCATION}`.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListKeyHandlesResponse> ListKeyHandlesAsync(gagr::LocationName parent, st::CancellationToken cancellationToken) =>
-            ListKeyHandlesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListKeyHandlesAsync(request, callSettings);
+        }
     }
 
     /// <summary>Autokey client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Provides interfaces for using Cloud KMS Autokey to provision new
+    /// Provides interfaces for using [Cloud KMS
+    /// Autokey](https://cloud.google.com/kms/help/autokey) to provision new
     /// [CryptoKeys][google.cloud.kms.v1.CryptoKey], ready for Customer Managed
     /// Encryption Key (CMEK) use, on-demand. To support certain client tooling, this
     /// feature is modeled around a [KeyHandle][google.cloud.kms.v1.KeyHandle]
@@ -944,11 +988,11 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ListKeyHandlesResponse ListKeyHandles(ListKeyHandlesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="KeyHandle"/> resources.</returns>
+        public override gax::PagedEnumerable<ListKeyHandlesResponse, KeyHandle> ListKeyHandles(ListKeyHandlesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListKeyHandlesRequest(ref request, ref callSettings);
-            return _callListKeyHandles.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListKeyHandlesRequest, ListKeyHandlesResponse, KeyHandle>(_callListKeyHandles, request, callSettings);
         }
 
         /// <summary>
@@ -956,12 +1000,24 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ListKeyHandlesResponse> ListKeyHandlesAsync(ListKeyHandlesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="KeyHandle"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListKeyHandlesResponse, KeyHandle> ListKeyHandlesAsync(ListKeyHandlesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListKeyHandlesRequest(ref request, ref callSettings);
-            return _callListKeyHandles.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListKeyHandlesRequest, ListKeyHandlesResponse, KeyHandle>(_callListKeyHandles, request, callSettings);
         }
+    }
+
+    public partial class ListKeyHandlesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListKeyHandlesResponse : gaxgrpc::IPageResponse<KeyHandle>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<KeyHandle> GetEnumerator() => KeyHandles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public static partial class Autokey

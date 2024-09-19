@@ -190,7 +190,8 @@ namespace Google.Cloud.Kms.V1
 
     /// <summary>AutokeyAdmin client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Provides interfaces for managing Cloud KMS Autokey folder-level
+    /// Provides interfaces for managing [Cloud KMS
+    /// Autokey](https://cloud.google.com/kms/help/autokey) folder-level
     /// configurations. A configuration is inherited by all descendent projects. A
     /// configuration at one folder overrides any other configurations in its
     /// ancestry. Setting a configuration on a folder is a prerequisite for Cloud KMS
@@ -648,7 +649,8 @@ namespace Google.Cloud.Kms.V1
 
     /// <summary>AutokeyAdmin client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Provides interfaces for managing Cloud KMS Autokey folder-level
+    /// Provides interfaces for managing [Cloud KMS
+    /// Autokey](https://cloud.google.com/kms/help/autokey) folder-level
     /// configurations. A configuration is inherited by all descendent projects. A
     /// configuration at one folder overrides any other configurations in its
     /// ancestry. Setting a configuration on a folder is a prerequisite for Cloud KMS

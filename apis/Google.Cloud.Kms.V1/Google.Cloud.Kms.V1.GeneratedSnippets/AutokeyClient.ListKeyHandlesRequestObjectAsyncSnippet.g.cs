@@ -17,8 +17,11 @@
 namespace GoogleCSharpSnippets
 {
     // [START cloudkms_v1_generated_Autokey_ListKeyHandles_async]
+    using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Kms.V1;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAutokeyClientSnippets
@@ -42,7 +45,39 @@ namespace GoogleCSharpSnippets
                 Filter = "",
             };
             // Make the request
-            ListKeyHandlesResponse response = await autokeyClient.ListKeyHandlesAsync(request);
+            PagedAsyncEnumerable<ListKeyHandlesResponse, KeyHandle> response = autokeyClient.ListKeyHandlesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyHandle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListKeyHandlesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyHandle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyHandle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyHandle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
         }
     }
     // [END cloudkms_v1_generated_Autokey_ListKeyHandles_async]

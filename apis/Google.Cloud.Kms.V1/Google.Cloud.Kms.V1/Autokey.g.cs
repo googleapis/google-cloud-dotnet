@@ -40,29 +40,30 @@ namespace Google.Cloud.Kms.V1 {
             "A+BBAjp+6kF7CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9LZXlIYW5kbGUS",
             "P3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlI",
             "YW5kbGVzL3trZXlfaGFuZGxlfSoKa2V5SGFuZGxlczIJa2V5SGFuZGxlIhkK",
-            "F0NyZWF0ZUtleUhhbmRsZU1ldGFkYXRhImcKFUxpc3RLZXlIYW5kbGVzUmVx",
-            "dWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2ds",
-            "ZWFwaXMuY29tL0xvY2F0aW9uEhMKBmZpbHRlchgEIAEoCUID4EEBIk0KFkxp",
-            "c3RLZXlIYW5kbGVzUmVzcG9uc2USMwoLa2V5X2hhbmRsZXMYASADKAsyHi5n",
-            "b29nbGUuY2xvdWQua21zLnYxLktleUhhbmRsZTK0BQoHQXV0b2tleRLrAQoP",
-            "Q3JlYXRlS2V5SGFuZGxlEisuZ29vZ2xlLmNsb3VkLmttcy52MS5DcmVhdGVL",
-            "ZXlIYW5kbGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKLAcpBJAoJS2V5SGFuZGxlEhdDcmVhdGVLZXlIYW5kbGVNZXRhZGF0YdpB",
-            "H3BhcmVudCxrZXlfaGFuZGxlLGtleV9oYW5kbGVfaWSC0+STAjwiLi92MS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2tleUhhbmRsZXM6Cmtl",
-            "eV9oYW5kbGUSlwEKDEdldEtleUhhbmRsZRIoLmdvb2dsZS5jbG91ZC5rbXMu",
-            "djEuR2V0S2V5SGFuZGxlUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "S2V5SGFuZGxlIj3aQQRuYW1lgtPkkwIwEi4vdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9rZXlIYW5kbGVzLyp9EqoBCg5MaXN0S2V5SGFuZGxl",
-            "cxIqLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEtleUhhbmRsZXNSZXF1ZXN0",
-            "GisuZ29vZ2xlLmNsb3VkLmttcy52MS5MaXN0S2V5SGFuZGxlc1Jlc3BvbnNl",
-            "Ij/aQQZwYXJlbnSC0+STAjASLi92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L2tleUhhbmRsZXMadMpBF2Nsb3Vka21zLmdvb2dsZWFwaXMu",
-            "Y29t0kFXaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
-            "a21zQlQKF2NvbS5nb29nbGUuY2xvdWQua21zLnYxQgxBdXRva2V5UHJvdG9Q",
-            "AVopY2xvdWQuZ29vZ2xlLmNvbS9nby9rbXMvYXBpdjEva21zcGI7a21zcGJi",
-            "BnByb3RvMw=="));
+            "F0NyZWF0ZUtleUhhbmRsZU1ldGFkYXRhIpgBChVMaXN0S2V5SGFuZGxlc1Jl",
+            "cXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29n",
+            "bGVhcGlzLmNvbS9Mb2NhdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIX",
+            "CgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQEi",
+            "ZgoWTGlzdEtleUhhbmRsZXNSZXNwb25zZRIzCgtrZXlfaGFuZGxlcxgBIAMo",
+            "CzIeLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5SGFuZGxlEhcKD25leHRfcGFn",
+            "ZV90b2tlbhgCIAEoCTK0BQoHQXV0b2tleRLrAQoPQ3JlYXRlS2V5SGFuZGxl",
+            "EisuZ29vZ2xlLmNsb3VkLmttcy52MS5DcmVhdGVLZXlIYW5kbGVSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKLAcpBJAoJS2V5SGFu",
+            "ZGxlEhdDcmVhdGVLZXlIYW5kbGVNZXRhZGF0YdpBH3BhcmVudCxrZXlfaGFu",
+            "ZGxlLGtleV9oYW5kbGVfaWSC0+STAjwiLi92MS97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyp9L2tleUhhbmRsZXM6CmtleV9oYW5kbGUSlwEKDEdl",
+            "dEtleUhhbmRsZRIoLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0S2V5SGFuZGxl",
+            "UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5SGFuZGxlIj3aQQRu",
+            "YW1lgtPkkwIwEi4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9r",
+            "ZXlIYW5kbGVzLyp9EqoBCg5MaXN0S2V5SGFuZGxlcxIqLmdvb2dsZS5jbG91",
+            "ZC5rbXMudjEuTGlzdEtleUhhbmRsZXNSZXF1ZXN0GisuZ29vZ2xlLmNsb3Vk",
+            "Lmttcy52MS5MaXN0S2V5SGFuZGxlc1Jlc3BvbnNlIj/aQQZwYXJlbnSC0+ST",
+            "AjASLi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2tleUhh",
+            "bmRsZXMadMpBF2Nsb3Vka21zLmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vka21zQlQKF2NvbS5nb29n",
+            "bGUuY2xvdWQua21zLnYxQgxBdXRva2V5UHJvdG9QAVopY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9rbXMvYXBpdjEva21zcGI7a21zcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -70,8 +71,8 @@ namespace Google.Cloud.Kms.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetKeyHandleRequest), global::Google.Cloud.Kms.V1.GetKeyHandleRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyHandle), global::Google.Cloud.Kms.V1.KeyHandle.Parser, new[]{ "Name", "KmsKey", "ResourceTypeSelector" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateKeyHandleMetadata), global::Google.Cloud.Kms.V1.CreateKeyHandleMetadata.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyHandlesRequest), global::Google.Cloud.Kms.V1.ListKeyHandlesRequest.Parser, new[]{ "Parent", "Filter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyHandlesResponse), global::Google.Cloud.Kms.V1.ListKeyHandlesResponse.Parser, new[]{ "KeyHandles" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyHandlesRequest), global::Google.Cloud.Kms.V1.ListKeyHandlesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyHandlesResponse), global::Google.Cloud.Kms.V1.ListKeyHandlesResponse.Parser, new[]{ "KeyHandles", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1056,6 +1057,8 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListKeyHandlesRequest(ListKeyHandlesRequest other) : this() {
       parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
       filter_ = other.filter_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1080,6 +1083,44 @@ namespace Google.Cloud.Kms.V1 {
       get { return parent_; }
       set {
         parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. Optional limit on the number of
+    /// [KeyHandles][google.cloud.kms.v1.KeyHandle] to include in the response. The
+    /// service may return fewer than this value. Further
+    /// [KeyHandles][google.cloud.kms.v1.KeyHandle] can subsequently be obtained by
+    /// including the
+    /// [ListKeyHandlesResponse.next_page_token][google.cloud.kms.v1.ListKeyHandlesResponse.next_page_token]
+    /// in a subsequent request.  If unspecified, at most
+    /// 100 [KeyHandles][google.cloud.kms.v1.KeyHandle] will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. Optional pagination token, returned earlier via
+    /// [ListKeyHandlesResponse.next_page_token][google.cloud.kms.v1.ListKeyHandlesResponse.next_page_token].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1116,6 +1157,8 @@ namespace Google.Cloud.Kms.V1 {
         return true;
       }
       if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
       if (Filter != other.Filter) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1125,6 +1168,8 @@ namespace Google.Cloud.Kms.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1148,6 +1193,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
       if (Filter.Length != 0) {
         output.WriteRawTag(34);
         output.WriteString(Filter);
@@ -1166,6 +1219,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
       if (Filter.Length != 0) {
         output.WriteRawTag(34);
         output.WriteString(Filter);
@@ -1182,6 +1243,12 @@ namespace Google.Cloud.Kms.V1 {
       int size = 0;
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
@@ -1200,6 +1267,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
@@ -1223,6 +1296,14 @@ namespace Google.Cloud.Kms.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
           case 34: {
             Filter = input.ReadString();
             break;
@@ -1244,6 +1325,14 @@ namespace Google.Cloud.Kms.V1 {
             break;
           case 10: {
             Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
             break;
           }
           case 34: {
@@ -1297,6 +1386,7 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListKeyHandlesResponse(ListKeyHandlesResponse other) : this() {
       keyHandles_ = other.keyHandles_.Clone();
+      nextPageToken_ = other.nextPageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1320,6 +1410,23 @@ namespace Google.Cloud.Kms.V1 {
       get { return keyHandles_; }
     }
 
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token to retrieve next page of results. Pass this value in
+    /// [ListKeyHandlesRequest.page_token][google.cloud.kms.v1.ListKeyHandlesRequest.page_token]
+    /// to retrieve the next page of results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1336,6 +1443,7 @@ namespace Google.Cloud.Kms.V1 {
         return true;
       }
       if(!keyHandles_.Equals(other.keyHandles_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1344,6 +1452,7 @@ namespace Google.Cloud.Kms.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= keyHandles_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1363,6 +1472,10 @@ namespace Google.Cloud.Kms.V1 {
       output.WriteRawMessage(this);
     #else
       keyHandles_.WriteTo(output, _repeated_keyHandles_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1374,6 +1487,10 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       keyHandles_.WriteTo(ref output, _repeated_keyHandles_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1385,6 +1502,9 @@ namespace Google.Cloud.Kms.V1 {
     public int CalculateSize() {
       int size = 0;
       size += keyHandles_.CalculateSize(_repeated_keyHandles_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1398,6 +1518,9 @@ namespace Google.Cloud.Kms.V1 {
         return;
       }
       keyHandles_.Add(other.keyHandles_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1417,6 +1540,10 @@ namespace Google.Cloud.Kms.V1 {
             keyHandles_.AddEntriesFrom(input, _repeated_keyHandles_codec);
             break;
           }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1434,6 +1561,10 @@ namespace Google.Cloud.Kms.V1 {
             break;
           case 10: {
             keyHandles_.AddEntriesFrom(ref input, _repeated_keyHandles_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
             break;
           }
         }
