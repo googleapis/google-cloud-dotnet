@@ -635,7 +635,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Cloud.Kms.V1.ListKeyHandlesResponse",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListKeyHandlesResponse, Google.Cloud.Kms.V1.KeyHandle>",
         "client": {
           "shortName": "AutokeyClient",
           "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
@@ -654,12 +654,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 80,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 44,
+          "start": 37,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -684,7 +684,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ListKeyHandlesResponse>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListKeyHandlesResponse, Google.Cloud.Kms.V1.KeyHandle>",
         "client": {
           "shortName": "AutokeyClient",
           "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
@@ -703,12 +703,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 82,
           "type": "FULL"
         },
         {
-          "start": 36,
-          "end": 45,
+          "start": 39,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -728,11 +728,19 @@
             "name": "parent"
           },
           {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
             "type": "Google.Api.Gax.Grpc.CallSettings",
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Cloud.Kms.V1.ListKeyHandlesResponse",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListKeyHandlesResponse, Google.Cloud.Kms.V1.KeyHandle>",
         "client": {
           "shortName": "AutokeyClient",
           "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
@@ -750,12 +758,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 41,
+          "end": 75,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 39,
+          "start": 36,
+          "end": 73,
           "type": "SHORT"
         }
       ]
@@ -776,11 +784,19 @@
             "name": "parent"
           },
           {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
             "type": "Google.Api.Gax.Grpc.CallSettings",
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ListKeyHandlesResponse>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListKeyHandlesResponse, Google.Cloud.Kms.V1.KeyHandle>",
         "client": {
           "shortName": "AutokeyClient",
           "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
@@ -798,12 +814,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 77,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 40,
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]
@@ -823,11 +839,19 @@
             "name": "parent"
           },
           {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
             "type": "Google.Api.Gax.Grpc.CallSettings",
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Cloud.Kms.V1.ListKeyHandlesResponse",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListKeyHandlesResponse, Google.Cloud.Kms.V1.KeyHandle>",
         "client": {
           "shortName": "AutokeyClient",
           "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
@@ -845,12 +869,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 76,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 40,
+          "start": 37,
+          "end": 74,
           "type": "SHORT"
         }
       ]
@@ -871,11 +895,19 @@
             "name": "parent"
           },
           {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
             "type": "Google.Api.Gax.Grpc.CallSettings",
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ListKeyHandlesResponse>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListKeyHandlesResponse, Google.Cloud.Kms.V1.KeyHandle>",
         "client": {
           "shortName": "AutokeyClient",
           "fullName": "Google.Cloud.Kms.V1.AutokeyClient"
@@ -893,12 +925,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 43,
+          "end": 78,
           "type": "FULL"
         },
         {
-          "start": 36,
-          "end": 41,
+          "start": 39,
+          "end": 76,
           "type": "SHORT"
         }
       ]

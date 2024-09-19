@@ -16,9 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Kms.V1;
     using Google.LongRunning;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -319,7 +322,39 @@ namespace GoogleCSharpSnippets
                 Filter = "",
             };
             // Make the request
-            ListKeyHandlesResponse response = autokeyClient.ListKeyHandles(request);
+            PagedEnumerable<ListKeyHandlesResponse, KeyHandle> response = autokeyClient.ListKeyHandles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyHandle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListKeyHandlesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyHandle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyHandle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyHandle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -327,7 +362,6 @@ namespace GoogleCSharpSnippets
         public async Task ListKeyHandlesRequestObjectAsync()
         {
             // Snippet: ListKeyHandlesAsync(ListKeyHandlesRequest, CallSettings)
-            // Additional: ListKeyHandlesAsync(ListKeyHandlesRequest, CancellationToken)
             // Create client
             AutokeyClient autokeyClient = await AutokeyClient.CreateAsync();
             // Initialize request argument(s)
@@ -337,61 +371,219 @@ namespace GoogleCSharpSnippets
                 Filter = "",
             };
             // Make the request
-            ListKeyHandlesResponse response = await autokeyClient.ListKeyHandlesAsync(request);
+            PagedAsyncEnumerable<ListKeyHandlesResponse, KeyHandle> response = autokeyClient.ListKeyHandlesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyHandle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListKeyHandlesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyHandle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyHandle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyHandle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListKeyHandles</summary>
         public void ListKeyHandles()
         {
-            // Snippet: ListKeyHandles(string, CallSettings)
+            // Snippet: ListKeyHandles(string, string, int?, CallSettings)
             // Create client
             AutokeyClient autokeyClient = AutokeyClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            ListKeyHandlesResponse response = autokeyClient.ListKeyHandles(parent);
+            PagedEnumerable<ListKeyHandlesResponse, KeyHandle> response = autokeyClient.ListKeyHandles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyHandle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListKeyHandlesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyHandle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyHandle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyHandle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListKeyHandlesAsync</summary>
         public async Task ListKeyHandlesAsync()
         {
-            // Snippet: ListKeyHandlesAsync(string, CallSettings)
-            // Additional: ListKeyHandlesAsync(string, CancellationToken)
+            // Snippet: ListKeyHandlesAsync(string, string, int?, CallSettings)
             // Create client
             AutokeyClient autokeyClient = await AutokeyClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            ListKeyHandlesResponse response = await autokeyClient.ListKeyHandlesAsync(parent);
+            PagedAsyncEnumerable<ListKeyHandlesResponse, KeyHandle> response = autokeyClient.ListKeyHandlesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyHandle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListKeyHandlesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyHandle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyHandle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyHandle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListKeyHandles</summary>
         public void ListKeyHandlesResourceNames()
         {
-            // Snippet: ListKeyHandles(LocationName, CallSettings)
+            // Snippet: ListKeyHandles(LocationName, string, int?, CallSettings)
             // Create client
             AutokeyClient autokeyClient = AutokeyClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            ListKeyHandlesResponse response = autokeyClient.ListKeyHandles(parent);
+            PagedEnumerable<ListKeyHandlesResponse, KeyHandle> response = autokeyClient.ListKeyHandles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyHandle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListKeyHandlesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyHandle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyHandle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyHandle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListKeyHandlesAsync</summary>
         public async Task ListKeyHandlesResourceNamesAsync()
         {
-            // Snippet: ListKeyHandlesAsync(LocationName, CallSettings)
-            // Additional: ListKeyHandlesAsync(LocationName, CancellationToken)
+            // Snippet: ListKeyHandlesAsync(LocationName, string, int?, CallSettings)
             // Create client
             AutokeyClient autokeyClient = await AutokeyClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            ListKeyHandlesResponse response = await autokeyClient.ListKeyHandlesAsync(parent);
+            PagedAsyncEnumerable<ListKeyHandlesResponse, KeyHandle> response = autokeyClient.ListKeyHandlesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyHandle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListKeyHandlesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyHandle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyHandle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyHandle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

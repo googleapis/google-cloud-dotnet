@@ -17,7 +17,9 @@
 namespace GoogleCSharpSnippets
 {
     // [START cloudkms_v1_generated_Autokey_ListKeyHandles_sync_flattened]
+    using Google.Api.Gax;
     using Google.Cloud.Kms.V1;
+    using System;
 
     public sealed partial class GeneratedAutokeyClientSnippets
     {
@@ -36,7 +38,39 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            ListKeyHandlesResponse response = autokeyClient.ListKeyHandles(parent);
+            PagedEnumerable<ListKeyHandlesResponse, KeyHandle> response = autokeyClient.ListKeyHandles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyHandle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListKeyHandlesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyHandle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyHandle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyHandle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
         }
     }
     // [END cloudkms_v1_generated_Autokey_ListKeyHandles_sync_flattened]
