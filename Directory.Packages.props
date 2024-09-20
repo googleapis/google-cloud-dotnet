@@ -26,5 +26,6 @@
     <PackageVersion Include="Xunit.Combinatorial" Version="1.6.24" />
     <PackageVersion Include="System.ValueTuple" Version="4.5.0" />
     <PackageVersion Include="log4net" Version="2.0.17" />
+    <PackageVersion Include="NLog" Version="5.3.4" />
   </ItemGroup>
 </Project>
