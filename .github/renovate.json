@@ -3,7 +3,9 @@
     "config:base",
     ":disableDependencyDashboard"
   ],
-  "ignorePresets": [":ignoreModulesAndTests"],
+  "ignorePresets": [
+    ":ignoreModulesAndTests"
+  ],
   "ignorePaths": [
     "issues/**",
     "apis/Google.Ads.MarketingPlatform.Admin.V1Alpha/Google.Ads.MarketingPlatform.Admin.V1Alpha/**",
@@ -331,6 +333,12 @@
         "log4net"
       ],
       "allowedVersions": "<3.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "NLog"
+      ],
+      "allowedVersions": "<6.0.0"
     }
   ],
   "schedule": [

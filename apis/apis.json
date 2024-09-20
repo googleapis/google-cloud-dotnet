@@ -3074,7 +3074,7 @@
         "Google.Cloud.DevTools.Common": "3.2.0",
         "Google.Cloud.Logging.V2": "4.3.0",
         "Grpc.Core": "default",
-        "NLog": "5.2.8"
+        "NLog": "default"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "default"
