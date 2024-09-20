@@ -3,6 +3,7 @@
     "config:base",
     ":disableDependencyDashboard"
   ],
+  "ignorePresets": [":ignoreModulesAndTests"],
   "ignorePaths": [
     "issues/**",
     "apis/Google.Ads.MarketingPlatform.Admin.V1Alpha/Google.Ads.MarketingPlatform.Admin.V1Alpha/**",
