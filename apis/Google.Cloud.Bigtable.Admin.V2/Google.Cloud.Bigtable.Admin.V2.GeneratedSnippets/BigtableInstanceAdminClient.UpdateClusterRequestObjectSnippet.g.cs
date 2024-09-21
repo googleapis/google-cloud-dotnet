@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 DefaultStorageType = StorageType.Unspecified,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
                 ClusterConfig = new Cluster.Types.ClusterConfig(),
+                NodeScalingFactor = Cluster.Types.NodeScalingFactor.Unspecified,
             };
             // Make the request
             Operation<Cluster, UpdateClusterMetadata> response = bigtableInstanceAdminClient.UpdateCluster(request);
