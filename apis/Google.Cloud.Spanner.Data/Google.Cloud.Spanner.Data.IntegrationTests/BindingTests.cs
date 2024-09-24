@@ -390,7 +390,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             new ValueWrapper[] { });
 
         private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
-            Skip.If(_fixture.RunningOnEmulator && BindUnsupportedNullData.Any(data => spannerDbType.Equals(data[0])),
+            Skip.If(_fixture.RunningOnEmulator && BindUnsupportedNullData.Any<SpannerDbType>(spannerDbType.Equals),
                 $"The emulator does not support {spannerDbType}.");
     }
 }
