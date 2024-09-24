@@ -1,8 +1,8 @@
 <Project>
   <ItemGroup>
-    <PackageVersion Include="xunit" Version="2.9.0" />
-    <PackageVersion Include="xunit.assert" Version="2.9.0" />
-    <PackageVersion Include="xunit.core" Version="2.9.0" />
+    <PackageVersion Include="xunit" Version="2.9.1" />
+    <PackageVersion Include="xunit.assert" Version="2.9.1" />
+    <PackageVersion Include="xunit.core" Version="2.9.1" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2" />
     <PackageVersion Include="Xunit.SkippableFact" Version="1.4.13" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
