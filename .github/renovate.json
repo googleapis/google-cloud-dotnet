@@ -339,6 +339,12 @@
         "NLog"
       ],
       "allowedVersions": "<6.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "BenchmarkDotNet"
+      ],
+      "allowedVersions": "<0.14.0"
     }
   ],
   "schedule": [
