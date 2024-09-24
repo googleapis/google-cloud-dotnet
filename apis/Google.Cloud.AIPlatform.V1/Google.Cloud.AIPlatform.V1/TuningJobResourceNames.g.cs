@@ -310,4 +310,34 @@ namespace Google.Cloud.AIPlatform.V1
             set => Endpoint = value?.ToString() ?? "";
         }
     }
+
+    public partial class TunedModelRef
+    {
+        /// <summary>
+        /// <see cref="ModelName"/>-typed view over the <see cref="TunedModel"/> resource name property.
+        /// </summary>
+        public ModelName TunedModelAsModelName
+        {
+            get => string.IsNullOrEmpty(TunedModel) ? null : ModelName.Parse(TunedModel, allowUnparsed: true);
+            set => TunedModel = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="TuningJobName"/>-typed view over the <see cref="TuningJob"/> resource name property.
+        /// </summary>
+        public TuningJobName TuningJobAsTuningJobName
+        {
+            get => string.IsNullOrEmpty(TuningJob) ? null : TuningJobName.Parse(TuningJob, allowUnparsed: true);
+            set => TuningJob = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PipelineJobName"/>-typed view over the <see cref="PipelineJob"/> resource name property.
+        /// </summary>
+        public PipelineJobName PipelineJobAsPipelineJobName
+        {
+            get => string.IsNullOrEmpty(PipelineJob) ? null : PipelineJobName.Parse(PipelineJob, allowUnparsed: true);
+            set => PipelineJob = value?.ToString() ?? "";
+        }
+    }
 }

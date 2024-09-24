@@ -96,12 +96,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZFR1bmluZ1NwZWMSIQoUdHJhaW5pbmdfZGF0YXNldF91cmkYASABKAlCA+BB",
             "AhIjChZ2YWxpZGF0aW9uX2RhdGFzZXRfdXJpGAIgASgJQgPgQQESVAoQaHlw",
             "ZXJfcGFyYW1ldGVycxgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLlN1cGVydmlzZWRIeXBlclBhcmFtZXRlcnNCA+BBAULMAQoeY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg5UdW5pbmdKb2JQcm90b1ABWj5j",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
-            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "LnYxLlN1cGVydmlzZWRIeXBlclBhcmFtZXRlcnNCA+BBASLjAQoNVHVuZWRN",
+            "b2RlbFJlZhI7Cgt0dW5lZF9tb2RlbBgBIAEoCUIk+kEhCh9haXBsYXRmb3Jt",
+            "Lmdvb2dsZWFwaXMuY29tL01vZGVsSAASPgoKdHVuaW5nX2pvYhgCIAEoCUIo",
+            "+kElCiNhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1R1bmluZ0pvYkgAEkIK",
+            "DHBpcGVsaW5lX2pvYhgDIAEoCUIq+kEnCiVhaXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL1BpcGVsaW5lSm9iSABCEQoPdHVuZWRfbW9kZWxfcmVmQswBCh5j",
+            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDlR1bmluZ0pvYlByb3Rv",
+            "UAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBs",
+            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
+            "cm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6",
+            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -111,7 +116,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedTuningDataStats), global::Google.Cloud.AIPlatform.V1.SupervisedTuningDataStats.Parser, new[]{ "TuningDatasetExampleCount", "TotalTuningCharacterCount", "TotalBillableCharacterCount", "TotalBillableTokenCount", "TuningStepCount", "UserInputTokenDistribution", "UserOutputTokenDistribution", "UserMessagePerExampleDistribution", "UserDatasetExamples", "TotalTruncatedExampleCount", "TruncatedExampleIndices" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TuningDataStats), global::Google.Cloud.AIPlatform.V1.TuningDataStats.Parser, new[]{ "SupervisedTuningDataStats" }, new[]{ "TuningDataStats" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters), global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters.Parser, new[]{ "EpochCount", "LearningRateMultiplier", "AdapterSize" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters.Types.AdapterSize) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedTuningSpec), global::Google.Cloud.AIPlatform.V1.SupervisedTuningSpec.Parser, new[]{ "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SupervisedTuningSpec), global::Google.Cloud.AIPlatform.V1.SupervisedTuningSpec.Parser, new[]{ "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TunedModelRef), global::Google.Cloud.AIPlatform.V1.TunedModelRef.Parser, new[]{ "TunedModel", "TuningJob", "PipelineJob" }, new[]{ "TunedModelRef" }, null, null, null)
           }));
     }
     #endregion
@@ -3275,7 +3281,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Tuning Spec for Supervised Tuning.
+  /// Tuning Spec for Supervised Tuning for first party models.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SupervisedTuningSpec : pb::IMessage<SupervisedTuningSpec>
@@ -3552,6 +3558,362 @@ namespace Google.Cloud.AIPlatform.V1 {
               HyperParameters = new global::Google.Cloud.AIPlatform.V1.SupervisedHyperParameters();
             }
             input.ReadMessage(HyperParameters);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// TunedModel Reference for legacy model migration.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TunedModelRef : pb::IMessage<TunedModelRef>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TunedModelRef> _parser = new pb::MessageParser<TunedModelRef>(() => new TunedModelRef());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TunedModelRef> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.TuningJobReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TunedModelRef() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TunedModelRef(TunedModelRef other) : this() {
+      switch (other.TunedModelRefCase) {
+        case TunedModelRefOneofCase.TunedModel:
+          TunedModel = other.TunedModel;
+          break;
+        case TunedModelRefOneofCase.TuningJob:
+          TuningJob = other.TuningJob;
+          break;
+        case TunedModelRefOneofCase.PipelineJob:
+          PipelineJob = other.PipelineJob;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TunedModelRef Clone() {
+      return new TunedModelRef(this);
+    }
+
+    /// <summary>Field number for the "tuned_model" field.</summary>
+    public const int TunedModelFieldNumber = 1;
+    /// <summary>
+    /// Support migration from model registry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TunedModel {
+      get { return HasTunedModel ? (string) tunedModelRef_ : ""; }
+      set {
+        tunedModelRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        tunedModelRefCase_ = TunedModelRefOneofCase.TunedModel;
+      }
+    }
+    /// <summary>Gets whether the "tuned_model" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTunedModel {
+      get { return tunedModelRefCase_ == TunedModelRefOneofCase.TunedModel; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "tuned_model" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTunedModel() {
+      if (HasTunedModel) {
+        ClearTunedModelRef();
+      }
+    }
+
+    /// <summary>Field number for the "tuning_job" field.</summary>
+    public const int TuningJobFieldNumber = 2;
+    /// <summary>
+    /// Support migration from tuning job list page, from gemini-1.0-pro-002
+    /// to 1.5 and above.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TuningJob {
+      get { return HasTuningJob ? (string) tunedModelRef_ : ""; }
+      set {
+        tunedModelRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        tunedModelRefCase_ = TunedModelRefOneofCase.TuningJob;
+      }
+    }
+    /// <summary>Gets whether the "tuning_job" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTuningJob {
+      get { return tunedModelRefCase_ == TunedModelRefOneofCase.TuningJob; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "tuning_job" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTuningJob() {
+      if (HasTuningJob) {
+        ClearTunedModelRef();
+      }
+    }
+
+    /// <summary>Field number for the "pipeline_job" field.</summary>
+    public const int PipelineJobFieldNumber = 3;
+    /// <summary>
+    /// Support migration from tuning job list page, from bison model to gemini
+    /// model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PipelineJob {
+      get { return HasPipelineJob ? (string) tunedModelRef_ : ""; }
+      set {
+        tunedModelRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        tunedModelRefCase_ = TunedModelRefOneofCase.PipelineJob;
+      }
+    }
+    /// <summary>Gets whether the "pipeline_job" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPipelineJob {
+      get { return tunedModelRefCase_ == TunedModelRefOneofCase.PipelineJob; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "pipeline_job" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPipelineJob() {
+      if (HasPipelineJob) {
+        ClearTunedModelRef();
+      }
+    }
+
+    private object tunedModelRef_;
+    /// <summary>Enum of possible cases for the "tuned_model_ref" oneof.</summary>
+    public enum TunedModelRefOneofCase {
+      None = 0,
+      TunedModel = 1,
+      TuningJob = 2,
+      PipelineJob = 3,
+    }
+    private TunedModelRefOneofCase tunedModelRefCase_ = TunedModelRefOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TunedModelRefOneofCase TunedModelRefCase {
+      get { return tunedModelRefCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTunedModelRef() {
+      tunedModelRefCase_ = TunedModelRefOneofCase.None;
+      tunedModelRef_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TunedModelRef);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TunedModelRef other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TunedModel != other.TunedModel) return false;
+      if (TuningJob != other.TuningJob) return false;
+      if (PipelineJob != other.PipelineJob) return false;
+      if (TunedModelRefCase != other.TunedModelRefCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasTunedModel) hash ^= TunedModel.GetHashCode();
+      if (HasTuningJob) hash ^= TuningJob.GetHashCode();
+      if (HasPipelineJob) hash ^= PipelineJob.GetHashCode();
+      hash ^= (int) tunedModelRefCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasTunedModel) {
+        output.WriteRawTag(10);
+        output.WriteString(TunedModel);
+      }
+      if (HasTuningJob) {
+        output.WriteRawTag(18);
+        output.WriteString(TuningJob);
+      }
+      if (HasPipelineJob) {
+        output.WriteRawTag(26);
+        output.WriteString(PipelineJob);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasTunedModel) {
+        output.WriteRawTag(10);
+        output.WriteString(TunedModel);
+      }
+      if (HasTuningJob) {
+        output.WriteRawTag(18);
+        output.WriteString(TuningJob);
+      }
+      if (HasPipelineJob) {
+        output.WriteRawTag(26);
+        output.WriteString(PipelineJob);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasTunedModel) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TunedModel);
+      }
+      if (HasTuningJob) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TuningJob);
+      }
+      if (HasPipelineJob) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PipelineJob);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TunedModelRef other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.TunedModelRefCase) {
+        case TunedModelRefOneofCase.TunedModel:
+          TunedModel = other.TunedModel;
+          break;
+        case TunedModelRefOneofCase.TuningJob:
+          TuningJob = other.TuningJob;
+          break;
+        case TunedModelRefOneofCase.PipelineJob:
+          PipelineJob = other.PipelineJob;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TunedModel = input.ReadString();
+            break;
+          }
+          case 18: {
+            TuningJob = input.ReadString();
+            break;
+          }
+          case 26: {
+            PipelineJob = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TunedModel = input.ReadString();
+            break;
+          }
+          case 18: {
+            TuningJob = input.ReadString();
+            break;
+          }
+          case 26: {
+            PipelineJob = input.ReadString();
             break;
           }
         }
