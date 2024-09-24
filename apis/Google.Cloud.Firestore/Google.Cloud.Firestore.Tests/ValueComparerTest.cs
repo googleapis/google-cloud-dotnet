@@ -127,7 +127,7 @@ namespace Google.Cloud.Firestore.Tests
         public static IEnumerable<object[]> Values => s_valuesInOrder.Select(x => new object[] { x });
 
         // Each group has equal values.
-        public static TheoryData<dynamic[]> EqualityGroups { get; } = new TheoryData<dynamic[]>
+        public static TheoryData<IEnumerable<dynamic>> EqualityGroups { get; } = new TheoryData<IEnumerable<dynamic>>
         {
             new dynamic[] { 0, -0.0, 0.0 },
             new dynamic[] { 1, 1.0 },
@@ -166,7 +166,7 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Theory, MemberData(nameof(EqualityGroups))]
-        public void Compare_EqualValues(dynamic[] clrValues)
+        public void Compare_EqualValues(IEnumerable<dynamic> clrValues)
         {
             var instance = ValueComparer.Instance;
             Value[] values = clrValues.Select(d => (Value) ProtoHelpers.CreateValue(d)).ToArray();

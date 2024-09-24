@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -22,7 +23,7 @@ namespace Google.Cloud.Firestore.Tests
     // Just tests for WriteBatch.ValidateNoPrefixes
     public partial class WriteBatchTest
     {
-        public static TheoryData<FieldPath[]> ValidPathSets = new TheoryData<FieldPath[]>
+        public static TheoryData<IEnumerable<FieldPath>> ValidPathSets = new TheoryData<IEnumerable<FieldPath>>
         {
             SplitPaths("a", "b"),
             SplitPaths("a.b", "b"),
@@ -32,7 +33,7 @@ namespace Google.Cloud.Firestore.Tests
             SplitPaths("ab.b", "b"),
         };
 
-        public static TheoryData<FieldPath[]> InvalidPathSets = new TheoryData<FieldPath[]>
+        public static TheoryData<IEnumerable<FieldPath>> InvalidPathSets = new TheoryData<IEnumerable<FieldPath>>
         {
             SplitPaths("a", "a.b"),
             SplitPaths("a", "a.b.c"),
@@ -44,7 +45,7 @@ namespace Google.Cloud.Firestore.Tests
 
         [Theory]
         [MemberData(nameof(ValidPathSets))]
-        public void ValidateNoPrefixes_Valid(FieldPath[] paths)
+        public void ValidateNoPrefixes_Valid(IEnumerable<FieldPath> paths)
         {
             WriteBatch.ValidateNoPrefixes(paths);
             WriteBatch.ValidateNoPrefixes(paths.Reverse());
@@ -52,7 +53,7 @@ namespace Google.Cloud.Firestore.Tests
 
         [Theory]
         [MemberData(nameof(InvalidPathSets))]
-        public void ValidateNoPrefixes_Invalid(FieldPath[] paths)
+        public void ValidateNoPrefixes_Invalid(IEnumerable<FieldPath> paths)
         {
             Assert.Throws<ArgumentException>(() => WriteBatch.ValidateNoPrefixes(paths));
             Assert.Throws<ArgumentException>(() => WriteBatch.ValidateNoPrefixes(paths.Reverse()));
