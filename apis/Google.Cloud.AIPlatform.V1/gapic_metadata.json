@@ -612,6 +612,12 @@
                 "ListTuningJobs",
                 "ListTuningJobsAsync"
               ]
+            },
+            "RebaseTunedModel": {
+              "methods": [
+                "RebaseTunedModel",
+                "RebaseTunedModelAsync"
+              ]
             }
           }
         }

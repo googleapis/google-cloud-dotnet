@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1;
+    using Google.LongRunning;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -568,6 +569,201 @@ namespace GoogleCSharpSnippets
             TuningJobName name = TuningJobName.FromProjectLocationTuningJob("[PROJECT]", "[LOCATION]", "[TUNING_JOB]");
             // Make the request
             await genAiTuningServiceClient.CancelTuningJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RebaseTunedModel</summary>
+        public void RebaseTunedModelRequestObject()
+        {
+            // Snippet: RebaseTunedModel(RebaseTunedModelRequest, CallSettings)
+            // Create client
+            GenAiTuningServiceClient genAiTuningServiceClient = GenAiTuningServiceClient.Create();
+            // Initialize request argument(s)
+            RebaseTunedModelRequest request = new RebaseTunedModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TunedModelRef = new TunedModelRef(),
+                TuningJob = new TuningJob(),
+                ArtifactDestination = new GcsDestination(),
+                DeployToSameEndpoint = false,
+            };
+            // Make the request
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> response = genAiTuningServiceClient.RebaseTunedModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuningJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> retrievedResponse = genAiTuningServiceClient.PollOnceRebaseTunedModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuningJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RebaseTunedModelAsync</summary>
+        public async Task RebaseTunedModelRequestObjectAsync()
+        {
+            // Snippet: RebaseTunedModelAsync(RebaseTunedModelRequest, CallSettings)
+            // Additional: RebaseTunedModelAsync(RebaseTunedModelRequest, CancellationToken)
+            // Create client
+            GenAiTuningServiceClient genAiTuningServiceClient = await GenAiTuningServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RebaseTunedModelRequest request = new RebaseTunedModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TunedModelRef = new TunedModelRef(),
+                TuningJob = new TuningJob(),
+                ArtifactDestination = new GcsDestination(),
+                DeployToSameEndpoint = false,
+            };
+            // Make the request
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> response = await genAiTuningServiceClient.RebaseTunedModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuningJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> retrievedResponse = await genAiTuningServiceClient.PollOnceRebaseTunedModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuningJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RebaseTunedModel</summary>
+        public void RebaseTunedModel()
+        {
+            // Snippet: RebaseTunedModel(string, TunedModelRef, CallSettings)
+            // Create client
+            GenAiTuningServiceClient genAiTuningServiceClient = GenAiTuningServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            TunedModelRef tunedModelRef = new TunedModelRef();
+            // Make the request
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> response = genAiTuningServiceClient.RebaseTunedModel(parent, tunedModelRef);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuningJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> retrievedResponse = genAiTuningServiceClient.PollOnceRebaseTunedModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuningJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RebaseTunedModelAsync</summary>
+        public async Task RebaseTunedModelAsync()
+        {
+            // Snippet: RebaseTunedModelAsync(string, TunedModelRef, CallSettings)
+            // Additional: RebaseTunedModelAsync(string, TunedModelRef, CancellationToken)
+            // Create client
+            GenAiTuningServiceClient genAiTuningServiceClient = await GenAiTuningServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            TunedModelRef tunedModelRef = new TunedModelRef();
+            // Make the request
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> response = await genAiTuningServiceClient.RebaseTunedModelAsync(parent, tunedModelRef);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuningJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> retrievedResponse = await genAiTuningServiceClient.PollOnceRebaseTunedModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuningJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RebaseTunedModel</summary>
+        public void RebaseTunedModelResourceNames()
+        {
+            // Snippet: RebaseTunedModel(LocationName, TunedModelRef, CallSettings)
+            // Create client
+            GenAiTuningServiceClient genAiTuningServiceClient = GenAiTuningServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            TunedModelRef tunedModelRef = new TunedModelRef();
+            // Make the request
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> response = genAiTuningServiceClient.RebaseTunedModel(parent, tunedModelRef);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuningJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> retrievedResponse = genAiTuningServiceClient.PollOnceRebaseTunedModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuningJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RebaseTunedModelAsync</summary>
+        public async Task RebaseTunedModelResourceNamesAsync()
+        {
+            // Snippet: RebaseTunedModelAsync(LocationName, TunedModelRef, CallSettings)
+            // Additional: RebaseTunedModelAsync(LocationName, TunedModelRef, CancellationToken)
+            // Create client
+            GenAiTuningServiceClient genAiTuningServiceClient = await GenAiTuningServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            TunedModelRef tunedModelRef = new TunedModelRef();
+            // Make the request
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> response = await genAiTuningServiceClient.RebaseTunedModelAsync(parent, tunedModelRef);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuningJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuningJob, RebaseTunedModelOperationMetadata> retrievedResponse = await genAiTuningServiceClient.PollOnceRebaseTunedModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuningJob retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

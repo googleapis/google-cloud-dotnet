@@ -26335,6 +26335,309 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_RebaseTunedModel_sync",
+      "title": "RebaseTunedModelRequestObject",
+      "description": "Snippet for RebaseTunedModel",
+      "file": "GenAiTuningServiceClient.RebaseTunedModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebaseTunedModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.RebaseTunedModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RebaseTunedModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.TuningJob, Google.Cloud.AIPlatform.V1.RebaseTunedModelOperationMetadata>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "RebaseTunedModel",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.RebaseTunedModel",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_RebaseTunedModel_async",
+      "title": "RebaseTunedModelRequestObjectAsync",
+      "description": "Snippet for RebaseTunedModelAsync",
+      "file": "GenAiTuningServiceClient.RebaseTunedModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebaseTunedModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.RebaseTunedModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RebaseTunedModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.TuningJob, Google.Cloud.AIPlatform.V1.RebaseTunedModelOperationMetadata>>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "RebaseTunedModel",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.RebaseTunedModel",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_RebaseTunedModel_sync_flattened",
+      "title": "RebaseTunedModel",
+      "description": "Snippet for RebaseTunedModel",
+      "file": "GenAiTuningServiceClient.RebaseTunedModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebaseTunedModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.RebaseTunedModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TunedModelRef",
+            "name": "tunedModelRef"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.TuningJob, Google.Cloud.AIPlatform.V1.RebaseTunedModelOperationMetadata>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "RebaseTunedModel",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.RebaseTunedModel",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_RebaseTunedModel_async_flattened",
+      "title": "RebaseTunedModelAsync",
+      "description": "Snippet for RebaseTunedModelAsync",
+      "file": "GenAiTuningServiceClient.RebaseTunedModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebaseTunedModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.RebaseTunedModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TunedModelRef",
+            "name": "tunedModelRef"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.TuningJob, Google.Cloud.AIPlatform.V1.RebaseTunedModelOperationMetadata>>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "RebaseTunedModel",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.RebaseTunedModel",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_RebaseTunedModel_sync_flattened_resourceNames",
+      "title": "RebaseTunedModelResourceNames",
+      "description": "Snippet for RebaseTunedModel",
+      "file": "GenAiTuningServiceClient.RebaseTunedModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebaseTunedModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.RebaseTunedModel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TunedModelRef",
+            "name": "tunedModelRef"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.TuningJob, Google.Cloud.AIPlatform.V1.RebaseTunedModelOperationMetadata>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "RebaseTunedModel",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.RebaseTunedModel",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_RebaseTunedModel_async_flattened_resourceNames",
+      "title": "RebaseTunedModelResourceNamesAsync",
+      "description": "Snippet for RebaseTunedModelAsync",
+      "file": "GenAiTuningServiceClient.RebaseTunedModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebaseTunedModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.RebaseTunedModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TunedModelRef",
+            "name": "tunedModelRef"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.TuningJob, Google.Cloud.AIPlatform.V1.RebaseTunedModelOperationMetadata>>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "RebaseTunedModel",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.RebaseTunedModel",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_IndexEndpointService_CreateIndexEndpoint_sync",
       "title": "CreateIndexEndpointRequestObject",
       "description": "Snippet for CreateIndexEndpoint",
