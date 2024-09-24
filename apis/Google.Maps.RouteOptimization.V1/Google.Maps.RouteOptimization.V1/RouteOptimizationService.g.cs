@@ -257,7 +257,7 @@ namespace Google.Maps.RouteOptimization.V1 {
             "RHVyYXRpb25CA+BBAhqTAQoTRnJlcXVlbmN5Q29uc3RyYWludBI6ChJtaW5f",
             "YnJlYWtfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
             "b25CA+BBAhJAChhtYXhfaW50ZXJfYnJlYWtfZHVyYXRpb24YAiABKAsyGS5n",
-            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAiLmDwoNU2hpcG1lbnRSb3V0",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAiKAEAoNU2hpcG1lbnRSb3V0",
             "ZRIVCg12ZWhpY2xlX2luZGV4GAEgASgFEhUKDXZlaGljbGVfbGFiZWwYAiAB",
             "KAkSNgoSdmVoaWNsZV9zdGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
             "YnVmLlRpbWVzdGFtcBI0ChB2ZWhpY2xlX2VuZF90aW1lGAYgASgLMhouZ29v",
@@ -282,7 +282,7 @@ namespace Google.Maps.RouteOptimization.V1 {
             "Zi5EdXJhdGlvbhIWCg5zaGlwbWVudF9sYWJlbBgHIAEoCRITCgt2aXNpdF9s",
             "YWJlbBgIIAEoCRpjChBMb2FkRGVtYW5kc0VudHJ5EgsKA2tleRgBIAEoCRI+",
             "CgV2YWx1ZRgCIAEoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9u",
-            "LnYxLlNoaXBtZW50LkxvYWQ6AjgBGq0FCgpUcmFuc2l0aW9uEjIKD3RyYXZl",
+            "LnYxLlNoaXBtZW50LkxvYWQ6AjgBGscFCgpUcmFuc2l0aW9uEjIKD3RyYXZl",
             "bF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIe",
             "ChZ0cmF2ZWxfZGlzdGFuY2VfbWV0ZXJzGAIgASgBEiAKGHRyYWZmaWNfaW5m",
             "b191bmF2YWlsYWJsZRgDIAEoCBIxCg5kZWxheV9kdXJhdGlvbhgEIAEoCzIZ",
@@ -293,102 +293,102 @@ namespace Google.Maps.RouteOptimization.V1 {
             "CnN0YXJ0X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "ElcKDnJvdXRlX3BvbHlsaW5lGAkgASgLMj8uZ29vZ2xlLm1hcHMucm91dGVv",
             "cHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5FbmNvZGVkUG9seWxpbmUS",
-            "YwoNdmVoaWNsZV9sb2FkcxgLIAMoCzJMLmdvb2dsZS5tYXBzLnJvdXRlb3B0",
-            "aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuVHJhbnNpdGlvbi5WZWhpY2xl",
-            "TG9hZHNFbnRyeRpwChFWZWhpY2xlTG9hZHNFbnRyeRILCgNrZXkYASABKAkS",
-            "SgoFdmFsdWUYAiABKAsyOy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
-            "bi52MS5TaGlwbWVudFJvdXRlLlZlaGljbGVMb2FkOgI4ARodCgtWZWhpY2xl",
-            "TG9hZBIOCgZhbW91bnQYASABKAMaIQoPRW5jb2RlZFBvbHlsaW5lEg4KBnBv",
-            "aW50cxgBIAEoCRpkCgVCcmVhaxIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCghkdXJhdGlvbhgCIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhoxCg9Sb3V0ZUNvc3RzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgBOgI4ASKGBQoPU2tpcHBlZFNoaXBt",
-            "ZW50Eg0KBWluZGV4GAEgASgFEg0KBWxhYmVsGAIgASgJEkkKB3JlYXNvbnMY",
-            "AyADKAsyOC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5Ta2lw",
-            "cGVkU2hpcG1lbnQuUmVhc29uGokECgZSZWFzb24SSwoEY29kZRgBIAEoDjI9",
-            "Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlw",
-            "bWVudC5SZWFzb24uQ29kZRIiChVleGFtcGxlX3ZlaGljbGVfaW5kZXgYAiAB",
-            "KAVIAIgBARImCh5leGFtcGxlX2V4Y2VlZGVkX2NhcGFjaXR5X3R5cGUYAyAB",
-            "KAkiywIKBENvZGUSFAoQQ09ERV9VTlNQRUNJRklFRBAAEg4KCk5PX1ZFSElD",
-            "TEUQARIjCh9ERU1BTkRfRVhDRUVEU19WRUhJQ0xFX0NBUEFDSVRZEAISNQox",
-            "Q0FOTk9UX0JFX1BFUkZPUk1FRF9XSVRISU5fVkVISUNMRV9ESVNUQU5DRV9M",
-            "SU1JVBADEjUKMUNBTk5PVF9CRV9QRVJGT1JNRURfV0lUSElOX1ZFSElDTEVf",
-            "RFVSQVRJT05fTElNSVQQBBI8CjhDQU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJ",
-            "Tl9WRUhJQ0xFX1RSQVZFTF9EVVJBVElPTl9MSU1JVBAFEjMKL0NBTk5PVF9C",
-            "RV9QRVJGT1JNRURfV0lUSElOX1ZFSElDTEVfVElNRV9XSU5ET1dTEAYSFwoT",
-            "VkVISUNMRV9OT1RfQUxMT1dFRBAHQhgKFl9leGFtcGxlX3ZlaGljbGVfaW5k",
-            "ZXgiywQKEUFnZ3JlZ2F0ZWRNZXRyaWNzEiAKGHBlcmZvcm1lZF9zaGlwbWVu",
-            "dF9jb3VudBgBIAEoBRIyCg90cmF2ZWxfZHVyYXRpb24YAiABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24SMAoNd2FpdF9kdXJhdGlvbhgDIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5kZWxheV9kdXJhdGlvbhgE",
-            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5icmVha19kdXJh",
-            "dGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg52aXNp",
-            "dF9kdXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIx",
-            "Cg50b3RhbF9kdXJhdGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbhIeChZ0cmF2ZWxfZGlzdGFuY2VfbWV0ZXJzGAggASgBElQKCW1heF9s",
-            "b2FkcxgJIAMoCzJBLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
-            "LkFnZ3JlZ2F0ZWRNZXRyaWNzLk1heExvYWRzRW50cnkabAoNTWF4TG9hZHNF",
-            "bnRyeRILCgNrZXkYASABKAkSSgoFdmFsdWUYAiABKAsyOy5nb29nbGUubWFw",
-            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlZlaGljbGVM",
-            "b2FkOgI4ASKzBgoaSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQSPwoGcm91",
-            "dGVzGAEgAygLMi8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEu",
-            "U2hpcG1lbnRSb3V0ZRJMChFza2lwcGVkX3NoaXBtZW50cxgCIAMoCzIxLmdv",
-            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlwbWVu",
-            "dBJxChZjb25zdHJhaW50X3JlbGF4YXRpb25zGAMgAygLMlEuZ29vZ2xlLm1h",
-            "cHMucm91dGVvcHRpbWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0",
-            "cmFpbnQuQ29uc3RyYWludFJlbGF4YXRpb24akgQKFENvbnN0cmFpbnRSZWxh",
-            "eGF0aW9uEnEKC3JlbGF4YXRpb25zGAEgAygLMlwuZ29vZ2xlLm1hcHMucm91",
-            "dGVvcHRpbWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQu",
-            "Q29uc3RyYWludFJlbGF4YXRpb24uUmVsYXhhdGlvbhIXCg92ZWhpY2xlX2lu",
-            "ZGljZXMYAiADKAUa7QIKClJlbGF4YXRpb24ScQoFbGV2ZWwYASABKA4yYi5n",
-            "b29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5JbmplY3RlZFNvbHV0",
-            "aW9uQ29uc3RyYWludC5Db25zdHJhaW50UmVsYXhhdGlvbi5SZWxheGF0aW9u",
-            "LkxldmVsEjIKDnRocmVzaG9sZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIdChV0aHJlc2hvbGRfdmlzaXRfY291bnQYAyABKAUi",
-            "mAEKBUxldmVsEhUKEUxFVkVMX1VOU1BFQ0lGSUVEEAASJQohUkVMQVhfVklT",
-            "SVRfVElNRVNfQUZURVJfVEhSRVNIT0xEEAESMgouUkVMQVhfVklTSVRfVElN",
-            "RVNfQU5EX1NFUVVFTkNFX0FGVEVSX1RIUkVTSE9MRBACEh0KGVJFTEFYX0FM",
-            "TF9BRlRFUl9USFJFU0hPTEQQAyKFAwocT3B0aW1pemVUb3Vyc1ZhbGlkYXRp",
-            "b25FcnJvchIMCgRjb2RlGAEgASgFEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRJd",
-            "CgZmaWVsZHMYAyADKAsyTS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
-            "bi52MS5PcHRpbWl6ZVRvdXJzVmFsaWRhdGlvbkVycm9yLkZpZWxkUmVmZXJl",
-            "bmNlEhUKDWVycm9yX21lc3NhZ2UYBCABKAkSGAoQb2ZmZW5kaW5nX3ZhbHVl",
-            "cxgFIAEoCRqwAQoORmllbGRSZWZlcmVuY2USDAoEbmFtZRgBIAEoCRIPCgVp",
-            "bmRleBgCIAEoBUgAEg0KA2tleRgEIAEoCUgAEmAKCXN1Yl9maWVsZBgDIAEo",
-            "CzJNLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9wdGltaXpl",
-            "VG91cnNWYWxpZGF0aW9uRXJyb3IuRmllbGRSZWZlcmVuY2VCDgoMaW5kZXhf",
-            "b3Jfa2V5IqIBCgtJbnB1dENvbmZpZxJBCgpnY3Nfc291cmNlGAEgASgLMisu",
-            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuR2NzU291cmNlSAAS",
-            "RgoLZGF0YV9mb3JtYXQYAiABKA4yLC5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
-            "aXphdGlvbi52MS5EYXRhRm9ybWF0QgPgQQJCCAoGc291cmNlIrIBCgxPdXRw",
-            "dXRDb25maWcSSwoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMjAuZ29vZ2xlLm1h",
-            "cHMucm91dGVvcHRpbWl6YXRpb24udjEuR2NzRGVzdGluYXRpb25IABJGCgtk",
-            "YXRhX2Zvcm1hdBgCIAEoDjIsLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0",
-            "aW9uLnYxLkRhdGFGb3JtYXRCA+BBAkINCgtkZXN0aW5hdGlvbiIdCglHY3NT",
-            "b3VyY2USEAoDdXJpGAEgASgJQgPgQQIiIgoOR2NzRGVzdGluYXRpb24SEAoD",
-            "dXJpGAEgASgJQgPgQQIqQwoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9V",
-            "TlNQRUNJRklFRBAAEggKBEpTT04QARIOCgpQUk9UT19URVhUEAIy+QQKEVJv",
-            "dXRlT3B0aW1pemF0aW9uEuoBCg1PcHRpbWl6ZVRvdXJzEjYuZ29vZ2xlLm1h",
-            "cHMucm91dGVvcHRpbWl6YXRpb24udjEuT3B0aW1pemVUb3Vyc1JlcXVlc3Qa",
-            "Ny5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5PcHRpbWl6ZVRv",
-            "dXJzUmVzcG9uc2UiaILT5JMCYiIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn06b3B0aW1pemVUb3VyczoBKloqIiUvdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qfTpvcHRpbWl6ZVRvdXJzOgEqEqACChJCYXRjaE9wdGltaXpl",
-            "VG91cnMSOy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5CYXRj",
-            "aE9wdGltaXplVG91cnNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiKtAcpBOAoaQmF0Y2hPcHRpbWl6ZVRvdXJzUmVzcG9uc2USGkJh",
-            "dGNoT3B0aW1pemVUb3Vyc01ldGFkYXRhgtPkkwJsIjYvdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpiYXRjaE9wdGltaXplVG91cnM6ASpa",
-            "LyIqL3YxL3twYXJlbnQ9cHJvamVjdHMvKn06YmF0Y2hPcHRpbWl6ZVRvdXJz",
-            "OgEqGlTKQSByb3V0ZW9wdGltaXphdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
-            "jQIKJGNvbS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MUIdUm91",
-            "dGVPcHRpbWl6YXRpb25TZXJ2aWNlUHJvdG9QAVpYY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9tYXBzL3JvdXRlb3B0aW1pemF0aW9uL2FwaXYxL3JvdXRlb3B0aW1p",
-            "emF0aW9ucGI7cm91dGVvcHRpbWl6YXRpb25wYqoCIEdvb2dsZS5NYXBzLlJv",
-            "dXRlT3B0aW1pemF0aW9uLlYxygIgR29vZ2xlXE1hcHNcUm91dGVPcHRpbWl6",
-            "YXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OlJvdXRlT3B0aW1pemF0aW9uOjpW",
-            "MWIGcHJvdG8z"));
+            "GAoLcm91dGVfdG9rZW4YDCABKAlCA+BBAxJjCg12ZWhpY2xlX2xvYWRzGAsg",
+            "AygLMkwuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hpcG1l",
+            "bnRSb3V0ZS5UcmFuc2l0aW9uLlZlaGljbGVMb2Fkc0VudHJ5GnAKEVZlaGlj",
+            "bGVMb2Fkc0VudHJ5EgsKA2tleRgBIAEoCRJKCgV2YWx1ZRgCIAEoCzI7Lmdv",
+            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUu",
+            "VmVoaWNsZUxvYWQ6AjgBGh0KC1ZlaGljbGVMb2FkEg4KBmFtb3VudBgBIAEo",
+            "AxohCg9FbmNvZGVkUG9seWxpbmUSDgoGcG9pbnRzGAEgASgJGmQKBUJyZWFr",
+            "Ei4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uGjEKD1JvdXRlQ29zdHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAE6AjgBIoYFCg9Ta2lwcGVkU2hpcG1lbnQSDQoFaW5kZXgYASABKAUS",
+            "DQoFbGFiZWwYAiABKAkSSQoHcmVhc29ucxgDIAMoCzI4Lmdvb2dsZS5tYXBz",
+            "LnJvdXRlb3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlwbWVudC5SZWFzb24a",
+            "iQQKBlJlYXNvbhJLCgRjb2RlGAEgASgOMj0uZ29vZ2xlLm1hcHMucm91dGVv",
+            "cHRpbWl6YXRpb24udjEuU2tpcHBlZFNoaXBtZW50LlJlYXNvbi5Db2RlEiIK",
+            "FWV4YW1wbGVfdmVoaWNsZV9pbmRleBgCIAEoBUgAiAEBEiYKHmV4YW1wbGVf",
+            "ZXhjZWVkZWRfY2FwYWNpdHlfdHlwZRgDIAEoCSLLAgoEQ29kZRIUChBDT0RF",
+            "X1VOU1BFQ0lGSUVEEAASDgoKTk9fVkVISUNMRRABEiMKH0RFTUFORF9FWENF",
+            "RURTX1ZFSElDTEVfQ0FQQUNJVFkQAhI1CjFDQU5OT1RfQkVfUEVSRk9STUVE",
+            "X1dJVEhJTl9WRUhJQ0xFX0RJU1RBTkNFX0xJTUlUEAMSNQoxQ0FOTk9UX0JF",
+            "X1BFUkZPUk1FRF9XSVRISU5fVkVISUNMRV9EVVJBVElPTl9MSU1JVBAEEjwK",
+            "OENBTk5PVF9CRV9QRVJGT1JNRURfV0lUSElOX1ZFSElDTEVfVFJBVkVMX0RV",
+            "UkFUSU9OX0xJTUlUEAUSMwovQ0FOTk9UX0JFX1BFUkZPUk1FRF9XSVRISU5f",
+            "VkVISUNMRV9USU1FX1dJTkRPV1MQBhIXChNWRUhJQ0xFX05PVF9BTExPV0VE",
+            "EAdCGAoWX2V4YW1wbGVfdmVoaWNsZV9pbmRleCLLBAoRQWdncmVnYXRlZE1l",
+            "dHJpY3MSIAoYcGVyZm9ybWVkX3NoaXBtZW50X2NvdW50GAEgASgFEjIKD3Ry",
+            "YXZlbF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bhIwCg13YWl0X2R1cmF0aW9uGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uEjEKDmRlbGF5X2R1cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEjEKDmJyZWFrX2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uEjEKDnZpc2l0X2R1cmF0aW9uGAYgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDnRvdGFsX2R1cmF0aW9uGAcg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEh4KFnRyYXZlbF9kaXN0",
+            "YW5jZV9tZXRlcnMYCCABKAESVAoJbWF4X2xvYWRzGAkgAygLMkEuZ29vZ2xl",
+            "Lm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuQWdncmVnYXRlZE1ldHJpY3Mu",
+            "TWF4TG9hZHNFbnRyeRpsCg1NYXhMb2Fkc0VudHJ5EgsKA2tleRgBIAEoCRJK",
+            "CgV2YWx1ZRgCIAEoCzI7Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9u",
+            "LnYxLlNoaXBtZW50Um91dGUuVmVoaWNsZUxvYWQ6AjgBIrMGChpJbmplY3Rl",
+            "ZFNvbHV0aW9uQ29uc3RyYWludBI/CgZyb3V0ZXMYASADKAsyLy5nb29nbGUu",
+            "bWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlEkwKEXNr",
+            "aXBwZWRfc2hpcG1lbnRzGAIgAygLMjEuZ29vZ2xlLm1hcHMucm91dGVvcHRp",
+            "bWl6YXRpb24udjEuU2tpcHBlZFNoaXBtZW50EnEKFmNvbnN0cmFpbnRfcmVs",
+            "YXhhdGlvbnMYAyADKAsyUS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
+            "bi52MS5JbmplY3RlZFNvbHV0aW9uQ29uc3RyYWludC5Db25zdHJhaW50UmVs",
+            "YXhhdGlvbhqSBAoUQ29uc3RyYWludFJlbGF4YXRpb24ScQoLcmVsYXhhdGlv",
+            "bnMYASADKAsyXC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5J",
+            "bmplY3RlZFNvbHV0aW9uQ29uc3RyYWludC5Db25zdHJhaW50UmVsYXhhdGlv",
+            "bi5SZWxheGF0aW9uEhcKD3ZlaGljbGVfaW5kaWNlcxgCIAMoBRrtAgoKUmVs",
+            "YXhhdGlvbhJxCgVsZXZlbBgBIAEoDjJiLmdvb2dsZS5tYXBzLnJvdXRlb3B0",
+            "aW1pemF0aW9uLnYxLkluamVjdGVkU29sdXRpb25Db25zdHJhaW50LkNvbnN0",
+            "cmFpbnRSZWxheGF0aW9uLlJlbGF4YXRpb24uTGV2ZWwSMgoOdGhyZXNob2xk",
+            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEh0KFXRo",
+            "cmVzaG9sZF92aXNpdF9jb3VudBgDIAEoBSKYAQoFTGV2ZWwSFQoRTEVWRUxf",
+            "VU5TUEVDSUZJRUQQABIlCiFSRUxBWF9WSVNJVF9USU1FU19BRlRFUl9USFJF",
+            "U0hPTEQQARIyCi5SRUxBWF9WSVNJVF9USU1FU19BTkRfU0VRVUVOQ0VfQUZU",
+            "RVJfVEhSRVNIT0xEEAISHQoZUkVMQVhfQUxMX0FGVEVSX1RIUkVTSE9MRBAD",
+            "IoUDChxPcHRpbWl6ZVRvdXJzVmFsaWRhdGlvbkVycm9yEgwKBGNvZGUYASAB",
+            "KAUSFAoMZGlzcGxheV9uYW1lGAIgASgJEl0KBmZpZWxkcxgDIAMoCzJNLmdv",
+            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNW",
+            "YWxpZGF0aW9uRXJyb3IuRmllbGRSZWZlcmVuY2USFQoNZXJyb3JfbWVzc2Fn",
+            "ZRgEIAEoCRIYChBvZmZlbmRpbmdfdmFsdWVzGAUgASgJGrABCg5GaWVsZFJl",
+            "ZmVyZW5jZRIMCgRuYW1lGAEgASgJEg8KBWluZGV4GAIgASgFSAASDQoDa2V5",
+            "GAQgASgJSAASYAoJc3ViX2ZpZWxkGAMgASgLMk0uZ29vZ2xlLm1hcHMucm91",
+            "dGVvcHRpbWl6YXRpb24udjEuT3B0aW1pemVUb3Vyc1ZhbGlkYXRpb25FcnJv",
+            "ci5GaWVsZFJlZmVyZW5jZUIOCgxpbmRleF9vcl9rZXkiogEKC0lucHV0Q29u",
+            "ZmlnEkEKCmdjc19zb3VyY2UYASABKAsyKy5nb29nbGUubWFwcy5yb3V0ZW9w",
+            "dGltaXphdGlvbi52MS5HY3NTb3VyY2VIABJGCgtkYXRhX2Zvcm1hdBgCIAEo",
+            "DjIsLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkRhdGFGb3Jt",
+            "YXRCA+BBAkIICgZzb3VyY2UisgEKDE91dHB1dENvbmZpZxJLCg9nY3NfZGVz",
+            "dGluYXRpb24YASABKAsyMC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
+            "bi52MS5HY3NEZXN0aW5hdGlvbkgAEkYKC2RhdGFfZm9ybWF0GAIgASgOMiwu",
+            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuRGF0YUZvcm1hdEID",
+            "4EECQg0KC2Rlc3RpbmF0aW9uIh0KCUdjc1NvdXJjZRIQCgN1cmkYASABKAlC",
+            "A+BBAiIiCg5HY3NEZXN0aW5hdGlvbhIQCgN1cmkYASABKAlCA+BBAipDCgpE",
+            "YXRhRm9ybWF0EhsKF0RBVEFfRk9STUFUX1VOU1BFQ0lGSUVEEAASCAoESlNP",
+            "ThABEg4KClBST1RPX1RFWFQQAjL5BAoRUm91dGVPcHRpbWl6YXRpb24S6gEK",
+            "DU9wdGltaXplVG91cnMSNi5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
+            "bi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdBo3Lmdvb2dsZS5tYXBzLnJvdXRl",
+            "b3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNSZXNwb25zZSJogtPkkwJi",
+            "IjEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpvcHRpbWl6",
+            "ZVRvdXJzOgEqWioiJS92MS97cGFyZW50PXByb2plY3RzLyp9Om9wdGltaXpl",
+            "VG91cnM6ASoSoAIKEkJhdGNoT3B0aW1pemVUb3VycxI7Lmdvb2dsZS5tYXBz",
+            "LnJvdXRlb3B0aW1pemF0aW9uLnYxLkJhdGNoT3B0aW1pemVUb3Vyc1JlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIq0BykE4ChpCYXRj",
+            "aE9wdGltaXplVG91cnNSZXNwb25zZRIaQmF0Y2hPcHRpbWl6ZVRvdXJzTWV0",
+            "YWRhdGGC0+STAmwiNi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9OmJhdGNoT3B0aW1pemVUb3VyczoBKlovIiovdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qfTpiYXRjaE9wdGltaXplVG91cnM6ASoaVMpBIHJvdXRlb3B0aW1p",
+            "emF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKNAgokY29tLmdvb2dsZS5tYXBz",
+            "LnJvdXRlb3B0aW1pemF0aW9uLnYxQh1Sb3V0ZU9wdGltaXphdGlvblNlcnZp",
+            "Y2VQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcm91dGVvcHRp",
+            "bWl6YXRpb24vYXBpdjEvcm91dGVvcHRpbWl6YXRpb25wYjtyb3V0ZW9wdGlt",
+            "aXphdGlvbnBiqgIgR29vZ2xlLk1hcHMuUm91dGVPcHRpbWl6YXRpb24uVjHK",
+            "AiBHb29nbGVcTWFwc1xSb3V0ZU9wdGltaXphdGlvblxWMeoCI0dvb2dsZTo6",
+            "TWFwczo6Um91dGVPcHRpbWl6YXRpb246OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.RouteOptimization.V1.DataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -416,7 +416,7 @@ namespace Google.Maps.RouteOptimization.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BreakRule), global::Google.Maps.RouteOptimization.V1.BreakRule.Parser, new[]{ "BreakRequests", "FrequencyConstraints" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BreakRule.Types.BreakRequest), global::Google.Maps.RouteOptimization.V1.BreakRule.Types.BreakRequest.Parser, new[]{ "EarliestStartTime", "LatestStartTime", "MinDuration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BreakRule.Types.FrequencyConstraint), global::Google.Maps.RouteOptimization.V1.BreakRule.Types.FrequencyConstraint.Parser, new[]{ "MinBreakDuration", "MaxInterBreakDuration" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Parser, new[]{ "VehicleIndex", "VehicleLabel", "VehicleStartTime", "VehicleEndTime", "Visits", "Transitions", "HasTrafficInfeasibilities", "RoutePolyline", "Breaks", "Metrics", "RouteCosts", "RouteTotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Visit), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Visit.Parser, new[]{ "ShipmentIndex", "IsPickup", "VisitRequestIndex", "StartTime", "LoadDemands", "Detour", "ShipmentLabel", "VisitLabel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Transition), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Transition.Parser, new[]{ "TravelDuration", "TravelDistanceMeters", "TrafficInfoUnavailable", "DelayDuration", "BreakDuration", "WaitDuration", "TotalDuration", "StartTime", "RoutePolyline", "VehicleLoads" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Transition), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Transition.Parser, new[]{ "TravelDuration", "TravelDistanceMeters", "TrafficInfoUnavailable", "DelayDuration", "BreakDuration", "WaitDuration", "TotalDuration", "StartTime", "RoutePolyline", "RouteToken", "VehicleLoads" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.VehicleLoad), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.VehicleLoad.Parser, new[]{ "Amount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.EncodedPolyline), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.EncodedPolyline.Parser, new[]{ "Points" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Break), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Break.Parser, new[]{ "StartTime", "Duration" }, null, null, null, null),
@@ -1675,7 +1675,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     public const int PopulateTransitionPolylinesFieldNumber = 13;
     private bool populateTransitionPolylines_;
     /// <summary>
-    /// If true, polylines will be populated in response
+    /// If true, polylines and route tokens will be populated in response
     /// [ShipmentRoute.transitions][google.maps.routeoptimization.v1.ShipmentRoute.transitions].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14079,6 +14079,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           totalDuration_ = other.totalDuration_ != null ? other.totalDuration_.Clone() : null;
           startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
           routePolyline_ = other.routePolyline_ != null ? other.routePolyline_.Clone() : null;
+          routeToken_ = other.routeToken_;
           vehicleLoads_ = other.vehicleLoads_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -14247,6 +14248,29 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
         }
 
+        /// <summary>Field number for the "route_token" field.</summary>
+        public const int RouteTokenFieldNumber = 12;
+        private string routeToken_ = "";
+        /// <summary>
+        /// Output only. An opaque token that can be passed to [Navigation
+        /// SDK](https://developers.google.com/maps/documentation/navigation) to
+        /// reconstruct the route during navigation, and, in the event of rerouting,
+        /// honor the original intention when the route was created. Treat this token
+        /// as an opaque blob.  Don't compare its value across requests as its value
+        /// may change even if the service returns the exact same route. This field
+        /// is only populated if [populate_transition_polylines]
+        /// [google.maps.routeoptimization.v1.OptimizeToursRequest.populate_transition_polylines]
+        /// is set to true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string RouteToken {
+          get { return routeToken_; }
+          set {
+            routeToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         /// <summary>Field number for the "vehicle_loads" field.</summary>
         public const int VehicleLoadsFieldNumber = 11;
         private static readonly pbc::MapField<string, global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.VehicleLoad>.Codec _map_vehicleLoads_codec
@@ -14295,6 +14319,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (!object.Equals(TotalDuration, other.TotalDuration)) return false;
           if (!object.Equals(StartTime, other.StartTime)) return false;
           if (!object.Equals(RoutePolyline, other.RoutePolyline)) return false;
+          if (RouteToken != other.RouteToken) return false;
           if (!VehicleLoads.Equals(other.VehicleLoads)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -14312,6 +14337,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (totalDuration_ != null) hash ^= TotalDuration.GetHashCode();
           if (startTime_ != null) hash ^= StartTime.GetHashCode();
           if (routePolyline_ != null) hash ^= RoutePolyline.GetHashCode();
+          if (RouteToken.Length != 0) hash ^= RouteToken.GetHashCode();
           hash ^= VehicleLoads.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -14368,6 +14394,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteMessage(RoutePolyline);
           }
           vehicleLoads_.WriteTo(output, _map_vehicleLoads_codec);
+          if (RouteToken.Length != 0) {
+            output.WriteRawTag(98);
+            output.WriteString(RouteToken);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -14415,6 +14445,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteMessage(RoutePolyline);
           }
           vehicleLoads_.WriteTo(ref output, _map_vehicleLoads_codec);
+          if (RouteToken.Length != 0) {
+            output.WriteRawTag(98);
+            output.WriteString(RouteToken);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -14451,6 +14485,9 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
           if (routePolyline_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(RoutePolyline);
+          }
+          if (RouteToken.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(RouteToken);
           }
           size += vehicleLoads_.CalculateSize(_map_vehicleLoads_codec);
           if (_unknownFields != null) {
@@ -14512,6 +14549,9 @@ namespace Google.Maps.RouteOptimization.V1 {
               RoutePolyline = new global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.EncodedPolyline();
             }
             RoutePolyline.MergeFrom(other.RoutePolyline);
+          }
+          if (other.RouteToken.Length != 0) {
+            RouteToken = other.RouteToken;
           }
           vehicleLoads_.MergeFrom(other.vehicleLoads_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -14590,6 +14630,10 @@ namespace Google.Maps.RouteOptimization.V1 {
                 vehicleLoads_.AddEntriesFrom(input, _map_vehicleLoads_codec);
                 break;
               }
+              case 98: {
+                RouteToken = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -14664,6 +14708,10 @@ namespace Google.Maps.RouteOptimization.V1 {
               }
               case 90: {
                 vehicleLoads_.AddEntriesFrom(ref input, _map_vehicleLoads_codec);
+                break;
+              }
+              case 98: {
+                RouteToken = input.ReadString();
                 break;
               }
             }
@@ -17500,253 +17548,21 @@ namespace Google.Maps.RouteOptimization.V1 {
     /// A validation error is defined by the pair (`code`, `display_name`) which
     /// are always present.
     ///
-    /// Other fields (below) provide more context about the error.
+    /// The fields following this section provide more context about the error.
     ///
     /// *MULTIPLE ERRORS*:
     /// When there are multiple errors, the validation process tries to output
     /// several of them. Much like a compiler, this is an imperfect process. Some
     /// validation errors will be "fatal", meaning that they stop the entire
     /// validation process. This is the case for `display_name="UNSPECIFIED"`
-    /// errors, among others. Some may cause the validation process to skip other
-    /// errors.
+    /// errors, among others. Some errors may cause the validation process to skip
+    /// other errors.
     ///
     /// *STABILITY*:
     /// `code` and `display_name` should be very stable. But new codes and
     /// display names may appear over time, which may cause a given (invalid)
     /// request to yield a different (`code`, `display_name`) pair because the new
-    /// error hid the old one (see "MULTIPLE ERRORS").
-    ///
-    /// *REFERENCE*: A list of all (code, name) pairs:
-    ///
-    /// * UNSPECIFIED = 0;
-    /// * VALIDATION_TIMEOUT_ERROR = 10; Validation couldn't be completed within
-    /// the deadline.
-    ///
-    /// * REQUEST_OPTIONS_ERROR = 12;
-    ///     * REQUEST_OPTIONS_INVALID_SOLVING_MODE = 1201;
-    ///     * REQUEST_OPTIONS_INVALID_MAX_VALIDATION_ERRORS = 1203;
-    ///     * REQUEST_OPTIONS_INVALID_GEODESIC_METERS_PER_SECOND = 1204;
-    ///     * REQUEST_OPTIONS_GEODESIC_METERS_PER_SECOND_TOO_SMALL = 1205;
-    ///     * REQUEST_OPTIONS_MISSING_GEODESIC_METERS_PER_SECOND = 1206;
-    ///     * REQUEST_OPTIONS_POPULATE_PATHFINDER_TRIPS_AND_GEODESIC_DISTANCE
-    ///       = 1207;
-    ///     * REQUEST_OPTIONS_COST_MODEL_OPTIONS_AND_GEODESIC_DISTANCE = 1208;
-    ///     * REQUEST_OPTIONS_TRAVEL_MODE_INCOMPATIBLE_WITH_TRAFFIC = 1211;
-    ///     * REQUEST_OPTIONS_MULTIPLE_TRAFFIC_FLAVORS = 1212;
-    ///     * REQUEST_OPTIONS_INVALID_TRAFFIC_FLAVOR = 1213;
-    ///     * REQUEST_OPTIONS_TRAFFIC_ENABLED_WITHOUT_GLOBAL_START_TIME = 1214;
-    ///     * REQUEST_OPTIONS_TRAFFIC_ENABLED_WITH_PRECEDENCES = 1215;
-    ///     * REQUEST_OPTIONS_TRAFFIC_PREFILL_MODE_INVALID = 1216;
-    ///     * REQUEST_OPTIONS_TRAFFIC_PREFILL_ENABLED_WITHOUT_TRAFFIC = 1217;
-    /// * INJECTED_SOLUTION_ERROR = 20;
-    ///     * INJECTED_SOLUTION_MISSING_LABEL = 2000;
-    ///     * INJECTED_SOLUTION_DUPLICATE_LABEL = 2001;
-    ///     * INJECTED_SOLUTION_AMBIGUOUS_INDEX = 2002;
-    ///     * INJECTED_SOLUTION_INFEASIBLE_AFTER_GETTING_TRAVEL_TIMES = 2003;
-    ///     * INJECTED_SOLUTION_TRANSITION_INCONSISTENT_WITH_ACTUAL_TRAVEL = 2004;
-    ///     * INJECTED_SOLUTION_CONCURRENT_SOLUTION_TYPES = 2005;
-    ///     * INJECTED_SOLUTION_MORE_THAN_ONE_PER_TYPE = 2006;
-    ///     * INJECTED_SOLUTION_REFRESH_WITHOUT_POPULATE = 2008;
-    ///     * INJECTED_SOLUTION_CONSTRAINED_ROUTE_PORTION_INFEASIBLE = 2010;
-    /// * SHIPMENT_MODEL_ERROR = 22;
-    ///     * SHIPMENT_MODEL_TOO_LARGE = 2200;
-    ///     * SHIPMENT_MODEL_TOO_MANY_CAPACITY_TYPES = 2201;
-    ///     * SHIPMENT_MODEL_GLOBAL_START_TIME_NEGATIVE_OR_NAN = 2202;
-    ///     * SHIPMENT_MODEL_GLOBAL_END_TIME_TOO_LARGE_OR_NAN = 2203;
-    ///     * SHIPMENT_MODEL_GLOBAL_START_TIME_AFTER_GLOBAL_END_TIME = 2204;
-    ///     * SHIPMENT_MODEL_GLOBAL_DURATION_TOO_LONG = 2205;
-    ///     * SHIPMENT_MODEL_MAX_ACTIVE_VEHICLES_NOT_POSITIVE = 2206;
-    ///     * SHIPMENT_MODEL_DURATION_MATRIX_TOO_LARGE = 2207;
-    /// * INDEX_ERROR = 24;
-    /// * TAG_ERROR = 26;
-    /// * TIME_WINDOW_ERROR = 28;
-    ///     * TIME_WINDOW_INVALID_START_TIME = 2800;
-    ///     * TIME_WINDOW_INVALID_END_TIME = 2801;
-    ///     * TIME_WINDOW_INVALID_SOFT_START_TIME = 2802;
-    ///     * TIME_WINDOW_INVALID_SOFT_END_TIME = 2803;
-    ///     * TIME_WINDOW_OUTSIDE_GLOBAL_TIME_WINDOW = 2804;
-    ///     * TIME_WINDOW_START_TIME_AFTER_END_TIME = 2805;
-    ///     * TIME_WINDOW_INVALID_COST_PER_HOUR_BEFORE_SOFT_START_TIME = 2806;
-    ///     * TIME_WINDOW_INVALID_COST_PER_HOUR_AFTER_SOFT_END_TIME = 2807;
-    ///     * TIME_WINDOW_COST_BEFORE_SOFT_START_TIME_WITHOUT_SOFT_START_TIME
-    ///       = 2808;
-    ///     * TIME_WINDOW_COST_AFTER_SOFT_END_TIME_WITHOUT_SOFT_END_TIME = 2809;
-    ///     * TIME_WINDOW_SOFT_START_TIME_WITHOUT_COST_BEFORE_SOFT_START_TIME
-    ///       = 2810;
-    ///     * TIME_WINDOW_SOFT_END_TIME_WITHOUT_COST_AFTER_SOFT_END_TIME = 2811;
-    ///     * TIME_WINDOW_OVERLAPPING_ADJACENT_OR_EARLIER_THAN_PREVIOUS = 2812;
-    ///     * TIME_WINDOW_START_TIME_AFTER_SOFT_START_TIME = 2813;
-    ///     * TIME_WINDOW_SOFT_START_TIME_OUTSIDE_GLOBAL_TIME_WINDOW = 2819;
-    ///     * TIME_WINDOW_SOFT_END_TIME_OUTSIDE_GLOBAL_TIME_WINDOW = 2820;
-    ///     * TIME_WINDOW_SOFT_END_TIME_AFTER_END_TIME = 2816;
-    ///     * TIME_WINDOW_COST_BEFORE_SOFT_START_TIME_SET_AND_MULTIPLE_WINDOWS
-    ///       = 2817;
-    ///     * TIME_WINDOW_COST_AFTER_SOFT_END_TIME_SET_AND_MULTIPLE_WINDOWS = 2818;
-    ///     * TRANSITION_ATTRIBUTES_ERROR = 30;
-    ///     * TRANSITION_ATTRIBUTES_INVALID_COST = 3000;
-    ///     * TRANSITION_ATTRIBUTES_INVALID_COST_PER_KILOMETER = 3001;
-    ///     * TRANSITION_ATTRIBUTES_DUPLICATE_TAG_PAIR = 3002;
-    ///     * TRANSITION_ATTRIBUTES_DISTANCE_LIMIT_MAX_METERS_UNSUPPORTED = 3003;
-    ///     * TRANSITION_ATTRIBUTES_UNSPECIFIED_SOURCE_TAGS = 3004;
-    ///     * TRANSITION_ATTRIBUTES_CONFLICTING_SOURCE_TAGS_FIELDS = 3005;
-    ///     * TRANSITION_ATTRIBUTES_UNSPECIFIED_DESTINATION_TAGS = 3006;
-    ///     * TRANSITION_ATTRIBUTES_CONFLICTING_DESTINATION_TAGS_FIELDS = 3007;
-    ///     * TRANSITION_ATTRIBUTES_DELAY_DURATION_NEGATIVE_OR_NAN = 3008;
-    ///     * TRANSITION_ATTRIBUTES_DELAY_DURATION_EXCEEDS_GLOBAL_DURATION = 3009;
-    /// * AMOUNT_ERROR = 31;
-    ///     * AMOUNT_NEGATIVE_VALUE = 3100;
-    /// * LOAD_LIMIT_ERROR = 33;
-    ///     * LOAD_LIMIT_INVALID_COST_ABOVE_SOFT_MAX = 3303;
-    ///     * LOAD_LIMIT_SOFT_MAX_WITHOUT_COST_ABOVE_SOFT_MAX = 3304;
-    ///     * LOAD_LIMIT_COST_ABOVE_SOFT_MAX_WITHOUT_SOFT_MAX = 3305;
-    ///     * LOAD_LIMIT_NEGATIVE_SOFT_MAX = 3306;
-    ///     * LOAD_LIMIT_MIXED_DEMAND_TYPE = 3307;
-    ///     * LOAD_LIMIT_MAX_LOAD_NEGATIVE_VALUE = 3308;
-    ///     * LOAD_LIMIT_SOFT_MAX_ABOVE_MAX = 3309;
-    /// * INTERVAL_ERROR = 34;
-    ///     * INTERVAL_MIN_EXCEEDS_MAX = 3401;
-    ///     * INTERVAL_NEGATIVE_MIN = 3402;
-    ///     * INTERVAL_NEGATIVE_MAX = 3403;
-    ///     * INTERVAL_MIN_EXCEEDS_CAPACITY = 3404;
-    ///     * INTERVAL_MAX_EXCEEDS_CAPACITY = 3405;
-    /// * DISTANCE_LIMIT_ERROR = 36;
-    ///     * DISTANCE_LIMIT_INVALID_COST_AFTER_SOFT_MAX = 3601;
-    ///     * DISTANCE_LIMIT_SOFT_MAX_WITHOUT_COST_AFTER_SOFT_MAX = 3602;
-    ///     * DISTANCE_LIMIT_COST_AFTER_SOFT_MAX_WITHOUT_SOFT_MAX = 3603;
-    ///     * DISTANCE_LIMIT_NEGATIVE_MAX = 3604;
-    ///     * DISTANCE_LIMIT_NEGATIVE_SOFT_MAX = 3605;
-    ///     * DISTANCE_LIMIT_SOFT_MAX_LARGER_THAN_MAX = 3606;
-    /// * DURATION_LIMIT_ERROR = 38;
-    ///     * DURATION_LIMIT_MAX_DURATION_NEGATIVE_OR_NAN = 3800;
-    ///     * DURATION_LIMIT_SOFT_MAX_DURATION_NEGATIVE_OR_NAN = 3801;
-    ///     * DURATION_LIMIT_INVALID_COST_PER_HOUR_AFTER_SOFT_MAX = 3802;
-    ///     * DURATION_LIMIT_SOFT_MAX_WITHOUT_COST_AFTER_SOFT_MAX = 3803;
-    ///     * DURATION_LIMIT_COST_AFTER_SOFT_MAX_WITHOUT_SOFT_MAX = 3804;
-    ///     * DURATION_LIMIT_QUADRATIC_SOFT_MAX_DURATION_NEGATIVE_OR_NAN = 3805;
-    ///     * DURATION_LIMIT_INVALID_COST_AFTER_QUADRATIC_SOFT_MAX = 3806;
-    ///     * DURATION_LIMIT_QUADRATIC_SOFT_MAX_WITHOUT_COST_PER_SQUARE_HOUR
-    ///       = 3807;
-    ///     * DURATION_LIMIT_COST_PER_SQUARE_HOUR_WITHOUT_QUADRATIC_SOFT_MAX
-    ///       = 3808;
-    ///     * DURATION_LIMIT_QUADRATIC_SOFT_MAX_WITHOUT_MAX = 3809;
-    ///     * DURATION_LIMIT_SOFT_MAX_LARGER_THAN_MAX = 3810;
-    ///     * DURATION_LIMIT_QUADRATIC_SOFT_MAX_LARGER_THAN_MAX = 3811;
-    ///     * DURATION_LIMIT_DIFF_BETWEEN_MAX_AND_QUADRATIC_SOFT_MAX_TOO_LARGE
-    ///       = 3812;
-    ///     * DURATION_LIMIT_MAX_DURATION_EXCEEDS_GLOBAL_DURATION = 3813;
-    ///     * DURATION_LIMIT_SOFT_MAX_DURATION_EXCEEDS_GLOBAL_DURATION = 3814;
-    ///     * DURATION_LIMIT_QUADRATIC_SOFT_MAX_DURATION_EXCEEDS_GLOBAL_DURATION
-    ///       = 3815;
-    /// * SHIPMENT_ERROR = 40;
-    ///     * SHIPMENT_PD_LIMIT_WITHOUT_PICKUP_AND_DELIVERY = 4014;
-    ///     * SHIPMENT_PD_ABSOLUTE_DETOUR_LIMIT_DURATION_NEGATIVE_OR_NAN = 4000;
-    ///     * SHIPMENT_PD_ABSOLUTE_DETOUR_LIMIT_DURATION_EXCEEDS_GLOBAL_DURATION
-    ///       = 4001;
-    ///     * SHIPMENT_PD_RELATIVE_DETOUR_LIMIT_INVALID = 4015;
-    ///     * SHIPMENT_PD_DETOUR_LIMIT_AND_EXTRA_VISIT_DURATION = 4016;
-    ///     * SHIPMENT_PD_TIME_LIMIT_DURATION_NEGATIVE_OR_NAN = 4002;
-    ///     * SHIPMENT_PD_TIME_LIMIT_DURATION_EXCEEDS_GLOBAL_DURATION = 4003;
-    ///     * SHIPMENT_EMPTY_SHIPMENT_TYPE = 4004;
-    ///     * SHIPMENT_NO_PICKUP_NO_DELIVERY = 4005;
-    ///     * SHIPMENT_INVALID_PENALTY_COST = 4006;
-    ///     * SHIPMENT_ALLOWED_VEHICLE_INDEX_OUT_OF_BOUNDS = 4007;
-    ///     * SHIPMENT_DUPLICATE_ALLOWED_VEHICLE_INDEX = 4008;
-    ///     * SHIPMENT_INCONSISTENT_COST_FOR_VEHICLE_SIZE_WITHOUT_INDEX = 4009;
-    ///     * SHIPMENT_INCONSISTENT_COST_FOR_VEHICLE_SIZE_WITH_INDEX = 4010;
-    ///     * SHIPMENT_INVALID_COST_FOR_VEHICLE = 4011;
-    ///     * SHIPMENT_COST_FOR_VEHICLE_INDEX_OUT_OF_BOUNDS = 4012;
-    ///     * SHIPMENT_DUPLICATE_COST_FOR_VEHICLE_INDEX = 4013;
-    /// * VEHICLE_ERROR = 42;
-    ///     * VEHICLE_EMPTY_REQUIRED_OPERATOR_TYPE = 4200;
-    ///     * VEHICLE_DUPLICATE_REQUIRED_OPERATOR_TYPE = 4201;
-    ///     * VEHICLE_NO_OPERATOR_WITH_REQUIRED_OPERATOR_TYPE = 4202;
-    ///     * VEHICLE_EMPTY_START_TAG = 4203;
-    ///     * VEHICLE_DUPLICATE_START_TAG = 4204;
-    ///     * VEHICLE_EMPTY_END_TAG = 4205;
-    ///     * VEHICLE_DUPLICATE_END_TAG = 4206;
-    ///     * VEHICLE_EXTRA_VISIT_DURATION_NEGATIVE_OR_NAN = 4207;
-    ///     * VEHICLE_EXTRA_VISIT_DURATION_EXCEEDS_GLOBAL_DURATION = 4208;
-    ///     * VEHICLE_EXTRA_VISIT_DURATION_EMPTY_KEY = 4209;
-    ///     * VEHICLE_FIRST_SHIPMENT_INDEX_OUT_OF_BOUNDS = 4210;
-    ///     * VEHICLE_FIRST_SHIPMENT_IGNORED = 4211;
-    ///     * VEHICLE_FIRST_SHIPMENT_NOT_BOUND = 4212;
-    ///     * VEHICLE_LAST_SHIPMENT_INDEX_OUT_OF_BOUNDS = 4213;
-    ///     * VEHICLE_LAST_SHIPMENT_IGNORED = 4214;
-    ///     * VEHICLE_LAST_SHIPMENT_NOT_BOUND = 4215;
-    ///     * VEHICLE_IGNORED_WITH_USED_IF_ROUTE_IS_EMPTY = 4216;
-    ///     * VEHICLE_INVALID_COST_PER_KILOMETER = 4217;
-    ///     * VEHICLE_INVALID_COST_PER_HOUR = 4218;
-    ///     * VEHICLE_INVALID_COST_PER_TRAVELED_HOUR = 4219;
-    ///     * VEHICLE_INVALID_FIXED_COST = 4220;
-    ///     * VEHICLE_INVALID_TRAVEL_DURATION_MULTIPLE = 4221;
-    ///     * VEHICLE_TRAVEL_DURATION_MULTIPLE_WITH_SHIPMENT_PD_DETOUR_LIMITS
-    ///       = 4223;
-    ///     * VEHICLE_MATRIX_INDEX_WITH_SHIPMENT_PD_DETOUR_LIMITS = 4224;
-    ///     * VEHICLE_MINIMUM_DURATION_LONGER_THAN_DURATION_LIMIT = 4222;
-    /// * VISIT_REQUEST_ERROR = 44;
-    ///     * VISIT_REQUEST_EMPTY_TAG = 4400;
-    ///     * VISIT_REQUEST_DUPLICATE_TAG = 4401;
-    ///     * VISIT_REQUEST_DURATION_NEGATIVE_OR_NAN = 4404;
-    ///     * VISIT_REQUEST_DURATION_EXCEEDS_GLOBAL_DURATION = 4405;
-    /// * PRECEDENCE_ERROR = 46;
-    ///     * PRECEDENCE_RULE_MISSING_FIRST_INDEX = 4600;
-    ///     * PRECEDENCE_RULE_MISSING_SECOND_INDEX = 4601;
-    ///     * PRECEDENCE_RULE_FIRST_INDEX_OUT_OF_BOUNDS = 4602;
-    ///     * PRECEDENCE_RULE_SECOND_INDEX_OUT_OF_BOUNDS = 4603;
-    ///     * PRECEDENCE_RULE_DUPLICATE_INDEX = 4604;
-    ///     * PRECEDENCE_RULE_INEXISTENT_FIRST_VISIT_REQUEST = 4605;
-    ///     * PRECEDENCE_RULE_INEXISTENT_SECOND_VISIT_REQUEST = 4606;
-    /// * BREAK_ERROR = 48;
-    ///     * BREAK_RULE_EMPTY = 4800;
-    ///     * BREAK_REQUEST_UNSPECIFIED_DURATION = 4801;
-    ///     * BREAK_REQUEST_UNSPECIFIED_EARLIEST_START_TIME = 4802;
-    ///     * BREAK_REQUEST_UNSPECIFIED_LATEST_START_TIME = 4803;
-    ///     * BREAK_REQUEST_DURATION_NEGATIVE_OR_NAN = 4804; = 4804;
-    ///     * BREAK_REQUEST_LATEST_START_TIME_BEFORE_EARLIEST_START_TIME = 4805;
-    ///     * BREAK_REQUEST_EARLIEST_START_TIME_BEFORE_GLOBAL_START_TIME = 4806;
-    ///     * BREAK_REQUEST_LATEST_END_TIME_AFTER_GLOBAL_END_TIME = 4807;
-    ///     * BREAK_REQUEST_NON_SCHEDULABLE = 4808;
-    ///     * BREAK_FREQUENCY_MAX_INTER_BREAK_DURATION_NEGATIVE_OR_NAN = 4809;
-    ///     * BREAK_FREQUENCY_MIN_BREAK_DURATION_NEGATIVE_OR_NAN = 4810;
-    ///     * BREAK_FREQUENCY_MIN_BREAK_DURATION_EXCEEDS_GLOBAL_DURATION = 4811;
-    ///     * BREAK_FREQUENCY_MAX_INTER_BREAK_DURATION_EXCEEDS_GLOBAL_DURATION
-    ///       = 4812;
-    ///     * BREAK_REQUEST_DURATION_EXCEEDS_GLOBAL_DURATION = 4813;
-    ///     * BREAK_FREQUENCY_MISSING_MAX_INTER_BREAK_DURATION = 4814;
-    ///     * BREAK_FREQUENCY_MISSING_MIN_BREAK_DURATION = 4815;
-    /// * SHIPMENT_TYPE_INCOMPATIBILITY_ERROR = 50;
-    ///     * SHIPMENT_TYPE_INCOMPATIBILITY_EMPTY_TYPE = 5001;
-    ///     * SHIPMENT_TYPE_INCOMPATIBILITY_LESS_THAN_TWO_TYPES = 5002;
-    ///     * SHIPMENT_TYPE_INCOMPATIBILITY_DUPLICATE_TYPE = 5003;
-    ///     * SHIPMENT_TYPE_INCOMPATIBILITY_INVALID_INCOMPATIBILITY_MODE = 5004;
-    ///     * SHIPMENT_TYPE_INCOMPATIBILITY_TOO_MANY_INCOMPATIBILITIES = 5005;
-    /// * SHIPMENT_TYPE_REQUIREMENT_ERROR = 52;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_NO_REQUIRED_TYPE = 52001;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_NO_DEPENDENT_TYPE = 52002;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_INVALID_REQUIREMENT_MODE = 52003;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_TOO_MANY_REQUIREMENTS = 52004;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_EMPTY_REQUIRED_TYPE = 52005;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_DUPLICATE_REQUIRED_TYPE = 52006;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_NO_REQUIRED_TYPE_FOUND = 52007;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_EMPTY_DEPENDENT_TYPE = 52008;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_DUPLICATE_DEPENDENT_TYPE = 52009;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_SELF_DEPENDENT_TYPE = 52010;
-    ///     * SHIPMENT_TYPE_REQUIREMENT_GRAPH_HAS_CYCLES = 52011;
-    /// * VEHICLE_OPERATOR_ERROR = 54;
-    ///     * VEHICLE_OPERATOR_EMPTY_TYPE = 5400;
-    ///     * VEHICLE_OPERATOR_MULTIPLE_START_TIME_WINDOWS = 5401;
-    ///     * VEHICLE_OPERATOR_SOFT_START_TIME_WINDOW = 5402;
-    ///     * VEHICLE_OPERATOR_MULTIPLE_END_TIME_WINDOWS = 5403;
-    ///     * VEHICLE_OPERATOR_SOFT_END_TIME_WINDOW = 5404;
-    /// * DURATION_SECONDS_MATRIX_ERROR = 56;
-    ///     * DURATION_SECONDS_MATRIX_DURATION_NEGATIVE_OR_NAN = 5600;
-    ///     * DURATION_SECONDS_MATRIX_DURATION_EXCEEDS_GLOBAL_DURATION = 5601;
-    /// * WARNING = 9;
-    ///     * WARNING_INJECTED_FIRST_SOLUTION = 90;
-    ///         * WARNING_INJECTED_FIRST_SOLUTION_INFEASIBLE_SHIPMENTS_REMOVED
-    ///           = 9000;
-    ///         * WARNING_INJECTED_FIRST_SOLUTION_INFEASIBLE_AFTER_GETTING_TRAVEL_TIMES
-    ///           = 9001;
+    /// error hid the old one. For example, see "MULTIPLE ERRORS".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
