@@ -22,6 +22,7 @@ using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using sc = System.Collections;
@@ -53,6 +54,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             GetTuningJobSettings = existing.GetTuningJobSettings;
             ListTuningJobsSettings = existing.ListTuningJobsSettings;
             CancelTuningJobSettings = existing.CancelTuningJobSettings;
+            RebaseTunedModelSettings = existing.RebaseTunedModelSettings;
+            RebaseTunedModelOperationsSettings = existing.RebaseTunedModelOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -107,6 +110,36 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CancelTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GenAiTuningServiceClient.RebaseTunedModel</c> and <c>GenAiTuningServiceClient.RebaseTunedModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RebaseTunedModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GenAiTuningServiceClient.RebaseTunedModel</c> and
+        /// <c>GenAiTuningServiceClient.RebaseTunedModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RebaseTunedModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -884,6 +917,183 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task CancelTuningJobAsync(TuningJobName name, st::CancellationToken cancellationToken) =>
             CancelTuningJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuningJob, RebaseTunedModelOperationMetadata> RebaseTunedModel(RebaseTunedModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>> RebaseTunedModelAsync(RebaseTunedModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>> RebaseTunedModelAsync(RebaseTunedModelRequest request, st::CancellationToken cancellationToken) =>
+            RebaseTunedModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RebaseTunedModel</c>.</summary>
+        public virtual lro::OperationsClient RebaseTunedModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RebaseTunedModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TuningJob, RebaseTunedModelOperationMetadata> PollOnceRebaseTunedModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RebaseTunedModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RebaseTunedModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>> PollOnceRebaseTunedModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RebaseTunedModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to rebase the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="tunedModelRef">
+        /// Required. TunedModel reference to retrieve the legacy model information.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuningJob, RebaseTunedModelOperationMetadata> RebaseTunedModel(string parent, TunedModelRef tunedModelRef, gaxgrpc::CallSettings callSettings = null) =>
+            RebaseTunedModel(new RebaseTunedModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TunedModelRef = gax::GaxPreconditions.CheckNotNull(tunedModelRef, nameof(tunedModelRef)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to rebase the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="tunedModelRef">
+        /// Required. TunedModel reference to retrieve the legacy model information.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>> RebaseTunedModelAsync(string parent, TunedModelRef tunedModelRef, gaxgrpc::CallSettings callSettings = null) =>
+            RebaseTunedModelAsync(new RebaseTunedModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TunedModelRef = gax::GaxPreconditions.CheckNotNull(tunedModelRef, nameof(tunedModelRef)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to rebase the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="tunedModelRef">
+        /// Required. TunedModel reference to retrieve the legacy model information.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>> RebaseTunedModelAsync(string parent, TunedModelRef tunedModelRef, st::CancellationToken cancellationToken) =>
+            RebaseTunedModelAsync(parent, tunedModelRef, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to rebase the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="tunedModelRef">
+        /// Required. TunedModel reference to retrieve the legacy model information.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuningJob, RebaseTunedModelOperationMetadata> RebaseTunedModel(gagr::LocationName parent, TunedModelRef tunedModelRef, gaxgrpc::CallSettings callSettings = null) =>
+            RebaseTunedModel(new RebaseTunedModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TunedModelRef = gax::GaxPreconditions.CheckNotNull(tunedModelRef, nameof(tunedModelRef)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to rebase the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="tunedModelRef">
+        /// Required. TunedModel reference to retrieve the legacy model information.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>> RebaseTunedModelAsync(gagr::LocationName parent, TunedModelRef tunedModelRef, gaxgrpc::CallSettings callSettings = null) =>
+            RebaseTunedModelAsync(new RebaseTunedModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TunedModelRef = gax::GaxPreconditions.CheckNotNull(tunedModelRef, nameof(tunedModelRef)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to rebase the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="tunedModelRef">
+        /// Required. TunedModel reference to retrieve the legacy model information.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>> RebaseTunedModelAsync(gagr::LocationName parent, TunedModelRef tunedModelRef, st::CancellationToken cancellationToken) =>
+            RebaseTunedModelAsync(parent, tunedModelRef, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>GenAiTuningService client wrapper implementation, for convenient use.</summary>
@@ -900,6 +1110,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<CancelTuningJobRequest, wkt::Empty> _callCancelTuningJob;
 
+        private readonly gaxgrpc::ApiCall<RebaseTunedModelRequest, lro::Operation> _callRebaseTunedModel;
+
         /// <summary>
         /// Constructs a client wrapper for the GenAiTuningService service, with the specified gRPC client and settings.
         /// </summary>
@@ -915,6 +1127,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            RebaseTunedModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RebaseTunedModelOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateTuningJob = clientHelper.BuildApiCall<CreateTuningJobRequest, TuningJob>("CreateTuningJob", grpcClient.CreateTuningJobAsync, grpcClient.CreateTuningJob, effectiveSettings.CreateTuningJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -929,6 +1142,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callCancelTuningJob = clientHelper.BuildApiCall<CancelTuningJobRequest, wkt::Empty>("CancelTuningJob", grpcClient.CancelTuningJobAsync, grpcClient.CancelTuningJob, effectiveSettings.CancelTuningJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelTuningJob);
             Modify_CancelTuningJobApiCall(ref _callCancelTuningJob);
+            _callRebaseTunedModel = clientHelper.BuildApiCall<RebaseTunedModelRequest, lro::Operation>("RebaseTunedModel", grpcClient.RebaseTunedModelAsync, grpcClient.RebaseTunedModel, effectiveSettings.RebaseTunedModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callRebaseTunedModel);
+            Modify_RebaseTunedModelApiCall(ref _callRebaseTunedModel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -941,6 +1157,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_ListTuningJobsApiCall(ref gaxgrpc::ApiCall<ListTuningJobsRequest, ListTuningJobsResponse> call);
 
         partial void Modify_CancelTuningJobApiCall(ref gaxgrpc::ApiCall<CancelTuningJobRequest, wkt::Empty> call);
+
+        partial void Modify_RebaseTunedModelApiCall(ref gaxgrpc::ApiCall<RebaseTunedModelRequest, lro::Operation> call);
 
         partial void OnConstruction(GenAiTuningService.GenAiTuningServiceClient grpcClient, GenAiTuningServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -960,6 +1178,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_ListTuningJobsRequest(ref ListTuningJobsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CancelTuningJobRequest(ref CancelTuningJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RebaseTunedModelRequest(ref RebaseTunedModelRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a TuningJob. A created TuningJob right away will be attempted to
@@ -1080,6 +1300,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             Modify_CancelTuningJobRequest(ref request, ref callSettings);
             return _callCancelTuningJob.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>RebaseTunedModel</c>.</summary>
+        public override lro::OperationsClient RebaseTunedModelOperationsClient { get; }
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TuningJob, RebaseTunedModelOperationMetadata> RebaseTunedModel(RebaseTunedModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RebaseTunedModelRequest(ref request, ref callSettings);
+            return new lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>(_callRebaseTunedModel.Sync(request, callSettings), RebaseTunedModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Rebase a TunedModel.
+        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
+        /// Reference and creates a TuningJob based on newly available model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>> RebaseTunedModelAsync(RebaseTunedModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RebaseTunedModelRequest(ref request, ref callSettings);
+            return new lro::Operation<TuningJob, RebaseTunedModelOperationMetadata>(await _callRebaseTunedModel.Async(request, callSettings).ConfigureAwait(false), RebaseTunedModelOperationsClient);
+        }
     }
 
     public partial class ListTuningJobsRequest : gaxgrpc::IPageRequest
@@ -1092,6 +1343,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public scg::IEnumerator<TuningJob> GetEnumerator() => TuningJobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class GenAiTuningService
+    {
+        public partial class GenAiTuningServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class GenAiTuningService
