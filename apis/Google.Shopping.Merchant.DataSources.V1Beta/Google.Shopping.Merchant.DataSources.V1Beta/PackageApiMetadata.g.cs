@@ -33,6 +33,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta
             yield return DatasourcesReflection.Descriptor;
             yield return DatasourcetypesReflection.Descriptor;
             yield return FileinputsReflection.Descriptor;
+            yield return FileuploadsReflection.Descriptor;
         }
     }
 }
