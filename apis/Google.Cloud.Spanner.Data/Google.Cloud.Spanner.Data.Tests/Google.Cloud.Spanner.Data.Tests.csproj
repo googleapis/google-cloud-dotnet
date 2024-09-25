@@ -8,8 +8,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CoreCompat.EnterpriseLibrary.TransientFaultHandling" VersionOverride="6.0.1304-r3" />
-    <PackageReference Include="Google.Api.Gax.Grpc.Testing" VersionOverride="[4.8.0, 5.0.0)" />
-    <PackageReference Include="Google.Api.Gax.Testing" VersionOverride="[4.8.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc.Testing" VersionOverride="[4.9.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Testing" VersionOverride="[4.9.0, 5.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj" />
     <PackageReference Include="Microsoft.Extensions.Configuration" VersionOverride="6.0.1" />

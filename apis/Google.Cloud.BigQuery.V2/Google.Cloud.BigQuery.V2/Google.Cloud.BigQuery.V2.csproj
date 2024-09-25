@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Rest" VersionOverride="[4.8.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Rest" VersionOverride="[4.9.0, 5.0.0)" />
     <PackageReference Include="Google.Apis.Bigquery.v2" VersionOverride="[1.68.0.3400, 2.0.0.0)" />
   </ItemGroup>
   <ItemGroup>
