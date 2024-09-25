@@ -9,6 +9,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="[2.15.0, 3.0.0)" />
+    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="[2.16.0, 3.0.0)" />
   </ItemGroup>
 </Project>

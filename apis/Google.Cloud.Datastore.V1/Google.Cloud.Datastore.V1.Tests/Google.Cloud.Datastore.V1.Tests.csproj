@@ -7,7 +7,7 @@
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Grpc.Testing" VersionOverride="[4.8.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc.Testing" VersionOverride="[4.9.0, 5.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <PackageReference Include="Google.Cloud.Datastore.Admin.V1" VersionOverride="[2.4.0, 3.0.0)" />
     <ProjectReference Include="..\Google.Cloud.Datastore.V1\Google.Cloud.Datastore.V1.csproj" />

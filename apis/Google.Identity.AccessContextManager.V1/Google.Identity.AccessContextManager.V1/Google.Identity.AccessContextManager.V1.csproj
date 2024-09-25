@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="[4.8.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="[4.9.0, 5.0.0)" />
     <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.2.0, 4.0.0)" />
     <PackageReference Include="Google.Identity.AccessContextManager.Type" VersionOverride="[2.2.0, 3.0.0)" />
     <PackageReference Include="Google.LongRunning" VersionOverride="[3.2.0, 4.0.0)" />
