@@ -27,7 +27,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Ci1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL29wZW5hcGkucHJv",
             "dG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1",
-            "Y3QucHJvdG8ipwYKDU9wZW5BcGlTY2hlbWESOAoEdHlwZRgBIAEoDjIlLmdv",
+            "Y3QucHJvdG8i7AYKDU9wZW5BcGlTY2hlbWESOAoEdHlwZRgBIAEoDjIlLmdv",
             "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuVHlwZUID4EEBEhMKBmZv",
             "cm1hdBgHIAEoCUID4EEBEhIKBXRpdGxlGBggASgJQgPgQQESGAoLZGVzY3Jp",
             "cHRpb24YCCABKAlCA+BBARIVCghudWxsYWJsZRgGIAEoCEID4EEBEiwKB2Rl",
@@ -42,21 +42,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZXJ0aWVzGA8gASgDQgPgQQESFAoHbWluaW11bRgQIAEoAUID4EEBEhQKB21h",
             "eGltdW0YESABKAFCA+BBARIXCgptaW5fbGVuZ3RoGBIgASgDQgPgQQESFwoK",
             "bWF4X2xlbmd0aBgTIAEoA0ID4EEBEhQKB3BhdHRlcm4YFCABKAlCA+BBARIs",
-            "CgdleGFtcGxlGAQgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQEa",
-            "YQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRI9CgV2YWx1ZRgCIAEo",
-            "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuT3BlbkFwaVNj",
-            "aGVtYToCOAEqZQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGU1RS",
-            "SU5HEAESCgoGTlVNQkVSEAISCwoHSU5URUdFUhADEgsKB0JPT0xFQU4QBBIJ",
-            "CgVBUlJBWRAFEgoKBk9CSkVDVBAGQuMBCiNjb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMUIMT3BlbkFwaVByb3RvUAFaQ2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjth",
-            "aXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGEx",
-            "ygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6",
-            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "CgdleGFtcGxlGAQgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQES",
+            "QwoGYW55X29mGAsgAygLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
+            "ZXRhMS5PcGVuQXBpU2NoZW1hQgPgQQEaYQoPUHJvcGVydGllc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRI9CgV2YWx1ZRgCIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuT3BlbkFwaVNjaGVtYToCOAEqZQoEVHlwZRIUChBU",
+            "WVBFX1VOU1BFQ0lGSUVEEAASCgoGU1RSSU5HEAESCgoGTlVNQkVSEAISCwoH",
+            "SU5URUdFUhADEgsKB0JPT0xFQU4QBBIJCgVBUlJBWRAFEgoKBk9CSkVDVBAG",
+            "QuMBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIMT3Bl",
+            "bkFwaVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9h",
+            "cGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUu",
+            "Q2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxh",
+            "dGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx",
+            "YmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.Type), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema), global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema.Parser, new[]{ "Type", "Format", "Title", "Description", "Nullable", "Default", "Items", "MinItems", "MaxItems", "Enum", "Properties", "PropertyOrdering", "Required", "MinProperties", "MaxProperties", "Minimum", "Maximum", "MinLength", "MaxLength", "Pattern", "Example" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema), global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema.Parser, new[]{ "Type", "Format", "Title", "Description", "Nullable", "Default", "Items", "MinItems", "MaxItems", "Enum", "Properties", "PropertyOrdering", "Required", "MinProperties", "MaxProperties", "Minimum", "Maximum", "MinLength", "MaxLength", "Pattern", "Example", "AnyOf" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -163,6 +165,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       maxLength_ = other.maxLength_;
       pattern_ = other.pattern_;
       example_ = other.example_ != null ? other.example_.Clone() : null;
+      anyOf_ = other.anyOf_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -497,6 +500,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "any_of" field.</summary>
+    public const int AnyOfFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema> _repeated_anyOf_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema> anyOf_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema>();
+    /// <summary>
+    /// Optional. The value should be validated against any (one or more) of the
+    /// subschemas in the list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.OpenApiSchema> AnyOf {
+      get { return anyOf_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -533,6 +551,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (MaxLength != other.MaxLength) return false;
       if (Pattern != other.Pattern) return false;
       if (!object.Equals(Example, other.Example)) return false;
+      if(!anyOf_.Equals(other.anyOf_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -561,6 +580,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (MaxLength != 0L) hash ^= MaxLength.GetHashCode();
       if (Pattern.Length != 0) hash ^= Pattern.GetHashCode();
       if (example_ != null) hash ^= Example.GetHashCode();
+      hash ^= anyOf_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -606,6 +626,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteString(Description);
       }
       enum_.WriteTo(output, _repeated_enum_codec);
+      anyOf_.WriteTo(output, _repeated_anyOf_codec);
       if (MinProperties != 0L) {
         output.WriteRawTag(112);
         output.WriteInt64(MinProperties);
@@ -688,6 +709,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteString(Description);
       }
       enum_.WriteTo(ref output, _repeated_enum_codec);
+      anyOf_.WriteTo(ref output, _repeated_anyOf_codec);
       if (MinProperties != 0L) {
         output.WriteRawTag(112);
         output.WriteInt64(MinProperties);
@@ -798,6 +820,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (example_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Example);
       }
+      size += anyOf_.CalculateSize(_repeated_anyOf_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -874,6 +897,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         }
         Example.MergeFrom(other.Example);
       }
+      anyOf_.Add(other.anyOf_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -929,6 +953,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 74: {
             enum_.AddEntriesFrom(input, _repeated_enum_codec);
+            break;
+          }
+          case 90: {
+            anyOf_.AddEntriesFrom(input, _repeated_anyOf_codec);
             break;
           }
           case 112: {
@@ -1037,6 +1065,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 74: {
             enum_.AddEntriesFrom(ref input, _repeated_enum_codec);
+            break;
+          }
+          case 90: {
+            anyOf_.AddEntriesFrom(ref input, _repeated_anyOf_codec);
             break;
           }
           case 112: {
