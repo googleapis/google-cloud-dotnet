@@ -32,7 +32,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
             "cmNlLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
             "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9i",
             "dWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byKTCAoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEIEhgKC2Rl",
+            "cC5wcm90byKiCAoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEIEhgKC2Rl",
             "c2NyaXB0aW9uGAIgASgJQgPgQQESRQoFc3RhdGUYAyABKA4yMS5nb29nbGUu",
             "Y2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuSW5zdGFuY2UuU3RhdGVCA+BB",
             "AxI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
@@ -50,148 +50,148 @@ namespace Google.Cloud.Parallelstore.V1Beta {
             "MWJldGEuRmlsZVN0cmlwZUxldmVsQgPgQQESXAoWZGlyZWN0b3J5X3N0cmlw",
             "ZV9sZXZlbBgQIAEoDjI3Lmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYx",
             "YmV0YS5EaXJlY3RvcnlTdHJpcGVMZXZlbEID4EEBGi0KC0xhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiUgoFU3RhdGUSFQoR",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYQoFU3RhdGUSFQoR",
             "U1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgoKBkFDVElWRRAC",
-            "EgwKCERFTEVUSU5HEAMSCgoGRkFJTEVEEAQ6fepBegolcGFyYWxsZWxzdG9y",
-            "ZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRI8cHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3RhbmNlcy97aW5zdGFuY2V9Kglp",
-            "bnN0YW5jZXMyCGluc3RhbmNlIrIBChRMaXN0SW5zdGFuY2VzUmVxdWVzdBI9",
-            "CgZwYXJlbnQYASABKAlCLeBBAvpBJxIlcGFyYWxsZWxzdG9yZS5nb29nbGVh",
-            "cGlzLmNvbS9JbnN0YW5jZRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpw",
-            "YWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoI",
-            "b3JkZXJfYnkYBSABKAlCA+BBASKFAQoVTGlzdEluc3RhbmNlc1Jlc3BvbnNl",
-            "Ej4KCWluc3RhbmNlcxgBIAMoCzIrLmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0",
-            "b3JlLnYxYmV0YS5JbnN0YW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkS",
-            "EwoLdW5yZWFjaGFibGUYAyADKAkiUQoSR2V0SW5zdGFuY2VSZXF1ZXN0EjsK",
-            "BG5hbWUYASABKAlCLeBBAvpBJwolcGFyYWxsZWxzdG9yZS5nb29nbGVhcGlz",
-            "LmNvbS9JbnN0YW5jZSLNAQoVQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0Ej0KBnBh",
-            "cmVudBgBIAEoCUIt4EEC+kEnEiVwYXJhbGxlbHN0b3JlLmdvb2dsZWFwaXMu",
-            "Y29tL0luc3RhbmNlEhgKC2luc3RhbmNlX2lkGAIgASgJQgPgQQISQgoIaW5z",
-            "dGFuY2UYAyABKAsyKy5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJl",
-            "dGEuSW5zdGFuY2VCA+BBAhIXCgpyZXF1ZXN0X2lkGAQgASgJQgPgQQEiqgEK",
-            "FVVwZGF0ZUluc3RhbmNlUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhJCCghpbnN0YW5jZRgC",
-            "IAEoCzIrLmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5JbnN0",
-            "YW5jZUID4EECEhcKCnJlcXVlc3RfaWQYAyABKAlCA+BBASJtChVEZWxldGVJ",
-            "bnN0YW5jZVJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVwYXJhbGxl",
-            "bHN0b3JlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEhcKCnJlcXVlc3RfaWQY",
-            "AiABKAlCA+BBASKAAgoRT3BlcmF0aW9uTWV0YWRhdGESNAoLY3JlYXRlX3Rp",
-            "bWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoI",
-            "ZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSEwoGdGFyZ2V0GAMgASgJQgPgQQMSEQoEdmVyYhgEIAEoCUID4EEDEhsK",
-            "DnN0YXR1c19tZXNzYWdlGAUgASgJQgPgQQMSIwoWcmVxdWVzdGVkX2NhbmNl",
-            "bGxhdGlvbhgGIAEoCEID4EEDEhgKC2FwaV92ZXJzaW9uGAcgASgJQgPgQQMi",
-            "IwoPU291cmNlR2NzQnVja2V0EhAKA3VyaRgBIAEoCUID4EECIigKFERlc3Rp",
-            "bmF0aW9uR2NzQnVja2V0EhAKA3VyaRgBIAEoCUID4EECIigKE1NvdXJjZVBh",
-            "cmFsbGVsc3RvcmUSEQoEcGF0aBgBIAEoCUID4EEBIi0KGERlc3RpbmF0aW9u",
-            "UGFyYWxsZWxzdG9yZRIRCgRwYXRoGAEgASgJQgPgQQEigQMKEUltcG9ydERh",
-            "dGFSZXF1ZXN0Ek8KEXNvdXJjZV9nY3NfYnVja2V0GAIgASgLMjIuZ29vZ2xl",
-            "LmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLlNvdXJjZUdjc0J1Y2tldEgA",
-            "EmAKGWRlc3RpbmF0aW9uX3BhcmFsbGVsc3RvcmUYAyABKAsyOy5nb29nbGUu",
-            "Y2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuRGVzdGluYXRpb25QYXJhbGxl",
-            "bHN0b3JlSAESOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVwYXJhbGxlbHN0b3Jl",
-            "Lmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEh8KCnJlcXVlc3RfaWQYBCABKAlC",
-            "C+BBAeKMz9cIAggBEkIKD3NlcnZpY2VfYWNjb3VudBgFIAEoCUIp4EEB+kEj",
-            "CiFpYW0uZ29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291bnRCCAoGc291cmNl",
-            "Qg0KC2Rlc3RpbmF0aW9uIoEDChFFeHBvcnREYXRhUmVxdWVzdBJWChRzb3Vy",
-            "Y2VfcGFyYWxsZWxzdG9yZRgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5wYXJhbGxl",
-            "bHN0b3JlLnYxYmV0YS5Tb3VyY2VQYXJhbGxlbHN0b3JlSAASWQoWZGVzdGlu",
-            "YXRpb25fZ2NzX2J1Y2tldBgDIAEoCzI3Lmdvb2dsZS5jbG91ZC5wYXJhbGxl",
-            "bHN0b3JlLnYxYmV0YS5EZXN0aW5hdGlvbkdjc0J1Y2tldEgBEjsKBG5hbWUY",
-            "ASABKAlCLeBBAvpBJwolcGFyYWxsZWxzdG9yZS5nb29nbGVhcGlzLmNvbS9J",
-            "bnN0YW5jZRIfCgpyZXF1ZXN0X2lkGAQgASgJQgvgQQHijM/XCAIIARJCCg9z",
-            "ZXJ2aWNlX2FjY291bnQYBSABKAlCKeBBAfpBIwohaWFtLmdvb2dsZWFwaXMu",
-            "Y29tL1NlcnZpY2VBY2NvdW50QggKBnNvdXJjZUINCgtkZXN0aW5hdGlvbiIU",
-            "ChJJbXBvcnREYXRhUmVzcG9uc2Ui2wIKEkltcG9ydERhdGFNZXRhZGF0YRJY",
-            "ChJvcGVyYXRpb25fbWV0YWRhdGEYASABKAsyPC5nb29nbGUuY2xvdWQucGFy",
-            "YWxsZWxzdG9yZS52MWJldGEuVHJhbnNmZXJPcGVyYXRpb25NZXRhZGF0YRI0",
-            "CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxIxCghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYBCABKAlCA+BBAxIRCgR2ZXJiGAUg",
-            "ASgJQgPgQQMSGwoOc3RhdHVzX21lc3NhZ2UYBiABKAlCA+BBAxIjChZyZXF1",
-            "ZXN0ZWRfY2FuY2VsbGF0aW9uGAcgASgIQgPgQQMSGAoLYXBpX3ZlcnNpb24Y",
-            "CCABKAlCA+BBAyIUChJFeHBvcnREYXRhUmVzcG9uc2Ui2wIKEkV4cG9ydERh",
-            "dGFNZXRhZGF0YRJYChJvcGVyYXRpb25fbWV0YWRhdGEYASABKAsyPC5nb29n",
-            "bGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuVHJhbnNmZXJPcGVyYXRp",
-            "b25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgDIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYBCABKAlCA+BB",
-            "AxIRCgR2ZXJiGAUgASgJQgPgQQMSGwoOc3RhdHVzX21lc3NhZ2UYBiABKAlC",
-            "A+BBAxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAcgASgIQgPgQQMSGAoL",
-            "YXBpX3ZlcnNpb24YCCABKAlCA+BBAyLHBAoZVHJhbnNmZXJPcGVyYXRpb25N",
-            "ZXRhZGF0YRJbChRzb3VyY2VfcGFyYWxsZWxzdG9yZRgHIAEoCzI2Lmdvb2ds",
+            "EgwKCERFTEVUSU5HEAMSCgoGRkFJTEVEEAQSDQoJVVBHUkFESU5HEAU6fepB",
+            "egolcGFyYWxsZWxzdG9yZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRI8cHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3RhbmNl",
+            "cy97aW5zdGFuY2V9KglpbnN0YW5jZXMyCGluc3RhbmNlIrIBChRMaXN0SW5z",
+            "dGFuY2VzUmVxdWVzdBI9CgZwYXJlbnQYASABKAlCLeBBAvpBJxIlcGFyYWxs",
+            "ZWxzdG9yZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIWCglwYWdlX3NpemUY",
+            "AiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVy",
+            "GAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKFAQoVTGlzdElu",
+            "c3RhbmNlc1Jlc3BvbnNlEj4KCWluc3RhbmNlcxgBIAMoCzIrLmdvb2dsZS5j",
+            "bG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5JbnN0YW5jZRIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiUQoSR2V0SW5z",
+            "dGFuY2VSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwolcGFyYWxsZWxz",
+            "dG9yZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZSLNAQoVQ3JlYXRlSW5zdGFu",
+            "Y2VSZXF1ZXN0Ej0KBnBhcmVudBgBIAEoCUIt4EEC+kEnEiVwYXJhbGxlbHN0",
+            "b3JlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEhgKC2luc3RhbmNlX2lkGAIg",
+            "ASgJQgPgQQISQgoIaW5zdGFuY2UYAyABKAsyKy5nb29nbGUuY2xvdWQucGFy",
+            "YWxsZWxzdG9yZS52MWJldGEuSW5zdGFuY2VCA+BBAhIXCgpyZXF1ZXN0X2lk",
+            "GAQgASgJQgPgQQEiqgEKFVVwZGF0ZUluc3RhbmNlUmVxdWVzdBI0Cgt1cGRh",
+            "dGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
+            "AhJCCghpbnN0YW5jZRgCIAEoCzIrLmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0",
+            "b3JlLnYxYmV0YS5JbnN0YW5jZUID4EECEhcKCnJlcXVlc3RfaWQYAyABKAlC",
+            "A+BBASJtChVEZWxldGVJbnN0YW5jZVJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt",
+            "4EEC+kEnCiVwYXJhbGxlbHN0b3JlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNl",
+            "EhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBASKAAgoRT3BlcmF0aW9uTWV0YWRh",
+            "dGESNAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSEwoGdGFyZ2V0GAMgASgJQgPgQQMSEQoEdmVy",
+            "YhgEIAEoCUID4EEDEhsKDnN0YXR1c19tZXNzYWdlGAUgASgJQgPgQQMSIwoW",
+            "cmVxdWVzdGVkX2NhbmNlbGxhdGlvbhgGIAEoCEID4EEDEhgKC2FwaV92ZXJz",
+            "aW9uGAcgASgJQgPgQQMiIwoPU291cmNlR2NzQnVja2V0EhAKA3VyaRgBIAEo",
+            "CUID4EECIigKFERlc3RpbmF0aW9uR2NzQnVja2V0EhAKA3VyaRgBIAEoCUID",
+            "4EECIigKE1NvdXJjZVBhcmFsbGVsc3RvcmUSEQoEcGF0aBgBIAEoCUID4EEB",
+            "Ii0KGERlc3RpbmF0aW9uUGFyYWxsZWxzdG9yZRIRCgRwYXRoGAEgASgJQgPg",
+            "QQEigQMKEUltcG9ydERhdGFSZXF1ZXN0Ek8KEXNvdXJjZV9nY3NfYnVja2V0",
+            "GAIgASgLMjIuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLlNv",
+            "dXJjZUdjc0J1Y2tldEgAEmAKGWRlc3RpbmF0aW9uX3BhcmFsbGVsc3RvcmUY",
+            "AyABKAsyOy5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuRGVz",
+            "dGluYXRpb25QYXJhbGxlbHN0b3JlSAESOwoEbmFtZRgBIAEoCUIt4EEC+kEn",
+            "CiVwYXJhbGxlbHN0b3JlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEh8KCnJl",
+            "cXVlc3RfaWQYBCABKAlCC+BBAeKMz9cIAggBEkIKD3NlcnZpY2VfYWNjb3Vu",
+            "dBgFIAEoCUIp4EEB+kEjCiFpYW0uZ29vZ2xlYXBpcy5jb20vU2VydmljZUFj",
+            "Y291bnRCCAoGc291cmNlQg0KC2Rlc3RpbmF0aW9uIoEDChFFeHBvcnREYXRh",
+            "UmVxdWVzdBJWChRzb3VyY2VfcGFyYWxsZWxzdG9yZRgCIAEoCzI2Lmdvb2ds",
             "ZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5Tb3VyY2VQYXJhbGxlbHN0",
-            "b3JlQgPgQQNIABJUChFzb3VyY2VfZ2NzX2J1Y2tldBgIIAEoCzIyLmdvb2ds",
-            "ZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5Tb3VyY2VHY3NCdWNrZXRC",
-            "A+BBA0gAEl4KFmRlc3RpbmF0aW9uX2djc19idWNrZXQYCSABKAsyNy5nb29n",
-            "bGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuRGVzdGluYXRpb25HY3NC",
-            "dWNrZXRCA+BBA0gBEmUKGWRlc3RpbmF0aW9uX3BhcmFsbGVsc3RvcmUYCiAB",
-            "KAsyOy5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuRGVzdGlu",
-            "YXRpb25QYXJhbGxlbHN0b3JlQgPgQQNIARJKCghjb3VudGVycxgDIAEoCzIz",
-            "Lmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5UcmFuc2ZlckNv",
-            "dW50ZXJzQgPgQQMSSwoNdHJhbnNmZXJfdHlwZRgGIAEoDjIvLmdvb2dsZS5j",
-            "bG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5UcmFuc2ZlclR5cGVCA+BBA0II",
-            "CgZzb3VyY2VCDQoLZGVzdGluYXRpb24inAEKEFRyYW5zZmVyQ291bnRlcnMS",
-            "FQoNb2JqZWN0c19mb3VuZBgBIAEoAxITCgtieXRlc19mb3VuZBgCIAEoAxIX",
-            "Cg9vYmplY3RzX3NraXBwZWQYAyABKAMSFQoNYnl0ZXNfc2tpcHBlZBgEIAEo",
-            "AxIWCg5vYmplY3RzX2NvcGllZBgFIAEoAxIUCgxieXRlc19jb3BpZWQYBiAB",
-            "KAMqRQoMVHJhbnNmZXJUeXBlEh0KGVRSQU5TRkVSX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIKCgZJTVBPUlQQARIKCgZFWFBPUlQQAiqKAQoPRmlsZVN0cmlwZUxl",
-            "dmVsEiEKHUZJTEVfU1RSSVBFX0xFVkVMX1VOU1BFQ0lGSUVEEAASGQoVRklM",
-            "RV9TVFJJUEVfTEVWRUxfTUlOEAESHgoaRklMRV9TVFJJUEVfTEVWRUxfQkFM",
-            "QU5DRUQQAhIZChVGSUxFX1NUUklQRV9MRVZFTF9NQVgQAyqjAQoURGlyZWN0",
-            "b3J5U3RyaXBlTGV2ZWwSJgoiRElSRUNUT1JZX1NUUklQRV9MRVZFTF9VTlNQ",
-            "RUNJRklFRBAAEh4KGkRJUkVDVE9SWV9TVFJJUEVfTEVWRUxfTUlOEAESIwof",
-            "RElSRUNUT1JZX1NUUklQRV9MRVZFTF9CQUxBTkNFRBACEh4KGkRJUkVDVE9S",
-            "WV9TVFJJUEVfTEVWRUxfTUFYEAMyzQwKDVBhcmFsbGVsc3RvcmUSxgEKDUxp",
-            "c3RJbnN0YW5jZXMSNy5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJl",
-            "dGEuTGlzdEluc3RhbmNlc1JlcXVlc3QaOC5nb29nbGUuY2xvdWQucGFyYWxs",
-            "ZWxzdG9yZS52MWJldGEuTGlzdEluc3RhbmNlc1Jlc3BvbnNlIkLaQQZwYXJl",
-            "bnSC0+STAjMSMS92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfS9pbnN0YW5jZXMSswEKC0dldEluc3RhbmNlEjUuZ29vZ2xlLmNsb3Vk",
-            "LnBhcmFsbGVsc3RvcmUudjFiZXRhLkdldEluc3RhbmNlUmVxdWVzdBorLmdv",
-            "b2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5JbnN0YW5jZSJA2kEE",
-            "bmFtZYLT5JMCMxIxL3YxYmV0YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2luc3RhbmNlcy8qfRLtAQoOQ3JlYXRlSW5zdGFuY2USOC5nb29nbGUu",
-            "Y2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuQ3JlYXRlSW5zdGFuY2VSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKBAcpBHQoISW5z",
-            "dGFuY2USEU9wZXJhdGlvbk1ldGFkYXRh2kEbcGFyZW50LGluc3RhbmNlLGlu",
-            "c3RhbmNlX2lkgtPkkwI9IjEvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vaW5zdGFuY2VzOghpbnN0YW5jZRLvAQoOVXBkYXRlSW5z",
-            "dGFuY2USOC5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuVXBk",
+            "b3JlSAASWQoWZGVzdGluYXRpb25fZ2NzX2J1Y2tldBgDIAEoCzI3Lmdvb2ds",
+            "ZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5EZXN0aW5hdGlvbkdjc0J1",
+            "Y2tldEgBEjsKBG5hbWUYASABKAlCLeBBAvpBJwolcGFyYWxsZWxzdG9yZS5n",
+            "b29nbGVhcGlzLmNvbS9JbnN0YW5jZRIfCgpyZXF1ZXN0X2lkGAQgASgJQgvg",
+            "QQHijM/XCAIIARJCCg9zZXJ2aWNlX2FjY291bnQYBSABKAlCKeBBAfpBIwoh",
+            "aWFtLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBY2NvdW50QggKBnNvdXJjZUIN",
+            "CgtkZXN0aW5hdGlvbiIUChJJbXBvcnREYXRhUmVzcG9uc2Ui2wIKEkltcG9y",
+            "dERhdGFNZXRhZGF0YRJYChJvcGVyYXRpb25fbWV0YWRhdGEYASABKAsyPC5n",
+            "b29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuVHJhbnNmZXJPcGVy",
+            "YXRpb25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYBCABKAlC",
+            "A+BBAxIRCgR2ZXJiGAUgASgJQgPgQQMSGwoOc3RhdHVzX21lc3NhZ2UYBiAB",
+            "KAlCA+BBAxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAcgASgIQgPgQQMS",
+            "GAoLYXBpX3ZlcnNpb24YCCABKAlCA+BBAyIUChJFeHBvcnREYXRhUmVzcG9u",
+            "c2Ui2wIKEkV4cG9ydERhdGFNZXRhZGF0YRJYChJvcGVyYXRpb25fbWV0YWRh",
+            "dGEYASABKAsyPC5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEu",
+            "VHJhbnNmZXJPcGVyYXRpb25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGlt",
+            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0",
+            "YXJnZXQYBCABKAlCA+BBAxIRCgR2ZXJiGAUgASgJQgPgQQMSGwoOc3RhdHVz",
+            "X21lc3NhZ2UYBiABKAlCA+BBAxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9u",
+            "GAcgASgIQgPgQQMSGAoLYXBpX3ZlcnNpb24YCCABKAlCA+BBAyLHBAoZVHJh",
+            "bnNmZXJPcGVyYXRpb25NZXRhZGF0YRJbChRzb3VyY2VfcGFyYWxsZWxzdG9y",
+            "ZRgHIAEoCzI2Lmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5T",
+            "b3VyY2VQYXJhbGxlbHN0b3JlQgPgQQNIABJUChFzb3VyY2VfZ2NzX2J1Y2tl",
+            "dBgIIAEoCzIyLmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5T",
+            "b3VyY2VHY3NCdWNrZXRCA+BBA0gAEl4KFmRlc3RpbmF0aW9uX2djc19idWNr",
+            "ZXQYCSABKAsyNy5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEu",
+            "RGVzdGluYXRpb25HY3NCdWNrZXRCA+BBA0gBEmUKGWRlc3RpbmF0aW9uX3Bh",
+            "cmFsbGVsc3RvcmUYCiABKAsyOy5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9y",
+            "ZS52MWJldGEuRGVzdGluYXRpb25QYXJhbGxlbHN0b3JlQgPgQQNIARJKCghj",
+            "b3VudGVycxgDIAEoCzIzLmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYx",
+            "YmV0YS5UcmFuc2ZlckNvdW50ZXJzQgPgQQMSSwoNdHJhbnNmZXJfdHlwZRgG",
+            "IAEoDjIvLmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5UcmFu",
+            "c2ZlclR5cGVCA+BBA0IICgZzb3VyY2VCDQoLZGVzdGluYXRpb24inAEKEFRy",
+            "YW5zZmVyQ291bnRlcnMSFQoNb2JqZWN0c19mb3VuZBgBIAEoAxITCgtieXRl",
+            "c19mb3VuZBgCIAEoAxIXCg9vYmplY3RzX3NraXBwZWQYAyABKAMSFQoNYnl0",
+            "ZXNfc2tpcHBlZBgEIAEoAxIWCg5vYmplY3RzX2NvcGllZBgFIAEoAxIUCgxi",
+            "eXRlc19jb3BpZWQYBiABKAMqRQoMVHJhbnNmZXJUeXBlEh0KGVRSQU5TRkVS",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIKCgZJTVBPUlQQARIKCgZFWFBPUlQQAiqK",
+            "AQoPRmlsZVN0cmlwZUxldmVsEiEKHUZJTEVfU1RSSVBFX0xFVkVMX1VOU1BF",
+            "Q0lGSUVEEAASGQoVRklMRV9TVFJJUEVfTEVWRUxfTUlOEAESHgoaRklMRV9T",
+            "VFJJUEVfTEVWRUxfQkFMQU5DRUQQAhIZChVGSUxFX1NUUklQRV9MRVZFTF9N",
+            "QVgQAyqjAQoURGlyZWN0b3J5U3RyaXBlTGV2ZWwSJgoiRElSRUNUT1JZX1NU",
+            "UklQRV9MRVZFTF9VTlNQRUNJRklFRBAAEh4KGkRJUkVDVE9SWV9TVFJJUEVf",
+            "TEVWRUxfTUlOEAESIwofRElSRUNUT1JZX1NUUklQRV9MRVZFTF9CQUxBTkNF",
+            "RBACEh4KGkRJUkVDVE9SWV9TVFJJUEVfTEVWRUxfTUFYEAMyzQwKDVBhcmFs",
+            "bGVsc3RvcmUSxgEKDUxpc3RJbnN0YW5jZXMSNy5nb29nbGUuY2xvdWQucGFy",
+            "YWxsZWxzdG9yZS52MWJldGEuTGlzdEluc3RhbmNlc1JlcXVlc3QaOC5nb29n",
+            "bGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuTGlzdEluc3RhbmNlc1Jl",
+            "c3BvbnNlIkLaQQZwYXJlbnSC0+STAjMSMS92MWJldGEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5jZXMSswEKC0dldEluc3RhbmNl",
+            "EjUuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLkdldEluc3Rh",
+            "bmNlUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0",
+            "YS5JbnN0YW5jZSJA2kEEbmFtZYLT5JMCMxIxL3YxYmV0YS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfRLtAQoOQ3JlYXRlSW5z",
+            "dGFuY2USOC5nb29nbGUuY2xvdWQucGFyYWxsZWxzdG9yZS52MWJldGEuQ3Jl",
             "YXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiKDAcpBHQoISW5zdGFuY2USEU9wZXJhdGlvbk1ldGFkYXRh2kEUaW5z",
-            "dGFuY2UsdXBkYXRlX21hc2uC0+STAkYyOi92MWJldGEve2luc3RhbmNlLm5h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06CGluc3Rh",
-            "bmNlEtgBCg5EZWxldGVJbnN0YW5jZRI4Lmdvb2dsZS5jbG91ZC5wYXJhbGxl",
-            "bHN0b3JlLnYxYmV0YS5EZWxldGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm3KQSoKFWdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwIzKjEvdjFiZXRh",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9EtUB",
-            "CgpJbXBvcnREYXRhEjQuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFi",
-            "ZXRhLkltcG9ydERhdGFSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJyykEoChJJbXBvcnREYXRhUmVzcG9uc2USEkltcG9ydERhdGFN",
-            "ZXRhZGF0YYLT5JMCQSI8L3YxYmV0YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2luc3RhbmNlcy8qfTppbXBvcnREYXRhOgEqEtUBCgpFeHBvcnRE",
-            "YXRhEjQuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3RvcmUudjFiZXRhLkV4cG9y",
-            "dERhdGFSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJy",
-            "ykEoChJFeHBvcnREYXRhUmVzcG9uc2USEkV4cG9ydERhdGFNZXRhZGF0YYLT",
-            "5JMCQSI8L3YxYmV0YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2lu",
-            "c3RhbmNlcy8qfTpleHBvcnREYXRhOgEqGlDKQRxwYXJhbGxlbHN0b3JlLmdv",
-            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybUKCBAolY29tLmdvb2dsZS5jbG91ZC5wYXJhbGxl",
-            "bHN0b3JlLnYxYmV0YUISUGFyYWxsZWxzdG9yZVByb3RvUAFaS2Nsb3VkLmdv",
-            "b2dsZS5jb20vZ28vcGFyYWxsZWxzdG9yZS9hcGl2MWJldGEvcGFyYWxsZWxz",
-            "dG9yZXBiO3BhcmFsbGVsc3RvcmVwYqoCIUdvb2dsZS5DbG91ZC5QYXJhbGxl",
-            "bHN0b3JlLlYxQmV0YcoCIUdvb2dsZVxDbG91ZFxQYXJhbGxlbHN0b3JlXFYx",
-            "YmV0YeoCJEdvb2dsZTo6Q2xvdWQ6OlBhcmFsbGVsc3RvcmU6OlYxYmV0YepB",
-            "TgoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEixwcm9qZWN0cy97",
-            "cHJvamVjdH0vZ2xvYmFsL25ldHdvcmtzL3tuZXR3b3JrfepBWQoeY29tcHV0",
-            "ZS5nb29nbGVhcGlzLmNvbS9BZGRyZXNzEjdwcm9qZWN0cy97cHJvamVjdH0v",
-            "cmVnaW9ucy97cmVnaW9ufS9hZGRyZXNzZXMve2FkZHJlc3N96kFZCiFpYW0u",
-            "Z29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291bnQSNHByb2plY3RzL3twcm9q",
-            "ZWN0fS9zZXJ2aWNlQWNjb3VudHMve3NlcnZpY2VfYWNjb3VudH1iBnByb3Rv",
-            "Mw=="));
+            "dGlvbiKBAcpBHQoISW5zdGFuY2USEU9wZXJhdGlvbk1ldGFkYXRh2kEbcGFy",
+            "ZW50LGluc3RhbmNlLGluc3RhbmNlX2lkgtPkkwI9IjEvdjFiZXRhL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5zdGFuY2VzOghpbnN0YW5j",
+            "ZRLvAQoOVXBkYXRlSW5zdGFuY2USOC5nb29nbGUuY2xvdWQucGFyYWxsZWxz",
+            "dG9yZS52MWJldGEuVXBkYXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiKDAcpBHQoISW5zdGFuY2USEU9wZXJhdGlv",
+            "bk1ldGFkYXRh2kEUaW5zdGFuY2UsdXBkYXRlX21hc2uC0+STAkYyOi92MWJl",
+            "dGEve2luc3RhbmNlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0",
+            "YW5jZXMvKn06CGluc3RhbmNlEtgBCg5EZWxldGVJbnN0YW5jZRI4Lmdvb2ds",
+            "ZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YS5EZWxldGVJbnN0YW5jZVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm3KQSoKFWdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1l",
+            "gtPkkwIzKjEvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "aW5zdGFuY2VzLyp9EtUBCgpJbXBvcnREYXRhEjQuZ29vZ2xlLmNsb3VkLnBh",
+            "cmFsbGVsc3RvcmUudjFiZXRhLkltcG9ydERhdGFSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJyykEoChJJbXBvcnREYXRhUmVzcG9u",
+            "c2USEkltcG9ydERhdGFNZXRhZGF0YYLT5JMCQSI8L3YxYmV0YS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTppbXBvcnREYXRh",
+            "OgEqEtUBCgpFeHBvcnREYXRhEjQuZ29vZ2xlLmNsb3VkLnBhcmFsbGVsc3Rv",
+            "cmUudjFiZXRhLkV4cG9ydERhdGFSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiJyykEoChJFeHBvcnREYXRhUmVzcG9uc2USEkV4cG9y",
+            "dERhdGFNZXRhZGF0YYLT5JMCQSI8L3YxYmV0YS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTpleHBvcnREYXRhOgEqGlDKQRxw",
+            "YXJhbGxlbHN0b3JlLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKCBAolY29tLmdvb2ds",
+            "ZS5jbG91ZC5wYXJhbGxlbHN0b3JlLnYxYmV0YUISUGFyYWxsZWxzdG9yZVBy",
+            "b3RvUAFaS2Nsb3VkLmdvb2dsZS5jb20vZ28vcGFyYWxsZWxzdG9yZS9hcGl2",
+            "MWJldGEvcGFyYWxsZWxzdG9yZXBiO3BhcmFsbGVsc3RvcmVwYqoCIUdvb2ds",
+            "ZS5DbG91ZC5QYXJhbGxlbHN0b3JlLlYxQmV0YcoCIUdvb2dsZVxDbG91ZFxQ",
+            "YXJhbGxlbHN0b3JlXFYxYmV0YeoCJEdvb2dsZTo6Q2xvdWQ6OlBhcmFsbGVs",
+            "c3RvcmU6OlYxYmV0YepBTgoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3",
+            "b3JrEixwcm9qZWN0cy97cHJvamVjdH0vZ2xvYmFsL25ldHdvcmtzL3tuZXR3",
+            "b3JrfepBWQoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9BZGRyZXNzEjdwcm9q",
+            "ZWN0cy97cHJvamVjdH0vcmVnaW9ucy97cmVnaW9ufS9hZGRyZXNzZXMve2Fk",
+            "ZHJlc3N96kFZCiFpYW0uZ29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291bnQS",
+            "NHByb2plY3RzL3twcm9qZWN0fS9zZXJ2aWNlQWNjb3VudHMve3NlcnZpY2Vf",
+            "YWNjb3VudH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Parallelstore.V1Beta.TransferType), typeof(global::Google.Cloud.Parallelstore.V1Beta.FileStripeLevel), typeof(global::Google.Cloud.Parallelstore.V1Beta.DirectoryStripeLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -244,7 +244,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   /// </summary>
   public enum FileStripeLevel {
     /// <summary>
-    /// Default file striping
+    /// If not set, FileStripeLevel will default to FILE_STRIPE_LEVEL_BALANCED
     /// </summary>
     [pbr::OriginalName("FILE_STRIPE_LEVEL_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -266,7 +266,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   /// </summary>
   public enum DirectoryStripeLevel {
     /// <summary>
-    /// Default directory striping
+    /// If not set, DirectoryStripeLevel will default to DIRECTORY_STRIPE_LEVEL_MAX
     /// </summary>
     [pbr::OriginalName("DIRECTORY_STRIPE_LEVEL_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -352,7 +352,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the instance, in the format
-    /// `projects/{project}/locations/{location}/instances/{instance_id}`
+    /// `projects/{project}/locations/{location}/instances/{instance_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -431,25 +431,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>
     /// Optional. Cloud Labels are a flexible and lightweight mechanism for
     /// organizing cloud resources into groups that reflect a customer's
-    /// organizational needs and deployment strategies. Cloud Labels can be used to
-    /// filter collections of resources. They can be used to control how resource
-    /// metrics are aggregated. And they can be used as arguments to policy
-    /// management rules (e.g. route, firewall, load balancing, etc.).
-    ///
-    ///  * Label keys must be between 1 and 63 characters long and must conform to
-    ///    the following regular expression: `[a-z][a-z0-9_-]{0,62}`.
-    ///  * Label values must be between 0 and 63 characters long and must conform
-    ///    to the regular expression `[a-z0-9_-]{0,63}`.
-    ///  * No more than 64 labels can be associated with a given resource.
-    ///
-    /// See https://goo.gl/xmQnxf for more information on and examples of labels.
-    ///
-    /// If you plan to use labels in your own code, please note that additional
-    /// characters may be allowed in the future. Therefore, you are advised to use
-    /// an internal label representation, such as JSON, which doesn't rely upon
-    /// specific characters being disallowed.  For example, representing labels
-    /// as the string:  name + "_" + value  would prove problematic if we were to
-    /// allow "_" in a future release.
+    /// organizational needs and deployment strategies. See
+    /// https://cloud.google.com/resource-manager/docs/labels-overview for details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -461,8 +444,9 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int CapacityGibFieldNumber = 8;
     private long capacityGib_;
     /// <summary>
-    /// Required. Immutable. Storage capacity of Parallelstore instance in
-    /// Gibibytes (GiB).
+    /// Required. Immutable. The instance's storage capacity in Gibibytes (GiB).
+    /// Allowed values are between 12000 and 100000, in multiples of 4000; e.g.,
+    /// 12000, 16000, 20000, ...
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -477,7 +461,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int DaosVersionFieldNumber = 9;
     private string daosVersion_ = "";
     /// <summary>
-    /// Output only. The version of DAOS software running in the instance
+    /// Output only. The version of DAOS software running in the instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -494,8 +478,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         = pb::FieldCodec.ForString(82);
     private readonly pbc::RepeatedField<string> accessPoints_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. List of access_points.
-    /// Contains a list of IPv4 addresses used for client side configuration.
+    /// Output only. A list of IPv4 addresses used for client side configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -507,7 +490,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int NetworkFieldNumber = 11;
     private string network_ = "";
     /// <summary>
-    /// Optional. Immutable. The name of the Google Compute Engine
+    /// Optional. Immutable. The name of the Compute Engine
     /// [VPC network](https://cloud.google.com/vpc/docs/vpc) to which the
     /// instance is connected.
     /// </summary>
@@ -524,10 +507,10 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int ReservedIpRangeFieldNumber = 12;
     private string reservedIpRange_ = "";
     /// <summary>
-    /// Optional. Immutable. Contains the id of the allocated IP address range
-    /// associated with the private service access connection for example,
-    /// "test-default" associated with IP range 10.0.0.0/29. If no range id is
-    /// provided all ranges will be considered.
+    /// Optional. Immutable. The ID of the IP address range being used by the
+    /// instance's VPC network. See [Configure a VPC
+    /// network](https://cloud.google.com/parallelstore/docs/vpc#create_and_configure_the_vpc).
+    /// If no ID is provided, all ranges are considered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -542,11 +525,9 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int EffectiveReservedIpRangeFieldNumber = 14;
     private string effectiveReservedIpRange_ = "";
     /// <summary>
-    /// Output only. Immutable. Contains the id of the allocated IP address range
-    /// associated with the private service access connection for example,
-    /// "test-default" associated with IP range 10.0.0.0/29. This field is
-    /// populated by the service and and contains the value currently used by the
-    /// service.
+    /// Output only. Immutable. The ID of the IP address range being used by the
+    /// instance's VPC network. This field is populated by the service and contains
+    /// the value currently used by the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -561,9 +542,13 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int FileStripeLevelFieldNumber = 15;
     private global::Google.Cloud.Parallelstore.V1Beta.FileStripeLevel fileStripeLevel_ = global::Google.Cloud.Parallelstore.V1Beta.FileStripeLevel.Unspecified;
     /// <summary>
-    /// Optional. Stripe level for files.
-    /// MIN better suited for small size files.
-    /// MAX higher throughput performance for larger files.
+    /// Optional. Stripe level for files. Allowed values are:
+    ///
+    /// * `FILE_STRIPE_LEVEL_MIN`: offers the best performance for small size
+    ///   files.
+    /// * `FILE_STRIPE_LEVEL_BALANCED`: balances performance for workloads
+    ///   involving a mix of small and large files.
+    /// * `FILE_STRIPE_LEVEL_MAX`: higher throughput performance for larger files.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -578,9 +563,14 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int DirectoryStripeLevelFieldNumber = 16;
     private global::Google.Cloud.Parallelstore.V1Beta.DirectoryStripeLevel directoryStripeLevel_ = global::Google.Cloud.Parallelstore.V1Beta.DirectoryStripeLevel.Unspecified;
     /// <summary>
-    /// Optional. Stripe level for directories.
-    /// MIN when directory has a small number of files.
-    /// MAX when directory has a large number of files.
+    /// Optional. Stripe level for directories. Allowed values are:
+    ///
+    /// * `DIRECTORY_STRIPE_LEVEL_MIN`: recommended when directories contain a
+    ///   small number of files.
+    /// * `DIRECTORY_STRIPE_LEVEL_BALANCED`: balances performance for workloads
+    ///   involving a mix of small and large directories.
+    /// * `DIRECTORY_STRIPE_LEVEL_MAX`: recommended for directories with a large
+    ///   number of files.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1038,7 +1028,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Represents the different states of a Parallelstore instance.
+      /// The possible states of a Parallelstore instance.
       /// </summary>
       public enum State {
         /// <summary>
@@ -1061,6 +1051,10 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         /// The instance is not usable.
         /// </summary>
         [pbr::OriginalName("FAILED")] Failed = 4,
+        /// <summary>
+        /// The instance is being upgraded.
+        /// </summary>
+        [pbr::OriginalName("UPGRADING")] Upgrading = 5,
       }
 
     }
@@ -1069,7 +1063,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Message for requesting list of Instances
+  /// List instances request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
@@ -1126,10 +1120,9 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>
     /// Required. The project and location for which to retrieve instance
     /// information, in the format `projects/{project_id}/locations/{location}`.
-    /// For Parallelstore locations map to Google Cloud zones, for example
-    /// **us-central1-a**.
-    /// To retrieve instance information for all locations, use "-" for the
-    /// `{location}` value.
+    ///
+    /// To retrieve instance information for all locations, use "-" as the value of
+    /// `{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1145,7 +1138,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     private int pageSize_;
     /// <summary>
     /// Optional. Requested page size. Server may return fewer items than
-    /// requested. If unspecified, server will pick an appropriate default.
+    /// requested. If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1175,7 +1168,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Filtering results
+    /// Optional. Filtering results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1190,7 +1183,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. Hint for how to order the results
+    /// Optional. Hint for how to order the results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1431,7 +1424,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Message for response to listing Instances
+  /// Response from
+  /// [ListInstances][google.cloud.parallelstore.v1beta.Parallelstore.ListInstances].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse>
@@ -1486,7 +1480,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Parallelstore.V1Beta.Instance.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Parallelstore.V1Beta.Instance> instances_ = new pbc::RepeatedField<global::Google.Cloud.Parallelstore.V1Beta.Instance>();
     /// <summary>
-    /// The list of Parallelstore Instances
+    /// The list of Parallelstore instances.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1685,7 +1679,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Request to get an instance's details.
+  /// Get an instance's details.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest>
@@ -1882,8 +1876,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Request for
-  /// [CreateInstance][google.cloud.parallelstore.v1beta.Parallelstore.CreateInstance]
+  /// Create a new Parallelstore instance.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest>
@@ -1939,7 +1932,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>
     /// Required. The instance's project and location, in the format
     /// `projects/{project}/locations/{location}`.
-    /// Locations map to Google Cloud zones, for example **us-west1-b**.
+    /// Locations map to Google Cloud zones; for example, `us-west1-b`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1954,8 +1947,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int InstanceIdFieldNumber = 2;
     private string instanceId_ = "";
     /// <summary>
-    /// Required. The logical name of the Parallelstore instance in the user
-    /// project with the following restrictions:
+    /// Required. The name of the Parallelstore instance.
     ///
     /// * Must contain only lowercase letters, numbers, and hyphens.
     /// * Must start with a letter.
@@ -2229,7 +2221,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Message for updating a Instance
+  /// Update an instance.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest>
@@ -2282,7 +2274,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int UpdateMaskFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. Mask of fields to update .Field mask is used to specify the
+    /// Required. Mask of fields to update. Field mask is used to specify the
     /// fields to be overwritten in the Instance resource by the update. At least
     /// one path must be supplied in this field. The fields specified in the
     /// update_mask are relative to the resource, not the full request.
@@ -2300,7 +2292,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int InstanceFieldNumber = 2;
     private global::Google.Cloud.Parallelstore.V1Beta.Instance instance_;
     /// <summary>
-    /// Required. The instance to update
+    /// Required. The instance to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2538,7 +2530,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Message for deleting a Instance
+  /// Delete an instance.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest>
@@ -2786,7 +2778,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Represents the metadata of the long-running operation.
+  /// Long-running operation metadata.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
@@ -3244,7 +3236,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Google Cloud Storage as a source.
+  /// Cloud Storage as the source of a data transfer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceGcsBucket : pb::IMessage<SourceGcsBucket>
@@ -3295,8 +3287,9 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Required. URI to a Cloud Storage object in format:
-    /// 'gs://&lt;bucket_name>/&lt;path_inside_bucket>'.
+    /// Required. URI to a Cloud Storage bucket in the format:
+    /// `gs://&lt;bucket_name>/&lt;path_inside_bucket>`. The path inside the bucket is
+    /// optional.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3441,7 +3434,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Google Cloud Storage as a destination.
+  /// Cloud Storage as the destination of a data transfer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestinationGcsBucket : pb::IMessage<DestinationGcsBucket>
@@ -3492,8 +3485,9 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Required. URI to a Cloud Storage object in format:
-    /// 'gs://&lt;bucket_name>/&lt;path_inside_bucket>'.
+    /// Required. URI to a Cloud Storage bucket in the format:
+    /// `gs://&lt;bucket_name>/&lt;path_inside_bucket>`. The path inside the bucket is
+    /// optional.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3638,7 +3632,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Pa as a source.
+  /// Parallelstore as the source of a data transfer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceParallelstore : pb::IMessage<SourceParallelstore>
@@ -3690,7 +3684,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     private string path_ = "";
     /// <summary>
     /// Optional. Root directory path to the Paralellstore filesystem, starting
-    /// with '/'. Defaults to '/' if unset.
+    /// with `/`. Defaults to `/` if unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3835,7 +3829,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Parallelstore as a destination.
+  /// Parallelstore as the destination of a data transfer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestinationParallelstore : pb::IMessage<DestinationParallelstore>
@@ -3887,7 +3881,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     private string path_ = "";
     /// <summary>
     /// Optional. Root directory path to the Paralellstore filesystem, starting
-    /// with '/'. Defaults to '/' if unset.
+    /// with `/`. Defaults to `/` if unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4032,8 +4026,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Message representing the request importing data from parallelstore to Cloud
-  /// Storage.
+  /// Import data from Cloud Storage into a Parallelstore instance.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportDataRequest : pb::IMessage<ImportDataRequest>
@@ -4097,7 +4090,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>Field number for the "source_gcs_bucket" field.</summary>
     public const int SourceGcsBucketFieldNumber = 2;
     /// <summary>
-    /// Cloud Storage source.
+    /// The Cloud Storage source bucket and, optionally, path inside the bucket.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4170,11 +4163,17 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int ServiceAccountFieldNumber = 5;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Optional. User-specified Service Account (SA) credentials to be used when
+    /// Optional. User-specified service account credentials to be used when
     /// performing the transfer.
-    /// Format: `projects/{project_id}/serviceAccounts/{service_account}`
+    ///
+    /// Use one of the following formats:
+    ///
+    /// * {EMAIL_ADDRESS_OR_UNIQUE_ID}
+    /// * `projects/{PROJECT_ID_OR_NUMBER}/serviceAccounts/{EMAIL_ADDRESS_OR_UNIQUE_ID}`
+    /// * `projects/-/serviceAccounts/{EMAIL_ADDRESS_OR_UNIQUE_ID}
+    ///
     /// If unspecified, the Parallelstore service agent is used:
-    /// service-&lt;PROJECT_NUMBER>@gcp-sa-parallelstore.iam.gserviceaccount.com)
+    /// `service-&lt;PROJECT_NUMBER>@gcp-sa-parallelstore.iam.gserviceaccount.com`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4491,8 +4490,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Message representing the request exporting data from Cloud Storage to
-  /// parallelstore.
+  /// Export data from Parallelstore to Cloud Storage.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDataRequest : pb::IMessage<ExportDataRequest>
@@ -4631,9 +4629,14 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// <summary>
     /// Optional. User-specified Service Account (SA) credentials to be used when
     /// performing the transfer.
-    /// Format: `projects/{project_id}/serviceAccounts/{service_account}`
+    /// Use one of the following formats:
+    ///
+    /// * {EMAIL_ADDRESS_OR_UNIQUE_ID}
+    /// * `projects/{PROJECT_ID_OR_NUMBER}/serviceAccounts/{EMAIL_ADDRESS_OR_UNIQUE_ID}`
+    /// * `projects/-/serviceAccounts/{EMAIL_ADDRESS_OR_UNIQUE_ID}
+    ///
     /// If unspecified, the Parallelstore service agent is used:
-    /// service-&lt;PROJECT_NUMBER>@gcp-sa-parallelstore.iam.gserviceaccount.com)
+    /// `service-&lt;PROJECT_NUMBER>@gcp-sa-parallelstore.iam.gserviceaccount.com`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4950,7 +4953,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// ImportDataResponse is the response returned from ImportData rpc.
+  /// The response to a request to import data to Parallelstore.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportDataResponse : pb::IMessage<ImportDataResponse>
@@ -5106,7 +5109,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// ImportDataMetadata contains import data operation metadata
+  /// Metadata related to the data import operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportDataMetadata : pb::IMessage<ImportDataMetadata>
@@ -5164,7 +5167,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int OperationMetadataFieldNumber = 1;
     private global::Google.Cloud.Parallelstore.V1Beta.TransferOperationMetadata operationMetadata_;
     /// <summary>
-    /// Contains the data transfer operation metadata.
+    /// Data transfer operation metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5613,7 +5616,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// ExportDataResponse is the response returned from ExportData rpc
+  /// The response to a request to export data from Parallelstore.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDataResponse : pb::IMessage<ExportDataResponse>
@@ -5769,7 +5772,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// ExportDataMetadata contains export data operation metadata
+  /// Metadata related to the data export operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDataMetadata : pb::IMessage<ExportDataMetadata>
@@ -5827,7 +5830,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int OperationMetadataFieldNumber = 1;
     private global::Google.Cloud.Parallelstore.V1Beta.TransferOperationMetadata operationMetadata_;
     /// <summary>
-    /// Contains the data transfer operation metadata.
+    /// Data transfer operation metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6276,7 +6279,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
   }
 
   /// <summary>
-  /// Represents the metadata of the long-running operation.
+  /// Long-running operation metadata related to a data transfer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransferOperationMetadata : pb::IMessage<TransferOperationMetadata>
@@ -6406,7 +6409,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int CountersFieldNumber = 3;
     private global::Google.Cloud.Parallelstore.V1Beta.TransferCounters counters_;
     /// <summary>
-    /// Output only. Information about the progress of the transfer operation.
+    /// Output only. The progress of the transfer operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

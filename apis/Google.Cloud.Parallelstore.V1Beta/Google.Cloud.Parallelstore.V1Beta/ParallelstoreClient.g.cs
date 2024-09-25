@@ -405,7 +405,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists all instances in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -414,7 +414,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists all instances in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -423,15 +423,14 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists all instances in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location for which to retrieve instance
         /// information, in the format `projects/{project_id}/locations/{location}`.
-        /// For Parallelstore locations map to Google Cloud zones, for example
-        /// **us-central1-a**.
-        /// To retrieve instance information for all locations, use "-" for the
-        /// `{location}` value.
+        /// 
+        /// To retrieve instance information for all locations, use "-" as the value of
+        /// `{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -461,15 +460,14 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists all instances in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location for which to retrieve instance
         /// information, in the format `projects/{project_id}/locations/{location}`.
-        /// For Parallelstore locations map to Google Cloud zones, for example
-        /// **us-central1-a**.
-        /// To retrieve instance information for all locations, use "-" for the
-        /// `{location}` value.
+        /// 
+        /// To retrieve instance information for all locations, use "-" as the value of
+        /// `{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -499,15 +497,14 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists all instances in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location for which to retrieve instance
         /// information, in the format `projects/{project_id}/locations/{location}`.
-        /// For Parallelstore locations map to Google Cloud zones, for example
-        /// **us-central1-a**.
-        /// To retrieve instance information for all locations, use "-" for the
-        /// `{location}` value.
+        /// 
+        /// To retrieve instance information for all locations, use "-" as the value of
+        /// `{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -537,15 +534,14 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists all instances in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location for which to retrieve instance
         /// information, in the format `projects/{project_id}/locations/{location}`.
-        /// For Parallelstore locations map to Google Cloud zones, for example
-        /// **us-central1-a**.
-        /// To retrieve instance information for all locations, use "-" for the
-        /// `{location}` value.
+        /// 
+        /// To retrieve instance information for all locations, use "-" as the value of
+        /// `{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -575,7 +571,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -584,7 +580,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -593,7 +589,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -602,7 +598,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. The instance resource name, in the format
@@ -617,7 +613,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. The instance resource name, in the format
@@ -632,7 +628,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. The instance resource name, in the format
@@ -644,7 +640,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             GetInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. The instance resource name, in the format
@@ -659,7 +655,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. The instance resource name, in the format
@@ -674,7 +670,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. The instance resource name, in the format
@@ -744,14 +740,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
         /// `projects/{project}/locations/{location}`.
-        /// Locations map to Google Cloud zones, for example **us-west1-b**.
+        /// Locations map to Google Cloud zones; for example, `us-west1-b`.
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The logical name of the Parallelstore instance in the user
-        /// project with the following restrictions:
+        /// Required. The name of the Parallelstore instance.
         /// 
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
@@ -775,14 +770,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
         /// `projects/{project}/locations/{location}`.
-        /// Locations map to Google Cloud zones, for example **us-west1-b**.
+        /// Locations map to Google Cloud zones; for example, `us-west1-b`.
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The logical name of the Parallelstore instance in the user
-        /// project with the following restrictions:
+        /// Required. The name of the Parallelstore instance.
         /// 
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
@@ -806,14 +800,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
         /// `projects/{project}/locations/{location}`.
-        /// Locations map to Google Cloud zones, for example **us-west1-b**.
+        /// Locations map to Google Cloud zones; for example, `us-west1-b`.
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The logical name of the Parallelstore instance in the user
-        /// project with the following restrictions:
+        /// Required. The name of the Parallelstore instance.
         /// 
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
@@ -832,14 +825,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
         /// `projects/{project}/locations/{location}`.
-        /// Locations map to Google Cloud zones, for example **us-west1-b**.
+        /// Locations map to Google Cloud zones; for example, `us-west1-b`.
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The logical name of the Parallelstore instance in the user
-        /// project with the following restrictions:
+        /// Required. The name of the Parallelstore instance.
         /// 
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
@@ -863,14 +855,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
         /// `projects/{project}/locations/{location}`.
-        /// Locations map to Google Cloud zones, for example **us-west1-b**.
+        /// Locations map to Google Cloud zones; for example, `us-west1-b`.
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The logical name of the Parallelstore instance in the user
-        /// project with the following restrictions:
+        /// Required. The name of the Parallelstore instance.
         /// 
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
@@ -894,14 +885,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
         /// `projects/{project}/locations/{location}`.
-        /// Locations map to Google Cloud zones, for example **us-west1-b**.
+        /// Locations map to Google Cloud zones; for example, `us-west1-b`.
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.
         /// </param>
         /// <param name="instanceId">
-        /// Required. The logical name of the Parallelstore instance in the user
-        /// project with the following restrictions:
+        /// Required. The name of the Parallelstore instance.
         /// 
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
@@ -915,7 +905,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             CreateInstanceAsync(parent, instance, instanceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the parameters of a single Instance.
+        /// Updates the parameters of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -924,7 +914,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the parameters of a single Instance.
+        /// Updates the parameters of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -933,7 +923,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the parameters of a single Instance.
+        /// Updates the parameters of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -968,13 +958,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInstanceOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the parameters of a single Instance.
+        /// Updates the parameters of a single instance.
         /// </summary>
         /// <param name="instance">
-        /// Required. The instance to update
+        /// Required. The instance to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update .Field mask is used to specify the
+        /// Required. Mask of fields to update. Field mask is used to specify the
         /// fields to be overwritten in the Instance resource by the update. At least
         /// one path must be supplied in this field. The fields specified in the
         /// update_mask are relative to the resource, not the full request.
@@ -989,13 +979,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Updates the parameters of a single Instance.
+        /// Updates the parameters of a single instance.
         /// </summary>
         /// <param name="instance">
-        /// Required. The instance to update
+        /// Required. The instance to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update .Field mask is used to specify the
+        /// Required. Mask of fields to update. Field mask is used to specify the
         /// fields to be overwritten in the Instance resource by the update. At least
         /// one path must be supplied in this field. The fields specified in the
         /// update_mask are relative to the resource, not the full request.
@@ -1010,13 +1000,13 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Updates the parameters of a single Instance.
+        /// Updates the parameters of a single instance.
         /// </summary>
         /// <param name="instance">
-        /// Required. The instance to update
+        /// Required. The instance to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update .Field mask is used to specify the
+        /// Required. Mask of fields to update. Field mask is used to specify the
         /// fields to be overwritten in the Instance resource by the update. At least
         /// one path must be supplied in this field. The fields specified in the
         /// update_mask are relative to the resource, not the full request.
@@ -1027,7 +1017,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             UpdateInstanceAsync(instance, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1036,7 +1026,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1045,7 +1035,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1080,7 +1070,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteInstanceOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource
@@ -1094,7 +1084,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource
@@ -1108,7 +1098,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource
@@ -1119,7 +1109,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource
@@ -1133,7 +1123,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource
@@ -1147,7 +1137,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource
@@ -1158,7 +1148,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// ImportData copies data from Cloud Storage to Parallelstore.
+        /// Copies data from Cloud Storage to Parallelstore.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1167,7 +1157,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// ImportData copies data from Cloud Storage to Parallelstore.
+        /// Copies data from Cloud Storage to Parallelstore.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1176,7 +1166,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// ImportData copies data from Cloud Storage to Parallelstore.
+        /// Copies data from Cloud Storage to Parallelstore.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1211,7 +1201,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             lro::Operation<ImportDataResponse, ImportDataMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportDataOperationsClient, callSettings);
 
         /// <summary>
-        /// ExportData copies data from Parallelstore to Cloud Storage
+        /// Copies data from Parallelstore to Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1220,7 +1210,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// ExportData copies data from Parallelstore to Cloud Storage
+        /// Copies data from Parallelstore to Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1229,7 +1219,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// ExportData copies data from Parallelstore to Cloud Storage
+        /// Copies data from Parallelstore to Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1382,7 +1372,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         partial void Modify_ExportDataRequest(ref ExportDataRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists all instances in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1394,7 +1384,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists all instances in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1406,7 +1396,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1418,7 +1408,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single Instance.
+        /// Gets details of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1460,7 +1450,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         public override lro::OperationsClient UpdateInstanceOperationsClient { get; }
 
         /// <summary>
-        /// Updates the parameters of a single Instance.
+        /// Updates the parameters of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1472,7 +1462,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Updates the parameters of a single Instance.
+        /// Updates the parameters of a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1487,7 +1477,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         public override lro::OperationsClient DeleteInstanceOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1499,7 +1489,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// Deletes a single Instance.
+        /// Deletes a single instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1514,7 +1504,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         public override lro::OperationsClient ImportDataOperationsClient { get; }
 
         /// <summary>
-        /// ImportData copies data from Cloud Storage to Parallelstore.
+        /// Copies data from Cloud Storage to Parallelstore.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1526,7 +1516,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// ImportData copies data from Cloud Storage to Parallelstore.
+        /// Copies data from Cloud Storage to Parallelstore.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1541,7 +1531,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         public override lro::OperationsClient ExportDataOperationsClient { get; }
 
         /// <summary>
-        /// ExportData copies data from Parallelstore to Cloud Storage
+        /// Copies data from Parallelstore to Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1553,7 +1543,7 @@ namespace Google.Cloud.Parallelstore.V1Beta
         }
 
         /// <summary>
-        /// ExportData copies data from Parallelstore to Cloud Storage
+        /// Copies data from Parallelstore to Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
