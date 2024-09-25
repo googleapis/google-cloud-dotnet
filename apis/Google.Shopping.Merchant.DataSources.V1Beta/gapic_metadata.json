@@ -49,6 +49,21 @@
           }
         }
       }
+    },
+    "FileUploadsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FileUploadsServiceClient",
+          "rpcs": {
+            "GetFileUpload": {
+              "methods": [
+                "GetFileUpload",
+                "GetFileUploadAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

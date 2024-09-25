@@ -1498,6 +1498,293 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_FileUploadsService_GetFileUpload_sync",
+      "title": "GetFileUploadRequestObject",
+      "description": "Snippet for GetFileUpload",
+      "file": "FileUploadsServiceClient.GetFileUploadRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFileUpload",
+        "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient.GetFileUpload",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.DataSources.V1Beta.GetFileUploadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.DataSources.V1Beta.FileUpload",
+        "client": {
+          "shortName": "FileUploadsServiceClient",
+          "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFileUpload",
+          "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService.GetFileUpload",
+          "service": {
+            "shortName": "FileUploadsService",
+            "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_FileUploadsService_GetFileUpload_async",
+      "title": "GetFileUploadRequestObjectAsync",
+      "description": "Snippet for GetFileUploadAsync",
+      "file": "FileUploadsServiceClient.GetFileUploadRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFileUploadAsync",
+        "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient.GetFileUploadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.DataSources.V1Beta.GetFileUploadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.DataSources.V1Beta.FileUpload>",
+        "client": {
+          "shortName": "FileUploadsServiceClient",
+          "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFileUpload",
+          "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService.GetFileUpload",
+          "service": {
+            "shortName": "FileUploadsService",
+            "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_FileUploadsService_GetFileUpload_sync_flattened",
+      "title": "GetFileUpload",
+      "description": "Snippet for GetFileUpload",
+      "file": "FileUploadsServiceClient.GetFileUploadSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFileUpload",
+        "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient.GetFileUpload",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.DataSources.V1Beta.FileUpload",
+        "client": {
+          "shortName": "FileUploadsServiceClient",
+          "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFileUpload",
+          "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService.GetFileUpload",
+          "service": {
+            "shortName": "FileUploadsService",
+            "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_FileUploadsService_GetFileUpload_async_flattened",
+      "title": "GetFileUploadAsync",
+      "description": "Snippet for GetFileUploadAsync",
+      "file": "FileUploadsServiceClient.GetFileUploadAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFileUploadAsync",
+        "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient.GetFileUploadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.DataSources.V1Beta.FileUpload>",
+        "client": {
+          "shortName": "FileUploadsServiceClient",
+          "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFileUpload",
+          "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService.GetFileUpload",
+          "service": {
+            "shortName": "FileUploadsService",
+            "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_FileUploadsService_GetFileUpload_sync_flattened_resourceNames",
+      "title": "GetFileUploadResourceNames",
+      "description": "Snippet for GetFileUpload",
+      "file": "FileUploadsServiceClient.GetFileUploadResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFileUpload",
+        "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient.GetFileUpload",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.DataSources.V1Beta.FileUpload",
+        "client": {
+          "shortName": "FileUploadsServiceClient",
+          "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFileUpload",
+          "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService.GetFileUpload",
+          "service": {
+            "shortName": "FileUploadsService",
+            "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_FileUploadsService_GetFileUpload_async_flattened_resourceNames",
+      "title": "GetFileUploadResourceNamesAsync",
+      "description": "Snippet for GetFileUploadAsync",
+      "file": "FileUploadsServiceClient.GetFileUploadResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFileUploadAsync",
+        "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient.GetFileUploadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.DataSources.V1Beta.FileUpload>",
+        "client": {
+          "shortName": "FileUploadsServiceClient",
+          "fullName": "Google.Shopping.Merchant.DataSources.V1Beta.FileUploadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFileUpload",
+          "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService.GetFileUpload",
+          "service": {
+            "shortName": "FileUploadsService",
+            "fullName": "google.shopping.merchant.datasources.v1beta.FileUploadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
