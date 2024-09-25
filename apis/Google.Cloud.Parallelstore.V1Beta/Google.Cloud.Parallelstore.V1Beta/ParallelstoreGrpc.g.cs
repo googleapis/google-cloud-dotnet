@@ -165,7 +165,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public abstract partial class ParallelstoreBase
     {
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists all instances in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -177,7 +177,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       }
 
       /// <summary>
-      /// Gets details of a single Instance.
+      /// Gets details of a single instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -201,7 +201,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       }
 
       /// <summary>
-      /// Updates the parameters of a single Instance.
+      /// Updates the parameters of a single instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -213,7 +213,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       }
 
       /// <summary>
-      /// Deletes a single Instance.
+      /// Deletes a single instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -225,7 +225,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       }
 
       /// <summary>
-      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// Copies data from Cloud Storage to Parallelstore.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -237,7 +237,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       }
 
       /// <summary>
-      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// Copies data from Parallelstore to Cloud Storage.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -278,7 +278,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       }
 
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists all instances in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -291,7 +291,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return ListInstances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists all instances in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -302,7 +302,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstances, null, options, request);
       }
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists all instances in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -315,7 +315,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return ListInstancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists all instances in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -326,7 +326,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstances, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Instance.
+      /// Gets details of a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -339,7 +339,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return GetInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Instance.
+      /// Gets details of a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -350,7 +350,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstance, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Instance.
+      /// Gets details of a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -363,7 +363,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return GetInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Instance.
+      /// Gets details of a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -422,7 +422,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInstance, null, options, request);
       }
       /// <summary>
-      /// Updates the parameters of a single Instance.
+      /// Updates the parameters of a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -435,7 +435,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return UpdateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the parameters of a single Instance.
+      /// Updates the parameters of a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -446,7 +446,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      /// Updates the parameters of a single Instance.
+      /// Updates the parameters of a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -459,7 +459,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return UpdateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the parameters of a single Instance.
+      /// Updates the parameters of a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -470,7 +470,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Instance.
+      /// Deletes a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -483,7 +483,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return DeleteInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Instance.
+      /// Deletes a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -494,7 +494,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInstance, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Instance.
+      /// Deletes a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -507,7 +507,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return DeleteInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Instance.
+      /// Deletes a single instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -518,7 +518,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
       }
       /// <summary>
-      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// Copies data from Cloud Storage to Parallelstore.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -531,7 +531,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return ImportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// Copies data from Cloud Storage to Parallelstore.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -542,7 +542,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ImportData, null, options, request);
       }
       /// <summary>
-      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// Copies data from Cloud Storage to Parallelstore.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -555,7 +555,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return ImportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// Copies data from Cloud Storage to Parallelstore.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -566,7 +566,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ImportData, null, options, request);
       }
       /// <summary>
-      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// Copies data from Parallelstore to Cloud Storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -579,7 +579,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return ExportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// Copies data from Parallelstore to Cloud Storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -590,7 +590,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ExportData, null, options, request);
       }
       /// <summary>
-      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// Copies data from Parallelstore to Cloud Storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -603,7 +603,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         return ExportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// Copies data from Parallelstore to Cloud Storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
