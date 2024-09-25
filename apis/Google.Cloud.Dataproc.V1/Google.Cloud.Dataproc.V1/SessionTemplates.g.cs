@@ -48,51 +48,52 @@ namespace Google.Cloud.Dataproc.V1 {
             "LmRhdGFwcm9jLnYxLlNlc3Npb25UZW1wbGF0ZUID4EEDEhcKD25leHRfcGFn",
             "ZV90b2tlbhgCIAEoCSJdChxEZWxldGVTZXNzaW9uVGVtcGxhdGVSZXF1ZXN0",
             "Ej0KBG5hbWUYASABKAlCL+BBAvpBKQonZGF0YXByb2MuZ29vZ2xlYXBpcy5j",
-            "b20vU2Vzc2lvblRlbXBsYXRlIrAFCg9TZXNzaW9uVGVtcGxhdGUSEQoEbmFt",
+            "b20vU2Vzc2lvblRlbXBsYXRlIoQGCg9TZXNzaW9uVGVtcGxhdGUSEQoEbmFt",
             "ZRgBIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAkgASgJQgPgQQESNAoLY3Jl",
             "YXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
             "QQMSRwoPanVweXRlcl9zZXNzaW9uGAMgASgLMicuZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwcm9jLnYxLkp1cHl0ZXJDb25maWdCA+BBAUgAEhQKB2NyZWF0b3IYBSAB",
-            "KAlCA+BBAxJKCgZsYWJlbHMYBiADKAsyNS5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuU2Vzc2lvblRlbXBsYXRlLkxhYmVsc0VudHJ5QgPgQQESRAoOcnVu",
-            "dGltZV9jb25maWcYByABKAsyJy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "UnVudGltZUNvbmZpZ0ID4EEBEkwKEmVudmlyb25tZW50X2NvbmZpZxgIIAEo",
-            "CzIrLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5FbnZpcm9ubWVudENvbmZp",
-            "Z0ID4EEBEjQKC3VwZGF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEhEKBHV1aWQYDCABKAlCA+BBAxotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOnHqQW4KJ2Rh",
-            "dGFwcm9jLmdvb2dsZWFwaXMuY29tL1Nlc3Npb25UZW1wbGF0ZRJDcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Nlc3Npb25UZW1w",
-            "bGF0ZXMve3RlbXBsYXRlfUIQCg5zZXNzaW9uX2NvbmZpZzL6CAoZU2Vzc2lv",
-            "blRlbXBsYXRlQ29udHJvbGxlchLkAQoVQ3JlYXRlU2Vzc2lvblRlbXBsYXRl",
-            "EjYuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNyZWF0ZVNlc3Npb25UZW1w",
+            "dGFwcm9jLnYxLkp1cHl0ZXJDb25maWdCA+BBAUgAElIKFXNwYXJrX2Nvbm5l",
+            "Y3Rfc2Vzc2lvbhgLIAEoCzIsLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5T",
+            "cGFya0Nvbm5lY3RDb25maWdCA+BBAUgAEhQKB2NyZWF0b3IYBSABKAlCA+BB",
+            "AxJKCgZsYWJlbHMYBiADKAsyNS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
+            "U2Vzc2lvblRlbXBsYXRlLkxhYmVsc0VudHJ5QgPgQQESRAoOcnVudGltZV9j",
+            "b25maWcYByABKAsyJy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuUnVudGlt",
+            "ZUNvbmZpZ0ID4EEBEkwKEmVudmlyb25tZW50X2NvbmZpZxgIIAEoCzIrLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcHJvYy52MS5FbnZpcm9ubWVudENvbmZpZ0ID4EEB",
+            "EjQKC3VwZGF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEhEKBHV1aWQYDCABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOnHqQW4KJ2RhdGFwcm9j",
+            "Lmdvb2dsZWFwaXMuY29tL1Nlc3Npb25UZW1wbGF0ZRJDcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Nlc3Npb25UZW1wbGF0ZXMv",
+            "e3RlbXBsYXRlfUIQCg5zZXNzaW9uX2NvbmZpZzL6CAoZU2Vzc2lvblRlbXBs",
+            "YXRlQ29udHJvbGxlchLkAQoVQ3JlYXRlU2Vzc2lvblRlbXBsYXRlEjYuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNyZWF0ZVNlc3Npb25UZW1wbGF0ZVJl",
+            "cXVlc3QaKS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuU2Vzc2lvblRlbXBs",
+            "YXRlImjaQRdwYXJlbnQsc2Vzc2lvbl90ZW1wbGF0ZYLT5JMCSCI0L3YxL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc2Vzc2lvblRlbXBsYXRl",
+            "czoQc2Vzc2lvbl90ZW1wbGF0ZRLuAQoVVXBkYXRlU2Vzc2lvblRlbXBsYXRl",
+            "EjYuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlVwZGF0ZVNlc3Npb25UZW1w",
             "bGF0ZVJlcXVlc3QaKS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuU2Vzc2lv",
-            "blRlbXBsYXRlImjaQRdwYXJlbnQsc2Vzc2lvbl90ZW1wbGF0ZYLT5JMCSCI0",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc2Vzc2lvblRl",
-            "bXBsYXRlczoQc2Vzc2lvbl90ZW1wbGF0ZRLuAQoVVXBkYXRlU2Vzc2lvblRl",
-            "bXBsYXRlEjYuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlVwZGF0ZVNlc3Np",
-            "b25UZW1wbGF0ZVJlcXVlc3QaKS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "U2Vzc2lvblRlbXBsYXRlInLaQRBzZXNzaW9uX3RlbXBsYXRlgtPkkwJZMkUv",
-            "djEve3Nlc3Npb25fdGVtcGxhdGUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL3Nlc3Npb25UZW1wbGF0ZXMvKn06EHNlc3Npb25fdGVtcGxhdGUSuQEK",
-            "EkdldFNlc3Npb25UZW1wbGF0ZRIzLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
-            "MS5HZXRTZXNzaW9uVGVtcGxhdGVSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwcm9jLnYxLlNlc3Npb25UZW1wbGF0ZSJD2kEEbmFtZYLT5JMCNhI0L3Yx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc2Vzc2lvblRlbXBsYXRl",
-            "cy8qfRLMAQoUTGlzdFNlc3Npb25UZW1wbGF0ZXMSNS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXByb2MudjEuTGlzdFNlc3Npb25UZW1wbGF0ZXNSZXF1ZXN0GjYuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxpc3RTZXNzaW9uVGVtcGxhdGVzUmVz",
-            "cG9uc2UiRdpBBnBhcmVudILT5JMCNhI0L3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0vc2Vzc2lvblRlbXBsYXRlcxKsAQoVRGVsZXRlU2Vz",
-            "c2lvblRlbXBsYXRlEjYuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRlbGV0",
-            "ZVNlc3Npb25UZW1wbGF0ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiQ9pBBG5hbWWC0+STAjYqNC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3Nlc3Npb25UZW1wbGF0ZXMvKn0aS8pBF2RhdGFwcm9jLmdvb2ds",
-            "ZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybUJ0Chxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
-            "QhVTZXNzaW9uVGVtcGxhdGVzUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9kYXRhcHJvYy92Mi9hcGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGJiBnBy",
-            "b3RvMw=="));
+            "blRlbXBsYXRlInLaQRBzZXNzaW9uX3RlbXBsYXRlgtPkkwJZMkUvdjEve3Nl",
+            "c3Npb25fdGVtcGxhdGUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nl",
+            "c3Npb25UZW1wbGF0ZXMvKn06EHNlc3Npb25fdGVtcGxhdGUSuQEKEkdldFNl",
+            "c3Npb25UZW1wbGF0ZRIzLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5HZXRT",
+            "ZXNzaW9uVGVtcGxhdGVSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLlNlc3Npb25UZW1wbGF0ZSJD2kEEbmFtZYLT5JMCNhI0L3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovc2Vzc2lvblRlbXBsYXRlcy8qfRLM",
+            "AQoUTGlzdFNlc3Npb25UZW1wbGF0ZXMSNS5nb29nbGUuY2xvdWQuZGF0YXBy",
+            "b2MudjEuTGlzdFNlc3Npb25UZW1wbGF0ZXNSZXF1ZXN0GjYuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwcm9jLnYxLkxpc3RTZXNzaW9uVGVtcGxhdGVzUmVzcG9uc2Ui",
+            "RdpBBnBhcmVudILT5JMCNhI0L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vc2Vzc2lvblRlbXBsYXRlcxKsAQoVRGVsZXRlU2Vzc2lvblRl",
+            "bXBsYXRlEjYuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRlbGV0ZVNlc3Np",
+            "b25UZW1wbGF0ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiQ9pB",
+            "BG5hbWWC0+STAjYqNC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L3Nlc3Npb25UZW1wbGF0ZXMvKn0aS8pBF2RhdGFwcm9jLmdvb2dsZWFwaXMu",
+            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
+            "bGF0Zm9ybUJ0Chxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxQhVTZXNz",
+            "aW9uVGVtcGxhdGVzUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRh",
+            "cHJvYy92Mi9hcGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataproc.V1.SessionsReflection.Descriptor, global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -102,7 +103,7 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListSessionTemplatesRequest), global::Google.Cloud.Dataproc.V1.ListSessionTemplatesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListSessionTemplatesResponse), global::Google.Cloud.Dataproc.V1.ListSessionTemplatesResponse.Parser, new[]{ "SessionTemplates", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteSessionTemplateRequest), global::Google.Cloud.Dataproc.V1.DeleteSessionTemplateRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SessionTemplate), global::Google.Cloud.Dataproc.V1.SessionTemplate.Parser, new[]{ "Name", "Description", "CreateTime", "JupyterSession", "Creator", "Labels", "RuntimeConfig", "EnvironmentConfig", "UpdateTime", "Uuid" }, new[]{ "SessionConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SessionTemplate), global::Google.Cloud.Dataproc.V1.SessionTemplate.Parser, new[]{ "Name", "Description", "CreateTime", "JupyterSession", "SparkConnectSession", "Creator", "Labels", "RuntimeConfig", "EnvironmentConfig", "UpdateTime", "Uuid" }, new[]{ "SessionConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -1549,6 +1550,9 @@ namespace Google.Cloud.Dataproc.V1 {
         case SessionConfigOneofCase.JupyterSession:
           JupyterSession = other.JupyterSession.Clone();
           break;
+        case SessionConfigOneofCase.SparkConnectSession:
+          SparkConnectSession = other.SparkConnectSession.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1617,6 +1621,21 @@ namespace Google.Cloud.Dataproc.V1 {
       set {
         sessionConfig_ = value;
         sessionConfigCase_ = value == null ? SessionConfigOneofCase.None : SessionConfigOneofCase.JupyterSession;
+      }
+    }
+
+    /// <summary>Field number for the "spark_connect_session" field.</summary>
+    public const int SparkConnectSessionFieldNumber = 11;
+    /// <summary>
+    /// Optional. Spark Connect session config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.SparkConnectConfig SparkConnectSession {
+      get { return sessionConfigCase_ == SessionConfigOneofCase.SparkConnectSession ? (global::Google.Cloud.Dataproc.V1.SparkConnectConfig) sessionConfig_ : null; }
+      set {
+        sessionConfig_ = value;
+        sessionConfigCase_ = value == null ? SessionConfigOneofCase.None : SessionConfigOneofCase.SparkConnectSession;
       }
     }
 
@@ -1721,6 +1740,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public enum SessionConfigOneofCase {
       None = 0,
       JupyterSession = 3,
+      SparkConnectSession = 11,
     }
     private SessionConfigOneofCase sessionConfigCase_ = SessionConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1755,6 +1775,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Description != other.Description) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(JupyterSession, other.JupyterSession)) return false;
+      if (!object.Equals(SparkConnectSession, other.SparkConnectSession)) return false;
       if (Creator != other.Creator) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(RuntimeConfig, other.RuntimeConfig)) return false;
@@ -1773,6 +1794,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (sessionConfigCase_ == SessionConfigOneofCase.JupyterSession) hash ^= JupyterSession.GetHashCode();
+      if (sessionConfigCase_ == SessionConfigOneofCase.SparkConnectSession) hash ^= SparkConnectSession.GetHashCode();
       if (Creator.Length != 0) hash ^= Creator.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (runtimeConfig_ != null) hash ^= RuntimeConfig.GetHashCode();
@@ -1831,6 +1853,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(UpdateTime);
       }
+      if (sessionConfigCase_ == SessionConfigOneofCase.SparkConnectSession) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SparkConnectSession);
+      }
       if (Uuid.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(Uuid);
@@ -1878,6 +1904,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(UpdateTime);
       }
+      if (sessionConfigCase_ == SessionConfigOneofCase.SparkConnectSession) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SparkConnectSession);
+      }
       if (Uuid.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(Uuid);
@@ -1903,6 +1933,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (sessionConfigCase_ == SessionConfigOneofCase.JupyterSession) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(JupyterSession);
+      }
+      if (sessionConfigCase_ == SessionConfigOneofCase.SparkConnectSession) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SparkConnectSession);
       }
       if (Creator.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Creator);
@@ -1976,6 +2009,12 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           JupyterSession.MergeFrom(other.JupyterSession);
           break;
+        case SessionConfigOneofCase.SparkConnectSession:
+          if (SparkConnectSession == null) {
+            SparkConnectSession = new global::Google.Cloud.Dataproc.V1.SparkConnectConfig();
+          }
+          SparkConnectSession.MergeFrom(other.SparkConnectSession);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2044,6 +2083,15 @@ namespace Google.Cloud.Dataproc.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Dataproc.V1.SparkConnectConfig subBuilder = new global::Google.Cloud.Dataproc.V1.SparkConnectConfig();
+            if (sessionConfigCase_ == SessionConfigOneofCase.SparkConnectSession) {
+              subBuilder.MergeFrom(SparkConnectSession);
+            }
+            input.ReadMessage(subBuilder);
+            SparkConnectSession = subBuilder;
             break;
           }
           case 98: {
@@ -2116,6 +2164,15 @@ namespace Google.Cloud.Dataproc.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Dataproc.V1.SparkConnectConfig subBuilder = new global::Google.Cloud.Dataproc.V1.SparkConnectConfig();
+            if (sessionConfigCase_ == SessionConfigOneofCase.SparkConnectSession) {
+              subBuilder.MergeFrom(SparkConnectSession);
+            }
+            input.ReadMessage(subBuilder);
+            SparkConnectSession = subBuilder;
             break;
           }
           case 98: {
