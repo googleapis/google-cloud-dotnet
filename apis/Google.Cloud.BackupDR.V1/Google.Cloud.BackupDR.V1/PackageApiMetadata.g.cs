@@ -83,6 +83,11 @@ namespace Google.Cloud.BackupDR.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return BackupdrReflection.Descriptor;
+            yield return BackupplanReflection.Descriptor;
+            yield return BackupplanassociationReflection.Descriptor;
+            yield return BackupvaultReflection.Descriptor;
+            yield return BackupvaultBaReflection.Descriptor;
+            yield return BackupvaultGceReflection.Descriptor;
             yield return gciv::IamPolicyReflection.Descriptor;
             yield return gciv::OptionsReflection.Descriptor;
             yield return gciv::PolicyReflection.Descriptor;
