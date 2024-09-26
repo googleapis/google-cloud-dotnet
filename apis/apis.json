@@ -1103,7 +1103,7 @@
       "protoPath": "google/cloud/bigquery/storage/v1",
       "productName": "Google BigQuery Storage",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/storage/",
-      "version": "3.15.0",
+      "version": "3.16.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the BigQuery Storage API.",
       "dependencies": {},
