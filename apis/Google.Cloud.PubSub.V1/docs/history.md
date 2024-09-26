@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.17.0, released 2024-09-26
+
+### New features
+
+- Add ingestion Cloud Storage fields and Platform Logging fields to Topic ([commit 5098b56](https://github.com/googleapis/google-cloud-dotnet/commit/5098b5604184c78fac6ba0161a7e081d530f8dd3))
+- Return listing information for subscriptions created via Analytics Hub ([commit ce5de77](https://github.com/googleapis/google-cloud-dotnet/commit/ce5de77b8f709c832d824bc739a68182183bec84))
+
+### Documentation improvements
+
+- Update documentation for 31 day subscription message retention ([commit 950f588](https://github.com/googleapis/google-cloud-dotnet/commit/950f5886f0486b86a899a7fe4aaa8b86979b2b89))
+
 ## Version 3.16.0, released 2024-07-22
 
 ### New features
