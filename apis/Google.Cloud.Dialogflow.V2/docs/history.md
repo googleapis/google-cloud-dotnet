@@ -1,5 +1,13 @@
 # Version history
 
+## Version 4.22.0, released 2024-09-26
+
+### New features
+
+- Created new boolean fields in conversation dataset for zone isolation and zone separation compliance status ([commit 1a9f58d](https://github.com/googleapis/google-cloud-dotnet/commit/1a9f58dd2cf7690fc50ec780c2f573ccda43eccb))
+- Add ALAW encoding value to Audio encoding enum ([commit 1a9f58d](https://github.com/googleapis/google-cloud-dotnet/commit/1a9f58dd2cf7690fc50ec780c2f573ccda43eccb))
+- Created new boolean fields in conversation model for zone isolation and zone separation compliance status ([commit 24e7f8f](https://github.com/googleapis/google-cloud-dotnet/commit/24e7f8f17a28c721b9eae24260db021a42292583))
+
 ## Version 4.21.0, released 2024-08-05
 
 ### Bug fixes
