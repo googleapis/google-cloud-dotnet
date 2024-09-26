@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2024-09-26
+
+### New features
+
+- Add `routing_parameters` to SearchNearbyRequest and SearchTextRequest ([commit 4f73b95](https://github.com/googleapis/google-cloud-dotnet/commit/4f73b95dcd2442f05b5aee911fb6142d00d2be19))
+- Add `search_along_route_parameters` to SearchTextRequest ([commit 4f73b95](https://github.com/googleapis/google-cloud-dotnet/commit/4f73b95dcd2442f05b5aee911fb6142d00d2be19))
+- Add `routing_summaries` to SearchNearbyResponse and SearchTextResponse ([commit 4f73b95](https://github.com/googleapis/google-cloud-dotnet/commit/4f73b95dcd2442f05b5aee911fb6142d00d2be19))
+
+### Documentation improvements
+
+- A comment for field `contextual_contents` in message `.google.maps.places.v1.SearchTextResponse` is changed to be more assertive ([commit 4f73b95](https://github.com/googleapis/google-cloud-dotnet/commit/4f73b95dcd2442f05b5aee911fb6142d00d2be19))
+- A comment for field `open_now` in message `.google.maps.places.v1.Place` is changed to clarify what it means with new-since-previous-comment current and secondary opening hours fields ([commit 4f73b95](https://github.com/googleapis/google-cloud-dotnet/commit/4f73b95dcd2442f05b5aee911fb6142d00d2be19))
+
 ## Version 1.0.0-beta08, released 2024-06-04
 
 ### New features
