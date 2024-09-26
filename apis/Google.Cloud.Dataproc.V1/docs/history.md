@@ -1,5 +1,15 @@
 # Version history
 
+## Version 5.15.0, released 2024-09-26
+
+### New features
+
+- Add support for Spark Connect sessions in Dataproc Serverless for Spark ([commit 2a56544](https://github.com/googleapis/google-cloud-dotnet/commit/2a5654405a1350a08e95dde23c034ca49a3f19b5))
+
+### Documentation improvements
+
+- Update docs for `filter` field in `ListSessionsRequest` ([commit 2a56544](https://github.com/googleapis/google-cloud-dotnet/commit/2a5654405a1350a08e95dde23c034ca49a3f19b5))
+
 ## Version 5.14.0, released 2024-09-16
 
 ### New features
