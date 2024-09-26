@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2024-09-26
+
+### New features
+
+- Add UPGRADING state to Parallelstore state ([commit d248b5d](https://github.com/googleapis/google-cloud-dotnet/commit/d248b5dc5dff4ee40febb87beb8b8011a1092b53))
+
+### Documentation improvements
+
+- Cleanup of Parallelstore API descriptions ([commit d248b5d](https://github.com/googleapis/google-cloud-dotnet/commit/d248b5dc5dff4ee40febb87beb8b8011a1092b53))
+
 ## Version 1.0.0-beta05, released 2024-08-05
 
 ### New features
