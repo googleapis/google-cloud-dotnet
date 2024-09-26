@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.7.0, released 2024-09-26
+
+### New features
+
+- Support adding constraints to new method types REMOVE_GRANTS and GOVERN_TAGS ([commit f49e16e](https://github.com/googleapis/google-cloud-dotnet/commit/f49e16e0aff289c5d4932bd6b503ac5e1cf739c8))
+
 ## Version 2.6.0, released 2024-05-14
 
 ### New features
