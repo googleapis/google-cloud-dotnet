@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.12.0, released 2024-09-26
+
+### New features
+
+- Add LEGACY_BUCKET option to DefaultLogsBucketBehavior ([commit 2f2b8d0](https://github.com/googleapis/google-cloud-dotnet/commit/2f2b8d05336d6487277288331c7d2c674a827c37))
+
+### Documentation improvements
+
+- Sanitize docs ([commit 2f2b8d0](https://github.com/googleapis/google-cloud-dotnet/commit/2f2b8d05336d6487277288331c7d2c674a827c37))
+
 ## Version 2.11.0, released 2024-06-04
 
 ### New features
