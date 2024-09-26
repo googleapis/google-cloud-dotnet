@@ -3020,7 +3020,7 @@
     },
     {
       "id": "Google.Cloud.Logging.Log4Net",
-      "version": "4.3.0",
+      "version": "4.4.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "description": "Log4Net client library for the Google Cloud Logging API.",
@@ -3032,7 +3032,7 @@
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.DevTools.Common": "3.2.0",
-        "Google.Cloud.Logging.V2": "4.3.0",
+        "Google.Cloud.Logging.V2": "4.4.0",
         "Grpc.Core": "default",
         "log4net": "default"
       },
