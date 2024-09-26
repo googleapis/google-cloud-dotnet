@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="2.15.0" />
+    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="2.16.0" />
     <PackageReference Include="LibGit2Sharp" />
     <PackageReference Include="NuGet.Protocol" />
     <PackageReference Include="Octokit" />
