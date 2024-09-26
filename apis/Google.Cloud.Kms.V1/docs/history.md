@@ -1,5 +1,28 @@
 # Version history
 
+## Version 3.14.0, released 2024-09-26
+
+### Bug fixes
+
+- **BREAKING CHANGE** Pagination feature is introduced for method `ListKeyHandles` in service `Autokey` ([commit d036220](https://github.com/googleapis/google-cloud-dotnet/commit/d036220251afc1d36c2ee530197ad37a404c54f7))
+
+This breaking change is being introduced without a new major version
+as we believe customers are unlikely to be using the existing API
+surface, and that it's in the best interestes of most customers to
+keep to a minor release. (We completely acknowledge that this *is* a
+breaking change, and we apologize if you're affected by it. Please
+[raise an issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+with any concerns - we're keen to improve this balance where we can.)
+
+### New features
+
+- Adding a state field for AutokeyConfig ([commit d036220](https://github.com/googleapis/google-cloud-dotnet/commit/d036220251afc1d36c2ee530197ad37a404c54f7))
+
+### Documentation improvements
+
+- Field service_resolvers in message .google.cloud.kms.v1.EkmConnection is Explicitly is marked as to have field behavior of Optional ([commit d036220](https://github.com/googleapis/google-cloud-dotnet/commit/d036220251afc1d36c2ee530197ad37a404c54f7))
+- A comment for field `destroy_scheduled_duration` in message `.google.cloud.kms.v1.CryptoKey` is updated for the default duration ([commit d036220](https://github.com/googleapis/google-cloud-dotnet/commit/d036220251afc1d36c2ee530197ad37a404c54f7))
+
 ## Version 3.13.0, released 2024-06-24
 
 ### New features
