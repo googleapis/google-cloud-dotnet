@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.4.0, released 2024-09-26
+
+### New features
+
+- Update log4net dependency. ([commit 0ab782a](https://github.com/googleapis/google-cloud-dotnet/commit/0ab782a2c14733e86fcdf9854465000ba0ed01c6))
+
 ## Version 4.3.0, released 2024-03-28
 
 ### New features
