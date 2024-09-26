@@ -3060,7 +3060,7 @@
     },
     {
       "id": "Google.Cloud.Logging.NLog",
-      "version": "5.1.0",
+      "version": "5.2.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "description": "NLog target for the Google Cloud Logging API.",
@@ -3072,7 +3072,7 @@
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.DevTools.Common": "3.2.0",
-        "Google.Cloud.Logging.V2": "4.3.0",
+        "Google.Cloud.Logging.V2": "4.4.0",
         "Grpc.Core": "default",
         "NLog": "default"
       },
