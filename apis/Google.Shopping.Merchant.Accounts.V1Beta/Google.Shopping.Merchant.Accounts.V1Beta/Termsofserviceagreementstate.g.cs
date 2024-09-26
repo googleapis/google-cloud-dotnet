@@ -169,6 +169,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     /// <summary>
     /// Identifier. The resource name of the terms of service version.
     /// Format: `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+    /// The identifier format is: `{TermsOfServiceKind}-{country}`
+    /// For example, an identifier could be: `MERCHANT_CENTER-US`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1074,6 +1076,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     /// <summary>
     /// Required. The resource name of the terms of service version.
     /// Format: `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+    /// The identifier format is: `{TermsOfServiceKind}-{country}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

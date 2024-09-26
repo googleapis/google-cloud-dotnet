@@ -29,46 +29,45 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             "Y291bnRzLnYxYmV0YRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoX",
             "Z29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIGdvb2ds",
-            "ZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvGhpnb29nbGUvdHlwZS9kYXRl",
-            "dGltZS5wcm90byK3BgoMQWNjb3VudElzc3VlEhEKBG5hbWUYASABKAlCA+BB",
-            "CBINCgV0aXRsZRgCIAEoCRJRCghzZXZlcml0eRgDIAEoDjI/Lmdvb2dsZS5z",
-            "aG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3VudElzc3Vl",
-            "LlNldmVyaXR5EmkKFWltcGFjdGVkX2Rlc3RpbmF0aW9ucxgEIAMoCzJKLmdv",
+            "ZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvIrcGCgxBY2NvdW50SXNzdWUS",
+            "EQoEbmFtZRgBIAEoCUID4EEIEg0KBXRpdGxlGAIgASgJElEKCHNldmVyaXR5",
+            "GAMgASgOMj8uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
+            "YmV0YS5BY2NvdW50SXNzdWUuU2V2ZXJpdHkSaQoVaW1wYWN0ZWRfZGVzdGlu",
+            "YXRpb25zGAQgAygLMkouZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291",
+            "bnRzLnYxYmV0YS5BY2NvdW50SXNzdWUuSW1wYWN0ZWREZXN0aW5hdGlvbhIO",
+            "CgZkZXRhaWwYBSABKAkSGQoRZG9jdW1lbnRhdGlvbl91cmkYBiABKAka3gIK",
+            "E0ltcGFjdGVkRGVzdGluYXRpb24SWwoRcmVwb3J0aW5nX2NvbnRleHQYASAB",
+            "KA4yOy5nb29nbGUuc2hvcHBpbmcudHlwZS5SZXBvcnRpbmdDb250ZXh0LlJl",
+            "cG9ydGluZ0NvbnRleHRFbnVtSACIAQESYgoHaW1wYWN0cxgCIAMoCzJRLmdv",
             "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3Vu",
-            "dElzc3VlLkltcGFjdGVkRGVzdGluYXRpb24SDgoGZGV0YWlsGAUgASgJEhkK",
-            "EWRvY3VtZW50YXRpb25fdXJpGAYgASgJGt4CChNJbXBhY3RlZERlc3RpbmF0",
-            "aW9uElsKEXJlcG9ydGluZ19jb250ZXh0GAEgASgOMjsuZ29vZ2xlLnNob3Bw",
-            "aW5nLnR5cGUuUmVwb3J0aW5nQ29udGV4dC5SZXBvcnRpbmdDb250ZXh0RW51",
-            "bUgAiAEBEmIKB2ltcGFjdHMYAiADKAsyUS5nb29nbGUuc2hvcHBpbmcubWVy",
-            "Y2hhbnQuYWNjb3VudHMudjFiZXRhLkFjY291bnRJc3N1ZS5JbXBhY3RlZERl",
-            "c3RpbmF0aW9uLkltcGFjdBpwCgZJbXBhY3QSEwoLcmVnaW9uX2NvZGUYASAB",
-            "KAkSUQoIc2V2ZXJpdHkYAiABKA4yPy5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQuYWNjb3VudHMudjFiZXRhLkFjY291bnRJc3N1ZS5TZXZlcml0eUIUChJf",
-            "cmVwb3J0aW5nX2NvbnRleHQiTQoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5T",
-            "UEVDSUZJRUQQABIMCghDUklUSUNBTBABEgkKBUVSUk9SEAISDgoKU1VHR0VT",
-            "VElPThADOmzqQWkKJ21lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0FjY291",
-            "bnRJc3N1ZRIhYWNjb3VudHMve2FjY291bnR9L2lzc3Vlcy97aXNzdWV9Kg1h",
-            "Y2NvdW50SXNzdWVzMgxhY2NvdW50SXNzdWUi0gEKGExpc3RBY2NvdW50SXNz",
-            "dWVzUmVxdWVzdBI6CgZwYXJlbnQYASABKAlCKuBBAvpBJAoibWVyY2hhbnRh",
-            "cGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudBIWCglwYWdlX3NpemUYAiABKAVC",
-            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESGgoNbGFuZ3VhZ2VfY29k",
-            "ZRgEIAEoCUID4EEBEi0KCXRpbWVfem9uZRgFIAEoCzIVLmdvb2dsZS50eXBl",
-            "LlRpbWVab25lQgPgQQEihAEKGUxpc3RBY2NvdW50SXNzdWVzUmVzcG9uc2US",
-            "TgoOYWNjb3VudF9pc3N1ZXMYASADKAsyNi5nb29nbGUuc2hvcHBpbmcubWVy",
-            "Y2hhbnQuYWNjb3VudHMudjFiZXRhLkFjY291bnRJc3N1ZRIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAkyuwIKE0FjY291bnRJc3N1ZVNlcnZpY2US2gEKEUxp",
-            "c3RBY2NvdW50SXNzdWVzEkIuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFj",
-            "Y291bnRzLnYxYmV0YS5MaXN0QWNjb3VudElzc3Vlc1JlcXVlc3QaQy5nb29n",
-            "bGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkxpc3RBY2Nv",
-            "dW50SXNzdWVzUmVzcG9uc2UiPNpBBnBhcmVudILT5JMCLRIrL2FjY291bnRz",
-            "L3YxYmV0YS97cGFyZW50PWFjY291bnRzLyp9L2lzc3VlcxpHykEabWVyY2hh",
-            "bnRhcGkuZ29vZ2xlYXBpcy5jb23SQSdodHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2NvbnRlbnRCkwEKLGNvbS5nb29nbGUuc2hvcHBpbmcubWVy",
-            "Y2hhbnQuYWNjb3VudHMudjFiZXRhQhFBY2NvdW50SXNzdWVQcm90b1ABWk5j",
-            "bG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50L2FjY291bnRz",
-            "L2FwaXYxYmV0YS9hY2NvdW50c3BiO2FjY291bnRzcGJiBnByb3RvMw=="));
+            "dElzc3VlLkltcGFjdGVkRGVzdGluYXRpb24uSW1wYWN0GnAKBkltcGFjdBIT",
+            "CgtyZWdpb25fY29kZRgBIAEoCRJRCghzZXZlcml0eRgCIAEoDjI/Lmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3VudElz",
+            "c3VlLlNldmVyaXR5QhQKEl9yZXBvcnRpbmdfY29udGV4dCJNCghTZXZlcml0",
+            "eRIYChRTRVZFUklUWV9VTlNQRUNJRklFRBAAEgwKCENSSVRJQ0FMEAESCQoF",
+            "RVJST1IQAhIOCgpTVUdHRVNUSU9OEAM6bOpBaQonbWVyY2hhbnRhcGkuZ29v",
+            "Z2xlYXBpcy5jb20vQWNjb3VudElzc3VlEiFhY2NvdW50cy97YWNjb3VudH0v",
+            "aXNzdWVzL3tpc3N1ZX0qDWFjY291bnRJc3N1ZXMyDGFjY291bnRJc3N1ZSK7",
+            "AQoYTGlzdEFjY291bnRJc3N1ZXNSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq",
+            "4EEC+kEkCiJtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhYK",
+            "CXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BB",
+            "ARIaCg1sYW5ndWFnZV9jb2RlGAQgASgJQgPgQQESFgoJdGltZV96b25lGAUg",
+            "ASgJQgPgQQEihAEKGUxpc3RBY2NvdW50SXNzdWVzUmVzcG9uc2USTgoOYWNj",
+            "b3VudF9pc3N1ZXMYASADKAsyNi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "YWNjb3VudHMudjFiZXRhLkFjY291bnRJc3N1ZRIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkyuwIKE0FjY291bnRJc3N1ZVNlcnZpY2US2gEKEUxpc3RBY2Nv",
+            "dW50SXNzdWVzEkIuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRz",
+            "LnYxYmV0YS5MaXN0QWNjb3VudElzc3Vlc1JlcXVlc3QaQy5nb29nbGUuc2hv",
+            "cHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkxpc3RBY2NvdW50SXNz",
+            "dWVzUmVzcG9uc2UiPNpBBnBhcmVudILT5JMCLRIrL2FjY291bnRzL3YxYmV0",
+            "YS97cGFyZW50PWFjY291bnRzLyp9L2lzc3VlcxpHykEabWVyY2hhbnRhcGku",
+            "Z29vZ2xlYXBpcy5jb23SQSdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2NvbnRlbnRCkwEKLGNvbS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "YWNjb3VudHMudjFiZXRhQhFBY2NvdW50SXNzdWVQcm90b1ABWk5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50L2FjY291bnRzL2FwaXYx",
+            "YmV0YS9hY2NvdW50c3BiO2FjY291bnRzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.AccountIssue), global::Google.Shopping.Merchant.Accounts.V1Beta.AccountIssue.Parser, new[]{ "Name", "Title", "Severity", "ImpactedDestinations", "Detail", "DocumentationUri" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.AccountIssue.Types.Severity) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.AccountIssue.Types.ImpactedDestination), global::Google.Shopping.Merchant.Accounts.V1Beta.AccountIssue.Types.ImpactedDestination.Parser, new[]{ "ReportingContext", "Impacts" }, new[]{ "ReportingContext" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.AccountIssue.Types.ImpactedDestination.Types.Impact), global::Google.Shopping.Merchant.Accounts.V1Beta.AccountIssue.Types.ImpactedDestination.Types.Impact.Parser, new[]{ "RegionCode", "Severity" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.ListAccountIssuesRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.ListAccountIssuesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "LanguageCode", "TimeZone" }, null, null, null, null),
@@ -1027,7 +1026,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       languageCode_ = other.languageCode_;
-      timeZone_ = other.timeZone_ != null ? other.timeZone_.Clone() : null;
+      timeZone_ = other.timeZone_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1109,7 +1108,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
 
     /// <summary>Field number for the "time_zone" field.</summary>
     public const int TimeZoneFieldNumber = 5;
-    private global::Google.Type.TimeZone timeZone_;
+    private string timeZone_ = "";
     /// <summary>
     /// Optional. The [IANA](https://www.iana.org/time-zones) timezone used to
     /// localize times in human-readable fields. For example 'America/Los_Angeles'.
@@ -1117,10 +1116,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Type.TimeZone TimeZone {
+    public string TimeZone {
       get { return timeZone_; }
       set {
-        timeZone_ = value;
+        timeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1143,7 +1142,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (LanguageCode != other.LanguageCode) return false;
-      if (!object.Equals(TimeZone, other.TimeZone)) return false;
+      if (TimeZone != other.TimeZone) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1155,7 +1154,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
-      if (timeZone_ != null) hash ^= TimeZone.GetHashCode();
+      if (TimeZone.Length != 0) hash ^= TimeZone.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1190,9 +1189,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         output.WriteRawTag(34);
         output.WriteString(LanguageCode);
       }
-      if (timeZone_ != null) {
+      if (TimeZone.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteMessage(TimeZone);
+        output.WriteString(TimeZone);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1220,9 +1219,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         output.WriteRawTag(34);
         output.WriteString(LanguageCode);
       }
-      if (timeZone_ != null) {
+      if (TimeZone.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteMessage(TimeZone);
+        output.WriteString(TimeZone);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1246,8 +1245,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
-      if (timeZone_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeZone);
+      if (TimeZone.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TimeZone);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1273,11 +1272,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
-      if (other.timeZone_ != null) {
-        if (timeZone_ == null) {
-          TimeZone = new global::Google.Type.TimeZone();
-        }
-        TimeZone.MergeFrom(other.TimeZone);
+      if (other.TimeZone.Length != 0) {
+        TimeZone = other.TimeZone;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1311,10 +1307,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             break;
           }
           case 42: {
-            if (timeZone_ == null) {
-              TimeZone = new global::Google.Type.TimeZone();
-            }
-            input.ReadMessage(TimeZone);
+            TimeZone = input.ReadString();
             break;
           }
         }
@@ -1349,10 +1342,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             break;
           }
           case 42: {
-            if (timeZone_ == null) {
-              TimeZone = new global::Google.Type.TimeZone();
-            }
-            input.ReadMessage(TimeZone);
+            TimeZone = input.ReadString();
             break;
           }
         }

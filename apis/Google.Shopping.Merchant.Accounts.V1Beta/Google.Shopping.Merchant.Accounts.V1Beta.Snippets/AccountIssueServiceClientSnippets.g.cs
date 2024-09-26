@@ -14,8 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-#pragma warning disable CS8981
-
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
@@ -23,7 +21,6 @@ namespace GoogleCSharpSnippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
-    using gt = Google.Type;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedAccountIssueServiceClientSnippets
@@ -39,7 +36,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 LanguageCode = "",
-                TimeZone = new gt::TimeZone(),
+                TimeZone = "",
             };
             // Make the request
             PagedEnumerable<ListAccountIssuesResponse, AccountIssue> response = accountIssueServiceClient.ListAccountIssues(request);
@@ -89,7 +86,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 LanguageCode = "",
-                TimeZone = new gt::TimeZone(),
+                TimeZone = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListAccountIssuesResponse, AccountIssue> response = accountIssueServiceClient.ListAccountIssuesAsync(request);

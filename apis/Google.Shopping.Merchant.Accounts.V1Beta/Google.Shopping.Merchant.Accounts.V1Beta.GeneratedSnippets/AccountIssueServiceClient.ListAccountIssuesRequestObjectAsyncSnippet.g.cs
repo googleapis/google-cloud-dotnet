@@ -14,8 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-#pragma warning disable CS8981
-
 namespace GoogleCSharpSnippets
 {
     // [START merchantapi_v1beta_generated_AccountIssueService_ListAccountIssues_async]
@@ -24,7 +22,6 @@ namespace GoogleCSharpSnippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
-    using gt = Google.Type;
 
     public sealed partial class GeneratedAccountIssueServiceClientSnippets
     {
@@ -45,7 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 LanguageCode = "",
-                TimeZone = new gt::TimeZone(),
+                TimeZone = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListAccountIssuesResponse, AccountIssue> response = accountIssueServiceClient.ListAccountIssuesAsync(request);
