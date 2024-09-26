@@ -1,5 +1,17 @@
 # Version history
 
+## Version 4.14.0, released 2024-09-26
+
+### New features
+
+- Action for publishing data profiles to SecOps (formelly known as Chronicle) ([commit d6641c2](https://github.com/googleapis/google-cloud-dotnet/commit/d6641c27d51c828d5c6d5930d93b30d79a6782e3))
+- Action for publishing data profiles to Security Command Center ([commit d6641c2](https://github.com/googleapis/google-cloud-dotnet/commit/d6641c27d51c828d5c6d5930d93b30d79a6782e3))
+- Discovery configs for AWS S3 buckets ([commit d6641c2](https://github.com/googleapis/google-cloud-dotnet/commit/d6641c27d51c828d5c6d5930d93b30d79a6782e3))
+
+### Documentation improvements
+
+- Small improvements and clarifications ([commit d6641c2](https://github.com/googleapis/google-cloud-dotnet/commit/d6641c27d51c828d5c6d5930d93b30d79a6782e3))
+
 ## Version 4.13.0, released 2024-09-09
 
 ### New features
