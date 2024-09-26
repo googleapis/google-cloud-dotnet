@@ -112,8 +112,8 @@ public class DetectPrChangesCommand : ICommand
         diffs.PrintDifferences(Level.Major, FormatDetail.Brief);
         diffs.PrintDifferences(Level.Minor, FormatDetail.Brief);
         Console.WriteLine($"Diff level: {diffs.Level}");
-        // Stop if we've found breaking changes.
-        if (diffs.Major.Any())
+        // Stop if we've found breaking changes, unless it's a beta-level API.
+        if (diffs.Major.Any() && api.CanHaveGaRelease)
         {
             return true;
         }
