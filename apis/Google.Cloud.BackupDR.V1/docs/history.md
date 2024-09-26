@@ -1,5 +1,24 @@
 # Version history
 
+## Version 1.2.0, released 2024-09-26
+
+### New features
+
+- Client library for the backupvault api is added ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- Add backupplan proto ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- Add backupplanassociation proto ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- Add backupvault_ba proto ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- Add backupvault_gce proto ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+
+### Documentation improvements
+
+- A comment for field `oauth2_client_id` in message `.google.cloud.backupdr.v1.ManagementServer` is changed ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- A comment for field `parent` in message `.google.cloud.backupdr.v1.ListManagementServersRequest` is changed ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- A comment for field `management_servers` in message `.google.cloud.backupdr.v1.ListManagementServersResponse` is changed ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- A comment for field `name` in message `.google.cloud.backupdr.v1.GetManagementServerRequest` is changed ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- A comment for field `parent` in message `.google.cloud.backupdr.v1.CreateManagementServerRequest` is changed ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+- A comment for field `requested_cancellation` in message `.google.cloud.backupdr.v1.OperationMetadata` is changed ([commit a873918](https://github.com/googleapis/google-cloud-dotnet/commit/a8739185eb39dedeab0eed11d4c382d553d5afd1))
+
 ## Version 1.1.0, released 2024-06-24
 
 ### New features
