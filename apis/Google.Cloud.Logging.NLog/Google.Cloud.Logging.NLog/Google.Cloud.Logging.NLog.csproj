@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>5.1.0</Version>
+    <Version>5.2.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>NLog target for the Google Cloud Logging API.</Description>
@@ -11,7 +11,7 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="[4.9.0, 5.0.0)" />
     <PackageReference Include="Google.Cloud.DevTools.Common" VersionOverride="[3.2.0, 4.0.0)" />
-    <PackageReference Include="Google.Cloud.Logging.V2" VersionOverride="[4.3.0, 5.0.0)" />
+    <PackageReference Include="Google.Cloud.Logging.V2" VersionOverride="[4.4.0, 5.0.0)" />
     <PackageReference Include="Grpc.Core" VersionOverride="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
     <PackageReference Include="NLog" />
   </ItemGroup>

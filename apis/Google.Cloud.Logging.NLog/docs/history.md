@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.2.0, released 2024-09-26
+
+### New features
+
+- Update NLog to 5.3.4 ([commit a2da879](https://github.com/googleapis/google-cloud-dotnet/commit/a2da87980e97abad96012e342077ba49bdd5921b))
+
 ## Version 5.1.0, released 2024-03-28
 
 ### New features
