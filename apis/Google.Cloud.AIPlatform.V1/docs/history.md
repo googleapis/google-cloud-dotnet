@@ -1,5 +1,19 @@
 # Version history
 
+## Version 3.8.0, released 2024-09-26
+
+### New features
+
+- Add TunedModelRef and RebaseTunedModel Api for Vertex GenAiTuningService ([commit d139bd8](https://github.com/googleapis/google-cloud-dotnet/commit/d139bd8d89a9d80965eaa7b011edee608266b622))
+- Add CIVIC_INTEGRITY category to SafetySettings for prediction service ([commit bfe994b](https://github.com/googleapis/google-cloud-dotnet/commit/bfe994b519b81d40c1352093956be04b0517d4f8))
+- A new field `generation_config` is added to message `.google.cloud.aiplatform.v1.CountTokensRequest` ([commit ba7bd07](https://github.com/googleapis/google-cloud-dotnet/commit/ba7bd0711d214682c47fe867a28fea446ecffa96))
+- A new field `labels` is added to message `.google.cloud.aiplatform.v1.GenerateContentRequest` ([commit ba7bd07](https://github.com/googleapis/google-cloud-dotnet/commit/ba7bd0711d214682c47fe867a28fea446ecffa96))
+- A new field `property_ordering` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit eda71ab](https://github.com/googleapis/google-cloud-dotnet/commit/eda71ab7b64b017de6b983a80a48ae4b04609de8))
+
+### Documentation improvements
+
+- Limit comment `SupervisedTuningSpec` for 1p tuning ([commit d139bd8](https://github.com/googleapis/google-cloud-dotnet/commit/d139bd8d89a9d80965eaa7b011edee608266b622))
+
 ## Version 3.7.0, released 2024-09-09
 
 ### New features
