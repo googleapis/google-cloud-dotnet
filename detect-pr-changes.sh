@@ -42,9 +42,6 @@ fi
 
 git clone . tmpgit --no-local -q -b main --depth 1 --recursive
 
-mkdir tmpgit/old
-mkdir tmpgit/new
-
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
 
