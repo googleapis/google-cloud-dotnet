@@ -245,7 +245,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
   #region Messages
   /// <summary>
   /// The merchant account's [shipping
-  /// setting]((https://support.google.com/merchants/answer/6069284).
+  /// setting](https://support.google.com/merchants/answer/6069284).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ShippingSettings : pb::IMessage<ShippingSettings>
@@ -4265,6 +4265,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     /// <summary>
     /// Minimum number of business days spent before an order is shipped.
     /// 0 means same day shipped, 1 means next day shipped.
+    /// 'min_handling_days' and 'max_handling_days' should be either set or not set
+    /// at the same time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4297,6 +4299,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     /// Maximum number of business days spent before an order is shipped.
     /// 0 means same day shipped, 1 means next day shipped.
     /// Must be greater than or equal to `min_handling_days`.
+    /// 'min_handling_days' and 'max_handling_days' should be either set or not set
+    /// at the same time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

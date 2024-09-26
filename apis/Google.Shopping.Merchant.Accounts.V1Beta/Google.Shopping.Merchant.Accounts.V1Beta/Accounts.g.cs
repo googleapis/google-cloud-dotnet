@@ -30,82 +30,85 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             "bGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
             "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxobZ29vZ2xlL3By",
             "b3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFz",
-            "ay5wcm90bxozZ29vZ2xlL3Nob3BwaW5nL21lcmNoYW50L2FjY291bnRzL3Yx",
-            "YmV0YS91c2VyLnByb3RvGhpnb29nbGUvdHlwZS9kYXRldGltZS5wcm90byKK",
-            "AgoHQWNjb3VudBIRCgRuYW1lGAEgASgJQgPgQQgSFwoKYWNjb3VudF9pZBgC",
-            "IAEoA0ID4EEDEhkKDGFjY291bnRfbmFtZRgDIAEoCUID4EECEhUKDWFkdWx0",
-            "X2NvbnRlbnQYBCABKAgSGQoMdGVzdF9hY2NvdW50GAUgASgIQgPgQQMSLQoJ",
-            "dGltZV96b25lGAYgASgLMhUuZ29vZ2xlLnR5cGUuVGltZVpvbmVCA+BBAhIa",
-            "Cg1sYW5ndWFnZV9jb2RlGAcgASgJQgPgQQI6O+pBOAoibWVyY2hhbnRhcGku",
-            "Z29vZ2xlYXBpcy5jb20vQWNjb3VudBISYWNjb3VudHMve2FjY291bnR9Ik0K",
-            "EUdldEFjY291bnRSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoibWVy",
-            "Y2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudCL5BQogQ3JlYXRlQW5k",
-            "Q29uZmlndXJlQWNjb3VudFJlcXVlc3QSRwoHYWNjb3VudBgBIAEoCzIxLmdv",
+            "ay5wcm90bxo+Z29vZ2xlL3Nob3BwaW5nL21lcmNoYW50L2FjY291bnRzL3Yx",
+            "YmV0YS9hY2NvdW50c2VydmljZXMucHJvdG8aM2dvb2dsZS9zaG9wcGluZy9t",
+            "ZXJjaGFudC9hY2NvdW50cy92MWJldGEvdXNlci5wcm90bxoaZ29vZ2xlL3R5",
+            "cGUvZGF0ZXRpbWUucHJvdG8iigIKB0FjY291bnQSEQoEbmFtZRgBIAEoCUID",
+            "4EEIEhcKCmFjY291bnRfaWQYAiABKANCA+BBAxIZCgxhY2NvdW50X25hbWUY",
+            "AyABKAlCA+BBAhIVCg1hZHVsdF9jb250ZW50GAQgASgIEhkKDHRlc3RfYWNj",
+            "b3VudBgFIAEoCEID4EEDEi0KCXRpbWVfem9uZRgGIAEoCzIVLmdvb2dsZS50",
+            "eXBlLlRpbWVab25lQgPgQQISGgoNbGFuZ3VhZ2VfY29kZRgHIAEoCUID4EEC",
+            "OjvqQTgKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0FjY291bnQSEmFj",
+            "Y291bnRzL3thY2NvdW50fSJNChFHZXRBY2NvdW50UmVxdWVzdBI4CgRuYW1l",
+            "GAEgASgJQirgQQL6QSQKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0Fj",
+            "Y291bnQinwYKIENyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnRSZXF1ZXN0EkcK",
+            "B2FjY291bnQYASABKAsyMS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNj",
+            "b3VudHMudjFiZXRhLkFjY291bnRCA+BBAhJPCgV1c2VycxgCIAMoCzI7Lmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQ3JlYXRl",
+            "VXNlclJlcXVlc3RCA+BBARKKAQoXYWNjZXB0X3Rlcm1zX29mX3NlcnZpY2UY",
+            "AyABKAsyXy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFi",
+            "ZXRhLkNyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnRSZXF1ZXN0LkFjY2VwdFRl",
+            "cm1zT2ZTZXJ2aWNlQgPgQQFIAIgBARJyCgdzZXJ2aWNlGAQgAygLMlwuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5DcmVhdGVB",
+            "bmRDb25maWd1cmVBY2NvdW50UmVxdWVzdC5BZGRBY2NvdW50U2VydmljZUID",
+            "4EECGnEKFEFjY2VwdFRlcm1zT2ZTZXJ2aWNlEj8KBG5hbWUYASABKAlCMeBB",
+            "AvpBKwopbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vVGVybXNPZlNlcnZp",
+            "Y2USGAoLcmVnaW9uX2NvZGUYAyABKAlCA+BBAhrQAQoRQWRkQWNjb3VudFNl",
+            "cnZpY2USWwoTYWNjb3VudF9hZ2dyZWdhdGlvbhhnIAEoCzI8Lmdvb2dsZS5z",
+            "aG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3VudEFnZ3Jl",
+            "Z2F0aW9uSAASQQoIcHJvdmlkZXIYASABKAlCKuBBAfpBJAoibWVyY2hhbnRh",
+            "cGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudEgBiAEBQg4KDHNlcnZpY2VfdHlw",
+            "ZUILCglfcHJvdmlkZXJCGgoYX2FjY2VwdF90ZXJtc19vZl9zZXJ2aWNlIlAK",
+            "FERlbGV0ZUFjY291bnRSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoi",
+            "bWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudCKVAQoUVXBkYXRl",
+            "QWNjb3VudFJlcXVlc3QSRwoHYWNjb3VudBgBIAEoCzIxLmdvb2dsZS5zaG9w",
+            "cGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3VudEID4EECEjQK",
+            "C3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
+            "a0ID4EECIlsKE0xpc3RBY2NvdW50c1JlcXVlc3QSFgoJcGFnZV9zaXplGAEg",
+            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgCIAEoCUID4EEBEhMKBmZpbHRlchgD",
+            "IAEoCUID4EEBInQKFExpc3RBY2NvdW50c1Jlc3BvbnNlEkMKCGFjY291bnRz",
+            "GAEgAygLMjEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
+            "YmV0YS5BY2NvdW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKHAQoWTGlz",
+            "dFN1YkFjY291bnRzUmVxdWVzdBI8Cghwcm92aWRlchgBIAEoCUIq4EEC+kEk",
+            "CiJtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhYKCXBhZ2Vf",
+            "c2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJ3ChdM",
+            "aXN0U3ViQWNjb3VudHNSZXNwb25zZRJDCghhY2NvdW50cxgBIAMoCzIxLmdv",
             "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3Vu",
-            "dEID4EECEk8KBXVzZXJzGAIgAygLMjsuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
-            "YW50LmFjY291bnRzLnYxYmV0YS5DcmVhdGVVc2VyUmVxdWVzdEID4EEBEooB",
-            "ChdhY2NlcHRfdGVybXNfb2Zfc2VydmljZRgDIAEoCzJfLmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQ3JlYXRlQW5kQ29uZmln",
-            "dXJlQWNjb3VudFJlcXVlc3QuQWNjZXB0VGVybXNPZlNlcnZpY2VCA+BBAUgA",
-            "iAEBEnIKB3NlcnZpY2UYBCADKAsyXC5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQuYWNjb3VudHMudjFiZXRhLkNyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnRS",
-            "ZXF1ZXN0LkFkZEFjY291bnRTZXJ2aWNlQgPgQQEacQoUQWNjZXB0VGVybXNP",
-            "ZlNlcnZpY2USPwoEbmFtZRgBIAEoCUIx4EEC+kErCiltZXJjaGFudGFwaS5n",
-            "b29nbGVhcGlzLmNvbS9UZXJtc09mU2VydmljZRIYCgtyZWdpb25fY29kZRgD",
-            "IAEoCUID4EECGqoBChFBZGRBY2NvdW50U2VydmljZRI1ChNhY2NvdW50X2Fn",
-            "Z3JlZ2F0aW9uGAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5SAASQQoI",
-            "cHJvdmlkZXIYASABKAlCKuBBAfpBJAoibWVyY2hhbnRhcGkuZ29vZ2xlYXBp",
-            "cy5jb20vQWNjb3VudEgBiAEBQg4KDHNlcnZpY2VfdHlwZUILCglfcHJvdmlk",
-            "ZXJCGgoYX2FjY2VwdF90ZXJtc19vZl9zZXJ2aWNlIlAKFERlbGV0ZUFjY291",
-            "bnRSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoibWVyY2hhbnRhcGku",
-            "Z29vZ2xlYXBpcy5jb20vQWNjb3VudCKVAQoUVXBkYXRlQWNjb3VudFJlcXVl",
-            "c3QSRwoHYWNjb3VudBgBIAEoCzIxLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
-            "dC5hY2NvdW50cy52MWJldGEuQWNjb3VudEID4EECEjQKC3VwZGF0ZV9tYXNr",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECIlsKE0xp",
-            "c3RBY2NvdW50c1JlcXVlc3QSFgoJcGFnZV9zaXplGAEgASgFQgPgQQESFwoK",
-            "cGFnZV90b2tlbhgCIAEoCUID4EEBEhMKBmZpbHRlchgDIAEoCUID4EEBInQK",
-            "FExpc3RBY2NvdW50c1Jlc3BvbnNlEkMKCGFjY291bnRzGAEgAygLMjEuZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5BY2NvdW50",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKHAQoWTGlzdFN1YkFjY291bnRz",
-            "UmVxdWVzdBI8Cghwcm92aWRlchgBIAEoCUIq4EEC+kEkCiJtZXJjaGFudGFw",
-            "aS5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID",
-            "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJ3ChdMaXN0U3ViQWNjb3Vu",
-            "dHNSZXNwb25zZRJDCghhY2NvdW50cxgBIAMoCzIxLmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3VudBIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAky7gkKD0FjY291bnRzU2VydmljZRKvAQoKR2V0QWNj",
-            "b3VudBI7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJl",
-            "dGEuR2V0QWNjb3VudFJlcXVlc3QaMS5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQuYWNjb3VudHMudjFiZXRhLkFjY291bnQiMdpBBG5hbWWC0+STAiQSIi9h",
-            "Y2NvdW50cy92MWJldGEve25hbWU9YWNjb3VudHMvKn0S0wEKGUNyZWF0ZUFu",
-            "ZENvbmZpZ3VyZUFjY291bnQSSi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "YWNjb3VudHMudjFiZXRhLkNyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnRSZXF1",
-            "ZXN0GjEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0",
-            "YS5BY2NvdW50IjeC0+STAjEiLC9hY2NvdW50cy92MWJldGEvYWNjb3VudHM6",
-            "Y3JlYXRlQW5kQ29uZmlndXJlOgEqEpoBCg1EZWxldGVBY2NvdW50Ej4uZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5EZWxldGVB",
-            "Y2NvdW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIx2kEEbmFt",
-            "ZYLT5JMCJCoiL2FjY291bnRzL3YxYmV0YS97bmFtZT1hY2NvdW50cy8qfRLV",
-            "AQoNVXBkYXRlQWNjb3VudBI+Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5h",
-            "Y2NvdW50cy52MWJldGEuVXBkYXRlQWNjb3VudFJlcXVlc3QaMS5nb29nbGUu",
-            "c2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkFjY291bnQiUdpB",
-            "E2FjY291bnQsdXBkYXRlX21hc2uC0+STAjUyKi9hY2NvdW50cy92MWJldGEv",
-            "e2FjY291bnQubmFtZT1hY2NvdW50cy8qfToHYWNjb3VudBKwAQoMTGlzdEFj",
-            "Y291bnRzEj0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
-            "YmV0YS5MaXN0QWNjb3VudHNSZXF1ZXN0Gj4uZ29vZ2xlLnNob3BwaW5nLm1l",
-            "cmNoYW50LmFjY291bnRzLnYxYmV0YS5MaXN0QWNjb3VudHNSZXNwb25zZSIh",
-            "gtPkkwIbEhkvYWNjb3VudHMvdjFiZXRhL2FjY291bnRzEuEBCg9MaXN0U3Vi",
-            "QWNjb3VudHMSQC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMu",
-            "djFiZXRhLkxpc3RTdWJBY2NvdW50c1JlcXVlc3QaQS5nb29nbGUuc2hvcHBp",
-            "bmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkxpc3RTdWJBY2NvdW50c1Jl",
-            "c3BvbnNlIknaQQhwcm92aWRlcoLT5JMCOBI2L2FjY291bnRzL3YxYmV0YS97",
-            "cHJvdmlkZXI9YWNjb3VudHMvKn06bGlzdFN1YmFjY291bnRzGkfKQRptZXJj",
-            "aGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY29udGVudEKPAQosY29tLmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5hY2NvdW50cy52MWJldGFCDUFjY291bnRzUHJvdG9QAVpOY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9hY2NvdW50cy9h",
-            "cGl2MWJldGEvYWNjb3VudHNwYjthY2NvdW50c3BiYgZwcm90bzM="));
+            "dBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAky7gkKD0FjY291bnRzU2Vydmlj",
+            "ZRKvAQoKR2V0QWNjb3VudBI7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5h",
+            "Y2NvdW50cy52MWJldGEuR2V0QWNjb3VudFJlcXVlc3QaMS5nb29nbGUuc2hv",
+            "cHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkFjY291bnQiMdpBBG5h",
+            "bWWC0+STAiQSIi9hY2NvdW50cy92MWJldGEve25hbWU9YWNjb3VudHMvKn0S",
+            "0wEKGUNyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnQSSi5nb29nbGUuc2hvcHBp",
+            "bmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkNyZWF0ZUFuZENvbmZpZ3Vy",
+            "ZUFjY291bnRSZXF1ZXN0GjEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFj",
+            "Y291bnRzLnYxYmV0YS5BY2NvdW50IjeC0+STAjEiLC9hY2NvdW50cy92MWJl",
+            "dGEvYWNjb3VudHM6Y3JlYXRlQW5kQ29uZmlndXJlOgEqEpoBCg1EZWxldGVB",
+            "Y2NvdW50Ej4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
+            "YmV0YS5EZWxldGVBY2NvdW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSIx2kEEbmFtZYLT5JMCJCoiL2FjY291bnRzL3YxYmV0YS97bmFtZT1h",
+            "Y2NvdW50cy8qfRLVAQoNVXBkYXRlQWNjb3VudBI+Lmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuVXBkYXRlQWNjb3VudFJlcXVl",
+            "c3QaMS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRh",
+            "LkFjY291bnQiUdpBE2FjY291bnQsdXBkYXRlX21hc2uC0+STAjUyKi9hY2Nv",
+            "dW50cy92MWJldGEve2FjY291bnQubmFtZT1hY2NvdW50cy8qfToHYWNjb3Vu",
+            "dBKwAQoMTGlzdEFjY291bnRzEj0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LmFjY291bnRzLnYxYmV0YS5MaXN0QWNjb3VudHNSZXF1ZXN0Gj4uZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5MaXN0QWNjb3Vu",
+            "dHNSZXNwb25zZSIhgtPkkwIbEhkvYWNjb3VudHMvdjFiZXRhL2FjY291bnRz",
+            "EuEBCg9MaXN0U3ViQWNjb3VudHMSQC5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQuYWNjb3VudHMudjFiZXRhLkxpc3RTdWJBY2NvdW50c1JlcXVlc3QaQS5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkxpc3RT",
+            "dWJBY2NvdW50c1Jlc3BvbnNlIknaQQhwcm92aWRlcoLT5JMCOBI2L2FjY291",
+            "bnRzL3YxYmV0YS97cHJvdmlkZXI9YWNjb3VudHMvKn06bGlzdFN1YmFjY291",
+            "bnRzGkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKPAQosY29tLmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGFCDUFjY291bnRz",
+            "UHJvdG9QAVpOY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFu",
+            "dC9hY2NvdW50cy9hcGl2MWJldGEvYWNjb3VudHNwYjthY2NvdW50c3BiYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1Beta.UserReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1Beta.AccountservicesReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1Beta.UserReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.Account), global::Google.Shopping.Merchant.Accounts.V1Beta.Account.Parser, new[]{ "Name", "AccountId", "AccountName", "AdultContent", "TestAccount", "TimeZone", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.GetAccountRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.GetAccountRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -878,9 +881,12 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         = pb::FieldCodec.ForMessage(34, global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest.Types.AddAccountService.Parser);
     private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest.Types.AddAccountService> service_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest.Types.AddAccountService>();
     /// <summary>
-    /// Optional. If specified, an account service between the account to be
-    /// created and the provider account is initialized as part of the
-    /// creation.
+    /// Required. An account service between the account to be created and the
+    /// provider account is initialized as part of the creation. At least one such
+    /// service needs to be provided. Currently exactly one of these needs to be
+    /// `account_aggregation`, which means you can only create sub accounts, not
+    /// standalone account through this method. Additional `account_management` or
+    /// `product_management` services may be provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1147,7 +1153,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Required. The resource name of the terms of service version.
+        /// Required. The resource name of the terms of service version in the format
+        /// `termsOfService/{version}`. To retrieve the latest version, use the
+        /// [termsOfService.retrieveLatest](/merchant/api/reference/rest/accounts_v1beta/termsOfService/retrieveLatest)
+        /// method.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1388,14 +1397,16 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         }
 
         /// <summary>Field number for the "account_aggregation" field.</summary>
-        public const int AccountAggregationFieldNumber = 2;
+        public const int AccountAggregationFieldNumber = 103;
         /// <summary>
-        /// The provider is an aggregator for the account.
+        /// The provider is an
+        /// [aggregator](https://support.google.com/merchants/answer/188487) for
+        /// the account. Payload for service type Account Aggregation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Protobuf.WellKnownTypes.Empty AccountAggregation {
-          get { return serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation ? (global::Google.Protobuf.WellKnownTypes.Empty) serviceType_ : null; }
+        public global::Google.Shopping.Merchant.Accounts.V1Beta.AccountAggregation AccountAggregation {
+          get { return serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation ? (global::Google.Shopping.Merchant.Accounts.V1Beta.AccountAggregation) serviceType_ : null; }
           set {
             serviceType_ = value;
             serviceTypeCase_ = value == null ? ServiceTypeOneofCase.None : ServiceTypeOneofCase.AccountAggregation;
@@ -1436,7 +1447,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         /// <summary>Enum of possible cases for the "service_type" oneof.</summary>
         public enum ServiceTypeOneofCase {
           None = 0,
-          AccountAggregation = 2,
+          AccountAggregation = 103,
         }
         private ServiceTypeOneofCase serviceTypeCase_ = ServiceTypeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1503,7 +1514,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             output.WriteString(Provider);
           }
           if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
-            output.WriteRawTag(18);
+            output.WriteRawTag(186, 6);
             output.WriteMessage(AccountAggregation);
           }
           if (_unknownFields != null) {
@@ -1521,7 +1532,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             output.WriteString(Provider);
           }
           if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
-            output.WriteRawTag(18);
+            output.WriteRawTag(186, 6);
             output.WriteMessage(AccountAggregation);
           }
           if (_unknownFields != null) {
@@ -1535,7 +1546,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         public int CalculateSize() {
           int size = 0;
           if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccountAggregation);
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(AccountAggregation);
           }
           if (HasProvider) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
@@ -1558,7 +1569,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
           switch (other.ServiceTypeCase) {
             case ServiceTypeOneofCase.AccountAggregation:
               if (AccountAggregation == null) {
-                AccountAggregation = new global::Google.Protobuf.WellKnownTypes.Empty();
+                AccountAggregation = new global::Google.Shopping.Merchant.Accounts.V1Beta.AccountAggregation();
               }
               AccountAggregation.MergeFrom(other.AccountAggregation);
               break;
@@ -1583,8 +1594,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
                 Provider = input.ReadString();
                 break;
               }
-              case 18: {
-                global::Google.Protobuf.WellKnownTypes.Empty subBuilder = new global::Google.Protobuf.WellKnownTypes.Empty();
+              case 826: {
+                global::Google.Shopping.Merchant.Accounts.V1Beta.AccountAggregation subBuilder = new global::Google.Shopping.Merchant.Accounts.V1Beta.AccountAggregation();
                 if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
                   subBuilder.MergeFrom(AccountAggregation);
                 }
@@ -1611,8 +1622,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
                 Provider = input.ReadString();
                 break;
               }
-              case 18: {
-                global::Google.Protobuf.WellKnownTypes.Empty subBuilder = new global::Google.Protobuf.WellKnownTypes.Empty();
+              case 826: {
+                global::Google.Shopping.Merchant.Accounts.V1Beta.AccountAggregation subBuilder = new global::Google.Shopping.Merchant.Accounts.V1Beta.AccountAggregation();
                 if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
                   subBuilder.MergeFrom(AccountAggregation);
                 }

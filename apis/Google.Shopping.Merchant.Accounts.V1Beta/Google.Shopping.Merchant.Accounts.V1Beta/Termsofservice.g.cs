@@ -39,34 +39,34 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             "6kFFCiltZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9UZXJtc09mU2Vydmlj",
             "ZRIYdGVybXNPZlNlcnZpY2Uve3ZlcnNpb259QgsKCV9maWxlX3VyaSJbChhH",
             "ZXRUZXJtc09mU2VydmljZVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4EEC+kEr",
-            "CiltZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9UZXJtc09mU2VydmljZSKG",
-            "AQojUmV0cmlldmVMYXRlc3RUZXJtc09mU2VydmljZVJlcXVlc3QSEwoLcmVn",
-            "aW9uX2NvZGUYASABKAkSSgoEa2luZBgCIAEoDjI8Lmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuVGVybXNPZlNlcnZpY2VLaW5k",
-            "IrUBChtBY2NlcHRUZXJtc09mU2VydmljZVJlcXVlc3QSPwoEbmFtZRgBIAEo",
-            "CUIx4EEC+kErCiltZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9UZXJtc09m",
-            "U2VydmljZRI7CgdhY2NvdW50GAIgASgJQirgQQL6QSQKIm1lcmNoYW50YXBp",
-            "Lmdvb2dsZWFwaXMuY29tL0FjY291bnQSGAoLcmVnaW9uX2NvZGUYAyABKAlC",
-            "A+BBAjLHBQoVVGVybXNPZlNlcnZpY2VTZXJ2aWNlEsoBChFHZXRUZXJtc09m",
-            "U2VydmljZRJCLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52",
-            "MWJldGEuR2V0VGVybXNPZlNlcnZpY2VSZXF1ZXN0GjguZ29vZ2xlLnNob3Bw",
-            "aW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5UZXJtc09mU2VydmljZSI3",
-            "2kEEbmFtZYLT5JMCKhIoL2FjY291bnRzL3YxYmV0YS97bmFtZT10ZXJtc09m",
-            "U2VydmljZS8qfRLfAQocUmV0cmlldmVMYXRlc3RUZXJtc09mU2VydmljZRJN",
-            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuUmV0",
-            "cmlldmVMYXRlc3RUZXJtc09mU2VydmljZVJlcXVlc3QaOC5nb29nbGUuc2hv",
-            "cHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLlRlcm1zT2ZTZXJ2aWNl",
-            "IjaC0+STAjASLi9hY2NvdW50cy92MWJldGEvdGVybXNPZlNlcnZpY2U6cmV0",
-            "cmlldmVMYXRlc3QStQEKFEFjY2VwdFRlcm1zT2ZTZXJ2aWNlEkUuZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5BY2NlcHRUZXJt",
-            "c09mU2VydmljZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiPtpB",
-            "BG5hbWWC0+STAjESLy9hY2NvdW50cy92MWJldGEve25hbWU9dGVybXNPZlNl",
-            "cnZpY2UvKn06YWNjZXB0GkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNv",
-            "bdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKV",
-            "AQosY29tLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJl",
-            "dGFCE1Rlcm1zT2ZTZXJ2aWNlUHJvdG9QAVpOY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9zaG9wcGluZy9tZXJjaGFudC9hY2NvdW50cy9hcGl2MWJldGEvYWNjb3Vu",
-            "dHNwYjthY2NvdW50c3BiYgZwcm90bzM="));
+            "CiltZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9UZXJtc09mU2VydmljZSKQ",
+            "AQojUmV0cmlldmVMYXRlc3RUZXJtc09mU2VydmljZVJlcXVlc3QSGAoLcmVn",
+            "aW9uX2NvZGUYASABKAlCA+BBAhJPCgRraW5kGAIgASgOMjwuZ29vZ2xlLnNo",
+            "b3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5UZXJtc09mU2Vydmlj",
+            "ZUtpbmRCA+BBAiK1AQobQWNjZXB0VGVybXNPZlNlcnZpY2VSZXF1ZXN0Ej8K",
+            "BG5hbWUYASABKAlCMeBBAvpBKwopbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5j",
+            "b20vVGVybXNPZlNlcnZpY2USOwoHYWNjb3VudBgCIAEoCUIq4EEC+kEkCiJt",
+            "ZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhgKC3JlZ2lvbl9j",
+            "b2RlGAMgASgJQgPgQQIyxwUKFVRlcm1zT2ZTZXJ2aWNlU2VydmljZRLKAQoR",
+            "R2V0VGVybXNPZlNlcnZpY2USQi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "YWNjb3VudHMudjFiZXRhLkdldFRlcm1zT2ZTZXJ2aWNlUmVxdWVzdBo4Lmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuVGVybXNP",
+            "ZlNlcnZpY2UiN9pBBG5hbWWC0+STAioSKC9hY2NvdW50cy92MWJldGEve25h",
+            "bWU9dGVybXNPZlNlcnZpY2UvKn0S3wEKHFJldHJpZXZlTGF0ZXN0VGVybXNP",
+            "ZlNlcnZpY2USTS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMu",
+            "djFiZXRhLlJldHJpZXZlTGF0ZXN0VGVybXNPZlNlcnZpY2VSZXF1ZXN0Gjgu",
+            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5UZXJt",
+            "c09mU2VydmljZSI2gtPkkwIwEi4vYWNjb3VudHMvdjFiZXRhL3Rlcm1zT2ZT",
+            "ZXJ2aWNlOnJldHJpZXZlTGF0ZXN0ErUBChRBY2NlcHRUZXJtc09mU2Vydmlj",
+            "ZRJFLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEu",
+            "QWNjZXB0VGVybXNPZlNlcnZpY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5Ij7aQQRuYW1lgtPkkwIxEi8vYWNjb3VudHMvdjFiZXRhL3tuYW1l",
+            "PXRlcm1zT2ZTZXJ2aWNlLyp9OmFjY2VwdBpHykEabWVyY2hhbnRhcGkuZ29v",
+            "Z2xlYXBpcy5jb23SQSdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2NvbnRlbnRClQEKLGNvbS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNj",
+            "b3VudHMudjFiZXRhQhNUZXJtc09mU2VydmljZVByb3RvUAFaTmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vc2hvcHBpbmcvbWVyY2hhbnQvYWNjb3VudHMvYXBpdjFi",
+            "ZXRhL2FjY291bnRzcGI7YWNjb3VudHNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1Beta.TermsofservicekindReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -708,9 +708,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public const int RegionCodeFieldNumber = 1;
     private string regionCode_ = "";
     /// <summary>
-    /// Region code as defined by [CLDR](https://cldr.unicode.org/). This is either
-    /// a country when the ToS applies specifically to that country or 001 when it
-    /// applies globally.
+    /// Required. Region code as defined by [CLDR](https://cldr.unicode.org/). This
+    /// is either a country when the ToS applies specifically to that country or
+    /// 001 when it applies globally.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -725,7 +725,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public const int KindFieldNumber = 2;
     private global::Google.Shopping.Merchant.Accounts.V1Beta.TermsOfServiceKind kind_ = global::Google.Shopping.Merchant.Accounts.V1Beta.TermsOfServiceKind.Unspecified;
     /// <summary>
-    /// The Kind this terms of service version applies to.
+    /// Required. The Kind this terms of service version applies to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
