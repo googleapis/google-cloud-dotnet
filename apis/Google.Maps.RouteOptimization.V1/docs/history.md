@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.2.0, released 2024-09-26
+
+### New features
+
+- Add support for generating route tokens ([commit 32d3448](https://github.com/googleapis/google-cloud-dotnet/commit/32d3448a98a29cfe9000efb91483339879741f46))
+- A new field `route_token` is added to message `.google.maps.routeoptimization.v1.ShipmentRoute.Transition` ([commit 32d3448](https://github.com/googleapis/google-cloud-dotnet/commit/32d3448a98a29cfe9000efb91483339879741f46))
+
+### Documentation improvements
+
+- A comment for method `BatchOptimizeTours` in service `RouteOptimization` is changed ([commit 32d3448](https://github.com/googleapis/google-cloud-dotnet/commit/32d3448a98a29cfe9000efb91483339879741f46))
+- A comment for field `populate_transition_polylines` in message `.google.maps.routeoptimization.v1.OptimizeToursRequest` is changed ([commit 32d3448](https://github.com/googleapis/google-cloud-dotnet/commit/32d3448a98a29cfe9000efb91483339879741f46))
+- A comment for field `code` in message `.google.maps.routeoptimization.v1.OptimizeToursValidationError` is changed ([commit 32d3448](https://github.com/googleapis/google-cloud-dotnet/commit/32d3448a98a29cfe9000efb91483339879741f46))
+
 ## Version 1.1.0, released 2024-09-16
 
 ### New features
