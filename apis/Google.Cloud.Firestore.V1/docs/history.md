@@ -4,6 +4,17 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.9.0, released 2024-09-26
+
+### New features
+
+- Expose the `FindNearest.distance_result_field` parameter ([commit 90e89c5](https://github.com/googleapis/google-cloud-dotnet/commit/90e89c54a34ab97ac383fb7fc7ccd308cd9ba189))
+- Expose the `FindNearest.distance_threshold` parameter ([commit 90e89c5](https://github.com/googleapis/google-cloud-dotnet/commit/90e89c54a34ab97ac383fb7fc7ccd308cd9ba189))
+
+### Documentation improvements
+
+- Minor documentation clarifications on FindNearest DistanceMeasure options ([commit 0997231](https://github.com/googleapis/google-cloud-dotnet/commit/099723106fe192589286ed58ab1ee8af88ce53d1))
+
 ## Version 3.8.0, released 2024-06-24
 
 No API surface changes; just dependency updates.
