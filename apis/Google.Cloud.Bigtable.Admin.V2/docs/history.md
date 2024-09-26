@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.21.0, released 2024-09-26
+
+### New features
+
+- Add support for Cloud Bigtable Node Scaling Factor for CBT Clusters ([commit 75f928c](https://github.com/googleapis/google-cloud-dotnet/commit/75f928cf788216909bc61155af1202558050bc7f))
+
 ## Version 3.20.0, released 2024-09-16
 
 ### New features
