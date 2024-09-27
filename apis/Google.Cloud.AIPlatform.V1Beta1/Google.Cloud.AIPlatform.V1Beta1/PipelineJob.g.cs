@@ -63,9 +63,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZRgWIAEoCUID4EEDEiIKFXByZWZsaWdodF92YWxpZGF0aW9ucxgaIAEoCEID",
             "4EEBEhoKDXNhdGlzZmllc19wenMYGyABKAhCA+BBAxIaCg1zYXRpc2ZpZXNf",
             "cHppGBwgASgIQgPgQQMSJQoYb3JpZ2luYWxfcGlwZWxpbmVfam9iX2lkGB0g",
-            "ASgDQgPgQQMSYgobcGlwZWxpbmVfdGFza19yZXJ1bl9jb25maWdzGB4gAygL",
+            "ASgDQgPgQQESYgobcGlwZWxpbmVfdGFza19yZXJ1bl9jb25maWdzGB4gAygL",
             "MjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVRh",
-            "c2tSZXJ1bkNvbmZpZ0ID4EEDGpYGCg1SdW50aW1lQ29uZmlnEmIKCnBhcmFt",
+            "c2tSZXJ1bkNvbmZpZ0ID4EEBGpYGCg1SdW50aW1lQ29uZmlnEmIKCnBhcmFt",
             "ZXRlcnMYASADKAsySi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
             "LlBpcGVsaW5lSm9iLlJ1bnRpbWVDb25maWcuUGFyYW1ldGVyc0VudHJ5QgIY",
             "ARIhChRnY3Nfb3V0cHV0X2RpcmVjdG9yeRgCIAEoCUID4EECEmkKEHBhcmFt",
@@ -140,18 +140,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "A+BBAxplCg9DdXN0b21Kb2JEZXRhaWwSOAoDam9iGAEgASgJQivgQQP6QSUK",
             "I2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEhgKC2ZhaWxl",
             "ZF9qb2JzGAMgAygJQgPgQQNCCQoHZGV0YWlscyLkBQoXUGlwZWxpbmVUYXNr",
-            "UmVydW5Db25maWcSFAoHdGFza19pZBgBIAEoA0ID4EEDEhYKCXRhc2tfbmFt",
-            "ZRgCIAEoCUID4EEDElQKBmlucHV0cxgDIAEoCzI/Lmdvb2dsZS5jbG91ZC5h",
+            "UmVydW5Db25maWcSFAoHdGFza19pZBgBIAEoA0ID4EEBEhYKCXRhc2tfbmFt",
+            "ZRgCIAEoCUID4EEBElQKBmlucHV0cxgDIAEoCzI/Lmdvb2dsZS5jbG91ZC5h",
             "aXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVUYXNrUmVydW5Db25maWcuSW5w",
-            "dXRzQgPgQQMSFgoJc2tpcF90YXNrGAQgASgIQgPgQQMSIgoVc2tpcF9kb3du",
-            "c3RyZWFtX3Rhc2tzGAUgASgIQgPgQQMaWAoMQXJ0aWZhY3RMaXN0EkgKCWFy",
+            "dXRzQgPgQQESFgoJc2tpcF90YXNrGAQgASgIQgPgQQESIgoVc2tpcF9kb3du",
+            "c3RyZWFtX3Rhc2tzGAUgASgIQgPgQQEaWAoMQXJ0aWZhY3RMaXN0EkgKCWFy",
             "dGlmYWN0cxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuUnVudGltZUFydGlmYWN0QgPgQQMargMKBklucHV0cxJmCglhcnRpZmFj",
+            "YTEuUnVudGltZUFydGlmYWN0QgPgQQEargMKBklucHV0cxJmCglhcnRpZmFj",
             "dHMYASADKAsyTi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBp",
             "cGVsaW5lVGFza1JlcnVuQ29uZmlnLklucHV0cy5BcnRpZmFjdHNFbnRyeUID",
-            "4EEDEnMKEHBhcmFtZXRlcl92YWx1ZXMYAiADKAsyVC5nb29nbGUuY2xvdWQu",
+            "4EEBEnMKEHBhcmFtZXRlcl92YWx1ZXMYAiADKAsyVC5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lVGFza1JlcnVuQ29uZmlnLklu",
-            "cHV0cy5QYXJhbWV0ZXJWYWx1ZXNFbnRyeUID4EEDGncKDkFydGlmYWN0c0Vu",
+            "cHV0cy5QYXJhbWV0ZXJWYWx1ZXNFbnRyeUID4EEBGncKDkFydGlmYWN0c0Vu",
             "dHJ5EgsKA2tleRgBIAEoCRJUCgV2YWx1ZRgCIAEoCzJFLmdvb2dsZS5jbG91",
             "ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVUYXNrUmVydW5Db25maWcu",
             "QXJ0aWZhY3RMaXN0OgI4ARpOChRQYXJhbWV0ZXJWYWx1ZXNFbnRyeRILCgNr",
@@ -635,8 +635,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int OriginalPipelineJobIdFieldNumber = 29;
     private long originalPipelineJobId_;
     /// <summary>
-    /// Output only. The original pipeline job id if this pipeline job is a rerun
-    /// of a previous pipeline job.
+    /// Optional. The original pipeline job id if this pipeline job is a rerun of a
+    /// previous pipeline job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -653,7 +653,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         = pb::FieldCodec.ForMessage(242, global::Google.Cloud.AIPlatform.V1Beta1.PipelineTaskRerunConfig.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.PipelineTaskRerunConfig> pipelineTaskRerunConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.PipelineTaskRerunConfig>();
     /// <summary>
-    /// Output only. The rerun configs for each task in the pipeline job.
+    /// Optional. The rerun configs for each task in the pipeline job.
     /// By default, the rerun will:
     /// 1. Use the same input artifacts as the original run.
     /// 2. Use the same input parameters as the original run.
@@ -4649,8 +4649,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int TaskIdFieldNumber = 1;
     private long taskId_;
     /// <summary>
-    /// Output only. The system generated ID of the task. Retrieved from original
-    /// run.
+    /// Optional. The system generated ID of the task. Retrieved from original run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4665,7 +4664,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int TaskNameFieldNumber = 2;
     private string taskName_ = "";
     /// <summary>
-    /// Output only. The name of the task.
+    /// Optional. The name of the task.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4680,7 +4679,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int InputsFieldNumber = 3;
     private global::Google.Cloud.AIPlatform.V1Beta1.PipelineTaskRerunConfig.Types.Inputs inputs_;
     /// <summary>
-    /// Output only. The runtime input of the task overridden by the user.
+    /// Optional. The runtime input of the task overridden by the user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4695,7 +4694,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int SkipTaskFieldNumber = 4;
     private bool skipTask_;
     /// <summary>
-    /// Output only. Whether to skip this task. Default value is False.
+    /// Optional. Whether to skip this task. Default value is False.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4710,7 +4709,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int SkipDownstreamTasksFieldNumber = 5;
     private bool skipDownstreamTasks_;
     /// <summary>
-    /// Output only. Whether to skip downstream tasks. Default value is False.
+    /// Optional. Whether to skip downstream tasks. Default value is False.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5016,7 +5015,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1Beta1.RuntimeArtifact.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.RuntimeArtifact> artifacts_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.RuntimeArtifact>();
         /// <summary>
-        /// Output only. A list of artifact metadata.
+        /// Optional. A list of artifact metadata.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5202,7 +5201,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1Beta1.PipelineTaskRerunConfig.Types.ArtifactList>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1Beta1.PipelineTaskRerunConfig.Types.ArtifactList.Parser), 10);
         private readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1Beta1.PipelineTaskRerunConfig.Types.ArtifactList> artifacts_ = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1Beta1.PipelineTaskRerunConfig.Types.ArtifactList>();
         /// <summary>
-        /// Output only. Input artifacts.
+        /// Optional. Input artifacts.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5216,7 +5215,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 18);
         private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> parameterValues_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>();
         /// <summary>
-        /// Output only. Input parameters.
+        /// Optional. Input parameters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
