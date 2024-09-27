@@ -38,6 +38,11 @@ namespace Google.Cloud.Firestore.IntegrationTests
         private static readonly PollSettings AdminOperationPollSettings =
             new PollSettings(expiration: Expiration.FromTimeout(TimeSpan.FromMinutes(5)), delay: TimeSpan.FromSeconds(5));
 
+        // How long we should wait after creating an index, before returning to the caller
+        // (who is expecting to be able to use the index immediately). Sometimes the CreateIndex operation
+        // returns before the index is *really* ready. A short delay fixes this.
+        private static readonly TimeSpan PostIndexCreationDelay = TimeSpan.FromSeconds(20);
+
         private const string DatabaseLocation = "us-east1";
 
         // This is not the test project environment variable used by other integration tests,
@@ -143,6 +148,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             };
             var job = await AdminClient.CreateIndexAsync(new CollectionGroupName(ProjectId, DatabaseId, collection.Id), index);
             await job.PollUntilCompletedAsync(AdminOperationPollSettings);
+            await Task.Delay(PostIndexCreationDelay);
         }
 
         private async Task PopulateCollection(CollectionReference collection, IEnumerable<object> documents)
