@@ -39,6 +39,10 @@ namespace GoogleCSharpSnippets
                 RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 PhaseId = "",
                 JobId = "",
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             IgnoreJobResponse response = cloudDeployClient.IgnoreJob(request);

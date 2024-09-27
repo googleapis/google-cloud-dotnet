@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START clouddeploy_v1_generated_CloudDeploy_CreateRollout_sync]
+    // [START clouddeploy_v1_generated_CloudDeploy_DeleteDeployPolicy_sync]
     using Google.Cloud.Deploy.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedCloudDeployClientSnippets
     {
-        /// <summary>Snippet for CreateRollout</summary>
+        /// <summary>Snippet for DeleteDeployPolicy</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,43 +31,38 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateRolloutRequestObject()
+        public void DeleteDeployPolicyRequestObject()
         {
             // Create client
             CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
             // Initialize request argument(s)
-            CreateRolloutRequest request = new CreateRolloutRequest
+            DeleteDeployPolicyRequest request = new DeleteDeployPolicyRequest
             {
-                ParentAsReleaseName = ReleaseName.FromProjectLocationDeliveryPipelineRelease("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]"),
-                RolloutId = "",
-                Rollout = new Rollout(),
+                DeployPolicyName = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
                 RequestId = "",
+                AllowMissing = false,
                 ValidateOnly = false,
-                OverrideDeployPolicyAsDeployPolicyNames =
-                {
-                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
-                },
-                StartingPhaseId = "",
+                Etag = "",
             };
             // Make the request
-            Operation<Rollout, OperationMetadata> response = cloudDeployClient.CreateRollout(request);
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteDeployPolicy(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Rollout, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Rollout result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Rollout, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateRollout(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteDeployPolicy(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Rollout retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END clouddeploy_v1_generated_CloudDeploy_CreateRollout_sync]
+    // [END clouddeploy_v1_generated_CloudDeploy_DeleteDeployPolicy_sync]
 }

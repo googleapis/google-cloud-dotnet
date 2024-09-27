@@ -43,6 +43,10 @@ namespace GoogleCSharpSnippets
                 Rollout = new Rollout(),
                 RequestId = "",
                 ValidateOnly = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
                 StartingPhaseId = "",
             };
             // Make the request
