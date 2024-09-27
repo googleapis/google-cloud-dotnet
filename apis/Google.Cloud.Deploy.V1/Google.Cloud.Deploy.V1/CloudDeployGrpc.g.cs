@@ -127,6 +127,20 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.AbandonReleaseResponse> __Marshaller_google_cloud_deploy_v1_AbandonReleaseResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.AbandonReleaseResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest> __Marshaller_google_cloud_deploy_v1_CreateDeployPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest> __Marshaller_google_cloud_deploy_v1_UpdateDeployPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest> __Marshaller_google_cloud_deploy_v1_DeleteDeployPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest> __Marshaller_google_cloud_deploy_v1_ListDeployPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse> __Marshaller_google_cloud_deploy_v1_ListDeployPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest> __Marshaller_google_cloud_deploy_v1_GetDeployPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.DeployPolicy> __Marshaller_google_cloud_deploy_v1_DeployPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.DeployPolicy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ApproveRolloutRequest> __Marshaller_google_cloud_deploy_v1_ApproveRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ApproveRolloutRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ApproveRolloutResponse> __Marshaller_google_cloud_deploy_v1_ApproveRolloutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ApproveRolloutResponse.Parser));
@@ -358,6 +372,46 @@ namespace Google.Cloud.Deploy.V1 {
         "AbandonRelease",
         __Marshaller_google_cloud_deploy_v1_AbandonReleaseRequest,
         __Marshaller_google_cloud_deploy_v1_AbandonReleaseResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest, global::Google.LongRunning.Operation> __Method_CreateDeployPolicy = new grpc::Method<global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDeployPolicy",
+        __Marshaller_google_cloud_deploy_v1_CreateDeployPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest, global::Google.LongRunning.Operation> __Method_UpdateDeployPolicy = new grpc::Method<global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDeployPolicy",
+        __Marshaller_google_cloud_deploy_v1_UpdateDeployPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest, global::Google.LongRunning.Operation> __Method_DeleteDeployPolicy = new grpc::Method<global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDeployPolicy",
+        __Marshaller_google_cloud_deploy_v1_DeleteDeployPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest, global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse> __Method_ListDeployPolicies = new grpc::Method<global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest, global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDeployPolicies",
+        __Marshaller_google_cloud_deploy_v1_ListDeployPoliciesRequest,
+        __Marshaller_google_cloud_deploy_v1_ListDeployPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest, global::Google.Cloud.Deploy.V1.DeployPolicy> __Method_GetDeployPolicy = new grpc::Method<global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest, global::Google.Cloud.Deploy.V1.DeployPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDeployPolicy",
+        __Marshaller_google_cloud_deploy_v1_GetDeployPolicyRequest,
+        __Marshaller_google_cloud_deploy_v1_DeployPolicy);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Deploy.V1.ApproveRolloutRequest, global::Google.Cloud.Deploy.V1.ApproveRolloutResponse> __Method_ApproveRollout = new grpc::Method<global::Google.Cloud.Deploy.V1.ApproveRolloutRequest, global::Google.Cloud.Deploy.V1.ApproveRolloutResponse>(
@@ -765,6 +819,66 @@ namespace Google.Cloud.Deploy.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.AbandonReleaseResponse> AbandonRelease(global::Google.Cloud.Deploy.V1.AbandonReleaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new DeployPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDeployPolicy(global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDeployPolicy(global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDeployPolicy(global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists DeployPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse> ListDeployPolicies(global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.DeployPolicy> GetDeployPolicy(global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2002,6 +2116,246 @@ namespace Google.Cloud.Deploy.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_AbandonRelease, null, options, request);
       }
       /// <summary>
+      /// Creates a new DeployPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDeployPolicy(global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDeployPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new DeployPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDeployPolicy(global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDeployPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new DeployPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDeployPolicyAsync(global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDeployPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new DeployPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDeployPolicyAsync(global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDeployPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDeployPolicy(global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDeployPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDeployPolicy(global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDeployPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDeployPolicyAsync(global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDeployPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDeployPolicyAsync(global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDeployPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDeployPolicy(global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDeployPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDeployPolicy(global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDeployPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDeployPolicyAsync(global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDeployPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDeployPolicyAsync(global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDeployPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Lists DeployPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse ListDeployPolicies(global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDeployPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DeployPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse ListDeployPolicies(global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDeployPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Lists DeployPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse> ListDeployPoliciesAsync(global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDeployPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DeployPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse> ListDeployPoliciesAsync(global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDeployPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.DeployPolicy GetDeployPolicy(global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDeployPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.DeployPolicy GetDeployPolicy(global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDeployPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.DeployPolicy> GetDeployPolicyAsync(global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDeployPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single DeployPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.DeployPolicy> GetDeployPolicyAsync(global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDeployPolicy, null, options, request);
+      }
+      /// <summary>
       /// Approves a Rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -3007,6 +3361,11 @@ namespace Google.Cloud.Deploy.V1 {
           .AddMethod(__Method_GetRelease, serviceImpl.GetRelease)
           .AddMethod(__Method_CreateRelease, serviceImpl.CreateRelease)
           .AddMethod(__Method_AbandonRelease, serviceImpl.AbandonRelease)
+          .AddMethod(__Method_CreateDeployPolicy, serviceImpl.CreateDeployPolicy)
+          .AddMethod(__Method_UpdateDeployPolicy, serviceImpl.UpdateDeployPolicy)
+          .AddMethod(__Method_DeleteDeployPolicy, serviceImpl.DeleteDeployPolicy)
+          .AddMethod(__Method_ListDeployPolicies, serviceImpl.ListDeployPolicies)
+          .AddMethod(__Method_GetDeployPolicy, serviceImpl.GetDeployPolicy)
           .AddMethod(__Method_ApproveRollout, serviceImpl.ApproveRollout)
           .AddMethod(__Method_AdvanceRollout, serviceImpl.AdvanceRollout)
           .AddMethod(__Method_CancelRollout, serviceImpl.CancelRollout)
@@ -3056,6 +3415,11 @@ namespace Google.Cloud.Deploy.V1 {
       serviceBinder.AddMethod(__Method_GetRelease, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetReleaseRequest, global::Google.Cloud.Deploy.V1.Release>(serviceImpl.GetRelease));
       serviceBinder.AddMethod(__Method_CreateRelease, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CreateReleaseRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRelease));
       serviceBinder.AddMethod(__Method_AbandonRelease, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.AbandonReleaseRequest, global::Google.Cloud.Deploy.V1.AbandonReleaseResponse>(serviceImpl.AbandonRelease));
+      serviceBinder.AddMethod(__Method_CreateDeployPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CreateDeployPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDeployPolicy));
+      serviceBinder.AddMethod(__Method_UpdateDeployPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.UpdateDeployPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDeployPolicy));
+      serviceBinder.AddMethod(__Method_DeleteDeployPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.DeleteDeployPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDeployPolicy));
+      serviceBinder.AddMethod(__Method_ListDeployPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.ListDeployPoliciesRequest, global::Google.Cloud.Deploy.V1.ListDeployPoliciesResponse>(serviceImpl.ListDeployPolicies));
+      serviceBinder.AddMethod(__Method_GetDeployPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetDeployPolicyRequest, global::Google.Cloud.Deploy.V1.DeployPolicy>(serviceImpl.GetDeployPolicy));
       serviceBinder.AddMethod(__Method_ApproveRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.ApproveRolloutRequest, global::Google.Cloud.Deploy.V1.ApproveRolloutResponse>(serviceImpl.ApproveRollout));
       serviceBinder.AddMethod(__Method_AdvanceRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest, global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse>(serviceImpl.AdvanceRollout));
       serviceBinder.AddMethod(__Method_CancelRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CancelRolloutRequest, global::Google.Cloud.Deploy.V1.CancelRolloutResponse>(serviceImpl.CancelRollout));
