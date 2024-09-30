@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.1.0, released 2024-09-30
+
+### New features
+
+- Added support for deploy policies ([commit 4d3c458](https://github.com/googleapis/google-cloud-dotnet/commit/4d3c45859e0e624ac47b37b5fe310e00dca425e6))
+
+### Documentation improvements
+
+- Minor documentation updates ([commit 4d3c458](https://github.com/googleapis/google-cloud-dotnet/commit/4d3c45859e0e624ac47b37b5fe310e00dca425e6))
+- Very minor documentation updates ([commit 24da068](https://github.com/googleapis/google-cloud-dotnet/commit/24da068bcc242ddfc4f45beb3b0baf4931083ec5))
+
 ## Version 3.0.0, released 2024-07-30
 
 ### Bug fixes
