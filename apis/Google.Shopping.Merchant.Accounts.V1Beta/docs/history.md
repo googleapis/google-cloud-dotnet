@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2024-09-30
+
+### New features
+
+- Add 'force' parameter for accounts.delete method ([commit a0d5d82](https://github.com/googleapis/google-cloud-dotnet/commit/a0d5d829b426a3a472c6d47116c200664d743600))
+
+### Documentation improvements
+
+- Updated descriptions for the DeleteAccount and ListAccounts RPCs ([commit a0d5d82](https://github.com/googleapis/google-cloud-dotnet/commit/a0d5d829b426a3a472c6d47116c200664d743600))
+
 ## Version 1.0.0-beta02, released 2024-09-26
 
 ### Bug fixes
