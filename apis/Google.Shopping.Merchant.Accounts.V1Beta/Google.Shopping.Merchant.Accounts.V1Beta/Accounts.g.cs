@@ -58,55 +58,55 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             "aG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3VudEFnZ3Jl",
             "Z2F0aW9uSAASQQoIcHJvdmlkZXIYASABKAlCKuBBAfpBJAoibWVyY2hhbnRh",
             "cGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudEgBiAEBQg4KDHNlcnZpY2VfdHlw",
-            "ZUILCglfcHJvdmlkZXJCGgoYX2FjY2VwdF90ZXJtc19vZl9zZXJ2aWNlIlAK",
+            "ZUILCglfcHJvdmlkZXJCGgoYX2FjY2VwdF90ZXJtc19vZl9zZXJ2aWNlImQK",
             "FERlbGV0ZUFjY291bnRSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoi",
-            "bWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudCKVAQoUVXBkYXRl",
-            "QWNjb3VudFJlcXVlc3QSRwoHYWNjb3VudBgBIAEoCzIxLmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3VudEID4EECEjQK",
-            "C3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
-            "a0ID4EECIlsKE0xpc3RBY2NvdW50c1JlcXVlc3QSFgoJcGFnZV9zaXplGAEg",
-            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgCIAEoCUID4EEBEhMKBmZpbHRlchgD",
-            "IAEoCUID4EEBInQKFExpc3RBY2NvdW50c1Jlc3BvbnNlEkMKCGFjY291bnRz",
-            "GAEgAygLMjEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
-            "YmV0YS5BY2NvdW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKHAQoWTGlz",
-            "dFN1YkFjY291bnRzUmVxdWVzdBI8Cghwcm92aWRlchgBIAEoCUIq4EEC+kEk",
-            "CiJtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhYKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJ3ChdM",
-            "aXN0U3ViQWNjb3VudHNSZXNwb25zZRJDCghhY2NvdW50cxgBIAMoCzIxLmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuQWNjb3Vu",
-            "dBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAky7gkKD0FjY291bnRzU2Vydmlj",
-            "ZRKvAQoKR2V0QWNjb3VudBI7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5h",
-            "Y2NvdW50cy52MWJldGEuR2V0QWNjb3VudFJlcXVlc3QaMS5nb29nbGUuc2hv",
-            "cHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkFjY291bnQiMdpBBG5h",
-            "bWWC0+STAiQSIi9hY2NvdW50cy92MWJldGEve25hbWU9YWNjb3VudHMvKn0S",
-            "0wEKGUNyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnQSSi5nb29nbGUuc2hvcHBp",
-            "bmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkNyZWF0ZUFuZENvbmZpZ3Vy",
-            "ZUFjY291bnRSZXF1ZXN0GjEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFj",
-            "Y291bnRzLnYxYmV0YS5BY2NvdW50IjeC0+STAjEiLC9hY2NvdW50cy92MWJl",
-            "dGEvYWNjb3VudHM6Y3JlYXRlQW5kQ29uZmlndXJlOgEqEpoBCg1EZWxldGVB",
-            "Y2NvdW50Ej4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
-            "YmV0YS5EZWxldGVBY2NvdW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIx2kEEbmFtZYLT5JMCJCoiL2FjY291bnRzL3YxYmV0YS97bmFtZT1h",
-            "Y2NvdW50cy8qfRLVAQoNVXBkYXRlQWNjb3VudBI+Lmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuVXBkYXRlQWNjb3VudFJlcXVl",
-            "c3QaMS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRh",
-            "LkFjY291bnQiUdpBE2FjY291bnQsdXBkYXRlX21hc2uC0+STAjUyKi9hY2Nv",
-            "dW50cy92MWJldGEve2FjY291bnQubmFtZT1hY2NvdW50cy8qfToHYWNjb3Vu",
-            "dBKwAQoMTGlzdEFjY291bnRzEj0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
-            "LmFjY291bnRzLnYxYmV0YS5MaXN0QWNjb3VudHNSZXF1ZXN0Gj4uZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5MaXN0QWNjb3Vu",
-            "dHNSZXNwb25zZSIhgtPkkwIbEhkvYWNjb3VudHMvdjFiZXRhL2FjY291bnRz",
-            "EuEBCg9MaXN0U3ViQWNjb3VudHMSQC5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQuYWNjb3VudHMudjFiZXRhLkxpc3RTdWJBY2NvdW50c1JlcXVlc3QaQS5n",
-            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkxpc3RT",
-            "dWJBY2NvdW50c1Jlc3BvbnNlIknaQQhwcm92aWRlcoLT5JMCOBI2L2FjY291",
-            "bnRzL3YxYmV0YS97cHJvdmlkZXI9YWNjb3VudHMvKn06bGlzdFN1YmFjY291",
-            "bnRzGkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKPAQosY29tLmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGFCDUFjY291bnRz",
-            "UHJvdG9QAVpOY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFu",
-            "dC9hY2NvdW50cy9hcGl2MWJldGEvYWNjb3VudHNwYjthY2NvdW50c3BiYgZw",
-            "cm90bzM="));
+            "bWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudBISCgVmb3JjZRgC",
+            "IAEoCEID4EEBIpUBChRVcGRhdGVBY2NvdW50UmVxdWVzdBJHCgdhY2NvdW50",
+            "GAEgASgLMjEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
+            "YmV0YS5BY2NvdW50QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiWwoTTGlzdEFjY291bnRzUmVx",
+            "dWVzdBIWCglwYWdlX3NpemUYASABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAIg",
+            "ASgJQgPgQQESEwoGZmlsdGVyGAMgASgJQgPgQQEidAoUTGlzdEFjY291bnRz",
+            "UmVzcG9uc2USQwoIYWNjb3VudHMYASADKAsyMS5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkFjY291bnQSFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJIocBChZMaXN0U3ViQWNjb3VudHNSZXF1ZXN0EjwKCHBy",
+            "b3ZpZGVyGAEgASgJQirgQQL6QSQKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMu",
+            "Y29tL0FjY291bnQSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90",
+            "b2tlbhgDIAEoCUID4EEBIncKF0xpc3RTdWJBY2NvdW50c1Jlc3BvbnNlEkMK",
+            "CGFjY291bnRzGAEgAygLMjEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFj",
+            "Y291bnRzLnYxYmV0YS5BY2NvdW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CTLuCQoPQWNjb3VudHNTZXJ2aWNlEq8BCgpHZXRBY2NvdW50EjsuZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5HZXRBY2NvdW50",
+            "UmVxdWVzdBoxLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52",
+            "MWJldGEuQWNjb3VudCIx2kEEbmFtZYLT5JMCJBIiL2FjY291bnRzL3YxYmV0",
+            "YS97bmFtZT1hY2NvdW50cy8qfRLTAQoZQ3JlYXRlQW5kQ29uZmlndXJlQWNj",
+            "b3VudBJKLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJl",
+            "dGEuQ3JlYXRlQW5kQ29uZmlndXJlQWNjb3VudFJlcXVlc3QaMS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkFjY291bnQiN4LT",
+            "5JMCMSIsL2FjY291bnRzL3YxYmV0YS9hY2NvdW50czpjcmVhdGVBbmRDb25m",
+            "aWd1cmU6ASoSmgEKDURlbGV0ZUFjY291bnQSPi5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkRlbGV0ZUFjY291bnRSZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjHaQQRuYW1lgtPkkwIkKiIvYWNj",
+            "b3VudHMvdjFiZXRhL3tuYW1lPWFjY291bnRzLyp9EtUBCg1VcGRhdGVBY2Nv",
+            "dW50Ej4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0",
+            "YS5VcGRhdGVBY2NvdW50UmVxdWVzdBoxLmdvb2dsZS5zaG9wcGluZy5tZXJj",
+            "aGFudC5hY2NvdW50cy52MWJldGEuQWNjb3VudCJR2kETYWNjb3VudCx1cGRh",
+            "dGVfbWFza4LT5JMCNTIqL2FjY291bnRzL3YxYmV0YS97YWNjb3VudC5uYW1l",
+            "PWFjY291bnRzLyp9OgdhY2NvdW50ErABCgxMaXN0QWNjb3VudHMSPS5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLkxpc3RBY2Nv",
+            "dW50c1JlcXVlc3QaPi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3Vu",
+            "dHMudjFiZXRhLkxpc3RBY2NvdW50c1Jlc3BvbnNlIiGC0+STAhsSGS9hY2Nv",
+            "dW50cy92MWJldGEvYWNjb3VudHMS4QEKD0xpc3RTdWJBY2NvdW50cxJALmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuTGlzdFN1",
+            "YkFjY291bnRzUmVxdWVzdBpBLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5h",
+            "Y2NvdW50cy52MWJldGEuTGlzdFN1YkFjY291bnRzUmVzcG9uc2UiSdpBCHBy",
+            "b3ZpZGVygtPkkwI4EjYvYWNjb3VudHMvdjFiZXRhL3twcm92aWRlcj1hY2Nv",
+            "dW50cy8qfTpsaXN0U3ViYWNjb3VudHMaR8pBGm1lcmNoYW50YXBpLmdvb2ds",
+            "ZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
+            "b250ZW50Qo8BCixjb20uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291",
+            "bnRzLnYxYmV0YUINQWNjb3VudHNQcm90b1ABWk5jbG91ZC5nb29nbGUuY29t",
+            "L2dvL3Nob3BwaW5nL21lcmNoYW50L2FjY291bnRzL2FwaXYxYmV0YS9hY2Nv",
+            "dW50c3BiO2FjY291bnRzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1Beta.AccountservicesReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1Beta.UserReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -114,7 +114,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.GetAccountRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.GetAccountRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest.Parser, new[]{ "Account", "Users", "AcceptTermsOfService", "Service" }, new[]{ "AcceptTermsOfService" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest.Types.AcceptTermsOfService), global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest.Types.AcceptTermsOfService.Parser, new[]{ "Name", "RegionCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest.Types.AddAccountService), global::Google.Shopping.Merchant.Accounts.V1Beta.CreateAndConfigureAccountRequest.Types.AddAccountService.Parser, new[]{ "AccountAggregation", "Provider" }, new[]{ "ServiceType", "Provider" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteAccountRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteAccountRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteAccountRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteAccountRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateAccountRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateAccountRequest.Parser, new[]{ "Account", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.ListAccountsRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.ListAccountsRequest.Parser, new[]{ "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.ListAccountsResponse), global::Google.Shopping.Merchant.Accounts.V1Beta.ListAccountsResponse.Parser, new[]{ "Accounts", "NextPageToken" }, null, null, null, null),
@@ -1682,6 +1682,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteAccountRequest(DeleteAccountRequest other) : this() {
       name_ = other.name_;
+      force_ = other.force_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1707,6 +1708,22 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "force" field.</summary>
+    public const int ForceFieldNumber = 2;
+    private bool force_;
+    /// <summary>
+    /// Optional. If set to `true`, the account is deleted even if it provides
+    /// services to other accounts or has processed offers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Force {
+      get { return force_; }
+      set {
+        force_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1723,6 +1740,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return true;
       }
       if (Name != other.Name) return false;
+      if (Force != other.Force) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1731,6 +1749,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Force != false) hash ^= Force.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1753,6 +1772,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (Force != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Force);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1767,6 +1790,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (Force != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Force);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1779,6 +1806,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Force != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1794,6 +1824,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.Force != false) {
+        Force = other.Force;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1814,6 +1847,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            Force = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1831,6 +1868,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Force = input.ReadBool();
             break;
           }
         }
