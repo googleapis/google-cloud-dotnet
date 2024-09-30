@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             DeleteAccountRequest request = new DeleteAccountRequest
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Force = false,
             };
             // Make the request
             await accountsServiceClient.DeleteAccountAsync(request);
