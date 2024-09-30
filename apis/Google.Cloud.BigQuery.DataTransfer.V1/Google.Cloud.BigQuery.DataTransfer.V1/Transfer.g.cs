@@ -34,77 +34,95 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             "aWwYASABKAgikAEKD1NjaGVkdWxlT3B0aW9ucxIfChdkaXNhYmxlX2F1dG9f",
             "c2NoZWR1bGluZxgDIAEoCBIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAiKAoIVXNlckluZm8SEgoFZW1haWwYASAB",
-            "KAlIAIgBAUIICgZfZW1haWwinAgKDlRyYW5zZmVyQ29uZmlnEhEKBG5hbWUY",
-            "ASABKAlCA+BBCBIgChZkZXN0aW5hdGlvbl9kYXRhc2V0X2lkGAIgASgJSAAS",
-            "FAoMZGlzcGxheV9uYW1lGAMgASgJEhYKDmRhdGFfc291cmNlX2lkGAUgASgJ",
-            "EicKBnBhcmFtcxgJIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSEAoI",
-            "c2NoZWR1bGUYByABKAkSUAoQc2NoZWR1bGVfb3B0aW9ucxgYIAEoCzI2Lmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNmZXIudjEuU2NoZWR1bGVP",
-            "cHRpb25zEiAKGGRhdGFfcmVmcmVzaF93aW5kb3dfZGF5cxgMIAEoBRIQCghk",
-            "aXNhYmxlZBgNIAEoCBI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI2Cg1uZXh0X3J1bl90aW1lGAggASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkgKBXN0YXRlGAog",
-            "ASgOMjQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5U",
-            "cmFuc2ZlclN0YXRlQgPgQQMSDwoHdXNlcl9pZBgLIAEoAxIbCg5kYXRhc2V0",
-            "X3JlZ2lvbhgOIAEoCUID4EEDEiEKGW5vdGlmaWNhdGlvbl9wdWJzdWJfdG9w",
-            "aWMYDyABKAkSUgoRZW1haWxfcHJlZmVyZW5jZXMYEiABKAsyNy5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkuZGF0YXRyYW5zZmVyLnYxLkVtYWlsUHJlZmVyZW5j",
-            "ZXMSTQoKb3duZXJfaW5mbxgbIAEoCzIvLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5kYXRhdHJhbnNmZXIudjEuVXNlckluZm9CA+BBA0gBiAEBEmAKGGVuY3J5",
-            "cHRpb25fY29uZmlndXJhdGlvbhgcIAEoCzI+Lmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5kYXRhdHJhbnNmZXIudjEuRW5jcnlwdGlvbkNvbmZpZ3VyYXRpb246",
-            "uQHqQbUBCjJiaWdxdWVyeWRhdGF0cmFuc2Zlci5nb29nbGVhcGlzLmNvbS9U",
-            "cmFuc2ZlckNvbmZpZxI0cHJvamVjdHMve3Byb2plY3R9L3RyYW5zZmVyQ29u",
-            "Zmlncy97dHJhbnNmZXJfY29uZmlnfRJJcHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L3RyYW5zZmVyQ29uZmlncy97dHJhbnNmZXJf",
-            "Y29uZmlnfUINCgtkZXN0aW5hdGlvbkINCgtfb3duZXJfaW5mbyJNChdFbmNy",
-            "eXB0aW9uQ29uZmlndXJhdGlvbhIyCgxrbXNfa2V5X25hbWUYASABKAsyHC5n",
-            "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUi/wYKC1RyYW5zZmVyUnVuEhEK",
-            "BG5hbWUYASABKAlCA+BBCBIxCg1zY2hlZHVsZV90aW1lGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghydW5fdGltZRgKIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKAoMZXJyb3Jfc3RhdHVzGBUgASgL",
-            "MhIuZ29vZ2xlLnJwYy5TdGF0dXMSMwoKc3RhcnRfdGltZRgEIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgFIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIs",
-            "CgZwYXJhbXMYCSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQMS",
-            "JQoWZGVzdGluYXRpb25fZGF0YXNldF9pZBgCIAEoCUID4EEDSAASGwoOZGF0",
-            "YV9zb3VyY2VfaWQYByABKAlCA+BBAxJDCgVzdGF0ZRgIIAEoDjI0Lmdvb2ds",
-            "ZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNmZXIudjEuVHJhbnNmZXJTdGF0",
-            "ZRIPCgd1c2VyX2lkGAsgASgDEhUKCHNjaGVkdWxlGAwgASgJQgPgQQMSJgoZ",
-            "bm90aWZpY2F0aW9uX3B1YnN1Yl90b3BpYxgXIAEoCUID4EEDElcKEWVtYWls",
-            "X3ByZWZlcmVuY2VzGBkgASgLMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRh",
-            "dGF0cmFuc2Zlci52MS5FbWFpbFByZWZlcmVuY2VzQgPgQQM6xAHqQcABCidi",
-            "aWdxdWVyeWRhdGF0cmFuc2Zlci5nb29nbGVhcGlzLmNvbS9SdW4SP3Byb2pl",
-            "Y3RzL3twcm9qZWN0fS90cmFuc2ZlckNvbmZpZ3Mve3RyYW5zZmVyX2NvbmZp",
-            "Z30vcnVucy97cnVufRJUcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L3RyYW5zZmVyQ29uZmlncy97dHJhbnNmZXJfY29uZmlnfS9y",
-            "dW5zL3tydW59Qg0KC2Rlc3RpbmF0aW9uIooCCg9UcmFuc2Zlck1lc3NhZ2US",
-            "MAoMbWVzc2FnZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBJYCghzZXZlcml0eRgCIAEoDjJGLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5kYXRhdHJhbnNmZXIudjEuVHJhbnNmZXJNZXNzYWdlLk1lc3NhZ2VTZXZl",
-            "cml0eRIUCgxtZXNzYWdlX3RleHQYAyABKAkiVQoPTWVzc2FnZVNldmVyaXR5",
-            "EiAKHE1FU1NBR0VfU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIICgRJTkZPEAES",
-            "CwoHV0FSTklORxACEgkKBUVSUk9SEAMqSwoMVHJhbnNmZXJUeXBlEh0KGVRS",
-            "QU5TRkVSX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVCQVRDSBABEg0KCVNUUkVB",
-            "TUlORxACGgIYASpzCg1UcmFuc2ZlclN0YXRlEh4KGlRSQU5TRkVSX1NUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxACEgsKB1JVTk5JTkcQAxINCglT",
-            "VUNDRUVERUQQBBIKCgZGQUlMRUQQBRINCglDQU5DRUxMRUQQBkKPAgopY29t",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNmZXIudjFCDVRyYW5z",
-            "ZmVyUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9iaWdxdWVyeS9kYXRh",
-            "dHJhbnNmZXIvYXBpdjEvZGF0YXRyYW5zZmVycGI7ZGF0YXRyYW5zZmVycGKi",
-            "AgVHQ0JEVKoCJUdvb2dsZS5DbG91ZC5CaWdRdWVyeS5EYXRhVHJhbnNmZXIu",
-            "VjHKAiVHb29nbGVcQ2xvdWRcQmlnUXVlcnlcRGF0YVRyYW5zZmVyXFYx6gIp",
-            "R29vZ2xlOjpDbG91ZDo6QmlncXVlcnk6OkRhdGFUcmFuc2Zlcjo6VjFiBnBy",
-            "b3RvMw=="));
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAipwIKEVNjaGVkdWxlT3B0aW9uc1YyElcK",
+            "E3RpbWVfYmFzZWRfc2NoZWR1bGUYASABKAsyOC5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuZGF0YXRyYW5zZmVyLnYxLlRpbWVCYXNlZFNjaGVkdWxlSAASUAoP",
+            "bWFudWFsX3NjaGVkdWxlGAIgASgLMjUuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LmRhdGF0cmFuc2Zlci52MS5NYW51YWxTY2hlZHVsZUgAElsKFWV2ZW50X2Ry",
+            "aXZlbl9zY2hlZHVsZRgDIAEoCzI6Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5k",
+            "YXRhdHJhbnNmZXIudjEuRXZlbnREcml2ZW5TY2hlZHVsZUgAQgoKCHNjaGVk",
+            "dWxlIoMBChFUaW1lQmFzZWRTY2hlZHVsZRIQCghzY2hlZHVsZRgBIAEoCRIu",
+            "CgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIsCghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXAiEAoOTWFudWFsU2NoZWR1bGUiMgoTRXZlbnREcml2ZW5TY2hlZHVsZRIb",
+            "ChNwdWJzdWJfc3Vic2NyaXB0aW9uGAEgASgJIigKCFVzZXJJbmZvEhIKBWVt",
+            "YWlsGAEgASgJSACIAQFCCAoGX2VtYWlsIpsJCg5UcmFuc2ZlckNvbmZpZxIR",
+            "CgRuYW1lGAEgASgJQgPgQQgSIAoWZGVzdGluYXRpb25fZGF0YXNldF9pZBgC",
+            "IAEoCUgAEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIWCg5kYXRhX3NvdXJjZV9p",
+            "ZBgFIAEoCRInCgZwYXJhbXMYCSABKAsyFy5nb29nbGUucHJvdG9idWYuU3Ry",
+            "dWN0EhAKCHNjaGVkdWxlGAcgASgJElAKEHNjaGVkdWxlX29wdGlvbnMYGCAB",
+            "KAsyNi5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXRyYW5zZmVyLnYxLlNj",
+            "aGVkdWxlT3B0aW9ucxJVChNzY2hlZHVsZV9vcHRpb25zX3YyGB8gASgLMjgu",
+            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5TY2hlZHVs",
+            "ZU9wdGlvbnNWMhIgChhkYXRhX3JlZnJlc2hfd2luZG93X2RheXMYDCABKAUS",
+            "EAoIZGlzYWJsZWQYDSABKAgSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNgoNbmV4dF9ydW5fdGltZRgI",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJICgVzdGF0",
+            "ZRgKIAEoDjI0Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNmZXIu",
+            "djEuVHJhbnNmZXJTdGF0ZUID4EEDEg8KB3VzZXJfaWQYCyABKAMSGwoOZGF0",
+            "YXNldF9yZWdpb24YDiABKAlCA+BBAxIhChlub3RpZmljYXRpb25fcHVic3Vi",
+            "X3RvcGljGA8gASgJElIKEWVtYWlsX3ByZWZlcmVuY2VzGBIgASgLMjcuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5FbWFpbFByZWZl",
+            "cmVuY2VzEk0KCm93bmVyX2luZm8YGyABKAsyLy5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuZGF0YXRyYW5zZmVyLnYxLlVzZXJJbmZvQgPgQQNIAYgBARJgChhl",
+            "bmNyeXB0aW9uX2NvbmZpZ3VyYXRpb24YHCABKAsyPi5nb29nbGUuY2xvdWQu",
+            "YmlncXVlcnkuZGF0YXRyYW5zZmVyLnYxLkVuY3J5cHRpb25Db25maWd1cmF0",
+            "aW9uEiYKBWVycm9yGCAgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAzq5",
+            "AepBtQEKMmJpZ3F1ZXJ5ZGF0YXRyYW5zZmVyLmdvb2dsZWFwaXMuY29tL1Ry",
+            "YW5zZmVyQ29uZmlnEjRwcm9qZWN0cy97cHJvamVjdH0vdHJhbnNmZXJDb25m",
+            "aWdzL3t0cmFuc2Zlcl9jb25maWd9Eklwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vdHJhbnNmZXJDb25maWdzL3t0cmFuc2Zlcl9j",
+            "b25maWd9Qg0KC2Rlc3RpbmF0aW9uQg0KC19vd25lcl9pbmZvIk0KF0VuY3J5",
+            "cHRpb25Db25maWd1cmF0aW9uEjIKDGttc19rZXlfbmFtZRgBIAEoCzIcLmdv",
+            "b2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZSL/BgoLVHJhbnNmZXJSdW4SEQoE",
+            "bmFtZRgBIAEoCUID4EEIEjEKDXNjaGVkdWxlX3RpbWUYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEiwKCHJ1bl90aW1lGAogASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIoCgxlcnJvcl9zdGF0dXMYFSABKAsy",
+            "Ei5nb29nbGUucnBjLlN0YXR1cxIzCgpzdGFydF90aW1lGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAUgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
+            "aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiwK",
+            "BnBhcmFtcxgJIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAxIl",
+            "ChZkZXN0aW5hdGlvbl9kYXRhc2V0X2lkGAIgASgJQgPgQQNIABIbCg5kYXRh",
+            "X3NvdXJjZV9pZBgHIAEoCUID4EEDEkMKBXN0YXRlGAggASgOMjQuZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5UcmFuc2ZlclN0YXRl",
+            "Eg8KB3VzZXJfaWQYCyABKAMSFQoIc2NoZWR1bGUYDCABKAlCA+BBAxImChlu",
+            "b3RpZmljYXRpb25fcHVic3ViX3RvcGljGBcgASgJQgPgQQMSVwoRZW1haWxf",
+            "cHJlZmVyZW5jZXMYGSABKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0",
+            "YXRyYW5zZmVyLnYxLkVtYWlsUHJlZmVyZW5jZXNCA+BBAzrEAepBwAEKJ2Jp",
+            "Z3F1ZXJ5ZGF0YXRyYW5zZmVyLmdvb2dsZWFwaXMuY29tL1J1bhI/cHJvamVj",
+            "dHMve3Byb2plY3R9L3RyYW5zZmVyQ29uZmlncy97dHJhbnNmZXJfY29uZmln",
+            "fS9ydW5zL3tydW59ElRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vdHJhbnNmZXJDb25maWdzL3t0cmFuc2Zlcl9jb25maWd9L3J1",
+            "bnMve3J1bn1CDQoLZGVzdGluYXRpb24iigIKD1RyYW5zZmVyTWVzc2FnZRIw",
+            "CgxtZXNzYWdlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wElgKCHNldmVyaXR5GAIgASgOMkYuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LmRhdGF0cmFuc2Zlci52MS5UcmFuc2Zlck1lc3NhZ2UuTWVzc2FnZVNldmVy",
+            "aXR5EhQKDG1lc3NhZ2VfdGV4dBgDIAEoCSJVCg9NZXNzYWdlU2V2ZXJpdHkS",
+            "IAocTUVTU0FHRV9TRVZFUklUWV9VTlNQRUNJRklFRBAAEggKBElORk8QARIL",
+            "CgdXQVJOSU5HEAISCQoFRVJST1IQAypLCgxUcmFuc2ZlclR5cGUSHQoZVFJB",
+            "TlNGRVJfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUJBVENIEAESDQoJU1RSRUFN",
+            "SU5HEAIaAhgBKnMKDVRyYW5zZmVyU3RhdGUSHgoaVFJBTlNGRVJfU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAISCwoHUlVOTklORxADEg0KCVNV",
+            "Q0NFRURFRBAEEgoKBkZBSUxFRBAFEg0KCUNBTkNFTExFRBAGQo8CCiljb20u",
+            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MUINVHJhbnNm",
+            "ZXJQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L2RhdGF0",
+            "cmFuc2Zlci9hcGl2MS9kYXRhdHJhbnNmZXJwYjtkYXRhdHJhbnNmZXJwYqIC",
+            "BUdDQkRUqgIlR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LkRhdGFUcmFuc2Zlci5W",
+            "McoCJUdvb2dsZVxDbG91ZFxCaWdRdWVyeVxEYXRhVHJhbnNmZXJcVjHqAilH",
+            "b29nbGU6OkNsb3VkOjpCaWdxdWVyeTo6RGF0YVRyYW5zZmVyOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType), typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences), global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences.Parser, new[]{ "EnableFailureEmail" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions.Parser, new[]{ "DisableAutoScheduling", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptionsV2), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptionsV2.Parser, new[]{ "TimeBasedSchedule", "ManualSchedule", "EventDrivenSchedule" }, new[]{ "Schedule" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule), global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule.Parser, new[]{ "Schedule", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule), global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule), global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule.Parser, new[]{ "PubsubSubscription" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.UserInfo), global::Google.Cloud.BigQuery.DataTransfer.V1.UserInfo.Parser, new[]{ "Email" }, new[]{ "Email" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion", "NotificationPubsubTopic", "EmailPreferences", "OwnerInfo", "EncryptionConfiguration" }, new[]{ "Destination", "OwnerInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "ScheduleOptionsV2", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion", "NotificationPubsubTopic", "EmailPreferences", "OwnerInfo", "EncryptionConfiguration", "Error" }, new[]{ "Destination", "OwnerInfo" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.EncryptionConfiguration), global::Google.Cloud.BigQuery.DataTransfer.V1.EncryptionConfiguration.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule", "NotificationPubsubTopic", "EmailPreferences" }, new[]{ "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Parser, new[]{ "MessageTime", "Severity", "MessageText" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity) }, null, null)
@@ -670,6 +688,1031 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   }
 
   /// <summary>
+  /// V2 options customizing different types of data transfer schedule.
+  /// This field supports existing time-based and manual transfer schedule. Also
+  /// supports Event-Driven transfer schedule. ScheduleOptionsV2 cannot be used
+  /// together with ScheduleOptions/Schedule.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ScheduleOptionsV2 : pb::IMessage<ScheduleOptionsV2>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ScheduleOptionsV2> _parser = new pb::MessageParser<ScheduleOptionsV2>(() => new ScheduleOptionsV2());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ScheduleOptionsV2> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScheduleOptionsV2() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScheduleOptionsV2(ScheduleOptionsV2 other) : this() {
+      switch (other.ScheduleCase) {
+        case ScheduleOneofCase.TimeBasedSchedule:
+          TimeBasedSchedule = other.TimeBasedSchedule.Clone();
+          break;
+        case ScheduleOneofCase.ManualSchedule:
+          ManualSchedule = other.ManualSchedule.Clone();
+          break;
+        case ScheduleOneofCase.EventDrivenSchedule:
+          EventDrivenSchedule = other.EventDrivenSchedule.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScheduleOptionsV2 Clone() {
+      return new ScheduleOptionsV2(this);
+    }
+
+    /// <summary>Field number for the "time_based_schedule" field.</summary>
+    public const int TimeBasedScheduleFieldNumber = 1;
+    /// <summary>
+    /// Time based transfer schedule options. This is the default schedule
+    /// option.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule TimeBasedSchedule {
+      get { return scheduleCase_ == ScheduleOneofCase.TimeBasedSchedule ? (global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule) schedule_ : null; }
+      set {
+        schedule_ = value;
+        scheduleCase_ = value == null ? ScheduleOneofCase.None : ScheduleOneofCase.TimeBasedSchedule;
+      }
+    }
+
+    /// <summary>Field number for the "manual_schedule" field.</summary>
+    public const int ManualScheduleFieldNumber = 2;
+    /// <summary>
+    /// Manual transfer schedule. If set, the transfer run will not be
+    /// auto-scheduled by the system, unless the client invokes
+    /// StartManualTransferRuns.  This is equivalent to
+    /// disable_auto_scheduling = true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule ManualSchedule {
+      get { return scheduleCase_ == ScheduleOneofCase.ManualSchedule ? (global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule) schedule_ : null; }
+      set {
+        schedule_ = value;
+        scheduleCase_ = value == null ? ScheduleOneofCase.None : ScheduleOneofCase.ManualSchedule;
+      }
+    }
+
+    /// <summary>Field number for the "event_driven_schedule" field.</summary>
+    public const int EventDrivenScheduleFieldNumber = 3;
+    /// <summary>
+    /// Event driven transfer schedule options. If set, the transfer will be
+    /// scheduled upon events arrial.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule EventDrivenSchedule {
+      get { return scheduleCase_ == ScheduleOneofCase.EventDrivenSchedule ? (global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule) schedule_ : null; }
+      set {
+        schedule_ = value;
+        scheduleCase_ = value == null ? ScheduleOneofCase.None : ScheduleOneofCase.EventDrivenSchedule;
+      }
+    }
+
+    private object schedule_;
+    /// <summary>Enum of possible cases for the "schedule" oneof.</summary>
+    public enum ScheduleOneofCase {
+      None = 0,
+      TimeBasedSchedule = 1,
+      ManualSchedule = 2,
+      EventDrivenSchedule = 3,
+    }
+    private ScheduleOneofCase scheduleCase_ = ScheduleOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScheduleOneofCase ScheduleCase {
+      get { return scheduleCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSchedule() {
+      scheduleCase_ = ScheduleOneofCase.None;
+      schedule_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ScheduleOptionsV2);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ScheduleOptionsV2 other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TimeBasedSchedule, other.TimeBasedSchedule)) return false;
+      if (!object.Equals(ManualSchedule, other.ManualSchedule)) return false;
+      if (!object.Equals(EventDrivenSchedule, other.EventDrivenSchedule)) return false;
+      if (ScheduleCase != other.ScheduleCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (scheduleCase_ == ScheduleOneofCase.TimeBasedSchedule) hash ^= TimeBasedSchedule.GetHashCode();
+      if (scheduleCase_ == ScheduleOneofCase.ManualSchedule) hash ^= ManualSchedule.GetHashCode();
+      if (scheduleCase_ == ScheduleOneofCase.EventDrivenSchedule) hash ^= EventDrivenSchedule.GetHashCode();
+      hash ^= (int) scheduleCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (scheduleCase_ == ScheduleOneofCase.TimeBasedSchedule) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TimeBasedSchedule);
+      }
+      if (scheduleCase_ == ScheduleOneofCase.ManualSchedule) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ManualSchedule);
+      }
+      if (scheduleCase_ == ScheduleOneofCase.EventDrivenSchedule) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EventDrivenSchedule);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (scheduleCase_ == ScheduleOneofCase.TimeBasedSchedule) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TimeBasedSchedule);
+      }
+      if (scheduleCase_ == ScheduleOneofCase.ManualSchedule) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ManualSchedule);
+      }
+      if (scheduleCase_ == ScheduleOneofCase.EventDrivenSchedule) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EventDrivenSchedule);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (scheduleCase_ == ScheduleOneofCase.TimeBasedSchedule) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeBasedSchedule);
+      }
+      if (scheduleCase_ == ScheduleOneofCase.ManualSchedule) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManualSchedule);
+      }
+      if (scheduleCase_ == ScheduleOneofCase.EventDrivenSchedule) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EventDrivenSchedule);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ScheduleOptionsV2 other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ScheduleCase) {
+        case ScheduleOneofCase.TimeBasedSchedule:
+          if (TimeBasedSchedule == null) {
+            TimeBasedSchedule = new global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule();
+          }
+          TimeBasedSchedule.MergeFrom(other.TimeBasedSchedule);
+          break;
+        case ScheduleOneofCase.ManualSchedule:
+          if (ManualSchedule == null) {
+            ManualSchedule = new global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule();
+          }
+          ManualSchedule.MergeFrom(other.ManualSchedule);
+          break;
+        case ScheduleOneofCase.EventDrivenSchedule:
+          if (EventDrivenSchedule == null) {
+            EventDrivenSchedule = new global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule();
+          }
+          EventDrivenSchedule.MergeFrom(other.EventDrivenSchedule);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule subBuilder = new global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule();
+            if (scheduleCase_ == ScheduleOneofCase.TimeBasedSchedule) {
+              subBuilder.MergeFrom(TimeBasedSchedule);
+            }
+            input.ReadMessage(subBuilder);
+            TimeBasedSchedule = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule subBuilder = new global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule();
+            if (scheduleCase_ == ScheduleOneofCase.ManualSchedule) {
+              subBuilder.MergeFrom(ManualSchedule);
+            }
+            input.ReadMessage(subBuilder);
+            ManualSchedule = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule subBuilder = new global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule();
+            if (scheduleCase_ == ScheduleOneofCase.EventDrivenSchedule) {
+              subBuilder.MergeFrom(EventDrivenSchedule);
+            }
+            input.ReadMessage(subBuilder);
+            EventDrivenSchedule = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule subBuilder = new global::Google.Cloud.BigQuery.DataTransfer.V1.TimeBasedSchedule();
+            if (scheduleCase_ == ScheduleOneofCase.TimeBasedSchedule) {
+              subBuilder.MergeFrom(TimeBasedSchedule);
+            }
+            input.ReadMessage(subBuilder);
+            TimeBasedSchedule = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule subBuilder = new global::Google.Cloud.BigQuery.DataTransfer.V1.ManualSchedule();
+            if (scheduleCase_ == ScheduleOneofCase.ManualSchedule) {
+              subBuilder.MergeFrom(ManualSchedule);
+            }
+            input.ReadMessage(subBuilder);
+            ManualSchedule = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule subBuilder = new global::Google.Cloud.BigQuery.DataTransfer.V1.EventDrivenSchedule();
+            if (scheduleCase_ == ScheduleOneofCase.EventDrivenSchedule) {
+              subBuilder.MergeFrom(EventDrivenSchedule);
+            }
+            input.ReadMessage(subBuilder);
+            EventDrivenSchedule = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Options customizing the time based transfer schedule.
+  /// Options are migrated from the original ScheduleOptions message.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TimeBasedSchedule : pb::IMessage<TimeBasedSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TimeBasedSchedule> _parser = new pb::MessageParser<TimeBasedSchedule>(() => new TimeBasedSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TimeBasedSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimeBasedSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimeBasedSchedule(TimeBasedSchedule other) : this() {
+      schedule_ = other.schedule_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimeBasedSchedule Clone() {
+      return new TimeBasedSchedule(this);
+    }
+
+    /// <summary>Field number for the "schedule" field.</summary>
+    public const int ScheduleFieldNumber = 1;
+    private string schedule_ = "";
+    /// <summary>
+    /// Data transfer schedule.
+    /// If the data source does not support a custom schedule, this should be
+    /// empty. If it is empty, the default value for the data source will be used.
+    /// The specified times are in UTC.
+    /// Examples of valid format:
+    /// `1st,3rd monday of month 15:30`,
+    /// `every wed,fri of jan,jun 13:15`, and
+    /// `first sunday of quarter 00:00`.
+    /// See more explanation about the format here:
+    /// https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    ///
+    /// NOTE: The minimum interval time between recurring transfers depends on the
+    /// data source; refer to the documentation for your data source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Schedule {
+      get { return schedule_; }
+      set {
+        schedule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Specifies time to start scheduling transfer runs. The first run will be
+    /// scheduled at or after the start time according to a recurrence pattern
+    /// defined in the schedule string. The start time can be changed at any
+    /// moment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Defines time to stop scheduling transfer runs. A transfer run cannot be
+    /// scheduled at or after the end time. The end time can be changed at any
+    /// moment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TimeBasedSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TimeBasedSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Schedule != other.Schedule) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Schedule.Length != 0) hash ^= Schedule.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Schedule.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Schedule);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Schedule.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Schedule);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Schedule.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Schedule);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TimeBasedSchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Schedule.Length != 0) {
+        Schedule = other.Schedule;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Schedule = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Schedule = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Options customizing manual transfers schedule.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ManualSchedule : pb::IMessage<ManualSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ManualSchedule> _parser = new pb::MessageParser<ManualSchedule>(() => new ManualSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ManualSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManualSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManualSchedule(ManualSchedule other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManualSchedule Clone() {
+      return new ManualSchedule(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ManualSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ManualSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ManualSchedule other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Options customizing EventDriven transfers schedule.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EventDrivenSchedule : pb::IMessage<EventDrivenSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EventDrivenSchedule> _parser = new pb::MessageParser<EventDrivenSchedule>(() => new EventDrivenSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EventDrivenSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventDrivenSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventDrivenSchedule(EventDrivenSchedule other) : this() {
+      pubsubSubscription_ = other.pubsubSubscription_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventDrivenSchedule Clone() {
+      return new EventDrivenSchedule(this);
+    }
+
+    /// <summary>Field number for the "pubsub_subscription" field.</summary>
+    public const int PubsubSubscriptionFieldNumber = 1;
+    private string pubsubSubscription_ = "";
+    /// <summary>
+    /// Pub/Sub subscription name used to receive events.
+    /// Only Google Cloud Storage data source support this option.
+    /// Format: projects/{project}/subscriptions/{subscription}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PubsubSubscription {
+      get { return pubsubSubscription_; }
+      set {
+        pubsubSubscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EventDrivenSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EventDrivenSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PubsubSubscription != other.PubsubSubscription) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PubsubSubscription.Length != 0) hash ^= PubsubSubscription.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PubsubSubscription.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PubsubSubscription);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PubsubSubscription.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PubsubSubscription);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PubsubSubscription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PubsubSubscription);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EventDrivenSchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PubsubSubscription.Length != 0) {
+        PubsubSubscription = other.PubsubSubscription;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PubsubSubscription = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PubsubSubscription = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Information about a user.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -687,7 +1730,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -902,7 +1945,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -928,6 +1971,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       params_ = other.params_ != null ? other.params_.Clone() : null;
       schedule_ = other.schedule_;
       scheduleOptions_ = other.scheduleOptions_ != null ? other.scheduleOptions_.Clone() : null;
+      scheduleOptionsV2_ = other.scheduleOptionsV2_ != null ? other.scheduleOptionsV2_.Clone() : null;
       dataRefreshWindowDays_ = other.dataRefreshWindowDays_;
       disabled_ = other.disabled_;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
@@ -939,6 +1983,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       emailPreferences_ = other.emailPreferences_ != null ? other.emailPreferences_.Clone() : null;
       ownerInfo_ = other.ownerInfo_ != null ? other.ownerInfo_.Clone() : null;
       encryptionConfiguration_ = other.encryptionConfiguration_ != null ? other.encryptionConfiguration_.Clone() : null;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
       switch (other.DestinationCase) {
         case DestinationOneofCase.DestinationDatasetId:
           DestinationDatasetId = other.DestinationDatasetId;
@@ -1093,6 +2138,23 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       get { return scheduleOptions_; }
       set {
         scheduleOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "schedule_options_v2" field.</summary>
+    public const int ScheduleOptionsV2FieldNumber = 31;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptionsV2 scheduleOptionsV2_;
+    /// <summary>
+    /// Options customizing different types of data transfer schedule.
+    /// This field replaces "schedule" and "schedule_options" fields.
+    /// ScheduleOptionsV2 cannot be used together with ScheduleOptions/Schedule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptionsV2 ScheduleOptionsV2 {
+      get { return scheduleOptionsV2_; }
+      set {
+        scheduleOptionsV2_ = value;
       }
     }
 
@@ -1278,6 +2340,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
     }
 
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 32;
+    private global::Google.Rpc.Status error_;
+    /// <summary>
+    /// Output only. Error code with detailed information about reason of the
+    /// latest config failure.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Rpc.Status Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
     private object destination_;
     /// <summary>Enum of possible cases for the "destination" oneof.</summary>
     public enum DestinationOneofCase {
@@ -1320,6 +2398,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (!object.Equals(Params, other.Params)) return false;
       if (Schedule != other.Schedule) return false;
       if (!object.Equals(ScheduleOptions, other.ScheduleOptions)) return false;
+      if (!object.Equals(ScheduleOptionsV2, other.ScheduleOptionsV2)) return false;
       if (DataRefreshWindowDays != other.DataRefreshWindowDays) return false;
       if (Disabled != other.Disabled) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
@@ -1331,6 +2410,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (!object.Equals(EmailPreferences, other.EmailPreferences)) return false;
       if (!object.Equals(OwnerInfo, other.OwnerInfo)) return false;
       if (!object.Equals(EncryptionConfiguration, other.EncryptionConfiguration)) return false;
+      if (!object.Equals(Error, other.Error)) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1346,6 +2426,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (params_ != null) hash ^= Params.GetHashCode();
       if (Schedule.Length != 0) hash ^= Schedule.GetHashCode();
       if (scheduleOptions_ != null) hash ^= ScheduleOptions.GetHashCode();
+      if (scheduleOptionsV2_ != null) hash ^= ScheduleOptionsV2.GetHashCode();
       if (DataRefreshWindowDays != 0) hash ^= DataRefreshWindowDays.GetHashCode();
       if (Disabled != false) hash ^= Disabled.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -1357,6 +2438,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (emailPreferences_ != null) hash ^= EmailPreferences.GetHashCode();
       if (ownerInfo_ != null) hash ^= OwnerInfo.GetHashCode();
       if (encryptionConfiguration_ != null) hash ^= EncryptionConfiguration.GetHashCode();
+      if (error_ != null) hash ^= Error.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1448,6 +2530,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(EncryptionConfiguration);
       }
+      if (scheduleOptionsV2_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(ScheduleOptionsV2);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(Error);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1530,6 +2620,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(EncryptionConfiguration);
       }
+      if (scheduleOptionsV2_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(ScheduleOptionsV2);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(Error);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1560,6 +2658,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (scheduleOptions_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ScheduleOptions);
+      }
+      if (scheduleOptionsV2_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ScheduleOptionsV2);
       }
       if (DataRefreshWindowDays != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DataRefreshWindowDays);
@@ -1593,6 +2694,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (encryptionConfiguration_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionConfiguration);
+      }
+      if (error_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Error);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1629,6 +2733,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           ScheduleOptions = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions();
         }
         ScheduleOptions.MergeFrom(other.ScheduleOptions);
+      }
+      if (other.scheduleOptionsV2_ != null) {
+        if (scheduleOptionsV2_ == null) {
+          ScheduleOptionsV2 = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptionsV2();
+        }
+        ScheduleOptionsV2.MergeFrom(other.ScheduleOptionsV2);
       }
       if (other.DataRefreshWindowDays != 0) {
         DataRefreshWindowDays = other.DataRefreshWindowDays;
@@ -1677,6 +2787,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           EncryptionConfiguration = new global::Google.Cloud.BigQuery.DataTransfer.V1.EncryptionConfiguration();
         }
         EncryptionConfiguration.MergeFrom(other.EncryptionConfiguration);
+      }
+      if (other.error_ != null) {
+        if (error_ == null) {
+          Error = new global::Google.Rpc.Status();
+        }
+        Error.MergeFrom(other.Error);
       }
       switch (other.DestinationCase) {
         case DestinationOneofCase.DestinationDatasetId:
@@ -1792,6 +2908,20 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             input.ReadMessage(EncryptionConfiguration);
             break;
           }
+          case 250: {
+            if (scheduleOptionsV2_ == null) {
+              ScheduleOptionsV2 = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptionsV2();
+            }
+            input.ReadMessage(ScheduleOptionsV2);
+            break;
+          }
+          case 258: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
         }
       }
     #endif
@@ -1900,6 +3030,20 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             input.ReadMessage(EncryptionConfiguration);
             break;
           }
+          case 250: {
+            if (scheduleOptionsV2_ == null) {
+              ScheduleOptionsV2 = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptionsV2();
+            }
+            input.ReadMessage(ScheduleOptionsV2);
+            break;
+          }
+          case 258: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
         }
       }
     }
@@ -1925,7 +3069,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2129,7 +3273,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3021,7 +4165,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
