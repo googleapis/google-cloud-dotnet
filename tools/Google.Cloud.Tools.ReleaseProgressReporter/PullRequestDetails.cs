@@ -126,14 +126,24 @@ public class PullRequestDetails
     /// </summary>
     /// <param name="client">The client to use to add the label.</param>
     /// <param name="label">Label to add on the pull request.</param>
-    public async Task<IReadOnlyList<Label>> AddLabel(GitHubClient client, string label) =>
+    public async Task AddLabel(GitHubClient client, string label) =>
         await client.Issue.Labels.AddToIssue(Owner, RepoName, Id, new string[] { label });
 
     /// <summary>
-    /// Removes the given label from the pull request.
+    /// Removes the given label from the pull request. If the label does not exist,
+    /// the API error is swallowed.
     /// </summary>
     /// <param name="client">The client to use to add the label.</param>
     /// <param name="label">Label to remove on the pull request.</param>
-    public async Task<IReadOnlyList<Label>> RemoveLabel(GitHubClient client, string label) =>
-        await client.Issue.Labels.RemoveFromIssue(Owner, RepoName, Id, label);
+    public async Task RemoveLabel(GitHubClient client, string label)
+    {
+        try
+        {
+            await client.Issue.Labels.RemoveFromIssue(Owner, RepoName, Id, label);
+        }
+        catch (NotFoundException)
+        {
+            Console.WriteLine($"Label '{label}' not found (when trying to remove)");
+        }
+    }
 }
