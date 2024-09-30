@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-09-30
+
+### Bug fixes
+
+- Annotate PipelineJob and PipelineTaskRerunConfig fields as optional ([commit 7b00bf9](https://github.com/googleapis/google-cloud-dotnet/commit/7b00bf9de9e656c3eae14474e94a411ba8dcbd12))
+
+### New features
+
+- Add a dynamic retrieval API ([commit 76aa5a6](https://github.com/googleapis/google-cloud-dotnet/commit/76aa5a6a4d2e7750429f18634bd550f196066c5a))
+
 ## Version 1.0.0-beta04, released 2024-09-26
 
 ### New features
