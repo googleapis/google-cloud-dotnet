@@ -34,18 +34,18 @@ namespace Google.Cloud.Spanner.V1 {
             "dG9fdHlwZV9mcW4YBSABKAkifwoKU3RydWN0VHlwZRIzCgZmaWVsZHMYASAD",
             "KAsyIy5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlLkZpZWxkGjwKBUZp",
             "ZWxkEgwKBG5hbWUYASABKAkSJQoEdHlwZRgCIAEoCzIXLmdvb2dsZS5zcGFu",
-            "bmVyLnYxLlR5cGUqxwEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJ",
+            "bmVyLnYxLlR5cGUq1QEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJ",
             "RklFRBAAEggKBEJPT0wQARIJCgVJTlQ2NBACEgsKB0ZMT0FUNjQQAxILCgdG",
             "TE9BVDMyEA8SDQoJVElNRVNUQU1QEAQSCAoEREFURRAFEgoKBlNUUklORxAG",
             "EgkKBUJZVEVTEAcSCQoFQVJSQVkQCBIKCgZTVFJVQ1QQCRILCgdOVU1FUklD",
-            "EAoSCAoESlNPThALEgkKBVBST1RPEA0SCAoERU5VTRAOKmQKElR5cGVBbm5v",
-            "dGF0aW9uQ29kZRIkCiBUWVBFX0FOTk9UQVRJT05fQ09ERV9VTlNQRUNJRklF",
-            "RBAAEg4KClBHX05VTUVSSUMQAhIMCghQR19KU09OQhADEgoKBlBHX09JRBAE",
-            "QqwBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCCVR5cGVQcm90b1ABWjVjbG91",
-            "ZC5nb29nbGUuY29tL2dvL3NwYW5uZXIvYXBpdjEvc3Bhbm5lcnBiO3NwYW5u",
-            "ZXJwYqoCF0dvb2dsZS5DbG91ZC5TcGFubmVyLlYxygIXR29vZ2xlXENsb3Vk",
-            "XFNwYW5uZXJcVjHqAhpHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpWMWIGcHJv",
-            "dG8z"));
+            "EAoSCAoESlNPThALEgkKBVBST1RPEA0SCAoERU5VTRAOEgwKCElOVEVSVkFM",
+            "EBAqZAoSVHlwZUFubm90YXRpb25Db2RlEiQKIFRZUEVfQU5OT1RBVElPTl9D",
+            "T0RFX1VOU1BFQ0lGSUVEEAASDgoKUEdfTlVNRVJJQxACEgwKCFBHX0pTT05C",
+            "EAMSCgoGUEdfT0lEEARCrAEKFWNvbS5nb29nbGUuc3Bhbm5lci52MUIJVHlw",
+            "ZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5lci9hcGl2MS9z",
+            "cGFubmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHK",
+            "AhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNw",
+            "YW5uZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), typeof(global::Google.Cloud.Spanner.V1.TypeAnnotationCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,14 +126,14 @@ namespace Google.Cloud.Spanner.V1 {
     [pbr::OriginalName("STRUCT")] Struct = 9,
     /// <summary>
     /// Encoded as `string`, in decimal format or scientific notation format.
-    /// &lt;br>Decimal format:
-    /// &lt;br>`[+-]Digits[.[Digits]]` or
-    /// &lt;br>`[+-][Digits].Digits`
+    /// Decimal format:
+    /// `[+-]Digits[.[Digits]]` or
+    /// `[+-][Digits].Digits`
     ///
     /// Scientific notation:
-    /// &lt;br>`[+-]Digits[.[Digits]][ExponentIndicator[+-]Digits]` or
-    /// &lt;br>`[+-][Digits].Digits[ExponentIndicator[+-]Digits]`
-    /// &lt;br>(ExponentIndicator is `"e"` or `"E"`)
+    /// `[+-]Digits[.[Digits]][ExponentIndicator[+-]Digits]` or
+    /// `[+-][Digits].Digits[ExponentIndicator[+-]Digits]`
+    /// (ExponentIndicator is `"e"` or `"E"`)
     /// </summary>
     [pbr::OriginalName("NUMERIC")] Numeric = 10,
     /// <summary>
@@ -156,6 +156,14 @@ namespace Google.Cloud.Spanner.V1 {
     /// Encoded as `string`, in decimal format.
     /// </summary>
     [pbr::OriginalName("ENUM")] Enum = 14,
+    /// <summary>
+    /// Encoded as `string`, in `ISO8601` duration format -
+    /// `P[n]Y[n]M[n]DT[n]H[n]M[n[.fraction]]S`
+    /// where `n` is an integer.
+    /// For example, `P1Y2M3DT4H5M6.5S` represents time duration of 1 year, 2
+    /// months, 3 days, 4 hours, 5 minutes, and 6.5 seconds.
+    /// </summary>
+    [pbr::OriginalName("INTERVAL")] Interval = 16,
   }
 
   /// <summary>
@@ -172,20 +180,21 @@ namespace Google.Cloud.Spanner.V1 {
     [pbr::OriginalName("TYPE_ANNOTATION_CODE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// PostgreSQL compatible NUMERIC type. This annotation needs to be applied to
-    /// [Type][google.spanner.v1.Type] instances having [NUMERIC][google.spanner.v1.TypeCode.NUMERIC]
-    /// type code to specify that values of this type should be treated as
-    /// PostgreSQL NUMERIC values. Currently this annotation is always needed for
-    /// [NUMERIC][google.spanner.v1.TypeCode.NUMERIC] when a client interacts with PostgreSQL-enabled
-    /// Spanner databases.
+    /// [Type][google.spanner.v1.Type] instances having
+    /// [NUMERIC][google.spanner.v1.TypeCode.NUMERIC] type code to specify that
+    /// values of this type should be treated as PostgreSQL NUMERIC values.
+    /// Currently this annotation is always needed for
+    /// [NUMERIC][google.spanner.v1.TypeCode.NUMERIC] when a client interacts with
+    /// PostgreSQL-enabled Spanner databases.
     /// </summary>
     [pbr::OriginalName("PG_NUMERIC")] PgNumeric = 2,
     /// <summary>
     /// PostgreSQL compatible JSONB type. This annotation needs to be applied to
-    /// [Type][google.spanner.v1.Type] instances having [JSON][google.spanner.v1.TypeCode.JSON]
-    /// type code to specify that values of this type should be treated as
-    /// PostgreSQL JSONB values. Currently this annotation is always needed for
-    /// [JSON][google.spanner.v1.TypeCode.JSON] when a client interacts with PostgreSQL-enabled
-    /// Spanner databases.
+    /// [Type][google.spanner.v1.Type] instances having
+    /// [JSON][google.spanner.v1.TypeCode.JSON] type code to specify that values of
+    /// this type should be treated as PostgreSQL JSONB values. Currently this
+    /// annotation is always needed for [JSON][google.spanner.v1.TypeCode.JSON]
+    /// when a client interacts with PostgreSQL-enabled Spanner databases.
     /// </summary>
     [pbr::OriginalName("PG_JSONB")] PgJsonb = 3,
     /// <summary>
@@ -271,8 +280,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ArrayElementTypeFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.Type arrayElementType_;
     /// <summary>
-    /// If [code][google.spanner.v1.Type.code] == [ARRAY][google.spanner.v1.TypeCode.ARRAY], then `array_element_type`
-    /// is the type of the array elements.
+    /// If [code][google.spanner.v1.Type.code] ==
+    /// [ARRAY][google.spanner.v1.TypeCode.ARRAY], then `array_element_type` is the
+    /// type of the array elements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -287,8 +297,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int StructTypeFieldNumber = 3;
     private global::Google.Cloud.Spanner.V1.StructType structType_;
     /// <summary>
-    /// If [code][google.spanner.v1.Type.code] == [STRUCT][google.spanner.v1.TypeCode.STRUCT], then `struct_type`
-    /// provides type information for the struct's fields.
+    /// If [code][google.spanner.v1.Type.code] ==
+    /// [STRUCT][google.spanner.v1.TypeCode.STRUCT], then `struct_type` provides
+    /// type information for the struct's fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -303,12 +314,14 @@ namespace Google.Cloud.Spanner.V1 {
     public const int TypeAnnotationFieldNumber = 4;
     private global::Google.Cloud.Spanner.V1.TypeAnnotationCode typeAnnotation_ = global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified;
     /// <summary>
-    /// The [TypeAnnotationCode][google.spanner.v1.TypeAnnotationCode] that disambiguates SQL type that Spanner will
-    /// use to represent values of this type during query processing. This is
-    /// necessary for some type codes because a single [TypeCode][google.spanner.v1.TypeCode] can be mapped
-    /// to different SQL types depending on the SQL dialect. [type_annotation][google.spanner.v1.Type.type_annotation]
-    /// typically is not needed to process the content of a value (it doesn't
-    /// affect serialization) and clients can ignore it on the read path.
+    /// The [TypeAnnotationCode][google.spanner.v1.TypeAnnotationCode] that
+    /// disambiguates SQL type that Spanner will use to represent values of this
+    /// type during query processing. This is necessary for some type codes because
+    /// a single [TypeCode][google.spanner.v1.TypeCode] can be mapped to different
+    /// SQL types depending on the SQL dialect.
+    /// [type_annotation][google.spanner.v1.Type.type_annotation] typically is not
+    /// needed to process the content of a value (it doesn't affect serialization)
+    /// and clients can ignore it on the read path.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -586,7 +599,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// `StructType` defines the fields of a [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.
+  /// `StructType` defines the fields of a
+  /// [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StructType : pb::IMessage<StructType>
@@ -642,9 +656,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// The list of fields that make up this struct. Order is
     /// significant, because values of this struct type are represented as
     /// lists, where the order of field values matches the order of
-    /// fields in the [StructType][google.spanner.v1.StructType]. In turn, the order of fields
-    /// matches the order of columns in a read request, or the order of
-    /// fields in the `SELECT` clause of a query.
+    /// fields in the [StructType][google.spanner.v1.StructType]. In turn, the
+    /// order of fields matches the order of columns in a read request, or the
+    /// order of fields in the `SELECT` clause of a query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
