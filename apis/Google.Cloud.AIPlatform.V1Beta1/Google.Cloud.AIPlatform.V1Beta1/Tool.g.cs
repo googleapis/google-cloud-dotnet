@@ -67,20 +67,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "+kElCiNhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1JhZ0NvcnB1cxIZCgxy",
             "YWdfZmlsZV9pZHMYAiADKAlCA+BBAUITChFfc2ltaWxhcml0eV90b3Bfa0Ic",
             "ChpfdmVjdG9yX2Rpc3RhbmNlX3RocmVzaG9sZCIoCg5WZXJ0ZXhBSVNlYXJj",
-            "aBIWCglkYXRhc3RvcmUYASABKAlCA+BBAiIXChVHb29nbGVTZWFyY2hSZXRy",
-            "aWV2YWwiagoKVG9vbENvbmZpZxJcChdmdW5jdGlvbl9jYWxsaW5nX2NvbmZp",
-            "ZxgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRnVu",
-            "Y3Rpb25DYWxsaW5nQ29uZmlnQgPgQQEixwEKFUZ1bmN0aW9uQ2FsbGluZ0Nv",
-            "bmZpZxJOCgRtb2RlGAEgASgOMjsuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMS5GdW5jdGlvbkNhbGxpbmdDb25maWcuTW9kZUID4EEBEiMKFmFs",
-            "bG93ZWRfZnVuY3Rpb25fbmFtZXMYAiADKAlCA+BBASI5CgRNb2RlEhQKEE1P",
-            "REVfVU5TUEVDSUZJRUQQABIICgRBVVRPEAESBwoDQU5ZEAISCAoETk9ORRAD",
-            "QuABCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIJVG9v",
-            "bFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
-            "MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xv",
-            "dWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZv",
-            "cm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0",
-            "YTFiBnByb3RvMw=="));
+            "aBIWCglkYXRhc3RvcmUYASABKAlCA+BBAiJyChVHb29nbGVTZWFyY2hSZXRy",
+            "aWV2YWwSWQoYZHluYW1pY19yZXRyaWV2YWxfY29uZmlnGAIgASgLMjcuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EeW5hbWljUmV0cmlldmFs",
+            "Q29uZmlnIs8BChZEeW5hbWljUmV0cmlldmFsQ29uZmlnEkoKBG1vZGUYASAB",
+            "KA4yPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkR5bmFtaWNS",
+            "ZXRyaWV2YWxDb25maWcuTW9kZRIjChFkeW5hbWljX3RocmVzaG9sZBgCIAEo",
+            "AkID4EEBSACIAQEiLgoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVEEAASEAoM",
+            "TU9ERV9EWU5BTUlDEAFCFAoSX2R5bmFtaWNfdGhyZXNob2xkImoKClRvb2xD",
+            "b25maWcSXAoXZnVuY3Rpb25fY2FsbGluZ19jb25maWcYASABKAsyNi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkZ1bmN0aW9uQ2FsbGluZ0Nv",
+            "bmZpZ0ID4EEBIscBChVGdW5jdGlvbkNhbGxpbmdDb25maWcSTgoEbW9kZRgB",
+            "IAEoDjI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRnVuY3Rp",
+            "b25DYWxsaW5nQ29uZmlnLk1vZGVCA+BBARIjChZhbGxvd2VkX2Z1bmN0aW9u",
+            "X25hbWVzGAIgAygJQgPgQQEiOQoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVE",
+            "EAASCAoEQVVUTxABEgcKA0FOWRACEggKBE5PTkUQA0LgAQojY29tLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCCVRvb2xQcm90b1ABWkNjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRm",
+            "b3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
+            "VjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJH",
+            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -92,7 +98,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Retrieval), global::Google.Cloud.AIPlatform.V1Beta1.Retrieval.Parser, new[]{ "VertexAiSearch", "VertexRagStore", "DisableAttribution" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexRagStore), global::Google.Cloud.AIPlatform.V1Beta1.VertexRagStore.Parser, new[]{ "RagCorpora", "RagResources", "SimilarityTopK", "VectorDistanceThreshold" }, new[]{ "SimilarityTopK", "VectorDistanceThreshold" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexRagStore.Types.RagResource), global::Google.Cloud.AIPlatform.V1Beta1.VertexRagStore.Types.RagResource.Parser, new[]{ "RagCorpus", "RagFileIds" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch), global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch.Parser, new[]{ "Datastore" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GoogleSearchRetrieval), global::Google.Cloud.AIPlatform.V1Beta1.GoogleSearchRetrieval.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GoogleSearchRetrieval), global::Google.Cloud.AIPlatform.V1Beta1.GoogleSearchRetrieval.Parser, new[]{ "DynamicRetrievalConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig), global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Parser, new[]{ "Mode", "DynamicThreshold" }, new[]{ "DynamicThreshold" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ToolConfig), global::Google.Cloud.AIPlatform.V1Beta1.ToolConfig.Parser, new[]{ "FunctionCallingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FunctionCallingConfig), global::Google.Cloud.AIPlatform.V1Beta1.FunctionCallingConfig.Parser, new[]{ "Mode", "AllowedFunctionNames" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.FunctionCallingConfig.Types.Mode) }, null, null)
           }));
@@ -3155,6 +3162,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleSearchRetrieval(GoogleSearchRetrieval other) : this() {
+      dynamicRetrievalConfig_ = other.dynamicRetrievalConfig_ != null ? other.dynamicRetrievalConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3162,6 +3170,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleSearchRetrieval Clone() {
       return new GoogleSearchRetrieval(this);
+    }
+
+    /// <summary>Field number for the "dynamic_retrieval_config" field.</summary>
+    public const int DynamicRetrievalConfigFieldNumber = 2;
+    private global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig dynamicRetrievalConfig_;
+    /// <summary>
+    /// Specifies the dynamic retrieval configuration for the given source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig DynamicRetrievalConfig {
+      get { return dynamicRetrievalConfig_; }
+      set {
+        dynamicRetrievalConfig_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3179,6 +3202,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(DynamicRetrievalConfig, other.DynamicRetrievalConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3186,6 +3210,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (dynamicRetrievalConfig_ != null) hash ^= DynamicRetrievalConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3204,6 +3229,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (dynamicRetrievalConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DynamicRetrievalConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3214,6 +3243,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dynamicRetrievalConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DynamicRetrievalConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3224,6 +3257,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (dynamicRetrievalConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DynamicRetrievalConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3235,6 +3271,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public void MergeFrom(GoogleSearchRetrieval other) {
       if (other == null) {
         return;
+      }
+      if (other.dynamicRetrievalConfig_ != null) {
+        if (dynamicRetrievalConfig_ == null) {
+          DynamicRetrievalConfig = new global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig();
+        }
+        DynamicRetrievalConfig.MergeFrom(other.DynamicRetrievalConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3251,6 +3293,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 18: {
+            if (dynamicRetrievalConfig_ == null) {
+              DynamicRetrievalConfig = new global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig();
+            }
+            input.ReadMessage(DynamicRetrievalConfig);
+            break;
+          }
         }
       }
     #endif
@@ -3266,10 +3315,293 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 18: {
+            if (dynamicRetrievalConfig_ == null) {
+              DynamicRetrievalConfig = new global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig();
+            }
+            input.ReadMessage(DynamicRetrievalConfig);
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Describes the options to customize dynamic retrieval.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DynamicRetrievalConfig : pb::IMessage<DynamicRetrievalConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DynamicRetrievalConfig> _parser = new pb::MessageParser<DynamicRetrievalConfig>(() => new DynamicRetrievalConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DynamicRetrievalConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DynamicRetrievalConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DynamicRetrievalConfig(DynamicRetrievalConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      mode_ = other.mode_;
+      dynamicThreshold_ = other.dynamicThreshold_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DynamicRetrievalConfig Clone() {
+      return new DynamicRetrievalConfig(this);
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode mode_ = global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode.Unspecified;
+    /// <summary>
+    /// The mode of the predictor to be used in dynamic retrieval.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dynamic_threshold" field.</summary>
+    public const int DynamicThresholdFieldNumber = 2;
+    private readonly static float DynamicThresholdDefaultValue = 0F;
+
+    private float dynamicThreshold_;
+    /// <summary>
+    /// Optional. The threshold to be used in dynamic retrieval.
+    /// If not set, a system default value is used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float DynamicThreshold {
+      get { if ((_hasBits0 & 1) != 0) { return dynamicThreshold_; } else { return DynamicThresholdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        dynamicThreshold_ = value;
+      }
+    }
+    /// <summary>Gets whether the "dynamic_threshold" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDynamicThreshold {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "dynamic_threshold" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDynamicThreshold() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DynamicRetrievalConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DynamicRetrievalConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mode != other.Mode) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DynamicThreshold, other.DynamicThreshold)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mode != global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
+      if (HasDynamicThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DynamicThreshold);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mode != global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      if (HasDynamicThreshold) {
+        output.WriteRawTag(21);
+        output.WriteFloat(DynamicThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mode != global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      if (HasDynamicThreshold) {
+        output.WriteRawTag(21);
+        output.WriteFloat(DynamicThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mode != global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (HasDynamicThreshold) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DynamicRetrievalConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mode != global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode.Unspecified) {
+        Mode = other.Mode;
+      }
+      if (other.HasDynamicThreshold) {
+        DynamicThreshold = other.DynamicThreshold;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Mode = (global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 21: {
+            DynamicThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Mode = (global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 21: {
+            DynamicThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DynamicRetrievalConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The mode of the predictor to be used in dynamic retrieval.
+      /// </summary>
+      public enum Mode {
+        /// <summary>
+        /// Always trigger retrieval.
+        /// </summary>
+        [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Run retrieval only when system decides it is necessary.
+        /// </summary>
+        [pbr::OriginalName("MODE_DYNAMIC")] Dynamic = 1,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -3291,7 +3623,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3496,7 +3828,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
