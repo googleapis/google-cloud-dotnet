@@ -5092,7 +5092,10 @@ namespace Google.Cloud.Batch.V1 {
         /// <summary>
         /// Name of an instance template used to create VMs.
         /// Named the field as 'instance_template' instead of 'template' to avoid
-        /// c++ keyword conflict.
+        /// C++ keyword conflict.
+        ///
+        /// Batch only supports global instance templates.
+        /// You can specify the global instance template as a full or partial URL.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
