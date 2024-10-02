@@ -2129,6 +2129,8 @@ namespace Google.Apps.Chat.V1 {
     private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.SpaceEvent> spaceEvents_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.SpaceEvent>();
     /// <summary>
     /// Results are returned in chronological order (oldest event first).
+    /// Note: The `permissionSettings` field is not returned in the Space
+    /// object for list requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

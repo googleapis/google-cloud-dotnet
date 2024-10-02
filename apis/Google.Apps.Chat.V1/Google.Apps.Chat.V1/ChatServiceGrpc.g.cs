@@ -400,18 +400,30 @@ namespace Google.Apps.Chat.V1 {
     public abstract partial class ChatServiceBase
     {
       /// <summary>
-      /// Creates a message in a Google Chat space. The maximum message size,
-      /// including text and cards, is 32,000 bytes. For an example, see [Send a
+      /// Creates a message in a Google Chat space. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
-      /// Calling this method requires
-      /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-      /// and supports the following authentication types:
+      /// The `create()` method requires either user or app authentication. Chat
+      /// attributes the message sender differently depending on the type of
+      /// authentication that you use in your request.
       ///
-      /// - For text messages, user authentication or app authentication are
-      /// supported.
-      /// - For card messages, only app authentication is supported. (Only Chat apps
-      /// can create card messages.)
+      /// The following image shows how Chat attributes a message when you use app
+      /// authentication. Chat displays the Chat app as the message
+      /// sender. The content of the message can contain text (`text`), cards
+      /// (`cardsV2`), and accessory widgets (`accessoryWidgets`).
+      ///
+      /// ![Message sent with app
+      /// authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg)
+      ///
+      /// The following image shows how Chat attributes a message when you use user
+      /// authentication. Chat displays the user as the message sender and attributes
+      /// the Chat app to the message by displaying its name. The content of message
+      /// can only contain text (`text`).
+      ///
+      /// ![Message sent with user
+      /// authentication](https://developers.google.com/workspace/chat/images/message-user-auth.svg)
+      ///
+      /// The maximum message size, including the message contents, is 32,000 bytes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -424,8 +436,12 @@ namespace Google.Apps.Chat.V1 {
 
       /// <summary>
       /// Lists messages in a space that the caller is a member of, including
-      /// messages from blocked members and spaces. For an example, see
-      /// [List messages](/chat/api/guides/v1/messages/list).
+      /// messages from blocked members and spaces. If you list messages from a
+      /// space with no messages, the response is an empty object. When using a
+      /// REST/HTTP interface, the response contains an empty JSON object, `{}`.
+      /// For an example, see
+      /// [List
+      /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
@@ -673,13 +689,18 @@ namespace Google.Apps.Chat.V1 {
       }
 
       /// <summary>
-      /// Creates a named space. Spaces grouped by topics aren't supported. For an
-      /// example, see [Create a
+      /// Creates a space with no members. Can be used to create a named space.
+      /// Spaces grouped by topics aren't supported. For an example, see
+      /// [Create a
       /// space](https://developers.google.com/workspace/chat/create-spaces).
       ///
       ///  If you receive the error message `ALREADY_EXISTS` when creating
       ///  a space, try a different `displayName`. An existing space within
       ///  the Google Workspace organization might already use this display name.
+      ///
+      /// If you're a member of the [Developer Preview
+      /// program](https://developers.google.com/workspace/preview), you can create a
+      /// group chat in import mode using `spaceType.GROUP_CHAT`.
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -844,40 +865,25 @@ namespace Google.Apps.Chat.V1 {
       }
 
       /// <summary>
-      /// Creates a human membership or app membership for the calling app. Creating
-      /// memberships for other apps isn't supported. For an example, see
-      /// [Invite or add a user or a Google Chat app to a
-      /// space](https://developers.google.com/workspace/chat/create-members).
+      /// Creates a membership for the calling Chat app, a user, or a Google Group.
+      /// Creating memberships for other Chat apps isn't supported.
       /// When creating a membership, if the specified member has their auto-accept
       /// policy turned off, then they're invited, and must accept the space
       /// invitation before joining. Otherwise, creating a membership adds the member
-      /// directly to the specified space. Requires [user
+      /// directly to the specified space.
+      /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` for the
-      /// human or app member, or set the `membership.group_member.name` for the
-      /// group member.
+      /// For example usage, see:
       ///
-      /// - To add the calling app to a space or a direct message between two human
-      ///   users, use `users/app`. Unable to add other
-      ///   apps to the space.
+      /// - [Invite or add a user to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
       ///
-      /// - To add a human user, use `users/{user}`, where `{user}` can be the email
-      /// address for the user. For users in the same Workspace organization `{user}`
-      /// can also be the `id` for the person from the People API, or the `id` for
-      /// the user in the Directory API. For example, if the People API Person
-      /// profile ID for `user@example.com` is `123456789`, you can add the user to
-      /// the space by setting the `membership.member.name` to
-      /// `users/user@example.com` or `users/123456789`.
+      /// - [Invite or add a Google Group to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
       ///
-      /// - To add or invite a Google group in a named space, use
-      /// `groups/{group}`, where `{group}` is the `id` for the group from the Cloud
-      /// Identity Groups API. For example, you can use [Cloud Identity Groups lookup
-      /// API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup)
-      /// to retrieve the ID `123456789` for group email `group@example.com`, then
-      /// you can add or invite the group to a named space by setting the
-      /// `membership.group_member.name` to `groups/123456789`. Group email is not
-      /// supported, and Google groups can only be added as members in named spaces.
+      /// - [Add the Chat app to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1032,6 +1038,9 @@ namespace Google.Apps.Chat.V1 {
       /// updated, the server returns the updated `Message` resource in the event
       /// payload.
       ///
+      /// Note: The `permissionSettings` field is not returned in the Space
+      /// object of the Space event data for this request.
+      ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// To get an event, the authenticated user must be a member of the space.
@@ -1104,18 +1113,30 @@ namespace Google.Apps.Chat.V1 {
       }
 
       /// <summary>
-      /// Creates a message in a Google Chat space. The maximum message size,
-      /// including text and cards, is 32,000 bytes. For an example, see [Send a
+      /// Creates a message in a Google Chat space. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
-      /// Calling this method requires
-      /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-      /// and supports the following authentication types:
+      /// The `create()` method requires either user or app authentication. Chat
+      /// attributes the message sender differently depending on the type of
+      /// authentication that you use in your request.
       ///
-      /// - For text messages, user authentication or app authentication are
-      /// supported.
-      /// - For card messages, only app authentication is supported. (Only Chat apps
-      /// can create card messages.)
+      /// The following image shows how Chat attributes a message when you use app
+      /// authentication. Chat displays the Chat app as the message
+      /// sender. The content of the message can contain text (`text`), cards
+      /// (`cardsV2`), and accessory widgets (`accessoryWidgets`).
+      ///
+      /// ![Message sent with app
+      /// authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg)
+      ///
+      /// The following image shows how Chat attributes a message when you use user
+      /// authentication. Chat displays the user as the message sender and attributes
+      /// the Chat app to the message by displaying its name. The content of message
+      /// can only contain text (`text`).
+      ///
+      /// ![Message sent with user
+      /// authentication](https://developers.google.com/workspace/chat/images/message-user-auth.svg)
+      ///
+      /// The maximum message size, including the message contents, is 32,000 bytes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1128,18 +1149,30 @@ namespace Google.Apps.Chat.V1 {
         return CreateMessage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a message in a Google Chat space. The maximum message size,
-      /// including text and cards, is 32,000 bytes. For an example, see [Send a
+      /// Creates a message in a Google Chat space. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
-      /// Calling this method requires
-      /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-      /// and supports the following authentication types:
+      /// The `create()` method requires either user or app authentication. Chat
+      /// attributes the message sender differently depending on the type of
+      /// authentication that you use in your request.
       ///
-      /// - For text messages, user authentication or app authentication are
-      /// supported.
-      /// - For card messages, only app authentication is supported. (Only Chat apps
-      /// can create card messages.)
+      /// The following image shows how Chat attributes a message when you use app
+      /// authentication. Chat displays the Chat app as the message
+      /// sender. The content of the message can contain text (`text`), cards
+      /// (`cardsV2`), and accessory widgets (`accessoryWidgets`).
+      ///
+      /// ![Message sent with app
+      /// authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg)
+      ///
+      /// The following image shows how Chat attributes a message when you use user
+      /// authentication. Chat displays the user as the message sender and attributes
+      /// the Chat app to the message by displaying its name. The content of message
+      /// can only contain text (`text`).
+      ///
+      /// ![Message sent with user
+      /// authentication](https://developers.google.com/workspace/chat/images/message-user-auth.svg)
+      ///
+      /// The maximum message size, including the message contents, is 32,000 bytes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1150,18 +1183,30 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateMessage, null, options, request);
       }
       /// <summary>
-      /// Creates a message in a Google Chat space. The maximum message size,
-      /// including text and cards, is 32,000 bytes. For an example, see [Send a
+      /// Creates a message in a Google Chat space. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
-      /// Calling this method requires
-      /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-      /// and supports the following authentication types:
+      /// The `create()` method requires either user or app authentication. Chat
+      /// attributes the message sender differently depending on the type of
+      /// authentication that you use in your request.
       ///
-      /// - For text messages, user authentication or app authentication are
-      /// supported.
-      /// - For card messages, only app authentication is supported. (Only Chat apps
-      /// can create card messages.)
+      /// The following image shows how Chat attributes a message when you use app
+      /// authentication. Chat displays the Chat app as the message
+      /// sender. The content of the message can contain text (`text`), cards
+      /// (`cardsV2`), and accessory widgets (`accessoryWidgets`).
+      ///
+      /// ![Message sent with app
+      /// authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg)
+      ///
+      /// The following image shows how Chat attributes a message when you use user
+      /// authentication. Chat displays the user as the message sender and attributes
+      /// the Chat app to the message by displaying its name. The content of message
+      /// can only contain text (`text`).
+      ///
+      /// ![Message sent with user
+      /// authentication](https://developers.google.com/workspace/chat/images/message-user-auth.svg)
+      ///
+      /// The maximum message size, including the message contents, is 32,000 bytes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1174,18 +1219,30 @@ namespace Google.Apps.Chat.V1 {
         return CreateMessageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a message in a Google Chat space. The maximum message size,
-      /// including text and cards, is 32,000 bytes. For an example, see [Send a
+      /// Creates a message in a Google Chat space. For an example, see [Send a
       /// message](https://developers.google.com/workspace/chat/create-messages).
       ///
-      /// Calling this method requires
-      /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-      /// and supports the following authentication types:
+      /// The `create()` method requires either user or app authentication. Chat
+      /// attributes the message sender differently depending on the type of
+      /// authentication that you use in your request.
       ///
-      /// - For text messages, user authentication or app authentication are
-      /// supported.
-      /// - For card messages, only app authentication is supported. (Only Chat apps
-      /// can create card messages.)
+      /// The following image shows how Chat attributes a message when you use app
+      /// authentication. Chat displays the Chat app as the message
+      /// sender. The content of the message can contain text (`text`), cards
+      /// (`cardsV2`), and accessory widgets (`accessoryWidgets`).
+      ///
+      /// ![Message sent with app
+      /// authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg)
+      ///
+      /// The following image shows how Chat attributes a message when you use user
+      /// authentication. Chat displays the user as the message sender and attributes
+      /// the Chat app to the message by displaying its name. The content of message
+      /// can only contain text (`text`).
+      ///
+      /// ![Message sent with user
+      /// authentication](https://developers.google.com/workspace/chat/images/message-user-auth.svg)
+      ///
+      /// The maximum message size, including the message contents, is 32,000 bytes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1197,8 +1254,12 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Lists messages in a space that the caller is a member of, including
-      /// messages from blocked members and spaces. For an example, see
-      /// [List messages](/chat/api/guides/v1/messages/list).
+      /// messages from blocked members and spaces. If you list messages from a
+      /// space with no messages, the response is an empty object. When using a
+      /// REST/HTTP interface, the response contains an empty JSON object, `{}`.
+      /// For an example, see
+      /// [List
+      /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
@@ -1214,8 +1275,12 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Lists messages in a space that the caller is a member of, including
-      /// messages from blocked members and spaces. For an example, see
-      /// [List messages](/chat/api/guides/v1/messages/list).
+      /// messages from blocked members and spaces. If you list messages from a
+      /// space with no messages, the response is an empty object. When using a
+      /// REST/HTTP interface, the response contains an empty JSON object, `{}`.
+      /// For an example, see
+      /// [List
+      /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
@@ -1229,8 +1294,12 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Lists messages in a space that the caller is a member of, including
-      /// messages from blocked members and spaces. For an example, see
-      /// [List messages](/chat/api/guides/v1/messages/list).
+      /// messages from blocked members and spaces. If you list messages from a
+      /// space with no messages, the response is an empty object. When using a
+      /// REST/HTTP interface, the response contains an empty JSON object, `{}`.
+      /// For an example, see
+      /// [List
+      /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
@@ -1246,8 +1315,12 @@ namespace Google.Apps.Chat.V1 {
       }
       /// <summary>
       /// Lists messages in a space that the caller is a member of, including
-      /// messages from blocked members and spaces. For an example, see
-      /// [List messages](/chat/api/guides/v1/messages/list).
+      /// messages from blocked members and spaces. If you list messages from a
+      /// space with no messages, the response is an empty object. When using a
+      /// REST/HTTP interface, the response contains an empty JSON object, `{}`.
+      /// For an example, see
+      /// [List
+      /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// </summary>
@@ -2196,13 +2269,18 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSpace, null, options, request);
       }
       /// <summary>
-      /// Creates a named space. Spaces grouped by topics aren't supported. For an
-      /// example, see [Create a
+      /// Creates a space with no members. Can be used to create a named space.
+      /// Spaces grouped by topics aren't supported. For an example, see
+      /// [Create a
       /// space](https://developers.google.com/workspace/chat/create-spaces).
       ///
       ///  If you receive the error message `ALREADY_EXISTS` when creating
       ///  a space, try a different `displayName`. An existing space within
       ///  the Google Workspace organization might already use this display name.
+      ///
+      /// If you're a member of the [Developer Preview
+      /// program](https://developers.google.com/workspace/preview), you can create a
+      /// group chat in import mode using `spaceType.GROUP_CHAT`.
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -2218,13 +2296,18 @@ namespace Google.Apps.Chat.V1 {
         return CreateSpace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a named space. Spaces grouped by topics aren't supported. For an
-      /// example, see [Create a
+      /// Creates a space with no members. Can be used to create a named space.
+      /// Spaces grouped by topics aren't supported. For an example, see
+      /// [Create a
       /// space](https://developers.google.com/workspace/chat/create-spaces).
       ///
       ///  If you receive the error message `ALREADY_EXISTS` when creating
       ///  a space, try a different `displayName`. An existing space within
       ///  the Google Workspace organization might already use this display name.
+      ///
+      /// If you're a member of the [Developer Preview
+      /// program](https://developers.google.com/workspace/preview), you can create a
+      /// group chat in import mode using `spaceType.GROUP_CHAT`.
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -2238,13 +2321,18 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSpace, null, options, request);
       }
       /// <summary>
-      /// Creates a named space. Spaces grouped by topics aren't supported. For an
-      /// example, see [Create a
+      /// Creates a space with no members. Can be used to create a named space.
+      /// Spaces grouped by topics aren't supported. For an example, see
+      /// [Create a
       /// space](https://developers.google.com/workspace/chat/create-spaces).
       ///
       ///  If you receive the error message `ALREADY_EXISTS` when creating
       ///  a space, try a different `displayName`. An existing space within
       ///  the Google Workspace organization might already use this display name.
+      ///
+      /// If you're a member of the [Developer Preview
+      /// program](https://developers.google.com/workspace/preview), you can create a
+      /// group chat in import mode using `spaceType.GROUP_CHAT`.
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -2260,13 +2348,18 @@ namespace Google.Apps.Chat.V1 {
         return CreateSpaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a named space. Spaces grouped by topics aren't supported. For an
-      /// example, see [Create a
+      /// Creates a space with no members. Can be used to create a named space.
+      /// Spaces grouped by topics aren't supported. For an example, see
+      /// [Create a
       /// space](https://developers.google.com/workspace/chat/create-spaces).
       ///
       ///  If you receive the error message `ALREADY_EXISTS` when creating
       ///  a space, try a different `displayName`. An existing space within
       ///  the Google Workspace organization might already use this display name.
+      ///
+      /// If you're a member of the [Developer Preview
+      /// program](https://developers.google.com/workspace/preview), you can create a
+      /// group chat in import mode using `spaceType.GROUP_CHAT`.
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -2880,40 +2973,25 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_FindDirectMessage, null, options, request);
       }
       /// <summary>
-      /// Creates a human membership or app membership for the calling app. Creating
-      /// memberships for other apps isn't supported. For an example, see
-      /// [Invite or add a user or a Google Chat app to a
-      /// space](https://developers.google.com/workspace/chat/create-members).
+      /// Creates a membership for the calling Chat app, a user, or a Google Group.
+      /// Creating memberships for other Chat apps isn't supported.
       /// When creating a membership, if the specified member has their auto-accept
       /// policy turned off, then they're invited, and must accept the space
       /// invitation before joining. Otherwise, creating a membership adds the member
-      /// directly to the specified space. Requires [user
+      /// directly to the specified space.
+      /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` for the
-      /// human or app member, or set the `membership.group_member.name` for the
-      /// group member.
+      /// For example usage, see:
       ///
-      /// - To add the calling app to a space or a direct message between two human
-      ///   users, use `users/app`. Unable to add other
-      ///   apps to the space.
+      /// - [Invite or add a user to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
       ///
-      /// - To add a human user, use `users/{user}`, where `{user}` can be the email
-      /// address for the user. For users in the same Workspace organization `{user}`
-      /// can also be the `id` for the person from the People API, or the `id` for
-      /// the user in the Directory API. For example, if the People API Person
-      /// profile ID for `user@example.com` is `123456789`, you can add the user to
-      /// the space by setting the `membership.member.name` to
-      /// `users/user@example.com` or `users/123456789`.
+      /// - [Invite or add a Google Group to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
       ///
-      /// - To add or invite a Google group in a named space, use
-      /// `groups/{group}`, where `{group}` is the `id` for the group from the Cloud
-      /// Identity Groups API. For example, you can use [Cloud Identity Groups lookup
-      /// API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup)
-      /// to retrieve the ID `123456789` for group email `group@example.com`, then
-      /// you can add or invite the group to a named space by setting the
-      /// `membership.group_member.name` to `groups/123456789`. Group email is not
-      /// supported, and Google groups can only be added as members in named spaces.
+      /// - [Add the Chat app to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2926,40 +3004,25 @@ namespace Google.Apps.Chat.V1 {
         return CreateMembership(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a human membership or app membership for the calling app. Creating
-      /// memberships for other apps isn't supported. For an example, see
-      /// [Invite or add a user or a Google Chat app to a
-      /// space](https://developers.google.com/workspace/chat/create-members).
+      /// Creates a membership for the calling Chat app, a user, or a Google Group.
+      /// Creating memberships for other Chat apps isn't supported.
       /// When creating a membership, if the specified member has their auto-accept
       /// policy turned off, then they're invited, and must accept the space
       /// invitation before joining. Otherwise, creating a membership adds the member
-      /// directly to the specified space. Requires [user
+      /// directly to the specified space.
+      /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` for the
-      /// human or app member, or set the `membership.group_member.name` for the
-      /// group member.
+      /// For example usage, see:
       ///
-      /// - To add the calling app to a space or a direct message between two human
-      ///   users, use `users/app`. Unable to add other
-      ///   apps to the space.
+      /// - [Invite or add a user to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
       ///
-      /// - To add a human user, use `users/{user}`, where `{user}` can be the email
-      /// address for the user. For users in the same Workspace organization `{user}`
-      /// can also be the `id` for the person from the People API, or the `id` for
-      /// the user in the Directory API. For example, if the People API Person
-      /// profile ID for `user@example.com` is `123456789`, you can add the user to
-      /// the space by setting the `membership.member.name` to
-      /// `users/user@example.com` or `users/123456789`.
+      /// - [Invite or add a Google Group to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
       ///
-      /// - To add or invite a Google group in a named space, use
-      /// `groups/{group}`, where `{group}` is the `id` for the group from the Cloud
-      /// Identity Groups API. For example, you can use [Cloud Identity Groups lookup
-      /// API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup)
-      /// to retrieve the ID `123456789` for group email `group@example.com`, then
-      /// you can add or invite the group to a named space by setting the
-      /// `membership.group_member.name` to `groups/123456789`. Group email is not
-      /// supported, and Google groups can only be added as members in named spaces.
+      /// - [Add the Chat app to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2970,40 +3033,25 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateMembership, null, options, request);
       }
       /// <summary>
-      /// Creates a human membership or app membership for the calling app. Creating
-      /// memberships for other apps isn't supported. For an example, see
-      /// [Invite or add a user or a Google Chat app to a
-      /// space](https://developers.google.com/workspace/chat/create-members).
+      /// Creates a membership for the calling Chat app, a user, or a Google Group.
+      /// Creating memberships for other Chat apps isn't supported.
       /// When creating a membership, if the specified member has their auto-accept
       /// policy turned off, then they're invited, and must accept the space
       /// invitation before joining. Otherwise, creating a membership adds the member
-      /// directly to the specified space. Requires [user
+      /// directly to the specified space.
+      /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` for the
-      /// human or app member, or set the `membership.group_member.name` for the
-      /// group member.
+      /// For example usage, see:
       ///
-      /// - To add the calling app to a space or a direct message between two human
-      ///   users, use `users/app`. Unable to add other
-      ///   apps to the space.
+      /// - [Invite or add a user to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
       ///
-      /// - To add a human user, use `users/{user}`, where `{user}` can be the email
-      /// address for the user. For users in the same Workspace organization `{user}`
-      /// can also be the `id` for the person from the People API, or the `id` for
-      /// the user in the Directory API. For example, if the People API Person
-      /// profile ID for `user@example.com` is `123456789`, you can add the user to
-      /// the space by setting the `membership.member.name` to
-      /// `users/user@example.com` or `users/123456789`.
+      /// - [Invite or add a Google Group to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
       ///
-      /// - To add or invite a Google group in a named space, use
-      /// `groups/{group}`, where `{group}` is the `id` for the group from the Cloud
-      /// Identity Groups API. For example, you can use [Cloud Identity Groups lookup
-      /// API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup)
-      /// to retrieve the ID `123456789` for group email `group@example.com`, then
-      /// you can add or invite the group to a named space by setting the
-      /// `membership.group_member.name` to `groups/123456789`. Group email is not
-      /// supported, and Google groups can only be added as members in named spaces.
+      /// - [Add the Chat app to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3016,40 +3064,25 @@ namespace Google.Apps.Chat.V1 {
         return CreateMembershipAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a human membership or app membership for the calling app. Creating
-      /// memberships for other apps isn't supported. For an example, see
-      /// [Invite or add a user or a Google Chat app to a
-      /// space](https://developers.google.com/workspace/chat/create-members).
+      /// Creates a membership for the calling Chat app, a user, or a Google Group.
+      /// Creating memberships for other Chat apps isn't supported.
       /// When creating a membership, if the specified member has their auto-accept
       /// policy turned off, then they're invited, and must accept the space
       /// invitation before joining. Otherwise, creating a membership adds the member
-      /// directly to the specified space. Requires [user
+      /// directly to the specified space.
+      /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       ///
-      /// To specify the member to add, set the `membership.member.name` for the
-      /// human or app member, or set the `membership.group_member.name` for the
-      /// group member.
+      /// For example usage, see:
       ///
-      /// - To add the calling app to a space or a direct message between two human
-      ///   users, use `users/app`. Unable to add other
-      ///   apps to the space.
+      /// - [Invite or add a user to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
       ///
-      /// - To add a human user, use `users/{user}`, where `{user}` can be the email
-      /// address for the user. For users in the same Workspace organization `{user}`
-      /// can also be the `id` for the person from the People API, or the `id` for
-      /// the user in the Directory API. For example, if the People API Person
-      /// profile ID for `user@example.com` is `123456789`, you can add the user to
-      /// the space by setting the `membership.member.name` to
-      /// `users/user@example.com` or `users/123456789`.
+      /// - [Invite or add a Google Group to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
       ///
-      /// - To add or invite a Google group in a named space, use
-      /// `groups/{group}`, where `{group}` is the `id` for the group from the Cloud
-      /// Identity Groups API. For example, you can use [Cloud Identity Groups lookup
-      /// API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup)
-      /// to retrieve the ID `123456789` for group email `group@example.com`, then
-      /// you can add or invite the group to a named space by setting the
-      /// `membership.group_member.name` to `groups/123456789`. Group email is not
-      /// supported, and Google groups can only be added as members in named spaces.
+      /// - [Add the Chat app to a
+      /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3611,6 +3644,9 @@ namespace Google.Apps.Chat.V1 {
       /// updated, the server returns the updated `Message` resource in the event
       /// payload.
       ///
+      /// Note: The `permissionSettings` field is not returned in the Space
+      /// object of the Space event data for this request.
+      ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// To get an event, the authenticated user must be a member of the space.
@@ -3637,6 +3673,9 @@ namespace Google.Apps.Chat.V1 {
       /// updated, the server returns the updated `Message` resource in the event
       /// payload.
       ///
+      /// Note: The `permissionSettings` field is not returned in the Space
+      /// object of the Space event data for this request.
+      ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
       /// To get an event, the authenticated user must be a member of the space.
@@ -3660,6 +3699,9 @@ namespace Google.Apps.Chat.V1 {
       /// if you request an event about a new message but the message was later
       /// updated, the server returns the updated `Message` resource in the event
       /// payload.
+      ///
+      /// Note: The `permissionSettings` field is not returned in the Space
+      /// object of the Space event data for this request.
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -3686,6 +3728,9 @@ namespace Google.Apps.Chat.V1 {
       /// if you request an event about a new message but the message was later
       /// updated, the server returns the updated `Message` resource in the event
       /// payload.
+      ///
+      /// Note: The `permissionSettings` field is not returned in the Space
+      /// object of the Space event data for this request.
       ///
       /// Requires [user
       /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
