@@ -28,7 +28,7 @@ namespace Google.Apps.Chat.V1 {
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aImdvb2dsZS9jaGF0L3YxL2hpc3Rvcnlfc3RhdGUu",
             "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpILCgVTcGFjZRIMCgRuYW1l",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrQUCgVTcGFjZRIMCgRuYW1l",
             "GAEgASgJEi8KBHR5cGUYAiABKA4yGi5nb29nbGUuY2hhdC52MS5TcGFjZS5U",
             "eXBlQgUYAeBBAxIzCgpzcGFjZV90eXBlGAogASgOMh8uZ29vZ2xlLmNoYXQu",
             "djEuU3BhY2UuU3BhY2VUeXBlEh8KEnNpbmdsZV91c2VyX2JvdF9kbRgEIAEo",
@@ -45,7 +45,11 @@ namespace Google.Apps.Chat.V1 {
             "ASgIQgPgQQMSRAoQbWVtYmVyc2hpcF9jb3VudBgUIAEoCzIlLmdvb2dsZS5j",
             "aGF0LnYxLlNwYWNlLk1lbWJlcnNoaXBDb3VudEID4EEDEkIKD2FjY2Vzc19z",
             "ZXR0aW5ncxgXIAEoCzIkLmdvb2dsZS5jaGF0LnYxLlNwYWNlLkFjY2Vzc1Nl",
-            "dHRpbmdzQgPgQQESFgoJc3BhY2VfdXJpGBkgASgJQgPgQQMaNwoMU3BhY2VE",
+            "dHRpbmdzQgPgQQESFgoJc3BhY2VfdXJpGBkgASgJQgPgQQMSZAoecHJlZGVm",
+            "aW5lZF9wZXJtaXNzaW9uX3NldHRpbmdzGBogASgOMjIuZ29vZ2xlLmNoYXQu",
+            "djEuU3BhY2UuUHJlZGVmaW5lZFBlcm1pc3Npb25TZXR0aW5nc0IG4EEE4EEB",
+            "SAASTAoTcGVybWlzc2lvbl9zZXR0aW5ncxgbIAEoCzIoLmdvb2dsZS5jaGF0",
+            "LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nc0ID4EEBSAAaNwoMU3BhY2VE",
             "ZXRhaWxzEhMKC2Rlc2NyaXB0aW9uGAEgASgJEhIKCmd1aWRlbGluZXMYAiAB",
             "KAkaVQoPTWVtYmVyc2hpcENvdW50EiYKHmpvaW5lZF9kaXJlY3RfaHVtYW5f",
             "dXNlcl9jb3VudBgEIAEoBRIaChJqb2luZWRfZ3JvdXBfY291bnQYBSABKAUa",
@@ -53,47 +57,71 @@ namespace Google.Apps.Chat.V1 {
             "b2dsZS5jaGF0LnYxLlNwYWNlLkFjY2Vzc1NldHRpbmdzLkFjY2Vzc1N0YXRl",
             "QgPgQQMSFQoIYXVkaWVuY2UYAyABKAlCA+BBASJKCgtBY2Nlc3NTdGF0ZRIc",
             "ChhBQ0NFU1NfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQUklWQVRFEAESEAoM",
-            "RElTQ09WRVJBQkxFEAIiLgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "CAoEUk9PTRABEgYKAkRNEAIiVgoJU3BhY2VUeXBlEhoKFlNQQUNFX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIJCgVTUEFDRRABEg4KCkdST1VQX0NIQVQQAhISCg5E",
-            "SVJFQ1RfTUVTU0FHRRADIoIBChNTcGFjZVRocmVhZGluZ1N0YXRlEiUKIVNQ",
-            "QUNFX1RIUkVBRElOR19TVEFURV9VTlNQRUNJRklFRBAAEhUKEVRIUkVBREVE",
-            "X01FU1NBR0VTEAISFAoQR1JPVVBFRF9NRVNTQUdFUxADEhcKE1VOVEhSRUFE",
-            "RURfTUVTU0FHRVMQBDou6kErChljaGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNl",
-            "Eg5zcGFjZXMve3NwYWNlfSJYChJDcmVhdGVTcGFjZVJlcXVlc3QSKQoFc3Bh",
-            "Y2UYASABKAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZUID4EECEhcKCnJlcXVl",
-            "c3RfaWQYAiABKAlCA+BBASJZChFMaXN0U3BhY2VzUmVxdWVzdBIWCglwYWdl",
-            "X3NpemUYASABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAIgASgJQgPgQQESEwoG",
-            "ZmlsdGVyGAMgASgJQgPgQQEiVAoSTGlzdFNwYWNlc1Jlc3BvbnNlEiUKBnNw",
-            "YWNlcxgBIAMoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCSJcCg9HZXRTcGFjZVJlcXVlc3QSLwoEbmFtZRgBIAEo",
-            "CUIh4EEC+kEbChljaGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNlEhgKEHVzZV9h",
-            "ZG1pbl9hY2Nlc3MYAiABKAgiLQoYRmluZERpcmVjdE1lc3NhZ2VSZXF1ZXN0",
-            "EhEKBG5hbWUYASABKAlCA+BBAiKKAQoSVXBkYXRlU3BhY2VSZXF1ZXN0EikK",
-            "BXNwYWNlGAEgASgLMhUuZ29vZ2xlLmNoYXQudjEuU3BhY2VCA+BBAhIvCgt1",
-            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sS",
-            "GAoQdXNlX2FkbWluX2FjY2VzcxgDIAEoCCKBAQoTU2VhcmNoU3BhY2VzUmVx",
-            "dWVzdBIYChB1c2VfYWRtaW5fYWNjZXNzGAEgASgIEhEKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhIKBXF1ZXJ5GAQgASgJQgPgQQIS",
-            "FQoIb3JkZXJfYnkYBSABKAlCA+BBASJqChRTZWFyY2hTcGFjZXNSZXNwb25z",
-            "ZRIlCgZzcGFjZXMYASADKAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZRIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEoBSJfChJE",
-            "ZWxldGVTcGFjZVJlcXVlc3QSLwoEbmFtZRgBIAEoCUIh4EEC+kEbChljaGF0",
-            "Lmdvb2dsZWFwaXMuY29tL1NwYWNlEhgKEHVzZV9hZG1pbl9hY2Nlc3MYAiAB",
-            "KAgiTQoaQ29tcGxldGVJbXBvcnRTcGFjZVJlcXVlc3QSLwoEbmFtZRgBIAEo",
-            "CUIh4EEC+kEbChljaGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNlIkMKG0NvbXBs",
-            "ZXRlSW1wb3J0U3BhY2VSZXNwb25zZRIkCgVzcGFjZRgBIAEoCzIVLmdvb2ds",
-            "ZS5jaGF0LnYxLlNwYWNlQqMBChJjb20uZ29vZ2xlLmNoYXQudjFCClNwYWNl",
-            "UHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2NoYXRw",
-            "YjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQuVjHK",
-            "AhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpW",
-            "MWIGcHJvdG8z"));
+            "RElTQ09WRVJBQkxFEAIahQYKElBlcm1pc3Npb25TZXR0aW5ncxJPChltYW5h",
+            "Z2VfbWVtYmVyc19hbmRfZ3JvdXBzGAEgASgLMicuZ29vZ2xlLmNoYXQudjEu",
+            "U3BhY2UuUGVybWlzc2lvblNldHRpbmdIAIgBARJKChRtb2RpZnlfc3BhY2Vf",
+            "ZGV0YWlscxgCIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Np",
+            "b25TZXR0aW5nSAGIAQESRAoOdG9nZ2xlX2hpc3RvcnkYAyABKAsyJy5nb29n",
+            "bGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0gCiAEBEkgKEnVz",
+            "ZV9hdF9tZW50aW9uX2FsbBgEIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNl",
+            "LlBlcm1pc3Npb25TZXR0aW5nSAOIAQESQQoLbWFuYWdlX2FwcHMYBSABKAsy",
+            "Jy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0gEiAEB",
+            "EkUKD21hbmFnZV93ZWJob29rcxgGIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNw",
+            "YWNlLlBlcm1pc3Npb25TZXR0aW5nSAWIAQESSAoNcG9zdF9tZXNzYWdlcxgH",
+            "IAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5n",
+            "QgPgQQNIBogBARJECg5yZXBseV9tZXNzYWdlcxgIIAEoCzInLmdvb2dsZS5j",
+            "aGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nSAeIAQFCHAoaX21hbmFn",
+            "ZV9tZW1iZXJzX2FuZF9ncm91cHNCFwoVX21vZGlmeV9zcGFjZV9kZXRhaWxz",
+            "QhEKD190b2dnbGVfaGlzdG9yeUIVChNfdXNlX2F0X21lbnRpb25fYWxsQg4K",
+            "DF9tYW5hZ2VfYXBwc0ISChBfbWFuYWdlX3dlYmhvb2tzQhAKDl9wb3N0X21l",
+            "c3NhZ2VzQhEKD19yZXBseV9tZXNzYWdlcxpGChFQZXJtaXNzaW9uU2V0dGlu",
+            "ZxIYChBtYW5hZ2Vyc19hbGxvd2VkGAEgASgIEhcKD21lbWJlcnNfYWxsb3dl",
+            "ZBgCIAEoCCIuCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIICgRST09N",
+            "EAESBgoCRE0QAiJWCglTcGFjZVR5cGUSGgoWU1BBQ0VfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEgkKBVNQQUNFEAESDgoKR1JPVVBfQ0hBVBACEhIKDkRJUkVDVF9N",
+            "RVNTQUdFEAMiggEKE1NwYWNlVGhyZWFkaW5nU3RhdGUSJQohU1BBQ0VfVEhS",
+            "RUFESU5HX1NUQVRFX1VOU1BFQ0lGSUVEEAASFQoRVEhSRUFERURfTUVTU0FH",
+            "RVMQAhIUChBHUk9VUEVEX01FU1NBR0VTEAMSFwoTVU5USFJFQURFRF9NRVNT",
+            "QUdFUxAEIn8KHFByZWRlZmluZWRQZXJtaXNzaW9uU2V0dGluZ3MSLgoqUFJF",
+            "REVGSU5FRF9QRVJNSVNTSU9OX1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASFwoT",
+            "Q09MTEFCT1JBVElPTl9TUEFDRRABEhYKEkFOTk9VTkNFTUVOVF9TUEFDRRAC",
+            "Oi7qQSsKGWNoYXQuZ29vZ2xlYXBpcy5jb20vU3BhY2USDnNwYWNlcy97c3Bh",
+            "Y2V9QhsKGXNwYWNlX3Blcm1pc3Npb25fc2V0dGluZ3MiWAoSQ3JlYXRlU3Bh",
+            "Y2VSZXF1ZXN0EikKBXNwYWNlGAEgASgLMhUuZ29vZ2xlLmNoYXQudjEuU3Bh",
+            "Y2VCA+BBAhIXCgpyZXF1ZXN0X2lkGAIgASgJQgPgQQEiWQoRTGlzdFNwYWNl",
+            "c1JlcXVlc3QSFgoJcGFnZV9zaXplGAEgASgFQgPgQQESFwoKcGFnZV90b2tl",
+            "bhgCIAEoCUID4EEBEhMKBmZpbHRlchgDIAEoCUID4EEBIlQKEkxpc3RTcGFj",
+            "ZXNSZXNwb25zZRIlCgZzcGFjZXMYASADKAsyFS5nb29nbGUuY2hhdC52MS5T",
+            "cGFjZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiXAoPR2V0U3BhY2VSZXF1",
+            "ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpBGwoZY2hhdC5nb29nbGVhcGlzLmNv",
+            "bS9TcGFjZRIYChB1c2VfYWRtaW5fYWNjZXNzGAIgASgIIi0KGEZpbmREaXJl",
+            "Y3RNZXNzYWdlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIiigEKElVwZGF0",
+            "ZVNwYWNlUmVxdWVzdBIpCgVzcGFjZRgBIAEoCzIVLmdvb2dsZS5jaGF0LnYx",
+            "LlNwYWNlQgPgQQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrEhgKEHVzZV9hZG1pbl9hY2Nlc3MYAyABKAgigQEK",
+            "E1NlYXJjaFNwYWNlc1JlcXVlc3QSGAoQdXNlX2FkbWluX2FjY2VzcxgBIAEo",
+            "CBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRISCgVx",
+            "dWVyeRgEIAEoCUID4EECEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEiagoUU2Vh",
+            "cmNoU3BhY2VzUmVzcG9uc2USJQoGc3BhY2VzGAEgAygLMhUuZ29vZ2xlLmNo",
+            "YXQudjEuU3BhY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFs",
+            "X3NpemUYAyABKAUiXwoSRGVsZXRlU3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASAB",
+            "KAlCIeBBAvpBGwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIYChB1c2Vf",
+            "YWRtaW5fYWNjZXNzGAIgASgIIk0KGkNvbXBsZXRlSW1wb3J0U3BhY2VSZXF1",
+            "ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpBGwoZY2hhdC5nb29nbGVhcGlzLmNv",
+            "bS9TcGFjZSJDChtDb21wbGV0ZUltcG9ydFNwYWNlUmVzcG9uc2USJAoFc3Bh",
+            "Y2UYASABKAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZUKjAQoSY29tLmdvb2ds",
+            "ZS5jaGF0LnYxQgpTcGFjZVByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "Y2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29n",
+            "bGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2ds",
+            "ZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.HistoryStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space), global::Google.Apps.Chat.V1.Space.Parser, new[]{ "Name", "Type", "SpaceType", "SingleUserBotDm", "Threaded", "DisplayName", "ExternalUserAllowed", "SpaceThreadingState", "SpaceDetails", "SpaceHistoryState", "ImportMode", "CreateTime", "LastActiveTime", "AdminInstalled", "MembershipCount", "AccessSettings", "SpaceUri" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.Type), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceType), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceThreadingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceDetails), global::Google.Apps.Chat.V1.Space.Types.SpaceDetails.Parser, new[]{ "Description", "Guidelines" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space), global::Google.Apps.Chat.V1.Space.Parser, new[]{ "Name", "Type", "SpaceType", "SingleUserBotDm", "Threaded", "DisplayName", "ExternalUserAllowed", "SpaceThreadingState", "SpaceDetails", "SpaceHistoryState", "ImportMode", "CreateTime", "LastActiveTime", "AdminInstalled", "MembershipCount", "AccessSettings", "SpaceUri", "PredefinedPermissionSettings", "PermissionSettings" }, new[]{ "SpacePermissionSettings" }, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.Type), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceType), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceThreadingState), typeof(global::Google.Apps.Chat.V1.Space.Types.PredefinedPermissionSettings) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceDetails), global::Google.Apps.Chat.V1.Space.Types.SpaceDetails.Parser, new[]{ "Description", "Guidelines" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.MembershipCount), global::Google.Apps.Chat.V1.Space.Types.MembershipCount.Parser, new[]{ "JoinedDirectHumanUserCount", "JoinedGroupCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings), global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Parser, new[]{ "AccessState", "Audience" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings), global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Parser, new[]{ "AccessState", "Audience" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.PermissionSettings), global::Google.Apps.Chat.V1.Space.Types.PermissionSettings.Parser, new[]{ "ManageMembersAndGroups", "ModifySpaceDetails", "ToggleHistory", "UseAtMentionAll", "ManageApps", "ManageWebhooks", "PostMessages", "ReplyMessages" }, new[]{ "ManageMembersAndGroups", "ModifySpaceDetails", "ToggleHistory", "UseAtMentionAll", "ManageApps", "ManageWebhooks", "PostMessages", "ReplyMessages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.PermissionSetting), global::Google.Apps.Chat.V1.Space.Types.PermissionSetting.Parser, new[]{ "ManagersAllowed", "MembersAllowed" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateSpaceRequest), global::Google.Apps.Chat.V1.CreateSpaceRequest.Parser, new[]{ "Space", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListSpacesRequest), global::Google.Apps.Chat.V1.ListSpacesRequest.Parser, new[]{ "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListSpacesResponse), global::Google.Apps.Chat.V1.ListSpacesResponse.Parser, new[]{ "Spaces", "NextPageToken" }, null, null, null, null),
@@ -167,6 +195,15 @@ namespace Google.Apps.Chat.V1 {
       membershipCount_ = other.membershipCount_ != null ? other.membershipCount_.Clone() : null;
       accessSettings_ = other.accessSettings_ != null ? other.accessSettings_.Clone() : null;
       spaceUri_ = other.spaceUri_;
+      switch (other.SpacePermissionSettingsCase) {
+        case SpacePermissionSettingsOneofCase.PredefinedPermissionSettings:
+          PredefinedPermissionSettings = other.PredefinedPermissionSettings;
+          break;
+        case SpacePermissionSettingsOneofCase.PermissionSettings:
+          PermissionSettings = other.PermissionSettings.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -183,6 +220,13 @@ namespace Google.Apps.Chat.V1 {
     /// Resource name of the space.
     ///
     /// Format: `spaces/{space}`
+    ///
+    /// Where `{space}` represents the system-assigned ID for the space. You can
+    /// obtain the space ID by calling the
+    /// [`spaces.list()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list)
+    /// method or from the space URL. For example, if the space URL
+    /// is `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID
+    /// is `AAAAAAAAA`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -264,11 +308,11 @@ namespace Google.Apps.Chat.V1 {
     private string displayName_ = "";
     /// <summary>
     /// The space's display name. Required when [creating a
-    /// space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create).
-    /// If you receive the error message `ALREADY_EXISTS` when creating a space or
-    /// updating the `displayName`, try a different `displayName`. An
-    /// existing space within the Google Workspace organization might already use
-    /// this display name.
+    /// space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create)
+    /// with a `spaceType` of `SPACE`. If you receive the error message
+    /// `ALREADY_EXISTS` when creating a space or updating the `displayName`, try a
+    /// different `displayName`. An existing space within the Google Workspace
+    /// organization might already use this display name.
     ///
     /// For direct messages, this field might be empty.
     ///
@@ -294,15 +338,6 @@ namespace Google.Apps.Chat.V1 {
     ///   * The authenticated user uses a consumer account (unmanaged user
     ///     account). By default, a space created by a consumer account permits any
     ///     Google Chat user.
-    ///
-    ///   * The space is used to [import data to Google Chat]
-    ///     (https://developers.google.com/chat/api/guides/import-data-overview)
-    ///     because import mode spaces must only permit members from the same
-    ///     Google Workspace organization. However, as part of the [Google
-    ///     Workspace Developer Preview
-    ///     Program](https://developers.google.com/workspace/preview), import mode
-    ///     spaces can permit any Google Chat user so this field can then be set
-    ///     for import mode spaces.
     ///
     /// For existing spaces, this field is output only.
     /// </summary>
@@ -483,6 +518,76 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "predefined_permission_settings" field.</summary>
+    public const int PredefinedPermissionSettingsFieldNumber = 26;
+    /// <summary>
+    /// Optional. Input only. Predefined space permission settings, input only
+    /// when creating a space. If the field is not set, a collaboration space is
+    /// created. After you create the space, settings are populated in the
+    /// `PermissionSettings` field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.Space.Types.PredefinedPermissionSettings PredefinedPermissionSettings {
+      get { return HasPredefinedPermissionSettings ? (global::Google.Apps.Chat.V1.Space.Types.PredefinedPermissionSettings) spacePermissionSettings_ : global::Google.Apps.Chat.V1.Space.Types.PredefinedPermissionSettings.Unspecified; }
+      set {
+        spacePermissionSettings_ = value;
+        spacePermissionSettingsCase_ = SpacePermissionSettingsOneofCase.PredefinedPermissionSettings;
+      }
+    }
+    /// <summary>Gets whether the "predefined_permission_settings" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPredefinedPermissionSettings {
+      get { return spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PredefinedPermissionSettings; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "predefined_permission_settings" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPredefinedPermissionSettings() {
+      if (HasPredefinedPermissionSettings) {
+        ClearSpacePermissionSettings();
+      }
+    }
+
+    /// <summary>Field number for the "permission_settings" field.</summary>
+    public const int PermissionSettingsFieldNumber = 27;
+    /// <summary>
+    /// Optional. Space permission settings for existing spaces. Input for
+    /// updating exact space permission settings, where existing permission
+    /// settings are replaced. Output lists current permission settings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.Space.Types.PermissionSettings PermissionSettings {
+      get { return spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings ? (global::Google.Apps.Chat.V1.Space.Types.PermissionSettings) spacePermissionSettings_ : null; }
+      set {
+        spacePermissionSettings_ = value;
+        spacePermissionSettingsCase_ = value == null ? SpacePermissionSettingsOneofCase.None : SpacePermissionSettingsOneofCase.PermissionSettings;
+      }
+    }
+
+    private object spacePermissionSettings_;
+    /// <summary>Enum of possible cases for the "space_permission_settings" oneof.</summary>
+    public enum SpacePermissionSettingsOneofCase {
+      None = 0,
+      PredefinedPermissionSettings = 26,
+      PermissionSettings = 27,
+    }
+    private SpacePermissionSettingsOneofCase spacePermissionSettingsCase_ = SpacePermissionSettingsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SpacePermissionSettingsOneofCase SpacePermissionSettingsCase {
+      get { return spacePermissionSettingsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSpacePermissionSettings() {
+      spacePermissionSettingsCase_ = SpacePermissionSettingsOneofCase.None;
+      spacePermissionSettings_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -515,6 +620,9 @@ namespace Google.Apps.Chat.V1 {
       if (!object.Equals(MembershipCount, other.MembershipCount)) return false;
       if (!object.Equals(AccessSettings, other.AccessSettings)) return false;
       if (SpaceUri != other.SpaceUri) return false;
+      if (PredefinedPermissionSettings != other.PredefinedPermissionSettings) return false;
+      if (!object.Equals(PermissionSettings, other.PermissionSettings)) return false;
+      if (SpacePermissionSettingsCase != other.SpacePermissionSettingsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -539,6 +647,9 @@ namespace Google.Apps.Chat.V1 {
       if (membershipCount_ != null) hash ^= MembershipCount.GetHashCode();
       if (accessSettings_ != null) hash ^= AccessSettings.GetHashCode();
       if (SpaceUri.Length != 0) hash ^= SpaceUri.GetHashCode();
+      if (HasPredefinedPermissionSettings) hash ^= PredefinedPermissionSettings.GetHashCode();
+      if (spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings) hash ^= PermissionSettings.GetHashCode();
+      hash ^= (int) spacePermissionSettingsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -625,6 +736,14 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(202, 1);
         output.WriteString(SpaceUri);
       }
+      if (HasPredefinedPermissionSettings) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) PredefinedPermissionSettings);
+      }
+      if (spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(PermissionSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -703,6 +822,14 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(202, 1);
         output.WriteString(SpaceUri);
       }
+      if (HasPredefinedPermissionSettings) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) PredefinedPermissionSettings);
+      }
+      if (spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(PermissionSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -763,6 +890,12 @@ namespace Google.Apps.Chat.V1 {
       }
       if (SpaceUri.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SpaceUri);
+      }
+      if (HasPredefinedPermissionSettings) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PredefinedPermissionSettings);
+      }
+      if (spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PermissionSettings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -842,6 +975,18 @@ namespace Google.Apps.Chat.V1 {
       if (other.SpaceUri.Length != 0) {
         SpaceUri = other.SpaceUri;
       }
+      switch (other.SpacePermissionSettingsCase) {
+        case SpacePermissionSettingsOneofCase.PredefinedPermissionSettings:
+          PredefinedPermissionSettings = other.PredefinedPermissionSettings;
+          break;
+        case SpacePermissionSettingsOneofCase.PermissionSettings:
+          if (PermissionSettings == null) {
+            PermissionSettings = new global::Google.Apps.Chat.V1.Space.Types.PermissionSettings();
+          }
+          PermissionSettings.MergeFrom(other.PermissionSettings);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -938,6 +1083,20 @@ namespace Google.Apps.Chat.V1 {
           }
           case 202: {
             SpaceUri = input.ReadString();
+            break;
+          }
+          case 208: {
+            spacePermissionSettings_ = input.ReadEnum();
+            spacePermissionSettingsCase_ = SpacePermissionSettingsOneofCase.PredefinedPermissionSettings;
+            break;
+          }
+          case 218: {
+            global::Google.Apps.Chat.V1.Space.Types.PermissionSettings subBuilder = new global::Google.Apps.Chat.V1.Space.Types.PermissionSettings();
+            if (spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings) {
+              subBuilder.MergeFrom(PermissionSettings);
+            }
+            input.ReadMessage(subBuilder);
+            PermissionSettings = subBuilder;
             break;
           }
         }
@@ -1038,6 +1197,20 @@ namespace Google.Apps.Chat.V1 {
             SpaceUri = input.ReadString();
             break;
           }
+          case 208: {
+            spacePermissionSettings_ = input.ReadEnum();
+            spacePermissionSettingsCase_ = SpacePermissionSettingsOneofCase.PredefinedPermissionSettings;
+            break;
+          }
+          case 218: {
+            global::Google.Apps.Chat.V1.Space.Types.PermissionSettings subBuilder = new global::Google.Apps.Chat.V1.Space.Types.PermissionSettings();
+            if (spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings) {
+              subBuilder.MergeFrom(PermissionSettings);
+            }
+            input.ReadMessage(subBuilder);
+            PermissionSettings = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1116,6 +1289,29 @@ namespace Google.Apps.Chat.V1 {
         /// 3 or more people.
         /// </summary>
         [pbr::OriginalName("UNTHREADED_MESSAGES")] UnthreadedMessages = 4,
+      }
+
+      /// <summary>
+      /// Predefined permission settings that you can only specify when creating a
+      /// named space. More settings might be added in the future.
+      /// For details about permission settings for named spaces, see [Learn about
+      /// spaces](https://support.google.com/chat/answer/7659784).
+      /// </summary>
+      public enum PredefinedPermissionSettings {
+        /// <summary>
+        /// Unspecified. Don't use.
+        /// </summary>
+        [pbr::OriginalName("PREDEFINED_PERMISSION_SETTINGS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Setting to make the space a collaboration space where all members can
+        /// post messages.
+        /// </summary>
+        [pbr::OriginalName("COLLABORATION_SPACE")] CollaborationSpace = 1,
+        /// <summary>
+        /// Setting to make the space an announcement space where only space managers
+        /// can post messages.
+        /// </summary>
+        [pbr::OriginalName("ANNOUNCEMENT_SPACE")] AnnouncementSpace = 2,
       }
 
       /// <summary>
@@ -1667,14 +1863,19 @@ namespace Google.Apps.Chat.V1 {
         /// <summary>
         /// Optional. The resource name of the [target
         /// audience](https://support.google.com/a/answer/9934697) who can discover
-        /// the space, join the space, and preview the messages in the space. For
-        /// details, see [Make a space discoverable to a target
+        /// the space, join the space, and preview the messages in the space. If
+        /// unset, only users or Google Groups who have been individually invited or
+        /// added to the space can access it. For details, see [Make a space
+        /// discoverable to a target
         /// audience](https://developers.google.com/workspace/chat/space-target-audience).
         ///
         /// Format: `audiences/{audience}`
         ///
         /// To use the default target audience for the Google Workspace organization,
         /// set to `audiences/default`.
+        ///
+        /// This field is not populated when using the `chat.bot` scope with [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1854,13 +2055,17 @@ namespace Google.Apps.Chat.V1 {
             /// </summary>
             [pbr::OriginalName("ACCESS_STATE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
-            /// Space is discoverable by added or invited members or groups.
+            /// Only users or Google Groups that have been individually added or
+            /// invited by other users or Google Workspace administrators can discover
+            /// and access the space.
             /// </summary>
             [pbr::OriginalName("PRIVATE")] Private = 1,
             /// <summary>
-            /// Space is discoverable by the selected [target
-            /// audience](https://support.google.com/a/answer/9934697), as well as
-            /// added or invited members or groups.
+            /// A space manager has granted a target audience access to
+            /// the space. Users or Google Groups that have been individually added or
+            /// invited to the space can also discover and access the space. To learn
+            /// more, see [Make a space discoverable to specific
+            /// users](https://developers.google.com/workspace/chat/space-target-audience).
             /// </summary>
             [pbr::OriginalName("DISCOVERABLE")] Discoverable = 2,
           }
@@ -1870,13 +2075,801 @@ namespace Google.Apps.Chat.V1 {
 
       }
 
+      /// <summary>
+      /// [Permission settings](https://support.google.com/chat/answer/13340792)
+      /// that you can specify when updating an existing named space.
+      ///
+      /// To set permission settings when creating a space, specify the
+      /// `PredefinedPermissionSettings` field in your request.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PermissionSettings : pb::IMessage<PermissionSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PermissionSettings> _parser = new pb::MessageParser<PermissionSettings>(() => new PermissionSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PermissionSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PermissionSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PermissionSettings(PermissionSettings other) : this() {
+          manageMembersAndGroups_ = other.manageMembersAndGroups_ != null ? other.manageMembersAndGroups_.Clone() : null;
+          modifySpaceDetails_ = other.modifySpaceDetails_ != null ? other.modifySpaceDetails_.Clone() : null;
+          toggleHistory_ = other.toggleHistory_ != null ? other.toggleHistory_.Clone() : null;
+          useAtMentionAll_ = other.useAtMentionAll_ != null ? other.useAtMentionAll_.Clone() : null;
+          manageApps_ = other.manageApps_ != null ? other.manageApps_.Clone() : null;
+          manageWebhooks_ = other.manageWebhooks_ != null ? other.manageWebhooks_.Clone() : null;
+          postMessages_ = other.postMessages_ != null ? other.postMessages_.Clone() : null;
+          replyMessages_ = other.replyMessages_ != null ? other.replyMessages_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PermissionSettings Clone() {
+          return new PermissionSettings(this);
+        }
+
+        /// <summary>Field number for the "manage_members_and_groups" field.</summary>
+        public const int ManageMembersAndGroupsFieldNumber = 1;
+        private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting manageMembersAndGroups_;
+        /// <summary>
+        /// Setting for managing members and groups in a space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.PermissionSetting ManageMembersAndGroups {
+          get { return manageMembersAndGroups_; }
+          set {
+            manageMembersAndGroups_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "modify_space_details" field.</summary>
+        public const int ModifySpaceDetailsFieldNumber = 2;
+        private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting modifySpaceDetails_;
+        /// <summary>
+        /// Setting for updating space name, avatar, description and guidelines.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.PermissionSetting ModifySpaceDetails {
+          get { return modifySpaceDetails_; }
+          set {
+            modifySpaceDetails_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "toggle_history" field.</summary>
+        public const int ToggleHistoryFieldNumber = 3;
+        private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting toggleHistory_;
+        /// <summary>
+        /// Setting for toggling space history on and off.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.PermissionSetting ToggleHistory {
+          get { return toggleHistory_; }
+          set {
+            toggleHistory_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "use_at_mention_all" field.</summary>
+        public const int UseAtMentionAllFieldNumber = 4;
+        private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting useAtMentionAll_;
+        /// <summary>
+        /// Setting for using @all in a space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.PermissionSetting UseAtMentionAll {
+          get { return useAtMentionAll_; }
+          set {
+            useAtMentionAll_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "manage_apps" field.</summary>
+        public const int ManageAppsFieldNumber = 5;
+        private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting manageApps_;
+        /// <summary>
+        /// Setting for managing apps in a space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.PermissionSetting ManageApps {
+          get { return manageApps_; }
+          set {
+            manageApps_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "manage_webhooks" field.</summary>
+        public const int ManageWebhooksFieldNumber = 6;
+        private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting manageWebhooks_;
+        /// <summary>
+        /// Setting for managing webhooks in a space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.PermissionSetting ManageWebhooks {
+          get { return manageWebhooks_; }
+          set {
+            manageWebhooks_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "post_messages" field.</summary>
+        public const int PostMessagesFieldNumber = 7;
+        private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting postMessages_;
+        /// <summary>
+        /// Output only. Setting for posting messages in a space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.PermissionSetting PostMessages {
+          get { return postMessages_; }
+          set {
+            postMessages_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "reply_messages" field.</summary>
+        public const int ReplyMessagesFieldNumber = 8;
+        private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting replyMessages_;
+        /// <summary>
+        /// Setting for replying to messages in a space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.PermissionSetting ReplyMessages {
+          get { return replyMessages_; }
+          set {
+            replyMessages_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PermissionSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PermissionSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(ManageMembersAndGroups, other.ManageMembersAndGroups)) return false;
+          if (!object.Equals(ModifySpaceDetails, other.ModifySpaceDetails)) return false;
+          if (!object.Equals(ToggleHistory, other.ToggleHistory)) return false;
+          if (!object.Equals(UseAtMentionAll, other.UseAtMentionAll)) return false;
+          if (!object.Equals(ManageApps, other.ManageApps)) return false;
+          if (!object.Equals(ManageWebhooks, other.ManageWebhooks)) return false;
+          if (!object.Equals(PostMessages, other.PostMessages)) return false;
+          if (!object.Equals(ReplyMessages, other.ReplyMessages)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (manageMembersAndGroups_ != null) hash ^= ManageMembersAndGroups.GetHashCode();
+          if (modifySpaceDetails_ != null) hash ^= ModifySpaceDetails.GetHashCode();
+          if (toggleHistory_ != null) hash ^= ToggleHistory.GetHashCode();
+          if (useAtMentionAll_ != null) hash ^= UseAtMentionAll.GetHashCode();
+          if (manageApps_ != null) hash ^= ManageApps.GetHashCode();
+          if (manageWebhooks_ != null) hash ^= ManageWebhooks.GetHashCode();
+          if (postMessages_ != null) hash ^= PostMessages.GetHashCode();
+          if (replyMessages_ != null) hash ^= ReplyMessages.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (manageMembersAndGroups_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ManageMembersAndGroups);
+          }
+          if (modifySpaceDetails_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ModifySpaceDetails);
+          }
+          if (toggleHistory_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ToggleHistory);
+          }
+          if (useAtMentionAll_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(UseAtMentionAll);
+          }
+          if (manageApps_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(ManageApps);
+          }
+          if (manageWebhooks_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(ManageWebhooks);
+          }
+          if (postMessages_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(PostMessages);
+          }
+          if (replyMessages_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(ReplyMessages);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (manageMembersAndGroups_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ManageMembersAndGroups);
+          }
+          if (modifySpaceDetails_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ModifySpaceDetails);
+          }
+          if (toggleHistory_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ToggleHistory);
+          }
+          if (useAtMentionAll_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(UseAtMentionAll);
+          }
+          if (manageApps_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(ManageApps);
+          }
+          if (manageWebhooks_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(ManageWebhooks);
+          }
+          if (postMessages_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(PostMessages);
+          }
+          if (replyMessages_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(ReplyMessages);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (manageMembersAndGroups_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManageMembersAndGroups);
+          }
+          if (modifySpaceDetails_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifySpaceDetails);
+          }
+          if (toggleHistory_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ToggleHistory);
+          }
+          if (useAtMentionAll_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(UseAtMentionAll);
+          }
+          if (manageApps_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManageApps);
+          }
+          if (manageWebhooks_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManageWebhooks);
+          }
+          if (postMessages_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostMessages);
+          }
+          if (replyMessages_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplyMessages);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PermissionSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.manageMembersAndGroups_ != null) {
+            if (manageMembersAndGroups_ == null) {
+              ManageMembersAndGroups = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+            }
+            ManageMembersAndGroups.MergeFrom(other.ManageMembersAndGroups);
+          }
+          if (other.modifySpaceDetails_ != null) {
+            if (modifySpaceDetails_ == null) {
+              ModifySpaceDetails = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+            }
+            ModifySpaceDetails.MergeFrom(other.ModifySpaceDetails);
+          }
+          if (other.toggleHistory_ != null) {
+            if (toggleHistory_ == null) {
+              ToggleHistory = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+            }
+            ToggleHistory.MergeFrom(other.ToggleHistory);
+          }
+          if (other.useAtMentionAll_ != null) {
+            if (useAtMentionAll_ == null) {
+              UseAtMentionAll = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+            }
+            UseAtMentionAll.MergeFrom(other.UseAtMentionAll);
+          }
+          if (other.manageApps_ != null) {
+            if (manageApps_ == null) {
+              ManageApps = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+            }
+            ManageApps.MergeFrom(other.ManageApps);
+          }
+          if (other.manageWebhooks_ != null) {
+            if (manageWebhooks_ == null) {
+              ManageWebhooks = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+            }
+            ManageWebhooks.MergeFrom(other.ManageWebhooks);
+          }
+          if (other.postMessages_ != null) {
+            if (postMessages_ == null) {
+              PostMessages = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+            }
+            PostMessages.MergeFrom(other.PostMessages);
+          }
+          if (other.replyMessages_ != null) {
+            if (replyMessages_ == null) {
+              ReplyMessages = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+            }
+            ReplyMessages.MergeFrom(other.ReplyMessages);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (manageMembersAndGroups_ == null) {
+                  ManageMembersAndGroups = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ManageMembersAndGroups);
+                break;
+              }
+              case 18: {
+                if (modifySpaceDetails_ == null) {
+                  ModifySpaceDetails = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ModifySpaceDetails);
+                break;
+              }
+              case 26: {
+                if (toggleHistory_ == null) {
+                  ToggleHistory = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ToggleHistory);
+                break;
+              }
+              case 34: {
+                if (useAtMentionAll_ == null) {
+                  UseAtMentionAll = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(UseAtMentionAll);
+                break;
+              }
+              case 42: {
+                if (manageApps_ == null) {
+                  ManageApps = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ManageApps);
+                break;
+              }
+              case 50: {
+                if (manageWebhooks_ == null) {
+                  ManageWebhooks = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ManageWebhooks);
+                break;
+              }
+              case 58: {
+                if (postMessages_ == null) {
+                  PostMessages = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(PostMessages);
+                break;
+              }
+              case 66: {
+                if (replyMessages_ == null) {
+                  ReplyMessages = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ReplyMessages);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (manageMembersAndGroups_ == null) {
+                  ManageMembersAndGroups = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ManageMembersAndGroups);
+                break;
+              }
+              case 18: {
+                if (modifySpaceDetails_ == null) {
+                  ModifySpaceDetails = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ModifySpaceDetails);
+                break;
+              }
+              case 26: {
+                if (toggleHistory_ == null) {
+                  ToggleHistory = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ToggleHistory);
+                break;
+              }
+              case 34: {
+                if (useAtMentionAll_ == null) {
+                  UseAtMentionAll = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(UseAtMentionAll);
+                break;
+              }
+              case 42: {
+                if (manageApps_ == null) {
+                  ManageApps = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ManageApps);
+                break;
+              }
+              case 50: {
+                if (manageWebhooks_ == null) {
+                  ManageWebhooks = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ManageWebhooks);
+                break;
+              }
+              case 58: {
+                if (postMessages_ == null) {
+                  PostMessages = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(PostMessages);
+                break;
+              }
+              case 66: {
+                if (replyMessages_ == null) {
+                  ReplyMessages = new global::Google.Apps.Chat.V1.Space.Types.PermissionSetting();
+                }
+                input.ReadMessage(ReplyMessages);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Represents a space permission setting.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PermissionSetting : pb::IMessage<PermissionSetting>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PermissionSetting> _parser = new pb::MessageParser<PermissionSetting>(() => new PermissionSetting());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PermissionSetting> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PermissionSetting() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PermissionSetting(PermissionSetting other) : this() {
+          managersAllowed_ = other.managersAllowed_;
+          membersAllowed_ = other.membersAllowed_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PermissionSetting Clone() {
+          return new PermissionSetting(this);
+        }
+
+        /// <summary>Field number for the "managers_allowed" field.</summary>
+        public const int ManagersAllowedFieldNumber = 1;
+        private bool managersAllowed_;
+        /// <summary>
+        /// Whether spaces managers have this permission.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ManagersAllowed {
+          get { return managersAllowed_; }
+          set {
+            managersAllowed_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "members_allowed" field.</summary>
+        public const int MembersAllowedFieldNumber = 2;
+        private bool membersAllowed_;
+        /// <summary>
+        /// Whether non-manager members have this permission.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool MembersAllowed {
+          get { return membersAllowed_; }
+          set {
+            membersAllowed_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PermissionSetting);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PermissionSetting other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ManagersAllowed != other.ManagersAllowed) return false;
+          if (MembersAllowed != other.MembersAllowed) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ManagersAllowed != false) hash ^= ManagersAllowed.GetHashCode();
+          if (MembersAllowed != false) hash ^= MembersAllowed.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ManagersAllowed != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(ManagersAllowed);
+          }
+          if (MembersAllowed != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(MembersAllowed);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ManagersAllowed != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(ManagersAllowed);
+          }
+          if (MembersAllowed != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(MembersAllowed);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ManagersAllowed != false) {
+            size += 1 + 1;
+          }
+          if (MembersAllowed != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PermissionSetting other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ManagersAllowed != false) {
+            ManagersAllowed = other.ManagersAllowed;
+          }
+          if (other.MembersAllowed != false) {
+            MembersAllowed = other.MembersAllowed;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ManagersAllowed = input.ReadBool();
+                break;
+              }
+              case 16: {
+                MembersAllowed = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ManagersAllowed = input.ReadBool();
+                break;
+              }
+              case 16: {
+                MembersAllowed = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
   }
 
   /// <summary>
-  /// A request to create a named space.
+  /// A request to create a named space with no members.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSpaceRequest : pb::IMessage<CreateSpaceRequest>
@@ -1931,9 +2924,13 @@ namespace Google.Apps.Chat.V1 {
     /// Required. The `displayName` and `spaceType` fields must be populated.  Only
     /// `SpaceType.SPACE` is supported.
     ///
-    /// If you receive the error message `ALREADY_EXISTS` when creating a space,
+    /// If you receive the error message `ALREADY_EXISTS`,
     /// try a different `displayName`. An existing space within the Google
     /// Workspace organization might already use this display name.
+    ///
+    /// If you're a member of the [Developer Preview
+    /// program](https://developers.google.com/workspace/preview),
+    /// `SpaceType.GROUP_CHAT` can be used if `importMode` is set to true.
     ///
     /// The space `name` is assigned on the server so anything specified in this
     /// field will be ignored.
@@ -2495,6 +3492,8 @@ namespace Google.Apps.Chat.V1 {
     private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.Space> spaces_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.Space>();
     /// <summary>
     /// List of spaces in the requested (or first) page.
+    /// Note: The `permissionSettings` field is not returned in the Space
+    /// object for list requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3193,54 +4192,64 @@ namespace Google.Apps.Chat.V1 {
     /// Required. The updated field paths, comma separated if there are
     /// multiple.
     ///
-    /// Currently supported field paths:
+    /// You can update the following fields for a space:
     ///
-    /// - `display_name` (Only supports changing the display name of a space with
-    /// the `SPACE` type, or when also including the `space_type` mask to change a
-    /// `GROUP_CHAT` space type to `SPACE`. Trying to update the display name of a
-    /// `GROUP_CHAT` or a `DIRECT_MESSAGE` space results in an invalid argument
-    /// error. If you receive the error message `ALREADY_EXISTS` when updating the
-    /// `displayName`, try a different `displayName`. An existing space within the
-    /// Google Workspace organization might already use this display name.)
+    /// `space_details`: Updates the space's description. Supports up to 150
+    /// characters.
     ///
-    /// - `space_type` (Only supports changing a `GROUP_CHAT` space type to
+    /// `display_name`: Only supports updating the display name for spaces where
+    /// `spaceType` field is `SPACE`.
+    ///  If you receive the error message `ALREADY_EXISTS`, try a different
+    ///  value. An existing space within the
+    /// Google Workspace organization might already use this display name.
+    ///
+    /// `space_type`: Only supports changing a `GROUP_CHAT` space type to
     /// `SPACE`. Include `display_name` together
     /// with `space_type` in the update mask and ensure that the specified space
     /// has a non-empty display name and the `SPACE` space type. Including the
     /// `space_type` mask and the `SPACE` type in the specified space when updating
     /// the display name is optional if the existing space already has the `SPACE`
     /// type. Trying to update the space type in other ways results in an invalid
-    /// argument error).
-    /// `space_type` is not supported with admin access.
+    /// argument error.
+    /// `space_type` is not supported with `useAdminAccess`.
     ///
-    /// - `space_details`
+    /// `space_history_state`: Updates [space history
+    /// settings](https://support.google.com/chat/answer/7664687) by turning
+    /// history on or off for the space. Only supported if history settings are
+    /// enabled for the Google Workspace organization. To update the
+    /// space history state, you must omit all other field masks in your request.
+    /// `space_history_state` is not supported with `useAdminAccess`.
     ///
-    /// - `space_history_state` (Supports [turning history on or off for the
-    /// space](https://support.google.com/chat/answer/7664687) if [the organization
-    /// allows users to change their history
-    /// setting](https://support.google.com/a/answer/7664184).
-    /// Warning: mutually exclusive with all other field paths.)
-    /// `space_history_state` is not supported with admin access.
-    ///
-    /// - `access_settings.audience` (Supports changing the [access
+    /// `access_settings.audience`: Updates the [access
     /// setting](https://support.google.com/chat/answer/11971020) of who can
-    /// discover the space, join the space, and preview the messages in space. If
-    /// no audience is specified in the access setting, the space's access setting
-    /// is updated to private. Warning: mutually exclusive with all other field
-    /// paths.)
-    /// `access_settings.audience` is not supported with admin access.
+    /// discover the space, join the space, and preview the messages in named space
+    /// where `spaceType` field is `SPACE`. If the existing space has a
+    /// target audience, you can remove the audience and restrict space access by
+    /// omitting a value for this field mask. To update access settings for a
+    /// space, the authenticating user must be a space manager and omit all other
+    /// field masks in your request. You can't update this field if the space is in
+    /// [import
+    /// mode](https://developers.google.com/workspace/chat/import-data-overview).
+    /// To learn more, see [Make a space discoverable to specific
+    /// users](https://developers.google.com/workspace/chat/space-target-audience).
+    /// `access_settings.audience` is not supported with `useAdminAccess`.
     ///
-    /// - Developer Preview: Supports changing the [permission
-    /// settings](https://support.google.com/chat/answer/13340792) of a space,
-    /// supported field paths
-    /// include: `permission_settings.manage_members_and_groups`,
-    /// `permission_settings.modify_space_details`,
-    /// `permission_settings.toggle_history`,
-    /// `permission_settings.use_at_mention_all`,
-    /// `permission_settings.manage_apps`, `permission_settings.manage_webhooks`,
-    /// `permission_settings.reply_messages`
-    ///  (Warning: mutually exclusive with all other non-permission settings field
-    /// paths). `permission_settings` is not supported with admin access.
+    /// `permission_settings`: Supports changing the
+    /// [permission settings](https://support.google.com/chat/answer/13340792)
+    /// of a space.
+    /// When updating permission settings, you can only specify
+    /// `permissionSettings` field masks; you cannot update other field masks
+    /// at the same time. `permissionSettings` is not supported with
+    /// `useAdminAccess`.
+    /// The supported field masks include:
+    ///
+    /// - `permission_settings.manageMembersAndGroups`
+    /// - `permission_settings.modifySpaceDetails`
+    /// - `permission_settings.toggleHistory`
+    /// - `permission_settings.useAtMentionAll`
+    /// - `permission_settings.manageApps`
+    /// - `permission_settings.manageWebhooks`
+    /// - `permission_settings.replyMessages`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
