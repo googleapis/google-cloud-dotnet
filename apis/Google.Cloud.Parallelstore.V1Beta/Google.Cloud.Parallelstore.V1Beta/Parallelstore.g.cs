@@ -4168,7 +4168,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     ///
     /// Use one of the following formats:
     ///
-    /// * {EMAIL_ADDRESS_OR_UNIQUE_ID}
+    /// * `{EMAIL_ADDRESS_OR_UNIQUE_ID}`
     /// * `projects/{PROJECT_ID_OR_NUMBER}/serviceAccounts/{EMAIL_ADDRESS_OR_UNIQUE_ID}`
     /// * `projects/-/serviceAccounts/{EMAIL_ADDRESS_OR_UNIQUE_ID}
     ///
@@ -4631,7 +4631,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// performing the transfer.
     /// Use one of the following formats:
     ///
-    /// * {EMAIL_ADDRESS_OR_UNIQUE_ID}
+    /// * `{EMAIL_ADDRESS_OR_UNIQUE_ID}`
     /// * `projects/{PROJECT_ID_OR_NUMBER}/serviceAccounts/{EMAIL_ADDRESS_OR_UNIQUE_ID}`
     /// * `projects/-/serviceAccounts/{EMAIL_ADDRESS_OR_UNIQUE_ID}
     ///
