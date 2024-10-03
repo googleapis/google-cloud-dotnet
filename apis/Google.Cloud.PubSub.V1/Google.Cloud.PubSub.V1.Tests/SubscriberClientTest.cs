@@ -606,6 +606,28 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
+        [Fact]
+        public void StopBeforeStart()
+        {
+            using (var fake = Fake.Create(new[] { new[] { ServerAction.Inf() } }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    var exception = await Assert.ThrowsAsync<InvalidOperationException>(
+                        async () => await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                            () => fake.Subscriber.StopAsync(TimeSpan.FromHours(1))));
+                    Assert.Equal("Can only stop a started instance.", exception.Message);
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
+                    Assert.Empty(fake.Subscribers[0].Extends);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.Subscribers[0].WriteCompletes);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.ClientShutdowns);
+                });
+            }
+        }
+
         // The test is similar to ImmediateStop but checks that calling DisposeAsync() instead of StopAsync() works.
         // It also tests that DisposeAsync() or StopAsync() can be called multiple times, without throwing exception.
         [Fact]
@@ -636,6 +658,31 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Empty(fake.Subscribers[0].Extends);
                     Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
                     Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(3) }, fake.ClientShutdowns);
+                });
+            }
+        }
+
+        [Fact]
+        public void DisposeBeforeStart()
+        {
+            using (var fake = Fake.CreateClientForSingleResponseStream(new[] { ServerAction.Inf() }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    // Dispose the subscriber.
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                        () => fake.Subscriber.DisposeAsync().AsTask());
+                    // Call DisposeAsync again. It shouldn't throw an exception.
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                       () => fake.Subscriber.DisposeAsync().AsTask());
+
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
+                    Assert.Empty(fake.Subscribers[0].Extends);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.Subscribers[0].WriteCompletes);
+                    Assert.Equal(Array.Empty<DateTime>(), fake.ClientShutdowns);
                 });
             }
         }

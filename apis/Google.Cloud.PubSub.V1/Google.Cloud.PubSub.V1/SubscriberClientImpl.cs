@@ -184,7 +184,18 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     }
 
     /// <inheritdoc />
-    public override ValueTask DisposeAsync() => new ValueTask(StopAsync(_disposeTimeout));
+    public override ValueTask DisposeAsync()
+    {
+        lock (_lock)
+        {
+            if (_mainTcs is null)
+            {
+                // No-op. We don't want to throw exceptions if DisposeAsync is called before StartAsync.
+                return new ValueTask(Task.CompletedTask);
+            }
+        }
+        return new ValueTask(StopAsync(_disposeTimeout));
+    }
 
     /// <inheritdoc />
     public override Task StopAsync(CancellationToken hardStopToken)
