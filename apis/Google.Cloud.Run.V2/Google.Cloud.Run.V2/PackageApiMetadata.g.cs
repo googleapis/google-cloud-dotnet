@@ -57,6 +57,7 @@ namespace Google.Cloud.Run.V2
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return gcl::LocationsReflection.Descriptor;
+            yield return BuildReflection.Descriptor;
             yield return ConditionReflection.Descriptor;
             yield return ExecutionReflection.Descriptor;
             yield return ExecutionTemplateReflection.Descriptor;

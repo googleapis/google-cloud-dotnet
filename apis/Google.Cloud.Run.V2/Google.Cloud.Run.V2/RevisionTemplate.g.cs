@@ -29,7 +29,7 @@ namespace Google.Cloud.Run.V2 {
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUv",
             "Y2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2dsZS9jbG91ZC9ydW4v",
             "djIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVy",
-            "YXRpb24ucHJvdG8i8gYKEFJldmlzaW9uVGVtcGxhdGUSNQoIcmV2aXNpb24Y",
+            "YXRpb24ucHJvdG8i7gcKEFJldmlzaW9uVGVtcGxhdGUSNQoIcmV2aXNpb24Y",
             "ASABKAlCI+BBAfpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEkYK",
             "BmxhYmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25U",
             "ZW1wbGF0ZS5MYWJlbHNFbnRyeUID4EEBElAKC2Fubm90YXRpb25zGAMgAygL",
@@ -45,17 +45,19 @@ namespace Google.Cloud.Run.V2 {
             "ZC5ydW4udjIuRXhlY3V0aW9uRW52aXJvbm1lbnRCA+BBARI+Cg5lbmNyeXB0",
             "aW9uX2tleRgOIAEoCUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9D",
             "cnlwdG9LZXkSLQogbWF4X2luc3RhbmNlX3JlcXVlc3RfY29uY3VycmVuY3kY",
-            "DyABKAVCA+BBARIdChBzZXNzaW9uX2FmZmluaXR5GBMgASgIQgPgQQESIgoV",
-            "aGVhbHRoX2NoZWNrX2Rpc2FibGVkGBQgASgIQgPgQQEaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0",
-            "aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCXQoX",
-            "Y29tLmdvb2dsZS5jbG91ZC5ydW4udjJCFVJldmlzaW9uVGVtcGxhdGVQcm90",
-            "b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5w",
-            "YmIGcHJvdG8z"));
+            "DyABKAVCA+BBARI7CgxzZXJ2aWNlX21lc2gYECABKAsyIC5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLlNlcnZpY2VNZXNoQgPgQQESHQoQc2Vzc2lvbl9hZmZpbml0",
+            "eRgTIAEoCEID4EEBEiIKFWhlYWx0aF9jaGVja19kaXNhYmxlZBgUIAEoCEID",
+            "4EEBEj0KDW5vZGVfc2VsZWN0b3IYFSABKAsyIS5nb29nbGUuY2xvdWQucnVu",
+            "LnYyLk5vZGVTZWxlY3RvckID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQl0KF2NvbS5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyQhVSZXZpc2lvblRlbXBsYXRlUHJvdG9QAVopY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency", "SessionAffinity", "HealthCheckDisabled" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency", "ServiceMesh", "SessionAffinity", "HealthCheckDisabled", "NodeSelector" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -113,8 +115,10 @@ namespace Google.Cloud.Run.V2 {
       executionEnvironment_ = other.executionEnvironment_;
       encryptionKey_ = other.encryptionKey_;
       maxInstanceRequestConcurrency_ = other.maxInstanceRequestConcurrency_;
+      serviceMesh_ = other.serviceMesh_ != null ? other.serviceMesh_.Clone() : null;
       sessionAffinity_ = other.sessionAffinity_;
       healthCheckDisabled_ = other.healthCheckDisabled_;
+      nodeSelector_ = other.nodeSelector_ != null ? other.nodeSelector_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -319,7 +323,8 @@ namespace Google.Cloud.Run.V2 {
     private int maxInstanceRequestConcurrency_;
     /// <summary>
     /// Optional. Sets the maximum number of requests that each serving instance
-    /// can receive.
+    /// can receive. If not specified or 0, defaults to 80 when requested
+    /// `CPU >= 1` and defaults to 1 when requested `CPU &lt; 1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -327,6 +332,21 @@ namespace Google.Cloud.Run.V2 {
       get { return maxInstanceRequestConcurrency_; }
       set {
         maxInstanceRequestConcurrency_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service_mesh" field.</summary>
+    public const int ServiceMeshFieldNumber = 16;
+    private global::Google.Cloud.Run.V2.ServiceMesh serviceMesh_;
+    /// <summary>
+    /// Optional. Enables service mesh connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.ServiceMesh ServiceMesh {
+      get { return serviceMesh_; }
+      set {
+        serviceMesh_ = value;
       }
     }
 
@@ -360,6 +380,21 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "node_selector" field.</summary>
+    public const int NodeSelectorFieldNumber = 21;
+    private global::Google.Cloud.Run.V2.NodeSelector nodeSelector_;
+    /// <summary>
+    /// Optional. The node selector for the revision template.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.NodeSelector NodeSelector {
+      get { return nodeSelector_; }
+      set {
+        nodeSelector_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -387,8 +422,10 @@ namespace Google.Cloud.Run.V2 {
       if (ExecutionEnvironment != other.ExecutionEnvironment) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
       if (MaxInstanceRequestConcurrency != other.MaxInstanceRequestConcurrency) return false;
+      if (!object.Equals(ServiceMesh, other.ServiceMesh)) return false;
       if (SessionAffinity != other.SessionAffinity) return false;
       if (HealthCheckDisabled != other.HealthCheckDisabled) return false;
+      if (!object.Equals(NodeSelector, other.NodeSelector)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -408,8 +445,10 @@ namespace Google.Cloud.Run.V2 {
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) hash ^= ExecutionEnvironment.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
       if (MaxInstanceRequestConcurrency != 0) hash ^= MaxInstanceRequestConcurrency.GetHashCode();
+      if (serviceMesh_ != null) hash ^= ServiceMesh.GetHashCode();
       if (SessionAffinity != false) hash ^= SessionAffinity.GetHashCode();
       if (HealthCheckDisabled != false) hash ^= HealthCheckDisabled.GetHashCode();
+      if (nodeSelector_ != null) hash ^= NodeSelector.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -464,6 +503,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(120);
         output.WriteInt32(MaxInstanceRequestConcurrency);
       }
+      if (serviceMesh_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ServiceMesh);
+      }
       if (SessionAffinity != false) {
         output.WriteRawTag(152, 1);
         output.WriteBool(SessionAffinity);
@@ -471,6 +514,10 @@ namespace Google.Cloud.Run.V2 {
       if (HealthCheckDisabled != false) {
         output.WriteRawTag(160, 1);
         output.WriteBool(HealthCheckDisabled);
+      }
+      if (nodeSelector_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(NodeSelector);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -518,6 +565,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(120);
         output.WriteInt32(MaxInstanceRequestConcurrency);
       }
+      if (serviceMesh_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ServiceMesh);
+      }
       if (SessionAffinity != false) {
         output.WriteRawTag(152, 1);
         output.WriteBool(SessionAffinity);
@@ -525,6 +576,10 @@ namespace Google.Cloud.Run.V2 {
       if (HealthCheckDisabled != false) {
         output.WriteRawTag(160, 1);
         output.WriteBool(HealthCheckDisabled);
+      }
+      if (nodeSelector_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(NodeSelector);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -564,11 +619,17 @@ namespace Google.Cloud.Run.V2 {
       if (MaxInstanceRequestConcurrency != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstanceRequestConcurrency);
       }
+      if (serviceMesh_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ServiceMesh);
+      }
       if (SessionAffinity != false) {
         size += 2 + 1;
       }
       if (HealthCheckDisabled != false) {
         size += 2 + 1;
+      }
+      if (nodeSelector_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NodeSelector);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -619,11 +680,23 @@ namespace Google.Cloud.Run.V2 {
       if (other.MaxInstanceRequestConcurrency != 0) {
         MaxInstanceRequestConcurrency = other.MaxInstanceRequestConcurrency;
       }
+      if (other.serviceMesh_ != null) {
+        if (serviceMesh_ == null) {
+          ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+        }
+        ServiceMesh.MergeFrom(other.ServiceMesh);
+      }
       if (other.SessionAffinity != false) {
         SessionAffinity = other.SessionAffinity;
       }
       if (other.HealthCheckDisabled != false) {
         HealthCheckDisabled = other.HealthCheckDisabled;
+      }
+      if (other.nodeSelector_ != null) {
+        if (nodeSelector_ == null) {
+          NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+        }
+        NodeSelector.MergeFrom(other.NodeSelector);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -697,12 +770,26 @@ namespace Google.Cloud.Run.V2 {
             MaxInstanceRequestConcurrency = input.ReadInt32();
             break;
           }
+          case 130: {
+            if (serviceMesh_ == null) {
+              ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+            }
+            input.ReadMessage(ServiceMesh);
+            break;
+          }
           case 152: {
             SessionAffinity = input.ReadBool();
             break;
           }
           case 160: {
             HealthCheckDisabled = input.ReadBool();
+            break;
+          }
+          case 170: {
+            if (nodeSelector_ == null) {
+              NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+            }
+            input.ReadMessage(NodeSelector);
             break;
           }
         }
@@ -777,12 +864,26 @@ namespace Google.Cloud.Run.V2 {
             MaxInstanceRequestConcurrency = input.ReadInt32();
             break;
           }
+          case 130: {
+            if (serviceMesh_ == null) {
+              ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+            }
+            input.ReadMessage(ServiceMesh);
+            break;
+          }
           case 152: {
             SessionAffinity = input.ReadBool();
             break;
           }
           case 160: {
             HealthCheckDisabled = input.ReadBool();
+            break;
+          }
+          case 170: {
+            if (nodeSelector_ == null) {
+              NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+            }
+            input.ReadMessage(NodeSelector);
             break;
           }
         }
