@@ -8,6 +8,7 @@
   ],
   "ignorePaths": [
     "issues/**",
+    "apis/Google.Ads.AdManager.V1/Google.Ads.AdManager.V1/**",
     "apis/Google.Ads.MarketingPlatform.Admin.V1Alpha/Google.Ads.MarketingPlatform.Admin.V1Alpha/**",
     "apis/Google.Analytics.Admin.V1Alpha/Google.Analytics.Admin.V1Alpha/**",
     "apis/Google.Analytics.Admin.V1Beta/Google.Analytics.Admin.V1Beta/**",
