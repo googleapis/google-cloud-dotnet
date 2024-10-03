@@ -2,7 +2,7 @@
   "apis": [
     {
       "id": "Google.Ads.AdManager.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Google Ad Manager",
       "productUrl": "https://developers.google.com/ad-manager/api/beta",
