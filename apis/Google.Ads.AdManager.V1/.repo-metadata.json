@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Ads.AdManager.V1",
+  "release_level": "preview",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Ads.AdManager.V1/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "admanager"
+}

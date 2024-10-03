@@ -1,6 +1,28 @@
 {
   "apis": [
     {
+      "id": "Google.Ads.AdManager.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Google Ad Manager",
+      "productUrl": "https://developers.google.com/ad-manager/api/beta",
+      "description": "Recommended Google client library to access the Ad Manager API, which allows you to manage your Ad Manager inventory, run reports and more.",
+      "tags": [
+        "ads",
+        "admanager"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/ads/admanager/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "admanager",
+      "serviceConfigFile": "admanager_v1.yaml",
+      "transport": "rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Ads.MarketingPlatform.Admin.V1Alpha",
       "version": "1.0.0-alpha01",
       "type": "grpc",
