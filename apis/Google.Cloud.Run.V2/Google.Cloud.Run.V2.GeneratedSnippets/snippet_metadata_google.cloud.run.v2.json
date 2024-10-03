@@ -11,6 +11,103 @@
   },
   "snippets": [
     {
+      "regionTag": "run_v2_generated_Builds_SubmitBuild_sync",
+      "title": "SubmitBuildRequestObject",
+      "description": "Snippet for SubmitBuild",
+      "file": "BuildsClient.SubmitBuildRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitBuild",
+        "fullName": "Google.Cloud.Run.V2.BuildsClient.SubmitBuild",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.SubmitBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Run.V2.SubmitBuildResponse",
+        "client": {
+          "shortName": "BuildsClient",
+          "fullName": "Google.Cloud.Run.V2.BuildsClient"
+        },
+        "method": {
+          "shortName": "SubmitBuild",
+          "fullName": "google.cloud.run.v2.Builds.SubmitBuild",
+          "service": {
+            "shortName": "Builds",
+            "fullName": "google.cloud.run.v2.Builds"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_Builds_SubmitBuild_async",
+      "title": "SubmitBuildRequestObjectAsync",
+      "description": "Snippet for SubmitBuildAsync",
+      "file": "BuildsClient.SubmitBuildRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitBuildAsync",
+        "fullName": "Google.Cloud.Run.V2.BuildsClient.SubmitBuildAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.SubmitBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.SubmitBuildResponse>",
+        "client": {
+          "shortName": "BuildsClient",
+          "fullName": "Google.Cloud.Run.V2.BuildsClient"
+        },
+        "method": {
+          "shortName": "SubmitBuild",
+          "fullName": "google.cloud.run.v2.Builds.SubmitBuild",
+          "service": {
+            "shortName": "Builds",
+            "fullName": "google.cloud.run.v2.Builds"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "run_v2_generated_Executions_GetExecution_sync",
       "title": "GetExecutionRequestObject",
       "description": "Snippet for GetExecution",

@@ -44,7 +44,7 @@ namespace Google.Cloud.Run.V2 {
             "b24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIm8KFURlbGV0ZVJldmlzaW9u",
             "UmVxdWVzdBIxCgRuYW1lGAEgASgJQiPgQQL6QR0KG3J1bi5nb29nbGVhcGlz",
             "LmNvbS9SZXZpc2lvbhIVCg12YWxpZGF0ZV9vbmx5GAIgASgIEgwKBGV0YWcY",
-            "AyABKAki7QwKCFJldmlzaW9uEhEKBG5hbWUYASABKAlCA+BBAxIQCgN1aWQY",
+            "AyABKAki3w0KCFJldmlzaW9uEhEKBG5hbWUYASABKAlCA+BBAxIQCgN1aWQY",
             "AiABKAlCA+BBAxIXCgpnZW5lcmF0aW9uGAMgASgDQgPgQQMSPgoGbGFiZWxz",
             "GAQgAygLMikuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5SZXZpc2lvbi5MYWJlbHNF",
             "bnRyeUID4EEDEkgKC2Fubm90YXRpb25zGAUgAygLMi4uZ29vZ2xlLmNsb3Vk",
@@ -65,42 +65,44 @@ namespace Google.Cloud.Run.V2 {
             "bHVtZXMYEiADKAsyGy5nb29nbGUuY2xvdWQucnVuLnYyLlZvbHVtZRJIChVl",
             "eGVjdXRpb25fZW52aXJvbm1lbnQYFCABKA4yKS5nb29nbGUuY2xvdWQucnVu",
             "LnYyLkV4ZWN1dGlvbkVudmlyb25tZW50Ej4KDmVuY3J5cHRpb25fa2V5GBUg",
-            "ASgJQib6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJc",
-            "CiBlbmNyeXB0aW9uX2tleV9yZXZvY2F0aW9uX2FjdGlvbhgXIAEoDjIyLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjIuRW5jcnlwdGlvbktleVJldm9jYXRpb25BY3Rp",
-            "b24SQwogZW5jcnlwdGlvbl9rZXlfc2h1dGRvd25fZHVyYXRpb24YGCABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SGAoLcmVjb25jaWxpbmcYHiAB",
-            "KAhCA+BBAxI3Cgpjb25kaXRpb25zGB8gAygLMh4uZ29vZ2xlLmNsb3VkLnJ1",
-            "bi52Mi5Db25kaXRpb25CA+BBAxIgChNvYnNlcnZlZF9nZW5lcmF0aW9uGCAg",
-            "ASgDQgPgQQMSFAoHbG9nX3VyaRghIAEoCUID4EEDEhoKDXNhdGlzZmllc19w",
-            "enMYJSABKAhCA+BBAxIYChBzZXNzaW9uX2FmZmluaXR5GCYgASgIEkcKDnNj",
-            "YWxpbmdfc3RhdHVzGCcgASgLMiouZ29vZ2xlLmNsb3VkLnJ1bi52Mi5SZXZp",
-            "c2lvblNjYWxpbmdTdGF0dXNCA+BBAxIRCgRldGFnGGMgASgJQgPgQQMaLQoL",
-            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoy",
-            "ChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAE6dOpBcQobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEk9wcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2VydmljZXMv",
-            "e3NlcnZpY2V9L3JldmlzaW9ucy97cmV2aXNpb259UgEBMoUGCglSZXZpc2lv",
-            "bnMS0gEKC0dldFJldmlzaW9uEicuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5HZXRS",
-            "ZXZpc2lvblJlcXVlc3QaHS5nb29nbGUuY2xvdWQucnVuLnYyLlJldmlzaW9u",
-            "InvaQQRuYW1lgtPkkwI6EjgvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9zZXJ2aWNlcy8qL3JldmlzaW9ucy8qfYrT5JMCLhIsCgRuYW1lEiRw",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKioS5wEKDUxpc3RS",
-            "ZXZpc2lvbnMSKS5nb29nbGUuY2xvdWQucnVuLnYyLkxpc3RSZXZpc2lvbnNS",
-            "ZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLnJ1bi52Mi5MaXN0UmV2aXNpb25zUmVz",
-            "cG9uc2Uif9pBBnBhcmVudILT5JMCOhI4L3YyL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qfS9yZXZpc2lvbnOK0+STAjASLgoG",
-            "cGFyZW50EiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKioS",
-            "8AEKDkRlbGV0ZVJldmlzaW9uEiouZ29vZ2xlLmNsb3VkLnJ1bi52Mi5EZWxl",
-            "dGVSZXZpc2lvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIpIBykEUCghSZXZpc2lvbhIIUmV2aXNpb27aQQRuYW1lgtPkkwI6Kjgv",
-            "djIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qL3Jl",
-            "dmlzaW9ucy8qfYrT5JMCLhIsCgRuYW1lEiRwcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy97bG9jYXRpb249Kn0vKioaRspBEnJ1bi5nb29nbGVhcGlzLmNvbdJBLmh0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
-            "VQoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCDVJldmlzaW9uUHJvdG9QAVop",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnBy",
-            "b3RvMw=="));
+            "ASgJQib6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRI2",
+            "CgxzZXJ2aWNlX21lc2gYFiABKAsyIC5nb29nbGUuY2xvdWQucnVuLnYyLlNl",
+            "cnZpY2VNZXNoElwKIGVuY3J5cHRpb25fa2V5X3Jldm9jYXRpb25fYWN0aW9u",
+            "GBcgASgOMjIuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5FbmNyeXB0aW9uS2V5UmV2",
+            "b2NhdGlvbkFjdGlvbhJDCiBlbmNyeXB0aW9uX2tleV9zaHV0ZG93bl9kdXJh",
+            "dGlvbhgYIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIYCgtyZWNv",
+            "bmNpbGluZxgeIAEoCEID4EEDEjcKCmNvbmRpdGlvbnMYHyADKAsyHi5nb29n",
+            "bGUuY2xvdWQucnVuLnYyLkNvbmRpdGlvbkID4EEDEiAKE29ic2VydmVkX2dl",
+            "bmVyYXRpb24YICABKANCA+BBAxIUCgdsb2dfdXJpGCEgASgJQgPgQQMSGgoN",
+            "c2F0aXNmaWVzX3B6cxglIAEoCEID4EEDEhgKEHNlc3Npb25fYWZmaW5pdHkY",
+            "JiABKAgSRwoOc2NhbGluZ19zdGF0dXMYJyABKAsyKi5nb29nbGUuY2xvdWQu",
+            "cnVuLnYyLlJldmlzaW9uU2NhbGluZ1N0YXR1c0ID4EEDEjgKDW5vZGVfc2Vs",
+            "ZWN0b3IYKCABKAsyIS5nb29nbGUuY2xvdWQucnVuLnYyLk5vZGVTZWxlY3Rv",
+            "chIRCgRldGFnGGMgASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6dOpBcQobcnVuLmdvb2ds",
+            "ZWFwaXMuY29tL1JldmlzaW9uEk9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vc2VydmljZXMve3NlcnZpY2V9L3JldmlzaW9ucy97",
+            "cmV2aXNpb259UgEBMoUGCglSZXZpc2lvbnMS0gEKC0dldFJldmlzaW9uEicu",
+            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5HZXRSZXZpc2lvblJlcXVlc3QaHS5nb29n",
+            "bGUuY2xvdWQucnVuLnYyLlJldmlzaW9uInvaQQRuYW1lgtPkkwI6EjgvdjIv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qL3Jldmlz",
+            "aW9ucy8qfYrT5JMCLhIsCgRuYW1lEiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97",
+            "bG9jYXRpb249Kn0vKioS5wEKDUxpc3RSZXZpc2lvbnMSKS5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLkxpc3RSZXZpc2lvbnNSZXF1ZXN0GiouZ29vZ2xlLmNsb3Vk",
+            "LnJ1bi52Mi5MaXN0UmV2aXNpb25zUmVzcG9uc2Uif9pBBnBhcmVudILT5JMC",
+            "OhI4L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNl",
+            "cy8qfS9yZXZpc2lvbnOK0+STAjASLgoGcGFyZW50EiRwcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy97bG9jYXRpb249Kn0vKioS8AEKDkRlbGV0ZVJldmlzaW9uEiou",
+            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5EZWxldGVSZXZpc2lvblJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpIBykEUCghSZXZpc2lvbhII",
+            "UmV2aXNpb27aQQRuYW1lgtPkkwI6KjgvdjIve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9zZXJ2aWNlcy8qL3JldmlzaW9ucy8qfYrT5JMCLhIsCgRu",
+            "YW1lEiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKioaRspB",
+            "EnJ1bi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CVQoXY29tLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjJCDVJldmlzaW9uUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9y",
+            "dW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.StatusReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -108,7 +110,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListRevisionsRequest), global::Google.Cloud.Run.V2.ListRevisionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListRevisionsResponse), global::Google.Cloud.Run.V2.ListRevisionsResponse.Parser, new[]{ "Revisions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.DeleteRevisionRequest), global::Google.Cloud.Run.V2.DeleteRevisionRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Revision), global::Google.Cloud.Run.V2.Revision.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Service", "Scaling", "VpcAccess", "MaxInstanceRequestConcurrency", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "EncryptionKeyRevocationAction", "EncryptionKeyShutdownDuration", "Reconciling", "Conditions", "ObservedGeneration", "LogUri", "SatisfiesPzs", "SessionAffinity", "ScalingStatus", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Revision), global::Google.Cloud.Run.V2.Revision.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Service", "Scaling", "VpcAccess", "MaxInstanceRequestConcurrency", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "ServiceMesh", "EncryptionKeyRevocationAction", "EncryptionKeyShutdownDuration", "Reconciling", "Conditions", "ObservedGeneration", "LogUri", "SatisfiesPzs", "SessionAffinity", "ScalingStatus", "NodeSelector", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1201,6 +1203,7 @@ namespace Google.Cloud.Run.V2 {
       volumes_ = other.volumes_.Clone();
       executionEnvironment_ = other.executionEnvironment_;
       encryptionKey_ = other.encryptionKey_;
+      serviceMesh_ = other.serviceMesh_ != null ? other.serviceMesh_.Clone() : null;
       encryptionKeyRevocationAction_ = other.encryptionKeyRevocationAction_;
       encryptionKeyShutdownDuration_ = other.encryptionKeyShutdownDuration_ != null ? other.encryptionKeyShutdownDuration_.Clone() : null;
       reconciling_ = other.reconciling_;
@@ -1210,6 +1213,7 @@ namespace Google.Cloud.Run.V2 {
       satisfiesPzs_ = other.satisfiesPzs_;
       sessionAffinity_ = other.sessionAffinity_;
       scalingStatus_ = other.scalingStatus_ != null ? other.scalingStatus_.Clone() : null;
+      nodeSelector_ = other.nodeSelector_ != null ? other.nodeSelector_.Clone() : null;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1543,6 +1547,21 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "service_mesh" field.</summary>
+    public const int ServiceMeshFieldNumber = 22;
+    private global::Google.Cloud.Run.V2.ServiceMesh serviceMesh_;
+    /// <summary>
+    /// Enables service mesh connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.ServiceMesh ServiceMesh {
+      get { return serviceMesh_; }
+      set {
+        serviceMesh_ = value;
+      }
+    }
+
     /// <summary>Field number for the "encryption_key_revocation_action" field.</summary>
     public const int EncryptionKeyRevocationActionFieldNumber = 23;
     private global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction encryptionKeyRevocationAction_ = global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified;
@@ -1684,6 +1703,21 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "node_selector" field.</summary>
+    public const int NodeSelectorFieldNumber = 40;
+    private global::Google.Cloud.Run.V2.NodeSelector nodeSelector_;
+    /// <summary>
+    /// The node selector for the revision.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.NodeSelector NodeSelector {
+      get { return nodeSelector_; }
+      set {
+        nodeSelector_ = value;
+      }
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
@@ -1735,6 +1769,7 @@ namespace Google.Cloud.Run.V2 {
       if(!volumes_.Equals(other.volumes_)) return false;
       if (ExecutionEnvironment != other.ExecutionEnvironment) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
+      if (!object.Equals(ServiceMesh, other.ServiceMesh)) return false;
       if (EncryptionKeyRevocationAction != other.EncryptionKeyRevocationAction) return false;
       if (!object.Equals(EncryptionKeyShutdownDuration, other.EncryptionKeyShutdownDuration)) return false;
       if (Reconciling != other.Reconciling) return false;
@@ -1744,6 +1779,7 @@ namespace Google.Cloud.Run.V2 {
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (SessionAffinity != other.SessionAffinity) return false;
       if (!object.Equals(ScalingStatus, other.ScalingStatus)) return false;
+      if (!object.Equals(NodeSelector, other.NodeSelector)) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1772,6 +1808,7 @@ namespace Google.Cloud.Run.V2 {
       hash ^= volumes_.GetHashCode();
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) hash ^= ExecutionEnvironment.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
+      if (serviceMesh_ != null) hash ^= ServiceMesh.GetHashCode();
       if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) hash ^= EncryptionKeyRevocationAction.GetHashCode();
       if (encryptionKeyShutdownDuration_ != null) hash ^= EncryptionKeyShutdownDuration.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
@@ -1781,6 +1818,7 @@ namespace Google.Cloud.Run.V2 {
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (SessionAffinity != false) hash ^= SessionAffinity.GetHashCode();
       if (scalingStatus_ != null) hash ^= ScalingStatus.GetHashCode();
+      if (nodeSelector_ != null) hash ^= NodeSelector.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1864,6 +1902,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(170, 1);
         output.WriteString(EncryptionKey);
       }
+      if (serviceMesh_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(ServiceMesh);
+      }
       if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
         output.WriteRawTag(184, 1);
         output.WriteEnum((int) EncryptionKeyRevocationAction);
@@ -1900,6 +1942,10 @@ namespace Google.Cloud.Run.V2 {
       if (scalingStatus_ != null) {
         output.WriteRawTag(186, 2);
         output.WriteMessage(ScalingStatus);
+      }
+      if (nodeSelector_ != null) {
+        output.WriteRawTag(194, 2);
+        output.WriteMessage(NodeSelector);
       }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
@@ -1979,6 +2025,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(170, 1);
         output.WriteString(EncryptionKey);
       }
+      if (serviceMesh_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(ServiceMesh);
+      }
       if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
         output.WriteRawTag(184, 1);
         output.WriteEnum((int) EncryptionKeyRevocationAction);
@@ -2015,6 +2065,10 @@ namespace Google.Cloud.Run.V2 {
       if (scalingStatus_ != null) {
         output.WriteRawTag(186, 2);
         output.WriteMessage(ScalingStatus);
+      }
+      if (nodeSelector_ != null) {
+        output.WriteRawTag(194, 2);
+        output.WriteMessage(NodeSelector);
       }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
@@ -2082,6 +2136,9 @@ namespace Google.Cloud.Run.V2 {
       if (EncryptionKey.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(EncryptionKey);
       }
+      if (serviceMesh_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ServiceMesh);
+      }
       if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EncryptionKeyRevocationAction);
       }
@@ -2106,6 +2163,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (scalingStatus_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ScalingStatus);
+      }
+      if (nodeSelector_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NodeSelector);
       }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
@@ -2195,6 +2255,12 @@ namespace Google.Cloud.Run.V2 {
       if (other.EncryptionKey.Length != 0) {
         EncryptionKey = other.EncryptionKey;
       }
+      if (other.serviceMesh_ != null) {
+        if (serviceMesh_ == null) {
+          ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+        }
+        ServiceMesh.MergeFrom(other.ServiceMesh);
+      }
       if (other.EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
         EncryptionKeyRevocationAction = other.EncryptionKeyRevocationAction;
       }
@@ -2225,6 +2291,12 @@ namespace Google.Cloud.Run.V2 {
           ScalingStatus = new global::Google.Cloud.Run.V2.RevisionScalingStatus();
         }
         ScalingStatus.MergeFrom(other.ScalingStatus);
+      }
+      if (other.nodeSelector_ != null) {
+        if (nodeSelector_ == null) {
+          NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+        }
+        NodeSelector.MergeFrom(other.NodeSelector);
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -2341,6 +2413,13 @@ namespace Google.Cloud.Run.V2 {
             EncryptionKey = input.ReadString();
             break;
           }
+          case 178: {
+            if (serviceMesh_ == null) {
+              ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+            }
+            input.ReadMessage(ServiceMesh);
+            break;
+          }
           case 184: {
             EncryptionKeyRevocationAction = (global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction) input.ReadEnum();
             break;
@@ -2385,6 +2464,13 @@ namespace Google.Cloud.Run.V2 {
               ScalingStatus = new global::Google.Cloud.Run.V2.RevisionScalingStatus();
             }
             input.ReadMessage(ScalingStatus);
+            break;
+          }
+          case 322: {
+            if (nodeSelector_ == null) {
+              NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+            }
+            input.ReadMessage(NodeSelector);
             break;
           }
           case 794: {
@@ -2503,6 +2589,13 @@ namespace Google.Cloud.Run.V2 {
             EncryptionKey = input.ReadString();
             break;
           }
+          case 178: {
+            if (serviceMesh_ == null) {
+              ServiceMesh = new global::Google.Cloud.Run.V2.ServiceMesh();
+            }
+            input.ReadMessage(ServiceMesh);
+            break;
+          }
           case 184: {
             EncryptionKeyRevocationAction = (global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction) input.ReadEnum();
             break;
@@ -2547,6 +2640,13 @@ namespace Google.Cloud.Run.V2 {
               ScalingStatus = new global::Google.Cloud.Run.V2.RevisionScalingStatus();
             }
             input.ReadMessage(ScalingStatus);
+            break;
+          }
+          case 322: {
+            if (nodeSelector_ == null) {
+              NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+            }
+            input.ReadMessage(NodeSelector);
             break;
           }
           case 794: {

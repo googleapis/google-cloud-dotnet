@@ -35,31 +35,45 @@ namespace Google.Cloud.Run.V2 {
             "YWNlEhQKB25ldHdvcmsYASABKAlCA+BBARIXCgpzdWJuZXR3b3JrGAIgASgJ",
             "QgPgQQESEQoEdGFncxgDIAMoCUID4EEBIlEKCVZwY0VncmVzcxIaChZWUENf",
             "RUdSRVNTX1VOU1BFQ0lGSUVEEAASDwoLQUxMX1RSQUZGSUMQARIXChNQUklW",
-            "QVRFX1JBTkdFU19PTkxZEAIiggEKE0JpbmFyeUF1dGhvcml6YXRpb24SGgoL",
-            "dXNlX2RlZmF1bHQYASABKAhCA+BBAUgAEhUKBnBvbGljeRgDIAEoCUID4EEB",
-            "SAASJQoYYnJlYWtnbGFzc19qdXN0aWZpY2F0aW9uGAIgASgJQgPgQQFCEQoP",
-            "YmluYXV0aHpfbWV0aG9kIlMKD1JldmlzaW9uU2NhbGluZxIfChJtaW5faW5z",
-            "dGFuY2VfY291bnQYASABKAVCA+BBARIfChJtYXhfaW5zdGFuY2VfY291bnQY",
-            "AiABKAVCA+BBASIxCg5TZXJ2aWNlU2NhbGluZxIfChJtaW5faW5zdGFuY2Vf",
-            "Y291bnQYASABKAVCA+BBASqZAQoOSW5ncmVzc1RyYWZmaWMSHwobSU5HUkVT",
-            "U19UUkFGRklDX1VOU1BFQ0lGSUVEEAASFwoTSU5HUkVTU19UUkFGRklDX0FM",
-            "TBABEiEKHUlOR1JFU1NfVFJBRkZJQ19JTlRFUk5BTF9PTkxZEAISKgomSU5H",
-            "UkVTU19UUkFGRklDX0lOVEVSTkFMX0xPQURfQkFMQU5DRVIQAyp9ChRFeGVj",
-            "dXRpb25FbnZpcm9ubWVudBIlCiFFWEVDVVRJT05fRU5WSVJPTk1FTlRfVU5T",
-            "UEVDSUZJRUQQABIeChpFWEVDVVRJT05fRU5WSVJPTk1FTlRfR0VOMRABEh4K",
-            "GkVYRUNVVElPTl9FTlZJUk9OTUVOVF9HRU4yEAIqcAodRW5jcnlwdGlvbktl",
-            "eVJldm9jYXRpb25BY3Rpb24SMAosRU5DUllQVElPTl9LRVlfUkVWT0NBVElP",
-            "Tl9BQ1RJT05fVU5TUEVDSUZJRUQQABIPCgtQUkVWRU5UX05FVxABEgwKCFNI",
-            "VVRET1dOEAJCWwoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCE1ZlbmRvclNl",
-            "dHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIv",
-            "cnVucGI7cnVucGJiBnByb3RvMw=="));
+            "QVRFX1JBTkdFU19PTkxZEAIisAEKE0JpbmFyeUF1dGhvcml6YXRpb24SGgoL",
+            "dXNlX2RlZmF1bHQYASABKAhCA+BBAUgAEkMKBnBvbGljeRgDIAEoCUIx4EEB",
+            "+kErCiliaW5hcnlhdXRob3JpemF0aW9uLmdvb2dsZWFwaXMuY29tL1BvbGlj",
+            "eUgAEiUKGGJyZWFrZ2xhc3NfanVzdGlmaWNhdGlvbhgCIAEoCUID4EEBQhEK",
+            "D2JpbmF1dGh6X21ldGhvZCJTCg9SZXZpc2lvblNjYWxpbmcSHwoSbWluX2lu",
+            "c3RhbmNlX2NvdW50GAEgASgFQgPgQQESHwoSbWF4X2luc3RhbmNlX2NvdW50",
+            "GAIgASgFQgPgQQEiRQoLU2VydmljZU1lc2gSNgoEbWVzaBgBIAEoCUIo+kEl",
+            "CiNuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaCLFAQoOU2Vy",
+            "dmljZVNjYWxpbmcSHwoSbWluX2luc3RhbmNlX2NvdW50GAEgASgFQgPgQQES",
+            "SgoMc2NhbGluZ19tb2RlGAMgASgOMi8uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5T",
+            "ZXJ2aWNlU2NhbGluZy5TY2FsaW5nTW9kZUID4EEBIkYKC1NjYWxpbmdNb2Rl",
+            "EhwKGFNDQUxJTkdfTU9ERV9VTlNQRUNJRklFRBAAEg0KCUFVVE9NQVRJQxAB",
+            "EgoKBk1BTlVBTBACIigKDE5vZGVTZWxlY3RvchIYCgthY2NlbGVyYXRvchgB",
+            "IAEoCUID4EECKrMBCg5JbmdyZXNzVHJhZmZpYxIfChtJTkdSRVNTX1RSQUZG",
+            "SUNfVU5TUEVDSUZJRUQQABIXChNJTkdSRVNTX1RSQUZGSUNfQUxMEAESIQod",
+            "SU5HUkVTU19UUkFGRklDX0lOVEVSTkFMX09OTFkQAhIqCiZJTkdSRVNTX1RS",
+            "QUZGSUNfSU5URVJOQUxfTE9BRF9CQUxBTkNFUhADEhgKFElOR1JFU1NfVFJB",
+            "RkZJQ19OT05FEAQqfQoURXhlY3V0aW9uRW52aXJvbm1lbnQSJQohRVhFQ1VU",
+            "SU9OX0VOVklST05NRU5UX1VOU1BFQ0lGSUVEEAASHgoaRVhFQ1VUSU9OX0VO",
+            "VklST05NRU5UX0dFTjEQARIeChpFWEVDVVRJT05fRU5WSVJPTk1FTlRfR0VO",
+            "MhACKnAKHUVuY3J5cHRpb25LZXlSZXZvY2F0aW9uQWN0aW9uEjAKLEVOQ1JZ",
+            "UFRJT05fS0VZX1JFVk9DQVRJT05fQUNUSU9OX1VOU1BFQ0lGSUVEEAASDwoL",
+            "UFJFVkVOVF9ORVcQARIMCghTSFVURE9XThACQqACChdjb20uZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52MkITVmVuZG9yU2V0dGluZ3NQcm90b1ABWiljbG91ZC5nb29n",
+            "bGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYupBYwopYmluYXJ5YXV0",
+            "aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbS9Qb2xpY3kSGXByb2plY3RzL3tw",
+            "cm9qZWN0fS9wb2xpY3kSG2xvY2F0aW9ucy97bG9jYXRpb259L3BvbGljeepB",
+            "XAojbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL01lc2gSNXByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tZXNoZXMve21l",
+            "c2h9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess), global::Google.Cloud.Run.V2.VpcAccess.Parser, new[]{ "Connector", "Egress", "NetworkInterfaces" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface), global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "Tags" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BinaryAuthorization), global::Google.Cloud.Run.V2.BinaryAuthorization.Parser, new[]{ "UseDefault", "Policy", "BreakglassJustification" }, new[]{ "BinauthzMethod" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceMesh), global::Google.Cloud.Run.V2.ServiceMesh.Parser, new[]{ "Mesh" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount", "ScalingMode" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.NodeSelector), global::Google.Cloud.Run.V2.NodeSelector.Parser, new[]{ "Accelerator" }, null, null, null, null)
           }));
     }
     #endregion
@@ -86,6 +100,10 @@ namespace Google.Cloud.Run.V2 {
     /// Both internal and Google Cloud Load Balancer traffic is allowed.
     /// </summary>
     [pbr::OriginalName("INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER")] InternalLoadBalancer = 3,
+    /// <summary>
+    /// No ingress traffic is allowed.
+    /// </summary>
+    [pbr::OriginalName("INGRESS_TRAFFIC_NONE")] None = 4,
   }
 
   /// <summary>
@@ -183,8 +201,8 @@ namespace Google.Cloud.Run.V2 {
     private string connector_ = "";
     /// <summary>
     /// VPC Access connector name.
-    /// Format: projects/{project}/locations/{location}/connectors/{connector},
-    /// where {project} can be project id or number.
+    /// Format: `projects/{project}/locations/{location}/connectors/{connector}`,
+    /// where `{project}` can be project id or number.
     /// For more information on sending traffic to a VPC network via a connector,
     /// visit https://cloud.google.com/run/docs/configuring/vpc-connectors.
     /// </summary>
@@ -789,7 +807,7 @@ namespace Google.Cloud.Run.V2 {
     public const int PolicyFieldNumber = 3;
     /// <summary>
     /// Optional. The path to a binary authorization policy.
-    /// Format: projects/{project}/platforms/cloudRun/{policy-name}
+    /// Format: `projects/{project}/platforms/cloudRun/{policy-name}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1110,7 +1128,9 @@ namespace Google.Cloud.Run.V2 {
     private int maxInstanceCount_;
     /// <summary>
     /// Optional. Maximum number of serving instances that this resource should
-    /// have.
+    /// have. When unspecified, the field is set to the server default value of
+    /// 100. For more information see
+    /// https://cloud.google.com/run/docs/configuring/max-instances
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1279,6 +1299,205 @@ namespace Google.Cloud.Run.V2 {
   }
 
   /// <summary>
+  /// Settings for Cloud Service Mesh. For more information see
+  /// https://cloud.google.com/service-mesh/docs/overview.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ServiceMesh : pb::IMessage<ServiceMesh>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ServiceMesh> _parser = new pb::MessageParser<ServiceMesh>(() => new ServiceMesh());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ServiceMesh> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceMesh() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceMesh(ServiceMesh other) : this() {
+      mesh_ = other.mesh_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceMesh Clone() {
+      return new ServiceMesh(this);
+    }
+
+    /// <summary>Field number for the "mesh" field.</summary>
+    public const int MeshFieldNumber = 1;
+    private string mesh_ = "";
+    /// <summary>
+    /// The Mesh resource name. Format:
+    /// `projects/{project}/locations/global/meshes/{mesh}`, where `{project}` can
+    /// be project id or number.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Mesh {
+      get { return mesh_; }
+      set {
+        mesh_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ServiceMesh);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ServiceMesh other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mesh != other.Mesh) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mesh.Length != 0) hash ^= Mesh.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mesh.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Mesh);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mesh.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Mesh);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mesh.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Mesh);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ServiceMesh other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mesh.Length != 0) {
+        Mesh = other.Mesh;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Mesh = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Mesh = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Scaling settings applied at the service level rather than
   /// at the revision level.
   /// </summary>
@@ -1297,7 +1516,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1318,6 +1537,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServiceScaling(ServiceScaling other) : this() {
       minInstanceCount_ = other.minInstanceCount_;
+      scalingMode_ = other.scalingMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1333,7 +1553,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Optional. total min instances for the service. This number of instances is
     /// divided among all revisions with specified traffic based on the percent
-    /// of traffic they are receiving. (BETA)
+    /// of traffic they are receiving.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1341,6 +1561,21 @@ namespace Google.Cloud.Run.V2 {
       get { return minInstanceCount_; }
       set {
         minInstanceCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scaling_mode" field.</summary>
+    public const int ScalingModeFieldNumber = 3;
+    private global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode scalingMode_ = global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified;
+    /// <summary>
+    /// Optional. The scaling mode for the service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode ScalingMode {
+      get { return scalingMode_; }
+      set {
+        scalingMode_ = value;
       }
     }
 
@@ -1360,6 +1595,7 @@ namespace Google.Cloud.Run.V2 {
         return true;
       }
       if (MinInstanceCount != other.MinInstanceCount) return false;
+      if (ScalingMode != other.ScalingMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1368,6 +1604,7 @@ namespace Google.Cloud.Run.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (MinInstanceCount != 0) hash ^= MinInstanceCount.GetHashCode();
+      if (ScalingMode != global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified) hash ^= ScalingMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1390,6 +1627,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(8);
         output.WriteInt32(MinInstanceCount);
       }
+      if (ScalingMode != global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ScalingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1404,6 +1645,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(8);
         output.WriteInt32(MinInstanceCount);
       }
+      if (ScalingMode != global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ScalingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1416,6 +1661,9 @@ namespace Google.Cloud.Run.V2 {
       int size = 0;
       if (MinInstanceCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinInstanceCount);
+      }
+      if (ScalingMode != global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ScalingMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1431,6 +1679,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.MinInstanceCount != 0) {
         MinInstanceCount = other.MinInstanceCount;
+      }
+      if (other.ScalingMode != global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified) {
+        ScalingMode = other.ScalingMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1451,6 +1702,10 @@ namespace Google.Cloud.Run.V2 {
             MinInstanceCount = input.ReadInt32();
             break;
           }
+          case 24: {
+            ScalingMode = (global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1468,6 +1723,233 @@ namespace Google.Cloud.Run.V2 {
             break;
           case 8: {
             MinInstanceCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            ScalingMode = (global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ServiceScaling message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The scaling mode for the service. If not provided, it defaults to
+      /// AUTOMATIC.
+      /// </summary>
+      public enum ScalingMode {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("SCALING_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Scale based on traffic between min and max instances.
+        /// </summary>
+        [pbr::OriginalName("AUTOMATIC")] Automatic = 1,
+        /// <summary>
+        /// Scale to exactly min instances and ignore max instances.
+        /// </summary>
+        [pbr::OriginalName("MANUAL")] Manual = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Hardware constraints configuration.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NodeSelector : pb::IMessage<NodeSelector>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NodeSelector> _parser = new pb::MessageParser<NodeSelector>(() => new NodeSelector());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NodeSelector> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeSelector() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeSelector(NodeSelector other) : this() {
+      accelerator_ = other.accelerator_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeSelector Clone() {
+      return new NodeSelector(this);
+    }
+
+    /// <summary>Field number for the "accelerator" field.</summary>
+    public const int AcceleratorFieldNumber = 1;
+    private string accelerator_ = "";
+    /// <summary>
+    /// Required. GPU accelerator type to attach to an instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Accelerator {
+      get { return accelerator_; }
+      set {
+        accelerator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NodeSelector);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NodeSelector other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Accelerator != other.Accelerator) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Accelerator.Length != 0) hash ^= Accelerator.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Accelerator.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Accelerator);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Accelerator.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Accelerator);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Accelerator.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Accelerator);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NodeSelector other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Accelerator.Length != 0) {
+        Accelerator = other.Accelerator;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Accelerator = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Accelerator = input.ReadString();
             break;
           }
         }
