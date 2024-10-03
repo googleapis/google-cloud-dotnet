@@ -228,6 +228,36 @@ namespace Google.Cloud.PubSub.V1.Tests
             });
         }
 
+        // Disposing before publishing shouldn't throw.
+        [Fact]
+        public void DisposeBeforePublishing()
+        {
+            var topicName = new TopicName("FakeProject", "FakeTopic");
+            var scheduler = new TestScheduler();
+            TaskHelper taskHelper = scheduler.TaskHelper;
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper, delays: new[] { TimeSpan.FromSeconds(1) });
+            var settings = MakeSettings(scheduler, batchElementCountThreshold: 2, batchRequestByteThreshold: 1000);
+            int shutdownCount = 0;
+            var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () =>
+            {
+                Interlocked.Increment(ref shutdownCount);
+                return Task.FromResult(0);
+            }, taskHelper);
+            scheduler.Run(async () =>
+            {
+                // Dispose the publisher.
+                await taskHelper.ConfigureAwaitHideCancellation(
+                   () => pub.DisposeAsync().AsTask());
+                // Call DisposeAsync again. It shouldn't throw an exception.
+                await taskHelper.ConfigureAwaitHideCancellation(
+                   () => pub.DisposeAsync().AsTask());
+                // Call ShutdownAsync. It shouldn't throw an exception.
+                await taskHelper.ConfigureAwaitHideCancellation(
+                  () => pub.ShutdownAsync(CancellationToken.None));
+                Assert.Equal(1, shutdownCount);
+            });
+        }
+
         [Fact]
         public void SettingsValidation()
         {
