@@ -27,20 +27,11 @@ namespace Google.Cloud.PubSub.V1;
 /// </summary>
 public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient>
 {
-    private static readonly GrpcChannelOptions s_unlimitedSendReceiveChannelOptions = GrpcChannelOptions.Empty
-        .WithMaxReceiveMessageSize(int.MaxValue)
-        .WithMaxSendMessageSize(int.MaxValue)
-        // Set max metadata size to 4 MB i.e., 4194304 bytes.
-        .WithCustomOption("grpc.max_metadata_size", 4194304);
-
     /// <summary>
     /// The name of the subscription that the subscriber subscribes to.
     /// This must be non-null by the time <see cref="Build"/> or <see cref="BuildAsync(CancellationToken)"/> is called.
     /// </summary>
-    public SubscriptionName SubscriptionName
-    {
-        get; set;
-    }
+    public SubscriptionName SubscriptionName { get; set; }
 
     private int? _clientCount;
 
@@ -117,35 +108,17 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
         var shutdowns = new Func<Task>[clientCount];
         for (int i = 0; i < clientCount; i++)
         {
-            // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
-            var grpcChannelOptions = s_unlimitedSendReceiveChannelOptions
-                .WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
+            var grpcChannelOptions = ClientBuilderChannelHelper.GetUnlimitedSendReceiveChannelOptions();
 
             var builder = new SubscriberServiceApiClientBuilder(this, grpcChannelOptions);
             clients[i] = isAsync
                 ? await builder.BuildAsync(cancellationToken).ConfigureAwait(false)
                 : builder.Build();
             var channel = builder.LastCreatedChannel;
-            shutdowns[i] = () => DisposeChannelAsync(channel);
+            shutdowns[i] = () => ClientBuilderChannelHelper.DisposeChannelAsync(channel);
         }
         Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
         return new SubscriberClientImpl(SubscriptionName, clients, settings, shutdown);
-
-        // TODO: Move this local method to a common place. We have it here and in PublisherClientBuilder.
-        static Task DisposeChannelAsync(Grpc.Core.ChannelBase channel)
-        {
-            if (channel is null)
-            {
-                return Task.CompletedTask;
-            }
-            if (channel is IDisposable disposable)
-            {
-                disposable.Dispose();
-            }
-
-            return channel.ShutdownAsync();
-        }
-
     }
 
     /// <summary>
