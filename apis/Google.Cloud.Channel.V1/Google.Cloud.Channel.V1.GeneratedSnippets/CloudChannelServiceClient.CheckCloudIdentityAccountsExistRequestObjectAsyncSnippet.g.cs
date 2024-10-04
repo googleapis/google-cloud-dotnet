@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 Domain = "",
+                PrimaryAdminEmail = "",
             };
             // Make the request
             CheckCloudIdentityAccountsExistResponse response = await cloudChannelServiceClient.CheckCloudIdentityAccountsExistAsync(request);
