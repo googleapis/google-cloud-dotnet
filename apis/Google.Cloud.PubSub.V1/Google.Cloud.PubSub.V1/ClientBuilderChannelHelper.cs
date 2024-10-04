@@ -27,9 +27,11 @@ internal static class ClientBuilderChannelHelper
         // Set max metadata size to 4 MB i.e., 4194304 bytes.
         .WithCustomOption("grpc.max_metadata_size", 4194304);
 
-        internal static GrpcChannelOptions GetUnlimitedSendReceiveChannelOptions() =>
-            // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
-            s_unlimitedSendReceiveChannelOptions.WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
+        internal static GrpcChannelOptions GetUnlimitedSendReceiveChannelOptions(bool sharedConnections) =>
+            sharedConnections ?
+                s_unlimitedSendReceiveChannelOptions :
+                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
+                s_unlimitedSendReceiveChannelOptions.WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
 
     internal static Task DisposeChannelAsync(ChannelBase channel)
     {

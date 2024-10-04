@@ -57,6 +57,12 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
     }
 
     /// <summary>
+    /// Whether the <see cref="PublisherServiceApiClient"/>s may share gRPC connections or not.
+    /// Defaults to false, meaning, each client has its own gRPC connection.
+    /// </summary>
+    public bool ShareClientConnections { get; set; }
+
+    /// <summary>
     /// Additional settings for batching, message ordering etc. Default settings will be used if this is null.
     /// </summary>
     public SubscriberClient.Settings Settings { get; set; }
@@ -108,7 +114,7 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
         var shutdowns = new Func<Task>[clientCount];
         for (int i = 0; i < clientCount; i++)
         {
-            var grpcChannelOptions = ClientBuilderChannelHelper.GetUnlimitedSendReceiveChannelOptions();
+            var grpcChannelOptions = ClientBuilderChannelHelper.GetUnlimitedSendReceiveChannelOptions(ShareClientConnections);
 
             var builder = new SubscriberServiceApiClientBuilder(this, grpcChannelOptions);
             clients[i] = isAsync
