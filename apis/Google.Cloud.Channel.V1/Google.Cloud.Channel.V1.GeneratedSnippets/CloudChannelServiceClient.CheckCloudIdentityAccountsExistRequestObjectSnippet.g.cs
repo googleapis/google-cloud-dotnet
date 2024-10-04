@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 Domain = "",
+                PrimaryAdminEmail = "",
             };
             // Make the request
             CheckCloudIdentityAccountsExistResponse response = cloudChannelServiceClient.CheckCloudIdentityAccountsExist(request);
