@@ -40,6 +40,7 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return LicenseManagementServiceReflection.Descriptor;
             yield return OrderReflection.Descriptor;
             yield return ProcurementServiceReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

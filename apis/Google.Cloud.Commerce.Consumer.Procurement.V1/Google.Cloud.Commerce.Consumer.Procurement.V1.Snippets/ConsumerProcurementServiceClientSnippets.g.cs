@@ -339,5 +339,151 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for ModifyOrder</summary>
+        public void ModifyOrderRequestObject()
+        {
+            // Snippet: ModifyOrder(ModifyOrderRequest, CallSettings)
+            // Create client
+            ConsumerProcurementServiceClient consumerProcurementServiceClient = ConsumerProcurementServiceClient.Create();
+            // Initialize request argument(s)
+            ModifyOrderRequest request = new ModifyOrderRequest
+            {
+                Name = "",
+                Etag = "",
+                DisplayName = "",
+                Modifications =
+                {
+                    new ModifyOrderRequest.Types.Modification(),
+                },
+            };
+            // Make the request
+            Operation<Order, ModifyOrderMetadata> response = consumerProcurementServiceClient.ModifyOrder(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, ModifyOrderMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, ModifyOrderMetadata> retrievedResponse = consumerProcurementServiceClient.PollOnceModifyOrder(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModifyOrderAsync</summary>
+        public async Task ModifyOrderRequestObjectAsync()
+        {
+            // Snippet: ModifyOrderAsync(ModifyOrderRequest, CallSettings)
+            // Additional: ModifyOrderAsync(ModifyOrderRequest, CancellationToken)
+            // Create client
+            ConsumerProcurementServiceClient consumerProcurementServiceClient = await ConsumerProcurementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModifyOrderRequest request = new ModifyOrderRequest
+            {
+                Name = "",
+                Etag = "",
+                DisplayName = "",
+                Modifications =
+                {
+                    new ModifyOrderRequest.Types.Modification(),
+                },
+            };
+            // Make the request
+            Operation<Order, ModifyOrderMetadata> response = await consumerProcurementServiceClient.ModifyOrderAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, ModifyOrderMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, ModifyOrderMetadata> retrievedResponse = await consumerProcurementServiceClient.PollOnceModifyOrderAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOrder</summary>
+        public void CancelOrderRequestObject()
+        {
+            // Snippet: CancelOrder(CancelOrderRequest, CallSettings)
+            // Create client
+            ConsumerProcurementServiceClient consumerProcurementServiceClient = ConsumerProcurementServiceClient.Create();
+            // Initialize request argument(s)
+            CancelOrderRequest request = new CancelOrderRequest
+            {
+                Name = "",
+                Etag = "",
+                CancellationPolicy = CancelOrderRequest.Types.CancellationPolicy.Unspecified,
+            };
+            // Make the request
+            Operation<Order, CancelOrderMetadata> response = consumerProcurementServiceClient.CancelOrder(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, CancelOrderMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, CancelOrderMetadata> retrievedResponse = consumerProcurementServiceClient.PollOnceCancelOrder(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOrderAsync</summary>
+        public async Task CancelOrderRequestObjectAsync()
+        {
+            // Snippet: CancelOrderAsync(CancelOrderRequest, CallSettings)
+            // Additional: CancelOrderAsync(CancelOrderRequest, CancellationToken)
+            // Create client
+            ConsumerProcurementServiceClient consumerProcurementServiceClient = await ConsumerProcurementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelOrderRequest request = new CancelOrderRequest
+            {
+                Name = "",
+                Etag = "",
+                CancellationPolicy = CancelOrderRequest.Types.CancellationPolicy.Unspecified,
+            };
+            // Make the request
+            Operation<Order, CancelOrderMetadata> response = await consumerProcurementServiceClient.CancelOrderAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, CancelOrderMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, CancelOrderMetadata> retrievedResponse = await consumerProcurementServiceClient.PollOnceCancelOrderAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

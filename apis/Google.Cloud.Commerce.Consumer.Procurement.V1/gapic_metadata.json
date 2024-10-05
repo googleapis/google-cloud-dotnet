@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "ConsumerProcurementServiceClient",
           "rpcs": {
+            "CancelOrder": {
+              "methods": [
+                "CancelOrder",
+                "CancelOrderAsync"
+              ]
+            },
             "GetOrder": {
               "methods": [
                 "GetOrder",
@@ -22,10 +28,55 @@
                 "ListOrdersAsync"
               ]
             },
+            "ModifyOrder": {
+              "methods": [
+                "ModifyOrder",
+                "ModifyOrderAsync"
+              ]
+            },
             "PlaceOrder": {
               "methods": [
                 "PlaceOrder",
                 "PlaceOrderAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "LicenseManagementService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LicenseManagementServiceClient",
+          "rpcs": {
+            "Assign": {
+              "methods": [
+                "Assign",
+                "AssignAsync"
+              ]
+            },
+            "EnumerateLicensedUsers": {
+              "methods": [
+                "EnumerateLicensedUsers",
+                "EnumerateLicensedUsersAsync"
+              ]
+            },
+            "GetLicensePool": {
+              "methods": [
+                "GetLicensePool",
+                "GetLicensePoolAsync"
+              ]
+            },
+            "Unassign": {
+              "methods": [
+                "Unassign",
+                "UnassignAsync"
+              ]
+            },
+            "UpdateLicensePool": {
+              "methods": [
+                "UpdateLicensePool",
+                "UpdateLicensePoolAsync"
               ]
             }
           }

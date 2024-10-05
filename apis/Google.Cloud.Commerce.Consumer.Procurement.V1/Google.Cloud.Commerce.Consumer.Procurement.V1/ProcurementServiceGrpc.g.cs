@@ -82,6 +82,10 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersRequest> __Marshaller_google_cloud_commerce_consumer_procurement_v1_ListOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersResponse> __Marshaller_google_cloud_commerce_consumer_procurement_v1_ListOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest> __Marshaller_google_cloud_commerce_consumer_procurement_v1_ModifyOrderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest> __Marshaller_google_cloud_commerce_consumer_procurement_v1_CancelOrderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Commerce.Consumer.Procurement.V1.PlaceOrderRequest, global::Google.LongRunning.Operation> __Method_PlaceOrder = new grpc::Method<global::Google.Cloud.Commerce.Consumer.Procurement.V1.PlaceOrderRequest, global::Google.LongRunning.Operation>(
@@ -106,6 +110,22 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
         "ListOrders",
         __Marshaller_google_cloud_commerce_consumer_procurement_v1_ListOrdersRequest,
         __Marshaller_google_cloud_commerce_consumer_procurement_v1_ListOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest, global::Google.LongRunning.Operation> __Method_ModifyOrder = new grpc::Method<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ModifyOrder",
+        __Marshaller_google_cloud_commerce_consumer_procurement_v1_ModifyOrderRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest, global::Google.LongRunning.Operation> __Method_CancelOrder = new grpc::Method<global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelOrder",
+        __Marshaller_google_cloud_commerce_consumer_procurement_v1_CancelOrderRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -161,6 +181,33 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersResponse> ListOrders(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Modifies an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ModifyOrder(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+      /// procured in the Order will be cancelled.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CancelOrder(global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -386,6 +433,114 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListOrders, null, options, request);
       }
+      /// <summary>
+      /// Modifies an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ModifyOrder(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyOrder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ModifyOrder(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ModifyOrder, null, options, request);
+      }
+      /// <summary>
+      /// Modifies an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ModifyOrderAsync(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyOrderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ModifyOrderAsync(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ModifyOrder, null, options, request);
+      }
+      /// <summary>
+      /// Cancels an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+      /// procured in the Order will be cancelled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelOrder(global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelOrder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+      /// procured in the Order will be cancelled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelOrder(global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelOrder, null, options, request);
+      }
+      /// <summary>
+      /// Cancels an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+      /// procured in the Order will be cancelled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelOrderAsync(global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelOrderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels an existing
+      /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+      /// procured in the Order will be cancelled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelOrderAsync(global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelOrder, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConsumerProcurementServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -402,7 +557,9 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_PlaceOrder, serviceImpl.PlaceOrder)
           .AddMethod(__Method_GetOrder, serviceImpl.GetOrder)
-          .AddMethod(__Method_ListOrders, serviceImpl.ListOrders).Build();
+          .AddMethod(__Method_ListOrders, serviceImpl.ListOrders)
+          .AddMethod(__Method_ModifyOrder, serviceImpl.ModifyOrder)
+          .AddMethod(__Method_CancelOrder, serviceImpl.CancelOrder).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -415,6 +572,8 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
       serviceBinder.AddMethod(__Method_PlaceOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Commerce.Consumer.Procurement.V1.PlaceOrderRequest, global::Google.LongRunning.Operation>(serviceImpl.PlaceOrder));
       serviceBinder.AddMethod(__Method_GetOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Commerce.Consumer.Procurement.V1.GetOrderRequest, global::Google.Cloud.Commerce.Consumer.Procurement.V1.Order>(serviceImpl.GetOrder));
       serviceBinder.AddMethod(__Method_ListOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersRequest, global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersResponse>(serviceImpl.ListOrders));
+      serviceBinder.AddMethod(__Method_ModifyOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest, global::Google.LongRunning.Operation>(serviceImpl.ModifyOrder));
+      serviceBinder.AddMethod(__Method_CancelOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest, global::Google.LongRunning.Operation>(serviceImpl.CancelOrder));
     }
 
   }
