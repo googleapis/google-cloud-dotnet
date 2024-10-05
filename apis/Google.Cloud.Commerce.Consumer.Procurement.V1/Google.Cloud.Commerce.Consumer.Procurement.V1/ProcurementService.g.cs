@@ -42,43 +42,100 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
             "aXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJ",
             "InMKEkxpc3RPcmRlcnNSZXNwb25zZRJECgZvcmRlcnMYASADKAsyNC5nb29n",
             "bGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQudjEuT3Jk",
-            "ZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMswFChpDb25zdW1lclByb2N1",
-            "cmVtZW50U2VydmljZRLDAQoKUGxhY2VPcmRlchJALmdvb2dsZS5jbG91ZC5j",
-            "b21tZXJjZS5jb25zdW1lci5wcm9jdXJlbWVudC52MS5QbGFjZU9yZGVyUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iVMpBGwoFT3Jk",
-            "ZXISElBsYWNlT3JkZXJNZXRhZGF0YYLT5JMCMCIrL3YxL3twYXJlbnQ9Ymls",
-            "bGluZ0FjY291bnRzLyp9L29yZGVyczpwbGFjZToBKhK2AQoIR2V0T3JkZXIS",
-            "Pi5nb29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQu",
-            "djEuR2V0T3JkZXJSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmNvbW1lcmNlLmNv",
-            "bnN1bWVyLnByb2N1cmVtZW50LnYxLk9yZGVyIjTaQQRuYW1lgtPkkwInEiUv",
-            "djEve25hbWU9YmlsbGluZ0FjY291bnRzLyovb3JkZXJzLyp9EskBCgpMaXN0",
-            "T3JkZXJzEkAuZ29vZ2xlLmNsb3VkLmNvbW1lcmNlLmNvbnN1bWVyLnByb2N1",
-            "cmVtZW50LnYxLkxpc3RPcmRlcnNSZXF1ZXN0GkEuZ29vZ2xlLmNsb3VkLmNv",
-            "bW1lcmNlLmNvbnN1bWVyLnByb2N1cmVtZW50LnYxLkxpc3RPcmRlcnNSZXNw",
-            "b25zZSI22kEGcGFyZW50gtPkkwInEiUvdjEve3BhcmVudD1iaWxsaW5nQWNj",
-            "b3VudHMvKn0vb3JkZXJzGmPKQS9jbG91ZGNvbW1lcmNlY29uc3VtZXJwcm9j",
-            "dXJlbWVudC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CnwIKMWNvbS5nb29nbGUuY2xv",
-            "dWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQudjFQAVpTY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9jb21tZXJjZS9jb25zdW1lci9wcm9jdXJlbWVudC9h",
-            "cGl2MS9wcm9jdXJlbWVudHBiO3Byb2N1cmVtZW50cGKqAi1Hb29nbGUuQ2xv",
-            "dWQuQ29tbWVyY2UuQ29uc3VtZXIuUHJvY3VyZW1lbnQuVjHKAi1Hb29nbGVc",
-            "Q2xvdWRcQ29tbWVyY2VcQ29uc3VtZXJcUHJvY3VyZW1lbnRcVjHqAjJHb29n",
-            "bGU6OkNsb3VkOjpDb21tZXJjZTo6Q29uc3VtZXI6OlByb2N1cmVtZW50OjpW",
-            "MWIGcHJvdG8z"));
+            "ZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpAEChJNb2RpZnlPcmRlclJl",
+            "cXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEmoKDW1vZGlmaWNhdGlvbnMYBiAD",
+            "KAsyTi5nb29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1l",
+            "bnQudjEuTW9kaWZ5T3JkZXJSZXF1ZXN0Lk1vZGlmaWNhdGlvbkID4EEBEhkK",
+            "DGRpc3BsYXlfbmFtZRgFIAEoCUID4EEBEhEKBGV0YWcYBCABKAlCA+BBARrM",
+            "AgoMTW9kaWZpY2F0aW9uEhkKDGxpbmVfaXRlbV9pZBgBIAEoCUID4EECElsK",
+            "C2NoYW5nZV90eXBlGAIgASgOMkEuZ29vZ2xlLmNsb3VkLmNvbW1lcmNlLmNv",
+            "bnN1bWVyLnByb2N1cmVtZW50LnYxLkxpbmVJdGVtQ2hhbmdlVHlwZUID4EEC",
+            "ElwKEm5ld19saW5lX2l0ZW1faW5mbxgDIAEoCzI7Lmdvb2dsZS5jbG91ZC5j",
+            "b21tZXJjZS5jb25zdW1lci5wcm9jdXJlbWVudC52MS5MaW5lSXRlbUluZm9C",
+            "A+BBARJmChVhdXRvX3JlbmV3YWxfYmVoYXZpb3IYBCABKA4yQi5nb29nbGUu",
+            "Y2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQudjEuQXV0b1Jl",
+            "bmV3YWxCZWhhdmlvckID4EEBIhUKE01vZGlmeU9yZGVyTWV0YWRhdGEixgIK",
+            "EkNhbmNlbE9yZGVyUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISEQoEZXRh",
+            "ZxgCIAEoCUID4EEBEnYKE2NhbmNlbGxhdGlvbl9wb2xpY3kYAyABKA4yVC5n",
+            "b29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQudjEu",
+            "Q2FuY2VsT3JkZXJSZXF1ZXN0LkNhbmNlbGxhdGlvblBvbGljeUID4EEBIpEB",
+            "ChJDYW5jZWxsYXRpb25Qb2xpY3kSIwofQ0FOQ0VMTEFUSU9OX1BPTElDWV9V",
+            "TlNQRUNJRklFRBAAEioKJkNBTkNFTExBVElPTl9QT0xJQ1lfQ0FOQ0VMX0lN",
+            "TUVESUFURUxZEAESKgomQ0FOQ0VMTEFUSU9OX1BPTElDWV9DQU5DRUxfQVRf",
+            "VEVSTV9FTkQQAiIVChNDYW5jZWxPcmRlck1ldGFkYXRhKoEBChNBdXRvUmVu",
+            "ZXdhbEJlaGF2aW9yEiUKIUFVVE9fUkVORVdBTF9CRUhBVklPUl9VTlNQRUNJ",
+            "RklFRBAAEiAKHEFVVE9fUkVORVdBTF9CRUhBVklPUl9FTkFCTEUQARIhCh1B",
+            "VVRPX1JFTkVXQUxfQkVIQVZJT1JfRElTQUJMRRACMuAIChpDb25zdW1lclBy",
+            "b2N1cmVtZW50U2VydmljZRLDAQoKUGxhY2VPcmRlchJALmdvb2dsZS5jbG91",
+            "ZC5jb21tZXJjZS5jb25zdW1lci5wcm9jdXJlbWVudC52MS5QbGFjZU9yZGVy",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iVMpBGwoF",
+            "T3JkZXISElBsYWNlT3JkZXJNZXRhZGF0YYLT5JMCMCIrL3YxL3twYXJlbnQ9",
+            "YmlsbGluZ0FjY291bnRzLyp9L29yZGVyczpwbGFjZToBKhK2AQoIR2V0T3Jk",
+            "ZXISPi5nb29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1l",
+            "bnQudjEuR2V0T3JkZXJSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmNvbW1lcmNl",
+            "LmNvbnN1bWVyLnByb2N1cmVtZW50LnYxLk9yZGVyIjTaQQRuYW1lgtPkkwIn",
+            "EiUvdjEve25hbWU9YmlsbGluZ0FjY291bnRzLyovb3JkZXJzLyp9EskBCgpM",
+            "aXN0T3JkZXJzEkAuZ29vZ2xlLmNsb3VkLmNvbW1lcmNlLmNvbnN1bWVyLnBy",
+            "b2N1cmVtZW50LnYxLkxpc3RPcmRlcnNSZXF1ZXN0GkEuZ29vZ2xlLmNsb3Vk",
+            "LmNvbW1lcmNlLmNvbnN1bWVyLnByb2N1cmVtZW50LnYxLkxpc3RPcmRlcnNS",
+            "ZXNwb25zZSI22kEGcGFyZW50gtPkkwInEiUvdjEve3BhcmVudD1iaWxsaW5n",
+            "QWNjb3VudHMvKn0vb3JkZXJzEscBCgtNb2RpZnlPcmRlchJBLmdvb2dsZS5j",
+            "bG91ZC5jb21tZXJjZS5jb25zdW1lci5wcm9jdXJlbWVudC52MS5Nb2RpZnlP",
+            "cmRlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIlbK",
+            "QRwKBU9yZGVyEhNNb2RpZnlPcmRlck1ldGFkYXRhgtPkkwIxIiwvdjEve25h",
+            "bWU9YmlsbGluZ0FjY291bnRzLyovb3JkZXJzLyp9Om1vZGlmeToBKhLHAQoL",
+            "Q2FuY2VsT3JkZXISQS5nb29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIu",
+            "cHJvY3VyZW1lbnQudjEuQ2FuY2VsT3JkZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiJWykEcCgVPcmRlchITQ2FuY2VsT3JkZXJN",
+            "ZXRhZGF0YYLT5JMCMSIsL3YxL3tuYW1lPWJpbGxpbmdBY2NvdW50cy8qL29y",
+            "ZGVycy8qfTpjYW5jZWw6ASoaY8pBL2Nsb3VkY29tbWVyY2Vjb25zdW1lcnBy",
+            "b2N1cmVtZW50Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKfAgoxY29tLmdvb2dsZS5j",
+            "bG91ZC5jb21tZXJjZS5jb25zdW1lci5wcm9jdXJlbWVudC52MVABWlNjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2NvbW1lcmNlL2NvbnN1bWVyL3Byb2N1cmVtZW50",
+            "L2FwaXYxL3Byb2N1cmVtZW50cGI7cHJvY3VyZW1lbnRwYqoCLUdvb2dsZS5D",
+            "bG91ZC5Db21tZXJjZS5Db25zdW1lci5Qcm9jdXJlbWVudC5WMcoCLUdvb2ds",
+            "ZVxDbG91ZFxDb21tZXJjZVxDb25zdW1lclxQcm9jdXJlbWVudFxWMeoCMkdv",
+            "b2dsZTo6Q2xvdWQ6OkNvbW1lcmNlOjpDb25zdW1lcjo6UHJvY3VyZW1lbnQ6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Commerce.Consumer.Procurement.V1.OrderReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.PlaceOrderRequest), global::Google.Cloud.Commerce.Consumer.Procurement.V1.PlaceOrderRequest.Parser, new[]{ "Parent", "DisplayName", "LineItemInfo", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.PlaceOrderMetadata), global::Google.Cloud.Commerce.Consumer.Procurement.V1.PlaceOrderMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.GetOrderRequest), global::Google.Cloud.Commerce.Consumer.Procurement.V1.GetOrderRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersRequest), global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersResponse), global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersResponse.Parser, new[]{ "Orders", "NextPageToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersResponse), global::Google.Cloud.Commerce.Consumer.Procurement.V1.ListOrdersResponse.Parser, new[]{ "Orders", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest), global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Parser, new[]{ "Name", "Modifications", "DisplayName", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Types.Modification), global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Types.Modification.Parser, new[]{ "LineItemId", "ChangeType", "NewLineItemInfo", "AutoRenewalBehavior" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderMetadata), global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest), global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Parser, new[]{ "Name", "Etag", "CancellationPolicy" }, null, new[]{ typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderMetadata), global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderMetadata.Parser, null, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Indicates the auto renewal behavior customer specifies on subscription.
+  /// </summary>
+  public enum AutoRenewalBehavior {
+    /// <summary>
+    /// If unspecified, the auto renewal behavior will follow the default config.
+    /// </summary>
+    [pbr::OriginalName("AUTO_RENEWAL_BEHAVIOR_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Auto Renewal will be enabled on subscription.
+    /// </summary>
+    [pbr::OriginalName("AUTO_RENEWAL_BEHAVIOR_ENABLE")] Enable = 1,
+    /// <summary>
+    /// Auto Renewal will be disabled on subscription.
+    /// </summary>
+    [pbr::OriginalName("AUTO_RENEWAL_BEHAVIOR_DISABLE")] Disable = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Request message for
@@ -184,7 +241,7 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
     /// <summary>
     /// Optional. A unique identifier for this request.
     /// The server will ignore subsequent requests that provide a duplicate request
-    /// ID for at least 120 minutes after the first request.
+    /// ID for at least 24 hours after the first request.
     ///
     /// The request ID must be a valid
     /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format).
@@ -1300,6 +1357,1284 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [ConsumerProcurementService.ModifyOrder][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.ModifyOrder].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ModifyOrderRequest : pb::IMessage<ModifyOrderRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ModifyOrderRequest> _parser = new pb::MessageParser<ModifyOrderRequest>(() => new ModifyOrderRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ModifyOrderRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Commerce.Consumer.Procurement.V1.ProcurementServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModifyOrderRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModifyOrderRequest(ModifyOrderRequest other) : this() {
+      name_ = other.name_;
+      modifications_ = other.modifications_.Clone();
+      displayName_ = other.displayName_;
+      etag_ = other.etag_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModifyOrderRequest Clone() {
+      return new ModifyOrderRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Name of the order to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "modifications" field.</summary>
+    public const int ModificationsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Types.Modification> _repeated_modifications_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Types.Modification.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Types.Modification> modifications_ = new pbc::RepeatedField<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Types.Modification>();
+    /// <summary>
+    /// Optional. Modifications for an existing Order created by an Offer.
+    /// Required when Offer based Order is being modified, except for when going
+    /// from an offer to a public plan.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Types.Modification> Modifications {
+      get { return modifications_; }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 5;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional. Updated display name of the order, leave as empty if you do not
+    /// want to update current display name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 4;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. The weak etag, which can be optionally populated, of the order
+    /// that this modify request is based on. Validation checking will only happen
+    /// if the invoker supplies this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ModifyOrderRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ModifyOrderRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if(!modifications_.Equals(other.modifications_)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Etag != other.Etag) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= modifications_.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Etag);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DisplayName);
+      }
+      modifications_.WriteTo(output, _repeated_modifications_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Etag);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DisplayName);
+      }
+      modifications_.WriteTo(ref output, _repeated_modifications_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += modifications_.CalculateSize(_repeated_modifications_codec);
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ModifyOrderRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      modifications_.Add(other.modifications_);
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 34: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 42: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 50: {
+            modifications_.AddEntriesFrom(input, _repeated_modifications_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 34: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 42: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 50: {
+            modifications_.AddEntriesFrom(ref input, _repeated_modifications_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ModifyOrderRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Modifications to make on the order.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Modification : pb::IMessage<Modification>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Modification> _parser = new pb::MessageParser<Modification>(() => new Modification());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Modification> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Commerce.Consumer.Procurement.V1.ModifyOrderRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Modification() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Modification(Modification other) : this() {
+          lineItemId_ = other.lineItemId_;
+          changeType_ = other.changeType_;
+          newLineItemInfo_ = other.newLineItemInfo_ != null ? other.newLineItemInfo_.Clone() : null;
+          autoRenewalBehavior_ = other.autoRenewalBehavior_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Modification Clone() {
+          return new Modification(this);
+        }
+
+        /// <summary>Field number for the "line_item_id" field.</summary>
+        public const int LineItemIdFieldNumber = 1;
+        private string lineItemId_ = "";
+        /// <summary>
+        /// Required. ID of the existing line item to make change to.
+        /// Required when change type is
+        /// [LineItemChangeType.LINE_ITEM_CHANGE_TYPE_UPDATE] or
+        /// [LineItemChangeType.LINE_ITEM_CHANGE_TYPE_CANCEL].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string LineItemId {
+          get { return lineItemId_; }
+          set {
+            lineItemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "change_type" field.</summary>
+        public const int ChangeTypeFieldNumber = 2;
+        private global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType changeType_ = global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType.Unspecified;
+        /// <summary>
+        /// Required. Type of change to make.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType ChangeType {
+          get { return changeType_; }
+          set {
+            changeType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "new_line_item_info" field.</summary>
+        public const int NewLineItemInfoFieldNumber = 3;
+        private global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemInfo newLineItemInfo_;
+        /// <summary>
+        /// Optional. The line item to update to.
+        /// Required when change_type is
+        /// [LineItemChangeType.LINE_ITEM_CHANGE_TYPE_CREATE] or
+        /// [LineItemChangeType.LINE_ITEM_CHANGE_TYPE_UPDATE].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemInfo NewLineItemInfo {
+          get { return newLineItemInfo_; }
+          set {
+            newLineItemInfo_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "auto_renewal_behavior" field.</summary>
+        public const int AutoRenewalBehaviorFieldNumber = 4;
+        private global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior autoRenewalBehavior_ = global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior.Unspecified;
+        /// <summary>
+        /// Optional. Auto renewal behavior of the subscription for the update.
+        /// Applied when change_type is
+        /// [LineItemChangeType.LINE_ITEM_CHANGE_TYPE_UPDATE]. Follows plan default
+        /// config when this field is not specified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior AutoRenewalBehavior {
+          get { return autoRenewalBehavior_; }
+          set {
+            autoRenewalBehavior_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Modification);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Modification other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (LineItemId != other.LineItemId) return false;
+          if (ChangeType != other.ChangeType) return false;
+          if (!object.Equals(NewLineItemInfo, other.NewLineItemInfo)) return false;
+          if (AutoRenewalBehavior != other.AutoRenewalBehavior) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (LineItemId.Length != 0) hash ^= LineItemId.GetHashCode();
+          if (ChangeType != global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType.Unspecified) hash ^= ChangeType.GetHashCode();
+          if (newLineItemInfo_ != null) hash ^= NewLineItemInfo.GetHashCode();
+          if (AutoRenewalBehavior != global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior.Unspecified) hash ^= AutoRenewalBehavior.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (LineItemId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(LineItemId);
+          }
+          if (ChangeType != global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ChangeType);
+          }
+          if (newLineItemInfo_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(NewLineItemInfo);
+          }
+          if (AutoRenewalBehavior != global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) AutoRenewalBehavior);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (LineItemId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(LineItemId);
+          }
+          if (ChangeType != global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ChangeType);
+          }
+          if (newLineItemInfo_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(NewLineItemInfo);
+          }
+          if (AutoRenewalBehavior != global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) AutoRenewalBehavior);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (LineItemId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(LineItemId);
+          }
+          if (ChangeType != global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChangeType);
+          }
+          if (newLineItemInfo_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(NewLineItemInfo);
+          }
+          if (AutoRenewalBehavior != global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AutoRenewalBehavior);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Modification other) {
+          if (other == null) {
+            return;
+          }
+          if (other.LineItemId.Length != 0) {
+            LineItemId = other.LineItemId;
+          }
+          if (other.ChangeType != global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType.Unspecified) {
+            ChangeType = other.ChangeType;
+          }
+          if (other.newLineItemInfo_ != null) {
+            if (newLineItemInfo_ == null) {
+              NewLineItemInfo = new global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemInfo();
+            }
+            NewLineItemInfo.MergeFrom(other.NewLineItemInfo);
+          }
+          if (other.AutoRenewalBehavior != global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior.Unspecified) {
+            AutoRenewalBehavior = other.AutoRenewalBehavior;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                LineItemId = input.ReadString();
+                break;
+              }
+              case 16: {
+                ChangeType = (global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                if (newLineItemInfo_ == null) {
+                  NewLineItemInfo = new global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemInfo();
+                }
+                input.ReadMessage(NewLineItemInfo);
+                break;
+              }
+              case 32: {
+                AutoRenewalBehavior = (global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                LineItemId = input.ReadString();
+                break;
+              }
+              case 16: {
+                ChangeType = (global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                if (newLineItemInfo_ == null) {
+                  NewLineItemInfo = new global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemInfo();
+                }
+                input.ReadMessage(NewLineItemInfo);
+                break;
+              }
+              case 32: {
+                AutoRenewalBehavior = (global::Google.Cloud.Commerce.Consumer.Procurement.V1.AutoRenewalBehavior) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Message stored in the metadata field of the Operation returned by
+  /// [ConsumerProcurementService.ModifyOrder][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.ModifyOrder].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ModifyOrderMetadata : pb::IMessage<ModifyOrderMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ModifyOrderMetadata> _parser = new pb::MessageParser<ModifyOrderMetadata>(() => new ModifyOrderMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ModifyOrderMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Commerce.Consumer.Procurement.V1.ProcurementServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModifyOrderMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModifyOrderMetadata(ModifyOrderMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModifyOrderMetadata Clone() {
+      return new ModifyOrderMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ModifyOrderMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ModifyOrderMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ModifyOrderMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [ConsumerProcurementService.CancelOrder][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.CancelOrder].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CancelOrderRequest : pb::IMessage<CancelOrderRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CancelOrderRequest> _parser = new pb::MessageParser<CancelOrderRequest>(() => new CancelOrderRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CancelOrderRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Commerce.Consumer.Procurement.V1.ProcurementServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelOrderRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelOrderRequest(CancelOrderRequest other) : this() {
+      name_ = other.name_;
+      etag_ = other.etag_;
+      cancellationPolicy_ = other.cancellationPolicy_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelOrderRequest Clone() {
+      return new CancelOrderRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 2;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. The weak etag, which can be optionally populated, of the order
+    /// that this cancel request is based on. Validation checking will only happen
+    /// if the invoker supplies this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cancellation_policy" field.</summary>
+    public const int CancellationPolicyFieldNumber = 3;
+    private global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy cancellationPolicy_ = global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy.Unspecified;
+    /// <summary>
+    /// Optional. Cancellation policy of this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy CancellationPolicy {
+      get { return cancellationPolicy_; }
+      set {
+        cancellationPolicy_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CancelOrderRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CancelOrderRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Etag != other.Etag) return false;
+      if (CancellationPolicy != other.CancellationPolicy) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (CancellationPolicy != global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy.Unspecified) hash ^= CancellationPolicy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (CancellationPolicy != global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) CancellationPolicy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (CancellationPolicy != global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) CancellationPolicy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (CancellationPolicy != global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CancellationPolicy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CancelOrderRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      if (other.CancellationPolicy != global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy.Unspecified) {
+        CancellationPolicy = other.CancellationPolicy;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 24: {
+            CancellationPolicy = (global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 24: {
+            CancellationPolicy = (global::Google.Cloud.Commerce.Consumer.Procurement.V1.CancelOrderRequest.Types.CancellationPolicy) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CancelOrderRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Indicates the cancellation policy the customer uses to cancel the order.
+      /// </summary>
+      public enum CancellationPolicy {
+        /// <summary>
+        /// If unspecified, cancellation will try to cancel the order, if order
+        /// cannot be immediately cancelled, auto renewal will be turned off.
+        /// However, caller should avoid using the value as it will yield a
+        /// non-deterministic result. This is still supported mainly to maintain
+        /// existing integrated usages and ensure backwards compatibility.
+        /// </summary>
+        [pbr::OriginalName("CANCELLATION_POLICY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Request will cancel the whole order immediately, if order cannot be
+        /// immediately cancelled, the request will fail.
+        /// </summary>
+        [pbr::OriginalName("CANCELLATION_POLICY_CANCEL_IMMEDIATELY")] CancelImmediately = 1,
+        /// <summary>
+        /// Request will cancel the auto renewal, if order is not subscription based,
+        /// the request will fail.
+        /// </summary>
+        [pbr::OriginalName("CANCELLATION_POLICY_CANCEL_AT_TERM_END")] CancelAtTermEnd = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Message stored in the metadata field of the Operation returned by
+  /// [ConsumerProcurementService.CancelOrder][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.CancelOrder].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CancelOrderMetadata : pb::IMessage<CancelOrderMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CancelOrderMetadata> _parser = new pb::MessageParser<CancelOrderMetadata>(() => new CancelOrderMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CancelOrderMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Commerce.Consumer.Procurement.V1.ProcurementServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelOrderMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelOrderMetadata(CancelOrderMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelOrderMetadata Clone() {
+      return new CancelOrderMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CancelOrderMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CancelOrderMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CancelOrderMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }

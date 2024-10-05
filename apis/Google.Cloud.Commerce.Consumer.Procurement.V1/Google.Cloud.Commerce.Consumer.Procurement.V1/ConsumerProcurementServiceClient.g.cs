@@ -52,6 +52,10 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
             PlaceOrderOperationsSettings = existing.PlaceOrderOperationsSettings.Clone();
             GetOrderSettings = existing.GetOrderSettings;
             ListOrdersSettings = existing.ListOrdersSettings;
+            ModifyOrderSettings = existing.ModifyOrderSettings;
+            ModifyOrderOperationsSettings = existing.ModifyOrderOperationsSettings.Clone();
+            CancelOrderSettings = existing.CancelOrderSettings;
+            CancelOrderOperationsSettings = existing.CancelOrderOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -124,6 +128,68 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListOrdersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConsumerProcurementServiceClient.ModifyOrder</c> and <c>ConsumerProcurementServiceClient.ModifyOrderAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ModifyOrderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConsumerProcurementServiceClient.ModifyOrder</c> and
+        /// <c>ConsumerProcurementServiceClient.ModifyOrderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ModifyOrderOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConsumerProcurementServiceClient.CancelOrder</c> and <c>ConsumerProcurementServiceClient.CancelOrderAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelOrderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConsumerProcurementServiceClient.CancelOrder</c> and
+        /// <c>ConsumerProcurementServiceClient.CancelOrderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CancelOrderOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ConsumerProcurementServiceSettings"/> object.</returns>
@@ -215,7 +281,7 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConsumerProcurementService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConsumerProcurementService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -522,6 +588,121 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
             }
             return ListOrdersAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Modifies an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Order, ModifyOrderMetadata> ModifyOrder(ModifyOrderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, ModifyOrderMetadata>> ModifyOrderAsync(ModifyOrderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, ModifyOrderMetadata>> ModifyOrderAsync(ModifyOrderRequest request, st::CancellationToken cancellationToken) =>
+            ModifyOrderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ModifyOrder</c>.</summary>
+        public virtual lro::OperationsClient ModifyOrderOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ModifyOrder</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Order, ModifyOrderMetadata> PollOnceModifyOrder(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Order, ModifyOrderMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ModifyOrderOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ModifyOrder</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Order, ModifyOrderMetadata>> PollOnceModifyOrderAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Order, ModifyOrderMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ModifyOrderOperationsClient, callSettings);
+
+        /// <summary>
+        /// Cancels an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+        /// procured in the Order will be cancelled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Order, CancelOrderMetadata> CancelOrder(CancelOrderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+        /// procured in the Order will be cancelled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, CancelOrderMetadata>> CancelOrderAsync(CancelOrderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+        /// procured in the Order will be cancelled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, CancelOrderMetadata>> CancelOrderAsync(CancelOrderRequest request, st::CancellationToken cancellationToken) =>
+            CancelOrderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CancelOrder</c>.</summary>
+        public virtual lro::OperationsClient CancelOrderOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CancelOrder</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Order, CancelOrderMetadata> PollOnceCancelOrder(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Order, CancelOrderMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelOrderOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CancelOrder</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Order, CancelOrderMetadata>> PollOnceCancelOrderAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Order, CancelOrderMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelOrderOperationsClient, callSettings);
     }
 
     /// <summary>ConsumerProcurementService client wrapper implementation, for convenient use.</summary>
@@ -544,6 +725,10 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
 
         private readonly gaxgrpc::ApiCall<ListOrdersRequest, ListOrdersResponse> _callListOrders;
 
+        private readonly gaxgrpc::ApiCall<ModifyOrderRequest, lro::Operation> _callModifyOrder;
+
+        private readonly gaxgrpc::ApiCall<CancelOrderRequest, lro::Operation> _callCancelOrder;
+
         /// <summary>
         /// Constructs a client wrapper for the ConsumerProcurementService service, with the specified gRPC client and
         /// settings.
@@ -563,6 +748,8 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
                 Logger = logger,
             });
             PlaceOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PlaceOrderOperationsSettings, logger);
+            ModifyOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ModifyOrderOperationsSettings, logger);
+            CancelOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelOrderOperationsSettings, logger);
             _callPlaceOrder = clientHelper.BuildApiCall<PlaceOrderRequest, lro::Operation>("PlaceOrder", grpcClient.PlaceOrderAsync, grpcClient.PlaceOrder, effectiveSettings.PlaceOrderSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPlaceOrder);
             Modify_PlaceOrderApiCall(ref _callPlaceOrder);
@@ -572,6 +759,12 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
             _callListOrders = clientHelper.BuildApiCall<ListOrdersRequest, ListOrdersResponse>("ListOrders", grpcClient.ListOrdersAsync, grpcClient.ListOrders, effectiveSettings.ListOrdersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListOrders);
             Modify_ListOrdersApiCall(ref _callListOrders);
+            _callModifyOrder = clientHelper.BuildApiCall<ModifyOrderRequest, lro::Operation>("ModifyOrder", grpcClient.ModifyOrderAsync, grpcClient.ModifyOrder, effectiveSettings.ModifyOrderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callModifyOrder);
+            Modify_ModifyOrderApiCall(ref _callModifyOrder);
+            _callCancelOrder = clientHelper.BuildApiCall<CancelOrderRequest, lro::Operation>("CancelOrder", grpcClient.CancelOrderAsync, grpcClient.CancelOrder, effectiveSettings.CancelOrderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelOrder);
+            Modify_CancelOrderApiCall(ref _callCancelOrder);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -583,6 +776,10 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
 
         partial void Modify_ListOrdersApiCall(ref gaxgrpc::ApiCall<ListOrdersRequest, ListOrdersResponse> call);
 
+        partial void Modify_ModifyOrderApiCall(ref gaxgrpc::ApiCall<ModifyOrderRequest, lro::Operation> call);
+
+        partial void Modify_CancelOrderApiCall(ref gaxgrpc::ApiCall<CancelOrderRequest, lro::Operation> call);
+
         partial void OnConstruction(ConsumerProcurementService.ConsumerProcurementServiceClient grpcClient, ConsumerProcurementServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ConsumerProcurementService client</summary>
@@ -593,6 +790,10 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
         partial void Modify_GetOrderRequest(ref GetOrderRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListOrdersRequest(ref ListOrdersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ModifyOrderRequest(ref ModifyOrderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelOrderRequest(ref CancelOrderRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>PlaceOrder</c>.</summary>
         public override lro::OperationsClient PlaceOrderOperationsClient { get; }
@@ -691,6 +892,66 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
         {
             Modify_ListOrdersRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOrdersRequest, ListOrdersResponse, Order>(_callListOrders, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>ModifyOrder</c>.</summary>
+        public override lro::OperationsClient ModifyOrderOperationsClient { get; }
+
+        /// <summary>
+        /// Modifies an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Order, ModifyOrderMetadata> ModifyOrder(ModifyOrderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyOrderRequest(ref request, ref callSettings);
+            return new lro::Operation<Order, ModifyOrderMetadata>(_callModifyOrder.Sync(request, callSettings), ModifyOrderOperationsClient);
+        }
+
+        /// <summary>
+        /// Modifies an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Order, ModifyOrderMetadata>> ModifyOrderAsync(ModifyOrderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyOrderRequest(ref request, ref callSettings);
+            return new lro::Operation<Order, ModifyOrderMetadata>(await _callModifyOrder.Async(request, callSettings).ConfigureAwait(false), ModifyOrderOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CancelOrder</c>.</summary>
+        public override lro::OperationsClient CancelOrderOperationsClient { get; }
+
+        /// <summary>
+        /// Cancels an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+        /// procured in the Order will be cancelled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Order, CancelOrderMetadata> CancelOrder(CancelOrderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelOrderRequest(ref request, ref callSettings);
+            return new lro::Operation<Order, CancelOrderMetadata>(_callCancelOrder.Sync(request, callSettings), CancelOrderOperationsClient);
+        }
+
+        /// <summary>
+        /// Cancels an existing
+        /// [Order][google.cloud.commerce.consumer.procurement.v1.Order]. Every product
+        /// procured in the Order will be cancelled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Order, CancelOrderMetadata>> CancelOrderAsync(CancelOrderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelOrderRequest(ref request, ref callSettings);
+            return new lro::Operation<Order, CancelOrderMetadata>(await _callCancelOrder.Async(request, callSettings).ConfigureAwait(false), CancelOrderOperationsClient);
         }
     }
 
