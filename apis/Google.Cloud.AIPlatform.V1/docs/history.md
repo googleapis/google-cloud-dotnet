@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.9.0, released 2024-10-07
+
+### New features
+
+- Add a dynamic retrieval API ([commit 39346c1](https://github.com/googleapis/google-cloud-dotnet/commit/39346c19aabf3069615026f5f668d04e41a370ca))
+- Add continuous sync option in feature_view.proto ([commit de039c0](https://github.com/googleapis/google-cloud-dotnet/commit/de039c0d341ff01cae7af23cabf9759140795d60))
+- Add psc_automation_configs to DeployIndex v1 ([commit 100ccd6](https://github.com/googleapis/google-cloud-dotnet/commit/100ccd6f0f9db723c786b231e931866f84536e23))
+
 ## Version 3.8.0, released 2024-09-26
 
 ### New features
