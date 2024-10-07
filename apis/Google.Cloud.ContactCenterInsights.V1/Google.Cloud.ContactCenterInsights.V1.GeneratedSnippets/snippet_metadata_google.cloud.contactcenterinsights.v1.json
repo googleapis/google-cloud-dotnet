@@ -951,12 +951,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -1000,12 +1000,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 81,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -3369,12 +3369,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -3418,12 +3418,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 68,
+          "end": 69,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 66,
+          "end": 67,
           "type": "SHORT"
         }
       ]
@@ -5839,6 +5839,580 @@
         {
           "start": 36,
           "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ExportIssueModel_sync",
+      "title": "ExportIssueModelRequestObject",
+      "description": "Snippet for ExportIssueModel",
+      "file": "ContactCenterInsightsClient.ExportIssueModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIssueModel",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ExportIssueModelMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ExportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ExportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ExportIssueModel_async",
+      "title": "ExportIssueModelRequestObjectAsync",
+      "description": "Snippet for ExportIssueModelAsync",
+      "file": "ContactCenterInsightsClient.ExportIssueModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIssueModelAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportIssueModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ExportIssueModelMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ExportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ExportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ExportIssueModel_sync_flattened",
+      "title": "ExportIssueModel",
+      "description": "Snippet for ExportIssueModel",
+      "file": "ContactCenterInsightsClient.ExportIssueModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIssueModel",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportIssueModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ExportIssueModelMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ExportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ExportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ExportIssueModel_async_flattened",
+      "title": "ExportIssueModelAsync",
+      "description": "Snippet for ExportIssueModelAsync",
+      "file": "ContactCenterInsightsClient.ExportIssueModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIssueModelAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportIssueModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ExportIssueModelMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ExportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ExportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ExportIssueModel_sync_flattened_resourceNames",
+      "title": "ExportIssueModelResourceNames",
+      "description": "Snippet for ExportIssueModel",
+      "file": "ContactCenterInsightsClient.ExportIssueModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIssueModel",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ExportIssueModelMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ExportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ExportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ExportIssueModel_async_flattened_resourceNames",
+      "title": "ExportIssueModelResourceNamesAsync",
+      "description": "Snippet for ExportIssueModelAsync",
+      "file": "ContactCenterInsightsClient.ExportIssueModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIssueModelAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportIssueModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ExportIssueModelMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ExportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ExportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ImportIssueModel_sync",
+      "title": "ImportIssueModelRequestObject",
+      "description": "Snippet for ImportIssueModel",
+      "file": "ContactCenterInsightsClient.ImportIssueModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIssueModel",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ImportIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ImportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ImportIssueModelMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ImportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ImportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ImportIssueModel_async",
+      "title": "ImportIssueModelRequestObjectAsync",
+      "description": "Snippet for ImportIssueModelAsync",
+      "file": "ContactCenterInsightsClient.ImportIssueModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIssueModelAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ImportIssueModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ImportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ImportIssueModelMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ImportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ImportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ImportIssueModel_sync_flattened",
+      "title": "ImportIssueModel",
+      "description": "Snippet for ImportIssueModel",
+      "file": "ContactCenterInsightsClient.ImportIssueModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIssueModel",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ImportIssueModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ImportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ImportIssueModelMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ImportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ImportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ImportIssueModel_async_flattened",
+      "title": "ImportIssueModelAsync",
+      "description": "Snippet for ImportIssueModelAsync",
+      "file": "ContactCenterInsightsClient.ImportIssueModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIssueModelAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ImportIssueModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ImportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ImportIssueModelMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ImportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ImportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ImportIssueModel_sync_flattened_resourceNames",
+      "title": "ImportIssueModelResourceNames",
+      "description": "Snippet for ImportIssueModel",
+      "file": "ContactCenterInsightsClient.ImportIssueModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIssueModel",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ImportIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ImportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ImportIssueModelMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ImportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ImportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_ImportIssueModel_async_flattened_resourceNames",
+      "title": "ImportIssueModelResourceNamesAsync",
+      "description": "Snippet for ImportIssueModelAsync",
+      "file": "ContactCenterInsightsClient.ImportIssueModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIssueModelAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ImportIssueModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ImportIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.ImportIssueModelMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "ImportIssueModel",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.ImportIssueModel",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
           "type": "SHORT"
         }
       ]
@@ -9351,6 +9925,485 @@
         {
           "start": 36,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_GetEncryptionSpec_sync",
+      "title": "GetEncryptionSpecRequestObject",
+      "description": "Snippet for GetEncryptionSpec",
+      "file": "ContactCenterInsightsClient.GetEncryptionSpecRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpec",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetEncryptionSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ContactCenterInsights.V1.EncryptionSpec",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.GetEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_GetEncryptionSpec_async",
+      "title": "GetEncryptionSpecRequestObjectAsync",
+      "description": "Snippet for GetEncryptionSpecAsync",
+      "file": "ContactCenterInsightsClient.GetEncryptionSpecRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpecAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.EncryptionSpec>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.GetEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_GetEncryptionSpec_sync_flattened",
+      "title": "GetEncryptionSpec",
+      "description": "Snippet for GetEncryptionSpec",
+      "file": "ContactCenterInsightsClient.GetEncryptionSpecSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpec",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetEncryptionSpec",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ContactCenterInsights.V1.EncryptionSpec",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.GetEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_GetEncryptionSpec_async_flattened",
+      "title": "GetEncryptionSpecAsync",
+      "description": "Snippet for GetEncryptionSpecAsync",
+      "file": "ContactCenterInsightsClient.GetEncryptionSpecAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpecAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.EncryptionSpec>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.GetEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_GetEncryptionSpec_sync_flattened_resourceNames",
+      "title": "GetEncryptionSpecResourceNames",
+      "description": "Snippet for GetEncryptionSpec",
+      "file": "ContactCenterInsightsClient.GetEncryptionSpecResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpec",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetEncryptionSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.EncryptionSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ContactCenterInsights.V1.EncryptionSpec",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.GetEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_GetEncryptionSpec_async_flattened_resourceNames",
+      "title": "GetEncryptionSpecResourceNamesAsync",
+      "description": "Snippet for GetEncryptionSpecAsync",
+      "file": "ContactCenterInsightsClient.GetEncryptionSpecResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpecAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.EncryptionSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.EncryptionSpec>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.GetEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_InitializeEncryptionSpec_sync",
+      "title": "InitializeEncryptionSpecRequestObject",
+      "description": "Snippet for InitializeEncryptionSpec",
+      "file": "ContactCenterInsightsClient.InitializeEncryptionSpecRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeEncryptionSpec",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.InitializeEncryptionSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecResponse, Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "InitializeEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.InitializeEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_InitializeEncryptionSpec_async",
+      "title": "InitializeEncryptionSpecRequestObjectAsync",
+      "description": "Snippet for InitializeEncryptionSpecAsync",
+      "file": "ContactCenterInsightsClient.InitializeEncryptionSpecRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeEncryptionSpecAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.InitializeEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecResponse, Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "InitializeEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.InitializeEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_InitializeEncryptionSpec_sync_flattened",
+      "title": "InitializeEncryptionSpec",
+      "description": "Snippet for InitializeEncryptionSpec",
+      "file": "ContactCenterInsightsClient.InitializeEncryptionSpecSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeEncryptionSpec",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.InitializeEncryptionSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.EncryptionSpec",
+            "name": "encryptionSpec"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecResponse, Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "InitializeEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.InitializeEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_InitializeEncryptionSpec_async_flattened",
+      "title": "InitializeEncryptionSpecAsync",
+      "description": "Snippet for InitializeEncryptionSpecAsync",
+      "file": "ContactCenterInsightsClient.InitializeEncryptionSpecAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeEncryptionSpecAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.InitializeEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.EncryptionSpec",
+            "name": "encryptionSpec"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecResponse, Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "InitializeEncryptionSpec",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.InitializeEncryptionSpec",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
           "type": "SHORT"
         }
       ]

@@ -122,6 +122,10 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UndeployIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ExportIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ImportIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.Issue> __Marshaller_google_cloud_contactcenterinsights_v1_Issue = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.Issue.Parser));
@@ -161,6 +165,12 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.Settings> __Marshaller_google_cloud_contactcenterinsights_v1_Settings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.Settings.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetEncryptionSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec> __Marshaller_google_cloud_contactcenterinsights_v1_EncryptionSpec = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest> __Marshaller_google_cloud_contactcenterinsights_v1_InitializeEncryptionSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -345,6 +355,22 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest, global::Google.LongRunning.Operation> __Method_ExportIssueModel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportIssueModel",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ExportIssueModelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest, global::Google.LongRunning.Operation> __Method_ImportIssueModel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportIssueModel",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ImportIssueModelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest, global::Google.Cloud.ContactCenterInsights.V1.Issue> __Method_GetIssue = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest, global::Google.Cloud.ContactCenterInsights.V1.Issue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -449,6 +475,22 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_Settings);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest, global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec> __Method_GetEncryptionSpec = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest, global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEncryptionSpec",
+        __Marshaller_google_cloud_contactcenterinsights_v1_GetEncryptionSpecRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_EncryptionSpec);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest, global::Google.LongRunning.Operation> __Method_InitializeEncryptionSpec = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InitializeEncryptionSpec",
+        __Marshaller_google_cloud_contactcenterinsights_v1_InitializeEncryptionSpecRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View> __Method_CreateView = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -500,6 +542,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     {
       /// <summary>
       /// Creates a conversation.
+      /// Note that this method does not support audio transcription or redaction.
+      /// Use `conversations.upload` instead.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -511,8 +555,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       }
 
       /// <summary>
-      /// Create a longrunning conversation upload operation. This method differs
-      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// Create a long-running conversation upload operation. This method differs
+      /// from `CreateConversation` by allowing audio transcription and optional DLP
       /// redaction.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -757,6 +801,30 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       }
 
       /// <summary>
+      /// Exports an issue model to the provided destination.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportIssueModel(global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports an issue model from a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportIssueModel(global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets an issue.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -913,6 +981,34 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       }
 
       /// <summary>
+      /// Gets location-level encryption key specification.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec> GetEncryptionSpec(global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Initializes a location-level encryption key specification.  An error will
+      /// be thrown if the location has resources already created before the
+      /// initialization. Once the encryption specification is initialized at a
+      /// location, it is immutable and all newly created resources under the
+      /// location will be encrypted with the existing specification.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> InitializeEncryptionSpec(global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a view.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1003,6 +1099,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
       /// <summary>
       /// Creates a conversation.
+      /// Note that this method does not support audio transcription or redaction.
+      /// Use `conversations.upload` instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1016,6 +1114,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       }
       /// <summary>
       /// Creates a conversation.
+      /// Note that this method does not support audio transcription or redaction.
+      /// Use `conversations.upload` instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1027,6 +1127,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       }
       /// <summary>
       /// Creates a conversation.
+      /// Note that this method does not support audio transcription or redaction.
+      /// Use `conversations.upload` instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1040,6 +1142,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       }
       /// <summary>
       /// Creates a conversation.
+      /// Note that this method does not support audio transcription or redaction.
+      /// Use `conversations.upload` instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1050,8 +1154,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConversation, null, options, request);
       }
       /// <summary>
-      /// Create a longrunning conversation upload operation. This method differs
-      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// Create a long-running conversation upload operation. This method differs
+      /// from `CreateConversation` by allowing audio transcription and optional DLP
       /// redaction.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1065,8 +1169,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return UploadConversation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a longrunning conversation upload operation. This method differs
-      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// Create a long-running conversation upload operation. This method differs
+      /// from `CreateConversation` by allowing audio transcription and optional DLP
       /// redaction.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1078,8 +1182,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UploadConversation, null, options, request);
       }
       /// <summary>
-      /// Create a longrunning conversation upload operation. This method differs
-      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// Create a long-running conversation upload operation. This method differs
+      /// from `CreateConversation` by allowing audio transcription and optional DLP
       /// redaction.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1093,8 +1197,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return UploadConversationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a longrunning conversation upload operation. This method differs
-      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// Create a long-running conversation upload operation. This method differs
+      /// from `CreateConversation` by allowing audio transcription and optional DLP
       /// redaction.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2034,6 +2138,102 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UndeployIssueModel, null, options, request);
       }
       /// <summary>
+      /// Exports an issue model to the provided destination.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportIssueModel(global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportIssueModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports an issue model to the provided destination.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportIssueModel(global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportIssueModel, null, options, request);
+      }
+      /// <summary>
+      /// Exports an issue model to the provided destination.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportIssueModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports an issue model to the provided destination.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportIssueModel, null, options, request);
+      }
+      /// <summary>
+      /// Imports an issue model from a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportIssueModel(global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportIssueModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports an issue model from a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportIssueModel(global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportIssueModel, null, options, request);
+      }
+      /// <summary>
+      /// Imports an issue model from a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportIssueModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports an issue model from a Cloud Storage bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportIssueModel, null, options, request);
+      }
+      /// <summary>
       /// Gets an issue.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2658,6 +2858,118 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSettings, null, options, request);
       }
       /// <summary>
+      /// Gets location-level encryption key specification.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec GetEncryptionSpec(global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEncryptionSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets location-level encryption key specification.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec GetEncryptionSpec(global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEncryptionSpec, null, options, request);
+      }
+      /// <summary>
+      /// Gets location-level encryption key specification.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec> GetEncryptionSpecAsync(global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEncryptionSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets location-level encryption key specification.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec> GetEncryptionSpecAsync(global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEncryptionSpec, null, options, request);
+      }
+      /// <summary>
+      /// Initializes a location-level encryption key specification.  An error will
+      /// be thrown if the location has resources already created before the
+      /// initialization. Once the encryption specification is initialized at a
+      /// location, it is immutable and all newly created resources under the
+      /// location will be encrypted with the existing specification.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation InitializeEncryptionSpec(global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InitializeEncryptionSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initializes a location-level encryption key specification.  An error will
+      /// be thrown if the location has resources already created before the
+      /// initialization. Once the encryption specification is initialized at a
+      /// location, it is immutable and all newly created resources under the
+      /// location will be encrypted with the existing specification.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation InitializeEncryptionSpec(global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InitializeEncryptionSpec, null, options, request);
+      }
+      /// <summary>
+      /// Initializes a location-level encryption key specification.  An error will
+      /// be thrown if the location has resources already created before the
+      /// initialization. Once the encryption specification is initialized at a
+      /// location, it is immutable and all newly created resources under the
+      /// location will be encrypted with the existing specification.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InitializeEncryptionSpecAsync(global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InitializeEncryptionSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initializes a location-level encryption key specification.  An error will
+      /// be thrown if the location has resources already created before the
+      /// initialization. Once the encryption specification is initialized at a
+      /// location, it is immutable and all newly created resources under the
+      /// location will be encrypted with the existing specification.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InitializeEncryptionSpecAsync(global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InitializeEncryptionSpec, null, options, request);
+      }
+      /// <summary>
       /// Creates a view.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2932,6 +3244,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
           .AddMethod(__Method_DeleteIssueModel, serviceImpl.DeleteIssueModel)
           .AddMethod(__Method_DeployIssueModel, serviceImpl.DeployIssueModel)
           .AddMethod(__Method_UndeployIssueModel, serviceImpl.UndeployIssueModel)
+          .AddMethod(__Method_ExportIssueModel, serviceImpl.ExportIssueModel)
+          .AddMethod(__Method_ImportIssueModel, serviceImpl.ImportIssueModel)
           .AddMethod(__Method_GetIssue, serviceImpl.GetIssue)
           .AddMethod(__Method_ListIssues, serviceImpl.ListIssues)
           .AddMethod(__Method_UpdateIssue, serviceImpl.UpdateIssue)
@@ -2945,6 +3259,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
           .AddMethod(__Method_CalculateStats, serviceImpl.CalculateStats)
           .AddMethod(__Method_GetSettings, serviceImpl.GetSettings)
           .AddMethod(__Method_UpdateSettings, serviceImpl.UpdateSettings)
+          .AddMethod(__Method_GetEncryptionSpec, serviceImpl.GetEncryptionSpec)
+          .AddMethod(__Method_InitializeEncryptionSpec, serviceImpl.InitializeEncryptionSpec)
           .AddMethod(__Method_CreateView, serviceImpl.CreateView)
           .AddMethod(__Method_GetView, serviceImpl.GetView)
           .AddMethod(__Method_ListViews, serviceImpl.ListViews)
@@ -2980,6 +3296,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       serviceBinder.AddMethod(__Method_DeleteIssueModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteIssueModel));
       serviceBinder.AddMethod(__Method_DeployIssueModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeployIssueModel));
       serviceBinder.AddMethod(__Method_UndeployIssueModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest, global::Google.LongRunning.Operation>(serviceImpl.UndeployIssueModel));
+      serviceBinder.AddMethod(__Method_ExportIssueModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ExportIssueModelRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportIssueModel));
+      serviceBinder.AddMethod(__Method_ImportIssueModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ImportIssueModelRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportIssueModel));
       serviceBinder.AddMethod(__Method_GetIssue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest, global::Google.Cloud.ContactCenterInsights.V1.Issue>(serviceImpl.GetIssue));
       serviceBinder.AddMethod(__Method_ListIssues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest, global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse>(serviceImpl.ListIssues));
       serviceBinder.AddMethod(__Method_UpdateIssue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest, global::Google.Cloud.ContactCenterInsights.V1.Issue>(serviceImpl.UpdateIssue));
@@ -2993,6 +3311,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       serviceBinder.AddMethod(__Method_CalculateStats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest, global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse>(serviceImpl.CalculateStats));
       serviceBinder.AddMethod(__Method_GetSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings>(serviceImpl.GetSettings));
       serviceBinder.AddMethod(__Method_UpdateSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings>(serviceImpl.UpdateSettings));
+      serviceBinder.AddMethod(__Method_GetEncryptionSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest, global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec>(serviceImpl.GetEncryptionSpec));
+      serviceBinder.AddMethod(__Method_InitializeEncryptionSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest, global::Google.LongRunning.Operation>(serviceImpl.InitializeEncryptionSpec));
       serviceBinder.AddMethod(__Method_CreateView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(serviceImpl.CreateView));
       serviceBinder.AddMethod(__Method_GetView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(serviceImpl.GetView));
       serviceBinder.AddMethod(__Method_ListViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse>(serviceImpl.ListViews));

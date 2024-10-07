@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START contactcenterinsights_v1_generated_ContactCenterInsights_ExportIssueModel_sync]
     using Google.Cloud.ContactCenterInsights.V1;
     using Google.LongRunning;
 
     public sealed partial class GeneratedContactCenterInsightsClientSnippets
     {
-        /// <summary>Snippet for IngestConversations</summary>
+        /// <summary>Snippet for ExportIssueModel</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,40 +30,35 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void IngestConversationsRequestObject()
+        public void ExportIssueModelRequestObject()
         {
             // Create client
             ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
             // Initialize request argument(s)
-            IngestConversationsRequest request = new IngestConversationsRequest
+            ExportIssueModelRequest request = new ExportIssueModelRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                GcsSource = new IngestConversationsRequest.Types.GcsSource(),
-                TranscriptObjectConfig = new IngestConversationsRequest.Types.TranscriptObjectConfig(),
-                ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
-                RedactionConfig = new RedactionConfig(),
-                SpeechConfig = new SpeechConfig(),
-                SampleSize = 0,
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+                GcsDestination = new ExportIssueModelRequest.Types.GcsDestination(),
             };
             // Make the request
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = contactCenterInsightsClient.IngestConversations(request);
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> response = contactCenterInsightsClient.ExportIssueModel(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            IngestConversationsResponse result = completedResponse.Result;
+            ExportIssueModelResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceIngestConversations(operationName);
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceExportIssueModel(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+                ExportIssueModelResponse retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync]
+    // [END contactcenterinsights_v1_generated_ContactCenterInsights_ExportIssueModel_sync]
 }

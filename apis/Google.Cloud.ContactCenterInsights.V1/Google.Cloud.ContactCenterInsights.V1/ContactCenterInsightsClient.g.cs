@@ -81,6 +81,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
             DeployIssueModelOperationsSettings = existing.DeployIssueModelOperationsSettings.Clone();
             UndeployIssueModelSettings = existing.UndeployIssueModelSettings;
             UndeployIssueModelOperationsSettings = existing.UndeployIssueModelOperationsSettings.Clone();
+            ExportIssueModelSettings = existing.ExportIssueModelSettings;
+            ExportIssueModelOperationsSettings = existing.ExportIssueModelOperationsSettings.Clone();
+            ImportIssueModelSettings = existing.ImportIssueModelSettings;
+            ImportIssueModelOperationsSettings = existing.ImportIssueModelOperationsSettings.Clone();
             GetIssueSettings = existing.GetIssueSettings;
             ListIssuesSettings = existing.ListIssuesSettings;
             UpdateIssueSettings = existing.UpdateIssueSettings;
@@ -94,6 +98,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
             CalculateStatsSettings = existing.CalculateStatsSettings;
             GetSettingsSettings = existing.GetSettingsSettings;
             UpdateSettingsSettings = existing.UpdateSettingsSettings;
+            GetEncryptionSpecSettings = existing.GetEncryptionSpecSettings;
+            InitializeEncryptionSpecSettings = existing.InitializeEncryptionSpecSettings;
+            InitializeEncryptionSpecOperationsSettings = existing.InitializeEncryptionSpecOperationsSettings.Clone();
             CreateViewSettings = existing.CreateViewSettings;
             GetViewSettings = existing.GetViewSettings;
             ListViewsSettings = existing.ListViewsSettings;
@@ -682,6 +689,80 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ExportIssueModel</c> and <c>ContactCenterInsightsClient.ExportIssueModelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.ExportIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.ExportIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportIssueModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ImportIssueModel</c> and <c>ContactCenterInsightsClient.ImportIssueModelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.ImportIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.ImportIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportIssueModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ContactCenterInsightsClient.GetIssue</c> and <c>ContactCenterInsightsClient.GetIssueAsync</c>.
         /// </summary>
         /// <remarks>
@@ -924,6 +1005,62 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.GetEncryptionSpec</c> and
+        /// <c>ContactCenterInsightsClient.GetEncryptionSpecAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEncryptionSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.InitializeEncryptionSpec</c> and
+        /// <c>ContactCenterInsightsClient.InitializeEncryptionSpecAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings InitializeEncryptionSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.InitializeEncryptionSpec</c> and
+        /// <c>ContactCenterInsightsClient.InitializeEncryptionSpecAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InitializeEncryptionSpecOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ContactCenterInsightsClient.CreateView</c> and <c>ContactCenterInsightsClient.CreateViewAsync</c>.
         /// </summary>
         /// <remarks>
@@ -1158,6 +1295,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1167,6 +1306,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1176,6 +1317,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1185,6 +1328,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1212,6 +1357,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1239,6 +1386,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1261,6 +1410,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1288,6 +1439,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1315,6 +1468,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1336,8 +1491,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             CreateConversationAsync(parent, conversation, conversationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1347,8 +1502,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1358,8 +1513,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1429,7 +1584,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Required. The new values for the conversation.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated.
+        /// The list of fields to be updated. All possible fields can be updated by
+        /// passing `*`, or a subset of the following updateable fields can be
+        /// provided:
+        /// 
+        /// * `agent_id`
+        /// * `language_code`
+        /// * `labels`
+        /// * `metadata`
+        /// * `quality_metadata`
+        /// * `call_metadata`
+        /// * `start_time`
+        /// * `expire_time` or `ttl`
+        /// * `data_source.gcs_source.audio_uri` or
+        /// `data_source.dialogflow_source.audio_uri`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1447,7 +1615,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Required. The new values for the conversation.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated.
+        /// The list of fields to be updated. All possible fields can be updated by
+        /// passing `*`, or a subset of the following updateable fields can be
+        /// provided:
+        /// 
+        /// * `agent_id`
+        /// * `language_code`
+        /// * `labels`
+        /// * `metadata`
+        /// * `quality_metadata`
+        /// * `call_metadata`
+        /// * `start_time`
+        /// * `expire_time` or `ttl`
+        /// * `data_source.gcs_source.audio_uri` or
+        /// `data_source.dialogflow_source.audio_uri`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1465,7 +1646,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Required. The new values for the conversation.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated.
+        /// The list of fields to be updated. All possible fields can be updated by
+        /// passing `*`, or a subset of the following updateable fields can be
+        /// provided:
+        /// 
+        /// * `agent_id`
+        /// * `language_code`
+        /// * `labels`
+        /// * `metadata`
+        /// * `quality_metadata`
+        /// * `call_metadata`
+        /// * `start_time`
+        /// * `expire_time` or `ttl`
+        /// * `data_source.gcs_source.audio_uri` or
+        /// `data_source.dialogflow_source.audio_uri`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3828,6 +4022,268 @@ namespace Google.Cloud.ContactCenterInsights.V1
             UndeployIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> ExportIssueModel(ExportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(ExportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(ExportIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            ExportIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportIssueModel</c>.</summary>
+        public virtual lro::OperationsClient ExportIssueModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> PollOnceExportIssueModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> PollOnceExportIssueModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> ExportIssueModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ExportIssueModel(new ExportIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ExportIssueModelAsync(new ExportIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(string name, st::CancellationToken cancellationToken) =>
+            ExportIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> ExportIssueModel(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            ExportIssueModel(new ExportIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            ExportIssueModelAsync(new ExportIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(IssueModelName name, st::CancellationToken cancellationToken) =>
+            ExportIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> ImportIssueModel(ImportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(ImportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(ImportIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            ImportIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportIssueModel</c>.</summary>
+        public virtual lro::OperationsClient ImportIssueModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> PollOnceImportIssueModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> PollOnceImportIssueModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> ImportIssueModel(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportIssueModel(new ImportIssueModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportIssueModelAsync(new ImportIssueModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(string parent, st::CancellationToken cancellationToken) =>
+            ImportIssueModelAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> ImportIssueModel(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportIssueModel(new ImportIssueModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportIssueModelAsync(new ImportIssueModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(gagr::LocationName parent, st::CancellationToken cancellationToken) =>
+            ImportIssueModelAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets an issue.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5194,6 +5650,237 @@ namespace Google.Cloud.ContactCenterInsights.V1
             UpdateSettingsAsync(settings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EncryptionSpec GetEncryptionSpec(GetEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(GetEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(GetEncryptionSpecRequest request, st::CancellationToken cancellationToken) =>
+            GetEncryptionSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EncryptionSpec GetEncryptionSpec(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEncryptionSpec(new GetEncryptionSpecRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEncryptionSpecAsync(new GetEncryptionSpecRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEncryptionSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EncryptionSpec GetEncryptionSpec(EncryptionSpecName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEncryptionSpec(new GetEncryptionSpecRequest
+            {
+                EncryptionSpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(EncryptionSpecName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEncryptionSpecAsync(new GetEncryptionSpecRequest
+            {
+                EncryptionSpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(EncryptionSpecName name, st::CancellationToken cancellationToken) =>
+            GetEncryptionSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification.  An error will
+        /// be thrown if the location has resources already created before the
+        /// initialization. Once the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> InitializeEncryptionSpec(InitializeEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification.  An error will
+        /// be thrown if the location has resources already created before the
+        /// initialization. Once the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(InitializeEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification.  An error will
+        /// be thrown if the location has resources already created before the
+        /// initialization. Once the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(InitializeEncryptionSpecRequest request, st::CancellationToken cancellationToken) =>
+            InitializeEncryptionSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>InitializeEncryptionSpec</c>.</summary>
+        public virtual lro::OperationsClient InitializeEncryptionSpecOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>InitializeEncryptionSpec</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> PollOnceInitializeEncryptionSpec(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitializeEncryptionSpecOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>InitializeEncryptionSpec</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> PollOnceInitializeEncryptionSpecAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitializeEncryptionSpecOperationsClient, callSettings);
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification.  An error will
+        /// be thrown if the location has resources already created before the
+        /// initialization. Once the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="encryptionSpec">
+        /// Required. The encryption spec used for CMEK encryption. It is required that
+        /// the kms key is in the same region as the endpoint. The same key will be
+        /// used for all provisioned resources, if encryption is available. If the
+        /// kms_key_name is left empty, no encryption will be enforced.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> InitializeEncryptionSpec(EncryptionSpec encryptionSpec, gaxgrpc::CallSettings callSettings = null) =>
+            InitializeEncryptionSpec(new InitializeEncryptionSpecRequest
+            {
+                EncryptionSpec = gax::GaxPreconditions.CheckNotNull(encryptionSpec, nameof(encryptionSpec)),
+            }, callSettings);
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification.  An error will
+        /// be thrown if the location has resources already created before the
+        /// initialization. Once the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="encryptionSpec">
+        /// Required. The encryption spec used for CMEK encryption. It is required that
+        /// the kms key is in the same region as the endpoint. The same key will be
+        /// used for all provisioned resources, if encryption is available. If the
+        /// kms_key_name is left empty, no encryption will be enforced.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(EncryptionSpec encryptionSpec, gaxgrpc::CallSettings callSettings = null) =>
+            InitializeEncryptionSpecAsync(new InitializeEncryptionSpecRequest
+            {
+                EncryptionSpec = gax::GaxPreconditions.CheckNotNull(encryptionSpec, nameof(encryptionSpec)),
+            }, callSettings);
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification.  An error will
+        /// be thrown if the location has resources already created before the
+        /// initialization. Once the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="encryptionSpec">
+        /// Required. The encryption spec used for CMEK encryption. It is required that
+        /// the kms key is in the same region as the endpoint. The same key will be
+        /// used for all provisioned resources, if encryption is available. If the
+        /// kms_key_name is left empty, no encryption will be enforced.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(EncryptionSpec encryptionSpec, st::CancellationToken cancellationToken) =>
+            InitializeEncryptionSpecAsync(encryptionSpec, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a view.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5824,6 +6511,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         private readonly gaxgrpc::ApiCall<UndeployIssueModelRequest, lro::Operation> _callUndeployIssueModel;
 
+        private readonly gaxgrpc::ApiCall<ExportIssueModelRequest, lro::Operation> _callExportIssueModel;
+
+        private readonly gaxgrpc::ApiCall<ImportIssueModelRequest, lro::Operation> _callImportIssueModel;
+
         private readonly gaxgrpc::ApiCall<GetIssueRequest, Issue> _callGetIssue;
 
         private readonly gaxgrpc::ApiCall<ListIssuesRequest, ListIssuesResponse> _callListIssues;
@@ -5849,6 +6540,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         private readonly gaxgrpc::ApiCall<GetSettingsRequest, Settings> _callGetSettings;
 
         private readonly gaxgrpc::ApiCall<UpdateSettingsRequest, Settings> _callUpdateSettings;
+
+        private readonly gaxgrpc::ApiCall<GetEncryptionSpecRequest, EncryptionSpec> _callGetEncryptionSpec;
+
+        private readonly gaxgrpc::ApiCall<InitializeEncryptionSpecRequest, lro::Operation> _callInitializeEncryptionSpec;
 
         private readonly gaxgrpc::ApiCall<CreateViewRequest, View> _callCreateView;
 
@@ -5886,6 +6581,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
             DeleteIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIssueModelOperationsSettings, logger);
             DeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployIssueModelOperationsSettings, logger);
             UndeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployIssueModelOperationsSettings, logger);
+            ExportIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportIssueModelOperationsSettings, logger);
+            ImportIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportIssueModelOperationsSettings, logger);
+            InitializeEncryptionSpecOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InitializeEncryptionSpecOperationsSettings, logger);
             _callCreateConversation = clientHelper.BuildApiCall<CreateConversationRequest, Conversation>("CreateConversation", grpcClient.CreateConversationAsync, grpcClient.CreateConversation, effectiveSettings.CreateConversationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversation);
             Modify_CreateConversationApiCall(ref _callCreateConversation);
@@ -5949,6 +6647,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callUndeployIssueModel = clientHelper.BuildApiCall<UndeployIssueModelRequest, lro::Operation>("UndeployIssueModel", grpcClient.UndeployIssueModelAsync, grpcClient.UndeployIssueModel, effectiveSettings.UndeployIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeployIssueModel);
             Modify_UndeployIssueModelApiCall(ref _callUndeployIssueModel);
+            _callExportIssueModel = clientHelper.BuildApiCall<ExportIssueModelRequest, lro::Operation>("ExportIssueModel", grpcClient.ExportIssueModelAsync, grpcClient.ExportIssueModel, effectiveSettings.ExportIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportIssueModel);
+            Modify_ExportIssueModelApiCall(ref _callExportIssueModel);
+            _callImportIssueModel = clientHelper.BuildApiCall<ImportIssueModelRequest, lro::Operation>("ImportIssueModel", grpcClient.ImportIssueModelAsync, grpcClient.ImportIssueModel, effectiveSettings.ImportIssueModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportIssueModel);
+            Modify_ImportIssueModelApiCall(ref _callImportIssueModel);
             _callGetIssue = clientHelper.BuildApiCall<GetIssueRequest, Issue>("GetIssue", grpcClient.GetIssueAsync, grpcClient.GetIssue, effectiveSettings.GetIssueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIssue);
             Modify_GetIssueApiCall(ref _callGetIssue);
@@ -5988,6 +6692,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callUpdateSettings = clientHelper.BuildApiCall<UpdateSettingsRequest, Settings>("UpdateSettings", grpcClient.UpdateSettingsAsync, grpcClient.UpdateSettings, effectiveSettings.UpdateSettingsSettings).WithGoogleRequestParam("settings.name", request => request.Settings?.Name);
             Modify_ApiCall(ref _callUpdateSettings);
             Modify_UpdateSettingsApiCall(ref _callUpdateSettings);
+            _callGetEncryptionSpec = clientHelper.BuildApiCall<GetEncryptionSpecRequest, EncryptionSpec>("GetEncryptionSpec", grpcClient.GetEncryptionSpecAsync, grpcClient.GetEncryptionSpec, effectiveSettings.GetEncryptionSpecSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEncryptionSpec);
+            Modify_GetEncryptionSpecApiCall(ref _callGetEncryptionSpec);
+            _callInitializeEncryptionSpec = clientHelper.BuildApiCall<InitializeEncryptionSpecRequest, lro::Operation>("InitializeEncryptionSpec", grpcClient.InitializeEncryptionSpecAsync, grpcClient.InitializeEncryptionSpec, effectiveSettings.InitializeEncryptionSpecSettings).WithGoogleRequestParam("encryption_spec.name", request => request.EncryptionSpec?.Name);
+            Modify_ApiCall(ref _callInitializeEncryptionSpec);
+            Modify_InitializeEncryptionSpecApiCall(ref _callInitializeEncryptionSpec);
             _callCreateView = clientHelper.BuildApiCall<CreateViewRequest, View>("CreateView", grpcClient.CreateViewAsync, grpcClient.CreateView, effectiveSettings.CreateViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateView);
             Modify_CreateViewApiCall(ref _callCreateView);
@@ -6050,6 +6760,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_UndeployIssueModelApiCall(ref gaxgrpc::ApiCall<UndeployIssueModelRequest, lro::Operation> call);
 
+        partial void Modify_ExportIssueModelApiCall(ref gaxgrpc::ApiCall<ExportIssueModelRequest, lro::Operation> call);
+
+        partial void Modify_ImportIssueModelApiCall(ref gaxgrpc::ApiCall<ImportIssueModelRequest, lro::Operation> call);
+
         partial void Modify_GetIssueApiCall(ref gaxgrpc::ApiCall<GetIssueRequest, Issue> call);
 
         partial void Modify_ListIssuesApiCall(ref gaxgrpc::ApiCall<ListIssuesRequest, ListIssuesResponse> call);
@@ -6075,6 +6789,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         partial void Modify_GetSettingsApiCall(ref gaxgrpc::ApiCall<GetSettingsRequest, Settings> call);
 
         partial void Modify_UpdateSettingsApiCall(ref gaxgrpc::ApiCall<UpdateSettingsRequest, Settings> call);
+
+        partial void Modify_GetEncryptionSpecApiCall(ref gaxgrpc::ApiCall<GetEncryptionSpecRequest, EncryptionSpec> call);
+
+        partial void Modify_InitializeEncryptionSpecApiCall(ref gaxgrpc::ApiCall<InitializeEncryptionSpecRequest, lro::Operation> call);
 
         partial void Modify_CreateViewApiCall(ref gaxgrpc::ApiCall<CreateViewRequest, View> call);
 
@@ -6133,6 +6851,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_UndeployIssueModelRequest(ref UndeployIssueModelRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ExportIssueModelRequest(ref ExportIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportIssueModelRequest(ref ImportIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetIssueRequest(ref GetIssueRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListIssuesRequest(ref ListIssuesRequest request, ref gaxgrpc::CallSettings settings);
@@ -6159,6 +6881,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_UpdateSettingsRequest(ref UpdateSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetEncryptionSpecRequest(ref GetEncryptionSpecRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_InitializeEncryptionSpecRequest(ref InitializeEncryptionSpecRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateViewRequest(ref CreateViewRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetViewRequest(ref GetViewRequest request, ref gaxgrpc::CallSettings settings);
@@ -6171,6 +6897,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6183,6 +6911,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6197,8 +6927,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public override lro::OperationsClient UploadConversationOperationsClient { get; }
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6211,8 +6941,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         }
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6715,6 +7445,60 @@ namespace Google.Cloud.ContactCenterInsights.V1
             return new lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>(await _callUndeployIssueModel.Async(request, callSettings).ConfigureAwait(false), UndeployIssueModelOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>ExportIssueModel</c>.</summary>
+        public override lro::OperationsClient ExportIssueModelOperationsClient { get; }
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> ExportIssueModel(ExportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>(_callExportIssueModel.Sync(request, callSettings), ExportIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(ExportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>(await _callExportIssueModel.Async(request, callSettings).ConfigureAwait(false), ExportIssueModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportIssueModel</c>.</summary>
+        public override lro::OperationsClient ImportIssueModelOperationsClient { get; }
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> ImportIssueModel(ImportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>(_callImportIssueModel.Sync(request, callSettings), ImportIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(ImportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>(await _callImportIssueModel.Async(request, callSettings).ConfigureAwait(false), ImportIssueModelOperationsClient);
+        }
+
         /// <summary>
         /// Gets an issue.
         /// </summary>
@@ -7025,6 +7809,65 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_UpdateSettingsRequest(ref request, ref callSettings);
             return _callUpdateSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EncryptionSpec GetEncryptionSpec(GetEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEncryptionSpecRequest(ref request, ref callSettings);
+            return _callGetEncryptionSpec.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EncryptionSpec> GetEncryptionSpecAsync(GetEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEncryptionSpecRequest(ref request, ref callSettings);
+            return _callGetEncryptionSpec.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>InitializeEncryptionSpec</c>.</summary>
+        public override lro::OperationsClient InitializeEncryptionSpecOperationsClient { get; }
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification.  An error will
+        /// be thrown if the location has resources already created before the
+        /// initialization. Once the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> InitializeEncryptionSpec(InitializeEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InitializeEncryptionSpecRequest(ref request, ref callSettings);
+            return new lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>(_callInitializeEncryptionSpec.Sync(request, callSettings), InitializeEncryptionSpecOperationsClient);
+        }
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification.  An error will
+        /// be thrown if the location has resources already created before the
+        /// initialization. Once the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(InitializeEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InitializeEncryptionSpecRequest(ref request, ref callSettings);
+            return new lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>(await _callInitializeEncryptionSpec.Async(request, callSettings).ConfigureAwait(false), InitializeEncryptionSpecOperationsClient);
         }
 
         /// <summary>

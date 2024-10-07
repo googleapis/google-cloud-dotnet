@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 View = ConversationView.Unspecified,
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListConversationsResponse, Conversation> response = contactCenterInsightsClient.ListConversationsAsync(request);

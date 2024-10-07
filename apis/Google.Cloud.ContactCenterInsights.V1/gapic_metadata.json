@@ -112,6 +112,12 @@
                 "ExportInsightsDataAsync"
               ]
             },
+            "ExportIssueModel": {
+              "methods": [
+                "ExportIssueModel",
+                "ExportIssueModelAsync"
+              ]
+            },
             "GetAnalysis": {
               "methods": [
                 "GetAnalysis",
@@ -122,6 +128,12 @@
               "methods": [
                 "GetConversation",
                 "GetConversationAsync"
+              ]
+            },
+            "GetEncryptionSpec": {
+              "methods": [
+                "GetEncryptionSpec",
+                "GetEncryptionSpecAsync"
               ]
             },
             "GetIssue": {
@@ -154,10 +166,22 @@
                 "GetViewAsync"
               ]
             },
+            "ImportIssueModel": {
+              "methods": [
+                "ImportIssueModel",
+                "ImportIssueModelAsync"
+              ]
+            },
             "IngestConversations": {
               "methods": [
                 "IngestConversations",
                 "IngestConversationsAsync"
+              ]
+            },
+            "InitializeEncryptionSpec": {
+              "methods": [
+                "InitializeEncryptionSpec",
+                "InitializeEncryptionSpecAsync"
               ]
             },
             "ListAnalyses": {
