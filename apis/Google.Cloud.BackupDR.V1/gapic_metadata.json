@@ -10,12 +10,6 @@
         "grpc": {
           "libraryClient": "BackupDRClient",
           "rpcs": {
-            "AbandonBackup": {
-              "methods": [
-                "AbandonBackup",
-                "AbandonBackupAsync"
-              ]
-            },
             "CreateBackupPlan": {
               "methods": [
                 "CreateBackupPlan",
@@ -70,22 +64,10 @@
                 "DeleteManagementServerAsync"
               ]
             },
-            "FetchAccessToken": {
-              "methods": [
-                "FetchAccessToken",
-                "FetchAccessTokenAsync"
-              ]
-            },
             "FetchUsableBackupVaults": {
               "methods": [
                 "FetchUsableBackupVaults",
                 "FetchUsableBackupVaultsAsync"
-              ]
-            },
-            "FinalizeBackup": {
-              "methods": [
-                "FinalizeBackup",
-                "FinalizeBackupAsync"
               ]
             },
             "GetBackup": {
@@ -124,12 +106,6 @@
                 "GetManagementServerAsync"
               ]
             },
-            "InitiateBackup": {
-              "methods": [
-                "InitiateBackup",
-                "InitiateBackupAsync"
-              ]
-            },
             "ListBackupPlanAssociations": {
               "methods": [
                 "ListBackupPlanAssociations",
@@ -166,28 +142,10 @@
                 "ListManagementServersAsync"
               ]
             },
-            "RemoveDataSource": {
-              "methods": [
-                "RemoveDataSource",
-                "RemoveDataSourceAsync"
-              ]
-            },
             "RestoreBackup": {
               "methods": [
                 "RestoreBackup",
                 "RestoreBackupAsync"
-              ]
-            },
-            "SetInternalStatus": {
-              "methods": [
-                "SetInternalStatus",
-                "SetInternalStatusAsync"
-              ]
-            },
-            "TestIamPermissions": {
-              "methods": [
-                "TestIamPermissions",
-                "TestIamPermissionsAsync"
               ]
             },
             "TriggerBackup": {
