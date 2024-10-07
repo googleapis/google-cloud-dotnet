@@ -1,5 +1,17 @@
 # Version history
 
+## Version 4.10.0, released 2024-10-07
+
+### New features
+
+- Add scheduleOptionsV2 and Error fields for TransferConfig ([commit 963221d](https://github.com/googleapis/google-cloud-dotnet/commit/963221d3cd8cb6e5252bb59ac3f413a2d703f4bd))
+
+### Documentation improvements
+
+- Add a note to the CreateTransferConfigRequest and UpdateTransferConfigRequest to disable restricting service account usage ([commit e0a36f4](https://github.com/googleapis/google-cloud-dotnet/commit/e0a36f41394c369bd47d7347479bce2ced7d21a0))
+- Deprecate `authorization_code` ([commit e1a80f1](https://github.com/googleapis/google-cloud-dotnet/commit/e1a80f10bd16b85f5805fa95810fb0d68196dc23))
+- Update OAuth links in `CreateTransferConfigRequest` and `UpdateTransferConfigRequest` ([commit 54d1ff9](https://github.com/googleapis/google-cloud-dotnet/commit/54d1ff93df6c51050015bae58e899296ebdb8fcb))
+
 ## Version 4.9.0, released 2024-05-13
 
 ### New features
