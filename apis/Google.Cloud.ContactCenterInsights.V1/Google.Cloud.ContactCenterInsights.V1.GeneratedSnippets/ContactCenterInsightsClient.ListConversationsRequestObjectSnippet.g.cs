@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 View = ConversationView.Unspecified,
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListConversationsResponse, Conversation> response = contactCenterInsightsClient.ListConversations(request);

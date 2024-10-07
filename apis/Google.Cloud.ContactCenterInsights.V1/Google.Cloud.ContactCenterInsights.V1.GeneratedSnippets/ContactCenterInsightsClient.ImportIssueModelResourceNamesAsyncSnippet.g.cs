@@ -16,14 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync]
+    // [START contactcenterinsights_v1_generated_ContactCenterInsights_ImportIssueModel_async_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.ContactCenterInsights.V1;
     using Google.LongRunning;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedContactCenterInsightsClientSnippets
     {
-        /// <summary>Snippet for IngestConversations</summary>
+        /// <summary>Snippet for ImportIssueModelAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,40 +32,31 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void IngestConversationsRequestObject()
+        public async Task ImportIssueModelResourceNamesAsync()
         {
             // Create client
-            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
             // Initialize request argument(s)
-            IngestConversationsRequest request = new IngestConversationsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                GcsSource = new IngestConversationsRequest.Types.GcsSource(),
-                TranscriptObjectConfig = new IngestConversationsRequest.Types.TranscriptObjectConfig(),
-                ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
-                RedactionConfig = new RedactionConfig(),
-                SpeechConfig = new SpeechConfig(),
-                SampleSize = 0,
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = contactCenterInsightsClient.IngestConversations(request);
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> response = await contactCenterInsightsClient.ImportIssueModelAsync(parent);
 
             // Poll until the returned long-running operation is complete
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            IngestConversationsResponse result = completedResponse.Result;
+            ImportIssueModelResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceIngestConversations(operationName);
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceImportIssueModelAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+                ImportIssueModelResponse retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync]
+    // [END contactcenterinsights_v1_generated_ContactCenterInsights_ImportIssueModel_async_flattened_resourceNames]
 }

@@ -272,6 +272,30 @@ namespace Google.Cloud.ContactCenterInsights.V1
         }
     }
 
+    public partial class ExportIssueModelRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::IssueModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::IssueModelName IssueModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::IssueModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportIssueModelRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetIssueRequest
     {
         /// <summary>
@@ -376,6 +400,18 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public gccv::SettingsName SettingsName
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::SettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEncryptionSpecRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::EncryptionSpecName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::EncryptionSpecName EncryptionSpecName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::EncryptionSpecName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

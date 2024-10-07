@@ -365,6 +365,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 View = ConversationView.Unspecified,
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListConversationsResponse, Conversation> response = contactCenterInsightsClient.ListConversations(request);
@@ -415,6 +416,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 View = ConversationView.Unspecified,
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListConversationsResponse, Conversation> response = contactCenterInsightsClient.ListConversationsAsync(request);
@@ -1768,6 +1770,7 @@ namespace GoogleCSharpSnippets
                 ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
                 RedactionConfig = new RedactionConfig(),
                 SpeechConfig = new SpeechConfig(),
+                SampleSize = 0,
             };
             // Make the request
             Operation<IngestConversationsResponse, IngestConversationsMetadata> response = contactCenterInsightsClient.IngestConversations(request);
@@ -1806,6 +1809,7 @@ namespace GoogleCSharpSnippets
                 ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
                 RedactionConfig = new RedactionConfig(),
                 SpeechConfig = new SpeechConfig(),
+                SampleSize = 0,
             };
             // Make the request
             Operation<IngestConversationsResponse, IngestConversationsMetadata> response = await contactCenterInsightsClient.IngestConversationsAsync(request);
@@ -3113,6 +3117,378 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ExportIssueModel</summary>
+        public void ExportIssueModelRequestObject()
+        {
+            // Snippet: ExportIssueModel(ExportIssueModelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ExportIssueModelRequest request = new ExportIssueModelRequest
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+                GcsDestination = new ExportIssueModelRequest.Types.GcsDestination(),
+            };
+            // Make the request
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> response = contactCenterInsightsClient.ExportIssueModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceExportIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportIssueModelAsync</summary>
+        public async Task ExportIssueModelRequestObjectAsync()
+        {
+            // Snippet: ExportIssueModelAsync(ExportIssueModelRequest, CallSettings)
+            // Additional: ExportIssueModelAsync(ExportIssueModelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportIssueModelRequest request = new ExportIssueModelRequest
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+                GcsDestination = new ExportIssueModelRequest.Types.GcsDestination(),
+            };
+            // Make the request
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> response = await contactCenterInsightsClient.ExportIssueModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceExportIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportIssueModel</summary>
+        public void ExportIssueModel()
+        {
+            // Snippet: ExportIssueModel(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]";
+            // Make the request
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> response = contactCenterInsightsClient.ExportIssueModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceExportIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportIssueModelAsync</summary>
+        public async Task ExportIssueModelAsync()
+        {
+            // Snippet: ExportIssueModelAsync(string, CallSettings)
+            // Additional: ExportIssueModelAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]";
+            // Make the request
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> response = await contactCenterInsightsClient.ExportIssueModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceExportIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportIssueModel</summary>
+        public void ExportIssueModelResourceNames()
+        {
+            // Snippet: ExportIssueModel(IssueModelName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            IssueModelName name = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
+            // Make the request
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> response = contactCenterInsightsClient.ExportIssueModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceExportIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportIssueModelAsync</summary>
+        public async Task ExportIssueModelResourceNamesAsync()
+        {
+            // Snippet: ExportIssueModelAsync(IssueModelName, CallSettings)
+            // Additional: ExportIssueModelAsync(IssueModelName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            IssueModelName name = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
+            // Make the request
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> response = await contactCenterInsightsClient.ExportIssueModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportIssueModelResponse, ExportIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceExportIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIssueModel</summary>
+        public void ImportIssueModelRequestObject()
+        {
+            // Snippet: ImportIssueModel(ImportIssueModelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ImportIssueModelRequest request = new ImportIssueModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GcsSource = new ImportIssueModelRequest.Types.GcsSource(),
+                CreateNewModel = false,
+            };
+            // Make the request
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> response = contactCenterInsightsClient.ImportIssueModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceImportIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIssueModelAsync</summary>
+        public async Task ImportIssueModelRequestObjectAsync()
+        {
+            // Snippet: ImportIssueModelAsync(ImportIssueModelRequest, CallSettings)
+            // Additional: ImportIssueModelAsync(ImportIssueModelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportIssueModelRequest request = new ImportIssueModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GcsSource = new ImportIssueModelRequest.Types.GcsSource(),
+                CreateNewModel = false,
+            };
+            // Make the request
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> response = await contactCenterInsightsClient.ImportIssueModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceImportIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIssueModel</summary>
+        public void ImportIssueModel()
+        {
+            // Snippet: ImportIssueModel(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> response = contactCenterInsightsClient.ImportIssueModel(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceImportIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIssueModelAsync</summary>
+        public async Task ImportIssueModelAsync()
+        {
+            // Snippet: ImportIssueModelAsync(string, CallSettings)
+            // Additional: ImportIssueModelAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> response = await contactCenterInsightsClient.ImportIssueModelAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceImportIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIssueModel</summary>
+        public void ImportIssueModelResourceNames()
+        {
+            // Snippet: ImportIssueModel(LocationName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> response = contactCenterInsightsClient.ImportIssueModel(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceImportIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIssueModelAsync</summary>
+        public async Task ImportIssueModelResourceNamesAsync()
+        {
+            // Snippet: ImportIssueModelAsync(LocationName, CallSettings)
+            // Additional: ImportIssueModelAsync(LocationName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> response = await contactCenterInsightsClient.ImportIssueModelAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportIssueModelResponse, ImportIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceImportIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIssue</summary>
         public void GetIssueRequestObject()
         {
@@ -4371,6 +4747,217 @@ namespace GoogleCSharpSnippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             Settings response = await contactCenterInsightsClient.UpdateSettingsAsync(settings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEncryptionSpec</summary>
+        public void GetEncryptionSpecRequestObject()
+        {
+            // Snippet: GetEncryptionSpec(GetEncryptionSpecRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            GetEncryptionSpecRequest request = new GetEncryptionSpecRequest
+            {
+                EncryptionSpecName = EncryptionSpecName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            EncryptionSpec response = contactCenterInsightsClient.GetEncryptionSpec(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEncryptionSpecAsync</summary>
+        public async Task GetEncryptionSpecRequestObjectAsync()
+        {
+            // Snippet: GetEncryptionSpecAsync(GetEncryptionSpecRequest, CallSettings)
+            // Additional: GetEncryptionSpecAsync(GetEncryptionSpecRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEncryptionSpecRequest request = new GetEncryptionSpecRequest
+            {
+                EncryptionSpecName = EncryptionSpecName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            EncryptionSpec response = await contactCenterInsightsClient.GetEncryptionSpecAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEncryptionSpec</summary>
+        public void GetEncryptionSpec()
+        {
+            // Snippet: GetEncryptionSpec(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/encryptionSpec";
+            // Make the request
+            EncryptionSpec response = contactCenterInsightsClient.GetEncryptionSpec(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEncryptionSpecAsync</summary>
+        public async Task GetEncryptionSpecAsync()
+        {
+            // Snippet: GetEncryptionSpecAsync(string, CallSettings)
+            // Additional: GetEncryptionSpecAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/encryptionSpec";
+            // Make the request
+            EncryptionSpec response = await contactCenterInsightsClient.GetEncryptionSpecAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEncryptionSpec</summary>
+        public void GetEncryptionSpecResourceNames()
+        {
+            // Snippet: GetEncryptionSpec(EncryptionSpecName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            EncryptionSpecName name = EncryptionSpecName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            EncryptionSpec response = contactCenterInsightsClient.GetEncryptionSpec(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEncryptionSpecAsync</summary>
+        public async Task GetEncryptionSpecResourceNamesAsync()
+        {
+            // Snippet: GetEncryptionSpecAsync(EncryptionSpecName, CallSettings)
+            // Additional: GetEncryptionSpecAsync(EncryptionSpecName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            EncryptionSpecName name = EncryptionSpecName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            EncryptionSpec response = await contactCenterInsightsClient.GetEncryptionSpecAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitializeEncryptionSpec</summary>
+        public void InitializeEncryptionSpecRequestObject()
+        {
+            // Snippet: InitializeEncryptionSpec(InitializeEncryptionSpecRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            InitializeEncryptionSpecRequest request = new InitializeEncryptionSpecRequest
+            {
+                EncryptionSpec = new EncryptionSpec(),
+            };
+            // Make the request
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> response = contactCenterInsightsClient.InitializeEncryptionSpec(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InitializeEncryptionSpecResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceInitializeEncryptionSpec(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InitializeEncryptionSpecResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitializeEncryptionSpecAsync</summary>
+        public async Task InitializeEncryptionSpecRequestObjectAsync()
+        {
+            // Snippet: InitializeEncryptionSpecAsync(InitializeEncryptionSpecRequest, CallSettings)
+            // Additional: InitializeEncryptionSpecAsync(InitializeEncryptionSpecRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            InitializeEncryptionSpecRequest request = new InitializeEncryptionSpecRequest
+            {
+                EncryptionSpec = new EncryptionSpec(),
+            };
+            // Make the request
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> response = await contactCenterInsightsClient.InitializeEncryptionSpecAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InitializeEncryptionSpecResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceInitializeEncryptionSpecAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InitializeEncryptionSpecResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitializeEncryptionSpec</summary>
+        public void InitializeEncryptionSpec()
+        {
+            // Snippet: InitializeEncryptionSpec(EncryptionSpec, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            EncryptionSpec encryptionSpec = new EncryptionSpec();
+            // Make the request
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> response = contactCenterInsightsClient.InitializeEncryptionSpec(encryptionSpec);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InitializeEncryptionSpecResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceInitializeEncryptionSpec(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InitializeEncryptionSpecResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitializeEncryptionSpecAsync</summary>
+        public async Task InitializeEncryptionSpecAsync()
+        {
+            // Snippet: InitializeEncryptionSpecAsync(EncryptionSpec, CallSettings)
+            // Additional: InitializeEncryptionSpecAsync(EncryptionSpec, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            EncryptionSpec encryptionSpec = new EncryptionSpec();
+            // Make the request
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> response = await contactCenterInsightsClient.InitializeEncryptionSpecAsync(encryptionSpec);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InitializeEncryptionSpecResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceInitializeEncryptionSpecAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InitializeEncryptionSpecResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

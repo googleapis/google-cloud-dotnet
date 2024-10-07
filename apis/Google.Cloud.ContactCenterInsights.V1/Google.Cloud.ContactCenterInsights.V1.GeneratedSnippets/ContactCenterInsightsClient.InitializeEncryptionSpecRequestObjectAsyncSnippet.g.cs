@@ -16,14 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START contactcenterinsights_v1_generated_ContactCenterInsights_InitializeEncryptionSpec_async]
     using Google.Cloud.ContactCenterInsights.V1;
     using Google.LongRunning;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedContactCenterInsightsClientSnippets
     {
-        /// <summary>Snippet for IngestConversations</summary>
+        /// <summary>Snippet for InitializeEncryptionSpecAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,40 +31,34 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void IngestConversationsRequestObject()
+        public async Task InitializeEncryptionSpecRequestObjectAsync()
         {
             // Create client
-            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
             // Initialize request argument(s)
-            IngestConversationsRequest request = new IngestConversationsRequest
+            InitializeEncryptionSpecRequest request = new InitializeEncryptionSpecRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                GcsSource = new IngestConversationsRequest.Types.GcsSource(),
-                TranscriptObjectConfig = new IngestConversationsRequest.Types.TranscriptObjectConfig(),
-                ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
-                RedactionConfig = new RedactionConfig(),
-                SpeechConfig = new SpeechConfig(),
-                SampleSize = 0,
+                EncryptionSpec = new EncryptionSpec(),
             };
             // Make the request
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> response = contactCenterInsightsClient.IngestConversations(request);
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> response = await contactCenterInsightsClient.InitializeEncryptionSpecAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            IngestConversationsResponse result = completedResponse.Result;
+            InitializeEncryptionSpecResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<IngestConversationsResponse, IngestConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceIngestConversations(operationName);
+            Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceInitializeEncryptionSpecAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                IngestConversationsResponse retrievedResult = retrievedResponse.Result;
+                InitializeEncryptionSpecResponse retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync]
+    // [END contactcenterinsights_v1_generated_ContactCenterInsights_InitializeEncryptionSpec_async]
 }
