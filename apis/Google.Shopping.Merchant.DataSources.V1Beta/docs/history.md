@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2024-10-07
+
+### New features
+
+- Adding some more information about supplemental data sources ([commit 7b274f8](https://github.com/googleapis/google-cloud-dotnet/commit/7b274f8f08a550655fdcf93dcc9bb157c35bf89d))
+
 ## Version 1.0.0-beta02, released 2024-09-26
 
 ### New features
