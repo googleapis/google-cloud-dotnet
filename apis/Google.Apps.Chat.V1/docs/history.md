@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2024-10-07
+
+### New features
+
+- Add doc for permission settings & announcement space support ([commit b8b7166](https://github.com/googleapis/google-cloud-dotnet/commit/b8b71669b657a6e3ac77fa31d0daa1568bd85d9c))
+- Add doc for import mode external users support ([commit b8b7166](https://github.com/googleapis/google-cloud-dotnet/commit/b8b71669b657a6e3ac77fa31d0daa1568bd85d9c))
+
+### Documentation improvements
+
+- Messages API dev docs improvement ([commit b8b7166](https://github.com/googleapis/google-cloud-dotnet/commit/b8b71669b657a6e3ac77fa31d0daa1568bd85d9c))
+- Memberships API dev docs improvement ([commit b8b7166](https://github.com/googleapis/google-cloud-dotnet/commit/b8b71669b657a6e3ac77fa31d0daa1568bd85d9c))
+- Discoverable space docs improvement ([commit b8b7166](https://github.com/googleapis/google-cloud-dotnet/commit/b8b71669b657a6e3ac77fa31d0daa1568bd85d9c))
+
 ## Version 1.0.0-beta07, released 2024-09-16
 
 ### New features
