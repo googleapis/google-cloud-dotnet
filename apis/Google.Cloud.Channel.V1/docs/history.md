@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.14.0, released 2024-10-07
+
+### New features
+
+- Add support for primary_admin_email as customer_identity for ImportCustomer ([commit 86e0b08](https://github.com/googleapis/google-cloud-dotnet/commit/86e0b08262bd101b4c79a287da12ecae5b063b69))
+- Add support for importing team customer from a different reseller ([commit 86e0b08](https://github.com/googleapis/google-cloud-dotnet/commit/86e0b08262bd101b4c79a287da12ecae5b063b69))
+- Add support to look up team customer Cloud Identity information ([commit 86e0b08](https://github.com/googleapis/google-cloud-dotnet/commit/86e0b08262bd101b4c79a287da12ecae5b063b69))
+
+### Documentation improvements
+
+- Clarify the expected value of the domain field for team type customers ([commit 86e0b08](https://github.com/googleapis/google-cloud-dotnet/commit/86e0b08262bd101b4c79a287da12ecae5b063b69))
+
 ## Version 2.13.0, released 2024-06-04
 
 ### New features
