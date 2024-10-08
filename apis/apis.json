@@ -1488,7 +1488,7 @@
     },
     {
       "id": "Google.Cloud.Commerce.Consumer.Procurement.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Cloud Commerce Consumer Procurement",
       "productUrl": "https://cloud.google.com/marketplace/docs/",
@@ -1497,7 +1497,7 @@
         "marketplace"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/commerce/consumer/procurement/v1",

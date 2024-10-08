@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.4.0, released 2024-10-07
+
+### New features
+
+- Add Order modification RPCs and License Management Service ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+
+### Documentation improvements
+
+- A comment for enum value `LINE_ITEM_CHANGE_STATE_PENDING_APPROVAL` in enum `LineItemChangeState` is changed ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+- A comment for enum value `LINE_ITEM_CHANGE_STATE_APPROVED` in enum `LineItemChangeState` is changed ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+- A comment for enum value `LINE_ITEM_CHANGE_STATE_COMPLETED` in enum `LineItemChangeState` is changed ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+- A comment for enum value `LINE_ITEM_CHANGE_STATE_REJECTED` in enum `LineItemChangeState` is changed ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+- A comment for enum value `LINE_ITEM_CHANGE_STATE_ABANDONED` in enum `LineItemChangeState` is changed ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+- A comment for enum value `LINE_ITEM_CHANGE_STATE_ACTIVATING` in enum `LineItemChangeState` is changed ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+- A comment for field `request_id` in message `.google.cloud.commerce.consumer.procurement.v1.PlaceOrderRequest` is changed ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+- A comment for field `filter` in message `.google.cloud.commerce.consumer.procurement.v1.ListOrdersRequest` is changed ([commit 79a1fc7](https://github.com/googleapis/google-cloud-dotnet/commit/79a1fc7e664c313586fe3d57d6f965861f40f0da))
+
 ## Version 1.3.0, released 2024-05-13
 
 ### New features
