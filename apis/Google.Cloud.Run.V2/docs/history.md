@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.10.0, released 2024-10-07
+
+### New features
+
+- Add Builds API ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+- Add Service Mesh configuration to Services ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+- Add GPU configuration to Services ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+- Add INGRESS_TRAFFIC_NONE to Services ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+- Add ServiceScaling to Services ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+
+### Documentation improvements
+
+- Fixed formatting of some documentation ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+
 ## Version 2.9.0, released 2024-07-22
 
 ### New features
