@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2024-10-07
+
+### New features
+
+- Add enable_secure_private_service_connect in service attachment ([commit d90dd21](https://github.com/googleapis/google-cloud-dotnet/commit/d90dd21d5ba02c10e77c7dbb16f7338f8a66d04d))
+- Add new `PscInterfaceConfig` field to `pipeline_job.proto` ([commit 92d7924](https://github.com/googleapis/google-cloud-dotnet/commit/92d79245bb9139aca60efa72bc2642131d32e982))
+
 ## Version 1.0.0-beta05, released 2024-09-30
 
 ### Bug fixes
