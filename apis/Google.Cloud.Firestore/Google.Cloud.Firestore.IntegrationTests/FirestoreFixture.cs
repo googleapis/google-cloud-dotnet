@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.Admin.V1;
@@ -187,7 +188,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 new ProjectName(ProjectId),
                 new Database { LocationId = DatabaseLocation, Type = DatabaseType.FirestoreNative },
                 databaseId);
-            await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
+            await operation.PollUntilCompletedAsync(AdminOperationPollSettings, CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromMinutes(5))));
         }
 
         // No clean-up here: CleanTestData deletes test collections, indexes and databases.
