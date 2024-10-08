@@ -39,6 +39,7 @@ public sealed class PushReleaseBranchesCommand : CommandBase
         {
             Console.WriteLine($"Releasing {branch.FriendlyName}");
             Commands.Checkout(repo, branch);
+            Console.WriteLine($"First sha: {repo.Head.Commits.First().Sha}");
             new PushCommand().InternalExecute();
         }
 
