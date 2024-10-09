@@ -148,7 +148,6 @@ namespace Google.Cloud.Iam.V1
     /// <remarks>
     /// API Overview
     /// 
-    /// 
     /// Manages Identity and Access Management (IAM) policies.
     /// 
     /// Any implementation of an API that offers access control features
@@ -363,7 +362,6 @@ namespace Google.Cloud.Iam.V1
     /// <summary>IAMPolicy client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// API Overview
-    /// 
     /// 
     /// Manages Identity and Access Management (IAM) policies.
     /// 
