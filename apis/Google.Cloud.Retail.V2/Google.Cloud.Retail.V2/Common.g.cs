@@ -3708,7 +3708,7 @@ namespace Google.Cloud.Retail.V2 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment> facetPositionAdjustments_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment>();
         /// <summary>
         /// Each instance corresponds to a force return attribute for the given
-        /// condition. There can't be more 3 instances here.
+        /// condition. There can't be more 15 instances here.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

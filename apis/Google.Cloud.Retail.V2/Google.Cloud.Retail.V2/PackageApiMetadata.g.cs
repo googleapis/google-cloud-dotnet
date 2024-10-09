@@ -55,6 +55,8 @@ namespace Google.Cloud.Retail.V2
             yield return ControlReflection.Descriptor;
             yield return ControlServiceReflection.Descriptor;
             yield return ExportConfigReflection.Descriptor;
+            yield return GenerativeQuestionReflection.Descriptor;
+            yield return GenerativeQuestionServiceReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
             yield return ModelReflection.Descriptor;
             yield return ModelServiceReflection.Descriptor;
