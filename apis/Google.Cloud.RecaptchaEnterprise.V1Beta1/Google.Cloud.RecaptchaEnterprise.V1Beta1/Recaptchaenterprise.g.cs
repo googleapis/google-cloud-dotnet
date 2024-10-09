@@ -256,7 +256,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project in which the assessment will be created,
+    /// Required. The name of the project in which the assessment is created,
     /// in the format `projects/{project_number}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -979,8 +979,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int AnnotationFieldNumber = 2;
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation annotation_ = global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation.Unspecified;
     /// <summary>
-    /// Optional. The annotation that will be assigned to the Event. This field can
-    /// be left empty to provide reasons that apply to an event without concluding
+    /// Optional. The annotation that is assigned to the Event. This field can be
+    /// left empty to provide reasons that apply to an event without concluding
     /// whether the event is legitimate or fraudulent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2453,8 +2453,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int TokenFieldNumber = 1;
     private string token_ = "";
     /// <summary>
-    /// Optional. The user response token provided by the reCAPTCHA Enterprise
-    /// client-side integration on your site.
+    /// Optional. The user response token provided by the reCAPTCHA client-side
+    /// integration on your site.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2469,8 +2469,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int SiteKeyFieldNumber = 2;
     private string siteKey_ = "";
     /// <summary>
-    /// Optional. The site key that was used to invoke reCAPTCHA Enterprise on your
-    /// site and generate the token.
+    /// Optional. The site key that was used to invoke reCAPTCHA on your site and
+    /// generate the token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2519,7 +2519,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     /// <summary>
     /// Optional. The expected action for this type of event. This should be the
     /// same action provided at token generation time on client-side platforms
-    /// already integrated with recaptcha enterprise.
+    /// already integrated with reCAPTCHA.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2551,7 +2551,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TransactionData transactionData_;
     /// <summary>
     /// Optional. Data describing a payment transaction to be assessed. Sending
-    /// this data enables reCAPTCHA Enterprise Fraud Prevention and the
+    /// this data enables reCAPTCHA Fraud Prevention and the
     /// FraudPreventionAssessment component in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2921,7 +2921,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
   }
 
   /// <summary>
-  /// Transaction data associated with a payment protected by reCAPTCHA Enterprise.
+  /// Transaction data associated with a payment protected by reCAPTCHA.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransactionData : pb::IMessage<TransactionData>
@@ -4830,7 +4830,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         private string avsResponseCode_ = "";
         /// <summary>
         /// AVS response code from the gateway
-        /// (available only when reCAPTCHA Enterprise is called after authorization).
+        /// (available only when reCAPTCHA is called after authorization).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4846,7 +4846,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         private string cvvResponseCode_ = "";
         /// <summary>
         /// CVV response code from the gateway
-        /// (available only when reCAPTCHA Enterprise is called after authorization).
+        /// (available only when reCAPTCHA is called after authorization).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
