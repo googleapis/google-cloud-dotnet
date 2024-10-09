@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 ReturnCommitStats = false,
                 RequestOptions = new RequestOptions(),
                 MaxCommitDelay = new Duration(),
+                PrecommitToken = new MultiplexedSessionPrecommitToken(),
             };
             // Make the request
             CommitResponse response = await spannerClient.CommitAsync(request);

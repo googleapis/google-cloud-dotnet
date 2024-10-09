@@ -25,36 +25,40 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvc3Bhbm5lci92MS9yZXN1bHRfc2V0LnByb3RvEhFnb29nbGUu",
-            "c3Bhbm5lci52MRocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxoiZ29v",
-            "Z2xlL3NwYW5uZXIvdjEvcXVlcnlfcGxhbi5wcm90bxojZ29vZ2xlL3NwYW5u",
-            "ZXIvdjEvdHJhbnNhY3Rpb24ucHJvdG8aHGdvb2dsZS9zcGFubmVyL3YxL3R5",
-            "cGUucHJvdG8inwEKCVJlc3VsdFNldBI2CghtZXRhZGF0YRgBIAEoCzIkLmdv",
-            "b2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldE1ldGFkYXRhEigKBHJvd3MYAiAD",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuTGlzdFZhbHVlEjAKBXN0YXRzGAMgASgL",
-            "MiEuZ29vZ2xlLnNwYW5uZXIudjEuUmVzdWx0U2V0U3RhdHMi0QEKEFBhcnRp",
-            "YWxSZXN1bHRTZXQSNgoIbWV0YWRhdGEYASABKAsyJC5nb29nbGUuc3Bhbm5l",
-            "ci52MS5SZXN1bHRTZXRNZXRhZGF0YRImCgZ2YWx1ZXMYAiADKAsyFi5nb29n",
-            "bGUucHJvdG9idWYuVmFsdWUSFQoNY2h1bmtlZF92YWx1ZRgDIAEoCBIUCgxy",
-            "ZXN1bWVfdG9rZW4YBCABKAwSMAoFc3RhdHMYBSABKAsyIS5nb29nbGUuc3Bh",
-            "bm5lci52MS5SZXN1bHRTZXRTdGF0cyK3AQoRUmVzdWx0U2V0TWV0YWRhdGES",
-            "LwoIcm93X3R5cGUYASABKAsyHS5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RU",
-            "eXBlEjMKC3RyYW5zYWN0aW9uGAIgASgLMh4uZ29vZ2xlLnNwYW5uZXIudjEu",
-            "VHJhbnNhY3Rpb24SPAoVdW5kZWNsYXJlZF9wYXJhbWV0ZXJzGAMgASgLMh0u",
-            "Z29vZ2xlLnNwYW5uZXIudjEuU3RydWN0VHlwZSK5AQoOUmVzdWx0U2V0U3Rh",
-            "dHMSMAoKcXVlcnlfcGxhbhgBIAEoCzIcLmdvb2dsZS5zcGFubmVyLnYxLlF1",
-            "ZXJ5UGxhbhIsCgtxdWVyeV9zdGF0cxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1",
-            "Zi5TdHJ1Y3QSGQoPcm93X2NvdW50X2V4YWN0GAMgASgDSAASHwoVcm93X2Nv",
-            "dW50X2xvd2VyX2JvdW5kGAQgASgDSABCCwoJcm93X2NvdW50QrQBChVjb20u",
-            "Z29vZ2xlLnNwYW5uZXIudjFCDlJlc3VsdFNldFByb3RvUAFaNWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vc3Bhbm5lci9hcGl2MS9zcGFubmVycGI7c3Bhbm5lcnBi",
-            "+AEBqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRc",
-            "U3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYxYgZwcm90",
-            "bzM="));
+            "c3Bhbm5lci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoc",
+            "Z29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxoiZ29vZ2xlL3NwYW5uZXIv",
+            "djEvcXVlcnlfcGxhbi5wcm90bxojZ29vZ2xlL3NwYW5uZXIvdjEvdHJhbnNh",
+            "Y3Rpb24ucHJvdG8aHGdvb2dsZS9zcGFubmVyL3YxL3R5cGUucHJvdG8i8gEK",
+            "CVJlc3VsdFNldBI2CghtZXRhZGF0YRgBIAEoCzIkLmdvb2dsZS5zcGFubmVy",
+            "LnYxLlJlc3VsdFNldE1ldGFkYXRhEigKBHJvd3MYAiADKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuTGlzdFZhbHVlEjAKBXN0YXRzGAMgASgLMiEuZ29vZ2xlLnNw",
+            "YW5uZXIudjEuUmVzdWx0U2V0U3RhdHMSUQoPcHJlY29tbWl0X3Rva2VuGAUg",
+            "ASgLMjMuZ29vZ2xlLnNwYW5uZXIudjEuTXVsdGlwbGV4ZWRTZXNzaW9uUHJl",
+            "Y29tbWl0VG9rZW5CA+BBASKkAgoQUGFydGlhbFJlc3VsdFNldBI2CghtZXRh",
+            "ZGF0YRgBIAEoCzIkLmdvb2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldE1ldGFk",
+            "YXRhEiYKBnZhbHVlcxgCIAMoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRIV",
+            "Cg1jaHVua2VkX3ZhbHVlGAMgASgIEhQKDHJlc3VtZV90b2tlbhgEIAEoDBIw",
+            "CgVzdGF0cxgFIAEoCzIhLmdvb2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldFN0",
+            "YXRzElEKD3ByZWNvbW1pdF90b2tlbhgIIAEoCzIzLmdvb2dsZS5zcGFubmVy",
+            "LnYxLk11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRva2VuQgPgQQEitwEK",
+            "EVJlc3VsdFNldE1ldGFkYXRhEi8KCHJvd190eXBlGAEgASgLMh0uZ29vZ2xl",
+            "LnNwYW5uZXIudjEuU3RydWN0VHlwZRIzCgt0cmFuc2FjdGlvbhgCIAEoCzIe",
+            "Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uEjwKFXVuZGVjbGFyZWRf",
+            "cGFyYW1ldGVycxgDIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5",
+            "cGUiuQEKDlJlc3VsdFNldFN0YXRzEjAKCnF1ZXJ5X3BsYW4YASABKAsyHC5n",
+            "b29nbGUuc3Bhbm5lci52MS5RdWVyeVBsYW4SLAoLcXVlcnlfc3RhdHMYAiAB",
+            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EhkKD3Jvd19jb3VudF9leGFj",
+            "dBgDIAEoA0gAEh8KFXJvd19jb3VudF9sb3dlcl9ib3VuZBgEIAEoA0gAQgsK",
+            "CXJvd19jb3VudEK0AQoVY29tLmdvb2dsZS5zcGFubmVyLnYxQg5SZXN1bHRT",
+            "ZXRQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3NwYW5uZXIvYXBpdjEv",
+            "c3Bhbm5lcnBiO3NwYW5uZXJwYvgBAaoCF0dvb2dsZS5DbG91ZC5TcGFubmVy",
+            "LlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6OkNsb3Vk",
+            "OjpTcGFubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats", "PrecommitToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats", "PrecommitToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetMetadata), global::Google.Cloud.Spanner.V1.ResultSetMetadata.Parser, new[]{ "RowType", "Transaction", "UndeclaredParameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetStats), global::Google.Cloud.Spanner.V1.ResultSetStats.Parser, new[]{ "QueryPlan", "QueryStats", "RowCountExact", "RowCountLowerBound" }, new[]{ "RowCount" }, null, null, null)
           }));
@@ -105,6 +109,7 @@ namespace Google.Cloud.Spanner.V1 {
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       rows_ = other.rows_.Clone();
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
+      precommitToken_ = other.precommitToken_ != null ? other.precommitToken_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -170,6 +175,27 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "precommit_token" field.</summary>
+    public const int PrecommitTokenFieldNumber = 5;
+    private global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken precommitToken_;
+    /// <summary>
+    /// Optional. A precommit token will be included if the read-write transaction
+    /// is on a multiplexed session.
+    /// The precommit token with the highest sequence number from this transaction
+    /// attempt should be passed to the
+    /// [Commit][google.spanner.v1.Spanner.Commit] request for this transaction.
+    /// This feature is not yet supported and will result in an UNIMPLEMENTED
+    /// error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken PrecommitToken {
+      get { return precommitToken_; }
+      set {
+        precommitToken_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -188,6 +214,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(Metadata, other.Metadata)) return false;
       if(!rows_.Equals(other.rows_)) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
+      if (!object.Equals(PrecommitToken, other.PrecommitToken)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -198,6 +225,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
       hash ^= rows_.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
+      if (precommitToken_ != null) hash ^= PrecommitToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -225,6 +253,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Stats);
       }
+      if (precommitToken_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PrecommitToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -244,6 +276,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Stats);
       }
+      if (precommitToken_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PrecommitToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -260,6 +296,9 @@ namespace Google.Cloud.Spanner.V1 {
       size += rows_.CalculateSize(_repeated_rows_codec);
       if (stats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (precommitToken_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrecommitToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -285,6 +324,12 @@ namespace Google.Cloud.Spanner.V1 {
           Stats = new global::Google.Cloud.Spanner.V1.ResultSetStats();
         }
         Stats.MergeFrom(other.Stats);
+      }
+      if (other.precommitToken_ != null) {
+        if (precommitToken_ == null) {
+          PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
+        }
+        PrecommitToken.MergeFrom(other.PrecommitToken);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -319,6 +364,13 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(Stats);
             break;
           }
+          case 42: {
+            if (precommitToken_ == null) {
+              PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
+            }
+            input.ReadMessage(PrecommitToken);
+            break;
+          }
         }
       }
     #endif
@@ -350,6 +402,13 @@ namespace Google.Cloud.Spanner.V1 {
               Stats = new global::Google.Cloud.Spanner.V1.ResultSetStats();
             }
             input.ReadMessage(Stats);
+            break;
+          }
+          case 42: {
+            if (precommitToken_ == null) {
+              PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
+            }
+            input.ReadMessage(PrecommitToken);
             break;
           }
         }
@@ -404,6 +463,7 @@ namespace Google.Cloud.Spanner.V1 {
       chunkedValue_ = other.chunkedValue_;
       resumeToken_ = other.resumeToken_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
+      precommitToken_ = other.precommitToken_ != null ? other.precommitToken_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -571,6 +631,27 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "precommit_token" field.</summary>
+    public const int PrecommitTokenFieldNumber = 8;
+    private global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken precommitToken_;
+    /// <summary>
+    /// Optional. A precommit token will be included if the read-write transaction
+    /// is on a multiplexed session.
+    /// The precommit token with the highest sequence number from this transaction
+    /// attempt should be passed to the
+    /// [Commit][google.spanner.v1.Spanner.Commit] request for this transaction.
+    /// This feature is not yet supported and will result in an UNIMPLEMENTED
+    /// error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken PrecommitToken {
+      get { return precommitToken_; }
+      set {
+        precommitToken_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -591,6 +672,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (ChunkedValue != other.ChunkedValue) return false;
       if (ResumeToken != other.ResumeToken) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
+      if (!object.Equals(PrecommitToken, other.PrecommitToken)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -603,6 +685,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (ChunkedValue != false) hash ^= ChunkedValue.GetHashCode();
       if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
+      if (precommitToken_ != null) hash ^= PrecommitToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -638,6 +721,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Stats);
       }
+      if (precommitToken_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PrecommitToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -665,6 +752,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Stats);
       }
+      if (precommitToken_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PrecommitToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -687,6 +778,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (stats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (precommitToken_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrecommitToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -718,6 +812,12 @@ namespace Google.Cloud.Spanner.V1 {
           Stats = new global::Google.Cloud.Spanner.V1.ResultSetStats();
         }
         Stats.MergeFrom(other.Stats);
+      }
+      if (other.precommitToken_ != null) {
+        if (precommitToken_ == null) {
+          PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
+        }
+        PrecommitToken.MergeFrom(other.PrecommitToken);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -760,6 +860,13 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(Stats);
             break;
           }
+          case 66: {
+            if (precommitToken_ == null) {
+              PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
+            }
+            input.ReadMessage(PrecommitToken);
+            break;
+          }
         }
       }
     #endif
@@ -799,6 +906,13 @@ namespace Google.Cloud.Spanner.V1 {
               Stats = new global::Google.Cloud.Spanner.V1.ResultSetStats();
             }
             input.ReadMessage(Stats);
+            break;
+          }
+          case 66: {
+            if (precommitToken_ == null) {
+              PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
+            }
+            input.ReadMessage(PrecommitToken);
             break;
           }
         }
