@@ -938,6 +938,7 @@ namespace GoogleCSharpSnippets
                 SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new gcsv::TransactionOptions(),
                 RequestOptions = new gcsv::RequestOptions(),
+                MutationKey = new gcsv::Mutation(),
             };
             // Make the request
             gcsv::Transaction response = spannerClient.BeginTransaction(request);
@@ -957,6 +958,7 @@ namespace GoogleCSharpSnippets
                 SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new gcsv::TransactionOptions(),
                 RequestOptions = new gcsv::RequestOptions(),
+                MutationKey = new gcsv::Mutation(),
             };
             // Make the request
             gcsv::Transaction response = await spannerClient.BeginTransactionAsync(request);
@@ -1039,6 +1041,7 @@ namespace GoogleCSharpSnippets
                 ReturnCommitStats = false,
                 RequestOptions = new gcsv::RequestOptions(),
                 MaxCommitDelay = new Duration(),
+                PrecommitToken = new gcsv::MultiplexedSessionPrecommitToken(),
             };
             // Make the request
             gcsv::CommitResponse response = spannerClient.Commit(request);
@@ -1064,6 +1067,7 @@ namespace GoogleCSharpSnippets
                 ReturnCommitStats = false,
                 RequestOptions = new gcsv::RequestOptions(),
                 MaxCommitDelay = new Duration(),
+                PrecommitToken = new gcsv::MultiplexedSessionPrecommitToken(),
             };
             // Make the request
             gcsv::CommitResponse response = await spannerClient.CommitAsync(request);

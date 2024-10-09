@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
                 RequestOptions = new RequestOptions(),
+                MutationKey = new Mutation(),
             };
             // Make the request
             Transaction response = await spannerClient.BeginTransactionAsync(request);
