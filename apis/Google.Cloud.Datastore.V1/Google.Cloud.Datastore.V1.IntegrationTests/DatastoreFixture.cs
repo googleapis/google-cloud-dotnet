@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Datastore.Admin.V1;
@@ -185,7 +186,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 new ProjectName(ProjectId),
                 new Database { LocationId = "northamerica-northeast1", Type = DatabaseType.DatastoreMode },
                 databaseId);
-            await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
+            await operation.PollUntilCompletedAsync(AdminOperationPollSettings, CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromMinutes(5))));
             Console.WriteLine($"Success creating database {databaseId}");
         }
 
