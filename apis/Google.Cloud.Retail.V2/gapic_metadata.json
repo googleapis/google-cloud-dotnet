@@ -155,6 +155,45 @@
         }
       }
     },
+    "GenerativeQuestionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GenerativeQuestionServiceClient",
+          "rpcs": {
+            "BatchUpdateGenerativeQuestionConfigs": {
+              "methods": [
+                "BatchUpdateGenerativeQuestionConfigs",
+                "BatchUpdateGenerativeQuestionConfigsAsync"
+              ]
+            },
+            "GetGenerativeQuestionsFeatureConfig": {
+              "methods": [
+                "GetGenerativeQuestionsFeatureConfig",
+                "GetGenerativeQuestionsFeatureConfigAsync"
+              ]
+            },
+            "ListGenerativeQuestionConfigs": {
+              "methods": [
+                "ListGenerativeQuestionConfigs",
+                "ListGenerativeQuestionConfigsAsync"
+              ]
+            },
+            "UpdateGenerativeQuestionConfig": {
+              "methods": [
+                "UpdateGenerativeQuestionConfig",
+                "UpdateGenerativeQuestionConfigAsync"
+              ]
+            },
+            "UpdateGenerativeQuestionsFeatureConfig": {
+              "methods": [
+                "UpdateGenerativeQuestionsFeatureConfig",
+                "UpdateGenerativeQuestionsFeatureConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ModelService": {
       "clients": {
         "grpc": {

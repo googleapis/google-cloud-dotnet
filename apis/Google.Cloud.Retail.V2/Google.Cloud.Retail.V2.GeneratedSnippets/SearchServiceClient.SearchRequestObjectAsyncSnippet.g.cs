@@ -62,6 +62,8 @@ namespace GoogleCSharpSnippets
                 Labels = { { "", "" }, },
                 SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
                 Entity = "",
+                ConversationalSearchSpec = new SearchRequest.Types.ConversationalSearchSpec(),
+                TileNavigationSpec = new SearchRequest.Types.TileNavigationSpec(),
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
