@@ -441,6 +441,7 @@ namespace GoogleCSharpSnippets
                 ResourceManagerTags = new ResourceManagerTags(),
                 ContainerdConfig = new ContainerdConfig(),
                 QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
+                StoragePools = { "", },
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -487,6 +488,7 @@ namespace GoogleCSharpSnippets
                 ResourceManagerTags = new ResourceManagerTags(),
                 ContainerdConfig = new ContainerdConfig(),
                 QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
+                StoragePools = { "", },
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
