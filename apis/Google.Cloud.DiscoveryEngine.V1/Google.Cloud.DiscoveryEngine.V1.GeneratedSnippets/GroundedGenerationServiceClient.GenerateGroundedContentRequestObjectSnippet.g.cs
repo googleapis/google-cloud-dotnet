@@ -17,7 +17,6 @@
 namespace GoogleCSharpSnippets
 {
     // [START discoveryengine_v1_generated_GroundedGenerationService_GenerateGroundedContent_sync]
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.DiscoveryEngine.V1;
 
     public sealed partial class GeneratedGroundedGenerationServiceClientSnippets
