@@ -15,18 +15,17 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gagr = Google.Api.Gax.ResourceNames;
 
 namespace Google.Cloud.DiscoveryEngine.V1
 {
     public partial class GenerateGroundedContentRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// <see cref="LocationName"/>-typed view over the <see cref="Location"/> resource name property.
         /// </summary>
-        public gagr::LocationName LocationAsLocationName
+        public LocationName LocationAsLocationName
         {
-            get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Location) ? null : LocationName.Parse(Location, allowUnparsed: true);
             set => Location = value?.ToString() ?? "";
         }
 

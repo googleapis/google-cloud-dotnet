@@ -17,7 +17,6 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.DiscoveryEngine.V1;
     using System.Threading.Tasks;
 

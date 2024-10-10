@@ -10351,12 +10351,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 86,
+          "end": 85,
           "type": "FULL"
         },
         {
-          "start": 37,
-          "end": 84,
+          "start": 36,
+          "end": 83,
           "type": "SHORT"
         }
       ]
@@ -10399,12 +10399,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 53,
+          "end": 52,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 51,
+          "start": 34,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -10448,12 +10448,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 54,
+          "end": 53,
           "type": "FULL"
         },
         {
-          "start": 36,
-          "end": 52,
+          "start": 35,
+          "end": 51,
           "type": "SHORT"
         }
       ]
