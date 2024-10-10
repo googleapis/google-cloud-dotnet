@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
                 Input = new SynthesisInput(),
                 Voice = new VoiceSelectionParams(),
                 AudioConfig = new AudioConfig(),
+                AdvancedVoiceOptions = new AdvancedVoiceOptions(),
             };
             // Make the request
             SynthesizeSpeechResponse response = textToSpeechClient.SynthesizeSpeech(request);
