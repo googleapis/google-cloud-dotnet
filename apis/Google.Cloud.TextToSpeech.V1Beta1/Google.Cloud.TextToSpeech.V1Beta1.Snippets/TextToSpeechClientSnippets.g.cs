@@ -93,6 +93,7 @@ namespace GoogleCSharpSnippets
                 {
                     SynthesizeSpeechRequest.Types.TimepointType.Unspecified,
                 },
+                AdvancedVoiceOptions = new AdvancedVoiceOptions(),
             };
             // Make the request
             SynthesizeSpeechResponse response = textToSpeechClient.SynthesizeSpeech(request);
@@ -116,6 +117,7 @@ namespace GoogleCSharpSnippets
                 {
                     SynthesizeSpeechRequest.Types.TimepointType.Unspecified,
                 },
+                AdvancedVoiceOptions = new AdvancedVoiceOptions(),
             };
             // Make the request
             SynthesizeSpeechResponse response = await textToSpeechClient.SynthesizeSpeechAsync(request);
