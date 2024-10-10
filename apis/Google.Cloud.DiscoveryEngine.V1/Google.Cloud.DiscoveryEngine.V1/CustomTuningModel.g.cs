@@ -28,7 +28,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bmdfbW9kZWwucHJvdG8SH2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
             "djEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8itgcKEUN1c3RvbVR1bmluZ01vZGVsEkYKBG5hbWUYASABKAlCOOBB",
+            "cHJvdG8izQcKEUN1c3RvbVR1bmluZ01vZGVsEkYKBG5hbWUYASABKAlCOOBB",
             "AvpBMgowZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0N1c3RvbVR1",
             "bmluZ01vZGVsEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIVCg1tb2RlbF92ZXJz",
             "aW9uGAMgASgDElIKC21vZGVsX3N0YXRlGAQgASgOMj0uZ29vZ2xlLmNsb3Vk",
@@ -37,29 +37,29 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bWVzdGFtcEICGAESNwoTdHJhaW5pbmdfc3RhcnRfdGltZRgGIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASUAoHbWV0cmljcxgHIAMoCzI/Lmdv",
             "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ3VzdG9tVHVuaW5nTW9k",
-            "ZWwuTWV0cmljc0VudHJ5Gi4KDE1ldHJpY3NFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAE6AjgBIsABCgpNb2RlbFN0YXRlEhsKF01PREVMX1NU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASEwoPVFJBSU5JTkdfUEFVU0VEEAESDAoIVFJB",
-            "SU5JTkcQAhIVChFUUkFJTklOR19DT01QTEVURRADEhUKEVJFQURZX0ZPUl9T",
-            "RVJWSU5HEAQSEwoPVFJBSU5JTkdfRkFJTEVEEAUSEgoOTk9fSU1QUk9WRU1F",
-            "TlQQBhIbChdJTlBVVF9WQUxJREFUSU9OX0ZBSUxFRBAHOqQC6kGgAgowZGlz",
-            "Y292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0N1c3RvbVR1bmluZ01vZGVs",
-            "Emhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0",
-            "YVN0b3Jlcy97ZGF0YV9zdG9yZX0vY3VzdG9tVHVuaW5nTW9kZWxzL3tjdXN0",
-            "b21fdHVuaW5nX21vZGVsfRKBAXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0",
-            "b3Jlcy97ZGF0YV9zdG9yZX0vY3VzdG9tVHVuaW5nTW9kZWxzL3tjdXN0b21f",
-            "dHVuaW5nX21vZGVsfUKJAgojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
-            "bmdpbmUudjFCFkN1c3RvbVR1bmluZ01vZGVsUHJvdG9QAVpNY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5n",
-            "aW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9H",
-            "b29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3Vk",
-            "XERpc2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVy",
-            "eUVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "ZWwuTWV0cmljc0VudHJ5EhUKDWVycm9yX21lc3NhZ2UYCCABKAkaLgoMTWV0",
+            "cmljc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEiwAEK",
+            "Ck1vZGVsU3RhdGUSGwoXTU9ERUxfU1RBVEVfVU5TUEVDSUZJRUQQABITCg9U",
+            "UkFJTklOR19QQVVTRUQQARIMCghUUkFJTklORxACEhUKEVRSQUlOSU5HX0NP",
+            "TVBMRVRFEAMSFQoRUkVBRFlfRk9SX1NFUlZJTkcQBBITCg9UUkFJTklOR19G",
+            "QUlMRUQQBRISCg5OT19JTVBST1ZFTUVOVBAGEhsKF0lOUFVUX1ZBTElEQVRJ",
+            "T05fRkFJTEVEEAc6pALqQaACCjBkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBp",
+            "cy5jb20vQ3VzdG9tVHVuaW5nTW9kZWwSaHByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9j",
+            "dXN0b21UdW5pbmdNb2RlbHMve2N1c3RvbV90dW5pbmdfbW9kZWx9EoEBcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rp",
+            "b25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9jdXN0",
+            "b21UdW5pbmdNb2RlbHMve2N1c3RvbV90dW5pbmdfbW9kZWx9QokCCiNjb20u",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIWQ3VzdG9tVHVuaW5n",
+            "TW9kZWxQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVu",
+            "Z2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVw",
+            "YqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlF",
+            "bmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIi",
+            "R29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CustomTuningModel), global::Google.Cloud.DiscoveryEngine.V1.CustomTuningModel.Parser, new[]{ "Name", "DisplayName", "ModelVersion", "ModelState", "CreateTime", "TrainingStartTime", "Metrics" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.CustomTuningModel.Types.ModelState) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CustomTuningModel), global::Google.Cloud.DiscoveryEngine.V1.CustomTuningModel.Parser, new[]{ "Name", "DisplayName", "ModelVersion", "ModelState", "CreateTime", "TrainingStartTime", "Metrics", "ErrorMessage" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.CustomTuningModel.Types.ModelState) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -111,6 +111,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       trainingStartTime_ = other.trainingStartTime_ != null ? other.trainingStartTime_.Clone() : null;
       metrics_ = other.metrics_.Clone();
+      errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -127,8 +128,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// Required. The fully qualified resource name of the model.
     ///
     /// Format:
-    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/customTuningModels/{custom_tuning_model}`
-    /// model must be an alpha-numerical string with limit of 40 characters.
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/customTuningModels/{custom_tuning_model}`.
+    ///
+    /// Model must be an alpha-numerical string with limit of 40 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +190,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int CreateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Deprecated: timestamp the Model was created at.
+    /// Deprecated: Timestamp the Model was created at.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -229,6 +231,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return metrics_; }
     }
 
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 8;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// Currently this is only populated if the model state is
+    /// `INPUT_VALIDATION_FAILED`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -251,6 +269,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(TrainingStartTime, other.TrainingStartTime)) return false;
       if (!Metrics.Equals(other.Metrics)) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -265,6 +284,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (trainingStartTime_ != null) hash ^= TrainingStartTime.GetHashCode();
       hash ^= Metrics.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -308,6 +328,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteMessage(TrainingStartTime);
       }
       metrics_.WriteTo(output, _map_metrics_codec);
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -343,6 +367,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteMessage(TrainingStartTime);
       }
       metrics_.WriteTo(ref output, _map_metrics_codec);
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -372,6 +400,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainingStartTime);
       }
       size += metrics_.CalculateSize(_map_metrics_codec);
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -409,6 +440,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         TrainingStartTime.MergeFrom(other.TrainingStartTime);
       }
       metrics_.MergeFrom(other.metrics_);
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -458,6 +492,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             metrics_.AddEntriesFrom(input, _map_metrics_codec);
             break;
           }
+          case 66: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -505,6 +543,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 58: {
             metrics_.AddEntriesFrom(ref input, _map_metrics_codec);
+            break;
+          }
+          case 66: {
+            ErrorMessage = input.ReadString();
             break;
           }
         }

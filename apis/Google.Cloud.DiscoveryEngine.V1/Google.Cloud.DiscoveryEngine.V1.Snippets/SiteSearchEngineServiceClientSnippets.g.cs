@@ -1187,6 +1187,7 @@ namespace GoogleCSharpSnippets
             {
                 SiteSearchEngineAsSiteSearchEngineName = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
                 Uris = { "", },
+                SiteCredential = "",
             };
             // Make the request
             Operation<RecrawlUrisResponse, RecrawlUrisMetadata> response = siteSearchEngineServiceClient.RecrawlUris(request);
@@ -1221,6 +1222,7 @@ namespace GoogleCSharpSnippets
             {
                 SiteSearchEngineAsSiteSearchEngineName = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
                 Uris = { "", },
+                SiteCredential = "",
             };
             // Make the request
             Operation<RecrawlUrisResponse, RecrawlUrisMetadata> response = await siteSearchEngineServiceClient.RecrawlUrisAsync(request);

@@ -85,11 +85,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
   #region Messages
   /// <summary>
   /// A singleton resource of
-  /// [DataStore][google.cloud.discoveryengine.v1.DataStore]. It's empty when
-  /// [DataStore][google.cloud.discoveryengine.v1.DataStore] is created, which
-  /// defaults to digital parser. The first call to
-  /// [DataStoreService.UpdateDocumentProcessingConfig][] method will initialize
-  /// the config.
+  /// [DataStore][google.cloud.discoveryengine.v1.DataStore]. If it's empty when
+  /// [DataStore][google.cloud.discoveryengine.v1.DataStore] is created and
+  /// [DataStore][google.cloud.discoveryengine.v1.DataStore] is set to
+  /// [DataStore.ContentConfig.CONTENT_REQUIRED][google.cloud.discoveryengine.v1.DataStore.ContentConfig.CONTENT_REQUIRED],
+  /// the default parser will default to digital parser.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentProcessingConfig : pb::IMessage<DocumentProcessingConfig>
@@ -205,6 +205,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// * `docx`: Override parsing config for DOCX files, only digital parsing and
     /// layout parsing are supported.
     /// * `pptx`: Override parsing config for PPTX files, only digital parsing and
+    /// layout parsing are supported.
+    /// * `xlsm`: Override parsing config for XLSM files, only digital parsing and
     /// layout parsing are supported.
     /// * `xlsx`: Override parsing config for XLSX files, only digital parsing and
     /// layout parsing are supported.

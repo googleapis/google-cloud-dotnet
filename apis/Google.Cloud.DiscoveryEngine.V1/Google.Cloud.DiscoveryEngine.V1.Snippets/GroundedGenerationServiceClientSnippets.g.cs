@@ -16,12 +16,118 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.DiscoveryEngine.V1;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedGroundedGenerationServiceClientSnippets
     {
+        /// <summary>Snippet for StreamGenerateGroundedContent</summary>
+        public async Task StreamGenerateGroundedContent()
+        {
+            // Snippet: StreamGenerateGroundedContent(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            GroundedGenerationServiceClient groundedGenerationServiceClient = GroundedGenerationServiceClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using GroundedGenerationServiceClient.StreamGenerateGroundedContentStream response = groundedGenerationServiceClient.StreamGenerateGroundedContent();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<GenerateGroundedContentResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    GenerateGroundedContentResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                GenerateGroundedContentRequest request = new GenerateGroundedContentRequest
+                {
+                    LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                    Contents =
+                    {
+                        new GroundedGenerationContent(),
+                    },
+                    GenerationSpec = new GenerateGroundedContentRequest.Types.GenerationSpec(),
+                    GroundingSpec = new GenerateGroundedContentRequest.Types.GroundingSpec(),
+                    SystemInstruction = new GroundedGenerationContent(),
+                    UserLabels = { { "", "" }, },
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateGroundedContent</summary>
+        public void GenerateGroundedContentRequestObject()
+        {
+            // Snippet: GenerateGroundedContent(GenerateGroundedContentRequest, CallSettings)
+            // Create client
+            GroundedGenerationServiceClient groundedGenerationServiceClient = GroundedGenerationServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateGroundedContentRequest request = new GenerateGroundedContentRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Contents =
+                {
+                    new GroundedGenerationContent(),
+                },
+                GenerationSpec = new GenerateGroundedContentRequest.Types.GenerationSpec(),
+                GroundingSpec = new GenerateGroundedContentRequest.Types.GroundingSpec(),
+                SystemInstruction = new GroundedGenerationContent(),
+                UserLabels = { { "", "" }, },
+            };
+            // Make the request
+            GenerateGroundedContentResponse response = groundedGenerationServiceClient.GenerateGroundedContent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateGroundedContentAsync</summary>
+        public async Task GenerateGroundedContentRequestObjectAsync()
+        {
+            // Snippet: GenerateGroundedContentAsync(GenerateGroundedContentRequest, CallSettings)
+            // Additional: GenerateGroundedContentAsync(GenerateGroundedContentRequest, CancellationToken)
+            // Create client
+            GroundedGenerationServiceClient groundedGenerationServiceClient = await GroundedGenerationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateGroundedContentRequest request = new GenerateGroundedContentRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Contents =
+                {
+                    new GroundedGenerationContent(),
+                },
+                GenerationSpec = new GenerateGroundedContentRequest.Types.GenerationSpec(),
+                GroundingSpec = new GenerateGroundedContentRequest.Types.GroundingSpec(),
+                SystemInstruction = new GroundedGenerationContent(),
+                UserLabels = { { "", "" }, },
+            };
+            // Make the request
+            GenerateGroundedContentResponse response = await groundedGenerationServiceClient.GenerateGroundedContentAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for CheckGrounding</summary>
         public void CheckGroundingRequestObject()
         {

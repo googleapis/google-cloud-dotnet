@@ -450,7 +450,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private string rankingConfig_ = "";
     /// <summary>
     /// Required. The resource name of the rank service config, such as
-    /// `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+    /// `projects/{project_num}/locations/{location}/rankingConfigs/default_ranking_config`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
