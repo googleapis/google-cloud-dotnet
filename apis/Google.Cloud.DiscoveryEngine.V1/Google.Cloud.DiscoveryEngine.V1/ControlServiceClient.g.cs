@@ -352,9 +352,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -386,9 +386,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -420,9 +420,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -449,9 +449,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -483,9 +483,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -517,9 +517,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -546,9 +546,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -580,9 +580,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -614,9 +614,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="control">
         /// Required. The Control to create.
@@ -677,7 +677,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -695,7 +695,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -713,7 +713,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -728,7 +728,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -746,7 +746,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -764,7 +764,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -925,7 +925,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -940,7 +940,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -955,7 +955,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -967,7 +967,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -982,7 +982,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -997,7 +997,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Control to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1030,9 +1030,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1067,9 +1067,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1104,9 +1104,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1141,9 +1141,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1178,9 +1178,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1215,9 +1215,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
         /// or
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

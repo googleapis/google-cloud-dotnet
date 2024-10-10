@@ -31,7 +31,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bW9uLnByb3RvGkBnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2Rv",
             "Y3VtZW50X3Byb2Nlc3NpbmdfY29uZmlnLnByb3RvGixnb29nbGUvY2xvdWQv",
             "ZGlzY292ZXJ5ZW5naW5lL3YxL3NjaGVtYS5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byLYBgoJRGF0YVN0b3JlEhEKBG5hbWUYASAB",
+            "YnVmL3RpbWVzdGFtcC5wcm90byLKCgoJRGF0YVN0b3JlEhEKBG5hbWUYASAB",
             "KAlCA+BBBRIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhJRChFpbmR1c3Ry",
             "eV92ZXJ0aWNhbBgDIAEoDjIxLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
             "bmUudjEuSW5kdXN0cnlWZXJ0aWNhbEID4EEFEkUKDnNvbHV0aW9uX3R5cGVz",
@@ -40,17 +40,36 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "b250ZW50X2NvbmZpZxgGIAEoDjI4Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
             "bmdpbmUudjEuRGF0YVN0b3JlLkNvbnRlbnRDb25maWdCA+BBBRI0CgtjcmVh",
             "dGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxJdChpkb2N1bWVudF9wcm9jZXNzaW5nX2NvbmZpZxgbIAEoCzI5Lmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRG9jdW1lbnRQcm9jZXNzaW5n",
-            "Q29uZmlnEkAKD3N0YXJ0aW5nX3NjaGVtYRgcIAEoCzInLmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2NoZW1hImkKDUNvbnRlbnRDb25maWcS",
-            "HgoaQ09OVEVOVF9DT05GSUdfVU5TUEVDSUZJRUQQABIOCgpOT19DT05URU5U",
-            "EAESFAoQQ09OVEVOVF9SRVFVSVJFRBACEhIKDlBVQkxJQ19XRUJTSVRFEAM6",
-            "yQHqQcUBCihkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vRGF0YVN0",
-            "b3JlEj9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "ZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0SWHByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0v",
-            "ZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX1CgQIKI2NvbS5nb29nbGUuY2xvdWQu",
+            "AxJdChJiaWxsaW5nX2VzdGltYXRpb24YFyABKAsyPC5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxLkRhdGFTdG9yZS5CaWxsaW5nRXN0aW1hdGlv",
+            "bkID4EEDEkoKEHdvcmtzcGFjZV9jb25maWcYGSABKAsyMC5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLldvcmtzcGFjZUNvbmZpZxJdChpkb2N1",
+            "bWVudF9wcm9jZXNzaW5nX2NvbmZpZxgbIAEoCzI5Lmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjEuRG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnEkAK",
+            "D3N0YXJ0aW5nX3NjaGVtYRgcIAEoCzInLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjEuU2NoZW1hGq4CChFCaWxsaW5nRXN0aW1hdGlvbhIcChRz",
+            "dHJ1Y3R1cmVkX2RhdGFfc2l6ZRgBIAEoAxIeChZ1bnN0cnVjdHVyZWRfZGF0",
+            "YV9zaXplGAIgASgDEhkKEXdlYnNpdGVfZGF0YV9zaXplGAMgASgDEj8KG3N0",
+            "cnVjdHVyZWRfZGF0YV91cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASQQoddW5zdHJ1Y3R1cmVkX2RhdGFfdXBkYXRlX3Rp",
+            "bWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKGHdlYnNp",
+            "dGVfZGF0YV91cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXAifwoNQ29udGVudENvbmZpZxIeChpDT05URU5UX0NPTkZJR19V",
+            "TlNQRUNJRklFRBAAEg4KCk5PX0NPTlRFTlQQARIUChBDT05URU5UX1JFUVVJ",
+            "UkVEEAISEgoOUFVCTElDX1dFQlNJVEUQAxIUChBHT09HTEVfV09SS1NQQUNF",
+            "EAQ6yQHqQcUBCihkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vRGF0",
+            "YVN0b3JlEj9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0SWHByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlv",
+            "bn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0i4gIKD1dvcmtzcGFjZUNvbmZp",
+            "ZxJDCgR0eXBlGAEgASgOMjUuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MS5Xb3Jrc3BhY2VDb25maWcuVHlwZRIaChJkYXNoZXJfY3VzdG9tZXJf",
+            "aWQYAiABKAkSKAobc3VwZXJfYWRtaW5fc2VydmljZV9hY2NvdW50GAQgASgJ",
+            "QgPgQQESJgoZc3VwZXJfYWRtaW5fZW1haWxfYWRkcmVzcxgFIAEoCUID4EEB",
+            "IpsBCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIQCgxHT09HTEVfRFJJ",
+            "VkUQARIPCgtHT09HTEVfTUFJTBACEhAKDEdPT0dMRV9TSVRFUxADEhMKD0dP",
+            "T0dMRV9DQUxFTkRBUhAEEg8KC0dPT0dMRV9DSEFUEAUSEQoNR09PR0xFX0dS",
+            "T1VQUxAGEg8KC0dPT0dMRV9LRUVQEAdCgQIKI2NvbS5nb29nbGUuY2xvdWQu",
             "ZGlzY292ZXJ5ZW5naW5lLnYxQg5EYXRhU3RvcmVQcm90b1ABWk1jbG91ZC5n",
             "b29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3Zlcnll",
             "bmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoC",
@@ -60,7 +79,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.SchemaReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore), global::Google.Cloud.DiscoveryEngine.V1.DataStore.Parser, new[]{ "Name", "DisplayName", "IndustryVertical", "SolutionTypes", "DefaultSchemaId", "ContentConfig", "CreateTime", "DocumentProcessingConfig", "StartingSchema" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.ContentConfig) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore), global::Google.Cloud.DiscoveryEngine.V1.DataStore.Parser, new[]{ "Name", "DisplayName", "IndustryVertical", "SolutionTypes", "DefaultSchemaId", "ContentConfig", "CreateTime", "BillingEstimation", "WorkspaceConfig", "DocumentProcessingConfig", "StartingSchema" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.ContentConfig) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation), global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation.Parser, new[]{ "StructuredDataSize", "UnstructuredDataSize", "WebsiteDataSize", "StructuredDataUpdateTime", "UnstructuredDataUpdateTime", "WebsiteDataUpdateTime" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig), global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Parser, new[]{ "Type", "DasherCustomerId", "SuperAdminServiceAccount", "SuperAdminEmailAddress" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type) }, null, null)
           }));
     }
     #endregion
@@ -112,6 +132,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       defaultSchemaId_ = other.defaultSchemaId_;
       contentConfig_ = other.contentConfig_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      billingEstimation_ = other.billingEstimation_ != null ? other.billingEstimation_.Clone() : null;
+      workspaceConfig_ = other.workspaceConfig_ != null ? other.workspaceConfig_.Clone() : null;
       documentProcessingConfig_ = other.documentProcessingConfig_ != null ? other.documentProcessingConfig_.Clone() : null;
       startingSchema_ = other.startingSchema_ != null ? other.startingSchema_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -245,6 +267,40 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "billing_estimation" field.</summary>
+    public const int BillingEstimationFieldNumber = 23;
+    private global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation billingEstimation_;
+    /// <summary>
+    /// Output only. Data size estimation for billing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation BillingEstimation {
+      get { return billingEstimation_; }
+      set {
+        billingEstimation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "workspace_config" field.</summary>
+    public const int WorkspaceConfigFieldNumber = 25;
+    private global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig workspaceConfig_;
+    /// <summary>
+    /// Config to store data store type configuration for workspace data. This
+    /// must be set when
+    /// [DataStore.content_config][google.cloud.discoveryengine.v1.DataStore.content_config]
+    /// is set as
+    /// [DataStore.ContentConfig.GOOGLE_WORKSPACE][google.cloud.discoveryengine.v1.DataStore.ContentConfig.GOOGLE_WORKSPACE].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig WorkspaceConfig {
+      get { return workspaceConfig_; }
+      set {
+        workspaceConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "document_processing_config" field.</summary>
     public const int DocumentProcessingConfigFieldNumber = 27;
     private global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig documentProcessingConfig_;
@@ -310,6 +366,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (DefaultSchemaId != other.DefaultSchemaId) return false;
       if (ContentConfig != other.ContentConfig) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(BillingEstimation, other.BillingEstimation)) return false;
+      if (!object.Equals(WorkspaceConfig, other.WorkspaceConfig)) return false;
       if (!object.Equals(DocumentProcessingConfig, other.DocumentProcessingConfig)) return false;
       if (!object.Equals(StartingSchema, other.StartingSchema)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -326,6 +384,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (DefaultSchemaId.Length != 0) hash ^= DefaultSchemaId.GetHashCode();
       if (ContentConfig != global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.ContentConfig.Unspecified) hash ^= ContentConfig.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (billingEstimation_ != null) hash ^= BillingEstimation.GetHashCode();
+      if (workspaceConfig_ != null) hash ^= WorkspaceConfig.GetHashCode();
       if (documentProcessingConfig_ != null) hash ^= DocumentProcessingConfig.GetHashCode();
       if (startingSchema_ != null) hash ^= StartingSchema.GetHashCode();
       if (_unknownFields != null) {
@@ -371,6 +431,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(58);
         output.WriteString(DefaultSchemaId);
       }
+      if (billingEstimation_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(BillingEstimation);
+      }
+      if (workspaceConfig_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(WorkspaceConfig);
+      }
       if (documentProcessingConfig_ != null) {
         output.WriteRawTag(218, 1);
         output.WriteMessage(DocumentProcessingConfig);
@@ -414,6 +482,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(58);
         output.WriteString(DefaultSchemaId);
       }
+      if (billingEstimation_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(BillingEstimation);
+      }
+      if (workspaceConfig_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(WorkspaceConfig);
+      }
       if (documentProcessingConfig_ != null) {
         output.WriteRawTag(218, 1);
         output.WriteMessage(DocumentProcessingConfig);
@@ -450,6 +526,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (billingEstimation_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BillingEstimation);
+      }
+      if (workspaceConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(WorkspaceConfig);
       }
       if (documentProcessingConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DocumentProcessingConfig);
@@ -490,6 +572,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.billingEstimation_ != null) {
+        if (billingEstimation_ == null) {
+          BillingEstimation = new global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation();
+        }
+        BillingEstimation.MergeFrom(other.BillingEstimation);
+      }
+      if (other.workspaceConfig_ != null) {
+        if (workspaceConfig_ == null) {
+          WorkspaceConfig = new global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig();
+        }
+        WorkspaceConfig.MergeFrom(other.WorkspaceConfig);
       }
       if (other.documentProcessingConfig_ != null) {
         if (documentProcessingConfig_ == null) {
@@ -548,6 +642,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 58: {
             DefaultSchemaId = input.ReadString();
+            break;
+          }
+          case 186: {
+            if (billingEstimation_ == null) {
+              BillingEstimation = new global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation();
+            }
+            input.ReadMessage(BillingEstimation);
+            break;
+          }
+          case 202: {
+            if (workspaceConfig_ == null) {
+              WorkspaceConfig = new global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig();
+            }
+            input.ReadMessage(WorkspaceConfig);
             break;
           }
           case 218: {
@@ -611,6 +719,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             DefaultSchemaId = input.ReadString();
             break;
           }
+          case 186: {
+            if (billingEstimation_ == null) {
+              BillingEstimation = new global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation();
+            }
+            input.ReadMessage(BillingEstimation);
+            break;
+          }
+          case 202: {
+            if (workspaceConfig_ == null) {
+              WorkspaceConfig = new global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig();
+            }
+            input.ReadMessage(WorkspaceConfig);
+            break;
+          }
           case 218: {
             if (documentProcessingConfig_ == null) {
               DocumentProcessingConfig = new global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig();
@@ -657,6 +779,801 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// The data store is used for public website search.
         /// </summary>
         [pbr::OriginalName("PUBLIC_WEBSITE")] PublicWebsite = 3,
+        /// <summary>
+        /// The data store is used for workspace search. Details of workspace
+        /// data store are specified in the
+        /// [WorkspaceConfig][google.cloud.discoveryengine.v1.WorkspaceConfig].
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_WORKSPACE")] GoogleWorkspace = 4,
+      }
+
+      /// <summary>
+      /// Estimation of data size per data store.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class BillingEstimation : pb::IMessage<BillingEstimation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<BillingEstimation> _parser = new pb::MessageParser<BillingEstimation>(() => new BillingEstimation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<BillingEstimation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1.DataStore.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BillingEstimation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BillingEstimation(BillingEstimation other) : this() {
+          structuredDataSize_ = other.structuredDataSize_;
+          unstructuredDataSize_ = other.unstructuredDataSize_;
+          websiteDataSize_ = other.websiteDataSize_;
+          structuredDataUpdateTime_ = other.structuredDataUpdateTime_ != null ? other.structuredDataUpdateTime_.Clone() : null;
+          unstructuredDataUpdateTime_ = other.unstructuredDataUpdateTime_ != null ? other.unstructuredDataUpdateTime_.Clone() : null;
+          websiteDataUpdateTime_ = other.websiteDataUpdateTime_ != null ? other.websiteDataUpdateTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BillingEstimation Clone() {
+          return new BillingEstimation(this);
+        }
+
+        /// <summary>Field number for the "structured_data_size" field.</summary>
+        public const int StructuredDataSizeFieldNumber = 1;
+        private long structuredDataSize_;
+        /// <summary>
+        /// Data size for structured data in terms of bytes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long StructuredDataSize {
+          get { return structuredDataSize_; }
+          set {
+            structuredDataSize_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unstructured_data_size" field.</summary>
+        public const int UnstructuredDataSizeFieldNumber = 2;
+        private long unstructuredDataSize_;
+        /// <summary>
+        /// Data size for unstructured data in terms of bytes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long UnstructuredDataSize {
+          get { return unstructuredDataSize_; }
+          set {
+            unstructuredDataSize_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "website_data_size" field.</summary>
+        public const int WebsiteDataSizeFieldNumber = 3;
+        private long websiteDataSize_;
+        /// <summary>
+        /// Data size for websites in terms of bytes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long WebsiteDataSize {
+          get { return websiteDataSize_; }
+          set {
+            websiteDataSize_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "structured_data_update_time" field.</summary>
+        public const int StructuredDataUpdateTimeFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp structuredDataUpdateTime_;
+        /// <summary>
+        /// Last updated timestamp for structured data.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp StructuredDataUpdateTime {
+          get { return structuredDataUpdateTime_; }
+          set {
+            structuredDataUpdateTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unstructured_data_update_time" field.</summary>
+        public const int UnstructuredDataUpdateTimeFieldNumber = 5;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp unstructuredDataUpdateTime_;
+        /// <summary>
+        /// Last updated timestamp for unstructured data.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp UnstructuredDataUpdateTime {
+          get { return unstructuredDataUpdateTime_; }
+          set {
+            unstructuredDataUpdateTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "website_data_update_time" field.</summary>
+        public const int WebsiteDataUpdateTimeFieldNumber = 6;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp websiteDataUpdateTime_;
+        /// <summary>
+        /// Last updated timestamp for websites.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp WebsiteDataUpdateTime {
+          get { return websiteDataUpdateTime_; }
+          set {
+            websiteDataUpdateTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as BillingEstimation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(BillingEstimation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (StructuredDataSize != other.StructuredDataSize) return false;
+          if (UnstructuredDataSize != other.UnstructuredDataSize) return false;
+          if (WebsiteDataSize != other.WebsiteDataSize) return false;
+          if (!object.Equals(StructuredDataUpdateTime, other.StructuredDataUpdateTime)) return false;
+          if (!object.Equals(UnstructuredDataUpdateTime, other.UnstructuredDataUpdateTime)) return false;
+          if (!object.Equals(WebsiteDataUpdateTime, other.WebsiteDataUpdateTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (StructuredDataSize != 0L) hash ^= StructuredDataSize.GetHashCode();
+          if (UnstructuredDataSize != 0L) hash ^= UnstructuredDataSize.GetHashCode();
+          if (WebsiteDataSize != 0L) hash ^= WebsiteDataSize.GetHashCode();
+          if (structuredDataUpdateTime_ != null) hash ^= StructuredDataUpdateTime.GetHashCode();
+          if (unstructuredDataUpdateTime_ != null) hash ^= UnstructuredDataUpdateTime.GetHashCode();
+          if (websiteDataUpdateTime_ != null) hash ^= WebsiteDataUpdateTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (StructuredDataSize != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(StructuredDataSize);
+          }
+          if (UnstructuredDataSize != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(UnstructuredDataSize);
+          }
+          if (WebsiteDataSize != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(WebsiteDataSize);
+          }
+          if (structuredDataUpdateTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(StructuredDataUpdateTime);
+          }
+          if (unstructuredDataUpdateTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(UnstructuredDataUpdateTime);
+          }
+          if (websiteDataUpdateTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(WebsiteDataUpdateTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (StructuredDataSize != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(StructuredDataSize);
+          }
+          if (UnstructuredDataSize != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(UnstructuredDataSize);
+          }
+          if (WebsiteDataSize != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(WebsiteDataSize);
+          }
+          if (structuredDataUpdateTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(StructuredDataUpdateTime);
+          }
+          if (unstructuredDataUpdateTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(UnstructuredDataUpdateTime);
+          }
+          if (websiteDataUpdateTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(WebsiteDataUpdateTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (StructuredDataSize != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(StructuredDataSize);
+          }
+          if (UnstructuredDataSize != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(UnstructuredDataSize);
+          }
+          if (WebsiteDataSize != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(WebsiteDataSize);
+          }
+          if (structuredDataUpdateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructuredDataUpdateTime);
+          }
+          if (unstructuredDataUpdateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(UnstructuredDataUpdateTime);
+          }
+          if (websiteDataUpdateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebsiteDataUpdateTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(BillingEstimation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.StructuredDataSize != 0L) {
+            StructuredDataSize = other.StructuredDataSize;
+          }
+          if (other.UnstructuredDataSize != 0L) {
+            UnstructuredDataSize = other.UnstructuredDataSize;
+          }
+          if (other.WebsiteDataSize != 0L) {
+            WebsiteDataSize = other.WebsiteDataSize;
+          }
+          if (other.structuredDataUpdateTime_ != null) {
+            if (structuredDataUpdateTime_ == null) {
+              StructuredDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            StructuredDataUpdateTime.MergeFrom(other.StructuredDataUpdateTime);
+          }
+          if (other.unstructuredDataUpdateTime_ != null) {
+            if (unstructuredDataUpdateTime_ == null) {
+              UnstructuredDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            UnstructuredDataUpdateTime.MergeFrom(other.UnstructuredDataUpdateTime);
+          }
+          if (other.websiteDataUpdateTime_ != null) {
+            if (websiteDataUpdateTime_ == null) {
+              WebsiteDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            WebsiteDataUpdateTime.MergeFrom(other.WebsiteDataUpdateTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                StructuredDataSize = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                UnstructuredDataSize = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                WebsiteDataSize = input.ReadInt64();
+                break;
+              }
+              case 34: {
+                if (structuredDataUpdateTime_ == null) {
+                  StructuredDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StructuredDataUpdateTime);
+                break;
+              }
+              case 42: {
+                if (unstructuredDataUpdateTime_ == null) {
+                  UnstructuredDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UnstructuredDataUpdateTime);
+                break;
+              }
+              case 50: {
+                if (websiteDataUpdateTime_ == null) {
+                  WebsiteDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(WebsiteDataUpdateTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                StructuredDataSize = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                UnstructuredDataSize = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                WebsiteDataSize = input.ReadInt64();
+                break;
+              }
+              case 34: {
+                if (structuredDataUpdateTime_ == null) {
+                  StructuredDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StructuredDataUpdateTime);
+                break;
+              }
+              case 42: {
+                if (unstructuredDataUpdateTime_ == null) {
+                  UnstructuredDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UnstructuredDataUpdateTime);
+                break;
+              }
+              case 50: {
+                if (websiteDataUpdateTime_ == null) {
+                  WebsiteDataUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(WebsiteDataUpdateTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Config to store data store type configuration for workspace data
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class WorkspaceConfig : pb::IMessage<WorkspaceConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WorkspaceConfig> _parser = new pb::MessageParser<WorkspaceConfig>(() => new WorkspaceConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WorkspaceConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1.DataStoreReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkspaceConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkspaceConfig(WorkspaceConfig other) : this() {
+      type_ = other.type_;
+      dasherCustomerId_ = other.dasherCustomerId_;
+      superAdminServiceAccount_ = other.superAdminServiceAccount_;
+      superAdminEmailAddress_ = other.superAdminEmailAddress_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkspaceConfig Clone() {
+      return new WorkspaceConfig(this);
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type type_ = global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type.Unspecified;
+    /// <summary>
+    /// The Google Workspace data source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dasher_customer_id" field.</summary>
+    public const int DasherCustomerIdFieldNumber = 2;
+    private string dasherCustomerId_ = "";
+    /// <summary>
+    /// Obfuscated Dasher customer ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DasherCustomerId {
+      get { return dasherCustomerId_; }
+      set {
+        dasherCustomerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "super_admin_service_account" field.</summary>
+    public const int SuperAdminServiceAccountFieldNumber = 4;
+    private string superAdminServiceAccount_ = "";
+    /// <summary>
+    /// Optional. The super admin service account for the workspace that will be
+    /// used for access token generation. For now we only use it for Native Google
+    /// Drive connector data ingestion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SuperAdminServiceAccount {
+      get { return superAdminServiceAccount_; }
+      set {
+        superAdminServiceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "super_admin_email_address" field.</summary>
+    public const int SuperAdminEmailAddressFieldNumber = 5;
+    private string superAdminEmailAddress_ = "";
+    /// <summary>
+    /// Optional. The super admin email address for the workspace that will be used
+    /// for access token generation. For now we only use it for Native Google Drive
+    /// connector data ingestion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SuperAdminEmailAddress {
+      get { return superAdminEmailAddress_; }
+      set {
+        superAdminEmailAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WorkspaceConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WorkspaceConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Type != other.Type) return false;
+      if (DasherCustomerId != other.DasherCustomerId) return false;
+      if (SuperAdminServiceAccount != other.SuperAdminServiceAccount) return false;
+      if (SuperAdminEmailAddress != other.SuperAdminEmailAddress) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Type != global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (DasherCustomerId.Length != 0) hash ^= DasherCustomerId.GetHashCode();
+      if (SuperAdminServiceAccount.Length != 0) hash ^= SuperAdminServiceAccount.GetHashCode();
+      if (SuperAdminEmailAddress.Length != 0) hash ^= SuperAdminEmailAddress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Type != global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (DasherCustomerId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DasherCustomerId);
+      }
+      if (SuperAdminServiceAccount.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SuperAdminServiceAccount);
+      }
+      if (SuperAdminEmailAddress.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(SuperAdminEmailAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (DasherCustomerId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DasherCustomerId);
+      }
+      if (SuperAdminServiceAccount.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SuperAdminServiceAccount);
+      }
+      if (SuperAdminEmailAddress.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(SuperAdminEmailAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Type != global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (DasherCustomerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DasherCustomerId);
+      }
+      if (SuperAdminServiceAccount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SuperAdminServiceAccount);
+      }
+      if (SuperAdminEmailAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SuperAdminEmailAddress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WorkspaceConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Type != global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.DasherCustomerId.Length != 0) {
+        DasherCustomerId = other.DasherCustomerId;
+      }
+      if (other.SuperAdminServiceAccount.Length != 0) {
+        SuperAdminServiceAccount = other.SuperAdminServiceAccount;
+      }
+      if (other.SuperAdminEmailAddress.Length != 0) {
+        SuperAdminEmailAddress = other.SuperAdminEmailAddress;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            DasherCustomerId = input.ReadString();
+            break;
+          }
+          case 34: {
+            SuperAdminServiceAccount = input.ReadString();
+            break;
+          }
+          case 42: {
+            SuperAdminEmailAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            DasherCustomerId = input.ReadString();
+            break;
+          }
+          case 34: {
+            SuperAdminServiceAccount = input.ReadString();
+            break;
+          }
+          case 42: {
+            SuperAdminEmailAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the WorkspaceConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specifies the type of Workspace App supported by this DataStore
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Defaults to an unspecified Workspace type.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Workspace Data Store contains Drive data
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_DRIVE")] GoogleDrive = 1,
+        /// <summary>
+        /// Workspace Data Store contains Mail data
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_MAIL")] GoogleMail = 2,
+        /// <summary>
+        /// Workspace Data Store contains Sites data
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_SITES")] GoogleSites = 3,
+        /// <summary>
+        /// Workspace Data Store contains Calendar data
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_CALENDAR")] GoogleCalendar = 4,
+        /// <summary>
+        /// Workspace Data Store contains Chat data
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_CHAT")] GoogleChat = 5,
+        /// <summary>
+        /// Workspace Data Store contains Groups data
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_GROUPS")] GoogleGroups = 6,
+        /// <summary>
+        /// Workspace Data Store contains Keep data
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_KEEP")] GoogleKeep = 7,
       }
 
     }

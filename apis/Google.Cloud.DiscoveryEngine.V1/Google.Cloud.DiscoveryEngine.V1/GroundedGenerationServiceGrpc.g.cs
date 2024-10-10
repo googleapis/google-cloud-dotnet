@@ -64,9 +64,29 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest> __Marshaller_google_cloud_discoveryengine_v1_GenerateGroundedContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> __Marshaller_google_cloud_discoveryengine_v1_GenerateGroundedContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest> __Marshaller_google_cloud_discoveryengine_v1_CheckGroundingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse> __Marshaller_google_cloud_discoveryengine_v1_CheckGroundingResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> __Method_StreamGenerateGroundedContent = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "StreamGenerateGroundedContent",
+        __Marshaller_google_cloud_discoveryengine_v1_GenerateGroundedContentRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_GenerateGroundedContentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> __Method_GenerateGroundedContent = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateGroundedContent",
+        __Marshaller_google_cloud_discoveryengine_v1_GenerateGroundedContentRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_GenerateGroundedContentResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest, global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse> __Method_CheckGrounding = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest, global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse>(
@@ -86,6 +106,31 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [grpc::BindServiceMethod(typeof(GroundedGenerationService), "BindService")]
     public abstract partial class GroundedGenerationServiceBase
     {
+      /// <summary>
+      /// Generates grounded content in a streaming fashion.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamGenerateGroundedContent(grpc::IAsyncStreamReader<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates grounded content.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> GenerateGroundedContent(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       /// <summary>
       /// Performs a grounding check.
       /// </summary>
@@ -127,6 +172,76 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       {
       }
 
+      /// <summary>
+      /// Generates grounded content in a streaming fashion.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> StreamGenerateGroundedContent(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamGenerateGroundedContent(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates grounded content in a streaming fashion.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> StreamGenerateGroundedContent(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamGenerateGroundedContent, null, options);
+      }
+      /// <summary>
+      /// Generates grounded content.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse GenerateGroundedContent(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateGroundedContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates grounded content.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse GenerateGroundedContent(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateGroundedContent, null, options, request);
+      }
+      /// <summary>
+      /// Generates grounded content.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> GenerateGroundedContentAsync(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateGroundedContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates grounded content.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse> GenerateGroundedContentAsync(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateGroundedContent, null, options, request);
+      }
       /// <summary>
       /// Performs a grounding check.
       /// </summary>
@@ -189,6 +304,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static grpc::ServerServiceDefinition BindService(GroundedGenerationServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_StreamGenerateGroundedContent, serviceImpl.StreamGenerateGroundedContent)
+          .AddMethod(__Method_GenerateGroundedContent, serviceImpl.GenerateGroundedContent)
           .AddMethod(__Method_CheckGrounding, serviceImpl.CheckGrounding).Build();
     }
 
@@ -199,6 +316,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GroundedGenerationServiceBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_StreamGenerateGroundedContent, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse>(serviceImpl.StreamGenerateGroundedContent));
+      serviceBinder.AddMethod(__Method_GenerateGroundedContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentRequest, global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse>(serviceImpl.GenerateGroundedContent));
       serviceBinder.AddMethod(__Method_CheckGrounding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest, global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse>(serviceImpl.CheckGrounding));
     }
 

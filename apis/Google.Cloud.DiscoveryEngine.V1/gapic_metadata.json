@@ -315,6 +315,18 @@
                 "CheckGrounding",
                 "CheckGroundingAsync"
               ]
+            },
+            "GenerateGroundedContent": {
+              "methods": [
+                "GenerateGroundedContent",
+                "GenerateGroundedContentAsync"
+              ]
+            },
+            "StreamGenerateGroundedContent": {
+              "methods": [
+                "StreamGenerateGroundedContent",
+                "StreamGenerateGroundedContentAsync"
+              ]
             }
           }
         }

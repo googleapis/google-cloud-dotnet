@@ -45,7 +45,6 @@ namespace GoogleCSharpSnippets
                 AnswerGenerationSpec = new AnswerQueryRequest.Types.AnswerGenerationSpec(),
                 SearchSpec = new AnswerQueryRequest.Types.SearchSpec(),
                 QueryUnderstandingSpec = new AnswerQueryRequest.Types.QueryUnderstandingSpec(),
-                AsynchronousMode = false,
                 UserPseudoId = "",
                 UserLabels = { { "", "" }, },
             };

@@ -499,9 +499,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
         /// Use
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
         /// to activate auto session mode, which automatically creates a new
         /// conversation inside a ConverseConversation session.
         /// </param>
@@ -522,9 +522,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
         /// Use
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
         /// to activate auto session mode, which automatically creates a new
         /// conversation inside a ConverseConversation session.
         /// </param>
@@ -545,9 +545,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
         /// Use
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
         /// to activate auto session mode, which automatically creates a new
         /// conversation inside a ConverseConversation session.
         /// </param>
@@ -564,9 +564,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
         /// Use
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
         /// to activate auto session mode, which automatically creates a new
         /// conversation inside a ConverseConversation session.
         /// </param>
@@ -587,9 +587,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
         /// Use
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
         /// to activate auto session mode, which automatically creates a new
         /// conversation inside a ConverseConversation session.
         /// </param>
@@ -610,9 +610,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
         /// Use
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/-`
         /// to activate auto session mode, which automatically creates a new
         /// conversation inside a ConverseConversation session.
         /// </param>
@@ -668,7 +668,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -690,7 +690,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -712,7 +712,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -730,7 +730,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -752,7 +752,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -774,7 +774,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="conversation">
         /// Required. The conversation to create.
@@ -828,7 +828,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -846,7 +846,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -864,7 +864,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -879,7 +879,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -897,7 +897,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -915,7 +915,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1079,7 +1079,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1094,7 +1094,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1109,7 +1109,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1121,7 +1121,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1136,7 +1136,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1151,7 +1151,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Conversation to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1184,7 +1184,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1254,7 +1254,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1289,7 +1289,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1377,7 +1377,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Answer to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1392,7 +1392,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Answer to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1407,7 +1407,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Answer to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1419,7 +1419,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Answer to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1434,7 +1434,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Answer to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1449,7 +1449,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Answer to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1500,7 +1500,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="session">
         /// Required. The session to create.
@@ -1522,7 +1522,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="session">
         /// Required. The session to create.
@@ -1544,7 +1544,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="session">
         /// Required. The session to create.
@@ -1562,7 +1562,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="session">
         /// Required. The session to create.
@@ -1584,7 +1584,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="session">
         /// Required. The session to create.
@@ -1606,7 +1606,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Full resource name of parent data store. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="session">
         /// Required. The session to create.
@@ -1660,7 +1660,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1678,7 +1678,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1696,7 +1696,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1711,7 +1711,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1729,7 +1729,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1747,7 +1747,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to delete. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1905,7 +1905,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1920,7 +1920,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1935,7 +1935,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1947,7 +1947,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1962,7 +1962,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1977,7 +1977,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Session to get. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2010,7 +2010,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2045,7 +2045,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2080,7 +2080,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2115,7 +2115,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The data store resource name. Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

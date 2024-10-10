@@ -68,6 +68,7 @@ namespace GoogleCSharpSnippets
                 LanguageCode = "",
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
+                OneBoxPageSize = 0,
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);

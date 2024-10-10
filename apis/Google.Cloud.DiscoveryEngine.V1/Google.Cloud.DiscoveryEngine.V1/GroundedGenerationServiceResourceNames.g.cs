@@ -15,9 +15,44 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 
 namespace Google.Cloud.DiscoveryEngine.V1
 {
+    public partial class GenerateGroundedContentRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
+            set => Location = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class GroundingSource
+            {
+                public partial class Types
+                {
+                    public partial class SearchSource
+                    {
+                        /// <summary>
+                        /// <see cref="ServingConfigName"/>-typed view over the <see cref="ServingConfig"/> resource
+                        /// name property.
+                        /// </summary>
+                        public ServingConfigName ServingConfigAsServingConfigName
+                        {
+                            get => string.IsNullOrEmpty(ServingConfig) ? null : ServingConfigName.Parse(ServingConfig, allowUnparsed: true);
+                            set => ServingConfig = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public partial class CheckGroundingRequest
     {
         /// <summary>
