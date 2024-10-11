@@ -327,7 +327,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>Field number for the "partner_model_tuning_spec" field.</summary>
     public const int PartnerModelTuningSpecFieldNumber = 21;
     /// <summary>
-    /// Tuning Spec for open sourced and third party Partner models.
+    /// Tuning Spec for open sourced and third party partner models.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
