@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.5.0, released 2024-10-14
+
+### New features
+
+- Add GroundedGenerationService API ([commit 0e8e0e2](https://github.com/googleapis/google-cloud-dotnet/commit/0e8e0e2638e4759dcc4d2b98bc1f1b88f236666c))
+- Add BillingEstimation in data store ([commit 0e8e0e2](https://github.com/googleapis/google-cloud-dotnet/commit/0e8e0e2638e4759dcc4d2b98bc1f1b88f236666c))
+- Support Google Workspace search ([commit 0e8e0e2](https://github.com/googleapis/google-cloud-dotnet/commit/0e8e0e2638e4759dcc4d2b98bc1f1b88f236666c))
+- Support advanced boost search ([commit 0e8e0e2](https://github.com/googleapis/google-cloud-dotnet/commit/0e8e0e2638e4759dcc4d2b98bc1f1b88f236666c))
+- Add one_box_page_size on search ([commit 0e8e0e2](https://github.com/googleapis/google-cloud-dotnet/commit/0e8e0e2638e4759dcc4d2b98bc1f1b88f236666c))
+- Add site_credential for site search config ([commit 0e8e0e2](https://github.com/googleapis/google-cloud-dotnet/commit/0e8e0e2638e4759dcc4d2b98bc1f1b88f236666c))
+
+### Documentation improvements
+
+- Update documentation ([commit 0e8e0e2](https://github.com/googleapis/google-cloud-dotnet/commit/0e8e0e2638e4759dcc4d2b98bc1f1b88f236666c))
+
 ## Version 1.4.0, released 2024-09-09
 
 ### New features
