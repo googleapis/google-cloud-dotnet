@@ -1,5 +1,25 @@
 # Version history
 
+## Version 3.32.0, released 2024-10-14
+
+### New features
+
+- Add an effective_cgroup_mode field in node config ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Add storage pools field to NodePool API ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Add ControlPlaneEndpointsConfig message to consolidate control plane isolation options ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Add DNSEndpointConfig for new DNS-based control plane access ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Add API to enable/disable secret manager csi component on GKE clusters ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Add CompliancePosture field for configuration of GKE Compliance Posture product ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Add RBACBindingConfig to API ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Add CompliancePosture field for configuration of GKE Compliance Posture product ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Add KCP_SSHD and KCP_CONNECTION to the supported values for the --logging flag for the create and update cluster commands ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Surface upgrade_target_version in GetServerConfig for all supported release channels ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+- Added support for Parallelstore CSI Driver ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+
+### Documentation improvements
+
+- Minor documentation updates ([commit e84c6d7](https://github.com/googleapis/google-cloud-dotnet/commit/e84c6d77e282a2286b373eb88288d501e8f2517c))
+
 ## Version 3.31.0, released 2024-09-09
 
 ### New features
