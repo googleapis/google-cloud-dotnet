@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-beta09, released 2024-10-14
+
+### New features
+
+- Add low latency journey option to proto ([commit dc529a6](https://github.com/googleapis/google-cloud-dotnet/commit/dc529a6b8f86687bf851f4f68366ed0eb9a531a2))
+- Add CustomPronunciationParams for upcoming feature work ([commit dc529a6](https://github.com/googleapis/google-cloud-dotnet/commit/dc529a6b8f86687bf851f4f68366ed0eb9a531a2))
+
 ## Version 2.0.0-beta08, released 2024-09-09
 
 ### New features
