@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.17.0, released 2024-10-14
+
+### New features
+
+- Add import / export IssueModel ([commit 8b67ba5](https://github.com/googleapis/google-cloud-dotnet/commit/8b67ba5b2dd26e7663b7d9faa633596ada676e77))
+- Add CMEK InitializeLroSpec ([commit 8b67ba5](https://github.com/googleapis/google-cloud-dotnet/commit/8b67ba5b2dd26e7663b7d9faa633596ada676e77))
+- Add metadata import to IngestConversations ([commit 8b67ba5](https://github.com/googleapis/google-cloud-dotnet/commit/8b67ba5b2dd26e7663b7d9faa633596ada676e77))
+- Add sampling to IngestConversations ([commit 8b67ba5](https://github.com/googleapis/google-cloud-dotnet/commit/8b67ba5b2dd26e7663b7d9faa633596ada676e77))
+
+### Documentation improvements
+
+- Add a comment for valid `order_by` values in ListConversations ([commit 8b67ba5](https://github.com/googleapis/google-cloud-dotnet/commit/8b67ba5b2dd26e7663b7d9faa633596ada676e77))
+- Add a comment for valid `update_mask` values in UpdateConversation ([commit 8b67ba5](https://github.com/googleapis/google-cloud-dotnet/commit/8b67ba5b2dd26e7663b7d9faa633596ada676e77))
+
 ## Version 2.16.0, released 2024-06-04
 
 ### New features
