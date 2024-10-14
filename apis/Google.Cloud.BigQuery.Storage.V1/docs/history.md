@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.17.0, released 2024-10-14
+
+### New features
+
+- Add experimental ArrowData type and arrow_data field within AppendRowsRequest ([commit f556dca](https://github.com/googleapis/google-cloud-dotnet/commit/f556dca9d15fdbc3d8b93896f101b961f1b7b510))
+
 ## Version 3.16.0, released 2024-09-26
 
 No API surface changes; just dependency updates.
