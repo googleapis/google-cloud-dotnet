@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.0.0, released 2024-10-14
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove visibility of unneeded TestIamPermissions RPC ([commit 553e7b0](https://github.com/googleapis/google-cloud-dotnet/commit/553e7b098875151e4dd7d8afbf20a708064fc645))
+- **BREAKING CHANGE** Remove visibility of unneeded InitiateBackup RPC ([commit 553e7b0](https://github.com/googleapis/google-cloud-dotnet/commit/553e7b098875151e4dd7d8afbf20a708064fc645))
+- **BREAKING CHANGE** Remove visibility of unneeded AbandonBackup RPC ([commit 553e7b0](https://github.com/googleapis/google-cloud-dotnet/commit/553e7b098875151e4dd7d8afbf20a708064fc645))
+- **BREAKING CHANGE** Remove visibility of unneeded FinalizeBackup RPC ([commit 553e7b0](https://github.com/googleapis/google-cloud-dotnet/commit/553e7b098875151e4dd7d8afbf20a708064fc645))
+- **BREAKING CHANGE** Remove visibility of unneeded RemoveDataSource RPC ([commit 553e7b0](https://github.com/googleapis/google-cloud-dotnet/commit/553e7b098875151e4dd7d8afbf20a708064fc645))
+- **BREAKING CHANGE** Remove visibility of unneeded SetInternalStatus RPC ([commit 553e7b0](https://github.com/googleapis/google-cloud-dotnet/commit/553e7b098875151e4dd7d8afbf20a708064fc645))
+
 ## Version 1.2.0, released 2024-09-26
 
 ### New features
