@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.12.0, released 2024-10-14
+
+### New features
+
+- Add conversational search ([commit df83180](https://github.com/googleapis/google-cloud-dotnet/commit/df83180ce586294c17b53889a19c1257acfaf310))
+- Add tile navigation ([commit df83180](https://github.com/googleapis/google-cloud-dotnet/commit/df83180ce586294c17b53889a19c1257acfaf310))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit df83180](https://github.com/googleapis/google-cloud-dotnet/commit/df83180ce586294c17b53889a19c1257acfaf310))
+
 ## Version 2.11.0, released 2024-06-10
 
 ### New features
