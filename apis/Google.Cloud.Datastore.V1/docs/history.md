@@ -1,5 +1,12 @@
 # Version history
 
+## Version 4.14.0, released 2024-10-14
+
+### New features
+
+- Add FindNearest API to the stable branch ([commit 6ffb6fc](https://github.com/googleapis/google-cloud-dotnet/commit/6ffb6fc4a24412e92502f27759c2c75b0f4452cb))
+- Support for field update operators in the Datastore API and resolution strategies when there is a conflict at write time ([commit fbdfc79](https://github.com/googleapis/google-cloud-dotnet/commit/fbdfc79f108f64af5caae1ba32bb43954a59b39d))
+
 ## Version 4.13.0, released 2024-08-13
 
 ### New features
