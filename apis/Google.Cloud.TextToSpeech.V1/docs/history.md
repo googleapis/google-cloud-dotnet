@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.8.0, released 2024-10-14
+
+### New features
+
+- Add low latency journey option to proto ([commit 96b9816](https://github.com/googleapis/google-cloud-dotnet/commit/96b9816db06cd726d959b0e8ad57bbd5cdb0ad0a))
+- Add CustomPronunciationParams for upcoming feature work ([commit 96b9816](https://github.com/googleapis/google-cloud-dotnet/commit/96b9816db06cd726d959b0e8ad57bbd5cdb0ad0a))
+
 ## Version 3.7.0, released 2024-09-09
 
 ### New features
