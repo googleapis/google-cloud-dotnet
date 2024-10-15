@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
@@ -470,6 +471,74 @@ namespace Google.Cloud.NetworkManagement.V1
         }
 
         /// <summary>
+        /// Lists all Connectivity Tests owned by a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the Connectivity Tests:
+        /// `projects/{project_id}/locations/global`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ConnectivityTest"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListConnectivityTestsResponse, ConnectivityTest> ListConnectivityTests(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectivityTestsRequest request = new ListConnectivityTestsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectivityTests(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all Connectivity Tests owned by a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the Connectivity Tests:
+        /// `projects/{project_id}/locations/global`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ConnectivityTest"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListConnectivityTestsResponse, ConnectivityTest> ListConnectivityTestsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectivityTestsRequest request = new ListConnectivityTestsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectivityTestsAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets the details of a specific Connectivity Test.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -536,6 +605,48 @@ namespace Google.Cloud.NetworkManagement.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ConnectivityTest> GetConnectivityTestAsync(string name, st::CancellationToken cancellationToken) =>
+            GetConnectivityTestAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Connectivity Test.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `ConnectivityTest` resource name using the form:
+        /// `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConnectivityTest GetConnectivityTest(ConnectivityTestName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnectivityTest(new GetConnectivityTestRequest
+            {
+                ConnectivityTestName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Connectivity Test.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `ConnectivityTest` resource name using the form:
+        /// `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectivityTest> GetConnectivityTestAsync(ConnectivityTestName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnectivityTestAsync(new GetConnectivityTestRequest
+            {
+                ConnectivityTestName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Connectivity Test.
+        /// </summary>
+        /// <param name="name">
+        /// Required. `ConnectivityTest` resource name using the form:
+        /// `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectivityTest> GetConnectivityTestAsync(ConnectivityTestName name, st::CancellationToken cancellationToken) =>
             GetConnectivityTestAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -750,6 +861,127 @@ namespace Google.Cloud.NetworkManagement.V1
             CreateConnectivityTestAsync(parent, testId, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new Connectivity Test.
+        /// After you create a test, the reachability analysis is performed as part
+        /// of the long running operation, which completes when the analysis completes.
+        /// 
+        /// If the endpoint specifications in `ConnectivityTest` are invalid
+        /// (for example, containing non-existent resources in the network, or you
+        /// don't have read permissions to the network configurations of listed
+        /// projects), then the reachability result returns a value of `UNKNOWN`.
+        /// 
+        /// If the endpoint specifications in `ConnectivityTest` are
+        /// incomplete, the reachability result returns a value of
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
+        /// see the Connectivity Test documentation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the Connectivity Test to create:
+        /// `projects/{project_id}/locations/global`
+        /// </param>
+        /// <param name="testId">
+        /// Required. The logical name of the Connectivity Test in your project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-40 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project
+        /// </param>
+        /// <param name="resource">
+        /// Required. A `ConnectivityTest` resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConnectivityTest, OperationMetadata> CreateConnectivityTest(gagr::ProjectName parent, string testId, ConnectivityTest resource, gaxgrpc::CallSettings callSettings = null) =>
+            CreateConnectivityTest(new CreateConnectivityTestRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TestId = gax::GaxPreconditions.CheckNotNullOrEmpty(testId, nameof(testId)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Connectivity Test.
+        /// After you create a test, the reachability analysis is performed as part
+        /// of the long running operation, which completes when the analysis completes.
+        /// 
+        /// If the endpoint specifications in `ConnectivityTest` are invalid
+        /// (for example, containing non-existent resources in the network, or you
+        /// don't have read permissions to the network configurations of listed
+        /// projects), then the reachability result returns a value of `UNKNOWN`.
+        /// 
+        /// If the endpoint specifications in `ConnectivityTest` are
+        /// incomplete, the reachability result returns a value of
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
+        /// see the Connectivity Test documentation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the Connectivity Test to create:
+        /// `projects/{project_id}/locations/global`
+        /// </param>
+        /// <param name="testId">
+        /// Required. The logical name of the Connectivity Test in your project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-40 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project
+        /// </param>
+        /// <param name="resource">
+        /// Required. A `ConnectivityTest` resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConnectivityTest, OperationMetadata>> CreateConnectivityTestAsync(gagr::ProjectName parent, string testId, ConnectivityTest resource, gaxgrpc::CallSettings callSettings = null) =>
+            CreateConnectivityTestAsync(new CreateConnectivityTestRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TestId = gax::GaxPreconditions.CheckNotNullOrEmpty(testId, nameof(testId)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Connectivity Test.
+        /// After you create a test, the reachability analysis is performed as part
+        /// of the long running operation, which completes when the analysis completes.
+        /// 
+        /// If the endpoint specifications in `ConnectivityTest` are invalid
+        /// (for example, containing non-existent resources in the network, or you
+        /// don't have read permissions to the network configurations of listed
+        /// projects), then the reachability result returns a value of `UNKNOWN`.
+        /// 
+        /// If the endpoint specifications in `ConnectivityTest` are
+        /// incomplete, the reachability result returns a value of
+        /// &lt;code&gt;AMBIGUOUS&lt;/code&gt;. For more information,
+        /// see the Connectivity Test documentation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the Connectivity Test to create:
+        /// `projects/{project_id}/locations/global`
+        /// </param>
+        /// <param name="testId">
+        /// Required. The logical name of the Connectivity Test in your project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-40 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project
+        /// </param>
+        /// <param name="resource">
+        /// Required. A `ConnectivityTest` resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConnectivityTest, OperationMetadata>> CreateConnectivityTestAsync(gagr::ProjectName parent, string testId, ConnectivityTest resource, st::CancellationToken cancellationToken) =>
+            CreateConnectivityTestAsync(parent, testId, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates the configuration of an existing `ConnectivityTest`.
         /// After you update a test, the reachability analysis is performed as part
         /// of the long running operation, which completes when the analysis completes.
@@ -763,7 +995,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-        /// in `ConnectivityTest` for for more details.
+        /// in `ConnectivityTest` for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -785,7 +1017,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-        /// in `ConnectivityTest` for for more details.
+        /// in `ConnectivityTest` for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -807,7 +1039,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-        /// in `ConnectivityTest` for for more details.
+        /// in `ConnectivityTest` for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -856,7 +1088,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-        /// in `ConnectivityTest` for for more details.
+        /// in `ConnectivityTest` for more details.
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -888,7 +1120,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-        /// in `ConnectivityTest` for for more details.
+        /// in `ConnectivityTest` for more details.
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -920,7 +1152,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-        /// in `ConnectivityTest` for for more details.
+        /// in `ConnectivityTest` for more details.
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -1115,6 +1347,48 @@ namespace Google.Cloud.NetworkManagement.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteConnectivityTestAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteConnectivityTestAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific `ConnectivityTest`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Connectivity Test resource name using the form:
+        /// `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteConnectivityTest(ConnectivityTestName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteConnectivityTest(new DeleteConnectivityTestRequest
+            {
+                ConnectivityTestName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific `ConnectivityTest`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Connectivity Test resource name using the form:
+        /// `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteConnectivityTestAsync(ConnectivityTestName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteConnectivityTestAsync(new DeleteConnectivityTestRequest
+            {
+                ConnectivityTestName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific `ConnectivityTest`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Connectivity Test resource name using the form:
+        /// `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteConnectivityTestAsync(ConnectivityTestName name, st::CancellationToken cancellationToken) =>
             DeleteConnectivityTestAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
@@ -1339,7 +1613,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-        /// in `ConnectivityTest` for for more details.
+        /// in `ConnectivityTest` for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1364,7 +1638,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// 
         /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
         /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-        /// in `ConnectivityTest` for for more details.
+        /// in `ConnectivityTest` for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

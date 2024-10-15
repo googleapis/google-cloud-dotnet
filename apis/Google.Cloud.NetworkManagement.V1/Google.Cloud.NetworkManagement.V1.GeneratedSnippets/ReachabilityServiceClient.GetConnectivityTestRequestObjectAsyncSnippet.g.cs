@@ -35,7 +35,10 @@ namespace GoogleCSharpSnippets
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = await ReachabilityServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetConnectivityTestRequest request = new GetConnectivityTestRequest { Name = "", };
+            GetConnectivityTestRequest request = new GetConnectivityTestRequest
+            {
+                ConnectivityTestName = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]"),
+            };
             // Make the request
             ConnectivityTest response = await reachabilityServiceClient.GetConnectivityTestAsync(request);
         }

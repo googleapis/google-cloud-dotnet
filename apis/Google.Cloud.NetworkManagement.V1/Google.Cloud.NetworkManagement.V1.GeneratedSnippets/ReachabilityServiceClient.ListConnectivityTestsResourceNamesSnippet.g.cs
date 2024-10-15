@@ -16,17 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_async]
+    // [START networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_sync_flattened_resourceNames]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkManagement.V1;
     using System;
-    using System.Linq;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedReachabilityServiceClientSnippets
     {
-        /// <summary>Snippet for ListConnectivityTestsAsync</summary>
+        /// <summary>Snippet for ListConnectivityTests</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -34,29 +32,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListConnectivityTestsRequestObjectAsync()
+        public void ListConnectivityTestsResourceNames()
         {
             // Create client
-            ReachabilityServiceClient reachabilityServiceClient = await ReachabilityServiceClient.CreateAsync();
+            ReachabilityServiceClient reachabilityServiceClient = ReachabilityServiceClient.Create();
             // Initialize request argument(s)
-            ListConnectivityTestsRequest request = new ListConnectivityTestsRequest
-            {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                Filter = "",
-                OrderBy = "",
-            };
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListConnectivityTestsResponse, ConnectivityTest> response = reachabilityServiceClient.ListConnectivityTestsAsync(request);
+            PagedEnumerable<ListConnectivityTestsResponse, ConnectivityTest> response = reachabilityServiceClient.ListConnectivityTests(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ConnectivityTest item) =>
+            foreach (ConnectivityTest item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListConnectivityTestsResponse page) =>
+            foreach (ListConnectivityTestsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -65,11 +58,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ConnectivityTest> singlePage = await response.ReadPageAsync(pageSize);
+            Page<ConnectivityTest> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ConnectivityTest item in singlePage)
@@ -81,5 +74,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_async]
+    // [END networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_sync_flattened_resourceNames]
 }

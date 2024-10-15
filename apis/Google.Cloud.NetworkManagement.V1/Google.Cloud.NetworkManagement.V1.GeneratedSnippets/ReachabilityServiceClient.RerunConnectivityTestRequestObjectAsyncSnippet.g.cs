@@ -36,7 +36,10 @@ namespace GoogleCSharpSnippets
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = await ReachabilityServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RerunConnectivityTestRequest request = new RerunConnectivityTestRequest { Name = "", };
+            RerunConnectivityTestRequest request = new RerunConnectivityTestRequest
+            {
+                ConnectivityTestName = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]"),
+            };
             // Make the request
             Operation<ConnectivityTest, OperationMetadata> response = await reachabilityServiceClient.RerunConnectivityTestAsync(request);
 

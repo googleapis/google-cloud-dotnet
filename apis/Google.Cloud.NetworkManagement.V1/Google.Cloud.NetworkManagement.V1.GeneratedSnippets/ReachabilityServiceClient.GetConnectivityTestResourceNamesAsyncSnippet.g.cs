@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync]
+    // [START networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_async_flattened_resourceNames]
     using Google.Cloud.NetworkManagement.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedReachabilityServiceClientSnippets
     {
-        /// <summary>Snippet for GetConnectivityTest</summary>
+        /// <summary>Snippet for GetConnectivityTestAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,18 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetConnectivityTestRequestObject()
+        public async Task GetConnectivityTestResourceNamesAsync()
         {
             // Create client
-            ReachabilityServiceClient reachabilityServiceClient = ReachabilityServiceClient.Create();
+            ReachabilityServiceClient reachabilityServiceClient = await ReachabilityServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetConnectivityTestRequest request = new GetConnectivityTestRequest
-            {
-                ConnectivityTestName = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]"),
-            };
+            ConnectivityTestName name = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]");
             // Make the request
-            ConnectivityTest response = reachabilityServiceClient.GetConnectivityTest(request);
+            ConnectivityTest response = await reachabilityServiceClient.GetConnectivityTestAsync(name);
         }
     }
-    // [END networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync]
+    // [END networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_async_flattened_resourceNames]
 }

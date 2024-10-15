@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_sync]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkManagement.V1;
     using System;
 
@@ -38,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListConnectivityTestsRequest request = new ListConnectivityTestsRequest
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
                 OrderBy = "",
             };

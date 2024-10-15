@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync]
+    // [START networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync_flattened_resourceNames]
     using Google.Cloud.NetworkManagement.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
@@ -31,17 +31,14 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void DeleteConnectivityTestRequestObject()
+        public void DeleteConnectivityTestResourceNames()
         {
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = ReachabilityServiceClient.Create();
             // Initialize request argument(s)
-            DeleteConnectivityTestRequest request = new DeleteConnectivityTestRequest
-            {
-                ConnectivityTestName = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]"),
-            };
+            ConnectivityTestName name = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = reachabilityServiceClient.DeleteConnectivityTest(request);
+            Operation<Empty, OperationMetadata> response = reachabilityServiceClient.DeleteConnectivityTest(name);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -60,5 +57,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync]
+    // [END networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync_flattened_resourceNames]
 }

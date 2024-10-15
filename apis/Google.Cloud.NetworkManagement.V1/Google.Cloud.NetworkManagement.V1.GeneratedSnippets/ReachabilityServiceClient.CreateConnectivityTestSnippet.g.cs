@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = ReachabilityServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]";
             string testId = "";
             ConnectivityTest resource = new ConnectivityTest();
             // Make the request
