@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync]
+    // [START networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync_flattened_resourceNames]
     using Google.Cloud.NetworkManagement.V1;
 
     public sealed partial class GeneratedReachabilityServiceClientSnippets
@@ -29,18 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetConnectivityTestRequestObject()
+        public void GetConnectivityTestResourceNames()
         {
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = ReachabilityServiceClient.Create();
             // Initialize request argument(s)
-            GetConnectivityTestRequest request = new GetConnectivityTestRequest
-            {
-                ConnectivityTestName = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]"),
-            };
+            ConnectivityTestName name = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]");
             // Make the request
-            ConnectivityTest response = reachabilityServiceClient.GetConnectivityTest(request);
+            ConnectivityTest response = reachabilityServiceClient.GetConnectivityTest(name);
         }
     }
-    // [END networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync]
+    // [END networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync_flattened_resourceNames]
 }

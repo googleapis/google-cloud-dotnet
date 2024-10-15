@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = ReachabilityServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/global/connectivityTests/[TEST]";
             // Make the request
             Operation<Empty, OperationMetadata> response = reachabilityServiceClient.DeleteConnectivityTest(name);
 

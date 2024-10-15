@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = ReachabilityServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]";
             // Make the request
             PagedEnumerable<ListConnectivityTestsResponse, ConnectivityTest> response = reachabilityServiceClient.ListConnectivityTests(parent);
 

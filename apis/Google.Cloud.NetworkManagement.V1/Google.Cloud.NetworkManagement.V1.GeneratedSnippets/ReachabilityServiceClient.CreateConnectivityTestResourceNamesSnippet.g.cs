@@ -16,14 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync]
+    // [START networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_sync_flattened_resourceNames]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkManagement.V1;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedReachabilityServiceClientSnippets
     {
-        /// <summary>Snippet for DeleteConnectivityTest</summary>
+        /// <summary>Snippet for CreateConnectivityTest</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,34 +31,33 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void DeleteConnectivityTestRequestObject()
+        public void CreateConnectivityTestResourceNames()
         {
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = ReachabilityServiceClient.Create();
             // Initialize request argument(s)
-            DeleteConnectivityTestRequest request = new DeleteConnectivityTestRequest
-            {
-                ConnectivityTestName = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]"),
-            };
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            string testId = "";
+            ConnectivityTest resource = new ConnectivityTest();
             // Make the request
-            Operation<Empty, OperationMetadata> response = reachabilityServiceClient.DeleteConnectivityTest(request);
+            Operation<ConnectivityTest, OperationMetadata> response = reachabilityServiceClient.CreateConnectivityTest(parent, testId, resource);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<ConnectivityTest, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            ConnectivityTest result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = reachabilityServiceClient.PollOnceDeleteConnectivityTest(operationName);
+            Operation<ConnectivityTest, OperationMetadata> retrievedResponse = reachabilityServiceClient.PollOnceCreateConnectivityTest(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                ConnectivityTest retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync]
+    // [END networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_sync_flattened_resourceNames]
 }

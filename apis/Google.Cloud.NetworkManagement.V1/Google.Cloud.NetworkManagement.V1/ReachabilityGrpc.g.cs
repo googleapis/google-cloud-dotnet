@@ -209,7 +209,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       ///
       /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
       /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-      /// in `ConnectivityTest` for for more details.
+      /// in `ConnectivityTest` for more details.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -490,7 +490,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       ///
       /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
       /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-      /// in `ConnectivityTest` for for more details.
+      /// in `ConnectivityTest` for more details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -516,7 +516,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       ///
       /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
       /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-      /// in `ConnectivityTest` for for more details.
+      /// in `ConnectivityTest` for more details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -540,7 +540,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       ///
       /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
       /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-      /// in `ConnectivityTest` for for more details.
+      /// in `ConnectivityTest` for more details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -566,7 +566,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       ///
       /// If the endpoint specifications in `ConnectivityTest` are incomplete, the
       /// reachability result returns a value of `AMBIGUOUS`. See the documentation
-      /// in `ConnectivityTest` for for more details.
+      /// in `ConnectivityTest` for more details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

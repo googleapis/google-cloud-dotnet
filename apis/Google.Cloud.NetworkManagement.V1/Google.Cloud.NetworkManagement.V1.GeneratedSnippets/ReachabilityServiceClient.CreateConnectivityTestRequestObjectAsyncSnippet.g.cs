@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_async]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkManagement.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
@@ -38,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateConnectivityTestRequest request = new CreateConnectivityTestRequest
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 TestId = "",
                 Resource = new ConnectivityTest(),
             };

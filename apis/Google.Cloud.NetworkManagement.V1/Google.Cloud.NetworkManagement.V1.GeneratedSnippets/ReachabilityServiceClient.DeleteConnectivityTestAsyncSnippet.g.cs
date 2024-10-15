@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = await ReachabilityServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/global/connectivityTests/[TEST]";
             // Make the request
             Operation<Empty, OperationMetadata> response = await reachabilityServiceClient.DeleteConnectivityTestAsync(name);
 
