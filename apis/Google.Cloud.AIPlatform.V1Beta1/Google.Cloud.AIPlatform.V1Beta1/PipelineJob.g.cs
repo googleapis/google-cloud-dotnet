@@ -39,7 +39,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Zm9ybS92MWJldGExL3VpX3BpcGVsaW5lX3NwZWMucHJvdG8aK2dvb2dsZS9j",
             "bG91ZC9haXBsYXRmb3JtL3YxYmV0YTEvdmFsdWUucHJvdG8aHGdvb2dsZS9w",
             "cm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIssRCgtQaXBlbGlu",
+            "bXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIqAXCgtQaXBlbGlu",
             "ZUpvYhIRCgRuYW1lGAEgASgJQgPgQQMSFAoMZGlzcGxheV9uYW1lGAIgASgJ",
             "EjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
             "dGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
@@ -68,7 +68,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "DXNhdGlzZmllc19wemkYHCABKAhCA+BBAxIlChhvcmlnaW5hbF9waXBlbGlu",
             "ZV9qb2JfaWQYHSABKANCA+BBARJiChtwaXBlbGluZV90YXNrX3JlcnVuX2Nv",
             "bmZpZ3MYHiADKAsyOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "LlBpcGVsaW5lVGFza1JlcnVuQ29uZmlnQgPgQQEalgYKDVJ1bnRpbWVDb25m",
+            "LlBpcGVsaW5lVGFza1JlcnVuQ29uZmlnQgPgQQEa6wsKDVJ1bnRpbWVDb25m",
             "aWcSYgoKcGFyYW1ldGVycxgBIAMoCzJKLmdvb2dsZS5jbG91ZC5haXBsYXRm",
             "b3JtLnYxYmV0YTEuUGlwZWxpbmVKb2IuUnVudGltZUNvbmZpZy5QYXJhbWV0",
             "ZXJzRW50cnlCAhgBEiEKFGdjc19vdXRwdXRfZGlyZWN0b3J5GAIgASgJQgPg",
@@ -78,99 +78,117 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVGYWls",
             "dXJlUG9saWN5EmcKD2lucHV0X2FydGlmYWN0cxgFIAMoCzJOLmdvb2dsZS5j",
             "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVKb2IuUnVudGltZUNv",
-            "bmZpZy5JbnB1dEFydGlmYWN0c0VudHJ5Gi4KDUlucHV0QXJ0aWZhY3QSFQoL",
-            "YXJ0aWZhY3RfaWQYASABKAlIAEIGCgRraW5kGlkKD1BhcmFtZXRlcnNFbnRy",
-            "eRILCgNrZXkYASABKAkSNQoFdmFsdWUYAiABKAsyJi5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MWJldGExLlZhbHVlOgI4ARpOChRQYXJhbWV0ZXJWYWx1",
-            "ZXNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUu",
-            "cHJvdG9idWYuVmFsdWU6AjgBGn8KE0lucHV0QXJ0aWZhY3RzRW50cnkSCwoD",
-            "a2V5GAEgASgJElcKBXZhbHVlGAIgASgLMkguZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFiZXRhMS5QaXBlbGluZUpvYi5SdW50aW1lQ29uZmlnLklucHV0",
-            "QXJ0aWZhY3Q6AjgBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAE6b+pBbAolYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
-            "bS9QaXBlbGluZUpvYhJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L3BpcGVsaW5lSm9icy97cGlwZWxpbmVfam9ifSIrChhQaXBl",
-            "bGluZVRlbXBsYXRlTWV0YWRhdGESDwoHdmVyc2lvbhgDIAEoCSL5AQoRUGlw",
-            "ZWxpbmVKb2JEZXRhaWwSRwoQcGlwZWxpbmVfY29udGV4dBgBIAEoCzIoLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQ29udGV4dEID4EEDEksK",
-            "FHBpcGVsaW5lX3J1bl9jb250ZXh0GAIgASgLMiguZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5Db250ZXh0QgPgQQMSTgoMdGFza19kZXRhaWxz",
-            "GAMgAygLMjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBl",
-            "bGluZVRhc2tEZXRhaWxCA+BBAyLPCwoSUGlwZWxpbmVUYXNrRGV0YWlsEhQK",
-            "B3Rhc2tfaWQYASABKANCA+BBAxIbCg5wYXJlbnRfdGFza19pZBgMIAEoA0ID",
-            "4EEDEhYKCXRhc2tfbmFtZRgCIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnN0YXJ0",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "MQoIZW5kX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSWQoPZXhlY3V0b3JfZGV0YWlsGAYgASgLMjsuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVRhc2tFeGVjdXRvckRldGFp",
-            "bEID4EEDEk0KBXN0YXRlGAcgASgOMjkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5QaXBlbGluZVRhc2tEZXRhaWwuU3RhdGVCA+BBAxJCCgll",
-            "eGVjdXRpb24YCCABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLkV4ZWN1dGlvbkID4EEDEiYKBWVycm9yGAkgASgLMhIuZ29vZ2xlLnJw",
-            "Yy5TdGF0dXNCA+BBAxJpChRwaXBlbGluZV90YXNrX3N0YXR1cxgNIAMoCzJG",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVUYXNr",
-            "RGV0YWlsLlBpcGVsaW5lVGFza1N0YXR1c0ID4EEDElQKBmlucHV0cxgKIAMo",
-            "CzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVU",
-            "YXNrRGV0YWlsLklucHV0c0VudHJ5QgPgQQMSVgoHb3V0cHV0cxgLIAMoCzJA",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVUYXNr",
-            "RGV0YWlsLk91dHB1dHNFbnRyeUID4EEDGsEBChJQaXBlbGluZVRhc2tTdGF0",
-            "dXMSNAoLdXBkYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSTQoFc3RhdGUYAiABKA4yOS5nb29nbGUuY2xvdWQuYWlw",
+            "bmZpZy5JbnB1dEFydGlmYWN0c0VudHJ5EmcKD2RlZmF1bHRfcnVudGltZRgG",
+            "IAEoCzJJLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxp",
+            "bmVKb2IuUnVudGltZUNvbmZpZy5EZWZhdWx0UnVudGltZUID4EEBGi4KDUlu",
+            "cHV0QXJ0aWZhY3QSFQoLYXJ0aWZhY3RfaWQYASABKAlIAEIGCgRraW5kGrkD",
+            "Ch9QZXJzaXN0ZW50UmVzb3VyY2VSdW50aW1lRGV0YWlsEiAKGHBlcnNpc3Rl",
+            "bnRfcmVzb3VyY2VfbmFtZRgBIAEoCRIuCiZ0YXNrX3Jlc291cmNlX3VuYXZh",
+            "aWxhYmxlX3dhaXRfdGltZV9tcxgCIAEoAxK2AQoqdGFza19yZXNvdXJjZV91",
+            "bmF2YWlsYWJsZV90aW1lb3V0X2JlaGF2aW9yGAMgASgOMoEBLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVKb2IuUnVudGltZUNv",
+            "bmZpZy5QZXJzaXN0ZW50UmVzb3VyY2VSdW50aW1lRGV0YWlsLlRhc2tSZXNv",
+            "dXJjZVVuYXZhaWxhYmxlVGltZW91dEJlaGF2aW9yIooBCiZUYXNrUmVzb3Vy",
+            "Y2VVbmF2YWlsYWJsZVRpbWVvdXRCZWhhdmlvchI6CjZUQVNLX1JFU09VUkNF",
+            "X1VOQVZBSUxBQkxFX1RJTUVPVVRfQkVIQVZJT1JfVU5TUEVDSUZJRUQQABII",
+            "CgRGQUlMEAESGgoWRkFMTF9CQUNLX1RPX09OX0RFTUFORBACGq0BCg5EZWZh",
+            "dWx0UnVudGltZRKIAQoicGVyc2lzdGVudF9yZXNvdXJjZV9ydW50aW1lX2Rl",
+            "dGFpbBgBIAEoCzJaLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
+            "UGlwZWxpbmVKb2IuUnVudGltZUNvbmZpZy5QZXJzaXN0ZW50UmVzb3VyY2VS",
+            "dW50aW1lRGV0YWlsSABCEAoOcnVudGltZV9kZXRhaWwaWQoPUGFyYW1ldGVy",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRI1CgV2YWx1ZRgCIAEoCzImLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuVmFsdWU6AjgBGk4KFFBhcmFtZXRl",
+            "clZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdv",
+            "b2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEafwoTSW5wdXRBcnRpZmFjdHNFbnRy",
+            "eRILCgNrZXkYASABKAkSVwoFdmFsdWUYAiABKAsySC5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lSm9iLlJ1bnRpbWVDb25maWcu",
+            "SW5wdXRBcnRpZmFjdDoCOAEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ATpv6kFsCiVhaXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL1BpcGVsaW5lSm9iEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vcGlwZWxpbmVKb2JzL3twaXBlbGluZV9qb2J9IisK",
+            "GFBpcGVsaW5lVGVtcGxhdGVNZXRhZGF0YRIPCgd2ZXJzaW9uGAMgASgJIvkB",
+            "ChFQaXBlbGluZUpvYkRldGFpbBJHChBwaXBlbGluZV9jb250ZXh0GAEgASgL",
+            "MiguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Db250ZXh0QgPg",
+            "QQMSSwoUcGlwZWxpbmVfcnVuX2NvbnRleHQYAiABKAsyKC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkNvbnRleHRCA+BBAxJOCgx0YXNrX2Rl",
+            "dGFpbHMYAyADKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "LlBpcGVsaW5lVGFza0RldGFpbEID4EEDIs8LChJQaXBlbGluZVRhc2tEZXRh",
+            "aWwSFAoHdGFza19pZBgBIAEoA0ID4EEDEhsKDnBhcmVudF90YXNrX2lkGAwg",
+            "ASgDQgPgQQMSFgoJdGFza19uYW1lGAIgASgJQgPgQQMSNAoLY3JlYXRlX3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoK",
+            "c3RhcnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxIxCghlbmRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxJZCg9leGVjdXRvcl9kZXRhaWwYBiABKAsyOy5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lVGFza0V4ZWN1dG9y",
+            "RGV0YWlsQgPgQQMSTQoFc3RhdGUYByABKA4yOS5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MWJldGExLlBpcGVsaW5lVGFza0RldGFpbC5TdGF0ZUID4EED",
-            "EiYKBWVycm9yGAMgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxpRCgxB",
-            "cnRpZmFjdExpc3QSQQoJYXJ0aWZhY3RzGAEgAygLMikuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5BcnRpZmFjdEID4EEDGm8KC0lucHV0c0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRJPCgV2YWx1ZRgCIAEoCzJALmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVUYXNrRGV0YWlsLkFydGlm",
-            "YWN0TGlzdDoCOAEacAoMT3V0cHV0c0VudHJ5EgsKA2tleRgBIAEoCRJPCgV2",
-            "YWx1ZRgCIAEoCzJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
-            "UGlwZWxpbmVUYXNrRGV0YWlsLkFydGlmYWN0TGlzdDoCOAEipgEKBVN0YXRl",
-            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgsKB1JVTk5J",
-            "TkcQAhINCglTVUNDRUVERUQQAxISCg5DQU5DRUxfUEVORElORxAEEg4KCkNB",
-            "TkNFTExJTkcQBRINCglDQU5DRUxMRUQQBhIKCgZGQUlMRUQQBxILCgdTS0lQ",
-            "UEVEEAgSEQoNTk9UX1RSSUdHRVJFRBAJItUEChpQaXBlbGluZVRhc2tFeGVj",
-            "dXRvckRldGFpbBJsChBjb250YWluZXJfZGV0YWlsGAEgASgLMksuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVRhc2tFeGVjdXRv",
-            "ckRldGFpbC5Db250YWluZXJEZXRhaWxCA+BBA0gAEm0KEWN1c3RvbV9qb2Jf",
-            "ZGV0YWlsGAIgASgLMksuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MS5QaXBlbGluZVRhc2tFeGVjdXRvckRldGFpbC5DdXN0b21Kb2JEZXRhaWxC",
-            "A+BBA0gAGucBCg9Db250YWluZXJEZXRhaWwSPQoIbWFpbl9qb2IYASABKAlC",
-            "K+BBA/pBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9DdXN0b21Kb2IS",
-            "SgoVcHJlX2NhY2hpbmdfY2hlY2tfam9iGAIgASgJQivgQQP6QSUKI2FpcGxh",
-            "dGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEh0KEGZhaWxlZF9tYWlu",
-            "X2pvYnMYAyADKAlCA+BBAxIqCh1mYWlsZWRfcHJlX2NhY2hpbmdfY2hlY2tf",
-            "am9icxgEIAMoCUID4EEDGmUKD0N1c3RvbUpvYkRldGFpbBI4CgNqb2IYASAB",
-            "KAlCK+BBA/pBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9DdXN0b21K",
-            "b2ISGAoLZmFpbGVkX2pvYnMYAyADKAlCA+BBA0IJCgdkZXRhaWxzIuQFChdQ",
-            "aXBlbGluZVRhc2tSZXJ1bkNvbmZpZxIUCgd0YXNrX2lkGAEgASgDQgPgQQES",
-            "FgoJdGFza19uYW1lGAIgASgJQgPgQQESVAoGaW5wdXRzGAMgASgLMj8uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVRhc2tSZXJ1",
-            "bkNvbmZpZy5JbnB1dHNCA+BBARIWCglza2lwX3Rhc2sYBCABKAhCA+BBARIi",
-            "ChVza2lwX2Rvd25zdHJlYW1fdGFza3MYBSABKAhCA+BBARpYCgxBcnRpZmFj",
-            "dExpc3QSSAoJYXJ0aWZhY3RzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFiZXRhMS5SdW50aW1lQXJ0aWZhY3RCA+BBARquAwoGSW5wdXRz",
-            "EmYKCWFydGlmYWN0cxgBIAMoCzJOLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuUGlwZWxpbmVUYXNrUmVydW5Db25maWcuSW5wdXRzLkFydGlm",
-            "YWN0c0VudHJ5QgPgQQEScwoQcGFyYW1ldGVyX3ZhbHVlcxgCIAMoCzJULmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVUYXNrUmVy",
-            "dW5Db25maWcuSW5wdXRzLlBhcmFtZXRlclZhbHVlc0VudHJ5QgPgQQEadwoO",
-            "QXJ0aWZhY3RzRW50cnkSCwoDa2V5GAEgASgJElQKBXZhbHVlGAIgASgLMkUu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVRhc2tS",
-            "ZXJ1bkNvbmZpZy5BcnRpZmFjdExpc3Q6AjgBGk4KFFBhcmFtZXRlclZhbHVl",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5w",
-            "cm90b2J1Zi5WYWx1ZToCOAFCsAIKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExQghQaXBlbGluZVABWkNjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
-            "bXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2ds",
-            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpB",
-            "SVBsYXRmb3JtOjpWMWJldGEx6kFOCh5jb21wdXRlLmdvb2dsZWFwaXMuY29t",
-            "L05ldHdvcmsSLHByb2plY3RzL3twcm9qZWN0fS9nbG9iYWwvbmV0d29ya3Mv",
-            "e25ldHdvcmt9YgZwcm90bzM="));
+            "EkIKCWV4ZWN1dGlvbhgIIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuRXhlY3V0aW9uQgPgQQMSJgoFZXJyb3IYCSABKAsyEi5nb29n",
+            "bGUucnBjLlN0YXR1c0ID4EEDEmkKFHBpcGVsaW5lX3Rhc2tfc3RhdHVzGA0g",
+            "AygLMkYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGlu",
+            "ZVRhc2tEZXRhaWwuUGlwZWxpbmVUYXNrU3RhdHVzQgPgQQMSVAoGaW5wdXRz",
+            "GAogAygLMj8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBl",
+            "bGluZVRhc2tEZXRhaWwuSW5wdXRzRW50cnlCA+BBAxJWCgdvdXRwdXRzGAsg",
+            "AygLMkAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGlu",
+            "ZVRhc2tEZXRhaWwuT3V0cHV0c0VudHJ5QgPgQQMawQEKElBpcGVsaW5lVGFz",
+            "a1N0YXR1cxI0Cgt1cGRhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxJNCgVzdGF0ZRgCIAEoDjI5Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGlwZWxpbmVUYXNrRGV0YWlsLlN0YXRl",
+            "QgPgQQMSJgoFZXJyb3IYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EED",
+            "GlEKDEFydGlmYWN0TGlzdBJBCglhcnRpZmFjdHMYASADKAsyKS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkFydGlmYWN0QgPgQQMabwoLSW5w",
+            "dXRzRW50cnkSCwoDa2V5GAEgASgJEk8KBXZhbHVlGAIgASgLMkAuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVRhc2tEZXRhaWwu",
+            "QXJ0aWZhY3RMaXN0OgI4ARpwCgxPdXRwdXRzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Ek8KBXZhbHVlGAIgASgLMkAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
+            "ZXRhMS5QaXBlbGluZVRhc2tEZXRhaWwuQXJ0aWZhY3RMaXN0OgI4ASKmAQoF",
+            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESCwoH",
+            "UlVOTklORxACEg0KCVNVQ0NFRURFRBADEhIKDkNBTkNFTF9QRU5ESU5HEAQS",
+            "DgoKQ0FOQ0VMTElORxAFEg0KCUNBTkNFTExFRBAGEgoKBkZBSUxFRBAHEgsK",
+            "B1NLSVBQRUQQCBIRCg1OT1RfVFJJR0dFUkVEEAki1QQKGlBpcGVsaW5lVGFz",
+            "a0V4ZWN1dG9yRGV0YWlsEmwKEGNvbnRhaW5lcl9kZXRhaWwYASABKAsySy5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lVGFza0V4",
+            "ZWN1dG9yRGV0YWlsLkNvbnRhaW5lckRldGFpbEID4EEDSAASbQoRY3VzdG9t",
+            "X2pvYl9kZXRhaWwYAiABKAsySy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLlBpcGVsaW5lVGFza0V4ZWN1dG9yRGV0YWlsLkN1c3RvbUpvYkRl",
+            "dGFpbEID4EEDSAAa5wEKD0NvbnRhaW5lckRldGFpbBI9CghtYWluX2pvYhgB",
+            "IAEoCUIr4EED+kElCiNhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0N1c3Rv",
+            "bUpvYhJKChVwcmVfY2FjaGluZ19jaGVja19qb2IYAiABKAlCK+BBA/pBJQoj",
+            "YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9DdXN0b21Kb2ISHQoQZmFpbGVk",
+            "X21haW5fam9icxgDIAMoCUID4EEDEioKHWZhaWxlZF9wcmVfY2FjaGluZ19j",
+            "aGVja19qb2JzGAQgAygJQgPgQQMaZQoPQ3VzdG9tSm9iRGV0YWlsEjgKA2pv",
+            "YhgBIAEoCUIr4EED+kElCiNhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0N1",
+            "c3RvbUpvYhIYCgtmYWlsZWRfam9icxgDIAMoCUID4EEDQgkKB2RldGFpbHMi",
+            "5AUKF1BpcGVsaW5lVGFza1JlcnVuQ29uZmlnEhQKB3Rhc2tfaWQYASABKANC",
+            "A+BBARIWCgl0YXNrX25hbWUYAiABKAlCA+BBARJUCgZpbnB1dHMYAyABKAsy",
+            "Py5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5lVGFz",
+            "a1JlcnVuQ29uZmlnLklucHV0c0ID4EEBEhYKCXNraXBfdGFzaxgEIAEoCEID",
+            "4EEBEiIKFXNraXBfZG93bnN0cmVhbV90YXNrcxgFIAEoCEID4EEBGlgKDEFy",
+            "dGlmYWN0TGlzdBJICglhcnRpZmFjdHMYASADKAsyMC5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlJ1bnRpbWVBcnRpZmFjdEID4EEBGq4DCgZJ",
+            "bnB1dHMSZgoJYXJ0aWZhY3RzGAEgAygLMk4uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFiZXRhMS5QaXBlbGluZVRhc2tSZXJ1bkNvbmZpZy5JbnB1dHMu",
+            "QXJ0aWZhY3RzRW50cnlCA+BBARJzChBwYXJhbWV0ZXJfdmFsdWVzGAIgAygL",
+            "MlQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QaXBlbGluZVRh",
+            "c2tSZXJ1bkNvbmZpZy5JbnB1dHMuUGFyYW1ldGVyVmFsdWVzRW50cnlCA+BB",
+            "ARp3Cg5BcnRpZmFjdHNFbnRyeRILCgNrZXkYASABKAkSVAoFdmFsdWUYAiAB",
+            "KAsyRS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBpcGVsaW5l",
+            "VGFza1JlcnVuQ29uZmlnLkFydGlmYWN0TGlzdDoCOAEaTgoUUGFyYW1ldGVy",
+            "VmFsdWVzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuZ29v",
+            "Z2xlLnByb3RvYnVmLlZhbHVlOgI4AUKwAgojY29tLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxYmV0YTFCCFBpcGVsaW5lUAFaQ2Nsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBs",
+            "YXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIf",
+            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xv",
+            "dWQ6OkFJUGxhdGZvcm06OlYxYmV0YTHqQU4KHmNvbXB1dGUuZ29vZ2xlYXBp",
+            "cy5jb20vTmV0d29yaxIscHJvamVjdHMve3Byb2plY3R9L2dsb2JhbC9uZXR3",
+            "b3Jrcy97bmV0d29ya31iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ArtifactReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContextReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExecutionReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.PipelineFailurePolicyReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.PipelineStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.UiPipelineSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ValueReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob), global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Parser, new[]{ "Name", "DisplayName", "CreateTime", "StartTime", "EndTime", "UpdateTime", "PipelineSpec", "State", "JobDetail", "Error", "Labels", "RuntimeConfig", "EncryptionSpec", "ServiceAccount", "Network", "ReservedIpRanges", "PscInterfaceConfig", "TemplateUri", "TemplateMetadata", "ScheduleName", "PreflightValidations", "SatisfiesPzs", "SatisfiesPzi", "OriginalPipelineJobId", "PipelineTaskRerunConfigs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig), global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Parser, new[]{ "Parameters", "GcsOutputDirectory", "ParameterValues", "FailurePolicy", "InputArtifacts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.InputArtifact), global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.InputArtifact.Parser, new[]{ "ArtifactId" }, new[]{ "Kind" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob), global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Parser, new[]{ "Name", "DisplayName", "CreateTime", "StartTime", "EndTime", "UpdateTime", "PipelineSpec", "State", "JobDetail", "Error", "Labels", "RuntimeConfig", "EncryptionSpec", "ServiceAccount", "Network", "ReservedIpRanges", "PscInterfaceConfig", "TemplateUri", "TemplateMetadata", "ScheduleName", "PreflightValidations", "SatisfiesPzs", "SatisfiesPzi", "OriginalPipelineJobId", "PipelineTaskRerunConfigs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig), global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Parser, new[]{ "Parameters", "GcsOutputDirectory", "ParameterValues", "FailurePolicy", "InputArtifacts", "DefaultRuntime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.InputArtifact), global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.InputArtifact.Parser, new[]{ "ArtifactId" }, new[]{ "Kind" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail), global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Parser, new[]{ "PersistentResourceName", "TaskResourceUnavailableWaitTimeMs", "TaskResourceUnavailableTimeoutBehavior" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.DefaultRuntime), global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.DefaultRuntime.Parser, new[]{ "PersistentResourceRuntimeDetail" }, new[]{ "RuntimeDetail" }, null, null, null),
             null, null, null, }),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PipelineTemplateMetadata), global::Google.Cloud.AIPlatform.V1Beta1.PipelineTemplateMetadata.Parser, new[]{ "Version" }, null, null, null, null),
@@ -1511,6 +1529,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           parameterValues_ = other.parameterValues_.Clone();
           failurePolicy_ = other.failurePolicy_;
           inputArtifacts_ = other.inputArtifacts_.Clone();
+          defaultRuntime_ = other.defaultRuntime_ != null ? other.defaultRuntime_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1618,6 +1637,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           get { return inputArtifacts_; }
         }
 
+        /// <summary>Field number for the "default_runtime" field.</summary>
+        public const int DefaultRuntimeFieldNumber = 6;
+        private global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.DefaultRuntime defaultRuntime_;
+        /// <summary>
+        /// Optional. The default runtime for the PipelineJob. If not provided,
+        /// Vertex Custom Job(on demand) is used as the runtime. For Vertex Custom
+        /// Job, please refer to
+        /// https://cloud.google.com/vertex-ai/docs/training/overview.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.DefaultRuntime DefaultRuntime {
+          get { return defaultRuntime_; }
+          set {
+            defaultRuntime_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1638,6 +1675,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (!ParameterValues.Equals(other.ParameterValues)) return false;
           if (FailurePolicy != other.FailurePolicy) return false;
           if (!InputArtifacts.Equals(other.InputArtifacts)) return false;
+          if (!object.Equals(DefaultRuntime, other.DefaultRuntime)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1650,6 +1688,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           hash ^= ParameterValues.GetHashCode();
           if (FailurePolicy != global::Google.Cloud.AIPlatform.V1Beta1.PipelineFailurePolicy.Unspecified) hash ^= FailurePolicy.GetHashCode();
           hash ^= InputArtifacts.GetHashCode();
+          if (defaultRuntime_ != null) hash ^= DefaultRuntime.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1679,6 +1718,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteEnum((int) FailurePolicy);
           }
           inputArtifacts_.WriteTo(output, _map_inputArtifacts_codec);
+          if (defaultRuntime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(DefaultRuntime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1700,6 +1743,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteEnum((int) FailurePolicy);
           }
           inputArtifacts_.WriteTo(ref output, _map_inputArtifacts_codec);
+          if (defaultRuntime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(DefaultRuntime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1719,6 +1766,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FailurePolicy);
           }
           size += inputArtifacts_.CalculateSize(_map_inputArtifacts_codec);
+          if (defaultRuntime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultRuntime);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1740,6 +1790,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             FailurePolicy = other.FailurePolicy;
           }
           inputArtifacts_.MergeFrom(other.inputArtifacts_);
+          if (other.defaultRuntime_ != null) {
+            if (defaultRuntime_ == null) {
+              DefaultRuntime = new global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.DefaultRuntime();
+            }
+            DefaultRuntime.MergeFrom(other.DefaultRuntime);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1775,6 +1831,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 inputArtifacts_.AddEntriesFrom(input, _map_inputArtifacts_codec);
                 break;
               }
+              case 50: {
+                if (defaultRuntime_ == null) {
+                  DefaultRuntime = new global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.DefaultRuntime();
+                }
+                input.ReadMessage(DefaultRuntime);
+                break;
+              }
             }
           }
         #endif
@@ -1808,6 +1871,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 42: {
                 inputArtifacts_.AddEntriesFrom(ref input, _map_inputArtifacts_codec);
+                break;
+              }
+              case 50: {
+                if (defaultRuntime_ == null) {
+                  DefaultRuntime = new global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.DefaultRuntime();
+                }
+                input.ReadMessage(DefaultRuntime);
                 break;
               }
             }
@@ -2055,6 +2125,552 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                     break;
                   case 10: {
                     ArtifactId = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Persistent resource based runtime detail. For more information, refer to
+          /// https://cloud.google.com/vertex-ai/docs/training/persistent-resource-overview
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class PersistentResourceRuntimeDetail : pb::IMessage<PersistentResourceRuntimeDetail>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<PersistentResourceRuntimeDetail> _parser = new pb::MessageParser<PersistentResourceRuntimeDetail>(() => new PersistentResourceRuntimeDetail());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<PersistentResourceRuntimeDetail> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PersistentResourceRuntimeDetail() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PersistentResourceRuntimeDetail(PersistentResourceRuntimeDetail other) : this() {
+              persistentResourceName_ = other.persistentResourceName_;
+              taskResourceUnavailableWaitTimeMs_ = other.taskResourceUnavailableWaitTimeMs_;
+              taskResourceUnavailableTimeoutBehavior_ = other.taskResourceUnavailableTimeoutBehavior_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PersistentResourceRuntimeDetail Clone() {
+              return new PersistentResourceRuntimeDetail(this);
+            }
+
+            /// <summary>Field number for the "persistent_resource_name" field.</summary>
+            public const int PersistentResourceNameFieldNumber = 1;
+            private string persistentResourceName_ = "";
+            /// <summary>
+            /// Persistent resource name.
+            /// Format:
+            /// `projects/{project}/locations/{location}/persistentResources/{persistent_resource}`
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string PersistentResourceName {
+              get { return persistentResourceName_; }
+              set {
+                persistentResourceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "task_resource_unavailable_wait_time_ms" field.</summary>
+            public const int TaskResourceUnavailableWaitTimeMsFieldNumber = 2;
+            private long taskResourceUnavailableWaitTimeMs_;
+            /// <summary>
+            /// The max time a pipeline task waits for the required CPU, memory, or
+            /// accelerator resource to become available from the specified persistent
+            /// resource. Default wait time is 0.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long TaskResourceUnavailableWaitTimeMs {
+              get { return taskResourceUnavailableWaitTimeMs_; }
+              set {
+                taskResourceUnavailableWaitTimeMs_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "task_resource_unavailable_timeout_behavior" field.</summary>
+            public const int TaskResourceUnavailableTimeoutBehaviorFieldNumber = 3;
+            private global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior taskResourceUnavailableTimeoutBehavior_ = global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior.Unspecified;
+            /// <summary>
+            /// Specifies the behavior to take if the timeout is reached.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior TaskResourceUnavailableTimeoutBehavior {
+              get { return taskResourceUnavailableTimeoutBehavior_; }
+              set {
+                taskResourceUnavailableTimeoutBehavior_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as PersistentResourceRuntimeDetail);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(PersistentResourceRuntimeDetail other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (PersistentResourceName != other.PersistentResourceName) return false;
+              if (TaskResourceUnavailableWaitTimeMs != other.TaskResourceUnavailableWaitTimeMs) return false;
+              if (TaskResourceUnavailableTimeoutBehavior != other.TaskResourceUnavailableTimeoutBehavior) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (PersistentResourceName.Length != 0) hash ^= PersistentResourceName.GetHashCode();
+              if (TaskResourceUnavailableWaitTimeMs != 0L) hash ^= TaskResourceUnavailableWaitTimeMs.GetHashCode();
+              if (TaskResourceUnavailableTimeoutBehavior != global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior.Unspecified) hash ^= TaskResourceUnavailableTimeoutBehavior.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (PersistentResourceName.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(PersistentResourceName);
+              }
+              if (TaskResourceUnavailableWaitTimeMs != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(TaskResourceUnavailableWaitTimeMs);
+              }
+              if (TaskResourceUnavailableTimeoutBehavior != global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior.Unspecified) {
+                output.WriteRawTag(24);
+                output.WriteEnum((int) TaskResourceUnavailableTimeoutBehavior);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (PersistentResourceName.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(PersistentResourceName);
+              }
+              if (TaskResourceUnavailableWaitTimeMs != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(TaskResourceUnavailableWaitTimeMs);
+              }
+              if (TaskResourceUnavailableTimeoutBehavior != global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior.Unspecified) {
+                output.WriteRawTag(24);
+                output.WriteEnum((int) TaskResourceUnavailableTimeoutBehavior);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (PersistentResourceName.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(PersistentResourceName);
+              }
+              if (TaskResourceUnavailableWaitTimeMs != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(TaskResourceUnavailableWaitTimeMs);
+              }
+              if (TaskResourceUnavailableTimeoutBehavior != global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaskResourceUnavailableTimeoutBehavior);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(PersistentResourceRuntimeDetail other) {
+              if (other == null) {
+                return;
+              }
+              if (other.PersistentResourceName.Length != 0) {
+                PersistentResourceName = other.PersistentResourceName;
+              }
+              if (other.TaskResourceUnavailableWaitTimeMs != 0L) {
+                TaskResourceUnavailableWaitTimeMs = other.TaskResourceUnavailableWaitTimeMs;
+              }
+              if (other.TaskResourceUnavailableTimeoutBehavior != global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior.Unspecified) {
+                TaskResourceUnavailableTimeoutBehavior = other.TaskResourceUnavailableTimeoutBehavior;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    PersistentResourceName = input.ReadString();
+                    break;
+                  }
+                  case 16: {
+                    TaskResourceUnavailableWaitTimeMs = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    TaskResourceUnavailableTimeoutBehavior = (global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    PersistentResourceName = input.ReadString();
+                    break;
+                  }
+                  case 16: {
+                    TaskResourceUnavailableWaitTimeMs = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    TaskResourceUnavailableTimeoutBehavior = (global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail.Types.TaskResourceUnavailableTimeoutBehavior) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the PersistentResourceRuntimeDetail message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// An enum that specifies the behavior to take if the timeout is reached.
+              /// </summary>
+              public enum TaskResourceUnavailableTimeoutBehavior {
+                /// <summary>
+                /// Unspecified. Behavior is same as `FAIL`.
+                /// </summary>
+                [pbr::OriginalName("TASK_RESOURCE_UNAVAILABLE_TIMEOUT_BEHAVIOR_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// Fail the task if the timeout is reached.
+                /// </summary>
+                [pbr::OriginalName("FAIL")] Fail = 1,
+                /// <summary>
+                /// Fall back to on-demand execution if the timeout is reached.
+                /// </summary>
+                [pbr::OriginalName("FALL_BACK_TO_ON_DEMAND")] FallBackToOnDemand = 2,
+              }
+
+            }
+            #endregion
+
+          }
+
+          /// <summary>
+          /// The default runtime for the PipelineJob.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class DefaultRuntime : pb::IMessage<DefaultRuntime>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<DefaultRuntime> _parser = new pb::MessageParser<DefaultRuntime>(() => new DefaultRuntime());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<DefaultRuntime> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DefaultRuntime() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DefaultRuntime(DefaultRuntime other) : this() {
+              switch (other.RuntimeDetailCase) {
+                case RuntimeDetailOneofCase.PersistentResourceRuntimeDetail:
+                  PersistentResourceRuntimeDetail = other.PersistentResourceRuntimeDetail.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DefaultRuntime Clone() {
+              return new DefaultRuntime(this);
+            }
+
+            /// <summary>Field number for the "persistent_resource_runtime_detail" field.</summary>
+            public const int PersistentResourceRuntimeDetailFieldNumber = 1;
+            /// <summary>
+            /// Persistent resource based runtime detail.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail PersistentResourceRuntimeDetail {
+              get { return runtimeDetailCase_ == RuntimeDetailOneofCase.PersistentResourceRuntimeDetail ? (global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail) runtimeDetail_ : null; }
+              set {
+                runtimeDetail_ = value;
+                runtimeDetailCase_ = value == null ? RuntimeDetailOneofCase.None : RuntimeDetailOneofCase.PersistentResourceRuntimeDetail;
+              }
+            }
+
+            private object runtimeDetail_;
+            /// <summary>Enum of possible cases for the "runtime_detail" oneof.</summary>
+            public enum RuntimeDetailOneofCase {
+              None = 0,
+              PersistentResourceRuntimeDetail = 1,
+            }
+            private RuntimeDetailOneofCase runtimeDetailCase_ = RuntimeDetailOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RuntimeDetailOneofCase RuntimeDetailCase {
+              get { return runtimeDetailCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearRuntimeDetail() {
+              runtimeDetailCase_ = RuntimeDetailOneofCase.None;
+              runtimeDetail_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as DefaultRuntime);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(DefaultRuntime other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(PersistentResourceRuntimeDetail, other.PersistentResourceRuntimeDetail)) return false;
+              if (RuntimeDetailCase != other.RuntimeDetailCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (runtimeDetailCase_ == RuntimeDetailOneofCase.PersistentResourceRuntimeDetail) hash ^= PersistentResourceRuntimeDetail.GetHashCode();
+              hash ^= (int) runtimeDetailCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (runtimeDetailCase_ == RuntimeDetailOneofCase.PersistentResourceRuntimeDetail) {
+                output.WriteRawTag(10);
+                output.WriteMessage(PersistentResourceRuntimeDetail);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (runtimeDetailCase_ == RuntimeDetailOneofCase.PersistentResourceRuntimeDetail) {
+                output.WriteRawTag(10);
+                output.WriteMessage(PersistentResourceRuntimeDetail);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (runtimeDetailCase_ == RuntimeDetailOneofCase.PersistentResourceRuntimeDetail) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(PersistentResourceRuntimeDetail);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(DefaultRuntime other) {
+              if (other == null) {
+                return;
+              }
+              switch (other.RuntimeDetailCase) {
+                case RuntimeDetailOneofCase.PersistentResourceRuntimeDetail:
+                  if (PersistentResourceRuntimeDetail == null) {
+                    PersistentResourceRuntimeDetail = new global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail();
+                  }
+                  PersistentResourceRuntimeDetail.MergeFrom(other.PersistentResourceRuntimeDetail);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail();
+                    if (runtimeDetailCase_ == RuntimeDetailOneofCase.PersistentResourceRuntimeDetail) {
+                      subBuilder.MergeFrom(PersistentResourceRuntimeDetail);
+                    }
+                    input.ReadMessage(subBuilder);
+                    PersistentResourceRuntimeDetail = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.PipelineJob.Types.RuntimeConfig.Types.PersistentResourceRuntimeDetail();
+                    if (runtimeDetailCase_ == RuntimeDetailOneofCase.PersistentResourceRuntimeDetail) {
+                      subBuilder.MergeFrom(PersistentResourceRuntimeDetail);
+                    }
+                    input.ReadMessage(subBuilder);
+                    PersistentResourceRuntimeDetail = subBuilder;
                     break;
                   }
                 }
