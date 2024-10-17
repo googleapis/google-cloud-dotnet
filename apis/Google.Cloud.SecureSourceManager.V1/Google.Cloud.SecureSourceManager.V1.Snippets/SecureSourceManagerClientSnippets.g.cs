@@ -789,6 +789,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
             PagedEnumerable<ListRepositoriesResponse, Repository> response = secureSourceManagerClient.ListRepositories(request);
@@ -838,6 +839,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = secureSourceManagerClient.ListRepositoriesAsync(request);
