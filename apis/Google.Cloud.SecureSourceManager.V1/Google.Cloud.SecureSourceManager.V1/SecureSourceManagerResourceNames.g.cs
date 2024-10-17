@@ -1354,6 +1354,15 @@ namespace Google.Cloud.SecureSourceManager.V1
             get => string.IsNullOrEmpty(Name) ? null : gcsv::RepositoryName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
+        }
     }
 
     public partial class ListInstancesRequest
@@ -1413,6 +1422,15 @@ namespace Google.Cloud.SecureSourceManager.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
         }
     }
 
