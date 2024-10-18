@@ -34,34 +34,10 @@
                 "CreateBucketAsync"
               ]
             },
-            "CreateHmacKey": {
-              "methods": [
-                "CreateHmacKey",
-                "CreateHmacKeyAsync"
-              ]
-            },
-            "CreateNotificationConfig": {
-              "methods": [
-                "CreateNotificationConfig",
-                "CreateNotificationConfigAsync"
-              ]
-            },
             "DeleteBucket": {
               "methods": [
                 "DeleteBucket",
                 "DeleteBucketAsync"
-              ]
-            },
-            "DeleteHmacKey": {
-              "methods": [
-                "DeleteHmacKey",
-                "DeleteHmacKeyAsync"
-              ]
-            },
-            "DeleteNotificationConfig": {
-              "methods": [
-                "DeleteNotificationConfig",
-                "DeleteNotificationConfigAsync"
               ]
             },
             "DeleteObject": {
@@ -76,22 +52,10 @@
                 "GetBucketAsync"
               ]
             },
-            "GetHmacKey": {
-              "methods": [
-                "GetHmacKey",
-                "GetHmacKeyAsync"
-              ]
-            },
             "GetIamPolicy": {
               "methods": [
                 "GetIamPolicy",
                 "GetIamPolicyAsync"
-              ]
-            },
-            "GetNotificationConfig": {
-              "methods": [
-                "GetNotificationConfig",
-                "GetNotificationConfigAsync"
               ]
             },
             "GetObject": {
@@ -100,28 +64,10 @@
                 "GetObjectAsync"
               ]
             },
-            "GetServiceAccount": {
-              "methods": [
-                "GetServiceAccount",
-                "GetServiceAccountAsync"
-              ]
-            },
             "ListBuckets": {
               "methods": [
                 "ListBuckets",
                 "ListBucketsAsync"
-              ]
-            },
-            "ListHmacKeys": {
-              "methods": [
-                "ListHmacKeys",
-                "ListHmacKeysAsync"
-              ]
-            },
-            "ListNotificationConfigs": {
-              "methods": [
-                "ListNotificationConfigs",
-                "ListNotificationConfigsAsync"
               ]
             },
             "ListObjects": {
@@ -182,12 +128,6 @@
               "methods": [
                 "UpdateBucket",
                 "UpdateBucketAsync"
-              ]
-            },
-            "UpdateHmacKey": {
-              "methods": [
-                "UpdateHmacKey",
-                "UpdateHmacKeyAsync"
               ]
             },
             "UpdateObject": {

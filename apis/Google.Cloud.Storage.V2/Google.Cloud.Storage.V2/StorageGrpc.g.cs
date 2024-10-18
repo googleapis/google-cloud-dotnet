@@ -112,18 +112,6 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.UpdateBucketRequest> __Marshaller_google_storage_v2_UpdateBucketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.UpdateBucketRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest> __Marshaller_google_storage_v2_DeleteNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.GetNotificationConfigRequest> __Marshaller_google_storage_v2_GetNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.GetNotificationConfigRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.NotificationConfig> __Marshaller_google_storage_v2_NotificationConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.NotificationConfig.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest> __Marshaller_google_storage_v2_CreateNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest> __Marshaller_google_storage_v2_ListNotificationConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse> __Marshaller_google_storage_v2_ListNotificationConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.ComposeObjectRequest> __Marshaller_google_storage_v2_ComposeObjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.ComposeObjectRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.Object> __Marshaller_google_storage_v2_Object = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.Object.Parser));
@@ -167,26 +155,6 @@ namespace Google.Cloud.Storage.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.QueryWriteStatusRequest> __Marshaller_google_storage_v2_QueryWriteStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.QueryWriteStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.QueryWriteStatusResponse> __Marshaller_google_storage_v2_QueryWriteStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.QueryWriteStatusResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.GetServiceAccountRequest> __Marshaller_google_storage_v2_GetServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.GetServiceAccountRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.ServiceAccount> __Marshaller_google_storage_v2_ServiceAccount = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.ServiceAccount.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.CreateHmacKeyRequest> __Marshaller_google_storage_v2_CreateHmacKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.CreateHmacKeyRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.CreateHmacKeyResponse> __Marshaller_google_storage_v2_CreateHmacKeyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.CreateHmacKeyResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest> __Marshaller_google_storage_v2_DeleteHmacKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.GetHmacKeyRequest> __Marshaller_google_storage_v2_GetHmacKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.GetHmacKeyRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.HmacKeyMetadata> __Marshaller_google_storage_v2_HmacKeyMetadata = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.HmacKeyMetadata.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.ListHmacKeysRequest> __Marshaller_google_storage_v2_ListHmacKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.ListHmacKeysRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.ListHmacKeysResponse> __Marshaller_google_storage_v2_ListHmacKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.ListHmacKeysResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest> __Marshaller_google_storage_v2_UpdateHmacKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Storage.V2.DeleteBucketRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBucket = new grpc::Method<global::Google.Cloud.Storage.V2.DeleteBucketRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -259,38 +227,6 @@ namespace Google.Cloud.Storage.V2 {
         "UpdateBucket",
         __Marshaller_google_storage_v2_UpdateBucketRequest,
         __Marshaller_google_storage_v2_Bucket);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteNotificationConfig = new grpc::Method<global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DeleteNotificationConfig",
-        __Marshaller_google_storage_v2_DeleteNotificationConfigRequest,
-        __Marshaller_google_protobuf_Empty);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.GetNotificationConfigRequest, global::Google.Cloud.Storage.V2.NotificationConfig> __Method_GetNotificationConfig = new grpc::Method<global::Google.Cloud.Storage.V2.GetNotificationConfigRequest, global::Google.Cloud.Storage.V2.NotificationConfig>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetNotificationConfig",
-        __Marshaller_google_storage_v2_GetNotificationConfigRequest,
-        __Marshaller_google_storage_v2_NotificationConfig);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest, global::Google.Cloud.Storage.V2.NotificationConfig> __Method_CreateNotificationConfig = new grpc::Method<global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest, global::Google.Cloud.Storage.V2.NotificationConfig>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateNotificationConfig",
-        __Marshaller_google_storage_v2_CreateNotificationConfigRequest,
-        __Marshaller_google_storage_v2_NotificationConfig);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest, global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse> __Method_ListNotificationConfigs = new grpc::Method<global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest, global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "ListNotificationConfigs",
-        __Marshaller_google_storage_v2_ListNotificationConfigsRequest,
-        __Marshaller_google_storage_v2_ListNotificationConfigsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Storage.V2.ComposeObjectRequest, global::Google.Cloud.Storage.V2.Object> __Method_ComposeObject = new grpc::Method<global::Google.Cloud.Storage.V2.ComposeObjectRequest, global::Google.Cloud.Storage.V2.Object>(
@@ -396,54 +332,6 @@ namespace Google.Cloud.Storage.V2 {
         __Marshaller_google_storage_v2_QueryWriteStatusRequest,
         __Marshaller_google_storage_v2_QueryWriteStatusResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.GetServiceAccountRequest, global::Google.Cloud.Storage.V2.ServiceAccount> __Method_GetServiceAccount = new grpc::Method<global::Google.Cloud.Storage.V2.GetServiceAccountRequest, global::Google.Cloud.Storage.V2.ServiceAccount>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetServiceAccount",
-        __Marshaller_google_storage_v2_GetServiceAccountRequest,
-        __Marshaller_google_storage_v2_ServiceAccount);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.CreateHmacKeyRequest, global::Google.Cloud.Storage.V2.CreateHmacKeyResponse> __Method_CreateHmacKey = new grpc::Method<global::Google.Cloud.Storage.V2.CreateHmacKeyRequest, global::Google.Cloud.Storage.V2.CreateHmacKeyResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateHmacKey",
-        __Marshaller_google_storage_v2_CreateHmacKeyRequest,
-        __Marshaller_google_storage_v2_CreateHmacKeyResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteHmacKey = new grpc::Method<global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DeleteHmacKey",
-        __Marshaller_google_storage_v2_DeleteHmacKeyRequest,
-        __Marshaller_google_protobuf_Empty);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.GetHmacKeyRequest, global::Google.Cloud.Storage.V2.HmacKeyMetadata> __Method_GetHmacKey = new grpc::Method<global::Google.Cloud.Storage.V2.GetHmacKeyRequest, global::Google.Cloud.Storage.V2.HmacKeyMetadata>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetHmacKey",
-        __Marshaller_google_storage_v2_GetHmacKeyRequest,
-        __Marshaller_google_storage_v2_HmacKeyMetadata);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.ListHmacKeysRequest, global::Google.Cloud.Storage.V2.ListHmacKeysResponse> __Method_ListHmacKeys = new grpc::Method<global::Google.Cloud.Storage.V2.ListHmacKeysRequest, global::Google.Cloud.Storage.V2.ListHmacKeysResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "ListHmacKeys",
-        __Marshaller_google_storage_v2_ListHmacKeysRequest,
-        __Marshaller_google_storage_v2_ListHmacKeysResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest, global::Google.Cloud.Storage.V2.HmacKeyMetadata> __Method_UpdateHmacKey = new grpc::Method<global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest, global::Google.Cloud.Storage.V2.HmacKeyMetadata>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "UpdateHmacKey",
-        __Marshaller_google_storage_v2_UpdateHmacKeyRequest,
-        __Marshaller_google_storage_v2_HmacKeyMetadata);
-
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -543,11 +431,13 @@ namespace Google.Cloud.Storage.V2 {
       }
 
       /// <summary>
-      /// Tests a set of permissions on the given bucket or object to see which, if
-      /// any, are held by the caller.
+      /// Tests a set of permissions on the given bucket, object, or managed folder
+      /// to see which, if any, are held by the caller.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}` for a bucket,
+      /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -566,57 +456,6 @@ namespace Google.Cloud.Storage.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.Bucket> UpdateBucket(global::Google.Cloud.Storage.V2.UpdateBucketRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Permanently deletes a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationConfig(global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// View a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.NotificationConfig> GetNotificationConfig(global::Google.Cloud.Storage.V2.GetNotificationConfigRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Creates a NotificationConfig for a given bucket.
-      /// These NotificationConfigs, when triggered, publish messages to the
-      /// specified Pub/Sub topics. See
-      /// https://cloud.google.com/storage/docs/pubsub-notifications.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.NotificationConfig> CreateNotificationConfig(global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Retrieves a list of NotificationConfigs for a given bucket.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse> ListNotificationConfigs(global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -876,78 +715,6 @@ namespace Google.Cloud.Storage.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.QueryWriteStatusResponse> QueryWriteStatus(global::Google.Cloud.Storage.V2.QueryWriteStatusRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Retrieves the name of a project's Google Cloud Storage service account.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.ServiceAccount> GetServiceAccount(global::Google.Cloud.Storage.V2.GetServiceAccountRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Creates a new HMAC key for the given service account.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.CreateHmacKeyResponse> CreateHmacKey(global::Google.Cloud.Storage.V2.CreateHmacKeyRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteHmacKey(global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Gets an existing HMAC key metadata for the given id.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.HmacKeyMetadata> GetHmacKey(global::Google.Cloud.Storage.V2.GetHmacKeyRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Lists HMAC keys under a given project with the additional filters provided.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.ListHmacKeysResponse> ListHmacKeys(global::Google.Cloud.Storage.V2.ListHmacKeysRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.HmacKeyMetadata> UpdateHmacKey(global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1334,11 +1101,13 @@ namespace Google.Cloud.Storage.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Tests a set of permissions on the given bucket or object to see which, if
-      /// any, are held by the caller.
+      /// Tests a set of permissions on the given bucket, object, or managed folder
+      /// to see which, if any, are held by the caller.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}` for a bucket,
+      /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1351,11 +1120,13 @@ namespace Google.Cloud.Storage.V2 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Tests a set of permissions on the given bucket or object to see which, if
-      /// any, are held by the caller.
+      /// Tests a set of permissions on the given bucket, object, or managed folder
+      /// to see which, if any, are held by the caller.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}` for a bucket,
+      /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1366,11 +1137,13 @@ namespace Google.Cloud.Storage.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Tests a set of permissions on the given bucket or object to see which, if
-      /// any, are held by the caller.
+      /// Tests a set of permissions on the given bucket, object, or managed folder
+      /// to see which, if any, are held by the caller.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}` for a bucket,
+      /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1383,11 +1156,13 @@ namespace Google.Cloud.Storage.V2 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Tests a set of permissions on the given bucket or object to see which, if
-      /// any, are held by the caller.
+      /// Tests a set of permissions on the given bucket, object, or managed folder
+      /// to see which, if any, are held by the caller.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}` for a bucket,
+      /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1444,210 +1219,6 @@ namespace Google.Cloud.Storage.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.Bucket> UpdateBucketAsync(global::Google.Cloud.Storage.V2.UpdateBucketRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBucket, null, options, request);
-      }
-      /// <summary>
-      /// Permanently deletes a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteNotificationConfig(global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Permanently deletes a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteNotificationConfig(global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteNotificationConfig, null, options, request);
-      }
-      /// <summary>
-      /// Permanently deletes a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationConfigAsync(global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Permanently deletes a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationConfigAsync(global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteNotificationConfig, null, options, request);
-      }
-      /// <summary>
-      /// View a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.NotificationConfig GetNotificationConfig(global::Google.Cloud.Storage.V2.GetNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// View a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.NotificationConfig GetNotificationConfig(global::Google.Cloud.Storage.V2.GetNotificationConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetNotificationConfig, null, options, request);
-      }
-      /// <summary>
-      /// View a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.NotificationConfig> GetNotificationConfigAsync(global::Google.Cloud.Storage.V2.GetNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// View a NotificationConfig.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.NotificationConfig> GetNotificationConfigAsync(global::Google.Cloud.Storage.V2.GetNotificationConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetNotificationConfig, null, options, request);
-      }
-      /// <summary>
-      /// Creates a NotificationConfig for a given bucket.
-      /// These NotificationConfigs, when triggered, publish messages to the
-      /// specified Pub/Sub topics. See
-      /// https://cloud.google.com/storage/docs/pubsub-notifications.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.NotificationConfig CreateNotificationConfig(global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates a NotificationConfig for a given bucket.
-      /// These NotificationConfigs, when triggered, publish messages to the
-      /// specified Pub/Sub topics. See
-      /// https://cloud.google.com/storage/docs/pubsub-notifications.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.NotificationConfig CreateNotificationConfig(global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateNotificationConfig, null, options, request);
-      }
-      /// <summary>
-      /// Creates a NotificationConfig for a given bucket.
-      /// These NotificationConfigs, when triggered, publish messages to the
-      /// specified Pub/Sub topics. See
-      /// https://cloud.google.com/storage/docs/pubsub-notifications.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.NotificationConfig> CreateNotificationConfigAsync(global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates a NotificationConfig for a given bucket.
-      /// These NotificationConfigs, when triggered, publish messages to the
-      /// specified Pub/Sub topics. See
-      /// https://cloud.google.com/storage/docs/pubsub-notifications.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.NotificationConfig> CreateNotificationConfigAsync(global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateNotificationConfig, null, options, request);
-      }
-      /// <summary>
-      /// Retrieves a list of NotificationConfigs for a given bucket.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse ListNotificationConfigs(global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListNotificationConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Retrieves a list of NotificationConfigs for a given bucket.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse ListNotificationConfigs(global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_ListNotificationConfigs, null, options, request);
-      }
-      /// <summary>
-      /// Retrieves a list of NotificationConfigs for a given bucket.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse> ListNotificationConfigsAsync(global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListNotificationConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Retrieves a list of NotificationConfigs for a given bucket.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse> ListNotificationConfigsAsync(global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_ListNotificationConfigs, null, options, request);
       }
       /// <summary>
       /// Concatenates a list of existing objects into a new object in the same
@@ -2457,294 +2028,6 @@ namespace Google.Cloud.Storage.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryWriteStatus, null, options, request);
       }
-      /// <summary>
-      /// Retrieves the name of a project's Google Cloud Storage service account.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.ServiceAccount GetServiceAccount(global::Google.Cloud.Storage.V2.GetServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Retrieves the name of a project's Google Cloud Storage service account.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.ServiceAccount GetServiceAccount(global::Google.Cloud.Storage.V2.GetServiceAccountRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetServiceAccount, null, options, request);
-      }
-      /// <summary>
-      /// Retrieves the name of a project's Google Cloud Storage service account.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.ServiceAccount> GetServiceAccountAsync(global::Google.Cloud.Storage.V2.GetServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Retrieves the name of a project's Google Cloud Storage service account.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.ServiceAccount> GetServiceAccountAsync(global::Google.Cloud.Storage.V2.GetServiceAccountRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetServiceAccount, null, options, request);
-      }
-      /// <summary>
-      /// Creates a new HMAC key for the given service account.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.CreateHmacKeyResponse CreateHmacKey(global::Google.Cloud.Storage.V2.CreateHmacKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateHmacKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates a new HMAC key for the given service account.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.CreateHmacKeyResponse CreateHmacKey(global::Google.Cloud.Storage.V2.CreateHmacKeyRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateHmacKey, null, options, request);
-      }
-      /// <summary>
-      /// Creates a new HMAC key for the given service account.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.CreateHmacKeyResponse> CreateHmacKeyAsync(global::Google.Cloud.Storage.V2.CreateHmacKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateHmacKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates a new HMAC key for the given service account.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.CreateHmacKeyResponse> CreateHmacKeyAsync(global::Google.Cloud.Storage.V2.CreateHmacKeyRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateHmacKey, null, options, request);
-      }
-      /// <summary>
-      /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteHmacKey(global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteHmacKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteHmacKey(global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteHmacKey, null, options, request);
-      }
-      /// <summary>
-      /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteHmacKeyAsync(global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteHmacKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteHmacKeyAsync(global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteHmacKey, null, options, request);
-      }
-      /// <summary>
-      /// Gets an existing HMAC key metadata for the given id.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.HmacKeyMetadata GetHmacKey(global::Google.Cloud.Storage.V2.GetHmacKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetHmacKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets an existing HMAC key metadata for the given id.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.HmacKeyMetadata GetHmacKey(global::Google.Cloud.Storage.V2.GetHmacKeyRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetHmacKey, null, options, request);
-      }
-      /// <summary>
-      /// Gets an existing HMAC key metadata for the given id.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.HmacKeyMetadata> GetHmacKeyAsync(global::Google.Cloud.Storage.V2.GetHmacKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetHmacKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets an existing HMAC key metadata for the given id.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.HmacKeyMetadata> GetHmacKeyAsync(global::Google.Cloud.Storage.V2.GetHmacKeyRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetHmacKey, null, options, request);
-      }
-      /// <summary>
-      /// Lists HMAC keys under a given project with the additional filters provided.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.ListHmacKeysResponse ListHmacKeys(global::Google.Cloud.Storage.V2.ListHmacKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListHmacKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists HMAC keys under a given project with the additional filters provided.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.ListHmacKeysResponse ListHmacKeys(global::Google.Cloud.Storage.V2.ListHmacKeysRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_ListHmacKeys, null, options, request);
-      }
-      /// <summary>
-      /// Lists HMAC keys under a given project with the additional filters provided.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.ListHmacKeysResponse> ListHmacKeysAsync(global::Google.Cloud.Storage.V2.ListHmacKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListHmacKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists HMAC keys under a given project with the additional filters provided.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.ListHmacKeysResponse> ListHmacKeysAsync(global::Google.Cloud.Storage.V2.ListHmacKeysRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_ListHmacKeys, null, options, request);
-      }
-      /// <summary>
-      /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.HmacKeyMetadata UpdateHmacKey(global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateHmacKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Storage.V2.HmacKeyMetadata UpdateHmacKey(global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateHmacKey, null, options, request);
-      }
-      /// <summary>
-      /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.HmacKeyMetadata> UpdateHmacKeyAsync(global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateHmacKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.HmacKeyMetadata> UpdateHmacKeyAsync(global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateHmacKey, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageClient NewInstance(ClientBaseConfiguration configuration)
@@ -2768,10 +2051,6 @@ namespace Google.Cloud.Storage.V2 {
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
           .AddMethod(__Method_UpdateBucket, serviceImpl.UpdateBucket)
-          .AddMethod(__Method_DeleteNotificationConfig, serviceImpl.DeleteNotificationConfig)
-          .AddMethod(__Method_GetNotificationConfig, serviceImpl.GetNotificationConfig)
-          .AddMethod(__Method_CreateNotificationConfig, serviceImpl.CreateNotificationConfig)
-          .AddMethod(__Method_ListNotificationConfigs, serviceImpl.ListNotificationConfigs)
           .AddMethod(__Method_ComposeObject, serviceImpl.ComposeObject)
           .AddMethod(__Method_DeleteObject, serviceImpl.DeleteObject)
           .AddMethod(__Method_RestoreObject, serviceImpl.RestoreObject)
@@ -2784,13 +2063,7 @@ namespace Google.Cloud.Storage.V2 {
           .AddMethod(__Method_ListObjects, serviceImpl.ListObjects)
           .AddMethod(__Method_RewriteObject, serviceImpl.RewriteObject)
           .AddMethod(__Method_StartResumableWrite, serviceImpl.StartResumableWrite)
-          .AddMethod(__Method_QueryWriteStatus, serviceImpl.QueryWriteStatus)
-          .AddMethod(__Method_GetServiceAccount, serviceImpl.GetServiceAccount)
-          .AddMethod(__Method_CreateHmacKey, serviceImpl.CreateHmacKey)
-          .AddMethod(__Method_DeleteHmacKey, serviceImpl.DeleteHmacKey)
-          .AddMethod(__Method_GetHmacKey, serviceImpl.GetHmacKey)
-          .AddMethod(__Method_ListHmacKeys, serviceImpl.ListHmacKeys)
-          .AddMethod(__Method_UpdateHmacKey, serviceImpl.UpdateHmacKey).Build();
+          .AddMethod(__Method_QueryWriteStatus, serviceImpl.QueryWriteStatus).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2809,10 +2082,6 @@ namespace Google.Cloud.Storage.V2 {
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
       serviceBinder.AddMethod(__Method_UpdateBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.UpdateBucketRequest, global::Google.Cloud.Storage.V2.Bucket>(serviceImpl.UpdateBucket));
-      serviceBinder.AddMethod(__Method_DeleteNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteNotificationConfig));
-      serviceBinder.AddMethod(__Method_GetNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.GetNotificationConfigRequest, global::Google.Cloud.Storage.V2.NotificationConfig>(serviceImpl.GetNotificationConfig));
-      serviceBinder.AddMethod(__Method_CreateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.CreateNotificationConfigRequest, global::Google.Cloud.Storage.V2.NotificationConfig>(serviceImpl.CreateNotificationConfig));
-      serviceBinder.AddMethod(__Method_ListNotificationConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.ListNotificationConfigsRequest, global::Google.Cloud.Storage.V2.ListNotificationConfigsResponse>(serviceImpl.ListNotificationConfigs));
       serviceBinder.AddMethod(__Method_ComposeObject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.ComposeObjectRequest, global::Google.Cloud.Storage.V2.Object>(serviceImpl.ComposeObject));
       serviceBinder.AddMethod(__Method_DeleteObject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.DeleteObjectRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteObject));
       serviceBinder.AddMethod(__Method_RestoreObject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.RestoreObjectRequest, global::Google.Cloud.Storage.V2.Object>(serviceImpl.RestoreObject));
@@ -2826,12 +2095,6 @@ namespace Google.Cloud.Storage.V2 {
       serviceBinder.AddMethod(__Method_RewriteObject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.RewriteObjectRequest, global::Google.Cloud.Storage.V2.RewriteResponse>(serviceImpl.RewriteObject));
       serviceBinder.AddMethod(__Method_StartResumableWrite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.StartResumableWriteRequest, global::Google.Cloud.Storage.V2.StartResumableWriteResponse>(serviceImpl.StartResumableWrite));
       serviceBinder.AddMethod(__Method_QueryWriteStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.QueryWriteStatusRequest, global::Google.Cloud.Storage.V2.QueryWriteStatusResponse>(serviceImpl.QueryWriteStatus));
-      serviceBinder.AddMethod(__Method_GetServiceAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.GetServiceAccountRequest, global::Google.Cloud.Storage.V2.ServiceAccount>(serviceImpl.GetServiceAccount));
-      serviceBinder.AddMethod(__Method_CreateHmacKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.CreateHmacKeyRequest, global::Google.Cloud.Storage.V2.CreateHmacKeyResponse>(serviceImpl.CreateHmacKey));
-      serviceBinder.AddMethod(__Method_DeleteHmacKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.DeleteHmacKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteHmacKey));
-      serviceBinder.AddMethod(__Method_GetHmacKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.GetHmacKeyRequest, global::Google.Cloud.Storage.V2.HmacKeyMetadata>(serviceImpl.GetHmacKey));
-      serviceBinder.AddMethod(__Method_ListHmacKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.ListHmacKeysRequest, global::Google.Cloud.Storage.V2.ListHmacKeysResponse>(serviceImpl.ListHmacKeys));
-      serviceBinder.AddMethod(__Method_UpdateHmacKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.UpdateHmacKeyRequest, global::Google.Cloud.Storage.V2.HmacKeyMetadata>(serviceImpl.UpdateHmacKey));
     }
 
   }
