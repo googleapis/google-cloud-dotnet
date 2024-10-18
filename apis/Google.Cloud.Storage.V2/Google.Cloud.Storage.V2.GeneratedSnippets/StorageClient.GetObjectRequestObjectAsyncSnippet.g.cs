@@ -48,6 +48,7 @@ namespace GoogleCSharpSnippets
                 CommonObjectRequestParams = new CommonObjectRequestParams(),
                 ReadMask = new FieldMask(),
                 SoftDeleted = false,
+                RestoreToken = "",
             };
             // Make the request
             Object response = await storageClient.GetObjectAsync(request);
