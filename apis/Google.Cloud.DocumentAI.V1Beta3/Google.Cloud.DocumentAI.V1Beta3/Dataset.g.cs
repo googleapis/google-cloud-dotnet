@@ -62,26 +62,27 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "MiwuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5SZXZpc2lvblJl",
             "ZhpDChRHQ1NNYW5hZ2VkRG9jdW1lbnRJZBIUCgdnY3NfdXJpGAEgASgJQgPg",
             "QQISFQoJY3dfZG9jX2lkGAIgASgJQgIYARoqChNVbm1hbmFnZWREb2N1bWVu",
-            "dElkEhMKBmRvY19pZBgBIAEoCUID4EECQgYKBHR5cGUi8QEKDURhdGFzZXRT",
+            "dElkEhMKBmRvY19pZBgBIAEoCUID4EECQgYKBHR5cGUiqQIKDURhdGFzZXRT",
             "Y2hlbWESDAoEbmFtZRgBIAEoCRJNCg9kb2N1bWVudF9zY2hlbWEYAyABKAsy",
             "Ly5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50U2No",
-            "ZW1hQgPgQQE6ggHqQX8KJ2RvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vRGF0",
-            "YXNldFNjaGVtYRJUcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3Byb2Nlc3NvcnMve3Byb2Nlc3Nvcn0vZGF0YXNldC9kYXRhc2V0",
-            "U2NoZW1hIocCChVCYXRjaERhdGFzZXREb2N1bWVudHMSbwoXaW5kaXZpZHVh",
-            "bF9kb2N1bWVudF9pZHMYASABKAsyTC5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
-            "aS52MWJldGEzLkJhdGNoRGF0YXNldERvY3VtZW50cy5JbmRpdmlkdWFsRG9j",
-            "dW1lbnRJZHNIABIQCgZmaWx0ZXIYAiABKAlIABpfChVJbmRpdmlkdWFsRG9j",
-            "dW1lbnRJZHMSRgoMZG9jdW1lbnRfaWRzGAEgAygLMisuZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudElkQgPgQQJCCgoIY3JpdGVy",
-            "aWFCyAIKI2NvbS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzQgxE",
-            "YXRhc2V0UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1bWVudGFp",
-            "L2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoCH0dvb2ds",
-            "ZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9j",
-            "dW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6",
-            "VjFiZXRhM+pBYgomY29udGVudHdhcmVob3VzZS5nb29nbGVhcGlzLmNvbS9T",
-            "Y2hlbWESOHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9zY2hlbWFzL3tzY2hlbWF9YgZwcm90bzM="));
+            "ZW1hQgPgQQESGgoNc2F0aXNmaWVzX3B6cxgEIAEoCEID4EEDEhoKDXNhdGlz",
+            "Zmllc19wemkYBSABKAhCA+BBAzqCAepBfwonZG9jdW1lbnRhaS5nb29nbGVh",
+            "cGlzLmNvbS9EYXRhc2V0U2NoZW1hElRwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29yfS9kYXRh",
+            "c2V0L2RhdGFzZXRTY2hlbWEihwIKFUJhdGNoRGF0YXNldERvY3VtZW50cxJv",
+            "ChdpbmRpdmlkdWFsX2RvY3VtZW50X2lkcxgBIAEoCzJMLmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuQmF0Y2hEYXRhc2V0RG9jdW1lbnRzLklu",
+            "ZGl2aWR1YWxEb2N1bWVudElkc0gAEhAKBmZpbHRlchgCIAEoCUgAGl8KFUlu",
+            "ZGl2aWR1YWxEb2N1bWVudElkcxJGCgxkb2N1bWVudF9pZHMYASADKAsyKy5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50SWRCA+BB",
+            "AkIKCghjcml0ZXJpYULIAgojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
+            "LnYxYmV0YTNCDERhdGFzZXRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2RvY3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9jdW1lbnRh",
+            "aXBiqgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oCH0dvb2ds",
+            "ZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNsb3VkOjpE",
+            "b2N1bWVudEFJOjpWMWJldGEz6kFiCiZjb250ZW50d2FyZWhvdXNlLmdvb2ds",
+            "ZWFwaXMuY29tL1NjaGVtYRI4cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3NjaGVtYXMve3NjaGVtYX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -91,7 +92,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig), global::Google.Cloud.DocumentAI.V1Beta3.Dataset.Types.SpannerIndexingConfig.Parser, null, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentId), global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Parser, new[]{ "GcsManagedDocId", "UnmanagedDocId", "RevisionRef" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Types.GCSManagedDocumentId), global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Types.GCSManagedDocumentId.Parser, new[]{ "GcsUri", "CwDocId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Types.UnmanagedDocumentId), global::Google.Cloud.DocumentAI.V1Beta3.DocumentId.Types.UnmanagedDocumentId.Parser, new[]{ "DocId" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema), global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema.Parser, new[]{ "Name", "DocumentSchema" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema), global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema.Parser, new[]{ "Name", "DocumentSchema", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.BatchDatasetDocuments), global::Google.Cloud.DocumentAI.V1Beta3.BatchDatasetDocuments.Parser, new[]{ "IndividualDocumentIds", "Filter" }, new[]{ "Criteria" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.BatchDatasetDocuments.Types.IndividualDocumentIds), global::Google.Cloud.DocumentAI.V1Beta3.BatchDatasetDocuments.Types.IndividualDocumentIds.Parser, new[]{ "DocumentIds" }, null, null, null, null)})
           }));
     }
@@ -2318,6 +2319,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public DatasetSchema(DatasetSchema other) : this() {
       name_ = other.name_;
       documentSchema_ = other.documentSchema_ != null ? other.documentSchema_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2359,6 +2362,36 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 4;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 5;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2376,6 +2409,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(DocumentSchema, other.DocumentSchema)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2385,6 +2420,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (documentSchema_ != null) hash ^= DocumentSchema.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2411,6 +2448,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(26);
         output.WriteMessage(DocumentSchema);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2429,6 +2474,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(26);
         output.WriteMessage(DocumentSchema);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2444,6 +2497,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (documentSchema_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentSchema);
+      }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2465,6 +2524,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           DocumentSchema = new global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema();
         }
         DocumentSchema.MergeFrom(other.DocumentSchema);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2492,6 +2557,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             input.ReadMessage(DocumentSchema);
             break;
           }
+          case 32: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 40: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2516,6 +2589,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               DocumentSchema = new global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema();
             }
             input.ReadMessage(DocumentSchema);
+            break;
+          }
+          case 32: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 40: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }
