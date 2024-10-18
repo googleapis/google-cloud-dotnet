@@ -57,10 +57,6 @@ namespace Google.Cloud.Storage.V2
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             UpdateBucketSettings = existing.UpdateBucketSettings;
-            DeleteNotificationConfigSettings = existing.DeleteNotificationConfigSettings;
-            GetNotificationConfigSettings = existing.GetNotificationConfigSettings;
-            CreateNotificationConfigSettings = existing.CreateNotificationConfigSettings;
-            ListNotificationConfigsSettings = existing.ListNotificationConfigsSettings;
             ComposeObjectSettings = existing.ComposeObjectSettings;
             DeleteObjectSettings = existing.DeleteObjectSettings;
             RestoreObjectSettings = existing.RestoreObjectSettings;
@@ -76,12 +72,6 @@ namespace Google.Cloud.Storage.V2
             RewriteObjectSettings = existing.RewriteObjectSettings;
             StartResumableWriteSettings = existing.StartResumableWriteSettings;
             QueryWriteStatusSettings = existing.QueryWriteStatusSettings;
-            GetServiceAccountSettings = existing.GetServiceAccountSettings;
-            CreateHmacKeySettings = existing.CreateHmacKeySettings;
-            DeleteHmacKeySettings = existing.DeleteHmacKeySettings;
-            GetHmacKeySettings = existing.GetHmacKeySettings;
-            ListHmacKeysSettings = existing.ListHmacKeysSettings;
-            UpdateHmacKeySettings = existing.UpdateHmacKeySettings;
             OnCopy(existing);
         }
 
@@ -275,90 +265,6 @@ namespace Google.Cloud.Storage.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateBucketSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>StorageClient.DeleteNotificationConfig</c> and <c>StorageClient.DeleteNotificationConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteNotificationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>StorageClient.GetNotificationConfig</c> and <c>StorageClient.GetNotificationConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings GetNotificationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>StorageClient.CreateNotificationConfig</c> and <c>StorageClient.CreateNotificationConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateNotificationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>StorageClient.ListNotificationConfigs</c> and <c>StorageClient.ListNotificationConfigsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ListNotificationConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.ComposeObject</c>
@@ -618,132 +524,6 @@ namespace Google.Cloud.Storage.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings QueryWriteStatusSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>StorageClient.GetServiceAccount</c> and <c>StorageClient.GetServiceAccountAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings GetServiceAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.CreateHmacKey</c>
-        ///  and <c>StorageClient.CreateHmacKeyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateHmacKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.DeleteHmacKey</c>
-        ///  and <c>StorageClient.DeleteHmacKeyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteHmacKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.GetHmacKey</c>
-        ///  and <c>StorageClient.GetHmacKeyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings GetHmacKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.ListHmacKeys</c>
-        ///  and <c>StorageClient.ListHmacKeysAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ListHmacKeysSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.UpdateHmacKey</c>
-        ///  and <c>StorageClient.UpdateHmacKeyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateHmacKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageSettings"/> object.</returns>
@@ -1873,11 +1653,13 @@ namespace Google.Cloud.Storage.V2
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1886,11 +1668,13 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1899,11 +1683,13 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1912,11 +1698,13 @@ namespace Google.Cloud.Storage.V2
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1941,11 +1729,13 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1970,11 +1760,13 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1992,11 +1784,13 @@ namespace Google.Cloud.Storage.V2
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2021,11 +1815,13 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2050,11 +1846,13 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2171,532 +1969,6 @@ namespace Google.Cloud.Storage.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Bucket> UpdateBucketAsync(Bucket bucket, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateBucketAsync(bucket, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteNotificationConfig(DeleteNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteNotificationConfigAsync(DeleteNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteNotificationConfigAsync(DeleteNotificationConfigRequest request, st::CancellationToken cancellationToken) =>
-            DeleteNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteNotificationConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteNotificationConfig(new DeleteNotificationConfigRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteNotificationConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteNotificationConfigAsync(new DeleteNotificationConfigRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteNotificationConfigAsync(string name, st::CancellationToken cancellationToken) =>
-            DeleteNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteNotificationConfig(NotificationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteNotificationConfig(new DeleteNotificationConfigRequest
-            {
-                NotificationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteNotificationConfigAsync(NotificationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteNotificationConfigAsync(new DeleteNotificationConfigRequest
-            {
-                NotificationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteNotificationConfigAsync(NotificationConfigName name, st::CancellationToken cancellationToken) =>
-            DeleteNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NotificationConfig GetNotificationConfig(GetNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(GetNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(GetNotificationConfigRequest request, st::CancellationToken cancellationToken) =>
-            GetNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// Format:
-        /// `projects/{project}/buckets/{bucket}/notificationConfigs/{notificationConfig}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NotificationConfig GetNotificationConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetNotificationConfig(new GetNotificationConfigRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// Format:
-        /// `projects/{project}/buckets/{bucket}/notificationConfigs/{notificationConfig}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetNotificationConfigAsync(new GetNotificationConfigRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// Format:
-        /// `projects/{project}/buckets/{bucket}/notificationConfigs/{notificationConfig}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(string name, st::CancellationToken cancellationToken) =>
-            GetNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// Format:
-        /// `projects/{project}/buckets/{bucket}/notificationConfigs/{notificationConfig}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NotificationConfig GetNotificationConfig(NotificationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
-            GetNotificationConfig(new GetNotificationConfigRequest
-            {
-                NotificationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// Format:
-        /// `projects/{project}/buckets/{bucket}/notificationConfigs/{notificationConfig}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(NotificationConfigName name, gaxgrpc::CallSettings callSettings = null) =>
-            GetNotificationConfigAsync(new GetNotificationConfigRequest
-            {
-                NotificationConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The parent bucket of the NotificationConfig.
-        /// Format:
-        /// `projects/{project}/buckets/{bucket}/notificationConfigs/{notificationConfig}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> GetNotificationConfigAsync(NotificationConfigName name, st::CancellationToken cancellationToken) =>
-            GetNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NotificationConfig CreateNotificationConfig(CreateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(CreateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(CreateNotificationConfigRequest request, st::CancellationToken cancellationToken) =>
-            CreateNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The bucket to which this NotificationConfig belongs.
-        /// </param>
-        /// <param name="notificationConfig">
-        /// Required. Properties of the NotificationConfig to be inserted.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NotificationConfig CreateNotificationConfig(string parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
-            CreateNotificationConfig(new CreateNotificationConfigRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The bucket to which this NotificationConfig belongs.
-        /// </param>
-        /// <param name="notificationConfig">
-        /// Required. Properties of the NotificationConfig to be inserted.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(string parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
-            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The bucket to which this NotificationConfig belongs.
-        /// </param>
-        /// <param name="notificationConfig">
-        /// Required. Properties of the NotificationConfig to be inserted.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(string parent, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
-            CreateNotificationConfigAsync(parent, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The bucket to which this NotificationConfig belongs.
-        /// </param>
-        /// <param name="notificationConfig">
-        /// Required. Properties of the NotificationConfig to be inserted.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NotificationConfig CreateNotificationConfig(BucketName parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
-            CreateNotificationConfig(new CreateNotificationConfigRequest
-            {
-                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The bucket to which this NotificationConfig belongs.
-        /// </param>
-        /// <param name="notificationConfig">
-        /// Required. Properties of the NotificationConfig to be inserted.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(BucketName parent, NotificationConfig notificationConfig, gaxgrpc::CallSettings callSettings = null) =>
-            CreateNotificationConfigAsync(new CreateNotificationConfigRequest
-            {
-                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                NotificationConfig = gax::GaxPreconditions.CheckNotNull(notificationConfig, nameof(notificationConfig)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The bucket to which this NotificationConfig belongs.
-        /// </param>
-        /// <param name="notificationConfig">
-        /// Required. Properties of the NotificationConfig to be inserted.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NotificationConfig> CreateNotificationConfigAsync(BucketName parent, NotificationConfig notificationConfig, st::CancellationToken cancellationToken) =>
-            CreateNotificationConfigAsync(parent, notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Retrieves a list of NotificationConfigs for a given bucket.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(ListNotificationConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves a list of NotificationConfigs for a given bucket.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(ListNotificationConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves a list of NotificationConfigs for a given bucket.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Name of a Google Cloud Storage bucket.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListNotificationConfigs(request, callSettings);
-        }
-
-        /// <summary>
-        /// Retrieves a list of NotificationConfigs for a given bucket.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Name of a Google Cloud Storage bucket.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListNotificationConfigsAsync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Retrieves a list of NotificationConfigs for a given bucket.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Name of a Google Cloud Storage bucket.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
-            {
-                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListNotificationConfigs(request, callSettings);
-        }
-
-        /// <summary>
-        /// Retrieves a list of NotificationConfigs for a given bucket.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Name of a Google Cloud Storage bucket.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListNotificationConfigsRequest request = new ListNotificationConfigsRequest
-            {
-                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListNotificationConfigsAsync(request, callSettings);
-        }
 
         /// <summary>
         /// Concatenates a list of existing objects into a new object in the same
@@ -4270,784 +3542,6 @@ namespace Google.Cloud.Storage.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<QueryWriteStatusResponse> QueryWriteStatusAsync(string uploadId, st::CancellationToken cancellationToken) =>
             QueryWriteStatusAsync(uploadId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ServiceAccount GetServiceAccount(GetServiceAccountRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ServiceAccount> GetServiceAccountAsync(GetServiceAccountRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ServiceAccount> GetServiceAccountAsync(GetServiceAccountRequest request, st::CancellationToken cancellationToken) =>
-            GetServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. Project ID, in the format of "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ServiceAccount GetServiceAccount(string project, gaxgrpc::CallSettings callSettings = null) =>
-            GetServiceAccount(new GetServiceAccountRequest
-            {
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. Project ID, in the format of "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ServiceAccount> GetServiceAccountAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
-            GetServiceAccountAsync(new GetServiceAccountRequest
-            {
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. Project ID, in the format of "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ServiceAccount> GetServiceAccountAsync(string project, st::CancellationToken cancellationToken) =>
-            GetServiceAccountAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. Project ID, in the format of "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ServiceAccount GetServiceAccount(gagr::ProjectName project, gaxgrpc::CallSettings callSettings = null) =>
-            GetServiceAccount(new GetServiceAccountRequest
-            {
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. Project ID, in the format of "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ServiceAccount> GetServiceAccountAsync(gagr::ProjectName project, gaxgrpc::CallSettings callSettings = null) =>
-            GetServiceAccountAsync(new GetServiceAccountRequest
-            {
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. Project ID, in the format of "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ServiceAccount> GetServiceAccountAsync(gagr::ProjectName project, st::CancellationToken cancellationToken) =>
-            GetServiceAccountAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual CreateHmacKeyResponse CreateHmacKey(CreateHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateHmacKeyResponse> CreateHmacKeyAsync(CreateHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateHmacKeyResponse> CreateHmacKeyAsync(CreateHmacKeyRequest request, st::CancellationToken cancellationToken) =>
-            CreateHmacKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project that the HMAC-owning service account lives in, in the
-        /// format of "projects/{projectIdentifier}". {projectIdentifier} can be the
-        /// project ID or project number.
-        /// </param>
-        /// <param name="serviceAccountEmail">
-        /// Required. The service account to create the HMAC for.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual CreateHmacKeyResponse CreateHmacKey(string project, string serviceAccountEmail, gaxgrpc::CallSettings callSettings = null) =>
-            CreateHmacKey(new CreateHmacKeyRequest
-            {
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                ServiceAccountEmail = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceAccountEmail, nameof(serviceAccountEmail)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project that the HMAC-owning service account lives in, in the
-        /// format of "projects/{projectIdentifier}". {projectIdentifier} can be the
-        /// project ID or project number.
-        /// </param>
-        /// <param name="serviceAccountEmail">
-        /// Required. The service account to create the HMAC for.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateHmacKeyResponse> CreateHmacKeyAsync(string project, string serviceAccountEmail, gaxgrpc::CallSettings callSettings = null) =>
-            CreateHmacKeyAsync(new CreateHmacKeyRequest
-            {
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                ServiceAccountEmail = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceAccountEmail, nameof(serviceAccountEmail)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project that the HMAC-owning service account lives in, in the
-        /// format of "projects/{projectIdentifier}". {projectIdentifier} can be the
-        /// project ID or project number.
-        /// </param>
-        /// <param name="serviceAccountEmail">
-        /// Required. The service account to create the HMAC for.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateHmacKeyResponse> CreateHmacKeyAsync(string project, string serviceAccountEmail, st::CancellationToken cancellationToken) =>
-            CreateHmacKeyAsync(project, serviceAccountEmail, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project that the HMAC-owning service account lives in, in the
-        /// format of "projects/{projectIdentifier}". {projectIdentifier} can be the
-        /// project ID or project number.
-        /// </param>
-        /// <param name="serviceAccountEmail">
-        /// Required. The service account to create the HMAC for.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual CreateHmacKeyResponse CreateHmacKey(gagr::ProjectName project, string serviceAccountEmail, gaxgrpc::CallSettings callSettings = null) =>
-            CreateHmacKey(new CreateHmacKeyRequest
-            {
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                ServiceAccountEmail = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceAccountEmail, nameof(serviceAccountEmail)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project that the HMAC-owning service account lives in, in the
-        /// format of "projects/{projectIdentifier}". {projectIdentifier} can be the
-        /// project ID or project number.
-        /// </param>
-        /// <param name="serviceAccountEmail">
-        /// Required. The service account to create the HMAC for.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateHmacKeyResponse> CreateHmacKeyAsync(gagr::ProjectName project, string serviceAccountEmail, gaxgrpc::CallSettings callSettings = null) =>
-            CreateHmacKeyAsync(new CreateHmacKeyRequest
-            {
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-                ServiceAccountEmail = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceAccountEmail, nameof(serviceAccountEmail)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project that the HMAC-owning service account lives in, in the
-        /// format of "projects/{projectIdentifier}". {projectIdentifier} can be the
-        /// project ID or project number.
-        /// </param>
-        /// <param name="serviceAccountEmail">
-        /// Required. The service account to create the HMAC for.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateHmacKeyResponse> CreateHmacKeyAsync(gagr::ProjectName project, string serviceAccountEmail, st::CancellationToken cancellationToken) =>
-            CreateHmacKeyAsync(project, serviceAccountEmail, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteHmacKey(DeleteHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteHmacKeyAsync(DeleteHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteHmacKeyAsync(DeleteHmacKeyRequest request, st::CancellationToken cancellationToken) =>
-            DeleteHmacKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project that owns the HMAC key, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteHmacKey(string accessId, string project, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteHmacKey(new DeleteHmacKeyRequest
-            {
-                AccessId = gax::GaxPreconditions.CheckNotNullOrEmpty(accessId, nameof(accessId)),
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project that owns the HMAC key, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteHmacKeyAsync(string accessId, string project, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteHmacKeyAsync(new DeleteHmacKeyRequest
-            {
-                AccessId = gax::GaxPreconditions.CheckNotNullOrEmpty(accessId, nameof(accessId)),
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project that owns the HMAC key, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteHmacKeyAsync(string accessId, string project, st::CancellationToken cancellationToken) =>
-            DeleteHmacKeyAsync(accessId, project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project that owns the HMAC key, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteHmacKey(string accessId, gagr::ProjectName project, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteHmacKey(new DeleteHmacKeyRequest
-            {
-                AccessId = gax::GaxPreconditions.CheckNotNullOrEmpty(accessId, nameof(accessId)),
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project that owns the HMAC key, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteHmacKeyAsync(string accessId, gagr::ProjectName project, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteHmacKeyAsync(new DeleteHmacKeyRequest
-            {
-                AccessId = gax::GaxPreconditions.CheckNotNullOrEmpty(accessId, nameof(accessId)),
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project that owns the HMAC key, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteHmacKeyAsync(string accessId, gagr::ProjectName project, st::CancellationToken cancellationToken) =>
-            DeleteHmacKeyAsync(accessId, project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual HmacKeyMetadata GetHmacKey(GetHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> GetHmacKeyAsync(GetHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> GetHmacKeyAsync(GetHmacKeyRequest request, st::CancellationToken cancellationToken) =>
-            GetHmacKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project the HMAC key lies in, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual HmacKeyMetadata GetHmacKey(string accessId, string project, gaxgrpc::CallSettings callSettings = null) =>
-            GetHmacKey(new GetHmacKeyRequest
-            {
-                AccessId = gax::GaxPreconditions.CheckNotNullOrEmpty(accessId, nameof(accessId)),
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project the HMAC key lies in, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> GetHmacKeyAsync(string accessId, string project, gaxgrpc::CallSettings callSettings = null) =>
-            GetHmacKeyAsync(new GetHmacKeyRequest
-            {
-                AccessId = gax::GaxPreconditions.CheckNotNullOrEmpty(accessId, nameof(accessId)),
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project the HMAC key lies in, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> GetHmacKeyAsync(string accessId, string project, st::CancellationToken cancellationToken) =>
-            GetHmacKeyAsync(accessId, project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project the HMAC key lies in, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual HmacKeyMetadata GetHmacKey(string accessId, gagr::ProjectName project, gaxgrpc::CallSettings callSettings = null) =>
-            GetHmacKey(new GetHmacKeyRequest
-            {
-                AccessId = gax::GaxPreconditions.CheckNotNullOrEmpty(accessId, nameof(accessId)),
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project the HMAC key lies in, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> GetHmacKeyAsync(string accessId, gagr::ProjectName project, gaxgrpc::CallSettings callSettings = null) =>
-            GetHmacKeyAsync(new GetHmacKeyRequest
-            {
-                AccessId = gax::GaxPreconditions.CheckNotNullOrEmpty(accessId, nameof(accessId)),
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-            }, callSettings);
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="accessId">
-        /// Required. The identifying key for the HMAC to delete.
-        /// </param>
-        /// <param name="project">
-        /// Required. The project the HMAC key lies in, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> GetHmacKeyAsync(string accessId, gagr::ProjectName project, st::CancellationToken cancellationToken) =>
-            GetHmacKeyAsync(accessId, project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lists HMAC keys under a given project with the additional filters provided.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeys(ListHmacKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists HMAC keys under a given project with the additional filters provided.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeysAsync(ListHmacKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists HMAC keys under a given project with the additional filters provided.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project to list HMAC keys for, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeys(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListHmacKeysRequest request = new ListHmacKeysRequest
-            {
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListHmacKeys(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists HMAC keys under a given project with the additional filters provided.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project to list HMAC keys for, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeysAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListHmacKeysRequest request = new ListHmacKeysRequest
-            {
-                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListHmacKeysAsync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists HMAC keys under a given project with the additional filters provided.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project to list HMAC keys for, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeys(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListHmacKeysRequest request = new ListHmacKeysRequest
-            {
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListHmacKeys(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists HMAC keys under a given project with the additional filters provided.
-        /// </summary>
-        /// <param name="project">
-        /// Required. The project to list HMAC keys for, in the format of
-        /// "projects/{projectIdentifier}".
-        /// {projectIdentifier} can be the project ID or project number.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeysAsync(gagr::ProjectName project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListHmacKeysRequest request = new ListHmacKeysRequest
-            {
-                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListHmacKeysAsync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual HmacKeyMetadata UpdateHmacKey(UpdateHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> UpdateHmacKeyAsync(UpdateHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> UpdateHmacKeyAsync(UpdateHmacKeyRequest request, st::CancellationToken cancellationToken) =>
-            UpdateHmacKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-        /// </summary>
-        /// <param name="hmacKey">
-        /// Required. The HMAC key to update.
-        /// If present, the hmac_key's `id` field will be used to identify the key.
-        /// Otherwise, the hmac_key's access_id and project fields will be used to
-        /// identify the key.
-        /// </param>
-        /// <param name="updateMask">
-        /// Update mask for hmac_key.
-        /// Not specifying any fields will mean only the `state` field is updated to
-        /// the value specified in `hmac_key`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual HmacKeyMetadata UpdateHmacKey(HmacKeyMetadata hmacKey, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateHmacKey(new UpdateHmacKeyRequest
-            {
-                HmacKey = gax::GaxPreconditions.CheckNotNull(hmacKey, nameof(hmacKey)),
-                UpdateMask = updateMask,
-            }, callSettings);
-
-        /// <summary>
-        /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-        /// </summary>
-        /// <param name="hmacKey">
-        /// Required. The HMAC key to update.
-        /// If present, the hmac_key's `id` field will be used to identify the key.
-        /// Otherwise, the hmac_key's access_id and project fields will be used to
-        /// identify the key.
-        /// </param>
-        /// <param name="updateMask">
-        /// Update mask for hmac_key.
-        /// Not specifying any fields will mean only the `state` field is updated to
-        /// the value specified in `hmac_key`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> UpdateHmacKeyAsync(HmacKeyMetadata hmacKey, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateHmacKeyAsync(new UpdateHmacKeyRequest
-            {
-                HmacKey = gax::GaxPreconditions.CheckNotNull(hmacKey, nameof(hmacKey)),
-                UpdateMask = updateMask,
-            }, callSettings);
-
-        /// <summary>
-        /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-        /// </summary>
-        /// <param name="hmacKey">
-        /// Required. The HMAC key to update.
-        /// If present, the hmac_key's `id` field will be used to identify the key.
-        /// Otherwise, the hmac_key's access_id and project fields will be used to
-        /// identify the key.
-        /// </param>
-        /// <param name="updateMask">
-        /// Update mask for hmac_key.
-        /// Not specifying any fields will mean only the `state` field is updated to
-        /// the value specified in `hmac_key`.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HmacKeyMetadata> UpdateHmacKeyAsync(HmacKeyMetadata hmacKey, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
-            UpdateHmacKeyAsync(hmacKey, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Storage client wrapper implementation, for convenient use.</summary>
@@ -5094,14 +3588,6 @@ namespace Google.Cloud.Storage.V2
 
         private readonly gaxgrpc::ApiCall<UpdateBucketRequest, Bucket> _callUpdateBucket;
 
-        private readonly gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> _callDeleteNotificationConfig;
-
-        private readonly gaxgrpc::ApiCall<GetNotificationConfigRequest, NotificationConfig> _callGetNotificationConfig;
-
-        private readonly gaxgrpc::ApiCall<CreateNotificationConfigRequest, NotificationConfig> _callCreateNotificationConfig;
-
-        private readonly gaxgrpc::ApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse> _callListNotificationConfigs;
-
         private readonly gaxgrpc::ApiCall<ComposeObjectRequest, Object> _callComposeObject;
 
         private readonly gaxgrpc::ApiCall<DeleteObjectRequest, wkt::Empty> _callDeleteObject;
@@ -5127,18 +3613,6 @@ namespace Google.Cloud.Storage.V2
         private readonly gaxgrpc::ApiCall<StartResumableWriteRequest, StartResumableWriteResponse> _callStartResumableWrite;
 
         private readonly gaxgrpc::ApiCall<QueryWriteStatusRequest, QueryWriteStatusResponse> _callQueryWriteStatus;
-
-        private readonly gaxgrpc::ApiCall<GetServiceAccountRequest, ServiceAccount> _callGetServiceAccount;
-
-        private readonly gaxgrpc::ApiCall<CreateHmacKeyRequest, CreateHmacKeyResponse> _callCreateHmacKey;
-
-        private readonly gaxgrpc::ApiCall<DeleteHmacKeyRequest, wkt::Empty> _callDeleteHmacKey;
-
-        private readonly gaxgrpc::ApiCall<GetHmacKeyRequest, HmacKeyMetadata> _callGetHmacKey;
-
-        private readonly gaxgrpc::ApiCall<ListHmacKeysRequest, ListHmacKeysResponse> _callListHmacKeys;
-
-        private readonly gaxgrpc::ApiCall<UpdateHmacKeyRequest, HmacKeyMetadata> _callUpdateHmacKey;
 
         /// <summary>
         /// Constructs a client wrapper for the Storage service, with the specified gRPC client and settings.
@@ -5176,24 +3650,12 @@ namespace Google.Cloud.Storage.V2
             _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("bucket", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
-            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::TestIamPermissionsRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/objects(?:/.*)?$", request => request.Resource));
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::TestIamPermissionsRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/objects(?:/.*)?$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/managedFolders(?:/.*)?$", request => request.Resource));
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             _callUpdateBucket = clientHelper.BuildApiCall<UpdateBucketRequest, Bucket>("UpdateBucket", grpcClient.UpdateBucketAsync, grpcClient.UpdateBucket, effectiveSettings.UpdateBucketSettings).WithGoogleRequestParam("bucket", request => request.Bucket?.Name);
             Modify_ApiCall(ref _callUpdateBucket);
             Modify_UpdateBucketApiCall(ref _callUpdateBucket);
-            _callDeleteNotificationConfig = clientHelper.BuildApiCall<DeleteNotificationConfigRequest, wkt::Empty>("DeleteNotificationConfig", grpcClient.DeleteNotificationConfigAsync, grpcClient.DeleteNotificationConfig, effectiveSettings.DeleteNotificationConfigSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteNotificationConfigRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
-            Modify_ApiCall(ref _callDeleteNotificationConfig);
-            Modify_DeleteNotificationConfigApiCall(ref _callDeleteNotificationConfig);
-            _callGetNotificationConfig = clientHelper.BuildApiCall<GetNotificationConfigRequest, NotificationConfig>("GetNotificationConfig", grpcClient.GetNotificationConfigAsync, grpcClient.GetNotificationConfig, effectiveSettings.GetNotificationConfigSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetNotificationConfigRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
-            Modify_ApiCall(ref _callGetNotificationConfig);
-            Modify_GetNotificationConfigApiCall(ref _callGetNotificationConfig);
-            _callCreateNotificationConfig = clientHelper.BuildApiCall<CreateNotificationConfigRequest, NotificationConfig>("CreateNotificationConfig", grpcClient.CreateNotificationConfigAsync, grpcClient.CreateNotificationConfig, effectiveSettings.CreateNotificationConfigSettings).WithGoogleRequestParam("bucket", request => request.Parent);
-            Modify_ApiCall(ref _callCreateNotificationConfig);
-            Modify_CreateNotificationConfigApiCall(ref _callCreateNotificationConfig);
-            _callListNotificationConfigs = clientHelper.BuildApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse>("ListNotificationConfigs", grpcClient.ListNotificationConfigsAsync, grpcClient.ListNotificationConfigs, effectiveSettings.ListNotificationConfigsSettings).WithGoogleRequestParam("bucket", request => request.Parent);
-            Modify_ApiCall(ref _callListNotificationConfigs);
-            Modify_ListNotificationConfigsApiCall(ref _callListNotificationConfigs);
             _callComposeObject = clientHelper.BuildApiCall<ComposeObjectRequest, Object>("ComposeObject", grpcClient.ComposeObjectAsync, grpcClient.ComposeObject, effectiveSettings.ComposeObjectSettings).WithGoogleRequestParam("bucket", request => request.Destination?.Bucket);
             Modify_ApiCall(ref _callComposeObject);
             Modify_ComposeObjectApiCall(ref _callComposeObject);
@@ -5233,24 +3695,6 @@ namespace Google.Cloud.Storage.V2
             _callQueryWriteStatus = clientHelper.BuildApiCall<QueryWriteStatusRequest, QueryWriteStatusResponse>("QueryWriteStatus", grpcClient.QueryWriteStatusAsync, grpcClient.QueryWriteStatus, effectiveSettings.QueryWriteStatusSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<QueryWriteStatusRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.UploadId));
             Modify_ApiCall(ref _callQueryWriteStatus);
             Modify_QueryWriteStatusApiCall(ref _callQueryWriteStatus);
-            _callGetServiceAccount = clientHelper.BuildApiCall<GetServiceAccountRequest, ServiceAccount>("GetServiceAccount", grpcClient.GetServiceAccountAsync, grpcClient.GetServiceAccount, effectiveSettings.GetServiceAccountSettings).WithGoogleRequestParam("project", request => request.Project);
-            Modify_ApiCall(ref _callGetServiceAccount);
-            Modify_GetServiceAccountApiCall(ref _callGetServiceAccount);
-            _callCreateHmacKey = clientHelper.BuildApiCall<CreateHmacKeyRequest, CreateHmacKeyResponse>("CreateHmacKey", grpcClient.CreateHmacKeyAsync, grpcClient.CreateHmacKey, effectiveSettings.CreateHmacKeySettings).WithGoogleRequestParam("project", request => request.Project);
-            Modify_ApiCall(ref _callCreateHmacKey);
-            Modify_CreateHmacKeyApiCall(ref _callCreateHmacKey);
-            _callDeleteHmacKey = clientHelper.BuildApiCall<DeleteHmacKeyRequest, wkt::Empty>("DeleteHmacKey", grpcClient.DeleteHmacKeyAsync, grpcClient.DeleteHmacKey, effectiveSettings.DeleteHmacKeySettings).WithGoogleRequestParam("project", request => request.Project);
-            Modify_ApiCall(ref _callDeleteHmacKey);
-            Modify_DeleteHmacKeyApiCall(ref _callDeleteHmacKey);
-            _callGetHmacKey = clientHelper.BuildApiCall<GetHmacKeyRequest, HmacKeyMetadata>("GetHmacKey", grpcClient.GetHmacKeyAsync, grpcClient.GetHmacKey, effectiveSettings.GetHmacKeySettings).WithGoogleRequestParam("project", request => request.Project);
-            Modify_ApiCall(ref _callGetHmacKey);
-            Modify_GetHmacKeyApiCall(ref _callGetHmacKey);
-            _callListHmacKeys = clientHelper.BuildApiCall<ListHmacKeysRequest, ListHmacKeysResponse>("ListHmacKeys", grpcClient.ListHmacKeysAsync, grpcClient.ListHmacKeys, effectiveSettings.ListHmacKeysSettings).WithGoogleRequestParam("project", request => request.Project);
-            Modify_ApiCall(ref _callListHmacKeys);
-            Modify_ListHmacKeysApiCall(ref _callListHmacKeys);
-            _callUpdateHmacKey = clientHelper.BuildApiCall<UpdateHmacKeyRequest, HmacKeyMetadata>("UpdateHmacKey", grpcClient.UpdateHmacKeyAsync, grpcClient.UpdateHmacKey, effectiveSettings.UpdateHmacKeySettings).WithGoogleRequestParam("project", request => request.HmacKey?.Project);
-            Modify_ApiCall(ref _callUpdateHmacKey);
-            Modify_UpdateHmacKeyApiCall(ref _callUpdateHmacKey);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5280,14 +3724,6 @@ namespace Google.Cloud.Storage.V2
 
         partial void Modify_UpdateBucketApiCall(ref gaxgrpc::ApiCall<UpdateBucketRequest, Bucket> call);
 
-        partial void Modify_DeleteNotificationConfigApiCall(ref gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> call);
-
-        partial void Modify_GetNotificationConfigApiCall(ref gaxgrpc::ApiCall<GetNotificationConfigRequest, NotificationConfig> call);
-
-        partial void Modify_CreateNotificationConfigApiCall(ref gaxgrpc::ApiCall<CreateNotificationConfigRequest, NotificationConfig> call);
-
-        partial void Modify_ListNotificationConfigsApiCall(ref gaxgrpc::ApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse> call);
-
         partial void Modify_ComposeObjectApiCall(ref gaxgrpc::ApiCall<ComposeObjectRequest, Object> call);
 
         partial void Modify_DeleteObjectApiCall(ref gaxgrpc::ApiCall<DeleteObjectRequest, wkt::Empty> call);
@@ -5314,18 +3750,6 @@ namespace Google.Cloud.Storage.V2
 
         partial void Modify_QueryWriteStatusApiCall(ref gaxgrpc::ApiCall<QueryWriteStatusRequest, QueryWriteStatusResponse> call);
 
-        partial void Modify_GetServiceAccountApiCall(ref gaxgrpc::ApiCall<GetServiceAccountRequest, ServiceAccount> call);
-
-        partial void Modify_CreateHmacKeyApiCall(ref gaxgrpc::ApiCall<CreateHmacKeyRequest, CreateHmacKeyResponse> call);
-
-        partial void Modify_DeleteHmacKeyApiCall(ref gaxgrpc::ApiCall<DeleteHmacKeyRequest, wkt::Empty> call);
-
-        partial void Modify_GetHmacKeyApiCall(ref gaxgrpc::ApiCall<GetHmacKeyRequest, HmacKeyMetadata> call);
-
-        partial void Modify_ListHmacKeysApiCall(ref gaxgrpc::ApiCall<ListHmacKeysRequest, ListHmacKeysResponse> call);
-
-        partial void Modify_UpdateHmacKeyApiCall(ref gaxgrpc::ApiCall<UpdateHmacKeyRequest, HmacKeyMetadata> call);
-
         partial void OnConstruction(Storage.StorageClient grpcClient, StorageSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Storage client</summary>
@@ -5348,14 +3772,6 @@ namespace Google.Cloud.Storage.V2
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateBucketRequest(ref UpdateBucketRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeleteNotificationConfigRequest(ref DeleteNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_GetNotificationConfigRequest(ref GetNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_CreateNotificationConfigRequest(ref CreateNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ListNotificationConfigsRequest(ref ListNotificationConfigsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ComposeObjectRequest(ref ComposeObjectRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5386,18 +3802,6 @@ namespace Google.Cloud.Storage.V2
         partial void Modify_StartResumableWriteRequest(ref StartResumableWriteRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryWriteStatusRequest(ref QueryWriteStatusRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_GetServiceAccountRequest(ref GetServiceAccountRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_CreateHmacKeyRequest(ref CreateHmacKeyRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeleteHmacKeyRequest(ref DeleteHmacKeyRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_GetHmacKeyRequest(ref GetHmacKeyRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ListHmacKeysRequest(ref ListHmacKeysRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_UpdateHmacKeyRequest(ref UpdateHmacKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Permanently deletes an empty bucket.
@@ -5576,11 +3980,13 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5592,11 +3998,13 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Tests a set of permissions on the given bucket or object to see which, if
-        /// any, are held by the caller.
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5629,108 +4037,6 @@ namespace Google.Cloud.Storage.V2
         {
             Modify_UpdateBucketRequest(ref request, ref callSettings);
             return _callUpdateBucket.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void DeleteNotificationConfig(DeleteNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteNotificationConfigRequest(ref request, ref callSettings);
-            _callDeleteNotificationConfig.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Permanently deletes a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteNotificationConfigAsync(DeleteNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteNotificationConfigRequest(ref request, ref callSettings);
-            return _callDeleteNotificationConfig.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override NotificationConfig GetNotificationConfig(GetNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetNotificationConfigRequest(ref request, ref callSettings);
-            return _callGetNotificationConfig.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// View a NotificationConfig.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<NotificationConfig> GetNotificationConfigAsync(GetNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetNotificationConfigRequest(ref request, ref callSettings);
-            return _callGetNotificationConfig.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override NotificationConfig CreateNotificationConfig(CreateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateNotificationConfigRequest(ref request, ref callSettings);
-            return _callCreateNotificationConfig.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a NotificationConfig for a given bucket.
-        /// These NotificationConfigs, when triggered, publish messages to the
-        /// specified Pub/Sub topics. See
-        /// https://cloud.google.com/storage/docs/pubsub-notifications.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<NotificationConfig> CreateNotificationConfigAsync(CreateNotificationConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateNotificationConfigRequest(ref request, ref callSettings);
-            return _callCreateNotificationConfig.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Retrieves a list of NotificationConfigs for a given bucket.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public override gax::PagedEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigs(ListNotificationConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListNotificationConfigsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListNotificationConfigsRequest, ListNotificationConfigsResponse, NotificationConfig>(_callListNotificationConfigs, request, callSettings);
-        }
-
-        /// <summary>
-        /// Retrieves a list of NotificationConfigs for a given bucket.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="NotificationConfig"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ListNotificationConfigsResponse, NotificationConfig> ListNotificationConfigsAsync(ListNotificationConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListNotificationConfigsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNotificationConfigsRequest, ListNotificationConfigsResponse, NotificationConfig>(_callListNotificationConfigs, request, callSettings);
         }
 
         /// <summary>
@@ -6243,165 +4549,13 @@ namespace Google.Cloud.Storage.V2
             Modify_QueryWriteStatusRequest(ref request, ref callSettings);
             return _callQueryWriteStatus.Async(request, callSettings);
         }
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ServiceAccount GetServiceAccount(GetServiceAccountRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetServiceAccountRequest(ref request, ref callSettings);
-            return _callGetServiceAccount.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Retrieves the name of a project's Google Cloud Storage service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ServiceAccount> GetServiceAccountAsync(GetServiceAccountRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetServiceAccountRequest(ref request, ref callSettings);
-            return _callGetServiceAccount.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override CreateHmacKeyResponse CreateHmacKey(CreateHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateHmacKeyRequest(ref request, ref callSettings);
-            return _callCreateHmacKey.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a new HMAC key for the given service account.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<CreateHmacKeyResponse> CreateHmacKeyAsync(CreateHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateHmacKeyRequest(ref request, ref callSettings);
-            return _callCreateHmacKey.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void DeleteHmacKey(DeleteHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteHmacKeyRequest(ref request, ref callSettings);
-            _callDeleteHmacKey.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes a given HMAC key.  Key must be in an INACTIVE state.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteHmacKeyAsync(DeleteHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteHmacKeyRequest(ref request, ref callSettings);
-            return _callDeleteHmacKey.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override HmacKeyMetadata GetHmacKey(GetHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetHmacKeyRequest(ref request, ref callSettings);
-            return _callGetHmacKey.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets an existing HMAC key metadata for the given id.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<HmacKeyMetadata> GetHmacKeyAsync(GetHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetHmacKeyRequest(ref request, ref callSettings);
-            return _callGetHmacKey.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists HMAC keys under a given project with the additional filters provided.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public override gax::PagedEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeys(ListHmacKeysRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListHmacKeysRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListHmacKeysRequest, ListHmacKeysResponse, HmacKeyMetadata>(_callListHmacKeys, request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists HMAC keys under a given project with the additional filters provided.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="HmacKeyMetadata"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ListHmacKeysResponse, HmacKeyMetadata> ListHmacKeysAsync(ListHmacKeysRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListHmacKeysRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListHmacKeysRequest, ListHmacKeysResponse, HmacKeyMetadata>(_callListHmacKeys, request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override HmacKeyMetadata UpdateHmacKey(UpdateHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateHmacKeyRequest(ref request, ref callSettings);
-            return _callUpdateHmacKey.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates a given HMAC key state between ACTIVE and INACTIVE.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<HmacKeyMetadata> UpdateHmacKeyAsync(UpdateHmacKeyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateHmacKeyRequest(ref request, ref callSettings);
-            return _callUpdateHmacKey.Async(request, callSettings);
-        }
     }
 
     public partial class ListBucketsRequest : gaxgrpc::IPageRequest
     {
     }
 
-    public partial class ListNotificationConfigsRequest : gaxgrpc::IPageRequest
-    {
-    }
-
     public partial class ListObjectsRequest : gaxgrpc::IPageRequest
-    {
-    }
-
-    public partial class ListHmacKeysRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6413,26 +4567,10 @@ namespace Google.Cloud.Storage.V2
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListNotificationConfigsResponse : gaxgrpc::IPageResponse<NotificationConfig>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<NotificationConfig> GetEnumerator() => NotificationConfigs.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
     public partial class ListObjectsResponse : gaxgrpc::IPageResponse<Object>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Object> GetEnumerator() => Objects.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class ListHmacKeysResponse : gaxgrpc::IPageResponse<HmacKeyMetadata>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<HmacKeyMetadata> GetEnumerator() => HmacKeys.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

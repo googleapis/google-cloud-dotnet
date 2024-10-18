@@ -46,6 +46,7 @@ namespace GoogleCSharpSnippets
                 IfMetagenerationNotMatch = 0L,
                 CommonObjectRequestParams = new CommonObjectRequestParams(),
                 CopySourceAcl = false,
+                RestoreToken = "",
             };
             // Make the request
             Object response = await storageClient.RestoreObjectAsync(request);
