@@ -1,5 +1,25 @@
 # Version history
 
+## Version 2.11.0, released 2024-10-21
+
+### New features
+
+- Add messages and fields related to Redis Instances ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add messages and fields related to Redis Clusters ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add PSC network attachment URI to the InstanceInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add subnet URI and region name to the NetworkInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add firewall policy URI to the FirewallInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add fields related to advertised routes to the RouteInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add region name field to the RouteInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add region name to the ForwardingRuleInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add load balancer name to the ForwardingRuleInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add PSC target fields to the ForwardingRuleInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+- Add more detailed abort and drop causes to corresponding enums ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+
+### Documentation improvements
+
+- Update outdated comments in the FirewallInfo proto ([commit 7cef758](https://github.com/googleapis/google-cloud-dotnet/commit/7cef758e38e4dea06b85110575bb6f4e6707be18))
+
 ## Version 2.10.0, released 2024-05-14
 
 ### New features
