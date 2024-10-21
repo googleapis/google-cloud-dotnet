@@ -65,6 +65,14 @@ namespace Google.Cloud.SecureSourceManager.V1
             GetIamPolicyRepoSettings = existing.GetIamPolicyRepoSettings;
             SetIamPolicyRepoSettings = existing.SetIamPolicyRepoSettings;
             TestIamPermissionsRepoSettings = existing.TestIamPermissionsRepoSettings;
+            CreateBranchRuleSettings = existing.CreateBranchRuleSettings;
+            CreateBranchRuleOperationsSettings = existing.CreateBranchRuleOperationsSettings.Clone();
+            ListBranchRulesSettings = existing.ListBranchRulesSettings;
+            GetBranchRuleSettings = existing.GetBranchRuleSettings;
+            UpdateBranchRuleSettings = existing.UpdateBranchRuleSettings;
+            UpdateBranchRuleOperationsSettings = existing.UpdateBranchRuleOperationsSettings.Clone();
+            DeleteBranchRuleSettings = existing.DeleteBranchRuleSettings;
+            DeleteBranchRuleOperationsSettings = existing.DeleteBranchRuleOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -311,6 +319,123 @@ namespace Google.Cloud.SecureSourceManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsRepoSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecureSourceManagerClient.CreateBranchRule</c> and <c>SecureSourceManagerClient.CreateBranchRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBranchRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>SecureSourceManagerClient.CreateBranchRule</c> and
+        /// <c>SecureSourceManagerClient.CreateBranchRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateBranchRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecureSourceManagerClient.ListBranchRules</c> and <c>SecureSourceManagerClient.ListBranchRulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBranchRulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecureSourceManagerClient.GetBranchRule</c> and <c>SecureSourceManagerClient.GetBranchRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBranchRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecureSourceManagerClient.UpdateBranchRule</c> and <c>SecureSourceManagerClient.UpdateBranchRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBranchRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>SecureSourceManagerClient.UpdateBranchRule</c> and
+        /// <c>SecureSourceManagerClient.UpdateBranchRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBranchRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecureSourceManagerClient.DeleteBranchRule</c> and <c>SecureSourceManagerClient.DeleteBranchRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBranchRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>SecureSourceManagerClient.DeleteBranchRule</c> and
+        /// <c>SecureSourceManagerClient.DeleteBranchRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteBranchRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2062,6 +2187,663 @@ namespace Google.Cloud.SecureSourceManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsRepoAsync(gax::IResourceName resource, st::CancellationToken cancellationToken) =>
             TestIamPermissionsRepoAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BranchRule, OperationMetadata> CreateBranchRule(CreateBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> CreateBranchRuleAsync(CreateBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> CreateBranchRuleAsync(CreateBranchRuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateBranchRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateBranchRule</c>.</summary>
+        public virtual lro::OperationsClient CreateBranchRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateBranchRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BranchRule, OperationMetadata> PollOnceCreateBranchRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BranchRule, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBranchRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBranchRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> PollOnceCreateBranchRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BranchRule, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBranchRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="branchRuleId">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BranchRule, OperationMetadata> CreateBranchRule(string parent, BranchRule branchRule, string branchRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBranchRule(new CreateBranchRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BranchRule = gax::GaxPreconditions.CheckNotNull(branchRule, nameof(branchRule)),
+                BranchRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(branchRuleId, nameof(branchRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="branchRuleId">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> CreateBranchRuleAsync(string parent, BranchRule branchRule, string branchRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBranchRuleAsync(new CreateBranchRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BranchRule = gax::GaxPreconditions.CheckNotNull(branchRule, nameof(branchRule)),
+                BranchRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(branchRuleId, nameof(branchRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="branchRuleId">
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> CreateBranchRuleAsync(string parent, BranchRule branchRule, string branchRuleId, st::CancellationToken cancellationToken) =>
+            CreateBranchRuleAsync(parent, branchRule, branchRuleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="branchRuleId">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BranchRule, OperationMetadata> CreateBranchRule(RepositoryName parent, BranchRule branchRule, string branchRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBranchRule(new CreateBranchRuleRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BranchRule = gax::GaxPreconditions.CheckNotNull(branchRule, nameof(branchRule)),
+                BranchRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(branchRuleId, nameof(branchRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="branchRuleId">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> CreateBranchRuleAsync(RepositoryName parent, BranchRule branchRule, string branchRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBranchRuleAsync(new CreateBranchRuleRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BranchRule = gax::GaxPreconditions.CheckNotNull(branchRule, nameof(branchRule)),
+                BranchRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(branchRuleId, nameof(branchRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="branchRuleId">
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> CreateBranchRuleAsync(RepositoryName parent, BranchRule branchRule, string branchRuleId, st::CancellationToken cancellationToken) =>
+            CreateBranchRuleAsync(parent, branchRule, branchRuleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// ListBranchRules lists branch rules in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BranchRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBranchRulesResponse, BranchRule> ListBranchRules(ListBranchRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// ListBranchRules lists branch rules in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BranchRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBranchRulesResponse, BranchRule> ListBranchRulesAsync(ListBranchRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// ListBranchRules lists branch rules in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BranchRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBranchRulesResponse, BranchRule> ListBranchRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBranchRulesRequest request = new ListBranchRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBranchRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// ListBranchRules lists branch rules in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BranchRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBranchRulesResponse, BranchRule> ListBranchRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBranchRulesRequest request = new ListBranchRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBranchRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// ListBranchRules lists branch rules in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BranchRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBranchRulesResponse, BranchRule> ListBranchRules(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBranchRulesRequest request = new ListBranchRulesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBranchRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// ListBranchRules lists branch rules in a given repository.
+        /// </summary>
+        /// <param name="parent">
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BranchRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBranchRulesResponse, BranchRule> ListBranchRulesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBranchRulesRequest request = new ListBranchRulesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBranchRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BranchRule GetBranchRule(GetBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BranchRule> GetBranchRuleAsync(GetBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BranchRule> GetBranchRuleAsync(GetBranchRuleRequest request, st::CancellationToken cancellationToken) =>
+            GetBranchRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the repository to retrieve.
+        /// The format is
+        /// `projects/{project}/locations/{location}/repositories/{repository}/branchRules/{branch_rule}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BranchRule GetBranchRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBranchRule(new GetBranchRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the repository to retrieve.
+        /// The format is
+        /// `projects/{project}/locations/{location}/repositories/{repository}/branchRules/{branch_rule}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BranchRule> GetBranchRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBranchRuleAsync(new GetBranchRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the repository to retrieve.
+        /// The format is
+        /// `projects/{project}/locations/{location}/repositories/{repository}/branchRules/{branch_rule}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BranchRule> GetBranchRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBranchRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the repository to retrieve.
+        /// The format is
+        /// `projects/{project}/locations/{location}/repositories/{repository}/branchRules/{branch_rule}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BranchRule GetBranchRule(BranchRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBranchRule(new GetBranchRuleRequest
+            {
+                BranchRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the repository to retrieve.
+        /// The format is
+        /// `projects/{project}/locations/{location}/repositories/{repository}/branchRules/{branch_rule}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BranchRule> GetBranchRuleAsync(BranchRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBranchRuleAsync(new GetBranchRuleRequest
+            {
+                BranchRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the repository to retrieve.
+        /// The format is
+        /// `projects/{project}/locations/{location}/repositories/{repository}/branchRules/{branch_rule}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BranchRule> GetBranchRuleAsync(BranchRuleName name, st::CancellationToken cancellationToken) =>
+            GetBranchRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// UpdateBranchRule updates a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BranchRule, OperationMetadata> UpdateBranchRule(UpdateBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// UpdateBranchRule updates a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> UpdateBranchRuleAsync(UpdateBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// UpdateBranchRule updates a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> UpdateBranchRuleAsync(UpdateBranchRuleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBranchRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBranchRule</c>.</summary>
+        public virtual lro::OperationsClient UpdateBranchRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateBranchRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BranchRule, OperationMetadata> PollOnceUpdateBranchRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BranchRule, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBranchRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBranchRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> PollOnceUpdateBranchRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BranchRule, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBranchRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// UpdateBranchRule updates a branch rule.
+        /// </summary>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// branchRule resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// The special value "*" means full replacement.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BranchRule, OperationMetadata> UpdateBranchRule(BranchRule branchRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBranchRule(new UpdateBranchRuleRequest
+            {
+                BranchRule = gax::GaxPreconditions.CheckNotNull(branchRule, nameof(branchRule)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// UpdateBranchRule updates a branch rule.
+        /// </summary>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// branchRule resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// The special value "*" means full replacement.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> UpdateBranchRuleAsync(BranchRule branchRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBranchRuleAsync(new UpdateBranchRuleRequest
+            {
+                BranchRule = gax::GaxPreconditions.CheckNotNull(branchRule, nameof(branchRule)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// UpdateBranchRule updates a branch rule.
+        /// </summary>
+        /// <param name="branchRule">
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// branchRule resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// The special value "*" means full replacement.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BranchRule, OperationMetadata>> UpdateBranchRuleAsync(BranchRule branchRule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBranchRuleAsync(branchRule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBranchRule(DeleteBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBranchRuleAsync(DeleteBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBranchRuleAsync(DeleteBranchRuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBranchRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteBranchRule</c>.</summary>
+        public virtual lro::OperationsClient DeleteBranchRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteBranchRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteBranchRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBranchRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteBranchRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteBranchRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBranchRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBranchRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBranchRule(new DeleteBranchRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBranchRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBranchRuleAsync(new DeleteBranchRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBranchRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBranchRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBranchRule(BranchRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBranchRule(new DeleteBranchRuleRequest
+            {
+                BranchRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBranchRuleAsync(BranchRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBranchRuleAsync(new DeleteBranchRuleRequest
+            {
+                BranchRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="name">
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBranchRuleAsync(BranchRuleName name, st::CancellationToken cancellationToken) =>
+            DeleteBranchRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SecureSourceManager client wrapper implementation, for convenient use.</summary>
@@ -2111,6 +2893,16 @@ namespace Google.Cloud.SecureSourceManager.V1
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissionsRepo;
 
+        private readonly gaxgrpc::ApiCall<CreateBranchRuleRequest, lro::Operation> _callCreateBranchRule;
+
+        private readonly gaxgrpc::ApiCall<ListBranchRulesRequest, ListBranchRulesResponse> _callListBranchRules;
+
+        private readonly gaxgrpc::ApiCall<GetBranchRuleRequest, BranchRule> _callGetBranchRule;
+
+        private readonly gaxgrpc::ApiCall<UpdateBranchRuleRequest, lro::Operation> _callUpdateBranchRule;
+
+        private readonly gaxgrpc::ApiCall<DeleteBranchRuleRequest, lro::Operation> _callDeleteBranchRule;
+
         /// <summary>
         /// Constructs a client wrapper for the SecureSourceManager service, with the specified gRPC client and
         /// settings.
@@ -2131,6 +2923,9 @@ namespace Google.Cloud.SecureSourceManager.V1
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
             CreateRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRepositoryOperationsSettings, logger);
             DeleteRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRepositoryOperationsSettings, logger);
+            CreateBranchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBranchRuleOperationsSettings, logger);
+            UpdateBranchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBranchRuleOperationsSettings, logger);
+            DeleteBranchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBranchRuleOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2166,6 +2961,21 @@ namespace Google.Cloud.SecureSourceManager.V1
             _callTestIamPermissionsRepo = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissionsRepo", grpcClient.TestIamPermissionsRepoAsync, grpcClient.TestIamPermissionsRepo, effectiveSettings.TestIamPermissionsRepoSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissionsRepo);
             Modify_TestIamPermissionsRepoApiCall(ref _callTestIamPermissionsRepo);
+            _callCreateBranchRule = clientHelper.BuildApiCall<CreateBranchRuleRequest, lro::Operation>("CreateBranchRule", grpcClient.CreateBranchRuleAsync, grpcClient.CreateBranchRule, effectiveSettings.CreateBranchRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBranchRule);
+            Modify_CreateBranchRuleApiCall(ref _callCreateBranchRule);
+            _callListBranchRules = clientHelper.BuildApiCall<ListBranchRulesRequest, ListBranchRulesResponse>("ListBranchRules", grpcClient.ListBranchRulesAsync, grpcClient.ListBranchRules, effectiveSettings.ListBranchRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBranchRules);
+            Modify_ListBranchRulesApiCall(ref _callListBranchRules);
+            _callGetBranchRule = clientHelper.BuildApiCall<GetBranchRuleRequest, BranchRule>("GetBranchRule", grpcClient.GetBranchRuleAsync, grpcClient.GetBranchRule, effectiveSettings.GetBranchRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBranchRule);
+            Modify_GetBranchRuleApiCall(ref _callGetBranchRule);
+            _callUpdateBranchRule = clientHelper.BuildApiCall<UpdateBranchRuleRequest, lro::Operation>("UpdateBranchRule", grpcClient.UpdateBranchRuleAsync, grpcClient.UpdateBranchRule, effectiveSettings.UpdateBranchRuleSettings).WithGoogleRequestParam("branch_rule.name", request => request.BranchRule?.Name);
+            Modify_ApiCall(ref _callUpdateBranchRule);
+            Modify_UpdateBranchRuleApiCall(ref _callUpdateBranchRule);
+            _callDeleteBranchRule = clientHelper.BuildApiCall<DeleteBranchRuleRequest, lro::Operation>("DeleteBranchRule", grpcClient.DeleteBranchRuleAsync, grpcClient.DeleteBranchRule, effectiveSettings.DeleteBranchRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBranchRule);
+            Modify_DeleteBranchRuleApiCall(ref _callDeleteBranchRule);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2192,6 +3002,16 @@ namespace Google.Cloud.SecureSourceManager.V1
         partial void Modify_SetIamPolicyRepoApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
 
         partial void Modify_TestIamPermissionsRepoApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
+        partial void Modify_CreateBranchRuleApiCall(ref gaxgrpc::ApiCall<CreateBranchRuleRequest, lro::Operation> call);
+
+        partial void Modify_ListBranchRulesApiCall(ref gaxgrpc::ApiCall<ListBranchRulesRequest, ListBranchRulesResponse> call);
+
+        partial void Modify_GetBranchRuleApiCall(ref gaxgrpc::ApiCall<GetBranchRuleRequest, BranchRule> call);
+
+        partial void Modify_UpdateBranchRuleApiCall(ref gaxgrpc::ApiCall<UpdateBranchRuleRequest, lro::Operation> call);
+
+        partial void Modify_DeleteBranchRuleApiCall(ref gaxgrpc::ApiCall<DeleteBranchRuleRequest, lro::Operation> call);
 
         partial void OnConstruction(SecureSourceManager.SecureSourceManagerClient grpcClient, SecureSourceManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2225,6 +3045,16 @@ namespace Google.Cloud.SecureSourceManager.V1
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBranchRuleRequest(ref CreateBranchRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBranchRulesRequest(ref ListBranchRulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBranchRuleRequest(ref GetBranchRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBranchRuleRequest(ref UpdateBranchRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBranchRuleRequest(ref DeleteBranchRuleRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Instances in a given project and location.
@@ -2519,6 +3349,135 @@ namespace Google.Cloud.SecureSourceManager.V1
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissionsRepo.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreateBranchRule</c>.</summary>
+        public override lro::OperationsClient CreateBranchRuleOperationsClient { get; }
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BranchRule, OperationMetadata> CreateBranchRule(CreateBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBranchRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<BranchRule, OperationMetadata>(_callCreateBranchRule.Sync(request, callSettings), CreateBranchRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// CreateBranchRule creates a branch rule in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BranchRule, OperationMetadata>> CreateBranchRuleAsync(CreateBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBranchRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<BranchRule, OperationMetadata>(await _callCreateBranchRule.Async(request, callSettings).ConfigureAwait(false), CreateBranchRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// ListBranchRules lists branch rules in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BranchRule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBranchRulesResponse, BranchRule> ListBranchRules(ListBranchRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBranchRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBranchRulesRequest, ListBranchRulesResponse, BranchRule>(_callListBranchRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// ListBranchRules lists branch rules in a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BranchRule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBranchRulesResponse, BranchRule> ListBranchRulesAsync(ListBranchRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBranchRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBranchRulesRequest, ListBranchRulesResponse, BranchRule>(_callListBranchRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BranchRule GetBranchRule(GetBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBranchRuleRequest(ref request, ref callSettings);
+            return _callGetBranchRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// GetBranchRule gets a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BranchRule> GetBranchRuleAsync(GetBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBranchRuleRequest(ref request, ref callSettings);
+            return _callGetBranchRule.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBranchRule</c>.</summary>
+        public override lro::OperationsClient UpdateBranchRuleOperationsClient { get; }
+
+        /// <summary>
+        /// UpdateBranchRule updates a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BranchRule, OperationMetadata> UpdateBranchRule(UpdateBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBranchRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<BranchRule, OperationMetadata>(_callUpdateBranchRule.Sync(request, callSettings), UpdateBranchRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// UpdateBranchRule updates a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BranchRule, OperationMetadata>> UpdateBranchRuleAsync(UpdateBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBranchRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<BranchRule, OperationMetadata>(await _callUpdateBranchRule.Async(request, callSettings).ConfigureAwait(false), UpdateBranchRuleOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteBranchRule</c>.</summary>
+        public override lro::OperationsClient DeleteBranchRuleOperationsClient { get; }
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteBranchRule(DeleteBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBranchRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteBranchRule.Sync(request, callSettings), DeleteBranchRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// DeleteBranchRule deletes a branch rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBranchRuleAsync(DeleteBranchRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBranchRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBranchRule.Async(request, callSettings).ConfigureAwait(false), DeleteBranchRuleOperationsClient);
+        }
     }
 
     public partial class ListInstancesRequest : gaxgrpc::IPageRequest
@@ -2526,6 +3485,10 @@ namespace Google.Cloud.SecureSourceManager.V1
     }
 
     public partial class ListRepositoriesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBranchRulesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2541,6 +3504,14 @@ namespace Google.Cloud.SecureSourceManager.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Repository> GetEnumerator() => Repositories.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBranchRulesResponse : gaxgrpc::IPageResponse<BranchRule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BranchRule> GetEnumerator() => BranchRules.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
