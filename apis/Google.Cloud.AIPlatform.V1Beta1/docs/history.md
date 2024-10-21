@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2024-10-21
+
+### New features
+
+- Add audio_timestamp to GenerationConfig ([commit dd3c974](https://github.com/googleapis/google-cloud-dotnet/commit/dd3c974dfc0838e95a943a7791207e60297f6829))
+- Introduce DefaultRuntime to PipelineJob ([commit 273b397](https://github.com/googleapis/google-cloud-dotnet/commit/273b397a2e7016be42b51d343f7f1ae8f9a4439a))
+
+### Documentation improvements
+
+- A comment for field `partner_model_tuning_spec` in message `.google.cloud.aiplatform.v1beta1.TuningJob` is changed ([commit 2d1b3a7](https://github.com/googleapis/google-cloud-dotnet/commit/2d1b3a77a86e5a82121e487f40104bdab3645550))
+
 ## Version 1.0.0-beta06, released 2024-10-07
 
 ### New features
