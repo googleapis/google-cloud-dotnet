@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.16.0, released 2024-10-21
+
+### New features
+
+- Add `ProvisioningModelMix` to support mixing of spot and standard instances for secondary workers ([commit dde1a4f](https://github.com/googleapis/google-cloud-dotnet/commit/dde1a4f656d818f682687266ab7519eb484a0d45))
+- Add support for configuration of bootdisk IOPS and throughput when bootdisk is a hyperdisk ([commit dde1a4f](https://github.com/googleapis/google-cloud-dotnet/commit/dde1a4f656d818f682687266ab7519eb484a0d45))
+
 ## Version 5.15.0, released 2024-09-26
 
 ### New features
