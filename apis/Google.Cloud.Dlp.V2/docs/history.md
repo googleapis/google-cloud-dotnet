@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.15.0, released 2024-10-21
+
+### New features
+
+- Discovery of BigQuery snapshots ([commit 6a666e4](https://github.com/googleapis/google-cloud-dotnet/commit/6a666e46ee98a0ee20e57a334bee5d01c9f60e50))
+
+### Documentation improvements
+
+- Documentation revisions for data profiles ([commit 6a666e4](https://github.com/googleapis/google-cloud-dotnet/commit/6a666e46ee98a0ee20e57a334bee5d01c9f60e50))
+
 ## Version 4.14.0, released 2024-09-26
 
 ### New features
