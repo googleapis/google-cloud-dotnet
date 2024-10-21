@@ -3294,6 +3294,1418 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_CreateBranchRule_sync",
+      "title": "CreateBranchRuleRequestObject",
+      "description": "Snippet for CreateBranchRule",
+      "file": "SecureSourceManagerClient.CreateBranchRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.CreateBranchRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "CreateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.CreateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_CreateBranchRule_async",
+      "title": "CreateBranchRuleRequestObjectAsync",
+      "description": "Snippet for CreateBranchRuleAsync",
+      "file": "SecureSourceManagerClient.CreateBranchRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.CreateBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "CreateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.CreateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_CreateBranchRule_sync_flattened",
+      "title": "CreateBranchRule",
+      "description": "Snippet for CreateBranchRule",
+      "file": "SecureSourceManagerClient.CreateBranchRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.CreateBranchRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+            "name": "branchRule"
+          },
+          {
+            "type": "System.String",
+            "name": "branchRuleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "CreateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.CreateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_CreateBranchRule_async_flattened",
+      "title": "CreateBranchRuleAsync",
+      "description": "Snippet for CreateBranchRuleAsync",
+      "file": "SecureSourceManagerClient.CreateBranchRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.CreateBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+            "name": "branchRule"
+          },
+          {
+            "type": "System.String",
+            "name": "branchRuleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "CreateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.CreateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_CreateBranchRule_sync_flattened_resourceNames",
+      "title": "CreateBranchRuleResourceNames",
+      "description": "Snippet for CreateBranchRule",
+      "file": "SecureSourceManagerClient.CreateBranchRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.CreateBranchRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+            "name": "branchRule"
+          },
+          {
+            "type": "System.String",
+            "name": "branchRuleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "CreateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.CreateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_CreateBranchRule_async_flattened_resourceNames",
+      "title": "CreateBranchRuleResourceNamesAsync",
+      "description": "Snippet for CreateBranchRuleAsync",
+      "file": "SecureSourceManagerClient.CreateBranchRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.CreateBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+            "name": "branchRule"
+          },
+          {
+            "type": "System.String",
+            "name": "branchRuleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "CreateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.CreateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_ListBranchRules_sync",
+      "title": "ListBranchRulesRequestObject",
+      "description": "Snippet for ListBranchRules",
+      "file": "SecureSourceManagerClient.ListBranchRulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBranchRules",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.ListBranchRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse, Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "ListBranchRules",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.ListBranchRules",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_ListBranchRules_async",
+      "title": "ListBranchRulesRequestObjectAsync",
+      "description": "Snippet for ListBranchRulesAsync",
+      "file": "SecureSourceManagerClient.ListBranchRulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBranchRulesAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.ListBranchRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse, Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "ListBranchRules",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.ListBranchRules",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_ListBranchRules_sync_flattened",
+      "title": "ListBranchRules",
+      "description": "Snippet for ListBranchRules",
+      "file": "SecureSourceManagerClient.ListBranchRulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBranchRules",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.ListBranchRules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse, Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "ListBranchRules",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.ListBranchRules",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_ListBranchRules_async_flattened",
+      "title": "ListBranchRulesAsync",
+      "description": "Snippet for ListBranchRulesAsync",
+      "file": "SecureSourceManagerClient.ListBranchRulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBranchRulesAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.ListBranchRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse, Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "ListBranchRules",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.ListBranchRules",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_ListBranchRules_sync_flattened_resourceNames",
+      "title": "ListBranchRulesResourceNames",
+      "description": "Snippet for ListBranchRules",
+      "file": "SecureSourceManagerClient.ListBranchRulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBranchRules",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.ListBranchRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse, Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "ListBranchRules",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.ListBranchRules",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_ListBranchRules_async_flattened_resourceNames",
+      "title": "ListBranchRulesResourceNamesAsync",
+      "description": "Snippet for ListBranchRulesAsync",
+      "file": "SecureSourceManagerClient.ListBranchRulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBranchRulesAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.ListBranchRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse, Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "ListBranchRules",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.ListBranchRules",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_GetBranchRule_sync",
+      "title": "GetBranchRuleRequestObject",
+      "description": "Snippet for GetBranchRule",
+      "file": "SecureSourceManagerClient.GetBranchRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.GetBranchRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "GetBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.GetBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_GetBranchRule_async",
+      "title": "GetBranchRuleRequestObjectAsync",
+      "description": "Snippet for GetBranchRuleAsync",
+      "file": "SecureSourceManagerClient.GetBranchRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.GetBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "GetBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.GetBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_GetBranchRule_sync_flattened",
+      "title": "GetBranchRule",
+      "description": "Snippet for GetBranchRule",
+      "file": "SecureSourceManagerClient.GetBranchRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.GetBranchRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "GetBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.GetBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_GetBranchRule_async_flattened",
+      "title": "GetBranchRuleAsync",
+      "description": "Snippet for GetBranchRuleAsync",
+      "file": "SecureSourceManagerClient.GetBranchRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.GetBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "GetBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.GetBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_GetBranchRule_sync_flattened_resourceNames",
+      "title": "GetBranchRuleResourceNames",
+      "description": "Snippet for GetBranchRule",
+      "file": "SecureSourceManagerClient.GetBranchRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.GetBranchRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "GetBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.GetBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_GetBranchRule_async_flattened_resourceNames",
+      "title": "GetBranchRuleResourceNamesAsync",
+      "description": "Snippet for GetBranchRuleAsync",
+      "file": "SecureSourceManagerClient.GetBranchRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.GetBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecureSourceManager.V1.BranchRule>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "GetBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.GetBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_UpdateBranchRule_sync",
+      "title": "UpdateBranchRuleRequestObject",
+      "description": "Snippet for UpdateBranchRule",
+      "file": "SecureSourceManagerClient.UpdateBranchRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.UpdateBranchRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.UpdateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_UpdateBranchRule_async",
+      "title": "UpdateBranchRuleRequestObjectAsync",
+      "description": "Snippet for UpdateBranchRuleAsync",
+      "file": "SecureSourceManagerClient.UpdateBranchRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.UpdateBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.UpdateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_UpdateBranchRule_sync_flattened",
+      "title": "UpdateBranchRule",
+      "description": "Snippet for UpdateBranchRule",
+      "file": "SecureSourceManagerClient.UpdateBranchRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.UpdateBranchRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+            "name": "branchRule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.UpdateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_UpdateBranchRule_async_flattened",
+      "title": "UpdateBranchRuleAsync",
+      "description": "Snippet for UpdateBranchRuleAsync",
+      "file": "SecureSourceManagerClient.UpdateBranchRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.UpdateBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRule",
+            "name": "branchRule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.SecureSourceManager.V1.BranchRule, Google.Cloud.SecureSourceManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.UpdateBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_DeleteBranchRule_sync",
+      "title": "DeleteBranchRuleRequestObject",
+      "description": "Snippet for DeleteBranchRule",
+      "file": "SecureSourceManagerClient.DeleteBranchRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.DeleteBranchRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.SecureSourceManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.DeleteBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_DeleteBranchRule_async",
+      "title": "DeleteBranchRuleRequestObjectAsync",
+      "description": "Snippet for DeleteBranchRuleAsync",
+      "file": "SecureSourceManagerClient.DeleteBranchRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.DeleteBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.SecureSourceManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.DeleteBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_DeleteBranchRule_sync_flattened",
+      "title": "DeleteBranchRule",
+      "description": "Snippet for DeleteBranchRule",
+      "file": "SecureSourceManagerClient.DeleteBranchRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.DeleteBranchRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.SecureSourceManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.DeleteBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_DeleteBranchRule_async_flattened",
+      "title": "DeleteBranchRuleAsync",
+      "description": "Snippet for DeleteBranchRuleAsync",
+      "file": "SecureSourceManagerClient.DeleteBranchRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.DeleteBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.SecureSourceManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.DeleteBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_DeleteBranchRule_sync_flattened_resourceNames",
+      "title": "DeleteBranchRuleResourceNames",
+      "description": "Snippet for DeleteBranchRule",
+      "file": "SecureSourceManagerClient.DeleteBranchRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBranchRule",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.DeleteBranchRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.SecureSourceManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.DeleteBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securesourcemanager_v1_generated_SecureSourceManager_DeleteBranchRule_async_flattened_resourceNames",
+      "title": "DeleteBranchRuleResourceNamesAsync",
+      "description": "Snippet for DeleteBranchRuleAsync",
+      "file": "SecureSourceManagerClient.DeleteBranchRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBranchRuleAsync",
+        "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient.DeleteBranchRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecureSourceManager.V1.BranchRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.SecureSourceManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "SecureSourceManagerClient",
+          "fullName": "Google.Cloud.SecureSourceManager.V1.SecureSourceManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteBranchRule",
+          "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager.DeleteBranchRule",
+          "service": {
+            "shortName": "SecureSourceManager",
+            "fullName": "google.cloud.securesourcemanager.v1.SecureSourceManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

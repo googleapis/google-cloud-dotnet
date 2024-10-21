@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "SecureSourceManagerClient",
           "rpcs": {
+            "CreateBranchRule": {
+              "methods": [
+                "CreateBranchRule",
+                "CreateBranchRuleAsync"
+              ]
+            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",
@@ -22,6 +28,12 @@
                 "CreateRepositoryAsync"
               ]
             },
+            "DeleteBranchRule": {
+              "methods": [
+                "DeleteBranchRule",
+                "DeleteBranchRuleAsync"
+              ]
+            },
             "DeleteInstance": {
               "methods": [
                 "DeleteInstance",
@@ -32,6 +44,12 @@
               "methods": [
                 "DeleteRepository",
                 "DeleteRepositoryAsync"
+              ]
+            },
+            "GetBranchRule": {
+              "methods": [
+                "GetBranchRule",
+                "GetBranchRuleAsync"
               ]
             },
             "GetIamPolicyRepo": {
@@ -50,6 +68,12 @@
               "methods": [
                 "GetRepository",
                 "GetRepositoryAsync"
+              ]
+            },
+            "ListBranchRules": {
+              "methods": [
+                "ListBranchRules",
+                "ListBranchRulesAsync"
               ]
             },
             "ListInstances": {
@@ -74,6 +98,12 @@
               "methods": [
                 "TestIamPermissionsRepo",
                 "TestIamPermissionsRepoAsync"
+              ]
+            },
+            "UpdateBranchRule": {
+              "methods": [
+                "UpdateBranchRule",
+                "UpdateBranchRuleAsync"
               ]
             }
           }

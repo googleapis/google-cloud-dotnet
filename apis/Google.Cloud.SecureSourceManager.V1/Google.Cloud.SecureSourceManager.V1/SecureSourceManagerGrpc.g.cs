@@ -118,6 +118,20 @@ namespace Google.Cloud.SecureSourceManager.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest> __Marshaller_google_cloud_securesourcemanager_v1_CreateBranchRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest> __Marshaller_google_cloud_securesourcemanager_v1_ListBranchRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse> __Marshaller_google_cloud_securesourcemanager_v1_ListBranchRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest> __Marshaller_google_cloud_securesourcemanager_v1_GetBranchRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.BranchRule> __Marshaller_google_cloud_securesourcemanager_v1_BranchRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.BranchRule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest> __Marshaller_google_cloud_securesourcemanager_v1_UpdateBranchRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest> __Marshaller_google_cloud_securesourcemanager_v1_DeleteBranchRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListInstancesRequest, global::Google.Cloud.SecureSourceManager.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListInstancesRequest, global::Google.Cloud.SecureSourceManager.V1.ListInstancesResponse>(
@@ -206,6 +220,46 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         "TestIamPermissionsRepo",
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest, global::Google.LongRunning.Operation> __Method_CreateBranchRule = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBranchRule",
+        __Marshaller_google_cloud_securesourcemanager_v1_CreateBranchRuleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest, global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse> __Method_ListBranchRules = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest, global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBranchRules",
+        __Marshaller_google_cloud_securesourcemanager_v1_ListBranchRulesRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_ListBranchRulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest, global::Google.Cloud.SecureSourceManager.V1.BranchRule> __Method_GetBranchRule = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest, global::Google.Cloud.SecureSourceManager.V1.BranchRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBranchRule",
+        __Marshaller_google_cloud_securesourcemanager_v1_GetBranchRuleRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_BranchRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest, global::Google.LongRunning.Operation> __Method_UpdateBranchRule = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBranchRule",
+        __Marshaller_google_cloud_securesourcemanager_v1_UpdateBranchRuleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest, global::Google.LongRunning.Operation> __Method_DeleteBranchRule = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBranchRule",
+        __Marshaller_google_cloud_securesourcemanager_v1_DeleteBranchRuleRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -354,6 +408,66 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsRepo(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// CreateBranchRule creates a branch rule in a given repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBranchRule(global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// ListBranchRules lists branch rules in a given repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse> ListBranchRules(global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// GetBranchRule gets a branch rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.BranchRule> GetBranchRule(global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// UpdateBranchRule updates a branch rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBranchRule(global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// DeleteBranchRule deletes a branch rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBranchRule(global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -951,6 +1065,246 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissionsRepo, null, options, request);
       }
+      /// <summary>
+      /// CreateBranchRule creates a branch rule in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBranchRule(global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBranchRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// CreateBranchRule creates a branch rule in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBranchRule(global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBranchRule, null, options, request);
+      }
+      /// <summary>
+      /// CreateBranchRule creates a branch rule in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBranchRuleAsync(global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBranchRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// CreateBranchRule creates a branch rule in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBranchRuleAsync(global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBranchRule, null, options, request);
+      }
+      /// <summary>
+      /// ListBranchRules lists branch rules in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse ListBranchRules(global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBranchRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ListBranchRules lists branch rules in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse ListBranchRules(global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBranchRules, null, options, request);
+      }
+      /// <summary>
+      /// ListBranchRules lists branch rules in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse> ListBranchRulesAsync(global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBranchRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ListBranchRules lists branch rules in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse> ListBranchRulesAsync(global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBranchRules, null, options, request);
+      }
+      /// <summary>
+      /// GetBranchRule gets a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.BranchRule GetBranchRule(global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBranchRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// GetBranchRule gets a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.BranchRule GetBranchRule(global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBranchRule, null, options, request);
+      }
+      /// <summary>
+      /// GetBranchRule gets a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.BranchRule> GetBranchRuleAsync(global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBranchRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// GetBranchRule gets a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.BranchRule> GetBranchRuleAsync(global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBranchRule, null, options, request);
+      }
+      /// <summary>
+      /// UpdateBranchRule updates a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBranchRule(global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBranchRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// UpdateBranchRule updates a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBranchRule(global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBranchRule, null, options, request);
+      }
+      /// <summary>
+      /// UpdateBranchRule updates a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBranchRuleAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBranchRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// UpdateBranchRule updates a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBranchRuleAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBranchRule, null, options, request);
+      }
+      /// <summary>
+      /// DeleteBranchRule deletes a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBranchRule(global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBranchRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// DeleteBranchRule deletes a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBranchRule(global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBranchRule, null, options, request);
+      }
+      /// <summary>
+      /// DeleteBranchRule deletes a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBranchRuleAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBranchRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// DeleteBranchRule deletes a branch rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBranchRuleAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBranchRule, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SecureSourceManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -975,7 +1329,12 @@ namespace Google.Cloud.SecureSourceManager.V1 {
           .AddMethod(__Method_DeleteRepository, serviceImpl.DeleteRepository)
           .AddMethod(__Method_GetIamPolicyRepo, serviceImpl.GetIamPolicyRepo)
           .AddMethod(__Method_SetIamPolicyRepo, serviceImpl.SetIamPolicyRepo)
-          .AddMethod(__Method_TestIamPermissionsRepo, serviceImpl.TestIamPermissionsRepo).Build();
+          .AddMethod(__Method_TestIamPermissionsRepo, serviceImpl.TestIamPermissionsRepo)
+          .AddMethod(__Method_CreateBranchRule, serviceImpl.CreateBranchRule)
+          .AddMethod(__Method_ListBranchRules, serviceImpl.ListBranchRules)
+          .AddMethod(__Method_GetBranchRule, serviceImpl.GetBranchRule)
+          .AddMethod(__Method_UpdateBranchRule, serviceImpl.UpdateBranchRule)
+          .AddMethod(__Method_DeleteBranchRule, serviceImpl.DeleteBranchRule).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -996,6 +1355,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       serviceBinder.AddMethod(__Method_GetIamPolicyRepo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicyRepo));
       serviceBinder.AddMethod(__Method_SetIamPolicyRepo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicyRepo));
       serviceBinder.AddMethod(__Method_TestIamPermissionsRepo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissionsRepo));
+      serviceBinder.AddMethod(__Method_CreateBranchRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.CreateBranchRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBranchRule));
+      serviceBinder.AddMethod(__Method_ListBranchRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesRequest, global::Google.Cloud.SecureSourceManager.V1.ListBranchRulesResponse>(serviceImpl.ListBranchRules));
+      serviceBinder.AddMethod(__Method_GetBranchRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest, global::Google.Cloud.SecureSourceManager.V1.BranchRule>(serviceImpl.GetBranchRule));
+      serviceBinder.AddMethod(__Method_UpdateBranchRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBranchRule));
+      serviceBinder.AddMethod(__Method_DeleteBranchRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBranchRule));
     }
 
   }
