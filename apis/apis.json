@@ -370,7 +370,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1Beta1",
-      "version": "1.0.0-beta06",
+      "version": "1.0.0-beta07",
       "type": "grpc",
       "productName": "Cloud AI Platform",
       "productUrl": "https://cloud.google.com/ai-platform/docs/",
