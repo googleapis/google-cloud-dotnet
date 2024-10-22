@@ -60,6 +60,8 @@ namespace Google.Cloud.AlloyDb.V1
             DeleteClusterOperationsSettings = existing.DeleteClusterOperationsSettings.Clone();
             PromoteClusterSettings = existing.PromoteClusterSettings;
             PromoteClusterOperationsSettings = existing.PromoteClusterOperationsSettings.Clone();
+            SwitchoverClusterSettings = existing.SwitchoverClusterSettings;
+            SwitchoverClusterOperationsSettings = existing.SwitchoverClusterOperationsSettings.Clone();
             RestoreClusterSettings = existing.RestoreClusterSettings;
             RestoreClusterOperationsSettings = existing.RestoreClusterOperationsSettings.Clone();
             CreateSecondaryClusterSettings = existing.CreateSecondaryClusterSettings;
@@ -82,6 +84,7 @@ namespace Google.Cloud.AlloyDb.V1
             InjectFaultOperationsSettings = existing.InjectFaultOperationsSettings.Clone();
             RestartInstanceSettings = existing.RestartInstanceSettings;
             RestartInstanceOperationsSettings = existing.RestartInstanceOperationsSettings.Clone();
+            ExecuteSqlSettings = existing.ExecuteSqlSettings;
             ListBackupsSettings = existing.ListBackupsSettings;
             GetBackupSettings = existing.GetBackupSettings;
             CreateBackupSettings = existing.CreateBackupSettings;
@@ -98,6 +101,7 @@ namespace Google.Cloud.AlloyDb.V1
             CreateUserSettings = existing.CreateUserSettings;
             UpdateUserSettings = existing.UpdateUserSettings;
             DeleteUserSettings = existing.DeleteUserSettings;
+            ListDatabasesSettings = existing.ListDatabasesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -257,6 +261,36 @@ namespace Google.Cloud.AlloyDb.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PromoteClusterOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AlloyDBAdminClient.SwitchoverCluster</c> and <c>AlloyDBAdminClient.SwitchoverClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SwitchoverClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AlloyDBAdminClient.SwitchoverCluster</c> and
+        /// <c>AlloyDBAdminClient.SwitchoverClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SwitchoverClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -600,6 +634,18 @@ namespace Google.Cloud.AlloyDb.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AlloyDBAdminClient.ExecuteSql</c> and <c>AlloyDBAdminClient.ExecuteSqlAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteSqlSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AlloyDBAdminClient.ListBackups</c> and <c>AlloyDBAdminClient.ListBackupsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -841,6 +887,18 @@ namespace Google.Cloud.AlloyDb.V1
         public gaxgrpc::CallSettings DeleteUserSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AlloyDBAdminClient.ListDatabases</c> and <c>AlloyDBAdminClient.ListDatabasesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDatabasesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -931,7 +989,7 @@ namespace Google.Cloud.AlloyDb.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AlloyDBAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AlloyDBAdmin.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -1865,6 +1923,162 @@ namespace Google.Cloud.AlloyDb.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> PromoteClusterAsync(ClusterName name, st::CancellationToken cancellationToken) =>
             PromoteClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, OperationMetadata> SwitchoverCluster(SwitchoverClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> SwitchoverClusterAsync(SwitchoverClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> SwitchoverClusterAsync(SwitchoverClusterRequest request, st::CancellationToken cancellationToken) =>
+            SwitchoverClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SwitchoverCluster</c>.</summary>
+        public virtual lro::OperationsClient SwitchoverClusterOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SwitchoverCluster</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Cluster, OperationMetadata> PollOnceSwitchoverCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SwitchoverClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SwitchoverCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> PollOnceSwitchoverClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SwitchoverClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource. For the required format, see the
+        /// comment on the Cluster.name field
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, OperationMetadata> SwitchoverCluster(string name, gaxgrpc::CallSettings callSettings = null) =>
+            SwitchoverCluster(new SwitchoverClusterRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource. For the required format, see the
+        /// comment on the Cluster.name field
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> SwitchoverClusterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            SwitchoverClusterAsync(new SwitchoverClusterRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource. For the required format, see the
+        /// comment on the Cluster.name field
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> SwitchoverClusterAsync(string name, st::CancellationToken cancellationToken) =>
+            SwitchoverClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource. For the required format, see the
+        /// comment on the Cluster.name field
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, OperationMetadata> SwitchoverCluster(ClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            SwitchoverCluster(new SwitchoverClusterRequest
+            {
+                ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource. For the required format, see the
+        /// comment on the Cluster.name field
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> SwitchoverClusterAsync(ClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            SwitchoverClusterAsync(new SwitchoverClusterRequest
+            {
+                ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource. For the required format, see the
+        /// comment on the Cluster.name field
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> SwitchoverClusterAsync(ClusterName name, st::CancellationToken cancellationToken) =>
+            SwitchoverClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new Cluster in a given project and location, with a volume
@@ -3561,6 +3775,235 @@ namespace Google.Cloud.AlloyDb.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RestartInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             RestartInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteSqlResponse ExecuteSql(ExecuteSqlRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(ExecuteSqlRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(ExecuteSqlRequest request, st::CancellationToken cancellationToken) =>
+            ExecuteSqlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance where the SQL will be executed. For the required
+        /// format, see the comment on the Instance.name field.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the query will be executed.
+        /// Note - Value provided should be the same as expected from `SELECT
+        /// current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="user">
+        /// Required. Database user to be used for executing the SQL.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_user;` and NOT as a resource reference.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. SQL statement to execute on database. Any valid statement is
+        /// permitted, including DDL, DML, DQL statements.
+        /// </param>
+        /// <param name="password">
+        /// Optional. The database native user’s password.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteSqlResponse ExecuteSql(string instance, string database, string user, string sqlStatement, string password, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteSql(new ExecuteSqlRequest
+            {
+                Password = password ?? "",
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                User = gax::GaxPreconditions.CheckNotNullOrEmpty(user, nameof(user)),
+                SqlStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(sqlStatement, nameof(sqlStatement)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance where the SQL will be executed. For the required
+        /// format, see the comment on the Instance.name field.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the query will be executed.
+        /// Note - Value provided should be the same as expected from `SELECT
+        /// current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="user">
+        /// Required. Database user to be used for executing the SQL.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_user;` and NOT as a resource reference.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. SQL statement to execute on database. Any valid statement is
+        /// permitted, including DDL, DML, DQL statements.
+        /// </param>
+        /// <param name="password">
+        /// Optional. The database native user’s password.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(string instance, string database, string user, string sqlStatement, string password, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteSqlAsync(new ExecuteSqlRequest
+            {
+                Password = password ?? "",
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                User = gax::GaxPreconditions.CheckNotNullOrEmpty(user, nameof(user)),
+                SqlStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(sqlStatement, nameof(sqlStatement)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance where the SQL will be executed. For the required
+        /// format, see the comment on the Instance.name field.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the query will be executed.
+        /// Note - Value provided should be the same as expected from `SELECT
+        /// current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="user">
+        /// Required. Database user to be used for executing the SQL.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_user;` and NOT as a resource reference.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. SQL statement to execute on database. Any valid statement is
+        /// permitted, including DDL, DML, DQL statements.
+        /// </param>
+        /// <param name="password">
+        /// Optional. The database native user’s password.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(string instance, string database, string user, string sqlStatement, string password, st::CancellationToken cancellationToken) =>
+            ExecuteSqlAsync(instance, database, user, sqlStatement, password, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance where the SQL will be executed. For the required
+        /// format, see the comment on the Instance.name field.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the query will be executed.
+        /// Note - Value provided should be the same as expected from `SELECT
+        /// current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="user">
+        /// Required. Database user to be used for executing the SQL.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_user;` and NOT as a resource reference.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. SQL statement to execute on database. Any valid statement is
+        /// permitted, including DDL, DML, DQL statements.
+        /// </param>
+        /// <param name="password">
+        /// Optional. The database native user’s password.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteSqlResponse ExecuteSql(InstanceName instance, string database, string user, string sqlStatement, string password, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteSql(new ExecuteSqlRequest
+            {
+                Password = password ?? "",
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                User = gax::GaxPreconditions.CheckNotNullOrEmpty(user, nameof(user)),
+                SqlStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(sqlStatement, nameof(sqlStatement)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance where the SQL will be executed. For the required
+        /// format, see the comment on the Instance.name field.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the query will be executed.
+        /// Note - Value provided should be the same as expected from `SELECT
+        /// current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="user">
+        /// Required. Database user to be used for executing the SQL.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_user;` and NOT as a resource reference.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. SQL statement to execute on database. Any valid statement is
+        /// permitted, including DDL, DML, DQL statements.
+        /// </param>
+        /// <param name="password">
+        /// Optional. The database native user’s password.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(InstanceName instance, string database, string user, string sqlStatement, string password, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteSqlAsync(new ExecuteSqlRequest
+            {
+                Password = password ?? "",
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                User = gax::GaxPreconditions.CheckNotNullOrEmpty(user, nameof(user)),
+                SqlStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(sqlStatement, nameof(sqlStatement)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance where the SQL will be executed. For the required
+        /// format, see the comment on the Instance.name field.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the query will be executed.
+        /// Note - Value provided should be the same as expected from `SELECT
+        /// current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="user">
+        /// Required. Database user to be used for executing the SQL.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_user;` and NOT as a resource reference.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. SQL statement to execute on database. Any valid statement is
+        /// permitted, including DDL, DML, DQL statements.
+        /// </param>
+        /// <param name="password">
+        /// Optional. The database native user’s password.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(InstanceName instance, string database, string user, string sqlStatement, string password, st::CancellationToken cancellationToken) =>
+            ExecuteSqlAsync(instance, database, user, sqlStatement, password, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists Backups in a given project and location.
@@ -5285,6 +5728,156 @@ namespace Google.Cloud.AlloyDb.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteUserAsync(UserName name, st::CancellationToken cancellationToken) =>
             DeleteUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Databases in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Database"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(ListDatabasesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Databases in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Database"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(ListDatabasesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Databases in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDatabasesRequest.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Database"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabases(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Databases in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDatabasesRequest.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Database"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabasesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Databases in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDatabasesRequest.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Database"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabases(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Databases in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDatabasesRequest.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Database"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabasesAsync(request, callSettings);
+        }
     }
 
     /// <summary>AlloyDBAdmin client wrapper implementation, for convenient use.</summary>
@@ -5304,6 +5897,8 @@ namespace Google.Cloud.AlloyDb.V1
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> _callDeleteCluster;
 
         private readonly gaxgrpc::ApiCall<PromoteClusterRequest, lro::Operation> _callPromoteCluster;
+
+        private readonly gaxgrpc::ApiCall<SwitchoverClusterRequest, lro::Operation> _callSwitchoverCluster;
 
         private readonly gaxgrpc::ApiCall<RestoreClusterRequest, lro::Operation> _callRestoreCluster;
 
@@ -5328,6 +5923,8 @@ namespace Google.Cloud.AlloyDb.V1
         private readonly gaxgrpc::ApiCall<InjectFaultRequest, lro::Operation> _callInjectFault;
 
         private readonly gaxgrpc::ApiCall<RestartInstanceRequest, lro::Operation> _callRestartInstance;
+
+        private readonly gaxgrpc::ApiCall<ExecuteSqlRequest, ExecuteSqlResponse> _callExecuteSql;
 
         private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
 
@@ -5355,6 +5952,8 @@ namespace Google.Cloud.AlloyDb.V1
 
         private readonly gaxgrpc::ApiCall<DeleteUserRequest, wkt::Empty> _callDeleteUser;
 
+        private readonly gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> _callListDatabases;
+
         /// <summary>
         /// Constructs a client wrapper for the AlloyDBAdmin service, with the specified gRPC client and settings.
         /// </summary>
@@ -5374,6 +5973,7 @@ namespace Google.Cloud.AlloyDb.V1
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
             DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings, logger);
             PromoteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PromoteClusterOperationsSettings, logger);
+            SwitchoverClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SwitchoverClusterOperationsSettings, logger);
             RestoreClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreClusterOperationsSettings, logger);
             CreateSecondaryClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSecondaryClusterOperationsSettings, logger);
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
@@ -5407,6 +6007,9 @@ namespace Google.Cloud.AlloyDb.V1
             _callPromoteCluster = clientHelper.BuildApiCall<PromoteClusterRequest, lro::Operation>("PromoteCluster", grpcClient.PromoteClusterAsync, grpcClient.PromoteCluster, effectiveSettings.PromoteClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPromoteCluster);
             Modify_PromoteClusterApiCall(ref _callPromoteCluster);
+            _callSwitchoverCluster = clientHelper.BuildApiCall<SwitchoverClusterRequest, lro::Operation>("SwitchoverCluster", grpcClient.SwitchoverClusterAsync, grpcClient.SwitchoverCluster, effectiveSettings.SwitchoverClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callSwitchoverCluster);
+            Modify_SwitchoverClusterApiCall(ref _callSwitchoverCluster);
             _callRestoreCluster = clientHelper.BuildApiCall<RestoreClusterRequest, lro::Operation>("RestoreCluster", grpcClient.RestoreClusterAsync, grpcClient.RestoreCluster, effectiveSettings.RestoreClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRestoreCluster);
             Modify_RestoreClusterApiCall(ref _callRestoreCluster);
@@ -5443,6 +6046,9 @@ namespace Google.Cloud.AlloyDb.V1
             _callRestartInstance = clientHelper.BuildApiCall<RestartInstanceRequest, lro::Operation>("RestartInstance", grpcClient.RestartInstanceAsync, grpcClient.RestartInstance, effectiveSettings.RestartInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRestartInstance);
             Modify_RestartInstanceApiCall(ref _callRestartInstance);
+            _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ExecuteSqlResponse>("ExecuteSql", grpcClient.ExecuteSqlAsync, grpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callExecuteSql);
+            Modify_ExecuteSqlApiCall(ref _callExecuteSql);
             _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackups);
             Modify_ListBackupsApiCall(ref _callListBackups);
@@ -5482,6 +6088,9 @@ namespace Google.Cloud.AlloyDb.V1
             _callDeleteUser = clientHelper.BuildApiCall<DeleteUserRequest, wkt::Empty>("DeleteUser", grpcClient.DeleteUserAsync, grpcClient.DeleteUser, effectiveSettings.DeleteUserSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteUser);
             Modify_DeleteUserApiCall(ref _callDeleteUser);
+            _callListDatabases = clientHelper.BuildApiCall<ListDatabasesRequest, ListDatabasesResponse>("ListDatabases", grpcClient.ListDatabasesAsync, grpcClient.ListDatabases, effectiveSettings.ListDatabasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDatabases);
+            Modify_ListDatabasesApiCall(ref _callListDatabases);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5498,6 +6107,8 @@ namespace Google.Cloud.AlloyDb.V1
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> call);
 
         partial void Modify_PromoteClusterApiCall(ref gaxgrpc::ApiCall<PromoteClusterRequest, lro::Operation> call);
+
+        partial void Modify_SwitchoverClusterApiCall(ref gaxgrpc::ApiCall<SwitchoverClusterRequest, lro::Operation> call);
 
         partial void Modify_RestoreClusterApiCall(ref gaxgrpc::ApiCall<RestoreClusterRequest, lro::Operation> call);
 
@@ -5522,6 +6133,8 @@ namespace Google.Cloud.AlloyDb.V1
         partial void Modify_InjectFaultApiCall(ref gaxgrpc::ApiCall<InjectFaultRequest, lro::Operation> call);
 
         partial void Modify_RestartInstanceApiCall(ref gaxgrpc::ApiCall<RestartInstanceRequest, lro::Operation> call);
+
+        partial void Modify_ExecuteSqlApiCall(ref gaxgrpc::ApiCall<ExecuteSqlRequest, ExecuteSqlResponse> call);
 
         partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
 
@@ -5549,6 +6162,8 @@ namespace Google.Cloud.AlloyDb.V1
 
         partial void Modify_DeleteUserApiCall(ref gaxgrpc::ApiCall<DeleteUserRequest, wkt::Empty> call);
 
+        partial void Modify_ListDatabasesApiCall(ref gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> call);
+
         partial void OnConstruction(AlloyDBAdmin.AlloyDBAdminClient grpcClient, AlloyDBAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AlloyDBAdmin client</summary>
@@ -5571,6 +6186,8 @@ namespace Google.Cloud.AlloyDb.V1
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PromoteClusterRequest(ref PromoteClusterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SwitchoverClusterRequest(ref SwitchoverClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RestoreClusterRequest(ref RestoreClusterRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5595,6 +6212,8 @@ namespace Google.Cloud.AlloyDb.V1
         partial void Modify_InjectFaultRequest(ref InjectFaultRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RestartInstanceRequest(ref RestartInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5621,6 +6240,8 @@ namespace Google.Cloud.AlloyDb.V1
         partial void Modify_UpdateUserRequest(ref UpdateUserRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteUserRequest(ref DeleteUserRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDatabasesRequest(ref ListDatabasesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Clusters in a given project and location.
@@ -5782,6 +6403,37 @@ namespace Google.Cloud.AlloyDb.V1
         {
             Modify_PromoteClusterRequest(ref request, ref callSettings);
             return new lro::Operation<Cluster, OperationMetadata>(await _callPromoteCluster.Async(request, callSettings).ConfigureAwait(false), PromoteClusterOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SwitchoverCluster</c>.</summary>
+        public override lro::OperationsClient SwitchoverClusterOperationsClient { get; }
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Cluster, OperationMetadata> SwitchoverCluster(SwitchoverClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SwitchoverClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, OperationMetadata>(_callSwitchoverCluster.Sync(request, callSettings), SwitchoverClusterOperationsClient);
+        }
+
+        /// <summary>
+        /// Switches the roles of PRIMARY and SECONDARY clusters without any data loss.
+        /// This promotes the SECONDARY cluster to PRIMARY and sets up the original
+        /// PRIMARY cluster to replicate from this newly promoted cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Cluster, OperationMetadata>> SwitchoverClusterAsync(SwitchoverClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SwitchoverClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, OperationMetadata>(await _callSwitchoverCluster.Async(request, callSettings).ConfigureAwait(false), SwitchoverClusterOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>RestoreCluster</c>.</summary>
@@ -6135,6 +6787,30 @@ namespace Google.Cloud.AlloyDb.V1
         }
 
         /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExecuteSqlResponse ExecuteSql(ExecuteSqlRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteSqlRequest(ref request, ref callSettings);
+            return _callExecuteSql.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Executes a SQL statement in a database inside an AlloyDB instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(ExecuteSqlRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteSqlRequest(ref request, ref callSettings);
+            return _callExecuteSql.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Lists Backups in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6462,6 +7138,30 @@ namespace Google.Cloud.AlloyDb.V1
             Modify_DeleteUserRequest(ref request, ref callSettings);
             return _callDeleteUser.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists Databases in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Database"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(ListDatabasesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatabasesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDatabasesRequest, ListDatabasesResponse, Database>(_callListDatabases, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Databases in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Database"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(ListDatabasesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatabasesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatabasesRequest, ListDatabasesResponse, Database>(_callListDatabases, request, callSettings);
+        }
     }
 
     public partial class ListClustersRequest : gaxgrpc::IPageRequest
@@ -6481,6 +7181,10 @@ namespace Google.Cloud.AlloyDb.V1
     }
 
     public partial class ListUsersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDatabasesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6520,6 +7224,14 @@ namespace Google.Cloud.AlloyDb.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<User> GetEnumerator() => Users.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDatabasesResponse : gaxgrpc::IPageResponse<Database>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Database> GetEnumerator() => Databases.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
