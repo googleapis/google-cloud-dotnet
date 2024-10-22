@@ -67,6 +67,7 @@ namespace Google.Cloud.AlloyDb.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return DataModelReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return gciv::IamPolicyReflection.Descriptor;

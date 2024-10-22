@@ -76,6 +76,12 @@
                 "DeleteUserAsync"
               ]
             },
+            "ExecuteSql": {
+              "methods": [
+                "ExecuteSql",
+                "ExecuteSqlAsync"
+              ]
+            },
             "FailoverInstance": {
               "methods": [
                 "FailoverInstance",
@@ -136,6 +142,12 @@
                 "ListClustersAsync"
               ]
             },
+            "ListDatabases": {
+              "methods": [
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",
@@ -170,6 +182,12 @@
               "methods": [
                 "RestoreCluster",
                 "RestoreClusterAsync"
+              ]
+            },
+            "SwitchoverCluster": {
+              "methods": [
+                "SwitchoverCluster",
+                "SwitchoverClusterAsync"
               ]
             },
             "UpdateBackup": {

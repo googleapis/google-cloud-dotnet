@@ -80,6 +80,18 @@ namespace Google.Cloud.AlloyDb.V1
         }
     }
 
+    public partial class SwitchoverClusterRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ClusterName ClusterName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ClusterName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class PromoteClusterRequest
     {
         /// <summary>
@@ -212,6 +224,18 @@ namespace Google.Cloud.AlloyDb.V1
         }
     }
 
+    public partial class ExecuteSqlRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListBackupsRequest
     {
         /// <summary>
@@ -341,6 +365,18 @@ namespace Google.Cloud.AlloyDb.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::UserName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListDatabasesRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }

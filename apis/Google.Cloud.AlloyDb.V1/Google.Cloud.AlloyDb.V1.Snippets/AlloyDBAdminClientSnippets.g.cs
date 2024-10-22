@@ -1110,6 +1110,193 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for SwitchoverCluster</summary>
+        public void SwitchoverClusterRequestObject()
+        {
+            // Snippet: SwitchoverCluster(SwitchoverClusterRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            SwitchoverClusterRequest request = new SwitchoverClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Cluster, OperationMetadata> response = alloyDBAdminClient.SwitchoverCluster(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceSwitchoverCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SwitchoverClusterAsync</summary>
+        public async Task SwitchoverClusterRequestObjectAsync()
+        {
+            // Snippet: SwitchoverClusterAsync(SwitchoverClusterRequest, CallSettings)
+            // Additional: SwitchoverClusterAsync(SwitchoverClusterRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            SwitchoverClusterRequest request = new SwitchoverClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Cluster, OperationMetadata> response = await alloyDBAdminClient.SwitchoverClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceSwitchoverClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SwitchoverCluster</summary>
+        public void SwitchoverCluster()
+        {
+            // Snippet: SwitchoverCluster(string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            Operation<Cluster, OperationMetadata> response = alloyDBAdminClient.SwitchoverCluster(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceSwitchoverCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SwitchoverClusterAsync</summary>
+        public async Task SwitchoverClusterAsync()
+        {
+            // Snippet: SwitchoverClusterAsync(string, CallSettings)
+            // Additional: SwitchoverClusterAsync(string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            Operation<Cluster, OperationMetadata> response = await alloyDBAdminClient.SwitchoverClusterAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceSwitchoverClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SwitchoverCluster</summary>
+        public void SwitchoverClusterResourceNames()
+        {
+            // Snippet: SwitchoverCluster(ClusterName, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            Operation<Cluster, OperationMetadata> response = alloyDBAdminClient.SwitchoverCluster(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceSwitchoverCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SwitchoverClusterAsync</summary>
+        public async Task SwitchoverClusterResourceNamesAsync()
+        {
+            // Snippet: SwitchoverClusterAsync(ClusterName, CallSettings)
+            // Additional: SwitchoverClusterAsync(ClusterName, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            Operation<Cluster, OperationMetadata> response = await alloyDBAdminClient.SwitchoverClusterAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceSwitchoverClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for RestoreCluster</summary>
         public void RestoreClusterRequestObject()
         {
@@ -2935,6 +3122,7 @@ namespace GoogleCSharpSnippets
                 InstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
                 RequestId = "",
                 ValidateOnly = false,
+                NodeIds = { "", },
             };
             // Make the request
             Operation<Instance, OperationMetadata> response = alloyDBAdminClient.RestartInstance(request);
@@ -2970,6 +3158,7 @@ namespace GoogleCSharpSnippets
                 InstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
                 RequestId = "",
                 ValidateOnly = false,
+                NodeIds = { "", },
             };
             // Make the request
             Operation<Instance, OperationMetadata> response = await alloyDBAdminClient.RestartInstanceAsync(request);
@@ -3107,6 +3296,117 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Instance retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSql</summary>
+        public void ExecuteSqlRequestObject()
+        {
+            // Snippet: ExecuteSql(ExecuteSqlRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ExecuteSqlRequest request = new ExecuteSqlRequest
+            {
+                InstanceAsInstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
+                Database = "",
+                User = "",
+                SqlStatement = "",
+                Password = "",
+            };
+            // Make the request
+            ExecuteSqlResponse response = alloyDBAdminClient.ExecuteSql(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSqlAsync</summary>
+        public async Task ExecuteSqlRequestObjectAsync()
+        {
+            // Snippet: ExecuteSqlAsync(ExecuteSqlRequest, CallSettings)
+            // Additional: ExecuteSqlAsync(ExecuteSqlRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ExecuteSqlRequest request = new ExecuteSqlRequest
+            {
+                InstanceAsInstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
+                Database = "",
+                User = "",
+                SqlStatement = "",
+                Password = "",
+            };
+            // Make the request
+            ExecuteSqlResponse response = await alloyDBAdminClient.ExecuteSqlAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSql</summary>
+        public void ExecuteSql()
+        {
+            // Snippet: ExecuteSql(string, string, string, string, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string instance = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/instances/[INSTANCE]";
+            string database = "";
+            string user = "";
+            string sqlStatement = "";
+            string password = "";
+            // Make the request
+            ExecuteSqlResponse response = alloyDBAdminClient.ExecuteSql(instance, database, user, sqlStatement, password);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSqlAsync</summary>
+        public async Task ExecuteSqlAsync()
+        {
+            // Snippet: ExecuteSqlAsync(string, string, string, string, string, CallSettings)
+            // Additional: ExecuteSqlAsync(string, string, string, string, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string instance = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/instances/[INSTANCE]";
+            string database = "";
+            string user = "";
+            string sqlStatement = "";
+            string password = "";
+            // Make the request
+            ExecuteSqlResponse response = await alloyDBAdminClient.ExecuteSqlAsync(instance, database, user, sqlStatement, password);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSql</summary>
+        public void ExecuteSqlResourceNames()
+        {
+            // Snippet: ExecuteSql(InstanceName, string, string, string, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName instance = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]");
+            string database = "";
+            string user = "";
+            string sqlStatement = "";
+            string password = "";
+            // Make the request
+            ExecuteSqlResponse response = alloyDBAdminClient.ExecuteSql(instance, database, user, sqlStatement, password);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSqlAsync</summary>
+        public async Task ExecuteSqlResourceNamesAsync()
+        {
+            // Snippet: ExecuteSqlAsync(InstanceName, string, string, string, string, CallSettings)
+            // Additional: ExecuteSqlAsync(InstanceName, string, string, string, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName instance = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]");
+            string database = "";
+            string user = "";
+            string sqlStatement = "";
+            string password = "";
+            // Make the request
+            ExecuteSqlResponse response = await alloyDBAdminClient.ExecuteSqlAsync(instance, database, user, sqlStatement, password);
             // End snippet
         }
 
@@ -5087,6 +5387,284 @@ namespace GoogleCSharpSnippets
             UserName name = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]");
             // Make the request
             await alloyDBAdminClient.DeleteUserAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabases</summary>
+        public void ListDatabasesRequestObject()
+        {
+            // Snippet: ListDatabases(ListDatabasesRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDatabasesResponse, Database> response = alloyDBAdminClient.ListDatabases(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Database item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabasesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Database item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Database> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Database item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabasesAsync</summary>
+        public async Task ListDatabasesRequestObjectAsync()
+        {
+            // Snippet: ListDatabasesAsync(ListDatabasesRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDatabasesResponse, Database> response = alloyDBAdminClient.ListDatabasesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Database item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatabasesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Database item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Database> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Database item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabases</summary>
+        public void ListDatabases()
+        {
+            // Snippet: ListDatabases(string, string, int?, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            PagedEnumerable<ListDatabasesResponse, Database> response = alloyDBAdminClient.ListDatabases(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Database item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabasesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Database item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Database> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Database item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabasesAsync</summary>
+        public async Task ListDatabasesAsync()
+        {
+            // Snippet: ListDatabasesAsync(string, string, int?, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            PagedAsyncEnumerable<ListDatabasesResponse, Database> response = alloyDBAdminClient.ListDatabasesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Database item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatabasesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Database item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Database> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Database item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabases</summary>
+        public void ListDatabasesResourceNames()
+        {
+            // Snippet: ListDatabases(ClusterName, string, int?, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            PagedEnumerable<ListDatabasesResponse, Database> response = alloyDBAdminClient.ListDatabases(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Database item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabasesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Database item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Database> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Database item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabasesAsync</summary>
+        public async Task ListDatabasesResourceNamesAsync()
+        {
+            // Snippet: ListDatabasesAsync(ClusterName, string, int?, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            PagedAsyncEnumerable<ListDatabasesResponse, Database> response = alloyDBAdminClient.ListDatabasesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Database item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatabasesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Database item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Database> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Database item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }
