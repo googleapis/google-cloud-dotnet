@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta10, released 2024-10-21
+
+### New features
+
+- Add brand voice lite ([commit 3b4c563](https://github.com/googleapis/google-cloud-dotnet/commit/3b4c563ae7f831f4479bb95f6e841c61f19cb906))
+
 ## Version 2.0.0-beta09, released 2024-10-14
 
 ### New features
