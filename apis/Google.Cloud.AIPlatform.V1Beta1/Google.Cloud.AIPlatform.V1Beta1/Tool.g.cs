@@ -2927,7 +2927,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
   /// <summary>
   /// Retrieve from Vertex AI Search datastore for grounding.
-  /// See https://cloud.google.com/vertex-ai-search-and-conversation
+  /// See https://cloud.google.com/products/agent-builder
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VertexAISearch : pb::IMessage<VertexAISearch>
@@ -2978,7 +2978,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int DatastoreFieldNumber = 1;
     private string datastore_ = "";
     /// <summary>
-    /// Required. Fully-qualified Vertex AI Search's datastore resource ID.
+    /// Required. Fully-qualified Vertex AI Search data store resource ID.
     /// Format:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
     /// </summary>
