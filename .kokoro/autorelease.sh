@@ -12,7 +12,8 @@ source ./populatesecrets.sh
 populate_all_secrets
 
 dotnet tool restore
-source <(dotnet release-progress-reporter publish-reporter-script)
+# Pause release progress reporting temporarily. See b/373927472
+# source <(dotnet release-progress-reporter publish-reporter-script)
 
 # Secrets are already populated, let's not do that again
 ./release.sh --skippopulatesecrets
