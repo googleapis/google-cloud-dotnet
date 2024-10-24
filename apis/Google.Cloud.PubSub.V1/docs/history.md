@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.19.0, released 2024-10-24
+
+### Bug fixes
+
+- Do not throw if a subscriber is disposed before being started ([commit 04b8d8a](https://github.com/googleapis/google-cloud-dotnet/commit/04b8d8abe0da0c5dbd6a6d1ea8a81aa116d1114f))
+
+### New features
+
+- Add IngestionFailureEvent to the external proto ([commit a51bbfd](https://github.com/googleapis/google-cloud-dotnet/commit/a51bbfd7d3c5130b77d0e2a3007e1edb5c27955c))
+- Support connection sharing across gRPC channels ([commit 2e16e74](https://github.com/googleapis/google-cloud-dotnet/commit/2e16e743de7bf60afe462692bdbc444f4dcd9ee8))
+
 ## Version 3.18.0, released 2024-09-26
 
 No API surface changes; just dependency updates.
