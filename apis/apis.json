@@ -3805,6 +3805,29 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Parallelstore.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Parallelstore",
+      "productUrl": "https://cloud.google.com/parallelstore?hl=en",
+      "description": "Recommended Google client library for Parallelstore: a fully managed, low-latency distributed file system designed to meet the demands of high performance computing (HPC) and data-intensive applications.",
+      "tags": [
+        "storage",
+        "performance"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/parallelstore/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "parallelstore",
+      "serviceConfigFile": "parallelstore_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Parallelstore.V1Beta",
       "version": "1.0.0-beta06",
       "type": "grpc",
