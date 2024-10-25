@@ -116,6 +116,18 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         }
     }
 
+    public partial class DeleteSiteRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::SiteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::SiteName SiteName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::SiteName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListHardwareGroupsRequest
     {
         /// <summary><see cref="OrderName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>

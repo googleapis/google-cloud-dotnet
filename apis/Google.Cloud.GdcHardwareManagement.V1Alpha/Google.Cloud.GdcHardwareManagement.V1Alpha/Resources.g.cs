@@ -70,7 +70,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
             "eUID4EEBEmIKFG9yZ2FuaXphdGlvbl9jb250YWN0GAUgASgLMj8uZ29vZ2xl",
             "LmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVudC52MWFscGhhLk9yZ2FuaXph",
             "dGlvbkNvbnRhY3RCA+BBAhIgChNnb29nbGVfbWFwc19waW5fdXJpGAYgASgJ",
-            "QgPgQQISUQoMYWNjZXNzX3RpbWVzGBogAygLMjYuZ29vZ2xlLmNsb3VkLmdk",
+            "QgPgQQESUQoMYWNjZXNzX3RpbWVzGBogAygLMjYuZ29vZ2xlLmNsb3VkLmdk",
             "Y2hhcmR3YXJlbWFuYWdlbWVudC52MWFscGhhLlRpbWVQZXJpb2RCA+BBARIS",
             "CgVub3RlcxgbIAEoCUID4EEBEh0KEGN1c3RvbWVyX3NpdGVfaWQYHCABKAlC",
             "A+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
@@ -99,7 +99,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
             "Y29tL0hhcmR3YXJlR3JvdXASVnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
             "bnMve2xvY2F0aW9ufS9vcmRlcnMve29yZGVyfS9oYXJkd2FyZUdyb3Vwcy97",
             "aGFyZHdhcmVfZ3JvdXB9Kg5oYXJkd2FyZUdyb3VwczINaGFyZHdhcmVHcm91",
-            "cCL9CgoISGFyZHdhcmUSEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlf",
+            "cCK9EAoISGFyZHdhcmUSEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlf",
             "bmFtZRgCIAEoCUID4EEBEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElUKBmxhYmVscxgF",
@@ -123,166 +123,185 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
             "ZW1hbmFnZW1lbnQuZ29vZ2xlYXBpcy5jb20vWm9uZRI7ChtyZXF1ZXN0ZWRf",
             "aW5zdGFsbGF0aW9uX2RhdGUYECABKAsyES5nb29nbGUudHlwZS5EYXRlQgPg",
             "QQESOAoYYWN0dWFsX2luc3RhbGxhdGlvbl9kYXRlGBEgASgLMhEuZ29vZ2xl",
-            "LnR5cGUuRGF0ZUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEigQEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
-            "SUVEEAASGgoWQURESVRJT05BTF9JTkZPX05FRURFRBABEgwKCEJVSUxESU5H",
-            "EAISDAoIU0hJUFBJTkcQAxIOCgpJTlNUQUxMSU5HEAQSDQoJSU5TVEFMTEVE",
-            "EAUSCgoGRkFJTEVEEAY6hAHqQYABCi1nZGNoYXJkd2FyZW1hbmFnZW1lbnQu",
-            "Z29vZ2xlYXBpcy5jb20vSGFyZHdhcmUSO3Byb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9oYXJkd2FyZS97aGFyZHdhcmV9KghoYXJk",
-            "d2FyZTIIaGFyZHdhcmUioQQKB0NvbW1lbnQSEQoEbmFtZRgBIAEoCUID4EEI",
-            "EjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDElQKBmxhYmVscxgDIAMoCzI/Lmdvb2dsZS5jbG91ZC5nZGNo",
-            "YXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5Db21tZW50LkxhYmVsc0VudHJ5",
-            "QgPgQQESEwoGYXV0aG9yGAQgASgJQgPgQQMSEQoEdGV4dBgFIAEoCUID4EEC",
-            "Ej0KFGN1c3RvbWVyX3ZpZXdlZF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEk4KDWF1dGhvcl9lbnRpdHkYByABKA4yMi5n",
-            "b29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYxYWxwaGEuRW50",
-            "aXR5QgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ATqQAepBjAEKLGdkY2hhcmR3YXJlbWFuYWdlbWVudC5nb29n",
-            "bGVhcGlzLmNvbS9Db21tZW50Eklwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vb3JkZXJzL3tvcmRlcn0vY29tbWVudHMve2NvbW1l",
-            "bnR9Kghjb21tZW50czIHY29tbWVudCKxAwoOQ2hhbmdlTG9nRW50cnkSEQoE",
-            "bmFtZRgBIAEoCUID4EEIEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElsKBmxhYmVscxgDIAMoCzJGLmdv",
-            "b2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5DaGFu",
-            "Z2VMb2dFbnRyeS5MYWJlbHNFbnRyeUID4EEBEhAKA2xvZxgEIAEoCUID4EED",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAE6twHqQbMBCjNnZGNoYXJkd2FyZW1hbmFnZW1lbnQuZ29vZ2xlYXBpcy5j",
-            "b20vQ2hhbmdlTG9nRW50cnkSWnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9vcmRlcnMve29yZGVyfS9jaGFuZ2VMb2dFbnRyaWVz",
-            "L3tjaGFuZ2VfbG9nX2VudHJ5fSoQY2hhbmdlTG9nRW50cmllczIOY2hhbmdl",
-            "TG9nRW50cnkijAUKA1NrdRIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxh",
-            "eV9uYW1lGAIgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSSgoGY29uZmln",
-            "GAYgASgLMjUuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVudC52",
-            "MWFscGhhLlNrdUNvbmZpZ0ID4EEDEk8KCWluc3RhbmNlcxgHIAMoCzI3Lmdv",
-            "b2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5Ta3VJ",
-            "bnN0YW5jZUID4EEDEhgKC2Rlc2NyaXB0aW9uGAggASgJQgPgQQMSGAoLcmV2",
-            "aXNpb25faWQYCSABKAlCA+BBAxIWCglpc19hY3RpdmUYCiABKAhCA+BBAxJH",
-            "CgR0eXBlGAsgASgOMjQuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdl",
-            "bWVudC52MWFscGhhLlNrdS5UeXBlQgPgQQMSFwoKdmNwdV9jb3VudBgMIAEo",
-            "BUID4EEDIjIKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEggKBFJBQ0sQ",
-            "ARIKCgZTRVJWRVIQAjps6kFpCihnZGNoYXJkd2FyZW1hbmFnZW1lbnQuZ29v",
-            "Z2xlYXBpcy5jb20vU2t1EjJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vc2t1cy97c2t1fSoEc2t1czIDc2t1Iv4HCgRab25lEhEK",
-            "BG5hbWUYASABKAlCA+BBCBI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJRCgZsYWJlbHMY",
-            "BCADKAsyPC5nb29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYx",
-            "YWxwaGEuWm9uZS5MYWJlbHNFbnRyeUID4EEBEhkKDGRpc3BsYXlfbmFtZRgF",
-            "IAEoCUID4EEBEkoKBXN0YXRlGAggASgOMjYuZ29vZ2xlLmNsb3VkLmdkY2hh",
-            "cmR3YXJlbWFuYWdlbWVudC52MWFscGhhLlpvbmUuU3RhdGVCA+BBAxJKCghj",
-            "b250YWN0cxgJIAMoCzIzLmdvb2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFn",
-            "ZW1lbnQudjFhbHBoYS5Db250YWN0QgPgQQISFAoHY2lxX3VyaRgKIAEoCUID",
-            "4EEDEloKDm5ldHdvcmtfY29uZmlnGAsgASgLMj0uZ29vZ2xlLmNsb3VkLmdk",
-            "Y2hhcmR3YXJlbWFuYWdlbWVudC52MWFscGhhLlpvbmVOZXR3b3JrQ29uZmln",
-            "QgPgQQESHwoSZ2xvYmFsbHlfdW5pcXVlX2lkGAwgASgJQgPgQQMSYQoUc3Vi",
-            "c2NyaXB0aW9uX2NvbmZpZ3MYDSADKAsyPi5nb29nbGUuY2xvdWQuZ2RjaGFy",
-            "ZHdhcmVtYW5hZ2VtZW50LnYxYWxwaGEuU3Vic2NyaXB0aW9uQ29uZmlnQgPg",
-            "QQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ASLYAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIaChZBRERJ",
-            "VElPTkFMX0lORk9fTkVFREVEEAESDQoJUFJFUEFSSU5HEAISLAooUkVBRFlf",
-            "Rk9SX0NVU1RPTUVSX0ZBQ1RPUllfVFVSTlVQX0NIRUNLUxAFEhkKFVJFQURZ",
-            "X0ZPUl9TSVRFX1RVUk5VUBAGEikKJUNVU1RPTUVSX0ZBQ1RPUllfVFVSTlVQ",
-            "X0NIRUNLU19GQUlMRUQQBxIKCgZBQ1RJVkUQAxINCglDQU5DRUxMRUQQBDpx",
-            "6kFuCilnZGNoYXJkd2FyZW1hbmFnZW1lbnQuZ29vZ2xlYXBpcy5jb20vWm9u",
-            "ZRI0cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3pv",
-            "bmVzL3t6b25lfSoFem9uZXMyBHpvbmUiuwEKE09yZ2FuaXphdGlvbkNvbnRh",
-            "Y3QSMAoHYWRkcmVzcxgBIAEoCzIaLmdvb2dsZS50eXBlLlBvc3RhbEFkZHJl",
-            "c3NCA+BBAhISCgVlbWFpbBgCIAEoCUID4EEBEhIKBXBob25lGAMgASgJQgPg",
-            "QQESSgoIY29udGFjdHMYBCADKAsyMy5nb29nbGUuY2xvdWQuZ2RjaGFyZHdh",
-            "cmVtYW5hZ2VtZW50LnYxYWxwaGEuQ29udGFjdEID4EECIukBCgdDb250YWN0",
-            "EhcKCmdpdmVuX25hbWUYASABKAlCA+BBAhIYCgtmYW1pbHlfbmFtZRgCIAEo",
-            "CUID4EEBEhIKBWVtYWlsGAMgASgJQgPgQQISEgoFcGhvbmUYBCABKAlCA+BB",
-            "AhItCgl0aW1lX3pvbmUYBSABKAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZUID",
-            "4EEBElQKD3JlYWNoYWJsZV90aW1lcxgGIAMoCzI2Lmdvb2dsZS5jbG91ZC5n",
-            "ZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5UaW1lUGVyaW9kQgPgQQEi",
-            "zgEKDkhhcmR3YXJlQ29uZmlnEj0KA3NrdRgBIAEoCUIw4EEC+kEqCihnZGNo",
-            "YXJkd2FyZW1hbmFnZW1lbnQuZ29vZ2xlYXBpcy5jb20vU2t1ElIKDHBvd2Vy",
-            "X3N1cHBseRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFn",
-            "ZW1lbnQudjFhbHBoYS5Qb3dlclN1cHBseUID4EECEikKHHN1YnNjcmlwdGlv",
-            "bl9kdXJhdGlvbl9tb250aHMYAyABKAVCA+BBASJDCglTa3VDb25maWcSCwoD",
-            "Y3B1GAEgASgJEgsKA2dwdRgCIAEoCRILCgNyYW0YAyABKAkSDwoHc3RvcmFn",
-            "ZRgEIAEoCSLKAQoLU2t1SW5zdGFuY2USEwoLcmVnaW9uX2NvZGUYASABKAkS",
-            "TQoMcG93ZXJfc3VwcGx5GAIgASgOMjcuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3",
-            "YXJlbWFuYWdlbWVudC52MWFscGhhLlBvd2VyU3VwcGx5EhMKC2JpbGxpbmdf",
-            "c2t1GAMgASgJEhwKFGJpbGxpbmdfc2t1X3Blcl92Y3B1GAQgASgJEiQKHHN1",
-            "YnNjcmlwdGlvbl9kdXJhdGlvbl9tb250aHMYBSABKAUi4wUKFEhhcmR3YXJl",
-            "UGh5c2ljYWxJbmZvEnMKEHBvd2VyX3JlY2VwdGFjbGUYASABKA4yVC5nb29n",
+            "LnR5cGUuRGF0ZUID4EEDElwKDW1hY2hpbmVfaW5mb3MYFCADKAsyQC5nb29n",
             "bGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYxYWxwaGEuSGFyZHdh",
-            "cmVQaHlzaWNhbEluZm8uUG93ZXJSZWNlcHRhY2xlVHlwZUID4EECEm8KDm5l",
-            "dHdvcmtfdXBsaW5rGAIgASgOMlIuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJl",
-            "bWFuYWdlbWVudC52MWFscGhhLkhhcmR3YXJlUGh5c2ljYWxJbmZvLk5ldHdv",
-            "cmtVcGxpbmtUeXBlQgPgQQISXgoHdm9sdGFnZRgDIAEoDjJILmdvb2dsZS5j",
-            "bG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5IYXJkd2FyZVBo",
-            "eXNpY2FsSW5mby5Wb2x0YWdlQgPgQQISXgoHYW1wZXJlcxgEIAEoDjJILmdv",
-            "b2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5IYXJk",
-            "d2FyZVBoeXNpY2FsSW5mby5BbXBlcmVzQgPgQQIiZgoTUG93ZXJSZWNlcHRh",
-            "Y2xlVHlwZRIlCiFQT1dFUl9SRUNFUFRBQ0xFX1RZUEVfVU5TUEVDSUZJRUQQ",
-            "ABINCglORU1BXzVfMTUQARIICgRDXzEzEAISDwoLU1RBTkRBUkRfRVUQAyJD",
-            "ChFOZXR3b3JrVXBsaW5rVHlwZRIjCh9ORVRXT1JLX1VQTElOS19UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASCQoFUkpfNDUQASJECgdWb2x0YWdlEhcKE1ZPTFRBR0Vf",
-            "VU5TUEVDSUZJRUQQABIPCgtWT0xUQUdFXzExMBABEg8KC1ZPTFRBR0VfMjIw",
-            "EAMiMgoHQW1wZXJlcxIXChNBTVBFUkVTX1VOU1BFQ0lGSUVEEAASDgoKQU1Q",
-            "RVJFU18xNRABItUDChhIYXJkd2FyZUluc3RhbGxhdGlvbkluZm8SGgoNcmFj",
-            "a19sb2NhdGlvbhgBIAEoCUID4EEBEiIKFXBvd2VyX2Rpc3RhbmNlX21ldGVy",
-            "cxgCIAEoBUID4EECEiMKFnN3aXRjaF9kaXN0YW5jZV9tZXRlcnMYAyABKAVC",
-            "A+BBAhJZChRyYWNrX3VuaXRfZGltZW5zaW9ucxgEIAEoCzI2Lmdvb2dsZS5j",
-            "bG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5EaW1lbnNpb25z",
-            "QgPgQQISTgoKcmFja19zcGFjZRgFIAEoCzI1Lmdvb2dsZS5jbG91ZC5nZGNo",
-            "YXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5SYWNrU3BhY2VCA+BBAhJlCgly",
-            "YWNrX3R5cGUYBiABKA4yTS5nb29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5h",
-            "Z2VtZW50LnYxYWxwaGEuSGFyZHdhcmVJbnN0YWxsYXRpb25JbmZvLlJhY2tU",
-            "eXBlQgPgQQIiQgoIUmFja1R5cGUSGQoVUkFDS19UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASDAoIVFdPX1BPU1QQARINCglGT1VSX1BPU1QQAiLeAgoRWm9uZU5ldHdv",
-            "cmtDb25maWcSLAoXbWFjaGluZV9tZ210X2lwdjRfcmFuZ2UYASABKAlCC+BB",
-            "AuKMz9cIAggCEi8KGmt1YmVybmV0ZXNfbm9kZV9pcHY0X3JhbmdlGAIgASgJ",
-            "QgvgQQLijM/XCAIIAhI4CiNrdWJlcm5ldGVzX2NvbnRyb2xfcGxhbmVfaXB2",
-            "NF9yYW5nZRgDIAEoCUIL4EEC4ozP1wgCCAISVwoWbWFuYWdlbWVudF9pcHY0",
-            "X3N1Ym5ldBgEIAEoCzIyLmdvb2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFn",
-            "ZW1lbnQudjFhbHBoYS5TdWJuZXRCA+BBAhJXChZrdWJlcm5ldGVzX2lwdjRf",
-            "c3VibmV0GAUgASgLMjIuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdl",
-            "bWVudC52MWFscGhhLlN1Ym5ldEID4EEBIl0KBlN1Ym5ldBIiCg1hZGRyZXNz",
-            "X3JhbmdlGAEgASgJQgvgQQLijM/XCAIIAhIvChpkZWZhdWx0X2dhdGV3YXlf",
-            "aXBfYWRkcmVzcxgCIAEoCUIL4EEC4ozP1wgCCAIilwEKClRpbWVQZXJpb2QS",
-            "LwoKc3RhcnRfdGltZRgBIAEoCzIWLmdvb2dsZS50eXBlLlRpbWVPZkRheUID",
-            "4EECEi0KCGVuZF90aW1lGAIgASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5",
-            "QgPgQQISKQoEZGF5cxgDIAMoDjIWLmdvb2dsZS50eXBlLkRheU9mV2Vla0ID",
-            "4EECIl4KCkRpbWVuc2lvbnMSGQoMd2lkdGhfaW5jaGVzGAEgASgCQgPgQQIS",
-            "GgoNaGVpZ2h0X2luY2hlcxgCIAEoAkID4EECEhkKDGRlcHRoX2luY2hlcxgD",
-            "IAEoAkID4EECIkUKCVJhY2tTcGFjZRIcCg9zdGFydF9yYWNrX3VuaXQYASAB",
-            "KAVCA+BBAhIaCg1lbmRfcmFja191bml0GAIgASgFQgPgQQIivwEKEEhhcmR3",
-            "YXJlTG9jYXRpb24SPwoEc2l0ZRgBIAEoCUIx4EEC+kErCilnZGNoYXJkd2Fy",
-            "ZW1hbmFnZW1lbnQuZ29vZ2xlYXBpcy5jb20vU2l0ZRIaCg1yYWNrX2xvY2F0",
-            "aW9uGAIgASgJQgPgQQISTgoKcmFja19zcGFjZRgDIAMoCzI1Lmdvb2dsZS5j",
-            "bG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5SYWNrU3BhY2VC",
-            "A+BBASK3AgoSU3Vic2NyaXB0aW9uQ29uZmlnEhwKD3N1YnNjcmlwdGlvbl9p",
-            "ZBgBIAEoCUID4EEDEhcKCmJpbGxpbmdfaWQYAiABKAlCA+BBAxJkCgVzdGF0",
-            "ZRgDIAEoDjJQLmdvb2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQu",
-            "djFhbHBoYS5TdWJzY3JpcHRpb25Db25maWcuU3Vic2NyaXB0aW9uU3RhdGVC",
-            "A+BBAyKDAQoRU3Vic2NyaXB0aW9uU3RhdGUSIgoeU1VCU0NSSVBUSU9OX1NU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAhIJ",
-            "CgVFUlJPUhADEhYKEkZBSUxFRF9UT19SRVRSSUVWRRAEEg0KCUNPTVBMRVRF",
-            "RBAFKlUKC1Bvd2VyU3VwcGx5EhwKGFBPV0VSX1NVUFBMWV9VTlNQRUNJRklF",
-            "RBAAEhMKD1BPV0VSX1NVUFBMWV9BQxABEhMKD1BPV0VSX1NVUFBMWV9EQxAC",
-            "KkYKBkVudGl0eRIWChJFTlRJVFlfVU5TUEVDSUZJRUQQABIKCgZHT09HTEUQ",
-            "ARIMCghDVVNUT01FUhACEgoKBlZFTkRPUhADQrICCi5jb20uZ29vZ2xlLmNs",
-            "b3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVudC52MWFscGhhQg5SZXNvdXJjZXNQ",
-            "cm90b1ABWmRjbG91ZC5nb29nbGUuY29tL2dvL2dkY2hhcmR3YXJlbWFuYWdl",
-            "bWVudC9hcGl2MWFscGhhL2dkY2hhcmR3YXJlbWFuYWdlbWVudHBiO2dkY2hh",
-            "cmR3YXJlbWFuYWdlbWVudHBiqgIqR29vZ2xlLkNsb3VkLkdkY0hhcmR3YXJl",
-            "TWFuYWdlbWVudC5WMUFscGhhygIqR29vZ2xlXENsb3VkXEdkY0hhcmR3YXJl",
-            "TWFuYWdlbWVudFxWMWFscGhh6gItR29vZ2xlOjpDbG91ZDo6R0RDSGFyZHdh",
-            "cmVNYW5hZ2VtZW50OjpWMWFscGhhYgZwcm90bzM="));
+            "cmUuTWFjaGluZUluZm9CA+BBAxrOAQoKTWFjQWRkcmVzcxIUCgdhZGRyZXNz",
+            "GAEgASgJQgPgQQMSXgoEdHlwZRgCIAEoDjJLLmdvb2dsZS5jbG91ZC5nZGNo",
+            "YXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5IYXJkd2FyZS5NYWNBZGRyZXNz",
+            "LkFkZHJlc3NUeXBlQgPgQQMiSgoLQWRkcmVzc1R5cGUSHAoYQUREUkVTU19U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASBwoDTklDEAESBwoDQk1DEAISCwoHVklSVFVB",
+            "TBADGpwBCghEaXNrSW5mbxIZCgxtYW51ZmFjdHVyZXIYASABKAlCA+BBAxIR",
+            "CgRzbG90GAIgASgFQgPgQQMSGgoNc2VyaWFsX251bWJlchgDIAEoCUID4EED",
+            "EhEKBHBzaWQYBCABKAlCA+BBAxIYCgtwYXJ0X251bWJlchgFIAEoCUID4EED",
+            "EhkKDG1vZGVsX251bWJlchgGIAEoCUID4EEDGu8BCgtNYWNoaW5lSW5mbxIY",
+            "CgtzZXJ2aWNlX3RhZxgBIAEoCUID4EEDElsKDW1hY19hZGRyZXNzZXMYAiAD",
+            "KAsyPy5nb29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYxYWxw",
+            "aGEuSGFyZHdhcmUuTWFjQWRkcmVzc0ID4EEDEhEKBG5hbWUYAyABKAlCA+BB",
+            "AxJWCgpkaXNrX2luZm9zGAQgAygLMj0uZ29vZ2xlLmNsb3VkLmdkY2hhcmR3",
+            "YXJlbWFuYWdlbWVudC52MWFscGhhLkhhcmR3YXJlLkRpc2tJbmZvQgPgQQMa",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASKBAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIaChZBRERJVElP",
+            "TkFMX0lORk9fTkVFREVEEAESDAoIQlVJTERJTkcQAhIMCghTSElQUElORxAD",
+            "Eg4KCklOU1RBTExJTkcQBBINCglJTlNUQUxMRUQQBRIKCgZGQUlMRUQQBjqE",
+            "AepBgAEKLWdkY2hhcmR3YXJlbWFuYWdlbWVudC5nb29nbGVhcGlzLmNvbS9I",
+            "YXJkd2FyZRI7cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2hhcmR3YXJlL3toYXJkd2FyZX0qCGhhcmR3YXJlMghoYXJkd2FyZSKh",
+            "BAoHQ29tbWVudBIRCgRuYW1lGAEgASgJQgPgQQgSNAoLY3JlYXRlX3RpbWUY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSVAoGbGFi",
+            "ZWxzGAMgAygLMj8uZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVu",
+            "dC52MWFscGhhLkNvbW1lbnQuTGFiZWxzRW50cnlCA+BBARITCgZhdXRob3IY",
+            "BCABKAlCA+BBAxIRCgR0ZXh0GAUgASgJQgPgQQISPQoUY3VzdG9tZXJfdmll",
+            "d2VkX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSTgoNYXV0aG9yX2VudGl0eRgHIAEoDjIyLmdvb2dsZS5jbG91ZC5nZGNo",
+            "YXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5FbnRpdHlCA+BBAxotCgtMYWJl",
+            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOpAB6kGM",
+            "AQosZ2RjaGFyZHdhcmVtYW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29tL0NvbW1l",
+            "bnQSSXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9v",
+            "cmRlcnMve29yZGVyfS9jb21tZW50cy97Y29tbWVudH0qCGNvbW1lbnRzMgdj",
+            "b21tZW50IrEDCg5DaGFuZ2VMb2dFbnRyeRIRCgRuYW1lGAEgASgJQgPgQQgS",
+            "NAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSWwoGbGFiZWxzGAMgAygLMkYuZ29vZ2xlLmNsb3VkLmdkY2hh",
+            "cmR3YXJlbWFuYWdlbWVudC52MWFscGhhLkNoYW5nZUxvZ0VudHJ5LkxhYmVs",
+            "c0VudHJ5QgPgQQESEAoDbG9nGAQgASgJQgPgQQMaLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATq3AepBswEKM2dkY2hh",
+            "cmR3YXJlbWFuYWdlbWVudC5nb29nbGVhcGlzLmNvbS9DaGFuZ2VMb2dFbnRy",
+            "eRJacHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L29y",
+            "ZGVycy97b3JkZXJ9L2NoYW5nZUxvZ0VudHJpZXMve2NoYW5nZV9sb2dfZW50",
+            "cnl9KhBjaGFuZ2VMb2dFbnRyaWVzMg5jaGFuZ2VMb2dFbnRyeSKMBQoDU2t1",
+            "EhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BB",
+            "AxI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxJKCgZjb25maWcYBiABKAsyNS5nb29nbGUu",
+            "Y2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYxYWxwaGEuU2t1Q29uZmln",
+            "QgPgQQMSTwoJaW5zdGFuY2VzGAcgAygLMjcuZ29vZ2xlLmNsb3VkLmdkY2hh",
+            "cmR3YXJlbWFuYWdlbWVudC52MWFscGhhLlNrdUluc3RhbmNlQgPgQQMSGAoL",
+            "ZGVzY3JpcHRpb24YCCABKAlCA+BBAxIYCgtyZXZpc2lvbl9pZBgJIAEoCUID",
+            "4EEDEhYKCWlzX2FjdGl2ZRgKIAEoCEID4EEDEkcKBHR5cGUYCyABKA4yNC5n",
+            "b29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYxYWxwaGEuU2t1",
+            "LlR5cGVCA+BBAxIXCgp2Y3B1X2NvdW50GAwgASgFQgPgQQMiMgoEVHlwZRIU",
+            "ChBUWVBFX1VOU1BFQ0lGSUVEEAASCAoEUkFDSxABEgoKBlNFUlZFUhACOmzq",
+            "QWkKKGdkY2hhcmR3YXJlbWFuYWdlbWVudC5nb29nbGVhcGlzLmNvbS9Ta3US",
+            "MnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9za3Vz",
+            "L3tza3V9KgRza3VzMgNza3Ui/gcKBFpvbmUSEQoEbmFtZRgBIAEoCUID4EEI",
+            "EjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDElEKBmxhYmVscxgEIAMoCzI8Lmdvb2dsZS5j",
+            "bG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5ab25lLkxhYmVs",
+            "c0VudHJ5QgPgQQESGQoMZGlzcGxheV9uYW1lGAUgASgJQgPgQQESSgoFc3Rh",
+            "dGUYCCABKA4yNi5nb29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50",
+            "LnYxYWxwaGEuWm9uZS5TdGF0ZUID4EEDEkoKCGNvbnRhY3RzGAkgAygLMjMu",
+            "Z29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVudC52MWFscGhhLkNv",
+            "bnRhY3RCA+BBAhIUCgdjaXFfdXJpGAogASgJQgPgQQMSWgoObmV0d29ya19j",
+            "b25maWcYCyABKAsyPS5nb29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2Vt",
+            "ZW50LnYxYWxwaGEuWm9uZU5ldHdvcmtDb25maWdCA+BBARIfChJnbG9iYWxs",
+            "eV91bmlxdWVfaWQYDCABKAlCA+BBAxJhChRzdWJzY3JpcHRpb25fY29uZmln",
+            "cxgNIAMoCzI+Lmdvb2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQu",
+            "djFhbHBoYS5TdWJzY3JpcHRpb25Db25maWdCA+BBAxotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBItgBCgVTdGF0ZRIV",
+            "ChFTVEFURV9VTlNQRUNJRklFRBAAEhoKFkFERElUSU9OQUxfSU5GT19ORUVE",
+            "RUQQARINCglQUkVQQVJJTkcQAhIsCihSRUFEWV9GT1JfQ1VTVE9NRVJfRkFD",
+            "VE9SWV9UVVJOVVBfQ0hFQ0tTEAUSGQoVUkVBRFlfRk9SX1NJVEVfVFVSTlVQ",
+            "EAYSKQolQ1VTVE9NRVJfRkFDVE9SWV9UVVJOVVBfQ0hFQ0tTX0ZBSUxFRBAH",
+            "EgoKBkFDVElWRRADEg0KCUNBTkNFTExFRBAEOnHqQW4KKWdkY2hhcmR3YXJl",
+            "bWFuYWdlbWVudC5nb29nbGVhcGlzLmNvbS9ab25lEjRwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vem9uZXMve3pvbmV9KgV6b25l",
+            "czIEem9uZSK7AQoTT3JnYW5pemF0aW9uQ29udGFjdBIwCgdhZGRyZXNzGAEg",
+            "ASgLMhouZ29vZ2xlLnR5cGUuUG9zdGFsQWRkcmVzc0ID4EECEhIKBWVtYWls",
+            "GAIgASgJQgPgQQESEgoFcGhvbmUYAyABKAlCA+BBARJKCghjb250YWN0cxgE",
+            "IAMoCzIzLmdvb2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFh",
+            "bHBoYS5Db250YWN0QgPgQQIi6QEKB0NvbnRhY3QSFwoKZ2l2ZW5fbmFtZRgB",
+            "IAEoCUID4EECEhgKC2ZhbWlseV9uYW1lGAIgASgJQgPgQQESEgoFZW1haWwY",
+            "AyABKAlCA+BBAhISCgVwaG9uZRgEIAEoCUID4EECEi0KCXRpbWVfem9uZRgF",
+            "IAEoCzIVLmdvb2dsZS50eXBlLlRpbWVab25lQgPgQQESVAoPcmVhY2hhYmxl",
+            "X3RpbWVzGAYgAygLMjYuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdl",
+            "bWVudC52MWFscGhhLlRpbWVQZXJpb2RCA+BBASLOAQoOSGFyZHdhcmVDb25m",
+            "aWcSPQoDc2t1GAEgASgJQjDgQQL6QSoKKGdkY2hhcmR3YXJlbWFuYWdlbWVu",
+            "dC5nb29nbGVhcGlzLmNvbS9Ta3USUgoMcG93ZXJfc3VwcGx5GAIgASgOMjcu",
+            "Z29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVudC52MWFscGhhLlBv",
+            "d2VyU3VwcGx5QgPgQQISKQocc3Vic2NyaXB0aW9uX2R1cmF0aW9uX21vbnRo",
+            "cxgDIAEoBUID4EEBIkMKCVNrdUNvbmZpZxILCgNjcHUYASABKAkSCwoDZ3B1",
+            "GAIgASgJEgsKA3JhbRgDIAEoCRIPCgdzdG9yYWdlGAQgASgJIsoBCgtTa3VJ",
+            "bnN0YW5jZRITCgtyZWdpb25fY29kZRgBIAEoCRJNCgxwb3dlcl9zdXBwbHkY",
+            "AiABKA4yNy5nb29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYx",
+            "YWxwaGEuUG93ZXJTdXBwbHkSEwoLYmlsbGluZ19za3UYAyABKAkSHAoUYmls",
+            "bGluZ19za3VfcGVyX3ZjcHUYBCABKAkSJAocc3Vic2NyaXB0aW9uX2R1cmF0",
+            "aW9uX21vbnRocxgFIAEoBSLjBQoUSGFyZHdhcmVQaHlzaWNhbEluZm8ScwoQ",
+            "cG93ZXJfcmVjZXB0YWNsZRgBIAEoDjJULmdvb2dsZS5jbG91ZC5nZGNoYXJk",
+            "d2FyZW1hbmFnZW1lbnQudjFhbHBoYS5IYXJkd2FyZVBoeXNpY2FsSW5mby5Q",
+            "b3dlclJlY2VwdGFjbGVUeXBlQgPgQQISbwoObmV0d29ya191cGxpbmsYAiAB",
+            "KA4yUi5nb29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYxYWxw",
+            "aGEuSGFyZHdhcmVQaHlzaWNhbEluZm8uTmV0d29ya1VwbGlua1R5cGVCA+BB",
+            "AhJeCgd2b2x0YWdlGAMgASgOMkguZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJl",
+            "bWFuYWdlbWVudC52MWFscGhhLkhhcmR3YXJlUGh5c2ljYWxJbmZvLlZvbHRh",
+            "Z2VCA+BBAhJeCgdhbXBlcmVzGAQgASgOMkguZ29vZ2xlLmNsb3VkLmdkY2hh",
+            "cmR3YXJlbWFuYWdlbWVudC52MWFscGhhLkhhcmR3YXJlUGh5c2ljYWxJbmZv",
+            "LkFtcGVyZXNCA+BBAiJmChNQb3dlclJlY2VwdGFjbGVUeXBlEiUKIVBPV0VS",
+            "X1JFQ0VQVEFDTEVfVFlQRV9VTlNQRUNJRklFRBAAEg0KCU5FTUFfNV8xNRAB",
+            "EggKBENfMTMQAhIPCgtTVEFOREFSRF9FVRADIkMKEU5ldHdvcmtVcGxpbmtU",
+            "eXBlEiMKH05FVFdPUktfVVBMSU5LX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVS",
+            "Sl80NRABIkQKB1ZvbHRhZ2USFwoTVk9MVEFHRV9VTlNQRUNJRklFRBAAEg8K",
+            "C1ZPTFRBR0VfMTEwEAESDwoLVk9MVEFHRV8yMjAQAyIyCgdBbXBlcmVzEhcK",
+            "E0FNUEVSRVNfVU5TUEVDSUZJRUQQABIOCgpBTVBFUkVTXzE1EAEi1QMKGEhh",
+            "cmR3YXJlSW5zdGFsbGF0aW9uSW5mbxIaCg1yYWNrX2xvY2F0aW9uGAEgASgJ",
+            "QgPgQQISIgoVcG93ZXJfZGlzdGFuY2VfbWV0ZXJzGAIgASgFQgPgQQISIwoW",
+            "c3dpdGNoX2Rpc3RhbmNlX21ldGVycxgDIAEoBUID4EECElkKFHJhY2tfdW5p",
+            "dF9kaW1lbnNpb25zGAQgASgLMjYuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJl",
+            "bWFuYWdlbWVudC52MWFscGhhLkRpbWVuc2lvbnNCA+BBAhJOCgpyYWNrX3Nw",
+            "YWNlGAUgASgLMjUuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVu",
+            "dC52MWFscGhhLlJhY2tTcGFjZUID4EECEmUKCXJhY2tfdHlwZRgGIAEoDjJN",
+            "Lmdvb2dsZS5jbG91ZC5nZGNoYXJkd2FyZW1hbmFnZW1lbnQudjFhbHBoYS5I",
+            "YXJkd2FyZUluc3RhbGxhdGlvbkluZm8uUmFja1R5cGVCA+BBAiJCCghSYWNr",
+            "VHlwZRIZChVSQUNLX1RZUEVfVU5TUEVDSUZJRUQQABIMCghUV09fUE9TVBAB",
+            "Eg0KCUZPVVJfUE9TVBACIt4CChFab25lTmV0d29ya0NvbmZpZxIsChdtYWNo",
+            "aW5lX21nbXRfaXB2NF9yYW5nZRgBIAEoCUIL4EEC4ozP1wgCCAISLwoaa3Vi",
+            "ZXJuZXRlc19ub2RlX2lwdjRfcmFuZ2UYAiABKAlCC+BBAuKMz9cIAggCEjgK",
+            "I2t1YmVybmV0ZXNfY29udHJvbF9wbGFuZV9pcHY0X3JhbmdlGAMgASgJQgvg",
+            "QQLijM/XCAIIAhJXChZtYW5hZ2VtZW50X2lwdjRfc3VibmV0GAQgASgLMjIu",
+            "Z29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVudC52MWFscGhhLlN1",
+            "Ym5ldEID4EECElcKFmt1YmVybmV0ZXNfaXB2NF9zdWJuZXQYBSABKAsyMi5n",
+            "b29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVtYW5hZ2VtZW50LnYxYWxwaGEuU3Vi",
+            "bmV0QgPgQQEiXQoGU3VibmV0EiIKDWFkZHJlc3NfcmFuZ2UYASABKAlCC+BB",
+            "AuKMz9cIAggCEi8KGmRlZmF1bHRfZ2F0ZXdheV9pcF9hZGRyZXNzGAIgASgJ",
+            "QgvgQQLijM/XCAIIAiKXAQoKVGltZVBlcmlvZBIvCgpzdGFydF90aW1lGAEg",
+            "ASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5QgPgQQISLQoIZW5kX3RpbWUY",
+            "AiABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlCA+BBAhIpCgRkYXlzGAMg",
+            "AygOMhYuZ29vZ2xlLnR5cGUuRGF5T2ZXZWVrQgPgQQIiXgoKRGltZW5zaW9u",
+            "cxIZCgx3aWR0aF9pbmNoZXMYASABKAJCA+BBAhIaCg1oZWlnaHRfaW5jaGVz",
+            "GAIgASgCQgPgQQISGQoMZGVwdGhfaW5jaGVzGAMgASgCQgPgQQIiRQoJUmFj",
+            "a1NwYWNlEhwKD3N0YXJ0X3JhY2tfdW5pdBgBIAEoBUID4EECEhoKDWVuZF9y",
+            "YWNrX3VuaXQYAiABKAVCA+BBAiK/AQoQSGFyZHdhcmVMb2NhdGlvbhI/CgRz",
+            "aXRlGAEgASgJQjHgQQL6QSsKKWdkY2hhcmR3YXJlbWFuYWdlbWVudC5nb29n",
+            "bGVhcGlzLmNvbS9TaXRlEhoKDXJhY2tfbG9jYXRpb24YAiABKAlCA+BBAhJO",
+            "CgpyYWNrX3NwYWNlGAMgAygLMjUuZ29vZ2xlLmNsb3VkLmdkY2hhcmR3YXJl",
+            "bWFuYWdlbWVudC52MWFscGhhLlJhY2tTcGFjZUID4EEBIrcCChJTdWJzY3Jp",
+            "cHRpb25Db25maWcSHAoPc3Vic2NyaXB0aW9uX2lkGAEgASgJQgPgQQMSFwoK",
+            "YmlsbGluZ19pZBgCIAEoCUID4EEDEmQKBXN0YXRlGAMgASgOMlAuZ29vZ2xl",
+            "LmNsb3VkLmdkY2hhcmR3YXJlbWFuYWdlbWVudC52MWFscGhhLlN1YnNjcmlw",
+            "dGlvbkNvbmZpZy5TdWJzY3JpcHRpb25TdGF0ZUID4EEDIoMBChFTdWJzY3Jp",
+            "cHRpb25TdGF0ZRIiCh5TVUJTQ1JJUFRJT05fU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABIKCgZBQ1RJVkUQARIMCghJTkFDVElWRRACEgkKBUVSUk9SEAMSFgoSRkFJ",
+            "TEVEX1RPX1JFVFJJRVZFEAQSDQoJQ09NUExFVEVEEAUqVQoLUG93ZXJTdXBw",
+            "bHkSHAoYUE9XRVJfU1VQUExZX1VOU1BFQ0lGSUVEEAASEwoPUE9XRVJfU1VQ",
+            "UExZX0FDEAESEwoPUE9XRVJfU1VQUExZX0RDEAIqRgoGRW50aXR5EhYKEkVO",
+            "VElUWV9VTlNQRUNJRklFRBAAEgoKBkdPT0dMRRABEgwKCENVU1RPTUVSEAIS",
+            "CgoGVkVORE9SEANCsgIKLmNvbS5nb29nbGUuY2xvdWQuZ2RjaGFyZHdhcmVt",
+            "YW5hZ2VtZW50LnYxYWxwaGFCDlJlc291cmNlc1Byb3RvUAFaZGNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZ2RjaGFyZHdhcmVtYW5hZ2VtZW50L2FwaXYxYWxwaGEv",
+            "Z2RjaGFyZHdhcmVtYW5hZ2VtZW50cGI7Z2RjaGFyZHdhcmVtYW5hZ2VtZW50",
+            "cGKqAipHb29nbGUuQ2xvdWQuR2RjSGFyZHdhcmVNYW5hZ2VtZW50LlYxQWxw",
+            "aGHKAipHb29nbGVcQ2xvdWRcR2RjSGFyZHdhcmVNYW5hZ2VtZW50XFYxYWxw",
+            "aGHqAi1Hb29nbGU6OkNsb3VkOjpHRENIYXJkd2FyZU1hbmFnZW1lbnQ6OlYx",
+            "YWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.PowerSupply), typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Entity), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Order), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Order.Parser, new[]{ "Name", "DisplayName", "CreateTime", "UpdateTime", "Labels", "State", "OrganizationContact", "TargetWorkloads", "CustomerMotivation", "FulfillmentTime", "RegionCode", "OrderFormUri", "Type", "SubmitTime", "BillingId", "ExistingHardware" }, null, new[]{ typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Order.Types.State), typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Order.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Site), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Site.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "Labels", "OrganizationContact", "GoogleMapsPinUri", "AccessTimes", "Notes", "CustomerSiteId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.HardwareGroup), global::Google.Cloud.GdcHardwareManagement.V1Alpha.HardwareGroup.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "HardwareCount", "Config", "Site", "State", "Zone", "RequestedInstallationDate" }, null, new[]{ typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.HardwareGroup.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Parser, new[]{ "Name", "DisplayName", "CreateTime", "UpdateTime", "Labels", "Order", "HardwareGroup", "Site", "State", "CiqUri", "Config", "EstimatedInstallationDate", "PhysicalInfo", "InstallationInfo", "Zone", "RequestedInstallationDate", "ActualInstallationDate" }, null, new[]{ typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Parser, new[]{ "Name", "DisplayName", "CreateTime", "UpdateTime", "Labels", "Order", "HardwareGroup", "Site", "State", "CiqUri", "Config", "EstimatedInstallationDate", "PhysicalInfo", "InstallationInfo", "Zone", "RequestedInstallationDate", "ActualInstallationDate", "MachineInfos" }, null, new[]{ typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Parser, new[]{ "Address", "Type" }, null, new[]{ typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.DiskInfo), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.DiskInfo.Parser, new[]{ "Manufacturer", "Slot", "SerialNumber", "Psid", "PartNumber", "ModelNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MachineInfo), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MachineInfo.Parser, new[]{ "ServiceTag", "MacAddresses", "Name", "DiskInfos" }, null, null, null, null),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Comment.Parser, new[]{ "Name", "CreateTime", "Labels", "Author", "Text", "CustomerViewedTime", "AuthorEntity" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.ChangeLogEntry), global::Google.Cloud.GdcHardwareManagement.V1Alpha.ChangeLogEntry.Parser, new[]{ "Name", "CreateTime", "Labels", "Log" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Sku), global::Google.Cloud.GdcHardwareManagement.V1Alpha.Sku.Parser, new[]{ "Name", "DisplayName", "CreateTime", "UpdateTime", "Config", "Instances", "Description", "RevisionId", "IsActive", "Type", "VcpuCount" }, null, new[]{ typeof(global::Google.Cloud.GdcHardwareManagement.V1Alpha.Sku.Types.Type) }, null, null),
@@ -1427,7 +1446,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
     public const int GoogleMapsPinUriFieldNumber = 6;
     private string googleMapsPinUri_ = "";
     /// <summary>
-    /// Required. A URL to the Google Maps address location of the site.
+    /// Optional. A URL to the Google Maps address location of the site.
     /// An example value is `https://goo.gl/maps/xxxxxxxxx`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2567,6 +2586,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       zone_ = other.zone_;
       requestedInstallationDate_ = other.requestedInstallationDate_ != null ? other.requestedInstallationDate_.Clone() : null;
       actualInstallationDate_ = other.actualInstallationDate_ != null ? other.actualInstallationDate_.Clone() : null;
+      machineInfos_ = other.machineInfos_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2813,9 +2833,9 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
     public const int RequestedInstallationDateFieldNumber = 16;
     private global::Google.Type.Date requestedInstallationDate_;
     /// <summary>
-    /// Optional. Requested installation date for this hardware. This is
-    /// auto-populated when the order is accepted, if the hardware's HardwareGroup
-    /// specifies this. It can also be filled in by the customer.
+    /// Optional. Requested installation date for this hardware. If not specified,
+    /// this is auto-populated from the order's fulfillment_time upon submission or
+    /// from the HardwareGroup's requested_installation_date upon order acceptance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2840,6 +2860,20 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       set {
         actualInstallationDate_ = value;
       }
+    }
+
+    /// <summary>Field number for the "machine_infos" field.</summary>
+    public const int MachineInfosFieldNumber = 20;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MachineInfo> _repeated_machineInfos_codec
+        = pb::FieldCodec.ForMessage(162, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MachineInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MachineInfo> machineInfos_ = new pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MachineInfo>();
+    /// <summary>
+    /// Output only. Per machine asset information needed for turnup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MachineInfo> MachineInfos {
+      get { return machineInfos_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2874,6 +2908,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       if (Zone != other.Zone) return false;
       if (!object.Equals(RequestedInstallationDate, other.RequestedInstallationDate)) return false;
       if (!object.Equals(ActualInstallationDate, other.ActualInstallationDate)) return false;
+      if(!machineInfos_.Equals(other.machineInfos_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2898,6 +2933,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (requestedInstallationDate_ != null) hash ^= RequestedInstallationDate.GetHashCode();
       if (actualInstallationDate_ != null) hash ^= ActualInstallationDate.GetHashCode();
+      hash ^= machineInfos_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2981,6 +3017,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         output.WriteRawTag(138, 1);
         output.WriteMessage(ActualInstallationDate);
       }
+      machineInfos_.WriteTo(output, _repeated_machineInfos_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3056,6 +3093,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         output.WriteRawTag(138, 1);
         output.WriteMessage(ActualInstallationDate);
       }
+      machineInfos_.WriteTo(ref output, _repeated_machineInfos_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3115,6 +3153,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       if (actualInstallationDate_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ActualInstallationDate);
       }
+      size += machineInfos_.CalculateSize(_repeated_machineInfos_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3200,6 +3239,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         }
         ActualInstallationDate.MergeFrom(other.ActualInstallationDate);
       }
+      machineInfos_.Add(other.machineInfos_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3305,6 +3345,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
               ActualInstallationDate = new global::Google.Type.Date();
             }
             input.ReadMessage(ActualInstallationDate);
+            break;
+          }
+          case 162: {
+            machineInfos_.AddEntriesFrom(input, _repeated_machineInfos_codec);
             break;
           }
         }
@@ -3414,6 +3458,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
             input.ReadMessage(ActualInstallationDate);
             break;
           }
+          case 162: {
+            machineInfos_.AddEntriesFrom(ref input, _repeated_machineInfos_codec);
+            break;
+          }
         }
       }
     }
@@ -3456,6 +3504,962 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         /// An error occurred and customer intervention is required.
         /// </summary>
         [pbr::OriginalName("FAILED")] Failed = 6,
+      }
+
+      /// <summary>
+      /// Message to describe the MAC address of a machine.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MacAddress : pb::IMessage<MacAddress>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MacAddress> _parser = new pb::MessageParser<MacAddress>(() => new MacAddress());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MacAddress> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MacAddress() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MacAddress(MacAddress other) : this() {
+          address_ = other.address_;
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MacAddress Clone() {
+          return new MacAddress(this);
+        }
+
+        /// <summary>Field number for the "address" field.</summary>
+        public const int AddressFieldNumber = 1;
+        private string address_ = "";
+        /// <summary>
+        /// Output only. Address string.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Address {
+          get { return address_; }
+          set {
+            address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 2;
+        private global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType type_ = global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType.Unspecified;
+        /// <summary>
+        /// Output only. Address type for this MAC address.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MacAddress);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MacAddress other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Address != other.Address) return false;
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Address.Length != 0) hash ^= Address.GetHashCode();
+          if (Type != global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Address.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Address);
+          }
+          if (Type != global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Address.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Address);
+          }
+          if (Type != global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Address.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+          }
+          if (Type != global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MacAddress other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Address.Length != 0) {
+            Address = other.Address;
+          }
+          if (other.Type != global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Address = input.ReadString();
+                break;
+              }
+              case 16: {
+                Type = (global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Address = input.ReadString();
+                break;
+              }
+              case 16: {
+                Type = (global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Types.AddressType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the MacAddress message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Enum for the different types of MAC address.
+          /// </summary>
+          public enum AddressType {
+            /// <summary>
+            /// Unspecified address type.
+            /// </summary>
+            [pbr::OriginalName("ADDRESS_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Address of a network interface card.
+            /// </summary>
+            [pbr::OriginalName("NIC")] Nic = 1,
+            /// <summary>
+            /// Address of a baseboard management controller.
+            /// </summary>
+            [pbr::OriginalName("BMC")] Bmc = 2,
+            /// <summary>
+            /// Address of a virtual interface.
+            /// </summary>
+            [pbr::OriginalName("VIRTUAL")] Virtual = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Information about individual disks on a machine.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DiskInfo : pb::IMessage<DiskInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DiskInfo> _parser = new pb::MessageParser<DiskInfo>(() => new DiskInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DiskInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DiskInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DiskInfo(DiskInfo other) : this() {
+          manufacturer_ = other.manufacturer_;
+          slot_ = other.slot_;
+          serialNumber_ = other.serialNumber_;
+          psid_ = other.psid_;
+          partNumber_ = other.partNumber_;
+          modelNumber_ = other.modelNumber_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DiskInfo Clone() {
+          return new DiskInfo(this);
+        }
+
+        /// <summary>Field number for the "manufacturer" field.</summary>
+        public const int ManufacturerFieldNumber = 1;
+        private string manufacturer_ = "";
+        /// <summary>
+        /// Output only. Disk manufacturer.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Manufacturer {
+          get { return manufacturer_; }
+          set {
+            manufacturer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "slot" field.</summary>
+        public const int SlotFieldNumber = 2;
+        private int slot_;
+        /// <summary>
+        /// Output only. Disk slot number.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Slot {
+          get { return slot_; }
+          set {
+            slot_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "serial_number" field.</summary>
+        public const int SerialNumberFieldNumber = 3;
+        private string serialNumber_ = "";
+        /// <summary>
+        /// Output only. Disk serial number.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SerialNumber {
+          get { return serialNumber_; }
+          set {
+            serialNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "psid" field.</summary>
+        public const int PsidFieldNumber = 4;
+        private string psid_ = "";
+        /// <summary>
+        /// Output only. Disk PSID.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Psid {
+          get { return psid_; }
+          set {
+            psid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "part_number" field.</summary>
+        public const int PartNumberFieldNumber = 5;
+        private string partNumber_ = "";
+        /// <summary>
+        /// Output only. Disk part number.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PartNumber {
+          get { return partNumber_; }
+          set {
+            partNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "model_number" field.</summary>
+        public const int ModelNumberFieldNumber = 6;
+        private string modelNumber_ = "";
+        /// <summary>
+        /// Output only. Disk model number.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ModelNumber {
+          get { return modelNumber_; }
+          set {
+            modelNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DiskInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DiskInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Manufacturer != other.Manufacturer) return false;
+          if (Slot != other.Slot) return false;
+          if (SerialNumber != other.SerialNumber) return false;
+          if (Psid != other.Psid) return false;
+          if (PartNumber != other.PartNumber) return false;
+          if (ModelNumber != other.ModelNumber) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Manufacturer.Length != 0) hash ^= Manufacturer.GetHashCode();
+          if (Slot != 0) hash ^= Slot.GetHashCode();
+          if (SerialNumber.Length != 0) hash ^= SerialNumber.GetHashCode();
+          if (Psid.Length != 0) hash ^= Psid.GetHashCode();
+          if (PartNumber.Length != 0) hash ^= PartNumber.GetHashCode();
+          if (ModelNumber.Length != 0) hash ^= ModelNumber.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Manufacturer.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Manufacturer);
+          }
+          if (Slot != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Slot);
+          }
+          if (SerialNumber.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(SerialNumber);
+          }
+          if (Psid.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Psid);
+          }
+          if (PartNumber.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(PartNumber);
+          }
+          if (ModelNumber.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(ModelNumber);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Manufacturer.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Manufacturer);
+          }
+          if (Slot != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Slot);
+          }
+          if (SerialNumber.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(SerialNumber);
+          }
+          if (Psid.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Psid);
+          }
+          if (PartNumber.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(PartNumber);
+          }
+          if (ModelNumber.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(ModelNumber);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Manufacturer.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Manufacturer);
+          }
+          if (Slot != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Slot);
+          }
+          if (SerialNumber.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SerialNumber);
+          }
+          if (Psid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Psid);
+          }
+          if (PartNumber.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PartNumber);
+          }
+          if (ModelNumber.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelNumber);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DiskInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Manufacturer.Length != 0) {
+            Manufacturer = other.Manufacturer;
+          }
+          if (other.Slot != 0) {
+            Slot = other.Slot;
+          }
+          if (other.SerialNumber.Length != 0) {
+            SerialNumber = other.SerialNumber;
+          }
+          if (other.Psid.Length != 0) {
+            Psid = other.Psid;
+          }
+          if (other.PartNumber.Length != 0) {
+            PartNumber = other.PartNumber;
+          }
+          if (other.ModelNumber.Length != 0) {
+            ModelNumber = other.ModelNumber;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Manufacturer = input.ReadString();
+                break;
+              }
+              case 16: {
+                Slot = input.ReadInt32();
+                break;
+              }
+              case 26: {
+                SerialNumber = input.ReadString();
+                break;
+              }
+              case 34: {
+                Psid = input.ReadString();
+                break;
+              }
+              case 42: {
+                PartNumber = input.ReadString();
+                break;
+              }
+              case 50: {
+                ModelNumber = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Manufacturer = input.ReadString();
+                break;
+              }
+              case 16: {
+                Slot = input.ReadInt32();
+                break;
+              }
+              case 26: {
+                SerialNumber = input.ReadString();
+                break;
+              }
+              case 34: {
+                Psid = input.ReadString();
+                break;
+              }
+              case 42: {
+                PartNumber = input.ReadString();
+                break;
+              }
+              case 50: {
+                ModelNumber = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Information about individual machines vendors will provide during turnup.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MachineInfo : pb::IMessage<MachineInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MachineInfo> _parser = new pb::MessageParser<MachineInfo>(() => new MachineInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MachineInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MachineInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MachineInfo(MachineInfo other) : this() {
+          serviceTag_ = other.serviceTag_;
+          macAddresses_ = other.macAddresses_.Clone();
+          name_ = other.name_;
+          diskInfos_ = other.diskInfos_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MachineInfo Clone() {
+          return new MachineInfo(this);
+        }
+
+        /// <summary>Field number for the "service_tag" field.</summary>
+        public const int ServiceTagFieldNumber = 1;
+        private string serviceTag_ = "";
+        /// <summary>
+        /// Output only. Machine service tag.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ServiceTag {
+          get { return serviceTag_; }
+          set {
+            serviceTag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "mac_addresses" field.</summary>
+        public const int MacAddressesFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress> _repeated_macAddresses_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress> macAddresses_ = new pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress>();
+        /// <summary>
+        /// Output only. Each associated MAC address.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.MacAddress> MacAddresses {
+          get { return macAddresses_; }
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 3;
+        private string name_ = "";
+        /// <summary>
+        /// Output only. Machine name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "disk_infos" field.</summary>
+        public const int DiskInfosFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.DiskInfo> _repeated_diskInfos_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.DiskInfo.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.DiskInfo> diskInfos_ = new pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.DiskInfo>();
+        /// <summary>
+        /// Output only. Information for each disk installed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.GdcHardwareManagement.V1Alpha.Hardware.Types.DiskInfo> DiskInfos {
+          get { return diskInfos_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MachineInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MachineInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ServiceTag != other.ServiceTag) return false;
+          if(!macAddresses_.Equals(other.macAddresses_)) return false;
+          if (Name != other.Name) return false;
+          if(!diskInfos_.Equals(other.diskInfos_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ServiceTag.Length != 0) hash ^= ServiceTag.GetHashCode();
+          hash ^= macAddresses_.GetHashCode();
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          hash ^= diskInfos_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ServiceTag.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceTag);
+          }
+          macAddresses_.WriteTo(output, _repeated_macAddresses_codec);
+          if (Name.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Name);
+          }
+          diskInfos_.WriteTo(output, _repeated_diskInfos_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ServiceTag.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceTag);
+          }
+          macAddresses_.WriteTo(ref output, _repeated_macAddresses_codec);
+          if (Name.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Name);
+          }
+          diskInfos_.WriteTo(ref output, _repeated_diskInfos_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ServiceTag.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceTag);
+          }
+          size += macAddresses_.CalculateSize(_repeated_macAddresses_codec);
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          size += diskInfos_.CalculateSize(_repeated_diskInfos_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MachineInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ServiceTag.Length != 0) {
+            ServiceTag = other.ServiceTag;
+          }
+          macAddresses_.Add(other.macAddresses_);
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          diskInfos_.Add(other.diskInfos_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ServiceTag = input.ReadString();
+                break;
+              }
+              case 18: {
+                macAddresses_.AddEntriesFrom(input, _repeated_macAddresses_codec);
+                break;
+              }
+              case 26: {
+                Name = input.ReadString();
+                break;
+              }
+              case 34: {
+                diskInfos_.AddEntriesFrom(input, _repeated_diskInfos_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ServiceTag = input.ReadString();
+                break;
+              }
+              case 18: {
+                macAddresses_.AddEntriesFrom(ref input, _repeated_macAddresses_codec);
+                break;
+              }
+              case 26: {
+                Name = input.ReadString();
+                break;
+              }
+              case 34: {
+                diskInfos_.AddEntriesFrom(ref input, _repeated_diskInfos_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
@@ -7629,7 +8633,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
     public const int RackLocationFieldNumber = 1;
     private string rackLocation_ = "";
     /// <summary>
-    /// Optional. Location of the rack in the site e.g. Floor 2, Room 201, Row 7,
+    /// Required. Location of the rack in the site e.g. Floor 2, Room 201, Row 7,
     /// Rack 3.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
