@@ -76,6 +76,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         __Marshaller_google_cloud_discoveryengine_v1_SearchRequest,
         __Marshaller_google_cloud_discoveryengine_v1_SearchResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest, global::Google.Cloud.DiscoveryEngine.V1.SearchResponse> __Method_SearchLite = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest, global::Google.Cloud.DiscoveryEngine.V1.SearchResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchLite",
+        __Marshaller_google_cloud_discoveryengine_v1_SearchRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_SearchResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -94,6 +102,30 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse> Search(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Performs a search. Similar to the
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// method, but a lite version that allows API key for authentication, where
+      /// OAuth and IAM checks are not required.
+      ///
+      /// Only public website search is supported by this method. If data stores and
+      /// engines not associated with public website search are specified, a
+      /// `FAILED_PRECONDITION` error is returned.
+      ///
+      /// This method can be used for easy onboarding without having to implement an
+      /// authentication backend. However, it is strongly recommended to use
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// instead with required OAuth and IAM checks to provide better data security.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse> SearchLite(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -175,6 +207,102 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_Search, null, options, request);
       }
+      /// <summary>
+      /// Performs a search. Similar to the
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// method, but a lite version that allows API key for authentication, where
+      /// OAuth and IAM checks are not required.
+      ///
+      /// Only public website search is supported by this method. If data stores and
+      /// engines not associated with public website search are specified, a
+      /// `FAILED_PRECONDITION` error is returned.
+      ///
+      /// This method can be used for easy onboarding without having to implement an
+      /// authentication backend. However, it is strongly recommended to use
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// instead with required OAuth and IAM checks to provide better data security.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.SearchResponse SearchLite(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchLite(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Performs a search. Similar to the
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// method, but a lite version that allows API key for authentication, where
+      /// OAuth and IAM checks are not required.
+      ///
+      /// Only public website search is supported by this method. If data stores and
+      /// engines not associated with public website search are specified, a
+      /// `FAILED_PRECONDITION` error is returned.
+      ///
+      /// This method can be used for easy onboarding without having to implement an
+      /// authentication backend. However, it is strongly recommended to use
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// instead with required OAuth and IAM checks to provide better data security.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.SearchResponse SearchLite(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchLite, null, options, request);
+      }
+      /// <summary>
+      /// Performs a search. Similar to the
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// method, but a lite version that allows API key for authentication, where
+      /// OAuth and IAM checks are not required.
+      ///
+      /// Only public website search is supported by this method. If data stores and
+      /// engines not associated with public website search are specified, a
+      /// `FAILED_PRECONDITION` error is returned.
+      ///
+      /// This method can be used for easy onboarding without having to implement an
+      /// authentication backend. However, it is strongly recommended to use
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// instead with required OAuth and IAM checks to provide better data security.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse> SearchLiteAsync(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchLiteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Performs a search. Similar to the
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// method, but a lite version that allows API key for authentication, where
+      /// OAuth and IAM checks are not required.
+      ///
+      /// Only public website search is supported by this method. If data stores and
+      /// engines not associated with public website search are specified, a
+      /// `FAILED_PRECONDITION` error is returned.
+      ///
+      /// This method can be used for easy onboarding without having to implement an
+      /// authentication backend. However, it is strongly recommended to use
+      /// [SearchService.Search][google.cloud.discoveryengine.v1.SearchService.Search]
+      /// instead with required OAuth and IAM checks to provide better data security.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse> SearchLiteAsync(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchLite, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SearchServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -189,7 +317,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static grpc::ServerServiceDefinition BindService(SearchServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Search, serviceImpl.Search).Build();
+          .AddMethod(__Method_Search, serviceImpl.Search)
+          .AddMethod(__Method_SearchLite, serviceImpl.SearchLite).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -200,6 +329,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SearchServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Search, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest, global::Google.Cloud.DiscoveryEngine.V1.SearchResponse>(serviceImpl.Search));
+      serviceBinder.AddMethod(__Method_SearchLite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest, global::Google.Cloud.DiscoveryEngine.V1.SearchResponse>(serviceImpl.SearchLite));
     }
 
   }

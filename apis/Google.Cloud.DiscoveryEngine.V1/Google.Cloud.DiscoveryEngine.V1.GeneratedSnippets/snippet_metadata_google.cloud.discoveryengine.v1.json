@@ -12443,6 +12443,103 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1_generated_SearchService_SearchLite_sync",
+      "title": "SearchLiteRequestObject",
+      "description": "Snippet for SearchLite",
+      "file": "SearchServiceClient.SearchLiteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchLite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchServiceClient.SearchLite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.SearchResponse, Google.Cloud.DiscoveryEngine.V1.SearchResponse+Types+SearchResult>",
+        "client": {
+          "shortName": "SearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchServiceClient"
+        },
+        "method": {
+          "shortName": "SearchLite",
+          "fullName": "google.cloud.discoveryengine.v1.SearchService.SearchLite",
+          "service": {
+            "shortName": "SearchService",
+            "fullName": "google.cloud.discoveryengine.v1.SearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 108,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 106,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SearchService_SearchLite_async",
+      "title": "SearchLiteRequestObjectAsync",
+      "description": "Snippet for SearchLiteAsync",
+      "file": "SearchServiceClient.SearchLiteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchLiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchServiceClient.SearchLiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.SearchResponse, Google.Cloud.DiscoveryEngine.V1.SearchResponse+Types+SearchResult>",
+        "client": {
+          "shortName": "SearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SearchServiceClient"
+        },
+        "method": {
+          "shortName": "SearchLite",
+          "fullName": "google.cloud.discoveryengine.v1.SearchService.SearchLite",
+          "service": {
+            "shortName": "SearchService",
+            "fullName": "google.cloud.discoveryengine.v1.SearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 110,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 108,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_SearchTuningService_TrainCustomModel_sync",
       "title": "TrainCustomModelRequestObject",
       "description": "Snippet for TrainCustomModel",
