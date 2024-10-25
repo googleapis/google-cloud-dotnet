@@ -67,6 +67,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             CreateSiteOperationsSettings = existing.CreateSiteOperationsSettings.Clone();
             UpdateSiteSettings = existing.UpdateSiteSettings;
             UpdateSiteOperationsSettings = existing.UpdateSiteOperationsSettings.Clone();
+            DeleteSiteSettings = existing.DeleteSiteSettings;
+            DeleteSiteOperationsSettings = existing.DeleteSiteOperationsSettings.Clone();
             ListHardwareGroupsSettings = existing.ListHardwareGroupsSettings;
             GetHardwareGroupSettings = existing.GetHardwareGroupSettings;
             CreateHardwareGroupSettings = existing.CreateHardwareGroupSettings;
@@ -380,6 +382,42 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateSiteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GDCHardwareManagementClient.DeleteSite</c> and <c>GDCHardwareManagementClient.DeleteSiteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSiteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GDCHardwareManagementClient.DeleteSite</c> and
+        /// <c>GDCHardwareManagementClient.DeleteSiteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteSiteOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1166,6 +1204,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list orders in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list orders across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1200,6 +1242,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list orders in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list orders across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1234,6 +1280,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list orders in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list orders across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1268,6 +1318,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list orders in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list orders across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2034,6 +2088,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list sites in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list sites across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2068,6 +2126,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list sites in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list sites across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2102,6 +2164,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list sites in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list sites across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2136,6 +2202,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list sites in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list sites across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2609,6 +2679,143 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Site, OperationMetadata>> UpdateSiteAsync(Site site, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateSiteAsync(site, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSite(DeleteSiteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSiteAsync(DeleteSiteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSiteAsync(DeleteSiteRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSiteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteSite</c>.</summary>
+        public virtual lro::OperationsClient DeleteSiteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteSite</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteSite(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSiteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteSite</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteSiteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSiteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the site.
+        /// Format: `projects/{project}/locations/{location}/sites/{site}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSite(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSite(new DeleteSiteRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the site.
+        /// Format: `projects/{project}/locations/{location}/sites/{site}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSiteAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSiteAsync(new DeleteSiteRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the site.
+        /// Format: `projects/{project}/locations/{location}/sites/{site}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSiteAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSiteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the site.
+        /// Format: `projects/{project}/locations/{location}/sites/{site}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSite(SiteName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSite(new DeleteSiteRequest
+            {
+                SiteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the site.
+        /// Format: `projects/{project}/locations/{location}/sites/{site}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSiteAsync(SiteName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSiteAsync(new DeleteSiteRequest
+            {
+                SiteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the site.
+        /// Format: `projects/{project}/locations/{location}/sites/{site}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSiteAsync(SiteName name, st::CancellationToken cancellationToken) =>
+            DeleteSiteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists hardware groups in a given order.
@@ -3389,6 +3596,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list hardware in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list hardware across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3423,6 +3634,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list hardware in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list hardware across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3457,6 +3672,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list hardware in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list hardware across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3491,6 +3710,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list hardware in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list hardware across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5057,6 +5280,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list SKUs in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list SKUs across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5091,6 +5318,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list SKUs in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list SKUs across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5125,6 +5356,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list SKUs in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list SKUs across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5159,6 +5394,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list SKUs in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list SKUs across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5322,6 +5561,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list zones in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list zones across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5356,6 +5599,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list zones in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list zones across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5390,6 +5637,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list zones in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list zones across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5424,6 +5675,10 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <param name="parent">
         /// Required. The project and location to list zones in.
         /// Format: `projects/{project}/locations/{location}`
+        /// 
+        /// To list zones across all locations, substitute `-` (the hyphen or
+        /// dash character) for the location and check the unreachable field in
+        /// the response message.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6221,6 +6476,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
 
         private readonly gaxgrpc::ApiCall<UpdateSiteRequest, lro::Operation> _callUpdateSite;
 
+        private readonly gaxgrpc::ApiCall<DeleteSiteRequest, lro::Operation> _callDeleteSite;
+
         private readonly gaxgrpc::ApiCall<ListHardwareGroupsRequest, ListHardwareGroupsResponse> _callListHardwareGroups;
 
         private readonly gaxgrpc::ApiCall<GetHardwareGroupRequest, HardwareGroup> _callGetHardwareGroup;
@@ -6291,6 +6548,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             SubmitOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitOrderOperationsSettings, logger);
             CreateSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSiteOperationsSettings, logger);
             UpdateSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSiteOperationsSettings, logger);
+            DeleteSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSiteOperationsSettings, logger);
             CreateHardwareGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHardwareGroupOperationsSettings, logger);
             UpdateHardwareGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateHardwareGroupOperationsSettings, logger);
             DeleteHardwareGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHardwareGroupOperationsSettings, logger);
@@ -6333,6 +6591,9 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             _callUpdateSite = clientHelper.BuildApiCall<UpdateSiteRequest, lro::Operation>("UpdateSite", grpcClient.UpdateSiteAsync, grpcClient.UpdateSite, effectiveSettings.UpdateSiteSettings).WithGoogleRequestParam("site.name", request => request.Site?.Name);
             Modify_ApiCall(ref _callUpdateSite);
             Modify_UpdateSiteApiCall(ref _callUpdateSite);
+            _callDeleteSite = clientHelper.BuildApiCall<DeleteSiteRequest, lro::Operation>("DeleteSite", grpcClient.DeleteSiteAsync, grpcClient.DeleteSite, effectiveSettings.DeleteSiteSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSite);
+            Modify_DeleteSiteApiCall(ref _callDeleteSite);
             _callListHardwareGroups = clientHelper.BuildApiCall<ListHardwareGroupsRequest, ListHardwareGroupsResponse>("ListHardwareGroups", grpcClient.ListHardwareGroupsAsync, grpcClient.ListHardwareGroups, effectiveSettings.ListHardwareGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListHardwareGroups);
             Modify_ListHardwareGroupsApiCall(ref _callListHardwareGroups);
@@ -6430,6 +6691,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
 
         partial void Modify_UpdateSiteApiCall(ref gaxgrpc::ApiCall<UpdateSiteRequest, lro::Operation> call);
 
+        partial void Modify_DeleteSiteApiCall(ref gaxgrpc::ApiCall<DeleteSiteRequest, lro::Operation> call);
+
         partial void Modify_ListHardwareGroupsApiCall(ref gaxgrpc::ApiCall<ListHardwareGroupsRequest, ListHardwareGroupsResponse> call);
 
         partial void Modify_GetHardwareGroupApiCall(ref gaxgrpc::ApiCall<GetHardwareGroupRequest, HardwareGroup> call);
@@ -6505,6 +6768,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         partial void Modify_CreateSiteRequest(ref CreateSiteRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSiteRequest(ref UpdateSiteRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSiteRequest(ref DeleteSiteRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListHardwareGroupsRequest(ref ListHardwareGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6810,6 +7075,33 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         {
             Modify_UpdateSiteRequest(ref request, ref callSettings);
             return new lro::Operation<Site, OperationMetadata>(await _callUpdateSite.Async(request, callSettings).ConfigureAwait(false), UpdateSiteOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteSite</c>.</summary>
+        public override lro::OperationsClient DeleteSiteOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteSite(DeleteSiteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSiteRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteSite.Sync(request, callSettings), DeleteSiteOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a site.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSiteAsync(DeleteSiteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSiteRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteSite.Async(request, callSettings).ConfigureAwait(false), DeleteSiteOperationsClient);
         }
 
         /// <summary>

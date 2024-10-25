@@ -2835,6 +2835,293 @@
       ]
     },
     {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_DeleteSite_sync",
+      "title": "DeleteSiteRequestObject",
+      "description": "Snippet for DeleteSite",
+      "file": "GDCHardwareManagementClient.DeleteSiteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSite",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.DeleteSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSite",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.DeleteSite",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_DeleteSite_async",
+      "title": "DeleteSiteRequestObjectAsync",
+      "description": "Snippet for DeleteSiteAsync",
+      "file": "GDCHardwareManagementClient.DeleteSiteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSiteAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.DeleteSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSite",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.DeleteSite",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_DeleteSite_sync_flattened",
+      "title": "DeleteSite",
+      "description": "Snippet for DeleteSite",
+      "file": "GDCHardwareManagementClient.DeleteSiteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSite",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.DeleteSite",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSite",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.DeleteSite",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_DeleteSite_async_flattened",
+      "title": "DeleteSiteAsync",
+      "description": "Snippet for DeleteSiteAsync",
+      "file": "GDCHardwareManagementClient.DeleteSiteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSiteAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.DeleteSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSite",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.DeleteSite",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_DeleteSite_sync_flattened_resourceNames",
+      "title": "DeleteSiteResourceNames",
+      "description": "Snippet for DeleteSite",
+      "file": "GDCHardwareManagementClient.DeleteSiteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSite",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.DeleteSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.SiteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSite",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.DeleteSite",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_DeleteSite_async_flattened_resourceNames",
+      "title": "DeleteSiteResourceNamesAsync",
+      "description": "Snippet for DeleteSiteAsync",
+      "file": "GDCHardwareManagementClient.DeleteSiteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSiteAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.DeleteSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.SiteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "DeleteSite",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.DeleteSite",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_ListHardwareGroups_sync",
       "title": "ListHardwareGroupsRequestObject",
       "description": "Snippet for ListHardwareGroups",

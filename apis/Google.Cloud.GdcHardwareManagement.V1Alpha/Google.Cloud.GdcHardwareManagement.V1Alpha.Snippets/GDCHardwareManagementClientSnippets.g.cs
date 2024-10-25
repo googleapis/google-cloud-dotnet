@@ -1790,6 +1790,191 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSite</summary>
+        public void DeleteSiteRequestObject()
+        {
+            // Snippet: DeleteSite(DeleteSiteRequest, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            DeleteSiteRequest request = new DeleteSiteRequest
+            {
+                SiteName = SiteName.FromProjectLocationSite("[PROJECT]", "[LOCATION]", "[SITE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = gDCHardwareManagementClient.DeleteSite(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceDeleteSite(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSiteAsync</summary>
+        public async Task DeleteSiteRequestObjectAsync()
+        {
+            // Snippet: DeleteSiteAsync(DeleteSiteRequest, CallSettings)
+            // Additional: DeleteSiteAsync(DeleteSiteRequest, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSiteRequest request = new DeleteSiteRequest
+            {
+                SiteName = SiteName.FromProjectLocationSite("[PROJECT]", "[LOCATION]", "[SITE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await gDCHardwareManagementClient.DeleteSiteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceDeleteSiteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSite</summary>
+        public void DeleteSite()
+        {
+            // Snippet: DeleteSite(string, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sites/[SITE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = gDCHardwareManagementClient.DeleteSite(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceDeleteSite(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSiteAsync</summary>
+        public async Task DeleteSiteAsync()
+        {
+            // Snippet: DeleteSiteAsync(string, CallSettings)
+            // Additional: DeleteSiteAsync(string, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sites/[SITE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await gDCHardwareManagementClient.DeleteSiteAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceDeleteSiteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSite</summary>
+        public void DeleteSiteResourceNames()
+        {
+            // Snippet: DeleteSite(SiteName, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            SiteName name = SiteName.FromProjectLocationSite("[PROJECT]", "[LOCATION]", "[SITE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = gDCHardwareManagementClient.DeleteSite(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceDeleteSite(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSiteAsync</summary>
+        public async Task DeleteSiteResourceNamesAsync()
+        {
+            // Snippet: DeleteSiteAsync(SiteName, CallSettings)
+            // Additional: DeleteSiteAsync(SiteName, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            SiteName name = SiteName.FromProjectLocationSite("[PROJECT]", "[LOCATION]", "[SITE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await gDCHardwareManagementClient.DeleteSiteAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceDeleteSiteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListHardwareGroups</summary>
         public void ListHardwareGroupsRequestObject()
         {

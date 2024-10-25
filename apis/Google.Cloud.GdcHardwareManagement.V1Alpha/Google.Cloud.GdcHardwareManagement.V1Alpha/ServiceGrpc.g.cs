@@ -94,6 +94,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.UpdateSiteRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_UpdateSiteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.UpdateSiteRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_DeleteSiteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListHardwareGroupsRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_ListHardwareGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListHardwareGroupsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListHardwareGroupsResponse> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_ListHardwareGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListHardwareGroupsResponse.Parser));
@@ -244,6 +246,14 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         __ServiceName,
         "UpdateSite",
         __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_UpdateSiteRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest, global::Google.LongRunning.Operation> __Method_DeleteSite = new grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSite",
+        __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_DeleteSiteRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -564,6 +574,18 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateSite(global::Google.Cloud.GdcHardwareManagement.V1Alpha.UpdateSiteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a site.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSite(global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1367,6 +1389,54 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSiteAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.UpdateSiteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSite, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a site.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSite(global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSite(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a site.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSite(global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSite, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a site.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSiteAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSiteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a site.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSiteAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSite, null, options, request);
       }
       /// <summary>
       /// Lists hardware groups in a given order.
@@ -2556,6 +2626,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
           .AddMethod(__Method_GetSite, serviceImpl.GetSite)
           .AddMethod(__Method_CreateSite, serviceImpl.CreateSite)
           .AddMethod(__Method_UpdateSite, serviceImpl.UpdateSite)
+          .AddMethod(__Method_DeleteSite, serviceImpl.DeleteSite)
           .AddMethod(__Method_ListHardwareGroups, serviceImpl.ListHardwareGroups)
           .AddMethod(__Method_GetHardwareGroup, serviceImpl.GetHardwareGroup)
           .AddMethod(__Method_CreateHardwareGroup, serviceImpl.CreateHardwareGroup)
@@ -2599,6 +2670,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       serviceBinder.AddMethod(__Method_GetSite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.GetSiteRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Site>(serviceImpl.GetSite));
       serviceBinder.AddMethod(__Method_CreateSite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CreateSiteRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSite));
       serviceBinder.AddMethod(__Method_UpdateSite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.UpdateSiteRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSite));
+      serviceBinder.AddMethod(__Method_DeleteSite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteSiteRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSite));
       serviceBinder.AddMethod(__Method_ListHardwareGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListHardwareGroupsRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListHardwareGroupsResponse>(serviceImpl.ListHardwareGroups));
       serviceBinder.AddMethod(__Method_GetHardwareGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.GetHardwareGroupRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.HardwareGroup>(serviceImpl.GetHardwareGroup));
       serviceBinder.AddMethod(__Method_CreateHardwareGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CreateHardwareGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateHardwareGroup));

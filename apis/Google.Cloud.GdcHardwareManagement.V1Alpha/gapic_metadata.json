@@ -64,6 +64,12 @@
                 "DeleteOrderAsync"
               ]
             },
+            "DeleteSite": {
+              "methods": [
+                "DeleteSite",
+                "DeleteSiteAsync"
+              ]
+            },
             "DeleteZone": {
               "methods": [
                 "DeleteZone",
