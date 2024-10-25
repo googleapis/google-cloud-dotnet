@@ -22,7 +22,7 @@ data transfer objects which happen to have well-defined binary and JSON
 formats. The sections below provide more information in areas which have
 previously caused some confusion.
 
-# Repeated fields and map fields
+## Repeated fields and map fields
 
 The generated C# code for protobuf messages makes simple properties
 read/write, but repeated fields and map fields are read-only. That
@@ -93,7 +93,7 @@ Or modify it after other initialization steps:
 
 [!code-cs[](../examples/help.Protobuf.txt#ProtoMap3)]
 
-# JSON parsing and formatting
+## JSON parsing and formatting
 
 Protobuf messages have a JSON format as well as the natural binary wire format.
 The Google.Protobuf library makes it easy to parse JSON into messages using
@@ -112,7 +112,7 @@ Sample parsing code:
 
 [!code-cs[](../examples/help.Protobuf.txt#JsonParsing)]
 
-# Value and Struct
+## Value and Struct
 
 Some APIs use the *well-known types* of `google.protobuf.Value`
 and `google.protobuf.Struct` which are represented by the .NET types
