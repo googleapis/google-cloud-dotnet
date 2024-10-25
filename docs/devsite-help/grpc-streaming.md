@@ -21,7 +21,7 @@ Note that this page does not cover client-streaming, as we do not currently
 publish any libraries with client-streaming RPCs. A new section will be added
 if and when we publish such a library.
 
-# Server-streaming RPCs
+## Server-streaming RPCs
 
 A server-streaming RPC starts with a single request, and then the server
 sends responses over time, which are read asynchronously. The server indicates
@@ -53,7 +53,7 @@ as those are API-specific and unrelated to stream usage.
 
 [!code-cs[](../examples/help.Streaming.txt#ServerStreaming)]
 
-# Bidirectional-streaming RPCs
+## Bidirectional-streaming RPCs
 
 A bidirectional-streaming RPC is started without a client-side request, as clients
 can send requests as and when they wish to. Similarly, the server provides a stream
