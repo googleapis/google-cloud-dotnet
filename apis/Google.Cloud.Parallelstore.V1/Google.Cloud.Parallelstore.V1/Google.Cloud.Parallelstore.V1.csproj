@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta00</Version>
+    <Version>1.0.0-beta01</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library for Parallelstore: a fully managed, low-latency distributed file system designed to meet the demands of high performance computing (HPC) and data-intensive applications.</Description>
