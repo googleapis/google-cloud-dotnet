@@ -426,6 +426,12 @@
                 "Search",
                 "SearchAsync"
               ]
+            },
+            "SearchLite": {
+              "methods": [
+                "SearchLite",
+                "SearchLiteAsync"
+              ]
             }
           }
         }

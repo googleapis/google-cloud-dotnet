@@ -3300,7 +3300,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             /// <summary>Field number for the "fhir_resource" field.</summary>
             public const int FhirResourceFieldNumber = 2;
             /// <summary>
-            /// Required. Format:
+            /// Format:
             /// projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resource_id}
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

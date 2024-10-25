@@ -28,7 +28,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLAIgoGQW5zd2VyEhEKBG5hbWUYASAB",
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLZIgoGQW5zd2VyEhEKBG5hbWUYASAB",
             "KAlCA+BBBRI8CgVzdGF0ZRgCIAEoDjItLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
             "cnllbmdpbmUudjEuQW5zd2VyLlN0YXRlEhMKC2Fuc3dlcl90ZXh0GAMgASgJ",
             "EkMKCWNpdGF0aW9ucxgEIAMoCzIwLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
@@ -110,29 +110,30 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "WRABEhwKGE5PTl9BTlNXRVJfU0VFS0lOR19RVUVSWRACEhcKE0pBSUxfQlJF",
             "QUtJTkdfUVVFUlkQAxIfChtOT05fQU5TV0VSX1NFRUtJTkdfUVVFUllfVjIQ",
             "BCJKCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg8KC0lOX1BST0dS",
-            "RVNTEAESCgoGRkFJTEVEEAISDQoJU1VDQ0VFREVEEAMixAIKE0Fuc3dlclNr",
+            "RVNTEAESCgoGRkFJTEVEEAISDQoJU1VDQ0VFREVEEAMi3QIKE0Fuc3dlclNr",
             "aXBwZWRSZWFzb24SJQohQU5TV0VSX1NLSVBQRURfUkVBU09OX1VOU1BFQ0lG",
             "SUVEEAASHQoZQURWRVJTQVJJQUxfUVVFUllfSUdOT1JFRBABEiQKIE5PTl9B",
             "TlNXRVJfU0VFS0lOR19RVUVSWV9JR05PUkVEEAISHwobT1VUX09GX0RPTUFJ",
             "Tl9RVUVSWV9JR05PUkVEEAMSHgoaUE9URU5USUFMX1BPTElDWV9WSU9MQVRJ",
             "T04QBBIXChNOT19SRUxFVkFOVF9DT05URU5UEAUSHwobSkFJTF9CUkVBS0lO",
             "R19RVUVSWV9JR05PUkVEEAYSHQoZQ1VTVE9NRVJfUE9MSUNZX1ZJT0xBVElP",
-            "ThAHEicKI05PTl9BTlNXRVJfU0VFS0lOR19RVUVSWV9JR05PUkVEX1YyEAg6",
-            "hQPqQYEDCiVkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vQW5zd2Vy",
-            "EmNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0",
-            "YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2Vzc2lvbnMve3Nlc3Npb259L2Fuc3dl",
-            "cnMve2Fuc3dlcn0SfHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97",
-            "ZGF0YV9zdG9yZX0vc2Vzc2lvbnMve3Nlc3Npb259L2Fuc3dlcnMve2Fuc3dl",
-            "cn0SdXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9j",
-            "b2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZW5naW5lcy97ZW5naW5lfS9zZXNz",
-            "aW9ucy97c2Vzc2lvbn0vYW5zd2Vycy97YW5zd2VyfUL+AQojY29tLmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCC0Fuc3dlclByb3RvUAFaTWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2Nv",
-            "dmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5H",
-            "SU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2ds",
-            "ZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpE",
-            "aXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "ThAHEicKI05PTl9BTlNXRVJfU0VFS0lOR19RVUVSWV9JR05PUkVEX1YyEAgS",
+            "FwoTTE9XX0dST1VOREVEX0FOU1dFUhAJOoUD6kGBAwolZGlzY292ZXJ5ZW5n",
+            "aW5lLmdvb2dsZWFwaXMuY29tL0Fuc3dlchJjcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9",
+            "L3Nlc3Npb25zL3tzZXNzaW9ufS9hbnN3ZXJzL3thbnN3ZXJ9Enxwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMv",
+            "e2NvbGxlY3Rpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L3Nlc3Npb25z",
+            "L3tzZXNzaW9ufS9hbnN3ZXJzL3thbnN3ZXJ9EnVwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rp",
+            "b259L2VuZ2luZXMve2VuZ2luZX0vc2Vzc2lvbnMve3Nlc3Npb259L2Fuc3dl",
+            "cnMve2Fuc3dlcn1C/gEKI2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxQgtBbnN3ZXJQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rp",
+            "c2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zl",
+            "cnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5E",
+            "aXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5n",
+            "aW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -807,6 +808,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// Google skips the answer if the query doesn't have clear intent.
         /// </summary>
         [pbr::OriginalName("NON_ANSWER_SEEKING_QUERY_IGNORED_V2")] NonAnswerSeekingQueryIgnoredV2 = 8,
+        /// <summary>
+        /// The low-grounded answer case.
+        ///
+        /// Google skips the answer if a well grounded answer was unable to be
+        /// generated.
+        /// </summary>
+        [pbr::OriginalName("LOW_GROUNDED_ANSWER")] LowGroundedAnswer = 9,
       }
 
       /// <summary>
