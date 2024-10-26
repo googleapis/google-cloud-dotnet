@@ -29,11 +29,11 @@ namespace Google.Ads.AdManager.V1 {
             "AQoLT3JkZXJTdGF0dXMSHAoYT1JERVJfU1RBVFVTX1VOU1BFQ0lGSUVEEAAS",
             "CQoFRFJBRlQQAhIUChBQRU5ESU5HX0FQUFJPVkFMEAMSDAoIQVBQUk9WRUQQ",
             "BBIPCgtESVNBUFBST1ZFRBAFEgoKBlBBVVNFRBAGEgwKCENBTkNFTEVEEAcS",
-            "CwoHREVMRVRFRBAIQqYBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFC",
+            "CwoHREVMRVRFRBAIQsMBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFC",
             "D09yZGVyRW51bXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
             "by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29v",
             "Z2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxW",
-            "MWIGcHJvdG8z"));
+            "MeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

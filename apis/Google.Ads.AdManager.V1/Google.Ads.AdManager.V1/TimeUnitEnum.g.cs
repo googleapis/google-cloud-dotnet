@@ -28,11 +28,12 @@ namespace Google.Ads.AdManager.V1 {
             "bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEijAEKDFRpbWVVbml0RW51bSJ8",
             "CghUaW1lVW5pdBIZChVUSU1FX1VOSVRfVU5TUEVDSUZJRUQQABIKCgZNSU5V",
             "VEUQARIICgRIT1VSEAISBwoDREFZEAMSCAoEV0VFSxAEEgkKBU1PTlRIEAUS",
-            "DAoITElGRVRJTUUQBhIHCgNQT0QQBxIKCgZTVFJFQU0QCEKoAQobY29tLmdv",
+            "DAoITElGRVRJTUUQBhIHCgNQT0QQBxIKCgZTVFJFQU0QCELFAQobY29tLmdv",
             "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhFUaW1lVW5pdEVudW1Qcm90b1ABWkBn",
             "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1h",
             "bmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHK",
-            "AhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMWIGcHJvdG8z"));
+            "AhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1h",
+            "bmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

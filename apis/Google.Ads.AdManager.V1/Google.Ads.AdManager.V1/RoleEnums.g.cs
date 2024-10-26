@@ -27,11 +27,11 @@ namespace Google.Ads.AdManager.V1 {
             "Cihnb29nbGUvYWRzL2FkbWFuYWdlci92MS9yb2xlX2VudW1zLnByb3RvEhdn",
             "b29nbGUuYWRzLmFkbWFuYWdlci52MSJVCg5Sb2xlU3RhdHVzRW51bSJDCgpS",
             "b2xlU3RhdHVzEhsKF1JPTEVfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCgoGQUNU",
-            "SVZFEAESDAoISU5BQ1RJVkUQAkKlAQobY29tLmdvb2dsZS5hZHMuYWRtYW5h",
+            "SVZFEAESDAoISU5BQ1RJVkUQAkLCAQobY29tLmdvb2dsZS5hZHMuYWRtYW5h",
             "Z2VyLnYxQg5Sb2xlRW51bXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9n",
             "ZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2Vy",
             "qgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFu",
-            "YWdlclxWMWIGcHJvdG8z"));
+            "YWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

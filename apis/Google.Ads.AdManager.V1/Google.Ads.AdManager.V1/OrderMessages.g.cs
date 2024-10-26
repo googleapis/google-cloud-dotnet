@@ -65,11 +65,11 @@ namespace Google.Ads.AdManager.V1 {
             "GCYgAygLMikuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tRmllbGRW",
             "YWx1ZUID4EEBOlrqQVcKHmFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9PcmRl",
             "chImbmV0d29ya3Mve25ldHdvcmtfY29kZX0vb3JkZXJzL3tvcmRlcn0qBm9y",
-            "ZGVyczIFb3JkZXJCqQEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIS",
+            "ZGVyczIFb3JkZXJCxgEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIS",
             "T3JkZXJNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
             "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
             "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
-            "XFYxYgZwcm90bzM="));
+            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.CustomFieldValueReflection.Descriptor, global::Google.Ads.AdManager.V1.OrderEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
