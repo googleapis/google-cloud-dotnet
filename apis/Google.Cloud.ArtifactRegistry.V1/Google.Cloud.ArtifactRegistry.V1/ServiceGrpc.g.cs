@@ -150,6 +150,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsRequest> __Marshaller_google_devtools_artifactregistry_v1_BatchDeleteVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest> __Marshaller_google_devtools_artifactregistry_v1_UpdateVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest> __Marshaller_google_devtools_artifactregistry_v1_ListFilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse> __Marshaller_google_devtools_artifactregistry_v1_ListFilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse.Parser));
@@ -157,6 +159,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest> __Marshaller_google_devtools_artifactregistry_v1_GetFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.File> __Marshaller_google_devtools_artifactregistry_v1_File = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.File.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest> __Marshaller_google_devtools_artifactregistry_v1_DeleteFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest> __Marshaller_google_devtools_artifactregistry_v1_UpdateFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.ListTagsRequest> __Marshaller_google_devtools_artifactregistry_v1_ListTagsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.ListTagsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -173,6 +179,20 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.DeleteTagRequest> __Marshaller_google_devtools_artifactregistry_v1_DeleteTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.DeleteTagRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest> __Marshaller_google_devtools_artifactregistry_v1_CreateRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.Rule> __Marshaller_google_devtools_artifactregistry_v1_Rule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.Rule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest> __Marshaller_google_devtools_artifactregistry_v1_ListRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse> __Marshaller_google_devtools_artifactregistry_v1_ListRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest> __Marshaller_google_devtools_artifactregistry_v1_GetRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest> __Marshaller_google_devtools_artifactregistry_v1_UpdateRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest> __Marshaller_google_devtools_artifactregistry_v1_DeleteRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -195,6 +215,20 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.VPCSCConfig> __Marshaller_google_devtools_artifactregistry_v1_VPCSCConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.VPCSCConfig.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.UpdateVPCSCConfigRequest> __Marshaller_google_devtools_artifactregistry_v1_UpdateVPCSCConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.UpdateVPCSCConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest> __Marshaller_google_devtools_artifactregistry_v1_UpdatePackageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest> __Marshaller_google_devtools_artifactregistry_v1_ListAttachmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse> __Marshaller_google_devtools_artifactregistry_v1_ListAttachmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest> __Marshaller_google_devtools_artifactregistry_v1_GetAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.Attachment> __Marshaller_google_devtools_artifactregistry_v1_Attachment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.Attachment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest> __Marshaller_google_devtools_artifactregistry_v1_CreateAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest> __Marshaller_google_devtools_artifactregistry_v1_DeleteAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse> __Method_ListDockerImages = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse>(
@@ -373,6 +407,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest, global::Google.Cloud.ArtifactRegistry.V1.Version> __Method_UpdateVersion = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest, global::Google.Cloud.ArtifactRegistry.V1.Version>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateVersion",
+        __Marshaller_google_devtools_artifactregistry_v1_UpdateVersionRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_Version);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse> __Method_ListFiles = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -386,6 +428,22 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         __ServiceName,
         "GetFile",
         __Marshaller_google_devtools_artifactregistry_v1_GetFileRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_File);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest, global::Google.LongRunning.Operation> __Method_DeleteFile = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFile",
+        __Marshaller_google_devtools_artifactregistry_v1_DeleteFileRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest, global::Google.Cloud.ArtifactRegistry.V1.File> __Method_UpdateFile = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest, global::Google.Cloud.ArtifactRegistry.V1.File>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateFile",
+        __Marshaller_google_devtools_artifactregistry_v1_UpdateFileRequest,
         __Marshaller_google_devtools_artifactregistry_v1_File);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -426,6 +484,46 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         __ServiceName,
         "DeleteTag",
         __Marshaller_google_devtools_artifactregistry_v1_DeleteTagRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule> __Method_CreateRule = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRule",
+        __Marshaller_google_devtools_artifactregistry_v1_CreateRuleRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_Rule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse> __Method_ListRules = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRules",
+        __Marshaller_google_devtools_artifactregistry_v1_ListRulesRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_ListRulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule> __Method_GetRule = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRule",
+        __Marshaller_google_devtools_artifactregistry_v1_GetRuleRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_Rule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule> __Method_UpdateRule = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRule",
+        __Marshaller_google_devtools_artifactregistry_v1_UpdateRuleRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_Rule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteRule = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRule",
+        __Marshaller_google_devtools_artifactregistry_v1_DeleteRuleRequest,
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -483,6 +581,46 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         "UpdateVPCSCConfig",
         __Marshaller_google_devtools_artifactregistry_v1_UpdateVPCSCConfigRequest,
         __Marshaller_google_devtools_artifactregistry_v1_VPCSCConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest, global::Google.Cloud.ArtifactRegistry.V1.Package> __Method_UpdatePackage = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest, global::Google.Cloud.ArtifactRegistry.V1.Package>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePackage",
+        __Marshaller_google_devtools_artifactregistry_v1_UpdatePackageRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_Package);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest, global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse> __Method_ListAttachments = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest, global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAttachments",
+        __Marshaller_google_devtools_artifactregistry_v1_ListAttachmentsRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_ListAttachmentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest, global::Google.Cloud.ArtifactRegistry.V1.Attachment> __Method_GetAttachment = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest, global::Google.Cloud.ArtifactRegistry.V1.Attachment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAttachment",
+        __Marshaller_google_devtools_artifactregistry_v1_GetAttachmentRequest,
+        __Marshaller_google_devtools_artifactregistry_v1_Attachment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest, global::Google.LongRunning.Operation> __Method_CreateAttachment = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAttachment",
+        __Marshaller_google_devtools_artifactregistry_v1_CreateAttachmentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest, global::Google.LongRunning.Operation> __Method_DeleteAttachment = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAttachment",
+        __Marshaller_google_devtools_artifactregistry_v1_DeleteAttachmentRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -771,6 +909,18 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
 
       /// <summary>
+      /// Updates a version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.Version> UpdateVersion(global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists files.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -790,6 +940,32 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.File> GetFile(global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a file and all of its content. It is only allowed on generic
+      /// repositories. The returned operation will complete once the file has been
+      /// deleted.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteFile(global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a file.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.File> UpdateFile(global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -850,6 +1026,66 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTag(global::Google.Cloud.ArtifactRegistry.V1.DeleteTagRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.Rule> CreateRule(global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists rules.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse> ListRules(global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.Rule> GetRule(global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.Rule> UpdateRule(global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRule(global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -934,6 +1170,69 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.VPCSCConfig> UpdateVPCSCConfig(global::Google.Cloud.ArtifactRegistry.V1.UpdateVPCSCConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a package.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.Package> UpdatePackage(global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists attachments.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse> ListAttachments(global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an attachment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1.Attachment> GetAttachment(global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an attachment. The returned Operation will finish once the
+      /// attachment has been created. Its response will be the created attachment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAttachment(global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an attachment. The returned Operation will
+      /// finish once the attachments has been deleted. It will not have any
+      /// Operation metadata and will return a `google.protobuf.Empty` response.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAttachment(global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2072,6 +2371,54 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteVersions, null, options, request);
       }
       /// <summary>
+      /// Updates a version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Version UpdateVersion(global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Version UpdateVersion(global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Updates a version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Version> UpdateVersionAsync(global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Version> UpdateVersionAsync(global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateVersion, null, options, request);
+      }
+      /// <summary>
       /// Lists files.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2166,6 +2513,110 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.File> GetFileAsync(global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetFile, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a file and all of its content. It is only allowed on generic
+      /// repositories. The returned operation will complete once the file has been
+      /// deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFile(global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a file and all of its content. It is only allowed on generic
+      /// repositories. The returned operation will complete once the file has been
+      /// deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFile(global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFile, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a file and all of its content. It is only allowed on generic
+      /// repositories. The returned operation will complete once the file has been
+      /// deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFileAsync(global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a file and all of its content. It is only allowed on generic
+      /// repositories. The returned operation will complete once the file has been
+      /// deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFileAsync(global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFile, null, options, request);
+      }
+      /// <summary>
+      /// Updates a file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.File UpdateFile(global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.File UpdateFile(global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateFile, null, options, request);
+      }
+      /// <summary>
+      /// Updates a file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.File> UpdateFileAsync(global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.File> UpdateFileAsync(global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateFile, null, options, request);
       }
       /// <summary>
       /// Lists tags.
@@ -2406,6 +2857,246 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagAsync(global::Google.Cloud.ArtifactRegistry.V1.DeleteTagRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTag, null, options, request);
+      }
+      /// <summary>
+      /// Creates a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Rule CreateRule(global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Rule CreateRule(global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Rule> CreateRuleAsync(global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Rule> CreateRuleAsync(global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Lists rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse ListRules(global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse ListRules(global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRules, null, options, request);
+      }
+      /// <summary>
+      /// Lists rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse> ListRulesAsync(global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse> ListRulesAsync(global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRules, null, options, request);
+      }
+      /// <summary>
+      /// Gets a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Rule GetRule(global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Rule GetRule(global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRule, null, options, request);
+      }
+      /// <summary>
+      /// Gets a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Rule> GetRuleAsync(global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Rule> GetRuleAsync(global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Rule UpdateRule(global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Rule UpdateRule(global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Rule> UpdateRuleAsync(global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Rule> UpdateRuleAsync(global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRule(global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRule(global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRuleAsync(global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRuleAsync(global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRule, null, options, request);
       }
       /// <summary>
       /// Updates the IAM policy for a given resource.
@@ -2743,6 +3434,258 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateVPCSCConfig, null, options, request);
       }
+      /// <summary>
+      /// Updates a package.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Package UpdatePackage(global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePackage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a package.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Package UpdatePackage(global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePackage, null, options, request);
+      }
+      /// <summary>
+      /// Updates a package.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Package> UpdatePackageAsync(global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePackageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a package.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Package> UpdatePackageAsync(global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePackage, null, options, request);
+      }
+      /// <summary>
+      /// Lists attachments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse ListAttachments(global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAttachments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists attachments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse ListAttachments(global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAttachments, null, options, request);
+      }
+      /// <summary>
+      /// Lists attachments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse> ListAttachmentsAsync(global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAttachmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists attachments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse> ListAttachmentsAsync(global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAttachments, null, options, request);
+      }
+      /// <summary>
+      /// Gets an attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Attachment GetAttachment(global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAttachment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1.Attachment GetAttachment(global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAttachment, null, options, request);
+      }
+      /// <summary>
+      /// Gets an attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Attachment> GetAttachmentAsync(global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAttachmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1.Attachment> GetAttachmentAsync(global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAttachment, null, options, request);
+      }
+      /// <summary>
+      /// Creates an attachment. The returned Operation will finish once the
+      /// attachment has been created. Its response will be the created attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAttachment(global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAttachment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an attachment. The returned Operation will finish once the
+      /// attachment has been created. Its response will be the created attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAttachment(global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAttachment, null, options, request);
+      }
+      /// <summary>
+      /// Creates an attachment. The returned Operation will finish once the
+      /// attachment has been created. Its response will be the created attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAttachmentAsync(global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAttachmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an attachment. The returned Operation will finish once the
+      /// attachment has been created. Its response will be the created attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAttachmentAsync(global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAttachment, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an attachment. The returned Operation will
+      /// finish once the attachments has been deleted. It will not have any
+      /// Operation metadata and will return a `google.protobuf.Empty` response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAttachment(global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAttachment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an attachment. The returned Operation will
+      /// finish once the attachments has been deleted. It will not have any
+      /// Operation metadata and will return a `google.protobuf.Empty` response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAttachment(global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAttachment, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an attachment. The returned Operation will
+      /// finish once the attachments has been deleted. It will not have any
+      /// Operation metadata and will return a `google.protobuf.Empty` response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAttachmentAsync(global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAttachmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an attachment. The returned Operation will
+      /// finish once the attachments has been deleted. It will not have any
+      /// Operation metadata and will return a `google.protobuf.Empty` response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAttachmentAsync(global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAttachment, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ArtifactRegistryClient NewInstance(ClientBaseConfiguration configuration)
@@ -2779,20 +3722,33 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           .AddMethod(__Method_GetVersion, serviceImpl.GetVersion)
           .AddMethod(__Method_DeleteVersion, serviceImpl.DeleteVersion)
           .AddMethod(__Method_BatchDeleteVersions, serviceImpl.BatchDeleteVersions)
+          .AddMethod(__Method_UpdateVersion, serviceImpl.UpdateVersion)
           .AddMethod(__Method_ListFiles, serviceImpl.ListFiles)
           .AddMethod(__Method_GetFile, serviceImpl.GetFile)
+          .AddMethod(__Method_DeleteFile, serviceImpl.DeleteFile)
+          .AddMethod(__Method_UpdateFile, serviceImpl.UpdateFile)
           .AddMethod(__Method_ListTags, serviceImpl.ListTags)
           .AddMethod(__Method_GetTag, serviceImpl.GetTag)
           .AddMethod(__Method_CreateTag, serviceImpl.CreateTag)
           .AddMethod(__Method_UpdateTag, serviceImpl.UpdateTag)
           .AddMethod(__Method_DeleteTag, serviceImpl.DeleteTag)
+          .AddMethod(__Method_CreateRule, serviceImpl.CreateRule)
+          .AddMethod(__Method_ListRules, serviceImpl.ListRules)
+          .AddMethod(__Method_GetRule, serviceImpl.GetRule)
+          .AddMethod(__Method_UpdateRule, serviceImpl.UpdateRule)
+          .AddMethod(__Method_DeleteRule, serviceImpl.DeleteRule)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
           .AddMethod(__Method_GetProjectSettings, serviceImpl.GetProjectSettings)
           .AddMethod(__Method_UpdateProjectSettings, serviceImpl.UpdateProjectSettings)
           .AddMethod(__Method_GetVPCSCConfig, serviceImpl.GetVPCSCConfig)
-          .AddMethod(__Method_UpdateVPCSCConfig, serviceImpl.UpdateVPCSCConfig).Build();
+          .AddMethod(__Method_UpdateVPCSCConfig, serviceImpl.UpdateVPCSCConfig)
+          .AddMethod(__Method_UpdatePackage, serviceImpl.UpdatePackage)
+          .AddMethod(__Method_ListAttachments, serviceImpl.ListAttachments)
+          .AddMethod(__Method_GetAttachment, serviceImpl.GetAttachment)
+          .AddMethod(__Method_CreateAttachment, serviceImpl.CreateAttachment)
+          .AddMethod(__Method_DeleteAttachment, serviceImpl.DeleteAttachment).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2824,13 +3780,21 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       serviceBinder.AddMethod(__Method_GetVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.GetVersionRequest, global::Google.Cloud.ArtifactRegistry.V1.Version>(serviceImpl.GetVersion));
       serviceBinder.AddMethod(__Method_DeleteVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.DeleteVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteVersion));
       serviceBinder.AddMethod(__Method_BatchDeleteVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchDeleteVersions));
+      serviceBinder.AddMethod(__Method_UpdateVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest, global::Google.Cloud.ArtifactRegistry.V1.Version>(serviceImpl.UpdateVersion));
       serviceBinder.AddMethod(__Method_ListFiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse>(serviceImpl.ListFiles));
       serviceBinder.AddMethod(__Method_GetFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest, global::Google.Cloud.ArtifactRegistry.V1.File>(serviceImpl.GetFile));
+      serviceBinder.AddMethod(__Method_DeleteFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteFile));
+      serviceBinder.AddMethod(__Method_UpdateFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest, global::Google.Cloud.ArtifactRegistry.V1.File>(serviceImpl.UpdateFile));
       serviceBinder.AddMethod(__Method_ListTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.ListTagsRequest, global::Google.Cloud.ArtifactRegistry.V1.ListTagsResponse>(serviceImpl.ListTags));
       serviceBinder.AddMethod(__Method_GetTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.GetTagRequest, global::Google.Cloud.ArtifactRegistry.V1.Tag>(serviceImpl.GetTag));
       serviceBinder.AddMethod(__Method_CreateTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.CreateTagRequest, global::Google.Cloud.ArtifactRegistry.V1.Tag>(serviceImpl.CreateTag));
       serviceBinder.AddMethod(__Method_UpdateTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.UpdateTagRequest, global::Google.Cloud.ArtifactRegistry.V1.Tag>(serviceImpl.UpdateTag));
       serviceBinder.AddMethod(__Method_DeleteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTag));
+      serviceBinder.AddMethod(__Method_CreateRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule>(serviceImpl.CreateRule));
+      serviceBinder.AddMethod(__Method_ListRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.ListRulesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListRulesResponse>(serviceImpl.ListRules));
+      serviceBinder.AddMethod(__Method_GetRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.GetRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule>(serviceImpl.GetRule));
+      serviceBinder.AddMethod(__Method_UpdateRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest, global::Google.Cloud.ArtifactRegistry.V1.Rule>(serviceImpl.UpdateRule));
+      serviceBinder.AddMethod(__Method_DeleteRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRule));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
@@ -2838,6 +3802,11 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       serviceBinder.AddMethod(__Method_UpdateProjectSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.UpdateProjectSettingsRequest, global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings>(serviceImpl.UpdateProjectSettings));
       serviceBinder.AddMethod(__Method_GetVPCSCConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.GetVPCSCConfigRequest, global::Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>(serviceImpl.GetVPCSCConfig));
       serviceBinder.AddMethod(__Method_UpdateVPCSCConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.UpdateVPCSCConfigRequest, global::Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>(serviceImpl.UpdateVPCSCConfig));
+      serviceBinder.AddMethod(__Method_UpdatePackage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest, global::Google.Cloud.ArtifactRegistry.V1.Package>(serviceImpl.UpdatePackage));
+      serviceBinder.AddMethod(__Method_ListAttachments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest, global::Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse>(serviceImpl.ListAttachments));
+      serviceBinder.AddMethod(__Method_GetAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest, global::Google.Cloud.ArtifactRegistry.V1.Attachment>(serviceImpl.GetAttachment));
+      serviceBinder.AddMethod(__Method_CreateAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAttachment));
+      serviceBinder.AddMethod(__Method_DeleteAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAttachment));
     }
 
   }

@@ -2555,12 +2555,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -2604,12 +2604,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -3967,12 +3967,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 78,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 76,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -4016,12 +4016,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 78,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -4860,12 +4860,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 82,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 80,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -4909,12 +4909,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 84,
+          "end": 85,
           "type": "FULL"
         },
         {
           "start": 40,
-          "end": 82,
+          "end": 83,
           "type": "SHORT"
         }
       ]
@@ -5718,6 +5718,206 @@
       ]
     },
     {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateVersion_sync",
+      "title": "UpdateVersionRequestObject",
+      "description": "Snippet for UpdateVersion",
+      "file": "ArtifactRegistryClient.UpdateVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVersion",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Version",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateVersion",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateVersion",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateVersion_async",
+      "title": "UpdateVersionRequestObjectAsync",
+      "description": "Snippet for UpdateVersionAsync",
+      "file": "ArtifactRegistryClient.UpdateVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVersionAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Version>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateVersion",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateVersion",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateVersion_sync_flattened",
+      "title": "UpdateVersion",
+      "description": "Snippet for UpdateVersion",
+      "file": "ArtifactRegistryClient.UpdateVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVersion",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Version",
+            "name": "version"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Version",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateVersion",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateVersion",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateVersion_async_flattened",
+      "title": "UpdateVersionAsync",
+      "description": "Snippet for UpdateVersionAsync",
+      "file": "ArtifactRegistryClient.UpdateVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVersionAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Version",
+            "name": "version"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Version>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateVersion",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateVersion",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListFiles_sync",
       "title": "ListFilesRequestObject",
       "description": "Snippet for ListFiles",
@@ -6319,6 +6519,493 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteFile_sync",
+      "title": "DeleteFileRequestObject",
+      "description": "Snippet for DeleteFile",
+      "file": "ArtifactRegistryClient.DeleteFileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFile",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteFile_async",
+      "title": "DeleteFileRequestObjectAsync",
+      "description": "Snippet for DeleteFileAsync",
+      "file": "ArtifactRegistryClient.DeleteFileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFileAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteFile_sync_flattened",
+      "title": "DeleteFile",
+      "description": "Snippet for DeleteFile",
+      "file": "ArtifactRegistryClient.DeleteFileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFile",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteFile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteFile_async_flattened",
+      "title": "DeleteFileAsync",
+      "description": "Snippet for DeleteFileAsync",
+      "file": "ArtifactRegistryClient.DeleteFileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFileAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteFile_sync_flattened_resourceNames",
+      "title": "DeleteFileResourceNames",
+      "description": "Snippet for DeleteFile",
+      "file": "ArtifactRegistryClient.DeleteFileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFile",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.FileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteFile_async_flattened_resourceNames",
+      "title": "DeleteFileResourceNamesAsync",
+      "description": "Snippet for DeleteFileAsync",
+      "file": "ArtifactRegistryClient.DeleteFileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFileAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.FileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateFile_sync",
+      "title": "UpdateFileRequestObject",
+      "description": "Snippet for UpdateFile",
+      "file": "ArtifactRegistryClient.UpdateFileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFile",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.File",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateFile_async",
+      "title": "UpdateFileRequestObjectAsync",
+      "description": "Snippet for UpdateFileAsync",
+      "file": "ArtifactRegistryClient.UpdateFileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFileAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.File>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateFile_sync_flattened",
+      "title": "UpdateFile",
+      "description": "Snippet for UpdateFile",
+      "file": "ArtifactRegistryClient.UpdateFileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFile",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.File",
+            "name": "file"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.File",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateFile_async_flattened",
+      "title": "UpdateFileAsync",
+      "description": "Snippet for UpdateFileAsync",
+      "file": "ArtifactRegistryClient.UpdateFileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFileAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.File",
+            "name": "file"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.File>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]
@@ -7301,6 +7988,1415 @@
         "method": {
           "shortName": "DeleteTag",
           "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteTag",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateRule_sync",
+      "title": "CreateRuleRequestObject",
+      "description": "Snippet for CreateRule",
+      "file": "ArtifactRegistryClient.CreateRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Rule",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateRule_async",
+      "title": "CreateRuleRequestObjectAsync",
+      "description": "Snippet for CreateRuleAsync",
+      "file": "ArtifactRegistryClient.CreateRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.CreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateRule_sync_flattened",
+      "title": "CreateRule",
+      "description": "Snippet for CreateRule",
+      "file": "ArtifactRegistryClient.CreateRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Rule",
+            "name": "rule"
+          },
+          {
+            "type": "System.String",
+            "name": "ruleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Rule",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateRule_async_flattened",
+      "title": "CreateRuleAsync",
+      "description": "Snippet for CreateRuleAsync",
+      "file": "ArtifactRegistryClient.CreateRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Rule",
+            "name": "rule"
+          },
+          {
+            "type": "System.String",
+            "name": "ruleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateRule_sync_flattened_resourceNames",
+      "title": "CreateRuleResourceNames",
+      "description": "Snippet for CreateRule",
+      "file": "ArtifactRegistryClient.CreateRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Rule",
+            "name": "rule"
+          },
+          {
+            "type": "System.String",
+            "name": "ruleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Rule",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateRule_async_flattened_resourceNames",
+      "title": "CreateRuleResourceNamesAsync",
+      "description": "Snippet for CreateRuleAsync",
+      "file": "ArtifactRegistryClient.CreateRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Rule",
+            "name": "rule"
+          },
+          {
+            "type": "System.String",
+            "name": "ruleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListRules_sync",
+      "title": "ListRulesRequestObject",
+      "description": "Snippet for ListRules",
+      "file": "ArtifactRegistryClient.ListRulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRules",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRulesResponse, Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListRules",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListRules_async",
+      "title": "ListRulesRequestObjectAsync",
+      "description": "Snippet for ListRulesAsync",
+      "file": "ArtifactRegistryClient.ListRulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRulesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRulesResponse, Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListRules",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListRules_sync_flattened",
+      "title": "ListRules",
+      "description": "Snippet for ListRules",
+      "file": "ArtifactRegistryClient.ListRulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRules",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRulesResponse, Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListRules",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListRules_async_flattened",
+      "title": "ListRulesAsync",
+      "description": "Snippet for ListRulesAsync",
+      "file": "ArtifactRegistryClient.ListRulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRulesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRulesResponse, Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListRules",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListRules_sync_flattened_resourceNames",
+      "title": "ListRulesResourceNames",
+      "description": "Snippet for ListRules",
+      "file": "ArtifactRegistryClient.ListRulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRules",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRulesResponse, Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListRules",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListRules_async_flattened_resourceNames",
+      "title": "ListRulesResourceNamesAsync",
+      "description": "Snippet for ListRulesAsync",
+      "file": "ArtifactRegistryClient.ListRulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRulesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRulesResponse, Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListRules",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListRules",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetRule_sync",
+      "title": "GetRuleRequestObject",
+      "description": "Snippet for GetRule",
+      "file": "ArtifactRegistryClient.GetRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Rule",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetRule_async",
+      "title": "GetRuleRequestObjectAsync",
+      "description": "Snippet for GetRuleAsync",
+      "file": "ArtifactRegistryClient.GetRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetRule_sync_flattened",
+      "title": "GetRule",
+      "description": "Snippet for GetRule",
+      "file": "ArtifactRegistryClient.GetRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Rule",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetRule_async_flattened",
+      "title": "GetRuleAsync",
+      "description": "Snippet for GetRuleAsync",
+      "file": "ArtifactRegistryClient.GetRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetRule_sync_flattened_resourceNames",
+      "title": "GetRuleResourceNames",
+      "description": "Snippet for GetRule",
+      "file": "ArtifactRegistryClient.GetRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Rule",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetRule_async_flattened_resourceNames",
+      "title": "GetRuleResourceNamesAsync",
+      "description": "Snippet for GetRuleAsync",
+      "file": "ArtifactRegistryClient.GetRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateRule_sync",
+      "title": "UpdateRuleRequestObject",
+      "description": "Snippet for UpdateRule",
+      "file": "ArtifactRegistryClient.UpdateRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Rule",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateRule_async",
+      "title": "UpdateRuleRequestObjectAsync",
+      "description": "Snippet for UpdateRuleAsync",
+      "file": "ArtifactRegistryClient.UpdateRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateRule_sync_flattened",
+      "title": "UpdateRule",
+      "description": "Snippet for UpdateRule",
+      "file": "ArtifactRegistryClient.UpdateRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Rule",
+            "name": "rule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Rule",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateRule_async_flattened",
+      "title": "UpdateRuleAsync",
+      "description": "Snippet for UpdateRuleAsync",
+      "file": "ArtifactRegistryClient.UpdateRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Rule",
+            "name": "rule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Rule>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteRule_sync",
+      "title": "DeleteRuleRequestObject",
+      "description": "Snippet for DeleteRule",
+      "file": "ArtifactRegistryClient.DeleteRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteRule_async",
+      "title": "DeleteRuleRequestObjectAsync",
+      "description": "Snippet for DeleteRuleAsync",
+      "file": "ArtifactRegistryClient.DeleteRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteRule_sync_flattened",
+      "title": "DeleteRule",
+      "description": "Snippet for DeleteRule",
+      "file": "ArtifactRegistryClient.DeleteRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteRule_async_flattened",
+      "title": "DeleteRuleAsync",
+      "description": "Snippet for DeleteRuleAsync",
+      "file": "ArtifactRegistryClient.DeleteRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteRule_sync_flattened_resourceNames",
+      "title": "DeleteRuleResourceNames",
+      "description": "Snippet for DeleteRule",
+      "file": "ArtifactRegistryClient.DeleteRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRule",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRule",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteRule_async_flattened_resourceNames",
+      "title": "DeleteRuleResourceNamesAsync",
+      "description": "Snippet for DeleteRuleAsync",
+      "file": "ArtifactRegistryClient.DeleteRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRuleAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteRule",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRule",
           "service": {
             "shortName": "ArtifactRegistry",
             "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
@@ -8582,6 +10678,1418 @@
         {
           "start": 36,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdatePackage_sync",
+      "title": "UpdatePackageRequestObject",
+      "description": "Snippet for UpdatePackage",
+      "file": "ArtifactRegistryClient.UpdatePackageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdatePackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Package",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdatePackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdatePackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdatePackage_async",
+      "title": "UpdatePackageRequestObjectAsync",
+      "description": "Snippet for UpdatePackageAsync",
+      "file": "ArtifactRegistryClient.UpdatePackageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdatePackageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdatePackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Package>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdatePackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdatePackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdatePackage_sync_flattened",
+      "title": "UpdatePackage",
+      "description": "Snippet for UpdatePackage",
+      "file": "ArtifactRegistryClient.UpdatePackageSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdatePackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Package",
+            "name": "package"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Package",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdatePackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdatePackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdatePackage_async_flattened",
+      "title": "UpdatePackageAsync",
+      "description": "Snippet for UpdatePackageAsync",
+      "file": "ArtifactRegistryClient.UpdatePackageAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdatePackageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Package",
+            "name": "package"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Package>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdatePackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdatePackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListAttachments_sync",
+      "title": "ListAttachmentsRequestObject",
+      "description": "Snippet for ListAttachments",
+      "file": "ArtifactRegistryClient.ListAttachmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachments",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListAttachments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse, Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListAttachments",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListAttachments_async",
+      "title": "ListAttachmentsRequestObjectAsync",
+      "description": "Snippet for ListAttachmentsAsync",
+      "file": "ArtifactRegistryClient.ListAttachmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachmentsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListAttachmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListAttachmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse, Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListAttachments",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListAttachments_sync_flattened",
+      "title": "ListAttachments",
+      "description": "Snippet for ListAttachments",
+      "file": "ArtifactRegistryClient.ListAttachmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachments",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListAttachments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse, Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListAttachments",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListAttachments_async_flattened",
+      "title": "ListAttachmentsAsync",
+      "description": "Snippet for ListAttachmentsAsync",
+      "file": "ArtifactRegistryClient.ListAttachmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachmentsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListAttachmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse, Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListAttachments",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListAttachments_sync_flattened_resourceNames",
+      "title": "ListAttachmentsResourceNames",
+      "description": "Snippet for ListAttachments",
+      "file": "ArtifactRegistryClient.ListAttachmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachments",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListAttachments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse, Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListAttachments",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListAttachments_async_flattened_resourceNames",
+      "title": "ListAttachmentsResourceNamesAsync",
+      "description": "Snippet for ListAttachmentsAsync",
+      "file": "ArtifactRegistryClient.ListAttachmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachmentsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListAttachmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListAttachmentsResponse, Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListAttachments",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetAttachment_sync",
+      "title": "GetAttachmentRequestObject",
+      "description": "Snippet for GetAttachment",
+      "file": "ArtifactRegistryClient.GetAttachmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetAttachment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Attachment",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetAttachment_async",
+      "title": "GetAttachmentRequestObjectAsync",
+      "description": "Snippet for GetAttachmentAsync",
+      "file": "ArtifactRegistryClient.GetAttachmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetAttachment_sync_flattened",
+      "title": "GetAttachment",
+      "description": "Snippet for GetAttachment",
+      "file": "ArtifactRegistryClient.GetAttachmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetAttachment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Attachment",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetAttachment_async_flattened",
+      "title": "GetAttachmentAsync",
+      "description": "Snippet for GetAttachmentAsync",
+      "file": "ArtifactRegistryClient.GetAttachmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetAttachment_sync_flattened_resourceNames",
+      "title": "GetAttachmentResourceNames",
+      "description": "Snippet for GetAttachment",
+      "file": "ArtifactRegistryClient.GetAttachmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetAttachment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.AttachmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Attachment",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetAttachment_async_flattened_resourceNames",
+      "title": "GetAttachmentResourceNamesAsync",
+      "description": "Snippet for GetAttachmentAsync",
+      "file": "ArtifactRegistryClient.GetAttachmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.AttachmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Attachment>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateAttachment_sync",
+      "title": "CreateAttachmentRequestObject",
+      "description": "Snippet for CreateAttachment",
+      "file": "ArtifactRegistryClient.CreateAttachmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateAttachment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Attachment, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateAttachment_async",
+      "title": "CreateAttachmentRequestObjectAsync",
+      "description": "Snippet for CreateAttachmentAsync",
+      "file": "ArtifactRegistryClient.CreateAttachmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Attachment, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateAttachment_sync_flattened",
+      "title": "CreateAttachment",
+      "description": "Snippet for CreateAttachment",
+      "file": "ArtifactRegistryClient.CreateAttachmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateAttachment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Attachment",
+            "name": "attachment"
+          },
+          {
+            "type": "System.String",
+            "name": "attachmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Attachment, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateAttachment_async_flattened",
+      "title": "CreateAttachmentAsync",
+      "description": "Snippet for CreateAttachmentAsync",
+      "file": "ArtifactRegistryClient.CreateAttachmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Attachment",
+            "name": "attachment"
+          },
+          {
+            "type": "System.String",
+            "name": "attachmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Attachment, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateAttachment_sync_flattened_resourceNames",
+      "title": "CreateAttachmentResourceNames",
+      "description": "Snippet for CreateAttachment",
+      "file": "ArtifactRegistryClient.CreateAttachmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateAttachment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Attachment",
+            "name": "attachment"
+          },
+          {
+            "type": "System.String",
+            "name": "attachmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Attachment, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_CreateAttachment_async_flattened_resourceNames",
+      "title": "CreateAttachmentResourceNamesAsync",
+      "description": "Snippet for CreateAttachmentAsync",
+      "file": "ArtifactRegistryClient.CreateAttachmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Attachment",
+            "name": "attachment"
+          },
+          {
+            "type": "System.String",
+            "name": "attachmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Attachment, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteAttachment_sync",
+      "title": "DeleteAttachmentRequestObject",
+      "description": "Snippet for DeleteAttachment",
+      "file": "ArtifactRegistryClient.DeleteAttachmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteAttachment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteAttachment_async",
+      "title": "DeleteAttachmentRequestObjectAsync",
+      "description": "Snippet for DeleteAttachmentAsync",
+      "file": "ArtifactRegistryClient.DeleteAttachmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteAttachment_sync_flattened",
+      "title": "DeleteAttachment",
+      "description": "Snippet for DeleteAttachment",
+      "file": "ArtifactRegistryClient.DeleteAttachmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteAttachment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteAttachment_async_flattened",
+      "title": "DeleteAttachmentAsync",
+      "description": "Snippet for DeleteAttachmentAsync",
+      "file": "ArtifactRegistryClient.DeleteAttachmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteAttachment_sync_flattened_resourceNames",
+      "title": "DeleteAttachmentResourceNames",
+      "description": "Snippet for DeleteAttachment",
+      "file": "ArtifactRegistryClient.DeleteAttachmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachment",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteAttachment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.AttachmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeleteAttachment_async_flattened_resourceNames",
+      "title": "DeleteAttachmentResourceNamesAsync",
+      "description": "Snippet for DeleteAttachmentAsync",
+      "file": "ArtifactRegistryClient.DeleteAttachmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachmentAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.AttachmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachment",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteAttachment",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
           "type": "SHORT"
         }
       ]

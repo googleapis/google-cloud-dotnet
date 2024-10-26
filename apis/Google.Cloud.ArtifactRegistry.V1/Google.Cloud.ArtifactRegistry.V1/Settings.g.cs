@@ -28,31 +28,34 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "cy5wcm90bxIjZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEa",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnBy",
-            "b3RvIpADCg9Qcm9qZWN0U2V0dGluZ3MSDAoEbmFtZRgBIAEoCRJnChhsZWdh",
+            "b3RvIogECg9Qcm9qZWN0U2V0dGluZ3MSDAoEbmFtZRgBIAEoCRJnChhsZWdh",
             "Y3lfcmVkaXJlY3Rpb25fc3RhdGUYAiABKA4yRS5nb29nbGUuZGV2dG9vbHMu",
             "YXJ0aWZhY3RyZWdpc3RyeS52MS5Qcm9qZWN0U2V0dGluZ3MuUmVkaXJlY3Rp",
-            "b25TdGF0ZSKrAQoQUmVkaXJlY3Rpb25TdGF0ZRIhCh1SRURJUkVDVElPTl9T",
-            "VEFURV9VTlNQRUNJRklFRBAAEiQKIFJFRElSRUNUSU9OX0ZST01fR0NSX0lP",
-            "X0RJU0FCTEVEEAESIwofUkVESVJFQ1RJT05fRlJPTV9HQ1JfSU9fRU5BQkxF",
-            "RBACEikKIVJFRElSRUNUSU9OX0ZST01fR0NSX0lPX0ZJTkFMSVpFRBADGgII",
-            "ATpY6kFVCi9hcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1Byb2pl",
-            "Y3RTZXR0aW5ncxIicHJvamVjdHMve3Byb2plY3R9L3Byb2plY3RTZXR0aW5n",
-            "cyJiChlHZXRQcm9qZWN0U2V0dGluZ3NSZXF1ZXN0EkUKBG5hbWUYASABKAlC",
-            "N+BBAvpBMQovYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9Qcm9q",
-            "ZWN0U2V0dGluZ3MinwEKHFVwZGF0ZVByb2plY3RTZXR0aW5nc1JlcXVlc3QS",
-            "TgoQcHJvamVjdF9zZXR0aW5ncxgCIAEoCzI0Lmdvb2dsZS5kZXZ0b29scy5h",
-            "cnRpZmFjdHJlZ2lzdHJ5LnYxLlByb2plY3RTZXR0aW5ncxIvCgt1cGRhdGVf",
-            "bWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC+AEKJ2Nv",
-            "bS5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MUINU2V0dGlu",
-            "Z3NQcm90b1ABWlBjbG91ZC5nb29nbGUuY29tL2dvL2FydGlmYWN0cmVnaXN0",
-            "cnkvYXBpdjEvYXJ0aWZhY3RyZWdpc3RyeXBiO2FydGlmYWN0cmVnaXN0cnlw",
-            "YqoCIEdvb2dsZS5DbG91ZC5BcnRpZmFjdFJlZ2lzdHJ5LlYxygIgR29vZ2xl",
-            "XENsb3VkXEFydGlmYWN0UmVnaXN0cnlcVjHqAiNHb29nbGU6OkNsb3VkOjpB",
-            "cnRpZmFjdFJlZ2lzdHJ5OjpWMWIGcHJvdG8z"));
+            "b25TdGF0ZRIUCgxwdWxsX3BlcmNlbnQYAyABKAUijQIKEFJlZGlyZWN0aW9u",
+            "U3RhdGUSIQodUkVESVJFQ1RJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIkCiBS",
+            "RURJUkVDVElPTl9GUk9NX0dDUl9JT19ESVNBQkxFRBABEiMKH1JFRElSRUNU",
+            "SU9OX0ZST01fR0NSX0lPX0VOQUJMRUQQAhIpCiFSRURJUkVDVElPTl9GUk9N",
+            "X0dDUl9JT19GSU5BTElaRUQQAxoCCAESLworUkVESVJFQ1RJT05fRlJPTV9H",
+            "Q1JfSU9fRU5BQkxFRF9BTkRfQ09QWUlORxAFEi8KK1JFRElSRUNUSU9OX0ZS",
+            "T01fR0NSX0lPX1BBUlRJQUxfQU5EX0NPUFlJTkcQBjpY6kFVCi9hcnRpZmFj",
+            "dHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1Byb2plY3RTZXR0aW5ncxIicHJv",
+            "amVjdHMve3Byb2plY3R9L3Byb2plY3RTZXR0aW5ncyJiChlHZXRQcm9qZWN0",
+            "U2V0dGluZ3NSZXF1ZXN0EkUKBG5hbWUYASABKAlCN+BBAvpBMQovYXJ0aWZh",
+            "Y3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0U2V0dGluZ3MinwEK",
+            "HFVwZGF0ZVByb2plY3RTZXR0aW5nc1JlcXVlc3QSTgoQcHJvamVjdF9zZXR0",
+            "aW5ncxgCIAEoCzI0Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5",
+            "LnYxLlByb2plY3RTZXR0aW5ncxIvCgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC+AEKJ2NvbS5nb29nbGUuZGV2dG9v",
+            "bHMuYXJ0aWZhY3RyZWdpc3RyeS52MUINU2V0dGluZ3NQcm90b1ABWlBjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2FydGlmYWN0cmVnaXN0cnkvYXBpdjEvYXJ0aWZh",
+            "Y3RyZWdpc3RyeXBiO2FydGlmYWN0cmVnaXN0cnlwYqoCIEdvb2dsZS5DbG91",
+            "ZC5BcnRpZmFjdFJlZ2lzdHJ5LlYxygIgR29vZ2xlXENsb3VkXEFydGlmYWN0",
+            "UmVnaXN0cnlcVjHqAiNHb29nbGU6OkNsb3VkOjpBcnRpZmFjdFJlZ2lzdHJ5",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings), global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Parser, new[]{ "Name", "LegacyRedirectionState" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Types.RedirectionState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings), global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Parser, new[]{ "Name", "LegacyRedirectionState", "PullPercent" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Types.RedirectionState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetProjectSettingsRequest), global::Google.Cloud.ArtifactRegistry.V1.GetProjectSettingsRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.UpdateProjectSettingsRequest), global::Google.Cloud.ArtifactRegistry.V1.UpdateProjectSettingsRequest.Parser, new[]{ "ProjectSettings", "UpdateMask" }, null, null, null, null)
           }));
@@ -101,6 +104,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public ProjectSettings(ProjectSettings other) : this() {
       name_ = other.name_;
       legacyRedirectionState_ = other.legacyRedirectionState_;
+      pullPercent_ = other.pullPercent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -146,6 +150,22 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "pull_percent" field.</summary>
+    public const int PullPercentFieldNumber = 3;
+    private int pullPercent_;
+    /// <summary>
+    /// The percentage of pull traffic to redirect from GCR to AR when using
+    /// partial redirection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PullPercent {
+      get { return pullPercent_; }
+      set {
+        pullPercent_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -163,6 +183,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
       if (Name != other.Name) return false;
       if (LegacyRedirectionState != other.LegacyRedirectionState) return false;
+      if (PullPercent != other.PullPercent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -172,6 +193,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (LegacyRedirectionState != global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Types.RedirectionState.Unspecified) hash ^= LegacyRedirectionState.GetHashCode();
+      if (PullPercent != 0) hash ^= PullPercent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,6 +220,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) LegacyRedirectionState);
       }
+      if (PullPercent != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PullPercent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -216,6 +242,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) LegacyRedirectionState);
       }
+      if (PullPercent != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PullPercent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -231,6 +261,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
       if (LegacyRedirectionState != global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Types.RedirectionState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LegacyRedirectionState);
+      }
+      if (PullPercent != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PullPercent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -249,6 +282,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
       if (other.LegacyRedirectionState != global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Types.RedirectionState.Unspecified) {
         LegacyRedirectionState = other.LegacyRedirectionState;
+      }
+      if (other.PullPercent != 0) {
+        PullPercent = other.PullPercent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -273,6 +309,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             LegacyRedirectionState = (global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Types.RedirectionState) input.ReadEnum();
             break;
           }
+          case 24: {
+            PullPercent = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -294,6 +334,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
           case 16: {
             LegacyRedirectionState = (global::Google.Cloud.ArtifactRegistry.V1.ProjectSettings.Types.RedirectionState) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            PullPercent = input.ReadInt32();
             break;
           }
         }
@@ -327,6 +371,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         /// </summary>
         [global::System.ObsoleteAttribute]
         [pbr::OriginalName("REDIRECTION_FROM_GCR_IO_FINALIZED")] RedirectionFromGcrIoFinalized = 3,
+        /// <summary>
+        /// Redirection is enabled and missing images are copied from GCR
+        /// </summary>
+        [pbr::OriginalName("REDIRECTION_FROM_GCR_IO_ENABLED_AND_COPYING")] RedirectionFromGcrIoEnabledAndCopying = 5,
+        /// <summary>
+        /// Redirection is partially enabled and missing images are copied from GCR
+        /// </summary>
+        [pbr::OriginalName("REDIRECTION_FROM_GCR_IO_PARTIAL_AND_COPYING")] RedirectionFromGcrIoPartialAndCopying = 6,
       }
 
     }

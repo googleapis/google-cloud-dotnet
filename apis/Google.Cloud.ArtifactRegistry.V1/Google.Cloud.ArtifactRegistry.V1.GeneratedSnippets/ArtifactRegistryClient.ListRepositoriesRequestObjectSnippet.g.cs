@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
             ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositories(request);
