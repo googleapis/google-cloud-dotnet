@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 Parent = "",
                 View = gcav::VersionView.Unspecified,
                 OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<gcav::ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(request);

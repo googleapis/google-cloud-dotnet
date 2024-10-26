@@ -322,4 +322,16 @@ namespace Google.Cloud.ArtifactRegistry.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class DeleteFileRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::FileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::FileName FileName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::FileName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

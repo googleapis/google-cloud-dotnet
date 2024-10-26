@@ -54,7 +54,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "Q0lGSUVEEAASCgoGREVMRVRFEAESCAoES0VFUBACQhAKDmNvbmRpdGlvbl90",
             "eXBlImkKF1ZpcnR1YWxSZXBvc2l0b3J5Q29uZmlnEk4KEXVwc3RyZWFtX3Bv",
             "bGljaWVzGAEgAygLMjMuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0",
-            "cnkudjEuVXBzdHJlYW1Qb2xpY3kizRYKFlJlbW90ZVJlcG9zaXRvcnlDb25m",
+            "cnkudjEuVXBzdHJlYW1Qb2xpY3kizR8KFlJlbW90ZVJlcG9zaXRvcnlDb25m",
             "aWcSaQoRZG9ja2VyX3JlcG9zaXRvcnkYAiABKAsyTC5nb29nbGUuZGV2dG9v",
             "bHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZW1vdGVSZXBvc2l0b3J5Q29uZmln",
             "LkRvY2tlclJlcG9zaXRvcnlIABJnChBtYXZlbl9yZXBvc2l0b3J5GAMgASgL",
@@ -68,123 +68,170 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "b29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZW1vdGVSZXBv",
             "c2l0b3J5Q29uZmlnLkFwdFJlcG9zaXRvcnlIABJjCg55dW1fcmVwb3NpdG9y",
             "eRgHIAEoCzJJLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYx",
-            "LlJlbW90ZVJlcG9zaXRvcnlDb25maWcuWXVtUmVwb3NpdG9yeUgAEhMKC2Rl",
-            "c2NyaXB0aW9uGAEgASgJEnIKFHVwc3RyZWFtX2NyZWRlbnRpYWxzGAkgASgL",
-            "Mk8uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuUmVtb3Rl",
-            "UmVwb3NpdG9yeUNvbmZpZy5VcHN0cmVhbUNyZWRlbnRpYWxzQgPgQQEavwIK",
-            "E1Vwc3RyZWFtQ3JlZGVudGlhbHMSlAEKHXVzZXJuYW1lX3Bhc3N3b3JkX2Ny",
-            "ZWRlbnRpYWxzGAEgASgLMmsuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVn",
-            "aXN0cnkudjEuUmVtb3RlUmVwb3NpdG9yeUNvbmZpZy5VcHN0cmVhbUNyZWRl",
-            "bnRpYWxzLlVzZXJuYW1lUGFzc3dvcmRDcmVkZW50aWFsc0gAGoEBChtVc2Vy",
-            "bmFtZVBhc3N3b3JkQ3JlZGVudGlhbHMSEAoIdXNlcm5hbWUYASABKAkSUAoX",
-            "cGFzc3dvcmRfc2VjcmV0X3ZlcnNpb24YAiABKAlCL/pBLAoqc2VjcmV0bWFu",
-            "YWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uQg0KC2NyZWRlbnRp",
-            "YWxzGuEBChBEb2NrZXJSZXBvc2l0b3J5EnoKEXB1YmxpY19yZXBvc2l0b3J5",
-            "GAEgASgOMl0uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEu",
-            "UmVtb3RlUmVwb3NpdG9yeUNvbmZpZy5Eb2NrZXJSZXBvc2l0b3J5LlB1Ymxp",
-            "Y1JlcG9zaXRvcnlIACJFChBQdWJsaWNSZXBvc2l0b3J5EiEKHVBVQkxJQ19S",
-            "RVBPU0lUT1JZX1VOU1BFQ0lGSUVEEAASDgoKRE9DS0VSX0hVQhABQgoKCHVw",
-            "c3RyZWFtGuIBCg9NYXZlblJlcG9zaXRvcnkSeQoRcHVibGljX3JlcG9zaXRv",
-            "cnkYASABKA4yXC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52",
-            "MS5SZW1vdGVSZXBvc2l0b3J5Q29uZmlnLk1hdmVuUmVwb3NpdG9yeS5QdWJs",
-            "aWNSZXBvc2l0b3J5SAAiSAoQUHVibGljUmVwb3NpdG9yeRIhCh1QVUJMSUNf",
-            "UkVQT1NJVE9SWV9VTlNQRUNJRklFRBAAEhEKDU1BVkVOX0NFTlRSQUwQAUIK",
-            "Cgh1cHN0cmVhbRrWAQoNTnBtUmVwb3NpdG9yeRJ3ChFwdWJsaWNfcmVwb3Np",
-            "dG9yeRgBIAEoDjJaLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5",
-            "LnYxLlJlbW90ZVJlcG9zaXRvcnlDb25maWcuTnBtUmVwb3NpdG9yeS5QdWJs",
-            "aWNSZXBvc2l0b3J5SAAiQAoQUHVibGljUmVwb3NpdG9yeRIhCh1QVUJMSUNf",
-            "UkVQT1NJVE9SWV9VTlNQRUNJRklFRBAAEgkKBU5QTUpTEAFCCgoIdXBzdHJl",
-            "YW0a2wEKEFB5dGhvblJlcG9zaXRvcnkSegoRcHVibGljX3JlcG9zaXRvcnkY",
-            "ASABKA4yXS5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5S",
-            "ZW1vdGVSZXBvc2l0b3J5Q29uZmlnLlB5dGhvblJlcG9zaXRvcnkuUHVibGlj",
-            "UmVwb3NpdG9yeUgAIj8KEFB1YmxpY1JlcG9zaXRvcnkSIQodUFVCTElDX1JF",
-            "UE9TSVRPUllfVU5TUEVDSUZJRUQQABIICgRQWVBJEAFCCgoIdXBzdHJlYW0a",
-            "kgMKDUFwdFJlcG9zaXRvcnkSdwoRcHVibGljX3JlcG9zaXRvcnkYASABKAsy",
+            "LlJlbW90ZVJlcG9zaXRvcnlDb25maWcuWXVtUmVwb3NpdG9yeUgAEm8KEWNv",
+            "bW1vbl9yZXBvc2l0b3J5GA4gASgLMlIuZ29vZ2xlLmRldnRvb2xzLmFydGlm",
+            "YWN0cmVnaXN0cnkudjEuUmVtb3RlUmVwb3NpdG9yeUNvbmZpZy5Db21tb25S",
+            "ZW1vdGVSZXBvc2l0b3J5SAASEwoLZGVzY3JpcHRpb24YASABKAkScgoUdXBz",
+            "dHJlYW1fY3JlZGVudGlhbHMYCSABKAsyTy5nb29nbGUuZGV2dG9vbHMuYXJ0",
+            "aWZhY3RyZWdpc3RyeS52MS5SZW1vdGVSZXBvc2l0b3J5Q29uZmlnLlVwc3Ry",
+            "ZWFtQ3JlZGVudGlhbHNCA+BBARIoChtkaXNhYmxlX3Vwc3RyZWFtX3ZhbGlk",
+            "YXRpb24YDCABKAhCA+BBBBq/AgoTVXBzdHJlYW1DcmVkZW50aWFscxKUAQod",
+            "dXNlcm5hbWVfcGFzc3dvcmRfY3JlZGVudGlhbHMYASABKAsyay5nb29nbGUu",
+            "ZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZW1vdGVSZXBvc2l0b3J5",
+            "Q29uZmlnLlVwc3RyZWFtQ3JlZGVudGlhbHMuVXNlcm5hbWVQYXNzd29yZENy",
+            "ZWRlbnRpYWxzSAAagQEKG1VzZXJuYW1lUGFzc3dvcmRDcmVkZW50aWFscxIQ",
+            "Cgh1c2VybmFtZRgBIAEoCRJQChdwYXNzd29yZF9zZWNyZXRfdmVyc2lvbhgC",
+            "IAEoCUIv+kEsCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3Jl",
+            "dFZlcnNpb25CDQoLY3JlZGVudGlhbHMa/gIKEERvY2tlclJlcG9zaXRvcnkS",
+            "egoRcHVibGljX3JlcG9zaXRvcnkYASABKA4yXS5nb29nbGUuZGV2dG9vbHMu",
+            "YXJ0aWZhY3RyZWdpc3RyeS52MS5SZW1vdGVSZXBvc2l0b3J5Q29uZmlnLkRv",
+            "Y2tlclJlcG9zaXRvcnkuUHVibGljUmVwb3NpdG9yeUgAEnoKEWN1c3RvbV9y",
+            "ZXBvc2l0b3J5GAMgASgLMl0uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVn",
+            "aXN0cnkudjEuUmVtb3RlUmVwb3NpdG9yeUNvbmZpZy5Eb2NrZXJSZXBvc2l0",
+            "b3J5LkN1c3RvbVJlcG9zaXRvcnlIABofChBDdXN0b21SZXBvc2l0b3J5EgsK",
+            "A3VyaRgBIAEoCSJFChBQdWJsaWNSZXBvc2l0b3J5EiEKHVBVQkxJQ19SRVBP",
+            "U0lUT1JZX1VOU1BFQ0lGSUVEEAASDgoKRE9DS0VSX0hVQhABQgoKCHVwc3Ry",
+            "ZWFtGv4CCg9NYXZlblJlcG9zaXRvcnkSeQoRcHVibGljX3JlcG9zaXRvcnkY",
+            "ASABKA4yXC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5S",
+            "ZW1vdGVSZXBvc2l0b3J5Q29uZmlnLk1hdmVuUmVwb3NpdG9yeS5QdWJsaWNS",
+            "ZXBvc2l0b3J5SAASeQoRY3VzdG9tX3JlcG9zaXRvcnkYAyABKAsyXC5nb29n",
+            "bGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZW1vdGVSZXBvc2l0",
+            "b3J5Q29uZmlnLk1hdmVuUmVwb3NpdG9yeS5DdXN0b21SZXBvc2l0b3J5SAAa",
+            "HwoQQ3VzdG9tUmVwb3NpdG9yeRILCgN1cmkYASABKAkiSAoQUHVibGljUmVw",
+            "b3NpdG9yeRIhCh1QVUJMSUNfUkVQT1NJVE9SWV9VTlNQRUNJRklFRBAAEhEK",
+            "DU1BVkVOX0NFTlRSQUwQAUIKCgh1cHN0cmVhbRrwAgoNTnBtUmVwb3NpdG9y",
+            "eRJ3ChFwdWJsaWNfcmVwb3NpdG9yeRgBIAEoDjJaLmdvb2dsZS5kZXZ0b29s",
+            "cy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlbW90ZVJlcG9zaXRvcnlDb25maWcu",
+            "TnBtUmVwb3NpdG9yeS5QdWJsaWNSZXBvc2l0b3J5SAASdwoRY3VzdG9tX3Jl",
+            "cG9zaXRvcnkYAyABKAsyWi5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdp",
+            "c3RyeS52MS5SZW1vdGVSZXBvc2l0b3J5Q29uZmlnLk5wbVJlcG9zaXRvcnku",
+            "Q3VzdG9tUmVwb3NpdG9yeUgAGh8KEEN1c3RvbVJlcG9zaXRvcnkSCwoDdXJp",
+            "GAEgASgJIkAKEFB1YmxpY1JlcG9zaXRvcnkSIQodUFVCTElDX1JFUE9TSVRP",
+            "UllfVU5TUEVDSUZJRUQQABIJCgVOUE1KUxABQgoKCHVwc3RyZWFtGvgCChBQ",
+            "eXRob25SZXBvc2l0b3J5EnoKEXB1YmxpY19yZXBvc2l0b3J5GAEgASgOMl0u",
+            "Z29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuUmVtb3RlUmVw",
+            "b3NpdG9yeUNvbmZpZy5QeXRob25SZXBvc2l0b3J5LlB1YmxpY1JlcG9zaXRv",
+            "cnlIABJ6ChFjdXN0b21fcmVwb3NpdG9yeRgDIAEoCzJdLmdvb2dsZS5kZXZ0",
+            "b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlbW90ZVJlcG9zaXRvcnlDb25m",
+            "aWcuUHl0aG9uUmVwb3NpdG9yeS5DdXN0b21SZXBvc2l0b3J5SAAaHwoQQ3Vz",
+            "dG9tUmVwb3NpdG9yeRILCgN1cmkYASABKAkiPwoQUHVibGljUmVwb3NpdG9y",
+            "eRIhCh1QVUJMSUNfUkVQT1NJVE9SWV9VTlNQRUNJRklFRBAAEggKBFBZUEkQ",
+            "AUIKCgh1cHN0cmVhbRrBBAoNQXB0UmVwb3NpdG9yeRJ3ChFwdWJsaWNfcmVw",
+            "b3NpdG9yeRgBIAEoCzJaLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lz",
+            "dHJ5LnYxLlJlbW90ZVJlcG9zaXRvcnlDb25maWcuQXB0UmVwb3NpdG9yeS5Q",
+            "dWJsaWNSZXBvc2l0b3J5SAASdwoRY3VzdG9tX3JlcG9zaXRvcnkYAyABKAsy",
             "Wi5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZW1vdGVS",
-            "ZXBvc2l0b3J5Q29uZmlnLkFwdFJlcG9zaXRvcnkuUHVibGljUmVwb3NpdG9y",
-            "eUgAGvsBChBQdWJsaWNSZXBvc2l0b3J5EoIBCg9yZXBvc2l0b3J5X2Jhc2UY",
+            "ZXBvc2l0b3J5Q29uZmlnLkFwdFJlcG9zaXRvcnkuQ3VzdG9tUmVwb3NpdG9y",
+            "eUgAGpACChBQdWJsaWNSZXBvc2l0b3J5EoIBCg9yZXBvc2l0b3J5X2Jhc2UY",
             "ASABKA4yaS5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5S",
             "ZW1vdGVSZXBvc2l0b3J5Q29uZmlnLkFwdFJlcG9zaXRvcnkuUHVibGljUmVw",
             "b3NpdG9yeS5SZXBvc2l0b3J5QmFzZRIXCg9yZXBvc2l0b3J5X3BhdGgYAiAB",
-            "KAkiSQoOUmVwb3NpdG9yeUJhc2USHwobUkVQT1NJVE9SWV9CQVNFX1VOU1BF",
-            "Q0lGSUVEEAASCgoGREVCSUFOEAESCgoGVUJVTlRVEAJCCgoIdXBzdHJlYW0a",
-            "0wMKDVl1bVJlcG9zaXRvcnkSdwoRcHVibGljX3JlcG9zaXRvcnkYASABKAsy",
-            "Wi5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZW1vdGVS",
-            "ZXBvc2l0b3J5Q29uZmlnLll1bVJlcG9zaXRvcnkuUHVibGljUmVwb3NpdG9y",
-            "eUgAGrwCChBQdWJsaWNSZXBvc2l0b3J5EoIBCg9yZXBvc2l0b3J5X2Jhc2UY",
-            "ASABKA4yaS5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5S",
-            "ZW1vdGVSZXBvc2l0b3J5Q29uZmlnLll1bVJlcG9zaXRvcnkuUHVibGljUmVw",
-            "b3NpdG9yeS5SZXBvc2l0b3J5QmFzZRIXCg9yZXBvc2l0b3J5X3BhdGgYAiAB",
-            "KAkiiQEKDlJlcG9zaXRvcnlCYXNlEh8KG1JFUE9TSVRPUllfQkFTRV9VTlNQ",
-            "RUNJRklFRBAAEgoKBkNFTlRPUxABEhAKDENFTlRPU19ERUJVRxACEhAKDENF",
-            "TlRPU19WQVVMVBADEhEKDUNFTlRPU19TVFJFQU0QBBIJCgVST0NLWRAFEggK",
-            "BEVQRUwQBkIKCgh1cHN0cmVhbUIPCg1yZW1vdGVfc291cmNlIoUOCgpSZXBv",
-            "c2l0b3J5El0KDG1hdmVuX2NvbmZpZxgJIAEoCzJFLmdvb2dsZS5kZXZ0b29s",
-            "cy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlcG9zaXRvcnkuTWF2ZW5SZXBvc2l0",
-            "b3J5Q29uZmlnSAASXwoNZG9ja2VyX2NvbmZpZxgRIAEoCzJGLmdvb2dsZS5k",
-            "ZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlcG9zaXRvcnkuRG9ja2Vy",
-            "UmVwb3NpdG9yeUNvbmZpZ0gAEmEKGXZpcnR1YWxfcmVwb3NpdG9yeV9jb25m",
-            "aWcYDiABKAsyPC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52",
-            "MS5WaXJ0dWFsUmVwb3NpdG9yeUNvbmZpZ0gBEl8KGHJlbW90ZV9yZXBvc2l0",
-            "b3J5X2NvbmZpZxgPIAEoCzI7Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJl",
-            "Z2lzdHJ5LnYxLlJlbW90ZVJlcG9zaXRvcnlDb25maWdIARIMCgRuYW1lGAEg",
-            "ASgJEksKBmZvcm1hdBgCIAEoDjI2Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFj",
-            "dHJlZ2lzdHJ5LnYxLlJlcG9zaXRvcnkuRm9ybWF0QgPgQQESEwoLZGVzY3Jp",
-            "cHRpb24YAyABKAkSSwoGbGFiZWxzGAQgAygLMjsuZ29vZ2xlLmRldnRvb2xz",
-            "LmFydGlmYWN0cmVnaXN0cnkudjEuUmVwb3NpdG9yeS5MYWJlbHNFbnRyeRI0",
-            "CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxIUCgxrbXNfa2V5X25hbWUYCCABKAkSRwoEbW9k",
-            "ZRgKIAEoDjI0Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYx",
-            "LlJlcG9zaXRvcnkuTW9kZUID4EEBEmMKEGNsZWFudXBfcG9saWNpZXMYDCAD",
-            "KAsyRC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZXBv",
-            "c2l0b3J5LkNsZWFudXBQb2xpY2llc0VudHJ5QgPgQQESFwoKc2l6ZV9ieXRl",
-            "cxgNIAEoA0ID4EEDEhoKDXNhdGlzZmllc19wenMYECABKAhCA+BBAxIjChZj",
-            "bGVhbnVwX3BvbGljeV9kcnlfcnVuGBIgASgIQgPgQQEa8wEKFU1hdmVuUmVw",
-            "b3NpdG9yeUNvbmZpZxIhChlhbGxvd19zbmFwc2hvdF9vdmVyd3JpdGVzGAEg",
-            "ASgIEmsKDnZlcnNpb25fcG9saWN5GAIgASgOMlMuZ29vZ2xlLmRldnRvb2xz",
-            "LmFydGlmYWN0cmVnaXN0cnkudjEuUmVwb3NpdG9yeS5NYXZlblJlcG9zaXRv",
-            "cnlDb25maWcuVmVyc2lvblBvbGljeSJKCg1WZXJzaW9uUG9saWN5Eh4KGlZF",
-            "UlNJT05fUE9MSUNZX1VOU1BFQ0lGSUVEEAASCwoHUkVMRUFTRRABEgwKCFNO",
-            "QVBTSE9UEAIaMAoWRG9ja2VyUmVwb3NpdG9yeUNvbmZpZxIWCg5pbW11dGFi",
-            "bGVfdGFncxgBIAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBGmoKFENsZWFudXBQb2xpY2llc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRJBCgV2YWx1ZRgCIAEoCzIyLmdvb2dsZS5kZXZ0b29scy5hcnRp",
-            "ZmFjdHJlZ2lzdHJ5LnYxLkNsZWFudXBQb2xpY3k6AjgBIm8KBkZvcm1hdBIW",
-            "ChJGT1JNQVRfVU5TUEVDSUZJRUQQABIKCgZET0NLRVIQARIJCgVNQVZFThAC",
-            "EgcKA05QTRADEgcKA0FQVBAFEgcKA1lVTRAGEgoKBlBZVEhPThAIEgcKA0tG",
-            "UBAJEgYKAkdPEAoiZAoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVEEAASFwoT",
-            "U1RBTkRBUkRfUkVQT1NJVE9SWRABEhYKElZJUlRVQUxfUkVQT1NJVE9SWRAC",
-            "EhUKEVJFTU9URV9SRVBPU0lUT1JZEAM6cupBbwoqYXJ0aWZhY3RyZWdpc3Ry",
-            "eS5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5EkFwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0",
-            "b3J5fUIPCg1mb3JtYXRfY29uZmlnQg0KC21vZGVfY29uZmlnIoQBChdMaXN0",
-            "UmVwb3NpdG9yaWVzUmVxdWVzdBJCCgZwYXJlbnQYASABKAlCMuBBAvpBLBIq",
-            "YXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5EhEK",
-            "CXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJInoKGExpc3RS",
-            "ZXBvc2l0b3JpZXNSZXNwb25zZRJFCgxyZXBvc2l0b3JpZXMYASADKAsyLy5n",
-            "b29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZXBvc2l0b3J5",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJYChRHZXRSZXBvc2l0b3J5UmVx",
-            "dWVzdBJACgRuYW1lGAEgASgJQjLgQQL6QSwKKmFydGlmYWN0cmVnaXN0cnku",
-            "Z29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeSLDAQoXQ3JlYXRlUmVwb3NpdG9y",
-            "eVJlcXVlc3QSQgoGcGFyZW50GAEgASgJQjLgQQL6QSwSKmFydGlmYWN0cmVn",
-            "aXN0cnkuZ29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeRIaCg1yZXBvc2l0b3J5",
-            "X2lkGAIgASgJQgPgQQISSAoKcmVwb3NpdG9yeRgDIAEoCzIvLmdvb2dsZS5k",
-            "ZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlcG9zaXRvcnlCA+BBAiKP",
-            "AQoXVXBkYXRlUmVwb3NpdG9yeVJlcXVlc3QSQwoKcmVwb3NpdG9yeRgBIAEo",
-            "CzIvLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlcG9z",
-            "aXRvcnkSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "RmllbGRNYXNrIlsKF0RlbGV0ZVJlcG9zaXRvcnlSZXF1ZXN0EkAKBG5hbWUY",
-            "ASABKAlCMuBBAvpBLAoqYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNv",
-            "bS9SZXBvc2l0b3J5QugCCidjb20uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0",
-            "cmVnaXN0cnkudjFCD1JlcG9zaXRvcnlQcm90b1ABWlBjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2FydGlmYWN0cmVnaXN0cnkvYXBpdjEvYXJ0aWZhY3RyZWdpc3Ry",
-            "eXBiO2FydGlmYWN0cmVnaXN0cnlwYqoCIEdvb2dsZS5DbG91ZC5BcnRpZmFj",
-            "dFJlZ2lzdHJ5LlYxygIgR29vZ2xlXENsb3VkXEFydGlmYWN0UmVnaXN0cnlc",
-            "VjHqAiNHb29nbGU6OkNsb3VkOjpBcnRpZmFjdFJlZ2lzdHJ5OjpWMepBawoq",
-            "c2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uEj1w",
-            "cm9qZWN0cy97cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97",
-            "c2VjcmV0X3ZlcnNpb259YgZwcm90bzM="));
+            "KAkiXgoOUmVwb3NpdG9yeUJhc2USHwobUkVQT1NJVE9SWV9CQVNFX1VOU1BF",
+            "Q0lGSUVEEAASCgoGREVCSUFOEAESCgoGVUJVTlRVEAISEwoPREVCSUFOX1NO",
+            "QVBTSE9UEAMaHwoQQ3VzdG9tUmVwb3NpdG9yeRILCgN1cmkYASABKAlCCgoI",
+            "dXBzdHJlYW0a7QQKDVl1bVJlcG9zaXRvcnkSdwoRcHVibGljX3JlcG9zaXRv",
+            "cnkYASABKAsyWi5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52",
+            "MS5SZW1vdGVSZXBvc2l0b3J5Q29uZmlnLll1bVJlcG9zaXRvcnkuUHVibGlj",
+            "UmVwb3NpdG9yeUgAEncKEWN1c3RvbV9yZXBvc2l0b3J5GAMgASgLMlouZ29v",
+            "Z2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuUmVtb3RlUmVwb3Np",
+            "dG9yeUNvbmZpZy5ZdW1SZXBvc2l0b3J5LkN1c3RvbVJlcG9zaXRvcnlIABq8",
+            "AgoQUHVibGljUmVwb3NpdG9yeRKCAQoPcmVwb3NpdG9yeV9iYXNlGAEgASgO",
+            "MmkuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuUmVtb3Rl",
+            "UmVwb3NpdG9yeUNvbmZpZy5ZdW1SZXBvc2l0b3J5LlB1YmxpY1JlcG9zaXRv",
+            "cnkuUmVwb3NpdG9yeUJhc2USFwoPcmVwb3NpdG9yeV9wYXRoGAIgASgJIokB",
+            "Cg5SZXBvc2l0b3J5QmFzZRIfChtSRVBPU0lUT1JZX0JBU0VfVU5TUEVDSUZJ",
+            "RUQQABIKCgZDRU5UT1MQARIQCgxDRU5UT1NfREVCVUcQAhIQCgxDRU5UT1Nf",
+            "VkFVTFQQAxIRCg1DRU5UT1NfU1RSRUFNEAQSCQoFUk9DS1kQBRIICgRFUEVM",
+            "EAYaHwoQQ3VzdG9tUmVwb3NpdG9yeRILCgN1cmkYASABKAlCCgoIdXBzdHJl",
+            "YW0aKgoWQ29tbW9uUmVtb3RlUmVwb3NpdG9yeRIQCgN1cmkYASABKAlCA+BB",
+            "AkIPCg1yZW1vdGVfc291cmNlIpkUCgpSZXBvc2l0b3J5El0KDG1hdmVuX2Nv",
+            "bmZpZxgJIAEoCzJFLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5",
+            "LnYxLlJlcG9zaXRvcnkuTWF2ZW5SZXBvc2l0b3J5Q29uZmlnSAASXwoNZG9j",
+            "a2VyX2NvbmZpZxgRIAEoCzJGLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJl",
+            "Z2lzdHJ5LnYxLlJlcG9zaXRvcnkuRG9ja2VyUmVwb3NpdG9yeUNvbmZpZ0gA",
+            "EmEKGXZpcnR1YWxfcmVwb3NpdG9yeV9jb25maWcYDiABKAsyPC5nb29nbGUu",
+            "ZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5WaXJ0dWFsUmVwb3NpdG9y",
+            "eUNvbmZpZ0gBEl8KGHJlbW90ZV9yZXBvc2l0b3J5X2NvbmZpZxgPIAEoCzI7",
+            "Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlbW90ZVJl",
+            "cG9zaXRvcnlDb25maWdIARIMCgRuYW1lGAEgASgJEksKBmZvcm1hdBgCIAEo",
+            "DjI2Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlcG9z",
+            "aXRvcnkuRm9ybWF0QgPgQQESEwoLZGVzY3JpcHRpb24YAyABKAkSSwoGbGFi",
+            "ZWxzGAQgAygLMjsuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnku",
+            "djEuUmVwb3NpdG9yeS5MYWJlbHNFbnRyeRI0CgtjcmVhdGVfdGltZRgFIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
+            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIU",
+            "CgxrbXNfa2V5X25hbWUYCCABKAkSRwoEbW9kZRgKIAEoDjI0Lmdvb2dsZS5k",
+            "ZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlcG9zaXRvcnkuTW9kZUID",
+            "4EEBEmMKEGNsZWFudXBfcG9saWNpZXMYDCADKAsyRC5nb29nbGUuZGV2dG9v",
+            "bHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZXBvc2l0b3J5LkNsZWFudXBQb2xp",
+            "Y2llc0VudHJ5QgPgQQESFwoKc2l6ZV9ieXRlcxgNIAEoA0ID4EEDEhoKDXNh",
+            "dGlzZmllc19wenMYECABKAhCA+BBAxIjChZjbGVhbnVwX3BvbGljeV9kcnlf",
+            "cnVuGBIgASgIQgPgQQESdwoddnVsbmVyYWJpbGl0eV9zY2FubmluZ19jb25m",
+            "aWcYEyABKAsySy5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52",
+            "MS5SZXBvc2l0b3J5LlZ1bG5lcmFiaWxpdHlTY2FubmluZ0NvbmZpZ0ID4EEB",
+            "EiYKGWRpc2FsbG93X3Vuc3BlY2lmaWVkX21vZGUYFSABKAhCA+BBARIaCg1z",
+            "YXRpc2ZpZXNfcHppGBYgASgIQgPgQQMa8wEKFU1hdmVuUmVwb3NpdG9yeUNv",
+            "bmZpZxIhChlhbGxvd19zbmFwc2hvdF9vdmVyd3JpdGVzGAEgASgIEmsKDnZl",
+            "cnNpb25fcG9saWN5GAIgASgOMlMuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0",
+            "cmVnaXN0cnkudjEuUmVwb3NpdG9yeS5NYXZlblJlcG9zaXRvcnlDb25maWcu",
+            "VmVyc2lvblBvbGljeSJKCg1WZXJzaW9uUG9saWN5Eh4KGlZFUlNJT05fUE9M",
+            "SUNZX1VOU1BFQ0lGSUVEEAASCwoHUkVMRUFTRRABEgwKCFNOQVBTSE9UEAIa",
+            "MAoWRG9ja2VyUmVwb3NpdG9yeUNvbmZpZxIWCg5pbW11dGFibGVfdGFncxgB",
+            "IAEoCBrHBAobVnVsbmVyYWJpbGl0eVNjYW5uaW5nQ29uZmlnEnwKEWVuYWJs",
+            "ZW1lbnRfY29uZmlnGAEgASgOMlwuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0",
+            "cmVnaXN0cnkudjEuUmVwb3NpdG9yeS5WdWxuZXJhYmlsaXR5U2Nhbm5pbmdD",
+            "b25maWcuRW5hYmxlbWVudENvbmZpZ0ID4EEBEjkKEGxhc3RfZW5hYmxlX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSegoQ",
+            "ZW5hYmxlbWVudF9zdGF0ZRgDIAEoDjJbLmdvb2dsZS5kZXZ0b29scy5hcnRp",
+            "ZmFjdHJlZ2lzdHJ5LnYxLlJlcG9zaXRvcnkuVnVsbmVyYWJpbGl0eVNjYW5u",
+            "aW5nQ29uZmlnLkVuYWJsZW1lbnRTdGF0ZUID4EEDEiQKF2VuYWJsZW1lbnRf",
+            "c3RhdGVfcmVhc29uGAQgASgJQgPgQQMiUgoQRW5hYmxlbWVudENvbmZpZxIh",
+            "Ch1FTkFCTEVNRU5UX0NPTkZJR19VTlNQRUNJRklFRBAAEg0KCUlOSEVSSVRF",
+            "RBABEgwKCERJU0FCTEVEEAIieQoPRW5hYmxlbWVudFN0YXRlEiAKHEVOQUJM",
+            "RU1FTlRfU1RBVEVfVU5TUEVDSUZJRUQQABIYChRTQ0FOTklOR19VTlNVUFBP",
+            "UlRFRBABEhUKEVNDQU5OSU5HX0RJU0FCTEVEEAISEwoPU0NBTk5JTkdfQUNU",
+            "SVZFEAMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ARpqChRDbGVhbnVwUG9saWNpZXNFbnRyeRILCgNrZXkYASABKAkS",
+            "QQoFdmFsdWUYAiABKAsyMi5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdp",
+            "c3RyeS52MS5DbGVhbnVwUG9saWN5OgI4ASJ8CgZGb3JtYXQSFgoSRk9STUFU",
+            "X1VOU1BFQ0lGSUVEEAASCgoGRE9DS0VSEAESCQoFTUFWRU4QAhIHCgNOUE0Q",
+            "AxIHCgNBUFQQBRIHCgNZVU0QBhIKCgZQWVRIT04QCBIHCgNLRlAQCRIGCgJH",
+            "TxAKEgsKB0dFTkVSSUMQCyJkCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQ",
+            "ABIXChNTVEFOREFSRF9SRVBPU0lUT1JZEAESFgoSVklSVFVBTF9SRVBPU0lU",
+            "T1JZEAISFQoRUkVNT1RFX1JFUE9TSVRPUlkQAzpy6kFvCiphcnRpZmFjdHJl",
+            "Z2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1JlcG9zaXRvcnkSQXByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXBvc2l0b3JpZXMve3Jl",
+            "cG9zaXRvcnl9Qg8KDWZvcm1hdF9jb25maWdCDQoLbW9kZV9jb25maWcisAEK",
+            "F0xpc3RSZXBvc2l0b3JpZXNSZXF1ZXN0EkIKBnBhcmVudBgBIAEoCUIy4EEC",
+            "+kEsEiphcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1JlcG9zaXRv",
+            "cnkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSEwoG",
+            "ZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASJ6ChhM",
+            "aXN0UmVwb3NpdG9yaWVzUmVzcG9uc2USRQoMcmVwb3NpdG9yaWVzGAEgAygL",
+            "Mi8uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuUmVwb3Np",
+            "dG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiWAoUR2V0UmVwb3NpdG9y",
+            "eVJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEsCiphcnRpZmFjdHJlZ2lz",
+            "dHJ5Lmdvb2dsZWFwaXMuY29tL1JlcG9zaXRvcnkiwwEKF0NyZWF0ZVJlcG9z",
+            "aXRvcnlSZXF1ZXN0EkIKBnBhcmVudBgBIAEoCUIy4EEC+kEsEiphcnRpZmFj",
+            "dHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1JlcG9zaXRvcnkSGgoNcmVwb3Np",
+            "dG9yeV9pZBgCIAEoCUID4EECEkgKCnJlcG9zaXRvcnkYAyABKAsyLy5nb29n",
+            "bGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZXBvc2l0b3J5QgPg",
+            "QQIijwEKF1VwZGF0ZVJlcG9zaXRvcnlSZXF1ZXN0EkMKCnJlcG9zaXRvcnkY",
+            "ASABKAsyLy5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5S",
+            "ZXBvc2l0b3J5Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkZpZWxkTWFzayJbChdEZWxldGVSZXBvc2l0b3J5UmVxdWVzdBJACgRu",
+            "YW1lGAEgASgJQjLgQQL6QSwKKmFydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBp",
+            "cy5jb20vUmVwb3NpdG9yeULnAwonY29tLmdvb2dsZS5kZXZ0b29scy5hcnRp",
+            "ZmFjdHJlZ2lzdHJ5LnYxQg9SZXBvc2l0b3J5UHJvdG9QAVpQY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9hcnRpZmFjdHJlZ2lzdHJ5L2FwaXYxL2FydGlmYWN0cmVn",
+            "aXN0cnlwYjthcnRpZmFjdHJlZ2lzdHJ5cGKqAiBHb29nbGUuQ2xvdWQuQXJ0",
+            "aWZhY3RSZWdpc3RyeS5WMcoCIEdvb2dsZVxDbG91ZFxBcnRpZmFjdFJlZ2lz",
+            "dHJ5XFYx6gIjR29vZ2xlOjpDbG91ZDo6QXJ0aWZhY3RSZWdpc3RyeTo6VjHq",
+            "QWsKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lv",
+            "bhI9cHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH0vdmVyc2lv",
+            "bnMve3NlY3JldF92ZXJzaW9ufepBfAonc2VydmljZWRpcmVjdG9yeS5nb29n",
+            "bGVhcGlzLmNvbS9TZXJ2aWNlElFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vbmFtZXNwYWNlcy97bmFtZXNwYWNlfS9zZXJ2aWNl",
+            "cy97c2VydmljZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -193,17 +240,21 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.CleanupPolicyMostRecentVersions), global::Google.Cloud.ArtifactRegistry.V1.CleanupPolicyMostRecentVersions.Parser, new[]{ "PackageNamePrefixes", "KeepCount" }, new[]{ "KeepCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.CleanupPolicy), global::Google.Cloud.ArtifactRegistry.V1.CleanupPolicy.Parser, new[]{ "Condition", "MostRecentVersions", "Id", "Action" }, new[]{ "ConditionType" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.CleanupPolicy.Types.Action) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.VirtualRepositoryConfig), global::Google.Cloud.ArtifactRegistry.V1.VirtualRepositoryConfig.Parser, new[]{ "UpstreamPolicies" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Parser, new[]{ "DockerRepository", "MavenRepository", "NpmRepository", "PythonRepository", "AptRepository", "YumRepository", "Description", "UpstreamCredentials" }, new[]{ "RemoteSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials.Parser, new[]{ "UsernamePasswordCredentials" }, new[]{ "Credentials" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials.Types.UsernamePasswordCredentials), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials.Types.UsernamePasswordCredentials.Parser, new[]{ "Username", "PasswordSecretVersion" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Parser, new[]{ "PublicRepository" }, new[]{ "Upstream" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.PublicRepository) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Parser, new[]{ "PublicRepository" }, new[]{ "Upstream" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.PublicRepository) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Parser, new[]{ "PublicRepository" }, new[]{ "Upstream" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.PublicRepository) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Parser, new[]{ "PublicRepository" }, new[]{ "Upstream" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.PublicRepository) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Parser, new[]{ "PublicRepository" }, new[]{ "Upstream" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.PublicRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.PublicRepository.Parser, new[]{ "RepositoryBase", "RepositoryPath" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.PublicRepository.Types.RepositoryBase) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Parser, new[]{ "PublicRepository" }, new[]{ "Upstream" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.PublicRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.PublicRepository.Parser, new[]{ "RepositoryBase", "RepositoryPath" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.PublicRepository.Types.RepositoryBase) }, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository), global::Google.Cloud.ArtifactRegistry.V1.Repository.Parser, new[]{ "MavenConfig", "DockerConfig", "VirtualRepositoryConfig", "RemoteRepositoryConfig", "Name", "Format", "Description", "Labels", "CreateTime", "UpdateTime", "KmsKeyName", "Mode", "CleanupPolicies", "SizeBytes", "SatisfiesPzs", "CleanupPolicyDryRun" }, new[]{ "FormatConfig", "ModeConfig" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.Format), typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.MavenRepositoryConfig), global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.MavenRepositoryConfig.Parser, new[]{ "AllowSnapshotOverwrites", "VersionPolicy" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.MavenRepositoryConfig.Types.VersionPolicy) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Parser, new[]{ "DockerRepository", "MavenRepository", "NpmRepository", "PythonRepository", "AptRepository", "YumRepository", "CommonRepository", "Description", "UpstreamCredentials", "DisableUpstreamValidation" }, new[]{ "RemoteSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials.Parser, new[]{ "UsernamePasswordCredentials" }, new[]{ "Credentials" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials.Types.UsernamePasswordCredentials), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials.Types.UsernamePasswordCredentials.Parser, new[]{ "Username", "PasswordSecretVersion" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Parser, new[]{ "PublicRepository", "CustomRepository" }, new[]{ "Upstream" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.PublicRepository) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository.Parser, new[]{ "Uri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Parser, new[]{ "PublicRepository", "CustomRepository" }, new[]{ "Upstream" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.PublicRepository) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository.Parser, new[]{ "Uri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Parser, new[]{ "PublicRepository", "CustomRepository" }, new[]{ "Upstream" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.PublicRepository) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository.Parser, new[]{ "Uri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Parser, new[]{ "PublicRepository", "CustomRepository" }, new[]{ "Upstream" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.PublicRepository) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository.Parser, new[]{ "Uri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Parser, new[]{ "PublicRepository", "CustomRepository" }, new[]{ "Upstream" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.PublicRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.PublicRepository.Parser, new[]{ "RepositoryBase", "RepositoryPath" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.PublicRepository.Types.RepositoryBase) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository.Parser, new[]{ "Uri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Parser, new[]{ "PublicRepository", "CustomRepository" }, new[]{ "Upstream" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.PublicRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.PublicRepository.Parser, new[]{ "RepositoryBase", "RepositoryPath" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.PublicRepository.Types.RepositoryBase) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository.Parser, new[]{ "Uri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository), global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository.Parser, new[]{ "Uri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository), global::Google.Cloud.ArtifactRegistry.V1.Repository.Parser, new[]{ "MavenConfig", "DockerConfig", "VirtualRepositoryConfig", "RemoteRepositoryConfig", "Name", "Format", "Description", "Labels", "CreateTime", "UpdateTime", "KmsKeyName", "Mode", "CleanupPolicies", "SizeBytes", "SatisfiesPzs", "CleanupPolicyDryRun", "VulnerabilityScanningConfig", "DisallowUnspecifiedMode", "SatisfiesPzi" }, new[]{ "FormatConfig", "ModeConfig" }, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.Format), typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.MavenRepositoryConfig), global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.MavenRepositoryConfig.Parser, new[]{ "AllowSnapshotOverwrites", "VersionPolicy" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.MavenRepositoryConfig.Types.VersionPolicy) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.DockerRepositoryConfig), global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.DockerRepositoryConfig.Parser, new[]{ "ImmutableTags" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig), global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Parser, new[]{ "EnablementConfig", "LastEnableTime", "EnablementState", "EnablementStateReason" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig), typeof(global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState) }, null, null),
             null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListRepositoriesRequest), global::Google.Cloud.ArtifactRegistry.V1.ListRepositoriesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListRepositoriesRequest), global::Google.Cloud.ArtifactRegistry.V1.ListRepositoriesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListRepositoriesResponse), global::Google.Cloud.ArtifactRegistry.V1.ListRepositoriesResponse.Parser, new[]{ "Repositories", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetRepositoryRequest), global::Google.Cloud.ArtifactRegistry.V1.GetRepositoryRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.CreateRepositoryRequest), global::Google.Cloud.ArtifactRegistry.V1.CreateRepositoryRequest.Parser, new[]{ "Parent", "RepositoryId", "Repository" }, null, null, null, null),
@@ -1793,6 +1844,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public RemoteRepositoryConfig(RemoteRepositoryConfig other) : this() {
       description_ = other.description_;
       upstreamCredentials_ = other.upstreamCredentials_ != null ? other.upstreamCredentials_.Clone() : null;
+      disableUpstreamValidation_ = other.disableUpstreamValidation_;
       switch (other.RemoteSourceCase) {
         case RemoteSourceOneofCase.DockerRepository:
           DockerRepository = other.DockerRepository.Clone();
@@ -1811,6 +1863,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           break;
         case RemoteSourceOneofCase.YumRepository:
           YumRepository = other.YumRepository.Clone();
+          break;
+        case RemoteSourceOneofCase.CommonRepository:
+          CommonRepository = other.CommonRepository.Clone();
           break;
       }
 
@@ -1913,6 +1968,22 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "common_repository" field.</summary>
+    public const int CommonRepositoryFieldNumber = 14;
+    /// <summary>
+    /// Common remote repository settings.
+    /// Used as the remote repository upstream URL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository CommonRepository {
+      get { return remoteSourceCase_ == RemoteSourceOneofCase.CommonRepository ? (global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository) remoteSource_ : null; }
+      set {
+        remoteSource_ = value;
+        remoteSourceCase_ = value == null ? RemoteSourceOneofCase.None : RemoteSourceOneofCase.CommonRepository;
+      }
+    }
+
     /// <summary>Field number for the "description" field.</summary>
     public const int DescriptionFieldNumber = 1;
     private string description_ = "";
@@ -1943,6 +2014,22 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "disable_upstream_validation" field.</summary>
+    public const int DisableUpstreamValidationFieldNumber = 12;
+    private bool disableUpstreamValidation_;
+    /// <summary>
+    /// Input only. A create/update remote repo option to avoid making a HEAD/GET
+    /// request to validate a remote repo and any supplied upstream credentials.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisableUpstreamValidation {
+      get { return disableUpstreamValidation_; }
+      set {
+        disableUpstreamValidation_ = value;
+      }
+    }
+
     private object remoteSource_;
     /// <summary>Enum of possible cases for the "remote_source" oneof.</summary>
     public enum RemoteSourceOneofCase {
@@ -1953,6 +2040,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       PythonRepository = 5,
       AptRepository = 6,
       YumRepository = 7,
+      CommonRepository = 14,
     }
     private RemoteSourceOneofCase remoteSourceCase_ = RemoteSourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1989,8 +2077,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (!object.Equals(PythonRepository, other.PythonRepository)) return false;
       if (!object.Equals(AptRepository, other.AptRepository)) return false;
       if (!object.Equals(YumRepository, other.YumRepository)) return false;
+      if (!object.Equals(CommonRepository, other.CommonRepository)) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(UpstreamCredentials, other.UpstreamCredentials)) return false;
+      if (DisableUpstreamValidation != other.DisableUpstreamValidation) return false;
       if (RemoteSourceCase != other.RemoteSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2005,8 +2095,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (remoteSourceCase_ == RemoteSourceOneofCase.PythonRepository) hash ^= PythonRepository.GetHashCode();
       if (remoteSourceCase_ == RemoteSourceOneofCase.AptRepository) hash ^= AptRepository.GetHashCode();
       if (remoteSourceCase_ == RemoteSourceOneofCase.YumRepository) hash ^= YumRepository.GetHashCode();
+      if (remoteSourceCase_ == RemoteSourceOneofCase.CommonRepository) hash ^= CommonRepository.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (upstreamCredentials_ != null) hash ^= UpstreamCredentials.GetHashCode();
+      if (DisableUpstreamValidation != false) hash ^= DisableUpstreamValidation.GetHashCode();
       hash ^= (int) remoteSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2058,6 +2150,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(UpstreamCredentials);
       }
+      if (DisableUpstreamValidation != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(DisableUpstreamValidation);
+      }
+      if (remoteSourceCase_ == RemoteSourceOneofCase.CommonRepository) {
+        output.WriteRawTag(114);
+        output.WriteMessage(CommonRepository);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2100,6 +2200,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(UpstreamCredentials);
       }
+      if (DisableUpstreamValidation != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(DisableUpstreamValidation);
+      }
+      if (remoteSourceCase_ == RemoteSourceOneofCase.CommonRepository) {
+        output.WriteRawTag(114);
+        output.WriteMessage(CommonRepository);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2128,11 +2236,17 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (remoteSourceCase_ == RemoteSourceOneofCase.YumRepository) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(YumRepository);
       }
+      if (remoteSourceCase_ == RemoteSourceOneofCase.CommonRepository) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommonRepository);
+      }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
       if (upstreamCredentials_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpstreamCredentials);
+      }
+      if (DisableUpstreamValidation != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2154,6 +2268,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           UpstreamCredentials = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials();
         }
         UpstreamCredentials.MergeFrom(other.UpstreamCredentials);
+      }
+      if (other.DisableUpstreamValidation != false) {
+        DisableUpstreamValidation = other.DisableUpstreamValidation;
       }
       switch (other.RemoteSourceCase) {
         case RemoteSourceOneofCase.DockerRepository:
@@ -2191,6 +2308,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             YumRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository();
           }
           YumRepository.MergeFrom(other.YumRepository);
+          break;
+        case RemoteSourceOneofCase.CommonRepository:
+          if (CommonRepository == null) {
+            CommonRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository();
+          }
+          CommonRepository.MergeFrom(other.CommonRepository);
           break;
       }
 
@@ -2274,6 +2397,19 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             input.ReadMessage(UpstreamCredentials);
             break;
           }
+          case 96: {
+            DisableUpstreamValidation = input.ReadBool();
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository();
+            if (remoteSourceCase_ == RemoteSourceOneofCase.CommonRepository) {
+              subBuilder.MergeFrom(CommonRepository);
+            }
+            input.ReadMessage(subBuilder);
+            CommonRepository = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2352,6 +2488,19 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
               UpstreamCredentials = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.UpstreamCredentials();
             }
             input.ReadMessage(UpstreamCredentials);
+            break;
+          }
+          case 96: {
+            DisableUpstreamValidation = input.ReadBool();
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.CommonRemoteRepository();
+            if (remoteSourceCase_ == RemoteSourceOneofCase.CommonRepository) {
+              subBuilder.MergeFrom(CommonRepository);
+            }
+            input.ReadMessage(subBuilder);
+            CommonRepository = subBuilder;
             break;
           }
         }
@@ -2891,6 +3040,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository;
               break;
+            case UpstreamOneofCase.CustomRepository:
+              CustomRepository = other.CustomRepository.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2932,11 +3084,27 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
         }
 
+        /// <summary>Field number for the "custom_repository" field.</summary>
+        public const int CustomRepositoryFieldNumber = 3;
+        /// <summary>
+        /// Customer-specified remote repository.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository CustomRepository {
+          get { return upstreamCase_ == UpstreamOneofCase.CustomRepository ? (global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository) upstream_ : null; }
+          set {
+            upstream_ = value;
+            upstreamCase_ = value == null ? UpstreamOneofCase.None : UpstreamOneofCase.CustomRepository;
+          }
+        }
+
         private object upstream_;
         /// <summary>Enum of possible cases for the "upstream" oneof.</summary>
         public enum UpstreamOneofCase {
           None = 0,
           PublicRepository = 1,
+          CustomRepository = 3,
         }
         private UpstreamOneofCase upstreamCase_ = UpstreamOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2968,6 +3136,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             return true;
           }
           if (PublicRepository != other.PublicRepository) return false;
+          if (!object.Equals(CustomRepository, other.CustomRepository)) return false;
           if (UpstreamCase != other.UpstreamCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -2977,6 +3146,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (HasPublicRepository) hash ^= PublicRepository.GetHashCode();
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) hash ^= CustomRepository.GetHashCode();
           hash ^= (int) upstreamCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -3000,6 +3170,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3014,6 +3188,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3026,6 +3204,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           int size = 0;
           if (HasPublicRepository) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PublicRepository);
+          }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomRepository);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3042,6 +3223,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           switch (other.UpstreamCase) {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository;
+              break;
+            case UpstreamOneofCase.CustomRepository:
+              if (CustomRepository == null) {
+                CustomRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository();
+              }
+              CustomRepository.MergeFrom(other.CustomRepository);
               break;
           }
 
@@ -3065,6 +3252,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 upstreamCase_ = UpstreamOneofCase.PublicRepository;
                 break;
               }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -3083,6 +3279,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
               case 8: {
                 upstream_ = input.ReadEnum();
                 upstreamCase_ = UpstreamOneofCase.PublicRepository;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
                 break;
               }
             }
@@ -3108,6 +3313,203 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             /// Docker Hub.
             /// </summary>
             [pbr::OriginalName("DOCKER_HUB")] DockerHub = 1,
+          }
+
+          /// <summary>
+          /// Customer-specified publicly available remote repository.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CustomRepository : pb::IMessage<CustomRepository>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CustomRepository> _parser = new pb::MessageParser<CustomRepository>(() => new CustomRepository());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CustomRepository> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.DockerRepository.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository(CustomRepository other) : this() {
+              uri_ = other.uri_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository Clone() {
+              return new CustomRepository(this);
+            }
+
+            /// <summary>Field number for the "uri" field.</summary>
+            public const int UriFieldNumber = 1;
+            private string uri_ = "";
+            /// <summary>
+            /// An http/https uri reference to the custom remote repository, for ex:
+            /// "https://registry-1.docker.io".
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Uri {
+              get { return uri_; }
+              set {
+                uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CustomRepository);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CustomRepository other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Uri != other.Uri) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Uri.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CustomRepository other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Uri.Length != 0) {
+                Uri = other.Uri;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
           }
 
         }
@@ -3157,6 +3559,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository;
               break;
+            case UpstreamOneofCase.CustomRepository:
+              CustomRepository = other.CustomRepository.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3198,11 +3603,27 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
         }
 
+        /// <summary>Field number for the "custom_repository" field.</summary>
+        public const int CustomRepositoryFieldNumber = 3;
+        /// <summary>
+        /// Customer-specified remote repository.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository CustomRepository {
+          get { return upstreamCase_ == UpstreamOneofCase.CustomRepository ? (global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository) upstream_ : null; }
+          set {
+            upstream_ = value;
+            upstreamCase_ = value == null ? UpstreamOneofCase.None : UpstreamOneofCase.CustomRepository;
+          }
+        }
+
         private object upstream_;
         /// <summary>Enum of possible cases for the "upstream" oneof.</summary>
         public enum UpstreamOneofCase {
           None = 0,
           PublicRepository = 1,
+          CustomRepository = 3,
         }
         private UpstreamOneofCase upstreamCase_ = UpstreamOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3234,6 +3655,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             return true;
           }
           if (PublicRepository != other.PublicRepository) return false;
+          if (!object.Equals(CustomRepository, other.CustomRepository)) return false;
           if (UpstreamCase != other.UpstreamCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -3243,6 +3665,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (HasPublicRepository) hash ^= PublicRepository.GetHashCode();
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) hash ^= CustomRepository.GetHashCode();
           hash ^= (int) upstreamCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -3266,6 +3689,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3280,6 +3707,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3292,6 +3723,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           int size = 0;
           if (HasPublicRepository) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PublicRepository);
+          }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomRepository);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3308,6 +3742,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           switch (other.UpstreamCase) {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository;
+              break;
+            case UpstreamOneofCase.CustomRepository:
+              if (CustomRepository == null) {
+                CustomRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository();
+              }
+              CustomRepository.MergeFrom(other.CustomRepository);
               break;
           }
 
@@ -3331,6 +3771,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 upstreamCase_ = UpstreamOneofCase.PublicRepository;
                 break;
               }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -3349,6 +3798,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
               case 8: {
                 upstream_ = input.ReadEnum();
                 upstreamCase_ = UpstreamOneofCase.PublicRepository;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
                 break;
               }
             }
@@ -3374,6 +3832,203 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             /// Maven Central.
             /// </summary>
             [pbr::OriginalName("MAVEN_CENTRAL")] MavenCentral = 1,
+          }
+
+          /// <summary>
+          /// Customer-specified publicly available remote repository.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CustomRepository : pb::IMessage<CustomRepository>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CustomRepository> _parser = new pb::MessageParser<CustomRepository>(() => new CustomRepository());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CustomRepository> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.MavenRepository.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository(CustomRepository other) : this() {
+              uri_ = other.uri_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository Clone() {
+              return new CustomRepository(this);
+            }
+
+            /// <summary>Field number for the "uri" field.</summary>
+            public const int UriFieldNumber = 1;
+            private string uri_ = "";
+            /// <summary>
+            /// An http/https uri reference to the upstream remote repository, for ex:
+            /// "https://my.maven.registry/".
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Uri {
+              get { return uri_; }
+              set {
+                uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CustomRepository);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CustomRepository other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Uri != other.Uri) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Uri.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CustomRepository other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Uri.Length != 0) {
+                Uri = other.Uri;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
           }
 
         }
@@ -3423,6 +4078,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository;
               break;
+            case UpstreamOneofCase.CustomRepository:
+              CustomRepository = other.CustomRepository.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3464,11 +4122,27 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
         }
 
+        /// <summary>Field number for the "custom_repository" field.</summary>
+        public const int CustomRepositoryFieldNumber = 3;
+        /// <summary>
+        /// Customer-specified remote repository.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository CustomRepository {
+          get { return upstreamCase_ == UpstreamOneofCase.CustomRepository ? (global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository) upstream_ : null; }
+          set {
+            upstream_ = value;
+            upstreamCase_ = value == null ? UpstreamOneofCase.None : UpstreamOneofCase.CustomRepository;
+          }
+        }
+
         private object upstream_;
         /// <summary>Enum of possible cases for the "upstream" oneof.</summary>
         public enum UpstreamOneofCase {
           None = 0,
           PublicRepository = 1,
+          CustomRepository = 3,
         }
         private UpstreamOneofCase upstreamCase_ = UpstreamOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3500,6 +4174,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             return true;
           }
           if (PublicRepository != other.PublicRepository) return false;
+          if (!object.Equals(CustomRepository, other.CustomRepository)) return false;
           if (UpstreamCase != other.UpstreamCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -3509,6 +4184,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (HasPublicRepository) hash ^= PublicRepository.GetHashCode();
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) hash ^= CustomRepository.GetHashCode();
           hash ^= (int) upstreamCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -3532,6 +4208,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3546,6 +4226,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3558,6 +4242,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           int size = 0;
           if (HasPublicRepository) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PublicRepository);
+          }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomRepository);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3574,6 +4261,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           switch (other.UpstreamCase) {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository;
+              break;
+            case UpstreamOneofCase.CustomRepository:
+              if (CustomRepository == null) {
+                CustomRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository();
+              }
+              CustomRepository.MergeFrom(other.CustomRepository);
               break;
           }
 
@@ -3597,6 +4290,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 upstreamCase_ = UpstreamOneofCase.PublicRepository;
                 break;
               }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -3615,6 +4317,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
               case 8: {
                 upstream_ = input.ReadEnum();
                 upstreamCase_ = UpstreamOneofCase.PublicRepository;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
                 break;
               }
             }
@@ -3639,6 +4350,203 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             /// npmjs.
             /// </summary>
             [pbr::OriginalName("NPMJS")] Npmjs = 1,
+          }
+
+          /// <summary>
+          /// Customer-specified publicly available remote repository.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CustomRepository : pb::IMessage<CustomRepository>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CustomRepository> _parser = new pb::MessageParser<CustomRepository>(() => new CustomRepository());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CustomRepository> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.NpmRepository.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository(CustomRepository other) : this() {
+              uri_ = other.uri_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository Clone() {
+              return new CustomRepository(this);
+            }
+
+            /// <summary>Field number for the "uri" field.</summary>
+            public const int UriFieldNumber = 1;
+            private string uri_ = "";
+            /// <summary>
+            /// An http/https uri reference to the upstream remote repository, for ex:
+            /// "https://my.npm.registry/".
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Uri {
+              get { return uri_; }
+              set {
+                uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CustomRepository);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CustomRepository other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Uri != other.Uri) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Uri.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CustomRepository other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Uri.Length != 0) {
+                Uri = other.Uri;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
           }
 
         }
@@ -3688,6 +4596,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository;
               break;
+            case UpstreamOneofCase.CustomRepository:
+              CustomRepository = other.CustomRepository.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3729,11 +4640,27 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
         }
 
+        /// <summary>Field number for the "custom_repository" field.</summary>
+        public const int CustomRepositoryFieldNumber = 3;
+        /// <summary>
+        /// Customer-specified remote repository.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository CustomRepository {
+          get { return upstreamCase_ == UpstreamOneofCase.CustomRepository ? (global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository) upstream_ : null; }
+          set {
+            upstream_ = value;
+            upstreamCase_ = value == null ? UpstreamOneofCase.None : UpstreamOneofCase.CustomRepository;
+          }
+        }
+
         private object upstream_;
         /// <summary>Enum of possible cases for the "upstream" oneof.</summary>
         public enum UpstreamOneofCase {
           None = 0,
           PublicRepository = 1,
+          CustomRepository = 3,
         }
         private UpstreamOneofCase upstreamCase_ = UpstreamOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3765,6 +4692,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             return true;
           }
           if (PublicRepository != other.PublicRepository) return false;
+          if (!object.Equals(CustomRepository, other.CustomRepository)) return false;
           if (UpstreamCase != other.UpstreamCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -3774,6 +4702,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (HasPublicRepository) hash ^= PublicRepository.GetHashCode();
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) hash ^= CustomRepository.GetHashCode();
           hash ^= (int) upstreamCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -3797,6 +4726,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3811,6 +4744,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3823,6 +4760,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           int size = 0;
           if (HasPublicRepository) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PublicRepository);
+          }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomRepository);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3839,6 +4779,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           switch (other.UpstreamCase) {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository;
+              break;
+            case UpstreamOneofCase.CustomRepository:
+              if (CustomRepository == null) {
+                CustomRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository();
+              }
+              CustomRepository.MergeFrom(other.CustomRepository);
               break;
           }
 
@@ -3862,6 +4808,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 upstreamCase_ = UpstreamOneofCase.PublicRepository;
                 break;
               }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -3880,6 +4835,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
               case 8: {
                 upstream_ = input.ReadEnum();
                 upstreamCase_ = UpstreamOneofCase.PublicRepository;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
                 break;
               }
             }
@@ -3904,6 +4868,203 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             /// PyPI.
             /// </summary>
             [pbr::OriginalName("PYPI")] Pypi = 1,
+          }
+
+          /// <summary>
+          /// Customer-specified publicly available remote repository.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CustomRepository : pb::IMessage<CustomRepository>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CustomRepository> _parser = new pb::MessageParser<CustomRepository>(() => new CustomRepository());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CustomRepository> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.PythonRepository.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository(CustomRepository other) : this() {
+              uri_ = other.uri_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository Clone() {
+              return new CustomRepository(this);
+            }
+
+            /// <summary>Field number for the "uri" field.</summary>
+            public const int UriFieldNumber = 1;
+            private string uri_ = "";
+            /// <summary>
+            /// An http/https uri reference to the upstream remote repository, for ex:
+            /// "https://my.python.registry/".
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Uri {
+              get { return uri_; }
+              set {
+                uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CustomRepository);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CustomRepository other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Uri != other.Uri) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Uri.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CustomRepository other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Uri.Length != 0) {
+                Uri = other.Uri;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
           }
 
         }
@@ -3953,6 +5114,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository.Clone();
               break;
+            case UpstreamOneofCase.CustomRepository:
+              CustomRepository = other.CustomRepository.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3980,11 +5144,27 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
         }
 
+        /// <summary>Field number for the "custom_repository" field.</summary>
+        public const int CustomRepositoryFieldNumber = 3;
+        /// <summary>
+        /// Customer-specified remote repository.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository CustomRepository {
+          get { return upstreamCase_ == UpstreamOneofCase.CustomRepository ? (global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository) upstream_ : null; }
+          set {
+            upstream_ = value;
+            upstreamCase_ = value == null ? UpstreamOneofCase.None : UpstreamOneofCase.CustomRepository;
+          }
+        }
+
         private object upstream_;
         /// <summary>Enum of possible cases for the "upstream" oneof.</summary>
         public enum UpstreamOneofCase {
           None = 0,
           PublicRepository = 1,
+          CustomRepository = 3,
         }
         private UpstreamOneofCase upstreamCase_ = UpstreamOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4016,6 +5196,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             return true;
           }
           if (!object.Equals(PublicRepository, other.PublicRepository)) return false;
+          if (!object.Equals(CustomRepository, other.CustomRepository)) return false;
           if (UpstreamCase != other.UpstreamCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -4025,6 +5206,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (upstreamCase_ == UpstreamOneofCase.PublicRepository) hash ^= PublicRepository.GetHashCode();
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) hash ^= CustomRepository.GetHashCode();
           hash ^= (int) upstreamCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -4048,6 +5230,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4062,6 +5248,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4074,6 +5264,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           int size = 0;
           if (upstreamCase_ == UpstreamOneofCase.PublicRepository) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(PublicRepository);
+          }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomRepository);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4093,6 +5286,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 PublicRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.PublicRepository();
               }
               PublicRepository.MergeFrom(other.PublicRepository);
+              break;
+            case UpstreamOneofCase.CustomRepository:
+              if (CustomRepository == null) {
+                CustomRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository();
+              }
+              CustomRepository.MergeFrom(other.CustomRepository);
               break;
           }
 
@@ -4120,6 +5319,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 PublicRepository = subBuilder;
                 break;
               }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -4142,6 +5350,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 PublicRepository = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
                 break;
               }
             }
@@ -4410,10 +5627,211 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 /// Ubuntu LTS/Pro.
                 /// </summary>
                 [pbr::OriginalName("UBUNTU")] Ubuntu = 2,
+                /// <summary>
+                /// Archived Debian.
+                /// </summary>
+                [pbr::OriginalName("DEBIAN_SNAPSHOT")] DebianSnapshot = 3,
               }
 
             }
             #endregion
+
+          }
+
+          /// <summary>
+          /// Customer-specified publicly available remote repository.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CustomRepository : pb::IMessage<CustomRepository>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CustomRepository> _parser = new pb::MessageParser<CustomRepository>(() => new CustomRepository());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CustomRepository> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.AptRepository.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository(CustomRepository other) : this() {
+              uri_ = other.uri_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository Clone() {
+              return new CustomRepository(this);
+            }
+
+            /// <summary>Field number for the "uri" field.</summary>
+            public const int UriFieldNumber = 1;
+            private string uri_ = "";
+            /// <summary>
+            /// An http/https uri reference to the upstream remote repository, for ex:
+            /// "https://my.apt.registry/".
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Uri {
+              get { return uri_; }
+              set {
+                uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CustomRepository);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CustomRepository other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Uri != other.Uri) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Uri.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CustomRepository other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Uri.Length != 0) {
+                Uri = other.Uri;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -4464,6 +5882,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             case UpstreamOneofCase.PublicRepository:
               PublicRepository = other.PublicRepository.Clone();
               break;
+            case UpstreamOneofCase.CustomRepository:
+              CustomRepository = other.CustomRepository.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4491,11 +5912,27 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
         }
 
+        /// <summary>Field number for the "custom_repository" field.</summary>
+        public const int CustomRepositoryFieldNumber = 3;
+        /// <summary>
+        /// Customer-specified remote repository.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository CustomRepository {
+          get { return upstreamCase_ == UpstreamOneofCase.CustomRepository ? (global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository) upstream_ : null; }
+          set {
+            upstream_ = value;
+            upstreamCase_ = value == null ? UpstreamOneofCase.None : UpstreamOneofCase.CustomRepository;
+          }
+        }
+
         private object upstream_;
         /// <summary>Enum of possible cases for the "upstream" oneof.</summary>
         public enum UpstreamOneofCase {
           None = 0,
           PublicRepository = 1,
+          CustomRepository = 3,
         }
         private UpstreamOneofCase upstreamCase_ = UpstreamOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4527,6 +5964,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             return true;
           }
           if (!object.Equals(PublicRepository, other.PublicRepository)) return false;
+          if (!object.Equals(CustomRepository, other.CustomRepository)) return false;
           if (UpstreamCase != other.UpstreamCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -4536,6 +5974,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (upstreamCase_ == UpstreamOneofCase.PublicRepository) hash ^= PublicRepository.GetHashCode();
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) hash ^= CustomRepository.GetHashCode();
           hash ^= (int) upstreamCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -4559,6 +5998,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4573,6 +6016,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(PublicRepository);
           }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomRepository);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4585,6 +6032,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           int size = 0;
           if (upstreamCase_ == UpstreamOneofCase.PublicRepository) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(PublicRepository);
+          }
+          if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomRepository);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4604,6 +6054,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 PublicRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.PublicRepository();
               }
               PublicRepository.MergeFrom(other.PublicRepository);
+              break;
+            case UpstreamOneofCase.CustomRepository:
+              if (CustomRepository == null) {
+                CustomRepository = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository();
+              }
+              CustomRepository.MergeFrom(other.CustomRepository);
               break;
           }
 
@@ -4631,6 +6087,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 PublicRepository = subBuilder;
                 break;
               }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -4653,6 +6118,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 PublicRepository = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository subBuilder = new global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Types.CustomRepository();
+                if (upstreamCase_ == UpstreamOneofCase.CustomRepository) {
+                  subBuilder.MergeFrom(CustomRepository);
+                }
+                input.ReadMessage(subBuilder);
+                CustomRepository = subBuilder;
                 break;
               }
             }
@@ -4944,8 +6418,401 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
 
           }
 
+          /// <summary>
+          /// Customer-specified publicly available remote repository.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CustomRepository : pb::IMessage<CustomRepository>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CustomRepository> _parser = new pb::MessageParser<CustomRepository>(() => new CustomRepository());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CustomRepository> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Types.YumRepository.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository(CustomRepository other) : this() {
+              uri_ = other.uri_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CustomRepository Clone() {
+              return new CustomRepository(this);
+            }
+
+            /// <summary>Field number for the "uri" field.</summary>
+            public const int UriFieldNumber = 1;
+            private string uri_ = "";
+            /// <summary>
+            /// An http/https uri reference to the upstream remote repository, for ex:
+            /// "https://my.yum.registry/".
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Uri {
+              get { return uri_; }
+              set {
+                uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CustomRepository);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CustomRepository other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Uri != other.Uri) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Uri.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Uri.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CustomRepository other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Uri.Length != 0) {
+                Uri = other.Uri;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
         }
         #endregion
+
+      }
+
+      /// <summary>
+      /// Common remote repository settings type.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CommonRemoteRepository : pb::IMessage<CommonRemoteRepository>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CommonRemoteRepository> _parser = new pb::MessageParser<CommonRemoteRepository>(() => new CommonRemoteRepository());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CommonRemoteRepository> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ArtifactRegistry.V1.RemoteRepositoryConfig.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CommonRemoteRepository() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CommonRemoteRepository(CommonRemoteRepository other) : this() {
+          uri_ = other.uri_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CommonRemoteRepository Clone() {
+          return new CommonRemoteRepository(this);
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 1;
+        private string uri_ = "";
+        /// <summary>
+        /// Required. A common public repository base for remote repository.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CommonRemoteRepository);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CommonRemoteRepository other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uri != other.Uri) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CommonRemoteRepository other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -5004,6 +6871,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       sizeBytes_ = other.sizeBytes_;
       satisfiesPzs_ = other.satisfiesPzs_;
       cleanupPolicyDryRun_ = other.cleanupPolicyDryRun_;
+      vulnerabilityScanningConfig_ = other.vulnerabilityScanningConfig_ != null ? other.vulnerabilityScanningConfig_.Clone() : null;
+      disallowUnspecifiedMode_ = other.disallowUnspecifiedMode_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       switch (other.FormatConfigCase) {
         case FormatConfigOneofCase.MavenConfig:
           MavenConfig = other.MavenConfig.Clone();
@@ -5098,7 +6968,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     private string name_ = "";
     /// <summary>
     /// The name of the repository, for example:
-    /// `projects/p1/locations/us-central1/repositories/repo1`.
+    /// `projects/p1/locations/us-central1/repositories/repo1`. For each location
+    /// in a project, repository names must be unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5285,6 +7156,53 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "vulnerability_scanning_config" field.</summary>
+    public const int VulnerabilityScanningConfigFieldNumber = 19;
+    private global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig vulnerabilityScanningConfig_;
+    /// <summary>
+    /// Optional. Config and state for vulnerability scanning of resources within
+    /// this Repository.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig VulnerabilityScanningConfig {
+      get { return vulnerabilityScanningConfig_; }
+      set {
+        vulnerabilityScanningConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disallow_unspecified_mode" field.</summary>
+    public const int DisallowUnspecifiedModeFieldNumber = 21;
+    private bool disallowUnspecifiedMode_;
+    /// <summary>
+    /// Optional. If this is true, an unspecified repo type will be treated as
+    /// error rather than defaulting to standard.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisallowUnspecifiedMode {
+      get { return disallowUnspecifiedMode_; }
+      set {
+        disallowUnspecifiedMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 22;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. If set, the repository satisfies physical zone isolation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     private object formatConfig_;
     /// <summary>Enum of possible cases for the "format_config" oneof.</summary>
     public enum FormatConfigOneofCase {
@@ -5358,6 +7276,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (SizeBytes != other.SizeBytes) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (CleanupPolicyDryRun != other.CleanupPolicyDryRun) return false;
+      if (!object.Equals(VulnerabilityScanningConfig, other.VulnerabilityScanningConfig)) return false;
+      if (DisallowUnspecifiedMode != other.DisallowUnspecifiedMode) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (FormatConfigCase != other.FormatConfigCase) return false;
       if (ModeConfigCase != other.ModeConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -5383,6 +7304,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (SizeBytes != 0L) hash ^= SizeBytes.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (CleanupPolicyDryRun != false) hash ^= CleanupPolicyDryRun.GetHashCode();
+      if (vulnerabilityScanningConfig_ != null) hash ^= VulnerabilityScanningConfig.GetHashCode();
+      if (DisallowUnspecifiedMode != false) hash ^= DisallowUnspecifiedMode.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       hash ^= (int) formatConfigCase_;
       hash ^= (int) modeConfigCase_;
       if (_unknownFields != null) {
@@ -5461,6 +7385,18 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(144, 1);
         output.WriteBool(CleanupPolicyDryRun);
       }
+      if (vulnerabilityScanningConfig_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(VulnerabilityScanningConfig);
+      }
+      if (DisallowUnspecifiedMode != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(DisallowUnspecifiedMode);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(176, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5529,6 +7465,18 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(144, 1);
         output.WriteBool(CleanupPolicyDryRun);
       }
+      if (vulnerabilityScanningConfig_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(VulnerabilityScanningConfig);
+      }
+      if (DisallowUnspecifiedMode != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(DisallowUnspecifiedMode);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(176, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5583,6 +7531,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (CleanupPolicyDryRun != false) {
         size += 2 + 1;
       }
+      if (vulnerabilityScanningConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VulnerabilityScanningConfig);
+      }
+      if (DisallowUnspecifiedMode != false) {
+        size += 2 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 2 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5632,6 +7589,18 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
       if (other.CleanupPolicyDryRun != false) {
         CleanupPolicyDryRun = other.CleanupPolicyDryRun;
+      }
+      if (other.vulnerabilityScanningConfig_ != null) {
+        if (vulnerabilityScanningConfig_ == null) {
+          VulnerabilityScanningConfig = new global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig();
+        }
+        VulnerabilityScanningConfig.MergeFrom(other.VulnerabilityScanningConfig);
+      }
+      if (other.DisallowUnspecifiedMode != false) {
+        DisallowUnspecifiedMode = other.DisallowUnspecifiedMode;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       switch (other.FormatConfigCase) {
         case FormatConfigOneofCase.MavenConfig:
@@ -5768,6 +7737,21 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             CleanupPolicyDryRun = input.ReadBool();
             break;
           }
+          case 154: {
+            if (vulnerabilityScanningConfig_ == null) {
+              VulnerabilityScanningConfig = new global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig();
+            }
+            input.ReadMessage(VulnerabilityScanningConfig);
+            break;
+          }
+          case 168: {
+            DisallowUnspecifiedMode = input.ReadBool();
+            break;
+          }
+          case 176: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -5873,6 +7857,21 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             CleanupPolicyDryRun = input.ReadBool();
             break;
           }
+          case 154: {
+            if (vulnerabilityScanningConfig_ == null) {
+              VulnerabilityScanningConfig = new global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig();
+            }
+            input.ReadMessage(VulnerabilityScanningConfig);
+            break;
+          }
+          case 168: {
+            DisallowUnspecifiedMode = input.ReadBool();
+            break;
+          }
+          case 176: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -5923,6 +7922,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         /// Go package format.
         /// </summary>
         [pbr::OriginalName("GO")] Go = 10,
+        /// <summary>
+        /// Generic package format.
+        /// </summary>
+        [pbr::OriginalName("GENERIC")] Generic = 11,
       }
 
       /// <summary>
@@ -6415,6 +8418,384 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
 
       }
 
+      /// <summary>
+      /// Config on whether to perform vulnerability scanning for resources in this
+      /// repository, as well as output fields describing current state.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class VulnerabilityScanningConfig : pb::IMessage<VulnerabilityScanningConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<VulnerabilityScanningConfig> _parser = new pb::MessageParser<VulnerabilityScanningConfig>(() => new VulnerabilityScanningConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<VulnerabilityScanningConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ArtifactRegistry.V1.Repository.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VulnerabilityScanningConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VulnerabilityScanningConfig(VulnerabilityScanningConfig other) : this() {
+          enablementConfig_ = other.enablementConfig_;
+          lastEnableTime_ = other.lastEnableTime_ != null ? other.lastEnableTime_.Clone() : null;
+          enablementState_ = other.enablementState_;
+          enablementStateReason_ = other.enablementStateReason_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VulnerabilityScanningConfig Clone() {
+          return new VulnerabilityScanningConfig(this);
+        }
+
+        /// <summary>Field number for the "enablement_config" field.</summary>
+        public const int EnablementConfigFieldNumber = 1;
+        private global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig enablementConfig_ = global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig.Unspecified;
+        /// <summary>
+        /// Optional. Config for whether this repository has vulnerability scanning
+        /// disabled.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig EnablementConfig {
+          get { return enablementConfig_; }
+          set {
+            enablementConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "last_enable_time" field.</summary>
+        public const int LastEnableTimeFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp lastEnableTime_;
+        /// <summary>
+        /// Output only. The last time this repository config was enabled.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp LastEnableTime {
+          get { return lastEnableTime_; }
+          set {
+            lastEnableTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "enablement_state" field.</summary>
+        public const int EnablementStateFieldNumber = 3;
+        private global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState enablementState_ = global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState.Unspecified;
+        /// <summary>
+        /// Output only. State of feature enablement, combining repository enablement
+        /// config and API enablement state.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState EnablementState {
+          get { return enablementState_; }
+          set {
+            enablementState_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "enablement_state_reason" field.</summary>
+        public const int EnablementStateReasonFieldNumber = 4;
+        private string enablementStateReason_ = "";
+        /// <summary>
+        /// Output only. Reason for the repository state.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string EnablementStateReason {
+          get { return enablementStateReason_; }
+          set {
+            enablementStateReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as VulnerabilityScanningConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(VulnerabilityScanningConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnablementConfig != other.EnablementConfig) return false;
+          if (!object.Equals(LastEnableTime, other.LastEnableTime)) return false;
+          if (EnablementState != other.EnablementState) return false;
+          if (EnablementStateReason != other.EnablementStateReason) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnablementConfig != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig.Unspecified) hash ^= EnablementConfig.GetHashCode();
+          if (lastEnableTime_ != null) hash ^= LastEnableTime.GetHashCode();
+          if (EnablementState != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState.Unspecified) hash ^= EnablementState.GetHashCode();
+          if (EnablementStateReason.Length != 0) hash ^= EnablementStateReason.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnablementConfig != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) EnablementConfig);
+          }
+          if (lastEnableTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(LastEnableTime);
+          }
+          if (EnablementState != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) EnablementState);
+          }
+          if (EnablementStateReason.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(EnablementStateReason);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnablementConfig != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) EnablementConfig);
+          }
+          if (lastEnableTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(LastEnableTime);
+          }
+          if (EnablementState != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) EnablementState);
+          }
+          if (EnablementStateReason.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(EnablementStateReason);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnablementConfig != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EnablementConfig);
+          }
+          if (lastEnableTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastEnableTime);
+          }
+          if (EnablementState != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EnablementState);
+          }
+          if (EnablementStateReason.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(EnablementStateReason);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(VulnerabilityScanningConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnablementConfig != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig.Unspecified) {
+            EnablementConfig = other.EnablementConfig;
+          }
+          if (other.lastEnableTime_ != null) {
+            if (lastEnableTime_ == null) {
+              LastEnableTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            LastEnableTime.MergeFrom(other.LastEnableTime);
+          }
+          if (other.EnablementState != global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState.Unspecified) {
+            EnablementState = other.EnablementState;
+          }
+          if (other.EnablementStateReason.Length != 0) {
+            EnablementStateReason = other.EnablementStateReason;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                EnablementConfig = (global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (lastEnableTime_ == null) {
+                  LastEnableTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LastEnableTime);
+                break;
+              }
+              case 24: {
+                EnablementState = (global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                EnablementStateReason = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EnablementConfig = (global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementConfig) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (lastEnableTime_ == null) {
+                  LastEnableTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LastEnableTime);
+                break;
+              }
+              case 24: {
+                EnablementState = (global::Google.Cloud.ArtifactRegistry.V1.Repository.Types.VulnerabilityScanningConfig.Types.EnablementState) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                EnablementStateReason = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the VulnerabilityScanningConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Config for vulnerability scanning of resources in this repository.
+          /// </summary>
+          public enum EnablementConfig {
+            /// <summary>
+            /// Not set. This will be treated as INHERITED.
+            /// </summary>
+            [pbr::OriginalName("ENABLEMENT_CONFIG_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Scanning is Enabled, but dependent on API enablement.
+            /// </summary>
+            [pbr::OriginalName("INHERITED")] Inherited = 1,
+            /// <summary>
+            /// No automatic vulnerability scanning will be performed for this
+            /// repository.
+            /// </summary>
+            [pbr::OriginalName("DISABLED")] Disabled = 2,
+          }
+
+          /// <summary>
+          /// Describes the state of vulnerability scanning in this repository,
+          /// including both repository enablement and API enablement.
+          /// </summary>
+          public enum EnablementState {
+            /// <summary>
+            /// Enablement state is unclear.
+            /// </summary>
+            [pbr::OriginalName("ENABLEMENT_STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Repository does not support vulnerability scanning.
+            /// </summary>
+            [pbr::OriginalName("SCANNING_UNSUPPORTED")] ScanningUnsupported = 1,
+            /// <summary>
+            /// Vulnerability scanning is disabled for this repository.
+            /// </summary>
+            [pbr::OriginalName("SCANNING_DISABLED")] ScanningDisabled = 2,
+            /// <summary>
+            /// Vulnerability scanning is active for this repository.
+            /// </summary>
+            [pbr::OriginalName("SCANNING_ACTIVE")] ScanningActive = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
 
@@ -6461,6 +8842,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6516,6 +8899,54 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. An expression for filtering the results of the request. Filter
+    /// rules are case insensitive. The fields eligible for filtering are:
+    ///
+    ///   * `name`
+    ///
+    ///  Examples of using a filter:
+    ///
+    /// To filter the results of your request to repositories with the name
+    /// `my-repo` in project `my-project` in the `us-central` region, append the
+    /// following filter expression to your request:
+    ///
+    ///   * `name="projects/my-project/locations/us-central1/repositories/my-repo"`
+    ///
+    ///  You can also use wildcards to match any number of characters before or
+    ///  after the value:
+    ///
+    ///   * `name="projects/my-project/locations/us-central1/repositories/my-*"`
+    ///   * `name="projects/my-project/locations/us-central1/repositories/*repo"`
+    ///   * `name="projects/my-project/locations/us-central1/repositories/*repo*"`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. The field to order the results by.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6534,6 +8965,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6544,6 +8977,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6574,6 +9009,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6596,6 +9039,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6614,6 +9065,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6635,6 +9092,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6663,6 +9126,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -6688,6 +9159,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
             break;
           }
         }

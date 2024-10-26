@@ -27,41 +27,52 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "Ci5nb29nbGUvZGV2dG9vbHMvYXJ0aWZhY3RyZWdpc3RyeS92MS9maWxlLnBy",
             "b3RvEiNnb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MRofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
-            "dXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKT",
-            "AQoESGFzaBJACgR0eXBlGAEgASgOMjIuZ29vZ2xlLmRldnRvb2xzLmFydGlm",
-            "YWN0cmVnaXN0cnkudjEuSGFzaC5IYXNoVHlwZRINCgV2YWx1ZRgCIAEoDCI6",
-            "CghIYXNoVHlwZRIZChVIQVNIX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZTSEEy",
-            "NTYQARIHCgNNRDUQAiKOAwoERmlsZRIMCgRuYW1lGAEgASgJEhIKCnNpemVf",
-            "Ynl0ZXMYAyABKAMSOQoGaGFzaGVzGAQgAygLMikuZ29vZ2xlLmRldnRvb2xz",
-            "LmFydGlmYWN0cmVnaXN0cnkudjEuSGFzaBI0CgtjcmVhdGVfdGltZRgFIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIN",
-            "CgVvd25lchgHIAEoCRIzCgpmZXRjaF90aW1lGAggASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDOnnqQXYKJGFydGlmYWN0cmVnaXN0cnku",
-            "Z29vZ2xlYXBpcy5jb20vRmlsZRJOcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L3JlcG9zaXRvcmllcy97cmVwb3NpdG9yeX0vZmls",
-            "ZXMve2ZpbGV9IpkBChBMaXN0RmlsZXNSZXF1ZXN0EjwKBnBhcmVudBgBIAEo",
-            "CUIs4EEC+kEmEiRhcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0Zp",
-            "bGUSDgoGZmlsdGVyGAQgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdl",
-            "X3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAUgASgJImYKEUxpc3RGaWxlc1Jl",
-            "c3BvbnNlEjgKBWZpbGVzGAEgAygLMikuZ29vZ2xlLmRldnRvb2xzLmFydGlm",
-            "YWN0cmVnaXN0cnkudjEuRmlsZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
-            "TAoOR2V0RmlsZVJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRhcnRp",
-            "ZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0ZpbGVC9AEKJ2NvbS5nb29n",
-            "bGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MUIJRmlsZVByb3RvUAFa",
-            "UGNsb3VkLmdvb2dsZS5jb20vZ28vYXJ0aWZhY3RyZWdpc3RyeS9hcGl2MS9h",
-            "cnRpZmFjdHJlZ2lzdHJ5cGI7YXJ0aWZhY3RyZWdpc3RyeXBiqgIgR29vZ2xl",
-            "LkNsb3VkLkFydGlmYWN0UmVnaXN0cnkuVjHKAiBHb29nbGVcQ2xvdWRcQXJ0",
-            "aWZhY3RSZWdpc3RyeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkFydGlmYWN0UmVn",
-            "aXN0cnk6OlYxYgZwcm90bzM="));
+            "dXJjZS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8a",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ikwEKBEhhc2gSQAoE",
+            "dHlwZRgBIAEoDjIyLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5",
+            "LnYxLkhhc2guSGFzaFR5cGUSDQoFdmFsdWUYAiABKAwiOgoISGFzaFR5cGUS",
+            "GQoVSEFTSF9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGU0hBMjU2EAESBwoDTUQ1",
+            "EAIimAQKBEZpbGUSDAoEbmFtZRgBIAEoCRISCgpzaXplX2J5dGVzGAMgASgD",
+            "EjkKBmhhc2hlcxgEIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJl",
+            "Z2lzdHJ5LnYxLkhhc2gSNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSDQoFb3duZXIYByAB",
+            "KAkSMwoKZmV0Y2hfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxJUCgthbm5vdGF0aW9ucxgJIAMoCzI6Lmdvb2dsZS5kZXZ0",
+            "b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLkZpbGUuQW5ub3RhdGlvbnNFbnRy",
+            "eUID4EEBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ATp56kF2CiRhcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFw",
+            "aXMuY29tL0ZpbGUSTnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9yZXBvc2l0b3JpZXMve3JlcG9zaXRvcnl9L2ZpbGVzL3tmaWxl",
+            "fSKZAQoQTGlzdEZpbGVzUmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpB",
+            "JhIkYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9GaWxlEg4KBmZp",
+            "bHRlchgEIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCRIQCghvcmRlcl9ieRgFIAEoCSJmChFMaXN0RmlsZXNSZXNwb25zZRI4",
+            "CgVmaWxlcxgBIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lz",
+            "dHJ5LnYxLkZpbGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkwKDkdldEZp",
+            "bGVSZXF1ZXN0EjoKBG5hbWUYASABKAlCLOBBAvpBJgokYXJ0aWZhY3RyZWdp",
+            "c3RyeS5nb29nbGVhcGlzLmNvbS9GaWxlIk8KEURlbGV0ZUZpbGVSZXF1ZXN0",
+            "EjoKBG5hbWUYASABKAlCLOBBAvpBJgokYXJ0aWZhY3RyZWdpc3RyeS5nb29n",
+            "bGVhcGlzLmNvbS9GaWxlIocBChFVcGRhdGVGaWxlUmVxdWVzdBI8CgRmaWxl",
+            "GAEgASgLMikuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEu",
+            "RmlsZUID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkZpZWxkTWFza0ID4EECQvQBCidjb20uZ29vZ2xlLmRldnRvb2xzLmFy",
+            "dGlmYWN0cmVnaXN0cnkudjFCCUZpbGVQcm90b1ABWlBjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2FydGlmYWN0cmVnaXN0cnkvYXBpdjEvYXJ0aWZhY3RyZWdpc3Ry",
+            "eXBiO2FydGlmYWN0cmVnaXN0cnlwYqoCIEdvb2dsZS5DbG91ZC5BcnRpZmFj",
+            "dFJlZ2lzdHJ5LlYxygIgR29vZ2xlXENsb3VkXEFydGlmYWN0UmVnaXN0cnlc",
+            "VjHqAiNHb29nbGU6OkNsb3VkOjpBcnRpZmFjdFJlZ2lzdHJ5OjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Hash), global::Google.Cloud.ArtifactRegistry.V1.Hash.Parser, new[]{ "Type", "Value" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.Hash.Types.HashType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.File), global::Google.Cloud.ArtifactRegistry.V1.File.Parser, new[]{ "Name", "SizeBytes", "Hashes", "CreateTime", "UpdateTime", "Owner", "FetchTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.File), global::Google.Cloud.ArtifactRegistry.V1.File.Parser, new[]{ "Name", "SizeBytes", "Hashes", "CreateTime", "UpdateTime", "Owner", "FetchTime", "Annotations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest), global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse), global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse.Parser, new[]{ "Files", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest), global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest), global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest), global::Google.Cloud.ArtifactRegistry.V1.DeleteFileRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest), global::Google.Cloud.ArtifactRegistry.V1.UpdateFileRequest.Parser, new[]{ "File", "UpdateMask" }, null, null, null, null)
           }));
     }
     #endregion
@@ -375,6 +386,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       owner_ = other.owner_;
       fetchTime_ = other.fetchTime_ != null ? other.fetchTime_.Clone() : null;
+      annotations_ = other.annotations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -389,7 +401,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     private string name_ = "";
     /// <summary>
     /// The name of the file, for example:
-    /// "projects/p1/locations/us-central1/repositories/repo1/files/a%2Fb%2Fc.txt".
+    /// `projects/p1/locations/us-central1/repositories/repo1/files/a%2Fb%2Fc.txt`.
     /// If the file ID part contains slashes, they are escaped.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -491,6 +503,20 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "annotations" field.</summary>
+    public const int AnnotationsFieldNumber = 9;
+    private static readonly pbc::MapField<string, string>.Codec _map_annotations_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 74);
+    private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Client specified annotations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Annotations {
+      get { return annotations_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -513,6 +539,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Owner != other.Owner) return false;
       if (!object.Equals(FetchTime, other.FetchTime)) return false;
+      if (!Annotations.Equals(other.Annotations)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -527,6 +554,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Owner.Length != 0) hash ^= Owner.GetHashCode();
       if (fetchTime_ != null) hash ^= FetchTime.GetHashCode();
+      hash ^= Annotations.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -570,6 +598,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(FetchTime);
       }
+      annotations_.WriteTo(output, _map_annotations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -605,6 +634,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(FetchTime);
       }
+      annotations_.WriteTo(ref output, _map_annotations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -634,6 +664,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (fetchTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FetchTime);
       }
+      size += annotations_.CalculateSize(_map_annotations_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -674,6 +705,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         }
         FetchTime.MergeFrom(other.FetchTime);
       }
+      annotations_.MergeFrom(other.annotations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -726,6 +758,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             input.ReadMessage(FetchTime);
             break;
           }
+          case 74: {
+            annotations_.AddEntriesFrom(input, _map_annotations_codec);
+            break;
+          }
         }
       }
     #endif
@@ -776,6 +812,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
               FetchTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(FetchTime);
+            break;
+          }
+          case 74: {
+            annotations_.AddEntriesFrom(ref input, _map_annotations_codec);
             break;
           }
         }
@@ -862,13 +902,51 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     ///
     ///   * `name`
     ///   * `owner`
+    ///   * `annotations`
     ///
-    ///  An example of using a filter:
+    /// Examples of using a filter:
     ///
-    ///   * `name="projects/p1/locations/us-central1/repositories/repo1/files/a/b/*"` --> Files with an
-    ///   ID starting with "a/b/".
-    ///   * `owner="projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/1.0"` -->
-    ///   Files owned by the version `1.0` in package `pkg1`.
+    ///  To filter the results of your request to files with the name `my_file.txt`
+    ///  in project `my-project` in the `us-central` region, in repository
+    ///  `my-repo`, append the following filter expression to your request:
+    ///
+    ///   * `name="projects/my-project/locations/us-central1/repositories/my-repo/files/my-file.txt"`
+    ///
+    ///  You can also use wildcards to match any number of characters before or
+    ///  after the value:
+    ///
+    ///   * `name="projects/my-project/locations/us-central1/repositories/my-repo/files/my-*"`
+    ///   * `name="projects/my-project/locations/us-central1/repositories/my-repo/files/*file.txt"`
+    ///   * `name="projects/my-project/locations/us-central1/repositories/my-repo/files/*file*"`
+    ///
+    ///  To filter the results of your request to files owned by the version `1.0`
+    ///  in package `pkg1`, append the following filter expression to your request:
+    ///
+    ///   * `owner="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-package/versions/1.0"`
+    ///
+    ///  To filter the results of your request to files with the annotation
+    ///  key-value pair [`external_link`: `external_link_value`], append the
+    ///  following filter expression to your request:
+    ///
+    ///   * `"annotations.external_link:external_link_value"`
+    ///
+    ///  To filter just for a specific annotation key `external_link`, append the
+    ///  following filter expression to your request:
+    ///
+    ///   * `"annotations.external_link"`
+    ///
+    ///  If the annotation key or value contains special characters, you can escape
+    ///  them by surrounding the value with backticks. For example, to filter the
+    ///  results of your request to files with the annotation key-value pair
+    ///  [`external.link`:`https://example.com/my-file`], append the following
+    ///  filter expression to your request:
+    ///
+    ///   * `` "annotations.`external.link`:`https://example.com/my-file`" ``
+    ///
+    ///  You can also filter with annotations with a wildcard to
+    ///  match any number of characters before or after the value:
+    ///
+    ///   * `` "annotations.*_link:`*example.com*`" ``
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -883,7 +961,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of files to return.
+    /// The maximum number of files to return. Maximum page size is 1,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1566,6 +1644,458 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request to delete a file.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteFileRequest : pb::IMessage<DeleteFileRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteFileRequest> _parser = new pb::MessageParser<DeleteFileRequest>(() => new DeleteFileRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteFileRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ArtifactRegistry.V1.FileReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteFileRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteFileRequest(DeleteFileRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteFileRequest Clone() {
+      return new DeleteFileRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the file to delete.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteFileRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteFileRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteFileRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request to update a file.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateFileRequest : pb::IMessage<UpdateFileRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateFileRequest> _parser = new pb::MessageParser<UpdateFileRequest>(() => new UpdateFileRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateFileRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ArtifactRegistry.V1.FileReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateFileRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateFileRequest(UpdateFileRequest other) : this() {
+      file_ = other.file_ != null ? other.file_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateFileRequest Clone() {
+      return new UpdateFileRequest(this);
+    }
+
+    /// <summary>Field number for the "file" field.</summary>
+    public const int FileFieldNumber = 1;
+    private global::Google.Cloud.ArtifactRegistry.V1.File file_;
+    /// <summary>
+    /// Required. The File that replaces the resource on the server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ArtifactRegistry.V1.File File {
+      get { return file_; }
+      set {
+        file_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Required. The update mask applies to the resource. For the `FieldMask`
+    /// definition, see
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateFileRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateFileRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(File, other.File)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (file_ != null) hash ^= File.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (file_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(File);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (file_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(File);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (file_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(File);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateFileRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.file_ != null) {
+        if (file_ == null) {
+          File = new global::Google.Cloud.ArtifactRegistry.V1.File();
+        }
+        File.MergeFrom(other.File);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (file_ == null) {
+              File = new global::Google.Cloud.ArtifactRegistry.V1.File();
+            }
+            input.ReadMessage(File);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (file_ == null) {
+              File = new global::Google.Cloud.ArtifactRegistry.V1.File();
+            }
+            input.ReadMessage(File);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
             break;
           }
         }

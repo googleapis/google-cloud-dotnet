@@ -53,9 +53,12 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             yield return AptArtifactReflection.Descriptor;
             yield return ArtifactReflection.Descriptor;
+            yield return AttachmentReflection.Descriptor;
             yield return FileReflection.Descriptor;
+            yield return GenericReflection.Descriptor;
             yield return PackageReflection.Descriptor;
             yield return RepositoryReflection.Descriptor;
+            yield return RuleReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return SettingsReflection.Descriptor;
             yield return TagReflection.Descriptor;

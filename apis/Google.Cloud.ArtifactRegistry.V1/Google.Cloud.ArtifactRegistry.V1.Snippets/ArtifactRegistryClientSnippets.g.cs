@@ -1540,6 +1540,8 @@ namespace GoogleCSharpSnippets
             gcav::ListRepositoriesRequest request = new gcav::ListRepositoriesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<gcav::ListRepositoriesResponse, gcav::Repository> response = artifactRegistryClient.ListRepositories(request);
@@ -1588,6 +1590,8 @@ namespace GoogleCSharpSnippets
             gcav::ListRepositoriesRequest request = new gcav::ListRepositoriesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcav::ListRepositoriesResponse, gcav::Repository> response = artifactRegistryClient.ListRepositoriesAsync(request);
@@ -2345,6 +2349,8 @@ namespace GoogleCSharpSnippets
             gcav::ListPackagesRequest request = new gcav::ListPackagesRequest
             {
                 ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<gcav::ListPackagesResponse, gcav::Package> response = artifactRegistryClient.ListPackages(request);
@@ -2393,6 +2399,8 @@ namespace GoogleCSharpSnippets
             gcav::ListPackagesRequest request = new gcav::ListPackagesRequest
             {
                 ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcav::ListPackagesResponse, gcav::Package> response = artifactRegistryClient.ListPackagesAsync(request);
@@ -2893,6 +2901,7 @@ namespace GoogleCSharpSnippets
                 Parent = "",
                 View = gcav::VersionView.Unspecified,
                 OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<gcav::ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(request);
@@ -2943,6 +2952,7 @@ namespace GoogleCSharpSnippets
                 Parent = "",
                 View = gcav::VersionView.Unspecified,
                 OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcav::ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersionsAsync(request);
@@ -3468,6 +3478,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateVersion</summary>
+        public void UpdateVersionRequestObject()
+        {
+            // Snippet: UpdateVersion(UpdateVersionRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::UpdateVersionRequest request = new gcav::UpdateVersionRequest
+            {
+                Version = new gcav::Version(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::Version response = artifactRegistryClient.UpdateVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVersionAsync</summary>
+        public async Task UpdateVersionRequestObjectAsync()
+        {
+            // Snippet: UpdateVersionAsync(UpdateVersionRequest, CallSettings)
+            // Additional: UpdateVersionAsync(UpdateVersionRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::UpdateVersionRequest request = new gcav::UpdateVersionRequest
+            {
+                Version = new gcav::Version(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::Version response = await artifactRegistryClient.UpdateVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVersion</summary>
+        public void UpdateVersion()
+        {
+            // Snippet: UpdateVersion(Version, FieldMask, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::Version version = new gcav::Version();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::Version response = artifactRegistryClient.UpdateVersion(version, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVersionAsync</summary>
+        public async Task UpdateVersionAsync()
+        {
+            // Snippet: UpdateVersionAsync(Version, FieldMask, CallSettings)
+            // Additional: UpdateVersionAsync(Version, FieldMask, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::Version version = new gcav::Version();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::Version response = await artifactRegistryClient.UpdateVersionAsync(version, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListFiles</summary>
         public void ListFilesRequestObject()
         {
@@ -3832,6 +3906,253 @@ namespace GoogleCSharpSnippets
             gcav::FileName name = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
             // Make the request
             gcav::File response = await artifactRegistryClient.GetFileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFile</summary>
+        public void DeleteFileRequestObject()
+        {
+            // Snippet: DeleteFile(DeleteFileRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::DeleteFileRequest request = new gcav::DeleteFileRequest
+            {
+                FileName = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
+            };
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteFile(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteFile(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileAsync</summary>
+        public async Task DeleteFileRequestObjectAsync()
+        {
+            // Snippet: DeleteFileAsync(DeleteFileRequest, CallSettings)
+            // Additional: DeleteFileAsync(DeleteFileRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::DeleteFileRequest request = new gcav::DeleteFileRequest
+            {
+                FileName = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
+            };
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteFileAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteFileAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFile</summary>
+        public void DeleteFile()
+        {
+            // Snippet: DeleteFile(string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/files/[FILE]";
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteFile(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteFile(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileAsync</summary>
+        public async Task DeleteFileAsync()
+        {
+            // Snippet: DeleteFileAsync(string, CallSettings)
+            // Additional: DeleteFileAsync(string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/files/[FILE]";
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteFileAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteFileAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFile</summary>
+        public void DeleteFileResourceNames()
+        {
+            // Snippet: DeleteFile(FileName, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::FileName name = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteFile(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteFile(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFileAsync</summary>
+        public async Task DeleteFileResourceNamesAsync()
+        {
+            // Snippet: DeleteFileAsync(FileName, CallSettings)
+            // Additional: DeleteFileAsync(FileName, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::FileName name = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteFileAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteFileAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFile</summary>
+        public void UpdateFileRequestObject()
+        {
+            // Snippet: UpdateFile(UpdateFileRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::UpdateFileRequest request = new gcav::UpdateFileRequest
+            {
+                File = new gcav::File(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::File response = artifactRegistryClient.UpdateFile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFileAsync</summary>
+        public async Task UpdateFileRequestObjectAsync()
+        {
+            // Snippet: UpdateFileAsync(UpdateFileRequest, CallSettings)
+            // Additional: UpdateFileAsync(UpdateFileRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::UpdateFileRequest request = new gcav::UpdateFileRequest
+            {
+                File = new gcav::File(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::File response = await artifactRegistryClient.UpdateFileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFile</summary>
+        public void UpdateFile()
+        {
+            // Snippet: UpdateFile(File, FieldMask, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::File file = new gcav::File();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::File response = artifactRegistryClient.UpdateFile(file, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFileAsync</summary>
+        public async Task UpdateFileAsync()
+        {
+            // Snippet: UpdateFileAsync(File, FieldMask, CallSettings)
+            // Additional: UpdateFileAsync(File, FieldMask, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::File file = new gcav::File();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::File response = await artifactRegistryClient.UpdateFileAsync(file, updateMask);
             // End snippet
         }
 
@@ -4263,6 +4584,619 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateRule</summary>
+        public void CreateRuleRequestObject()
+        {
+            // Snippet: CreateRule(CreateRuleRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::CreateRuleRequest request = new gcav::CreateRuleRequest
+            {
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RuleId = "",
+                Rule = new gcav::Rule(),
+            };
+            // Make the request
+            gcav::Rule response = artifactRegistryClient.CreateRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRuleAsync</summary>
+        public async Task CreateRuleRequestObjectAsync()
+        {
+            // Snippet: CreateRuleAsync(CreateRuleRequest, CallSettings)
+            // Additional: CreateRuleAsync(CreateRuleRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::CreateRuleRequest request = new gcav::CreateRuleRequest
+            {
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RuleId = "",
+                Rule = new gcav::Rule(),
+            };
+            // Make the request
+            gcav::Rule response = await artifactRegistryClient.CreateRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRule</summary>
+        public void CreateRule()
+        {
+            // Snippet: CreateRule(string, Rule, string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            gcav::Rule rule = new gcav::Rule();
+            string ruleId = "";
+            // Make the request
+            gcav::Rule response = artifactRegistryClient.CreateRule(parent, rule, ruleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRuleAsync</summary>
+        public async Task CreateRuleAsync()
+        {
+            // Snippet: CreateRuleAsync(string, Rule, string, CallSettings)
+            // Additional: CreateRuleAsync(string, Rule, string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            gcav::Rule rule = new gcav::Rule();
+            string ruleId = "";
+            // Make the request
+            gcav::Rule response = await artifactRegistryClient.CreateRuleAsync(parent, rule, ruleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRule</summary>
+        public void CreateRuleResourceNames()
+        {
+            // Snippet: CreateRule(RepositoryName, Rule, string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::Rule rule = new gcav::Rule();
+            string ruleId = "";
+            // Make the request
+            gcav::Rule response = artifactRegistryClient.CreateRule(parent, rule, ruleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRuleAsync</summary>
+        public async Task CreateRuleResourceNamesAsync()
+        {
+            // Snippet: CreateRuleAsync(RepositoryName, Rule, string, CallSettings)
+            // Additional: CreateRuleAsync(RepositoryName, Rule, string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::Rule rule = new gcav::Rule();
+            string ruleId = "";
+            // Make the request
+            gcav::Rule response = await artifactRegistryClient.CreateRuleAsync(parent, rule, ruleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRules</summary>
+        public void ListRulesRequestObject()
+        {
+            // Snippet: ListRules(ListRulesRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::ListRulesRequest request = new gcav::ListRulesRequest
+            {
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedEnumerable<gcav::ListRulesResponse, gcav::Rule> response = artifactRegistryClient.ListRules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::Rule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::ListRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Rule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Rule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Rule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRulesAsync</summary>
+        public async Task ListRulesRequestObjectAsync()
+        {
+            // Snippet: ListRulesAsync(ListRulesRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::ListRulesRequest request = new gcav::ListRulesRequest
+            {
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcav::ListRulesResponse, gcav::Rule> response = artifactRegistryClient.ListRulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcav::Rule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcav::ListRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Rule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Rule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Rule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRules</summary>
+        public void ListRules()
+        {
+            // Snippet: ListRules(string, string, int?, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedEnumerable<gcav::ListRulesResponse, gcav::Rule> response = artifactRegistryClient.ListRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::Rule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::ListRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Rule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Rule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Rule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRulesAsync</summary>
+        public async Task ListRulesAsync()
+        {
+            // Snippet: ListRulesAsync(string, string, int?, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<gcav::ListRulesResponse, gcav::Rule> response = artifactRegistryClient.ListRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcav::Rule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcav::ListRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Rule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Rule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Rule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRules</summary>
+        public void ListRulesResourceNames()
+        {
+            // Snippet: ListRules(RepositoryName, string, int?, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<gcav::ListRulesResponse, gcav::Rule> response = artifactRegistryClient.ListRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::Rule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::ListRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Rule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Rule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Rule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRulesAsync</summary>
+        public async Task ListRulesResourceNamesAsync()
+        {
+            // Snippet: ListRulesAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedAsyncEnumerable<gcav::ListRulesResponse, gcav::Rule> response = artifactRegistryClient.ListRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcav::Rule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcav::ListRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Rule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Rule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Rule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRule</summary>
+        public void GetRuleRequestObject()
+        {
+            // Snippet: GetRule(GetRuleRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::GetRuleRequest request = new gcav::GetRuleRequest
+            {
+                RuleName = gcav::RuleName.FromProjectLocationRepositoryRule("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RULE]"),
+            };
+            // Make the request
+            gcav::Rule response = artifactRegistryClient.GetRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRuleAsync</summary>
+        public async Task GetRuleRequestObjectAsync()
+        {
+            // Snippet: GetRuleAsync(GetRuleRequest, CallSettings)
+            // Additional: GetRuleAsync(GetRuleRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::GetRuleRequest request = new gcav::GetRuleRequest
+            {
+                RuleName = gcav::RuleName.FromProjectLocationRepositoryRule("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RULE]"),
+            };
+            // Make the request
+            gcav::Rule response = await artifactRegistryClient.GetRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRule</summary>
+        public void GetRule()
+        {
+            // Snippet: GetRule(string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/rules/[RULE]";
+            // Make the request
+            gcav::Rule response = artifactRegistryClient.GetRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRuleAsync</summary>
+        public async Task GetRuleAsync()
+        {
+            // Snippet: GetRuleAsync(string, CallSettings)
+            // Additional: GetRuleAsync(string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/rules/[RULE]";
+            // Make the request
+            gcav::Rule response = await artifactRegistryClient.GetRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRule</summary>
+        public void GetRuleResourceNames()
+        {
+            // Snippet: GetRule(RuleName, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::RuleName name = gcav::RuleName.FromProjectLocationRepositoryRule("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RULE]");
+            // Make the request
+            gcav::Rule response = artifactRegistryClient.GetRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRuleAsync</summary>
+        public async Task GetRuleResourceNamesAsync()
+        {
+            // Snippet: GetRuleAsync(RuleName, CallSettings)
+            // Additional: GetRuleAsync(RuleName, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::RuleName name = gcav::RuleName.FromProjectLocationRepositoryRule("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RULE]");
+            // Make the request
+            gcav::Rule response = await artifactRegistryClient.GetRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRule</summary>
+        public void UpdateRuleRequestObject()
+        {
+            // Snippet: UpdateRule(UpdateRuleRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::UpdateRuleRequest request = new gcav::UpdateRuleRequest
+            {
+                Rule = new gcav::Rule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::Rule response = artifactRegistryClient.UpdateRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRuleAsync</summary>
+        public async Task UpdateRuleRequestObjectAsync()
+        {
+            // Snippet: UpdateRuleAsync(UpdateRuleRequest, CallSettings)
+            // Additional: UpdateRuleAsync(UpdateRuleRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::UpdateRuleRequest request = new gcav::UpdateRuleRequest
+            {
+                Rule = new gcav::Rule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::Rule response = await artifactRegistryClient.UpdateRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRule</summary>
+        public void UpdateRule()
+        {
+            // Snippet: UpdateRule(Rule, FieldMask, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::Rule rule = new gcav::Rule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::Rule response = artifactRegistryClient.UpdateRule(rule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRuleAsync</summary>
+        public async Task UpdateRuleAsync()
+        {
+            // Snippet: UpdateRuleAsync(Rule, FieldMask, CallSettings)
+            // Additional: UpdateRuleAsync(Rule, FieldMask, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::Rule rule = new gcav::Rule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::Rule response = await artifactRegistryClient.UpdateRuleAsync(rule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRule</summary>
+        public void DeleteRuleRequestObject()
+        {
+            // Snippet: DeleteRule(DeleteRuleRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::DeleteRuleRequest request = new gcav::DeleteRuleRequest
+            {
+                RuleName = gcav::RuleName.FromProjectLocationRepositoryRule("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RULE]"),
+            };
+            // Make the request
+            artifactRegistryClient.DeleteRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRuleAsync</summary>
+        public async Task DeleteRuleRequestObjectAsync()
+        {
+            // Snippet: DeleteRuleAsync(DeleteRuleRequest, CallSettings)
+            // Additional: DeleteRuleAsync(DeleteRuleRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::DeleteRuleRequest request = new gcav::DeleteRuleRequest
+            {
+                RuleName = gcav::RuleName.FromProjectLocationRepositoryRule("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RULE]"),
+            };
+            // Make the request
+            await artifactRegistryClient.DeleteRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRule</summary>
+        public void DeleteRule()
+        {
+            // Snippet: DeleteRule(string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/rules/[RULE]";
+            // Make the request
+            artifactRegistryClient.DeleteRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRuleAsync</summary>
+        public async Task DeleteRuleAsync()
+        {
+            // Snippet: DeleteRuleAsync(string, CallSettings)
+            // Additional: DeleteRuleAsync(string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/rules/[RULE]";
+            // Make the request
+            await artifactRegistryClient.DeleteRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRule</summary>
+        public void DeleteRuleResourceNames()
+        {
+            // Snippet: DeleteRule(RuleName, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::RuleName name = gcav::RuleName.FromProjectLocationRepositoryRule("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RULE]");
+            // Make the request
+            artifactRegistryClient.DeleteRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRuleAsync</summary>
+        public async Task DeleteRuleResourceNamesAsync()
+        {
+            // Snippet: DeleteRuleAsync(RuleName, CallSettings)
+            // Additional: DeleteRuleAsync(RuleName, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::RuleName name = gcav::RuleName.FromProjectLocationRepositoryRule("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RULE]");
+            // Make the request
+            await artifactRegistryClient.DeleteRuleAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicyRequestObject()
         {
@@ -4669,6 +5603,813 @@ namespace GoogleCSharpSnippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             gcav::VPCSCConfig response = await artifactRegistryClient.UpdateVPCSCConfigAsync(vpcscConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePackage</summary>
+        public void UpdatePackageRequestObject()
+        {
+            // Snippet: UpdatePackage(UpdatePackageRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::UpdatePackageRequest request = new gcav::UpdatePackageRequest
+            {
+                Package = new gcav::Package(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::Package response = artifactRegistryClient.UpdatePackage(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePackageAsync</summary>
+        public async Task UpdatePackageRequestObjectAsync()
+        {
+            // Snippet: UpdatePackageAsync(UpdatePackageRequest, CallSettings)
+            // Additional: UpdatePackageAsync(UpdatePackageRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::UpdatePackageRequest request = new gcav::UpdatePackageRequest
+            {
+                Package = new gcav::Package(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::Package response = await artifactRegistryClient.UpdatePackageAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePackage</summary>
+        public void UpdatePackage()
+        {
+            // Snippet: UpdatePackage(Package, FieldMask, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::Package package = new gcav::Package();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::Package response = artifactRegistryClient.UpdatePackage(package, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePackageAsync</summary>
+        public async Task UpdatePackageAsync()
+        {
+            // Snippet: UpdatePackageAsync(Package, FieldMask, CallSettings)
+            // Additional: UpdatePackageAsync(Package, FieldMask, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::Package package = new gcav::Package();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::Package response = await artifactRegistryClient.UpdatePackageAsync(package, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttachments</summary>
+        public void ListAttachmentsRequestObject()
+        {
+            // Snippet: ListAttachments(ListAttachmentsRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::ListAttachmentsRequest request = new gcav::ListAttachmentsRequest
+            {
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<gcav::ListAttachmentsResponse, gcav::Attachment> response = artifactRegistryClient.ListAttachments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::Attachment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::ListAttachmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Attachment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Attachment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Attachment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttachmentsAsync</summary>
+        public async Task ListAttachmentsRequestObjectAsync()
+        {
+            // Snippet: ListAttachmentsAsync(ListAttachmentsRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::ListAttachmentsRequest request = new gcav::ListAttachmentsRequest
+            {
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcav::ListAttachmentsResponse, gcav::Attachment> response = artifactRegistryClient.ListAttachmentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcav::Attachment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcav::ListAttachmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Attachment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Attachment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Attachment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttachments</summary>
+        public void ListAttachments()
+        {
+            // Snippet: ListAttachments(string, string, int?, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedEnumerable<gcav::ListAttachmentsResponse, gcav::Attachment> response = artifactRegistryClient.ListAttachments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::Attachment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::ListAttachmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Attachment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Attachment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Attachment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttachmentsAsync</summary>
+        public async Task ListAttachmentsAsync()
+        {
+            // Snippet: ListAttachmentsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<gcav::ListAttachmentsResponse, gcav::Attachment> response = artifactRegistryClient.ListAttachmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcav::Attachment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcav::ListAttachmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Attachment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Attachment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Attachment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttachments</summary>
+        public void ListAttachmentsResourceNames()
+        {
+            // Snippet: ListAttachments(RepositoryName, string, int?, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<gcav::ListAttachmentsResponse, gcav::Attachment> response = artifactRegistryClient.ListAttachments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::Attachment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::ListAttachmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Attachment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Attachment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Attachment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAttachmentsAsync</summary>
+        public async Task ListAttachmentsResourceNamesAsync()
+        {
+            // Snippet: ListAttachmentsAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedAsyncEnumerable<gcav::ListAttachmentsResponse, gcav::Attachment> response = artifactRegistryClient.ListAttachmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcav::Attachment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcav::ListAttachmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::Attachment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::Attachment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::Attachment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachment</summary>
+        public void GetAttachmentRequestObject()
+        {
+            // Snippet: GetAttachment(GetAttachmentRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::GetAttachmentRequest request = new gcav::GetAttachmentRequest
+            {
+                AttachmentName = gcav::AttachmentName.FromProjectLocationRepositoryAttachment("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[ATTACHMENT]"),
+            };
+            // Make the request
+            gcav::Attachment response = artifactRegistryClient.GetAttachment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachmentAsync</summary>
+        public async Task GetAttachmentRequestObjectAsync()
+        {
+            // Snippet: GetAttachmentAsync(GetAttachmentRequest, CallSettings)
+            // Additional: GetAttachmentAsync(GetAttachmentRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::GetAttachmentRequest request = new gcav::GetAttachmentRequest
+            {
+                AttachmentName = gcav::AttachmentName.FromProjectLocationRepositoryAttachment("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[ATTACHMENT]"),
+            };
+            // Make the request
+            gcav::Attachment response = await artifactRegistryClient.GetAttachmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachment</summary>
+        public void GetAttachment()
+        {
+            // Snippet: GetAttachment(string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/attachments/[ATTACHMENT]";
+            // Make the request
+            gcav::Attachment response = artifactRegistryClient.GetAttachment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachmentAsync</summary>
+        public async Task GetAttachmentAsync()
+        {
+            // Snippet: GetAttachmentAsync(string, CallSettings)
+            // Additional: GetAttachmentAsync(string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/attachments/[ATTACHMENT]";
+            // Make the request
+            gcav::Attachment response = await artifactRegistryClient.GetAttachmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachment</summary>
+        public void GetAttachmentResourceNames()
+        {
+            // Snippet: GetAttachment(AttachmentName, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::AttachmentName name = gcav::AttachmentName.FromProjectLocationRepositoryAttachment("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[ATTACHMENT]");
+            // Make the request
+            gcav::Attachment response = artifactRegistryClient.GetAttachment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachmentAsync</summary>
+        public async Task GetAttachmentResourceNamesAsync()
+        {
+            // Snippet: GetAttachmentAsync(AttachmentName, CallSettings)
+            // Additional: GetAttachmentAsync(AttachmentName, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::AttachmentName name = gcav::AttachmentName.FromProjectLocationRepositoryAttachment("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[ATTACHMENT]");
+            // Make the request
+            gcav::Attachment response = await artifactRegistryClient.GetAttachmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAttachment</summary>
+        public void CreateAttachmentRequestObject()
+        {
+            // Snippet: CreateAttachment(CreateAttachmentRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::CreateAttachmentRequest request = new gcav::CreateAttachmentRequest
+            {
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                AttachmentId = "",
+                Attachment = new gcav::Attachment(),
+            };
+            // Make the request
+            Operation<gcav::Attachment, gcav::OperationMetadata> response = artifactRegistryClient.CreateAttachment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::Attachment, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcav::Attachment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::Attachment, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateAttachment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::Attachment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAttachmentAsync</summary>
+        public async Task CreateAttachmentRequestObjectAsync()
+        {
+            // Snippet: CreateAttachmentAsync(CreateAttachmentRequest, CallSettings)
+            // Additional: CreateAttachmentAsync(CreateAttachmentRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::CreateAttachmentRequest request = new gcav::CreateAttachmentRequest
+            {
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                AttachmentId = "",
+                Attachment = new gcav::Attachment(),
+            };
+            // Make the request
+            Operation<gcav::Attachment, gcav::OperationMetadata> response = await artifactRegistryClient.CreateAttachmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::Attachment, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcav::Attachment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::Attachment, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateAttachmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::Attachment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAttachment</summary>
+        public void CreateAttachment()
+        {
+            // Snippet: CreateAttachment(string, Attachment, string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            gcav::Attachment attachment = new gcav::Attachment();
+            string attachmentId = "";
+            // Make the request
+            Operation<gcav::Attachment, gcav::OperationMetadata> response = artifactRegistryClient.CreateAttachment(parent, attachment, attachmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::Attachment, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcav::Attachment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::Attachment, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateAttachment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::Attachment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAttachmentAsync</summary>
+        public async Task CreateAttachmentAsync()
+        {
+            // Snippet: CreateAttachmentAsync(string, Attachment, string, CallSettings)
+            // Additional: CreateAttachmentAsync(string, Attachment, string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            gcav::Attachment attachment = new gcav::Attachment();
+            string attachmentId = "";
+            // Make the request
+            Operation<gcav::Attachment, gcav::OperationMetadata> response = await artifactRegistryClient.CreateAttachmentAsync(parent, attachment, attachmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::Attachment, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcav::Attachment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::Attachment, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateAttachmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::Attachment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAttachment</summary>
+        public void CreateAttachmentResourceNames()
+        {
+            // Snippet: CreateAttachment(RepositoryName, Attachment, string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::Attachment attachment = new gcav::Attachment();
+            string attachmentId = "";
+            // Make the request
+            Operation<gcav::Attachment, gcav::OperationMetadata> response = artifactRegistryClient.CreateAttachment(parent, attachment, attachmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::Attachment, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcav::Attachment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::Attachment, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateAttachment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::Attachment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAttachmentAsync</summary>
+        public async Task CreateAttachmentResourceNamesAsync()
+        {
+            // Snippet: CreateAttachmentAsync(RepositoryName, Attachment, string, CallSettings)
+            // Additional: CreateAttachmentAsync(RepositoryName, Attachment, string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::Attachment attachment = new gcav::Attachment();
+            string attachmentId = "";
+            // Make the request
+            Operation<gcav::Attachment, gcav::OperationMetadata> response = await artifactRegistryClient.CreateAttachmentAsync(parent, attachment, attachmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::Attachment, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcav::Attachment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::Attachment, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateAttachmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::Attachment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAttachment</summary>
+        public void DeleteAttachmentRequestObject()
+        {
+            // Snippet: DeleteAttachment(DeleteAttachmentRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::DeleteAttachmentRequest request = new gcav::DeleteAttachmentRequest
+            {
+                AttachmentName = gcav::AttachmentName.FromProjectLocationRepositoryAttachment("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[ATTACHMENT]"),
+            };
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteAttachment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteAttachment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAttachmentAsync</summary>
+        public async Task DeleteAttachmentRequestObjectAsync()
+        {
+            // Snippet: DeleteAttachmentAsync(DeleteAttachmentRequest, CallSettings)
+            // Additional: DeleteAttachmentAsync(DeleteAttachmentRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::DeleteAttachmentRequest request = new gcav::DeleteAttachmentRequest
+            {
+                AttachmentName = gcav::AttachmentName.FromProjectLocationRepositoryAttachment("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[ATTACHMENT]"),
+            };
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteAttachmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteAttachmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAttachment</summary>
+        public void DeleteAttachment()
+        {
+            // Snippet: DeleteAttachment(string, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/attachments/[ATTACHMENT]";
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteAttachment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteAttachment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAttachmentAsync</summary>
+        public async Task DeleteAttachmentAsync()
+        {
+            // Snippet: DeleteAttachmentAsync(string, CallSettings)
+            // Additional: DeleteAttachmentAsync(string, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/attachments/[ATTACHMENT]";
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteAttachmentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteAttachmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAttachment</summary>
+        public void DeleteAttachmentResourceNames()
+        {
+            // Snippet: DeleteAttachment(AttachmentName, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::AttachmentName name = gcav::AttachmentName.FromProjectLocationRepositoryAttachment("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[ATTACHMENT]");
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteAttachment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteAttachment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAttachmentAsync</summary>
+        public async Task DeleteAttachmentResourceNamesAsync()
+        {
+            // Snippet: DeleteAttachmentAsync(AttachmentName, CallSettings)
+            // Additional: DeleteAttachmentAsync(AttachmentName, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::AttachmentName name = gcav::AttachmentName.FromProjectLocationRepositoryAttachment("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[ATTACHMENT]");
+            // Make the request
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteAttachmentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteAttachmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }
