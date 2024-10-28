@@ -3054,5 +3054,3837 @@ namespace GoogleCSharpSnippets
             GoogleChannelConfig response = await eventarcClient.UpdateGoogleChannelConfigAsync(googleChannelConfig, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for GetMessageBus</summary>
+        public void GetMessageBusRequestObject()
+        {
+            // Snippet: GetMessageBus(GetMessageBusRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GetMessageBusRequest request = new GetMessageBusRequest
+            {
+                MessageBusName = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]"),
+            };
+            // Make the request
+            MessageBus response = eventarcClient.GetMessageBus(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMessageBusAsync</summary>
+        public async Task GetMessageBusRequestObjectAsync()
+        {
+            // Snippet: GetMessageBusAsync(GetMessageBusRequest, CallSettings)
+            // Additional: GetMessageBusAsync(GetMessageBusRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMessageBusRequest request = new GetMessageBusRequest
+            {
+                MessageBusName = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]"),
+            };
+            // Make the request
+            MessageBus response = await eventarcClient.GetMessageBusAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMessageBus</summary>
+        public void GetMessageBus()
+        {
+            // Snippet: GetMessageBus(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/messageBuses/[MESSAGE_BUS]";
+            // Make the request
+            MessageBus response = eventarcClient.GetMessageBus(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMessageBusAsync</summary>
+        public async Task GetMessageBusAsync()
+        {
+            // Snippet: GetMessageBusAsync(string, CallSettings)
+            // Additional: GetMessageBusAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/messageBuses/[MESSAGE_BUS]";
+            // Make the request
+            MessageBus response = await eventarcClient.GetMessageBusAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMessageBus</summary>
+        public void GetMessageBusResourceNames()
+        {
+            // Snippet: GetMessageBus(MessageBusName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            MessageBusName name = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]");
+            // Make the request
+            MessageBus response = eventarcClient.GetMessageBus(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMessageBusAsync</summary>
+        public async Task GetMessageBusResourceNamesAsync()
+        {
+            // Snippet: GetMessageBusAsync(MessageBusName, CallSettings)
+            // Additional: GetMessageBusAsync(MessageBusName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            MessageBusName name = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]");
+            // Make the request
+            MessageBus response = await eventarcClient.GetMessageBusAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBuses</summary>
+        public void ListMessageBusesRequestObject()
+        {
+            // Snippet: ListMessageBuses(ListMessageBusesRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ListMessageBusesRequest request = new ListMessageBusesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListMessageBusesResponse, MessageBus> response = eventarcClient.ListMessageBuses(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MessageBus item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMessageBusesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MessageBus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MessageBus> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MessageBus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusesAsync</summary>
+        public async Task ListMessageBusesRequestObjectAsync()
+        {
+            // Snippet: ListMessageBusesAsync(ListMessageBusesRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMessageBusesRequest request = new ListMessageBusesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMessageBusesResponse, MessageBus> response = eventarcClient.ListMessageBusesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MessageBus item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMessageBusesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MessageBus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MessageBus> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MessageBus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBuses</summary>
+        public void ListMessageBuses()
+        {
+            // Snippet: ListMessageBuses(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListMessageBusesResponse, MessageBus> response = eventarcClient.ListMessageBuses(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MessageBus item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMessageBusesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MessageBus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MessageBus> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MessageBus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusesAsync</summary>
+        public async Task ListMessageBusesAsync()
+        {
+            // Snippet: ListMessageBusesAsync(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListMessageBusesResponse, MessageBus> response = eventarcClient.ListMessageBusesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MessageBus item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMessageBusesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MessageBus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MessageBus> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MessageBus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBuses</summary>
+        public void ListMessageBusesResourceNames()
+        {
+            // Snippet: ListMessageBuses(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListMessageBusesResponse, MessageBus> response = eventarcClient.ListMessageBuses(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MessageBus item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMessageBusesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MessageBus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MessageBus> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MessageBus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusesAsync</summary>
+        public async Task ListMessageBusesResourceNamesAsync()
+        {
+            // Snippet: ListMessageBusesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListMessageBusesResponse, MessageBus> response = eventarcClient.ListMessageBusesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MessageBus item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMessageBusesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MessageBus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MessageBus> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MessageBus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusEnrollments</summary>
+        public void ListMessageBusEnrollmentsRequestObject()
+        {
+            // Snippet: ListMessageBusEnrollments(ListMessageBusEnrollmentsRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ListMessageBusEnrollmentsRequest request = new ListMessageBusEnrollmentsRequest
+            {
+                ParentAsMessageBusName = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMessageBusEnrollmentsResponse, string> response = eventarcClient.ListMessageBusEnrollments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMessageBusEnrollmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusEnrollmentsAsync</summary>
+        public async Task ListMessageBusEnrollmentsRequestObjectAsync()
+        {
+            // Snippet: ListMessageBusEnrollmentsAsync(ListMessageBusEnrollmentsRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMessageBusEnrollmentsRequest request = new ListMessageBusEnrollmentsRequest
+            {
+                ParentAsMessageBusName = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMessageBusEnrollmentsResponse, string> response = eventarcClient.ListMessageBusEnrollmentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMessageBusEnrollmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusEnrollments</summary>
+        public void ListMessageBusEnrollments()
+        {
+            // Snippet: ListMessageBusEnrollments(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/messageBuses/[MESSAGE_BUS]";
+            // Make the request
+            PagedEnumerable<ListMessageBusEnrollmentsResponse, string> response = eventarcClient.ListMessageBusEnrollments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMessageBusEnrollmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusEnrollmentsAsync</summary>
+        public async Task ListMessageBusEnrollmentsAsync()
+        {
+            // Snippet: ListMessageBusEnrollmentsAsync(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/messageBuses/[MESSAGE_BUS]";
+            // Make the request
+            PagedAsyncEnumerable<ListMessageBusEnrollmentsResponse, string> response = eventarcClient.ListMessageBusEnrollmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMessageBusEnrollmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusEnrollments</summary>
+        public void ListMessageBusEnrollmentsResourceNames()
+        {
+            // Snippet: ListMessageBusEnrollments(MessageBusName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            MessageBusName parent = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]");
+            // Make the request
+            PagedEnumerable<ListMessageBusEnrollmentsResponse, string> response = eventarcClient.ListMessageBusEnrollments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMessageBusEnrollmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMessageBusEnrollmentsAsync</summary>
+        public async Task ListMessageBusEnrollmentsResourceNamesAsync()
+        {
+            // Snippet: ListMessageBusEnrollmentsAsync(MessageBusName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            MessageBusName parent = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]");
+            // Make the request
+            PagedAsyncEnumerable<ListMessageBusEnrollmentsResponse, string> response = eventarcClient.ListMessageBusEnrollmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMessageBusEnrollmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMessageBus</summary>
+        public void CreateMessageBusRequestObject()
+        {
+            // Snippet: CreateMessageBus(CreateMessageBusRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            CreateMessageBusRequest request = new CreateMessageBusRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                MessageBus = new MessageBus(),
+                MessageBusId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = eventarcClient.CreateMessageBus(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateMessageBus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMessageBusAsync</summary>
+        public async Task CreateMessageBusRequestObjectAsync()
+        {
+            // Snippet: CreateMessageBusAsync(CreateMessageBusRequest, CallSettings)
+            // Additional: CreateMessageBusAsync(CreateMessageBusRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateMessageBusRequest request = new CreateMessageBusRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                MessageBus = new MessageBus(),
+                MessageBusId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = await eventarcClient.CreateMessageBusAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateMessageBusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMessageBus</summary>
+        public void CreateMessageBus()
+        {
+            // Snippet: CreateMessageBus(string, MessageBus, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            MessageBus messageBus = new MessageBus();
+            string messageBusId = "";
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = eventarcClient.CreateMessageBus(parent, messageBus, messageBusId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateMessageBus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMessageBusAsync</summary>
+        public async Task CreateMessageBusAsync()
+        {
+            // Snippet: CreateMessageBusAsync(string, MessageBus, string, CallSettings)
+            // Additional: CreateMessageBusAsync(string, MessageBus, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            MessageBus messageBus = new MessageBus();
+            string messageBusId = "";
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = await eventarcClient.CreateMessageBusAsync(parent, messageBus, messageBusId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateMessageBusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMessageBus</summary>
+        public void CreateMessageBusResourceNames()
+        {
+            // Snippet: CreateMessageBus(LocationName, MessageBus, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            MessageBus messageBus = new MessageBus();
+            string messageBusId = "";
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = eventarcClient.CreateMessageBus(parent, messageBus, messageBusId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateMessageBus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMessageBusAsync</summary>
+        public async Task CreateMessageBusResourceNamesAsync()
+        {
+            // Snippet: CreateMessageBusAsync(LocationName, MessageBus, string, CallSettings)
+            // Additional: CreateMessageBusAsync(LocationName, MessageBus, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            MessageBus messageBus = new MessageBus();
+            string messageBusId = "";
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = await eventarcClient.CreateMessageBusAsync(parent, messageBus, messageBusId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateMessageBusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMessageBus</summary>
+        public void UpdateMessageBusRequestObject()
+        {
+            // Snippet: UpdateMessageBus(UpdateMessageBusRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            UpdateMessageBusRequest request = new UpdateMessageBusRequest
+            {
+                MessageBus = new MessageBus(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = eventarcClient.UpdateMessageBus(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdateMessageBus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMessageBusAsync</summary>
+        public async Task UpdateMessageBusRequestObjectAsync()
+        {
+            // Snippet: UpdateMessageBusAsync(UpdateMessageBusRequest, CallSettings)
+            // Additional: UpdateMessageBusAsync(UpdateMessageBusRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateMessageBusRequest request = new UpdateMessageBusRequest
+            {
+                MessageBus = new MessageBus(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = await eventarcClient.UpdateMessageBusAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdateMessageBusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMessageBus</summary>
+        public void UpdateMessageBus()
+        {
+            // Snippet: UpdateMessageBus(MessageBus, FieldMask, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            MessageBus messageBus = new MessageBus();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = eventarcClient.UpdateMessageBus(messageBus, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdateMessageBus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMessageBusAsync</summary>
+        public async Task UpdateMessageBusAsync()
+        {
+            // Snippet: UpdateMessageBusAsync(MessageBus, FieldMask, CallSettings)
+            // Additional: UpdateMessageBusAsync(MessageBus, FieldMask, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            MessageBus messageBus = new MessageBus();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = await eventarcClient.UpdateMessageBusAsync(messageBus, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdateMessageBusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMessageBus</summary>
+        public void DeleteMessageBusRequestObject()
+        {
+            // Snippet: DeleteMessageBus(DeleteMessageBusRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            DeleteMessageBusRequest request = new DeleteMessageBusRequest
+            {
+                MessageBusName = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = eventarcClient.DeleteMessageBus(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteMessageBus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMessageBusAsync</summary>
+        public async Task DeleteMessageBusRequestObjectAsync()
+        {
+            // Snippet: DeleteMessageBusAsync(DeleteMessageBusRequest, CallSettings)
+            // Additional: DeleteMessageBusAsync(DeleteMessageBusRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteMessageBusRequest request = new DeleteMessageBusRequest
+            {
+                MessageBusName = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = await eventarcClient.DeleteMessageBusAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteMessageBusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMessageBus</summary>
+        public void DeleteMessageBus()
+        {
+            // Snippet: DeleteMessageBus(string, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/messageBuses/[MESSAGE_BUS]";
+            string etag = "";
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = eventarcClient.DeleteMessageBus(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteMessageBus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMessageBusAsync</summary>
+        public async Task DeleteMessageBusAsync()
+        {
+            // Snippet: DeleteMessageBusAsync(string, string, CallSettings)
+            // Additional: DeleteMessageBusAsync(string, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/messageBuses/[MESSAGE_BUS]";
+            string etag = "";
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = await eventarcClient.DeleteMessageBusAsync(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteMessageBusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMessageBus</summary>
+        public void DeleteMessageBusResourceNames()
+        {
+            // Snippet: DeleteMessageBus(MessageBusName, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            MessageBusName name = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]");
+            string etag = "";
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = eventarcClient.DeleteMessageBus(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteMessageBus(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMessageBusAsync</summary>
+        public async Task DeleteMessageBusResourceNamesAsync()
+        {
+            // Snippet: DeleteMessageBusAsync(MessageBusName, string, CallSettings)
+            // Additional: DeleteMessageBusAsync(MessageBusName, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            MessageBusName name = MessageBusName.FromProjectLocationMessageBus("[PROJECT]", "[LOCATION]", "[MESSAGE_BUS]");
+            string etag = "";
+            // Make the request
+            Operation<MessageBus, OperationMetadata> response = await eventarcClient.DeleteMessageBusAsync(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MessageBus, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MessageBus result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MessageBus, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteMessageBusAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MessageBus retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnrollment</summary>
+        public void GetEnrollmentRequestObject()
+        {
+            // Snippet: GetEnrollment(GetEnrollmentRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GetEnrollmentRequest request = new GetEnrollmentRequest
+            {
+                EnrollmentName = EnrollmentName.FromProjectLocationEnrollment("[PROJECT]", "[LOCATION]", "[ENROLLMENT]"),
+            };
+            // Make the request
+            Enrollment response = eventarcClient.GetEnrollment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnrollmentAsync</summary>
+        public async Task GetEnrollmentRequestObjectAsync()
+        {
+            // Snippet: GetEnrollmentAsync(GetEnrollmentRequest, CallSettings)
+            // Additional: GetEnrollmentAsync(GetEnrollmentRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEnrollmentRequest request = new GetEnrollmentRequest
+            {
+                EnrollmentName = EnrollmentName.FromProjectLocationEnrollment("[PROJECT]", "[LOCATION]", "[ENROLLMENT]"),
+            };
+            // Make the request
+            Enrollment response = await eventarcClient.GetEnrollmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnrollment</summary>
+        public void GetEnrollment()
+        {
+            // Snippet: GetEnrollment(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/enrollments/[ENROLLMENT]";
+            // Make the request
+            Enrollment response = eventarcClient.GetEnrollment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnrollmentAsync</summary>
+        public async Task GetEnrollmentAsync()
+        {
+            // Snippet: GetEnrollmentAsync(string, CallSettings)
+            // Additional: GetEnrollmentAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/enrollments/[ENROLLMENT]";
+            // Make the request
+            Enrollment response = await eventarcClient.GetEnrollmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnrollment</summary>
+        public void GetEnrollmentResourceNames()
+        {
+            // Snippet: GetEnrollment(EnrollmentName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            EnrollmentName name = EnrollmentName.FromProjectLocationEnrollment("[PROJECT]", "[LOCATION]", "[ENROLLMENT]");
+            // Make the request
+            Enrollment response = eventarcClient.GetEnrollment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnrollmentAsync</summary>
+        public async Task GetEnrollmentResourceNamesAsync()
+        {
+            // Snippet: GetEnrollmentAsync(EnrollmentName, CallSettings)
+            // Additional: GetEnrollmentAsync(EnrollmentName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            EnrollmentName name = EnrollmentName.FromProjectLocationEnrollment("[PROJECT]", "[LOCATION]", "[ENROLLMENT]");
+            // Make the request
+            Enrollment response = await eventarcClient.GetEnrollmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnrollments</summary>
+        public void ListEnrollmentsRequestObject()
+        {
+            // Snippet: ListEnrollments(ListEnrollmentsRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ListEnrollmentsRequest request = new ListEnrollmentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListEnrollmentsResponse, Enrollment> response = eventarcClient.ListEnrollments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Enrollment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEnrollmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Enrollment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Enrollment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Enrollment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnrollmentsAsync</summary>
+        public async Task ListEnrollmentsRequestObjectAsync()
+        {
+            // Snippet: ListEnrollmentsAsync(ListEnrollmentsRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ListEnrollmentsRequest request = new ListEnrollmentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListEnrollmentsResponse, Enrollment> response = eventarcClient.ListEnrollmentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Enrollment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEnrollmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Enrollment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Enrollment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Enrollment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnrollments</summary>
+        public void ListEnrollments()
+        {
+            // Snippet: ListEnrollments(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListEnrollmentsResponse, Enrollment> response = eventarcClient.ListEnrollments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Enrollment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEnrollmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Enrollment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Enrollment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Enrollment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnrollmentsAsync</summary>
+        public async Task ListEnrollmentsAsync()
+        {
+            // Snippet: ListEnrollmentsAsync(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListEnrollmentsResponse, Enrollment> response = eventarcClient.ListEnrollmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Enrollment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEnrollmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Enrollment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Enrollment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Enrollment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnrollments</summary>
+        public void ListEnrollmentsResourceNames()
+        {
+            // Snippet: ListEnrollments(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListEnrollmentsResponse, Enrollment> response = eventarcClient.ListEnrollments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Enrollment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEnrollmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Enrollment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Enrollment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Enrollment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEnrollmentsAsync</summary>
+        public async Task ListEnrollmentsResourceNamesAsync()
+        {
+            // Snippet: ListEnrollmentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListEnrollmentsResponse, Enrollment> response = eventarcClient.ListEnrollmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Enrollment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEnrollmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Enrollment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Enrollment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Enrollment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnrollment</summary>
+        public void CreateEnrollmentRequestObject()
+        {
+            // Snippet: CreateEnrollment(CreateEnrollmentRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            CreateEnrollmentRequest request = new CreateEnrollmentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Enrollment = new Enrollment(),
+                EnrollmentId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = eventarcClient.CreateEnrollment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateEnrollment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnrollmentAsync</summary>
+        public async Task CreateEnrollmentRequestObjectAsync()
+        {
+            // Snippet: CreateEnrollmentAsync(CreateEnrollmentRequest, CallSettings)
+            // Additional: CreateEnrollmentAsync(CreateEnrollmentRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateEnrollmentRequest request = new CreateEnrollmentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Enrollment = new Enrollment(),
+                EnrollmentId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = await eventarcClient.CreateEnrollmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateEnrollmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnrollment</summary>
+        public void CreateEnrollment()
+        {
+            // Snippet: CreateEnrollment(string, Enrollment, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Enrollment enrollment = new Enrollment();
+            string enrollmentId = "";
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = eventarcClient.CreateEnrollment(parent, enrollment, enrollmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateEnrollment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnrollmentAsync</summary>
+        public async Task CreateEnrollmentAsync()
+        {
+            // Snippet: CreateEnrollmentAsync(string, Enrollment, string, CallSettings)
+            // Additional: CreateEnrollmentAsync(string, Enrollment, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Enrollment enrollment = new Enrollment();
+            string enrollmentId = "";
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = await eventarcClient.CreateEnrollmentAsync(parent, enrollment, enrollmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateEnrollmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnrollment</summary>
+        public void CreateEnrollmentResourceNames()
+        {
+            // Snippet: CreateEnrollment(LocationName, Enrollment, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Enrollment enrollment = new Enrollment();
+            string enrollmentId = "";
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = eventarcClient.CreateEnrollment(parent, enrollment, enrollmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateEnrollment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEnrollmentAsync</summary>
+        public async Task CreateEnrollmentResourceNamesAsync()
+        {
+            // Snippet: CreateEnrollmentAsync(LocationName, Enrollment, string, CallSettings)
+            // Additional: CreateEnrollmentAsync(LocationName, Enrollment, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Enrollment enrollment = new Enrollment();
+            string enrollmentId = "";
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = await eventarcClient.CreateEnrollmentAsync(parent, enrollment, enrollmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateEnrollmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnrollment</summary>
+        public void UpdateEnrollmentRequestObject()
+        {
+            // Snippet: UpdateEnrollment(UpdateEnrollmentRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            UpdateEnrollmentRequest request = new UpdateEnrollmentRequest
+            {
+                Enrollment = new Enrollment(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = eventarcClient.UpdateEnrollment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdateEnrollment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnrollmentAsync</summary>
+        public async Task UpdateEnrollmentRequestObjectAsync()
+        {
+            // Snippet: UpdateEnrollmentAsync(UpdateEnrollmentRequest, CallSettings)
+            // Additional: UpdateEnrollmentAsync(UpdateEnrollmentRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateEnrollmentRequest request = new UpdateEnrollmentRequest
+            {
+                Enrollment = new Enrollment(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = await eventarcClient.UpdateEnrollmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdateEnrollmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnrollment</summary>
+        public void UpdateEnrollment()
+        {
+            // Snippet: UpdateEnrollment(Enrollment, FieldMask, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            Enrollment enrollment = new Enrollment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = eventarcClient.UpdateEnrollment(enrollment, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdateEnrollment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnrollmentAsync</summary>
+        public async Task UpdateEnrollmentAsync()
+        {
+            // Snippet: UpdateEnrollmentAsync(Enrollment, FieldMask, CallSettings)
+            // Additional: UpdateEnrollmentAsync(Enrollment, FieldMask, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            Enrollment enrollment = new Enrollment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = await eventarcClient.UpdateEnrollmentAsync(enrollment, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdateEnrollmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnrollment</summary>
+        public void DeleteEnrollmentRequestObject()
+        {
+            // Snippet: DeleteEnrollment(DeleteEnrollmentRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            DeleteEnrollmentRequest request = new DeleteEnrollmentRequest
+            {
+                EnrollmentName = EnrollmentName.FromProjectLocationEnrollment("[PROJECT]", "[LOCATION]", "[ENROLLMENT]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = eventarcClient.DeleteEnrollment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteEnrollment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnrollmentAsync</summary>
+        public async Task DeleteEnrollmentRequestObjectAsync()
+        {
+            // Snippet: DeleteEnrollmentAsync(DeleteEnrollmentRequest, CallSettings)
+            // Additional: DeleteEnrollmentAsync(DeleteEnrollmentRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteEnrollmentRequest request = new DeleteEnrollmentRequest
+            {
+                EnrollmentName = EnrollmentName.FromProjectLocationEnrollment("[PROJECT]", "[LOCATION]", "[ENROLLMENT]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = await eventarcClient.DeleteEnrollmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteEnrollmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnrollment</summary>
+        public void DeleteEnrollment()
+        {
+            // Snippet: DeleteEnrollment(string, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/enrollments/[ENROLLMENT]";
+            string etag = "";
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = eventarcClient.DeleteEnrollment(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteEnrollment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnrollmentAsync</summary>
+        public async Task DeleteEnrollmentAsync()
+        {
+            // Snippet: DeleteEnrollmentAsync(string, string, CallSettings)
+            // Additional: DeleteEnrollmentAsync(string, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/enrollments/[ENROLLMENT]";
+            string etag = "";
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = await eventarcClient.DeleteEnrollmentAsync(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteEnrollmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnrollment</summary>
+        public void DeleteEnrollmentResourceNames()
+        {
+            // Snippet: DeleteEnrollment(EnrollmentName, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            EnrollmentName name = EnrollmentName.FromProjectLocationEnrollment("[PROJECT]", "[LOCATION]", "[ENROLLMENT]");
+            string etag = "";
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = eventarcClient.DeleteEnrollment(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteEnrollment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEnrollmentAsync</summary>
+        public async Task DeleteEnrollmentResourceNamesAsync()
+        {
+            // Snippet: DeleteEnrollmentAsync(EnrollmentName, string, CallSettings)
+            // Additional: DeleteEnrollmentAsync(EnrollmentName, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            EnrollmentName name = EnrollmentName.FromProjectLocationEnrollment("[PROJECT]", "[LOCATION]", "[ENROLLMENT]");
+            string etag = "";
+            // Make the request
+            Operation<Enrollment, OperationMetadata> response = await eventarcClient.DeleteEnrollmentAsync(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Enrollment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Enrollment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Enrollment, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteEnrollmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Enrollment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipeline</summary>
+        public void GetPipelineRequestObject()
+        {
+            // Snippet: GetPipeline(GetPipelineRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GetPipelineRequest request = new GetPipelineRequest
+            {
+                PipelineName = PipelineName.FromProjectLocationPipeline("[PROJECT]", "[LOCATION]", "[PIPELINE]"),
+            };
+            // Make the request
+            Pipeline response = eventarcClient.GetPipeline(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineAsync</summary>
+        public async Task GetPipelineRequestObjectAsync()
+        {
+            // Snippet: GetPipelineAsync(GetPipelineRequest, CallSettings)
+            // Additional: GetPipelineAsync(GetPipelineRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPipelineRequest request = new GetPipelineRequest
+            {
+                PipelineName = PipelineName.FromProjectLocationPipeline("[PROJECT]", "[LOCATION]", "[PIPELINE]"),
+            };
+            // Make the request
+            Pipeline response = await eventarcClient.GetPipelineAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipeline</summary>
+        public void GetPipeline()
+        {
+            // Snippet: GetPipeline(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelines/[PIPELINE]";
+            // Make the request
+            Pipeline response = eventarcClient.GetPipeline(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineAsync</summary>
+        public async Task GetPipelineAsync()
+        {
+            // Snippet: GetPipelineAsync(string, CallSettings)
+            // Additional: GetPipelineAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelines/[PIPELINE]";
+            // Make the request
+            Pipeline response = await eventarcClient.GetPipelineAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipeline</summary>
+        public void GetPipelineResourceNames()
+        {
+            // Snippet: GetPipeline(PipelineName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            PipelineName name = PipelineName.FromProjectLocationPipeline("[PROJECT]", "[LOCATION]", "[PIPELINE]");
+            // Make the request
+            Pipeline response = eventarcClient.GetPipeline(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineAsync</summary>
+        public async Task GetPipelineResourceNamesAsync()
+        {
+            // Snippet: GetPipelineAsync(PipelineName, CallSettings)
+            // Additional: GetPipelineAsync(PipelineName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            PipelineName name = PipelineName.FromProjectLocationPipeline("[PROJECT]", "[LOCATION]", "[PIPELINE]");
+            // Make the request
+            Pipeline response = await eventarcClient.GetPipelineAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelines</summary>
+        public void ListPipelinesRequestObject()
+        {
+            // Snippet: ListPipelines(ListPipelinesRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ListPipelinesRequest request = new ListPipelinesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListPipelinesResponse, Pipeline> response = eventarcClient.ListPipelines(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Pipeline item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPipelinesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Pipeline item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Pipeline> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Pipeline item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelinesAsync</summary>
+        public async Task ListPipelinesRequestObjectAsync()
+        {
+            // Snippet: ListPipelinesAsync(ListPipelinesRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPipelinesRequest request = new ListPipelinesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPipelinesResponse, Pipeline> response = eventarcClient.ListPipelinesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Pipeline item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPipelinesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Pipeline item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Pipeline> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Pipeline item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelines</summary>
+        public void ListPipelines()
+        {
+            // Snippet: ListPipelines(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListPipelinesResponse, Pipeline> response = eventarcClient.ListPipelines(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Pipeline item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPipelinesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Pipeline item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Pipeline> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Pipeline item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelinesAsync</summary>
+        public async Task ListPipelinesAsync()
+        {
+            // Snippet: ListPipelinesAsync(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListPipelinesResponse, Pipeline> response = eventarcClient.ListPipelinesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Pipeline item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPipelinesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Pipeline item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Pipeline> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Pipeline item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelines</summary>
+        public void ListPipelinesResourceNames()
+        {
+            // Snippet: ListPipelines(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListPipelinesResponse, Pipeline> response = eventarcClient.ListPipelines(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Pipeline item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPipelinesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Pipeline item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Pipeline> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Pipeline item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelinesAsync</summary>
+        public async Task ListPipelinesResourceNamesAsync()
+        {
+            // Snippet: ListPipelinesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListPipelinesResponse, Pipeline> response = eventarcClient.ListPipelinesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Pipeline item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPipelinesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Pipeline item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Pipeline> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Pipeline item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipeline</summary>
+        public void CreatePipelineRequestObject()
+        {
+            // Snippet: CreatePipeline(CreatePipelineRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            CreatePipelineRequest request = new CreatePipelineRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Pipeline = new Pipeline(),
+                PipelineId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = eventarcClient.CreatePipeline(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreatePipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipelineAsync</summary>
+        public async Task CreatePipelineRequestObjectAsync()
+        {
+            // Snippet: CreatePipelineAsync(CreatePipelineRequest, CallSettings)
+            // Additional: CreatePipelineAsync(CreatePipelineRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            CreatePipelineRequest request = new CreatePipelineRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Pipeline = new Pipeline(),
+                PipelineId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = await eventarcClient.CreatePipelineAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreatePipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipeline</summary>
+        public void CreatePipeline()
+        {
+            // Snippet: CreatePipeline(string, Pipeline, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Pipeline pipeline = new Pipeline();
+            string pipelineId = "";
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = eventarcClient.CreatePipeline(parent, pipeline, pipelineId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreatePipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipelineAsync</summary>
+        public async Task CreatePipelineAsync()
+        {
+            // Snippet: CreatePipelineAsync(string, Pipeline, string, CallSettings)
+            // Additional: CreatePipelineAsync(string, Pipeline, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Pipeline pipeline = new Pipeline();
+            string pipelineId = "";
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = await eventarcClient.CreatePipelineAsync(parent, pipeline, pipelineId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreatePipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipeline</summary>
+        public void CreatePipelineResourceNames()
+        {
+            // Snippet: CreatePipeline(LocationName, Pipeline, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Pipeline pipeline = new Pipeline();
+            string pipelineId = "";
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = eventarcClient.CreatePipeline(parent, pipeline, pipelineId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreatePipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipelineAsync</summary>
+        public async Task CreatePipelineResourceNamesAsync()
+        {
+            // Snippet: CreatePipelineAsync(LocationName, Pipeline, string, CallSettings)
+            // Additional: CreatePipelineAsync(LocationName, Pipeline, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Pipeline pipeline = new Pipeline();
+            string pipelineId = "";
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = await eventarcClient.CreatePipelineAsync(parent, pipeline, pipelineId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreatePipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePipeline</summary>
+        public void UpdatePipelineRequestObject()
+        {
+            // Snippet: UpdatePipeline(UpdatePipelineRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            UpdatePipelineRequest request = new UpdatePipelineRequest
+            {
+                Pipeline = new Pipeline(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = eventarcClient.UpdatePipeline(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdatePipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePipelineAsync</summary>
+        public async Task UpdatePipelineRequestObjectAsync()
+        {
+            // Snippet: UpdatePipelineAsync(UpdatePipelineRequest, CallSettings)
+            // Additional: UpdatePipelineAsync(UpdatePipelineRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdatePipelineRequest request = new UpdatePipelineRequest
+            {
+                Pipeline = new Pipeline(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = await eventarcClient.UpdatePipelineAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdatePipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePipeline</summary>
+        public void UpdatePipeline()
+        {
+            // Snippet: UpdatePipeline(Pipeline, FieldMask, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            Pipeline pipeline = new Pipeline();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = eventarcClient.UpdatePipeline(pipeline, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdatePipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePipelineAsync</summary>
+        public async Task UpdatePipelineAsync()
+        {
+            // Snippet: UpdatePipelineAsync(Pipeline, FieldMask, CallSettings)
+            // Additional: UpdatePipelineAsync(Pipeline, FieldMask, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            Pipeline pipeline = new Pipeline();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = await eventarcClient.UpdatePipelineAsync(pipeline, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdatePipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipeline</summary>
+        public void DeletePipelineRequestObject()
+        {
+            // Snippet: DeletePipeline(DeletePipelineRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            DeletePipelineRequest request = new DeletePipelineRequest
+            {
+                PipelineName = PipelineName.FromProjectLocationPipeline("[PROJECT]", "[LOCATION]", "[PIPELINE]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = eventarcClient.DeletePipeline(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeletePipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineAsync</summary>
+        public async Task DeletePipelineRequestObjectAsync()
+        {
+            // Snippet: DeletePipelineAsync(DeletePipelineRequest, CallSettings)
+            // Additional: DeletePipelineAsync(DeletePipelineRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            DeletePipelineRequest request = new DeletePipelineRequest
+            {
+                PipelineName = PipelineName.FromProjectLocationPipeline("[PROJECT]", "[LOCATION]", "[PIPELINE]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = await eventarcClient.DeletePipelineAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeletePipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipeline</summary>
+        public void DeletePipeline()
+        {
+            // Snippet: DeletePipeline(string, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelines/[PIPELINE]";
+            string etag = "";
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = eventarcClient.DeletePipeline(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeletePipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineAsync</summary>
+        public async Task DeletePipelineAsync()
+        {
+            // Snippet: DeletePipelineAsync(string, string, CallSettings)
+            // Additional: DeletePipelineAsync(string, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelines/[PIPELINE]";
+            string etag = "";
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = await eventarcClient.DeletePipelineAsync(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeletePipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipeline</summary>
+        public void DeletePipelineResourceNames()
+        {
+            // Snippet: DeletePipeline(PipelineName, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            PipelineName name = PipelineName.FromProjectLocationPipeline("[PROJECT]", "[LOCATION]", "[PIPELINE]");
+            string etag = "";
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = eventarcClient.DeletePipeline(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeletePipeline(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineAsync</summary>
+        public async Task DeletePipelineResourceNamesAsync()
+        {
+            // Snippet: DeletePipelineAsync(PipelineName, string, CallSettings)
+            // Additional: DeletePipelineAsync(PipelineName, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            PipelineName name = PipelineName.FromProjectLocationPipeline("[PROJECT]", "[LOCATION]", "[PIPELINE]");
+            string etag = "";
+            // Make the request
+            Operation<Pipeline, OperationMetadata> response = await eventarcClient.DeletePipelineAsync(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Pipeline, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Pipeline result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Pipeline, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeletePipelineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Pipeline retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleApiSource</summary>
+        public void GetGoogleApiSourceRequestObject()
+        {
+            // Snippet: GetGoogleApiSource(GetGoogleApiSourceRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GetGoogleApiSourceRequest request = new GetGoogleApiSourceRequest
+            {
+                GoogleApiSourceName = GoogleApiSourceName.FromProjectLocationGoogleApiSource("[PROJECT]", "[LOCATION]", "[GOOGLE_API_SOURCE]"),
+            };
+            // Make the request
+            GoogleApiSource response = eventarcClient.GetGoogleApiSource(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleApiSourceAsync</summary>
+        public async Task GetGoogleApiSourceRequestObjectAsync()
+        {
+            // Snippet: GetGoogleApiSourceAsync(GetGoogleApiSourceRequest, CallSettings)
+            // Additional: GetGoogleApiSourceAsync(GetGoogleApiSourceRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoogleApiSourceRequest request = new GetGoogleApiSourceRequest
+            {
+                GoogleApiSourceName = GoogleApiSourceName.FromProjectLocationGoogleApiSource("[PROJECT]", "[LOCATION]", "[GOOGLE_API_SOURCE]"),
+            };
+            // Make the request
+            GoogleApiSource response = await eventarcClient.GetGoogleApiSourceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleApiSource</summary>
+        public void GetGoogleApiSource()
+        {
+            // Snippet: GetGoogleApiSource(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/googleApiSources/[GOOGLE_API_SOURCE]";
+            // Make the request
+            GoogleApiSource response = eventarcClient.GetGoogleApiSource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleApiSourceAsync</summary>
+        public async Task GetGoogleApiSourceAsync()
+        {
+            // Snippet: GetGoogleApiSourceAsync(string, CallSettings)
+            // Additional: GetGoogleApiSourceAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/googleApiSources/[GOOGLE_API_SOURCE]";
+            // Make the request
+            GoogleApiSource response = await eventarcClient.GetGoogleApiSourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleApiSource</summary>
+        public void GetGoogleApiSourceResourceNames()
+        {
+            // Snippet: GetGoogleApiSource(GoogleApiSourceName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GoogleApiSourceName name = GoogleApiSourceName.FromProjectLocationGoogleApiSource("[PROJECT]", "[LOCATION]", "[GOOGLE_API_SOURCE]");
+            // Make the request
+            GoogleApiSource response = eventarcClient.GetGoogleApiSource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoogleApiSourceAsync</summary>
+        public async Task GetGoogleApiSourceResourceNamesAsync()
+        {
+            // Snippet: GetGoogleApiSourceAsync(GoogleApiSourceName, CallSettings)
+            // Additional: GetGoogleApiSourceAsync(GoogleApiSourceName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GoogleApiSourceName name = GoogleApiSourceName.FromProjectLocationGoogleApiSource("[PROJECT]", "[LOCATION]", "[GOOGLE_API_SOURCE]");
+            // Make the request
+            GoogleApiSource response = await eventarcClient.GetGoogleApiSourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoogleApiSources</summary>
+        public void ListGoogleApiSourcesRequestObject()
+        {
+            // Snippet: ListGoogleApiSources(ListGoogleApiSourcesRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ListGoogleApiSourcesRequest request = new ListGoogleApiSourcesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> response = eventarcClient.ListGoogleApiSources(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoogleApiSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoogleApiSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoogleApiSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoogleApiSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoogleApiSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoogleApiSourcesAsync</summary>
+        public async Task ListGoogleApiSourcesRequestObjectAsync()
+        {
+            // Snippet: ListGoogleApiSourcesAsync(ListGoogleApiSourcesRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGoogleApiSourcesRequest request = new ListGoogleApiSourcesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> response = eventarcClient.ListGoogleApiSourcesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GoogleApiSource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGoogleApiSourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoogleApiSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoogleApiSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoogleApiSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoogleApiSources</summary>
+        public void ListGoogleApiSources()
+        {
+            // Snippet: ListGoogleApiSources(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> response = eventarcClient.ListGoogleApiSources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoogleApiSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoogleApiSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoogleApiSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoogleApiSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoogleApiSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoogleApiSourcesAsync</summary>
+        public async Task ListGoogleApiSourcesAsync()
+        {
+            // Snippet: ListGoogleApiSourcesAsync(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> response = eventarcClient.ListGoogleApiSourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GoogleApiSource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGoogleApiSourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoogleApiSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoogleApiSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoogleApiSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoogleApiSources</summary>
+        public void ListGoogleApiSourcesResourceNames()
+        {
+            // Snippet: ListGoogleApiSources(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> response = eventarcClient.ListGoogleApiSources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoogleApiSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoogleApiSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoogleApiSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoogleApiSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoogleApiSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoogleApiSourcesAsync</summary>
+        public async Task ListGoogleApiSourcesResourceNamesAsync()
+        {
+            // Snippet: ListGoogleApiSourcesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> response = eventarcClient.ListGoogleApiSourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GoogleApiSource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGoogleApiSourcesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoogleApiSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoogleApiSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoogleApiSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoogleApiSource</summary>
+        public void CreateGoogleApiSourceRequestObject()
+        {
+            // Snippet: CreateGoogleApiSource(CreateGoogleApiSourceRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            CreateGoogleApiSourceRequest request = new CreateGoogleApiSourceRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GoogleApiSource = new GoogleApiSource(),
+                GoogleApiSourceId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = eventarcClient.CreateGoogleApiSource(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateGoogleApiSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoogleApiSourceAsync</summary>
+        public async Task CreateGoogleApiSourceRequestObjectAsync()
+        {
+            // Snippet: CreateGoogleApiSourceAsync(CreateGoogleApiSourceRequest, CallSettings)
+            // Additional: CreateGoogleApiSourceAsync(CreateGoogleApiSourceRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateGoogleApiSourceRequest request = new CreateGoogleApiSourceRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GoogleApiSource = new GoogleApiSource(),
+                GoogleApiSourceId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = await eventarcClient.CreateGoogleApiSourceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateGoogleApiSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoogleApiSource</summary>
+        public void CreateGoogleApiSource()
+        {
+            // Snippet: CreateGoogleApiSource(string, GoogleApiSource, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            GoogleApiSource googleApiSource = new GoogleApiSource();
+            string googleApiSourceId = "";
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = eventarcClient.CreateGoogleApiSource(parent, googleApiSource, googleApiSourceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateGoogleApiSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoogleApiSourceAsync</summary>
+        public async Task CreateGoogleApiSourceAsync()
+        {
+            // Snippet: CreateGoogleApiSourceAsync(string, GoogleApiSource, string, CallSettings)
+            // Additional: CreateGoogleApiSourceAsync(string, GoogleApiSource, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            GoogleApiSource googleApiSource = new GoogleApiSource();
+            string googleApiSourceId = "";
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = await eventarcClient.CreateGoogleApiSourceAsync(parent, googleApiSource, googleApiSourceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateGoogleApiSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoogleApiSource</summary>
+        public void CreateGoogleApiSourceResourceNames()
+        {
+            // Snippet: CreateGoogleApiSource(LocationName, GoogleApiSource, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            GoogleApiSource googleApiSource = new GoogleApiSource();
+            string googleApiSourceId = "";
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = eventarcClient.CreateGoogleApiSource(parent, googleApiSource, googleApiSourceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateGoogleApiSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoogleApiSourceAsync</summary>
+        public async Task CreateGoogleApiSourceResourceNamesAsync()
+        {
+            // Snippet: CreateGoogleApiSourceAsync(LocationName, GoogleApiSource, string, CallSettings)
+            // Additional: CreateGoogleApiSourceAsync(LocationName, GoogleApiSource, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            GoogleApiSource googleApiSource = new GoogleApiSource();
+            string googleApiSourceId = "";
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = await eventarcClient.CreateGoogleApiSourceAsync(parent, googleApiSource, googleApiSourceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateGoogleApiSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoogleApiSource</summary>
+        public void UpdateGoogleApiSourceRequestObject()
+        {
+            // Snippet: UpdateGoogleApiSource(UpdateGoogleApiSourceRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            UpdateGoogleApiSourceRequest request = new UpdateGoogleApiSourceRequest
+            {
+                GoogleApiSource = new GoogleApiSource(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = eventarcClient.UpdateGoogleApiSource(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdateGoogleApiSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoogleApiSourceAsync</summary>
+        public async Task UpdateGoogleApiSourceRequestObjectAsync()
+        {
+            // Snippet: UpdateGoogleApiSourceAsync(UpdateGoogleApiSourceRequest, CallSettings)
+            // Additional: UpdateGoogleApiSourceAsync(UpdateGoogleApiSourceRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGoogleApiSourceRequest request = new UpdateGoogleApiSourceRequest
+            {
+                GoogleApiSource = new GoogleApiSource(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = await eventarcClient.UpdateGoogleApiSourceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdateGoogleApiSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoogleApiSource</summary>
+        public void UpdateGoogleApiSource()
+        {
+            // Snippet: UpdateGoogleApiSource(GoogleApiSource, FieldMask, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GoogleApiSource googleApiSource = new GoogleApiSource();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = eventarcClient.UpdateGoogleApiSource(googleApiSource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdateGoogleApiSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoogleApiSourceAsync</summary>
+        public async Task UpdateGoogleApiSourceAsync()
+        {
+            // Snippet: UpdateGoogleApiSourceAsync(GoogleApiSource, FieldMask, CallSettings)
+            // Additional: UpdateGoogleApiSourceAsync(GoogleApiSource, FieldMask, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GoogleApiSource googleApiSource = new GoogleApiSource();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = await eventarcClient.UpdateGoogleApiSourceAsync(googleApiSource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdateGoogleApiSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoogleApiSource</summary>
+        public void DeleteGoogleApiSourceRequestObject()
+        {
+            // Snippet: DeleteGoogleApiSource(DeleteGoogleApiSourceRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            DeleteGoogleApiSourceRequest request = new DeleteGoogleApiSourceRequest
+            {
+                GoogleApiSourceName = GoogleApiSourceName.FromProjectLocationGoogleApiSource("[PROJECT]", "[LOCATION]", "[GOOGLE_API_SOURCE]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = eventarcClient.DeleteGoogleApiSource(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteGoogleApiSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoogleApiSourceAsync</summary>
+        public async Task DeleteGoogleApiSourceRequestObjectAsync()
+        {
+            // Snippet: DeleteGoogleApiSourceAsync(DeleteGoogleApiSourceRequest, CallSettings)
+            // Additional: DeleteGoogleApiSourceAsync(DeleteGoogleApiSourceRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteGoogleApiSourceRequest request = new DeleteGoogleApiSourceRequest
+            {
+                GoogleApiSourceName = GoogleApiSourceName.FromProjectLocationGoogleApiSource("[PROJECT]", "[LOCATION]", "[GOOGLE_API_SOURCE]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = await eventarcClient.DeleteGoogleApiSourceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteGoogleApiSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoogleApiSource</summary>
+        public void DeleteGoogleApiSource()
+        {
+            // Snippet: DeleteGoogleApiSource(string, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/googleApiSources/[GOOGLE_API_SOURCE]";
+            string etag = "";
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = eventarcClient.DeleteGoogleApiSource(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteGoogleApiSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoogleApiSourceAsync</summary>
+        public async Task DeleteGoogleApiSourceAsync()
+        {
+            // Snippet: DeleteGoogleApiSourceAsync(string, string, CallSettings)
+            // Additional: DeleteGoogleApiSourceAsync(string, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/googleApiSources/[GOOGLE_API_SOURCE]";
+            string etag = "";
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = await eventarcClient.DeleteGoogleApiSourceAsync(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteGoogleApiSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoogleApiSource</summary>
+        public void DeleteGoogleApiSourceResourceNames()
+        {
+            // Snippet: DeleteGoogleApiSource(GoogleApiSourceName, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GoogleApiSourceName name = GoogleApiSourceName.FromProjectLocationGoogleApiSource("[PROJECT]", "[LOCATION]", "[GOOGLE_API_SOURCE]");
+            string etag = "";
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = eventarcClient.DeleteGoogleApiSource(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteGoogleApiSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoogleApiSourceAsync</summary>
+        public async Task DeleteGoogleApiSourceResourceNamesAsync()
+        {
+            // Snippet: DeleteGoogleApiSourceAsync(GoogleApiSourceName, string, CallSettings)
+            // Additional: DeleteGoogleApiSourceAsync(GoogleApiSourceName, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GoogleApiSourceName name = GoogleApiSourceName.FromProjectLocationGoogleApiSource("[PROJECT]", "[LOCATION]", "[GOOGLE_API_SOURCE]");
+            string etag = "";
+            // Make the request
+            Operation<GoogleApiSource, OperationMetadata> response = await eventarcClient.DeleteGoogleApiSourceAsync(name, etag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoogleApiSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoogleApiSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoogleApiSource, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteGoogleApiSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoogleApiSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
