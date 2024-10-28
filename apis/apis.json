@@ -5460,6 +5460,33 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.VisionAI.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Vision AI",
+      "productUrl": "https://cloud.google.com/vision-ai/docs",
+      "description": "Recommended Google client library to access to Vertex AI Vision API. Vertex AI Vision is an AI-powered platform to ingest, analyze and store video data.",
+      "tags": [
+        "ai",
+        "vertex",
+        "vision",
+        "video",
+        "analytics"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/visionai/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "visionai",
+      "serviceConfigFile": "visionai_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.VmwareEngine.V1",
       "version": "1.6.0",
       "type": "grpc",
