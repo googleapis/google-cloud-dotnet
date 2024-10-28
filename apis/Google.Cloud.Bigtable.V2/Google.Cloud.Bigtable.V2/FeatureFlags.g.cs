@@ -25,20 +25,22 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyItsBCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
+            "Z2xlLmJpZ3RhYmxlLnYyIp4CCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
             "Y2FucxgBIAEoCBIeChZtdXRhdGVfcm93c19yYXRlX2xpbWl0GAMgASgIEh8K",
             "F211dGF0ZV9yb3dzX3JhdGVfbGltaXQyGAUgASgIEiIKGmxhc3Rfc2Nhbm5l",
             "ZF9yb3dfcmVzcG9uc2VzGAQgASgIEhYKDnJvdXRpbmdfY29va2llGAYgASgI",
             "EhIKCnJldHJ5X2luZm8YByABKAgSIwobY2xpZW50X3NpZGVfbWV0cmljc19l",
-            "bmFibGVkGAggASgIQrsBChZjb20uZ29vZ2xlLmJpZ3RhYmxlLnYyQhFGZWF0",
-            "dXJlRmxhZ3NQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2JpZ3RhYmxl",
-            "L2FwaXYyL2JpZ3RhYmxlcGI7YmlndGFibGVwYqoCGEdvb2dsZS5DbG91ZC5C",
-            "aWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJsZVxWMuoCG0dvb2ds",
-            "ZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMmIGcHJvdG8z"));
+            "bmFibGVkGAggASgIEiAKGHRyYWZmaWNfZGlyZWN0b3JfZW5hYmxlZBgJIAEo",
+            "CBIfChdkaXJlY3RfYWNjZXNzX3JlcXVlc3RlZBgKIAEoCEK7AQoWY29tLmdv",
+            "b2dsZS5iaWd0YWJsZS52MkIRRmVhdHVyZUZsYWdzUHJvdG9QAVo4Y2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9iaWd0YWJsZS9hcGl2Mi9iaWd0YWJsZXBiO2JpZ3Rh",
+            "YmxlcGKqAhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xv",
+            "dWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled", "TrafficDirectorEnabled", "DirectAccessRequested" }, null, null, null, null)
           }));
     }
     #endregion
@@ -97,6 +99,8 @@ namespace Google.Cloud.Bigtable.V2 {
       routingCookie_ = other.routingCookie_;
       retryInfo_ = other.retryInfo_;
       clientSideMetricsEnabled_ = other.clientSideMetricsEnabled_;
+      trafficDirectorEnabled_ = other.trafficDirectorEnabled_;
+      directAccessRequested_ = other.directAccessRequested_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -219,6 +223,36 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "traffic_director_enabled" field.</summary>
+    public const int TrafficDirectorEnabledFieldNumber = 9;
+    private bool trafficDirectorEnabled_;
+    /// <summary>
+    /// Notify the server that the client using Traffic Director endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool TrafficDirectorEnabled {
+      get { return trafficDirectorEnabled_; }
+      set {
+        trafficDirectorEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "direct_access_requested" field.</summary>
+    public const int DirectAccessRequestedFieldNumber = 10;
+    private bool directAccessRequested_;
+    /// <summary>
+    /// Notify the server that the client explicitly opted in for Direct Access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DirectAccessRequested {
+      get { return directAccessRequested_; }
+      set {
+        directAccessRequested_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -241,6 +275,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (RoutingCookie != other.RoutingCookie) return false;
       if (RetryInfo != other.RetryInfo) return false;
       if (ClientSideMetricsEnabled != other.ClientSideMetricsEnabled) return false;
+      if (TrafficDirectorEnabled != other.TrafficDirectorEnabled) return false;
+      if (DirectAccessRequested != other.DirectAccessRequested) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -255,6 +291,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (RoutingCookie != false) hash ^= RoutingCookie.GetHashCode();
       if (RetryInfo != false) hash ^= RetryInfo.GetHashCode();
       if (ClientSideMetricsEnabled != false) hash ^= ClientSideMetricsEnabled.GetHashCode();
+      if (TrafficDirectorEnabled != false) hash ^= TrafficDirectorEnabled.GetHashCode();
+      if (DirectAccessRequested != false) hash ^= DirectAccessRequested.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -301,6 +339,14 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(64);
         output.WriteBool(ClientSideMetricsEnabled);
       }
+      if (TrafficDirectorEnabled != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(TrafficDirectorEnabled);
+      }
+      if (DirectAccessRequested != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(DirectAccessRequested);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -339,6 +385,14 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(64);
         output.WriteBool(ClientSideMetricsEnabled);
       }
+      if (TrafficDirectorEnabled != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(TrafficDirectorEnabled);
+      }
+      if (DirectAccessRequested != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(DirectAccessRequested);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -368,6 +422,12 @@ namespace Google.Cloud.Bigtable.V2 {
         size += 1 + 1;
       }
       if (ClientSideMetricsEnabled != false) {
+        size += 1 + 1;
+      }
+      if (TrafficDirectorEnabled != false) {
+        size += 1 + 1;
+      }
+      if (DirectAccessRequested != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -402,6 +462,12 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.ClientSideMetricsEnabled != false) {
         ClientSideMetricsEnabled = other.ClientSideMetricsEnabled;
+      }
+      if (other.TrafficDirectorEnabled != false) {
+        TrafficDirectorEnabled = other.TrafficDirectorEnabled;
+      }
+      if (other.DirectAccessRequested != false) {
+        DirectAccessRequested = other.DirectAccessRequested;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -446,6 +512,14 @@ namespace Google.Cloud.Bigtable.V2 {
             ClientSideMetricsEnabled = input.ReadBool();
             break;
           }
+          case 72: {
+            TrafficDirectorEnabled = input.ReadBool();
+            break;
+          }
+          case 80: {
+            DirectAccessRequested = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -487,6 +561,14 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 64: {
             ClientSideMetricsEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            TrafficDirectorEnabled = input.ReadBool();
+            break;
+          }
+          case 80: {
+            DirectAccessRequested = input.ReadBool();
             break;
           }
         }
