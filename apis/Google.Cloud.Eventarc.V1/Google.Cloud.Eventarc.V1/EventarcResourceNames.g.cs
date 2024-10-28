@@ -199,4 +199,208 @@ namespace Google.Cloud.Eventarc.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetMessageBusRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::MessageBusName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::MessageBusName MessageBusName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::MessageBusName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMessageBusesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMessageBusEnrollmentsRequest
+    {
+        /// <summary>
+        /// <see cref="MessageBusName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public MessageBusName ParentAsMessageBusName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : MessageBusName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateMessageBusRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteMessageBusRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::MessageBusName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::MessageBusName MessageBusName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::MessageBusName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEnrollmentRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::EnrollmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::EnrollmentName EnrollmentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::EnrollmentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListEnrollmentsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateEnrollmentRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteEnrollmentRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::EnrollmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::EnrollmentName EnrollmentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::EnrollmentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetPipelineRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::PipelineName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::PipelineName PipelineName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::PipelineName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListPipelinesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreatePipelineRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeletePipelineRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::PipelineName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::PipelineName PipelineName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::PipelineName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetGoogleApiSourceRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::GoogleApiSourceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::GoogleApiSourceName GoogleApiSourceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::GoogleApiSourceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListGoogleApiSourcesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateGoogleApiSourceRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteGoogleApiSourceRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::GoogleApiSourceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::GoogleApiSourceName GoogleApiSourceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::GoogleApiSourceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

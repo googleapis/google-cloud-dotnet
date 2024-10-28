@@ -5162,6 +5162,6037 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetMessageBus_sync",
+      "title": "GetMessageBusRequestObject",
+      "description": "Snippet for GetMessageBus",
+      "file": "EventarcClient.GetMessageBusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetMessageBus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetMessageBusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.MessageBus",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetMessageBus_async",
+      "title": "GetMessageBusRequestObjectAsync",
+      "description": "Snippet for GetMessageBusAsync",
+      "file": "EventarcClient.GetMessageBusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetMessageBusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetMessageBus_sync_flattened",
+      "title": "GetMessageBus",
+      "description": "Snippet for GetMessageBus",
+      "file": "EventarcClient.GetMessageBusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetMessageBus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.MessageBus",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetMessageBus_async_flattened",
+      "title": "GetMessageBusAsync",
+      "description": "Snippet for GetMessageBusAsync",
+      "file": "EventarcClient.GetMessageBusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetMessageBus_sync_flattened_resourceNames",
+      "title": "GetMessageBusResourceNames",
+      "description": "Snippet for GetMessageBus",
+      "file": "EventarcClient.GetMessageBusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetMessageBus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.MessageBus",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetMessageBus_async_flattened_resourceNames",
+      "title": "GetMessageBusResourceNamesAsync",
+      "description": "Snippet for GetMessageBusAsync",
+      "file": "EventarcClient.GetMessageBusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBuses_sync",
+      "title": "ListMessageBusesRequestObject",
+      "description": "Snippet for ListMessageBuses",
+      "file": "EventarcClient.ListMessageBusesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBuses",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBuses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListMessageBusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusesResponse, Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBuses",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBuses",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBuses_async",
+      "title": "ListMessageBusesRequestObjectAsync",
+      "description": "Snippet for ListMessageBusesAsync",
+      "file": "EventarcClient.ListMessageBusesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListMessageBusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusesResponse, Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBuses",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBuses",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBuses_sync_flattened",
+      "title": "ListMessageBuses",
+      "description": "Snippet for ListMessageBuses",
+      "file": "EventarcClient.ListMessageBusesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBuses",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBuses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusesResponse, Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBuses",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBuses",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBuses_async_flattened",
+      "title": "ListMessageBusesAsync",
+      "description": "Snippet for ListMessageBusesAsync",
+      "file": "EventarcClient.ListMessageBusesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusesResponse, Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBuses",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBuses",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBuses_sync_flattened_resourceNames",
+      "title": "ListMessageBusesResourceNames",
+      "description": "Snippet for ListMessageBuses",
+      "file": "EventarcClient.ListMessageBusesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBuses",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBuses",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusesResponse, Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBuses",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBuses",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBuses_async_flattened_resourceNames",
+      "title": "ListMessageBusesResourceNamesAsync",
+      "description": "Snippet for ListMessageBusesAsync",
+      "file": "EventarcClient.ListMessageBusesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusesResponse, Google.Cloud.Eventarc.V1.MessageBus>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBuses",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBuses",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBusEnrollments_sync",
+      "title": "ListMessageBusEnrollmentsRequestObject",
+      "description": "Snippet for ListMessageBusEnrollments",
+      "file": "EventarcClient.ListMessageBusEnrollmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusEnrollments",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusEnrollments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListMessageBusEnrollmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusEnrollmentsResponse, System.String>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBusEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBusEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBusEnrollments_async",
+      "title": "ListMessageBusEnrollmentsRequestObjectAsync",
+      "description": "Snippet for ListMessageBusEnrollmentsAsync",
+      "file": "EventarcClient.ListMessageBusEnrollmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusEnrollmentsAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusEnrollmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListMessageBusEnrollmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusEnrollmentsResponse, System.String>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBusEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBusEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBusEnrollments_sync_flattened",
+      "title": "ListMessageBusEnrollments",
+      "description": "Snippet for ListMessageBusEnrollments",
+      "file": "EventarcClient.ListMessageBusEnrollmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusEnrollments",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusEnrollments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusEnrollmentsResponse, System.String>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBusEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBusEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBusEnrollments_async_flattened",
+      "title": "ListMessageBusEnrollmentsAsync",
+      "description": "Snippet for ListMessageBusEnrollmentsAsync",
+      "file": "EventarcClient.ListMessageBusEnrollmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusEnrollmentsAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusEnrollmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusEnrollmentsResponse, System.String>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBusEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBusEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBusEnrollments_sync_flattened_resourceNames",
+      "title": "ListMessageBusEnrollmentsResourceNames",
+      "description": "Snippet for ListMessageBusEnrollments",
+      "file": "EventarcClient.ListMessageBusEnrollmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusEnrollments",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusEnrollments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBusName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusEnrollmentsResponse, System.String>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBusEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBusEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListMessageBusEnrollments_async_flattened_resourceNames",
+      "title": "ListMessageBusEnrollmentsResourceNamesAsync",
+      "description": "Snippet for ListMessageBusEnrollmentsAsync",
+      "file": "EventarcClient.ListMessageBusEnrollmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMessageBusEnrollmentsAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListMessageBusEnrollmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBusName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListMessageBusEnrollmentsResponse, System.String>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListMessageBusEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListMessageBusEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateMessageBus_sync",
+      "title": "CreateMessageBusRequestObject",
+      "description": "Snippet for CreateMessageBus",
+      "file": "EventarcClient.CreateMessageBusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateMessageBus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateMessageBusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateMessageBus_async",
+      "title": "CreateMessageBusRequestObjectAsync",
+      "description": "Snippet for CreateMessageBusAsync",
+      "file": "EventarcClient.CreateMessageBusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateMessageBusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateMessageBus_sync_flattened",
+      "title": "CreateMessageBus",
+      "description": "Snippet for CreateMessageBus",
+      "file": "EventarcClient.CreateMessageBusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateMessageBus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBus",
+            "name": "messageBus"
+          },
+          {
+            "type": "System.String",
+            "name": "messageBusId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateMessageBus_async_flattened",
+      "title": "CreateMessageBusAsync",
+      "description": "Snippet for CreateMessageBusAsync",
+      "file": "EventarcClient.CreateMessageBusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBus",
+            "name": "messageBus"
+          },
+          {
+            "type": "System.String",
+            "name": "messageBusId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateMessageBus_sync_flattened_resourceNames",
+      "title": "CreateMessageBusResourceNames",
+      "description": "Snippet for CreateMessageBus",
+      "file": "EventarcClient.CreateMessageBusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateMessageBus",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBus",
+            "name": "messageBus"
+          },
+          {
+            "type": "System.String",
+            "name": "messageBusId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateMessageBus_async_flattened_resourceNames",
+      "title": "CreateMessageBusResourceNamesAsync",
+      "description": "Snippet for CreateMessageBusAsync",
+      "file": "EventarcClient.CreateMessageBusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBus",
+            "name": "messageBus"
+          },
+          {
+            "type": "System.String",
+            "name": "messageBusId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateMessageBus_sync",
+      "title": "UpdateMessageBusRequestObject",
+      "description": "Snippet for UpdateMessageBus",
+      "file": "EventarcClient.UpdateMessageBusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateMessageBus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateMessageBusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateMessageBus_async",
+      "title": "UpdateMessageBusRequestObjectAsync",
+      "description": "Snippet for UpdateMessageBusAsync",
+      "file": "EventarcClient.UpdateMessageBusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateMessageBusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateMessageBus_sync_flattened",
+      "title": "UpdateMessageBus",
+      "description": "Snippet for UpdateMessageBus",
+      "file": "EventarcClient.UpdateMessageBusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateMessageBus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBus",
+            "name": "messageBus"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateMessageBus_async_flattened",
+      "title": "UpdateMessageBusAsync",
+      "description": "Snippet for UpdateMessageBusAsync",
+      "file": "EventarcClient.UpdateMessageBusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBus",
+            "name": "messageBus"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteMessageBus_sync",
+      "title": "DeleteMessageBusRequestObject",
+      "description": "Snippet for DeleteMessageBus",
+      "file": "EventarcClient.DeleteMessageBusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteMessageBus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteMessageBusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteMessageBus_async",
+      "title": "DeleteMessageBusRequestObjectAsync",
+      "description": "Snippet for DeleteMessageBusAsync",
+      "file": "EventarcClient.DeleteMessageBusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteMessageBusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteMessageBus_sync_flattened",
+      "title": "DeleteMessageBus",
+      "description": "Snippet for DeleteMessageBus",
+      "file": "EventarcClient.DeleteMessageBusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteMessageBus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteMessageBus_async_flattened",
+      "title": "DeleteMessageBusAsync",
+      "description": "Snippet for DeleteMessageBusAsync",
+      "file": "EventarcClient.DeleteMessageBusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteMessageBus_sync_flattened_resourceNames",
+      "title": "DeleteMessageBusResourceNames",
+      "description": "Snippet for DeleteMessageBus",
+      "file": "EventarcClient.DeleteMessageBusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMessageBus",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteMessageBus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBusName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteMessageBus_async_flattened_resourceNames",
+      "title": "DeleteMessageBusResourceNamesAsync",
+      "description": "Snippet for DeleteMessageBusAsync",
+      "file": "EventarcClient.DeleteMessageBusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMessageBusAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteMessageBusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.MessageBusName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.MessageBus, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteMessageBus",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteMessageBus",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetEnrollment_sync",
+      "title": "GetEnrollmentRequestObject",
+      "description": "Snippet for GetEnrollment",
+      "file": "EventarcClient.GetEnrollmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.Enrollment",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetEnrollment_async",
+      "title": "GetEnrollmentRequestObjectAsync",
+      "description": "Snippet for GetEnrollmentAsync",
+      "file": "EventarcClient.GetEnrollmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetEnrollment_sync_flattened",
+      "title": "GetEnrollment",
+      "description": "Snippet for GetEnrollment",
+      "file": "EventarcClient.GetEnrollmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetEnrollment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.Enrollment",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetEnrollment_async_flattened",
+      "title": "GetEnrollmentAsync",
+      "description": "Snippet for GetEnrollmentAsync",
+      "file": "EventarcClient.GetEnrollmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetEnrollment_sync_flattened_resourceNames",
+      "title": "GetEnrollmentResourceNames",
+      "description": "Snippet for GetEnrollment",
+      "file": "EventarcClient.GetEnrollmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.EnrollmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.Enrollment",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetEnrollment_async_flattened_resourceNames",
+      "title": "GetEnrollmentResourceNamesAsync",
+      "description": "Snippet for GetEnrollmentAsync",
+      "file": "EventarcClient.GetEnrollmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.EnrollmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListEnrollments_sync",
+      "title": "ListEnrollmentsRequestObject",
+      "description": "Snippet for ListEnrollments",
+      "file": "EventarcClient.ListEnrollmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnrollments",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListEnrollments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListEnrollmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListEnrollmentsResponse, Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListEnrollments_async",
+      "title": "ListEnrollmentsRequestObjectAsync",
+      "description": "Snippet for ListEnrollmentsAsync",
+      "file": "EventarcClient.ListEnrollmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnrollmentsAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListEnrollmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListEnrollmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListEnrollmentsResponse, Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListEnrollments_sync_flattened",
+      "title": "ListEnrollments",
+      "description": "Snippet for ListEnrollments",
+      "file": "EventarcClient.ListEnrollmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnrollments",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListEnrollments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListEnrollmentsResponse, Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListEnrollments_async_flattened",
+      "title": "ListEnrollmentsAsync",
+      "description": "Snippet for ListEnrollmentsAsync",
+      "file": "EventarcClient.ListEnrollmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnrollmentsAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListEnrollmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListEnrollmentsResponse, Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListEnrollments_sync_flattened_resourceNames",
+      "title": "ListEnrollmentsResourceNames",
+      "description": "Snippet for ListEnrollments",
+      "file": "EventarcClient.ListEnrollmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnrollments",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListEnrollments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListEnrollmentsResponse, Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListEnrollments_async_flattened_resourceNames",
+      "title": "ListEnrollmentsResourceNamesAsync",
+      "description": "Snippet for ListEnrollmentsAsync",
+      "file": "EventarcClient.ListEnrollmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnrollmentsAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListEnrollmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListEnrollmentsResponse, Google.Cloud.Eventarc.V1.Enrollment>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListEnrollments",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListEnrollments",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateEnrollment_sync",
+      "title": "CreateEnrollmentRequestObject",
+      "description": "Snippet for CreateEnrollment",
+      "file": "EventarcClient.CreateEnrollmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateEnrollment_async",
+      "title": "CreateEnrollmentRequestObjectAsync",
+      "description": "Snippet for CreateEnrollmentAsync",
+      "file": "EventarcClient.CreateEnrollmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateEnrollment_sync_flattened",
+      "title": "CreateEnrollment",
+      "description": "Snippet for CreateEnrollment",
+      "file": "EventarcClient.CreateEnrollmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateEnrollment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Enrollment",
+            "name": "enrollment"
+          },
+          {
+            "type": "System.String",
+            "name": "enrollmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateEnrollment_async_flattened",
+      "title": "CreateEnrollmentAsync",
+      "description": "Snippet for CreateEnrollmentAsync",
+      "file": "EventarcClient.CreateEnrollmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Enrollment",
+            "name": "enrollment"
+          },
+          {
+            "type": "System.String",
+            "name": "enrollmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateEnrollment_sync_flattened_resourceNames",
+      "title": "CreateEnrollmentResourceNames",
+      "description": "Snippet for CreateEnrollment",
+      "file": "EventarcClient.CreateEnrollmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Enrollment",
+            "name": "enrollment"
+          },
+          {
+            "type": "System.String",
+            "name": "enrollmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateEnrollment_async_flattened_resourceNames",
+      "title": "CreateEnrollmentResourceNamesAsync",
+      "description": "Snippet for CreateEnrollmentAsync",
+      "file": "EventarcClient.CreateEnrollmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Enrollment",
+            "name": "enrollment"
+          },
+          {
+            "type": "System.String",
+            "name": "enrollmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateEnrollment_sync",
+      "title": "UpdateEnrollmentRequestObject",
+      "description": "Snippet for UpdateEnrollment",
+      "file": "EventarcClient.UpdateEnrollmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateEnrollment_async",
+      "title": "UpdateEnrollmentRequestObjectAsync",
+      "description": "Snippet for UpdateEnrollmentAsync",
+      "file": "EventarcClient.UpdateEnrollmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateEnrollment_sync_flattened",
+      "title": "UpdateEnrollment",
+      "description": "Snippet for UpdateEnrollment",
+      "file": "EventarcClient.UpdateEnrollmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.Enrollment",
+            "name": "enrollment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateEnrollment_async_flattened",
+      "title": "UpdateEnrollmentAsync",
+      "description": "Snippet for UpdateEnrollmentAsync",
+      "file": "EventarcClient.UpdateEnrollmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.Enrollment",
+            "name": "enrollment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteEnrollment_sync",
+      "title": "DeleteEnrollmentRequestObject",
+      "description": "Snippet for DeleteEnrollment",
+      "file": "EventarcClient.DeleteEnrollmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteEnrollment_async",
+      "title": "DeleteEnrollmentRequestObjectAsync",
+      "description": "Snippet for DeleteEnrollmentAsync",
+      "file": "EventarcClient.DeleteEnrollmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteEnrollment_sync_flattened",
+      "title": "DeleteEnrollment",
+      "description": "Snippet for DeleteEnrollment",
+      "file": "EventarcClient.DeleteEnrollmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteEnrollment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteEnrollment_async_flattened",
+      "title": "DeleteEnrollmentAsync",
+      "description": "Snippet for DeleteEnrollmentAsync",
+      "file": "EventarcClient.DeleteEnrollmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteEnrollment_sync_flattened_resourceNames",
+      "title": "DeleteEnrollmentResourceNames",
+      "description": "Snippet for DeleteEnrollment",
+      "file": "EventarcClient.DeleteEnrollmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnrollment",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.EnrollmentName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteEnrollment_async_flattened_resourceNames",
+      "title": "DeleteEnrollmentResourceNamesAsync",
+      "description": "Snippet for DeleteEnrollmentAsync",
+      "file": "EventarcClient.DeleteEnrollmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEnrollmentAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.EnrollmentName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Enrollment, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteEnrollment",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteEnrollment",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetPipeline_sync",
+      "title": "GetPipelineRequestObject",
+      "description": "Snippet for GetPipeline",
+      "file": "EventarcClient.GetPipelineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.Pipeline",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetPipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetPipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetPipeline_async",
+      "title": "GetPipelineRequestObjectAsync",
+      "description": "Snippet for GetPipelineAsync",
+      "file": "EventarcClient.GetPipelineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetPipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetPipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetPipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetPipeline_sync_flattened",
+      "title": "GetPipeline",
+      "description": "Snippet for GetPipeline",
+      "file": "EventarcClient.GetPipelineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetPipeline",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.Pipeline",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetPipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetPipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetPipeline_async_flattened",
+      "title": "GetPipelineAsync",
+      "description": "Snippet for GetPipelineAsync",
+      "file": "EventarcClient.GetPipelineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetPipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetPipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetPipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetPipeline_sync_flattened_resourceNames",
+      "title": "GetPipelineResourceNames",
+      "description": "Snippet for GetPipeline",
+      "file": "EventarcClient.GetPipelineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.PipelineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.Pipeline",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetPipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetPipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetPipeline_async_flattened_resourceNames",
+      "title": "GetPipelineResourceNamesAsync",
+      "description": "Snippet for GetPipelineAsync",
+      "file": "EventarcClient.GetPipelineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetPipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.PipelineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetPipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetPipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListPipelines_sync",
+      "title": "ListPipelinesRequestObject",
+      "description": "Snippet for ListPipelines",
+      "file": "EventarcClient.ListPipelinesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPipelines",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListPipelines",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListPipelinesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListPipelinesResponse, Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListPipelines",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListPipelines",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListPipelines_async",
+      "title": "ListPipelinesRequestObjectAsync",
+      "description": "Snippet for ListPipelinesAsync",
+      "file": "EventarcClient.ListPipelinesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPipelinesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListPipelinesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListPipelinesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListPipelinesResponse, Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListPipelines",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListPipelines",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListPipelines_sync_flattened",
+      "title": "ListPipelines",
+      "description": "Snippet for ListPipelines",
+      "file": "EventarcClient.ListPipelinesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPipelines",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListPipelines",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListPipelinesResponse, Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListPipelines",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListPipelines",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListPipelines_async_flattened",
+      "title": "ListPipelinesAsync",
+      "description": "Snippet for ListPipelinesAsync",
+      "file": "EventarcClient.ListPipelinesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPipelinesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListPipelinesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListPipelinesResponse, Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListPipelines",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListPipelines",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListPipelines_sync_flattened_resourceNames",
+      "title": "ListPipelinesResourceNames",
+      "description": "Snippet for ListPipelines",
+      "file": "EventarcClient.ListPipelinesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPipelines",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListPipelines",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListPipelinesResponse, Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListPipelines",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListPipelines",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListPipelines_async_flattened_resourceNames",
+      "title": "ListPipelinesResourceNamesAsync",
+      "description": "Snippet for ListPipelinesAsync",
+      "file": "EventarcClient.ListPipelinesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPipelinesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListPipelinesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListPipelinesResponse, Google.Cloud.Eventarc.V1.Pipeline>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListPipelines",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListPipelines",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreatePipeline_sync",
+      "title": "CreatePipelineRequestObject",
+      "description": "Snippet for CreatePipeline",
+      "file": "EventarcClient.CreatePipelineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreatePipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreatePipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreatePipeline_async",
+      "title": "CreatePipelineRequestObjectAsync",
+      "description": "Snippet for CreatePipelineAsync",
+      "file": "EventarcClient.CreatePipelineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreatePipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreatePipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreatePipeline_sync_flattened",
+      "title": "CreatePipeline",
+      "description": "Snippet for CreatePipeline",
+      "file": "EventarcClient.CreatePipelineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreatePipeline",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Pipeline",
+            "name": "pipeline"
+          },
+          {
+            "type": "System.String",
+            "name": "pipelineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreatePipeline_async_flattened",
+      "title": "CreatePipelineAsync",
+      "description": "Snippet for CreatePipelineAsync",
+      "file": "EventarcClient.CreatePipelineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreatePipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Pipeline",
+            "name": "pipeline"
+          },
+          {
+            "type": "System.String",
+            "name": "pipelineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreatePipeline_sync_flattened_resourceNames",
+      "title": "CreatePipelineResourceNames",
+      "description": "Snippet for CreatePipeline",
+      "file": "EventarcClient.CreatePipelineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreatePipeline",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Pipeline",
+            "name": "pipeline"
+          },
+          {
+            "type": "System.String",
+            "name": "pipelineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreatePipeline_async_flattened_resourceNames",
+      "title": "CreatePipelineResourceNamesAsync",
+      "description": "Snippet for CreatePipelineAsync",
+      "file": "EventarcClient.CreatePipelineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreatePipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Pipeline",
+            "name": "pipeline"
+          },
+          {
+            "type": "System.String",
+            "name": "pipelineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdatePipeline_sync",
+      "title": "UpdatePipelineRequestObject",
+      "description": "Snippet for UpdatePipeline",
+      "file": "EventarcClient.UpdatePipelineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdatePipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdatePipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdatePipeline_async",
+      "title": "UpdatePipelineRequestObjectAsync",
+      "description": "Snippet for UpdatePipelineAsync",
+      "file": "EventarcClient.UpdatePipelineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdatePipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdatePipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdatePipeline_sync_flattened",
+      "title": "UpdatePipeline",
+      "description": "Snippet for UpdatePipeline",
+      "file": "EventarcClient.UpdatePipelineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdatePipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.Pipeline",
+            "name": "pipeline"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdatePipeline_async_flattened",
+      "title": "UpdatePipelineAsync",
+      "description": "Snippet for UpdatePipelineAsync",
+      "file": "EventarcClient.UpdatePipelineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdatePipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.Pipeline",
+            "name": "pipeline"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdatePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdatePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeletePipeline_sync",
+      "title": "DeletePipelineRequestObject",
+      "description": "Snippet for DeletePipeline",
+      "file": "EventarcClient.DeletePipelineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeletePipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeletePipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeletePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeletePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeletePipeline_async",
+      "title": "DeletePipelineRequestObjectAsync",
+      "description": "Snippet for DeletePipelineAsync",
+      "file": "EventarcClient.DeletePipelineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeletePipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeletePipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeletePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeletePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeletePipeline_sync_flattened",
+      "title": "DeletePipeline",
+      "description": "Snippet for DeletePipeline",
+      "file": "EventarcClient.DeletePipelineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeletePipeline",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeletePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeletePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeletePipeline_async_flattened",
+      "title": "DeletePipelineAsync",
+      "description": "Snippet for DeletePipelineAsync",
+      "file": "EventarcClient.DeletePipelineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeletePipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeletePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeletePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeletePipeline_sync_flattened_resourceNames",
+      "title": "DeletePipelineResourceNames",
+      "description": "Snippet for DeletePipeline",
+      "file": "EventarcClient.DeletePipelineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePipeline",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeletePipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.PipelineName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeletePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeletePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeletePipeline_async_flattened_resourceNames",
+      "title": "DeletePipelineResourceNamesAsync",
+      "description": "Snippet for DeletePipelineAsync",
+      "file": "EventarcClient.DeletePipelineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePipelineAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeletePipelineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.PipelineName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Pipeline, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeletePipeline",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeletePipeline",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleApiSource_sync",
+      "title": "GetGoogleApiSourceRequestObject",
+      "description": "Snippet for GetGoogleApiSource",
+      "file": "EventarcClient.GetGoogleApiSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleApiSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetGoogleApiSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleApiSource_async",
+      "title": "GetGoogleApiSourceRequestObjectAsync",
+      "description": "Snippet for GetGoogleApiSourceAsync",
+      "file": "EventarcClient.GetGoogleApiSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetGoogleApiSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleApiSource_sync_flattened",
+      "title": "GetGoogleApiSource",
+      "description": "Snippet for GetGoogleApiSource",
+      "file": "EventarcClient.GetGoogleApiSourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleApiSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleApiSource_async_flattened",
+      "title": "GetGoogleApiSourceAsync",
+      "description": "Snippet for GetGoogleApiSourceAsync",
+      "file": "EventarcClient.GetGoogleApiSourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleApiSource_sync_flattened_resourceNames",
+      "title": "GetGoogleApiSourceResourceNames",
+      "description": "Snippet for GetGoogleApiSource",
+      "file": "EventarcClient.GetGoogleApiSourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleApiSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_GetGoogleApiSource_async_flattened_resourceNames",
+      "title": "GetGoogleApiSourceResourceNamesAsync",
+      "description": "Snippet for GetGoogleApiSourceAsync",
+      "file": "EventarcClient.GetGoogleApiSourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "GetGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.GetGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListGoogleApiSources_sync",
+      "title": "ListGoogleApiSourcesRequestObject",
+      "description": "Snippet for ListGoogleApiSources",
+      "file": "EventarcClient.ListGoogleApiSourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGoogleApiSources",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListGoogleApiSources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListGoogleApiSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListGoogleApiSourcesResponse, Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListGoogleApiSources",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListGoogleApiSources",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListGoogleApiSources_async",
+      "title": "ListGoogleApiSourcesRequestObjectAsync",
+      "description": "Snippet for ListGoogleApiSourcesAsync",
+      "file": "EventarcClient.ListGoogleApiSourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGoogleApiSourcesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListGoogleApiSourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListGoogleApiSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListGoogleApiSourcesResponse, Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListGoogleApiSources",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListGoogleApiSources",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListGoogleApiSources_sync_flattened",
+      "title": "ListGoogleApiSources",
+      "description": "Snippet for ListGoogleApiSources",
+      "file": "EventarcClient.ListGoogleApiSourcesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGoogleApiSources",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListGoogleApiSources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListGoogleApiSourcesResponse, Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListGoogleApiSources",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListGoogleApiSources",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListGoogleApiSources_async_flattened",
+      "title": "ListGoogleApiSourcesAsync",
+      "description": "Snippet for ListGoogleApiSourcesAsync",
+      "file": "EventarcClient.ListGoogleApiSourcesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGoogleApiSourcesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListGoogleApiSourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListGoogleApiSourcesResponse, Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListGoogleApiSources",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListGoogleApiSources",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListGoogleApiSources_sync_flattened_resourceNames",
+      "title": "ListGoogleApiSourcesResourceNames",
+      "description": "Snippet for ListGoogleApiSources",
+      "file": "EventarcClient.ListGoogleApiSourcesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGoogleApiSources",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListGoogleApiSources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListGoogleApiSourcesResponse, Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListGoogleApiSources",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListGoogleApiSources",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_ListGoogleApiSources_async_flattened_resourceNames",
+      "title": "ListGoogleApiSourcesResourceNamesAsync",
+      "description": "Snippet for ListGoogleApiSourcesAsync",
+      "file": "EventarcClient.ListGoogleApiSourcesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGoogleApiSourcesAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListGoogleApiSourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListGoogleApiSourcesResponse, Google.Cloud.Eventarc.V1.GoogleApiSource>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "ListGoogleApiSources",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.ListGoogleApiSources",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateGoogleApiSource_sync",
+      "title": "CreateGoogleApiSourceRequestObject",
+      "description": "Snippet for CreateGoogleApiSource",
+      "file": "EventarcClient.CreateGoogleApiSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateGoogleApiSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateGoogleApiSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateGoogleApiSource_async",
+      "title": "CreateGoogleApiSourceRequestObjectAsync",
+      "description": "Snippet for CreateGoogleApiSourceAsync",
+      "file": "EventarcClient.CreateGoogleApiSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateGoogleApiSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateGoogleApiSource_sync_flattened",
+      "title": "CreateGoogleApiSource",
+      "description": "Snippet for CreateGoogleApiSource",
+      "file": "EventarcClient.CreateGoogleApiSourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateGoogleApiSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+            "name": "googleApiSource"
+          },
+          {
+            "type": "System.String",
+            "name": "googleApiSourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateGoogleApiSource_async_flattened",
+      "title": "CreateGoogleApiSourceAsync",
+      "description": "Snippet for CreateGoogleApiSourceAsync",
+      "file": "EventarcClient.CreateGoogleApiSourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+            "name": "googleApiSource"
+          },
+          {
+            "type": "System.String",
+            "name": "googleApiSourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateGoogleApiSource_sync_flattened_resourceNames",
+      "title": "CreateGoogleApiSourceResourceNames",
+      "description": "Snippet for CreateGoogleApiSource",
+      "file": "EventarcClient.CreateGoogleApiSourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateGoogleApiSource",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+            "name": "googleApiSource"
+          },
+          {
+            "type": "System.String",
+            "name": "googleApiSourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_CreateGoogleApiSource_async_flattened_resourceNames",
+      "title": "CreateGoogleApiSourceResourceNamesAsync",
+      "description": "Snippet for CreateGoogleApiSourceAsync",
+      "file": "EventarcClient.CreateGoogleApiSourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+            "name": "googleApiSource"
+          },
+          {
+            "type": "System.String",
+            "name": "googleApiSourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "CreateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.CreateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateGoogleApiSource_sync",
+      "title": "UpdateGoogleApiSourceRequestObject",
+      "description": "Snippet for UpdateGoogleApiSource",
+      "file": "EventarcClient.UpdateGoogleApiSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleApiSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateGoogleApiSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateGoogleApiSource_async",
+      "title": "UpdateGoogleApiSourceRequestObjectAsync",
+      "description": "Snippet for UpdateGoogleApiSourceAsync",
+      "file": "EventarcClient.UpdateGoogleApiSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateGoogleApiSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateGoogleApiSource_sync_flattened",
+      "title": "UpdateGoogleApiSource",
+      "description": "Snippet for UpdateGoogleApiSource",
+      "file": "EventarcClient.UpdateGoogleApiSourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleApiSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+            "name": "googleApiSource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_UpdateGoogleApiSource_async_flattened",
+      "title": "UpdateGoogleApiSourceAsync",
+      "description": "Snippet for UpdateGoogleApiSourceAsync",
+      "file": "EventarcClient.UpdateGoogleApiSourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSource",
+            "name": "googleApiSource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "UpdateGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.UpdateGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteGoogleApiSource_sync",
+      "title": "DeleteGoogleApiSourceRequestObject",
+      "description": "Snippet for DeleteGoogleApiSource",
+      "file": "EventarcClient.DeleteGoogleApiSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteGoogleApiSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteGoogleApiSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteGoogleApiSource_async",
+      "title": "DeleteGoogleApiSourceRequestObjectAsync",
+      "description": "Snippet for DeleteGoogleApiSourceAsync",
+      "file": "EventarcClient.DeleteGoogleApiSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteGoogleApiSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteGoogleApiSource_sync_flattened",
+      "title": "DeleteGoogleApiSource",
+      "description": "Snippet for DeleteGoogleApiSource",
+      "file": "EventarcClient.DeleteGoogleApiSourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteGoogleApiSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteGoogleApiSource_async_flattened",
+      "title": "DeleteGoogleApiSourceAsync",
+      "description": "Snippet for DeleteGoogleApiSourceAsync",
+      "file": "EventarcClient.DeleteGoogleApiSourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteGoogleApiSource_sync_flattened_resourceNames",
+      "title": "DeleteGoogleApiSourceResourceNames",
+      "description": "Snippet for DeleteGoogleApiSource",
+      "file": "EventarcClient.DeleteGoogleApiSourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGoogleApiSource",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteGoogleApiSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSourceName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarc_v1_generated_Eventarc_DeleteGoogleApiSource_async_flattened_resourceNames",
+      "title": "DeleteGoogleApiSourceResourceNamesAsync",
+      "description": "Snippet for DeleteGoogleApiSourceAsync",
+      "file": "EventarcClient.DeleteGoogleApiSourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGoogleApiSourceAsync",
+        "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteGoogleApiSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleApiSourceName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.GoogleApiSource, Google.Cloud.Eventarc.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EventarcClient",
+          "fullName": "Google.Cloud.Eventarc.V1.EventarcClient"
+        },
+        "method": {
+          "shortName": "DeleteGoogleApiSource",
+          "fullName": "google.cloud.eventarc.v1.Eventarc.DeleteGoogleApiSource",
+          "service": {
+            "shortName": "Eventarc",
+            "fullName": "google.cloud.eventarc.v1.Eventarc"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

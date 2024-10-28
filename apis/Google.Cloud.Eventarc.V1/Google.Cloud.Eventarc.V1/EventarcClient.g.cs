@@ -76,6 +76,39 @@ namespace Google.Cloud.Eventarc.V1
             DeleteChannelConnectionOperationsSettings = existing.DeleteChannelConnectionOperationsSettings.Clone();
             GetGoogleChannelConfigSettings = existing.GetGoogleChannelConfigSettings;
             UpdateGoogleChannelConfigSettings = existing.UpdateGoogleChannelConfigSettings;
+            GetMessageBusSettings = existing.GetMessageBusSettings;
+            ListMessageBusesSettings = existing.ListMessageBusesSettings;
+            ListMessageBusEnrollmentsSettings = existing.ListMessageBusEnrollmentsSettings;
+            CreateMessageBusSettings = existing.CreateMessageBusSettings;
+            CreateMessageBusOperationsSettings = existing.CreateMessageBusOperationsSettings.Clone();
+            UpdateMessageBusSettings = existing.UpdateMessageBusSettings;
+            UpdateMessageBusOperationsSettings = existing.UpdateMessageBusOperationsSettings.Clone();
+            DeleteMessageBusSettings = existing.DeleteMessageBusSettings;
+            DeleteMessageBusOperationsSettings = existing.DeleteMessageBusOperationsSettings.Clone();
+            GetEnrollmentSettings = existing.GetEnrollmentSettings;
+            ListEnrollmentsSettings = existing.ListEnrollmentsSettings;
+            CreateEnrollmentSettings = existing.CreateEnrollmentSettings;
+            CreateEnrollmentOperationsSettings = existing.CreateEnrollmentOperationsSettings.Clone();
+            UpdateEnrollmentSettings = existing.UpdateEnrollmentSettings;
+            UpdateEnrollmentOperationsSettings = existing.UpdateEnrollmentOperationsSettings.Clone();
+            DeleteEnrollmentSettings = existing.DeleteEnrollmentSettings;
+            DeleteEnrollmentOperationsSettings = existing.DeleteEnrollmentOperationsSettings.Clone();
+            GetPipelineSettings = existing.GetPipelineSettings;
+            ListPipelinesSettings = existing.ListPipelinesSettings;
+            CreatePipelineSettings = existing.CreatePipelineSettings;
+            CreatePipelineOperationsSettings = existing.CreatePipelineOperationsSettings.Clone();
+            UpdatePipelineSettings = existing.UpdatePipelineSettings;
+            UpdatePipelineOperationsSettings = existing.UpdatePipelineOperationsSettings.Clone();
+            DeletePipelineSettings = existing.DeletePipelineSettings;
+            DeletePipelineOperationsSettings = existing.DeletePipelineOperationsSettings.Clone();
+            GetGoogleApiSourceSettings = existing.GetGoogleApiSourceSettings;
+            ListGoogleApiSourcesSettings = existing.ListGoogleApiSourcesSettings;
+            CreateGoogleApiSourceSettings = existing.CreateGoogleApiSourceSettings;
+            CreateGoogleApiSourceOperationsSettings = existing.CreateGoogleApiSourceOperationsSettings.Clone();
+            UpdateGoogleApiSourceSettings = existing.UpdateGoogleApiSourceSettings;
+            UpdateGoogleApiSourceOperationsSettings = existing.UpdateGoogleApiSourceOperationsSettings.Clone();
+            DeleteGoogleApiSourceSettings = existing.DeleteGoogleApiSourceSettings;
+            DeleteGoogleApiSourceOperationsSettings = existing.DeleteGoogleApiSourceOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -89,11 +122,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetTriggerSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>EventarcClient.ListTriggers</c>
@@ -101,11 +143,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListTriggersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListTriggersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -114,10 +165,10 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EventarcClient.CreateTrigger</c> and
@@ -144,10 +195,10 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EventarcClient.UpdateTrigger</c> and
@@ -174,10 +225,10 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EventarcClient.DeleteTrigger</c> and
@@ -203,11 +254,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>EventarcClient.ListChannels</c>
@@ -215,11 +275,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListChannelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListChannelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -228,10 +297,10 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EventarcClient.CreateChannel</c> and
@@ -258,10 +327,10 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EventarcClient.UpdateChannel</c> and
@@ -288,10 +357,10 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EventarcClient.DeleteChannel</c> and
@@ -317,11 +386,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetProviderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetProviderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -329,11 +407,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListProvidersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListProvidersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -341,11 +428,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetChannelConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetChannelConnectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -353,11 +449,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListChannelConnectionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListChannelConnectionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -366,10 +471,10 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateChannelConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateChannelConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EventarcClient.CreateChannelConnection</c> and
@@ -396,10 +501,10 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteChannelConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteChannelConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EventarcClient.DeleteChannelConnection</c> and
@@ -425,11 +530,20 @@ namespace Google.Cloud.Eventarc.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetGoogleChannelConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetGoogleChannelConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -438,10 +552,559 @@ namespace Google.Cloud.Eventarc.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateGoogleChannelConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateGoogleChannelConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.GetMessageBus</c> and <c>EventarcClient.GetMessageBusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMessageBusSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.ListMessageBuses</c> and <c>EventarcClient.ListMessageBusesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMessageBusesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.ListMessageBusEnrollments</c> and <c>EventarcClient.ListMessageBusEnrollmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMessageBusEnrollmentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.CreateMessageBus</c> and <c>EventarcClient.CreateMessageBusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateMessageBusSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.CreateMessageBus</c> and
+        /// <c>EventarcClient.CreateMessageBusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateMessageBusOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.UpdateMessageBus</c> and <c>EventarcClient.UpdateMessageBusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateMessageBusSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.UpdateMessageBus</c> and
+        /// <c>EventarcClient.UpdateMessageBusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateMessageBusOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.DeleteMessageBus</c> and <c>EventarcClient.DeleteMessageBusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteMessageBusSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.DeleteMessageBus</c> and
+        /// <c>EventarcClient.DeleteMessageBusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteMessageBusOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.GetEnrollment</c> and <c>EventarcClient.GetEnrollmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEnrollmentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.ListEnrollments</c> and <c>EventarcClient.ListEnrollmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEnrollmentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.CreateEnrollment</c> and <c>EventarcClient.CreateEnrollmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateEnrollmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.CreateEnrollment</c> and
+        /// <c>EventarcClient.CreateEnrollmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateEnrollmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.UpdateEnrollment</c> and <c>EventarcClient.UpdateEnrollmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEnrollmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.UpdateEnrollment</c> and
+        /// <c>EventarcClient.UpdateEnrollmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateEnrollmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.DeleteEnrollment</c> and <c>EventarcClient.DeleteEnrollmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteEnrollmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.DeleteEnrollment</c> and
+        /// <c>EventarcClient.DeleteEnrollmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteEnrollmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>EventarcClient.GetPipeline</c>
+        ///  and <c>EventarcClient.GetPipelineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPipelineSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.ListPipelines</c> and <c>EventarcClient.ListPipelinesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPipelinesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.CreatePipeline</c> and <c>EventarcClient.CreatePipelineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreatePipelineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.CreatePipeline</c> and
+        /// <c>EventarcClient.CreatePipelineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreatePipelineOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.UpdatePipeline</c> and <c>EventarcClient.UpdatePipelineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePipelineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.UpdatePipeline</c> and
+        /// <c>EventarcClient.UpdatePipelineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdatePipelineOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.DeletePipeline</c> and <c>EventarcClient.DeletePipelineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeletePipelineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.DeletePipeline</c> and
+        /// <c>EventarcClient.DeletePipelineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeletePipelineOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.GetGoogleApiSource</c> and <c>EventarcClient.GetGoogleApiSourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoogleApiSourceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.ListGoogleApiSources</c> and <c>EventarcClient.ListGoogleApiSourcesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGoogleApiSourcesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.CreateGoogleApiSource</c> and <c>EventarcClient.CreateGoogleApiSourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateGoogleApiSourceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.CreateGoogleApiSource</c> and
+        /// <c>EventarcClient.CreateGoogleApiSourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateGoogleApiSourceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.UpdateGoogleApiSource</c> and <c>EventarcClient.UpdateGoogleApiSourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateGoogleApiSourceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.UpdateGoogleApiSource</c> and
+        /// <c>EventarcClient.UpdateGoogleApiSourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateGoogleApiSourceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.DeleteGoogleApiSource</c> and <c>EventarcClient.DeleteGoogleApiSourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteGoogleApiSourceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.DeleteGoogleApiSource</c> and
+        /// <c>EventarcClient.DeleteGoogleApiSourceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteGoogleApiSourceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2987,6 +3650,2969 @@ namespace Google.Cloud.Eventarc.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<GoogleChannelConfig> UpdateGoogleChannelConfigAsync(GoogleChannelConfig googleChannelConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateGoogleChannelConfigAsync(googleChannelConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MessageBus GetMessageBus(GetMessageBusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MessageBus> GetMessageBusAsync(GetMessageBusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MessageBus> GetMessageBusAsync(GetMessageBusRequest request, st::CancellationToken cancellationToken) =>
+            GetMessageBusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the message bus to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MessageBus GetMessageBus(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMessageBus(new GetMessageBusRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the message bus to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MessageBus> GetMessageBusAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMessageBusAsync(new GetMessageBusRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the message bus to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MessageBus> GetMessageBusAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMessageBusAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the message bus to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MessageBus GetMessageBus(MessageBusName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMessageBus(new GetMessageBusRequest
+            {
+                MessageBusName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the message bus to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MessageBus> GetMessageBusAsync(MessageBusName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMessageBusAsync(new GetMessageBusRequest
+            {
+                MessageBusName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the message bus to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MessageBus> GetMessageBusAsync(MessageBusName name, st::CancellationToken cancellationToken) =>
+            GetMessageBusAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List message buses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MessageBus"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMessageBusesResponse, MessageBus> ListMessageBuses(ListMessageBusesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List message buses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MessageBus"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMessageBusesResponse, MessageBus> ListMessageBusesAsync(ListMessageBusesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List message buses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list triggers on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MessageBus"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMessageBusesResponse, MessageBus> ListMessageBuses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessageBusesRequest request = new ListMessageBusesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessageBuses(request, callSettings);
+        }
+
+        /// <summary>
+        /// List message buses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list triggers on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MessageBus"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMessageBusesResponse, MessageBus> ListMessageBusesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessageBusesRequest request = new ListMessageBusesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessageBusesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List message buses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list triggers on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MessageBus"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMessageBusesResponse, MessageBus> ListMessageBuses(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessageBusesRequest request = new ListMessageBusesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessageBuses(request, callSettings);
+        }
+
+        /// <summary>
+        /// List message buses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list triggers on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MessageBus"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMessageBusesResponse, MessageBus> ListMessageBusesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessageBusesRequest request = new ListMessageBusesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessageBusesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List message bus enrollments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMessageBusEnrollmentsResponse, string> ListMessageBusEnrollments(ListMessageBusEnrollmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List message bus enrollments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMessageBusEnrollmentsResponse, string> ListMessageBusEnrollmentsAsync(ListMessageBusEnrollmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List message bus enrollments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent message bus to list enrollments on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMessageBusEnrollmentsResponse, string> ListMessageBusEnrollments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessageBusEnrollmentsRequest request = new ListMessageBusEnrollmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessageBusEnrollments(request, callSettings);
+        }
+
+        /// <summary>
+        /// List message bus enrollments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent message bus to list enrollments on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMessageBusEnrollmentsResponse, string> ListMessageBusEnrollmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessageBusEnrollmentsRequest request = new ListMessageBusEnrollmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessageBusEnrollmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List message bus enrollments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent message bus to list enrollments on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMessageBusEnrollmentsResponse, string> ListMessageBusEnrollments(MessageBusName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessageBusEnrollmentsRequest request = new ListMessageBusEnrollmentsRequest
+            {
+                ParentAsMessageBusName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessageBusEnrollments(request, callSettings);
+        }
+
+        /// <summary>
+        /// List message bus enrollments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent message bus to list enrollments on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMessageBusEnrollmentsResponse, string> ListMessageBusEnrollmentsAsync(MessageBusName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMessageBusEnrollmentsRequest request = new ListMessageBusEnrollmentsRequest
+            {
+                ParentAsMessageBusName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMessageBusEnrollmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> CreateMessageBus(CreateMessageBusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> CreateMessageBusAsync(CreateMessageBusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> CreateMessageBusAsync(CreateMessageBusRequest request, st::CancellationToken cancellationToken) =>
+            CreateMessageBusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateMessageBus</c>.</summary>
+        public virtual lro::OperationsClient CreateMessageBusOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateMessageBus</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> PollOnceCreateMessageBus(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MessageBus, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMessageBusOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateMessageBus</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> PollOnceCreateMessageBusAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MessageBus, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMessageBusOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this message bus.
+        /// </param>
+        /// <param name="messageBus">
+        /// Required. The message bus to create.
+        /// </param>
+        /// <param name="messageBusId">
+        /// Required. The user-provided ID to be assigned to the MessageBus. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> CreateMessageBus(string parent, MessageBus messageBus, string messageBusId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMessageBus(new CreateMessageBusRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MessageBus = gax::GaxPreconditions.CheckNotNull(messageBus, nameof(messageBus)),
+                MessageBusId = gax::GaxPreconditions.CheckNotNullOrEmpty(messageBusId, nameof(messageBusId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this message bus.
+        /// </param>
+        /// <param name="messageBus">
+        /// Required. The message bus to create.
+        /// </param>
+        /// <param name="messageBusId">
+        /// Required. The user-provided ID to be assigned to the MessageBus. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> CreateMessageBusAsync(string parent, MessageBus messageBus, string messageBusId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMessageBusAsync(new CreateMessageBusRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MessageBus = gax::GaxPreconditions.CheckNotNull(messageBus, nameof(messageBus)),
+                MessageBusId = gax::GaxPreconditions.CheckNotNullOrEmpty(messageBusId, nameof(messageBusId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this message bus.
+        /// </param>
+        /// <param name="messageBus">
+        /// Required. The message bus to create.
+        /// </param>
+        /// <param name="messageBusId">
+        /// Required. The user-provided ID to be assigned to the MessageBus. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> CreateMessageBusAsync(string parent, MessageBus messageBus, string messageBusId, st::CancellationToken cancellationToken) =>
+            CreateMessageBusAsync(parent, messageBus, messageBusId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this message bus.
+        /// </param>
+        /// <param name="messageBus">
+        /// Required. The message bus to create.
+        /// </param>
+        /// <param name="messageBusId">
+        /// Required. The user-provided ID to be assigned to the MessageBus. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> CreateMessageBus(gagr::LocationName parent, MessageBus messageBus, string messageBusId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMessageBus(new CreateMessageBusRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MessageBus = gax::GaxPreconditions.CheckNotNull(messageBus, nameof(messageBus)),
+                MessageBusId = gax::GaxPreconditions.CheckNotNullOrEmpty(messageBusId, nameof(messageBusId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this message bus.
+        /// </param>
+        /// <param name="messageBus">
+        /// Required. The message bus to create.
+        /// </param>
+        /// <param name="messageBusId">
+        /// Required. The user-provided ID to be assigned to the MessageBus. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> CreateMessageBusAsync(gagr::LocationName parent, MessageBus messageBus, string messageBusId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMessageBusAsync(new CreateMessageBusRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MessageBus = gax::GaxPreconditions.CheckNotNull(messageBus, nameof(messageBus)),
+                MessageBusId = gax::GaxPreconditions.CheckNotNullOrEmpty(messageBusId, nameof(messageBusId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this message bus.
+        /// </param>
+        /// <param name="messageBus">
+        /// Required. The message bus to create.
+        /// </param>
+        /// <param name="messageBusId">
+        /// Required. The user-provided ID to be assigned to the MessageBus. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> CreateMessageBusAsync(gagr::LocationName parent, MessageBus messageBus, string messageBusId, st::CancellationToken cancellationToken) =>
+            CreateMessageBusAsync(parent, messageBus, messageBusId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> UpdateMessageBus(UpdateMessageBusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> UpdateMessageBusAsync(UpdateMessageBusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> UpdateMessageBusAsync(UpdateMessageBusRequest request, st::CancellationToken cancellationToken) =>
+            UpdateMessageBusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateMessageBus</c>.</summary>
+        public virtual lro::OperationsClient UpdateMessageBusOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateMessageBus</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> PollOnceUpdateMessageBus(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MessageBus, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMessageBusOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateMessageBus</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> PollOnceUpdateMessageBusAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MessageBus, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMessageBusOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a single message bus.
+        /// </summary>
+        /// <param name="messageBus">
+        /// Required. The MessageBus to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> UpdateMessageBus(MessageBus messageBus, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMessageBus(new UpdateMessageBusRequest
+            {
+                MessageBus = gax::GaxPreconditions.CheckNotNull(messageBus, nameof(messageBus)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single message bus.
+        /// </summary>
+        /// <param name="messageBus">
+        /// Required. The MessageBus to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> UpdateMessageBusAsync(MessageBus messageBus, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMessageBusAsync(new UpdateMessageBusRequest
+            {
+                MessageBus = gax::GaxPreconditions.CheckNotNull(messageBus, nameof(messageBus)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single message bus.
+        /// </summary>
+        /// <param name="messageBus">
+        /// Required. The MessageBus to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> UpdateMessageBusAsync(MessageBus messageBus, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMessageBusAsync(messageBus, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> DeleteMessageBus(DeleteMessageBusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> DeleteMessageBusAsync(DeleteMessageBusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> DeleteMessageBusAsync(DeleteMessageBusRequest request, st::CancellationToken cancellationToken) =>
+            DeleteMessageBusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteMessageBus</c>.</summary>
+        public virtual lro::OperationsClient DeleteMessageBusOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteMessageBus</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> PollOnceDeleteMessageBus(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MessageBus, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteMessageBusOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteMessageBus</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> PollOnceDeleteMessageBusAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MessageBus, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteMessageBusOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the MessageBus to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> DeleteMessageBus(string name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMessageBus(new DeleteMessageBusRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the MessageBus to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> DeleteMessageBusAsync(string name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMessageBusAsync(new DeleteMessageBusRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the MessageBus to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> DeleteMessageBusAsync(string name, string etag, st::CancellationToken cancellationToken) =>
+            DeleteMessageBusAsync(name, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the MessageBus to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MessageBus, OperationMetadata> DeleteMessageBus(MessageBusName name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMessageBus(new DeleteMessageBusRequest
+            {
+                MessageBusName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the MessageBus to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> DeleteMessageBusAsync(MessageBusName name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMessageBusAsync(new DeleteMessageBusRequest
+            {
+                MessageBusName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the MessageBus to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MessageBus, OperationMetadata>> DeleteMessageBusAsync(MessageBusName name, string etag, st::CancellationToken cancellationToken) =>
+            DeleteMessageBusAsync(name, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Enrollment GetEnrollment(GetEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Enrollment> GetEnrollmentAsync(GetEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Enrollment> GetEnrollmentAsync(GetEnrollmentRequest request, st::CancellationToken cancellationToken) =>
+            GetEnrollmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Enrollment GetEnrollment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnrollment(new GetEnrollmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Enrollment> GetEnrollmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnrollmentAsync(new GetEnrollmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Enrollment> GetEnrollmentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEnrollmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Enrollment GetEnrollment(EnrollmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnrollment(new GetEnrollmentRequest
+            {
+                EnrollmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Enrollment> GetEnrollmentAsync(EnrollmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnrollmentAsync(new GetEnrollmentRequest
+            {
+                EnrollmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Enrollment> GetEnrollmentAsync(EnrollmentName name, st::CancellationToken cancellationToken) =>
+            GetEnrollmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List Enrollments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Enrollment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEnrollmentsResponse, Enrollment> ListEnrollments(ListEnrollmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List Enrollments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Enrollment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEnrollmentsResponse, Enrollment> ListEnrollmentsAsync(ListEnrollmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List Enrollments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list triggers on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Enrollment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEnrollmentsResponse, Enrollment> ListEnrollments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnrollmentsRequest request = new ListEnrollmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnrollments(request, callSettings);
+        }
+
+        /// <summary>
+        /// List Enrollments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list triggers on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Enrollment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEnrollmentsResponse, Enrollment> ListEnrollmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnrollmentsRequest request = new ListEnrollmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnrollmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List Enrollments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list triggers on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Enrollment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEnrollmentsResponse, Enrollment> ListEnrollments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnrollmentsRequest request = new ListEnrollmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnrollments(request, callSettings);
+        }
+
+        /// <summary>
+        /// List Enrollments.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list triggers on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Enrollment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEnrollmentsResponse, Enrollment> ListEnrollmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnrollmentsRequest request = new ListEnrollmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnrollmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> CreateEnrollment(CreateEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> CreateEnrollmentAsync(CreateEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> CreateEnrollmentAsync(CreateEnrollmentRequest request, st::CancellationToken cancellationToken) =>
+            CreateEnrollmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateEnrollment</c>.</summary>
+        public virtual lro::OperationsClient CreateEnrollmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateEnrollment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> PollOnceCreateEnrollment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Enrollment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateEnrollmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateEnrollment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> PollOnceCreateEnrollmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Enrollment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateEnrollmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this enrollment.
+        /// </param>
+        /// <param name="enrollment">
+        /// Required. The enrollment to create.
+        /// </param>
+        /// <param name="enrollmentId">
+        /// Required. The user-provided ID to be assigned to the Enrollment. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> CreateEnrollment(string parent, Enrollment enrollment, string enrollmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEnrollment(new CreateEnrollmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Enrollment = gax::GaxPreconditions.CheckNotNull(enrollment, nameof(enrollment)),
+                EnrollmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(enrollmentId, nameof(enrollmentId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this enrollment.
+        /// </param>
+        /// <param name="enrollment">
+        /// Required. The enrollment to create.
+        /// </param>
+        /// <param name="enrollmentId">
+        /// Required. The user-provided ID to be assigned to the Enrollment. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> CreateEnrollmentAsync(string parent, Enrollment enrollment, string enrollmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEnrollmentAsync(new CreateEnrollmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Enrollment = gax::GaxPreconditions.CheckNotNull(enrollment, nameof(enrollment)),
+                EnrollmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(enrollmentId, nameof(enrollmentId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this enrollment.
+        /// </param>
+        /// <param name="enrollment">
+        /// Required. The enrollment to create.
+        /// </param>
+        /// <param name="enrollmentId">
+        /// Required. The user-provided ID to be assigned to the Enrollment. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> CreateEnrollmentAsync(string parent, Enrollment enrollment, string enrollmentId, st::CancellationToken cancellationToken) =>
+            CreateEnrollmentAsync(parent, enrollment, enrollmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this enrollment.
+        /// </param>
+        /// <param name="enrollment">
+        /// Required. The enrollment to create.
+        /// </param>
+        /// <param name="enrollmentId">
+        /// Required. The user-provided ID to be assigned to the Enrollment. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> CreateEnrollment(gagr::LocationName parent, Enrollment enrollment, string enrollmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEnrollment(new CreateEnrollmentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Enrollment = gax::GaxPreconditions.CheckNotNull(enrollment, nameof(enrollment)),
+                EnrollmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(enrollmentId, nameof(enrollmentId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this enrollment.
+        /// </param>
+        /// <param name="enrollment">
+        /// Required. The enrollment to create.
+        /// </param>
+        /// <param name="enrollmentId">
+        /// Required. The user-provided ID to be assigned to the Enrollment. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> CreateEnrollmentAsync(gagr::LocationName parent, Enrollment enrollment, string enrollmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEnrollmentAsync(new CreateEnrollmentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Enrollment = gax::GaxPreconditions.CheckNotNull(enrollment, nameof(enrollment)),
+                EnrollmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(enrollmentId, nameof(enrollmentId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this enrollment.
+        /// </param>
+        /// <param name="enrollment">
+        /// Required. The enrollment to create.
+        /// </param>
+        /// <param name="enrollmentId">
+        /// Required. The user-provided ID to be assigned to the Enrollment. It should
+        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> CreateEnrollmentAsync(gagr::LocationName parent, Enrollment enrollment, string enrollmentId, st::CancellationToken cancellationToken) =>
+            CreateEnrollmentAsync(parent, enrollment, enrollmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> UpdateEnrollment(UpdateEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> UpdateEnrollmentAsync(UpdateEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> UpdateEnrollmentAsync(UpdateEnrollmentRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEnrollmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateEnrollment</c>.</summary>
+        public virtual lro::OperationsClient UpdateEnrollmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateEnrollment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> PollOnceUpdateEnrollment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Enrollment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEnrollmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateEnrollment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> PollOnceUpdateEnrollmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Enrollment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEnrollmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a single Enrollment.
+        /// </summary>
+        /// <param name="enrollment">
+        /// Required. The Enrollment to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> UpdateEnrollment(Enrollment enrollment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEnrollment(new UpdateEnrollmentRequest
+            {
+                Enrollment = gax::GaxPreconditions.CheckNotNull(enrollment, nameof(enrollment)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single Enrollment.
+        /// </summary>
+        /// <param name="enrollment">
+        /// Required. The Enrollment to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> UpdateEnrollmentAsync(Enrollment enrollment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEnrollmentAsync(new UpdateEnrollmentRequest
+            {
+                Enrollment = gax::GaxPreconditions.CheckNotNull(enrollment, nameof(enrollment)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single Enrollment.
+        /// </summary>
+        /// <param name="enrollment">
+        /// Required. The Enrollment to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> UpdateEnrollmentAsync(Enrollment enrollment, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateEnrollmentAsync(enrollment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> DeleteEnrollment(DeleteEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> DeleteEnrollmentAsync(DeleteEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> DeleteEnrollmentAsync(DeleteEnrollmentRequest request, st::CancellationToken cancellationToken) =>
+            DeleteEnrollmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteEnrollment</c>.</summary>
+        public virtual lro::OperationsClient DeleteEnrollmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteEnrollment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> PollOnceDeleteEnrollment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Enrollment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteEnrollmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteEnrollment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> PollOnceDeleteEnrollmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Enrollment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteEnrollmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Enrollment will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> DeleteEnrollment(string name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEnrollment(new DeleteEnrollmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Enrollment will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> DeleteEnrollmentAsync(string name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEnrollmentAsync(new DeleteEnrollmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Enrollment will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> DeleteEnrollmentAsync(string name, string etag, st::CancellationToken cancellationToken) =>
+            DeleteEnrollmentAsync(name, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Enrollment will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Enrollment, OperationMetadata> DeleteEnrollment(EnrollmentName name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEnrollment(new DeleteEnrollmentRequest
+            {
+                EnrollmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Enrollment will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> DeleteEnrollmentAsync(EnrollmentName name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEnrollmentAsync(new DeleteEnrollmentRequest
+            {
+                EnrollmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Enrollment to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Enrollment will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Enrollment, OperationMetadata>> DeleteEnrollmentAsync(EnrollmentName name, string etag, st::CancellationToken cancellationToken) =>
+            DeleteEnrollmentAsync(name, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Pipeline GetPipeline(GetPipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pipeline> GetPipelineAsync(GetPipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pipeline> GetPipelineAsync(GetPipelineRequest request, st::CancellationToken cancellationToken) =>
+            GetPipelineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pipeline to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Pipeline GetPipeline(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPipeline(new GetPipelineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pipeline to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pipeline> GetPipelineAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPipelineAsync(new GetPipelineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pipeline to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pipeline> GetPipelineAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPipelineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pipeline to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Pipeline GetPipeline(PipelineName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPipeline(new GetPipelineRequest
+            {
+                PipelineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pipeline to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pipeline> GetPipelineAsync(PipelineName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPipelineAsync(new GetPipelineRequest
+            {
+                PipelineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pipeline to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pipeline> GetPipelineAsync(PipelineName name, st::CancellationToken cancellationToken) =>
+            GetPipelineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List pipelines.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Pipeline"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPipelinesResponse, Pipeline> ListPipelines(ListPipelinesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List pipelines.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Pipeline"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPipelinesResponse, Pipeline> ListPipelinesAsync(ListPipelinesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List pipelines.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list pipelines on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Pipeline"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPipelinesResponse, Pipeline> ListPipelines(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPipelinesRequest request = new ListPipelinesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPipelines(request, callSettings);
+        }
+
+        /// <summary>
+        /// List pipelines.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list pipelines on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Pipeline"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPipelinesResponse, Pipeline> ListPipelinesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPipelinesRequest request = new ListPipelinesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPipelinesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List pipelines.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list pipelines on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Pipeline"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPipelinesResponse, Pipeline> ListPipelines(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPipelinesRequest request = new ListPipelinesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPipelines(request, callSettings);
+        }
+
+        /// <summary>
+        /// List pipelines.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list pipelines on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Pipeline"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPipelinesResponse, Pipeline> ListPipelinesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPipelinesRequest request = new ListPipelinesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPipelinesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> CreatePipeline(CreatePipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> CreatePipelineAsync(CreatePipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> CreatePipelineAsync(CreatePipelineRequest request, st::CancellationToken cancellationToken) =>
+            CreatePipelineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreatePipeline</c>.</summary>
+        public virtual lro::OperationsClient CreatePipelineOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreatePipeline</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> PollOnceCreatePipeline(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Pipeline, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePipelineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreatePipeline</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> PollOnceCreatePipelineAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Pipeline, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePipelineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this pipeline.
+        /// </param>
+        /// <param name="pipeline">
+        /// Required. The pipeline to create.
+        /// </param>
+        /// <param name="pipelineId">
+        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> CreatePipeline(string parent, Pipeline pipeline, string pipelineId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePipeline(new CreatePipelineRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Pipeline = gax::GaxPreconditions.CheckNotNull(pipeline, nameof(pipeline)),
+                PipelineId = gax::GaxPreconditions.CheckNotNullOrEmpty(pipelineId, nameof(pipelineId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this pipeline.
+        /// </param>
+        /// <param name="pipeline">
+        /// Required. The pipeline to create.
+        /// </param>
+        /// <param name="pipelineId">
+        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> CreatePipelineAsync(string parent, Pipeline pipeline, string pipelineId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePipelineAsync(new CreatePipelineRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Pipeline = gax::GaxPreconditions.CheckNotNull(pipeline, nameof(pipeline)),
+                PipelineId = gax::GaxPreconditions.CheckNotNullOrEmpty(pipelineId, nameof(pipelineId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this pipeline.
+        /// </param>
+        /// <param name="pipeline">
+        /// Required. The pipeline to create.
+        /// </param>
+        /// <param name="pipelineId">
+        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> CreatePipelineAsync(string parent, Pipeline pipeline, string pipelineId, st::CancellationToken cancellationToken) =>
+            CreatePipelineAsync(parent, pipeline, pipelineId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this pipeline.
+        /// </param>
+        /// <param name="pipeline">
+        /// Required. The pipeline to create.
+        /// </param>
+        /// <param name="pipelineId">
+        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> CreatePipeline(gagr::LocationName parent, Pipeline pipeline, string pipelineId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePipeline(new CreatePipelineRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Pipeline = gax::GaxPreconditions.CheckNotNull(pipeline, nameof(pipeline)),
+                PipelineId = gax::GaxPreconditions.CheckNotNullOrEmpty(pipelineId, nameof(pipelineId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this pipeline.
+        /// </param>
+        /// <param name="pipeline">
+        /// Required. The pipeline to create.
+        /// </param>
+        /// <param name="pipelineId">
+        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> CreatePipelineAsync(gagr::LocationName parent, Pipeline pipeline, string pipelineId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePipelineAsync(new CreatePipelineRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Pipeline = gax::GaxPreconditions.CheckNotNull(pipeline, nameof(pipeline)),
+                PipelineId = gax::GaxPreconditions.CheckNotNullOrEmpty(pipelineId, nameof(pipelineId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this pipeline.
+        /// </param>
+        /// <param name="pipeline">
+        /// Required. The pipeline to create.
+        /// </param>
+        /// <param name="pipelineId">
+        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> CreatePipelineAsync(gagr::LocationName parent, Pipeline pipeline, string pipelineId, st::CancellationToken cancellationToken) =>
+            CreatePipelineAsync(parent, pipeline, pipelineId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> UpdatePipeline(UpdatePipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> UpdatePipelineAsync(UpdatePipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> UpdatePipelineAsync(UpdatePipelineRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePipelineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdatePipeline</c>.</summary>
+        public virtual lro::OperationsClient UpdatePipelineOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdatePipeline</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> PollOnceUpdatePipeline(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Pipeline, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePipelineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdatePipeline</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> PollOnceUpdatePipelineAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Pipeline, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePipelineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a single pipeline.
+        /// </summary>
+        /// <param name="pipeline">
+        /// Required. The Pipeline to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> UpdatePipeline(Pipeline pipeline, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePipeline(new UpdatePipelineRequest
+            {
+                Pipeline = gax::GaxPreconditions.CheckNotNull(pipeline, nameof(pipeline)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single pipeline.
+        /// </summary>
+        /// <param name="pipeline">
+        /// Required. The Pipeline to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> UpdatePipelineAsync(Pipeline pipeline, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePipelineAsync(new UpdatePipelineRequest
+            {
+                Pipeline = gax::GaxPreconditions.CheckNotNull(pipeline, nameof(pipeline)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single pipeline.
+        /// </summary>
+        /// <param name="pipeline">
+        /// Required. The Pipeline to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> UpdatePipelineAsync(Pipeline pipeline, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePipelineAsync(pipeline, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> DeletePipeline(DeletePipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> DeletePipelineAsync(DeletePipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> DeletePipelineAsync(DeletePipelineRequest request, st::CancellationToken cancellationToken) =>
+            DeletePipelineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeletePipeline</c>.</summary>
+        public virtual lro::OperationsClient DeletePipelineOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeletePipeline</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> PollOnceDeletePipeline(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Pipeline, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePipelineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeletePipeline</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> PollOnceDeletePipelineAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Pipeline, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePipelineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Pipeline to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Pipeline will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> DeletePipeline(string name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePipeline(new DeletePipelineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Pipeline to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Pipeline will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> DeletePipelineAsync(string name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePipelineAsync(new DeletePipelineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Pipeline to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Pipeline will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> DeletePipelineAsync(string name, string etag, st::CancellationToken cancellationToken) =>
+            DeletePipelineAsync(name, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Pipeline to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Pipeline will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pipeline, OperationMetadata> DeletePipeline(PipelineName name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePipeline(new DeletePipelineRequest
+            {
+                PipelineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Pipeline to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Pipeline will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> DeletePipelineAsync(PipelineName name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePipelineAsync(new DeletePipelineRequest
+            {
+                PipelineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Pipeline to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the Pipeline will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pipeline, OperationMetadata>> DeletePipelineAsync(PipelineName name, string etag, st::CancellationToken cancellationToken) =>
+            DeletePipelineAsync(name, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoogleApiSource GetGoogleApiSource(GetGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleApiSource> GetGoogleApiSourceAsync(GetGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleApiSource> GetGoogleApiSourceAsync(GetGoogleApiSourceRequest request, st::CancellationToken cancellationToken) =>
+            GetGoogleApiSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the google api source to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoogleApiSource GetGoogleApiSource(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoogleApiSource(new GetGoogleApiSourceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the google api source to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleApiSource> GetGoogleApiSourceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoogleApiSourceAsync(new GetGoogleApiSourceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the google api source to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleApiSource> GetGoogleApiSourceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoogleApiSourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the google api source to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoogleApiSource GetGoogleApiSource(GoogleApiSourceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoogleApiSource(new GetGoogleApiSourceRequest
+            {
+                GoogleApiSourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the google api source to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleApiSource> GetGoogleApiSourceAsync(GoogleApiSourceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoogleApiSourceAsync(new GetGoogleApiSourceRequest
+            {
+                GoogleApiSourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the google api source to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoogleApiSource> GetGoogleApiSourceAsync(GoogleApiSourceName name, st::CancellationToken cancellationToken) =>
+            GetGoogleApiSourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List GoogleApiSources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoogleApiSource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> ListGoogleApiSources(ListGoogleApiSourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List GoogleApiSources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoogleApiSource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> ListGoogleApiSourcesAsync(ListGoogleApiSourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List GoogleApiSources.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list GoogleApiSources on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoogleApiSource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> ListGoogleApiSources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoogleApiSourcesRequest request = new ListGoogleApiSourcesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoogleApiSources(request, callSettings);
+        }
+
+        /// <summary>
+        /// List GoogleApiSources.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list GoogleApiSources on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoogleApiSource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> ListGoogleApiSourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoogleApiSourcesRequest request = new ListGoogleApiSourcesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoogleApiSourcesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List GoogleApiSources.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list GoogleApiSources on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoogleApiSource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> ListGoogleApiSources(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoogleApiSourcesRequest request = new ListGoogleApiSourcesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoogleApiSources(request, callSettings);
+        }
+
+        /// <summary>
+        /// List GoogleApiSources.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list GoogleApiSources on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoogleApiSource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> ListGoogleApiSourcesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoogleApiSourcesRequest request = new ListGoogleApiSourcesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoogleApiSourcesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> CreateGoogleApiSource(CreateGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> CreateGoogleApiSourceAsync(CreateGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> CreateGoogleApiSourceAsync(CreateGoogleApiSourceRequest request, st::CancellationToken cancellationToken) =>
+            CreateGoogleApiSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateGoogleApiSource</c>.</summary>
+        public virtual lro::OperationsClient CreateGoogleApiSourceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateGoogleApiSource</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> PollOnceCreateGoogleApiSource(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoogleApiSource, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGoogleApiSourceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGoogleApiSource</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> PollOnceCreateGoogleApiSourceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoogleApiSource, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGoogleApiSourceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this google api source.
+        /// </param>
+        /// <param name="googleApiSource">
+        /// Required. The google api source to create.
+        /// </param>
+        /// <param name="googleApiSourceId">
+        /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
+        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> CreateGoogleApiSource(string parent, GoogleApiSource googleApiSource, string googleApiSourceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoogleApiSource(new CreateGoogleApiSourceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GoogleApiSource = gax::GaxPreconditions.CheckNotNull(googleApiSource, nameof(googleApiSource)),
+                GoogleApiSourceId = gax::GaxPreconditions.CheckNotNullOrEmpty(googleApiSourceId, nameof(googleApiSourceId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this google api source.
+        /// </param>
+        /// <param name="googleApiSource">
+        /// Required. The google api source to create.
+        /// </param>
+        /// <param name="googleApiSourceId">
+        /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
+        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> CreateGoogleApiSourceAsync(string parent, GoogleApiSource googleApiSource, string googleApiSourceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoogleApiSourceAsync(new CreateGoogleApiSourceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GoogleApiSource = gax::GaxPreconditions.CheckNotNull(googleApiSource, nameof(googleApiSource)),
+                GoogleApiSourceId = gax::GaxPreconditions.CheckNotNullOrEmpty(googleApiSourceId, nameof(googleApiSourceId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this google api source.
+        /// </param>
+        /// <param name="googleApiSource">
+        /// Required. The google api source to create.
+        /// </param>
+        /// <param name="googleApiSourceId">
+        /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
+        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> CreateGoogleApiSourceAsync(string parent, GoogleApiSource googleApiSource, string googleApiSourceId, st::CancellationToken cancellationToken) =>
+            CreateGoogleApiSourceAsync(parent, googleApiSource, googleApiSourceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this google api source.
+        /// </param>
+        /// <param name="googleApiSource">
+        /// Required. The google api source to create.
+        /// </param>
+        /// <param name="googleApiSourceId">
+        /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
+        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> CreateGoogleApiSource(gagr::LocationName parent, GoogleApiSource googleApiSource, string googleApiSourceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoogleApiSource(new CreateGoogleApiSourceRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GoogleApiSource = gax::GaxPreconditions.CheckNotNull(googleApiSource, nameof(googleApiSource)),
+                GoogleApiSourceId = gax::GaxPreconditions.CheckNotNullOrEmpty(googleApiSourceId, nameof(googleApiSourceId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this google api source.
+        /// </param>
+        /// <param name="googleApiSource">
+        /// Required. The google api source to create.
+        /// </param>
+        /// <param name="googleApiSourceId">
+        /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
+        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> CreateGoogleApiSourceAsync(gagr::LocationName parent, GoogleApiSource googleApiSource, string googleApiSourceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoogleApiSourceAsync(new CreateGoogleApiSourceRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GoogleApiSource = gax::GaxPreconditions.CheckNotNull(googleApiSource, nameof(googleApiSource)),
+                GoogleApiSourceId = gax::GaxPreconditions.CheckNotNullOrEmpty(googleApiSourceId, nameof(googleApiSourceId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this google api source.
+        /// </param>
+        /// <param name="googleApiSource">
+        /// Required. The google api source to create.
+        /// </param>
+        /// <param name="googleApiSourceId">
+        /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
+        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> CreateGoogleApiSourceAsync(gagr::LocationName parent, GoogleApiSource googleApiSource, string googleApiSourceId, st::CancellationToken cancellationToken) =>
+            CreateGoogleApiSourceAsync(parent, googleApiSource, googleApiSourceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> UpdateGoogleApiSource(UpdateGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> UpdateGoogleApiSourceAsync(UpdateGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> UpdateGoogleApiSourceAsync(UpdateGoogleApiSourceRequest request, st::CancellationToken cancellationToken) =>
+            UpdateGoogleApiSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateGoogleApiSource</c>.</summary>
+        public virtual lro::OperationsClient UpdateGoogleApiSourceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateGoogleApiSource</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> PollOnceUpdateGoogleApiSource(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoogleApiSource, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGoogleApiSourceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGoogleApiSource</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> PollOnceUpdateGoogleApiSourceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoogleApiSource, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGoogleApiSourceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a single GoogleApiSource.
+        /// </summary>
+        /// <param name="googleApiSource">
+        /// Required. The GoogleApiSource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> UpdateGoogleApiSource(GoogleApiSource googleApiSource, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoogleApiSource(new UpdateGoogleApiSourceRequest
+            {
+                GoogleApiSource = gax::GaxPreconditions.CheckNotNull(googleApiSource, nameof(googleApiSource)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single GoogleApiSource.
+        /// </summary>
+        /// <param name="googleApiSource">
+        /// Required. The GoogleApiSource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> UpdateGoogleApiSourceAsync(GoogleApiSource googleApiSource, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoogleApiSourceAsync(new UpdateGoogleApiSourceRequest
+            {
+                GoogleApiSource = gax::GaxPreconditions.CheckNotNull(googleApiSource, nameof(googleApiSource)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single GoogleApiSource.
+        /// </summary>
+        /// <param name="googleApiSource">
+        /// Required. The GoogleApiSource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The fields to be updated; only fields explicitly provided are
+        /// updated. If no field mask is provided, all provided fields in the request
+        /// are updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> UpdateGoogleApiSourceAsync(GoogleApiSource googleApiSource, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateGoogleApiSourceAsync(googleApiSource, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> DeleteGoogleApiSource(DeleteGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> DeleteGoogleApiSourceAsync(DeleteGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> DeleteGoogleApiSourceAsync(DeleteGoogleApiSourceRequest request, st::CancellationToken cancellationToken) =>
+            DeleteGoogleApiSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteGoogleApiSource</c>.</summary>
+        public virtual lro::OperationsClient DeleteGoogleApiSourceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteGoogleApiSource</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> PollOnceDeleteGoogleApiSource(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoogleApiSource, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGoogleApiSourceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGoogleApiSource</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> PollOnceDeleteGoogleApiSourceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoogleApiSource, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGoogleApiSourceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoogleApiSource to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> DeleteGoogleApiSource(string name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoogleApiSource(new DeleteGoogleApiSourceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoogleApiSource to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> DeleteGoogleApiSourceAsync(string name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoogleApiSourceAsync(new DeleteGoogleApiSourceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoogleApiSource to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> DeleteGoogleApiSourceAsync(string name, string etag, st::CancellationToken cancellationToken) =>
+            DeleteGoogleApiSourceAsync(name, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoogleApiSource to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoogleApiSource, OperationMetadata> DeleteGoogleApiSource(GoogleApiSourceName name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoogleApiSource(new DeleteGoogleApiSourceRequest
+            {
+                GoogleApiSourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoogleApiSource to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> DeleteGoogleApiSourceAsync(GoogleApiSourceName name, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoogleApiSourceAsync(new DeleteGoogleApiSourceRequest
+            {
+                GoogleApiSourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Etag = etag ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoogleApiSource to be deleted.
+        /// </param>
+        /// <param name="etag">
+        /// Optional. If provided, the MessageBus will only be deleted if the etag
+        /// matches the current etag on the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> DeleteGoogleApiSourceAsync(GoogleApiSourceName name, string etag, st::CancellationToken cancellationToken) =>
+            DeleteGoogleApiSourceAsync(name, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Eventarc client wrapper implementation, for convenient use.</summary>
@@ -3032,6 +6658,48 @@ namespace Google.Cloud.Eventarc.V1
 
         private readonly gaxgrpc::ApiCall<UpdateGoogleChannelConfigRequest, GoogleChannelConfig> _callUpdateGoogleChannelConfig;
 
+        private readonly gaxgrpc::ApiCall<GetMessageBusRequest, MessageBus> _callGetMessageBus;
+
+        private readonly gaxgrpc::ApiCall<ListMessageBusesRequest, ListMessageBusesResponse> _callListMessageBuses;
+
+        private readonly gaxgrpc::ApiCall<ListMessageBusEnrollmentsRequest, ListMessageBusEnrollmentsResponse> _callListMessageBusEnrollments;
+
+        private readonly gaxgrpc::ApiCall<CreateMessageBusRequest, lro::Operation> _callCreateMessageBus;
+
+        private readonly gaxgrpc::ApiCall<UpdateMessageBusRequest, lro::Operation> _callUpdateMessageBus;
+
+        private readonly gaxgrpc::ApiCall<DeleteMessageBusRequest, lro::Operation> _callDeleteMessageBus;
+
+        private readonly gaxgrpc::ApiCall<GetEnrollmentRequest, Enrollment> _callGetEnrollment;
+
+        private readonly gaxgrpc::ApiCall<ListEnrollmentsRequest, ListEnrollmentsResponse> _callListEnrollments;
+
+        private readonly gaxgrpc::ApiCall<CreateEnrollmentRequest, lro::Operation> _callCreateEnrollment;
+
+        private readonly gaxgrpc::ApiCall<UpdateEnrollmentRequest, lro::Operation> _callUpdateEnrollment;
+
+        private readonly gaxgrpc::ApiCall<DeleteEnrollmentRequest, lro::Operation> _callDeleteEnrollment;
+
+        private readonly gaxgrpc::ApiCall<GetPipelineRequest, Pipeline> _callGetPipeline;
+
+        private readonly gaxgrpc::ApiCall<ListPipelinesRequest, ListPipelinesResponse> _callListPipelines;
+
+        private readonly gaxgrpc::ApiCall<CreatePipelineRequest, lro::Operation> _callCreatePipeline;
+
+        private readonly gaxgrpc::ApiCall<UpdatePipelineRequest, lro::Operation> _callUpdatePipeline;
+
+        private readonly gaxgrpc::ApiCall<DeletePipelineRequest, lro::Operation> _callDeletePipeline;
+
+        private readonly gaxgrpc::ApiCall<GetGoogleApiSourceRequest, GoogleApiSource> _callGetGoogleApiSource;
+
+        private readonly gaxgrpc::ApiCall<ListGoogleApiSourcesRequest, ListGoogleApiSourcesResponse> _callListGoogleApiSources;
+
+        private readonly gaxgrpc::ApiCall<CreateGoogleApiSourceRequest, lro::Operation> _callCreateGoogleApiSource;
+
+        private readonly gaxgrpc::ApiCall<UpdateGoogleApiSourceRequest, lro::Operation> _callUpdateGoogleApiSource;
+
+        private readonly gaxgrpc::ApiCall<DeleteGoogleApiSourceRequest, lro::Operation> _callDeleteGoogleApiSource;
+
         /// <summary>
         /// Constructs a client wrapper for the Eventarc service, with the specified gRPC client and settings.
         /// </summary>
@@ -3055,6 +6723,18 @@ namespace Google.Cloud.Eventarc.V1
             DeleteChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelOperationsSettings, logger);
             CreateChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelConnectionOperationsSettings, logger);
             DeleteChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelConnectionOperationsSettings, logger);
+            CreateMessageBusOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMessageBusOperationsSettings, logger);
+            UpdateMessageBusOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMessageBusOperationsSettings, logger);
+            DeleteMessageBusOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMessageBusOperationsSettings, logger);
+            CreateEnrollmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnrollmentOperationsSettings, logger);
+            UpdateEnrollmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnrollmentOperationsSettings, logger);
+            DeleteEnrollmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnrollmentOperationsSettings, logger);
+            CreatePipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePipelineOperationsSettings, logger);
+            UpdatePipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePipelineOperationsSettings, logger);
+            DeletePipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePipelineOperationsSettings, logger);
+            CreateGoogleApiSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGoogleApiSourceOperationsSettings, logger);
+            UpdateGoogleApiSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGoogleApiSourceOperationsSettings, logger);
+            DeleteGoogleApiSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGoogleApiSourceOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callGetTrigger = clientHelper.BuildApiCall<GetTriggerRequest, Trigger>("GetTrigger", grpcClient.GetTriggerAsync, grpcClient.GetTrigger, effectiveSettings.GetTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -3111,6 +6791,69 @@ namespace Google.Cloud.Eventarc.V1
             _callUpdateGoogleChannelConfig = clientHelper.BuildApiCall<UpdateGoogleChannelConfigRequest, GoogleChannelConfig>("UpdateGoogleChannelConfig", grpcClient.UpdateGoogleChannelConfigAsync, grpcClient.UpdateGoogleChannelConfig, effectiveSettings.UpdateGoogleChannelConfigSettings).WithGoogleRequestParam("google_channel_config.name", request => request.GoogleChannelConfig?.Name);
             Modify_ApiCall(ref _callUpdateGoogleChannelConfig);
             Modify_UpdateGoogleChannelConfigApiCall(ref _callUpdateGoogleChannelConfig);
+            _callGetMessageBus = clientHelper.BuildApiCall<GetMessageBusRequest, MessageBus>("GetMessageBus", grpcClient.GetMessageBusAsync, grpcClient.GetMessageBus, effectiveSettings.GetMessageBusSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMessageBus);
+            Modify_GetMessageBusApiCall(ref _callGetMessageBus);
+            _callListMessageBuses = clientHelper.BuildApiCall<ListMessageBusesRequest, ListMessageBusesResponse>("ListMessageBuses", grpcClient.ListMessageBusesAsync, grpcClient.ListMessageBuses, effectiveSettings.ListMessageBusesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMessageBuses);
+            Modify_ListMessageBusesApiCall(ref _callListMessageBuses);
+            _callListMessageBusEnrollments = clientHelper.BuildApiCall<ListMessageBusEnrollmentsRequest, ListMessageBusEnrollmentsResponse>("ListMessageBusEnrollments", grpcClient.ListMessageBusEnrollmentsAsync, grpcClient.ListMessageBusEnrollments, effectiveSettings.ListMessageBusEnrollmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMessageBusEnrollments);
+            Modify_ListMessageBusEnrollmentsApiCall(ref _callListMessageBusEnrollments);
+            _callCreateMessageBus = clientHelper.BuildApiCall<CreateMessageBusRequest, lro::Operation>("CreateMessageBus", grpcClient.CreateMessageBusAsync, grpcClient.CreateMessageBus, effectiveSettings.CreateMessageBusSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateMessageBus);
+            Modify_CreateMessageBusApiCall(ref _callCreateMessageBus);
+            _callUpdateMessageBus = clientHelper.BuildApiCall<UpdateMessageBusRequest, lro::Operation>("UpdateMessageBus", grpcClient.UpdateMessageBusAsync, grpcClient.UpdateMessageBus, effectiveSettings.UpdateMessageBusSettings).WithGoogleRequestParam("message_bus.name", request => request.MessageBus?.Name);
+            Modify_ApiCall(ref _callUpdateMessageBus);
+            Modify_UpdateMessageBusApiCall(ref _callUpdateMessageBus);
+            _callDeleteMessageBus = clientHelper.BuildApiCall<DeleteMessageBusRequest, lro::Operation>("DeleteMessageBus", grpcClient.DeleteMessageBusAsync, grpcClient.DeleteMessageBus, effectiveSettings.DeleteMessageBusSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteMessageBus);
+            Modify_DeleteMessageBusApiCall(ref _callDeleteMessageBus);
+            _callGetEnrollment = clientHelper.BuildApiCall<GetEnrollmentRequest, Enrollment>("GetEnrollment", grpcClient.GetEnrollmentAsync, grpcClient.GetEnrollment, effectiveSettings.GetEnrollmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEnrollment);
+            Modify_GetEnrollmentApiCall(ref _callGetEnrollment);
+            _callListEnrollments = clientHelper.BuildApiCall<ListEnrollmentsRequest, ListEnrollmentsResponse>("ListEnrollments", grpcClient.ListEnrollmentsAsync, grpcClient.ListEnrollments, effectiveSettings.ListEnrollmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEnrollments);
+            Modify_ListEnrollmentsApiCall(ref _callListEnrollments);
+            _callCreateEnrollment = clientHelper.BuildApiCall<CreateEnrollmentRequest, lro::Operation>("CreateEnrollment", grpcClient.CreateEnrollmentAsync, grpcClient.CreateEnrollment, effectiveSettings.CreateEnrollmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateEnrollment);
+            Modify_CreateEnrollmentApiCall(ref _callCreateEnrollment);
+            _callUpdateEnrollment = clientHelper.BuildApiCall<UpdateEnrollmentRequest, lro::Operation>("UpdateEnrollment", grpcClient.UpdateEnrollmentAsync, grpcClient.UpdateEnrollment, effectiveSettings.UpdateEnrollmentSettings).WithGoogleRequestParam("enrollment.name", request => request.Enrollment?.Name);
+            Modify_ApiCall(ref _callUpdateEnrollment);
+            Modify_UpdateEnrollmentApiCall(ref _callUpdateEnrollment);
+            _callDeleteEnrollment = clientHelper.BuildApiCall<DeleteEnrollmentRequest, lro::Operation>("DeleteEnrollment", grpcClient.DeleteEnrollmentAsync, grpcClient.DeleteEnrollment, effectiveSettings.DeleteEnrollmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteEnrollment);
+            Modify_DeleteEnrollmentApiCall(ref _callDeleteEnrollment);
+            _callGetPipeline = clientHelper.BuildApiCall<GetPipelineRequest, Pipeline>("GetPipeline", grpcClient.GetPipelineAsync, grpcClient.GetPipeline, effectiveSettings.GetPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPipeline);
+            Modify_GetPipelineApiCall(ref _callGetPipeline);
+            _callListPipelines = clientHelper.BuildApiCall<ListPipelinesRequest, ListPipelinesResponse>("ListPipelines", grpcClient.ListPipelinesAsync, grpcClient.ListPipelines, effectiveSettings.ListPipelinesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPipelines);
+            Modify_ListPipelinesApiCall(ref _callListPipelines);
+            _callCreatePipeline = clientHelper.BuildApiCall<CreatePipelineRequest, lro::Operation>("CreatePipeline", grpcClient.CreatePipelineAsync, grpcClient.CreatePipeline, effectiveSettings.CreatePipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreatePipeline);
+            Modify_CreatePipelineApiCall(ref _callCreatePipeline);
+            _callUpdatePipeline = clientHelper.BuildApiCall<UpdatePipelineRequest, lro::Operation>("UpdatePipeline", grpcClient.UpdatePipelineAsync, grpcClient.UpdatePipeline, effectiveSettings.UpdatePipelineSettings).WithGoogleRequestParam("pipeline.name", request => request.Pipeline?.Name);
+            Modify_ApiCall(ref _callUpdatePipeline);
+            Modify_UpdatePipelineApiCall(ref _callUpdatePipeline);
+            _callDeletePipeline = clientHelper.BuildApiCall<DeletePipelineRequest, lro::Operation>("DeletePipeline", grpcClient.DeletePipelineAsync, grpcClient.DeletePipeline, effectiveSettings.DeletePipelineSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeletePipeline);
+            Modify_DeletePipelineApiCall(ref _callDeletePipeline);
+            _callGetGoogleApiSource = clientHelper.BuildApiCall<GetGoogleApiSourceRequest, GoogleApiSource>("GetGoogleApiSource", grpcClient.GetGoogleApiSourceAsync, grpcClient.GetGoogleApiSource, effectiveSettings.GetGoogleApiSourceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoogleApiSource);
+            Modify_GetGoogleApiSourceApiCall(ref _callGetGoogleApiSource);
+            _callListGoogleApiSources = clientHelper.BuildApiCall<ListGoogleApiSourcesRequest, ListGoogleApiSourcesResponse>("ListGoogleApiSources", grpcClient.ListGoogleApiSourcesAsync, grpcClient.ListGoogleApiSources, effectiveSettings.ListGoogleApiSourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGoogleApiSources);
+            Modify_ListGoogleApiSourcesApiCall(ref _callListGoogleApiSources);
+            _callCreateGoogleApiSource = clientHelper.BuildApiCall<CreateGoogleApiSourceRequest, lro::Operation>("CreateGoogleApiSource", grpcClient.CreateGoogleApiSourceAsync, grpcClient.CreateGoogleApiSource, effectiveSettings.CreateGoogleApiSourceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateGoogleApiSource);
+            Modify_CreateGoogleApiSourceApiCall(ref _callCreateGoogleApiSource);
+            _callUpdateGoogleApiSource = clientHelper.BuildApiCall<UpdateGoogleApiSourceRequest, lro::Operation>("UpdateGoogleApiSource", grpcClient.UpdateGoogleApiSourceAsync, grpcClient.UpdateGoogleApiSource, effectiveSettings.UpdateGoogleApiSourceSettings).WithGoogleRequestParam("google_api_source.name", request => request.GoogleApiSource?.Name);
+            Modify_ApiCall(ref _callUpdateGoogleApiSource);
+            Modify_UpdateGoogleApiSourceApiCall(ref _callUpdateGoogleApiSource);
+            _callDeleteGoogleApiSource = clientHelper.BuildApiCall<DeleteGoogleApiSourceRequest, lro::Operation>("DeleteGoogleApiSource", grpcClient.DeleteGoogleApiSourceAsync, grpcClient.DeleteGoogleApiSource, effectiveSettings.DeleteGoogleApiSourceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteGoogleApiSource);
+            Modify_DeleteGoogleApiSourceApiCall(ref _callDeleteGoogleApiSource);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3151,6 +6894,48 @@ namespace Google.Cloud.Eventarc.V1
         partial void Modify_GetGoogleChannelConfigApiCall(ref gaxgrpc::ApiCall<GetGoogleChannelConfigRequest, GoogleChannelConfig> call);
 
         partial void Modify_UpdateGoogleChannelConfigApiCall(ref gaxgrpc::ApiCall<UpdateGoogleChannelConfigRequest, GoogleChannelConfig> call);
+
+        partial void Modify_GetMessageBusApiCall(ref gaxgrpc::ApiCall<GetMessageBusRequest, MessageBus> call);
+
+        partial void Modify_ListMessageBusesApiCall(ref gaxgrpc::ApiCall<ListMessageBusesRequest, ListMessageBusesResponse> call);
+
+        partial void Modify_ListMessageBusEnrollmentsApiCall(ref gaxgrpc::ApiCall<ListMessageBusEnrollmentsRequest, ListMessageBusEnrollmentsResponse> call);
+
+        partial void Modify_CreateMessageBusApiCall(ref gaxgrpc::ApiCall<CreateMessageBusRequest, lro::Operation> call);
+
+        partial void Modify_UpdateMessageBusApiCall(ref gaxgrpc::ApiCall<UpdateMessageBusRequest, lro::Operation> call);
+
+        partial void Modify_DeleteMessageBusApiCall(ref gaxgrpc::ApiCall<DeleteMessageBusRequest, lro::Operation> call);
+
+        partial void Modify_GetEnrollmentApiCall(ref gaxgrpc::ApiCall<GetEnrollmentRequest, Enrollment> call);
+
+        partial void Modify_ListEnrollmentsApiCall(ref gaxgrpc::ApiCall<ListEnrollmentsRequest, ListEnrollmentsResponse> call);
+
+        partial void Modify_CreateEnrollmentApiCall(ref gaxgrpc::ApiCall<CreateEnrollmentRequest, lro::Operation> call);
+
+        partial void Modify_UpdateEnrollmentApiCall(ref gaxgrpc::ApiCall<UpdateEnrollmentRequest, lro::Operation> call);
+
+        partial void Modify_DeleteEnrollmentApiCall(ref gaxgrpc::ApiCall<DeleteEnrollmentRequest, lro::Operation> call);
+
+        partial void Modify_GetPipelineApiCall(ref gaxgrpc::ApiCall<GetPipelineRequest, Pipeline> call);
+
+        partial void Modify_ListPipelinesApiCall(ref gaxgrpc::ApiCall<ListPipelinesRequest, ListPipelinesResponse> call);
+
+        partial void Modify_CreatePipelineApiCall(ref gaxgrpc::ApiCall<CreatePipelineRequest, lro::Operation> call);
+
+        partial void Modify_UpdatePipelineApiCall(ref gaxgrpc::ApiCall<UpdatePipelineRequest, lro::Operation> call);
+
+        partial void Modify_DeletePipelineApiCall(ref gaxgrpc::ApiCall<DeletePipelineRequest, lro::Operation> call);
+
+        partial void Modify_GetGoogleApiSourceApiCall(ref gaxgrpc::ApiCall<GetGoogleApiSourceRequest, GoogleApiSource> call);
+
+        partial void Modify_ListGoogleApiSourcesApiCall(ref gaxgrpc::ApiCall<ListGoogleApiSourcesRequest, ListGoogleApiSourcesResponse> call);
+
+        partial void Modify_CreateGoogleApiSourceApiCall(ref gaxgrpc::ApiCall<CreateGoogleApiSourceRequest, lro::Operation> call);
+
+        partial void Modify_UpdateGoogleApiSourceApiCall(ref gaxgrpc::ApiCall<UpdateGoogleApiSourceRequest, lro::Operation> call);
+
+        partial void Modify_DeleteGoogleApiSourceApiCall(ref gaxgrpc::ApiCall<DeleteGoogleApiSourceRequest, lro::Operation> call);
 
         partial void OnConstruction(Eventarc.EventarcClient grpcClient, EventarcSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3198,6 +6983,48 @@ namespace Google.Cloud.Eventarc.V1
         partial void Modify_GetGoogleChannelConfigRequest(ref GetGoogleChannelConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateGoogleChannelConfigRequest(ref UpdateGoogleChannelConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMessageBusRequest(ref GetMessageBusRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMessageBusesRequest(ref ListMessageBusesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMessageBusEnrollmentsRequest(ref ListMessageBusEnrollmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateMessageBusRequest(ref CreateMessageBusRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateMessageBusRequest(ref UpdateMessageBusRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteMessageBusRequest(ref DeleteMessageBusRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEnrollmentRequest(ref GetEnrollmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListEnrollmentsRequest(ref ListEnrollmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateEnrollmentRequest(ref CreateEnrollmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateEnrollmentRequest(ref UpdateEnrollmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteEnrollmentRequest(ref DeleteEnrollmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPipelineRequest(ref GetPipelineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPipelinesRequest(ref ListPipelinesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreatePipelineRequest(ref CreatePipelineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePipelineRequest(ref UpdatePipelineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeletePipelineRequest(ref DeletePipelineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoogleApiSourceRequest(ref GetGoogleApiSourceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListGoogleApiSourcesRequest(ref ListGoogleApiSourcesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateGoogleApiSourceRequest(ref CreateGoogleApiSourceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateGoogleApiSourceRequest(ref UpdateGoogleApiSourceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteGoogleApiSourceRequest(ref DeleteGoogleApiSourceRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Get a single trigger.
@@ -3654,6 +7481,546 @@ namespace Google.Cloud.Eventarc.V1
             Modify_UpdateGoogleChannelConfigRequest(ref request, ref callSettings);
             return _callUpdateGoogleChannelConfig.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MessageBus GetMessageBus(GetMessageBusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMessageBusRequest(ref request, ref callSettings);
+            return _callGetMessageBus.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a single MessageBus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MessageBus> GetMessageBusAsync(GetMessageBusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMessageBusRequest(ref request, ref callSettings);
+            return _callGetMessageBus.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List message buses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MessageBus"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMessageBusesResponse, MessageBus> ListMessageBuses(ListMessageBusesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMessageBusesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMessageBusesRequest, ListMessageBusesResponse, MessageBus>(_callListMessageBuses, request, callSettings);
+        }
+
+        /// <summary>
+        /// List message buses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MessageBus"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMessageBusesResponse, MessageBus> ListMessageBusesAsync(ListMessageBusesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMessageBusesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMessageBusesRequest, ListMessageBusesResponse, MessageBus>(_callListMessageBuses, request, callSettings);
+        }
+
+        /// <summary>
+        /// List message bus enrollments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMessageBusEnrollmentsResponse, string> ListMessageBusEnrollments(ListMessageBusEnrollmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMessageBusEnrollmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMessageBusEnrollmentsRequest, ListMessageBusEnrollmentsResponse, string>(_callListMessageBusEnrollments, request, callSettings);
+        }
+
+        /// <summary>
+        /// List message bus enrollments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMessageBusEnrollmentsResponse, string> ListMessageBusEnrollmentsAsync(ListMessageBusEnrollmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMessageBusEnrollmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMessageBusEnrollmentsRequest, ListMessageBusEnrollmentsResponse, string>(_callListMessageBusEnrollments, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateMessageBus</c>.</summary>
+        public override lro::OperationsClient CreateMessageBusOperationsClient { get; }
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MessageBus, OperationMetadata> CreateMessageBus(CreateMessageBusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMessageBusRequest(ref request, ref callSettings);
+            return new lro::Operation<MessageBus, OperationMetadata>(_callCreateMessageBus.Sync(request, callSettings), CreateMessageBusOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a new MessageBus in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MessageBus, OperationMetadata>> CreateMessageBusAsync(CreateMessageBusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMessageBusRequest(ref request, ref callSettings);
+            return new lro::Operation<MessageBus, OperationMetadata>(await _callCreateMessageBus.Async(request, callSettings).ConfigureAwait(false), CreateMessageBusOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateMessageBus</c>.</summary>
+        public override lro::OperationsClient UpdateMessageBusOperationsClient { get; }
+
+        /// <summary>
+        /// Update a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MessageBus, OperationMetadata> UpdateMessageBus(UpdateMessageBusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMessageBusRequest(ref request, ref callSettings);
+            return new lro::Operation<MessageBus, OperationMetadata>(_callUpdateMessageBus.Sync(request, callSettings), UpdateMessageBusOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MessageBus, OperationMetadata>> UpdateMessageBusAsync(UpdateMessageBusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMessageBusRequest(ref request, ref callSettings);
+            return new lro::Operation<MessageBus, OperationMetadata>(await _callUpdateMessageBus.Async(request, callSettings).ConfigureAwait(false), UpdateMessageBusOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteMessageBus</c>.</summary>
+        public override lro::OperationsClient DeleteMessageBusOperationsClient { get; }
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MessageBus, OperationMetadata> DeleteMessageBus(DeleteMessageBusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMessageBusRequest(ref request, ref callSettings);
+            return new lro::Operation<MessageBus, OperationMetadata>(_callDeleteMessageBus.Sync(request, callSettings), DeleteMessageBusOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete a single message bus.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MessageBus, OperationMetadata>> DeleteMessageBusAsync(DeleteMessageBusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMessageBusRequest(ref request, ref callSettings);
+            return new lro::Operation<MessageBus, OperationMetadata>(await _callDeleteMessageBus.Async(request, callSettings).ConfigureAwait(false), DeleteMessageBusOperationsClient);
+        }
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Enrollment GetEnrollment(GetEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEnrollmentRequest(ref request, ref callSettings);
+            return _callGetEnrollment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Enrollment> GetEnrollmentAsync(GetEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEnrollmentRequest(ref request, ref callSettings);
+            return _callGetEnrollment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List Enrollments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Enrollment"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEnrollmentsResponse, Enrollment> ListEnrollments(ListEnrollmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEnrollmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEnrollmentsRequest, ListEnrollmentsResponse, Enrollment>(_callListEnrollments, request, callSettings);
+        }
+
+        /// <summary>
+        /// List Enrollments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Enrollment"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListEnrollmentsResponse, Enrollment> ListEnrollmentsAsync(ListEnrollmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEnrollmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEnrollmentsRequest, ListEnrollmentsResponse, Enrollment>(_callListEnrollments, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateEnrollment</c>.</summary>
+        public override lro::OperationsClient CreateEnrollmentOperationsClient { get; }
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Enrollment, OperationMetadata> CreateEnrollment(CreateEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEnrollmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Enrollment, OperationMetadata>(_callCreateEnrollment.Sync(request, callSettings), CreateEnrollmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a new Enrollment in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Enrollment, OperationMetadata>> CreateEnrollmentAsync(CreateEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEnrollmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Enrollment, OperationMetadata>(await _callCreateEnrollment.Async(request, callSettings).ConfigureAwait(false), CreateEnrollmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateEnrollment</c>.</summary>
+        public override lro::OperationsClient UpdateEnrollmentOperationsClient { get; }
+
+        /// <summary>
+        /// Update a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Enrollment, OperationMetadata> UpdateEnrollment(UpdateEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEnrollmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Enrollment, OperationMetadata>(_callUpdateEnrollment.Sync(request, callSettings), UpdateEnrollmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Enrollment, OperationMetadata>> UpdateEnrollmentAsync(UpdateEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEnrollmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Enrollment, OperationMetadata>(await _callUpdateEnrollment.Async(request, callSettings).ConfigureAwait(false), UpdateEnrollmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteEnrollment</c>.</summary>
+        public override lro::OperationsClient DeleteEnrollmentOperationsClient { get; }
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Enrollment, OperationMetadata> DeleteEnrollment(DeleteEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEnrollmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Enrollment, OperationMetadata>(_callDeleteEnrollment.Sync(request, callSettings), DeleteEnrollmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete a single Enrollment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Enrollment, OperationMetadata>> DeleteEnrollmentAsync(DeleteEnrollmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEnrollmentRequest(ref request, ref callSettings);
+            return new lro::Operation<Enrollment, OperationMetadata>(await _callDeleteEnrollment.Async(request, callSettings).ConfigureAwait(false), DeleteEnrollmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Pipeline GetPipeline(GetPipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPipelineRequest(ref request, ref callSettings);
+            return _callGetPipeline.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a single Pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Pipeline> GetPipelineAsync(GetPipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPipelineRequest(ref request, ref callSettings);
+            return _callGetPipeline.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List pipelines.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Pipeline"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPipelinesResponse, Pipeline> ListPipelines(ListPipelinesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPipelinesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPipelinesRequest, ListPipelinesResponse, Pipeline>(_callListPipelines, request, callSettings);
+        }
+
+        /// <summary>
+        /// List pipelines.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Pipeline"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPipelinesResponse, Pipeline> ListPipelinesAsync(ListPipelinesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPipelinesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPipelinesRequest, ListPipelinesResponse, Pipeline>(_callListPipelines, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreatePipeline</c>.</summary>
+        public override lro::OperationsClient CreatePipelineOperationsClient { get; }
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Pipeline, OperationMetadata> CreatePipeline(CreatePipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePipelineRequest(ref request, ref callSettings);
+            return new lro::Operation<Pipeline, OperationMetadata>(_callCreatePipeline.Sync(request, callSettings), CreatePipelineOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a new Pipeline in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Pipeline, OperationMetadata>> CreatePipelineAsync(CreatePipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePipelineRequest(ref request, ref callSettings);
+            return new lro::Operation<Pipeline, OperationMetadata>(await _callCreatePipeline.Async(request, callSettings).ConfigureAwait(false), CreatePipelineOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdatePipeline</c>.</summary>
+        public override lro::OperationsClient UpdatePipelineOperationsClient { get; }
+
+        /// <summary>
+        /// Update a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Pipeline, OperationMetadata> UpdatePipeline(UpdatePipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePipelineRequest(ref request, ref callSettings);
+            return new lro::Operation<Pipeline, OperationMetadata>(_callUpdatePipeline.Sync(request, callSettings), UpdatePipelineOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Pipeline, OperationMetadata>> UpdatePipelineAsync(UpdatePipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePipelineRequest(ref request, ref callSettings);
+            return new lro::Operation<Pipeline, OperationMetadata>(await _callUpdatePipeline.Async(request, callSettings).ConfigureAwait(false), UpdatePipelineOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeletePipeline</c>.</summary>
+        public override lro::OperationsClient DeletePipelineOperationsClient { get; }
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Pipeline, OperationMetadata> DeletePipeline(DeletePipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePipelineRequest(ref request, ref callSettings);
+            return new lro::Operation<Pipeline, OperationMetadata>(_callDeletePipeline.Sync(request, callSettings), DeletePipelineOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete a single pipeline.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Pipeline, OperationMetadata>> DeletePipelineAsync(DeletePipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePipelineRequest(ref request, ref callSettings);
+            return new lro::Operation<Pipeline, OperationMetadata>(await _callDeletePipeline.Async(request, callSettings).ConfigureAwait(false), DeletePipelineOperationsClient);
+        }
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoogleApiSource GetGoogleApiSource(GetGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoogleApiSourceRequest(ref request, ref callSettings);
+            return _callGetGoogleApiSource.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoogleApiSource> GetGoogleApiSourceAsync(GetGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoogleApiSourceRequest(ref request, ref callSettings);
+            return _callGetGoogleApiSource.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List GoogleApiSources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoogleApiSource"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> ListGoogleApiSources(ListGoogleApiSourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoogleApiSourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGoogleApiSourcesRequest, ListGoogleApiSourcesResponse, GoogleApiSource>(_callListGoogleApiSources, request, callSettings);
+        }
+
+        /// <summary>
+        /// List GoogleApiSources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoogleApiSource"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListGoogleApiSourcesResponse, GoogleApiSource> ListGoogleApiSourcesAsync(ListGoogleApiSourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoogleApiSourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGoogleApiSourcesRequest, ListGoogleApiSourcesResponse, GoogleApiSource>(_callListGoogleApiSources, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateGoogleApiSource</c>.</summary>
+        public override lro::OperationsClient CreateGoogleApiSourceOperationsClient { get; }
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoogleApiSource, OperationMetadata> CreateGoogleApiSource(CreateGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGoogleApiSourceRequest(ref request, ref callSettings);
+            return new lro::Operation<GoogleApiSource, OperationMetadata>(_callCreateGoogleApiSource.Sync(request, callSettings), CreateGoogleApiSourceOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a new GoogleApiSource in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> CreateGoogleApiSourceAsync(CreateGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGoogleApiSourceRequest(ref request, ref callSettings);
+            return new lro::Operation<GoogleApiSource, OperationMetadata>(await _callCreateGoogleApiSource.Async(request, callSettings).ConfigureAwait(false), CreateGoogleApiSourceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateGoogleApiSource</c>.</summary>
+        public override lro::OperationsClient UpdateGoogleApiSourceOperationsClient { get; }
+
+        /// <summary>
+        /// Update a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoogleApiSource, OperationMetadata> UpdateGoogleApiSource(UpdateGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoogleApiSourceRequest(ref request, ref callSettings);
+            return new lro::Operation<GoogleApiSource, OperationMetadata>(_callUpdateGoogleApiSource.Sync(request, callSettings), UpdateGoogleApiSourceOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> UpdateGoogleApiSourceAsync(UpdateGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoogleApiSourceRequest(ref request, ref callSettings);
+            return new lro::Operation<GoogleApiSource, OperationMetadata>(await _callUpdateGoogleApiSource.Async(request, callSettings).ConfigureAwait(false), UpdateGoogleApiSourceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteGoogleApiSource</c>.</summary>
+        public override lro::OperationsClient DeleteGoogleApiSourceOperationsClient { get; }
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoogleApiSource, OperationMetadata> DeleteGoogleApiSource(DeleteGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGoogleApiSourceRequest(ref request, ref callSettings);
+            return new lro::Operation<GoogleApiSource, OperationMetadata>(_callDeleteGoogleApiSource.Sync(request, callSettings), DeleteGoogleApiSourceOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete a single GoogleApiSource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoogleApiSource, OperationMetadata>> DeleteGoogleApiSourceAsync(DeleteGoogleApiSourceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGoogleApiSourceRequest(ref request, ref callSettings);
+            return new lro::Operation<GoogleApiSource, OperationMetadata>(await _callDeleteGoogleApiSource.Async(request, callSettings).ConfigureAwait(false), DeleteGoogleApiSourceOperationsClient);
+        }
     }
 
     public partial class ListTriggersRequest : gaxgrpc::IPageRequest
@@ -3669,6 +8036,26 @@ namespace Google.Cloud.Eventarc.V1
     }
 
     public partial class ListChannelConnectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListMessageBusesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListMessageBusEnrollmentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEnrollmentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPipelinesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListGoogleApiSourcesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3700,6 +8087,46 @@ namespace Google.Cloud.Eventarc.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ChannelConnection> GetEnumerator() => ChannelConnections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListMessageBusesResponse : gaxgrpc::IPageResponse<MessageBus>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<MessageBus> GetEnumerator() => MessageBuses.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListMessageBusEnrollmentsResponse : gaxgrpc::IPageResponse<string>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<string> GetEnumerator() => Enrollments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEnrollmentsResponse : gaxgrpc::IPageResponse<Enrollment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Enrollment> GetEnumerator() => Enrollments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPipelinesResponse : gaxgrpc::IPageResponse<Pipeline>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Pipeline> GetEnumerator() => Pipelines.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListGoogleApiSourcesResponse : gaxgrpc::IPageResponse<GoogleApiSource>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GoogleApiSource> GetEnumerator() => GoogleApiSources.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
