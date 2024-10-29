@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.15.0, released 2024-10-29
+
+### New features
+
+- Add feature flags proto for Direct Access ([commit 70094ae](https://github.com/googleapis/google-cloud-dotnet/commit/70094aea955279d55e675a50ee723b76ff65e4c8))
+
 ## Version 3.14.0, released 2024-07-22
 
 ### New features
