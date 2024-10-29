@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.9.0, released 2024-10-29
+
+### New features
+
+- Add Artifact Registry attachment API ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry custom remote support ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry generic repository support ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry server side resource filtering and sorting ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry rule APIs ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry UpdateFile and DeleteFile APIs ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+
+### Documentation improvements
+
+- Include max page size for all Artifact Registry APIs ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+
 ## Version 2.8.0, released 2024-06-04
 
 ### New features
