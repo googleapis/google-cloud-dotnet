@@ -1051,6 +1051,375 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for RemoveIpOverride</summary>
+        public void RemoveIpOverrideRequestObject()
+        {
+            // Snippet: RemoveIpOverride(RemoveIpOverrideRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveIpOverrideRequest request = new RemoveIpOverrideRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                IpOverrideData = new IpOverrideData(),
+            };
+            // Make the request
+            RemoveIpOverrideResponse response = recaptchaEnterpriseServiceClient.RemoveIpOverride(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverrideAsync</summary>
+        public async Task RemoveIpOverrideRequestObjectAsync()
+        {
+            // Snippet: RemoveIpOverrideAsync(RemoveIpOverrideRequest, CallSettings)
+            // Additional: RemoveIpOverrideAsync(RemoveIpOverrideRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveIpOverrideRequest request = new RemoveIpOverrideRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                IpOverrideData = new IpOverrideData(),
+            };
+            // Make the request
+            RemoveIpOverrideResponse response = await recaptchaEnterpriseServiceClient.RemoveIpOverrideAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverride</summary>
+        public void RemoveIpOverride()
+        {
+            // Snippet: RemoveIpOverride(string, IpOverrideData, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]";
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            RemoveIpOverrideResponse response = recaptchaEnterpriseServiceClient.RemoveIpOverride(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverrideAsync</summary>
+        public async Task RemoveIpOverrideAsync()
+        {
+            // Snippet: RemoveIpOverrideAsync(string, IpOverrideData, CallSettings)
+            // Additional: RemoveIpOverrideAsync(string, IpOverrideData, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]";
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            RemoveIpOverrideResponse response = await recaptchaEnterpriseServiceClient.RemoveIpOverrideAsync(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverride</summary>
+        public void RemoveIpOverrideResourceNames()
+        {
+            // Snippet: RemoveIpOverride(KeyName, IpOverrideData, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            RemoveIpOverrideResponse response = recaptchaEnterpriseServiceClient.RemoveIpOverride(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverrideAsync</summary>
+        public async Task RemoveIpOverrideResourceNamesAsync()
+        {
+            // Snippet: RemoveIpOverrideAsync(KeyName, IpOverrideData, CallSettings)
+            // Additional: RemoveIpOverrideAsync(KeyName, IpOverrideData, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            RemoveIpOverrideResponse response = await recaptchaEnterpriseServiceClient.RemoveIpOverrideAsync(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverrides</summary>
+        public void ListIpOverridesRequestObject()
+        {
+            // Snippet: ListIpOverrides(ListIpOverridesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ListIpOverridesRequest request = new ListIpOverridesRequest
+            {
+                ParentAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverrides(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (IpOverrideData item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIpOverridesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverridesAsync</summary>
+        public async Task ListIpOverridesRequestObjectAsync()
+        {
+            // Snippet: ListIpOverridesAsync(ListIpOverridesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListIpOverridesRequest request = new ListIpOverridesRequest
+            {
+                ParentAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverridesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((IpOverrideData item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIpOverridesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverrides</summary>
+        public void ListIpOverrides()
+        {
+            // Snippet: ListIpOverrides(string, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/keys/[KEY]";
+            // Make the request
+            PagedEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverrides(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (IpOverrideData item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIpOverridesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverridesAsync</summary>
+        public async Task ListIpOverridesAsync()
+        {
+            // Snippet: ListIpOverridesAsync(string, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/keys/[KEY]";
+            // Make the request
+            PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverridesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((IpOverrideData item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIpOverridesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverrides</summary>
+        public void ListIpOverridesResourceNames()
+        {
+            // Snippet: ListIpOverrides(KeyName, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            KeyName parent = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            PagedEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverrides(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (IpOverrideData item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIpOverridesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverridesAsync</summary>
+        public async Task ListIpOverridesResourceNamesAsync()
+        {
+            // Snippet: ListIpOverridesAsync(KeyName, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName parent = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverridesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((IpOverrideData item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIpOverridesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetMetrics</summary>
         public void GetMetricsRequestObject()
         {

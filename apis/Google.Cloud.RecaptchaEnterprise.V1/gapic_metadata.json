@@ -76,6 +76,12 @@
                 "ListFirewallPoliciesAsync"
               ]
             },
+            "ListIpOverrides": {
+              "methods": [
+                "ListIpOverrides",
+                "ListIpOverridesAsync"
+              ]
+            },
             "ListKeys": {
               "methods": [
                 "ListKeys",
@@ -98,6 +104,12 @@
               "methods": [
                 "MigrateKey",
                 "MigrateKeyAsync"
+              ]
+            },
+            "RemoveIpOverride": {
+              "methods": [
+                "RemoveIpOverride",
+                "RemoveIpOverrideAsync"
               ]
             },
             "ReorderFirewallPolicies": {
