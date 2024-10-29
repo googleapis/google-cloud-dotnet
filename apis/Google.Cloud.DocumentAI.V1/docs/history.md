@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.19.0, released 2024-10-29
+
+### New features
+
+- Updated the exponential backoff settings for the Document AI ProcessDocument and BatchProcessDocuments methods ([commit e8a1148](https://github.com/googleapis/google-cloud-dotnet/commit/e8a11488194f5da2cfada12645ed89bb8301535e))
+- Add RESOURCE_EXHAUSTED to retryable status codes for ProcessDocument method ([commit e8a1148](https://github.com/googleapis/google-cloud-dotnet/commit/e8a11488194f5da2cfada12645ed89bb8301535e))
+- Added an url for issue reporting and api short name ([commit e8a1148](https://github.com/googleapis/google-cloud-dotnet/commit/e8a11488194f5da2cfada12645ed89bb8301535e))
+
 ## Version 3.18.0, released 2024-08-05
 
 ### New features
