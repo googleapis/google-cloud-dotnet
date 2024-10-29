@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta11, released 2024-10-29
+
+### New features
+
+- Add multi-speaker markup, which allows generating dialogue between multiple speakers ([commit 9c3527e](https://github.com/googleapis/google-cloud-dotnet/commit/9c3527ec81408e73c6f3542b9e9dfeb18c3675b0))
+
 ## Version 2.0.0-beta10, released 2024-10-21
 
 ### New features
