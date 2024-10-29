@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2024-10-29
+
+### New features
+
+- Add fast_tryout_enabled to FasterDeploymentConfig message in aiplatform v1beta1 endpoint.proto ([commit 546a95b](https://github.com/googleapis/google-cloud-dotnet/commit/546a95bbb6816231ec35d14bd4d7aa3b2555076f))
+- Add new PscInterfaceConfig field to custom_job.proto ([commit ce7c3b6](https://github.com/googleapis/google-cloud-dotnet/commit/ce7c3b6e6466f1978102ff1760f3b8f07dbbe1e0))
+
 ## Version 1.0.0-beta07, released 2024-10-21
 
 ### New features
