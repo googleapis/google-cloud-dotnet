@@ -5991,7 +5991,7 @@
     },
     {
       "id": "Google.Shopping.Css.V1",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "productName": "CSS",
       "productUrl": "https://developers.google.com/comparison-shopping-services/api",
@@ -6001,7 +6001,7 @@
         "comparison"
       ],
       "dependencies": {
-        "Google.Shopping.Type": "1.0.0-beta05"
+        "Google.Shopping.Type": "1.0.0-beta06"
       },
       "generator": "micro",
       "protoPath": "google/shopping/css/v1",
