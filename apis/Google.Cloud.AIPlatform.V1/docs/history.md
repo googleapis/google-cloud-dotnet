@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2024-10-29
+
+### New features
+
+- Add `text` field for Grounding metadata support chunk output ([commit d09eec7](https://github.com/googleapis/google-cloud-dotnet/commit/d09eec728557c8fc8062c7c574367f34e7578b93))
+
 ## Version 3.9.0, released 2024-10-07
 
 ### New features
