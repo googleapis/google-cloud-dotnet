@@ -59,6 +59,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             DeleteKeySettings = existing.DeleteKeySettings;
             MigrateKeySettings = existing.MigrateKeySettings;
             AddIpOverrideSettings = existing.AddIpOverrideSettings;
+            RemoveIpOverrideSettings = existing.RemoveIpOverrideSettings;
+            ListIpOverridesSettings = existing.ListIpOverridesSettings;
             GetMetricsSettings = existing.GetMetricsSettings;
             CreateFirewallPolicySettings = existing.CreateFirewallPolicySettings;
             ListFirewallPoliciesSettings = existing.ListFirewallPoliciesSettings;
@@ -201,6 +203,32 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AddIpOverrideSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.RemoveIpOverride</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.RemoveIpOverrideAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveIpOverrideSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.ListIpOverrides</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.ListIpOverridesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListIpOverridesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -648,8 +676,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that is assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -670,8 +698,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that is assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -692,8 +720,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that is assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -710,8 +738,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that is assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -732,8 +760,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that is assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -754,8 +782,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that is assigned to the Event. This field can
-        /// be left empty to provide reasons that apply to an event without concluding
+        /// Optional. The annotation that is assigned to the Event. This field can be
+        /// left empty to provide reasons that apply to an event without concluding
         /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -918,7 +946,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that contains the keys that are
+        /// Required. The name of the project that contains the keys that is
         /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
@@ -952,7 +980,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that contains the keys that are
+        /// Required. The name of the project that contains the keys that is
         /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
@@ -986,7 +1014,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that contains the keys that are
+        /// Required. The name of the project that contains the keys that is
         /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
@@ -1020,7 +1048,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that contains the keys that are
+        /// Required. The name of the project that contains the keys that is
         /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
@@ -1684,6 +1712,329 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             AddIpOverrideAsync(name, ipOverrideData, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveIpOverrideResponse RemoveIpOverride(RemoveIpOverrideRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveIpOverrideResponse> RemoveIpOverrideAsync(RemoveIpOverrideRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveIpOverrideResponse> RemoveIpOverrideAsync(RemoveIpOverrideRequest request, st::CancellationToken cancellationToken) =>
+            RemoveIpOverrideAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key from which the IP override is removed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override to be removed from the key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveIpOverrideResponse RemoveIpOverride(string name, IpOverrideData ipOverrideData, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveIpOverride(new RemoveIpOverrideRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                IpOverrideData = gax::GaxPreconditions.CheckNotNull(ipOverrideData, nameof(ipOverrideData)),
+            }, callSettings);
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key from which the IP override is removed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override to be removed from the key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveIpOverrideResponse> RemoveIpOverrideAsync(string name, IpOverrideData ipOverrideData, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveIpOverrideAsync(new RemoveIpOverrideRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                IpOverrideData = gax::GaxPreconditions.CheckNotNull(ipOverrideData, nameof(ipOverrideData)),
+            }, callSettings);
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key from which the IP override is removed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override to be removed from the key.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveIpOverrideResponse> RemoveIpOverrideAsync(string name, IpOverrideData ipOverrideData, st::CancellationToken cancellationToken) =>
+            RemoveIpOverrideAsync(name, ipOverrideData, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key from which the IP override is removed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override to be removed from the key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveIpOverrideResponse RemoveIpOverride(KeyName name, IpOverrideData ipOverrideData, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveIpOverride(new RemoveIpOverrideRequest
+            {
+                KeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                IpOverrideData = gax::GaxPreconditions.CheckNotNull(ipOverrideData, nameof(ipOverrideData)),
+            }, callSettings);
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key from which the IP override is removed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override to be removed from the key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveIpOverrideResponse> RemoveIpOverrideAsync(KeyName name, IpOverrideData ipOverrideData, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveIpOverrideAsync(new RemoveIpOverrideRequest
+            {
+                KeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                IpOverrideData = gax::GaxPreconditions.CheckNotNull(ipOverrideData, nameof(ipOverrideData)),
+            }, callSettings);
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key from which the IP override is removed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="ipOverrideData">
+        /// Required. IP override to be removed from the key.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveIpOverrideResponse> RemoveIpOverrideAsync(KeyName name, IpOverrideData ipOverrideData, st::CancellationToken cancellationToken) =>
+            RemoveIpOverrideAsync(name, ipOverrideData, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all IP overrides for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IpOverrideData"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIpOverridesResponse, IpOverrideData> ListIpOverrides(ListIpOverridesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all IP overrides for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IpOverrideData"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> ListIpOverridesAsync(ListIpOverridesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all IP overrides for a key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent key for which the IP overrides are listed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IpOverrideData"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIpOverridesResponse, IpOverrideData> ListIpOverrides(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIpOverridesRequest request = new ListIpOverridesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIpOverrides(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all IP overrides for a key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent key for which the IP overrides are listed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IpOverrideData"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> ListIpOverridesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIpOverridesRequest request = new ListIpOverridesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIpOverridesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all IP overrides for a key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent key for which the IP overrides are listed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IpOverrideData"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIpOverridesResponse, IpOverrideData> ListIpOverrides(KeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIpOverridesRequest request = new ListIpOverridesRequest
+            {
+                ParentAsKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIpOverrides(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all IP overrides for a key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent key for which the IP overrides are listed, in the
+        /// format `projects/{project}/keys/{key}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IpOverrideData"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> ListIpOverridesAsync(KeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIpOverridesRequest request = new ListIpOverridesRequest
+            {
+                ParentAsKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIpOverridesAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Get some aggregated metrics for a Key. This data can be used to build
         /// dashboards.
         /// </summary>
@@ -1842,7 +2193,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A project may have a maximum of 1000 policies.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this policy will apply to, in the format
+        /// Required. The name of the project this policy applies to, in the format
         /// `projects/{project}`.
         /// </param>
         /// <param name="firewallPolicy">
@@ -1863,7 +2214,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A project may have a maximum of 1000 policies.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this policy will apply to, in the format
+        /// Required. The name of the project this policy applies to, in the format
         /// `projects/{project}`.
         /// </param>
         /// <param name="firewallPolicy">
@@ -1884,7 +2235,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A project may have a maximum of 1000 policies.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this policy will apply to, in the format
+        /// Required. The name of the project this policy applies to, in the format
         /// `projects/{project}`.
         /// </param>
         /// <param name="firewallPolicy">
@@ -1901,7 +2252,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A project may have a maximum of 1000 policies.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this policy will apply to, in the format
+        /// Required. The name of the project this policy applies to, in the format
         /// `projects/{project}`.
         /// </param>
         /// <param name="firewallPolicy">
@@ -1922,7 +2273,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A project may have a maximum of 1000 policies.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this policy will apply to, in the format
+        /// Required. The name of the project this policy applies to, in the format
         /// `projects/{project}`.
         /// </param>
         /// <param name="firewallPolicy">
@@ -1943,7 +2294,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A project may have a maximum of 1000 policies.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this policy will apply to, in the format
+        /// Required. The name of the project this policy applies to, in the format
         /// `projects/{project}`.
         /// </param>
         /// <param name="firewallPolicy">
@@ -3102,6 +3453,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         private readonly gaxgrpc::ApiCall<AddIpOverrideRequest, AddIpOverrideResponse> _callAddIpOverride;
 
+        private readonly gaxgrpc::ApiCall<RemoveIpOverrideRequest, RemoveIpOverrideResponse> _callRemoveIpOverride;
+
+        private readonly gaxgrpc::ApiCall<ListIpOverridesRequest, ListIpOverridesResponse> _callListIpOverrides;
+
         private readonly gaxgrpc::ApiCall<GetMetricsRequest, Metrics> _callGetMetrics;
 
         private readonly gaxgrpc::ApiCall<CreateFirewallPolicyRequest, FirewallPolicy> _callCreateFirewallPolicy;
@@ -3170,6 +3525,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callAddIpOverride = clientHelper.BuildApiCall<AddIpOverrideRequest, AddIpOverrideResponse>("AddIpOverride", grpcClient.AddIpOverrideAsync, grpcClient.AddIpOverride, effectiveSettings.AddIpOverrideSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAddIpOverride);
             Modify_AddIpOverrideApiCall(ref _callAddIpOverride);
+            _callRemoveIpOverride = clientHelper.BuildApiCall<RemoveIpOverrideRequest, RemoveIpOverrideResponse>("RemoveIpOverride", grpcClient.RemoveIpOverrideAsync, grpcClient.RemoveIpOverride, effectiveSettings.RemoveIpOverrideSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRemoveIpOverride);
+            Modify_RemoveIpOverrideApiCall(ref _callRemoveIpOverride);
+            _callListIpOverrides = clientHelper.BuildApiCall<ListIpOverridesRequest, ListIpOverridesResponse>("ListIpOverrides", grpcClient.ListIpOverridesAsync, grpcClient.ListIpOverrides, effectiveSettings.ListIpOverridesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListIpOverrides);
+            Modify_ListIpOverridesApiCall(ref _callListIpOverrides);
             _callGetMetrics = clientHelper.BuildApiCall<GetMetricsRequest, Metrics>("GetMetrics", grpcClient.GetMetricsAsync, grpcClient.GetMetrics, effectiveSettings.GetMetricsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetrics);
             Modify_GetMetricsApiCall(ref _callGetMetrics);
@@ -3225,6 +3586,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         partial void Modify_AddIpOverrideApiCall(ref gaxgrpc::ApiCall<AddIpOverrideRequest, AddIpOverrideResponse> call);
 
+        partial void Modify_RemoveIpOverrideApiCall(ref gaxgrpc::ApiCall<RemoveIpOverrideRequest, RemoveIpOverrideResponse> call);
+
+        partial void Modify_ListIpOverridesApiCall(ref gaxgrpc::ApiCall<ListIpOverridesRequest, ListIpOverridesResponse> call);
+
         partial void Modify_GetMetricsApiCall(ref gaxgrpc::ApiCall<GetMetricsRequest, Metrics> call);
 
         partial void Modify_CreateFirewallPolicyApiCall(ref gaxgrpc::ApiCall<CreateFirewallPolicyRequest, FirewallPolicy> call);
@@ -3269,6 +3634,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         partial void Modify_MigrateKeyRequest(ref MigrateKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AddIpOverrideRequest(ref AddIpOverrideRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveIpOverrideRequest(ref RemoveIpOverrideRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListIpOverridesRequest(ref ListIpOverridesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetMetricsRequest(ref GetMetricsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3553,6 +3922,62 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         }
 
         /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RemoveIpOverrideResponse RemoveIpOverride(RemoveIpOverrideRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveIpOverrideRequest(ref request, ref callSettings);
+            return _callRemoveIpOverride.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes an IP override from a key. The following restrictions hold:
+        /// * If the IP isn't found in an existing IP override, a `NOT_FOUND` error
+        /// is returned.
+        /// * If the IP is found in an existing IP override, but the
+        /// override type does not match, a `NOT_FOUND` error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RemoveIpOverrideResponse> RemoveIpOverrideAsync(RemoveIpOverrideRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveIpOverrideRequest(ref request, ref callSettings);
+            return _callRemoveIpOverride.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all IP overrides for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IpOverrideData"/> resources.</returns>
+        public override gax::PagedEnumerable<ListIpOverridesResponse, IpOverrideData> ListIpOverrides(ListIpOverridesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListIpOverridesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListIpOverridesRequest, ListIpOverridesResponse, IpOverrideData>(_callListIpOverrides, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all IP overrides for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IpOverrideData"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> ListIpOverridesAsync(ListIpOverridesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListIpOverridesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListIpOverridesRequest, ListIpOverridesResponse, IpOverrideData>(_callListIpOverrides, request, callSettings);
+        }
+
+        /// <summary>
         /// Get some aggregated metrics for a Key. This data can be used to build
         /// dashboards.
         /// </summary>
@@ -3807,6 +4232,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
     {
     }
 
+    public partial class ListIpOverridesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListFirewallPoliciesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -3827,6 +4256,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Key> GetEnumerator() => Keys.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListIpOverridesResponse : gaxgrpc::IPageResponse<IpOverrideData>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<IpOverrideData> GetEnumerator() => IpOverrides.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

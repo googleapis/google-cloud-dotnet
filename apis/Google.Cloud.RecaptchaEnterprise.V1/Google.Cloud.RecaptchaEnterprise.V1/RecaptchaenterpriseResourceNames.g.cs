@@ -1740,6 +1740,28 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         }
     }
 
+    public partial class RemoveIpOverrideRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::KeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::KeyName KeyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListIpOverridesRequest
+    {
+        /// <summary><see cref="KeyName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public KeyName ParentAsKeyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : KeyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class RelatedAccountGroupMembership
     {
         /// <summary>
