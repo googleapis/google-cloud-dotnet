@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.6.0, released 2024-10-29
+
+### New features
+
+- Add lite search API to allow public website search with API key ([commit bfc1d53](https://github.com/googleapis/google-cloud-dotnet/commit/bfc1d5353befef905905f145e1c0048ee09f0743))
+- Add LOW_GROUNDED_ANSWER in answer skip reasons ([commit bfc1d53](https://github.com/googleapis/google-cloud-dotnet/commit/bfc1d5353befef905905f145e1c0048ee09f0743))
+- Support query regex in control match rules ([commit bfc1d53](https://github.com/googleapis/google-cloud-dotnet/commit/bfc1d5353befef905905f145e1c0048ee09f0743))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit bfc1d53](https://github.com/googleapis/google-cloud-dotnet/commit/bfc1d5353befef905905f145e1c0048ee09f0743))
+
 ## Version 1.5.0, released 2024-10-14
 
 ### New features
