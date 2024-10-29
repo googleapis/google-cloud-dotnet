@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.13.0, released 2024-10-29
+
+### New features
+
+- Add PrivateServiceConnect option to WorkerPool ([commit 59748e6](https://github.com/googleapis/google-cloud-dotnet/commit/59748e60fa58d45650d8f63981db904478308272))
+
 ## Version 2.12.0, released 2024-09-26
 
 ### New features
