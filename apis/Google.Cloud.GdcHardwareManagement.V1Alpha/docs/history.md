@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-alpha03, released 2024-10-29
+
+### New features
+
+- Add a DeleteSite method ([commit 546e30b](https://github.com/googleapis/google-cloud-dotnet/commit/546e30b7a257eea06f08b9abcadd62117ad6d304))
+- Add MAC address and disk info to the Hardware resource ([commit 546e30b](https://github.com/googleapis/google-cloud-dotnet/commit/546e30b7a257eea06f08b9abcadd62117ad6d304))
+
+### Documentation improvements
+
+- Annotate rack_location field as required; this was always enforced ([commit 546e30b](https://github.com/googleapis/google-cloud-dotnet/commit/546e30b7a257eea06f08b9abcadd62117ad6d304))
+
 ## Version 1.0.0-alpha02, released 2024-09-26
 
 ### New features
