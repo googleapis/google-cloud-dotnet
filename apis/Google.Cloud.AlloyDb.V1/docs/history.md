@@ -1,5 +1,24 @@
 # Version history
 
+## Version 1.9.0, released 2024-10-29
+
+### New features
+
+- Add new PSC instance configuration setting and output the PSC DNS name ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Add new API to execute SQL statements ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Add support for Free Trials ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Add support to schedule maintenance ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Additional field to set tags on a backup or cluster ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Add more observability options on the Instance level ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Add new API to perform a promotion or switchover on secondary instances ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Support for obtaining the public ip addresses of an instance and enabling either inbound or outbound public ip ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Add new API to list the databases in a project and location ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+- Add optional field to keep extra roles on a user if it already exists ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+
+### Documentation improvements
+
+- Various typo fixes, correcting the formatting, and clarifications on the request_id and validate_only fields in API requests and on the page_size when listing the database ([commit e79b0b3](https://github.com/googleapis/google-cloud-dotnet/commit/e79b0b3717b7c9aae913bf6a0262e4985c74dcf7))
+
 ## Version 1.8.0, released 2024-06-04
 
 ### New features
