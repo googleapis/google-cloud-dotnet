@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.9.0, released 2024-10-29
+
+### New features
+
+- Add multi-speaker markup, which allows generating dialogue between multiple speakers ([commit 94c353c](https://github.com/googleapis/google-cloud-dotnet/commit/94c353c51b23301309aacbcf055b147a085612e8))
+- Add brand voice lite, which lets you clone a voice with just 10 seconds of audio ([commit 6635e62](https://github.com/googleapis/google-cloud-dotnet/commit/6635e6209450b1005ca0c15495c0724c90a955a5))
+
 ## Version 3.8.0, released 2024-10-14
 
 ### New features
