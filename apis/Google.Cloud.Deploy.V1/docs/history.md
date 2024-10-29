@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.2.0, released 2024-10-29
+
+### New features
+
+- Added new fields for the Automation Repair rule ([commit 803ebaa](https://github.com/googleapis/google-cloud-dotnet/commit/803ebaa5bfee8895cd987ec69dcaf0827923198a))
+- Added route destination related fields to Gateway service mesh message ([commit 803ebaa](https://github.com/googleapis/google-cloud-dotnet/commit/803ebaa5bfee8895cd987ec69dcaf0827923198a))
+
 ## Version 3.1.0, released 2024-09-30
 
 ### New features
