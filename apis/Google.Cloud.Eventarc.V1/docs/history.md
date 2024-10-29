@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.6.0, released 2024-10-29
+
+### New features
+
+- Publish Eventarc Advanced protos ([commit 5bb7fc6](https://github.com/googleapis/google-cloud-dotnet/commit/5bb7fc6b056a33c2d61a1104d231701f288369d2))
+
+### Documentation improvements
+
+- Clarified multiple comments in Eventarc Standard protos ([commit 5bb7fc6](https://github.com/googleapis/google-cloud-dotnet/commit/5bb7fc6b056a33c2d61a1104d231701f288369d2))
+
 ## Version 2.5.0, released 2024-05-14
 
 ### New features

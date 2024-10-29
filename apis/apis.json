@@ -2415,7 +2415,7 @@
     },
     {
       "id": "Google.Cloud.Eventarc.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Eventarc",
       "productUrl": "https://cloud.google.com/eventarc/docs",
@@ -2425,9 +2425,9 @@
         "cloudevents"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/eventarc/v1",
