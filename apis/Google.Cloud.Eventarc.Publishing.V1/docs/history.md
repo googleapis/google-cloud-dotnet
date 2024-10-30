@@ -1,5 +1,10 @@
 # Version history
 
+## Version 2.0.0-beta07, released 2024-10-30
+
+### New features
+
+- Add Eventarc Advanced Publishing features, allowing publishing events to a Message Bus ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
 ## Version 2.0.0-beta06, released 2024-05-08
 
 ### New features
