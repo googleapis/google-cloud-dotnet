@@ -43,6 +43,36 @@ public sealed class PushReleaseBranchesCommand : CommandBase
         }
 
         Commands.Checkout(repo, originalBranch);
+
+        if (ConfirmDeleteBranches())
+        {
+            foreach (var branch in releaseBranches)
+            {
+                Console.WriteLine($"Deleting {branch.FriendlyName}");
+                repo.Branches.Remove(branch);
+            }
+        }
+
         return 0;
     }
+
+    private static bool ConfirmDeleteBranches()
+    {
+        while (true)
+        {
+            Console.Write("Deleted pushed branches?(y/n) ");
+            string response = Console.ReadLine();
+            switch (response)
+            {
+                case "y":
+                    return true;
+                case "n":
+                    return false;
+                default:
+                    Console.WriteLine($"Unexpected response '{response}'.");
+                    continue;
+            }
+        }
+    }
+
 }
