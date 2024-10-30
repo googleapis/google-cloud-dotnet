@@ -69,6 +69,8 @@ namespace GoogleCSharpSnippets
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
                 RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
+                PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
+                OneBoxPageSize = 0,
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
@@ -150,9 +152,177 @@ namespace GoogleCSharpSnippets
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
                 RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
+                PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
+                OneBoxPageSize = 0,
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SearchResponse.Types.SearchResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchResponse.Types.SearchResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchResponse.Types.SearchResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchResponse.Types.SearchResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchLite</summary>
+        public void SearchLiteRequestObject()
+        {
+            // Snippet: SearchLite(SearchRequest, CallSettings)
+            // Create client
+            SearchServiceClient searchServiceClient = SearchServiceClient.Create();
+            // Initialize request argument(s)
+            SearchRequest request = new SearchRequest
+            {
+                ServingConfigAsServingConfigName = ServingConfigName.FromProjectLocationDataStoreServingConfig("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SERVING_CONFIG]"),
+                BranchAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Query = "",
+                Offset = 0,
+                Filter = "",
+                OrderBy = "",
+                FacetSpecs =
+                {
+                    new SearchRequest.Types.FacetSpec(),
+                },
+                BoostSpec = new SearchRequest.Types.BoostSpec(),
+                Params = { { "", new Value() }, },
+                QueryExpansionSpec = new SearchRequest.Types.QueryExpansionSpec(),
+                SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
+                UserPseudoId = "",
+                ImageQuery = new SearchRequest.Types.ImageQuery(),
+                SafeSearch = false,
+                UserInfo = new UserInfo(),
+                UserLabels = { { "", "" }, },
+                EmbeddingSpec = new SearchRequest.Types.EmbeddingSpec(),
+                ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
+                RankingExpression = "",
+                NaturalLanguageQueryUnderstandingSpec = new SearchRequest.Types.NaturalLanguageQueryUnderstandingSpec(),
+                CanonicalFilter = "",
+                SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
+                DataStoreSpecs =
+                {
+                    new SearchRequest.Types.DataStoreSpec(),
+                },
+                LanguageCode = "",
+                RegionCode = "",
+                SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                SessionSpec = new SearchRequest.Types.SessionSpec(),
+                RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
+                PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
+                OneBoxPageSize = 0,
+            };
+            // Make the request
+            PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchLite(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SearchResponse.Types.SearchResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchResponse.Types.SearchResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchResponse.Types.SearchResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchResponse.Types.SearchResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchLiteAsync</summary>
+        public async Task SearchLiteRequestObjectAsync()
+        {
+            // Snippet: SearchLiteAsync(SearchRequest, CallSettings)
+            // Create client
+            SearchServiceClient searchServiceClient = await SearchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchRequest request = new SearchRequest
+            {
+                ServingConfigAsServingConfigName = ServingConfigName.FromProjectLocationDataStoreServingConfig("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SERVING_CONFIG]"),
+                BranchAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Query = "",
+                Offset = 0,
+                Filter = "",
+                OrderBy = "",
+                FacetSpecs =
+                {
+                    new SearchRequest.Types.FacetSpec(),
+                },
+                BoostSpec = new SearchRequest.Types.BoostSpec(),
+                Params = { { "", new Value() }, },
+                QueryExpansionSpec = new SearchRequest.Types.QueryExpansionSpec(),
+                SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
+                UserPseudoId = "",
+                ImageQuery = new SearchRequest.Types.ImageQuery(),
+                SafeSearch = false,
+                UserInfo = new UserInfo(),
+                UserLabels = { { "", "" }, },
+                EmbeddingSpec = new SearchRequest.Types.EmbeddingSpec(),
+                ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
+                RankingExpression = "",
+                NaturalLanguageQueryUnderstandingSpec = new SearchRequest.Types.NaturalLanguageQueryUnderstandingSpec(),
+                CanonicalFilter = "",
+                SearchAsYouTypeSpec = new SearchRequest.Types.SearchAsYouTypeSpec(),
+                DataStoreSpecs =
+                {
+                    new SearchRequest.Types.DataStoreSpec(),
+                },
+                LanguageCode = "",
+                RegionCode = "",
+                SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                SessionSpec = new SearchRequest.Types.SessionSpec(),
+                RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
+                PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
+                OneBoxPageSize = 0,
+            };
+            // Make the request
+            PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchLiteAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((SearchResponse.Types.SearchResult item) =>

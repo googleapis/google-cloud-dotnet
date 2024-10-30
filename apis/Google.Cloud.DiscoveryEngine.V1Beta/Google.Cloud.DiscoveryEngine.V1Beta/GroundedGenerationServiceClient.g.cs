@@ -47,12 +47,50 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         private GroundedGenerationServiceSettings(GroundedGenerationServiceSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            StreamGenerateGroundedContentSettings = existing.StreamGenerateGroundedContentSettings;
+            StreamGenerateGroundedContentStreamingSettings = existing.StreamGenerateGroundedContentStreamingSettings;
+            GenerateGroundedContentSettings = existing.GenerateGroundedContentSettings;
             CheckGroundingSettings = existing.CheckGroundingSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
         partial void OnCopy(GroundedGenerationServiceSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GroundedGenerationServiceClient.StreamGenerateGroundedContent</c> and
+        /// <c>GroundedGenerationServiceClient.StreamGenerateGroundedContentAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 5 seconds.</remarks>
+        public gaxgrpc::CallSettings StreamGenerateGroundedContentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>GroundedGenerationServiceClient.StreamGenerateGroundedContent</c> and
+        /// <c>GroundedGenerationServiceClient.StreamGenerateGroundedContentAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings StreamGenerateGroundedContentStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GroundedGenerationServiceClient.GenerateGroundedContent</c> and
+        /// <c>GroundedGenerationServiceClient.GenerateGroundedContentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateGroundedContentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -226,6 +264,50 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="StreamGenerateGroundedContent(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamGenerateGroundedContentStream : gaxgrpc::BidirectionalStreamingBase<GenerateGroundedContentRequest, GenerateGroundedContentResponse>
+        {
+        }
+
+        /// <summary>
+        /// Generates grounded content in a streaming fashion.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual StreamGenerateGroundedContentStream StreamGenerateGroundedContent(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates grounded content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateGroundedContentResponse GenerateGroundedContent(GenerateGroundedContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates grounded content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateGroundedContentResponse> GenerateGroundedContentAsync(GenerateGroundedContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates grounded content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateGroundedContentResponse> GenerateGroundedContentAsync(GenerateGroundedContentRequest request, st::CancellationToken cancellationToken) =>
+            GenerateGroundedContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Performs a grounding check.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -259,6 +341,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
     /// </remarks>
     public sealed partial class GroundedGenerationServiceClientImpl : GroundedGenerationServiceClient
     {
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse> _callStreamGenerateGroundedContent;
+
+        private readonly gaxgrpc::ApiCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse> _callGenerateGroundedContent;
+
         private readonly gaxgrpc::ApiCall<CheckGroundingRequest, CheckGroundingResponse> _callCheckGrounding;
 
         /// <summary>
@@ -280,6 +366,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
                 Logger = logger,
             });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callStreamGenerateGroundedContent = clientHelper.BuildApiCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse>("StreamGenerateGroundedContent", grpcClient.StreamGenerateGroundedContent, effectiveSettings.StreamGenerateGroundedContentSettings, effectiveSettings.StreamGenerateGroundedContentStreamingSettings);
+            Modify_ApiCall(ref _callStreamGenerateGroundedContent);
+            Modify_StreamGenerateGroundedContentApiCall(ref _callStreamGenerateGroundedContent);
+            _callGenerateGroundedContent = clientHelper.BuildApiCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse>("GenerateGroundedContent", grpcClient.GenerateGroundedContentAsync, grpcClient.GenerateGroundedContent, effectiveSettings.GenerateGroundedContentSettings).WithGoogleRequestParam("location", request => request.Location);
+            Modify_ApiCall(ref _callGenerateGroundedContent);
+            Modify_GenerateGroundedContentApiCall(ref _callGenerateGroundedContent);
             _callCheckGrounding = clientHelper.BuildApiCall<CheckGroundingRequest, CheckGroundingResponse>("CheckGrounding", grpcClient.CheckGroundingAsync, grpcClient.CheckGrounding, effectiveSettings.CheckGroundingSettings).WithGoogleRequestParam("grounding_config", request => request.GroundingConfig);
             Modify_ApiCall(ref _callCheckGrounding);
             Modify_CheckGroundingApiCall(ref _callCheckGrounding);
@@ -287,6 +379,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_StreamGenerateGroundedContentApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse> call);
+
+        partial void Modify_GenerateGroundedContentApiCall(ref gaxgrpc::ApiCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse> call);
 
         partial void Modify_CheckGroundingApiCall(ref gaxgrpc::ApiCall<CheckGroundingRequest, CheckGroundingResponse> call);
 
@@ -298,7 +396,99 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public override gcl::LocationsClient LocationsClient { get; }
 
+        partial void Modify_GenerateGroundedContentRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateGroundedContentRequestRequest(ref GenerateGroundedContentRequest request);
+
+        partial void Modify_GenerateGroundedContentRequest(ref GenerateGroundedContentRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CheckGroundingRequest(ref CheckGroundingRequest request, ref gaxgrpc::CallSettings settings);
+
+        internal sealed partial class StreamGenerateGroundedContentStreamImpl : StreamGenerateGroundedContentStream
+        {
+            /// <summary>
+            /// Construct the bidirectional streaming method for <c>StreamGenerateGroundedContent</c>.
+            /// </summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{GenerateGroundedContentRequest}"/> instance
+            /// associated with this streaming call.
+            /// </param>
+            public StreamGenerateGroundedContentStreamImpl(GroundedGenerationServiceClientImpl service, grpccore::AsyncDuplexStreamingCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse> call, gaxgrpc::BufferedClientStreamWriter<GenerateGroundedContentRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private GroundedGenerationServiceClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<GenerateGroundedContentRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse> GrpcCall { get; }
+
+            private GenerateGroundedContentRequest ModifyRequest(GenerateGroundedContentRequest request)
+            {
+                _service.Modify_GenerateGroundedContentRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(GenerateGroundedContentRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(GenerateGroundedContentRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(GenerateGroundedContentRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(GenerateGroundedContentRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Generates grounded content in a streaming fashion.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override GroundedGenerationServiceClient.StreamGenerateGroundedContentStream StreamGenerateGroundedContent(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_GenerateGroundedContentRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callStreamGenerateGroundedContent.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<GenerateGroundedContentRequest, GenerateGroundedContentResponse> call = _callStreamGenerateGroundedContent.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<GenerateGroundedContentRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<GenerateGroundedContentRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamGenerateGroundedContentStreamImpl(this, call, writeBuffer);
+        }
+
+        /// <summary>
+        /// Generates grounded content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateGroundedContentResponse GenerateGroundedContent(GenerateGroundedContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateGroundedContentRequest(ref request, ref callSettings);
+            return _callGenerateGroundedContent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates grounded content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateGroundedContentResponse> GenerateGroundedContentAsync(GenerateGroundedContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateGroundedContentRequest(ref request, ref callSettings);
+            return _callGenerateGroundedContent.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Performs a grounding check.

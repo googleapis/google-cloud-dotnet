@@ -29,7 +29,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
             "c291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3Yx",
             "YmV0YS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8ihwsKBkVuZ2luZRJaChJjaGF0X2VuZ2luZV9jb25maWcYCyABKAsy",
+            "cHJvdG8ipwsKBkVuZ2luZRJaChJjaGF0X2VuZ2luZV9jb25maWcYCyABKAsy",
             "PC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5FbmdpbmUu",
             "Q2hhdEVuZ2luZUNvbmZpZ0gAEl4KFHNlYXJjaF9lbmdpbmVfY29uZmlnGA0g",
             "ASgLMj4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuRW5n",
@@ -45,32 +45,33 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "IAEoDjI1Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLklu",
             "ZHVzdHJ5VmVydGljYWwSTwoNY29tbW9uX2NvbmZpZxgPIAEoCzI4Lmdvb2ds",
             "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkVuZ2luZS5Db21tb25D",
-            "b25maWcapAEKElNlYXJjaEVuZ2luZUNvbmZpZxJECgtzZWFyY2hfdGllchgB",
-            "IAEoDjIvLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNl",
-            "YXJjaFRpZXISSAoOc2VhcmNoX2FkZF9vbnMYAiADKA4yMC5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TZWFyY2hBZGRPbhqXAgoQQ2hh",
-            "dEVuZ2luZUNvbmZpZxJvChVhZ2VudF9jcmVhdGlvbl9jb25maWcYASABKAsy",
-            "UC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5FbmdpbmUu",
-            "Q2hhdEVuZ2luZUNvbmZpZy5BZ2VudENyZWF0aW9uQ29uZmlnEiAKGGRpYWxv",
-            "Z2Zsb3dfYWdlbnRfdG9fbGluaxgCIAEoCRpwChNBZ2VudENyZWF0aW9uQ29u",
-            "ZmlnEhAKCGJ1c2luZXNzGAEgASgJEh0KFWRlZmF1bHRfbGFuZ3VhZ2VfY29k",
-            "ZRgCIAEoCRIWCgl0aW1lX3pvbmUYAyABKAlCA+BBAhIQCghsb2NhdGlvbhgE",
-            "IAEoCRokCgxDb21tb25Db25maWcSFAoMY29tcGFueV9uYW1lGAEgASgJGi4K",
-            "EkNoYXRFbmdpbmVNZXRhZGF0YRIYChBkaWFsb2dmbG93X2FnZW50GAEgASgJ",
-            "On3qQXoKJWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9FbmdpbmUS",
-            "UXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xs",
-            "ZWN0aW9ucy97Y29sbGVjdGlvbn0vZW5naW5lcy97ZW5naW5lfUIPCg1lbmdp",
-            "bmVfY29uZmlnQhEKD2VuZ2luZV9tZXRhZGF0YUKSAgonY29tLmdvb2dsZS5j",
-            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQgtFbmdpbmVQcm90b1ABWlFj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEv",
-            "ZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZF",
-            "UllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0",
-            "YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29v",
-            "Z2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
+            "b25maWcSHgoRZGlzYWJsZV9hbmFseXRpY3MYGiABKAhCA+BBARqkAQoSU2Vh",
+            "cmNoRW5naW5lQ29uZmlnEkQKC3NlYXJjaF90aWVyGAEgASgOMi8uZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuU2VhcmNoVGllchJICg5z",
+            "ZWFyY2hfYWRkX29ucxgCIAMoDjIwLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjFiZXRhLlNlYXJjaEFkZE9uGpcCChBDaGF0RW5naW5lQ29uZmln",
+            "Em8KFWFnZW50X2NyZWF0aW9uX2NvbmZpZxgBIAEoCzJQLmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkVuZ2luZS5DaGF0RW5naW5lQ29u",
+            "ZmlnLkFnZW50Q3JlYXRpb25Db25maWcSIAoYZGlhbG9nZmxvd19hZ2VudF90",
+            "b19saW5rGAIgASgJGnAKE0FnZW50Q3JlYXRpb25Db25maWcSEAoIYnVzaW5l",
+            "c3MYASABKAkSHQoVZGVmYXVsdF9sYW5ndWFnZV9jb2RlGAIgASgJEhYKCXRp",
+            "bWVfem9uZRgDIAEoCUID4EECEhAKCGxvY2F0aW9uGAQgASgJGiQKDENvbW1v",
+            "bkNvbmZpZxIUCgxjb21wYW55X25hbWUYASABKAkaLgoSQ2hhdEVuZ2luZU1l",
+            "dGFkYXRhEhgKEGRpYWxvZ2Zsb3dfYWdlbnQYASABKAk6fepBegolZGlzY292",
+            "ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0VuZ2luZRJRcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xs",
+            "ZWN0aW9ufS9lbmdpbmVzL3tlbmdpbmV9Qg8KDWVuZ2luZV9jb25maWdCEQoP",
+            "ZW5naW5lX21ldGFkYXRhQpICCidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MWJldGFCC0VuZ2luZVByb3RvUAFaUWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3Zlcnllbmdp",
+            "bmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dv",
+            "b2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENs",
+            "b3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpE",
+            "aXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Engine), global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Parser, new[]{ "ChatEngineConfig", "SearchEngineConfig", "ChatEngineMetadata", "Name", "DisplayName", "CreateTime", "UpdateTime", "DataStoreIds", "SolutionType", "IndustryVertical", "CommonConfig" }, new[]{ "EngineConfig", "EngineMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.SearchEngineConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.SearchEngineConfig.Parser, new[]{ "SearchTier", "SearchAddOns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Engine), global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Parser, new[]{ "ChatEngineConfig", "SearchEngineConfig", "ChatEngineMetadata", "Name", "DisplayName", "CreateTime", "UpdateTime", "DataStoreIds", "SolutionType", "IndustryVertical", "CommonConfig", "DisableAnalytics" }, new[]{ "EngineConfig", "EngineMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.SearchEngineConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.SearchEngineConfig.Parser, new[]{ "SearchTier", "SearchAddOns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.ChatEngineConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.ChatEngineConfig.Parser, new[]{ "AgentCreationConfig", "DialogflowAgentToLink" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig.Parser, new[]{ "Business", "DefaultLanguageCode", "TimeZone", "Location" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.CommonConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.CommonConfig.Parser, new[]{ "CompanyName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.ChatEngineMetadata), global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.ChatEngineMetadata.Parser, new[]{ "DialogflowAgent" }, null, null, null, null)})
@@ -127,6 +128,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       solutionType_ = other.solutionType_;
       industryVertical_ = other.industryVertical_;
       commonConfig_ = other.commonConfig_ != null ? other.commonConfig_.Clone() : null;
+      disableAnalytics_ = other.disableAnalytics_;
       switch (other.EngineConfigCase) {
         case EngineConfigOneofCase.ChatEngineConfig:
           ChatEngineConfig = other.ChatEngineConfig.Clone();
@@ -216,7 +218,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// characters.
     ///
     /// Format:
-    /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+    /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
     /// engine should be 1-63 characters, and valid characters are
     /// /[a-z0-9][a-z0-9-_]*/. Otherwise, an INVALID_ARGUMENT error is returned.
     /// </summary>
@@ -357,6 +359,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "disable_analytics" field.</summary>
+    public const int DisableAnalyticsFieldNumber = 26;
+    private bool disableAnalytics_;
+    /// <summary>
+    /// Optional. Whether to disable analytics for searches performed on this
+    /// engine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisableAnalytics {
+      get { return disableAnalytics_; }
+      set {
+        disableAnalytics_ = value;
+      }
+    }
+
     private object engineConfig_;
     /// <summary>Enum of possible cases for the "engine_config" oneof.</summary>
     public enum EngineConfigOneofCase {
@@ -424,6 +442,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (SolutionType != other.SolutionType) return false;
       if (IndustryVertical != other.IndustryVertical) return false;
       if (!object.Equals(CommonConfig, other.CommonConfig)) return false;
+      if (DisableAnalytics != other.DisableAnalytics) return false;
       if (EngineConfigCase != other.EngineConfigCase) return false;
       if (EngineMetadataCase != other.EngineMetadataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -444,6 +463,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (SolutionType != global::Google.Cloud.DiscoveryEngine.V1Beta.SolutionType.Unspecified) hash ^= SolutionType.GetHashCode();
       if (IndustryVertical != global::Google.Cloud.DiscoveryEngine.V1Beta.IndustryVertical.Unspecified) hash ^= IndustryVertical.GetHashCode();
       if (commonConfig_ != null) hash ^= CommonConfig.GetHashCode();
+      if (DisableAnalytics != false) hash ^= DisableAnalytics.GetHashCode();
       hash ^= (int) engineConfigCase_;
       hash ^= (int) engineMetadataCase_;
       if (_unknownFields != null) {
@@ -505,6 +525,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) IndustryVertical);
       }
+      if (DisableAnalytics != false) {
+        output.WriteRawTag(208, 1);
+        output.WriteBool(DisableAnalytics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -556,6 +580,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) IndustryVertical);
       }
+      if (DisableAnalytics != false) {
+        output.WriteRawTag(208, 1);
+        output.WriteBool(DisableAnalytics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -596,6 +624,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (commonConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommonConfig);
+      }
+      if (DisableAnalytics != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -639,6 +670,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           CommonConfig = new global::Google.Cloud.DiscoveryEngine.V1Beta.Engine.Types.CommonConfig();
         }
         CommonConfig.MergeFrom(other.CommonConfig);
+      }
+      if (other.DisableAnalytics != false) {
+        DisableAnalytics = other.DisableAnalytics;
       }
       switch (other.EngineConfigCase) {
         case EngineConfigOneofCase.ChatEngineConfig:
@@ -747,6 +781,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             IndustryVertical = (global::Google.Cloud.DiscoveryEngine.V1Beta.IndustryVertical) input.ReadEnum();
             break;
           }
+          case 208: {
+            DisableAnalytics = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -828,6 +866,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 128: {
             IndustryVertical = (global::Google.Cloud.DiscoveryEngine.V1Beta.IndustryVertical) input.ReadEnum();
+            break;
+          }
+          case 208: {
+            DisableAnalytics = input.ReadBool();
             break;
           }
         }

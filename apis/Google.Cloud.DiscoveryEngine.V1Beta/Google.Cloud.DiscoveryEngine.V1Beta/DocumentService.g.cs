@@ -52,101 +52,107 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "b3dfbWlzc2luZxgCIAEoCBIvCgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdvb2ds",
             "ZS5wcm90b2J1Zi5GaWVsZE1hc2siVgoVRGVsZXRlRG9jdW1lbnRSZXF1ZXN0",
             "Ej0KBG5hbWUYASABKAlCL+BBAvpBKQonZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
-            "ZWFwaXMuY29tL0RvY3VtZW50IuQCCiBCYXRjaEdldERvY3VtZW50c01ldGFk",
+            "ZWFwaXMuY29tL0RvY3VtZW50IqcECiBCYXRjaEdldERvY3VtZW50c01ldGFk",
             "YXRhUmVxdWVzdBI9CgZwYXJlbnQYASABKAlCLeBBAvpBJwolZGlzY292ZXJ5",
             "ZW5naW5lLmdvb2dsZWFwaXMuY29tL0JyYW5jaBJjCgdtYXRjaGVyGAIgASgL",
             "Mk0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQmF0Y2hH",
             "ZXREb2N1bWVudHNNZXRhZGF0YVJlcXVlc3QuTWF0Y2hlckID4EECGhsKC1Vy",
-            "aXNNYXRjaGVyEgwKBHVyaXMYASADKAkafwoHTWF0Y2hlchJpCgx1cmlzX21h",
-            "dGNoZXIYASABKAsyUS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
-            "YmV0YS5CYXRjaEdldERvY3VtZW50c01ldGFkYXRhUmVxdWVzdC5VcmlzTWF0",
-            "Y2hlckgAQgkKB21hdGNoZXIi5gQKIUJhdGNoR2V0RG9jdW1lbnRzTWV0YWRh",
-            "dGFSZXNwb25zZRJzChJkb2N1bWVudHNfbWV0YWRhdGEYASADKAsyVy5nb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5CYXRjaEdldERvY3Vt",
-            "ZW50c01ldGFkYXRhUmVzcG9uc2UuRG9jdW1lbnRNZXRhZGF0YRr0AgoQRG9j",
-            "dW1lbnRNZXRhZGF0YRJ7Cg1tYXRjaGVyX3ZhbHVlGAIgASgLMmQuZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQmF0Y2hHZXREb2N1bWVu",
-            "dHNNZXRhZGF0YVJlc3BvbnNlLkRvY3VtZW50TWV0YWRhdGEuTWF0Y2hlclZh",
-            "bHVlElsKBXN0YXRlGAMgASgOMkwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MWJldGEuQmF0Y2hHZXREb2N1bWVudHNNZXRhZGF0YVJlc3BvbnNl",
-            "LlN0YXRlEjcKE2xhc3RfcmVmcmVzaGVkX3RpbWUYBCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEh0KFWRhdGFfaW5nZXN0aW9uX3NvdXJjZRgF",
-            "IAEoCRouCgxNYXRjaGVyVmFsdWUSDQoDdXJpGAEgASgJSABCDwoNbWF0Y2hl",
-            "cl92YWx1ZSJVCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0lO",
-            "REVYRUQQARIWChJOT1RfSU5fVEFSR0VUX1NJVEUQAhIQCgxOT1RfSU5fSU5E",
-            "RVgQAzKhFwoPRG9jdW1lbnRTZXJ2aWNlEqwCCgtHZXREb2N1bWVudBI3Lmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkdldERvY3VtZW50",
-            "UmVxdWVzdBotLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
-            "LkRvY3VtZW50IrQB2kEEbmFtZYLT5JMCpgESSS92MWJldGEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJhbmNoZXMvKi9k",
-            "b2N1bWVudHMvKn1aWRJXL3YxYmV0YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyov",
-            "ZG9jdW1lbnRzLyp9Er8CCg1MaXN0RG9jdW1lbnRzEjkuZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGEuTGlzdERvY3VtZW50c1JlcXVlc3Qa",
-            "Oi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5MaXN0RG9j",
-            "dW1lbnRzUmVzcG9uc2UitgHaQQZwYXJlbnSC0+STAqYBEkkvdjFiZXRhL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJh",
-            "bmNoZXMvKn0vZG9jdW1lbnRzWlkSVy92MWJldGEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL2Jy",
-            "YW5jaGVzLyp9L2RvY3VtZW50cxLdAgoOQ3JlYXRlRG9jdW1lbnQSOi5nb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5DcmVhdGVEb2N1bWVu",
-            "dFJlcXVlc3QaLS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
-            "YS5Eb2N1bWVudCLfAdpBG3BhcmVudCxkb2N1bWVudCxkb2N1bWVudF9pZILT",
-            "5JMCugEiSS92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qfS9kb2N1bWVudHM6CGRvY3VtZW50",
-            "WmMiVy92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nv",
-            "bGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyp9L2RvY3VtZW50",
-            "czoIZG9jdW1lbnQS6AIKDlVwZGF0ZURvY3VtZW50EjouZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGEuVXBkYXRlRG9jdW1lbnRSZXF1ZXN0",
-            "Gi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuRG9jdW1l",
-            "bnQi6gHaQRRkb2N1bWVudCx1cGRhdGVfbWFza4LT5JMCzAEyUi92MWJldGEv",
-            "e2RvY3VtZW50Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3Rv",
-            "cmVzLyovYnJhbmNoZXMvKi9kb2N1bWVudHMvKn06CGRvY3VtZW50WmwyYC92",
-            "MWJldGEve2RvY3VtZW50Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
-            "b2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qL2RvY3VtZW50",
-            "cy8qfToIZG9jdW1lbnQSmwIKDkRlbGV0ZURvY3VtZW50EjouZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuRGVsZXRlRG9jdW1lbnRSZXF1",
-            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IrQB2kEEbmFtZYLT5JMCpgEq",
-            "SS92MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3Rv",
-            "cmVzLyovYnJhbmNoZXMvKi9kb2N1bWVudHMvKn1aWSpXL3YxYmV0YS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0",
-            "b3Jlcy8qL2JyYW5jaGVzLyovZG9jdW1lbnRzLyp9Eq4DCg9JbXBvcnREb2N1",
-            "bWVudHMSOy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5J",
-            "bXBvcnREb2N1bWVudHNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiK+AspBego7Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MWJldGEuSW1wb3J0RG9jdW1lbnRzUmVzcG9uc2USO2dvb2dsZS5jbG91ZC5k",
-            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkltcG9ydERvY3VtZW50c01ldGFkYXRh",
-            "gtPkkwK6ASJQL3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyp9L2RvY3VtZW50czppbXBvcnQ6",
-            "ASpaYyJeL3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "Y29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJhbmNoZXMvKn0vZG9jdW1l",
-            "bnRzOmltcG9ydDoBKhKoAwoOUHVyZ2VEb2N1bWVudHMSOi5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5QdXJnZURvY3VtZW50c1JlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIroCykF4Cjpnb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5QdXJnZURvY3VtZW50",
-            "c1Jlc3BvbnNlEjpnb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
-            "YS5QdXJnZURvY3VtZW50c01ldGFkYXRhgtPkkwK4ASJPL3YxYmV0YS97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5j",
-            "aGVzLyp9L2RvY3VtZW50czpwdXJnZToBKlpiIl0vdjFiZXRhL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9y",
-            "ZXMvKi9icmFuY2hlcy8qfS9kb2N1bWVudHM6cHVyZ2U6ASoSgwMKGUJhdGNo",
-            "R2V0RG9jdW1lbnRzTWV0YWRhdGESRS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxYmV0YS5CYXRjaEdldERvY3VtZW50c01ldGFkYXRhUmVxdWVz",
-            "dBpGLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkJhdGNo",
-            "R2V0RG9jdW1lbnRzTWV0YWRhdGFSZXNwb25zZSLWAdpBBnBhcmVudILT5JMC",
-            "xgESWS92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Rh",
-            "dGFTdG9yZXMvKi9icmFuY2hlcy8qfS9iYXRjaEdldERvY3VtZW50c01ldGFk",
-            "YXRhWmkSZy92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyp9L2JhdGNo",
-            "R2V0RG9jdW1lbnRzTWV0YWRhdGEaUspBHmRpc2NvdmVyeWVuZ2luZS5nb29n",
-            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Y2xvdWQtcGxhdGZvcm1CmwIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxYmV0YUIURG9jdW1lbnRTZXJ2aWNlUHJvdG9QAVpRY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2Nv",
-            "dmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5H",
-            "SU5FqgIjR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNH",
-            "b29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6",
-            "Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90bzM="));
+            "aXNNYXRjaGVyEgwKBHVyaXMYASADKAkaVQoLRmhpck1hdGNoZXISRgoOZmhp",
+            "cl9yZXNvdXJjZXMYASADKAlCLuBBAvpBKAomaGVhbHRoY2FyZS5nb29nbGVh",
+            "cGlzLmNvbS9GaGlyUmVzb3VyY2Ua6gEKB01hdGNoZXISaQoMdXJpc19tYXRj",
+            "aGVyGAEgASgLMlEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJl",
+            "dGEuQmF0Y2hHZXREb2N1bWVudHNNZXRhZGF0YVJlcXVlc3QuVXJpc01hdGNo",
+            "ZXJIABJpCgxmaGlyX21hdGNoZXIYAiABKAsyUS5nb29nbGUuY2xvdWQuZGlz",
+            "Y292ZXJ5ZW5naW5lLnYxYmV0YS5CYXRjaEdldERvY3VtZW50c01ldGFkYXRh",
+            "UmVxdWVzdC5GaGlyTWF0Y2hlckgAQgkKB21hdGNoZXIirAUKIUJhdGNoR2V0",
+            "RG9jdW1lbnRzTWV0YWRhdGFSZXNwb25zZRJzChJkb2N1bWVudHNfbWV0YWRh",
+            "dGEYASADKAsyVy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
+            "YS5CYXRjaEdldERvY3VtZW50c01ldGFkYXRhUmVzcG9uc2UuRG9jdW1lbnRN",
+            "ZXRhZGF0YRq6AwoQRG9jdW1lbnRNZXRhZGF0YRJ7Cg1tYXRjaGVyX3ZhbHVl",
+            "GAIgASgLMmQuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
+            "QmF0Y2hHZXREb2N1bWVudHNNZXRhZGF0YVJlc3BvbnNlLkRvY3VtZW50TWV0",
+            "YWRhdGEuTWF0Y2hlclZhbHVlElsKBXN0YXRlGAMgASgOMkwuZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQmF0Y2hHZXREb2N1bWVudHNN",
+            "ZXRhZGF0YVJlc3BvbnNlLlN0YXRlEjcKE2xhc3RfcmVmcmVzaGVkX3RpbWUY",
+            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEh0KFWRhdGFfaW5n",
+            "ZXN0aW9uX3NvdXJjZRgFIAEoCRp0CgxNYXRjaGVyVmFsdWUSDQoDdXJpGAEg",
+            "ASgJSAASRAoNZmhpcl9yZXNvdXJjZRgCIAEoCUIr+kEoCiZoZWFsdGhjYXJl",
+            "Lmdvb2dsZWFwaXMuY29tL0ZoaXJSZXNvdXJjZUgAQg8KDW1hdGNoZXJfdmFs",
+            "dWUiVQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdJTkRFWEVE",
+            "EAESFgoSTk9UX0lOX1RBUkdFVF9TSVRFEAISEAoMTk9UX0lOX0lOREVYEAMy",
+            "oRcKD0RvY3VtZW50U2VydmljZRKsAgoLR2V0RG9jdW1lbnQSNy5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5HZXREb2N1bWVudFJlcXVl",
+            "c3QaLS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1",
+            "bWVudCK0AdpBBG5hbWWC0+STAqYBEkkvdjFiZXRhL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyovZG9jdW1l",
+            "bnRzLyp9WlkSVy92MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qL2RvY3Vt",
+            "ZW50cy8qfRK/AgoNTGlzdERvY3VtZW50cxI5Lmdvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjFiZXRhLkxpc3REb2N1bWVudHNSZXF1ZXN0GjouZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuTGlzdERvY3VtZW50",
+            "c1Jlc3BvbnNlIrYB2kEGcGFyZW50gtPkkwKmARJJL3YxYmV0YS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVz",
+            "Lyp9L2RvY3VtZW50c1pZElcvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hl",
+            "cy8qfS9kb2N1bWVudHMS3QIKDkNyZWF0ZURvY3VtZW50EjouZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQ3JlYXRlRG9jdW1lbnRSZXF1",
+            "ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuRG9j",
+            "dW1lbnQi3wHaQRtwYXJlbnQsZG9jdW1lbnQsZG9jdW1lbnRfaWSC0+STAroB",
+            "IkkvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRh",
+            "U3RvcmVzLyovYnJhbmNoZXMvKn0vZG9jdW1lbnRzOghkb2N1bWVudFpjIlcv",
+            "djFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0",
+            "aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qfS9kb2N1bWVudHM6CGRv",
+            "Y3VtZW50EugCCg5VcGRhdGVEb2N1bWVudBI6Lmdvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjFiZXRhLlVwZGF0ZURvY3VtZW50UmVxdWVzdBotLmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkRvY3VtZW50IuoB",
+            "2kEUZG9jdW1lbnQsdXBkYXRlX21hc2uC0+STAswBMlIvdjFiZXRhL3tkb2N1",
+            "bWVudC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8q",
+            "L2JyYW5jaGVzLyovZG9jdW1lbnRzLyp9Oghkb2N1bWVudFpsMmAvdjFiZXRh",
+            "L3tkb2N1bWVudC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVj",
+            "dGlvbnMvKi9kYXRhU3RvcmVzLyovYnJhbmNoZXMvKi9kb2N1bWVudHMvKn06",
+            "CGRvY3VtZW50EpsCCg5EZWxldGVEb2N1bWVudBI6Lmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkRlbGV0ZURvY3VtZW50UmVxdWVzdBoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSK0AdpBBG5hbWWC0+STAqYBKkkvdjFi",
+            "ZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8q",
+            "L2JyYW5jaGVzLyovZG9jdW1lbnRzLyp9WlkqVy92MWJldGEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMv",
+            "Ki9icmFuY2hlcy8qL2RvY3VtZW50cy8qfRKuAwoPSW1wb3J0RG9jdW1lbnRz",
+            "EjsuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuSW1wb3J0",
+            "RG9jdW1lbnRzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ivgLKQXoKO2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
+            "LkltcG9ydERvY3VtZW50c1Jlc3BvbnNlEjtnb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxYmV0YS5JbXBvcnREb2N1bWVudHNNZXRhZGF0YYLT5JMC",
+            "ugEiUC92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Rh",
+            "dGFTdG9yZXMvKi9icmFuY2hlcy8qfS9kb2N1bWVudHM6aW1wb3J0OgEqWmMi",
+            "Xi92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxl",
+            "Y3Rpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyp9L2RvY3VtZW50czpp",
+            "bXBvcnQ6ASoSqAMKDlB1cmdlRG9jdW1lbnRzEjouZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MWJldGEuUHVyZ2VEb2N1bWVudHNSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK6AspBeAo6Z29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUHVyZ2VEb2N1bWVudHNSZXNw",
+            "b25zZRI6Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUHVy",
+            "Z2VEb2N1bWVudHNNZXRhZGF0YYLT5JMCuAEiTy92MWJldGEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8q",
+            "fS9kb2N1bWVudHM6cHVyZ2U6ASpaYiJdL3YxYmV0YS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyov",
+            "YnJhbmNoZXMvKn0vZG9jdW1lbnRzOnB1cmdlOgEqEoMDChlCYXRjaEdldERv",
+            "Y3VtZW50c01ldGFkYXRhEkUuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MWJldGEuQmF0Y2hHZXREb2N1bWVudHNNZXRhZGF0YVJlcXVlc3QaRi5n",
+            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5CYXRjaEdldERv",
+            "Y3VtZW50c01ldGFkYXRhUmVzcG9uc2Ui1gHaQQZwYXJlbnSC0+STAsYBElkv",
+            "djFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3Rv",
+            "cmVzLyovYnJhbmNoZXMvKn0vYmF0Y2hHZXREb2N1bWVudHNNZXRhZGF0YVpp",
+            "EmcvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xs",
+            "ZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qfS9iYXRjaEdldERv",
+            "Y3VtZW50c01ldGFkYXRhGlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBp",
+            "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
+            "LXBsYXRmb3JtQpsCCidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MWJldGFCFERvY3VtZW50U2VydmljZVByb3RvUAFaUWNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3Zlcnll",
+            "bmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoC",
+            "I0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xl",
+            "XENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3Vk",
+            "OjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ImportConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.PurgeConfigReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -157,8 +163,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.UpdateDocumentRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.UpdateDocumentRequest.Parser, new[]{ "Document", "AllowMissing", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DeleteDocumentRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.DeleteDocumentRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Parser, new[]{ "Parent", "Matcher" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.UrisMatcher), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.UrisMatcher.Parser, new[]{ "Uris" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.Matcher), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.Matcher.Parser, new[]{ "UrisMatcher" }, new[]{ "Matcher" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Parser, new[]{ "DocumentsMetadata" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Parser, new[]{ "MatcherValue", "State", "LastRefreshedTime", "DataIngestionSource" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Types.MatcherValue), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Types.MatcherValue.Parser, new[]{ "Uri" }, new[]{ "MatcherValue" }, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher.Parser, new[]{ "FhirResources" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.Matcher), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.Matcher.Parser, new[]{ "UrisMatcher", "FhirMatcher" }, new[]{ "Matcher" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Parser, new[]{ "DocumentsMetadata" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Parser, new[]{ "MatcherValue", "State", "LastRefreshedTime", "DataIngestionSource" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Types.MatcherValue), global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataResponse.Types.DocumentMetadata.Types.MatcherValue.Parser, new[]{ "Uri", "FhirResource" }, new[]{ "MatcherValue" }, null, null, null)})})
           }));
     }
     #endregion
@@ -2160,6 +2167,194 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
 
       /// <summary>
+      /// Matcher for the [Document][google.cloud.discoveryengine.v1beta.Document]s
+      /// by FHIR resource names.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FhirMatcher : pb::IMessage<FhirMatcher>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FhirMatcher> _parser = new pb::MessageParser<FhirMatcher>(() => new FhirMatcher());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FhirMatcher> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FhirMatcher() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FhirMatcher(FhirMatcher other) : this() {
+          fhirResources_ = other.fhirResources_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FhirMatcher Clone() {
+          return new FhirMatcher(this);
+        }
+
+        /// <summary>Field number for the "fhir_resources" field.</summary>
+        public const int FhirResourcesFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_fhirResources_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> fhirResources_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Required. The FHIR resources to match by.
+        /// Format:
+        /// projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resource_id}
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> FhirResources {
+          get { return fhirResources_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FhirMatcher);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FhirMatcher other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!fhirResources_.Equals(other.fhirResources_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= fhirResources_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          fhirResources_.WriteTo(output, _repeated_fhirResources_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          fhirResources_.WriteTo(ref output, _repeated_fhirResources_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += fhirResources_.CalculateSize(_repeated_fhirResources_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FhirMatcher other) {
+          if (other == null) {
+            return;
+          }
+          fhirResources_.Add(other.fhirResources_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                fhirResources_.AddEntriesFrom(input, _repeated_fhirResources_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                fhirResources_.AddEntriesFrom(ref input, _repeated_fhirResources_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Matcher for the [Document][google.cloud.discoveryengine.v1beta.Document]s.
       /// Currently supports matching by exact URIs.
       /// </summary>
@@ -2178,7 +2373,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2201,6 +2396,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           switch (other.MatcherCase) {
             case MatcherOneofCase.UrisMatcher:
               UrisMatcher = other.UrisMatcher.Clone();
+              break;
+            case MatcherOneofCase.FhirMatcher:
+              FhirMatcher = other.FhirMatcher.Clone();
               break;
           }
 
@@ -2228,11 +2426,27 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
         }
 
+        /// <summary>Field number for the "fhir_matcher" field.</summary>
+        public const int FhirMatcherFieldNumber = 2;
+        /// <summary>
+        /// Matcher by FHIR resource names.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher FhirMatcher {
+          get { return matcherCase_ == MatcherOneofCase.FhirMatcher ? (global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher) matcher_ : null; }
+          set {
+            matcher_ = value;
+            matcherCase_ = value == null ? MatcherOneofCase.None : MatcherOneofCase.FhirMatcher;
+          }
+        }
+
         private object matcher_;
         /// <summary>Enum of possible cases for the "matcher" oneof.</summary>
         public enum MatcherOneofCase {
           None = 0,
           UrisMatcher = 1,
+          FhirMatcher = 2,
         }
         private MatcherOneofCase matcherCase_ = MatcherOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2264,6 +2478,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             return true;
           }
           if (!object.Equals(UrisMatcher, other.UrisMatcher)) return false;
+          if (!object.Equals(FhirMatcher, other.FhirMatcher)) return false;
           if (MatcherCase != other.MatcherCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -2273,6 +2488,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         public override int GetHashCode() {
           int hash = 1;
           if (matcherCase_ == MatcherOneofCase.UrisMatcher) hash ^= UrisMatcher.GetHashCode();
+          if (matcherCase_ == MatcherOneofCase.FhirMatcher) hash ^= FhirMatcher.GetHashCode();
           hash ^= (int) matcherCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2296,6 +2512,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteRawTag(10);
             output.WriteMessage(UrisMatcher);
           }
+          if (matcherCase_ == MatcherOneofCase.FhirMatcher) {
+            output.WriteRawTag(18);
+            output.WriteMessage(FhirMatcher);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2310,6 +2530,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteRawTag(10);
             output.WriteMessage(UrisMatcher);
           }
+          if (matcherCase_ == MatcherOneofCase.FhirMatcher) {
+            output.WriteRawTag(18);
+            output.WriteMessage(FhirMatcher);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2322,6 +2546,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           int size = 0;
           if (matcherCase_ == MatcherOneofCase.UrisMatcher) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(UrisMatcher);
+          }
+          if (matcherCase_ == MatcherOneofCase.FhirMatcher) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(FhirMatcher);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2341,6 +2568,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 UrisMatcher = new global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.UrisMatcher();
               }
               UrisMatcher.MergeFrom(other.UrisMatcher);
+              break;
+            case MatcherOneofCase.FhirMatcher:
+              if (FhirMatcher == null) {
+                FhirMatcher = new global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher();
+              }
+              FhirMatcher.MergeFrom(other.FhirMatcher);
               break;
           }
 
@@ -2368,6 +2601,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 UrisMatcher = subBuilder;
                 break;
               }
+              case 18: {
+                global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher subBuilder = new global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher();
+                if (matcherCase_ == MatcherOneofCase.FhirMatcher) {
+                  subBuilder.MergeFrom(FhirMatcher);
+                }
+                input.ReadMessage(subBuilder);
+                FhirMatcher = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -2390,6 +2632,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 }
                 input.ReadMessage(subBuilder);
                 UrisMatcher = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher subBuilder = new global::Google.Cloud.DiscoveryEngine.V1Beta.BatchGetDocumentsMetadataRequest.Types.FhirMatcher();
+                if (matcherCase_ == MatcherOneofCase.FhirMatcher) {
+                  subBuilder.MergeFrom(FhirMatcher);
+                }
+                input.ReadMessage(subBuilder);
+                FhirMatcher = subBuilder;
                 break;
               }
             }
@@ -3009,6 +3260,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 case MatcherValueOneofCase.Uri:
                   Uri = other.Uri;
                   break;
+                case MatcherValueOneofCase.FhirResource:
+                  FhirResource = other.FhirResource;
+                  break;
               }
 
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3050,11 +3304,42 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               }
             }
 
+            /// <summary>Field number for the "fhir_resource" field.</summary>
+            public const int FhirResourceFieldNumber = 2;
+            /// <summary>
+            /// Format:
+            /// projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resource_id}
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string FhirResource {
+              get { return HasFhirResource ? (string) matcherValue_ : ""; }
+              set {
+                matcherValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                matcherValueCase_ = MatcherValueOneofCase.FhirResource;
+              }
+            }
+            /// <summary>Gets whether the "fhir_resource" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasFhirResource {
+              get { return matcherValueCase_ == MatcherValueOneofCase.FhirResource; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "fhir_resource" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearFhirResource() {
+              if (HasFhirResource) {
+                ClearMatcherValue();
+              }
+            }
+
             private object matcherValue_;
             /// <summary>Enum of possible cases for the "matcher_value" oneof.</summary>
             public enum MatcherValueOneofCase {
               None = 0,
               Uri = 1,
+              FhirResource = 2,
             }
             private MatcherValueOneofCase matcherValueCase_ = MatcherValueOneofCase.None;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3086,6 +3371,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 return true;
               }
               if (Uri != other.Uri) return false;
+              if (FhirResource != other.FhirResource) return false;
               if (MatcherValueCase != other.MatcherValueCase) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
@@ -3095,6 +3381,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             public override int GetHashCode() {
               int hash = 1;
               if (HasUri) hash ^= Uri.GetHashCode();
+              if (HasFhirResource) hash ^= FhirResource.GetHashCode();
               hash ^= (int) matcherValueCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -3118,6 +3405,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 output.WriteRawTag(10);
                 output.WriteString(Uri);
               }
+              if (HasFhirResource) {
+                output.WriteRawTag(18);
+                output.WriteString(FhirResource);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -3132,6 +3423,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 output.WriteRawTag(10);
                 output.WriteString(Uri);
               }
+              if (HasFhirResource) {
+                output.WriteRawTag(18);
+                output.WriteString(FhirResource);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -3144,6 +3439,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               int size = 0;
               if (HasUri) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+              }
+              if (HasFhirResource) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(FhirResource);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -3160,6 +3458,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               switch (other.MatcherValueCase) {
                 case MatcherValueOneofCase.Uri:
                   Uri = other.Uri;
+                  break;
+                case MatcherValueOneofCase.FhirResource:
+                  FhirResource = other.FhirResource;
                   break;
               }
 
@@ -3182,6 +3483,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                     Uri = input.ReadString();
                     break;
                   }
+                  case 18: {
+                    FhirResource = input.ReadString();
+                    break;
+                  }
                 }
               }
             #endif
@@ -3199,6 +3504,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                     break;
                   case 10: {
                     Uri = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    FhirResource = input.ReadString();
                     break;
                   }
                 }

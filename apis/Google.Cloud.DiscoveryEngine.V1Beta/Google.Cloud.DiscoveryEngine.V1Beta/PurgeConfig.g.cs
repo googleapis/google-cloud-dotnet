@@ -157,7 +157,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Required. The resource name of the catalog under which the events are
     /// created. The format is
-    /// `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStoreId}`
+    /// `projects/{project}/locations/global/collections/{collection}/dataStores/{dataStore}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

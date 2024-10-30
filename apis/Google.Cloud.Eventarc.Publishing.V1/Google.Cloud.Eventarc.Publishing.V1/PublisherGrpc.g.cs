@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 #pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
@@ -93,6 +94,10 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest> __Marshaller_google_cloud_eventarc_publishing_v1_PublishEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse> __Marshaller_google_cloud_eventarc_publishing_v1_PublishEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest> __Marshaller_google_cloud_eventarc_publishing_v1_PublishRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse> __Marshaller_google_cloud_eventarc_publishing_v1_PublishResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest, global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsResponse> __Method_PublishChannelConnectionEvents = new grpc::Method<global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest, global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsResponse>(
@@ -109,6 +114,14 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
         "PublishEvents",
         __Marshaller_google_cloud_eventarc_publishing_v1_PublishEventsRequest,
         __Marshaller_google_cloud_eventarc_publishing_v1_PublishEventsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest, global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse> __Method_Publish = new grpc::Method<global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest, global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Publish",
+        __Marshaller_google_cloud_eventarc_publishing_v1_PublishRequest,
+        __Marshaller_google_cloud_eventarc_publishing_v1_PublishResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -140,6 +153,18 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse> PublishEvents(global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Publish events to a message bus.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse> Publish(global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -269,6 +294,54 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_PublishEvents, null, options, request);
       }
+      /// <summary>
+      /// Publish events to a message bus.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse Publish(global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Publish(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Publish events to a message bus.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse Publish(global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Publish, null, options, request);
+      }
+      /// <summary>
+      /// Publish events to a message bus.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse> PublishAsync(global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PublishAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Publish events to a message bus.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse> PublishAsync(global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Publish, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override PublisherClient NewInstance(ClientBaseConfiguration configuration)
@@ -284,7 +357,8 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_PublishChannelConnectionEvents, serviceImpl.PublishChannelConnectionEvents)
-          .AddMethod(__Method_PublishEvents, serviceImpl.PublishEvents).Build();
+          .AddMethod(__Method_PublishEvents, serviceImpl.PublishEvents)
+          .AddMethod(__Method_Publish, serviceImpl.Publish).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -296,6 +370,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
     {
       serviceBinder.AddMethod(__Method_PublishChannelConnectionEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest, global::Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsResponse>(serviceImpl.PublishChannelConnectionEvents));
       serviceBinder.AddMethod(__Method_PublishEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest, global::Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse>(serviceImpl.PublishEvents));
+      serviceBinder.AddMethod(__Method_Publish, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.Publishing.V1.PublishRequest, global::Google.Cloud.Eventarc.Publishing.V1.PublishResponse>(serviceImpl.Publish));
     }
 
   }

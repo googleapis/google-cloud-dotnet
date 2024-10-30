@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gax = Google.Api.Gax;
 using gcdv = Google.Cloud.DiscoveryEngine.V1Beta;
 
 namespace Google.Cloud.DiscoveryEngine.V1Beta
@@ -70,6 +71,46 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             get => string.IsNullOrEmpty(Parent) ? null : BranchName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class FhirMatcher
+            {
+                /// <summary>
+                /// <see cref="FhirResourceName"/>-typed view over the <see cref="FhirResources"/> resource name
+                /// property.
+                /// </summary>
+                public gax::ResourceNameList<FhirResourceName> FhirResourcesAsFhirResourceNames
+                {
+                    get => new gax::ResourceNameList<FhirResourceName>(FhirResources, s => string.IsNullOrEmpty(s) ? null : FhirResourceName.Parse(s, allowUnparsed: true));
+                }
+            }
+        }
+    }
+
+    public partial class BatchGetDocumentsMetadataResponse
+    {
+        public partial class Types
+        {
+            public partial class DocumentMetadata
+            {
+                public partial class Types
+                {
+                    public partial class MatcherValue
+                    {
+                        /// <summary>
+                        /// <see cref="FhirResourceName"/>-typed view over the <see cref="FhirResource"/> resource name
+                        /// property.
+                        /// </summary>
+                        public FhirResourceName FhirResourceAsFhirResourceName
+                        {
+                            get => string.IsNullOrEmpty(FhirResource) ? null : FhirResourceName.Parse(FhirResource, allowUnparsed: true);
+                            set => FhirResource = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -726,6 +726,357 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public static bool operator !=(TargetSiteName a, TargetSiteName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Sitemap</c> resource.</summary>
+    public sealed partial class SitemapName : gax::IResourceName, sys::IEquatable<SitemapName>
+    {
+        /// <summary>The possible contents of <see cref="SitemapName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+            /// .
+            /// </summary>
+            ProjectLocationDataStoreSitemap = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+            /// .
+            /// </summary>
+            ProjectLocationCollectionDataStoreSitemap = 2,
+        }
+
+        private static gax::PathTemplate s_projectLocationDataStoreSitemap = new gax::PathTemplate("projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}");
+
+        private static gax::PathTemplate s_projectLocationCollectionDataStoreSitemap = new gax::PathTemplate("projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}");
+
+        /// <summary>Creates a <see cref="SitemapName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SitemapName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SitemapName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SitemapName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="SitemapName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sitemapId">The <c>Sitemap</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SitemapName"/> constructed from the provided ids.</returns>
+        public static SitemapName FromProjectLocationDataStoreSitemap(string projectId, string locationId, string dataStoreId, string sitemapId) =>
+            new SitemapName(ResourceNameType.ProjectLocationDataStoreSitemap, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), sitemapId: gax::GaxPreconditions.CheckNotNullOrEmpty(sitemapId, nameof(sitemapId)));
+
+        /// <summary>
+        /// Creates a <see cref="SitemapName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sitemapId">The <c>Sitemap</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SitemapName"/> constructed from the provided ids.</returns>
+        public static SitemapName FromProjectLocationCollectionDataStoreSitemap(string projectId, string locationId, string collectionId, string dataStoreId, string sitemapId) =>
+            new SitemapName(ResourceNameType.ProjectLocationCollectionDataStoreSitemap, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), collectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), sitemapId: gax::GaxPreconditions.CheckNotNullOrEmpty(sitemapId, nameof(sitemapId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SitemapName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sitemapId">The <c>Sitemap</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SitemapName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string dataStoreId, string sitemapId) =>
+            FormatProjectLocationDataStoreSitemap(projectId, locationId, dataStoreId, sitemapId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SitemapName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sitemapId">The <c>Sitemap</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SitemapName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>.
+        /// </returns>
+        public static string FormatProjectLocationDataStoreSitemap(string projectId, string locationId, string dataStoreId, string sitemapId) =>
+            s_projectLocationDataStoreSitemap.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sitemapId, nameof(sitemapId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SitemapName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sitemapId">The <c>Sitemap</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SitemapName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationCollectionDataStoreSitemap(string projectId, string locationId, string collectionId, string dataStoreId, string sitemapId) =>
+            s_projectLocationCollectionDataStoreSitemap.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sitemapId, nameof(sitemapId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="SitemapName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="sitemapName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SitemapName"/> if successful.</returns>
+        public static SitemapName Parse(string sitemapName) => Parse(sitemapName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SitemapName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="sitemapName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SitemapName"/> if successful.</returns>
+        public static SitemapName Parse(string sitemapName, bool allowUnparsed) =>
+            TryParse(sitemapName, allowUnparsed, out SitemapName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SitemapName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="sitemapName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SitemapName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sitemapName, out SitemapName result) => TryParse(sitemapName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SitemapName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="sitemapName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SitemapName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sitemapName, bool allowUnparsed, out SitemapName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(sitemapName, nameof(sitemapName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationDataStoreSitemap.TryParseName(sitemapName, out resourceName))
+            {
+                result = FromProjectLocationDataStoreSitemap(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (s_projectLocationCollectionDataStoreSitemap.TryParseName(sitemapName, out resourceName))
+            {
+                result = FromProjectLocationCollectionDataStoreSitemap(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(sitemapName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private SitemapName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string collectionId = null, string dataStoreId = null, string locationId = null, string projectId = null, string sitemapId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            CollectionId = collectionId;
+            DataStoreId = dataStoreId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            SitemapId = sitemapId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SitemapName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sitemapId">The <c>Sitemap</c> ID. Must not be <c>null</c> or empty.</param>
+        public SitemapName(string projectId, string locationId, string dataStoreId, string sitemapId) : this(ResourceNameType.ProjectLocationDataStoreSitemap, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), sitemapId: gax::GaxPreconditions.CheckNotNullOrEmpty(sitemapId, nameof(sitemapId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Collection</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string CollectionId { get; }
+
+        /// <summary>
+        /// The <c>DataStore</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string DataStoreId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Sitemap</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string SitemapId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationDataStoreSitemap: return s_projectLocationDataStoreSitemap.Expand(ProjectId, LocationId, DataStoreId, SitemapId);
+                case ResourceNameType.ProjectLocationCollectionDataStoreSitemap: return s_projectLocationCollectionDataStoreSitemap.Expand(ProjectId, LocationId, CollectionId, DataStoreId, SitemapId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as SitemapName);
+
+        /// <inheritdoc/>
+        public bool Equals(SitemapName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(SitemapName a, SitemapName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(SitemapName a, SitemapName b) => !(a == b);
+    }
+
     public partial class SiteSearchEngine
     {
         /// <summary>
@@ -746,6 +1097,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public gcdv::TargetSiteName TargetSiteName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::TargetSiteName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Sitemap
+    {
+        /// <summary>
+        /// <see cref="gcdv::SitemapName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::SitemapName SitemapName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::SitemapName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

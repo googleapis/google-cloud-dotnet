@@ -29,4 +29,47 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             set => DataStore = value?.ToString() ?? "";
         }
     }
+
+    public partial class AdvancedCompleteQueryRequest
+    {
+        /// <summary>
+        /// <see cref="CompletionConfigName"/>-typed view over the <see cref="CompletionConfig"/> resource name
+        /// property.
+        /// </summary>
+        public CompletionConfigName CompletionConfigAsCompletionConfigName
+        {
+            get => string.IsNullOrEmpty(CompletionConfig) ? null : CompletionConfigName.Parse(CompletionConfig, allowUnparsed: true);
+            set => CompletionConfig = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AdvancedCompleteQueryResponse
+    {
+        public partial class Types
+        {
+            public partial class PersonSuggestion
+            {
+                /// <summary>
+                /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+                /// </summary>
+                public DataStoreName DataStoreAsDataStoreName
+                {
+                    get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+                    set => DataStore = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class ContentSuggestion
+            {
+                /// <summary>
+                /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+                /// </summary>
+                public DataStoreName DataStoreAsDataStoreName
+                {
+                    get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+                    set => DataStore = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
 }

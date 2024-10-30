@@ -47,6 +47,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             SearchSettings = existing.SearchSettings;
+            SearchLiteSettings = existing.SearchLiteSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -70,6 +71,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SearchSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SearchServiceClient.SearchLite</c> and <c>SearchServiceClient.SearchLiteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchLiteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -239,6 +258,50 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> SearchAsync(SearchRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Performs a search. Similar to the
+        /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+        /// method, but a lite version that allows API key for authentication, where
+        /// OAuth and IAM checks are not required.
+        /// 
+        /// Only public website search is supported by this method. If data stores and
+        /// engines not associated with public website search are specified, a
+        /// `FAILED_PRECONDITION` error is returned.
+        /// 
+        /// This method can be used for easy onboarding without having to implement an
+        /// authentication backend. However, it is strongly recommended to use
+        /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+        /// instead with required OAuth and IAM checks to provide better data security.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchResponse.Types.SearchResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> SearchLite(SearchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Performs a search. Similar to the
+        /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+        /// method, but a lite version that allows API key for authentication, where
+        /// OAuth and IAM checks are not required.
+        /// 
+        /// Only public website search is supported by this method. If data stores and
+        /// engines not associated with public website search are specified, a
+        /// `FAILED_PRECONDITION` error is returned.
+        /// 
+        /// This method can be used for easy onboarding without having to implement an
+        /// authentication backend. However, it is strongly recommended to use
+        /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+        /// instead with required OAuth and IAM checks to provide better data security.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SearchResponse.Types.SearchResult"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> SearchLiteAsync(SearchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>SearchService client wrapper implementation, for convenient use.</summary>
@@ -248,6 +311,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
     public sealed partial class SearchServiceClientImpl : SearchServiceClient
     {
         private readonly gaxgrpc::ApiCall<SearchRequest, SearchResponse> _callSearch;
+
+        private readonly gaxgrpc::ApiCall<SearchRequest, SearchResponse> _callSearchLite;
 
         /// <summary>
         /// Constructs a client wrapper for the SearchService service, with the specified gRPC client and settings.
@@ -268,12 +333,17 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             _callSearch = clientHelper.BuildApiCall<SearchRequest, SearchResponse>("Search", grpcClient.SearchAsync, grpcClient.Search, effectiveSettings.SearchSettings).WithGoogleRequestParam("serving_config", request => request.ServingConfig);
             Modify_ApiCall(ref _callSearch);
             Modify_SearchApiCall(ref _callSearch);
+            _callSearchLite = clientHelper.BuildApiCall<SearchRequest, SearchResponse>("SearchLite", grpcClient.SearchLiteAsync, grpcClient.SearchLite, effectiveSettings.SearchLiteSettings).WithGoogleRequestParam("serving_config", request => request.ServingConfig);
+            Modify_ApiCall(ref _callSearchLite);
+            Modify_SearchLiteApiCall(ref _callSearchLite);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_SearchApiCall(ref gaxgrpc::ApiCall<SearchRequest, SearchResponse> call);
+
+        partial void Modify_SearchLiteApiCall(ref gaxgrpc::ApiCall<SearchRequest, SearchResponse> call);
 
         partial void OnConstruction(SearchService.SearchServiceClient grpcClient, SearchServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -309,6 +379,56 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             Modify_SearchRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchRequest, SearchResponse, SearchResponse.Types.SearchResult>(_callSearch, request, callSettings);
+        }
+
+        /// <summary>
+        /// Performs a search. Similar to the
+        /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+        /// method, but a lite version that allows API key for authentication, where
+        /// OAuth and IAM checks are not required.
+        /// 
+        /// Only public website search is supported by this method. If data stores and
+        /// engines not associated with public website search are specified, a
+        /// `FAILED_PRECONDITION` error is returned.
+        /// 
+        /// This method can be used for easy onboarding without having to implement an
+        /// authentication backend. However, it is strongly recommended to use
+        /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+        /// instead with required OAuth and IAM checks to provide better data security.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchResponse.Types.SearchResult"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> SearchLite(SearchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchRequest, SearchResponse, SearchResponse.Types.SearchResult>(_callSearchLite, request, callSettings);
+        }
+
+        /// <summary>
+        /// Performs a search. Similar to the
+        /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+        /// method, but a lite version that allows API key for authentication, where
+        /// OAuth and IAM checks are not required.
+        /// 
+        /// Only public website search is supported by this method. If data stores and
+        /// engines not associated with public website search are specified, a
+        /// `FAILED_PRECONDITION` error is returned.
+        /// 
+        /// This method can be used for easy onboarding without having to implement an
+        /// authentication backend. However, it is strongly recommended to use
+        /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+        /// instead with required OAuth and IAM checks to provide better data security.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SearchResponse.Types.SearchResult"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> SearchLiteAsync(SearchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchRequest, SearchResponse, SearchResponse.Types.SearchResult>(_callSearchLite, request, callSettings);
         }
     }
 

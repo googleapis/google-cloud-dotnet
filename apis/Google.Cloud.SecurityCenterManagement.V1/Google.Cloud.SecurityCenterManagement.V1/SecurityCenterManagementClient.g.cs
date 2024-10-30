@@ -611,10 +611,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -625,10 +626,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -639,18 +641,19 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. specified in one
-        /// of the following formats:
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -682,18 +685,19 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. specified in one
-        /// of the following formats:
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -725,18 +729,19 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. specified in one
-        /// of the following formats:
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -768,18 +773,19 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. specified in one
-        /// of the following formats:
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -811,18 +817,19 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. specified in one
-        /// of the following formats:
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -854,18 +861,19 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. specified in one
-        /// of the following formats:
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -897,18 +905,19 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. specified in one
-        /// of the following formats:
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -940,18 +949,19 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. specified in one
-        /// of the following formats:
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -983,7 +993,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -992,7 +1003,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1001,7 +1013,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1010,15 +1023,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
         /// Required. The full resource name of the custom module, specified in one of
         /// the following formats:
         /// 
-        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1029,15 +1043,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
         /// Required. The full resource name of the custom module, specified in one of
         /// the following formats:
         /// 
-        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1048,15 +1063,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
         /// Required. The full resource name of the custom module, specified in one of
         /// the following formats:
         /// 
-        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1064,15 +1080,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
         /// Required. The full resource name of the custom module, specified in one of
         /// the following formats:
         /// 
-        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1083,15 +1100,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
         /// Required. The full resource name of the custom module, specified in one of
         /// the following formats:
         /// 
-        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1102,15 +1120,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
         /// Required. The full resource name of the custom module, specified in one of
         /// the following formats:
         /// 
-        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
-        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}`
+        /// * `organizations/organization/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/folder/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/project/{location}/effectiveSecurityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1118,9 +1137,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1129,9 +1150,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1142,13 +1165,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent organization, folder, or project in which to list
-        /// custom modules, specified in one of the following formats:
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1182,13 +1207,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent organization, folder, or project in which to list
-        /// custom modules, specified in one of the following formats:
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1224,13 +1251,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent organization, folder, or project in which to list
-        /// custom modules, specified in one of the following formats:
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1264,13 +1293,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent organization, folder, or project in which to list
-        /// custom modules, specified in one of the following formats:
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1306,13 +1337,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent organization, folder, or project in which to list
-        /// custom modules, specified in one of the following formats:
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1346,13 +1379,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent organization, folder, or project in which to list
-        /// custom modules, specified in one of the following formats:
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1388,13 +1423,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent organization, folder, or project in which to list
-        /// custom modules, specified in one of the following formats:
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1428,13 +1465,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent organization, folder, or project in which to list
-        /// custom modules, specified in one of the following formats:
+        /// Required. Name of the parent organization, folder, or project in which to
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1470,8 +1509,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1480,8 +1521,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1492,12 +1535,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project in which to
-        /// list custom modules, specified in one of the following formats:
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1531,12 +1576,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project in which to
-        /// list custom modules, specified in one of the following formats:
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1572,12 +1619,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project in which to
-        /// list custom modules, specified in one of the following formats:
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1611,12 +1660,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project in which to
-        /// list custom modules, specified in one of the following formats:
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1652,12 +1703,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project in which to
-        /// list custom modules, specified in one of the following formats:
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1691,12 +1744,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project in which to
-        /// list custom modules, specified in one of the following formats:
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1732,12 +1787,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project in which to
-        /// list custom modules, specified in one of the following formats:
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1771,12 +1828,14 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project in which to
-        /// list custom modules, specified in one of the following formats:
+        /// list custom modules, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
@@ -1812,7 +1871,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1821,7 +1881,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1830,7 +1891,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1839,10 +1901,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the resource
+        /// Required. Name of the resource, in the format
+        /// `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1853,10 +1917,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the resource
+        /// Required. Name of the resource, in the format
+        /// `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1867,10 +1933,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the resource
+        /// Required. Name of the resource, in the format
+        /// `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1878,10 +1946,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the resource
+        /// Required. Name of the resource, in the format
+        /// `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1892,10 +1962,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the resource
+        /// Required. Name of the resource, in the format
+        /// `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1906,10 +1978,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the resource
+        /// Required. Name of the resource, in the format
+        /// `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1917,10 +1991,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1929,10 +2005,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1941,10 +2019,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1953,21 +2033,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             CreateSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1979,21 +2061,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2005,21 +2089,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2027,21 +2113,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             CreateSecurityHealthAnalyticsCustomModuleAsync(parent, securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2053,21 +2141,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2079,21 +2169,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2101,21 +2193,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             CreateSecurityHealthAnalyticsCustomModuleAsync(parent, securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2127,21 +2221,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2153,21 +2249,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2175,21 +2273,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             CreateSecurityHealthAnalyticsCustomModuleAsync(parent, securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2201,21 +2301,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2227,21 +2329,23 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent organization, folder, or project of the
-        /// module, specified in one of the following formats:
+        /// module, in one of the following formats:
         /// 
         /// * `organizations/{organization}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
         /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being created
+        /// Required. The resource being created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2249,11 +2353,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             CreateSecurityHealthAnalyticsCustomModuleAsync(parent, securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-        /// on the given update mask. Updating the enablement state is supported on
-        /// both resident and inherited modules (though resident modules cannot have an
-        /// enablement state of "inherited"). Updating the display name and custom
-        /// config of a module is supported on resident modules only.
+        /// Updates the
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// under the given name based on the given update mask. Updating the
+        /// enablement state is supported on both resident and inherited modules
+        /// (though resident modules cannot have an enablement state of "inherited").
+        /// Updating the display name and custom configuration of a module is supported
+        /// on resident modules only.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2262,11 +2368,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-        /// on the given update mask. Updating the enablement state is supported on
-        /// both resident and inherited modules (though resident modules cannot have an
-        /// enablement state of "inherited"). Updating the display name and custom
-        /// config of a module is supported on resident modules only.
+        /// Updates the
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// under the given name based on the given update mask. Updating the
+        /// enablement state is supported on both resident and inherited modules
+        /// (though resident modules cannot have an enablement state of "inherited").
+        /// Updating the display name and custom configuration of a module is supported
+        /// on resident modules only.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2275,11 +2383,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-        /// on the given update mask. Updating the enablement state is supported on
-        /// both resident and inherited modules (though resident modules cannot have an
-        /// enablement state of "inherited"). Updating the display name and custom
-        /// config of a module is supported on resident modules only.
+        /// Updates the
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// under the given name based on the given update mask. Updating the
+        /// enablement state is supported on both resident and inherited modules
+        /// (though resident modules cannot have an enablement state of "inherited").
+        /// Updating the display name and custom configuration of a module is supported
+        /// on resident modules only.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2288,20 +2398,25 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             UpdateSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-        /// on the given update mask. Updating the enablement state is supported on
-        /// both resident and inherited modules (though resident modules cannot have an
-        /// enablement state of "inherited"). Updating the display name and custom
-        /// config of a module is supported on resident modules only.
+        /// Updates the
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// under the given name based on the given update mask. Updating the
+        /// enablement state is supported on both resident and inherited modules
+        /// (though resident modules cannot have an enablement state of "inherited").
+        /// Updating the display name and custom configuration of a module is supported
+        /// on resident modules only.
         /// </summary>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being updated
+        /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. The only fields that can be
-        /// updated are `enablement_state` and `custom_config`. If empty or set to the
-        /// wildcard value `*`, both `enablement_state` and `custom_config` are
-        /// updated.
+        /// Required. The fields to update. The following values are valid:
+        /// 
+        /// * `custom_config`
+        /// * `enablement_state`
+        /// 
+        /// If you omit this field or set it to the wildcard value `*`, then all
+        /// eligible fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2313,20 +2428,25 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-        /// on the given update mask. Updating the enablement state is supported on
-        /// both resident and inherited modules (though resident modules cannot have an
-        /// enablement state of "inherited"). Updating the display name and custom
-        /// config of a module is supported on resident modules only.
+        /// Updates the
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// under the given name based on the given update mask. Updating the
+        /// enablement state is supported on both resident and inherited modules
+        /// (though resident modules cannot have an enablement state of "inherited").
+        /// Updating the display name and custom configuration of a module is supported
+        /// on resident modules only.
         /// </summary>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being updated
+        /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. The only fields that can be
-        /// updated are `enablement_state` and `custom_config`. If empty or set to the
-        /// wildcard value `*`, both `enablement_state` and `custom_config` are
-        /// updated.
+        /// Required. The fields to update. The following values are valid:
+        /// 
+        /// * `custom_config`
+        /// * `enablement_state`
+        /// 
+        /// If you omit this field or set it to the wildcard value `*`, then all
+        /// eligible fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2338,20 +2458,25 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-        /// on the given update mask. Updating the enablement state is supported on
-        /// both resident and inherited modules (though resident modules cannot have an
-        /// enablement state of "inherited"). Updating the display name and custom
-        /// config of a module is supported on resident modules only.
+        /// Updates the
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// under the given name based on the given update mask. Updating the
+        /// enablement state is supported on both resident and inherited modules
+        /// (though resident modules cannot have an enablement state of "inherited").
+        /// Updating the display name and custom configuration of a module is supported
+        /// on resident modules only.
         /// </summary>
         /// <param name="securityHealthAnalyticsCustomModule">
-        /// Required. The resource being updated
+        /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. The only fields that can be
-        /// updated are `enablement_state` and `custom_config`. If empty or set to the
-        /// wildcard value `*`, both `enablement_state` and `custom_config` are
-        /// updated.
+        /// Required. The fields to update. The following values are valid:
+        /// 
+        /// * `custom_config`
+        /// * `enablement_state`
+        /// 
+        /// If you omit this field or set it to the wildcard value `*`, then all
+        /// eligible fields are updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2359,9 +2484,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             UpdateSecurityHealthAnalyticsCustomModuleAsync(securityHealthAnalyticsCustomModule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2370,9 +2496,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2381,9 +2508,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2392,18 +2520,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             DeleteSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The resource name of the SHA custom module, in one of the
+        /// following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2414,18 +2542,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The resource name of the SHA custom module, in one of the
+        /// following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2436,18 +2564,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The resource name of the SHA custom module, in one of the
+        /// following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2455,18 +2583,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             DeleteSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The resource name of the SHA custom module, in one of the
+        /// following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2477,18 +2605,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The resource name of the SHA custom module, in one of the
+        /// following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2499,18 +2627,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the SHA custom module.
+        /// Required. The resource name of the SHA custom module, in one of the
+        /// following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
-        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/securityHealthAnalyticsCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2518,7 +2646,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             DeleteSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// Simulates the result of using a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// to check a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2527,7 +2657,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// Simulates the result of using a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// to check a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2536,7 +2668,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// Simulates the result of using a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// to check a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2545,14 +2679,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             SimulateSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// Simulates the result of using a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// to check a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the organization, project, or
-        /// folder. For more information about relative resource names, see [Relative
-        /// Resource
-        /// Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-        /// Example: `organizations/{organization_id}`.
+        /// folder. For more information about relative resource names, see [AIP-122:
+        /// Resource names](https://google.aip.dev/122). Example:
+        /// `organizations/{organization_id}`.
         /// </param>
         /// <param name="customConfig">
         /// Required. The custom configuration that you need to test.
@@ -2571,14 +2706,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// Simulates the result of using a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// to check a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the organization, project, or
-        /// folder. For more information about relative resource names, see [Relative
-        /// Resource
-        /// Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-        /// Example: `organizations/{organization_id}`.
+        /// folder. For more information about relative resource names, see [AIP-122:
+        /// Resource names](https://google.aip.dev/122). Example:
+        /// `organizations/{organization_id}`.
         /// </param>
         /// <param name="customConfig">
         /// Required. The custom configuration that you need to test.
@@ -2597,14 +2733,15 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// Simulates the result of using a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// to check a resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The relative resource name of the organization, project, or
-        /// folder. For more information about relative resource names, see [Relative
-        /// Resource
-        /// Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-        /// Example: `organizations/{organization_id}`.
+        /// folder. For more information about relative resource names, see [AIP-122:
+        /// Resource names](https://google.aip.dev/122). Example:
+        /// `organizations/{organization_id}`.
         /// </param>
         /// <param name="customConfig">
         /// Required. The custom configuration that you need to test.
@@ -2647,11 +2784,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent along with modules inherited from its ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2686,11 +2824,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent along with modules inherited from its ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2727,11 +2866,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent along with modules inherited from its ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2766,11 +2906,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent along with modules inherited from its ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2807,11 +2948,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent along with modules inherited from its ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2846,11 +2988,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent along with modules inherited from its ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2887,11 +3030,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent along with modules inherited from its ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2926,11 +3070,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent along with modules inherited from its ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list effective custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list effective custom modules, in one of the
+        /// following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2962,13 +3107,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2977,13 +3127,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2992,13 +3147,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3007,22 +3167,26 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetEffectiveEventThreatDetectionCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3033,22 +3197,26 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3059,22 +3227,26 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3082,22 +3254,26 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetEffectiveEventThreatDetectionCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3108,22 +3284,26 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3134,22 +3314,26 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{effective_event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/effectiveEventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3157,9 +3341,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             GetEffectiveEventThreatDetectionCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3168,9 +3352,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3181,16 +3365,17 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3220,16 +3405,17 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3261,16 +3447,17 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3300,16 +3487,17 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3341,16 +3529,17 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3380,16 +3569,17 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3421,16 +3611,17 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3460,16 +3651,17 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3501,8 +3693,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3511,8 +3703,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3523,15 +3715,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3561,15 +3754,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3601,15 +3795,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3639,15 +3834,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3679,15 +3875,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3717,15 +3914,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3757,15 +3955,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3795,15 +3994,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent to list custom modules. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent to list custom modules, in one of the following
+        /// formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3865,13 +4065,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets an Event Threat Detection custom module.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3885,13 +4084,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets an Event Threat Detection custom module.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3905,13 +4103,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets an Event Threat Detection custom module.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3922,13 +4119,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets an Event Threat Detection custom module.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3942,13 +4138,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets an Event Threat Detection custom module.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3962,13 +4157,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets an Event Threat Detection custom module.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3977,9 +4171,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3989,9 +4183,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4001,9 +4195,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4013,21 +4207,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4040,21 +4234,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4067,21 +4261,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4090,21 +4284,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4117,21 +4311,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4144,21 +4338,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4167,21 +4361,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4194,21 +4388,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4221,21 +4415,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4244,21 +4438,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4271,21 +4465,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4298,21 +4492,21 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="parent">
-        /// Required. Name of parent for the module. Its format is
-        /// `organizations/{organization}/locations/{location}`,
-        /// `folders/{folder}/locations/{location}`,
-        /// or
-        /// `projects/{project}/locations/{location}`
+        /// Required. Name of parent for the module, in one of the following formats:
+        /// 
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="eventThreatDetectionCustomModule">
         /// Required. The module to create. The
-        /// event_threat_detection_custom_module.name will be ignored and server
-        /// generated.
+        /// [EventThreatDetectionCustomModule.name][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule.name]
+        /// field is ignored; Security Command Center generates the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4370,14 +4564,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// of a module cannot be changed.
         /// </summary>
         /// <param name="eventThreatDetectionCustomModule">
-        /// Required. The module being updated
+        /// Required. The module being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// EventThreatDetectionCustomModule resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// Required. The fields to update. If omitted, then all fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4397,14 +4587,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// of a module cannot be changed.
         /// </summary>
         /// <param name="eventThreatDetectionCustomModule">
-        /// Required. The module being updated
+        /// Required. The module being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// EventThreatDetectionCustomModule resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// Required. The fields to update. If omitted, then all fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4424,14 +4610,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// of a module cannot be changed.
         /// </summary>
         /// <param name="eventThreatDetectionCustomModule">
-        /// Required. The module being updated
+        /// Required. The module being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
-        /// EventThreatDetectionCustomModule resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// Required. The fields to update. If omitted, then all fields are updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4440,8 +4622,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4451,8 +4633,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4462,8 +4644,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4473,17 +4655,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4495,17 +4676,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4517,17 +4697,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4536,17 +4715,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4558,17 +4736,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4580,17 +4757,16 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the ETD custom module.
+        /// Required. The resource name of the Event Threat Detection custom module, in
+        /// one of the following formats:
         /// 
-        /// Its format is:
-        /// 
-        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
-        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{event_threat_detection_custom_module}`.
+        /// * `organizations/{organization}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `folders/{folder}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
+        /// * `projects/{project}/locations/{location}/eventThreatDetectionCustomModules/{custom_module}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4655,21 +4831,20 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets service settings for the specified Security Command Center service.
         /// </summary>
         /// <param name="name">
-        /// Required. The Security Command Center service to retrieve.
-        /// 
-        /// Formats:
+        /// Required. The Security Command Center service to retrieve, in one of the
+        /// following formats:
         /// 
         /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
         /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
         /// * projects/{project}/locations/{location}/securityCenterServices/{service}
         /// 
-        /// The possible values for id {service} are:
+        /// The following values are valid for `{service}`:
         /// 
-        /// * container-threat-detection
-        /// * event-threat-detection
-        /// * security-health-analytics
-        /// * vm-threat-detection
-        /// * web-security-scanner
+        /// * `container-threat-detection`
+        /// * `event-threat-detection`
+        /// * `security-health-analytics`
+        /// * `vm-threat-detection`
+        /// * `web-security-scanner`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4683,21 +4858,20 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets service settings for the specified Security Command Center service.
         /// </summary>
         /// <param name="name">
-        /// Required. The Security Command Center service to retrieve.
-        /// 
-        /// Formats:
+        /// Required. The Security Command Center service to retrieve, in one of the
+        /// following formats:
         /// 
         /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
         /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
         /// * projects/{project}/locations/{location}/securityCenterServices/{service}
         /// 
-        /// The possible values for id {service} are:
+        /// The following values are valid for `{service}`:
         /// 
-        /// * container-threat-detection
-        /// * event-threat-detection
-        /// * security-health-analytics
-        /// * vm-threat-detection
-        /// * web-security-scanner
+        /// * `container-threat-detection`
+        /// * `event-threat-detection`
+        /// * `security-health-analytics`
+        /// * `vm-threat-detection`
+        /// * `web-security-scanner`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4711,21 +4885,20 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets service settings for the specified Security Command Center service.
         /// </summary>
         /// <param name="name">
-        /// Required. The Security Command Center service to retrieve.
-        /// 
-        /// Formats:
+        /// Required. The Security Command Center service to retrieve, in one of the
+        /// following formats:
         /// 
         /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
         /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
         /// * projects/{project}/locations/{location}/securityCenterServices/{service}
         /// 
-        /// The possible values for id {service} are:
+        /// The following values are valid for `{service}`:
         /// 
-        /// * container-threat-detection
-        /// * event-threat-detection
-        /// * security-health-analytics
-        /// * vm-threat-detection
-        /// * web-security-scanner
+        /// * `container-threat-detection`
+        /// * `event-threat-detection`
+        /// * `security-health-analytics`
+        /// * `vm-threat-detection`
+        /// * `web-security-scanner`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4736,21 +4909,20 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets service settings for the specified Security Command Center service.
         /// </summary>
         /// <param name="name">
-        /// Required. The Security Command Center service to retrieve.
-        /// 
-        /// Formats:
+        /// Required. The Security Command Center service to retrieve, in one of the
+        /// following formats:
         /// 
         /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
         /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
         /// * projects/{project}/locations/{location}/securityCenterServices/{service}
         /// 
-        /// The possible values for id {service} are:
+        /// The following values are valid for `{service}`:
         /// 
-        /// * container-threat-detection
-        /// * event-threat-detection
-        /// * security-health-analytics
-        /// * vm-threat-detection
-        /// * web-security-scanner
+        /// * `container-threat-detection`
+        /// * `event-threat-detection`
+        /// * `security-health-analytics`
+        /// * `vm-threat-detection`
+        /// * `web-security-scanner`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4764,21 +4936,20 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets service settings for the specified Security Command Center service.
         /// </summary>
         /// <param name="name">
-        /// Required. The Security Command Center service to retrieve.
-        /// 
-        /// Formats:
+        /// Required. The Security Command Center service to retrieve, in one of the
+        /// following formats:
         /// 
         /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
         /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
         /// * projects/{project}/locations/{location}/securityCenterServices/{service}
         /// 
-        /// The possible values for id {service} are:
+        /// The following values are valid for `{service}`:
         /// 
-        /// * container-threat-detection
-        /// * event-threat-detection
-        /// * security-health-analytics
-        /// * vm-threat-detection
-        /// * web-security-scanner
+        /// * `container-threat-detection`
+        /// * `event-threat-detection`
+        /// * `security-health-analytics`
+        /// * `vm-threat-detection`
+        /// * `web-security-scanner`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4792,21 +4963,20 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Gets service settings for the specified Security Command Center service.
         /// </summary>
         /// <param name="name">
-        /// Required. The Security Command Center service to retrieve.
-        /// 
-        /// Formats:
+        /// Required. The Security Command Center service to retrieve, in one of the
+        /// following formats:
         /// 
         /// * organizations/{organization}/locations/{location}/securityCenterServices/{service}
         /// * folders/{folder}/locations/{location}/securityCenterServices/{service}
         /// * projects/{project}/locations/{location}/securityCenterServices/{service}
         /// 
-        /// The possible values for id {service} are:
+        /// The following values are valid for `{service}`:
         /// 
-        /// * container-threat-detection
-        /// * event-threat-detection
-        /// * security-health-analytics
-        /// * vm-threat-detection
-        /// * web-security-scanner
+        /// * `container-threat-detection`
+        /// * `event-threat-detection`
+        /// * `security-health-analytics`
+        /// * `vm-threat-detection`
+        /// * `web-security-scanner`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4838,13 +5008,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent to list Security Command Center services.
+        /// Required. The name of the parent to list Security Command Center services,
+        /// in one of the following formats:
         /// 
-        /// Formats:
-        /// 
-        /// * organizations/{organization}/locations/{location}
-        /// * folders/{folder}/locations/{location}
-        /// * projects/{project}/locations/{location}
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4878,13 +5047,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent to list Security Command Center services.
+        /// Required. The name of the parent to list Security Command Center services,
+        /// in one of the following formats:
         /// 
-        /// Formats:
-        /// 
-        /// * organizations/{organization}/locations/{location}
-        /// * folders/{folder}/locations/{location}
-        /// * projects/{project}/locations/{location}
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4918,13 +5086,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent to list Security Command Center services.
+        /// Required. The name of the parent to list Security Command Center services,
+        /// in one of the following formats:
         /// 
-        /// Formats:
-        /// 
-        /// * organizations/{organization}/locations/{location}
-        /// * folders/{folder}/locations/{location}
-        /// * projects/{project}/locations/{location}
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4958,13 +5125,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent to list Security Command Center services.
+        /// Required. The name of the parent to list Security Command Center services,
+        /// in one of the following formats:
         /// 
-        /// Formats:
-        /// 
-        /// * organizations/{organization}/locations/{location}
-        /// * folders/{folder}/locations/{location}
-        /// * projects/{project}/locations/{location}
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4998,13 +5164,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent to list Security Command Center services.
+        /// Required. The name of the parent to list Security Command Center services,
+        /// in one of the following formats:
         /// 
-        /// Formats:
-        /// 
-        /// * organizations/{organization}/locations/{location}
-        /// * folders/{folder}/locations/{location}
-        /// * projects/{project}/locations/{location}
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5038,13 +5203,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent to list Security Command Center services.
+        /// Required. The name of the parent to list Security Command Center services,
+        /// in one of the following formats:
         /// 
-        /// Formats:
-        /// 
-        /// * organizations/{organization}/locations/{location}
-        /// * folders/{folder}/locations/{location}
-        /// * projects/{project}/locations/{location}
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5078,13 +5242,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent to list Security Command Center services.
+        /// Required. The name of the parent to list Security Command Center services,
+        /// in one of the following formats:
         /// 
-        /// Formats:
-        /// 
-        /// * organizations/{organization}/locations/{location}
-        /// * folders/{folder}/locations/{location}
-        /// * projects/{project}/locations/{location}
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5118,13 +5281,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent to list Security Command Center services.
+        /// Required. The name of the parent to list Security Command Center services,
+        /// in one of the following formats:
         /// 
-        /// Formats:
-        /// 
-        /// * organizations/{organization}/locations/{location}
-        /// * folders/{folder}/locations/{location}
-        /// * projects/{project}/locations/{location}
+        /// * `organizations/{organization}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5187,10 +5349,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Required. The updated service.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Possible values:
+        /// Required. The fields to update. Accepts the following values:
         /// 
-        /// * "intended_enablement_state"
-        /// * "modules"
+        /// * `intended_enablement_state`
+        /// * `modules`
+        /// 
+        /// If omitted, then all eligible fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5208,10 +5372,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Required. The updated service.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Possible values:
+        /// Required. The fields to update. Accepts the following values:
         /// 
-        /// * "intended_enablement_state"
-        /// * "modules"
+        /// * `intended_enablement_state`
+        /// * `modules`
+        /// 
+        /// If omitted, then all eligible fields are updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5229,10 +5395,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         /// Required. The updated service.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Possible values:
+        /// Required. The fields to update. Accepts the following values:
         /// 
-        /// * "intended_enablement_state"
-        /// * "modules"
+        /// * `intended_enablement_state`
+        /// * `modules`
+        /// 
+        /// If omitted, then all eligible fields are updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5468,10 +5636,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         partial void Modify_UpdateSecurityCenterServiceRequest(ref UpdateSecurityCenterServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5485,10 +5654,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-        /// given parent. This includes resident modules defined at the scope of the
-        /// parent, and inherited modules, inherited from CRM ancestors (no
-        /// descendants).
+        /// Returns a list of all
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5502,7 +5672,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5514,7 +5685,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+        /// Gets details of a single
+        /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5526,9 +5698,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5540,9 +5714,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-        /// parent. This includes resident modules defined at the scope of the parent,
-        /// and inherited modules, inherited from CRM ancestors (no descendants).
+        /// Returns a list of all
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources for the given parent. This includes resident modules defined at
+        /// the scope of the parent, and inherited modules, inherited from ancestor
+        /// organizations, folders, and projects (no descendants).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5556,8 +5732,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5569,8 +5747,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent's CRM descendants.
+        /// Returns a list of all resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// resources under the given organization, folder, or project and all of its
+        /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5584,7 +5764,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5596,7 +5777,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// Retrieves a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5608,10 +5790,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5623,10 +5807,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-        /// given CRM parent, and also creates inherited
-        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-        /// parent. These modules are enabled by default.
+        /// Creates a resident
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// at the scope of the given organization, folder, or project, and also
+        /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+        /// folders and projects that are descendants of the given parent. These
+        /// modules are enabled by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5638,11 +5824,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-        /// on the given update mask. Updating the enablement state is supported on
-        /// both resident and inherited modules (though resident modules cannot have an
-        /// enablement state of "inherited"). Updating the display name and custom
-        /// config of a module is supported on resident modules only.
+        /// Updates the
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// under the given name based on the given update mask. Updating the
+        /// enablement state is supported on both resident and inherited modules
+        /// (though resident modules cannot have an enablement state of "inherited").
+        /// Updating the display name and custom configuration of a module is supported
+        /// on resident modules only.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5654,11 +5842,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-        /// on the given update mask. Updating the enablement state is supported on
-        /// both resident and inherited modules (though resident modules cannot have an
-        /// enablement state of "inherited"). Updating the display name and custom
-        /// config of a module is supported on resident modules only.
+        /// Updates the
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// under the given name based on the given update mask. Updating the
+        /// enablement state is supported on both resident and inherited modules
+        /// (though resident modules cannot have an enablement state of "inherited").
+        /// Updating the display name and custom configuration of a module is supported
+        /// on resident modules only.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5670,9 +5860,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5684,9 +5875,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-        /// descendants in the CRM hierarchy. This method is only supported for
-        /// resident custom modules.
+        /// Deletes the specified
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// and all of its descendants in the resource hierarchy. This method is only
+        /// supported for resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5698,7 +5890,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// Simulates the result of using a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// to check a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5710,7 +5904,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// Simulates the result of using a
+        /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+        /// to check a resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5752,13 +5948,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5770,13 +5971,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Gets an effective ETD custom module. Retrieves the effective module at the
-        /// given level. The difference between an EffectiveCustomModule and a
-        /// CustomModule is that the fields for an EffectiveCustomModule are computed
-        /// from ancestors if needed. For example, the enablement_state for a
-        /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-        /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-        /// or DISABLED (the effective enablement_state).
+        /// Gets the effective Event Threat Detection custom module at the given level.
+        /// 
+        /// The difference between an
+        /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+        /// and an
+        /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+        /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+        /// computed from ancestors if needed. For example, the enablement state for an
+        /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+        /// `INHERITED`. In contrast, the enablement state for an
+        /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+        /// or `DISABLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5788,9 +5994,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5802,9 +6008,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all Event Threat Detection custom modules for the given
-        /// Resource Manager parent. This includes resident modules defined at the
-        /// scope of the parent along with modules inherited from ancestors.
+        /// Lists all Event Threat Detection custom modules for the given organization,
+        /// folder, or project. This includes resident modules defined at the scope of
+        /// the parent along with modules inherited from ancestors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5818,8 +6024,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5831,8 +6037,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         }
 
         /// <summary>
-        /// Lists all resident Event Threat Detection custom modules under the
-        /// given Resource Manager parent and its descendants.
+        /// Lists all resident Event Threat Detection custom modules for the given
+        /// organization, folder, or project and its descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5871,9 +6077,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5886,9 +6092,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Creates a resident Event Threat Detection custom module at the scope of the
-        /// given Resource Manager parent, and also creates inherited custom modules
-        /// for all descendants of the given parent. These modules are enabled by
-        /// default.
+        /// given organization, folder, or project, and creates inherited custom
+        /// modules for all descendants of the given parent. These modules are enabled
+        /// by default.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5935,8 +6141,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5949,8 +6155,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Deletes the specified Event Threat Detection custom module and all of its
-        /// descendants in the Resource Manager hierarchy. This method is only
-        /// supported for resident custom modules.
+        /// descendants in the resource hierarchy. This method is only supported for
+        /// resident custom modules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

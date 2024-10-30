@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "PublisherClient",
           "rpcs": {
+            "Publish": {
+              "methods": [
+                "Publish",
+                "PublishAsync"
+              ]
+            },
             "PublishChannelConnectionEvents": {
               "methods": [
                 "PublishChannelConnectionEvents",

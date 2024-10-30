@@ -30,7 +30,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8aMGdvb2dsZS9jbG91ZC9kaXNjb3Zlcnll",
             "bmdpbmUvdjFiZXRhL2NvbW1vbi5wcm90bxo4Z29vZ2xlL2Nsb3VkL2Rpc2Nv",
             "dmVyeWVuZ2luZS92MWJldGEvc2VhcmNoX3NlcnZpY2UucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ikAwKDVNlcnZpbmdDb25maWcS",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipQ0KDVNlcnZpbmdDb25maWcS",
             "VgoMbWVkaWFfY29uZmlnGAcgASgLMj4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
             "eWVuZ2luZS52MWJldGEuU2VydmluZ0NvbmZpZy5NZWRpYUNvbmZpZ0gAEloK",
             "DmdlbmVyaWNfY29uZmlnGAogASgLMkAuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
@@ -49,33 +49,36 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "GA8gAygJEiMKG29uZXdheV9zeW5vbnltc19jb250cm9sX2lkcxgQIAMoCRIe",
             "ChZkaXNzb2NpYXRlX2NvbnRyb2xfaWRzGBEgAygJEh8KF3JlcGxhY2VtZW50",
             "X2NvbnRyb2xfaWRzGBIgAygJEhoKEmlnbm9yZV9jb250cm9sX2lkcxgTIAMo",
-            "CRrIAQoLTWVkaWFDb25maWcSLgokY29udGVudF93YXRjaGVkX3BlcmNlbnRh",
-            "Z2VfdGhyZXNob2xkGAIgASgCSAASKwohY29udGVudF93YXRjaGVkX3NlY29u",
-            "ZHNfdGhyZXNob2xkGAUgASgCSAASGwoTZGVtb3Rpb25fZXZlbnRfdHlwZRgB",
-            "IAEoCRIlCh1jb250ZW50X2ZyZXNobmVzc19jdXRvZmZfZGF5cxgEIAEoBUIY",
-            "ChZkZW1vdGVfY29udGVudF93YXRjaGVkGnIKDUdlbmVyaWNDb25maWcSYQoT",
-            "Y29udGVudF9zZWFyY2hfc3BlYxgBIAEoCzJELmdvb2dsZS5jbG91ZC5kaXNj",
-            "b3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaFJlcXVlc3QuQ29udGVudFNlYXJj",
-            "aFNwZWM6gAPqQfwCCixkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20v",
-            "U2VydmluZ0NvbmZpZxJfcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L3NlcnZpbmdDb25m",
-            "aWdzL3tzZXJ2aW5nX2NvbmZpZ30SeHByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0",
-            "YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2VydmluZ0NvbmZpZ3Mve3NlcnZpbmdf",
-            "Y29uZmlnfRJxcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdpbmVzL3tlbmdpbmV9",
-            "L3NlcnZpbmdDb25maWdzL3tzZXJ2aW5nX2NvbmZpZ31CEQoPdmVydGljYWxf",
-            "Y29uZmlnQpkCCidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MWJldGFCElNlcnZpbmdDb25maWdQcm90b1ABWlFjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5naW5l",
-            "cGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNHb29n",
-            "bGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxDbG91",
-            "ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6RGlz",
-            "Y292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
+            "CRJkChRwZXJzb25hbGl6YXRpb25fc3BlYxgZIAEoCzJGLmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaFJlcXVlc3QuUGVyc29u",
+            "YWxpemF0aW9uU3BlYxr3AQoLTWVkaWFDb25maWcSLgokY29udGVudF93YXRj",
+            "aGVkX3BlcmNlbnRhZ2VfdGhyZXNob2xkGAIgASgCSAASKwohY29udGVudF93",
+            "YXRjaGVkX3NlY29uZHNfdGhyZXNob2xkGAUgASgCSAASGwoTZGVtb3Rpb25f",
+            "ZXZlbnRfdHlwZRgBIAEoCRItCiBkZW1vdGVfY29udGVudF93YXRjaGVkX3Bh",
+            "c3RfZGF5cxglIAEoBUID4EEBEiUKHWNvbnRlbnRfZnJlc2huZXNzX2N1dG9m",
+            "Zl9kYXlzGAQgASgFQhgKFmRlbW90ZV9jb250ZW50X3dhdGNoZWQacgoNR2Vu",
+            "ZXJpY0NvbmZpZxJhChNjb250ZW50X3NlYXJjaF9zcGVjGAEgASgLMkQuZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuU2VhcmNoUmVxdWVz",
+            "dC5Db250ZW50U2VhcmNoU3BlYzqAA+pB/AIKLGRpc2NvdmVyeWVuZ2luZS5n",
+            "b29nbGVhcGlzLmNvbS9TZXJ2aW5nQ29uZmlnEl9wcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9y",
+            "ZX0vc2VydmluZ0NvbmZpZ3Mve3NlcnZpbmdfY29uZmlnfRJ4cHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tj",
+            "b2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9zZXJ2aW5nQ29u",
+            "Zmlncy97c2VydmluZ19jb25maWd9EnFwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2Vu",
+            "Z2luZXMve2VuZ2luZX0vc2VydmluZ0NvbmZpZ3Mve3NlcnZpbmdfY29uZmln",
+            "fUIRCg92ZXJ0aWNhbF9jb25maWdCmQIKJ2NvbS5nb29nbGUuY2xvdWQuZGlz",
+            "Y292ZXJ5ZW5naW5lLnYxYmV0YUISU2VydmluZ0NvbmZpZ1Byb3RvUAFaUWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9k",
+            "aXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVS",
+            "WUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRh",
+            "ygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29n",
+            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.SearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Parser, new[]{ "MediaConfig", "GenericConfig", "Name", "DisplayName", "SolutionType", "ModelId", "DiversityLevel", "EmbeddingConfig", "RankingExpression", "CreateTime", "UpdateTime", "FilterControlIds", "BoostControlIds", "RedirectControlIds", "SynonymsControlIds", "OnewaySynonymsControlIds", "DissociateControlIds", "ReplacementControlIds", "IgnoreControlIds" }, new[]{ "VerticalConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.MediaConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.MediaConfig.Parser, new[]{ "ContentWatchedPercentageThreshold", "ContentWatchedSecondsThreshold", "DemotionEventType", "ContentFreshnessCutoffDays" }, new[]{ "DemoteContentWatched" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Parser, new[]{ "MediaConfig", "GenericConfig", "Name", "DisplayName", "SolutionType", "ModelId", "DiversityLevel", "EmbeddingConfig", "RankingExpression", "CreateTime", "UpdateTime", "FilterControlIds", "BoostControlIds", "RedirectControlIds", "SynonymsControlIds", "OnewaySynonymsControlIds", "DissociateControlIds", "ReplacementControlIds", "IgnoreControlIds", "PersonalizationSpec" }, new[]{ "VerticalConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.MediaConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.MediaConfig.Parser, new[]{ "ContentWatchedPercentageThreshold", "ContentWatchedSecondsThreshold", "DemotionEventType", "DemoteContentWatchedPastDays", "ContentFreshnessCutoffDays" }, new[]{ "DemoteContentWatched" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.GenericConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.GenericConfig.Parser, new[]{ "ContentSearchSpec" }, null, null, null, null)})
           }));
     }
@@ -141,6 +144,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       dissociateControlIds_ = other.dissociateControlIds_.Clone();
       replacementControlIds_ = other.replacementControlIds_.Clone();
       ignoreControlIds_ = other.ignoreControlIds_.Clone();
+      personalizationSpec_ = other.personalizationSpec_ != null ? other.personalizationSpec_.Clone() : null;
       switch (other.VerticalConfigCase) {
         case VerticalConfigOneofCase.MediaConfig:
           MediaConfig = other.MediaConfig.Clone();
@@ -541,6 +545,30 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       get { return ignoreControlIds_; }
     }
 
+    /// <summary>Field number for the "personalization_spec" field.</summary>
+    public const int PersonalizationSpecFieldNumber = 25;
+    private global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.PersonalizationSpec personalizationSpec_;
+    /// <summary>
+    /// The specification for personalization spec.
+    ///
+    /// Notice that if both
+    /// [ServingConfig.personalization_spec][google.cloud.discoveryengine.v1beta.ServingConfig.personalization_spec]
+    /// and
+    /// [SearchRequest.personalization_spec][google.cloud.discoveryengine.v1beta.SearchRequest.personalization_spec]
+    /// are set,
+    /// [SearchRequest.personalization_spec][google.cloud.discoveryengine.v1beta.SearchRequest.personalization_spec]
+    /// overrides
+    /// [ServingConfig.personalization_spec][google.cloud.discoveryengine.v1beta.ServingConfig.personalization_spec].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.PersonalizationSpec PersonalizationSpec {
+      get { return personalizationSpec_; }
+      set {
+        personalizationSpec_ = value;
+      }
+    }
+
     private object verticalConfig_;
     /// <summary>Enum of possible cases for the "vertical_config" oneof.</summary>
     public enum VerticalConfigOneofCase {
@@ -596,6 +624,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if(!dissociateControlIds_.Equals(other.dissociateControlIds_)) return false;
       if(!replacementControlIds_.Equals(other.replacementControlIds_)) return false;
       if(!ignoreControlIds_.Equals(other.ignoreControlIds_)) return false;
+      if (!object.Equals(PersonalizationSpec, other.PersonalizationSpec)) return false;
       if (VerticalConfigCase != other.VerticalConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -623,6 +652,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       hash ^= dissociateControlIds_.GetHashCode();
       hash ^= replacementControlIds_.GetHashCode();
       hash ^= ignoreControlIds_.GetHashCode();
+      if (personalizationSpec_ != null) hash ^= PersonalizationSpec.GetHashCode();
       hash ^= (int) verticalConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -694,6 +724,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(170, 1);
         output.WriteString(RankingExpression);
       }
+      if (personalizationSpec_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(PersonalizationSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -756,6 +790,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(170, 1);
         output.WriteString(RankingExpression);
       }
+      if (personalizationSpec_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(PersonalizationSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -807,6 +845,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       size += dissociateControlIds_.CalculateSize(_repeated_dissociateControlIds_codec);
       size += replacementControlIds_.CalculateSize(_repeated_replacementControlIds_codec);
       size += ignoreControlIds_.CalculateSize(_repeated_ignoreControlIds_codec);
+      if (personalizationSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PersonalizationSpec);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -863,6 +904,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       dissociateControlIds_.Add(other.dissociateControlIds_);
       replacementControlIds_.Add(other.replacementControlIds_);
       ignoreControlIds_.Add(other.ignoreControlIds_);
+      if (other.personalizationSpec_ != null) {
+        if (personalizationSpec_ == null) {
+          PersonalizationSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.PersonalizationSpec();
+        }
+        PersonalizationSpec.MergeFrom(other.PersonalizationSpec);
+      }
       switch (other.VerticalConfigCase) {
         case VerticalConfigOneofCase.MediaConfig:
           if (MediaConfig == null) {
@@ -988,6 +1035,13 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             RankingExpression = input.ReadString();
             break;
           }
+          case 202: {
+            if (personalizationSpec_ == null) {
+              PersonalizationSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.PersonalizationSpec();
+            }
+            input.ReadMessage(PersonalizationSpec);
+            break;
+          }
         }
       }
     #endif
@@ -1098,6 +1152,13 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             RankingExpression = input.ReadString();
             break;
           }
+          case 202: {
+            if (personalizationSpec_ == null) {
+              PersonalizationSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.PersonalizationSpec();
+            }
+            input.ReadMessage(PersonalizationSpec);
+            break;
+          }
         }
       }
     }
@@ -1161,6 +1222,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MediaConfig(MediaConfig other) : this() {
           demotionEventType_ = other.demotionEventType_;
+          demoteContentWatchedPastDays_ = other.demoteContentWatchedPastDays_;
           contentFreshnessCutoffDays_ = other.contentFreshnessCutoffDays_;
           switch (other.DemoteContentWatchedCase) {
             case DemoteContentWatchedOneofCase.ContentWatchedPercentageThreshold:
@@ -1263,6 +1325,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
         }
 
+        /// <summary>Field number for the "demote_content_watched_past_days" field.</summary>
+        public const int DemoteContentWatchedPastDaysFieldNumber = 37;
+        private int demoteContentWatchedPastDays_;
+        /// <summary>
+        /// Optional. Specifies the number of days to look back for demoting watched
+        /// content. If set to zero or unset, defaults to the maximum of 365 days.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int DemoteContentWatchedPastDays {
+          get { return demoteContentWatchedPastDays_; }
+          set {
+            demoteContentWatchedPastDays_ = value;
+          }
+        }
+
         /// <summary>Field number for the "content_freshness_cutoff_days" field.</summary>
         public const int ContentFreshnessCutoffDaysFieldNumber = 4;
         private int contentFreshnessCutoffDays_;
@@ -1319,6 +1397,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ContentWatchedPercentageThreshold, other.ContentWatchedPercentageThreshold)) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ContentWatchedSecondsThreshold, other.ContentWatchedSecondsThreshold)) return false;
           if (DemotionEventType != other.DemotionEventType) return false;
+          if (DemoteContentWatchedPastDays != other.DemoteContentWatchedPastDays) return false;
           if (ContentFreshnessCutoffDays != other.ContentFreshnessCutoffDays) return false;
           if (DemoteContentWatchedCase != other.DemoteContentWatchedCase) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -1331,6 +1410,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           if (HasContentWatchedPercentageThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ContentWatchedPercentageThreshold);
           if (HasContentWatchedSecondsThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ContentWatchedSecondsThreshold);
           if (DemotionEventType.Length != 0) hash ^= DemotionEventType.GetHashCode();
+          if (DemoteContentWatchedPastDays != 0) hash ^= DemoteContentWatchedPastDays.GetHashCode();
           if (ContentFreshnessCutoffDays != 0) hash ^= ContentFreshnessCutoffDays.GetHashCode();
           hash ^= (int) demoteContentWatchedCase_;
           if (_unknownFields != null) {
@@ -1367,6 +1447,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteRawTag(45);
             output.WriteFloat(ContentWatchedSecondsThreshold);
           }
+          if (DemoteContentWatchedPastDays != 0) {
+            output.WriteRawTag(168, 2);
+            output.WriteInt32(DemoteContentWatchedPastDays);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1393,6 +1477,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteRawTag(45);
             output.WriteFloat(ContentWatchedSecondsThreshold);
           }
+          if (DemoteContentWatchedPastDays != 0) {
+            output.WriteRawTag(168, 2);
+            output.WriteInt32(DemoteContentWatchedPastDays);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1412,6 +1500,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           if (DemotionEventType.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(DemotionEventType);
           }
+          if (DemoteContentWatchedPastDays != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeInt32Size(DemoteContentWatchedPastDays);
+          }
           if (ContentFreshnessCutoffDays != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(ContentFreshnessCutoffDays);
           }
@@ -1429,6 +1520,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           if (other.DemotionEventType.Length != 0) {
             DemotionEventType = other.DemotionEventType;
+          }
+          if (other.DemoteContentWatchedPastDays != 0) {
+            DemoteContentWatchedPastDays = other.DemoteContentWatchedPastDays;
           }
           if (other.ContentFreshnessCutoffDays != 0) {
             ContentFreshnessCutoffDays = other.ContentFreshnessCutoffDays;
@@ -1473,6 +1567,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 ContentWatchedSecondsThreshold = input.ReadFloat();
                 break;
               }
+              case 296: {
+                DemoteContentWatchedPastDays = input.ReadInt32();
+                break;
+              }
             }
           }
         #endif
@@ -1502,6 +1600,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               }
               case 45: {
                 ContentWatchedSecondsThreshold = input.ReadFloat();
+                break;
+              }
+              case 296: {
+                DemoteContentWatchedPastDays = input.ReadInt32();
                 break;
               }
             }
