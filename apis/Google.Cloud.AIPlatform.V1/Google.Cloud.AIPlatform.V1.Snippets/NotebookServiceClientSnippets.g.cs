@@ -1958,6 +1958,189 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for StopNotebookRuntime</summary>
+        public void StopNotebookRuntimeRequestObject()
+        {
+            // Snippet: StopNotebookRuntime(StopNotebookRuntimeRequest, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            StopNotebookRuntimeRequest request = new StopNotebookRuntimeRequest
+            {
+                NotebookRuntimeName = NotebookRuntimeName.FromProjectLocationNotebookRuntime("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME]"),
+            };
+            // Make the request
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> response = notebookServiceClient.StopNotebookRuntime(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            StopNotebookRuntimeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceStopNotebookRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                StopNotebookRuntimeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopNotebookRuntimeAsync</summary>
+        public async Task StopNotebookRuntimeRequestObjectAsync()
+        {
+            // Snippet: StopNotebookRuntimeAsync(StopNotebookRuntimeRequest, CallSettings)
+            // Additional: StopNotebookRuntimeAsync(StopNotebookRuntimeRequest, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            StopNotebookRuntimeRequest request = new StopNotebookRuntimeRequest
+            {
+                NotebookRuntimeName = NotebookRuntimeName.FromProjectLocationNotebookRuntime("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME]"),
+            };
+            // Make the request
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> response = await notebookServiceClient.StopNotebookRuntimeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            StopNotebookRuntimeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceStopNotebookRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                StopNotebookRuntimeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopNotebookRuntime</summary>
+        public void StopNotebookRuntime()
+        {
+            // Snippet: StopNotebookRuntime(string, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/notebookRuntimes/[NOTEBOOK_RUNTIME]";
+            // Make the request
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> response = notebookServiceClient.StopNotebookRuntime(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            StopNotebookRuntimeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceStopNotebookRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                StopNotebookRuntimeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopNotebookRuntimeAsync</summary>
+        public async Task StopNotebookRuntimeAsync()
+        {
+            // Snippet: StopNotebookRuntimeAsync(string, CallSettings)
+            // Additional: StopNotebookRuntimeAsync(string, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/notebookRuntimes/[NOTEBOOK_RUNTIME]";
+            // Make the request
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> response = await notebookServiceClient.StopNotebookRuntimeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            StopNotebookRuntimeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceStopNotebookRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                StopNotebookRuntimeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopNotebookRuntime</summary>
+        public void StopNotebookRuntimeResourceNames()
+        {
+            // Snippet: StopNotebookRuntime(NotebookRuntimeName, CallSettings)
+            // Create client
+            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            // Initialize request argument(s)
+            NotebookRuntimeName name = NotebookRuntimeName.FromProjectLocationNotebookRuntime("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME]");
+            // Make the request
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> response = notebookServiceClient.StopNotebookRuntime(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            StopNotebookRuntimeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> retrievedResponse = notebookServiceClient.PollOnceStopNotebookRuntime(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                StopNotebookRuntimeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopNotebookRuntimeAsync</summary>
+        public async Task StopNotebookRuntimeResourceNamesAsync()
+        {
+            // Snippet: StopNotebookRuntimeAsync(NotebookRuntimeName, CallSettings)
+            // Additional: StopNotebookRuntimeAsync(NotebookRuntimeName, CancellationToken)
+            // Create client
+            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NotebookRuntimeName name = NotebookRuntimeName.FromProjectLocationNotebookRuntime("[PROJECT]", "[LOCATION]", "[NOTEBOOK_RUNTIME]");
+            // Make the request
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> response = await notebookServiceClient.StopNotebookRuntimeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            StopNotebookRuntimeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceStopNotebookRuntimeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                StopNotebookRuntimeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateNotebookExecutionJob</summary>
         public void CreateNotebookExecutionJobRequestObject()
         {
