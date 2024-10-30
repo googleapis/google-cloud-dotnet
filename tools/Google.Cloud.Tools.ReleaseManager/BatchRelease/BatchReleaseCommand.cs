@@ -73,6 +73,14 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 // Note: This takes into account the dry-run flag.
                 proposal.Execute(config);
             }
+
+            if (config.DeferPush && proposals.Any(p => p.Completed))
+            {
+                Console.WriteLine();
+                Console.WriteLine("*****************************************************************************");
+                Console.WriteLine("* Don't forget to push the release branches with the push-releases command. *");
+                Console.WriteLine("*****************************************************************************");
+            }
             return 0;
 
             void MaybeLogProgress(int progress, int total)

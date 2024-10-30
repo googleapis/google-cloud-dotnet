@@ -32,6 +32,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         public StructuredVersion OldVersion { get; }
         public StructuredVersion NewVersion { get; }
         private HistoryFile ModifiedHistoryFile { get; }
+        public bool Completed { get; set; }
 
         /// <summary>
         /// The history file section being added, or null if this API does not have a version history.
@@ -140,6 +141,9 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             // Go back to our current branch
             Commands.Checkout(repo, original);
             Console.WriteLine();
+
+            // Remember that this proposal was completed (as far as the config goes).
+            Completed = true;
         }
 
         /// <summary>
