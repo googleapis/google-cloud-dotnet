@@ -61,6 +61,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             DeleteTargetSiteSettings = existing.DeleteTargetSiteSettings;
             DeleteTargetSiteOperationsSettings = existing.DeleteTargetSiteOperationsSettings.Clone();
             ListTargetSitesSettings = existing.ListTargetSitesSettings;
+            CreateSitemapSettings = existing.CreateSitemapSettings;
+            CreateSitemapOperationsSettings = existing.CreateSitemapOperationsSettings.Clone();
+            DeleteSitemapSettings = existing.DeleteSitemapSettings;
+            DeleteSitemapOperationsSettings = existing.DeleteSitemapOperationsSettings.Clone();
+            FetchSitemapsSettings = existing.FetchSitemapsSettings;
             EnableAdvancedSiteSearchSettings = existing.EnableAdvancedSiteSearchSettings;
             EnableAdvancedSiteSearchOperationsSettings = existing.EnableAdvancedSiteSearchOperationsSettings.Clone();
             DisableAdvancedSiteSearchSettings = existing.DisableAdvancedSiteSearchSettings;
@@ -238,6 +243,81 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListTargetSitesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SiteSearchEngineServiceClient.CreateSitemap</c> and <c>SiteSearchEngineServiceClient.CreateSitemapAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSitemapSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>SiteSearchEngineServiceClient.CreateSitemap</c> and
+        /// <c>SiteSearchEngineServiceClient.CreateSitemapAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateSitemapOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SiteSearchEngineServiceClient.DeleteSitemap</c> and <c>SiteSearchEngineServiceClient.DeleteSitemapAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSitemapSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>SiteSearchEngineServiceClient.DeleteSitemap</c> and
+        /// <c>SiteSearchEngineServiceClient.DeleteSitemapAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteSitemapOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SiteSearchEngineServiceClient.FetchSitemaps</c> and <c>SiteSearchEngineServiceClient.FetchSitemapsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchSitemapsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1558,6 +1638,500 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         }
 
         /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Sitemap, CreateSitemapMetadata> CreateSitemap(CreateSitemapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Sitemap, CreateSitemapMetadata>> CreateSitemapAsync(CreateSitemapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Sitemap, CreateSitemapMetadata>> CreateSitemapAsync(CreateSitemapRequest request, st::CancellationToken cancellationToken) =>
+            CreateSitemapAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateSitemap</c>.</summary>
+        public virtual lro::OperationsClient CreateSitemapOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateSitemap</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Sitemap, CreateSitemapMetadata> PollOnceCreateSitemap(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Sitemap, CreateSitemapMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSitemapOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateSitemap</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Sitemap, CreateSitemapMetadata>> PollOnceCreateSitemapAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Sitemap, CreateSitemapMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSitemapOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="sitemap">
+        /// Required. The [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap] to
+        /// create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Sitemap, CreateSitemapMetadata> CreateSitemap(string parent, Sitemap sitemap, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSitemap(new CreateSitemapRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Sitemap = gax::GaxPreconditions.CheckNotNull(sitemap, nameof(sitemap)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="sitemap">
+        /// Required. The [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap] to
+        /// create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Sitemap, CreateSitemapMetadata>> CreateSitemapAsync(string parent, Sitemap sitemap, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSitemapAsync(new CreateSitemapRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Sitemap = gax::GaxPreconditions.CheckNotNull(sitemap, nameof(sitemap)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="sitemap">
+        /// Required. The [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap] to
+        /// create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Sitemap, CreateSitemapMetadata>> CreateSitemapAsync(string parent, Sitemap sitemap, st::CancellationToken cancellationToken) =>
+            CreateSitemapAsync(parent, sitemap, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="sitemap">
+        /// Required. The [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap] to
+        /// create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Sitemap, CreateSitemapMetadata> CreateSitemap(SiteSearchEngineName parent, Sitemap sitemap, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSitemap(new CreateSitemapRequest
+            {
+                ParentAsSiteSearchEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Sitemap = gax::GaxPreconditions.CheckNotNull(sitemap, nameof(sitemap)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="sitemap">
+        /// Required. The [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap] to
+        /// create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Sitemap, CreateSitemapMetadata>> CreateSitemapAsync(SiteSearchEngineName parent, Sitemap sitemap, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSitemapAsync(new CreateSitemapRequest
+            {
+                ParentAsSiteSearchEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Sitemap = gax::GaxPreconditions.CheckNotNull(sitemap, nameof(sitemap)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="sitemap">
+        /// Required. The [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap] to
+        /// create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Sitemap, CreateSitemapMetadata>> CreateSitemapAsync(SiteSearchEngineName parent, Sitemap sitemap, st::CancellationToken cancellationToken) =>
+            CreateSitemapAsync(parent, sitemap, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteSitemapMetadata> DeleteSitemap(DeleteSitemapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteSitemapMetadata>> DeleteSitemapAsync(DeleteSitemapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteSitemapMetadata>> DeleteSitemapAsync(DeleteSitemapRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSitemapAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteSitemap</c>.</summary>
+        public virtual lro::OperationsClient DeleteSitemapOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteSitemap</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteSitemapMetadata> PollOnceDeleteSitemap(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteSitemapMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSitemapOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteSitemap</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteSitemapMetadata>> PollOnceDeleteSitemapAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteSitemapMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSitemapOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full resource name of
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}`.
+        /// 
+        /// If the caller does not have permission to access the
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the requested [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteSitemapMetadata> DeleteSitemap(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSitemap(new DeleteSitemapRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full resource name of
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}`.
+        /// 
+        /// If the caller does not have permission to access the
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the requested [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteSitemapMetadata>> DeleteSitemapAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSitemapAsync(new DeleteSitemapRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full resource name of
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}`.
+        /// 
+        /// If the caller does not have permission to access the
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the requested [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteSitemapMetadata>> DeleteSitemapAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSitemapAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full resource name of
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}`.
+        /// 
+        /// If the caller does not have permission to access the
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the requested [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteSitemapMetadata> DeleteSitemap(SitemapName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSitemap(new DeleteSitemapRequest
+            {
+                SitemapName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full resource name of
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}`.
+        /// 
+        /// If the caller does not have permission to access the
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the requested [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteSitemapMetadata>> DeleteSitemapAsync(SitemapName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSitemapAsync(new DeleteSitemapRequest
+            {
+                SitemapName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Full resource name of
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], such as
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/siteSearchEngine/sitemaps/{sitemap}`.
+        /// 
+        /// If the caller does not have permission to access the
+        /// [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the requested [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteSitemapMetadata>> DeleteSitemapAsync(SitemapName name, st::CancellationToken cancellationToken) =>
+            DeleteSitemapAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchSitemapsResponse FetchSitemaps(FetchSitemapsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchSitemapsResponse> FetchSitemapsAsync(FetchSitemapsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchSitemapsResponse> FetchSitemapsAsync(FetchSitemapsRequest request, st::CancellationToken cancellationToken) =>
+            FetchSitemapsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchSitemapsResponse FetchSitemaps(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            FetchSitemaps(new FetchSitemapsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchSitemapsResponse> FetchSitemapsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            FetchSitemapsAsync(new FetchSitemapsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchSitemapsResponse> FetchSitemapsAsync(string parent, st::CancellationToken cancellationToken) =>
+            FetchSitemapsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchSitemapsResponse FetchSitemaps(SiteSearchEngineName parent, gaxgrpc::CallSettings callSettings = null) =>
+            FetchSitemaps(new FetchSitemapsRequest
+            {
+                ParentAsSiteSearchEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchSitemapsResponse> FetchSitemapsAsync(SiteSearchEngineName parent, gaxgrpc::CallSettings callSettings = null) =>
+            FetchSitemapsAsync(new FetchSitemapsRequest
+            {
+                ParentAsSiteSearchEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name of the
+        /// [SiteSearchEngine][google.cloud.discoveryengine.v1beta.SiteSearchEngine],
+        /// such as
+        /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchSitemapsResponse> FetchSitemapsAsync(SiteSearchEngineName parent, st::CancellationToken cancellationToken) =>
+            FetchSitemapsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Upgrade from basic site search to advanced site search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1821,6 +2395,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         private readonly gaxgrpc::ApiCall<ListTargetSitesRequest, ListTargetSitesResponse> _callListTargetSites;
 
+        private readonly gaxgrpc::ApiCall<CreateSitemapRequest, lro::Operation> _callCreateSitemap;
+
+        private readonly gaxgrpc::ApiCall<DeleteSitemapRequest, lro::Operation> _callDeleteSitemap;
+
+        private readonly gaxgrpc::ApiCall<FetchSitemapsRequest, FetchSitemapsResponse> _callFetchSitemaps;
+
         private readonly gaxgrpc::ApiCall<EnableAdvancedSiteSearchRequest, lro::Operation> _callEnableAdvancedSiteSearch;
 
         private readonly gaxgrpc::ApiCall<DisableAdvancedSiteSearchRequest, lro::Operation> _callDisableAdvancedSiteSearch;
@@ -1853,6 +2433,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             BatchCreateTargetSitesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateTargetSitesOperationsSettings, logger);
             UpdateTargetSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetSiteOperationsSettings, logger);
             DeleteTargetSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetSiteOperationsSettings, logger);
+            CreateSitemapOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSitemapOperationsSettings, logger);
+            DeleteSitemapOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSitemapOperationsSettings, logger);
             EnableAdvancedSiteSearchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableAdvancedSiteSearchOperationsSettings, logger);
             DisableAdvancedSiteSearchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableAdvancedSiteSearchOperationsSettings, logger);
             RecrawlUrisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RecrawlUrisOperationsSettings, logger);
@@ -1879,6 +2461,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             _callListTargetSites = clientHelper.BuildApiCall<ListTargetSitesRequest, ListTargetSitesResponse>("ListTargetSites", grpcClient.ListTargetSitesAsync, grpcClient.ListTargetSites, effectiveSettings.ListTargetSitesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTargetSites);
             Modify_ListTargetSitesApiCall(ref _callListTargetSites);
+            _callCreateSitemap = clientHelper.BuildApiCall<CreateSitemapRequest, lro::Operation>("CreateSitemap", grpcClient.CreateSitemapAsync, grpcClient.CreateSitemap, effectiveSettings.CreateSitemapSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSitemap);
+            Modify_CreateSitemapApiCall(ref _callCreateSitemap);
+            _callDeleteSitemap = clientHelper.BuildApiCall<DeleteSitemapRequest, lro::Operation>("DeleteSitemap", grpcClient.DeleteSitemapAsync, grpcClient.DeleteSitemap, effectiveSettings.DeleteSitemapSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSitemap);
+            Modify_DeleteSitemapApiCall(ref _callDeleteSitemap);
+            _callFetchSitemaps = clientHelper.BuildApiCall<FetchSitemapsRequest, FetchSitemapsResponse>("FetchSitemaps", grpcClient.FetchSitemapsAsync, grpcClient.FetchSitemaps, effectiveSettings.FetchSitemapsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callFetchSitemaps);
+            Modify_FetchSitemapsApiCall(ref _callFetchSitemaps);
             _callEnableAdvancedSiteSearch = clientHelper.BuildApiCall<EnableAdvancedSiteSearchRequest, lro::Operation>("EnableAdvancedSiteSearch", grpcClient.EnableAdvancedSiteSearchAsync, grpcClient.EnableAdvancedSiteSearch, effectiveSettings.EnableAdvancedSiteSearchSettings).WithGoogleRequestParam("site_search_engine", request => request.SiteSearchEngine);
             Modify_ApiCall(ref _callEnableAdvancedSiteSearch);
             Modify_EnableAdvancedSiteSearchApiCall(ref _callEnableAdvancedSiteSearch);
@@ -1913,6 +2504,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         partial void Modify_ListTargetSitesApiCall(ref gaxgrpc::ApiCall<ListTargetSitesRequest, ListTargetSitesResponse> call);
 
+        partial void Modify_CreateSitemapApiCall(ref gaxgrpc::ApiCall<CreateSitemapRequest, lro::Operation> call);
+
+        partial void Modify_DeleteSitemapApiCall(ref gaxgrpc::ApiCall<DeleteSitemapRequest, lro::Operation> call);
+
+        partial void Modify_FetchSitemapsApiCall(ref gaxgrpc::ApiCall<FetchSitemapsRequest, FetchSitemapsResponse> call);
+
         partial void Modify_EnableAdvancedSiteSearchApiCall(ref gaxgrpc::ApiCall<EnableAdvancedSiteSearchRequest, lro::Operation> call);
 
         partial void Modify_DisableAdvancedSiteSearchApiCall(ref gaxgrpc::ApiCall<DisableAdvancedSiteSearchRequest, lro::Operation> call);
@@ -1944,6 +2541,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         partial void Modify_DeleteTargetSiteRequest(ref DeleteTargetSiteRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTargetSitesRequest(ref ListTargetSitesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateSitemapRequest(ref CreateSitemapRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSitemapRequest(ref DeleteSitemapRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchSitemapsRequest(ref FetchSitemapsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_EnableAdvancedSiteSearchRequest(ref EnableAdvancedSiteSearchRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2139,6 +2742,86 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             Modify_ListTargetSitesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTargetSitesRequest, ListTargetSitesResponse, TargetSite>(_callListTargetSites, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateSitemap</c>.</summary>
+        public override lro::OperationsClient CreateSitemapOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Sitemap, CreateSitemapMetadata> CreateSitemap(CreateSitemapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSitemapRequest(ref request, ref callSettings);
+            return new lro::Operation<Sitemap, CreateSitemapMetadata>(_callCreateSitemap.Sync(request, callSettings), CreateSitemapOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Sitemap, CreateSitemapMetadata>> CreateSitemapAsync(CreateSitemapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSitemapRequest(ref request, ref callSettings);
+            return new lro::Operation<Sitemap, CreateSitemapMetadata>(await _callCreateSitemap.Async(request, callSettings).ConfigureAwait(false), CreateSitemapOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteSitemap</c>.</summary>
+        public override lro::OperationsClient DeleteSitemapOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteSitemapMetadata> DeleteSitemap(DeleteSitemapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSitemapRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteSitemapMetadata>(_callDeleteSitemap.Sync(request, callSettings), DeleteSitemapOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteSitemapMetadata>> DeleteSitemapAsync(DeleteSitemapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSitemapRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteSitemapMetadata>(await _callDeleteSitemap.Async(request, callSettings).ConfigureAwait(false), DeleteSitemapOperationsClient);
+        }
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchSitemapsResponse FetchSitemaps(FetchSitemapsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchSitemapsRequest(ref request, ref callSettings);
+            return _callFetchSitemaps.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch [Sitemap][google.cloud.discoveryengine.v1beta.Sitemap]s in a
+        /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchSitemapsResponse> FetchSitemapsAsync(FetchSitemapsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchSitemapsRequest(ref request, ref callSettings);
+            return _callFetchSitemaps.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>EnableAdvancedSiteSearch</c>.</summary>

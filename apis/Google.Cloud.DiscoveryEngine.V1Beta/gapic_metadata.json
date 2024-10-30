@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "CompletionServiceClient",
           "rpcs": {
+            "AdvancedCompleteQuery": {
+              "methods": [
+                "AdvancedCompleteQuery",
+                "AdvancedCompleteQueryAsync"
+              ]
+            },
             "CompleteQuery": {
               "methods": [
                 "CompleteQuery",
@@ -366,6 +372,18 @@
                 "CheckGrounding",
                 "CheckGroundingAsync"
               ]
+            },
+            "GenerateGroundedContent": {
+              "methods": [
+                "GenerateGroundedContent",
+                "GenerateGroundedContentAsync"
+              ]
+            },
+            "StreamGenerateGroundedContent": {
+              "methods": [
+                "StreamGenerateGroundedContent",
+                "StreamGenerateGroundedContentAsync"
+              ]
             }
           }
         }
@@ -549,6 +567,12 @@
                 "Search",
                 "SearchAsync"
               ]
+            },
+            "SearchLite": {
+              "methods": [
+                "SearchLite",
+                "SearchLiteAsync"
+              ]
             }
           }
         }
@@ -619,10 +643,22 @@
                 "BatchVerifyTargetSitesAsync"
               ]
             },
+            "CreateSitemap": {
+              "methods": [
+                "CreateSitemap",
+                "CreateSitemapAsync"
+              ]
+            },
             "CreateTargetSite": {
               "methods": [
                 "CreateTargetSite",
                 "CreateTargetSiteAsync"
+              ]
+            },
+            "DeleteSitemap": {
+              "methods": [
+                "DeleteSitemap",
+                "DeleteSitemapAsync"
               ]
             },
             "DeleteTargetSite": {
@@ -647,6 +683,12 @@
               "methods": [
                 "FetchDomainVerificationStatus",
                 "FetchDomainVerificationStatusAsync"
+              ]
+            },
+            "FetchSitemaps": {
+              "methods": [
+                "FetchSitemaps",
+                "FetchSitemapsAsync"
               ]
             },
             "GetSiteSearchEngine": {

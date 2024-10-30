@@ -91,6 +91,42 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         }
     }
 
+    public partial class CreateSitemapRequest
+    {
+        /// <summary>
+        /// <see cref="SiteSearchEngineName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public SiteSearchEngineName ParentAsSiteSearchEngineName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SiteSearchEngineName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSitemapRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::SitemapName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::SitemapName SitemapName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::SitemapName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchSitemapsRequest
+    {
+        /// <summary>
+        /// <see cref="SiteSearchEngineName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public SiteSearchEngineName ParentAsSiteSearchEngineName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SiteSearchEngineName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class EnableAdvancedSiteSearchRequest
     {
         /// <summary>

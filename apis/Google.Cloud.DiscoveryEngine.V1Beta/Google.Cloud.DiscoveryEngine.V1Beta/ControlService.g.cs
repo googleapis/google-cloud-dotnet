@@ -170,9 +170,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. Full resource name of parent data store. Format:
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
     /// or
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -721,7 +721,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the Control to delete. Format:
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -918,7 +918,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the Control to get. Format:
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1118,9 +1118,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. The data store resource name. Format:
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`
     /// or
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

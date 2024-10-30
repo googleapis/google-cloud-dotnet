@@ -2223,7 +2223,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Required. The name of the engine to pause.
     /// Format:
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2421,7 +2421,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Required. The name of the engine to resume.
     /// Format:
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2620,7 +2620,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Required. The resource name of the engine to tune.
     /// Format:
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2818,7 +2818,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Required. The resource name of the engine that this tune applies to.
     /// Format:
-    /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -47,6 +47,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CompleteQuerySettings = existing.CompleteQuerySettings;
+            AdvancedCompleteQuerySettings = existing.AdvancedCompleteQuerySettings;
             ImportSuggestionDenyListEntriesSettings = existing.ImportSuggestionDenyListEntriesSettings;
             ImportSuggestionDenyListEntriesOperationsSettings = existing.ImportSuggestionDenyListEntriesOperationsSettings.Clone();
             PurgeSuggestionDenyListEntriesSettings = existing.PurgeSuggestionDenyListEntriesSettings;
@@ -78,6 +79,25 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CompleteQuerySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CompletionServiceClient.AdvancedCompleteQuery</c> and
+        /// <c>CompletionServiceClient.AdvancedCompleteQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AdvancedCompleteQuerySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -404,6 +424,33 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             CompleteQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Completes the user input with advanced keyword suggestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdvancedCompleteQueryResponse AdvancedCompleteQuery(AdvancedCompleteQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Completes the user input with advanced keyword suggestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdvancedCompleteQueryResponse> AdvancedCompleteQueryAsync(AdvancedCompleteQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Completes the user input with advanced keyword suggestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdvancedCompleteQueryResponse> AdvancedCompleteQueryAsync(AdvancedCompleteQueryRequest request, st::CancellationToken cancellationToken) =>
+            AdvancedCompleteQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Imports all
         /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
         /// for a DataStore.
@@ -652,6 +699,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
     {
         private readonly gaxgrpc::ApiCall<CompleteQueryRequest, CompleteQueryResponse> _callCompleteQuery;
 
+        private readonly gaxgrpc::ApiCall<AdvancedCompleteQueryRequest, AdvancedCompleteQueryResponse> _callAdvancedCompleteQuery;
+
         private readonly gaxgrpc::ApiCall<ImportSuggestionDenyListEntriesRequest, lro::Operation> _callImportSuggestionDenyListEntries;
 
         private readonly gaxgrpc::ApiCall<PurgeSuggestionDenyListEntriesRequest, lro::Operation> _callPurgeSuggestionDenyListEntries;
@@ -683,6 +732,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             _callCompleteQuery = clientHelper.BuildApiCall<CompleteQueryRequest, CompleteQueryResponse>("CompleteQuery", grpcClient.CompleteQueryAsync, grpcClient.CompleteQuery, effectiveSettings.CompleteQuerySettings).WithGoogleRequestParam("data_store", request => request.DataStore);
             Modify_ApiCall(ref _callCompleteQuery);
             Modify_CompleteQueryApiCall(ref _callCompleteQuery);
+            _callAdvancedCompleteQuery = clientHelper.BuildApiCall<AdvancedCompleteQueryRequest, AdvancedCompleteQueryResponse>("AdvancedCompleteQuery", grpcClient.AdvancedCompleteQueryAsync, grpcClient.AdvancedCompleteQuery, effectiveSettings.AdvancedCompleteQuerySettings).WithGoogleRequestParam("completion_config", request => request.CompletionConfig);
+            Modify_ApiCall(ref _callAdvancedCompleteQuery);
+            Modify_AdvancedCompleteQueryApiCall(ref _callAdvancedCompleteQuery);
             _callImportSuggestionDenyListEntries = clientHelper.BuildApiCall<ImportSuggestionDenyListEntriesRequest, lro::Operation>("ImportSuggestionDenyListEntries", grpcClient.ImportSuggestionDenyListEntriesAsync, grpcClient.ImportSuggestionDenyListEntries, effectiveSettings.ImportSuggestionDenyListEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportSuggestionDenyListEntries);
             Modify_ImportSuggestionDenyListEntriesApiCall(ref _callImportSuggestionDenyListEntries);
@@ -702,6 +754,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         partial void Modify_CompleteQueryApiCall(ref gaxgrpc::ApiCall<CompleteQueryRequest, CompleteQueryResponse> call);
 
+        partial void Modify_AdvancedCompleteQueryApiCall(ref gaxgrpc::ApiCall<AdvancedCompleteQueryRequest, AdvancedCompleteQueryResponse> call);
+
         partial void Modify_ImportSuggestionDenyListEntriesApiCall(ref gaxgrpc::ApiCall<ImportSuggestionDenyListEntriesRequest, lro::Operation> call);
 
         partial void Modify_PurgeSuggestionDenyListEntriesApiCall(ref gaxgrpc::ApiCall<PurgeSuggestionDenyListEntriesRequest, lro::Operation> call);
@@ -719,6 +773,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_CompleteQueryRequest(ref CompleteQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AdvancedCompleteQueryRequest(ref AdvancedCompleteQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportSuggestionDenyListEntriesRequest(ref ImportSuggestionDenyListEntriesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -750,6 +806,30 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             Modify_CompleteQueryRequest(ref request, ref callSettings);
             return _callCompleteQuery.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Completes the user input with advanced keyword suggestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdvancedCompleteQueryResponse AdvancedCompleteQuery(AdvancedCompleteQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AdvancedCompleteQueryRequest(ref request, ref callSettings);
+            return _callAdvancedCompleteQuery.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Completes the user input with advanced keyword suggestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdvancedCompleteQueryResponse> AdvancedCompleteQueryAsync(AdvancedCompleteQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AdvancedCompleteQueryRequest(ref request, ref callSettings);
+            return _callAdvancedCompleteQuery.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>ImportSuggestionDenyListEntries</c>.</summary>

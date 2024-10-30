@@ -407,7 +407,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the ServingConfig to get. Format:
-    /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+    /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -606,7 +606,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. Full resource name of the parent resource. Format:
-    /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+    /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

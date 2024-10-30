@@ -1210,7 +1210,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to pause.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1228,7 +1228,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to pause.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1246,7 +1246,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to pause.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1261,7 +1261,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to pause.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to pause.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1297,7 +1297,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to pause.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1345,7 +1345,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to resume.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to resume.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1381,7 +1381,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to resume.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1396,7 +1396,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to resume.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1414,7 +1414,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to resume.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1432,7 +1432,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The name of the engine to resume.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1506,7 +1506,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The resource name of the engine to tune.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1524,7 +1524,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The resource name of the engine to tune.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1542,7 +1542,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The resource name of the engine to tune.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1557,7 +1557,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The resource name of the engine to tune.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1575,7 +1575,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The resource name of the engine to tune.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1593,7 +1593,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <param name="name">
         /// Required. The resource name of the engine to tune.
         /// Format:
-        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

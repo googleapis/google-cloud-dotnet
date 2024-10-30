@@ -64,6 +64,59 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for AdvancedCompleteQuery</summary>
+        public void AdvancedCompleteQueryRequestObject()
+        {
+            // Snippet: AdvancedCompleteQuery(AdvancedCompleteQueryRequest, CallSettings)
+            // Create client
+            CompletionServiceClient completionServiceClient = CompletionServiceClient.Create();
+            // Initialize request argument(s)
+            AdvancedCompleteQueryRequest request = new AdvancedCompleteQueryRequest
+            {
+                CompletionConfigAsCompletionConfigName = CompletionConfigName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                Query = "",
+                QueryModel = "",
+                UserPseudoId = "",
+                IncludeTailSuggestions = false,
+                BoostSpec = new AdvancedCompleteQueryRequest.Types.BoostSpec(),
+                SuggestionTypes =
+                {
+                    AdvancedCompleteQueryRequest.Types.SuggestionType.Unspecified,
+                },
+                UserInfo = new UserInfo(),
+            };
+            // Make the request
+            AdvancedCompleteQueryResponse response = completionServiceClient.AdvancedCompleteQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdvancedCompleteQueryAsync</summary>
+        public async Task AdvancedCompleteQueryRequestObjectAsync()
+        {
+            // Snippet: AdvancedCompleteQueryAsync(AdvancedCompleteQueryRequest, CallSettings)
+            // Additional: AdvancedCompleteQueryAsync(AdvancedCompleteQueryRequest, CancellationToken)
+            // Create client
+            CompletionServiceClient completionServiceClient = await CompletionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdvancedCompleteQueryRequest request = new AdvancedCompleteQueryRequest
+            {
+                CompletionConfigAsCompletionConfigName = CompletionConfigName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                Query = "",
+                QueryModel = "",
+                UserPseudoId = "",
+                IncludeTailSuggestions = false,
+                BoostSpec = new AdvancedCompleteQueryRequest.Types.BoostSpec(),
+                SuggestionTypes =
+                {
+                    AdvancedCompleteQueryRequest.Types.SuggestionType.Unspecified,
+                },
+                UserInfo = new UserInfo(),
+            };
+            // Make the request
+            AdvancedCompleteQueryResponse response = await completionServiceClient.AdvancedCompleteQueryAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ImportSuggestionDenyListEntries</summary>
         public void ImportSuggestionDenyListEntriesRequestObject()
         {

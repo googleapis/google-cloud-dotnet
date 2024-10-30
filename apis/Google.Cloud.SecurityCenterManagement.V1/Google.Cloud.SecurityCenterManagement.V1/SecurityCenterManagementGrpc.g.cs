@@ -315,10 +315,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     public abstract partial class SecurityCenterManagementBase
     {
       /// <summary>
-      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-      /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants).
+      /// Returns a list of all
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -330,7 +331,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+      /// Gets details of a single
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -342,9 +344,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Returns a list of all
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -356,8 +360,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent's CRM descendants.
+      /// Returns a list of all resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources under the given organization, folder, or project and all of its
+      /// descendants.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -369,7 +375,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// Retrieves a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -381,10 +388,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-      /// given CRM parent, and also creates inherited
-      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-      /// parent. These modules are enabled by default.
+      /// Creates a resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// at the scope of the given organization, folder, or project, and also
+      /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+      /// folders and projects that are descendants of the given parent. These
+      /// modules are enabled by default.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -396,11 +405,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-      /// on the given update mask. Updating the enablement state is supported on
-      /// both resident and inherited modules (though resident modules cannot have an
-      /// enablement state of "inherited"). Updating the display name and custom
-      /// config of a module is supported on resident modules only.
+      /// Updates the
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// under the given name based on the given update mask. Updating the
+      /// enablement state is supported on both resident and inherited modules
+      /// (though resident modules cannot have an enablement state of "inherited").
+      /// Updating the display name and custom configuration of a module is supported
+      /// on resident modules only.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -412,9 +423,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-      /// descendants in the CRM hierarchy. This method is only supported for
-      /// resident custom modules.
+      /// Deletes the specified
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// and all of its descendants in the resource hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -426,7 +438,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+      /// Simulates the result of using a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// to check a resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -452,13 +466,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Gets an effective ETD custom module. Retrieves the effective module at the
-      /// given level. The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// Gets the effective Event Threat Detection custom module at the given level.
+      ///
+      /// The difference between an
+      /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+      /// and an
+      /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+      /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+      /// computed from ancestors if needed. For example, the enablement state for an
+      /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+      /// `INHERITED`. In contrast, the enablement state for an
+      /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+      /// or `DISABLED`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -470,9 +489,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Lists all Event Threat Detection custom modules for the given
-      /// Resource Manager parent. This includes resident modules defined at the
-      /// scope of the parent along with modules inherited from ancestors.
+      /// Lists all Event Threat Detection custom modules for the given organization,
+      /// folder, or project. This includes resident modules defined at the scope of
+      /// the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -484,8 +503,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Lists all resident Event Threat Detection custom modules under the
-      /// given Resource Manager parent and its descendants.
+      /// Lists all resident Event Threat Detection custom modules for the given
+      /// organization, folder, or project and its descendants.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -510,9 +529,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
 
       /// <summary>
       /// Creates a resident Event Threat Detection custom module at the scope of the
-      /// given Resource Manager parent, and also creates inherited custom modules
-      /// for all descendants of the given parent. These modules are enabled by
-      /// default.
+      /// given organization, folder, or project, and creates inherited custom
+      /// modules for all descendants of the given parent. These modules are enabled
+      /// by default.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -542,8 +561,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
 
       /// <summary>
       /// Deletes the specified Event Threat Detection custom module and all of its
-      /// descendants in the Resource Manager hierarchy. This method is only
-      /// supported for resident custom modules.
+      /// descendants in the resource hierarchy. This method is only supported for
+      /// resident custom modules.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -633,10 +652,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-      /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants).
+      /// Returns a list of all
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -649,10 +669,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListEffectiveSecurityHealthAnalyticsCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-      /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants).
+      /// Returns a list of all
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -663,10 +684,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEffectiveSecurityHealthAnalyticsCustomModules, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-      /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants).
+      /// Returns a list of all
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -679,10 +701,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
-      /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants).
+      /// Returns a list of all
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -693,7 +716,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEffectiveSecurityHealthAnalyticsCustomModules, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+      /// Gets details of a single
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -706,7 +730,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return GetEffectiveSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+      /// Gets details of a single
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -717,7 +742,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEffectiveSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+      /// Gets details of a single
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -730,7 +756,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single EffectiveSecurityHealthAnalyticsCustomModule.
+      /// Gets details of a single
+      /// [EffectiveSecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.EffectiveSecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -741,9 +768,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEffectiveSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Returns a list of all
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -756,9 +785,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListSecurityHealthAnalyticsCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Returns a list of all
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -769,9 +800,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSecurityHealthAnalyticsCustomModules, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Returns a list of all
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -784,9 +817,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListSecurityHealthAnalyticsCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Returns a list of all
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources for the given parent. This includes resident modules defined at
+      /// the scope of the parent, and inherited modules, inherited from ancestor
+      /// organizations, folders, and projects (no descendants).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -797,8 +832,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSecurityHealthAnalyticsCustomModules, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent's CRM descendants.
+      /// Returns a list of all resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources under the given organization, folder, or project and all of its
+      /// descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -811,8 +848,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListDescendantSecurityHealthAnalyticsCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent's CRM descendants.
+      /// Returns a list of all resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources under the given organization, folder, or project and all of its
+      /// descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -823,8 +862,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDescendantSecurityHealthAnalyticsCustomModules, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent's CRM descendants.
+      /// Returns a list of all resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources under the given organization, folder, or project and all of its
+      /// descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -837,8 +878,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListDescendantSecurityHealthAnalyticsCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent's CRM descendants.
+      /// Returns a list of all resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// resources under the given organization, folder, or project and all of its
+      /// descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -849,7 +892,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDescendantSecurityHealthAnalyticsCustomModules, null, options, request);
       }
       /// <summary>
-      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// Retrieves a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -862,7 +906,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return GetSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// Retrieves a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -873,7 +918,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// Retrieves a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -886,7 +932,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return GetSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// Retrieves a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -897,10 +944,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-      /// given CRM parent, and also creates inherited
-      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-      /// parent. These modules are enabled by default.
+      /// Creates a resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// at the scope of the given organization, folder, or project, and also
+      /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+      /// folders and projects that are descendants of the given parent. These
+      /// modules are enabled by default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -913,10 +962,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CreateSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-      /// given CRM parent, and also creates inherited
-      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-      /// parent. These modules are enabled by default.
+      /// Creates a resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// at the scope of the given organization, folder, or project, and also
+      /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+      /// folders and projects that are descendants of the given parent. These
+      /// modules are enabled by default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -927,10 +978,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-      /// given CRM parent, and also creates inherited
-      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-      /// parent. These modules are enabled by default.
+      /// Creates a resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// at the scope of the given organization, folder, or project, and also
+      /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+      /// folders and projects that are descendants of the given parent. These
+      /// modules are enabled by default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -943,10 +996,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CreateSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
-      /// given CRM parent, and also creates inherited
-      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-      /// parent. These modules are enabled by default.
+      /// Creates a resident
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// at the scope of the given organization, folder, or project, and also
+      /// creates inherited `SecurityHealthAnalyticsCustomModule` resources for all
+      /// folders and projects that are descendants of the given parent. These
+      /// modules are enabled by default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -957,11 +1012,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-      /// on the given update mask. Updating the enablement state is supported on
-      /// both resident and inherited modules (though resident modules cannot have an
-      /// enablement state of "inherited"). Updating the display name and custom
-      /// config of a module is supported on resident modules only.
+      /// Updates the
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// under the given name based on the given update mask. Updating the
+      /// enablement state is supported on both resident and inherited modules
+      /// (though resident modules cannot have an enablement state of "inherited").
+      /// Updating the display name and custom configuration of a module is supported
+      /// on resident modules only.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -974,11 +1031,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return UpdateSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-      /// on the given update mask. Updating the enablement state is supported on
-      /// both resident and inherited modules (though resident modules cannot have an
-      /// enablement state of "inherited"). Updating the display name and custom
-      /// config of a module is supported on resident modules only.
+      /// Updates the
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// under the given name based on the given update mask. Updating the
+      /// enablement state is supported on both resident and inherited modules
+      /// (though resident modules cannot have an enablement state of "inherited").
+      /// Updating the display name and custom configuration of a module is supported
+      /// on resident modules only.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -989,11 +1048,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-      /// on the given update mask. Updating the enablement state is supported on
-      /// both resident and inherited modules (though resident modules cannot have an
-      /// enablement state of "inherited"). Updating the display name and custom
-      /// config of a module is supported on resident modules only.
+      /// Updates the
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// under the given name based on the given update mask. Updating the
+      /// enablement state is supported on both resident and inherited modules
+      /// (though resident modules cannot have an enablement state of "inherited").
+      /// Updating the display name and custom configuration of a module is supported
+      /// on resident modules only.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1006,11 +1067,13 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return UpdateSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
-      /// on the given update mask. Updating the enablement state is supported on
-      /// both resident and inherited modules (though resident modules cannot have an
-      /// enablement state of "inherited"). Updating the display name and custom
-      /// config of a module is supported on resident modules only.
+      /// Updates the
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// under the given name based on the given update mask. Updating the
+      /// enablement state is supported on both resident and inherited modules
+      /// (though resident modules cannot have an enablement state of "inherited").
+      /// Updating the display name and custom configuration of a module is supported
+      /// on resident modules only.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1021,9 +1084,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-      /// descendants in the CRM hierarchy. This method is only supported for
-      /// resident custom modules.
+      /// Deletes the specified
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// and all of its descendants in the resource hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1036,9 +1100,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return DeleteSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-      /// descendants in the CRM hierarchy. This method is only supported for
-      /// resident custom modules.
+      /// Deletes the specified
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// and all of its descendants in the resource hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1049,9 +1114,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-      /// descendants in the CRM hierarchy. This method is only supported for
-      /// resident custom modules.
+      /// Deletes the specified
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// and all of its descendants in the resource hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1064,9 +1130,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return DeleteSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
-      /// descendants in the CRM hierarchy. This method is only supported for
-      /// resident custom modules.
+      /// Deletes the specified
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// and all of its descendants in the resource hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1077,7 +1144,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+      /// Simulates the result of using a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// to check a resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1090,7 +1159,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return SimulateSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+      /// Simulates the result of using a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// to check a resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1101,7 +1172,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SimulateSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+      /// Simulates the result of using a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// to check a resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1114,7 +1187,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return SimulateSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+      /// Simulates the result of using a
+      /// [SecurityHealthAnalyticsCustomModule][google.cloud.securitycentermanagement.v1.SecurityHealthAnalyticsCustomModule]
+      /// to check a resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1181,13 +1256,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEffectiveEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Gets an effective ETD custom module. Retrieves the effective module at the
-      /// given level. The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// Gets the effective Event Threat Detection custom module at the given level.
+      ///
+      /// The difference between an
+      /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+      /// and an
+      /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+      /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+      /// computed from ancestors if needed. For example, the enablement state for an
+      /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+      /// `INHERITED`. In contrast, the enablement state for an
+      /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+      /// or `DISABLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1200,13 +1280,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return GetEffectiveEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an effective ETD custom module. Retrieves the effective module at the
-      /// given level. The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// Gets the effective Event Threat Detection custom module at the given level.
+      ///
+      /// The difference between an
+      /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+      /// and an
+      /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+      /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+      /// computed from ancestors if needed. For example, the enablement state for an
+      /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+      /// `INHERITED`. In contrast, the enablement state for an
+      /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+      /// or `DISABLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1217,13 +1302,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEffectiveEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Gets an effective ETD custom module. Retrieves the effective module at the
-      /// given level. The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// Gets the effective Event Threat Detection custom module at the given level.
+      ///
+      /// The difference between an
+      /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+      /// and an
+      /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+      /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+      /// computed from ancestors if needed. For example, the enablement state for an
+      /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+      /// `INHERITED`. In contrast, the enablement state for an
+      /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+      /// or `DISABLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1236,13 +1326,18 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return GetEffectiveEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an effective ETD custom module. Retrieves the effective module at the
-      /// given level. The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// Gets the effective Event Threat Detection custom module at the given level.
+      ///
+      /// The difference between an
+      /// [EffectiveEventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EffectiveEventThreatDetectionCustomModule]
+      /// and an
+      /// [EventThreatDetectionCustomModule][google.cloud.securitycentermanagement.v1.EventThreatDetectionCustomModule]
+      /// is that the fields for an `EffectiveEventThreatDetectionCustomModule` are
+      /// computed from ancestors if needed. For example, the enablement state for an
+      /// `EventThreatDetectionCustomModule` can be `ENABLED`, `DISABLED`, or
+      /// `INHERITED`. In contrast, the enablement state for an
+      /// `EffectiveEventThreatDetectionCustomModule` is always computed as `ENABLED`
+      /// or `DISABLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1253,9 +1348,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEffectiveEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Lists all Event Threat Detection custom modules for the given
-      /// Resource Manager parent. This includes resident modules defined at the
-      /// scope of the parent along with modules inherited from ancestors.
+      /// Lists all Event Threat Detection custom modules for the given organization,
+      /// folder, or project. This includes resident modules defined at the scope of
+      /// the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1268,9 +1363,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListEventThreatDetectionCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all Event Threat Detection custom modules for the given
-      /// Resource Manager parent. This includes resident modules defined at the
-      /// scope of the parent along with modules inherited from ancestors.
+      /// Lists all Event Threat Detection custom modules for the given organization,
+      /// folder, or project. This includes resident modules defined at the scope of
+      /// the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1281,9 +1376,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Lists all Event Threat Detection custom modules for the given
-      /// Resource Manager parent. This includes resident modules defined at the
-      /// scope of the parent along with modules inherited from ancestors.
+      /// Lists all Event Threat Detection custom modules for the given organization,
+      /// folder, or project. This includes resident modules defined at the scope of
+      /// the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1296,9 +1391,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListEventThreatDetectionCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all Event Threat Detection custom modules for the given
-      /// Resource Manager parent. This includes resident modules defined at the
-      /// scope of the parent along with modules inherited from ancestors.
+      /// Lists all Event Threat Detection custom modules for the given organization,
+      /// folder, or project. This includes resident modules defined at the scope of
+      /// the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1309,8 +1404,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Lists all resident Event Threat Detection custom modules under the
-      /// given Resource Manager parent and its descendants.
+      /// Lists all resident Event Threat Detection custom modules for the given
+      /// organization, folder, or project and its descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1323,8 +1418,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListDescendantEventThreatDetectionCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all resident Event Threat Detection custom modules under the
-      /// given Resource Manager parent and its descendants.
+      /// Lists all resident Event Threat Detection custom modules for the given
+      /// organization, folder, or project and its descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1335,8 +1430,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDescendantEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Lists all resident Event Threat Detection custom modules under the
-      /// given Resource Manager parent and its descendants.
+      /// Lists all resident Event Threat Detection custom modules for the given
+      /// organization, folder, or project and its descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1349,8 +1444,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListDescendantEventThreatDetectionCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all resident Event Threat Detection custom modules under the
-      /// given Resource Manager parent and its descendants.
+      /// Lists all resident Event Threat Detection custom modules for the given
+      /// organization, folder, or project and its descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1410,9 +1505,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Creates a resident Event Threat Detection custom module at the scope of the
-      /// given Resource Manager parent, and also creates inherited custom modules
-      /// for all descendants of the given parent. These modules are enabled by
-      /// default.
+      /// given organization, folder, or project, and creates inherited custom
+      /// modules for all descendants of the given parent. These modules are enabled
+      /// by default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1426,9 +1521,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Creates a resident Event Threat Detection custom module at the scope of the
-      /// given Resource Manager parent, and also creates inherited custom modules
-      /// for all descendants of the given parent. These modules are enabled by
-      /// default.
+      /// given organization, folder, or project, and creates inherited custom
+      /// modules for all descendants of the given parent. These modules are enabled
+      /// by default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1440,9 +1535,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Creates a resident Event Threat Detection custom module at the scope of the
-      /// given Resource Manager parent, and also creates inherited custom modules
-      /// for all descendants of the given parent. These modules are enabled by
-      /// default.
+      /// given organization, folder, or project, and creates inherited custom
+      /// modules for all descendants of the given parent. These modules are enabled
+      /// by default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1456,9 +1551,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Creates a resident Event Threat Detection custom module at the scope of the
-      /// given Resource Manager parent, and also creates inherited custom modules
-      /// for all descendants of the given parent. These modules are enabled by
-      /// default.
+      /// given organization, folder, or project, and creates inherited custom
+      /// modules for all descendants of the given parent. These modules are enabled
+      /// by default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1538,8 +1633,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Deletes the specified Event Threat Detection custom module and all of its
-      /// descendants in the Resource Manager hierarchy. This method is only
-      /// supported for resident custom modules.
+      /// descendants in the resource hierarchy. This method is only supported for
+      /// resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1553,8 +1648,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Deletes the specified Event Threat Detection custom module and all of its
-      /// descendants in the Resource Manager hierarchy. This method is only
-      /// supported for resident custom modules.
+      /// descendants in the resource hierarchy. This method is only supported for
+      /// resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1566,8 +1661,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Deletes the specified Event Threat Detection custom module and all of its
-      /// descendants in the Resource Manager hierarchy. This method is only
-      /// supported for resident custom modules.
+      /// descendants in the resource hierarchy. This method is only supported for
+      /// resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1581,8 +1676,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Deletes the specified Event Threat Detection custom module and all of its
-      /// descendants in the Resource Manager hierarchy. This method is only
-      /// supported for resident custom modules.
+      /// descendants in the resource hierarchy. This method is only supported for
+      /// resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

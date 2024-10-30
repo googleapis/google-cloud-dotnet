@@ -30,6 +30,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return CloudEventReflection.Descriptor;
             yield return PublisherReflection.Descriptor;
         }
     }

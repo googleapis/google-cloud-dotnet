@@ -203,6 +203,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "eventarcpublishing_v1_generated_Publisher_Publish_sync",
+      "title": "PublishRequestObject",
+      "description": "Snippet for Publish",
+      "file": "PublisherClient.PublishRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Publish",
+        "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient.Publish",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.Publishing.V1.PublishRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Eventarc.Publishing.V1.PublishResponse",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "Publish",
+          "fullName": "google.cloud.eventarc.publishing.v1.Publisher.Publish",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.cloud.eventarc.publishing.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "eventarcpublishing_v1_generated_Publisher_Publish_async",
+      "title": "PublishRequestObjectAsync",
+      "description": "Snippet for PublishAsync",
+      "file": "PublisherClient.PublishRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PublishAsync",
+        "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient.PublishAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.Publishing.V1.PublishRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.Publishing.V1.PublishResponse>",
+        "client": {
+          "shortName": "PublisherClient",
+          "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient"
+        },
+        "method": {
+          "shortName": "Publish",
+          "fullName": "google.cloud.eventarc.publishing.v1.Publisher.Publish",
+          "service": {
+            "shortName": "Publisher",
+            "fullName": "google.cloud.eventarc.publishing.v1.Publisher"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
