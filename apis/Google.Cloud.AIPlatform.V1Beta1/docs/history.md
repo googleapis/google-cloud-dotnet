@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2024-10-30
+
+### New features
+
+- Add UpdateEndpointLongRunning API in v1beta1 version ([commit 42c90e3](https://github.com/googleapis/google-cloud-dotnet/commit/42c90e3a092a9757a6e1af1a44d9f049bb580c86))
+
 ## Version 1.0.0-beta08, released 2024-10-29
 
 ### New features
