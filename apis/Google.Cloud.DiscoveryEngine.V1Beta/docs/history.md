@@ -1,5 +1,27 @@
 # Version history
 
+## Version 1.0.0-beta18, released 2024-10-30
+
+### New features
+
+- Add GroundedGenerationService API ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Add AdvancedCompleteQuery API ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Add lite search API to allow public website search with API key ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Add Sitemap APIs to preview channel ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Support search personalization to preview channel ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Support natural language understanding search ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Add BillingEstimation in data store ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Support Google Workspace search ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Support advanced boost search ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Add one_box_page_size on search ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Support query regex in control match rules ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+
+### Documentation improvements
+
+- Deprecate extractive_answers in answer generation ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Deprecate asynchronous mode in answer generation ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+- Keep the API doc up-to-date with recent changes ([commit 60f4d3e](https://github.com/googleapis/google-cloud-dotnet/commit/60f4d3efe7d79ccd6d66e1c04be6a95a3aa12a38))
+
 ## Version 1.0.0-beta17, released 2024-09-09
 
 ### New features
