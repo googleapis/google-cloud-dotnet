@@ -67,6 +67,8 @@ namespace Google.Cloud.AIPlatform.V1
             UpgradeNotebookRuntimeOperationsSettings = existing.UpgradeNotebookRuntimeOperationsSettings.Clone();
             StartNotebookRuntimeSettings = existing.StartNotebookRuntimeSettings;
             StartNotebookRuntimeOperationsSettings = existing.StartNotebookRuntimeOperationsSettings.Clone();
+            StopNotebookRuntimeSettings = existing.StopNotebookRuntimeSettings;
+            StopNotebookRuntimeOperationsSettings = existing.StopNotebookRuntimeOperationsSettings.Clone();
             CreateNotebookExecutionJobSettings = existing.CreateNotebookExecutionJobSettings;
             CreateNotebookExecutionJobOperationsSettings = existing.CreateNotebookExecutionJobOperationsSettings.Clone();
             GetNotebookExecutionJobSettings = existing.GetNotebookExecutionJobSettings;
@@ -326,6 +328,36 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings StartNotebookRuntimeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NotebookServiceClient.StopNotebookRuntime</c> and <c>NotebookServiceClient.StopNotebookRuntimeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopNotebookRuntimeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NotebookServiceClient.StopNotebookRuntime</c> and
+        /// <c>NotebookServiceClient.StopNotebookRuntimeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StopNotebookRuntimeOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2225,6 +2257,156 @@ namespace Google.Cloud.AIPlatform.V1
             StartNotebookRuntimeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> StopNotebookRuntime(StopNotebookRuntimeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>> StopNotebookRuntimeAsync(StopNotebookRuntimeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>> StopNotebookRuntimeAsync(StopNotebookRuntimeRequest request, st::CancellationToken cancellationToken) =>
+            StopNotebookRuntimeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StopNotebookRuntime</c>.</summary>
+        public virtual lro::OperationsClient StopNotebookRuntimeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StopNotebookRuntime</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> PollOnceStopNotebookRuntime(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopNotebookRuntimeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopNotebookRuntime</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>> PollOnceStopNotebookRuntimeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopNotebookRuntimeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookRuntime resource to be stopped.
+        /// Instead of checking whether the name is in valid NotebookRuntime resource
+        /// name format, directly throw NotFound exception if there is no such
+        /// NotebookRuntime in spanner.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> StopNotebookRuntime(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StopNotebookRuntime(new StopNotebookRuntimeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookRuntime resource to be stopped.
+        /// Instead of checking whether the name is in valid NotebookRuntime resource
+        /// name format, directly throw NotFound exception if there is no such
+        /// NotebookRuntime in spanner.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>> StopNotebookRuntimeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StopNotebookRuntimeAsync(new StopNotebookRuntimeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookRuntime resource to be stopped.
+        /// Instead of checking whether the name is in valid NotebookRuntime resource
+        /// name format, directly throw NotFound exception if there is no such
+        /// NotebookRuntime in spanner.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>> StopNotebookRuntimeAsync(string name, st::CancellationToken cancellationToken) =>
+            StopNotebookRuntimeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookRuntime resource to be stopped.
+        /// Instead of checking whether the name is in valid NotebookRuntime resource
+        /// name format, directly throw NotFound exception if there is no such
+        /// NotebookRuntime in spanner.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> StopNotebookRuntime(NotebookRuntimeName name, gaxgrpc::CallSettings callSettings = null) =>
+            StopNotebookRuntime(new StopNotebookRuntimeRequest
+            {
+                NotebookRuntimeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookRuntime resource to be stopped.
+        /// Instead of checking whether the name is in valid NotebookRuntime resource
+        /// name format, directly throw NotFound exception if there is no such
+        /// NotebookRuntime in spanner.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>> StopNotebookRuntimeAsync(NotebookRuntimeName name, gaxgrpc::CallSettings callSettings = null) =>
+            StopNotebookRuntimeAsync(new StopNotebookRuntimeRequest
+            {
+                NotebookRuntimeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NotebookRuntime resource to be stopped.
+        /// Instead of checking whether the name is in valid NotebookRuntime resource
+        /// name format, directly throw NotFound exception if there is no such
+        /// NotebookRuntime in spanner.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>> StopNotebookRuntimeAsync(NotebookRuntimeName name, st::CancellationToken cancellationToken) =>
+            StopNotebookRuntimeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a NotebookExecutionJob.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2830,6 +3012,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<StartNotebookRuntimeRequest, lro::Operation> _callStartNotebookRuntime;
 
+        private readonly gaxgrpc::ApiCall<StopNotebookRuntimeRequest, lro::Operation> _callStopNotebookRuntime;
+
         private readonly gaxgrpc::ApiCall<CreateNotebookExecutionJobRequest, lro::Operation> _callCreateNotebookExecutionJob;
 
         private readonly gaxgrpc::ApiCall<GetNotebookExecutionJobRequest, NotebookExecutionJob> _callGetNotebookExecutionJob;
@@ -2859,6 +3043,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteNotebookRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNotebookRuntimeOperationsSettings, logger);
             UpgradeNotebookRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeNotebookRuntimeOperationsSettings, logger);
             StartNotebookRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartNotebookRuntimeOperationsSettings, logger);
+            StopNotebookRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopNotebookRuntimeOperationsSettings, logger);
             CreateNotebookExecutionJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNotebookExecutionJobOperationsSettings, logger);
             DeleteNotebookExecutionJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNotebookExecutionJobOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
@@ -2896,6 +3081,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callStartNotebookRuntime = clientHelper.BuildApiCall<StartNotebookRuntimeRequest, lro::Operation>("StartNotebookRuntime", grpcClient.StartNotebookRuntimeAsync, grpcClient.StartNotebookRuntime, effectiveSettings.StartNotebookRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartNotebookRuntime);
             Modify_StartNotebookRuntimeApiCall(ref _callStartNotebookRuntime);
+            _callStopNotebookRuntime = clientHelper.BuildApiCall<StopNotebookRuntimeRequest, lro::Operation>("StopNotebookRuntime", grpcClient.StopNotebookRuntimeAsync, grpcClient.StopNotebookRuntime, effectiveSettings.StopNotebookRuntimeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStopNotebookRuntime);
+            Modify_StopNotebookRuntimeApiCall(ref _callStopNotebookRuntime);
             _callCreateNotebookExecutionJob = clientHelper.BuildApiCall<CreateNotebookExecutionJobRequest, lro::Operation>("CreateNotebookExecutionJob", grpcClient.CreateNotebookExecutionJobAsync, grpcClient.CreateNotebookExecutionJob, effectiveSettings.CreateNotebookExecutionJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateNotebookExecutionJob);
             Modify_CreateNotebookExecutionJobApiCall(ref _callCreateNotebookExecutionJob);
@@ -2934,6 +3122,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_UpgradeNotebookRuntimeApiCall(ref gaxgrpc::ApiCall<UpgradeNotebookRuntimeRequest, lro::Operation> call);
 
         partial void Modify_StartNotebookRuntimeApiCall(ref gaxgrpc::ApiCall<StartNotebookRuntimeRequest, lro::Operation> call);
+
+        partial void Modify_StopNotebookRuntimeApiCall(ref gaxgrpc::ApiCall<StopNotebookRuntimeRequest, lro::Operation> call);
 
         partial void Modify_CreateNotebookExecutionJobApiCall(ref gaxgrpc::ApiCall<CreateNotebookExecutionJobRequest, lro::Operation> call);
 
@@ -2975,6 +3165,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_UpgradeNotebookRuntimeRequest(ref UpgradeNotebookRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_StartNotebookRuntimeRequest(ref StartNotebookRuntimeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StopNotebookRuntimeRequest(ref StopNotebookRuntimeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateNotebookExecutionJobRequest(ref CreateNotebookExecutionJobRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3266,6 +3458,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_StartNotebookRuntimeRequest(ref request, ref callSettings);
             return new lro::Operation<StartNotebookRuntimeResponse, StartNotebookRuntimeOperationMetadata>(await _callStartNotebookRuntime.Async(request, callSettings).ConfigureAwait(false), StartNotebookRuntimeOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StopNotebookRuntime</c>.</summary>
+        public override lro::OperationsClient StopNotebookRuntimeOperationsClient { get; }
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata> StopNotebookRuntime(StopNotebookRuntimeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopNotebookRuntimeRequest(ref request, ref callSettings);
+            return new lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>(_callStopNotebookRuntime.Sync(request, callSettings), StopNotebookRuntimeOperationsClient);
+        }
+
+        /// <summary>
+        /// Stops a NotebookRuntime.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>> StopNotebookRuntimeAsync(StopNotebookRuntimeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopNotebookRuntimeRequest(ref request, ref callSettings);
+            return new lro::Operation<StopNotebookRuntimeResponse, StopNotebookRuntimeOperationMetadata>(await _callStopNotebookRuntime.Async(request, callSettings).ConfigureAwait(false), StopNotebookRuntimeOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>CreateNotebookExecutionJob</c>.</summary>

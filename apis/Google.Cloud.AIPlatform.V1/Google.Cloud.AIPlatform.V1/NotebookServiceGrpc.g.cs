@@ -96,6 +96,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.StartNotebookRuntimeRequest> __Marshaller_google_cloud_aiplatform_v1_StartNotebookRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.StartNotebookRuntimeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest> __Marshaller_google_cloud_aiplatform_v1_StopNotebookRuntimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest> __Marshaller_google_cloud_aiplatform_v1_CreateNotebookExecutionJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetNotebookExecutionJobRequest> __Marshaller_google_cloud_aiplatform_v1_GetNotebookExecutionJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetNotebookExecutionJobRequest.Parser));
@@ -194,6 +196,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         __ServiceName,
         "StartNotebookRuntime",
         __Marshaller_google_cloud_aiplatform_v1_StartNotebookRuntimeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest, global::Google.LongRunning.Operation> __Method_StopNotebookRuntime = new grpc::Method<global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StopNotebookRuntime",
+        __Marshaller_google_cloud_aiplatform_v1_StopNotebookRuntimeRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -367,6 +377,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartNotebookRuntime(global::Google.Cloud.AIPlatform.V1.StartNotebookRuntimeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Stops a NotebookRuntime.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StopNotebookRuntime(global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -981,6 +1003,54 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_StartNotebookRuntime, null, options, request);
       }
       /// <summary>
+      /// Stops a NotebookRuntime.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StopNotebookRuntime(global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopNotebookRuntime(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops a NotebookRuntime.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StopNotebookRuntime(global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StopNotebookRuntime, null, options, request);
+      }
+      /// <summary>
+      /// Stops a NotebookRuntime.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopNotebookRuntimeAsync(global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopNotebookRuntimeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops a NotebookRuntime.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopNotebookRuntimeAsync(global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StopNotebookRuntime, null, options, request);
+      }
+      /// <summary>
       /// Creates a NotebookExecutionJob.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1197,6 +1267,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_DeleteNotebookRuntime, serviceImpl.DeleteNotebookRuntime)
           .AddMethod(__Method_UpgradeNotebookRuntime, serviceImpl.UpgradeNotebookRuntime)
           .AddMethod(__Method_StartNotebookRuntime, serviceImpl.StartNotebookRuntime)
+          .AddMethod(__Method_StopNotebookRuntime, serviceImpl.StopNotebookRuntime)
           .AddMethod(__Method_CreateNotebookExecutionJob, serviceImpl.CreateNotebookExecutionJob)
           .AddMethod(__Method_GetNotebookExecutionJob, serviceImpl.GetNotebookExecutionJob)
           .AddMethod(__Method_ListNotebookExecutionJobs, serviceImpl.ListNotebookExecutionJobs)
@@ -1221,6 +1292,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_DeleteNotebookRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteNotebookRuntime));
       serviceBinder.AddMethod(__Method_UpgradeNotebookRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpgradeNotebookRuntime));
       serviceBinder.AddMethod(__Method_StartNotebookRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.StartNotebookRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.StartNotebookRuntime));
+      serviceBinder.AddMethod(__Method_StopNotebookRuntime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.StopNotebookRuntimeRequest, global::Google.LongRunning.Operation>(serviceImpl.StopNotebookRuntime));
       serviceBinder.AddMethod(__Method_CreateNotebookExecutionJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateNotebookExecutionJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateNotebookExecutionJob));
       serviceBinder.AddMethod(__Method_GetNotebookExecutionJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetNotebookExecutionJobRequest, global::Google.Cloud.AIPlatform.V1.NotebookExecutionJob>(serviceImpl.GetNotebookExecutionJob));
       serviceBinder.AddMethod(__Method_ListNotebookExecutionJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsRequest, global::Google.Cloud.AIPlatform.V1.ListNotebookExecutionJobsResponse>(serviceImpl.ListNotebookExecutionJobs));
