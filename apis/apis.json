@@ -4058,7 +4058,7 @@
       "protoPath": "google/cloud/recaptchaenterprise/v1",
       "productName": "Google Cloud reCAPTCHA Enterprise",
       "productUrl": "https://cloud.google.com/recaptcha-enterprise/",
-      "version": "2.15.0",
+      "version": "2.16.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API v1.",
       "tags": [

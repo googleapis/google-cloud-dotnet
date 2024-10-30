@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.16.0, released 2024-10-30
+
+### New features
+
+- Support for ListIpOverrides and RemoveIpOverride ([commit 0120a36](https://github.com/googleapis/google-cloud-dotnet/commit/0120a36ef7e21cbb5fbd835b81bdec60d660fcb8))
+- Enable Akamai web application firewall ([commit 0120a36](https://github.com/googleapis/google-cloud-dotnet/commit/0120a36ef7e21cbb5fbd835b81bdec60d660fcb8))
+
+### Documentation improvements
+
+- Minor updates to reference documentation ([commit 0120a36](https://github.com/googleapis/google-cloud-dotnet/commit/0120a36ef7e21cbb5fbd835b81bdec60d660fcb8))
+
 ## Version 2.15.0, released 2024-09-09
 
 ### New features
