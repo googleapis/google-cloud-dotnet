@@ -777,6 +777,130 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateEndpointLongRunning</summary>
+        public void UpdateEndpointLongRunningRequestObject()
+        {
+            // Snippet: UpdateEndpointLongRunning(UpdateEndpointLongRunningRequest, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateEndpointLongRunningRequest request = new UpdateEndpointLongRunningRequest
+            {
+                Endpoint = new Endpoint(),
+            };
+            // Make the request
+            Operation<Endpoint, UpdateEndpointOperationMetadata> response = endpointServiceClient.UpdateEndpointLongRunning(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, UpdateEndpointOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, UpdateEndpointOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceUpdateEndpointLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEndpointLongRunningAsync</summary>
+        public async Task UpdateEndpointLongRunningRequestObjectAsync()
+        {
+            // Snippet: UpdateEndpointLongRunningAsync(UpdateEndpointLongRunningRequest, CallSettings)
+            // Additional: UpdateEndpointLongRunningAsync(UpdateEndpointLongRunningRequest, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateEndpointLongRunningRequest request = new UpdateEndpointLongRunningRequest
+            {
+                Endpoint = new Endpoint(),
+            };
+            // Make the request
+            Operation<Endpoint, UpdateEndpointOperationMetadata> response = await endpointServiceClient.UpdateEndpointLongRunningAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, UpdateEndpointOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, UpdateEndpointOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceUpdateEndpointLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEndpointLongRunning</summary>
+        public void UpdateEndpointLongRunning()
+        {
+            // Snippet: UpdateEndpointLongRunning(Endpoint, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            Endpoint endpoint = new Endpoint();
+            // Make the request
+            Operation<Endpoint, UpdateEndpointOperationMetadata> response = endpointServiceClient.UpdateEndpointLongRunning(endpoint);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, UpdateEndpointOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, UpdateEndpointOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceUpdateEndpointLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEndpointLongRunningAsync</summary>
+        public async Task UpdateEndpointLongRunningAsync()
+        {
+            // Snippet: UpdateEndpointLongRunningAsync(Endpoint, CallSettings)
+            // Additional: UpdateEndpointLongRunningAsync(Endpoint, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Endpoint endpoint = new Endpoint();
+            // Make the request
+            Operation<Endpoint, UpdateEndpointOperationMetadata> response = await endpointServiceClient.UpdateEndpointLongRunningAsync(endpoint);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, UpdateEndpointOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, UpdateEndpointOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceUpdateEndpointLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteEndpoint</summary>
         public void DeleteEndpointRequestObject()
         {

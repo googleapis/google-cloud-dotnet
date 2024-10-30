@@ -225,6 +225,12 @@
                 "UpdateEndpoint",
                 "UpdateEndpointAsync"
               ]
+            },
+            "UpdateEndpointLongRunning": {
+              "methods": [
+                "UpdateEndpointLongRunning",
+                "UpdateEndpointLongRunningAsync"
+              ]
             }
           }
         }
