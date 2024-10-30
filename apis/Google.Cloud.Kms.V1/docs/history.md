@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.15.0, released 2024-10-30
+
+### Documentation improvements
+
+- Improve comment formatting
+
+
 ## Version 3.14.0, released 2024-09-26
 
 ### Bug fixes
