@@ -62,7 +62,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bS9FbmRwb2ludBI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
             "YXRpb259L2VuZHBvaW50cy97ZW5kcG9pbnR9Ek1wcm9qZWN0cy97cHJvamVj",
             "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHVibGlzaGVycy97cHVibGlzaGVy",
-            "fS9tb2RlbHMve21vZGVsfSLaBQoNRGVwbG95ZWRNb2RlbBJNChNkZWRpY2F0",
+            "fS9tb2RlbHMve21vZGVsfSLjBgoNRGVwbG95ZWRNb2RlbBJNChNkZWRpY2F0",
             "ZWRfcmVzb3VyY2VzGAcgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
             "djEuRGVkaWNhdGVkUmVzb3VyY2VzSAASTQoTYXV0b21hdGljX3Jlc291cmNl",
             "cxgIIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkF1dG9tYXRp",
@@ -78,24 +78,27 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZGlzYWJsZV9jb250YWluZXJfbG9nZ2luZxgPIAEoCBIdChVlbmFibGVfYWNj",
             "ZXNzX2xvZ2dpbmcYDSABKAgSTAoRcHJpdmF0ZV9lbmRwb2ludHMYDiABKAsy",
             "LC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qcml2YXRlRW5kcG9pbnRz",
-            "QgPgQQNCFgoUcHJlZGljdGlvbl9yZXNvdXJjZXMijwEKEFByaXZhdGVFbmRw",
-            "b2ludHMSHQoQcHJlZGljdF9odHRwX3VyaRgBIAEoCUID4EEDEh0KEGV4cGxh",
-            "aW5faHR0cF91cmkYAiABKAlCA+BBAxIcCg9oZWFsdGhfaHR0cF91cmkYAyAB",
-            "KAlCA+BBAxIfChJzZXJ2aWNlX2F0dGFjaG1lbnQYBCABKAlCA+BBAyKcAQoj",
-            "UHJlZGljdFJlcXVlc3RSZXNwb25zZUxvZ2dpbmdDb25maWcSDwoHZW5hYmxl",
-            "ZBgBIAEoCBIVCg1zYW1wbGluZ19yYXRlGAIgASgBEk0KFGJpZ3F1ZXJ5X2Rl",
-            "c3RpbmF0aW9uGAMgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "QmlnUXVlcnlEZXN0aW5hdGlvbkLLAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxQg1FbmRwb2ludFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBi",
-            "qgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRc",
-            "QUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx",
-            "YgZwcm90bzM="));
+            "QgPgQQMSUgoNc3lzdGVtX2xhYmVscxgcIAMoCzI7Lmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkRlcGxveWVkTW9kZWwuU3lzdGVtTGFiZWxzRW50cnka",
+            "MwoRU3lzdGVtTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4AUIWChRwcmVkaWN0aW9uX3Jlc291cmNlcyKPAQoQUHJpdmF0ZUVu",
+            "ZHBvaW50cxIdChBwcmVkaWN0X2h0dHBfdXJpGAEgASgJQgPgQQMSHQoQZXhw",
+            "bGFpbl9odHRwX3VyaRgCIAEoCUID4EEDEhwKD2hlYWx0aF9odHRwX3VyaRgD",
+            "IAEoCUID4EEDEh8KEnNlcnZpY2VfYXR0YWNobWVudBgEIAEoCUID4EEDIpwB",
+            "CiNQcmVkaWN0UmVxdWVzdFJlc3BvbnNlTG9nZ2luZ0NvbmZpZxIPCgdlbmFi",
+            "bGVkGAEgASgIEhUKDXNhbXBsaW5nX3JhdGUYAiABKAESTQoUYmlncXVlcnlf",
+            "ZGVzdGluYXRpb24YAyABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5CaWdRdWVyeURlc3RpbmF0aW9uQssBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCDUVuZHBvaW50UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3Jt",
+            "cGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91",
+            "ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig", "DedicatedEndpointEnabled", "DedicatedEndpointDns", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints" }, new[]{ "PredictionResources" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null)
           }));
@@ -1143,6 +1146,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       disableContainerLogging_ = other.disableContainerLogging_;
       enableAccessLogging_ = other.enableAccessLogging_;
       privateEndpoints_ = other.privateEndpoints_ != null ? other.privateEndpoints_.Clone() : null;
+      systemLabels_ = other.systemLabels_.Clone();
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
           DedicatedResources = other.DedicatedResources.Clone();
@@ -1447,6 +1451,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "system_labels" field.</summary>
+    public const int SystemLabelsFieldNumber = 28;
+    private static readonly pbc::MapField<string, string>.Codec _map_systemLabels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 226);
+    private readonly pbc::MapField<string, string> systemLabels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// System labels to apply to Model Garden deployments.
+    /// System labels are managed by Google for internal use only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> SystemLabels {
+      get { return systemLabels_; }
+    }
+
     private object predictionResources_;
     /// <summary>Enum of possible cases for the "prediction_resources" oneof.</summary>
     public enum PredictionResourcesOneofCase {
@@ -1498,6 +1517,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DisableContainerLogging != other.DisableContainerLogging) return false;
       if (EnableAccessLogging != other.EnableAccessLogging) return false;
       if (!object.Equals(PrivateEndpoints, other.PrivateEndpoints)) return false;
+      if (!SystemLabels.Equals(other.SystemLabels)) return false;
       if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1520,6 +1540,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DisableContainerLogging != false) hash ^= DisableContainerLogging.GetHashCode();
       if (EnableAccessLogging != false) hash ^= EnableAccessLogging.GetHashCode();
       if (privateEndpoints_ != null) hash ^= PrivateEndpoints.GetHashCode();
+      hash ^= SystemLabels.GetHashCode();
       hash ^= (int) predictionResourcesCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1595,6 +1616,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(152, 1);
         output.WriteBool(DisableExplanations);
       }
+      systemLabels_.WriteTo(output, _map_systemLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1661,6 +1683,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(152, 1);
         output.WriteBool(DisableExplanations);
       }
+      systemLabels_.WriteTo(ref output, _map_systemLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1713,6 +1736,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (privateEndpoints_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrivateEndpoints);
       }
+      size += systemLabels_.CalculateSize(_map_systemLabels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1767,6 +1791,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         PrivateEndpoints.MergeFrom(other.PrivateEndpoints);
       }
+      systemLabels_.MergeFrom(other.systemLabels_);
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
           if (DedicatedResources == null) {
@@ -1875,6 +1900,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             DisableExplanations = input.ReadBool();
             break;
           }
+          case 226: {
+            systemLabels_.AddEntriesFrom(input, _map_systemLabels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1963,6 +1992,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 152: {
             DisableExplanations = input.ReadBool();
+            break;
+          }
+          case 226: {
+            systemLabels_.AddEntriesFrom(ref input, _map_systemLabels_codec);
             break;
           }
         }
