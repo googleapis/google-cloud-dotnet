@@ -1615,6 +1615,12 @@
                 "StartNotebookRuntimeAsync"
               ]
             },
+            "StopNotebookRuntime": {
+              "methods": [
+                "StopNotebookRuntime",
+                "StopNotebookRuntimeAsync"
+              ]
+            },
             "UpdateNotebookRuntimeTemplate": {
               "methods": [
                 "UpdateNotebookRuntimeTemplate",

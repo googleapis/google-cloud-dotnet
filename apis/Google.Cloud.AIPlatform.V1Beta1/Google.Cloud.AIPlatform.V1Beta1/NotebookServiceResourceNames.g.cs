@@ -152,6 +152,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
     }
 
+    public partial class StopNotebookRuntimeRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::NotebookRuntimeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::NotebookRuntimeName NotebookRuntimeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::NotebookRuntimeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateNotebookExecutionJobRequest
     {
         /// <summary>
