@@ -22,6 +22,7 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -1165,6 +1166,280 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeaturesRequestObject()
+        {
+            // Snippet: BatchCreateFeatures(BatchCreateFeaturesRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCreateFeaturesRequest request = new BatchCreateFeaturesRequest
+            {
+                ParentAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                Requests =
+                {
+                    new CreateFeatureRequest(),
+                },
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featureRegistryServiceClient.BatchCreateFeatures(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesRequestObjectAsync()
+        {
+            // Snippet: BatchCreateFeaturesAsync(BatchCreateFeaturesRequest, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(BatchCreateFeaturesRequest, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateFeaturesRequest request = new BatchCreateFeaturesRequest
+            {
+                ParentAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                Requests =
+                {
+                    new CreateFeatureRequest(),
+                },
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeatures()
+        {
+            // Snippet: BatchCreateFeatures(string, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featureRegistryServiceClient.BatchCreateFeatures(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesAsync()
+        {
+            // Snippet: BatchCreateFeaturesAsync(string, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(string, IEnumerable<CreateFeatureRequest>, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeaturesResourceNames1()
+        {
+            // Snippet: BatchCreateFeatures(EntityTypeName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featureRegistryServiceClient.BatchCreateFeatures(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesResourceNames1Async()
+        {
+            // Snippet: BatchCreateFeaturesAsync(EntityTypeName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(EntityTypeName, IEnumerable<CreateFeatureRequest>, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeaturesResourceNames2()
+        {
+            // Snippet: BatchCreateFeatures(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featureRegistryServiceClient.BatchCreateFeatures(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesResourceNames2Async()
+        {
+            // Snippet: BatchCreateFeaturesAsync(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetFeature</summary>
         public void GetFeatureRequestObject()
         {
@@ -1175,6 +1450,7 @@ namespace GoogleCSharpSnippets
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
+                FeatureStatsAndAnomalySpec = new FeatureStatsAndAnomalySpec(),
             };
             // Make the request
             Feature response = featureRegistryServiceClient.GetFeature(request);
@@ -1192,6 +1468,7 @@ namespace GoogleCSharpSnippets
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
+                FeatureStatsAndAnomalySpec = new FeatureStatsAndAnomalySpec(),
             };
             // Make the request
             Feature response = await featureRegistryServiceClient.GetFeatureAsync(request);
@@ -1934,6 +2211,1217 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitor</summary>
+        public void CreateFeatureMonitorRequestObject()
+        {
+            // Snippet: CreateFeatureMonitor(CreateFeatureMonitorRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            CreateFeatureMonitorRequest request = new CreateFeatureMonitorRequest
+            {
+                ParentAsFeatureGroupName = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]"),
+                FeatureMonitor = new FeatureMonitor(),
+                FeatureMonitorId = "",
+            };
+            // Make the request
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> response = featureRegistryServiceClient.CreateFeatureMonitor(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceCreateFeatureMonitor(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorAsync</summary>
+        public async Task CreateFeatureMonitorRequestObjectAsync()
+        {
+            // Snippet: CreateFeatureMonitorAsync(CreateFeatureMonitorRequest, CallSettings)
+            // Additional: CreateFeatureMonitorAsync(CreateFeatureMonitorRequest, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateFeatureMonitorRequest request = new CreateFeatureMonitorRequest
+            {
+                ParentAsFeatureGroupName = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]"),
+                FeatureMonitor = new FeatureMonitor(),
+                FeatureMonitorId = "",
+            };
+            // Make the request
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> response = await featureRegistryServiceClient.CreateFeatureMonitorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceCreateFeatureMonitorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitor</summary>
+        public void CreateFeatureMonitor()
+        {
+            // Snippet: CreateFeatureMonitor(string, FeatureMonitor, string, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]";
+            FeatureMonitor featureMonitor = new FeatureMonitor();
+            string featureMonitorId = "";
+            // Make the request
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> response = featureRegistryServiceClient.CreateFeatureMonitor(parent, featureMonitor, featureMonitorId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceCreateFeatureMonitor(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorAsync</summary>
+        public async Task CreateFeatureMonitorAsync()
+        {
+            // Snippet: CreateFeatureMonitorAsync(string, FeatureMonitor, string, CallSettings)
+            // Additional: CreateFeatureMonitorAsync(string, FeatureMonitor, string, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]";
+            FeatureMonitor featureMonitor = new FeatureMonitor();
+            string featureMonitorId = "";
+            // Make the request
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> response = await featureRegistryServiceClient.CreateFeatureMonitorAsync(parent, featureMonitor, featureMonitorId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceCreateFeatureMonitorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitor</summary>
+        public void CreateFeatureMonitorResourceNames()
+        {
+            // Snippet: CreateFeatureMonitor(FeatureGroupName, FeatureMonitor, string, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            FeatureMonitor featureMonitor = new FeatureMonitor();
+            string featureMonitorId = "";
+            // Make the request
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> response = featureRegistryServiceClient.CreateFeatureMonitor(parent, featureMonitor, featureMonitorId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceCreateFeatureMonitor(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorAsync</summary>
+        public async Task CreateFeatureMonitorResourceNamesAsync()
+        {
+            // Snippet: CreateFeatureMonitorAsync(FeatureGroupName, FeatureMonitor, string, CallSettings)
+            // Additional: CreateFeatureMonitorAsync(FeatureGroupName, FeatureMonitor, string, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            FeatureMonitor featureMonitor = new FeatureMonitor();
+            string featureMonitorId = "";
+            // Make the request
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> response = await featureRegistryServiceClient.CreateFeatureMonitorAsync(parent, featureMonitor, featureMonitorId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceCreateFeatureMonitorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitor</summary>
+        public void GetFeatureMonitorRequestObject()
+        {
+            // Snippet: GetFeatureMonitor(GetFeatureMonitorRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            GetFeatureMonitorRequest request = new GetFeatureMonitorRequest
+            {
+                FeatureMonitorName = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]"),
+            };
+            // Make the request
+            FeatureMonitor response = featureRegistryServiceClient.GetFeatureMonitor(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorAsync</summary>
+        public async Task GetFeatureMonitorRequestObjectAsync()
+        {
+            // Snippet: GetFeatureMonitorAsync(GetFeatureMonitorRequest, CallSettings)
+            // Additional: GetFeatureMonitorAsync(GetFeatureMonitorRequest, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFeatureMonitorRequest request = new GetFeatureMonitorRequest
+            {
+                FeatureMonitorName = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]"),
+            };
+            // Make the request
+            FeatureMonitor response = await featureRegistryServiceClient.GetFeatureMonitorAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitor</summary>
+        public void GetFeatureMonitor()
+        {
+            // Snippet: GetFeatureMonitor(string, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]";
+            // Make the request
+            FeatureMonitor response = featureRegistryServiceClient.GetFeatureMonitor(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorAsync</summary>
+        public async Task GetFeatureMonitorAsync()
+        {
+            // Snippet: GetFeatureMonitorAsync(string, CallSettings)
+            // Additional: GetFeatureMonitorAsync(string, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]";
+            // Make the request
+            FeatureMonitor response = await featureRegistryServiceClient.GetFeatureMonitorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitor</summary>
+        public void GetFeatureMonitorResourceNames()
+        {
+            // Snippet: GetFeatureMonitor(FeatureMonitorName, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureMonitorName name = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]");
+            // Make the request
+            FeatureMonitor response = featureRegistryServiceClient.GetFeatureMonitor(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorAsync</summary>
+        public async Task GetFeatureMonitorResourceNamesAsync()
+        {
+            // Snippet: GetFeatureMonitorAsync(FeatureMonitorName, CallSettings)
+            // Additional: GetFeatureMonitorAsync(FeatureMonitorName, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureMonitorName name = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]");
+            // Make the request
+            FeatureMonitor response = await featureRegistryServiceClient.GetFeatureMonitorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitors</summary>
+        public void ListFeatureMonitorsRequestObject()
+        {
+            // Snippet: ListFeatureMonitors(ListFeatureMonitorsRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            ListFeatureMonitorsRequest request = new ListFeatureMonitorsRequest
+            {
+                ParentAsFeatureGroupName = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitors(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeatureMonitor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeatureMonitorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorsAsync</summary>
+        public async Task ListFeatureMonitorsRequestObjectAsync()
+        {
+            // Snippet: ListFeatureMonitorsAsync(ListFeatureMonitorsRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFeatureMonitorsRequest request = new ListFeatureMonitorsRequest
+            {
+                ParentAsFeatureGroupName = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitorsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeatureMonitor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitors</summary>
+        public void ListFeatureMonitors()
+        {
+            // Snippet: ListFeatureMonitors(string, string, int?, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]";
+            // Make the request
+            PagedEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitors(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeatureMonitor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeatureMonitorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorsAsync</summary>
+        public async Task ListFeatureMonitorsAsync()
+        {
+            // Snippet: ListFeatureMonitorsAsync(string, string, int?, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]";
+            // Make the request
+            PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitorsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeatureMonitor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitors</summary>
+        public void ListFeatureMonitorsResourceNames()
+        {
+            // Snippet: ListFeatureMonitors(FeatureGroupName, string, int?, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            // Make the request
+            PagedEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitors(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeatureMonitor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeatureMonitorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorsAsync</summary>
+        public async Task ListFeatureMonitorsResourceNamesAsync()
+        {
+            // Snippet: ListFeatureMonitorsAsync(FeatureGroupName, string, int?, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            // Make the request
+            PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> response = featureRegistryServiceClient.ListFeatureMonitorsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeatureMonitor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitor item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitor item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureMonitor</summary>
+        public void DeleteFeatureMonitorRequestObject()
+        {
+            // Snippet: DeleteFeatureMonitor(DeleteFeatureMonitorRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteFeatureMonitorRequest request = new DeleteFeatureMonitorRequest
+            {
+                FeatureMonitorName = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = featureRegistryServiceClient.DeleteFeatureMonitor(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceDeleteFeatureMonitor(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureMonitorAsync</summary>
+        public async Task DeleteFeatureMonitorRequestObjectAsync()
+        {
+            // Snippet: DeleteFeatureMonitorAsync(DeleteFeatureMonitorRequest, CallSettings)
+            // Additional: DeleteFeatureMonitorAsync(DeleteFeatureMonitorRequest, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteFeatureMonitorRequest request = new DeleteFeatureMonitorRequest
+            {
+                FeatureMonitorName = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await featureRegistryServiceClient.DeleteFeatureMonitorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceDeleteFeatureMonitorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureMonitor</summary>
+        public void DeleteFeatureMonitor()
+        {
+            // Snippet: DeleteFeatureMonitor(string, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = featureRegistryServiceClient.DeleteFeatureMonitor(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceDeleteFeatureMonitor(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureMonitorAsync</summary>
+        public async Task DeleteFeatureMonitorAsync()
+        {
+            // Snippet: DeleteFeatureMonitorAsync(string, CallSettings)
+            // Additional: DeleteFeatureMonitorAsync(string, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await featureRegistryServiceClient.DeleteFeatureMonitorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceDeleteFeatureMonitorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureMonitor</summary>
+        public void DeleteFeatureMonitorResourceNames()
+        {
+            // Snippet: DeleteFeatureMonitor(FeatureMonitorName, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureMonitorName name = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = featureRegistryServiceClient.DeleteFeatureMonitor(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceDeleteFeatureMonitor(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureMonitorAsync</summary>
+        public async Task DeleteFeatureMonitorResourceNamesAsync()
+        {
+            // Snippet: DeleteFeatureMonitorAsync(FeatureMonitorName, CallSettings)
+            // Additional: DeleteFeatureMonitorAsync(FeatureMonitorName, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureMonitorName name = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await featureRegistryServiceClient.DeleteFeatureMonitorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceDeleteFeatureMonitorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorJob</summary>
+        public void CreateFeatureMonitorJobRequestObject()
+        {
+            // Snippet: CreateFeatureMonitorJob(CreateFeatureMonitorJobRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            CreateFeatureMonitorJobRequest request = new CreateFeatureMonitorJobRequest
+            {
+                ParentAsFeatureMonitorName = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]"),
+                FeatureMonitorJob = new FeatureMonitorJob(),
+                FeatureMonitorJobId = 0L,
+            };
+            // Make the request
+            FeatureMonitorJob response = featureRegistryServiceClient.CreateFeatureMonitorJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorJobAsync</summary>
+        public async Task CreateFeatureMonitorJobRequestObjectAsync()
+        {
+            // Snippet: CreateFeatureMonitorJobAsync(CreateFeatureMonitorJobRequest, CallSettings)
+            // Additional: CreateFeatureMonitorJobAsync(CreateFeatureMonitorJobRequest, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateFeatureMonitorJobRequest request = new CreateFeatureMonitorJobRequest
+            {
+                ParentAsFeatureMonitorName = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]"),
+                FeatureMonitorJob = new FeatureMonitorJob(),
+                FeatureMonitorJobId = 0L,
+            };
+            // Make the request
+            FeatureMonitorJob response = await featureRegistryServiceClient.CreateFeatureMonitorJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorJob</summary>
+        public void CreateFeatureMonitorJob()
+        {
+            // Snippet: CreateFeatureMonitorJob(string, FeatureMonitorJob, long, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]";
+            FeatureMonitorJob featureMonitorJob = new FeatureMonitorJob();
+            long featureMonitorJobId = 0L;
+            // Make the request
+            FeatureMonitorJob response = featureRegistryServiceClient.CreateFeatureMonitorJob(parent, featureMonitorJob, featureMonitorJobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorJobAsync</summary>
+        public async Task CreateFeatureMonitorJobAsync()
+        {
+            // Snippet: CreateFeatureMonitorJobAsync(string, FeatureMonitorJob, long, CallSettings)
+            // Additional: CreateFeatureMonitorJobAsync(string, FeatureMonitorJob, long, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]";
+            FeatureMonitorJob featureMonitorJob = new FeatureMonitorJob();
+            long featureMonitorJobId = 0L;
+            // Make the request
+            FeatureMonitorJob response = await featureRegistryServiceClient.CreateFeatureMonitorJobAsync(parent, featureMonitorJob, featureMonitorJobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorJob</summary>
+        public void CreateFeatureMonitorJobResourceNames()
+        {
+            // Snippet: CreateFeatureMonitorJob(FeatureMonitorName, FeatureMonitorJob, long, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureMonitorName parent = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]");
+            FeatureMonitorJob featureMonitorJob = new FeatureMonitorJob();
+            long featureMonitorJobId = 0L;
+            // Make the request
+            FeatureMonitorJob response = featureRegistryServiceClient.CreateFeatureMonitorJob(parent, featureMonitorJob, featureMonitorJobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureMonitorJobAsync</summary>
+        public async Task CreateFeatureMonitorJobResourceNamesAsync()
+        {
+            // Snippet: CreateFeatureMonitorJobAsync(FeatureMonitorName, FeatureMonitorJob, long, CallSettings)
+            // Additional: CreateFeatureMonitorJobAsync(FeatureMonitorName, FeatureMonitorJob, long, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureMonitorName parent = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]");
+            FeatureMonitorJob featureMonitorJob = new FeatureMonitorJob();
+            long featureMonitorJobId = 0L;
+            // Make the request
+            FeatureMonitorJob response = await featureRegistryServiceClient.CreateFeatureMonitorJobAsync(parent, featureMonitorJob, featureMonitorJobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorJob</summary>
+        public void GetFeatureMonitorJobRequestObject()
+        {
+            // Snippet: GetFeatureMonitorJob(GetFeatureMonitorJobRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            GetFeatureMonitorJobRequest request = new GetFeatureMonitorJobRequest
+            {
+                FeatureMonitorJobName = FeatureMonitorJobName.FromProjectLocationFeatureGroupFeatureMonitorFeatureMonitorJob("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]", "[FEATURE_MONITOR_JOB]"),
+            };
+            // Make the request
+            FeatureMonitorJob response = featureRegistryServiceClient.GetFeatureMonitorJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorJobAsync</summary>
+        public async Task GetFeatureMonitorJobRequestObjectAsync()
+        {
+            // Snippet: GetFeatureMonitorJobAsync(GetFeatureMonitorJobRequest, CallSettings)
+            // Additional: GetFeatureMonitorJobAsync(GetFeatureMonitorJobRequest, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFeatureMonitorJobRequest request = new GetFeatureMonitorJobRequest
+            {
+                FeatureMonitorJobName = FeatureMonitorJobName.FromProjectLocationFeatureGroupFeatureMonitorFeatureMonitorJob("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]", "[FEATURE_MONITOR_JOB]"),
+            };
+            // Make the request
+            FeatureMonitorJob response = await featureRegistryServiceClient.GetFeatureMonitorJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorJob</summary>
+        public void GetFeatureMonitorJob()
+        {
+            // Snippet: GetFeatureMonitorJob(string, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]/featureMonitorJobs/[FEATURE_MONITOR_JOB]";
+            // Make the request
+            FeatureMonitorJob response = featureRegistryServiceClient.GetFeatureMonitorJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorJobAsync</summary>
+        public async Task GetFeatureMonitorJobAsync()
+        {
+            // Snippet: GetFeatureMonitorJobAsync(string, CallSettings)
+            // Additional: GetFeatureMonitorJobAsync(string, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]/featureMonitorJobs/[FEATURE_MONITOR_JOB]";
+            // Make the request
+            FeatureMonitorJob response = await featureRegistryServiceClient.GetFeatureMonitorJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorJob</summary>
+        public void GetFeatureMonitorJobResourceNames()
+        {
+            // Snippet: GetFeatureMonitorJob(FeatureMonitorJobName, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureMonitorJobName name = FeatureMonitorJobName.FromProjectLocationFeatureGroupFeatureMonitorFeatureMonitorJob("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]", "[FEATURE_MONITOR_JOB]");
+            // Make the request
+            FeatureMonitorJob response = featureRegistryServiceClient.GetFeatureMonitorJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureMonitorJobAsync</summary>
+        public async Task GetFeatureMonitorJobResourceNamesAsync()
+        {
+            // Snippet: GetFeatureMonitorJobAsync(FeatureMonitorJobName, CallSettings)
+            // Additional: GetFeatureMonitorJobAsync(FeatureMonitorJobName, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureMonitorJobName name = FeatureMonitorJobName.FromProjectLocationFeatureGroupFeatureMonitorFeatureMonitorJob("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]", "[FEATURE_MONITOR_JOB]");
+            // Make the request
+            FeatureMonitorJob response = await featureRegistryServiceClient.GetFeatureMonitorJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorJobs</summary>
+        public void ListFeatureMonitorJobsRequestObject()
+        {
+            // Snippet: ListFeatureMonitorJobs(ListFeatureMonitorJobsRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            ListFeatureMonitorJobsRequest request = new ListFeatureMonitorJobsRequest
+            {
+                ParentAsFeatureMonitorName = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeatureMonitorJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeatureMonitorJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitorJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitorJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitorJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorJobsAsync</summary>
+        public async Task ListFeatureMonitorJobsRequestObjectAsync()
+        {
+            // Snippet: ListFeatureMonitorJobsAsync(ListFeatureMonitorJobsRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFeatureMonitorJobsRequest request = new ListFeatureMonitorJobsRequest
+            {
+                ParentAsFeatureMonitorName = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeatureMonitorJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitorJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitorJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitorJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorJobs</summary>
+        public void ListFeatureMonitorJobs()
+        {
+            // Snippet: ListFeatureMonitorJobs(string, string, int?, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]";
+            // Make the request
+            PagedEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeatureMonitorJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeatureMonitorJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitorJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitorJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitorJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorJobsAsync</summary>
+        public async Task ListFeatureMonitorJobsAsync()
+        {
+            // Snippet: ListFeatureMonitorJobsAsync(string, string, int?, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featureGroups/[FEATURE_GROUP]/featureMonitors/[FEATURE_MONITOR]";
+            // Make the request
+            PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeatureMonitorJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitorJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitorJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitorJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorJobs</summary>
+        public void ListFeatureMonitorJobsResourceNames()
+        {
+            // Snippet: ListFeatureMonitorJobs(FeatureMonitorName, string, int?, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureMonitorName parent = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]");
+            // Make the request
+            PagedEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeatureMonitorJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeatureMonitorJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitorJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitorJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitorJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatureMonitorJobsAsync</summary>
+        public async Task ListFeatureMonitorJobsResourceNamesAsync()
+        {
+            // Snippet: ListFeatureMonitorJobsAsync(FeatureMonitorName, string, int?, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureMonitorName parent = FeatureMonitorName.FromProjectLocationFeatureGroupFeatureMonitor("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]", "[FEATURE_MONITOR]");
+            // Make the request
+            PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> response = featureRegistryServiceClient.ListFeatureMonitorJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeatureMonitorJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeatureMonitorJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeatureMonitorJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeatureMonitorJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeatureMonitorJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

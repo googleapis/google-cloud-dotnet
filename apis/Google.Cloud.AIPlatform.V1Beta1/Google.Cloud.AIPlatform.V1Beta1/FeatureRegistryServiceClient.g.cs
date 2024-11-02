@@ -62,12 +62,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             DeleteFeatureGroupOperationsSettings = existing.DeleteFeatureGroupOperationsSettings.Clone();
             CreateFeatureSettings = existing.CreateFeatureSettings;
             CreateFeatureOperationsSettings = existing.CreateFeatureOperationsSettings.Clone();
+            BatchCreateFeaturesSettings = existing.BatchCreateFeaturesSettings;
+            BatchCreateFeaturesOperationsSettings = existing.BatchCreateFeaturesOperationsSettings.Clone();
             GetFeatureSettings = existing.GetFeatureSettings;
             ListFeaturesSettings = existing.ListFeaturesSettings;
             UpdateFeatureSettings = existing.UpdateFeatureSettings;
             UpdateFeatureOperationsSettings = existing.UpdateFeatureOperationsSettings.Clone();
             DeleteFeatureSettings = existing.DeleteFeatureSettings;
             DeleteFeatureOperationsSettings = existing.DeleteFeatureOperationsSettings.Clone();
+            CreateFeatureMonitorSettings = existing.CreateFeatureMonitorSettings;
+            CreateFeatureMonitorOperationsSettings = existing.CreateFeatureMonitorOperationsSettings.Clone();
+            GetFeatureMonitorSettings = existing.GetFeatureMonitorSettings;
+            ListFeatureMonitorsSettings = existing.ListFeatureMonitorsSettings;
+            DeleteFeatureMonitorSettings = existing.DeleteFeatureMonitorSettings;
+            DeleteFeatureMonitorOperationsSettings = existing.DeleteFeatureMonitorOperationsSettings.Clone();
+            CreateFeatureMonitorJobSettings = existing.CreateFeatureMonitorJobSettings;
+            GetFeatureMonitorJobSettings = existing.GetFeatureMonitorJobSettings;
+            ListFeatureMonitorJobsSettings = existing.ListFeatureMonitorJobsSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -227,6 +238,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.BatchCreateFeatures</c> and
+        /// <c>FeatureRegistryServiceClient.BatchCreateFeaturesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateFeaturesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FeatureRegistryServiceClient.BatchCreateFeatures</c> and
+        /// <c>FeatureRegistryServiceClient.BatchCreateFeaturesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchCreateFeaturesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FeatureRegistryServiceClient.GetFeature</c> and <c>FeatureRegistryServiceClient.GetFeatureAsync</c>.
         /// </summary>
         /// <remarks>
@@ -310,6 +352,133 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.CreateFeatureMonitor</c> and
+        /// <c>FeatureRegistryServiceClient.CreateFeatureMonitorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateFeatureMonitorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FeatureRegistryServiceClient.CreateFeatureMonitor</c> and
+        /// <c>FeatureRegistryServiceClient.CreateFeatureMonitorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateFeatureMonitorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.GetFeatureMonitor</c> and
+        /// <c>FeatureRegistryServiceClient.GetFeatureMonitorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFeatureMonitorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.ListFeatureMonitors</c> and
+        /// <c>FeatureRegistryServiceClient.ListFeatureMonitorsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListFeatureMonitorsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.DeleteFeatureMonitor</c> and
+        /// <c>FeatureRegistryServiceClient.DeleteFeatureMonitorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFeatureMonitorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FeatureRegistryServiceClient.DeleteFeatureMonitor</c> and
+        /// <c>FeatureRegistryServiceClient.DeleteFeatureMonitorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteFeatureMonitorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.CreateFeatureMonitorJob</c> and
+        /// <c>FeatureRegistryServiceClient.CreateFeatureMonitorJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateFeatureMonitorJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.GetFeatureMonitorJob</c> and
+        /// <c>FeatureRegistryServiceClient.GetFeatureMonitorJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFeatureMonitorJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.ListFeatureMonitorJobs</c> and
+        /// <c>FeatureRegistryServiceClient.ListFeatureMonitorJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListFeatureMonitorJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -541,7 +710,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -571,7 +740,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -601,7 +770,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -626,7 +795,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -656,7 +825,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -686,7 +855,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -1613,6 +1782,291 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             CreateFeatureAsync(parent, feature, featureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(BatchCreateFeaturesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(BatchCreateFeaturesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(BatchCreateFeaturesRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchCreateFeatures</c>.</summary>
+        public virtual lro::OperationsClient BatchCreateFeaturesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchCreateFeatures</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> PollOnceBatchCreateFeatures(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateFeaturesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCreateFeatures</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> PollOnceBatchCreateFeaturesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateFeaturesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(string parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeatures(new BatchCreateFeaturesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(string parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeaturesAsync(new BatchCreateFeaturesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(string parent, scg::IEnumerable<CreateFeatureRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(EntityTypeName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeatures(new BatchCreateFeaturesRequest
+            {
+                ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(EntityTypeName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeaturesAsync(new BatchCreateFeaturesRequest
+            {
+                ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(EntityTypeName parent, scg::IEnumerable<CreateFeatureRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeatures(new BatchCreateFeaturesRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeaturesAsync(new BatchCreateFeaturesRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets details of a single Feature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2283,6 +2737,1073 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteFeatureAsync(FeatureName name, st::CancellationToken cancellationToken) =>
             DeleteFeatureAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> CreateFeatureMonitor(CreateFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>> CreateFeatureMonitorAsync(CreateFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>> CreateFeatureMonitorAsync(CreateFeatureMonitorRequest request, st::CancellationToken cancellationToken) =>
+            CreateFeatureMonitorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateFeatureMonitor</c>.</summary>
+        public virtual lro::OperationsClient CreateFeatureMonitorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateFeatureMonitor</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> PollOnceCreateFeatureMonitor(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateFeatureMonitorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateFeatureMonitor</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>> PollOnceCreateFeatureMonitorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateFeatureMonitorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureGroup to create FeatureMonitor.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featuregroup}`
+        /// </param>
+        /// <param name="featureMonitor">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorId">
+        /// Required. The ID to use for this FeatureMonitor, which will become the
+        /// final component of the FeatureGroup's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the FeatureGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> CreateFeatureMonitor(string parent, FeatureMonitor featureMonitor, string featureMonitorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureMonitor(new CreateFeatureMonitorRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                FeatureMonitor = gax::GaxPreconditions.CheckNotNull(featureMonitor, nameof(featureMonitor)),
+                FeatureMonitorId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureMonitorId, nameof(featureMonitorId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureGroup to create FeatureMonitor.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featuregroup}`
+        /// </param>
+        /// <param name="featureMonitor">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorId">
+        /// Required. The ID to use for this FeatureMonitor, which will become the
+        /// final component of the FeatureGroup's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the FeatureGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>> CreateFeatureMonitorAsync(string parent, FeatureMonitor featureMonitor, string featureMonitorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureMonitorAsync(new CreateFeatureMonitorRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                FeatureMonitor = gax::GaxPreconditions.CheckNotNull(featureMonitor, nameof(featureMonitor)),
+                FeatureMonitorId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureMonitorId, nameof(featureMonitorId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureGroup to create FeatureMonitor.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featuregroup}`
+        /// </param>
+        /// <param name="featureMonitor">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorId">
+        /// Required. The ID to use for this FeatureMonitor, which will become the
+        /// final component of the FeatureGroup's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the FeatureGroup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>> CreateFeatureMonitorAsync(string parent, FeatureMonitor featureMonitor, string featureMonitorId, st::CancellationToken cancellationToken) =>
+            CreateFeatureMonitorAsync(parent, featureMonitor, featureMonitorId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureGroup to create FeatureMonitor.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featuregroup}`
+        /// </param>
+        /// <param name="featureMonitor">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorId">
+        /// Required. The ID to use for this FeatureMonitor, which will become the
+        /// final component of the FeatureGroup's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the FeatureGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> CreateFeatureMonitor(FeatureGroupName parent, FeatureMonitor featureMonitor, string featureMonitorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureMonitor(new CreateFeatureMonitorRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FeatureMonitor = gax::GaxPreconditions.CheckNotNull(featureMonitor, nameof(featureMonitor)),
+                FeatureMonitorId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureMonitorId, nameof(featureMonitorId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureGroup to create FeatureMonitor.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featuregroup}`
+        /// </param>
+        /// <param name="featureMonitor">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorId">
+        /// Required. The ID to use for this FeatureMonitor, which will become the
+        /// final component of the FeatureGroup's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the FeatureGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>> CreateFeatureMonitorAsync(FeatureGroupName parent, FeatureMonitor featureMonitor, string featureMonitorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureMonitorAsync(new CreateFeatureMonitorRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FeatureMonitor = gax::GaxPreconditions.CheckNotNull(featureMonitor, nameof(featureMonitor)),
+                FeatureMonitorId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureMonitorId, nameof(featureMonitorId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureGroup to create FeatureMonitor.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featuregroup}`
+        /// </param>
+        /// <param name="featureMonitor">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorId">
+        /// Required. The ID to use for this FeatureMonitor, which will become the
+        /// final component of the FeatureGroup's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the FeatureGroup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>> CreateFeatureMonitorAsync(FeatureGroupName parent, FeatureMonitor featureMonitor, string featureMonitorId, st::CancellationToken cancellationToken) =>
+            CreateFeatureMonitorAsync(parent, featureMonitor, featureMonitorId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitor GetFeatureMonitor(GetFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitor> GetFeatureMonitorAsync(GetFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitor> GetFeatureMonitorAsync(GetFeatureMonitorRequest request, st::CancellationToken cancellationToken) =>
+            GetFeatureMonitorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitor GetFeatureMonitor(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureMonitor(new GetFeatureMonitorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitor> GetFeatureMonitorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureMonitorAsync(new GetFeatureMonitorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitor> GetFeatureMonitorAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFeatureMonitorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitor GetFeatureMonitor(FeatureMonitorName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureMonitor(new GetFeatureMonitorRequest
+            {
+                FeatureMonitorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitor> GetFeatureMonitorAsync(FeatureMonitorName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureMonitorAsync(new GetFeatureMonitorRequest
+            {
+                FeatureMonitorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitor> GetFeatureMonitorAsync(FeatureMonitorName name, st::CancellationToken cancellationToken) =>
+            GetFeatureMonitorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists FeatureGroups in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeatureMonitor"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> ListFeatureMonitors(ListFeatureMonitorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists FeatureGroups in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeatureMonitor"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> ListFeatureMonitorsAsync(ListFeatureMonitorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists FeatureGroups in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the FeatureGroup to list FeatureMonitors.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeatureMonitor"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> ListFeatureMonitors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureMonitorsRequest request = new ListFeatureMonitorsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureMonitors(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists FeatureGroups in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the FeatureGroup to list FeatureMonitors.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeatureMonitor"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> ListFeatureMonitorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureMonitorsRequest request = new ListFeatureMonitorsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureMonitorsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists FeatureGroups in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the FeatureGroup to list FeatureMonitors.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeatureMonitor"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> ListFeatureMonitors(FeatureGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureMonitorsRequest request = new ListFeatureMonitorsRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureMonitors(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists FeatureGroups in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the FeatureGroup to list FeatureMonitors.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeatureMonitor"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> ListFeatureMonitorsAsync(FeatureGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureMonitorsRequest request = new ListFeatureMonitorsRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureMonitorsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteFeatureMonitor(DeleteFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteFeatureMonitorAsync(DeleteFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteFeatureMonitorAsync(DeleteFeatureMonitorRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFeatureMonitorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteFeatureMonitor</c>.</summary>
+        public virtual lro::OperationsClient DeleteFeatureMonitorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteFeatureMonitor</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceDeleteFeatureMonitor(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFeatureMonitorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteFeatureMonitor</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceDeleteFeatureMonitorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFeatureMonitorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteFeatureMonitor(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureMonitor(new DeleteFeatureMonitorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteFeatureMonitorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureMonitorAsync(new DeleteFeatureMonitorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteFeatureMonitorAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteFeatureMonitorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteFeatureMonitor(FeatureMonitorName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureMonitor(new DeleteFeatureMonitorRequest
+            {
+                FeatureMonitorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteFeatureMonitorAsync(FeatureMonitorName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureMonitorAsync(new DeleteFeatureMonitorRequest
+            {
+                FeatureMonitorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitor to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteFeatureMonitorAsync(FeatureMonitorName name, st::CancellationToken cancellationToken) =>
+            DeleteFeatureMonitorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitorJob CreateFeatureMonitorJob(CreateFeatureMonitorJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> CreateFeatureMonitorJobAsync(CreateFeatureMonitorJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> CreateFeatureMonitorJobAsync(CreateFeatureMonitorJobRequest request, st::CancellationToken cancellationToken) =>
+            CreateFeatureMonitorJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureMonitor to create FeatureMonitorJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="featureMonitorJob">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorJobId">
+        /// Optional. Output only. System-generated ID for feature monitor job.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitorJob CreateFeatureMonitorJob(string parent, FeatureMonitorJob featureMonitorJob, long featureMonitorJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureMonitorJob(new CreateFeatureMonitorJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                FeatureMonitorJob = gax::GaxPreconditions.CheckNotNull(featureMonitorJob, nameof(featureMonitorJob)),
+                FeatureMonitorJobId = featureMonitorJobId,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureMonitor to create FeatureMonitorJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="featureMonitorJob">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorJobId">
+        /// Optional. Output only. System-generated ID for feature monitor job.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> CreateFeatureMonitorJobAsync(string parent, FeatureMonitorJob featureMonitorJob, long featureMonitorJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureMonitorJobAsync(new CreateFeatureMonitorJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                FeatureMonitorJob = gax::GaxPreconditions.CheckNotNull(featureMonitorJob, nameof(featureMonitorJob)),
+                FeatureMonitorJobId = featureMonitorJobId,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureMonitor to create FeatureMonitorJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="featureMonitorJob">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorJobId">
+        /// Optional. Output only. System-generated ID for feature monitor job.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> CreateFeatureMonitorJobAsync(string parent, FeatureMonitorJob featureMonitorJob, long featureMonitorJobId, st::CancellationToken cancellationToken) =>
+            CreateFeatureMonitorJobAsync(parent, featureMonitorJob, featureMonitorJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureMonitor to create FeatureMonitorJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="featureMonitorJob">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorJobId">
+        /// Optional. Output only. System-generated ID for feature monitor job.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitorJob CreateFeatureMonitorJob(FeatureMonitorName parent, FeatureMonitorJob featureMonitorJob, long featureMonitorJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureMonitorJob(new CreateFeatureMonitorJobRequest
+            {
+                ParentAsFeatureMonitorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FeatureMonitorJob = gax::GaxPreconditions.CheckNotNull(featureMonitorJob, nameof(featureMonitorJob)),
+                FeatureMonitorJobId = featureMonitorJobId,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureMonitor to create FeatureMonitorJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="featureMonitorJob">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorJobId">
+        /// Optional. Output only. System-generated ID for feature monitor job.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> CreateFeatureMonitorJobAsync(FeatureMonitorName parent, FeatureMonitorJob featureMonitorJob, long featureMonitorJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureMonitorJobAsync(new CreateFeatureMonitorJobRequest
+            {
+                ParentAsFeatureMonitorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FeatureMonitorJob = gax::GaxPreconditions.CheckNotNull(featureMonitorJob, nameof(featureMonitorJob)),
+                FeatureMonitorJobId = featureMonitorJobId,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of FeatureMonitor to create FeatureMonitorJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="featureMonitorJob">
+        /// Required. The Monitor to create.
+        /// </param>
+        /// <param name="featureMonitorJobId">
+        /// Optional. Output only. System-generated ID for feature monitor job.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> CreateFeatureMonitorJobAsync(FeatureMonitorName parent, FeatureMonitorJob featureMonitorJob, long featureMonitorJobId, st::CancellationToken cancellationToken) =>
+            CreateFeatureMonitorJobAsync(parent, featureMonitorJob, featureMonitorJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitorJob GetFeatureMonitorJob(GetFeatureMonitorJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> GetFeatureMonitorJobAsync(GetFeatureMonitorJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> GetFeatureMonitorJobAsync(GetFeatureMonitorJobRequest request, st::CancellationToken cancellationToken) =>
+            GetFeatureMonitorJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitorJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}/featureMonitorJobs/{feature_monitor_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitorJob GetFeatureMonitorJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureMonitorJob(new GetFeatureMonitorJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitorJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}/featureMonitorJobs/{feature_monitor_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> GetFeatureMonitorJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureMonitorJobAsync(new GetFeatureMonitorJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitorJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}/featureMonitorJobs/{feature_monitor_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> GetFeatureMonitorJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFeatureMonitorJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitorJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}/featureMonitorJobs/{feature_monitor_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeatureMonitorJob GetFeatureMonitorJob(FeatureMonitorJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureMonitorJob(new GetFeatureMonitorJobRequest
+            {
+                FeatureMonitorJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitorJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}/featureMonitorJobs/{feature_monitor_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> GetFeatureMonitorJobAsync(FeatureMonitorJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureMonitorJobAsync(new GetFeatureMonitorJobRequest
+            {
+                FeatureMonitorJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the FeatureMonitorJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}/featureMonitorJobs/{feature_monitor_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeatureMonitorJob> GetFeatureMonitorJobAsync(FeatureMonitorJobName name, st::CancellationToken cancellationToken) =>
+            GetFeatureMonitorJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List feature monitor jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeatureMonitorJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> ListFeatureMonitorJobs(ListFeatureMonitorJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List feature monitor jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeatureMonitorJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> ListFeatureMonitorJobsAsync(ListFeatureMonitorJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List feature monitor jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the FeatureMonitor to list
+        /// FeatureMonitorJobs. Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeatureMonitorJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> ListFeatureMonitorJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureMonitorJobsRequest request = new ListFeatureMonitorJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureMonitorJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// List feature monitor jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the FeatureMonitor to list
+        /// FeatureMonitorJobs. Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeatureMonitorJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> ListFeatureMonitorJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureMonitorJobsRequest request = new ListFeatureMonitorJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureMonitorJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List feature monitor jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the FeatureMonitor to list
+        /// FeatureMonitorJobs. Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeatureMonitorJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> ListFeatureMonitorJobs(FeatureMonitorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureMonitorJobsRequest request = new ListFeatureMonitorJobsRequest
+            {
+                ParentAsFeatureMonitorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureMonitorJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// List feature monitor jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the FeatureMonitor to list
+        /// FeatureMonitorJobs. Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeatureMonitorJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> ListFeatureMonitorJobsAsync(FeatureMonitorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeatureMonitorJobsRequest request = new ListFeatureMonitorJobsRequest
+            {
+                ParentAsFeatureMonitorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeatureMonitorJobsAsync(request, callSettings);
+        }
     }
 
     /// <summary>FeatureRegistryService client wrapper implementation, for convenient use.</summary>
@@ -2304,6 +3825,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<CreateFeatureRequest, lro::Operation> _callCreateFeature;
 
+        private readonly gaxgrpc::ApiCall<BatchCreateFeaturesRequest, lro::Operation> _callBatchCreateFeatures;
+
         private readonly gaxgrpc::ApiCall<GetFeatureRequest, Feature> _callGetFeature;
 
         private readonly gaxgrpc::ApiCall<ListFeaturesRequest, ListFeaturesResponse> _callListFeatures;
@@ -2311,6 +3834,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         private readonly gaxgrpc::ApiCall<UpdateFeatureRequest, lro::Operation> _callUpdateFeature;
 
         private readonly gaxgrpc::ApiCall<DeleteFeatureRequest, lro::Operation> _callDeleteFeature;
+
+        private readonly gaxgrpc::ApiCall<CreateFeatureMonitorRequest, lro::Operation> _callCreateFeatureMonitor;
+
+        private readonly gaxgrpc::ApiCall<GetFeatureMonitorRequest, FeatureMonitor> _callGetFeatureMonitor;
+
+        private readonly gaxgrpc::ApiCall<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse> _callListFeatureMonitors;
+
+        private readonly gaxgrpc::ApiCall<DeleteFeatureMonitorRequest, lro::Operation> _callDeleteFeatureMonitor;
+
+        private readonly gaxgrpc::ApiCall<CreateFeatureMonitorJobRequest, FeatureMonitorJob> _callCreateFeatureMonitorJob;
+
+        private readonly gaxgrpc::ApiCall<GetFeatureMonitorJobRequest, FeatureMonitorJob> _callGetFeatureMonitorJob;
+
+        private readonly gaxgrpc::ApiCall<ListFeatureMonitorJobsRequest, ListFeatureMonitorJobsResponse> _callListFeatureMonitorJobs;
 
         /// <summary>
         /// Constructs a client wrapper for the FeatureRegistryService service, with the specified gRPC client and
@@ -2334,8 +3871,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             UpdateFeatureGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFeatureGroupOperationsSettings, logger);
             DeleteFeatureGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureGroupOperationsSettings, logger);
             CreateFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFeatureOperationsSettings, logger);
+            BatchCreateFeaturesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateFeaturesOperationsSettings, logger);
             UpdateFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFeatureOperationsSettings, logger);
             DeleteFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureOperationsSettings, logger);
+            CreateFeatureMonitorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFeatureMonitorOperationsSettings, logger);
+            DeleteFeatureMonitorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureMonitorOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateFeatureGroup = clientHelper.BuildApiCall<CreateFeatureGroupRequest, lro::Operation>("CreateFeatureGroup", grpcClient.CreateFeatureGroupAsync, grpcClient.CreateFeatureGroup, effectiveSettings.CreateFeatureGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2356,6 +3896,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callCreateFeature = clientHelper.BuildApiCall<CreateFeatureRequest, lro::Operation>("CreateFeature", grpcClient.CreateFeatureAsync, grpcClient.CreateFeature, effectiveSettings.CreateFeatureSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFeature);
             Modify_CreateFeatureApiCall(ref _callCreateFeature);
+            _callBatchCreateFeatures = clientHelper.BuildApiCall<BatchCreateFeaturesRequest, lro::Operation>("BatchCreateFeatures", grpcClient.BatchCreateFeaturesAsync, grpcClient.BatchCreateFeatures, effectiveSettings.BatchCreateFeaturesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateFeatures);
+            Modify_BatchCreateFeaturesApiCall(ref _callBatchCreateFeatures);
             _callGetFeature = clientHelper.BuildApiCall<GetFeatureRequest, Feature>("GetFeature", grpcClient.GetFeatureAsync, grpcClient.GetFeature, effectiveSettings.GetFeatureSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFeature);
             Modify_GetFeatureApiCall(ref _callGetFeature);
@@ -2368,6 +3911,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callDeleteFeature = clientHelper.BuildApiCall<DeleteFeatureRequest, lro::Operation>("DeleteFeature", grpcClient.DeleteFeatureAsync, grpcClient.DeleteFeature, effectiveSettings.DeleteFeatureSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFeature);
             Modify_DeleteFeatureApiCall(ref _callDeleteFeature);
+            _callCreateFeatureMonitor = clientHelper.BuildApiCall<CreateFeatureMonitorRequest, lro::Operation>("CreateFeatureMonitor", grpcClient.CreateFeatureMonitorAsync, grpcClient.CreateFeatureMonitor, effectiveSettings.CreateFeatureMonitorSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateFeatureMonitor);
+            Modify_CreateFeatureMonitorApiCall(ref _callCreateFeatureMonitor);
+            _callGetFeatureMonitor = clientHelper.BuildApiCall<GetFeatureMonitorRequest, FeatureMonitor>("GetFeatureMonitor", grpcClient.GetFeatureMonitorAsync, grpcClient.GetFeatureMonitor, effectiveSettings.GetFeatureMonitorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetFeatureMonitor);
+            Modify_GetFeatureMonitorApiCall(ref _callGetFeatureMonitor);
+            _callListFeatureMonitors = clientHelper.BuildApiCall<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse>("ListFeatureMonitors", grpcClient.ListFeatureMonitorsAsync, grpcClient.ListFeatureMonitors, effectiveSettings.ListFeatureMonitorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListFeatureMonitors);
+            Modify_ListFeatureMonitorsApiCall(ref _callListFeatureMonitors);
+            _callDeleteFeatureMonitor = clientHelper.BuildApiCall<DeleteFeatureMonitorRequest, lro::Operation>("DeleteFeatureMonitor", grpcClient.DeleteFeatureMonitorAsync, grpcClient.DeleteFeatureMonitor, effectiveSettings.DeleteFeatureMonitorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteFeatureMonitor);
+            Modify_DeleteFeatureMonitorApiCall(ref _callDeleteFeatureMonitor);
+            _callCreateFeatureMonitorJob = clientHelper.BuildApiCall<CreateFeatureMonitorJobRequest, FeatureMonitorJob>("CreateFeatureMonitorJob", grpcClient.CreateFeatureMonitorJobAsync, grpcClient.CreateFeatureMonitorJob, effectiveSettings.CreateFeatureMonitorJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateFeatureMonitorJob);
+            Modify_CreateFeatureMonitorJobApiCall(ref _callCreateFeatureMonitorJob);
+            _callGetFeatureMonitorJob = clientHelper.BuildApiCall<GetFeatureMonitorJobRequest, FeatureMonitorJob>("GetFeatureMonitorJob", grpcClient.GetFeatureMonitorJobAsync, grpcClient.GetFeatureMonitorJob, effectiveSettings.GetFeatureMonitorJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetFeatureMonitorJob);
+            Modify_GetFeatureMonitorJobApiCall(ref _callGetFeatureMonitorJob);
+            _callListFeatureMonitorJobs = clientHelper.BuildApiCall<ListFeatureMonitorJobsRequest, ListFeatureMonitorJobsResponse>("ListFeatureMonitorJobs", grpcClient.ListFeatureMonitorJobsAsync, grpcClient.ListFeatureMonitorJobs, effectiveSettings.ListFeatureMonitorJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListFeatureMonitorJobs);
+            Modify_ListFeatureMonitorJobsApiCall(ref _callListFeatureMonitorJobs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2385,6 +3949,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         partial void Modify_CreateFeatureApiCall(ref gaxgrpc::ApiCall<CreateFeatureRequest, lro::Operation> call);
 
+        partial void Modify_BatchCreateFeaturesApiCall(ref gaxgrpc::ApiCall<BatchCreateFeaturesRequest, lro::Operation> call);
+
         partial void Modify_GetFeatureApiCall(ref gaxgrpc::ApiCall<GetFeatureRequest, Feature> call);
 
         partial void Modify_ListFeaturesApiCall(ref gaxgrpc::ApiCall<ListFeaturesRequest, ListFeaturesResponse> call);
@@ -2392,6 +3958,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_UpdateFeatureApiCall(ref gaxgrpc::ApiCall<UpdateFeatureRequest, lro::Operation> call);
 
         partial void Modify_DeleteFeatureApiCall(ref gaxgrpc::ApiCall<DeleteFeatureRequest, lro::Operation> call);
+
+        partial void Modify_CreateFeatureMonitorApiCall(ref gaxgrpc::ApiCall<CreateFeatureMonitorRequest, lro::Operation> call);
+
+        partial void Modify_GetFeatureMonitorApiCall(ref gaxgrpc::ApiCall<GetFeatureMonitorRequest, FeatureMonitor> call);
+
+        partial void Modify_ListFeatureMonitorsApiCall(ref gaxgrpc::ApiCall<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse> call);
+
+        partial void Modify_DeleteFeatureMonitorApiCall(ref gaxgrpc::ApiCall<DeleteFeatureMonitorRequest, lro::Operation> call);
+
+        partial void Modify_CreateFeatureMonitorJobApiCall(ref gaxgrpc::ApiCall<CreateFeatureMonitorJobRequest, FeatureMonitorJob> call);
+
+        partial void Modify_GetFeatureMonitorJobApiCall(ref gaxgrpc::ApiCall<GetFeatureMonitorJobRequest, FeatureMonitorJob> call);
+
+        partial void Modify_ListFeatureMonitorJobsApiCall(ref gaxgrpc::ApiCall<ListFeatureMonitorJobsRequest, ListFeatureMonitorJobsResponse> call);
 
         partial void OnConstruction(FeatureRegistryService.FeatureRegistryServiceClient grpcClient, FeatureRegistryServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2416,6 +3996,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         partial void Modify_CreateFeatureRequest(ref CreateFeatureRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BatchCreateFeaturesRequest(ref BatchCreateFeaturesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetFeatureRequest(ref GetFeatureRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListFeaturesRequest(ref ListFeaturesRequest request, ref gaxgrpc::CallSettings settings);
@@ -2423,6 +4005,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_UpdateFeatureRequest(ref UpdateFeatureRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteFeatureRequest(ref DeleteFeatureRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateFeatureMonitorRequest(ref CreateFeatureMonitorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetFeatureMonitorRequest(ref GetFeatureMonitorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListFeatureMonitorsRequest(ref ListFeatureMonitorsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFeatureMonitorRequest(ref DeleteFeatureMonitorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateFeatureMonitorJobRequest(ref CreateFeatureMonitorJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetFeatureMonitorJobRequest(ref GetFeatureMonitorJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListFeatureMonitorJobsRequest(ref ListFeatureMonitorJobsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateFeatureGroup</c>.</summary>
         public override lro::OperationsClient CreateFeatureGroupOperationsClient { get; }
@@ -2580,6 +4176,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             return new lro::Operation<Feature, CreateFeatureOperationMetadata>(await _callCreateFeature.Async(request, callSettings).ConfigureAwait(false), CreateFeatureOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>BatchCreateFeatures</c>.</summary>
+        public override lro::OperationsClient BatchCreateFeaturesOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(BatchCreateFeaturesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateFeaturesRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>(_callBatchCreateFeatures.Sync(request, callSettings), BatchCreateFeaturesOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(BatchCreateFeaturesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateFeaturesRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>(await _callBatchCreateFeatures.Async(request, callSettings).ConfigureAwait(false), BatchCreateFeaturesOperationsClient);
+        }
+
         /// <summary>
         /// Gets details of a single Feature.
         /// </summary>
@@ -2681,6 +4304,180 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             Modify_DeleteFeatureRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteFeature.Async(request, callSettings).ConfigureAwait(false), DeleteFeatureOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>CreateFeatureMonitor</c>.</summary>
+        public override lro::OperationsClient CreateFeatureMonitorOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata> CreateFeatureMonitor(CreateFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFeatureMonitorRequest(ref request, ref callSettings);
+            return new lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>(_callCreateFeatureMonitor.Sync(request, callSettings), CreateFeatureMonitorOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new FeatureMonitor in a given project, location and FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>> CreateFeatureMonitorAsync(CreateFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFeatureMonitorRequest(ref request, ref callSettings);
+            return new lro::Operation<FeatureMonitor, CreateFeatureMonitorOperationMetadata>(await _callCreateFeatureMonitor.Async(request, callSettings).ConfigureAwait(false), CreateFeatureMonitorOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FeatureMonitor GetFeatureMonitor(GetFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFeatureMonitorRequest(ref request, ref callSettings);
+            return _callGetFeatureMonitor.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FeatureMonitor> GetFeatureMonitorAsync(GetFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFeatureMonitorRequest(ref request, ref callSettings);
+            return _callGetFeatureMonitor.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists FeatureGroups in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeatureMonitor"/> resources.</returns>
+        public override gax::PagedEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> ListFeatureMonitors(ListFeatureMonitorsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFeatureMonitorsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse, FeatureMonitor>(_callListFeatureMonitors, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists FeatureGroups in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeatureMonitor"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListFeatureMonitorsResponse, FeatureMonitor> ListFeatureMonitorsAsync(ListFeatureMonitorsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFeatureMonitorsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse, FeatureMonitor>(_callListFeatureMonitors, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteFeatureMonitor</c>.</summary>
+        public override lro::OperationsClient DeleteFeatureMonitorOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteFeatureMonitor(DeleteFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFeatureMonitorRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callDeleteFeatureMonitor.Sync(request, callSettings), DeleteFeatureMonitorOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteFeatureMonitorAsync(DeleteFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFeatureMonitorRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteFeatureMonitor.Async(request, callSettings).ConfigureAwait(false), DeleteFeatureMonitorOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FeatureMonitorJob CreateFeatureMonitorJob(CreateFeatureMonitorJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFeatureMonitorJobRequest(ref request, ref callSettings);
+            return _callCreateFeatureMonitorJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FeatureMonitorJob> CreateFeatureMonitorJobAsync(CreateFeatureMonitorJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFeatureMonitorJobRequest(ref request, ref callSettings);
+            return _callCreateFeatureMonitorJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FeatureMonitorJob GetFeatureMonitorJob(GetFeatureMonitorJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFeatureMonitorJobRequest(ref request, ref callSettings);
+            return _callGetFeatureMonitorJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a feature monitor job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FeatureMonitorJob> GetFeatureMonitorJobAsync(GetFeatureMonitorJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFeatureMonitorJobRequest(ref request, ref callSettings);
+            return _callGetFeatureMonitorJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List feature monitor jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeatureMonitorJob"/> resources.</returns>
+        public override gax::PagedEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> ListFeatureMonitorJobs(ListFeatureMonitorJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFeatureMonitorJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListFeatureMonitorJobsRequest, ListFeatureMonitorJobsResponse, FeatureMonitorJob>(_callListFeatureMonitorJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// List feature monitor jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeatureMonitorJob"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListFeatureMonitorJobsResponse, FeatureMonitorJob> ListFeatureMonitorJobsAsync(ListFeatureMonitorJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFeatureMonitorJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFeatureMonitorJobsRequest, ListFeatureMonitorJobsResponse, FeatureMonitorJob>(_callListFeatureMonitorJobs, request, callSettings);
+        }
     }
 
     public partial class ListFeatureGroupsRequest : gaxgrpc::IPageRequest
@@ -2691,10 +4488,34 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     {
     }
 
+    public partial class ListFeatureMonitorsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListFeatureMonitorJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListFeatureGroupsResponse : gaxgrpc::IPageResponse<FeatureGroup>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<FeatureGroup> GetEnumerator() => FeatureGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListFeatureMonitorsResponse : gaxgrpc::IPageResponse<FeatureMonitor>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FeatureMonitor> GetEnumerator() => FeatureMonitors.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListFeatureMonitorJobsResponse : gaxgrpc::IPageResponse<FeatureMonitorJob>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FeatureMonitorJob> GetEnumerator() => FeatureMonitorJobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

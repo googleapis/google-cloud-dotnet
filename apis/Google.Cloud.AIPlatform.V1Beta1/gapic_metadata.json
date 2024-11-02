@@ -430,6 +430,12 @@
         "grpc": {
           "libraryClient": "FeatureRegistryServiceClient",
           "rpcs": {
+            "BatchCreateFeatures": {
+              "methods": [
+                "BatchCreateFeatures",
+                "BatchCreateFeaturesAsync"
+              ]
+            },
             "CreateFeature": {
               "methods": [
                 "CreateFeature",
@@ -440,6 +446,18 @@
               "methods": [
                 "CreateFeatureGroup",
                 "CreateFeatureGroupAsync"
+              ]
+            },
+            "CreateFeatureMonitor": {
+              "methods": [
+                "CreateFeatureMonitor",
+                "CreateFeatureMonitorAsync"
+              ]
+            },
+            "CreateFeatureMonitorJob": {
+              "methods": [
+                "CreateFeatureMonitorJob",
+                "CreateFeatureMonitorJobAsync"
               ]
             },
             "DeleteFeature": {
@@ -454,6 +472,12 @@
                 "DeleteFeatureGroupAsync"
               ]
             },
+            "DeleteFeatureMonitor": {
+              "methods": [
+                "DeleteFeatureMonitor",
+                "DeleteFeatureMonitorAsync"
+              ]
+            },
             "GetFeature": {
               "methods": [
                 "GetFeature",
@@ -466,10 +490,34 @@
                 "GetFeatureGroupAsync"
               ]
             },
+            "GetFeatureMonitor": {
+              "methods": [
+                "GetFeatureMonitor",
+                "GetFeatureMonitorAsync"
+              ]
+            },
+            "GetFeatureMonitorJob": {
+              "methods": [
+                "GetFeatureMonitorJob",
+                "GetFeatureMonitorJobAsync"
+              ]
+            },
             "ListFeatureGroups": {
               "methods": [
                 "ListFeatureGroups",
                 "ListFeatureGroupsAsync"
+              ]
+            },
+            "ListFeatureMonitorJobs": {
+              "methods": [
+                "ListFeatureMonitorJobs",
+                "ListFeatureMonitorJobsAsync"
+              ]
+            },
+            "ListFeatureMonitors": {
+              "methods": [
+                "ListFeatureMonitors",
+                "ListFeatureMonitorsAsync"
               ]
             },
             "ListFeatures": {

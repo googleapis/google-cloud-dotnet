@@ -16,14 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1beta1_generated_FeaturestoreService_BatchCreateFeatures_sync_flattened_resourceNames]
+    // [START aiplatform_v1beta1_generated_FeatureRegistryService_BatchCreateFeatures_async_flattened_resourceNames2]
     using Google.Cloud.AIPlatform.V1Beta1;
     using Google.LongRunning;
     using System.Collections.Generic;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedFeaturestoreServiceClientSnippets
+    public sealed partial class GeneratedFeatureRegistryServiceClientSnippets
     {
-        /// <summary>Snippet for BatchCreateFeatures</summary>
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,28 +32,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void BatchCreateFeaturesResourceNames()
+        public async Task BatchCreateFeaturesResourceNames2Async()
         {
             // Create client
-            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
             IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
             {
                 new CreateFeatureRequest(),
             };
             // Make the request
-            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featurestoreServiceClient.BatchCreateFeatures(parent, requests);
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(parent, requests);
 
             // Poll until the returned long-running operation is complete
-            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             BatchCreateFeaturesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceBatchCreateFeatures(operationName);
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -61,5 +62,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END aiplatform_v1beta1_generated_FeaturestoreService_BatchCreateFeatures_sync_flattened_resourceNames]
+    // [END aiplatform_v1beta1_generated_FeatureRegistryService_BatchCreateFeatures_async_flattened_resourceNames2]
 }
