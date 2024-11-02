@@ -83,6 +83,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest> __Marshaller_google_cloud_aiplatform_v1_CreateFeatureRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest> __Marshaller_google_cloud_aiplatform_v1_BatchCreateFeaturesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetFeatureRequest> __Marshaller_google_cloud_aiplatform_v1_GetFeatureRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetFeatureRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.Feature> __Marshaller_google_cloud_aiplatform_v1_Feature = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.Feature.Parser));
@@ -141,6 +143,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         __ServiceName,
         "CreateFeature",
         __Marshaller_google_cloud_aiplatform_v1_CreateFeatureRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest, global::Google.LongRunning.Operation> __Method_BatchCreateFeatures = new grpc::Method<global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateFeatures",
+        __Marshaller_google_cloud_aiplatform_v1_BatchCreateFeaturesRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -253,6 +263,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateFeature(global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a batch of Features in a given FeatureGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchCreateFeatures(global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -623,6 +645,54 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateFeature, null, options, request);
       }
       /// <summary>
+      /// Creates a batch of Features in a given FeatureGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreateFeatures(global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateFeatures(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a batch of Features in a given FeatureGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreateFeatures(global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateFeatures, null, options, request);
+      }
+      /// <summary>
+      /// Creates a batch of Features in a given FeatureGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateFeaturesAsync(global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateFeaturesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a batch of Features in a given FeatureGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateFeaturesAsync(global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateFeatures, null, options, request);
+      }
+      /// <summary>
       /// Gets details of a single Feature.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -834,6 +904,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_UpdateFeatureGroup, serviceImpl.UpdateFeatureGroup)
           .AddMethod(__Method_DeleteFeatureGroup, serviceImpl.DeleteFeatureGroup)
           .AddMethod(__Method_CreateFeature, serviceImpl.CreateFeature)
+          .AddMethod(__Method_BatchCreateFeatures, serviceImpl.BatchCreateFeatures)
           .AddMethod(__Method_GetFeature, serviceImpl.GetFeature)
           .AddMethod(__Method_ListFeatures, serviceImpl.ListFeatures)
           .AddMethod(__Method_UpdateFeature, serviceImpl.UpdateFeature)
@@ -853,6 +924,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_UpdateFeatureGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateFeatureGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateFeatureGroup));
       serviceBinder.AddMethod(__Method_DeleteFeatureGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteFeatureGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteFeatureGroup));
       serviceBinder.AddMethod(__Method_CreateFeature, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateFeature));
+      serviceBinder.AddMethod(__Method_BatchCreateFeatures, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchCreateFeatures));
       serviceBinder.AddMethod(__Method_GetFeature, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetFeatureRequest, global::Google.Cloud.AIPlatform.V1.Feature>(serviceImpl.GetFeature));
       serviceBinder.AddMethod(__Method_ListFeatures, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListFeaturesRequest, global::Google.Cloud.AIPlatform.V1.ListFeaturesResponse>(serviceImpl.ListFeatures));
       serviceBinder.AddMethod(__Method_UpdateFeature, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateFeatureRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateFeature));

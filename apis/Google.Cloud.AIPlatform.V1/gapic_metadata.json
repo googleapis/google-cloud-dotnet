@@ -358,6 +358,12 @@
         "grpc": {
           "libraryClient": "FeatureRegistryServiceClient",
           "rpcs": {
+            "BatchCreateFeatures": {
+              "methods": [
+                "BatchCreateFeatures",
+                "BatchCreateFeaturesAsync"
+              ]
+            },
             "CreateFeature": {
               "methods": [
                 "CreateFeature",
