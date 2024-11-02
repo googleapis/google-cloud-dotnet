@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GetFeatureRequest request = new GetFeatureRequest
             {
                 FeatureName = FeatureName.FromProjectLocationFeaturestoreEntityTypeFeature("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]", "[FEATURE]"),
+                FeatureStatsAndAnomalySpec = new FeatureStatsAndAnomalySpec(),
             };
             // Make the request
             Feature response = await featureRegistryServiceClient.GetFeatureAsync(request);

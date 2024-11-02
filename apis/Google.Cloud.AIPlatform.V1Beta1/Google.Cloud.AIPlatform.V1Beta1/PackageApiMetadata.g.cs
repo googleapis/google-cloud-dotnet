@@ -122,6 +122,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             yield return ExtensionRegistryServiceReflection.Descriptor;
             yield return FeatureReflection.Descriptor;
             yield return FeatureGroupReflection.Descriptor;
+            yield return FeatureMonitorReflection.Descriptor;
+            yield return FeatureMonitorJobReflection.Descriptor;
             yield return FeatureMonitoringStatsReflection.Descriptor;
             yield return FeatureOnlineStoreReflection.Descriptor;
             yield return FeatureOnlineStoreAdminServiceReflection.Descriptor;

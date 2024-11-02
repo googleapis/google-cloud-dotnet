@@ -27,53 +27,56 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Ci1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL2ZlYXR1cmUucHJv",
             "dG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8aPmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0YTEvZmVhdHVy",
-            "ZV9tb25pdG9yaW5nX3N0YXRzLnByb3RvGj1nb29nbGUvY2xvdWQvYWlwbGF0",
-            "Zm9ybS92MWJldGExL2ZlYXR1cmVzdG9yZV9tb25pdG9yaW5nLnByb3RvGh9n",
-            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItsLCgdGZWF0dXJlEhEK",
-            "BG5hbWUYASABKAlCA+BBBRITCgtkZXNjcmlwdGlvbhgCIAEoCRJLCgp2YWx1",
-            "ZV90eXBlGAMgASgOMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MS5GZWF0dXJlLlZhbHVlVHlwZUID4EEFEjQKC2NyZWF0ZV90aW1lGAQgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
-            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkkK",
-            "BmxhYmVscxgGIAMoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuRmVhdHVyZS5MYWJlbHNFbnRyeUID4EEBEgwKBGV0YWcYByABKAkSXwoR",
-            "bW9uaXRvcmluZ19jb25maWcYCSABKAsyPS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLkZlYXR1cmVzdG9yZU1vbml0b3JpbmdDb25maWdCBRgB",
-            "4EEBEh8KEmRpc2FibGVfbW9uaXRvcmluZxgMIAEoCEID4EEBElMKEG1vbml0",
-            "b3Jpbmdfc3RhdHMYCiADKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkZlYXR1cmVTdGF0c0Fub21hbHlCA+BBAxJoChptb25pdG9yaW5n",
-            "X3N0YXRzX2Fub21hbGllcxgLIAMoCzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxYmV0YTEuRmVhdHVyZS5Nb25pdG9yaW5nU3RhdHNBbm9tYWx5QgPg",
-            "QQMSGwoTdmVyc2lvbl9jb2x1bW5fbmFtZRhqIAEoCRIYChBwb2ludF9vZl9j",
-            "b250YWN0GGsgASgJGrECChZNb25pdG9yaW5nU3RhdHNBbm9tYWx5EmEKCW9i",
-            "amVjdGl2ZRgBIAEoDjJJLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuRmVhdHVyZS5Nb25pdG9yaW5nU3RhdHNBbm9tYWx5Lk9iamVjdGl2ZUID",
-            "4EEDElgKFWZlYXR1cmVfc3RhdHNfYW5vbWFseRgCIAEoCzI0Lmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRmVhdHVyZVN0YXRzQW5vbWFseUID",
-            "4EEDIloKCU9iamVjdGl2ZRIZChVPQkpFQ1RJVkVfVU5TUEVDSUZJRUQQABIb",
-            "ChdJTVBPUlRfRkVBVFVSRV9BTkFMWVNJUxABEhUKEVNOQVBTSE9UX0FOQUxZ",
-            "U0lTEAIaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ASKwAQoJVmFsdWVUeXBlEhoKFlZBTFVFX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIICgRCT09MEAESDgoKQk9PTF9BUlJBWRACEgoKBkRPVUJMRRADEhAK",
-            "DERPVUJMRV9BUlJBWRAEEgkKBUlOVDY0EAkSDwoLSU5UNjRfQVJSQVkQChIK",
-            "CgZTVFJJTkcQCxIQCgxTVFJJTkdfQVJSQVkQDBIJCgVCWVRFUxANEgoKBlNU",
-            "UlVDVBAOOocC6kGDAgohYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9GZWF0",
-            "dXJlEnFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "ZmVhdHVyZXN0b3Jlcy97ZmVhdHVyZXN0b3JlfS9lbnRpdHlUeXBlcy97ZW50",
-            "aXR5X3R5cGV9L2ZlYXR1cmVzL3tmZWF0dXJlfRJYcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlYXR1cmVHcm91cHMve2ZlYXR1",
-            "cmVfZ3JvdXB9L2ZlYXR1cmVzL3tmZWF0dXJlfSoIZmVhdHVyZXMyB2ZlYXR1",
-            "cmVC4wEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQgxG",
-            "ZWF0dXJlUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
-            "L2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2ds",
-            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQ",
-            "bGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
-            "VjFiZXRhMWIGcHJvdG8z"));
+            "cHJvdG8aNWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0YTEvZmVhdHVy",
+            "ZV9tb25pdG9yLnByb3RvGj5nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJl",
+            "dGExL2ZlYXR1cmVfbW9uaXRvcmluZ19zdGF0cy5wcm90bxo9Z29vZ2xlL2Ns",
+            "b3VkL2FpcGxhdGZvcm0vdjFiZXRhMS9mZWF0dXJlc3RvcmVfbW9uaXRvcmlu",
+            "Zy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byK8DAoH",
+            "RmVhdHVyZRIRCgRuYW1lGAEgASgJQgPgQQUSEwoLZGVzY3JpcHRpb24YAiAB",
+            "KAkSSwoKdmFsdWVfdHlwZRgDIAEoDjIyLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuRmVhdHVyZS5WYWx1ZVR5cGVCA+BBBRI0CgtjcmVhdGVf",
+            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
+            "Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxJJCgZsYWJlbHMYBiADKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MWJldGExLkZlYXR1cmUuTGFiZWxzRW50cnlCA+BBARIMCgRldGFn",
+            "GAcgASgJEl8KEW1vbml0b3JpbmdfY29uZmlnGAkgASgLMj0uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5GZWF0dXJlc3RvcmVNb25pdG9yaW5n",
+            "Q29uZmlnQgUYAeBBARIfChJkaXNhYmxlX21vbml0b3JpbmcYDCABKAhCA+BB",
+            "ARJTChBtb25pdG9yaW5nX3N0YXRzGAogAygLMjQuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFiZXRhMS5GZWF0dXJlU3RhdHNBbm9tYWx5QgPgQQMSaAoa",
+            "bW9uaXRvcmluZ19zdGF0c19hbm9tYWxpZXMYCyADKAsyPy5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkZlYXR1cmUuTW9uaXRvcmluZ1N0YXRz",
+            "QW5vbWFseUID4EEDEl8KGWZlYXR1cmVfc3RhdHNfYW5kX2Fub21hbHkYDSAD",
+            "KAsyNy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkZlYXR1cmVT",
+            "dGF0c0FuZEFub21hbHlCA+BBAxIbChN2ZXJzaW9uX2NvbHVtbl9uYW1lGGog",
+            "ASgJEhgKEHBvaW50X29mX2NvbnRhY3QYayABKAkasQIKFk1vbml0b3JpbmdT",
+            "dGF0c0Fub21hbHkSYQoJb2JqZWN0aXZlGAEgASgOMkkuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMS5GZWF0dXJlLk1vbml0b3JpbmdTdGF0c0Fu",
+            "b21hbHkuT2JqZWN0aXZlQgPgQQMSWAoVZmVhdHVyZV9zdGF0c19hbm9tYWx5",
+            "GAIgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5GZWF0",
+            "dXJlU3RhdHNBbm9tYWx5QgPgQQMiWgoJT2JqZWN0aXZlEhkKFU9CSkVDVElW",
+            "RV9VTlNQRUNJRklFRBAAEhsKF0lNUE9SVF9GRUFUVVJFX0FOQUxZU0lTEAES",
+            "FQoRU05BUFNIT1RfQU5BTFlTSVMQAhotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIrABCglWYWx1ZVR5cGUSGgoWVkFM",
+            "VUVfVFlQRV9VTlNQRUNJRklFRBAAEggKBEJPT0wQARIOCgpCT09MX0FSUkFZ",
+            "EAISCgoGRE9VQkxFEAMSEAoMRE9VQkxFX0FSUkFZEAQSCQoFSU5UNjQQCRIP",
+            "CgtJTlQ2NF9BUlJBWRAKEgoKBlNUUklORxALEhAKDFNUUklOR19BUlJBWRAM",
+            "EgkKBUJZVEVTEA0SCgoGU1RSVUNUEA46hwLqQYMCCiFhaXBsYXRmb3JtLmdv",
+            "b2dsZWFwaXMuY29tL0ZlYXR1cmUScXByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlc3RvcmVzL3tmZWF0dXJlc3RvcmV9",
+            "L2VudGl0eVR5cGVzL3tlbnRpdHlfdHlwZX0vZmVhdHVyZXMve2ZlYXR1cmV9",
+            "Elhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVh",
+            "dHVyZUdyb3Vwcy97ZmVhdHVyZV9ncm91cH0vZmVhdHVyZXMve2ZlYXR1cmV9",
+            "KghmZWF0dXJlczIHZmVhdHVyZULjAQojY29tLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTFCDEZlYXR1cmVQcm90b1ABWkNjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlw",
+            "bGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoC",
+            "H0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNs",
+            "b3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.FeaturestoreMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.FeatureMonitorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.FeaturestoreMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Feature), global::Google.Cloud.AIPlatform.V1Beta1.Feature.Parser, new[]{ "Name", "Description", "ValueType", "CreateTime", "UpdateTime", "Labels", "Etag", "MonitoringConfig", "DisableMonitoring", "MonitoringStats", "MonitoringStatsAnomalies", "VersionColumnName", "PointOfContact" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Feature.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Feature.Types.MonitoringStatsAnomaly), global::Google.Cloud.AIPlatform.V1Beta1.Feature.Types.MonitoringStatsAnomaly.Parser, new[]{ "Objective", "FeatureStatsAnomaly" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Feature), global::Google.Cloud.AIPlatform.V1Beta1.Feature.Parser, new[]{ "Name", "Description", "ValueType", "CreateTime", "UpdateTime", "Labels", "Etag", "MonitoringConfig", "DisableMonitoring", "MonitoringStats", "MonitoringStatsAnomalies", "FeatureStatsAndAnomaly", "VersionColumnName", "PointOfContact" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Feature.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Feature.Types.MonitoringStatsAnomaly), global::Google.Cloud.AIPlatform.V1Beta1.Feature.Types.MonitoringStatsAnomaly.Parser, new[]{ "Objective", "FeatureStatsAnomaly" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) }, null, null),
             null, })
           }));
     }
@@ -131,6 +134,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       disableMonitoring_ = other.disableMonitoring_;
       monitoringStats_ = other.monitoringStats_.Clone();
       monitoringStatsAnomalies_ = other.monitoringStatsAnomalies_.Clone();
+      featureStatsAndAnomaly_ = other.featureStatsAndAnomaly_.Clone();
       versionColumnName_ = other.versionColumnName_;
       pointOfContact_ = other.pointOfContact_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -354,6 +358,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return monitoringStatsAnomalies_; }
     }
 
+    /// <summary>Field number for the "feature_stats_and_anomaly" field.</summary>
+    public const int FeatureStatsAndAnomalyFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.FeatureStatsAndAnomaly> _repeated_featureStatsAndAnomaly_codec
+        = pb::FieldCodec.ForMessage(106, global::Google.Cloud.AIPlatform.V1Beta1.FeatureStatsAndAnomaly.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.FeatureStatsAndAnomaly> featureStatsAndAnomaly_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.FeatureStatsAndAnomaly>();
+    /// <summary>
+    /// Output only. Only applicable for Vertex AI Feature Store.
+    /// The list of historical stats and anomalies.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.FeatureStatsAndAnomaly> FeatureStatsAndAnomaly {
+      get { return featureStatsAndAnomaly_; }
+    }
+
     /// <summary>Field number for the "version_column_name" field.</summary>
     public const int VersionColumnNameFieldNumber = 106;
     private string versionColumnName_ = "";
@@ -413,6 +432,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (DisableMonitoring != other.DisableMonitoring) return false;
       if(!monitoringStats_.Equals(other.monitoringStats_)) return false;
       if(!monitoringStatsAnomalies_.Equals(other.monitoringStatsAnomalies_)) return false;
+      if(!featureStatsAndAnomaly_.Equals(other.featureStatsAndAnomaly_)) return false;
       if (VersionColumnName != other.VersionColumnName) return false;
       if (PointOfContact != other.PointOfContact) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -433,6 +453,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (DisableMonitoring != false) hash ^= DisableMonitoring.GetHashCode();
       hash ^= monitoringStats_.GetHashCode();
       hash ^= monitoringStatsAnomalies_.GetHashCode();
+      hash ^= featureStatsAndAnomaly_.GetHashCode();
       if (VersionColumnName.Length != 0) hash ^= VersionColumnName.GetHashCode();
       if (PointOfContact.Length != 0) hash ^= PointOfContact.GetHashCode();
       if (_unknownFields != null) {
@@ -488,6 +509,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(96);
         output.WriteBool(DisableMonitoring);
       }
+      featureStatsAndAnomaly_.WriteTo(output, _repeated_featureStatsAndAnomaly_codec);
       if (VersionColumnName.Length != 0) {
         output.WriteRawTag(210, 6);
         output.WriteString(VersionColumnName);
@@ -541,6 +563,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(96);
         output.WriteBool(DisableMonitoring);
       }
+      featureStatsAndAnomaly_.WriteTo(ref output, _repeated_featureStatsAndAnomaly_codec);
       if (VersionColumnName.Length != 0) {
         output.WriteRawTag(210, 6);
         output.WriteString(VersionColumnName);
@@ -586,6 +609,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       size += monitoringStats_.CalculateSize(_repeated_monitoringStats_codec);
       size += monitoringStatsAnomalies_.CalculateSize(_repeated_monitoringStatsAnomalies_codec);
+      size += featureStatsAndAnomaly_.CalculateSize(_repeated_featureStatsAndAnomaly_codec);
       if (VersionColumnName.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(VersionColumnName);
       }
@@ -640,6 +664,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       monitoringStats_.Add(other.monitoringStats_);
       monitoringStatsAnomalies_.Add(other.monitoringStatsAnomalies_);
+      featureStatsAndAnomaly_.Add(other.featureStatsAndAnomaly_);
       if (other.VersionColumnName.Length != 0) {
         VersionColumnName = other.VersionColumnName;
       }
@@ -712,6 +737,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 96: {
             DisableMonitoring = input.ReadBool();
+            break;
+          }
+          case 106: {
+            featureStatsAndAnomaly_.AddEntriesFrom(input, _repeated_featureStatsAndAnomaly_codec);
             break;
           }
           case 850: {
@@ -788,6 +817,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 96: {
             DisableMonitoring = input.ReadBool();
+            break;
+          }
+          case 106: {
+            featureStatsAndAnomaly_.AddEntriesFrom(ref input, _repeated_featureStatsAndAnomaly_codec);
             break;
           }
           case 850: {

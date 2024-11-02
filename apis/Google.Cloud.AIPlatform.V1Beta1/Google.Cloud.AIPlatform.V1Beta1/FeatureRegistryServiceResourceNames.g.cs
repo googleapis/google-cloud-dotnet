@@ -67,4 +67,88 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateFeatureMonitorRequest
+    {
+        /// <summary>
+        /// <see cref="FeatureGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FeatureGroupName ParentAsFeatureGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FeatureGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetFeatureMonitorRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::FeatureMonitorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::FeatureMonitorName FeatureMonitorName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::FeatureMonitorName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListFeatureMonitorsRequest
+    {
+        /// <summary>
+        /// <see cref="FeatureGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FeatureGroupName ParentAsFeatureGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FeatureGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteFeatureMonitorRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::FeatureMonitorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::FeatureMonitorName FeatureMonitorName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::FeatureMonitorName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateFeatureMonitorJobRequest
+    {
+        /// <summary>
+        /// <see cref="FeatureMonitorName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FeatureMonitorName ParentAsFeatureMonitorName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FeatureMonitorName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetFeatureMonitorJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::FeatureMonitorJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::FeatureMonitorJobName FeatureMonitorJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::FeatureMonitorJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListFeatureMonitorJobsRequest
+    {
+        /// <summary>
+        /// <see cref="FeatureMonitorName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FeatureMonitorName ParentAsFeatureMonitorName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FeatureMonitorName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }
