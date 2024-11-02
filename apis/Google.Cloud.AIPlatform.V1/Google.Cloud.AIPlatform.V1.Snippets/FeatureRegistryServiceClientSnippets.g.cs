@@ -22,6 +22,7 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -1161,6 +1162,280 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeaturesRequestObject()
+        {
+            // Snippet: BatchCreateFeatures(BatchCreateFeaturesRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCreateFeaturesRequest request = new BatchCreateFeaturesRequest
+            {
+                ParentAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                Requests =
+                {
+                    new CreateFeatureRequest(),
+                },
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featureRegistryServiceClient.BatchCreateFeatures(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesRequestObjectAsync()
+        {
+            // Snippet: BatchCreateFeaturesAsync(BatchCreateFeaturesRequest, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(BatchCreateFeaturesRequest, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateFeaturesRequest request = new BatchCreateFeaturesRequest
+            {
+                ParentAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                Requests =
+                {
+                    new CreateFeatureRequest(),
+                },
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeatures()
+        {
+            // Snippet: BatchCreateFeatures(string, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featureRegistryServiceClient.BatchCreateFeatures(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesAsync()
+        {
+            // Snippet: BatchCreateFeaturesAsync(string, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(string, IEnumerable<CreateFeatureRequest>, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeaturesResourceNames1()
+        {
+            // Snippet: BatchCreateFeatures(EntityTypeName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featureRegistryServiceClient.BatchCreateFeatures(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesResourceNames1Async()
+        {
+            // Snippet: BatchCreateFeaturesAsync(EntityTypeName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(EntityTypeName, IEnumerable<CreateFeatureRequest>, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeatures</summary>
+        public void BatchCreateFeaturesResourceNames2()
+        {
+            // Snippet: BatchCreateFeatures(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = featureRegistryServiceClient.BatchCreateFeatures(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceBatchCreateFeatures(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateFeaturesAsync</summary>
+        public async Task BatchCreateFeaturesResourceNames2Async()
+        {
+            // Snippet: BatchCreateFeaturesAsync(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CallSettings)
+            // Additional: BatchCreateFeaturesAsync(FeatureGroupName, IEnumerable<CreateFeatureRequest>, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureGroupName parent = FeatureGroupName.FromProjectLocationFeatureGroup("[PROJECT]", "[LOCATION]", "[FEATURE_GROUP]");
+            IEnumerable<CreateFeatureRequest> requests = new CreateFeatureRequest[]
+            {
+                new CreateFeatureRequest(),
+            };
+            // Make the request
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> response = await featureRegistryServiceClient.BatchCreateFeaturesAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchCreateFeaturesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceBatchCreateFeaturesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchCreateFeaturesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

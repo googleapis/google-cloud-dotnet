@@ -15607,6 +15607,412 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_FeatureRegistryService_BatchCreateFeatures_sync",
+      "title": "BatchCreateFeaturesRequestObject",
+      "description": "Snippet for BatchCreateFeatures",
+      "file": "FeatureRegistryServiceClient.BatchCreateFeaturesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeatures",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient.BatchCreateFeatures",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureRegistryService_BatchCreateFeatures_async",
+      "title": "BatchCreateFeaturesRequestObjectAsync",
+      "description": "Snippet for BatchCreateFeaturesAsync",
+      "file": "FeatureRegistryServiceClient.BatchCreateFeaturesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeaturesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient.BatchCreateFeaturesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.BatchCreateFeaturesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureRegistryService_BatchCreateFeatures_sync_flattened",
+      "title": "BatchCreateFeatures",
+      "description": "Snippet for BatchCreateFeatures",
+      "file": "FeatureRegistryServiceClient.BatchCreateFeaturesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeatures",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient.BatchCreateFeatures",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.CreateFeatureRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureRegistryService_BatchCreateFeatures_async_flattened",
+      "title": "BatchCreateFeaturesAsync",
+      "description": "Snippet for BatchCreateFeaturesAsync",
+      "file": "FeatureRegistryServiceClient.BatchCreateFeaturesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeaturesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient.BatchCreateFeaturesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.CreateFeatureRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureRegistryService_BatchCreateFeatures_sync_flattened_resourceNames1",
+      "title": "BatchCreateFeaturesResourceNames1",
+      "description": "Snippet for BatchCreateFeatures",
+      "file": "FeatureRegistryServiceClient.BatchCreateFeaturesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeatures",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient.BatchCreateFeatures",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EntityTypeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.CreateFeatureRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureRegistryService_BatchCreateFeatures_async_flattened_resourceNames1",
+      "title": "BatchCreateFeaturesResourceNames1Async",
+      "description": "Snippet for BatchCreateFeaturesAsync",
+      "file": "FeatureRegistryServiceClient.BatchCreateFeaturesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeaturesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient.BatchCreateFeaturesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EntityTypeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.CreateFeatureRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureRegistryService_BatchCreateFeatures_sync_flattened_resourceNames2",
+      "title": "BatchCreateFeaturesResourceNames2",
+      "description": "Snippet for BatchCreateFeatures",
+      "file": "FeatureRegistryServiceClient.BatchCreateFeaturesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeatures",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient.BatchCreateFeatures",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.FeatureGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.CreateFeatureRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureRegistryService_BatchCreateFeatures_async_flattened_resourceNames2",
+      "title": "BatchCreateFeaturesResourceNames2Async",
+      "description": "Snippet for BatchCreateFeaturesAsync",
+      "file": "FeatureRegistryServiceClient.BatchCreateFeaturesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeaturesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient.BatchCreateFeaturesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.FeatureGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.CreateFeatureRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureRegistryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_FeatureRegistryService_GetFeature_sync",
       "title": "GetFeatureRequestObject",
       "description": "Snippet for GetFeature",
@@ -22130,10 +22536,10 @@
       ]
     },
     {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreService_BatchCreateFeatures_sync_flattened_resourceNames",
-      "title": "BatchCreateFeaturesResourceNames",
+      "regionTag": "aiplatform_v1_generated_FeaturestoreService_BatchCreateFeatures_sync_flattened_resourceNames1",
+      "title": "BatchCreateFeaturesResourceNames1",
       "description": "Snippet for BatchCreateFeatures",
-      "file": "FeaturestoreServiceClient.BatchCreateFeaturesResourceNamesSnippet.g.cs",
+      "file": "FeaturestoreServiceClient.BatchCreateFeaturesResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "BatchCreateFeatures",
@@ -22181,10 +22587,10 @@
       ]
     },
     {
-      "regionTag": "aiplatform_v1_generated_FeaturestoreService_BatchCreateFeatures_async_flattened_resourceNames",
-      "title": "BatchCreateFeaturesResourceNamesAsync",
+      "regionTag": "aiplatform_v1_generated_FeaturestoreService_BatchCreateFeatures_async_flattened_resourceNames1",
+      "title": "BatchCreateFeaturesResourceNames1Async",
       "description": "Snippet for BatchCreateFeaturesAsync",
-      "file": "FeaturestoreServiceClient.BatchCreateFeaturesResourceNamesAsyncSnippet.g.cs",
+      "file": "FeaturestoreServiceClient.BatchCreateFeaturesResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "BatchCreateFeaturesAsync",
@@ -22193,6 +22599,109 @@
         "parameters": [
           {
             "type": "Google.Cloud.AIPlatform.V1.EntityTypeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.CreateFeatureRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>>",
+        "client": {
+          "shortName": "FeaturestoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeaturestoreService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreService_BatchCreateFeatures_sync_flattened_resourceNames2",
+      "title": "BatchCreateFeaturesResourceNames2",
+      "description": "Snippet for BatchCreateFeatures",
+      "file": "FeaturestoreServiceClient.BatchCreateFeaturesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeatures",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreServiceClient.BatchCreateFeatures",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.FeatureGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.CreateFeatureRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCreateFeaturesResponse, Google.Cloud.AIPlatform.V1.BatchCreateFeaturesOperationMetadata>",
+        "client": {
+          "shortName": "FeaturestoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateFeatures",
+          "fullName": "google.cloud.aiplatform.v1.FeaturestoreService.BatchCreateFeatures",
+          "service": {
+            "shortName": "FeaturestoreService",
+            "fullName": "google.cloud.aiplatform.v1.FeaturestoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeaturestoreService_BatchCreateFeatures_async_flattened_resourceNames2",
+      "title": "BatchCreateFeaturesResourceNames2Async",
+      "description": "Snippet for BatchCreateFeaturesAsync",
+      "file": "FeaturestoreServiceClient.BatchCreateFeaturesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateFeaturesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeaturestoreServiceClient.BatchCreateFeaturesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.FeatureGroupName",
             "name": "parent"
           },
           {

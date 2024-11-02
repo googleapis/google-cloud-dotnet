@@ -3357,16 +3357,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of
-        /// Features under. Format:
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="requests">
         /// Required. The request message specifying the Features to create. All
-        /// Features must be created under the same parent EntityType. The `parent`
-        /// field in each child request message can be omitted. If `parent` is set in a
-        /// child request, then the value must match the `parent` value in this request
-        /// message.
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3384,16 +3385,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of
-        /// Features under. Format:
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="requests">
         /// Required. The request message specifying the Features to create. All
-        /// Features must be created under the same parent EntityType. The `parent`
-        /// field in each child request message can be omitted. If `parent` is set in a
-        /// child request, then the value must match the `parent` value in this request
-        /// message.
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3411,16 +3413,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of
-        /// Features under. Format:
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="requests">
         /// Required. The request message specifying the Features to create. All
-        /// Features must be created under the same parent EntityType. The `parent`
-        /// field in each child request message can be omitted. If `parent` is set in a
-        /// child request, then the value must match the `parent` value in this request
-        /// message.
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3431,16 +3434,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of
-        /// Features under. Format:
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="requests">
         /// Required. The request message specifying the Features to create. All
-        /// Features must be created under the same parent EntityType. The `parent`
-        /// field in each child request message can be omitted. If `parent` is set in a
-        /// child request, then the value must match the `parent` value in this request
-        /// message.
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3458,16 +3462,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of
-        /// Features under. Format:
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="requests">
         /// Required. The request message specifying the Features to create. All
-        /// Features must be created under the same parent EntityType. The `parent`
-        /// field in each child request message can be omitted. If `parent` is set in a
-        /// child request, then the value must match the `parent` value in this request
-        /// message.
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3485,20 +3490,98 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of
-        /// Features under. Format:
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="requests">
         /// Required. The request message specifying the Features to create. All
-        /// Features must be created under the same parent EntityType. The `parent`
-        /// field in each child request message can be omitted. If `parent` is set in a
-        /// child request, then the value must match the `parent` value in this request
-        /// message.
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(EntityTypeName parent, scg::IEnumerable<CreateFeatureRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a batch of Features in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeatures(new BatchCreateFeaturesRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeaturesAsync(new BatchCreateFeaturesRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, st::CancellationToken cancellationToken) =>
             BatchCreateFeaturesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

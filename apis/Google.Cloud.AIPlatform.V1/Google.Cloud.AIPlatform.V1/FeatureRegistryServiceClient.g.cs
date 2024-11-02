@@ -62,6 +62,8 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteFeatureGroupOperationsSettings = existing.DeleteFeatureGroupOperationsSettings.Clone();
             CreateFeatureSettings = existing.CreateFeatureSettings;
             CreateFeatureOperationsSettings = existing.CreateFeatureOperationsSettings.Clone();
+            BatchCreateFeaturesSettings = existing.BatchCreateFeaturesSettings;
+            BatchCreateFeaturesOperationsSettings = existing.BatchCreateFeaturesOperationsSettings.Clone();
             GetFeatureSettings = existing.GetFeatureSettings;
             ListFeaturesSettings = existing.ListFeaturesSettings;
             UpdateFeatureSettings = existing.UpdateFeatureSettings;
@@ -221,6 +223,37 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateFeatureOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.BatchCreateFeatures</c> and
+        /// <c>FeatureRegistryServiceClient.BatchCreateFeaturesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateFeaturesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FeatureRegistryServiceClient.BatchCreateFeatures</c> and
+        /// <c>FeatureRegistryServiceClient.BatchCreateFeaturesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchCreateFeaturesOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -541,7 +574,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -571,7 +604,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -601,7 +634,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -626,7 +659,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -656,7 +689,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -686,7 +719,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The ID to use for this FeatureGroup, which will become the final
         /// component of the FeatureGroup's resource name.
         /// 
-        /// This value may be up to 60 characters, and valid characters are
+        /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
         /// The value must be unique within the project and location.
@@ -1613,6 +1646,291 @@ namespace Google.Cloud.AIPlatform.V1
             CreateFeatureAsync(parent, feature, featureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(BatchCreateFeaturesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(BatchCreateFeaturesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(BatchCreateFeaturesRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchCreateFeatures</c>.</summary>
+        public virtual lro::OperationsClient BatchCreateFeaturesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchCreateFeatures</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> PollOnceBatchCreateFeatures(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateFeaturesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCreateFeatures</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> PollOnceBatchCreateFeaturesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateFeaturesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(string parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeatures(new BatchCreateFeaturesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(string parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeaturesAsync(new BatchCreateFeaturesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(string parent, scg::IEnumerable<CreateFeatureRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(EntityTypeName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeatures(new BatchCreateFeaturesRequest
+            {
+                ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(EntityTypeName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeaturesAsync(new BatchCreateFeaturesRequest
+            {
+                ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(EntityTypeName parent, scg::IEnumerable<CreateFeatureRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeatures(new BatchCreateFeaturesRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateFeaturesAsync(new BatchCreateFeaturesRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType/FeatureGroup to create the
+        /// batch of Features under. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType / FeatureGroup.
+        /// The `parent` field in each child request message can be omitted. If
+        /// `parent` is set in a child request, then the value must match the `parent`
+        /// value in this request message.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(FeatureGroupName parent, scg::IEnumerable<CreateFeatureRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateFeaturesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets details of a single Feature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2304,6 +2622,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<CreateFeatureRequest, lro::Operation> _callCreateFeature;
 
+        private readonly gaxgrpc::ApiCall<BatchCreateFeaturesRequest, lro::Operation> _callBatchCreateFeatures;
+
         private readonly gaxgrpc::ApiCall<GetFeatureRequest, Feature> _callGetFeature;
 
         private readonly gaxgrpc::ApiCall<ListFeaturesRequest, ListFeaturesResponse> _callListFeatures;
@@ -2334,6 +2654,7 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateFeatureGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFeatureGroupOperationsSettings, logger);
             DeleteFeatureGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureGroupOperationsSettings, logger);
             CreateFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFeatureOperationsSettings, logger);
+            BatchCreateFeaturesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateFeaturesOperationsSettings, logger);
             UpdateFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFeatureOperationsSettings, logger);
             DeleteFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
@@ -2356,6 +2677,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callCreateFeature = clientHelper.BuildApiCall<CreateFeatureRequest, lro::Operation>("CreateFeature", grpcClient.CreateFeatureAsync, grpcClient.CreateFeature, effectiveSettings.CreateFeatureSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFeature);
             Modify_CreateFeatureApiCall(ref _callCreateFeature);
+            _callBatchCreateFeatures = clientHelper.BuildApiCall<BatchCreateFeaturesRequest, lro::Operation>("BatchCreateFeatures", grpcClient.BatchCreateFeaturesAsync, grpcClient.BatchCreateFeatures, effectiveSettings.BatchCreateFeaturesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateFeatures);
+            Modify_BatchCreateFeaturesApiCall(ref _callBatchCreateFeatures);
             _callGetFeature = clientHelper.BuildApiCall<GetFeatureRequest, Feature>("GetFeature", grpcClient.GetFeatureAsync, grpcClient.GetFeature, effectiveSettings.GetFeatureSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFeature);
             Modify_GetFeatureApiCall(ref _callGetFeature);
@@ -2384,6 +2708,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeleteFeatureGroupApiCall(ref gaxgrpc::ApiCall<DeleteFeatureGroupRequest, lro::Operation> call);
 
         partial void Modify_CreateFeatureApiCall(ref gaxgrpc::ApiCall<CreateFeatureRequest, lro::Operation> call);
+
+        partial void Modify_BatchCreateFeaturesApiCall(ref gaxgrpc::ApiCall<BatchCreateFeaturesRequest, lro::Operation> call);
 
         partial void Modify_GetFeatureApiCall(ref gaxgrpc::ApiCall<GetFeatureRequest, Feature> call);
 
@@ -2415,6 +2741,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeleteFeatureGroupRequest(ref DeleteFeatureGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateFeatureRequest(ref CreateFeatureRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateFeaturesRequest(ref BatchCreateFeaturesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetFeatureRequest(ref GetFeatureRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2578,6 +2906,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_CreateFeatureRequest(ref request, ref callSettings);
             return new lro::Operation<Feature, CreateFeatureOperationMetadata>(await _callCreateFeature.Async(request, callSettings).ConfigureAwait(false), CreateFeatureOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BatchCreateFeatures</c>.</summary>
+        public override lro::OperationsClient BatchCreateFeaturesOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata> BatchCreateFeatures(BatchCreateFeaturesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateFeaturesRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>(_callBatchCreateFeatures.Sync(request, callSettings), BatchCreateFeaturesOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a batch of Features in a given FeatureGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>> BatchCreateFeaturesAsync(BatchCreateFeaturesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateFeaturesRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateFeaturesResponse, BatchCreateFeaturesOperationMetadata>(await _callBatchCreateFeatures.Async(request, callSettings).ConfigureAwait(false), BatchCreateFeaturesOperationsClient);
         }
 
         /// <summary>
