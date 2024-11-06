@@ -51,11 +51,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "bG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZUgAElcKEGFk",
             "ZGl0aW9uYWxfY2FzZXMYAiABKAsyOy5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
             "dy5jeC52My5GdWxmaWxsbWVudC5Db25kaXRpb25hbENhc2VzSABCEgoQY2Fz",
-            "ZXNfb3JfbWVzc2FnZUK2AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "ZXNfb3JfbWVzc2FnZUKzAQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
             "LmN4LnYzQhBGdWxmaWxsbWVudFByb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBiO2N4cGL4AQGiAgJERqoCHUdv",
-            "b2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6",
-            "RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
+            "Z28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBiO2N4cGKiAgJERqoCHUdvb2ds",
+            "ZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlh",
+            "bG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -155,8 +155,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string webhook_ = "";
     /// <summary>
     /// The webhook to call.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/webhooks/&lt;Webhook ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/webhooks/&lt;WebhookID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

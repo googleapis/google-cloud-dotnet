@@ -193,11 +193,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The unique identifier of the session entity type.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type
-    /// ID>` or `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity
-    /// Type ID>`. If `Environment ID` is not specified, we assume default 'draft'
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -503,9 +503,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to list all session entity types from.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>` or `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>`.
     /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment.
     /// </summary>
@@ -1012,11 +1013,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the session entity type.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type ID>` or
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity
-    /// Type ID>`. If `Environment ID` is not specified, we assume default 'draft'
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`.
+    /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1216,9 +1217,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to create a session entity type for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>` or `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>`.
     /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment.
     /// </summary>
@@ -1467,12 +1469,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityType sessionEntityType_;
     /// <summary>
     /// Required. The session entity type to update.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type ID>` or
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity
-    /// Type ID>`. If `Environment ID` is not specified, we assume default 'draft'
-    /// environment.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`.
+    /// If `Environment ID` is not specified,
+    /// we assume default 'draft' environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1727,12 +1729,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the session entity type to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type ID>` or
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>/entityTypes/&lt;Entity
-    /// Type ID>`. If `Environment ID` is not specified, we assume default 'draft'
-    /// environment.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>/entityTypes/&lt;EntityTypeID>`.
+    /// If `Environment ID` is not specified,
+    /// we assume default 'draft' environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

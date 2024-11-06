@@ -143,8 +143,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// The name of the deployment.
-    /// Format: projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/deployments/&lt;Deployment ID>.
+    /// Format:
+    /// projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/deployments/&lt;DeploymentID>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -160,8 +160,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string flowVersion_ = "";
     /// <summary>
     /// The name of the flow version for this deployment.
-    /// Format: projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/versions/&lt;Verion ID>.
+    /// Format:
+    /// projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/versions/&lt;VerionID>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -593,8 +593,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private readonly pbc::RepeatedField<string> deploymentTestResults_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// Results of test cases running before the deployment.
-        /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-        /// ID>/testCases/&lt;TestCase ID>/results/&lt;TestCaseResult ID>`.
+        /// Format:
+        /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/testCases/&lt;TestCaseID>/results/&lt;TestCaseResultID>`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -607,8 +607,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private string experiment_ = "";
         /// <summary>
         /// The name of the experiment triggered by this deployment.
-        /// Format: projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-        /// ID>/environments/&lt;Environment ID>/experiments/&lt;Experiment ID>.
+        /// Format:
+        /// projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/experiments/&lt;ExperimentID>.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -827,9 +827,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
-    /// list all environments for. Format: `projects/&lt;Project
-    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/environments/&lt;Environment
-    /// ID>`.
+    /// list all environments for. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1337,8 +1336,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. The name of the
     /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>/deployments/&lt;Deployment ID>`.
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/deployments/&lt;DeploymentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

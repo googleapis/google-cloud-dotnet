@@ -178,14 +178,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "b2NhdGlvbnMvKi9hZ2VudHMvKi93ZWJob29rcy8qfRp4ykEZZGlhbG9nZmxv",
             "dy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
             "L2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9kaWFsb2dmbG93QrECCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "b20vYXV0aC9kaWFsb2dmbG93Qq4CCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxv",
             "Z2Zsb3cuY3gudjNCDFdlYmhvb2tQcm90b1ABWjFjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaqAh1H",
-            "b29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6",
-            "OkRpYWxvZ2Zsb3c6OkNYOjpWM+pBfAonc2VydmljZWRpcmVjdG9yeS5nb29n",
-            "bGVhcGlzLmNvbS9TZXJ2aWNlElFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vbmFtZXNwYWNlcy97bmFtZXNwYWNlfS9zZXJ2aWNl",
-            "cy97c2VydmljZX1iBnByb3RvMw=="));
+            "L2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBiogICREaqAh1Hb29n",
+            "bGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRp",
+            "YWxvZ2Zsb3c6OkNYOjpWM+pBfAonc2VydmljZWRpcmVjdG9yeS5nb29nbGVh",
+            "cGlzLmNvbS9TZXJ2aWNlElFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vbmFtZXNwYWNlcy97bmFtZXNwYWNlfS9zZXJ2aWNlcy97",
+            "c2VydmljZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -284,8 +284,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// [Webhooks.UpdateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook]
     /// method.
     /// [Webhooks.CreateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook]
-    /// populates the name automatically. Format: `projects/&lt;Project
-    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/webhooks/&lt;Webhook ID>`.
+    /// populates the name automatically. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/webhooks/&lt;WebhookID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1746,8 +1746,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// <summary>
         /// Required. The name of [Service
         /// Directory](https://cloud.google.com/service-directory) service.
-        /// Format: `projects/&lt;Project ID>/locations/&lt;Location
-        /// ID>/namespaces/&lt;Namespace ID>/services/&lt;Service ID>`.
+        /// Format:
+        /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/namespaces/&lt;NamespaceID>/services/&lt;ServiceID>`.
         /// `Location ID` of the service directory must be the same as the location
         /// of the agent.
         /// </summary>
@@ -2002,7 +2002,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to list all webhooks for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// Format: `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2507,8 +2507,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the webhook.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/webhooks/&lt;Webhook ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/webhooks/&lt;WebhookID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2707,7 +2707,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to create a webhook for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// Format: `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3210,8 +3210,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the webhook to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/webhooks/&lt;Webhook ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/webhooks/&lt;WebhookID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3534,8 +3534,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as
     /// input, this field will contain a copy of the intent identifier. Format:
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/intents/&lt;Intent ID>`.
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/intents/&lt;IntentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4605,8 +4604,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// <summary>
         /// Always present. The unique identifier of the last matched
         /// [intent][google.cloud.dialogflow.cx.v3.Intent].
-        /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-        /// ID>/intents/&lt;Intent ID>`.
+        /// Format:
+        /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/intents/&lt;IntentID>`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5169,7 +5168,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private float score_;
         /// <summary>
         /// Sentiment score between -1.0 (negative sentiment) and 1.0 (positive
-        /// sentiment).
+        ///  sentiment).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5487,8 +5486,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TargetPageFieldNumber = 5;
     /// <summary>
     /// The target page to transition to.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/pages/&lt;PageID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5518,8 +5517,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TargetFlowFieldNumber = 6;
     /// <summary>
     /// The target flow to transition to.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6178,9 +6177,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Always present for
     /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored for
     /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The
-    /// unique identifier of the current page. Format: `projects/&lt;Project
-    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/pages/&lt;Page
-    /// ID>`.
+    /// unique identifier of the current page. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/pages/&lt;PageID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7103,9 +7101,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// unique identifier of the
     /// [session][google.cloud.dialogflow.cx.v3.DetectIntentRequest.session]. This
     /// field can be used by the webhook to identify a session.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/sessions/&lt;Session ID>` or `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/environments/&lt;Environment ID>/sessions/&lt;Session ID>`
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/sessions/&lt;SessionID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/environments/&lt;EnvironmentID>/sessions/&lt;SessionID>`
     /// if environment is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

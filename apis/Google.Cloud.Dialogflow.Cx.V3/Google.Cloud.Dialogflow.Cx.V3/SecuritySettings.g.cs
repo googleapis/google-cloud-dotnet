@@ -198,8 +198,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. Resource name of the settings.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/securitySettings/&lt;security settings ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/securitySettings/&lt;securitysettingsID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -655,7 +655,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The location to list all security settings for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
+    /// Format: `projects/&lt;ProjectID>/locations/&lt;LocationID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1159,7 +1159,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. The location to create an
     /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
+    /// Format: `projects/&lt;ProjectID>/locations/&lt;LocationID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1405,8 +1405,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. The name of the
     /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
-    /// delete. Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/securitySettings/&lt;Security Settings ID>`.
+    /// delete. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/securitySettings/&lt;SecuritySettingsID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1626,8 +1626,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// [SecuritySettingsService.UpdateSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings]
     /// method.
     /// [SecuritySettingsService.CreateSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings]
-    /// populates the name automatically. Format: `projects/&lt;Project
-    /// ID>/locations/&lt;Location ID>/securitySettings/&lt;Security Settings ID>`.
+    /// populates the name automatically. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/securitySettings/&lt;SecuritySettingsID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1701,9 +1701,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// If empty, we use the default DLP inspect config.
     ///
     /// The template name will have one of the following formats:
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/inspectTemplates/&lt;Template
-    /// ID>` OR `organizations/&lt;Organization ID>/locations/&lt;Location
-    /// ID>/inspectTemplates/&lt;Template ID>`
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/inspectTemplates/&lt;TemplateID>`
+    /// OR
+    /// `organizations/&lt;OrganizationID>/locations/&lt;LocationID>/inspectTemplates/&lt;TemplateID>`
     ///
     /// Note: `inspect_template` must be located in the same region as the
     /// `SecuritySettings`.
@@ -1732,9 +1732,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// If empty, Dialogflow replaces sensitive info with `[redacted]` text.
     ///
     /// The template name will have one of the following formats:
-    /// `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/deidentifyTemplates/&lt;Template ID>` OR `organizations/&lt;Organization
-    /// ID>/locations/&lt;Location ID>/deidentifyTemplates/&lt;Template ID>`
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/deidentifyTemplates/&lt;TemplateID>`
+    /// OR
+    /// `organizations/&lt;OrganizationID>/locations/&lt;LocationID>/deidentifyTemplates/&lt;TemplateID>`
     ///
     /// Note: `deidentify_template` must be located in the same region as the
     /// `SecuritySettings`.
