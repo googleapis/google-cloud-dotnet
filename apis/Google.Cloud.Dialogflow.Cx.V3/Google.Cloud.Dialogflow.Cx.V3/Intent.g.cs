@@ -129,11 +129,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "YXRpb25zLyovYWdlbnRzLyp9L2ludGVudHM6ZXhwb3J0OgEqGnjKQRlkaWFs",
             "b2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
             "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCsQEKIWNvbS5nb29nbGUuY2xvdWQu",
+            "cGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCrgEKIWNvbS5nb29nbGUuY2xvdWQu",
             "ZGlhbG9nZmxvdy5jeC52M0ILSW50ZW50UHJvdG9QAVoxY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRG",
-            "qgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNs",
-            "b3VkOjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
+            "LmNvbS9nby9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYqICAkRGqgId",
+            "R29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3Vk",
+            "OjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.InlineReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.IntentView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -250,8 +250,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// method.
     /// [Intents.CreateIntent][google.cloud.dialogflow.cx.v3.Intents.CreateIntent]
     /// populates the name automatically.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/intents/&lt;Intent ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/intents/&lt;IntentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1267,11 +1267,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private string entityType_ = "";
         /// <summary>
         /// Required. The entity type of the parameter.
-        /// Format: `projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type
-        /// ID>` for system entity types (for example,
+        /// Format:
+        /// `projects/-/locations/-/agents/-/entityTypes/&lt;SystemEntityTypeID>` for
+        /// system entity types (for example,
         /// `projects/-/locations/-/agents/-/entityTypes/sys.date`), or
-        /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-        /// ID>/entityTypes/&lt;Entity Type ID>` for developer entity types.
+        /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/entityTypes/&lt;EntityTypeID>`
+        /// for developer entity types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1585,7 +1586,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to list all intents for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// Format: `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2178,8 +2179,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the intent.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/intents/&lt;Intent ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/intents/&lt;IntentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2427,7 +2428,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to create an intent for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// Format: `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3024,8 +3025,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the intent to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/intents/&lt;Intent ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/intents/&lt;IntentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3233,7 +3234,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to import the intents into.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// Format: `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3663,8 +3664,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private readonly pbc::RepeatedField<string> intents_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// The unique identifier of the imported intents.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/intents/&lt;Intent ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/intents/&lt;IntentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4292,8 +4293,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the parent agent to export intents.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>`.
+    /// Format: `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4311,8 +4311,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private readonly pbc::RepeatedField<string> intents_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. The name of the intents to export.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/intents/&lt;Intent ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/intents/&lt;IntentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

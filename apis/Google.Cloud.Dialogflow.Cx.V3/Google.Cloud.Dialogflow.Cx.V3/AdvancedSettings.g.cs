@@ -50,11 +50,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "cm90b2J1Zi5EdXJhdGlvbhqBAQoPTG9nZ2luZ1NldHRpbmdzEiIKGmVuYWJs",
             "ZV9zdGFja2RyaXZlcl9sb2dnaW5nGAIgASgIEiIKGmVuYWJsZV9pbnRlcmFj",
             "dGlvbl9sb2dnaW5nGAMgASgIEiYKHmVuYWJsZV9jb25zZW50X2Jhc2VkX3Jl",
-            "ZGFjdGlvbhgEIAEoCEK7AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "ZGFjdGlvbhgEIAEoCEK4AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
             "LmN4LnYzQhVBZHZhbmNlZFNldHRpbmdzUHJvdG9QAVoxY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRG",
-            "qgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNs",
-            "b3VkOjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
+            "LmNvbS9nby9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYqICAkRGqgId",
+            "R29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3Vk",
+            "OjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.GcsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1203,7 +1203,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int EnableStackdriverLoggingFieldNumber = 2;
         private bool enableStackdriverLogging_;
         /// <summary>
-        /// Enables StackDriver logging.
+        /// Enables Google Cloud Logging.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

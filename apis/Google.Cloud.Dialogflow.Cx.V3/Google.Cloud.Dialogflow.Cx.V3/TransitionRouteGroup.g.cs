@@ -105,11 +105,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "aXRpb25Sb3V0ZUdyb3Vwcy8qfRp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlz",
             "LmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
             "cGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFs",
-            "b2dmbG93Qr8BCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNC",
+            "b2dmbG93QrwBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNC",
             "GVRyYW5zaXRpb25Sb3V0ZUdyb3VwUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgId",
-            "R29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3Vk",
-            "OjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
+            "bS9nby9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYqICAkRGqgIdR29v",
+            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpE",
+            "aWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -184,9 +184,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// The unique identifier of the transition route group.
     /// [TransitionRouteGroups.CreateTransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroups.CreateTransitionRouteGroup]
-    /// populates the name automatically. Format: `projects/&lt;Project
-    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/flows/&lt;Flow
-    /// ID>/transitionRouteGroups/&lt;Transition Route Group ID>`
+    /// populates the name automatically. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/transitionRouteGroups/&lt;TransitionRouteGroupID>`
     /// .
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -457,9 +456,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The flow to list all transition route groups for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`
-    /// or `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`
+    ///  or `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1018,10 +1017,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. The name of the
     /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/transitionRouteGroups/&lt;Transition Route Group ID>`
-    /// or `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/transitionRouteGroups/&lt;Transition Route Group ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/transitionRouteGroups/&lt;TransitionRouteGroupID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/transitionRouteGroups/&lt;TransitionRouteGroupID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1272,9 +1271,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. The flow to create an
     /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-    /// for. Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`
-    /// or `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`
+    /// for. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`
+    /// or `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>`
     /// for agent-level groups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1877,10 +1876,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. The name of the
     /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
-    /// to delete. Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/transitionRouteGroups/&lt;Transition
-    /// Route Group ID>` or `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/transitionRouteGroups/&lt;Transition Route Group ID>`.
+    /// to delete. Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/transitionRouteGroups/&lt;TransitionRouteGroupID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/transitionRouteGroups/&lt;TransitionRouteGroupID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

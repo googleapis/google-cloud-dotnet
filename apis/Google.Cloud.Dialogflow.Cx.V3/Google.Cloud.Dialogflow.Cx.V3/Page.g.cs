@@ -124,11 +124,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "cy8qL2Zsb3dzLyovcGFnZXMvKn0aeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBp",
             "cy5jb23SQVlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlh",
-            "bG9nZmxvd0KvAQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "bG9nZmxvd0KsAQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
             "QglQYWdlUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93",
-            "L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRp",
-            "YWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpD",
-            "WDo6VjNiBnByb3RvMw=="));
+            "L2N4L2FwaXYzL2N4cGI7Y3hwYqICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxv",
+            "Z2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6",
+            "VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FulfillmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -230,8 +230,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// [Pages.UpdatePage][google.cloud.dialogflow.cx.v3.Pages.UpdatePage] method.
     /// [Pages.CreatePage][google.cloud.dialogflow.cx.v3.Pages.CreatePage]
     /// populates the name automatically.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/pages/&lt;PageID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -323,11 +323,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// *   If multiple transition route groups within a page contain the same
     ///     intent, then the first group in the ordered list takes precedence.
     ///
-    /// Format:`projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/transitionRouteGroups/&lt;TransitionRouteGroup ID>`
-    /// or `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/transitionRouteGroups/&lt;TransitionRouteGroup ID>` for agent-level
-    /// groups.
+    /// Format:`projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/transitionRouteGroups/&lt;TransitionRouteGroupID>`
+    /// or
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/transitionRouteGroups/&lt;TransitionRouteGroupID>`
+    /// for agent-level groups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1057,11 +1056,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private string entityType_ = "";
         /// <summary>
         /// Required. The entity type of the parameter.
-        /// Format: `projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type
-        /// ID>` for system entity types (for example,
+        /// Format:
+        /// `projects/-/locations/-/agents/-/entityTypes/&lt;SystemEntityTypeID>` for
+        /// system entity types (for example,
         /// `projects/-/locations/-/agents/-/entityTypes/sys.date`), or
-        /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-        /// ID>/entityTypes/&lt;Entity Type ID>` for developer entity types.
+        /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/entityTypes/&lt;EntityTypeID>`
+        /// for developer entity types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1887,8 +1887,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TargetPageFieldNumber = 2;
     /// <summary>
     /// The target page to transition to.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/pages/&lt;PageID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1918,8 +1918,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TargetFlowFieldNumber = 3;
     /// <summary>
     /// The target flow to transition to.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2321,8 +2321,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string intent_ = "";
     /// <summary>
     /// The unique identifier of an [Intent][google.cloud.dialogflow.cx.v3.Intent].
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/intents/&lt;Intent ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/intents/&lt;IntentID>`.
     /// Indicates that the transition can only happen when the given intent is
     /// matched.
     /// At least one of `intent` or `condition` must be specified. When both
@@ -2382,8 +2382,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TargetPageFieldNumber = 4;
     /// <summary>
     /// The target page to transition to.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/pages/&lt;PageID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2413,8 +2413,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TargetFlowFieldNumber = 5;
     /// <summary>
     /// The target flow to transition to.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2809,8 +2809,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The flow to list all pages for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3375,8 +3375,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the page.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/pages/&lt;PageID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3635,8 +3635,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. The flow to create a page for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4256,8 +4256,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the page to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/Flows/&lt;flow ID>/pages/&lt;Page ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/Flows/&lt;flowID>/pages/&lt;PageID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4550,8 +4550,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TargetPageFieldNumber = 4;
     /// <summary>
     /// The target page to transition to.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>/pages/&lt;PageID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4581,8 +4581,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TargetFlowFieldNumber = 5;
     /// <summary>
     /// The target flow to transition to.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/flows/&lt;FlowID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -47,12 +47,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "YWJsZV9kYXRhX3N0b3JlX2ZhbGxiYWNrGAggASgIOoEB6kF+CjFkaWFsb2dm",
             "bG93Lmdvb2dsZWFwaXMuY29tL0FnZW50R2VuZXJhdGl2ZVNldHRpbmdzEklw",
             "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdlbnRz",
-            "L3thZ2VudH0vZ2VuZXJhdGl2ZVNldHRpbmdzQr0BCiFjb20uZ29vZ2xlLmNs",
+            "L3thZ2VudH0vZ2VuZXJhdGl2ZVNldHRpbmdzQroBCiFjb20uZ29vZ2xlLmNs",
             "b3VkLmRpYWxvZ2Zsb3cuY3gudjNCF0dlbmVyYXRpdmVTZXR0aW5nc1Byb3Rv",
             "UAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2My9j",
-            "eHBiO2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4",
-            "LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90",
-            "bzM="));
+            "eHBiO2N4cGKiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz",
+            "6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SafetySettingsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -120,8 +119,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/generativeSettings`.
+    /// Format:
+    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/agents/&lt;AgentID>/generativeSettings`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

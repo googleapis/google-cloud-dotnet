@@ -1034,7 +1034,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> text_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Required. A collection of text responses.
+        /// Required. A collection of text response variants. If multiple variants
+        /// are defined, only one text response variant is returned at runtime.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
