@@ -33,41 +33,43 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dW5jdGlvbkRlY2xhcmF0aW9uQgPgQQESPQoJcmV0cmlldmFsGAIgASgLMiUu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUmV0cmlldmFsQgPgQQESVwoX",
             "Z29vZ2xlX3NlYXJjaF9yZXRyaWV2YWwYAyABKAsyMS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5Hb29nbGVTZWFyY2hSZXRyaWV2YWxCA+BBASKGAQoT",
+            "YWlwbGF0Zm9ybS52MS5Hb29nbGVTZWFyY2hSZXRyaWV2YWxCA+BBASLIAQoT",
             "RnVuY3Rpb25EZWNsYXJhdGlvbhIRCgRuYW1lGAEgASgJQgPgQQISGAoLZGVz",
             "Y3JpcHRpb24YAiABKAlCA+BBARJCCgpwYXJhbWV0ZXJzGAMgASgLMikuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuT3BlbkFwaVNjaGVtYUID4EEBIk0K",
-            "DEZ1bmN0aW9uQ2FsbBIRCgRuYW1lGAEgASgJQgPgQQISKgoEYXJncxgCIAEo",
-            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBASJVChBGdW5jdGlvblJl",
-            "c3BvbnNlEhEKBG5hbWUYASABKAlCA+BBAhIuCghyZXNwb25zZRgCIAEoCzIX",
-            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBAiKBAQoJUmV0cmlldmFsEkYK",
-            "EHZlcnRleF9haV9zZWFyY2gYAiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5WZXJ0ZXhBSVNlYXJjaEgAEiIKE2Rpc2FibGVfYXR0cmlidXRp",
-            "b24YAyABKAhCBRgB4EEBQggKBnNvdXJjZSIoCg5WZXJ0ZXhBSVNlYXJjaBIW",
-            "CglkYXRhc3RvcmUYASABKAlCA+BBAiJtChVHb29nbGVTZWFyY2hSZXRyaWV2",
-            "YWwSVAoYZHluYW1pY19yZXRyaWV2YWxfY29uZmlnGAIgASgLMjIuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRHluYW1pY1JldHJpZXZhbENvbmZpZyLK",
-            "AQoWRHluYW1pY1JldHJpZXZhbENvbmZpZxJFCgRtb2RlGAEgASgOMjcuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRHluYW1pY1JldHJpZXZhbENvbmZp",
-            "Zy5Nb2RlEiMKEWR5bmFtaWNfdGhyZXNob2xkGAIgASgCQgPgQQFIAIgBASIu",
-            "CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIQCgxNT0RFX0RZTkFNSUMQ",
-            "AUIUChJfZHluYW1pY190aHJlc2hvbGQiZQoKVG9vbENvbmZpZxJXChdmdW5j",
-            "dGlvbl9jYWxsaW5nX2NvbmZpZxgBIAEoCzIxLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkZ1bmN0aW9uQ2FsbGluZ0NvbmZpZ0ID4EEBIsIBChVGdW5j",
-            "dGlvbkNhbGxpbmdDb25maWcSSQoEbW9kZRgBIAEoDjI2Lmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9uQ2FsbGluZ0NvbmZpZy5Nb2RlQgPg",
-            "QQESIwoWYWxsb3dlZF9mdW5jdGlvbl9uYW1lcxgCIAMoCUID4EEBIjkKBE1v",
-            "ZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEggKBEFVVE8QARIHCgNBTlkQAhII",
-            "CgROT05FEANCxwEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIJ",
-            "VG9vbFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9h",
-            "cGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3Vk",
-            "LkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoC",
-            "HUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuT3BlbkFwaVNjaGVtYUID4EEBEkAK",
+            "CHJlc3BvbnNlGAQgASgLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "T3BlbkFwaVNjaGVtYUID4EEBIk0KDEZ1bmN0aW9uQ2FsbBIRCgRuYW1lGAEg",
+            "ASgJQgPgQQISKgoEYXJncxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
+            "Y3RCA+BBASJVChBGdW5jdGlvblJlc3BvbnNlEhEKBG5hbWUYASABKAlCA+BB",
+            "AhIuCghyZXNwb25zZRgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
+            "A+BBAiKBAQoJUmV0cmlldmFsEkYKEHZlcnRleF9haV9zZWFyY2gYAiABKAsy",
+            "Ki5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5WZXJ0ZXhBSVNlYXJjaEgA",
+            "EiIKE2Rpc2FibGVfYXR0cmlidXRpb24YAyABKAhCBRgB4EEBQggKBnNvdXJj",
+            "ZSIoCg5WZXJ0ZXhBSVNlYXJjaBIWCglkYXRhc3RvcmUYASABKAlCA+BBAiJt",
+            "ChVHb29nbGVTZWFyY2hSZXRyaWV2YWwSVAoYZHluYW1pY19yZXRyaWV2YWxf",
+            "Y29uZmlnGAIgASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRHlu",
+            "YW1pY1JldHJpZXZhbENvbmZpZyLKAQoWRHluYW1pY1JldHJpZXZhbENvbmZp",
+            "ZxJFCgRtb2RlGAEgASgOMjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "RHluYW1pY1JldHJpZXZhbENvbmZpZy5Nb2RlEiMKEWR5bmFtaWNfdGhyZXNo",
+            "b2xkGAIgASgCQgPgQQFIAIgBASIuCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJ",
+            "RUQQABIQCgxNT0RFX0RZTkFNSUMQAUIUChJfZHluYW1pY190aHJlc2hvbGQi",
+            "ZQoKVG9vbENvbmZpZxJXChdmdW5jdGlvbl9jYWxsaW5nX2NvbmZpZxgBIAEo",
+            "CzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9uQ2FsbGlu",
+            "Z0NvbmZpZ0ID4EEBIsIBChVGdW5jdGlvbkNhbGxpbmdDb25maWcSSQoEbW9k",
+            "ZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9u",
+            "Q2FsbGluZ0NvbmZpZy5Nb2RlQgPgQQESIwoWYWxsb3dlZF9mdW5jdGlvbl9u",
+            "YW1lcxgCIAMoCUID4EEBIjkKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAA",
+            "EggKBEFVVE8QARIHCgNBTlkQAhIICgROT05FEANCxwEKHmNvbS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIJVG9vbFByb3RvUAFaPmNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0",
+            "Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVc",
+            "Q2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZv",
+            "cm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tool), global::Google.Cloud.AIPlatform.V1.Tool.Parser, new[]{ "FunctionDeclarations", "Retrieval", "GoogleSearchRetrieval" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionDeclaration), global::Google.Cloud.AIPlatform.V1.FunctionDeclaration.Parser, new[]{ "Name", "Description", "Parameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionDeclaration), global::Google.Cloud.AIPlatform.V1.FunctionDeclaration.Parser, new[]{ "Name", "Description", "Parameters", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionCall), global::Google.Cloud.AIPlatform.V1.FunctionCall.Parser, new[]{ "Name", "Args" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionResponse), global::Google.Cloud.AIPlatform.V1.FunctionResponse.Parser, new[]{ "Name", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Retrieval), global::Google.Cloud.AIPlatform.V1.Retrieval.Parser, new[]{ "VertexAiSearch", "DisableAttribution" }, new[]{ "Source" }, null, null, null),
@@ -151,7 +153,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// User should provide a [FunctionResponse][content.part.function_response]
     /// for each function call in the next turn. Based on the function responses,
     /// Model will generate the final response back to the user.
-    /// Maximum 64 function declarations can be provided.
+    /// Maximum 128 function declarations can be provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -385,9 +387,9 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Structured representation of a function declaration as defined by the
   /// [OpenAPI 3.0 specification](https://spec.openapis.org/oas/v3.0.3). Included
-  /// in this declaration are the function name and parameters. This
-  /// FunctionDeclaration is a representation of a block of code that can be used
-  /// as a `Tool` by the model and executed by the client.
+  /// in this declaration are the function name, description, parameters and
+  /// response type. This FunctionDeclaration is a representation of a block of
+  /// code that can be used as a `Tool` by the model and executed by the client.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FunctionDeclaration : pb::IMessage<FunctionDeclaration>
@@ -427,6 +429,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       name_ = other.name_;
       description_ = other.description_;
       parameters_ = other.parameters_ != null ? other.parameters_.Clone() : null;
+      response_ = other.response_ != null ? other.response_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -498,6 +501,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "response" field.</summary>
+    public const int ResponseFieldNumber = 4;
+    private global::Google.Cloud.AIPlatform.V1.OpenApiSchema response_;
+    /// <summary>
+    /// Optional. Describes the output from this function in JSON Schema format.
+    /// Reflects the Open API 3.03 Response Object. The Schema defines the type
+    /// used for the response value of the function.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.OpenApiSchema Response {
+      get { return response_; }
+      set {
+        response_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -516,6 +536,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(Parameters, other.Parameters)) return false;
+      if (!object.Equals(Response, other.Response)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -526,6 +547,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (parameters_ != null) hash ^= Parameters.GetHashCode();
+      if (response_ != null) hash ^= Response.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -556,6 +578,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Parameters);
       }
+      if (response_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Response);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -578,6 +604,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Parameters);
       }
+      if (response_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Response);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -596,6 +626,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (parameters_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Parameters);
+      }
+      if (response_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Response);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -620,6 +653,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           Parameters = new global::Google.Cloud.AIPlatform.V1.OpenApiSchema();
         }
         Parameters.MergeFrom(other.Parameters);
+      }
+      if (other.response_ != null) {
+        if (response_ == null) {
+          Response = new global::Google.Cloud.AIPlatform.V1.OpenApiSchema();
+        }
+        Response.MergeFrom(other.Response);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -651,6 +690,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(Parameters);
             break;
           }
+          case 34: {
+            if (response_ == null) {
+              Response = new global::Google.Cloud.AIPlatform.V1.OpenApiSchema();
+            }
+            input.ReadMessage(Response);
+            break;
+          }
         }
       }
     #endif
@@ -679,6 +725,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               Parameters = new global::Google.Cloud.AIPlatform.V1.OpenApiSchema();
             }
             input.ReadMessage(Parameters);
+            break;
+          }
+          case 34: {
+            if (response_ == null) {
+              Response = new global::Google.Cloud.AIPlatform.V1.OpenApiSchema();
+            }
+            input.ReadMessage(Response);
             break;
           }
         }
@@ -1010,6 +1063,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.Struct response_;
     /// <summary>
     /// Required. The function response in JSON object format.
+    /// Use "output" key to specify function output and "error" key to specify
+    /// error details (if any). If "output" and "error" keys are not specified,
+    /// then whole "response" is treated as function output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

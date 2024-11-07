@@ -319,9 +319,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(74);
     private readonly pbc::RepeatedField<string> enum_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. Possible values of the element of Type.STRING with enum format.
-    /// For example we can define an Enum Direction as :
-    /// {type:STRING, format:enum, enum:["EAST", NORTH", "SOUTH", "WEST"]}
+    /// Optional. Possible values of the element of primitive type with enum
+    /// format. Examples:
+    /// 1. We can define direction as :
+    /// ```{type:STRING, format:enum, enum:["EAST", "NORTH", "SOUTH", "WEST"]}```
+    /// 2. We can define apartment number as :
+    /// ```{type:INTEGER, format:enum, enum:["101", "201", "301"]}```
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
