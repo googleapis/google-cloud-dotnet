@@ -3586,6 +3586,9 @@ namespace Google.Cloud.ServiceHealth.V1 {
 
   }
 
+  /// <summary>
+  /// Message for requesting list of events.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEventsRequest : pb::IMessage<ListEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3702,7 +3705,8 @@ namespace Google.Cloud.ServiceHealth.V1 {
     /// response. The expression takes the following forms: &lt;br>
     /// *   field=value for `category` and `state`&lt;br>
     /// *   field &amp;lt;, >, &amp;lt;=, or >= value for `update_time` &lt;br>
-    /// Examples: `category=INCIDENT`, `update_time>=2000-01-01T11:30:00-04:00`
+    /// Examples: `category=INCIDENT`, `update_time>="2000-01-01T11:30:00-04:00"`,
+    /// `event_impacts.product.product_name:"Eventarc"`
     /// &lt;br>
     ///
     /// Multiple filter queries are separated by spaces. Example:
@@ -3712,7 +3716,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
     /// AND and OR expressions explicitly.
     ///
     /// Filter is supported for the following fields: `category`, `state`,
-    /// `update_time`
+    /// `update_time`, `event_impacts.product.product_name`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3967,6 +3971,9 @@ namespace Google.Cloud.ServiceHealth.V1 {
 
   }
 
+  /// <summary>
+  /// Message for response to listing events.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEventsResponse : pb::IMessage<ListEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4223,7 +4230,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for getting an event
+  /// Message for getting an event.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEventRequest : pb::IMessage<GetEventRequest>
@@ -4424,6 +4431,9 @@ namespace Google.Cloud.ServiceHealth.V1 {
 
   }
 
+  /// <summary>
+  /// Message for requesting list of organization events.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrganizationEventsRequest : pb::IMessage<ListOrganizationEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4547,7 +4557,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
     /// *   field=value for `category` and `state`
     /// *   field &amp;lt;, >, &amp;lt;=, or >= value for `update_time`
     ///
-    /// Examples: `category=INCIDENT`, `update_time>=2000-01-01T11:30:00-04:00`
+    /// Examples: `category=INCIDENT`, `update_time>="2000-01-01T11:30:00-04:00"`
     ///
     /// Multiple filter queries are space-separated. Example:
     /// `category=INCIDENT state=ACTIVE`.
@@ -4811,6 +4821,9 @@ namespace Google.Cloud.ServiceHealth.V1 {
 
   }
 
+  /// <summary>
+  /// Message for response to listing organization events.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrganizationEventsResponse : pb::IMessage<ListOrganizationEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5066,6 +5079,9 @@ namespace Google.Cloud.ServiceHealth.V1 {
 
   }
 
+  /// <summary>
+  /// Message for getting an organization event.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOrganizationEventRequest : pb::IMessage<GetOrganizationEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5268,7 +5284,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for requesting list of OrganizationImpacts
+  /// Message for requesting list of organization impacts.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrganizationImpactsRequest : pb::IMessage<ListOrganizationImpactsRequest>
@@ -5617,6 +5633,9 @@ namespace Google.Cloud.ServiceHealth.V1 {
 
   }
 
+  /// <summary>
+  /// Message for response to listing organization impacts.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrganizationImpactsResponse : pb::IMessage<ListOrganizationImpactsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5874,6 +5893,9 @@ namespace Google.Cloud.ServiceHealth.V1 {
 
   }
 
+  /// <summary>
+  /// Message for getting an organization impact.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOrganizationImpactRequest : pb::IMessage<GetOrganizationImpactRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
