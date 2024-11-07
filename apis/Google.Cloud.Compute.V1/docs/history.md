@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.0.0, released 2024-11-07
+
+### New features
+
+- Update Compute Engine API to revision 20241015 ([commit dd73c65](https://github.com/googleapis/google-cloud-dotnet/commit/dd73c65b8bb7aa8a5927b5e5f7bb8d5e8372f881))
+
+### Breaking changes
+
+This release removes some IAM-related client library types. These
+already had no effect on the service, but due to the wide-ranging
+nature of the removal, it's *possible* that customers may have been
+relying on the types. We do not expect these types to reappear in
+the library; if this removal breaks your code, please check
+carefully for what you expected it to do, and raise an issue in
+GitHub if you have concerns.
+
 ## Version 2.17.0, released 2024-07-25
 
 ### Bug fixes
