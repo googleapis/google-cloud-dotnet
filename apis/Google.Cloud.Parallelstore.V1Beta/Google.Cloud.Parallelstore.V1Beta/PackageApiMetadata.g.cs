@@ -44,8 +44,8 @@ namespace Google.Cloud.Parallelstore.V1Beta
                 },
                 {
                     "google.longrunning.Operations.CancelOperation",
-                    // { "post": "/v1beta/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
-                    proto::ByteString.FromBase64("IjkvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfTpjYW5jZWw6ASo=")
+                    // { "post": "/v1beta/{name=projects/*/locations/*/operations/*}:cancel" }
+                    proto::ByteString.FromBase64("IjkvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfTpjYW5jZWw=")
                 },
                 {
                     "google.longrunning.Operations.DeleteOperation",
