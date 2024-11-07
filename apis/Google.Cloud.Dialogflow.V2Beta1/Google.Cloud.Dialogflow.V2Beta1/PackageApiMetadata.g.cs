@@ -81,6 +81,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             yield return ParticipantReflection.Descriptor;
             yield return SessionReflection.Descriptor;
             yield return SessionEntityTypeReflection.Descriptor;
+            yield return SipTrunkReflection.Descriptor;
             yield return ValidationResultReflection.Descriptor;
             yield return VersionReflection.Descriptor;
             yield return WebhookReflection.Descriptor;
