@@ -68,32 +68,33 @@ namespace Google.Cloud.Run.V2 {
             "ZS5NZWRpdW0SEgoKc2l6ZV9saW1pdBgCIAEoCSIsCgZNZWRpdW0SFgoSTUVE",
             "SVVNX1VOU1BFQ0lGSUVEEAASCgoGTUVNT1JZEAEiQgoPTkZTVm9sdW1lU291",
             "cmNlEg4KBnNlcnZlchgBIAEoCRIMCgRwYXRoGAIgASgJEhEKCXJlYWRfb25s",
-            "eRgDIAEoCCI0Cg9HQ1NWb2x1bWVTb3VyY2USDgoGYnVja2V0GAEgASgJEhEK",
-            "CXJlYWRfb25seRgCIAEoCCLIAgoFUHJvYmUSIgoVaW5pdGlhbF9kZWxheV9z",
-            "ZWNvbmRzGAEgASgFQgPgQQESHAoPdGltZW91dF9zZWNvbmRzGAIgASgFQgPg",
-            "QQESGwoOcGVyaW9kX3NlY29uZHMYAyABKAVCA+BBARIeChFmYWlsdXJlX3Ro",
-            "cmVzaG9sZBgEIAEoBUID4EEBEjsKCGh0dHBfZ2V0GAUgASgLMiIuZ29vZ2xl",
-            "LmNsb3VkLnJ1bi52Mi5IVFRQR2V0QWN0aW9uQgPgQQFIABI/Cgp0Y3Bfc29j",
-            "a2V0GAYgASgLMiQuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5UQ1BTb2NrZXRBY3Rp",
-            "b25CA+BBAUgAEjQKBGdycGMYByABKAsyHy5nb29nbGUuY2xvdWQucnVuLnYy",
-            "LkdSUENBY3Rpb25CA+BBAUgAQgwKCnByb2JlX3R5cGUicQoNSFRUUEdldEFj",
-            "dGlvbhIRCgRwYXRoGAEgASgJQgPgQQESOgoMaHR0cF9oZWFkZXJzGAQgAygL",
-            "Mh8uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5IVFRQSGVhZGVyQgPgQQESEQoEcG9y",
-            "dBgFIAEoBUID4EEBIjMKCkhUVFBIZWFkZXISEQoEbmFtZRgBIAEoCUID4EEC",
-            "EhIKBXZhbHVlGAIgASgJQgPgQQEiJAoPVENQU29ja2V0QWN0aW9uEhEKBHBv",
-            "cnQYASABKAVCA+BBASI1CgpHUlBDQWN0aW9uEhEKBHBvcnQYASABKAVCA+BB",
-            "ARIUCgdzZXJ2aWNlGAIgASgJQgPgQQFC6QMKF2NvbS5nb29nbGUuY2xvdWQu",
-            "cnVuLnYyQgtLOHNNaW5Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1",
-            "bi9hcGl2Mi9ydW5wYjtydW5wYupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5j",
-            "b20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlw",
-            "dG9fa2V5fepBSgojc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNy",
-            "ZXQSI3Byb2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR96kFkCipz",
-            "ZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNpb24SNnBy",
-            "b2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR9L3ZlcnNpb25zL3t2",
-            "ZXJzaW9ufepBZAoidnBjYWNjZXNzLmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rv",
-            "chI+cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nv",
-            "bm5lY3RvcnMve2Nvbm5lY3Rvcn1iBnByb3RvMw=="));
+            "eRgDIAEoCCJLCg9HQ1NWb2x1bWVTb3VyY2USDgoGYnVja2V0GAEgASgJEhEK",
+            "CXJlYWRfb25seRgCIAEoCBIVCg1tb3VudF9vcHRpb25zGAMgAygJIsgCCgVQ",
+            "cm9iZRIiChVpbml0aWFsX2RlbGF5X3NlY29uZHMYASABKAVCA+BBARIcCg90",
+            "aW1lb3V0X3NlY29uZHMYAiABKAVCA+BBARIbCg5wZXJpb2Rfc2Vjb25kcxgD",
+            "IAEoBUID4EEBEh4KEWZhaWx1cmVfdGhyZXNob2xkGAQgASgFQgPgQQESOwoI",
+            "aHR0cF9nZXQYBSABKAsyIi5nb29nbGUuY2xvdWQucnVuLnYyLkhUVFBHZXRB",
+            "Y3Rpb25CA+BBAUgAEj8KCnRjcF9zb2NrZXQYBiABKAsyJC5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLlRDUFNvY2tldEFjdGlvbkID4EEBSAASNAoEZ3JwYxgHIAEo",
+            "CzIfLmdvb2dsZS5jbG91ZC5ydW4udjIuR1JQQ0FjdGlvbkID4EEBSABCDAoK",
+            "cHJvYmVfdHlwZSJxCg1IVFRQR2V0QWN0aW9uEhEKBHBhdGgYASABKAlCA+BB",
+            "ARI6CgxodHRwX2hlYWRlcnMYBCADKAsyHy5nb29nbGUuY2xvdWQucnVuLnYy",
+            "LkhUVFBIZWFkZXJCA+BBARIRCgRwb3J0GAUgASgFQgPgQQEiMwoKSFRUUEhl",
+            "YWRlchIRCgRuYW1lGAEgASgJQgPgQQISEgoFdmFsdWUYAiABKAlCA+BBASIk",
+            "Cg9UQ1BTb2NrZXRBY3Rpb24SEQoEcG9ydBgBIAEoBUID4EEBIjUKCkdSUENB",
+            "Y3Rpb24SEQoEcG9ydBgBIAEoBUID4EEBEhQKB3NlcnZpY2UYAiABKAlCA+BB",
+            "AULpAwoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCC0s4c01pblByb3RvUAFa",
+            "KWNsb3VkLmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBi6kF4",
+            "CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5",
+            "X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl96kFKCiNzZWNyZXRtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9",
+            "L3NlY3JldHMve3NlY3JldH3qQWQKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBp",
+            "cy5jb20vU2VjcmV0VmVyc2lvbhI2cHJvamVjdHMve3Byb2plY3R9L3NlY3Jl",
+            "dHMve3NlY3JldH0vdmVyc2lvbnMve3ZlcnNpb2596kFkCiJ2cGNhY2Nlc3Mu",
+            "Z29vZ2xlYXBpcy5jb20vQ29ubmVjdG9yEj5wcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vY29ubmVjdG9ycy97Y29ubmVjdG9yfWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,7 +111,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CloudSqlInstance), global::Google.Cloud.Run.V2.CloudSqlInstance.Parser, new[]{ "Instances" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EmptyDirVolumeSource), global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Parser, new[]{ "Medium", "SizeLimit" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.NFSVolumeSource), global::Google.Cloud.Run.V2.NFSVolumeSource.Parser, new[]{ "Server", "Path", "ReadOnly" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GCSVolumeSource), global::Google.Cloud.Run.V2.GCSVolumeSource.Parser, new[]{ "Bucket", "ReadOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GCSVolumeSource), global::Google.Cloud.Run.V2.GCSVolumeSource.Parser, new[]{ "Bucket", "ReadOnly", "MountOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Probe), global::Google.Cloud.Run.V2.Probe.Parser, new[]{ "InitialDelaySeconds", "TimeoutSeconds", "PeriodSeconds", "FailureThreshold", "HttpGet", "TcpSocket", "Grpc" }, new[]{ "ProbeType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPGetAction), global::Google.Cloud.Run.V2.HTTPGetAction.Parser, new[]{ "Path", "HttpHeaders", "Port" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPHeader), global::Google.Cloud.Run.V2.HTTPHeader.Parser, new[]{ "Name", "Value" }, null, null, null, null),
@@ -1090,14 +1091,9 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
     /// <summary>
-    /// Variable references $(VAR_NAME) are expanded
-    /// using the previous defined environment variables in the container and
-    /// any route environment variables. If a variable cannot be resolved,
-    /// the reference in the input string will be unchanged. The $(VAR_NAME)
-    /// syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
-    /// references will never be expanded, regardless of whether the variable
-    /// exists or not.
+    /// Literal value of the environment variable.
     /// Defaults to "", and the maximum length is 32768 bytes.
+    /// Variable references are not supported in Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4151,6 +4147,7 @@ namespace Google.Cloud.Run.V2 {
     public GCSVolumeSource(GCSVolumeSource other) : this() {
       bucket_ = other.bucket_;
       readOnly_ = other.readOnly_;
+      mountOptions_ = other.mountOptions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4190,6 +4187,21 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "mount_options" field.</summary>
+    public const int MountOptionsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_mountOptions_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> mountOptions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// A list of additional flags to pass to the gcsfuse CLI.
+    /// Options should be specified without the leading "--".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> MountOptions {
+      get { return mountOptions_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4207,6 +4219,7 @@ namespace Google.Cloud.Run.V2 {
       }
       if (Bucket != other.Bucket) return false;
       if (ReadOnly != other.ReadOnly) return false;
+      if(!mountOptions_.Equals(other.mountOptions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4216,6 +4229,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       if (Bucket.Length != 0) hash ^= Bucket.GetHashCode();
       if (ReadOnly != false) hash ^= ReadOnly.GetHashCode();
+      hash ^= mountOptions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4242,6 +4256,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteBool(ReadOnly);
       }
+      mountOptions_.WriteTo(output, _repeated_mountOptions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4260,6 +4275,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteBool(ReadOnly);
       }
+      mountOptions_.WriteTo(ref output, _repeated_mountOptions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4276,6 +4292,7 @@ namespace Google.Cloud.Run.V2 {
       if (ReadOnly != false) {
         size += 1 + 1;
       }
+      size += mountOptions_.CalculateSize(_repeated_mountOptions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4294,6 +4311,7 @@ namespace Google.Cloud.Run.V2 {
       if (other.ReadOnly != false) {
         ReadOnly = other.ReadOnly;
       }
+      mountOptions_.Add(other.mountOptions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4317,6 +4335,10 @@ namespace Google.Cloud.Run.V2 {
             ReadOnly = input.ReadBool();
             break;
           }
+          case 26: {
+            mountOptions_.AddEntriesFrom(input, _repeated_mountOptions_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4338,6 +4360,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 16: {
             ReadOnly = input.ReadBool();
+            break;
+          }
+          case 26: {
+            mountOptions_.AddEntriesFrom(ref input, _repeated_mountOptions_codec);
             break;
           }
         }
