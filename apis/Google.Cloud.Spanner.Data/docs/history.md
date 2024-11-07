@@ -1,5 +1,20 @@
 # Version history
 
+## Version 5.0.0-beta05, released 2024-11-07
+
+### New features
+
+- Add support for Cloud Spanner Default Backup Schedules ([commit a456d8c](https://github.com/googleapis/google-cloud-dotnet/commit/a456d8cb3888c61360e3361bec4568c95807e312))
+- Define ReplicaComputeCapacity and AsymmetricAutoscalingOption ([commit 905160d](https://github.com/googleapis/google-cloud-dotnet/commit/905160d71ca8d4eeaabd5373ec2600efcd64a108))
+- Add new QueryMode enum values (WITH_STATS, WITH_PLAN_AND_STATS) ([commit 16d3bbb](https://github.com/googleapis/google-cloud-dotnet/commit/16d3bbbdce35809697b8e47338cbd3369b5f8865))
+- Add INTERVAL API ([commit 9f9efe6](https://github.com/googleapis/google-cloud-dotnet/commit/9f9efe6dc4ff1ec59ac506585e26c0a40ce75552))
+
+### Documentation improvements
+
+- A comment for field `node_count` in message `spanner.admin.instance.v1.Instance` is changed ([commit 905160d](https://github.com/googleapis/google-cloud-dotnet/commit/905160d71ca8d4eeaabd5373ec2600efcd64a108))
+- A comment for field `processing_units` in message `spanner.admin.instance.v1.Instance` is changed ([commit 905160d](https://github.com/googleapis/google-cloud-dotnet/commit/905160d71ca8d4eeaabd5373ec2600efcd64a108))
+- Update comment for PROFILE QueryMode ([commit 16d3bbb](https://github.com/googleapis/google-cloud-dotnet/commit/16d3bbbdce35809697b8e47338cbd3369b5f8865))
+
 ## Version 5.0.0-beta04, released 2024-08-13
 
 ### Bug fixes
