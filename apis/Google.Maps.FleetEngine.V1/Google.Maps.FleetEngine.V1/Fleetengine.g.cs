@@ -100,12 +100,12 @@ namespace Google.Maps.FleetEngine.V1 {
             "EAISCwoHUEFTU0lWRRADEiIKHlJPQURfU05BUFBFRF9MT0NBVElPTl9QUk9W",
             "SURFUhAEEh4KGkNVU1RPTUVSX1NVUFBMSUVEX0xPQ0FUSU9OEAUSGQoVRkxF",
             "RVRfRU5HSU5FX0xPQ0FUSU9OEAYSGwoXRlVTRURfTE9DQVRJT05fUFJPVklE",
-            "RVIQZBISCg1DT1JFX0xPQ0FUSU9OEMgBQtMBChpnb29nbGUubWFwcy5mbGVl",
-            "dGVuZ2luZS52MUILRmxlZXRFbmdpbmVQAVpGY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9tYXBzL2ZsZWV0ZW5naW5lL2FwaXYxL2ZsZWV0ZW5naW5lcGI7ZmxlZXRl",
-            "bmdpbmVwYqICA0NGRaoCGkdvb2dsZS5NYXBzLkZsZWV0RW5naW5lLlYxygIa",
-            "R29vZ2xlXE1hcHNcRmxlZXRFbmdpbmVcVjHqAh1Hb29nbGU6Ok1hcHM6OkZs",
-            "ZWV0RW5naW5lOjpWMWIGcHJvdG8z"));
+            "RVIQZBISCg1DT1JFX0xPQ0FUSU9OEMgBQtcBCh5jb20uZ29vZ2xlLm1hcHMu",
+            "ZmxlZXRlbmdpbmUudjFCC0ZsZWV0RW5naW5lUAFaRmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vbWFwcy9mbGVldGVuZ2luZS9hcGl2MS9mbGVldGVuZ2luZXBiO2Zs",
+            "ZWV0ZW5naW5lcGKiAgNDRkWqAhpHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5W",
+            "McoCGkdvb2dsZVxNYXBzXEZsZWV0RW5naW5lXFYx6gIdR29vZ2xlOjpNYXBz",
+            "OjpGbGVldEVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.FleetEngine.V1.TrafficReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.FleetEngine.V1.TripType), typeof(global::Google.Maps.FleetEngine.V1.WaypointType), typeof(global::Google.Maps.FleetEngine.V1.PolylineFormatType), typeof(global::Google.Maps.FleetEngine.V1.NavigationStatus), typeof(global::Google.Maps.FleetEngine.V1.LocationSensor), }, null, new pbr::GeneratedClrTypeInfo[] {
