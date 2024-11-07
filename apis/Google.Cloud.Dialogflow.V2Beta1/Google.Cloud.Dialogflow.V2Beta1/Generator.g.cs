@@ -274,10 +274,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// Optional. The ID to use for the generator, which will become the final
     /// component of the generator's resource name.
     ///
-    /// The generator ID must be compliant with the regression fomula
+    /// The generator ID must be compliant with the regression formula
     /// `[a-zA-Z][a-zA-Z0-9_-]*` with the characters length in range of [3,64].
     /// If the field is not provided, an Id will be auto-generated.
-    /// If the field is provided, the caller is resposible for
+    /// If the field is provided, the caller is responsible for
     /// 1. the uniqueness of the ID, otherwise the request will be rejected.
     /// 2. the consistency for whether to use custom ID or not under a project to
     /// better ensure uniqueness.
@@ -2365,7 +2365,6 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// <summary>
   /// Providing examples in the generator (i.e. building a few-shot generator)
   /// helps convey the desired format of the LLM response.
-  /// NEXT_ID: 10
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FewShotExample : pb::IMessage<FewShotExample>
@@ -3851,7 +3850,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>Field number for the "summarization_context" field.</summary>
     public const int SummarizationContextFieldNumber = 13;
     /// <summary>
-    /// Input of prebuilt Summarization feature.
+    /// Input of Summarization feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

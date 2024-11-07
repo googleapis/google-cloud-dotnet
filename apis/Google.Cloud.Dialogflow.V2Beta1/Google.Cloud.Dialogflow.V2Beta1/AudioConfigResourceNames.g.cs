@@ -510,4 +510,26 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </returns>
         public static bool operator !=(PhraseSetName a, PhraseSetName b) => !(a == b);
     }
+
+    public partial class InputAudioConfig
+    {
+        /// <summary>
+        /// <see cref="PhraseSetName"/>-typed view over the <see cref="PhraseSets"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<PhraseSetName> PhraseSetsAsPhraseSetNames
+        {
+            get => new gax::ResourceNameList<PhraseSetName>(PhraseSets, s => string.IsNullOrEmpty(s) ? null : PhraseSetName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class SpeechToTextConfig
+    {
+        /// <summary>
+        /// <see cref="PhraseSetName"/>-typed view over the <see cref="PhraseSets"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<PhraseSetName> PhraseSetsAsPhraseSetNames
+        {
+            get => new gax::ResourceNameList<PhraseSetName>(PhraseSets, s => string.IsNullOrEmpty(s) ? null : PhraseSetName.Parse(s, allowUnparsed: true));
+        }
+    }
 }
