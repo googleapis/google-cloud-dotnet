@@ -54,6 +54,7 @@ namespace GoogleCSharpSnippets
                 EvOptions = new SearchTextRequest.Types.EVOptions(),
                 RoutingParameters = new RoutingParameters(),
                 SearchAlongRouteParameters = new SearchTextRequest.Types.SearchAlongRouteParameters(),
+                IncludePureServiceAreaBusinesses = false,
             };
             // Make the request
             SearchTextResponse response = placesClient.SearchText(request);

@@ -101,6 +101,7 @@ namespace GoogleCSharpSnippets
                 EvOptions = new SearchTextRequest.Types.EVOptions(),
                 RoutingParameters = new RoutingParameters(),
                 SearchAlongRouteParameters = new SearchTextRequest.Types.SearchAlongRouteParameters(),
+                IncludePureServiceAreaBusinesses = false,
             };
             // Make the request
             SearchTextResponse response = placesClient.SearchText(request);
@@ -135,6 +136,7 @@ namespace GoogleCSharpSnippets
                 EvOptions = new SearchTextRequest.Types.EVOptions(),
                 RoutingParameters = new RoutingParameters(),
                 SearchAlongRouteParameters = new SearchTextRequest.Types.SearchAlongRouteParameters(),
+                IncludePureServiceAreaBusinesses = false,
             };
             // Make the request
             SearchTextResponse response = await placesClient.SearchTextAsync(request);
@@ -347,6 +349,7 @@ namespace GoogleCSharpSnippets
                 InputOffset = 0,
                 IncludeQueryPredictions = false,
                 SessionToken = "",
+                IncludePureServiceAreaBusinesses = false,
             };
             // Make the request
             AutocompletePlacesResponse response = placesClient.AutocompletePlaces(request);
@@ -374,6 +377,7 @@ namespace GoogleCSharpSnippets
                 InputOffset = 0,
                 IncludeQueryPredictions = false,
                 SessionToken = "",
+                IncludePureServiceAreaBusinesses = false,
             };
             // Make the request
             AutocompletePlacesResponse response = await placesClient.AutocompletePlacesAsync(request);

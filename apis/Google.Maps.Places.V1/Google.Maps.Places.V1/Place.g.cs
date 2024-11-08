@@ -30,151 +30,161 @@ namespace Google.Maps.Places.V1 {
             "ZXMvdjEvY29udGVudF9ibG9jay5wcm90bxonZ29vZ2xlL21hcHMvcGxhY2Vz",
             "L3YxL2V2X2NoYXJnaW5nLnByb3RvGihnb29nbGUvbWFwcy9wbGFjZXMvdjEv",
             "ZnVlbF9vcHRpb25zLnByb3RvGiFnb29nbGUvbWFwcy9wbGFjZXMvdjEvcGhv",
-            "dG8ucHJvdG8aJWdvb2dsZS9tYXBzL3BsYWNlcy92MS9yZWZlcmVuY2UucHJv",
-            "dG8aImdvb2dsZS9tYXBzL3BsYWNlcy92MS9yZXZpZXcucHJvdG8aFmdvb2ds",
-            "ZS90eXBlL2RhdGUucHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90bxog",
-            "Z29vZ2xlL3R5cGUvbG9jYWxpemVkX3RleHQucHJvdG8i0CwKBVBsYWNlEgwK",
-            "BG5hbWUYASABKAkSCgoCaWQYAiABKAkSMAoMZGlzcGxheV9uYW1lGB8gASgL",
-            "MhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dBINCgV0eXBlcxgFIAMoCRIU",
-            "CgxwcmltYXJ5X3R5cGUYMiABKAkSPQoZcHJpbWFyeV90eXBlX2Rpc3BsYXlf",
-            "bmFtZRggIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSHQoVbmF0",
-            "aW9uYWxfcGhvbmVfbnVtYmVyGAcgASgJEiIKGmludGVybmF0aW9uYWxfcGhv",
-            "bmVfbnVtYmVyGAggASgJEhkKEWZvcm1hdHRlZF9hZGRyZXNzGAkgASgJEh8K",
-            "F3Nob3J0X2Zvcm1hdHRlZF9hZGRyZXNzGDMgASgJEkkKEmFkZHJlc3NfY29t",
-            "cG9uZW50cxgKIAMoCzItLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5B",
-            "ZGRyZXNzQ29tcG9uZW50EjgKCXBsdXNfY29kZRgLIAEoCzIlLmdvb2dsZS5t",
-            "YXBzLnBsYWNlcy52MS5QbGFjZS5QbHVzQ29kZRIlCghsb2NhdGlvbhgMIAEo",
-            "CzITLmdvb2dsZS50eXBlLkxhdExuZxIrCgh2aWV3cG9ydBgNIAEoCzIZLmdv",
-            "b2dsZS5nZW8udHlwZS5WaWV3cG9ydBIOCgZyYXRpbmcYDiABKAESFwoPZ29v",
-            "Z2xlX21hcHNfdXJpGA8gASgJEhMKC3dlYnNpdGVfdXJpGBAgASgJEi4KB3Jl",
-            "dmlld3MYNSADKAsyHS5nb29nbGUubWFwcy5wbGFjZXMudjEuUmV2aWV3EkgK",
-            "FXJlZ3VsYXJfb3BlbmluZ19ob3VycxgVIAEoCzIpLmdvb2dsZS5tYXBzLnBs",
-            "YWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMSHwoSdXRjX29mZnNldF9taW51",
-            "dGVzGBYgASgFSACIAQESLAoGcGhvdG9zGDYgAygLMhwuZ29vZ2xlLm1hcHMu",
-            "cGxhY2VzLnYxLlBob3RvEhoKEmFkcl9mb3JtYXRfYWRkcmVzcxgYIAEoCRJE",
-            "Cg9idXNpbmVzc19zdGF0dXMYGSABKA4yKy5nb29nbGUubWFwcy5wbGFjZXMu",
-            "djEuUGxhY2UuQnVzaW5lc3NTdGF0dXMSNgoLcHJpY2VfbGV2ZWwYGiABKA4y",
-            "IS5nb29nbGUubWFwcy5wbGFjZXMudjEuUHJpY2VMZXZlbBI+CgxhdHRyaWJ1",
-            "dGlvbnMYGyADKAsyKC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuQXR0",
-            "cmlidXRpb24SHgoRdXNlcl9yYXRpbmdfY291bnQYHCABKAVIAYgBARIaChJp",
-            "Y29uX21hc2tfYmFzZV91cmkYHSABKAkSHQoVaWNvbl9iYWNrZ3JvdW5kX2Nv",
-            "bG9yGB4gASgJEhQKB3Rha2VvdXQYISABKAhIAogBARIVCghkZWxpdmVyeRgi",
-            "IAEoCEgDiAEBEhQKB2RpbmVfaW4YIyABKAhIBIgBARIcCg9jdXJic2lkZV9w",
-            "aWNrdXAYJCABKAhIBYgBARIXCgpyZXNlcnZhYmxlGCYgASgISAaIAQESHQoQ",
-            "c2VydmVzX2JyZWFrZmFzdBgnIAEoCEgHiAEBEhkKDHNlcnZlc19sdW5jaBgo",
-            "IAEoCEgIiAEBEhoKDXNlcnZlc19kaW5uZXIYKSABKAhICYgBARIYCgtzZXJ2",
-            "ZXNfYmVlchgqIAEoCEgKiAEBEhgKC3NlcnZlc193aW5lGCsgASgISAuIAQES",
-            "GgoNc2VydmVzX2JydW5jaBgsIAEoCEgMiAEBEiMKFnNlcnZlc192ZWdldGFy",
-            "aWFuX2Zvb2QYLSABKAhIDYgBARJIChVjdXJyZW50X29wZW5pbmdfaG91cnMY",
-            "LiABKAsyKS5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuT3BlbmluZ0hv",
-            "dXJzElIKH2N1cnJlbnRfc2Vjb25kYXJ5X29wZW5pbmdfaG91cnMYLyADKAsy",
-            "KS5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuT3BlbmluZ0hvdXJzElIK",
-            "H3JlZ3VsYXJfc2Vjb25kYXJ5X29wZW5pbmdfaG91cnMYMSADKAsyKS5nb29n",
-            "bGUubWFwcy5wbGFjZXMudjEuUGxhY2UuT3BlbmluZ0hvdXJzEjUKEWVkaXRv",
-            "cmlhbF9zdW1tYXJ5GDQgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4",
-            "dBIcCg9vdXRkb29yX3NlYXRpbmcYNyABKAhIDogBARIXCgpsaXZlX211c2lj",
-            "GDggASgISA+IAQESHgoRbWVudV9mb3JfY2hpbGRyZW4YOSABKAhIEIgBARId",
-            "ChBzZXJ2ZXNfY29ja3RhaWxzGDogASgISBGIAQESGwoOc2VydmVzX2Rlc3Nl",
-            "cnQYOyABKAhIEogBARIaCg1zZXJ2ZXNfY29mZmVlGDwgASgISBOIAQESHgoR",
-            "Z29vZF9mb3JfY2hpbGRyZW4YPiABKAhIFIgBARIYCgthbGxvd3NfZG9ncxg/",
-            "IAEoCEgViAEBEhUKCHJlc3Ryb29tGEAgASgISBaIAQESHAoPZ29vZF9mb3Jf",
-            "Z3JvdXBzGEEgASgISBeIAQESJQoYZ29vZF9mb3Jfd2F0Y2hpbmdfc3BvcnRz",
-            "GEIgASgISBiIAQESRAoPcGF5bWVudF9vcHRpb25zGEMgASgLMisuZ29vZ2xl",
-            "Lm1hcHMucGxhY2VzLnYxLlBsYWNlLlBheW1lbnRPcHRpb25zEkQKD3Bhcmtp",
-            "bmdfb3B0aW9ucxhGIAEoCzIrLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFj",
-            "ZS5QYXJraW5nT3B0aW9ucxJFChBzdWJfZGVzdGluYXRpb25zGEcgAygLMisu",
-            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlN1YkRlc3RpbmF0aW9uElUK",
-            "FWFjY2Vzc2liaWxpdHlfb3B0aW9ucxhIIAEoCzIxLmdvb2dsZS5tYXBzLnBs",
-            "YWNlcy52MS5QbGFjZS5BY2Nlc3NpYmlsaXR5T3B0aW9uc0gZiAEBEjgKDGZ1",
-            "ZWxfb3B0aW9ucxhOIAEoCzIiLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5GdWVs",
-            "T3B0aW9ucxJBChFldl9jaGFyZ2Vfb3B0aW9ucxhPIAEoCzImLmdvb2dsZS5t",
-            "YXBzLnBsYWNlcy52MS5FVkNoYXJnZU9wdGlvbnMSSgoSZ2VuZXJhdGl2ZV9z",
-            "dW1tYXJ5GFAgASgLMi4uZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkdl",
-            "bmVyYXRpdmVTdW1tYXJ5Ej4KDGFyZWFfc3VtbWFyeRhRIAEoCzIoLmdvb2ds",
-            "ZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5BcmVhU3VtbWFyeRpfChBBZGRyZXNz",
-            "Q29tcG9uZW50EhEKCWxvbmdfdGV4dBgBIAEoCRISCgpzaG9ydF90ZXh0GAIg",
-            "ASgJEg0KBXR5cGVzGAMgAygJEhUKDWxhbmd1YWdlX2NvZGUYBCABKAkaNgoI",
-            "UGx1c0NvZGUSEwoLZ2xvYmFsX2NvZGUYASABKAkSFQoNY29tcG91bmRfY29k",
-            "ZRgCIAEoCRqUBwoMT3BlbmluZ0hvdXJzEhUKCG9wZW5fbm93GAEgASgISACI",
-            "AQESQQoHcGVyaW9kcxgCIAMoCzIwLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Q",
-            "bGFjZS5PcGVuaW5nSG91cnMuUGVyaW9kEhwKFHdlZWtkYXlfZGVzY3JpcHRp",
-            "b25zGAMgAygJEloKFHNlY29uZGFyeV9ob3Vyc190eXBlGAQgASgOMjwuZ29v",
-            "Z2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3Vycy5TZWNvbmRh",
-            "cnlIb3Vyc1R5cGUSSgoMc3BlY2lhbF9kYXlzGAUgAygLMjQuZ29vZ2xlLm1h",
-            "cHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3Vycy5TcGVjaWFsRGF5GqkC",
-            "CgZQZXJpb2QSRAoEb3BlbhgBIAEoCzI2Lmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MS5QbGFjZS5PcGVuaW5nSG91cnMuUGVyaW9kLlBvaW50EkUKBWNsb3NlGAIg",
-            "ASgLMjYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3Vy",
-            "cy5QZXJpb2QuUG9pbnQakQEKBVBvaW50EhAKA2RheRgBIAEoBUgAiAEBEhEK",
-            "BGhvdXIYAiABKAVIAYgBARITCgZtaW51dGUYAyABKAVIAogBARIfCgRkYXRl",
-            "GAYgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIRCgl0cnVuY2F0ZWQYBSABKAhC",
-            "BgoEX2RheUIHCgVfaG91ckIJCgdfbWludXRlGi0KClNwZWNpYWxEYXkSHwoE",
-            "ZGF0ZRgBIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUi+wEKElNlY29uZGFyeUhv",
-            "dXJzVHlwZRIkCiBTRUNPTkRBUllfSE9VUlNfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EhEKDURSSVZFX1RIUk9VR0gQARIOCgpIQVBQWV9IT1VSEAISDAoIREVMSVZF",
-            "UlkQAxILCgdUQUtFT1VUEAQSCwoHS0lUQ0hFThAFEg0KCUJSRUFLRkFTVBAG",
-            "EgkKBUxVTkNIEAcSCgoGRElOTkVSEAgSCgoGQlJVTkNIEAkSCgoGUElDS1VQ",
-            "EAoSCgoGQUNDRVNTEAsSEAoMU0VOSU9SX0hPVVJTEAwSGAoUT05MSU5FX1NF",
-            "UlZJQ0VfSE9VUlMQDUILCglfb3Blbl9ub3caNQoLQXR0cmlidXRpb24SEAoI",
-            "cHJvdmlkZXIYASABKAkSFAoMcHJvdmlkZXJfdXJpGAIgASgJGuYBCg5QYXlt",
-            "ZW50T3B0aW9ucxIhChRhY2NlcHRzX2NyZWRpdF9jYXJkcxgBIAEoCEgAiAEB",
-            "EiAKE2FjY2VwdHNfZGViaXRfY2FyZHMYAiABKAhIAYgBARIeChFhY2NlcHRz",
-            "X2Nhc2hfb25seRgDIAEoCEgCiAEBEhgKC2FjY2VwdHNfbmZjGAQgASgISAOI",
-            "AQFCFwoVX2FjY2VwdHNfY3JlZGl0X2NhcmRzQhYKFF9hY2NlcHRzX2RlYml0",
-            "X2NhcmRzQhQKEl9hY2NlcHRzX2Nhc2hfb25seUIOCgxfYWNjZXB0c19uZmMa",
-            "jgMKDlBhcmtpbmdPcHRpb25zEh0KEGZyZWVfcGFya2luZ19sb3QYASABKAhI",
-            "AIgBARIdChBwYWlkX3BhcmtpbmdfbG90GAIgASgISAGIAQESIAoTZnJlZV9z",
-            "dHJlZXRfcGFya2luZxgDIAEoCEgCiAEBEiAKE3BhaWRfc3RyZWV0X3Bhcmtp",
-            "bmcYBCABKAhIA4gBARIaCg12YWxldF9wYXJraW5nGAUgASgISASIAQESIAoT",
-            "ZnJlZV9nYXJhZ2VfcGFya2luZxgGIAEoCEgFiAEBEiAKE3BhaWRfZ2FyYWdl",
-            "X3BhcmtpbmcYByABKAhIBogBAUITChFfZnJlZV9wYXJraW5nX2xvdEITChFf",
-            "cGFpZF9wYXJraW5nX2xvdEIWChRfZnJlZV9zdHJlZXRfcGFya2luZ0IWChRf",
-            "cGFpZF9zdHJlZXRfcGFya2luZ0IQCg5fdmFsZXRfcGFya2luZ0IWChRfZnJl",
-            "ZV9nYXJhZ2VfcGFya2luZ0IWChRfcGFpZF9nYXJhZ2VfcGFya2luZxpMCg5T",
-            "dWJEZXN0aW5hdGlvbhIuCgRuYW1lGAEgASgJQiD6QR0KG3BsYWNlcy5nb29n",
-            "bGVhcGlzLmNvbS9QbGFjZRIKCgJpZBgCIAEoCRrSAgoUQWNjZXNzaWJpbGl0",
-            "eU9wdGlvbnMSKgodd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3BhcmtpbmcYASAB",
-            "KAhIAIgBARIrCh53aGVlbGNoYWlyX2FjY2Vzc2libGVfZW50cmFuY2UYAiAB",
-            "KAhIAYgBARIrCh53aGVlbGNoYWlyX2FjY2Vzc2libGVfcmVzdHJvb20YAyAB",
-            "KAhIAogBARIqCh13aGVlbGNoYWlyX2FjY2Vzc2libGVfc2VhdGluZxgEIAEo",
-            "CEgDiAEBQiAKHl93aGVlbGNoYWlyX2FjY2Vzc2libGVfcGFya2luZ0IhCh9f",
-            "d2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2VudHJhbmNlQiEKH193aGVlbGNoYWly",
-            "X2FjY2Vzc2libGVfcmVzdHJvb21CIAoeX3doZWVsY2hhaXJfYWNjZXNzaWJs",
-            "ZV9zZWF0aW5nGqkBChFHZW5lcmF0aXZlU3VtbWFyeRIsCghvdmVydmlldxgB",
-            "IAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSLwoLZGVzY3JpcHRp",
-            "b24YAiABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0EjUKCnJlZmVy",
-            "ZW5jZXMYAyABKAsyIS5nb29nbGUubWFwcy5wbGFjZXMudjEuUmVmZXJlbmNl",
-            "cxpKCgtBcmVhU3VtbWFyeRI7Cg5jb250ZW50X2Jsb2NrcxgEIAMoCzIjLmdv",
-            "b2dsZS5tYXBzLnBsYWNlcy52MS5Db250ZW50QmxvY2sicgoOQnVzaW5lc3NT",
-            "dGF0dXMSHwobQlVTSU5FU1NfU1RBVFVTX1VOU1BFQ0lGSUVEEAASDwoLT1BF",
-            "UkFUSU9OQUwQARIWChJDTE9TRURfVEVNUE9SQVJJTFkQAhIWChJDTE9TRURf",
-            "UEVSTUFORU5UTFkQAzpC6kE/ChtwbGFjZXMuZ29vZ2xlYXBpcy5jb20vUGxh",
-            "Y2USEXBsYWNlcy97cGxhY2VfaWR9KgZwbGFjZXMyBXBsYWNlQhUKE191dGNf",
-            "b2Zmc2V0X21pbnV0ZXNCFAoSX3VzZXJfcmF0aW5nX2NvdW50QgoKCF90YWtl",
-            "b3V0QgsKCV9kZWxpdmVyeUIKCghfZGluZV9pbkISChBfY3VyYnNpZGVfcGlj",
-            "a3VwQg0KC19yZXNlcnZhYmxlQhMKEV9zZXJ2ZXNfYnJlYWtmYXN0Qg8KDV9z",
-            "ZXJ2ZXNfbHVuY2hCEAoOX3NlcnZlc19kaW5uZXJCDgoMX3NlcnZlc19iZWVy",
-            "Qg4KDF9zZXJ2ZXNfd2luZUIQCg5fc2VydmVzX2JydW5jaEIZChdfc2VydmVz",
-            "X3ZlZ2V0YXJpYW5fZm9vZEISChBfb3V0ZG9vcl9zZWF0aW5nQg0KC19saXZl",
-            "X211c2ljQhQKEl9tZW51X2Zvcl9jaGlsZHJlbkITChFfc2VydmVzX2NvY2t0",
-            "YWlsc0IRCg9fc2VydmVzX2Rlc3NlcnRCEAoOX3NlcnZlc19jb2ZmZWVCFAoS",
-            "X2dvb2RfZm9yX2NoaWxkcmVuQg4KDF9hbGxvd3NfZG9nc0ILCglfcmVzdHJv",
-            "b21CEgoQX2dvb2RfZm9yX2dyb3Vwc0IbChlfZ29vZF9mb3Jfd2F0Y2hpbmdf",
-            "c3BvcnRzQhgKFl9hY2Nlc3NpYmlsaXR5X29wdGlvbnMqsQEKClByaWNlTGV2",
-            "ZWwSGwoXUFJJQ0VfTEVWRUxfVU5TUEVDSUZJRUQQABIUChBQUklDRV9MRVZF",
-            "TF9GUkVFEAESGwoXUFJJQ0VfTEVWRUxfSU5FWFBFTlNJVkUQAhIYChRQUklD",
-            "RV9MRVZFTF9NT0RFUkFURRADEhkKFVBSSUNFX0xFVkVMX0VYUEVOU0lWRRAE",
-            "Eh4KGlBSSUNFX0xFVkVMX1ZFUllfRVhQRU5TSVZFEAVCngEKGWNvbS5nb29n",
-            "bGUubWFwcy5wbGFjZXMudjFCClBsYWNlUHJvdG9QAVo3Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9tYXBzL3BsYWNlcy9hcGl2MS9wbGFjZXNwYjtwbGFjZXNwYvgB",
-            "AaICBkdNUFNWMaoCFUdvb2dsZS5NYXBzLlBsYWNlcy5WMcoCFUdvb2dsZVxN",
-            "YXBzXFBsYWNlc1xWMWIGcHJvdG8z"));
+            "dG8ucHJvdG8aJ2dvb2dsZS9tYXBzL3BsYWNlcy92MS9wcmljZV9yYW5nZS5w",
+            "cm90bxolZ29vZ2xlL21hcHMvcGxhY2VzL3YxL3JlZmVyZW5jZS5wcm90bxoi",
+            "Z29vZ2xlL21hcHMvcGxhY2VzL3YxL3Jldmlldy5wcm90bxofZ29vZ2xlL3By",
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90",
+            "bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvGiBnb29nbGUvdHlwZS9sb2Nh",
+            "bGl6ZWRfdGV4dC5wcm90byLRLwoFUGxhY2USDAoEbmFtZRgBIAEoCRIKCgJp",
+            "ZBgCIAEoCRIwCgxkaXNwbGF5X25hbWUYHyABKAsyGi5nb29nbGUudHlwZS5M",
+            "b2NhbGl6ZWRUZXh0Eg0KBXR5cGVzGAUgAygJEhQKDHByaW1hcnlfdHlwZRgy",
+            "IAEoCRI9ChlwcmltYXJ5X3R5cGVfZGlzcGxheV9uYW1lGCAgASgLMhouZ29v",
+            "Z2xlLnR5cGUuTG9jYWxpemVkVGV4dBIdChVuYXRpb25hbF9waG9uZV9udW1i",
+            "ZXIYByABKAkSIgoaaW50ZXJuYXRpb25hbF9waG9uZV9udW1iZXIYCCABKAkS",
+            "GQoRZm9ybWF0dGVkX2FkZHJlc3MYCSABKAkSHwoXc2hvcnRfZm9ybWF0dGVk",
+            "X2FkZHJlc3MYMyABKAkSSQoSYWRkcmVzc19jb21wb25lbnRzGAogAygLMi0u",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkFkZHJlc3NDb21wb25lbnQS",
+            "OAoJcGx1c19jb2RlGAsgASgLMiUuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBs",
+            "YWNlLlBsdXNDb2RlEiUKCGxvY2F0aW9uGAwgASgLMhMuZ29vZ2xlLnR5cGUu",
+            "TGF0TG5nEisKCHZpZXdwb3J0GA0gASgLMhkuZ29vZ2xlLmdlby50eXBlLlZp",
+            "ZXdwb3J0Eg4KBnJhdGluZxgOIAEoARIXCg9nb29nbGVfbWFwc191cmkYDyAB",
+            "KAkSEwoLd2Vic2l0ZV91cmkYECABKAkSLgoHcmV2aWV3cxg1IAMoCzIdLmdv",
+            "b2dsZS5tYXBzLnBsYWNlcy52MS5SZXZpZXcSSAoVcmVndWxhcl9vcGVuaW5n",
+            "X2hvdXJzGBUgASgLMikuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9w",
+            "ZW5pbmdIb3VycxIfChJ1dGNfb2Zmc2V0X21pbnV0ZXMYFiABKAVIAIgBARIs",
+            "CgZwaG90b3MYNiADKAsyHC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGhvdG8S",
+            "GgoSYWRyX2Zvcm1hdF9hZGRyZXNzGBggASgJEkQKD2J1c2luZXNzX3N0YXR1",
+            "cxgZIAEoDjIrLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5CdXNpbmVz",
+            "c1N0YXR1cxI2CgtwcmljZV9sZXZlbBgaIAEoDjIhLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5QcmljZUxldmVsEj4KDGF0dHJpYnV0aW9ucxgbIAMoCzIoLmdv",
+            "b2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5BdHRyaWJ1dGlvbhIeChF1c2Vy",
+            "X3JhdGluZ19jb3VudBgcIAEoBUgBiAEBEhoKEmljb25fbWFza19iYXNlX3Vy",
+            "aRgdIAEoCRIdChVpY29uX2JhY2tncm91bmRfY29sb3IYHiABKAkSFAoHdGFr",
+            "ZW91dBghIAEoCEgCiAEBEhUKCGRlbGl2ZXJ5GCIgASgISAOIAQESFAoHZGlu",
+            "ZV9pbhgjIAEoCEgEiAEBEhwKD2N1cmJzaWRlX3BpY2t1cBgkIAEoCEgFiAEB",
+            "EhcKCnJlc2VydmFibGUYJiABKAhIBogBARIdChBzZXJ2ZXNfYnJlYWtmYXN0",
+            "GCcgASgISAeIAQESGQoMc2VydmVzX2x1bmNoGCggASgISAiIAQESGgoNc2Vy",
+            "dmVzX2Rpbm5lchgpIAEoCEgJiAEBEhgKC3NlcnZlc19iZWVyGCogASgISAqI",
+            "AQESGAoLc2VydmVzX3dpbmUYKyABKAhIC4gBARIaCg1zZXJ2ZXNfYnJ1bmNo",
+            "GCwgASgISAyIAQESIwoWc2VydmVzX3ZlZ2V0YXJpYW5fZm9vZBgtIAEoCEgN",
+            "iAEBEkgKFWN1cnJlbnRfb3BlbmluZ19ob3VycxguIAEoCzIpLmdvb2dsZS5t",
+            "YXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMSUgofY3VycmVudF9z",
+            "ZWNvbmRhcnlfb3BlbmluZ19ob3VycxgvIAMoCzIpLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMSUgofcmVndWxhcl9zZWNvbmRh",
+            "cnlfb3BlbmluZ19ob3VycxgxIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52",
+            "MS5QbGFjZS5PcGVuaW5nSG91cnMSNQoRZWRpdG9yaWFsX3N1bW1hcnkYNCAB",
+            "KAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0EhwKD291dGRvb3Jfc2Vh",
+            "dGluZxg3IAEoCEgOiAEBEhcKCmxpdmVfbXVzaWMYOCABKAhID4gBARIeChFt",
+            "ZW51X2Zvcl9jaGlsZHJlbhg5IAEoCEgQiAEBEh0KEHNlcnZlc19jb2NrdGFp",
+            "bHMYOiABKAhIEYgBARIbCg5zZXJ2ZXNfZGVzc2VydBg7IAEoCEgSiAEBEhoK",
+            "DXNlcnZlc19jb2ZmZWUYPCABKAhIE4gBARIeChFnb29kX2Zvcl9jaGlsZHJl",
+            "bhg+IAEoCEgUiAEBEhgKC2FsbG93c19kb2dzGD8gASgISBWIAQESFQoIcmVz",
+            "dHJvb20YQCABKAhIFogBARIcCg9nb29kX2Zvcl9ncm91cHMYQSABKAhIF4gB",
+            "ARIlChhnb29kX2Zvcl93YXRjaGluZ19zcG9ydHMYQiABKAhIGIgBARJECg9w",
+            "YXltZW50X29wdGlvbnMYQyABKAsyKy5nb29nbGUubWFwcy5wbGFjZXMudjEu",
+            "UGxhY2UuUGF5bWVudE9wdGlvbnMSRAoPcGFya2luZ19vcHRpb25zGEYgASgL",
+            "MisuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBhcmtpbmdPcHRpb25z",
+            "EkUKEHN1Yl9kZXN0aW5hdGlvbnMYRyADKAsyKy5nb29nbGUubWFwcy5wbGFj",
+            "ZXMudjEuUGxhY2UuU3ViRGVzdGluYXRpb24SVQoVYWNjZXNzaWJpbGl0eV9v",
+            "cHRpb25zGEggASgLMjEuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkFj",
+            "Y2Vzc2liaWxpdHlPcHRpb25zSBmIAQESOAoMZnVlbF9vcHRpb25zGE4gASgL",
+            "MiIuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkZ1ZWxPcHRpb25zEkEKEWV2X2No",
+            "YXJnZV9vcHRpb25zGE8gASgLMiYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkVW",
+            "Q2hhcmdlT3B0aW9ucxJKChJnZW5lcmF0aXZlX3N1bW1hcnkYUCABKAsyLi5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuR2VuZXJhdGl2ZVN1bW1hcnkS",
+            "PgoMYXJlYV9zdW1tYXJ5GFEgASgLMiguZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "LlBsYWNlLkFyZWFTdW1tYXJ5EkcKEWNvbnRhaW5pbmdfcGxhY2VzGFIgAygL",
+            "MiwuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkNvbnRhaW5pbmdQbGFj",
+            "ZRInChpwdXJlX3NlcnZpY2VfYXJlYV9idXNpbmVzcxhTIAEoCEgaiAEBEjYK",
+            "C3ByaWNlX3JhbmdlGFYgASgLMiEuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBy",
+            "aWNlUmFuZ2UaXwoQQWRkcmVzc0NvbXBvbmVudBIRCglsb25nX3RleHQYASAB",
+            "KAkSEgoKc2hvcnRfdGV4dBgCIAEoCRINCgV0eXBlcxgDIAMoCRIVCg1sYW5n",
+            "dWFnZV9jb2RlGAQgASgJGjYKCFBsdXNDb2RlEhMKC2dsb2JhbF9jb2RlGAEg",
+            "ASgJEhUKDWNvbXBvdW5kX2NvZGUYAiABKAka/QcKDE9wZW5pbmdIb3VycxIV",
+            "CghvcGVuX25vdxgBIAEoCEgAiAEBEkEKB3BlcmlvZHMYAiADKAsyMC5nb29n",
+            "bGUubWFwcy5wbGFjZXMudjEuUGxhY2UuT3BlbmluZ0hvdXJzLlBlcmlvZBIc",
+            "ChR3ZWVrZGF5X2Rlc2NyaXB0aW9ucxgDIAMoCRJaChRzZWNvbmRhcnlfaG91",
+            "cnNfdHlwZRgEIAEoDjI8Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5P",
+            "cGVuaW5nSG91cnMuU2Vjb25kYXJ5SG91cnNUeXBlEkoKDHNwZWNpYWxfZGF5",
+            "cxgFIAMoCzI0Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5n",
+            "SG91cnMuU3BlY2lhbERheRIyCg5uZXh0X29wZW5fdGltZRgGIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMwoPbmV4dF9jbG9zZV90aW1lGAcg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBqpAgoGUGVyaW9kEkQK",
+            "BG9wZW4YASABKAsyNi5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuT3Bl",
+            "bmluZ0hvdXJzLlBlcmlvZC5Qb2ludBJFCgVjbG9zZRgCIAEoCzI2Lmdvb2ds",
+            "ZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMuUGVyaW9kLlBv",
+            "aW50GpEBCgVQb2ludBIQCgNkYXkYASABKAVIAIgBARIRCgRob3VyGAIgASgF",
+            "SAGIAQESEwoGbWludXRlGAMgASgFSAKIAQESHwoEZGF0ZRgGIAEoCzIRLmdv",
+            "b2dsZS50eXBlLkRhdGUSEQoJdHJ1bmNhdGVkGAUgASgIQgYKBF9kYXlCBwoF",
+            "X2hvdXJCCQoHX21pbnV0ZRotCgpTcGVjaWFsRGF5Eh8KBGRhdGUYASABKAsy",
+            "ES5nb29nbGUudHlwZS5EYXRlIvsBChJTZWNvbmRhcnlIb3Vyc1R5cGUSJAog",
+            "U0VDT05EQVJZX0hPVVJTX1RZUEVfVU5TUEVDSUZJRUQQABIRCg1EUklWRV9U",
+            "SFJPVUdIEAESDgoKSEFQUFlfSE9VUhACEgwKCERFTElWRVJZEAMSCwoHVEFL",
+            "RU9VVBAEEgsKB0tJVENIRU4QBRINCglCUkVBS0ZBU1QQBhIJCgVMVU5DSBAH",
+            "EgoKBkRJTk5FUhAIEgoKBkJSVU5DSBAJEgoKBlBJQ0tVUBAKEgoKBkFDQ0VT",
+            "UxALEhAKDFNFTklPUl9IT1VSUxAMEhgKFE9OTElORV9TRVJWSUNFX0hPVVJT",
+            "EA1CCwoJX29wZW5fbm93GjUKC0F0dHJpYnV0aW9uEhAKCHByb3ZpZGVyGAEg",
+            "ASgJEhQKDHByb3ZpZGVyX3VyaRgCIAEoCRrmAQoOUGF5bWVudE9wdGlvbnMS",
+            "IQoUYWNjZXB0c19jcmVkaXRfY2FyZHMYASABKAhIAIgBARIgChNhY2NlcHRz",
+            "X2RlYml0X2NhcmRzGAIgASgISAGIAQESHgoRYWNjZXB0c19jYXNoX29ubHkY",
+            "AyABKAhIAogBARIYCgthY2NlcHRzX25mYxgEIAEoCEgDiAEBQhcKFV9hY2Nl",
+            "cHRzX2NyZWRpdF9jYXJkc0IWChRfYWNjZXB0c19kZWJpdF9jYXJkc0IUChJf",
+            "YWNjZXB0c19jYXNoX29ubHlCDgoMX2FjY2VwdHNfbmZjGo4DCg5QYXJraW5n",
+            "T3B0aW9ucxIdChBmcmVlX3BhcmtpbmdfbG90GAEgASgISACIAQESHQoQcGFp",
+            "ZF9wYXJraW5nX2xvdBgCIAEoCEgBiAEBEiAKE2ZyZWVfc3RyZWV0X3Bhcmtp",
+            "bmcYAyABKAhIAogBARIgChNwYWlkX3N0cmVldF9wYXJraW5nGAQgASgISAOI",
+            "AQESGgoNdmFsZXRfcGFya2luZxgFIAEoCEgEiAEBEiAKE2ZyZWVfZ2FyYWdl",
+            "X3BhcmtpbmcYBiABKAhIBYgBARIgChNwYWlkX2dhcmFnZV9wYXJraW5nGAcg",
+            "ASgISAaIAQFCEwoRX2ZyZWVfcGFya2luZ19sb3RCEwoRX3BhaWRfcGFya2lu",
+            "Z19sb3RCFgoUX2ZyZWVfc3RyZWV0X3BhcmtpbmdCFgoUX3BhaWRfc3RyZWV0",
+            "X3BhcmtpbmdCEAoOX3ZhbGV0X3BhcmtpbmdCFgoUX2ZyZWVfZ2FyYWdlX3Bh",
+            "cmtpbmdCFgoUX3BhaWRfZ2FyYWdlX3BhcmtpbmcaTAoOU3ViRGVzdGluYXRp",
+            "b24SLgoEbmFtZRgBIAEoCUIg+kEdChtwbGFjZXMuZ29vZ2xlYXBpcy5jb20v",
+            "UGxhY2USCgoCaWQYAiABKAka0gIKFEFjY2Vzc2liaWxpdHlPcHRpb25zEioK",
+            "HXdoZWVsY2hhaXJfYWNjZXNzaWJsZV9wYXJraW5nGAEgASgISACIAQESKwoe",
+            "d2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2VudHJhbmNlGAIgASgISAGIAQESKwoe",
+            "d2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3Jlc3Ryb29tGAMgASgISAKIAQESKgod",
+            "d2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3NlYXRpbmcYBCABKAhIA4gBAUIgCh5f",
+            "d2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3BhcmtpbmdCIQofX3doZWVsY2hhaXJf",
+            "YWNjZXNzaWJsZV9lbnRyYW5jZUIhCh9fd2hlZWxjaGFpcl9hY2Nlc3NpYmxl",
+            "X3Jlc3Ryb29tQiAKHl93aGVlbGNoYWlyX2FjY2Vzc2libGVfc2VhdGluZxqp",
+            "AQoRR2VuZXJhdGl2ZVN1bW1hcnkSLAoIb3ZlcnZpZXcYASABKAsyGi5nb29n",
+            "bGUudHlwZS5Mb2NhbGl6ZWRUZXh0Ei8KC2Rlc2NyaXB0aW9uGAIgASgLMhou",
+            "Z29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dBI1CgpyZWZlcmVuY2VzGAMgASgL",
+            "MiEuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlJlZmVyZW5jZXMaSgoLQXJlYVN1",
+            "bW1hcnkSOwoOY29udGVudF9ibG9ja3MYBCADKAsyIy5nb29nbGUubWFwcy5w",
+            "bGFjZXMudjEuQ29udGVudEJsb2NrGk0KD0NvbnRhaW5pbmdQbGFjZRIuCgRu",
+            "YW1lGAEgASgJQiD6QR0KG3BsYWNlcy5nb29nbGVhcGlzLmNvbS9QbGFjZRIK",
+            "CgJpZBgCIAEoCSJyCg5CdXNpbmVzc1N0YXR1cxIfChtCVVNJTkVTU19TVEFU",
+            "VVNfVU5TUEVDSUZJRUQQABIPCgtPUEVSQVRJT05BTBABEhYKEkNMT1NFRF9U",
+            "RU1QT1JBUklMWRACEhYKEkNMT1NFRF9QRVJNQU5FTlRMWRADOkLqQT8KG3Bs",
+            "YWNlcy5nb29nbGVhcGlzLmNvbS9QbGFjZRIRcGxhY2VzL3twbGFjZV9pZH0q",
+            "BnBsYWNlczIFcGxhY2VCFQoTX3V0Y19vZmZzZXRfbWludXRlc0IUChJfdXNl",
+            "cl9yYXRpbmdfY291bnRCCgoIX3Rha2VvdXRCCwoJX2RlbGl2ZXJ5QgoKCF9k",
+            "aW5lX2luQhIKEF9jdXJic2lkZV9waWNrdXBCDQoLX3Jlc2VydmFibGVCEwoR",
+            "X3NlcnZlc19icmVha2Zhc3RCDwoNX3NlcnZlc19sdW5jaEIQCg5fc2VydmVz",
+            "X2Rpbm5lckIOCgxfc2VydmVzX2JlZXJCDgoMX3NlcnZlc193aW5lQhAKDl9z",
+            "ZXJ2ZXNfYnJ1bmNoQhkKF19zZXJ2ZXNfdmVnZXRhcmlhbl9mb29kQhIKEF9v",
+            "dXRkb29yX3NlYXRpbmdCDQoLX2xpdmVfbXVzaWNCFAoSX21lbnVfZm9yX2No",
+            "aWxkcmVuQhMKEV9zZXJ2ZXNfY29ja3RhaWxzQhEKD19zZXJ2ZXNfZGVzc2Vy",
+            "dEIQCg5fc2VydmVzX2NvZmZlZUIUChJfZ29vZF9mb3JfY2hpbGRyZW5CDgoM",
+            "X2FsbG93c19kb2dzQgsKCV9yZXN0cm9vbUISChBfZ29vZF9mb3JfZ3JvdXBz",
+            "QhsKGV9nb29kX2Zvcl93YXRjaGluZ19zcG9ydHNCGAoWX2FjY2Vzc2liaWxp",
+            "dHlfb3B0aW9uc0IdChtfcHVyZV9zZXJ2aWNlX2FyZWFfYnVzaW5lc3MqsQEK",
+            "ClByaWNlTGV2ZWwSGwoXUFJJQ0VfTEVWRUxfVU5TUEVDSUZJRUQQABIUChBQ",
+            "UklDRV9MRVZFTF9GUkVFEAESGwoXUFJJQ0VfTEVWRUxfSU5FWFBFTlNJVkUQ",
+            "AhIYChRQUklDRV9MRVZFTF9NT0RFUkFURRADEhkKFVBSSUNFX0xFVkVMX0VY",
+            "UEVOU0lWRRAEEh4KGlBSSUNFX0xFVkVMX1ZFUllfRVhQRU5TSVZFEAVCmwEK",
+            "GWNvbS5nb29nbGUubWFwcy5wbGFjZXMudjFCClBsYWNlUHJvdG9QAVo3Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9tYXBzL3BsYWNlcy9hcGl2MS9wbGFjZXNwYjtw",
+            "bGFjZXNwYqICBkdNUFNWMaoCFUdvb2dsZS5NYXBzLlBsYWNlcy5WMcoCFUdv",
+            "b2dsZVxNYXBzXFBsYWNlc1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.ContentBlockReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.FuelOptionsReflection.Descriptor, global::Google.Maps.Places.V1.PhotoReflection.Descriptor, global::Google.Maps.Places.V1.ReferenceReflection.Descriptor, global::Google.Maps.Places.V1.ReviewReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.ContentBlockReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.FuelOptionsReflection.Descriptor, global::Google.Maps.Places.V1.PhotoReflection.Descriptor, global::Google.Maps.Places.V1.PriceRangeReflection.Descriptor, global::Google.Maps.Places.V1.ReferenceReflection.Descriptor, global::Google.Maps.Places.V1.ReviewReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Places.V1.PriceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "PrimaryType", "PrimaryTypeDisplayName", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "ShortFormattedAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions", "GenerativeSummary", "AreaSummary" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "PrimaryType", "PrimaryTypeDisplayName", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "ShortFormattedAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions", "GenerativeSummary", "AreaSummary", "ContainingPlaces", "PureServiceAreaBusiness", "PriceRange" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions", "PureServiceAreaBusiness" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.PlusCode), global::Google.Maps.Places.V1.Place.Types.PlusCode.Parser, new[]{ "GlobalCode", "CompoundCode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser, new[]{ "OpenNow", "Periods", "WeekdayDescriptions", "SecondaryHoursType", "SpecialDays" }, new[]{ "OpenNow" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Parser, new[]{ "Open", "Close" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point.Parser, new[]{ "Day", "Hour", "Minute", "Date", "Truncated" }, new[]{ "Day", "Hour", "Minute" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser, new[]{ "OpenNow", "Periods", "WeekdayDescriptions", "SecondaryHoursType", "SpecialDays", "NextOpenTime", "NextCloseTime" }, new[]{ "OpenNow" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Parser, new[]{ "Open", "Close" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point.Parser, new[]{ "Day", "Hour", "Minute", "Date", "Truncated" }, new[]{ "Day", "Hour", "Minute" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay.Parser, new[]{ "Date" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.Attribution), global::Google.Maps.Places.V1.Place.Types.Attribution.Parser, new[]{ "Provider", "ProviderUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.PaymentOptions), global::Google.Maps.Places.V1.Place.Types.PaymentOptions.Parser, new[]{ "AcceptsCreditCards", "AcceptsDebitCards", "AcceptsCashOnly", "AcceptsNfc" }, new[]{ "AcceptsCreditCards", "AcceptsDebitCards", "AcceptsCashOnly", "AcceptsNfc" }, null, null, null),
@@ -182,7 +192,8 @@ namespace Google.Maps.Places.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.SubDestination), global::Google.Maps.Places.V1.Place.Types.SubDestination.Parser, new[]{ "Name", "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions), global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions.Parser, new[]{ "WheelchairAccessibleParking", "WheelchairAccessibleEntrance", "WheelchairAccessibleRestroom", "WheelchairAccessibleSeating" }, new[]{ "WheelchairAccessibleParking", "WheelchairAccessibleEntrance", "WheelchairAccessibleRestroom", "WheelchairAccessibleSeating" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.GenerativeSummary), global::Google.Maps.Places.V1.Place.Types.GenerativeSummary.Parser, new[]{ "Overview", "Description", "References" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AreaSummary), global::Google.Maps.Places.V1.Place.Types.AreaSummary.Parser, new[]{ "ContentBlocks" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AreaSummary), global::Google.Maps.Places.V1.Place.Types.AreaSummary.Parser, new[]{ "ContentBlocks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ContainingPlace), global::Google.Maps.Places.V1.Place.Types.ContainingPlace.Parser, new[]{ "Name", "Id" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -325,6 +336,9 @@ namespace Google.Maps.Places.V1 {
       evChargeOptions_ = other.evChargeOptions_ != null ? other.evChargeOptions_.Clone() : null;
       generativeSummary_ = other.generativeSummary_ != null ? other.generativeSummary_.Clone() : null;
       areaSummary_ = other.areaSummary_ != null ? other.areaSummary_.Clone() : null;
+      containingPlaces_ = other.containingPlaces_.Clone();
+      pureServiceAreaBusiness_ = other.pureServiceAreaBusiness_;
+      priceRange_ = other.priceRange_ != null ? other.priceRange_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -556,7 +570,9 @@ namespace Google.Maps.Places.V1 {
     public const int ViewportFieldNumber = 13;
     private global::Google.Geo.Type.Viewport viewport_;
     /// <summary>
-    /// A viewport suitable for displaying the place on an average-sized map.
+    /// A viewport suitable for displaying the place on an average-sized map. This
+    /// viewport should not be used as the physical boundary or the service area of
+    /// the business.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -710,9 +726,6 @@ namespace Google.Maps.Places.V1 {
     /// <summary>Field number for the "business_status" field.</summary>
     public const int BusinessStatusFieldNumber = 25;
     private global::Google.Maps.Places.V1.Place.Types.BusinessStatus businessStatus_ = global::Google.Maps.Places.V1.Place.Types.BusinessStatus.Unspecified;
-    /// <summary>
-    /// The business status for the place.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Maps.Places.V1.Place.Types.BusinessStatus BusinessStatus {
@@ -1706,6 +1719,69 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
+    /// <summary>Field number for the "containing_places" field.</summary>
+    public const int ContainingPlacesFieldNumber = 82;
+    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Place.Types.ContainingPlace> _repeated_containingPlaces_codec
+        = pb::FieldCodec.ForMessage(658, global::Google.Maps.Places.V1.Place.Types.ContainingPlace.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.ContainingPlace> containingPlaces_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.ContainingPlace>();
+    /// <summary>
+    /// List of places in which the current place is located.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.ContainingPlace> ContainingPlaces {
+      get { return containingPlaces_; }
+    }
+
+    /// <summary>Field number for the "pure_service_area_business" field.</summary>
+    public const int PureServiceAreaBusinessFieldNumber = 83;
+    private readonly static bool PureServiceAreaBusinessDefaultValue = false;
+
+    private bool pureServiceAreaBusiness_;
+    /// <summary>
+    /// Indicates whether the place is a pure service area business. Pure service
+    /// area business is a business that visits or delivers to customers directly
+    /// but does not serve customers at their business address. For example,
+    /// businesses like cleaning services or plumbers. Those businesses may not
+    /// have a physical address or location on Google Maps.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PureServiceAreaBusiness {
+      get { if ((_hasBits0 & 33554432) != 0) { return pureServiceAreaBusiness_; } else { return PureServiceAreaBusinessDefaultValue; } }
+      set {
+        _hasBits0 |= 33554432;
+        pureServiceAreaBusiness_ = value;
+      }
+    }
+    /// <summary>Gets whether the "pure_service_area_business" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPureServiceAreaBusiness {
+      get { return (_hasBits0 & 33554432) != 0; }
+    }
+    /// <summary>Clears the value of the "pure_service_area_business" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPureServiceAreaBusiness() {
+      _hasBits0 &= ~33554432;
+    }
+
+    /// <summary>Field number for the "price_range" field.</summary>
+    public const int PriceRangeFieldNumber = 86;
+    private global::Google.Maps.Places.V1.PriceRange priceRange_;
+    /// <summary>
+    /// The price range associated with a Place.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.PriceRange PriceRange {
+      get { return priceRange_; }
+      set {
+        priceRange_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1784,6 +1860,9 @@ namespace Google.Maps.Places.V1 {
       if (!object.Equals(EvChargeOptions, other.EvChargeOptions)) return false;
       if (!object.Equals(GenerativeSummary, other.GenerativeSummary)) return false;
       if (!object.Equals(AreaSummary, other.AreaSummary)) return false;
+      if(!containingPlaces_.Equals(other.containingPlaces_)) return false;
+      if (PureServiceAreaBusiness != other.PureServiceAreaBusiness) return false;
+      if (!object.Equals(PriceRange, other.PriceRange)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1854,6 +1933,9 @@ namespace Google.Maps.Places.V1 {
       if (evChargeOptions_ != null) hash ^= EvChargeOptions.GetHashCode();
       if (generativeSummary_ != null) hash ^= GenerativeSummary.GetHashCode();
       if (areaSummary_ != null) hash ^= AreaSummary.GetHashCode();
+      hash ^= containingPlaces_.GetHashCode();
+      if (HasPureServiceAreaBusiness) hash ^= PureServiceAreaBusiness.GetHashCode();
+      if (priceRange_ != null) hash ^= PriceRange.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2100,6 +2182,15 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(138, 5);
         output.WriteMessage(AreaSummary);
       }
+      containingPlaces_.WriteTo(output, _repeated_containingPlaces_codec);
+      if (HasPureServiceAreaBusiness) {
+        output.WriteRawTag(152, 5);
+        output.WriteBool(PureServiceAreaBusiness);
+      }
+      if (priceRange_ != null) {
+        output.WriteRawTag(178, 5);
+        output.WriteMessage(PriceRange);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2338,6 +2429,15 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(138, 5);
         output.WriteMessage(AreaSummary);
       }
+      containingPlaces_.WriteTo(ref output, _repeated_containingPlaces_codec);
+      if (HasPureServiceAreaBusiness) {
+        output.WriteRawTag(152, 5);
+        output.WriteBool(PureServiceAreaBusiness);
+      }
+      if (priceRange_ != null) {
+        output.WriteRawTag(178, 5);
+        output.WriteMessage(PriceRange);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2520,6 +2620,13 @@ namespace Google.Maps.Places.V1 {
       }
       if (areaSummary_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AreaSummary);
+      }
+      size += containingPlaces_.CalculateSize(_repeated_containingPlaces_codec);
+      if (HasPureServiceAreaBusiness) {
+        size += 2 + 1;
+      }
+      if (priceRange_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PriceRange);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2750,6 +2857,16 @@ namespace Google.Maps.Places.V1 {
           AreaSummary = new global::Google.Maps.Places.V1.Place.Types.AreaSummary();
         }
         AreaSummary.MergeFrom(other.AreaSummary);
+      }
+      containingPlaces_.Add(other.containingPlaces_);
+      if (other.HasPureServiceAreaBusiness) {
+        PureServiceAreaBusiness = other.PureServiceAreaBusiness;
+      }
+      if (other.priceRange_ != null) {
+        if (priceRange_ == null) {
+          PriceRange = new global::Google.Maps.Places.V1.PriceRange();
+        }
+        PriceRange.MergeFrom(other.PriceRange);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3063,6 +3180,21 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(AreaSummary);
             break;
           }
+          case 658: {
+            containingPlaces_.AddEntriesFrom(input, _repeated_containingPlaces_codec);
+            break;
+          }
+          case 664: {
+            PureServiceAreaBusiness = input.ReadBool();
+            break;
+          }
+          case 690: {
+            if (priceRange_ == null) {
+              PriceRange = new global::Google.Maps.Places.V1.PriceRange();
+            }
+            input.ReadMessage(PriceRange);
+            break;
+          }
         }
       }
     #endif
@@ -3373,6 +3505,21 @@ namespace Google.Maps.Places.V1 {
               AreaSummary = new global::Google.Maps.Places.V1.Place.Types.AreaSummary();
             }
             input.ReadMessage(AreaSummary);
+            break;
+          }
+          case 658: {
+            containingPlaces_.AddEntriesFrom(ref input, _repeated_containingPlaces_codec);
+            break;
+          }
+          case 664: {
+            PureServiceAreaBusiness = input.ReadBool();
+            break;
+          }
+          case 690: {
+            if (priceRange_ == null) {
+              PriceRange = new global::Google.Maps.Places.V1.PriceRange();
+            }
+            input.ReadMessage(PriceRange);
             break;
           }
         }
@@ -4003,6 +4150,8 @@ namespace Google.Maps.Places.V1 {
           weekdayDescriptions_ = other.weekdayDescriptions_.Clone();
           secondaryHoursType_ = other.secondaryHoursType_;
           specialDays_ = other.specialDays_.Clone();
+          nextOpenTime_ = other.nextOpenTime_ != null ? other.nextOpenTime_.Clone() : null;
+          nextCloseTime_ = other.nextCloseTime_ != null ? other.nextCloseTime_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4111,6 +4260,40 @@ namespace Google.Maps.Places.V1 {
           get { return specialDays_; }
         }
 
+        /// <summary>Field number for the "next_open_time" field.</summary>
+        public const int NextOpenTimeFieldNumber = 6;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp nextOpenTime_;
+        /// <summary>
+        /// The next time the current opening hours period starts up to 7 days in the
+        /// future. This field is only populated if the opening hours period is not
+        /// active at the time of serving the request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp NextOpenTime {
+          get { return nextOpenTime_; }
+          set {
+            nextOpenTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "next_close_time" field.</summary>
+        public const int NextCloseTimeFieldNumber = 7;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp nextCloseTime_;
+        /// <summary>
+        /// The next time the current opening hours period ends up to 7 days in the
+        /// future. This field is only populated if the opening hours period is
+        /// active at the time of serving the request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp NextCloseTime {
+          get { return nextCloseTime_; }
+          set {
+            nextCloseTime_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4131,6 +4314,8 @@ namespace Google.Maps.Places.V1 {
           if(!weekdayDescriptions_.Equals(other.weekdayDescriptions_)) return false;
           if (SecondaryHoursType != other.SecondaryHoursType) return false;
           if(!specialDays_.Equals(other.specialDays_)) return false;
+          if (!object.Equals(NextOpenTime, other.NextOpenTime)) return false;
+          if (!object.Equals(NextCloseTime, other.NextCloseTime)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4143,6 +4328,8 @@ namespace Google.Maps.Places.V1 {
           hash ^= weekdayDescriptions_.GetHashCode();
           if (SecondaryHoursType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType.Unspecified) hash ^= SecondaryHoursType.GetHashCode();
           hash ^= specialDays_.GetHashCode();
+          if (nextOpenTime_ != null) hash ^= NextOpenTime.GetHashCode();
+          if (nextCloseTime_ != null) hash ^= NextCloseTime.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4172,6 +4359,14 @@ namespace Google.Maps.Places.V1 {
             output.WriteEnum((int) SecondaryHoursType);
           }
           specialDays_.WriteTo(output, _repeated_specialDays_codec);
+          if (nextOpenTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(NextOpenTime);
+          }
+          if (nextCloseTime_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(NextCloseTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4193,6 +4388,14 @@ namespace Google.Maps.Places.V1 {
             output.WriteEnum((int) SecondaryHoursType);
           }
           specialDays_.WriteTo(ref output, _repeated_specialDays_codec);
+          if (nextOpenTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(NextOpenTime);
+          }
+          if (nextCloseTime_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(NextCloseTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4212,6 +4415,12 @@ namespace Google.Maps.Places.V1 {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SecondaryHoursType);
           }
           size += specialDays_.CalculateSize(_repeated_specialDays_codec);
+          if (nextOpenTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(NextOpenTime);
+          }
+          if (nextCloseTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(NextCloseTime);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4233,6 +4442,18 @@ namespace Google.Maps.Places.V1 {
             SecondaryHoursType = other.SecondaryHoursType;
           }
           specialDays_.Add(other.specialDays_);
+          if (other.nextOpenTime_ != null) {
+            if (nextOpenTime_ == null) {
+              NextOpenTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            NextOpenTime.MergeFrom(other.NextOpenTime);
+          }
+          if (other.nextCloseTime_ != null) {
+            if (nextCloseTime_ == null) {
+              NextCloseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            NextCloseTime.MergeFrom(other.NextCloseTime);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4268,6 +4489,20 @@ namespace Google.Maps.Places.V1 {
                 specialDays_.AddEntriesFrom(input, _repeated_specialDays_codec);
                 break;
               }
+              case 50: {
+                if (nextOpenTime_ == null) {
+                  NextOpenTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(NextOpenTime);
+                break;
+              }
+              case 58: {
+                if (nextCloseTime_ == null) {
+                  NextCloseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(NextCloseTime);
+                break;
+              }
             }
           }
         #endif
@@ -4301,6 +4536,20 @@ namespace Google.Maps.Places.V1 {
               }
               case 42: {
                 specialDays_.AddEntriesFrom(ref input, _repeated_specialDays_codec);
+                break;
+              }
+              case 50: {
+                if (nextOpenTime_ == null) {
+                  NextOpenTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(NextOpenTime);
+                break;
+              }
+              case 58: {
+                if (nextCloseTime_ == null) {
+                  NextCloseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(NextCloseTime);
                 break;
               }
             }
@@ -7528,6 +7777,242 @@ namespace Google.Maps.Places.V1 {
                 break;
               case 34: {
                 contentBlocks_.AddEntriesFrom(ref input, _repeated_contentBlocks_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Info about the place in which this place is located.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ContainingPlace : pb::IMessage<ContainingPlace>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ContainingPlace> _parser = new pb::MessageParser<ContainingPlace>(() => new ContainingPlace());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ContainingPlace> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[10]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ContainingPlace() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ContainingPlace(ContainingPlace other) : this() {
+          name_ = other.name_;
+          id_ = other.id_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ContainingPlace Clone() {
+          return new ContainingPlace(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// The resource name of the place in which this place is located.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 2;
+        private string id_ = "";
+        /// <summary>
+        /// The place id of the place in which this place is located.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ContainingPlace);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ContainingPlace other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (Id != other.Id) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Id);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Id);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ContainingPlace other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Id = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Id = input.ReadString();
                 break;
               }
             }

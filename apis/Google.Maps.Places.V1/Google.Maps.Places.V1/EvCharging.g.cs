@@ -43,11 +43,11 @@ namespace Google.Maps.Places.V1 {
             "VE9SX1RZUEVfQ0NTX0NPTUJPXzEQBRIhCh1FVl9DT05ORUNUT1JfVFlQRV9D",
             "Q1NfQ09NQk9fMhAGEhsKF0VWX0NPTk5FQ1RPUl9UWVBFX1RFU0xBEAcSJgoi",
             "RVZfQ09OTkVDVE9SX1RZUEVfVU5TUEVDSUZJRURfR0JfVBAIEi0KKUVWX0NP",
-            "Tk5FQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEX1dBTExfT1VUTEVUEAlCowEKGWNv",
+            "Tk5FQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEX1dBTExfT1VUTEVUEAlCoAEKGWNv",
             "bS5nb29nbGUubWFwcy5wbGFjZXMudjFCD0V2Q2hhcmdpbmdQcm90b1ABWjdj",
             "bG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3Bi",
-            "O3BsYWNlc3Bi+AEBogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYx",
-            "ygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
+            "O3BsYWNlc3BiogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIV",
+            "R29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Places.V1.EVConnectorType), }, null, new pbr::GeneratedClrTypeInfo[] {

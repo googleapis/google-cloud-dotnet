@@ -40,6 +40,7 @@ namespace Google.Maps.Places.V1
             yield return PlaceReflection.Descriptor;
             yield return PlacesServiceReflection.Descriptor;
             yield return PolylineReflection.Descriptor;
+            yield return PriceRangeReflection.Descriptor;
             yield return ReferenceReflection.Descriptor;
             yield return ReviewReflection.Descriptor;
             yield return RouteModifiersReflection.Descriptor;
