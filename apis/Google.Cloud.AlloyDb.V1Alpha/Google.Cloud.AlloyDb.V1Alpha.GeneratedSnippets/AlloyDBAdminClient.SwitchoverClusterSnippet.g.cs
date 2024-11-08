@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1alpha_generated_AlloyDBAdmin_RestartInstance_sync]
+    // [START alloydb_v1alpha_generated_AlloyDBAdmin_SwitchoverCluster_sync_flattened]
     using Google.Cloud.AlloyDb.V1Alpha;
     using Google.LongRunning;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for RestartInstance</summary>
+        /// <summary>Snippet for SwitchoverCluster</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,37 +30,31 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void RestartInstanceRequestObject()
+        public void SwitchoverCluster()
         {
             // Create client
             AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
             // Initialize request argument(s)
-            RestartInstanceRequest request = new RestartInstanceRequest
-            {
-                InstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
-                RequestId = "",
-                ValidateOnly = false,
-                NodeIds = { "", },
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
             // Make the request
-            Operation<Instance, OperationMetadata> response = alloyDBAdminClient.RestartInstance(request);
+            Operation<Cluster, OperationMetadata> response = alloyDBAdminClient.SwitchoverCluster(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Cluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            Cluster result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceRestartInstance(operationName);
+            Operation<Cluster, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceSwitchoverCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                Cluster retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END alloydb_v1alpha_generated_AlloyDBAdmin_RestartInstance_sync]
+    // [END alloydb_v1alpha_generated_AlloyDBAdmin_SwitchoverCluster_sync_flattened]
 }
