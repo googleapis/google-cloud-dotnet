@@ -250,6 +250,18 @@ namespace Google.Maps.Places.V1
                     set => Name = value?.ToString() ?? "";
                 }
             }
+
+            public partial class ContainingPlace
+            {
+                /// <summary>
+                /// <see cref="gmpv::PlaceName"/>-typed view over the <see cref="Name"/> resource name property.
+                /// </summary>
+                public gmpv::PlaceName PlaceName
+                {
+                    get => string.IsNullOrEmpty(Name) ? null : gmpv::PlaceName.Parse(Name, allowUnparsed: true);
+                    set => Name = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

@@ -28,11 +28,11 @@ namespace Google.Maps.Places.V1 {
             "b3RvEhVnb29nbGUubWFwcy5wbGFjZXMudjEqegoRUm91dGluZ1ByZWZlcmVu",
             "Y2USIgoeUk9VVElOR19QUkVGRVJFTkNFX1VOU1BFQ0lGSUVEEAASEwoPVFJB",
             "RkZJQ19VTkFXQVJFEAESEQoNVFJBRkZJQ19BV0FSRRACEhkKFVRSQUZGSUNf",
-            "QVdBUkVfT1BUSU1BTBADQqoBChljb20uZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "QVdBUkVfT1BUSU1BTBADQqcBChljb20uZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
             "QhZSb3V0aW5nUHJlZmVyZW5jZVByb3RvUAFaN2Nsb3VkLmdvb2dsZS5jb20v",
-            "Z28vbWFwcy9wbGFjZXMvYXBpdjEvcGxhY2VzcGI7cGxhY2VzcGL4AQGiAgZH",
-            "TVBTVjGqAhVHb29nbGUuTWFwcy5QbGFjZXMuVjHKAhVHb29nbGVcTWFwc1xQ",
-            "bGFjZXNcVjFiBnByb3RvMw=="));
+            "Z28vbWFwcy9wbGFjZXMvYXBpdjEvcGxhY2VzcGI7cGxhY2VzcGKiAgZHTVBT",
+            "VjGqAhVHb29nbGUuTWFwcy5QbGFjZXMuVjHKAhVHb29nbGVcTWFwc1xQbGFj",
+            "ZXNcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Places.V1.RoutingPreference), }, null, null));

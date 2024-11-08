@@ -30,10 +30,10 @@ namespace Google.Maps.Places.V1 {
             "cm90byKBAQoMQ29udGVudEJsb2NrEg0KBXRvcGljGAEgASgJEisKB2NvbnRl",
             "bnQYAiABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0EjUKCnJlZmVy",
             "ZW5jZXMYAyABKAsyIS5nb29nbGUubWFwcy5wbGFjZXMudjEuUmVmZXJlbmNl",
-            "c0KlAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIRQ29udGVudEJsb2Nr",
+            "c0KiAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIRQ29udGVudEJsb2Nr",
             "UHJvdG9QAVo3Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3BsYWNlcy9hcGl2",
-            "MS9wbGFjZXNwYjtwbGFjZXNwYvgBAaICBkdNUFNWMaoCFUdvb2dsZS5NYXBz",
-            "LlBsYWNlcy5WMcoCFUdvb2dsZVxNYXBzXFBsYWNlc1xWMWIGcHJvdG8z"));
+            "MS9wbGFjZXNwYjtwbGFjZXNwYqICBkdNUFNWMaoCFUdvb2dsZS5NYXBzLlBs",
+            "YWNlcy5WMcoCFUdvb2dsZVxNYXBzXFBsYWNlc1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Maps.Places.V1.ReferenceReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
