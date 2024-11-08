@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 InstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
                 RequestId = "",
                 ValidateOnly = false,
+                NodeIds = { "", },
             };
             // Make the request
             Operation<Instance, OperationMetadata> response = await alloyDBAdminClient.RestartInstanceAsync(request);

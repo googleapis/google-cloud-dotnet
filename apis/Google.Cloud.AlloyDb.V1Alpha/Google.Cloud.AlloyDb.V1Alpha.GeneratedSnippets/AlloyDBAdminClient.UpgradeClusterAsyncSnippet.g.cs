@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1alpha_generated_AlloyDBAdmin_RestartInstance_sync]
+    // [START alloydb_v1alpha_generated_AlloyDBAdmin_UpgradeCluster_async_flattened]
     using Google.Cloud.AlloyDb.V1Alpha;
     using Google.LongRunning;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for RestartInstance</summary>
+        /// <summary>Snippet for UpgradeClusterAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,37 +31,32 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void RestartInstanceRequestObject()
+        public async Task UpgradeClusterAsync()
         {
             // Create client
-            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
             // Initialize request argument(s)
-            RestartInstanceRequest request = new RestartInstanceRequest
-            {
-                InstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
-                RequestId = "",
-                ValidateOnly = false,
-                NodeIds = { "", },
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            DatabaseVersion version = DatabaseVersion.Unspecified;
             // Make the request
-            Operation<Instance, OperationMetadata> response = alloyDBAdminClient.RestartInstance(request);
+            Operation<UpgradeClusterResponse, OperationMetadata> response = await alloyDBAdminClient.UpgradeClusterAsync(name, version);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<UpgradeClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            UpgradeClusterResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceRestartInstance(operationName);
+            Operation<UpgradeClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceUpgradeClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                UpgradeClusterResponse retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END alloydb_v1alpha_generated_AlloyDBAdmin_RestartInstance_sync]
+    // [END alloydb_v1alpha_generated_AlloyDBAdmin_UpgradeCluster_async_flattened]
 }
