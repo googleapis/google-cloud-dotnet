@@ -68,7 +68,31 @@ namespace Google.Cloud.AlloyDb.V1Beta
         }
     }
 
+    public partial class UpgradeClusterRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ClusterName ClusterName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ClusterName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteClusterRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ClusterName ClusterName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ClusterName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SwitchoverClusterRequest
     {
         /// <summary>
         /// <see cref="gcav::ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
@@ -209,6 +233,18 @@ namespace Google.Cloud.AlloyDb.V1Beta
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ExecuteSqlRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
         }
     }
 
