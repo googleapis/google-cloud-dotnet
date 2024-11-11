@@ -2361,7 +2361,6 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// Providing examples in the generator (i.e. building a few-shot generator)
   /// helps convey the desired format of the LLM response.
-  /// NEXT_ID: 10
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FewShotExample : pb::IMessage<FewShotExample>
