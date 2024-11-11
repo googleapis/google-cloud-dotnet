@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2_generated_Conversations_SearchKnowledge_sync]
     using Google.Cloud.Dialogflow.V2;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedConversationsClientSnippets
     {
@@ -42,6 +43,10 @@ namespace GoogleCSharpSnippets
                 ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
                 LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
                 Parent = "",
+                QuerySource = SearchKnowledgeRequest.Types.QuerySource.Unspecified,
+                EndUserMetadata = new Struct(),
+                SearchConfig = new SearchKnowledgeRequest.Types.SearchConfig(),
+                ExactSearch = false,
             };
             // Make the request
             SearchKnowledgeResponse response = conversationsClient.SearchKnowledge(request);
