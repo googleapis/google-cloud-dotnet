@@ -1504,8 +1504,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedIndex">
         /// Required. The DeployedIndex to be updated within the IndexEndpoint.
-        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
-        /// and [DeployedIndex][dedicated_resources]
+        /// Currently, the updatable fields are
+        /// [DeployedIndex.automatic_resources][google.cloud.aiplatform.v1.DeployedIndex.automatic_resources]
+        /// and
+        /// [DeployedIndex.dedicated_resources][google.cloud.aiplatform.v1.DeployedIndex.dedicated_resources]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1526,8 +1528,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedIndex">
         /// Required. The DeployedIndex to be updated within the IndexEndpoint.
-        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
-        /// and [DeployedIndex][dedicated_resources]
+        /// Currently, the updatable fields are
+        /// [DeployedIndex.automatic_resources][google.cloud.aiplatform.v1.DeployedIndex.automatic_resources]
+        /// and
+        /// [DeployedIndex.dedicated_resources][google.cloud.aiplatform.v1.DeployedIndex.dedicated_resources]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1548,8 +1552,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedIndex">
         /// Required. The DeployedIndex to be updated within the IndexEndpoint.
-        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
-        /// and [DeployedIndex][dedicated_resources]
+        /// Currently, the updatable fields are
+        /// [DeployedIndex.automatic_resources][google.cloud.aiplatform.v1.DeployedIndex.automatic_resources]
+        /// and
+        /// [DeployedIndex.dedicated_resources][google.cloud.aiplatform.v1.DeployedIndex.dedicated_resources]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1566,8 +1572,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedIndex">
         /// Required. The DeployedIndex to be updated within the IndexEndpoint.
-        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
-        /// and [DeployedIndex][dedicated_resources]
+        /// Currently, the updatable fields are
+        /// [DeployedIndex.automatic_resources][google.cloud.aiplatform.v1.DeployedIndex.automatic_resources]
+        /// and
+        /// [DeployedIndex.dedicated_resources][google.cloud.aiplatform.v1.DeployedIndex.dedicated_resources]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1588,8 +1596,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedIndex">
         /// Required. The DeployedIndex to be updated within the IndexEndpoint.
-        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
-        /// and [DeployedIndex][dedicated_resources]
+        /// Currently, the updatable fields are
+        /// [DeployedIndex.automatic_resources][google.cloud.aiplatform.v1.DeployedIndex.automatic_resources]
+        /// and
+        /// [DeployedIndex.dedicated_resources][google.cloud.aiplatform.v1.DeployedIndex.dedicated_resources]
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1610,8 +1620,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedIndex">
         /// Required. The DeployedIndex to be updated within the IndexEndpoint.
-        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
-        /// and [DeployedIndex][dedicated_resources]
+        /// Currently, the updatable fields are
+        /// [DeployedIndex.automatic_resources][google.cloud.aiplatform.v1.DeployedIndex.automatic_resources]
+        /// and
+        /// [DeployedIndex.dedicated_resources][google.cloud.aiplatform.v1.DeployedIndex.dedicated_resources]
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

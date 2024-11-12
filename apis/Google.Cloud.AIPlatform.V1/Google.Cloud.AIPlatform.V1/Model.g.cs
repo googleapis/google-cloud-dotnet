@@ -776,7 +776,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Stats of data used for training or evaluating the Model.
     ///
     /// Only populated when the Model is trained by a TrainingPipeline with
-    /// [data_input_config][TrainingPipeline.data_input_config].
+    /// [data_input_config][google.cloud.aiplatform.v1.TrainingPipeline.input_data_config].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

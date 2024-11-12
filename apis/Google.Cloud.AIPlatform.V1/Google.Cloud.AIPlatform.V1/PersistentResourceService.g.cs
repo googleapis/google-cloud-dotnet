@@ -1353,7 +1353,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [PersistentResourceService.ListPersistentResource][].
+  /// Request message for
+  /// [PersistentResourceService.ListPersistentResources][google.cloud.aiplatform.v1.PersistentResourceService.ListPersistentResources].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPersistentResourcesRequest : pb::IMessage<ListPersistentResourcesRequest>
@@ -1439,8 +1440,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Optional. The standard list page token.
     /// Typically obtained via
-    /// [ListPersistentResourceResponse.next_page_token][] of the previous
-    /// [PersistentResourceService.ListPersistentResource][] call.
+    /// [ListPersistentResourcesResponse.next_page_token][google.cloud.aiplatform.v1.ListPersistentResourcesResponse.next_page_token]
+    /// of the previous [PersistentResourceService.ListPersistentResource][] call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

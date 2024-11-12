@@ -1023,8 +1023,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1039,8 +1040,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1055,8 +1057,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1071,8 +1074,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1094,8 +1098,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1117,8 +1122,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1137,8 +1143,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1160,8 +1167,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1183,8 +1191,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1203,8 +1212,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1234,8 +1244,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1265,8 +1276,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1292,8 +1304,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1323,8 +1336,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1354,8 +1368,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Schedule resource to be resumed.
@@ -1746,8 +1761,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1765,8 +1781,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// When the Schedule is resumed, new runs will be scheduled starting from the
         /// next execution time after the current time based on the time_specification
-        /// in the Schedule. If [Schedule.catchUp][] is set up true, all
-        /// missed runs will be scheduled for backfill first.
+        /// in the Schedule. If
+        /// [Schedule.catch_up][google.cloud.aiplatform.v1.Schedule.catch_up] is set up
+        /// true, all missed runs will be scheduled for backfill first.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

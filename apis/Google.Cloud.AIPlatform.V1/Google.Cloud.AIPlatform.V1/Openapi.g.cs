@@ -322,9 +322,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Optional. Possible values of the element of primitive type with enum
     /// format. Examples:
     /// 1. We can define direction as :
-    /// ```{type:STRING, format:enum, enum:["EAST", "NORTH", "SOUTH", "WEST"]}```
+    /// {type:STRING, format:enum, enum:["EAST", NORTH", "SOUTH", "WEST"]}
     /// 2. We can define apartment number as :
-    /// ```{type:INTEGER, format:enum, enum:["101", "201", "301"]}```
+    /// {type:INTEGER, format:enum, enum:["101", "201", "301"]}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
