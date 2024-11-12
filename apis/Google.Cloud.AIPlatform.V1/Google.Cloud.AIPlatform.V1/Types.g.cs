@@ -909,7 +909,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// be set.  The values hold the flattened representation of the tensor in
     /// row major order.
     ///
-    /// [BOOL][google.aiplatform.master.Tensor.DataType.BOOL]
+    /// [BOOL][google.cloud.aiplatform.v1.Tensor.DataType.BOOL]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -923,7 +923,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(114);
     private readonly pbc::RepeatedField<string> stringVal_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// [STRING][google.aiplatform.master.Tensor.DataType.STRING]
+    /// [STRING][google.cloud.aiplatform.v1.Tensor.DataType.STRING]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -937,7 +937,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForBytes(122);
     private readonly pbc::RepeatedField<pb::ByteString> bytesVal_ = new pbc::RepeatedField<pb::ByteString>();
     /// <summary>
-    /// [STRING][google.aiplatform.master.Tensor.DataType.STRING]
+    /// [STRING][google.cloud.aiplatform.v1.Tensor.DataType.STRING]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -951,7 +951,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForFloat(42);
     private readonly pbc::RepeatedField<float> floatVal_ = new pbc::RepeatedField<float>();
     /// <summary>
-    /// [FLOAT][google.aiplatform.master.Tensor.DataType.FLOAT]
+    /// [FLOAT][google.cloud.aiplatform.v1.Tensor.DataType.FLOAT]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -965,7 +965,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForDouble(50);
     private readonly pbc::RepeatedField<double> doubleVal_ = new pbc::RepeatedField<double>();
     /// <summary>
-    /// [DOUBLE][google.aiplatform.master.Tensor.DataType.DOUBLE]
+    /// [DOUBLE][google.cloud.aiplatform.v1.Tensor.DataType.DOUBLE]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -979,9 +979,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForInt32(58);
     private readonly pbc::RepeatedField<int> intVal_ = new pbc::RepeatedField<int>();
     /// <summary>
-    /// [INT_8][google.aiplatform.master.Tensor.DataType.INT8]
-    /// [INT_16][google.aiplatform.master.Tensor.DataType.INT16]
-    /// [INT_32][google.aiplatform.master.Tensor.DataType.INT32]
+    /// [INT_8][google.cloud.aiplatform.v1.Tensor.DataType.INT8]
+    /// [INT_16][google.cloud.aiplatform.v1.Tensor.DataType.INT16]
+    /// [INT_32][google.cloud.aiplatform.v1.Tensor.DataType.INT32]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -995,7 +995,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForInt64(66);
     private readonly pbc::RepeatedField<long> int64Val_ = new pbc::RepeatedField<long>();
     /// <summary>
-    /// [INT64][google.aiplatform.master.Tensor.DataType.INT64]
+    /// [INT64][google.cloud.aiplatform.v1.Tensor.DataType.INT64]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1009,9 +1009,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> uintVal_ = new pbc::RepeatedField<uint>();
     /// <summary>
-    /// [UINT8][google.aiplatform.master.Tensor.DataType.UINT8]
-    /// [UINT16][google.aiplatform.master.Tensor.DataType.UINT16]
-    /// [UINT32][google.aiplatform.master.Tensor.DataType.UINT32]
+    /// [UINT8][google.cloud.aiplatform.v1.Tensor.DataType.UINT8]
+    /// [UINT16][google.cloud.aiplatform.v1.Tensor.DataType.UINT16]
+    /// [UINT32][google.cloud.aiplatform.v1.Tensor.DataType.UINT32]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1025,7 +1025,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForUInt64(82);
     private readonly pbc::RepeatedField<ulong> uint64Val_ = new pbc::RepeatedField<ulong>();
     /// <summary>
-    /// [UINT64][google.aiplatform.master.Tensor.DataType.UINT64]
+    /// [UINT64][google.cloud.aiplatform.v1.Tensor.DataType.UINT64]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

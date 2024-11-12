@@ -3494,7 +3494,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         private global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest request_;
         /// <summary>
         /// It's the same as the value in
-        /// [MigrateResourceRequest.migrate_resource_requests][].
+        /// [BatchMigrateResourcesRequest.migrate_resource_requests][google.cloud.aiplatform.v1.BatchMigrateResourcesRequest.migrate_resource_requests].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

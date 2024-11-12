@@ -2272,7 +2272,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// Request message for
-  /// [FeaturestoreOnlineServingService.StreamingFeatureValuesRead][].
+  /// [FeaturestoreOnlineServingService.StreamingReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.StreamingReadFeatureValues].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingReadFeatureValuesRequest : pb::IMessage<StreamingReadFeatureValuesRequest>

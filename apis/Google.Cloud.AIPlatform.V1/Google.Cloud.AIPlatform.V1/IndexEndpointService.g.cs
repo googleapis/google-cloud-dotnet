@@ -3255,8 +3255,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.DeployedIndex deployedIndex_;
     /// <summary>
     /// Required. The DeployedIndex to be updated within the IndexEndpoint.
-    /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
-    /// and [DeployedIndex][dedicated_resources]
+    /// Currently, the updatable fields are
+    /// [DeployedIndex.automatic_resources][google.cloud.aiplatform.v1.DeployedIndex.automatic_resources]
+    /// and
+    /// [DeployedIndex.dedicated_resources][google.cloud.aiplatform.v1.DeployedIndex.dedicated_resources]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

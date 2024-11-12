@@ -762,12 +762,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A page token, received from a previous
-    /// [FeatureGroupAdminService.ListFeatureGroups][] call.
-    /// Provide this to retrieve the subsequent page.
+    /// [FeatureRegistryService.ListFeatureGroups][google.cloud.aiplatform.v1.FeatureRegistryService.ListFeatureGroups]
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [FeatureGroupAdminService.ListFeatureGroups][] must
-    /// match the call that provided the page token.
+    /// [FeatureRegistryService.ListFeatureGroups][google.cloud.aiplatform.v1.FeatureRegistryService.ListFeatureGroups]
+    /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

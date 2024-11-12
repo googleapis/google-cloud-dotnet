@@ -7728,7 +7728,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.DeleteEntityTypes][].
+  /// Request message for
+  /// [FeaturestoreService.DeleteEntityType][google.cloud.aiplatform.v1.FeaturestoreService.DeleteEntityType].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEntityTypeRequest : pb::IMessage<DeleteEntityTypeRequest>

@@ -3264,7 +3264,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeatureOnlineStoreAdminService.DeleteFeatureViews][].
+  /// Request message for
+  /// [FeatureOnlineStoreAdminService.DeleteFeatureView][google.cloud.aiplatform.v1.FeatureOnlineStoreAdminService.DeleteFeatureView].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFeatureViewRequest : pb::IMessage<DeleteFeatureViewRequest>
