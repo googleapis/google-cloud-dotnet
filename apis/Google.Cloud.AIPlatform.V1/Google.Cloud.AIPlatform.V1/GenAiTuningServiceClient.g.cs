@@ -920,8 +920,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -931,8 +929,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -942,8 +938,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -979,8 +973,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location into which to rebase the Model.
@@ -1000,8 +992,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location into which to rebase the Model.
@@ -1021,8 +1011,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location into which to rebase the Model.
@@ -1038,8 +1026,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location into which to rebase the Model.
@@ -1059,8 +1045,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location into which to rebase the Model.
@@ -1080,8 +1064,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location into which to rebase the Model.
@@ -1306,8 +1288,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1320,8 +1300,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Rebase a TunedModel.
-        /// Creates a LongRunningOperation that takes a legacy Tuned GenAI model
-        /// Reference and creates a TuningJob based on newly available model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

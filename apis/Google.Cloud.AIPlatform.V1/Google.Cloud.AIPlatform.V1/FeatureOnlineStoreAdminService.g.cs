@@ -3077,6 +3077,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///   * `feature_registry_source.feature_groups`
     ///   * `sync_config`
     ///   * `sync_config.cron`
+    ///   * `optimized_config.automatic_resources`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

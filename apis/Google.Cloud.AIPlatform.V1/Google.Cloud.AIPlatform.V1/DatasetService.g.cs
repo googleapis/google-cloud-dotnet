@@ -756,6 +756,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Request message for
   /// [DatasetService.GetDataset][google.cloud.aiplatform.v1.DatasetService.GetDataset].
+  /// Next ID: 4
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatasetRequest : pb::IMessage<GetDatasetRequest>
@@ -4355,6 +4356,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Request message for
   /// [DatasetService.GetDatasetVersion][google.cloud.aiplatform.v1.DatasetService.GetDatasetVersion].
+  /// Next ID: 4
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatasetVersionRequest : pb::IMessage<GetDatasetVersionRequest>

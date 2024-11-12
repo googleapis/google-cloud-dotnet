@@ -2828,7 +2828,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int TimeoutFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
     /// <summary>
-    /// The maximum job running time. The default is 7 days.
+    /// Optional. The maximum job running time. The default is 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2843,7 +2843,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int RestartJobOnWorkerRestartFieldNumber = 3;
     private bool restartJobOnWorkerRestart_;
     /// <summary>
-    /// Restarts the entire CustomJob if a worker gets restarted.
+    /// Optional. Restarts the entire CustomJob if a worker gets restarted.
     /// This feature can be used by distributed training jobs that are not
     /// resilient to workers leaving and joining a job.
     /// </summary>
