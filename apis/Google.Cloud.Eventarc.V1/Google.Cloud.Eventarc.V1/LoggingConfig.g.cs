@@ -48,7 +48,7 @@ namespace Google.Cloud.Eventarc.V1 {
   }
   #region Messages
   /// <summary>
-  /// The configuration for Platform Telemetry logging for Eventarc Avdvanced
+  /// The configuration for Platform Telemetry logging for Eventarc Advanced
   /// resources.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
