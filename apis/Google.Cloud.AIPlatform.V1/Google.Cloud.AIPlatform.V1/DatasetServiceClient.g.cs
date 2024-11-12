@@ -3044,6 +3044,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Lists Annotations belongs to a dataitem
+        /// This RPC is only available in InternalDatasetService. It is only used for
+        /// exporting conversation data to CCAI Insights.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3053,6 +3055,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Lists Annotations belongs to a dataitem
+        /// This RPC is only available in InternalDatasetService. It is only used for
+        /// exporting conversation data to CCAI Insights.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3062,6 +3066,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Lists Annotations belongs to a dataitem
+        /// This RPC is only available in InternalDatasetService. It is only used for
+        /// exporting conversation data to CCAI Insights.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the DataItem to list Annotations from.
@@ -3097,6 +3103,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Lists Annotations belongs to a dataitem
+        /// This RPC is only available in InternalDatasetService. It is only used for
+        /// exporting conversation data to CCAI Insights.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the DataItem to list Annotations from.
@@ -3132,6 +3140,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Lists Annotations belongs to a dataitem
+        /// This RPC is only available in InternalDatasetService. It is only used for
+        /// exporting conversation data to CCAI Insights.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the DataItem to list Annotations from.
@@ -3167,6 +3177,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Lists Annotations belongs to a dataitem
+        /// This RPC is only available in InternalDatasetService. It is only used for
+        /// exporting conversation data to CCAI Insights.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the DataItem to list Annotations from.
@@ -3877,6 +3889,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Lists Annotations belongs to a dataitem
+        /// This RPC is only available in InternalDatasetService. It is only used for
+        /// exporting conversation data to CCAI Insights.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3889,6 +3903,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Lists Annotations belongs to a dataitem
+        /// This RPC is only available in InternalDatasetService. It is only used for
+        /// exporting conversation data to CCAI Insights.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -1927,6 +1927,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `feature_registry_source.feature_groups`
         /// * `sync_config`
         /// * `sync_config.cron`
+        /// * `optimized_config.automatic_resources`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1965,6 +1966,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `feature_registry_source.feature_groups`
         /// * `sync_config`
         /// * `sync_config.cron`
+        /// * `optimized_config.automatic_resources`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2003,6 +2005,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `feature_registry_source.feature_groups`
         /// * `sync_config`
         /// * `sync_config.cron`
+        /// * `optimized_config.automatic_resources`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
