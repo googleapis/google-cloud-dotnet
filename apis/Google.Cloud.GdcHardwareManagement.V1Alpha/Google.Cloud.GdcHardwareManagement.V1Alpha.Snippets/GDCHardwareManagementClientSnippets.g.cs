@@ -6013,6 +6013,7 @@ namespace GoogleCSharpSnippets
                 ZoneName = ZoneName.FromProjectLocationZone("[PROJECT]", "[LOCATION]", "[ZONE]"),
                 RequestId = "",
                 StateSignal = SignalZoneStateRequest.Types.StateSignal.Unspecified,
+                ProvisioningStateSignal = SignalZoneStateRequest.Types.ProvisioningStateSignal.Unspecified,
             };
             // Make the request
             Operation<Zone, OperationMetadata> response = gDCHardwareManagementClient.SignalZoneState(request);
@@ -6048,6 +6049,7 @@ namespace GoogleCSharpSnippets
                 ZoneName = ZoneName.FromProjectLocationZone("[PROJECT]", "[LOCATION]", "[ZONE]"),
                 RequestId = "",
                 StateSignal = SignalZoneStateRequest.Types.StateSignal.Unspecified,
+                ProvisioningStateSignal = SignalZoneStateRequest.Types.ProvisioningStateSignal.Unspecified,
             };
             // Make the request
             Operation<Zone, OperationMetadata> response = await gDCHardwareManagementClient.SignalZoneStateAsync(request);

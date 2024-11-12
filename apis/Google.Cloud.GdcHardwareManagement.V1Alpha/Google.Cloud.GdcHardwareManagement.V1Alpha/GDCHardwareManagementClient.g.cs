@@ -6351,7 +6351,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// Format: `projects/{project}/locations/{location}/zones/{zone}`
         /// </param>
         /// <param name="stateSignal">
-        /// Required. The state signal to send for this zone.
+        /// Optional. The state signal to send for this zone. Either state_signal or
+        /// provisioning_state_signal must be set, but not both.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6370,7 +6371,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// Format: `projects/{project}/locations/{location}/zones/{zone}`
         /// </param>
         /// <param name="stateSignal">
-        /// Required. The state signal to send for this zone.
+        /// Optional. The state signal to send for this zone. Either state_signal or
+        /// provisioning_state_signal must be set, but not both.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6389,7 +6391,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// Format: `projects/{project}/locations/{location}/zones/{zone}`
         /// </param>
         /// <param name="stateSignal">
-        /// Required. The state signal to send for this zone.
+        /// Optional. The state signal to send for this zone. Either state_signal or
+        /// provisioning_state_signal must be set, but not both.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6404,7 +6407,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// Format: `projects/{project}/locations/{location}/zones/{zone}`
         /// </param>
         /// <param name="stateSignal">
-        /// Required. The state signal to send for this zone.
+        /// Optional. The state signal to send for this zone. Either state_signal or
+        /// provisioning_state_signal must be set, but not both.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6423,7 +6427,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// Format: `projects/{project}/locations/{location}/zones/{zone}`
         /// </param>
         /// <param name="stateSignal">
-        /// Required. The state signal to send for this zone.
+        /// Optional. The state signal to send for this zone. Either state_signal or
+        /// provisioning_state_signal must be set, but not both.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6442,7 +6447,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// Format: `projects/{project}/locations/{location}/zones/{zone}`
         /// </param>
         /// <param name="stateSignal">
-        /// Required. The state signal to send for this zone.
+        /// Optional. The state signal to send for this zone. Either state_signal or
+        /// provisioning_state_signal must be set, but not both.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
