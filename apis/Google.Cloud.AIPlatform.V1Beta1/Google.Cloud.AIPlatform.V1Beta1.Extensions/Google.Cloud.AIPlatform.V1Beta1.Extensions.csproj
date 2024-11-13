@@ -12,4 +12,8 @@
       <PackageReference Include="Microsoft.Extensions.AI" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Google.Cloud.AIPlatform.V1Beta1\Google.Cloud.AIPlatform.V1Beta1.csproj" />
+    </ItemGroup>
+
 </Project>
