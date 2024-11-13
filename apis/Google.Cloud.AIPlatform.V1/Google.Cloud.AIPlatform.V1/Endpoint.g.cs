@@ -62,7 +62,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bS9FbmRwb2ludBI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
             "YXRpb259L2VuZHBvaW50cy97ZW5kcG9pbnR9Ek1wcm9qZWN0cy97cHJvamVj",
             "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHVibGlzaGVycy97cHVibGlzaGVy",
-            "fS9tb2RlbHMve21vZGVsfSLjBgoNRGVwbG95ZWRNb2RlbBJNChNkZWRpY2F0",
+            "fS9tb2RlbHMve21vZGVsfSK5BwoNRGVwbG95ZWRNb2RlbBJNChNkZWRpY2F0",
             "ZWRfcmVzb3VyY2VzGAcgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
             "djEuRGVkaWNhdGVkUmVzb3VyY2VzSAASTQoTYXV0b21hdGljX3Jlc291cmNl",
             "cxgIIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkF1dG9tYXRp",
@@ -78,29 +78,33 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZGlzYWJsZV9jb250YWluZXJfbG9nZ2luZxgPIAEoCBIdChVlbmFibGVfYWNj",
             "ZXNzX2xvZ2dpbmcYDSABKAgSTAoRcHJpdmF0ZV9lbmRwb2ludHMYDiABKAsy",
             "LC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qcml2YXRlRW5kcG9pbnRz",
-            "QgPgQQMSUgoNc3lzdGVtX2xhYmVscxgcIAMoCzI7Lmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkRlcGxveWVkTW9kZWwuU3lzdGVtTGFiZWxzRW50cnka",
-            "MwoRU3lzdGVtTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4AUIWChRwcmVkaWN0aW9uX3Jlc291cmNlcyKPAQoQUHJpdmF0ZUVu",
-            "ZHBvaW50cxIdChBwcmVkaWN0X2h0dHBfdXJpGAEgASgJQgPgQQMSHQoQZXhw",
-            "bGFpbl9odHRwX3VyaRgCIAEoCUID4EEDEhwKD2hlYWx0aF9odHRwX3VyaRgD",
-            "IAEoCUID4EEDEh8KEnNlcnZpY2VfYXR0YWNobWVudBgEIAEoCUID4EEDIpwB",
-            "CiNQcmVkaWN0UmVxdWVzdFJlc3BvbnNlTG9nZ2luZ0NvbmZpZxIPCgdlbmFi",
-            "bGVkGAEgASgIEhUKDXNhbXBsaW5nX3JhdGUYAiABKAESTQoUYmlncXVlcnlf",
-            "ZGVzdGluYXRpb24YAyABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5CaWdRdWVyeURlc3RpbmF0aW9uQssBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFCDUVuZHBvaW50UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3Jt",
-            "cGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91",
-            "ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
-            "VjFiBnByb3RvMw=="));
+            "QgPgQQMSVAoYZmFzdGVyX2RlcGxveW1lbnRfY29uZmlnGBcgASgLMjIuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmFzdGVyRGVwbG95bWVudENvbmZp",
+            "ZxJSCg1zeXN0ZW1fbGFiZWxzGBwgAygLMjsuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRGVwbG95ZWRNb2RlbC5TeXN0ZW1MYWJlbHNFbnRyeRozChFT",
+            "eXN0ZW1MYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBQhYKFHByZWRpY3Rpb25fcmVzb3VyY2VzIo8BChBQcml2YXRlRW5kcG9p",
+            "bnRzEh0KEHByZWRpY3RfaHR0cF91cmkYASABKAlCA+BBAxIdChBleHBsYWlu",
+            "X2h0dHBfdXJpGAIgASgJQgPgQQMSHAoPaGVhbHRoX2h0dHBfdXJpGAMgASgJ",
+            "QgPgQQMSHwoSc2VydmljZV9hdHRhY2htZW50GAQgASgJQgPgQQMinAEKI1By",
+            "ZWRpY3RSZXF1ZXN0UmVzcG9uc2VMb2dnaW5nQ29uZmlnEg8KB2VuYWJsZWQY",
+            "ASABKAgSFQoNc2FtcGxpbmdfcmF0ZRgCIAEoARJNChRiaWdxdWVyeV9kZXN0",
+            "aW5hdGlvbhgDIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJp",
+            "Z1F1ZXJ5RGVzdGluYXRpb24iNQoWRmFzdGVyRGVwbG95bWVudENvbmZpZxIb",
+            "ChNmYXN0X3RyeW91dF9lbmFibGVkGAIgASgIQssBCh5jb20uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFCDUVuZHBvaW50UHJvdG9QAVo+Y2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBs",
+            "YXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2ds",
+            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
+            "Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig", "DedicatedEndpointEnabled", "DedicatedEndpointDns", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig), global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig.Parser, new[]{ "FastTryoutEnabled" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1146,6 +1150,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       disableContainerLogging_ = other.disableContainerLogging_;
       enableAccessLogging_ = other.enableAccessLogging_;
       privateEndpoints_ = other.privateEndpoints_ != null ? other.privateEndpoints_.Clone() : null;
+      fasterDeploymentConfig_ = other.fasterDeploymentConfig_ != null ? other.fasterDeploymentConfig_.Clone() : null;
       systemLabels_ = other.systemLabels_.Clone();
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
@@ -1451,6 +1456,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "faster_deployment_config" field.</summary>
+    public const int FasterDeploymentConfigFieldNumber = 23;
+    private global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig fasterDeploymentConfig_;
+    /// <summary>
+    /// Configuration for faster model deployment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig FasterDeploymentConfig {
+      get { return fasterDeploymentConfig_; }
+      set {
+        fasterDeploymentConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "system_labels" field.</summary>
     public const int SystemLabelsFieldNumber = 28;
     private static readonly pbc::MapField<string, string>.Codec _map_systemLabels_codec
@@ -1517,6 +1537,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DisableContainerLogging != other.DisableContainerLogging) return false;
       if (EnableAccessLogging != other.EnableAccessLogging) return false;
       if (!object.Equals(PrivateEndpoints, other.PrivateEndpoints)) return false;
+      if (!object.Equals(FasterDeploymentConfig, other.FasterDeploymentConfig)) return false;
       if (!SystemLabels.Equals(other.SystemLabels)) return false;
       if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1540,6 +1561,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DisableContainerLogging != false) hash ^= DisableContainerLogging.GetHashCode();
       if (EnableAccessLogging != false) hash ^= EnableAccessLogging.GetHashCode();
       if (privateEndpoints_ != null) hash ^= PrivateEndpoints.GetHashCode();
+      if (fasterDeploymentConfig_ != null) hash ^= FasterDeploymentConfig.GetHashCode();
       hash ^= SystemLabels.GetHashCode();
       hash ^= (int) predictionResourcesCase_;
       if (_unknownFields != null) {
@@ -1616,6 +1638,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(152, 1);
         output.WriteBool(DisableExplanations);
       }
+      if (fasterDeploymentConfig_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(FasterDeploymentConfig);
+      }
       systemLabels_.WriteTo(output, _map_systemLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1683,6 +1709,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(152, 1);
         output.WriteBool(DisableExplanations);
       }
+      if (fasterDeploymentConfig_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(FasterDeploymentConfig);
+      }
       systemLabels_.WriteTo(ref output, _map_systemLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1735,6 +1765,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (privateEndpoints_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrivateEndpoints);
+      }
+      if (fasterDeploymentConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FasterDeploymentConfig);
       }
       size += systemLabels_.CalculateSize(_map_systemLabels_codec);
       if (_unknownFields != null) {
@@ -1790,6 +1823,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           PrivateEndpoints = new global::Google.Cloud.AIPlatform.V1.PrivateEndpoints();
         }
         PrivateEndpoints.MergeFrom(other.PrivateEndpoints);
+      }
+      if (other.fasterDeploymentConfig_ != null) {
+        if (fasterDeploymentConfig_ == null) {
+          FasterDeploymentConfig = new global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig();
+        }
+        FasterDeploymentConfig.MergeFrom(other.FasterDeploymentConfig);
       }
       systemLabels_.MergeFrom(other.systemLabels_);
       switch (other.PredictionResourcesCase) {
@@ -1900,6 +1939,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             DisableExplanations = input.ReadBool();
             break;
           }
+          case 186: {
+            if (fasterDeploymentConfig_ == null) {
+              FasterDeploymentConfig = new global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig();
+            }
+            input.ReadMessage(FasterDeploymentConfig);
+            break;
+          }
           case 226: {
             systemLabels_.AddEntriesFrom(input, _map_systemLabels_codec);
             break;
@@ -1992,6 +2038,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 152: {
             DisableExplanations = input.ReadBool();
+            break;
+          }
+          case 186: {
+            if (fasterDeploymentConfig_ == null) {
+              FasterDeploymentConfig = new global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig();
+            }
+            input.ReadMessage(FasterDeploymentConfig);
             break;
           }
           case 226: {
@@ -2608,6 +2661,202 @@ namespace Google.Cloud.AIPlatform.V1 {
               BigqueryDestination = new global::Google.Cloud.AIPlatform.V1.BigQueryDestination();
             }
             input.ReadMessage(BigqueryDestination);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for faster model deployment.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FasterDeploymentConfig : pb::IMessage<FasterDeploymentConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FasterDeploymentConfig> _parser = new pb::MessageParser<FasterDeploymentConfig>(() => new FasterDeploymentConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FasterDeploymentConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.EndpointReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FasterDeploymentConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FasterDeploymentConfig(FasterDeploymentConfig other) : this() {
+      fastTryoutEnabled_ = other.fastTryoutEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FasterDeploymentConfig Clone() {
+      return new FasterDeploymentConfig(this);
+    }
+
+    /// <summary>Field number for the "fast_tryout_enabled" field.</summary>
+    public const int FastTryoutEnabledFieldNumber = 2;
+    private bool fastTryoutEnabled_;
+    /// <summary>
+    /// If true, enable fast tryout feature for this deployed model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool FastTryoutEnabled {
+      get { return fastTryoutEnabled_; }
+      set {
+        fastTryoutEnabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FasterDeploymentConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FasterDeploymentConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FastTryoutEnabled != other.FastTryoutEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FastTryoutEnabled != false) hash ^= FastTryoutEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FastTryoutEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(FastTryoutEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FastTryoutEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(FastTryoutEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FastTryoutEnabled != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FasterDeploymentConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FastTryoutEnabled != false) {
+        FastTryoutEnabled = other.FastTryoutEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            FastTryoutEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            FastTryoutEnabled = input.ReadBool();
             break;
           }
         }
