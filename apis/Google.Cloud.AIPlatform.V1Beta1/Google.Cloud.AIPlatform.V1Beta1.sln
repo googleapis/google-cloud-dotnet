@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AIPlatform.V1Beta1.Snippets", "Google.Cloud.AIPlatform.V1Beta1.Snippets\Google.Cloud.AIPlatform.V1Beta1.Snippets.csproj", "{CD82E817-EA05-431B-84EE-A34AC5D67C38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AIPlatform.V1Beta1.Extensions", "Google.Cloud.AIPlatform.V1Beta1.Extensions\Google.Cloud.AIPlatform.V1Beta1.Extensions.csproj", "{43D10BF9-255C-4E17-B683-BA2C501CF397}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{CD82E817-EA05-431B-84EE-A34AC5D67C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD82E817-EA05-431B-84EE-A34AC5D67C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD82E817-EA05-431B-84EE-A34AC5D67C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D10BF9-255C-4E17-B683-BA2C501CF397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D10BF9-255C-4E17-B683-BA2C501CF397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D10BF9-255C-4E17-B683-BA2C501CF397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D10BF9-255C-4E17-B683-BA2C501CF397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

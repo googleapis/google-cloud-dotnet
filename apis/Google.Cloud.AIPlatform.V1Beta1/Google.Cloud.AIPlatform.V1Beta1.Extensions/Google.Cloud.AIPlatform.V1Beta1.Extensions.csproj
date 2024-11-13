@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Version>1.0.0-beta09</Version>
+        <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Description>Implementation of Microsoft.Extensions.AI for Google client library to access the AI Platform API (v1beta).</Description>
+        <PackageTags>ai;ml;Google;Cloud</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.AI" />
+    </ItemGroup>
+
+</Project>
