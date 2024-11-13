@@ -1140,6 +1140,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurposeC4"/>.</summary>
                 public const string GeneralPurposeC4 = "GENERAL_PURPOSE_C4";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurposeC4A"/>.</summary>
+                public const string GeneralPurposeC4A = "GENERAL_PURPOSE_C4A";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurposeE2"/>.</summary>
                 public const string GeneralPurposeE2 = "GENERAL_PURPOSE_E2";
 
