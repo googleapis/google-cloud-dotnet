@@ -29,7 +29,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "dC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
             "L2FwaS9yZXNvdXJjZS5wcm90bxotZ29vZ2xlL2Nsb3VkL25ldHdvcmttYW5h",
             "Z2VtZW50L3YxL3RyYWNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byK4BgoQQ29ubmVj",
+            "YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKuBwoQQ29ubmVj",
             "dGl2aXR5VGVzdBIRCgRuYW1lGAEgASgJQgPgQQgSEwoLZGVzY3JpcHRpb24Y",
             "AiABKAkSQAoGc291cmNlGAMgASgLMisuZ29vZ2xlLmNsb3VkLm5ldHdvcmtt",
             "YW5hZ2VtZW50LnYxLkVuZHBvaW50QgPgQQISRQoLZGVzdGluYXRpb24YBCAB",
@@ -43,80 +43,82 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "FHJlYWNoYWJpbGl0eV9kZXRhaWxzGAwgASgLMjYuZ29vZ2xlLmNsb3VkLm5l",
             "dHdvcmttYW5hZ2VtZW50LnYxLlJlYWNoYWJpbGl0eURldGFpbHNCA+BBAxJP",
             "Cg9wcm9iaW5nX2RldGFpbHMYDiABKAsyMS5nb29nbGUuY2xvdWQubmV0d29y",
-            "a21hbmFnZW1lbnQudjEuUHJvYmluZ0RldGFpbHNCA+BBAxIeChZieXBhc3Nf",
-            "ZmlyZXdhbGxfY2hlY2tzGBEgASgIGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6dOpBcQoxbmV0d29ya21hbmFnZW1l",
-            "bnQuZ29vZ2xlYXBpcy5jb20vQ29ubmVjdGl2aXR5VGVzdBI8cHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy9nbG9iYWwvY29ubmVjdGl2aXR5VGVzdHMv",
-            "e3Rlc3R9ItcJCghFbmRwb2ludBISCgppcF9hZGRyZXNzGAEgASgJEgwKBHBv",
-            "cnQYAiABKAUSEAoIaW5zdGFuY2UYAyABKAkSFwoPZm9yd2FyZGluZ19ydWxl",
-            "GA0gASgJEmoKFmZvcndhcmRpbmdfcnVsZV90YXJnZXQYDiABKA4yQC5nb29n",
-            "bGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuRW5kcG9pbnQuRm9yd2Fy",
-            "ZGluZ1J1bGVUYXJnZXRCA+BBA0gAiAEBEiIKEGxvYWRfYmFsYW5jZXJfaWQY",
-            "DyABKAlCA+BBA0gBiAEBElkKEmxvYWRfYmFsYW5jZXJfdHlwZRgQIAEoDjIz",
-            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5Mb2FkQmFsYW5j",
-            "ZXJUeXBlQgPgQQNIAogBARIaChJna2VfbWFzdGVyX2NsdXN0ZXIYByABKAkS",
-            "DAoEZnFkbhgTIAEoCRIaChJjbG91ZF9zcWxfaW5zdGFuY2UYCCABKAkSFgoO",
-            "cmVkaXNfaW5zdGFuY2UYESABKAkSFQoNcmVkaXNfY2x1c3RlchgSIAEoCRJZ",
-            "Cg5jbG91ZF9mdW5jdGlvbhgKIAEoCzJBLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "bWFuYWdlbWVudC52MS5FbmRwb2ludC5DbG91ZEZ1bmN0aW9uRW5kcG9pbnQS",
-            "YAoSYXBwX2VuZ2luZV92ZXJzaW9uGAsgASgLMkQuZ29vZ2xlLmNsb3VkLm5l",
-            "dHdvcmttYW5hZ2VtZW50LnYxLkVuZHBvaW50LkFwcEVuZ2luZVZlcnNpb25F",
-            "bmRwb2ludBJgChJjbG91ZF9ydW5fcmV2aXNpb24YDCABKAsyRC5nb29nbGUu",
-            "Y2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuRW5kcG9pbnQuQ2xvdWRSdW5S",
-            "ZXZpc2lvbkVuZHBvaW50Eg8KB25ldHdvcmsYBCABKAkSTQoMbmV0d29ya190",
-            "eXBlGAUgASgOMjcuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYx",
-            "LkVuZHBvaW50Lk5ldHdvcmtUeXBlEhIKCnByb2plY3RfaWQYBiABKAkaJAoV",
-            "Q2xvdWRGdW5jdGlvbkVuZHBvaW50EgsKA3VyaRgBIAEoCRonChhBcHBFbmdp",
-            "bmVWZXJzaW9uRW5kcG9pbnQSCwoDdXJpGAEgASgJGicKGENsb3VkUnVuUmV2",
-            "aXNpb25FbmRwb2ludBILCgN1cmkYASABKAkiUQoLTmV0d29ya1R5cGUSHAoY",
-            "TkVUV09SS19UWVBFX1VOU1BFQ0lGSUVEEAASDwoLR0NQX05FVFdPUksQARIT",
-            "Cg9OT05fR0NQX05FVFdPUksQAiJ5ChRGb3J3YXJkaW5nUnVsZVRhcmdldBIm",
-            "CiJGT1JXQVJESU5HX1JVTEVfVEFSR0VUX1VOU1BFQ0lGSUVEEAASDAoISU5T",
-            "VEFOQ0UQARIRCg1MT0FEX0JBTEFOQ0VSEAISDwoLVlBOX0dBVEVXQVkQAxIH",
-            "CgNQU0MQBEIZChdfZm9yd2FyZGluZ19ydWxlX3RhcmdldEITChFfbG9hZF9i",
-            "YWxhbmNlcl9pZEIVChNfbG9hZF9iYWxhbmNlcl90eXBlItUCChNSZWFjaGFi",
-            "aWxpdHlEZXRhaWxzEk0KBnJlc3VsdBgBIAEoDjI9Lmdvb2dsZS5jbG91ZC5u",
-            "ZXR3b3JrbWFuYWdlbWVudC52MS5SZWFjaGFiaWxpdHlEZXRhaWxzLlJlc3Vs",
-            "dBIvCgt2ZXJpZnlfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASIQoFZXJyb3IYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1cxI4CgZ0",
-            "cmFjZXMYBSADKAsyKC5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQu",
-            "djEuVHJhY2UiYQoGUmVzdWx0EhYKElJFU1VMVF9VTlNQRUNJRklFRBAAEg0K",
-            "CVJFQUNIQUJMRRABEg8KC1VOUkVBQ0hBQkxFEAISDQoJQU1CSUdVT1VTEAQS",
-            "EAoMVU5ERVRFUk1JTkVEEAUiPAoRTGF0ZW5jeVBlcmNlbnRpbGUSDwoHcGVy",
-            "Y2VudBgBIAEoBRIWCg5sYXRlbmN5X21pY3JvcxgCIAEoAyJoChNMYXRlbmN5",
-            "RGlzdHJpYnV0aW9uElEKE2xhdGVuY3lfcGVyY2VudGlsZXMYASADKAsyNC5n",
-            "b29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuTGF0ZW5jeVBlcmNl",
-            "bnRpbGUi3gYKDlByb2JpbmdEZXRhaWxzEk8KBnJlc3VsdBgBIAEoDjI/Lmdv",
-            "b2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5Qcm9iaW5nRGV0YWls",
-            "cy5Qcm9iaW5nUmVzdWx0Ei8KC3ZlcmlmeV90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIhCgVlcnJvchgDIAEoCzISLmdvb2dsZS5y",
-            "cGMuU3RhdHVzElgKC2Fib3J0X2NhdXNlGAQgASgOMkMuZ29vZ2xlLmNsb3Vk",
-            "Lm5ldHdvcmttYW5hZ2VtZW50LnYxLlByb2JpbmdEZXRhaWxzLlByb2JpbmdB",
-            "Ym9ydENhdXNlEhgKEHNlbnRfcHJvYmVfY291bnQYBSABKAUSHgoWc3VjY2Vz",
-            "c2Z1bF9wcm9iZV9jb3VudBgGIAEoBRJGCg1lbmRwb2ludF9pbmZvGAcgASgL",
-            "Mi8uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkVuZHBvaW50",
-            "SW5mbxJPCg9wcm9iaW5nX2xhdGVuY3kYCCABKAsyNi5nb29nbGUuY2xvdWQu",
-            "bmV0d29ya21hbmFnZW1lbnQudjEuTGF0ZW5jeURpc3RyaWJ1dGlvbhJjChtk",
-            "ZXN0aW5hdGlvbl9lZ3Jlc3NfbG9jYXRpb24YCSABKAsyPi5nb29nbGUuY2xv",
-            "dWQubmV0d29ya21hbmFnZW1lbnQudjEuUHJvYmluZ0RldGFpbHMuRWRnZUxv",
-            "Y2F0aW9uGikKDEVkZ2VMb2NhdGlvbhIZChFtZXRyb3BvbGl0YW5fYXJlYRgB",
-            "IAEoCSKAAQoNUHJvYmluZ1Jlc3VsdBIeChpQUk9CSU5HX1JFU1VMVF9VTlNQ",
-            "RUNJRklFRBAAEg0KCVJFQUNIQUJMRRABEg8KC1VOUkVBQ0hBQkxFEAISHQoZ",
-            "UkVBQ0hBQklMSVRZX0lOQ09OU0lTVEVOVBADEhAKDFVOREVURVJNSU5FRBAE",
-            "ImcKEVByb2JpbmdBYm9ydENhdXNlEiMKH1BST0JJTkdfQUJPUlRfQ0FVU0Vf",
-            "VU5TUEVDSUZJRUQQABIVChFQRVJNSVNTSU9OX0RFTklFRBABEhYKEk5PX1NP",
-            "VVJDRV9MT0NBVElPThACQv0BCiVjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtt",
-            "YW5hZ2VtZW50LnYxQg5UZXN0T3V0ZXJDbGFzc1ABWlNjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL25ldHdvcmttYW5hZ2VtZW50L2FwaXYxL25ldHdvcmttYW5hZ2Vt",
-            "ZW50cGI7bmV0d29ya21hbmFnZW1lbnRwYqoCIUdvb2dsZS5DbG91ZC5OZXR3",
-            "b3JrTWFuYWdlbWVudC5WMcoCIUdvb2dsZVxDbG91ZFxOZXR3b3JrTWFuYWdl",
-            "bWVudFxWMeoCJEdvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtNYW5hZ2VtZW50OjpW",
-            "MWIGcHJvdG8z"));
+            "a21hbmFnZW1lbnQudjEuUHJvYmluZ0RldGFpbHNCA+BBAxISCgpyb3VuZF90",
+            "cmlwGA8gASgIEmAKG3JldHVybl9yZWFjaGFiaWxpdHlfZGV0YWlscxgQIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5SZWFjaGFi",
+            "aWxpdHlEZXRhaWxzQgPgQQMSHgoWYnlwYXNzX2ZpcmV3YWxsX2NoZWNrcxgR",
+            "IAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBOnTqQXEKMW5ldHdvcmttYW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29t",
+            "L0Nvbm5lY3Rpdml0eVRlc3QSPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMvZ2xvYmFsL2Nvbm5lY3Rpdml0eVRlc3RzL3t0ZXN0fSLXCQoIRW5kcG9p",
+            "bnQSEgoKaXBfYWRkcmVzcxgBIAEoCRIMCgRwb3J0GAIgASgFEhAKCGluc3Rh",
+            "bmNlGAMgASgJEhcKD2ZvcndhcmRpbmdfcnVsZRgNIAEoCRJqChZmb3J3YXJk",
+            "aW5nX3J1bGVfdGFyZ2V0GA4gASgOMkAuZ29vZ2xlLmNsb3VkLm5ldHdvcmtt",
+            "YW5hZ2VtZW50LnYxLkVuZHBvaW50LkZvcndhcmRpbmdSdWxlVGFyZ2V0QgPg",
+            "QQNIAIgBARIiChBsb2FkX2JhbGFuY2VyX2lkGA8gASgJQgPgQQNIAYgBARJZ",
+            "ChJsb2FkX2JhbGFuY2VyX3R5cGUYECABKA4yMy5nb29nbGUuY2xvdWQubmV0",
+            "d29ya21hbmFnZW1lbnQudjEuTG9hZEJhbGFuY2VyVHlwZUID4EEDSAKIAQES",
+            "GgoSZ2tlX21hc3Rlcl9jbHVzdGVyGAcgASgJEgwKBGZxZG4YEyABKAkSGgoS",
+            "Y2xvdWRfc3FsX2luc3RhbmNlGAggASgJEhYKDnJlZGlzX2luc3RhbmNlGBEg",
+            "ASgJEhUKDXJlZGlzX2NsdXN0ZXIYEiABKAkSWQoOY2xvdWRfZnVuY3Rpb24Y",
+            "CiABKAsyQS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuRW5k",
+            "cG9pbnQuQ2xvdWRGdW5jdGlvbkVuZHBvaW50EmAKEmFwcF9lbmdpbmVfdmVy",
+            "c2lvbhgLIAEoCzJELmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52",
+            "MS5FbmRwb2ludC5BcHBFbmdpbmVWZXJzaW9uRW5kcG9pbnQSYAoSY2xvdWRf",
+            "cnVuX3JldmlzaW9uGAwgASgLMkQuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5h",
+            "Z2VtZW50LnYxLkVuZHBvaW50LkNsb3VkUnVuUmV2aXNpb25FbmRwb2ludBIP",
+            "CgduZXR3b3JrGAQgASgJEk0KDG5ldHdvcmtfdHlwZRgFIAEoDjI3Lmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5FbmRwb2ludC5OZXR3b3Jr",
+            "VHlwZRISCgpwcm9qZWN0X2lkGAYgASgJGiQKFUNsb3VkRnVuY3Rpb25FbmRw",
+            "b2ludBILCgN1cmkYASABKAkaJwoYQXBwRW5naW5lVmVyc2lvbkVuZHBvaW50",
+            "EgsKA3VyaRgBIAEoCRonChhDbG91ZFJ1blJldmlzaW9uRW5kcG9pbnQSCwoD",
+            "dXJpGAEgASgJIlEKC05ldHdvcmtUeXBlEhwKGE5FVFdPUktfVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEg8KC0dDUF9ORVRXT1JLEAESEwoPTk9OX0dDUF9ORVRXT1JL",
+            "EAIieQoURm9yd2FyZGluZ1J1bGVUYXJnZXQSJgoiRk9SV0FSRElOR19SVUxF",
+            "X1RBUkdFVF9VTlNQRUNJRklFRBAAEgwKCElOU1RBTkNFEAESEQoNTE9BRF9C",
+            "QUxBTkNFUhACEg8KC1ZQTl9HQVRFV0FZEAMSBwoDUFNDEARCGQoXX2Zvcndh",
+            "cmRpbmdfcnVsZV90YXJnZXRCEwoRX2xvYWRfYmFsYW5jZXJfaWRCFQoTX2xv",
+            "YWRfYmFsYW5jZXJfdHlwZSLVAgoTUmVhY2hhYmlsaXR5RGV0YWlscxJNCgZy",
+            "ZXN1bHQYASABKA4yPS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQu",
+            "djEuUmVhY2hhYmlsaXR5RGV0YWlscy5SZXN1bHQSLwoLdmVyaWZ5X3RpbWUY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiEKBWVycm9yGAMg",
+            "ASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSOAoGdHJhY2VzGAUgAygLMiguZ29v",
+            "Z2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLlRyYWNlImEKBlJlc3Vs",
+            "dBIWChJSRVNVTFRfVU5TUEVDSUZJRUQQABINCglSRUFDSEFCTEUQARIPCgtV",
+            "TlJFQUNIQUJMRRACEg0KCUFNQklHVU9VUxAEEhAKDFVOREVURVJNSU5FRBAF",
+            "IjwKEUxhdGVuY3lQZXJjZW50aWxlEg8KB3BlcmNlbnQYASABKAUSFgoObGF0",
+            "ZW5jeV9taWNyb3MYAiABKAMiaAoTTGF0ZW5jeURpc3RyaWJ1dGlvbhJRChNs",
+            "YXRlbmN5X3BlcmNlbnRpbGVzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLm5ldHdv",
+            "cmttYW5hZ2VtZW50LnYxLkxhdGVuY3lQZXJjZW50aWxlIt4GCg5Qcm9iaW5n",
+            "RGV0YWlscxJPCgZyZXN1bHQYASABKA4yPy5nb29nbGUuY2xvdWQubmV0d29y",
+            "a21hbmFnZW1lbnQudjEuUHJvYmluZ0RldGFpbHMuUHJvYmluZ1Jlc3VsdBIv",
+            "Cgt2ZXJpZnlfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASIQoFZXJyb3IYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1cxJYCgthYm9y",
+            "dF9jYXVzZRgEIAEoDjJDLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVu",
+            "dC52MS5Qcm9iaW5nRGV0YWlscy5Qcm9iaW5nQWJvcnRDYXVzZRIYChBzZW50",
+            "X3Byb2JlX2NvdW50GAUgASgFEh4KFnN1Y2Nlc3NmdWxfcHJvYmVfY291bnQY",
+            "BiABKAUSRgoNZW5kcG9pbnRfaW5mbxgHIAEoCzIvLmdvb2dsZS5jbG91ZC5u",
+            "ZXR3b3JrbWFuYWdlbWVudC52MS5FbmRwb2ludEluZm8STwoPcHJvYmluZ19s",
+            "YXRlbmN5GAggASgLMjYuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50",
+            "LnYxLkxhdGVuY3lEaXN0cmlidXRpb24SYwobZGVzdGluYXRpb25fZWdyZXNz",
+            "X2xvY2F0aW9uGAkgASgLMj4uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2Vt",
+            "ZW50LnYxLlByb2JpbmdEZXRhaWxzLkVkZ2VMb2NhdGlvbhopCgxFZGdlTG9j",
+            "YXRpb24SGQoRbWV0cm9wb2xpdGFuX2FyZWEYASABKAkigAEKDVByb2JpbmdS",
+            "ZXN1bHQSHgoaUFJPQklOR19SRVNVTFRfVU5TUEVDSUZJRUQQABINCglSRUFD",
+            "SEFCTEUQARIPCgtVTlJFQUNIQUJMRRACEh0KGVJFQUNIQUJJTElUWV9JTkNP",
+            "TlNJU1RFTlQQAxIQCgxVTkRFVEVSTUlORUQQBCJnChFQcm9iaW5nQWJvcnRD",
+            "YXVzZRIjCh9QUk9CSU5HX0FCT1JUX0NBVVNFX1VOU1BFQ0lGSUVEEAASFQoR",
+            "UEVSTUlTU0lPTl9ERU5JRUQQARIWChJOT19TT1VSQ0VfTE9DQVRJT04QAkL9",
+            "AQolY29tLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MUIOVGVz",
+            "dE91dGVyQ2xhc3NQAVpTY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3b3JrbWFu",
+            "YWdlbWVudC9hcGl2MS9uZXR3b3JrbWFuYWdlbWVudHBiO25ldHdvcmttYW5h",
+            "Z2VtZW50cGKqAiFHb29nbGUuQ2xvdWQuTmV0d29ya01hbmFnZW1lbnQuVjHK",
+            "AiFHb29nbGVcQ2xvdWRcTmV0d29ya01hbmFnZW1lbnRcVjHqAiRHb29nbGU6",
+            "OkNsb3VkOjpOZXR3b3JrTWFuYWdlbWVudDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkManagement.V1.TraceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ConnectivityTest), global::Google.Cloud.NetworkManagement.V1.ConnectivityTest.Parser, new[]{ "Name", "Description", "Source", "Destination", "Protocol", "RelatedProjects", "DisplayName", "Labels", "CreateTime", "UpdateTime", "ReachabilityDetails", "ProbingDetails", "BypassFirewallChecks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ConnectivityTest), global::Google.Cloud.NetworkManagement.V1.ConnectivityTest.Parser, new[]{ "Name", "Description", "Source", "Destination", "Protocol", "RelatedProjects", "DisplayName", "Labels", "CreateTime", "UpdateTime", "ReachabilityDetails", "ProbingDetails", "RoundTrip", "ReturnReachabilityDetails", "BypassFirewallChecks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Parser, new[]{ "IpAddress", "Port", "Instance", "ForwardingRule", "ForwardingRuleTarget", "LoadBalancerId", "LoadBalancerType", "GkeMasterCluster", "Fqdn", "CloudSqlInstance", "RedisInstance", "RedisCluster", "CloudFunction", "AppEngineVersion", "CloudRunRevision", "Network", "NetworkType", "ProjectId" }, new[]{ "ForwardingRuleTarget", "LoadBalancerId", "LoadBalancerType" }, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.NetworkType), typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.ForwardingRuleTarget) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null)}),
@@ -180,6 +182,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       reachabilityDetails_ = other.reachabilityDetails_ != null ? other.reachabilityDetails_.Clone() : null;
       probingDetails_ = other.probingDetails_ != null ? other.probingDetails_.Clone() : null;
+      roundTrip_ = other.roundTrip_;
+      returnReachabilityDetails_ = other.returnReachabilityDetails_ != null ? other.returnReachabilityDetails_.Clone() : null;
       bypassFirewallChecks_ = other.bypassFirewallChecks_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -414,6 +418,40 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
     }
 
+    /// <summary>Field number for the "round_trip" field.</summary>
+    public const int RoundTripFieldNumber = 15;
+    private bool roundTrip_;
+    /// <summary>
+    /// Whether run analysis for the return path from destination to source.
+    /// Default value is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RoundTrip {
+      get { return roundTrip_; }
+      set {
+        roundTrip_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "return_reachability_details" field.</summary>
+    public const int ReturnReachabilityDetailsFieldNumber = 16;
+    private global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails returnReachabilityDetails_;
+    /// <summary>
+    /// Output only. The reachability details of this test from the latest run for
+    /// the return path. The details are updated when creating a new test,
+    /// updating an existing test, or triggering a one-time rerun of an existing
+    /// test.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails ReturnReachabilityDetails {
+      get { return returnReachabilityDetails_; }
+      set {
+        returnReachabilityDetails_ = value;
+      }
+    }
+
     /// <summary>Field number for the "bypass_firewall_checks" field.</summary>
     public const int BypassFirewallChecksFieldNumber = 17;
     private bool bypassFirewallChecks_;
@@ -457,6 +495,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(ReachabilityDetails, other.ReachabilityDetails)) return false;
       if (!object.Equals(ProbingDetails, other.ProbingDetails)) return false;
+      if (RoundTrip != other.RoundTrip) return false;
+      if (!object.Equals(ReturnReachabilityDetails, other.ReturnReachabilityDetails)) return false;
       if (BypassFirewallChecks != other.BypassFirewallChecks) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -477,6 +517,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (reachabilityDetails_ != null) hash ^= ReachabilityDetails.GetHashCode();
       if (probingDetails_ != null) hash ^= ProbingDetails.GetHashCode();
+      if (RoundTrip != false) hash ^= RoundTrip.GetHashCode();
+      if (returnReachabilityDetails_ != null) hash ^= ReturnReachabilityDetails.GetHashCode();
       if (BypassFirewallChecks != false) hash ^= BypassFirewallChecks.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -538,6 +580,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(ProbingDetails);
       }
+      if (RoundTrip != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(RoundTrip);
+      }
+      if (returnReachabilityDetails_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ReturnReachabilityDetails);
+      }
       if (BypassFirewallChecks != false) {
         output.WriteRawTag(136, 1);
         output.WriteBool(BypassFirewallChecks);
@@ -594,6 +644,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(ProbingDetails);
       }
+      if (RoundTrip != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(RoundTrip);
+      }
+      if (returnReachabilityDetails_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ReturnReachabilityDetails);
+      }
       if (BypassFirewallChecks != false) {
         output.WriteRawTag(136, 1);
         output.WriteBool(BypassFirewallChecks);
@@ -639,6 +697,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (probingDetails_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProbingDetails);
+      }
+      if (RoundTrip != false) {
+        size += 1 + 1;
+      }
+      if (returnReachabilityDetails_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReturnReachabilityDetails);
       }
       if (BypassFirewallChecks != false) {
         size += 2 + 1;
@@ -704,6 +768,15 @@ namespace Google.Cloud.NetworkManagement.V1 {
           ProbingDetails = new global::Google.Cloud.NetworkManagement.V1.ProbingDetails();
         }
         ProbingDetails.MergeFrom(other.ProbingDetails);
+      }
+      if (other.RoundTrip != false) {
+        RoundTrip = other.RoundTrip;
+      }
+      if (other.returnReachabilityDetails_ != null) {
+        if (returnReachabilityDetails_ == null) {
+          ReturnReachabilityDetails = new global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails();
+        }
+        ReturnReachabilityDetails.MergeFrom(other.ReturnReachabilityDetails);
       }
       if (other.BypassFirewallChecks != false) {
         BypassFirewallChecks = other.BypassFirewallChecks;
@@ -789,6 +862,17 @@ namespace Google.Cloud.NetworkManagement.V1 {
             input.ReadMessage(ProbingDetails);
             break;
           }
+          case 120: {
+            RoundTrip = input.ReadBool();
+            break;
+          }
+          case 130: {
+            if (returnReachabilityDetails_ == null) {
+              ReturnReachabilityDetails = new global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails();
+            }
+            input.ReadMessage(ReturnReachabilityDetails);
+            break;
+          }
           case 136: {
             BypassFirewallChecks = input.ReadBool();
             break;
@@ -872,6 +956,17 @@ namespace Google.Cloud.NetworkManagement.V1 {
               ProbingDetails = new global::Google.Cloud.NetworkManagement.V1.ProbingDetails();
             }
             input.ReadMessage(ProbingDetails);
+            break;
+          }
+          case 120: {
+            RoundTrip = input.ReadBool();
+            break;
+          }
+          case 130: {
+            if (returnReachabilityDetails_ == null) {
+              ReturnReachabilityDetails = new global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails();
+            }
+            input.ReadMessage(ReturnReachabilityDetails);
             break;
           }
           case 136: {
