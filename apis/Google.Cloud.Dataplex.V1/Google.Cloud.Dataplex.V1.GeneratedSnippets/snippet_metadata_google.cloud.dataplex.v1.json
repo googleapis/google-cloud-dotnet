@@ -5793,12 +5793,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
-          "start": 36,
-          "end": 79,
+          "start": 37,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -5842,12 +5842,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 85,
+          "end": 86,
           "type": "FULL"
         },
         {
-          "start": 40,
-          "end": 83,
+          "start": 41,
+          "end": 84,
           "type": "SHORT"
         }
       ]
@@ -5967,6 +5967,1334 @@
         {
           "start": 40,
           "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_SearchEntries_sync_flattened_resourceNames",
+      "title": "SearchEntriesResourceNames",
+      "description": "Snippet for SearchEntries",
+      "file": "CatalogServiceClient.SearchEntriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchEntries",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.SearchEntries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.SearchEntriesResponse, Google.Cloud.Dataplex.V1.SearchEntriesResult>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "SearchEntries",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.SearchEntries",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_SearchEntries_async_flattened_resourceNames",
+      "title": "SearchEntriesResourceNamesAsync",
+      "description": "Snippet for SearchEntriesAsync",
+      "file": "CatalogServiceClient.SearchEntriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchEntriesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.SearchEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.SearchEntriesResponse, Google.Cloud.Dataplex.V1.SearchEntriesResult>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "SearchEntries",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.SearchEntries",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateMetadataJob_sync",
+      "title": "CreateMetadataJobRequestObject",
+      "description": "Snippet for CreateMetadataJob",
+      "file": "CatalogServiceClient.CreateMetadataJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateMetadataJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateMetadataJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.MetadataJob, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateMetadataJob_async",
+      "title": "CreateMetadataJobRequestObjectAsync",
+      "description": "Snippet for CreateMetadataJobAsync",
+      "file": "CatalogServiceClient.CreateMetadataJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateMetadataJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.MetadataJob, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateMetadataJob_sync_flattened",
+      "title": "CreateMetadataJob",
+      "description": "Snippet for CreateMetadataJob",
+      "file": "CatalogServiceClient.CreateMetadataJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateMetadataJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.MetadataJob",
+            "name": "metadataJob"
+          },
+          {
+            "type": "System.String",
+            "name": "metadataJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.MetadataJob, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateMetadataJob_async_flattened",
+      "title": "CreateMetadataJobAsync",
+      "description": "Snippet for CreateMetadataJobAsync",
+      "file": "CatalogServiceClient.CreateMetadataJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.MetadataJob",
+            "name": "metadataJob"
+          },
+          {
+            "type": "System.String",
+            "name": "metadataJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.MetadataJob, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateMetadataJob_sync_flattened_resourceNames",
+      "title": "CreateMetadataJobResourceNames",
+      "description": "Snippet for CreateMetadataJob",
+      "file": "CatalogServiceClient.CreateMetadataJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateMetadataJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.MetadataJob",
+            "name": "metadataJob"
+          },
+          {
+            "type": "System.String",
+            "name": "metadataJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.MetadataJob, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateMetadataJob_async_flattened_resourceNames",
+      "title": "CreateMetadataJobResourceNamesAsync",
+      "description": "Snippet for CreateMetadataJobAsync",
+      "file": "CatalogServiceClient.CreateMetadataJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.MetadataJob",
+            "name": "metadataJob"
+          },
+          {
+            "type": "System.String",
+            "name": "metadataJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.MetadataJob, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetMetadataJob_sync",
+      "title": "GetMetadataJobRequestObject",
+      "description": "Snippet for GetMetadataJob",
+      "file": "CatalogServiceClient.GetMetadataJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetMetadataJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetMetadataJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.MetadataJob",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetMetadataJob_async",
+      "title": "GetMetadataJobRequestObjectAsync",
+      "description": "Snippet for GetMetadataJobAsync",
+      "file": "CatalogServiceClient.GetMetadataJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetMetadataJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetMetadataJob_sync_flattened",
+      "title": "GetMetadataJob",
+      "description": "Snippet for GetMetadataJob",
+      "file": "CatalogServiceClient.GetMetadataJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetMetadataJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.MetadataJob",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetMetadataJob_async_flattened",
+      "title": "GetMetadataJobAsync",
+      "description": "Snippet for GetMetadataJobAsync",
+      "file": "CatalogServiceClient.GetMetadataJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetMetadataJob_sync_flattened_resourceNames",
+      "title": "GetMetadataJobResourceNames",
+      "description": "Snippet for GetMetadataJob",
+      "file": "CatalogServiceClient.GetMetadataJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetMetadataJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.MetadataJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.MetadataJob",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetMetadataJob_async_flattened_resourceNames",
+      "title": "GetMetadataJobResourceNamesAsync",
+      "description": "Snippet for GetMetadataJobAsync",
+      "file": "CatalogServiceClient.GetMetadataJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.MetadataJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_ListMetadataJobs_sync",
+      "title": "ListMetadataJobsRequestObject",
+      "description": "Snippet for ListMetadataJobs",
+      "file": "CatalogServiceClient.ListMetadataJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMetadataJobs",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.ListMetadataJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListMetadataJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListMetadataJobsResponse, Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ListMetadataJobs",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.ListMetadataJobs",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_ListMetadataJobs_async",
+      "title": "ListMetadataJobsRequestObjectAsync",
+      "description": "Snippet for ListMetadataJobsAsync",
+      "file": "CatalogServiceClient.ListMetadataJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMetadataJobsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.ListMetadataJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListMetadataJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListMetadataJobsResponse, Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ListMetadataJobs",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.ListMetadataJobs",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_ListMetadataJobs_sync_flattened",
+      "title": "ListMetadataJobs",
+      "description": "Snippet for ListMetadataJobs",
+      "file": "CatalogServiceClient.ListMetadataJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMetadataJobs",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.ListMetadataJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListMetadataJobsResponse, Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ListMetadataJobs",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.ListMetadataJobs",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_ListMetadataJobs_async_flattened",
+      "title": "ListMetadataJobsAsync",
+      "description": "Snippet for ListMetadataJobsAsync",
+      "file": "CatalogServiceClient.ListMetadataJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMetadataJobsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.ListMetadataJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListMetadataJobsResponse, Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ListMetadataJobs",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.ListMetadataJobs",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_ListMetadataJobs_sync_flattened_resourceNames",
+      "title": "ListMetadataJobsResourceNames",
+      "description": "Snippet for ListMetadataJobs",
+      "file": "CatalogServiceClient.ListMetadataJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMetadataJobs",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.ListMetadataJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListMetadataJobsResponse, Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ListMetadataJobs",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.ListMetadataJobs",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_ListMetadataJobs_async_flattened_resourceNames",
+      "title": "ListMetadataJobsResourceNamesAsync",
+      "description": "Snippet for ListMetadataJobsAsync",
+      "file": "CatalogServiceClient.ListMetadataJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMetadataJobsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.ListMetadataJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListMetadataJobsResponse, Google.Cloud.Dataplex.V1.MetadataJob>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ListMetadataJobs",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.ListMetadataJobs",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CancelMetadataJob_sync",
+      "title": "CancelMetadataJobRequestObject",
+      "description": "Snippet for CancelMetadataJob",
+      "file": "CatalogServiceClient.CancelMetadataJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CancelMetadataJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CancelMetadataJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CancelMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CancelMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CancelMetadataJob_async",
+      "title": "CancelMetadataJobRequestObjectAsync",
+      "description": "Snippet for CancelMetadataJobAsync",
+      "file": "CatalogServiceClient.CancelMetadataJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CancelMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CancelMetadataJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CancelMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CancelMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CancelMetadataJob_sync_flattened",
+      "title": "CancelMetadataJob",
+      "description": "Snippet for CancelMetadataJob",
+      "file": "CatalogServiceClient.CancelMetadataJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CancelMetadataJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CancelMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CancelMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CancelMetadataJob_async_flattened",
+      "title": "CancelMetadataJobAsync",
+      "description": "Snippet for CancelMetadataJobAsync",
+      "file": "CatalogServiceClient.CancelMetadataJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CancelMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CancelMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CancelMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CancelMetadataJob_sync_flattened_resourceNames",
+      "title": "CancelMetadataJobResourceNames",
+      "description": "Snippet for CancelMetadataJob",
+      "file": "CatalogServiceClient.CancelMetadataJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelMetadataJob",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CancelMetadataJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.MetadataJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CancelMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CancelMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CancelMetadataJob_async_flattened_resourceNames",
+      "title": "CancelMetadataJobResourceNamesAsync",
+      "description": "Snippet for CancelMetadataJobAsync",
+      "file": "CatalogServiceClient.CancelMetadataJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelMetadataJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CancelMetadataJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.MetadataJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CancelMetadataJob",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CancelMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
           "type": "SHORT"
         }
       ]

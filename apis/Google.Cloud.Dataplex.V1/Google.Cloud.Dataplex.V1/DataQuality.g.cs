@@ -80,7 +80,7 @@ namespace Google.Cloud.Dataplex.V1 {
             "bWVuc2lvblJlc3VsdBJGCglkaW1lbnNpb24YASABKAsyLi5nb29nbGUuY2xv",
             "dWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlEaW1lbnNpb25CA+BBAxIOCgZw",
             "YXNzZWQYAyABKAgSFwoFc2NvcmUYBCABKAJCA+BBA0gAiAEBQggKBl9zY29y",
-            "ZSIkChREYXRhUXVhbGl0eURpbWVuc2lvbhIMCgRuYW1lGAEgASgJIvQNCg9E",
+            "ZSIkChREYXRhUXVhbGl0eURpbWVuc2lvbhIMCgRuYW1lGAEgASgJIo0OCg9E",
             "YXRhUXVhbGl0eVJ1bGUSVwoRcmFuZ2VfZXhwZWN0YXRpb24YASABKAsyOi5n",
             "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlLlJhbmdl",
             "RXhwZWN0YXRpb25IABJcChRub25fbnVsbF9leHBlY3RhdGlvbhgCIAEoCzI8",
@@ -103,30 +103,31 @@ namespace Google.Cloud.Dataplex.V1 {
             "UnVsZS5TcWxBc3NlcnRpb25IABIUCgZjb2x1bW4Y9AMgASgJQgPgQQESGQoL",
             "aWdub3JlX251bGwY9QMgASgIQgPgQQESFwoJZGltZW5zaW9uGPYDIAEoCUID",
             "4EECEhcKCXRocmVzaG9sZBj3AyABKAFCA+BBARISCgRuYW1lGPgDIAEoCUID",
-            "4EEBEhkKC2Rlc2NyaXB0aW9uGPkDIAEoCUID4EEBGoQBChBSYW5nZUV4cGVj",
-            "dGF0aW9uEhYKCW1pbl92YWx1ZRgBIAEoCUID4EEBEhYKCW1heF92YWx1ZRgC",
-            "IAEoCUID4EEBEh8KEnN0cmljdF9taW5fZW5hYmxlZBgDIAEoCEID4EEBEh8K",
-            "EnN0cmljdF9tYXhfZW5hYmxlZBgEIAEoCEID4EEBGhQKEk5vbk51bGxFeHBl",
-            "Y3RhdGlvbholCg5TZXRFeHBlY3RhdGlvbhITCgZ2YWx1ZXMYASADKAlCA+BB",
-            "ARomChBSZWdleEV4cGVjdGF0aW9uEhIKBXJlZ2V4GAEgASgJQgPgQQEaFwoV",
-            "VW5pcXVlbmVzc0V4cGVjdGF0aW9uGsICChlTdGF0aXN0aWNSYW5nZUV4cGVj",
-            "dGF0aW9uEmsKCXN0YXRpc3RpYxgBIAEoDjJTLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MS5EYXRhUXVhbGl0eVJ1bGUuU3RhdGlzdGljUmFuZ2VFeHBlY3Rh",
-            "dGlvbi5Db2x1bW5TdGF0aXN0aWNCA+BBARIWCgltaW5fdmFsdWUYAiABKAlC",
-            "A+BBARIWCgltYXhfdmFsdWUYAyABKAlCA+BBARIfChJzdHJpY3RfbWluX2Vu",
-            "YWJsZWQYBCABKAhCA+BBARIfChJzdHJpY3RfbWF4X2VuYWJsZWQYBSABKAhC",
-            "A+BBASJGCg9Db2x1bW5TdGF0aXN0aWMSFwoTU1RBVElTVElDX1VOREVGSU5F",
-            "RBAAEggKBE1FQU4QARIHCgNNSU4QAhIHCgNNQVgQAxo2ChdSb3dDb25kaXRp",
-            "b25FeHBlY3RhdGlvbhIbCg5zcWxfZXhwcmVzc2lvbhgBIAEoCUID4EEBGjgK",
-            "GVRhYmxlQ29uZGl0aW9uRXhwZWN0YXRpb24SGwoOc3FsX2V4cHJlc3Npb24Y",
-            "ASABKAlCA+BBARoqCgxTcWxBc3NlcnRpb24SGgoNc3FsX3N0YXRlbWVudBgB",
-            "IAEoCUID4EEBQgsKCXJ1bGVfdHlwZSJRChdEYXRhUXVhbGl0eUNvbHVtblJl",
-            "c3VsdBITCgZjb2x1bW4YASABKAlCA+BBAxIXCgVzY29yZRgCIAEoAkID4EED",
-            "SACIAQFCCAoGX3Njb3JlQsQBChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxQhBEYXRhUXVhbGl0eVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "ZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBi6kFVCh1iaWdx",
-            "dWVyeS5nb29nbGVhcGlzLmNvbS9UYWJsZRI0cHJvamVjdHMve3Byb2plY3R9",
-            "L2RhdGFzZXRzL3tkYXRhc2V0fS90YWJsZXMve3RhYmxlfWIGcHJvdG8z"));
+            "4EEBEhkKC2Rlc2NyaXB0aW9uGPkDIAEoCUID4EEBEhcKCXN1c3BlbmRlZBj6",
+            "AyABKAhCA+BBARqEAQoQUmFuZ2VFeHBlY3RhdGlvbhIWCgltaW5fdmFsdWUY",
+            "ASABKAlCA+BBARIWCgltYXhfdmFsdWUYAiABKAlCA+BBARIfChJzdHJpY3Rf",
+            "bWluX2VuYWJsZWQYAyABKAhCA+BBARIfChJzdHJpY3RfbWF4X2VuYWJsZWQY",
+            "BCABKAhCA+BBARoUChJOb25OdWxsRXhwZWN0YXRpb24aJQoOU2V0RXhwZWN0",
+            "YXRpb24SEwoGdmFsdWVzGAEgAygJQgPgQQEaJgoQUmVnZXhFeHBlY3RhdGlv",
+            "bhISCgVyZWdleBgBIAEoCUID4EEBGhcKFVVuaXF1ZW5lc3NFeHBlY3RhdGlv",
+            "bhrCAgoZU3RhdGlzdGljUmFuZ2VFeHBlY3RhdGlvbhJrCglzdGF0aXN0aWMY",
+            "ASABKA4yUy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlS",
+            "dWxlLlN0YXRpc3RpY1JhbmdlRXhwZWN0YXRpb24uQ29sdW1uU3RhdGlzdGlj",
+            "QgPgQQESFgoJbWluX3ZhbHVlGAIgASgJQgPgQQESFgoJbWF4X3ZhbHVlGAMg",
+            "ASgJQgPgQQESHwoSc3RyaWN0X21pbl9lbmFibGVkGAQgASgIQgPgQQESHwoS",
+            "c3RyaWN0X21heF9lbmFibGVkGAUgASgIQgPgQQEiRgoPQ29sdW1uU3RhdGlz",
+            "dGljEhcKE1NUQVRJU1RJQ19VTkRFRklORUQQABIICgRNRUFOEAESBwoDTUlO",
+            "EAISBwoDTUFYEAMaNgoXUm93Q29uZGl0aW9uRXhwZWN0YXRpb24SGwoOc3Fs",
+            "X2V4cHJlc3Npb24YASABKAlCA+BBARo4ChlUYWJsZUNvbmRpdGlvbkV4cGVj",
+            "dGF0aW9uEhsKDnNxbF9leHByZXNzaW9uGAEgASgJQgPgQQEaKgoMU3FsQXNz",
+            "ZXJ0aW9uEhoKDXNxbF9zdGF0ZW1lbnQYASABKAlCA+BBAUILCglydWxlX3R5",
+            "cGUiUQoXRGF0YVF1YWxpdHlDb2x1bW5SZXN1bHQSEwoGY29sdW1uGAEgASgJ",
+            "QgPgQQMSFwoFc2NvcmUYAiABKAJCA+BBA0gAiAEBQggKBl9zY29yZULEAQoc",
+            "Y29tLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MUIQRGF0YVF1YWxpdHlQcm90",
+            "b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFw",
+            "bGV4cGI7ZGF0YXBsZXhwYupBVQodYmlncXVlcnkuZ29vZ2xlYXBpcy5jb20v",
+            "VGFibGUSNHByb2plY3RzL3twcm9qZWN0fS9kYXRhc2V0cy97ZGF0YXNldH0v",
+            "dGFibGVzL3t0YWJsZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -140,7 +141,7 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRuleResult), global::Google.Cloud.Dataplex.V1.DataQualityRuleResult.Parser, new[]{ "Rule", "Passed", "EvaluatedCount", "PassedCount", "NullCount", "PassRatio", "FailingRowsQuery", "AssertionRowCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult), global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult.Parser, new[]{ "Dimension", "Passed", "Score" }, new[]{ "Score" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityDimension), global::Google.Cloud.Dataplex.V1.DataQualityDimension.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule), global::Google.Cloud.Dataplex.V1.DataQualityRule.Parser, new[]{ "RangeExpectation", "NonNullExpectation", "SetExpectation", "RegexExpectation", "UniquenessExpectation", "StatisticRangeExpectation", "RowConditionExpectation", "TableConditionExpectation", "SqlAssertion", "Column", "IgnoreNull", "Dimension", "Threshold", "Name", "Description" }, new[]{ "RuleType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RangeExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RangeExpectation.Parser, new[]{ "MinValue", "MaxValue", "StrictMinEnabled", "StrictMaxEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule), global::Google.Cloud.Dataplex.V1.DataQualityRule.Parser, new[]{ "RangeExpectation", "NonNullExpectation", "SetExpectation", "RegexExpectation", "UniquenessExpectation", "StatisticRangeExpectation", "RowConditionExpectation", "TableConditionExpectation", "SqlAssertion", "Column", "IgnoreNull", "Dimension", "Threshold", "Name", "Description", "Suspended" }, new[]{ "RuleType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RangeExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RangeExpectation.Parser, new[]{ "MinValue", "MaxValue", "StrictMinEnabled", "StrictMaxEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.NonNullExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.NonNullExpectation.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SetExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SetExpectation.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RegexExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RegexExpectation.Parser, new[]{ "Regex" }, null, null, null, null),
@@ -3839,7 +3840,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// The dimension name a rule belongs to. Supported dimensions are
     /// ["COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS",
-    /// "INTEGRITY"]
+    /// "FRESHNESS", "VOLUME"]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4027,6 +4028,7 @@ namespace Google.Cloud.Dataplex.V1 {
       threshold_ = other.threshold_;
       name_ = other.name_;
       description_ = other.description_;
+      suspended_ = other.suspended_;
       switch (other.RuleTypeCase) {
         case RuleTypeOneofCase.RangeExpectation:
           RangeExpectation = other.RangeExpectation.Clone();
@@ -4253,7 +4255,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. The dimension a rule belongs to. Results are also aggregated at
     /// the dimension level. Supported dimensions are **["COMPLETENESS",
-    /// "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]**
+    /// "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS", "FRESHNESS",
+    /// "VOLUME"]**
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4322,6 +4325,22 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "suspended" field.</summary>
+    public const int SuspendedFieldNumber = 506;
+    private bool suspended_;
+    /// <summary>
+    /// Optional. Whether the Rule is active or suspended.
+    /// Default is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Suspended {
+      get { return suspended_; }
+      set {
+        suspended_ = value;
+      }
+    }
+
     private object ruleType_;
     /// <summary>Enum of possible cases for the "rule_type" oneof.</summary>
     public enum RuleTypeOneofCase {
@@ -4380,6 +4399,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Threshold, other.Threshold)) return false;
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
+      if (Suspended != other.Suspended) return false;
       if (RuleTypeCase != other.RuleTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4403,6 +4423,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (Threshold != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Threshold);
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Suspended != false) hash ^= Suspended.GetHashCode();
       hash ^= (int) ruleTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4482,6 +4503,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(202, 31);
         output.WriteString(Description);
       }
+      if (Suspended != false) {
+        output.WriteRawTag(208, 31);
+        output.WriteBool(Suspended);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4552,6 +4577,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(202, 31);
         output.WriteString(Description);
       }
+      if (Suspended != false) {
+        output.WriteRawTag(208, 31);
+        output.WriteBool(Suspended);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4607,6 +4636,9 @@ namespace Google.Cloud.Dataplex.V1 {
       if (Description.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
+      if (Suspended != false) {
+        size += 2 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4636,6 +4668,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.Suspended != false) {
+        Suspended = other.Suspended;
       }
       switch (other.RuleTypeCase) {
         case RuleTypeOneofCase.RangeExpectation:
@@ -4814,6 +4849,10 @@ namespace Google.Cloud.Dataplex.V1 {
             Description = input.ReadString();
             break;
           }
+          case 4048: {
+            Suspended = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -4932,6 +4971,10 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           case 4042: {
             Description = input.ReadString();
+            break;
+          }
+          case 4048: {
+            Suspended = input.ReadBool();
             break;
           }
         }

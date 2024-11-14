@@ -18,7 +18,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dataplex_v1_generated_CatalogService_SearchEntries_async]
+    // [START dataplex_v1_generated_CatalogService_ListMetadataJobs_async_flattened_resourceNames]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using System;
@@ -28,7 +28,7 @@ namespace GoogleCSharpSnippets
 
     public sealed partial class GeneratedCatalogServiceClientSnippets
     {
-        /// <summary>Snippet for SearchEntriesAsync</summary>
+        /// <summary>Snippet for ListMetadataJobsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -36,34 +36,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task SearchEntriesRequestObjectAsync()
+        public async Task ListMetadataJobsResourceNamesAsync()
         {
             // Create client
             gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
             // Initialize request argument(s)
-            gcdv::SearchEntriesRequest request = new gcdv::SearchEntriesRequest
-            {
-                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Query = "",
-                OrderBy = "",
-                Scope = "",
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<gcdv::SearchEntriesResponse, gcdv::SearchEntriesResult> response = catalogServiceClient.SearchEntriesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListMetadataJobsResponse, gcdv::MetadataJob> response = catalogServiceClient.ListMetadataJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((gcdv::SearchEntriesResult item) =>
+            await response.ForEachAsync((gcdv::MetadataJob item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((gcdv::SearchEntriesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListMetadataJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (gcdv::SearchEntriesResult item in page)
+                foreach (gcdv::MetadataJob item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -72,10 +66,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<gcdv::SearchEntriesResult> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::MetadataJob> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (gcdv::SearchEntriesResult item in singlePage)
+            foreach (gcdv::MetadataJob item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -84,5 +78,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END dataplex_v1_generated_CatalogService_SearchEntries_async]
+    // [END dataplex_v1_generated_CatalogService_ListMetadataJobs_async_flattened_resourceNames]
 }

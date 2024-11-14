@@ -27,199 +27,201 @@ namespace Google.Cloud.Dataplex.V1 {
             "CiZnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvY2F0YWxvZy5wcm90bxIYZ29v",
             "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
             "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9m",
-            "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
-            "bxomZ29vZ2xlL2Nsb3VkL2RhdGFwbGV4L3YxL3NlcnZpY2UucHJvdG8aI2dv",
-            "b2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGhtnb29nbGUvcHJv",
-            "dG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNr",
-            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvItMNCgpBc3BlY3RUeXBlEjgKBG5h",
-            "bWUYASABKAlCKuBBA/pBJAoiZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vQXNw",
-            "ZWN0VHlwZRIQCgN1aWQYAiABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIY",
-            "CgtkZXNjcmlwdGlvbhgFIAEoCUID4EEBEhkKDGRpc3BsYXlfbmFtZRgGIAEo",
-            "CUID4EEBEkUKBmxhYmVscxgHIAMoCzIwLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
-            "eC52MS5Bc3BlY3RUeXBlLkxhYmVsc0VudHJ5QgPgQQESDAoEZXRhZxgIIAEo",
-            "CRJOCg1hdXRob3JpemF0aW9uGDQgASgLMjIuZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxLkFzcGVjdFR5cGUuQXV0aG9yaXphdGlvbkID4EEFElUKEW1ldGFk",
-            "YXRhX3RlbXBsYXRlGDUgASgLMjUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "LkFzcGVjdFR5cGUuTWV0YWRhdGFUZW1wbGF0ZUID4EECEkcKD3RyYW5zZmVy",
-            "X3N0YXR1cxjKASABKA4yKC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVHJh",
-            "bnNmZXJTdGF0dXNCA+BBAxo2Cg1BdXRob3JpemF0aW9uEiUKGGFsdGVybmF0",
-            "ZV91c2VfcGVybWlzc2lvbhgBIAEoCUID4EEFGqQHChBNZXRhZGF0YVRlbXBs",
-            "YXRlEhIKBWluZGV4GAEgASgFQgPgQQESEQoEbmFtZRgCIAEoCUID4EECEhEK",
-            "BHR5cGUYBSABKAlCA+BBAhJRCg1yZWNvcmRfZmllbGRzGAYgAygLMjUuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkFzcGVjdFR5cGUuTWV0YWRhdGFUZW1w",
-            "bGF0ZUID4EEBElkKC2VudW1fdmFsdWVzGAggAygLMj8uZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLkFzcGVjdFR5cGUuTWV0YWRhdGFUZW1wbGF0ZS5FbnVt",
-            "VmFsdWVCA+BBARJNCgltYXBfaXRlbXMYCiABKAsyNS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuQXNwZWN0VHlwZS5NZXRhZGF0YVRlbXBsYXRlQgPgQQES",
-            "TwoLYXJyYXlfaXRlbXMYCyABKAsyNS5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
-            "djEuQXNwZWN0VHlwZS5NZXRhZGF0YVRlbXBsYXRlQgPgQQESFAoHdHlwZV9p",
-            "ZBgMIAEoCUID4EEBEhUKCHR5cGVfcmVmGA0gASgJQgPgQQESWwoLY29uc3Ry",
-            "YWludHMYMiABKAsyQS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNwZWN0",
-            "VHlwZS5NZXRhZGF0YVRlbXBsYXRlLkNvbnN0cmFpbnRzQgPgQQESWwoLYW5u",
-            "b3RhdGlvbnMYMyABKAsyQS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNw",
-            "ZWN0VHlwZS5NZXRhZGF0YVRlbXBsYXRlLkFubm90YXRpb25zQgPgQQEaSwoJ",
-            "RW51bVZhbHVlEhIKBWluZGV4GAEgASgFQgPgQQISEQoEbmFtZRgCIAEoCUID",
-            "4EECEhcKCmRlcHJlY2F0ZWQYAyABKAlCA+BBARokCgtDb25zdHJhaW50cxIV",
-            "CghyZXF1aXJlZBgBIAEoCEID4EEBGq0BCgtBbm5vdGF0aW9ucxIXCgpkZXBy",
-            "ZWNhdGVkGAEgASgJQgPgQQESGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQES",
-            "GAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARIaCg1kaXNwbGF5X29yZGVyGAQg",
-            "ASgFQgPgQQESGAoLc3RyaW5nX3R5cGUYBiABKAlCA+BBARIaCg1zdHJpbmdf",
-            "dmFsdWVzGAcgAygJQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ATqEAepBgAEKImRhdGFwbGV4Lmdvb2dsZWFw",
-            "aXMuY29tL0FzcGVjdFR5cGUSQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9hc3BlY3RUeXBlcy97YXNwZWN0X3R5cGV9Kgthc3Bl",
-            "Y3RUeXBlczIKYXNwZWN0VHlwZSLNBAoKRW50cnlHcm91cBI4CgRuYW1lGAEg",
-            "ASgJQirgQQP6QSQKImRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudHJ5R3Jv",
-            "dXASEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUY",
-            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGAoLZGVz",
-            "Y3JpcHRpb24YBSABKAlCA+BBARIZCgxkaXNwbGF5X25hbWUYBiABKAlCA+BB",
-            "ARJFCgZsYWJlbHMYByADKAsyMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "RW50cnlHcm91cC5MYWJlbHNFbnRyeUID4EEBEgwKBGV0YWcYCCABKAkSRwoP",
-            "dHJhbnNmZXJfc3RhdHVzGMoBIAEoDjIoLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
-            "eC52MS5UcmFuc2ZlclN0YXR1c0ID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6hAHqQYABCiJkYXRhcGxleC5n",
-            "b29nbGVhcGlzLmNvbS9FbnRyeUdyb3VwEkFwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZW50cnlHcm91cHMve2VudHJ5X2dyb3Vw",
-            "fSoLZW50cnlHcm91cHMyCmVudHJ5R3JvdXAi3AYKCUVudHJ5VHlwZRI3CgRu",
-            "YW1lGAEgASgJQingQQP6QSMKIWRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0Vu",
-            "dHJ5VHlwZRIQCgN1aWQYAiABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIY",
-            "CgtkZXNjcmlwdGlvbhgFIAEoCUID4EEBEhkKDGRpc3BsYXlfbmFtZRgGIAEo",
-            "CUID4EEBEkQKBmxhYmVscxgHIAMoCzIvLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
-            "eC52MS5FbnRyeVR5cGUuTGFiZWxzRW50cnlCA+BBARIRCgRldGFnGAggASgJ",
-            "QgPgQQESGQoMdHlwZV9hbGlhc2VzGAkgAygJQgPgQQESFQoIcGxhdGZvcm0Y",
-            "CiABKAlCA+BBARITCgZzeXN0ZW0YCyABKAlCA+BBARJIChByZXF1aXJlZF9h",
-            "c3BlY3RzGDIgAygLMi4uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5",
-            "VHlwZS5Bc3BlY3RJbmZvEk0KDWF1dGhvcml6YXRpb24YMyABKAsyMS5nb29n",
-            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlUeXBlLkF1dGhvcml6YXRpb25C",
-            "A+BBBRpDCgpBc3BlY3RJbmZvEjUKBHR5cGUYASABKAlCJ/pBJAoiZGF0YXBs",
-            "ZXguZ29vZ2xlYXBpcy5jb20vQXNwZWN0VHlwZRo2Cg1BdXRob3JpemF0aW9u",
-            "EiUKGGFsdGVybmF0ZV91c2VfcGVybWlzc2lvbhgBIAEoCUID4EEFGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6fupB",
-            "ewohZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50cnlUeXBlEj9wcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZW50cnlUeXBlcy97",
-            "ZW50cnlfdHlwZX0qCmVudHJ5VHlwZXMyCWVudHJ5VHlwZSKRAgoGQXNwZWN0",
-            "EhgKC2FzcGVjdF90eXBlGAEgASgJQgPgQQMSEQoEcGF0aBgCIAEoCUID4EED",
-            "EjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEioKBGRhdGEYCCABKAsyFy5nb29nbGUucHJv",
-            "dG9idWYuU3RydWN0QgPgQQISQgoNYXNwZWN0X3NvdXJjZRgJIAEoCzImLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5Bc3BlY3RTb3VyY2VCA+BBASJwCgxB",
-            "c3BlY3RTb3VyY2USLwoLY3JlYXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAsgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcCLEBAoFRW50cnkSEQoEbmFtZRgBIAEoCUID",
-            "4EEIEhoKCmVudHJ5X3R5cGUYBCABKAlCBuBBAuBBBRI0CgtjcmVhdGVfdGlt",
-            "ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1",
-            "cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxJCCgdhc3BlY3RzGAkgAygLMiwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLkVudHJ5LkFzcGVjdHNFbnRyeUID4EEBEhwKDHBhcmVudF9lbnRyeRgK",
-            "IAEoCUIG4EEB4EEFEiEKFGZ1bGx5X3F1YWxpZmllZF9uYW1lGAwgASgJQgPg",
-            "QQESQAoMZW50cnlfc291cmNlGA8gASgLMiUuZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxLkVudHJ5U291cmNlQgPgQQEaUAoMQXNwZWN0c0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRIvCgV2YWx1ZRgCIAEoCzIgLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
-            "eC52MS5Bc3BlY3Q6AjgBOoYB6kGCAQodZGF0YXBsZXguZ29vZ2xlYXBpcy5j",
-            "b20vRW50cnkSUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9lbnRyeUdyb3Vwcy97ZW50cnlfZ3JvdXB9L2VudHJpZXMve2VudHJ5",
-            "fSoHZW50cmllczIFZW50cnki0QMKC0VudHJ5U291cmNlEhAKCHJlc291cmNl",
-            "GAEgASgJEg4KBnN5c3RlbRgCIAEoCRIQCghwbGF0Zm9ybRgDIAEoCRIUCgxk",
-            "aXNwbGF5X25hbWUYBSABKAkSEwoLZGVzY3JpcHRpb24YBiABKAkSQQoGbGFi",
-            "ZWxzGAcgAygLMjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5U291",
-            "cmNlLkxhYmVsc0VudHJ5EkYKCWFuY2VzdG9ycxgJIAMoCzIuLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5FbnRyeVNvdXJjZS5BbmNlc3RvckID4EEFEi8K",
-            "C2NyZWF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBIvCgt1cGRhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASFQoIbG9jYXRpb24YDCABKAlCA+BBAxowCghBbmNlc3RvchIRCgRu",
-            "YW1lGAEgASgJQgPgQQESEQoEdHlwZRgCIAEoCUID4EEBGi0KC0xhYmVsc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEizQEKF0NyZWF0",
-            "ZUVudHJ5R3JvdXBSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFs",
-            "b2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SGwoOZW50cnlfZ3Jv",
-            "dXBfaWQYAiABKAlCA+BBAhI+CgtlbnRyeV9ncm91cBgDIAEoCzIkLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeUdyb3VwQgPgQQISGgoNdmFsaWRh",
-            "dGVfb25seRgEIAEoCEID4EEBIqsBChdVcGRhdGVFbnRyeUdyb3VwUmVxdWVz",
-            "dBI+CgtlbnRyeV9ncm91cBgBIAEoCzIkLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
-            "eC52MS5FbnRyeUdyb3VwQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISGgoNdmFsaWRhdGVfb25s",
-            "eRgDIAEoCEID4EEBImYKF0RlbGV0ZUVudHJ5R3JvdXBSZXF1ZXN0EjgKBG5h",
-            "bWUYASABKAlCKuBBAvpBJAoiZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50",
-            "cnlHcm91cBIRCgRldGFnGAIgASgJQgPgQQEisAEKFkxpc3RFbnRyeUdyb3Vw",
-            "c1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5n",
-            "b29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BB",
-            "ARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPg",
-            "QQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKNAQoXTGlzdEVudHJ5R3JvdXBz",
-            "UmVzcG9uc2USOgoMZW50cnlfZ3JvdXBzGAEgAygLMiQuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLkVudHJ5R3JvdXASFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJEh0KFXVucmVhY2hhYmxlX2xvY2F0aW9ucxgDIAMoCSJQChRHZXRFbnRy",
-            "eUdyb3VwUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6QSQKImRhdGFwbGV4",
-            "Lmdvb2dsZWFwaXMuY29tL0VudHJ5R3JvdXAiyQEKFkNyZWF0ZUVudHJ5VHlw",
-            "ZVJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5n",
-            "b29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIaCg1lbnRyeV90eXBlX2lkGAIgASgJ",
-            "QgPgQQISPAoKZW50cnlfdHlwZRgDIAEoCzIjLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MS5FbnRyeVR5cGVCA+BBAhIaCg12YWxpZGF0ZV9vbmx5GAQgASgI",
-            "QgPgQQEiqAEKFlVwZGF0ZUVudHJ5VHlwZVJlcXVlc3QSPAoKZW50cnlfdHlw",
-            "ZRgBIAEoCzIjLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeVR5cGVC",
-            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2tCA+BBAhIaCg12YWxpZGF0ZV9vbmx5GAMgASgIQgPgQQEiZAoW",
-            "RGVsZXRlRW50cnlUeXBlUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMK",
-            "IWRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudHJ5VHlwZRIRCgRldGFnGAIg",
-            "ASgJQgPgQQEirwEKFUxpc3RFbnRyeVR5cGVzUmVxdWVzdBI5CgZwYXJlbnQY",
-            "ASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0",
-            "aW9uEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyAB",
-            "KAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEo",
-            "CUID4EEBIooBChZMaXN0RW50cnlUeXBlc1Jlc3BvbnNlEjgKC2VudHJ5X3R5",
-            "cGVzGAEgAygLMiMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5VHlw",
-            "ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSHQoVdW5yZWFjaGFibGVfbG9j",
-            "YXRpb25zGAMgAygJIk4KE0dldEVudHJ5VHlwZVJlcXVlc3QSNwoEbmFtZRgB",
-            "IAEoCUIp4EEC+kEjCiFkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9FbnRyeVR5",
-            "cGUizQEKF0NyZWF0ZUFzcGVjdFR5cGVSZXF1ZXN0EjkKBnBhcmVudBgBIAEo",
-            "CUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24S",
-            "GwoOYXNwZWN0X3R5cGVfaWQYAiABKAlCA+BBAhI+Cgthc3BlY3RfdHlwZRgD",
-            "IAEoCzIkLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5Bc3BlY3RUeXBlQgPg",
-            "QQISGgoNdmFsaWRhdGVfb25seRgEIAEoCEID4EEBIqsBChdVcGRhdGVBc3Bl",
-            "Y3RUeXBlUmVxdWVzdBI+Cgthc3BlY3RfdHlwZRgBIAEoCzIkLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5Bc3BlY3RUeXBlQgPgQQISNAoLdXBkYXRlX21h",
-            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISGgoN",
-            "dmFsaWRhdGVfb25seRgDIAEoCEID4EEBImYKF0RlbGV0ZUFzcGVjdFR5cGVS",
-            "ZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoiZGF0YXBsZXguZ29vZ2xl",
-            "YXBpcy5jb20vQXNwZWN0VHlwZRIRCgRldGFnGAIgASgJQgPgQQEisAEKFkxp",
-            "c3RBc3BlY3RUeXBlc1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMK",
-            "IWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIWCglwYWdlX3Np",
-            "emUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmls",
-            "dGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKNAQoXTGlz",
-            "dEFzcGVjdFR5cGVzUmVzcG9uc2USOgoMYXNwZWN0X3R5cGVzGAEgAygLMiQu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkFzcGVjdFR5cGUSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJEh0KFXVucmVhY2hhYmxlX2xvY2F0aW9ucxgDIAMo",
-            "CSJQChRHZXRBc3BlY3RUeXBlUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6",
-            "QSQKImRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0FzcGVjdFR5cGUinAEKEkNy",
-            "ZWF0ZUVudHJ5UmVxdWVzdBI6CgZwYXJlbnQYASABKAlCKuBBAvpBJAoiZGF0",
-            "YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50cnlHcm91cBIVCghlbnRyeV9pZBgC",
-            "IAEoCUID4EECEjMKBWVudHJ5GAMgASgLMh8uZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxLkVudHJ5QgPgQQIi2gEKElVwZGF0ZUVudHJ5UmVxdWVzdBIzCgVl",
-            "bnRyeRgBIAEoCzIfLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeUID",
-            "4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFza0ID4EEBEhoKDWFsbG93X21pc3NpbmcYAyABKAhCA+BBARIjChZk",
-            "ZWxldGVfbWlzc2luZ19hc3BlY3RzGAQgASgIQgPgQQESGAoLYXNwZWN0X2tl",
-            "eXMYBSADKAlCA+BBASJJChJEZWxldGVFbnRyeVJlcXVlc3QSMwoEbmFtZRgB",
-            "IAEoCUIl4EEC+kEfCh1kYXRhcGxleC5nb29nbGVhcGlzLmNvbS9FbnRyeSKW",
-            "AQoSTGlzdEVudHJpZXNSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEk",
-            "CiJkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9FbnRyeUdyb3VwEhYKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZm",
-            "aWx0ZXIYBCABKAlCA+BBASJgChNMaXN0RW50cmllc1Jlc3BvbnNlEjAKB2Vu",
-            "dHJpZXMYASADKAsyHy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnkS",
-            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIq0BCg9HZXRFbnRyeVJlcXVlc3QS",
-            "MwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1kYXRhcGxleC5nb29nbGVhcGlzLmNv",
-            "bS9FbnRyeRI2CgR2aWV3GAIgASgOMiMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLkVudHJ5Vmlld0ID4EEBEhkKDGFzcGVjdF90eXBlcxgDIAMoCUID4EEB",
-            "EhIKBXBhdGhzGAQgAygJQgPgQQEixAEKEkxvb2t1cEVudHJ5UmVxdWVzdBIR",
-            "CgRuYW1lGAEgASgJQgPgQQISNgoEdmlldxgCIAEoDjIjLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5FbnRyeVZpZXdCA+BBARIZCgxhc3BlY3RfdHlwZXMY",
-            "AyADKAlCA+BBARISCgVwYXRocxgEIAMoCUID4EEBEjQKBWVudHJ5GAUgASgJ",
-            "QiXgQQL6QR8KHWRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudHJ5IpkBChRT",
-            "ZWFyY2hFbnRyaWVzUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISEgoFcXVl",
+            "aWVsZF9iZWhhdmlvci5wcm90bxobZ29vZ2xlL2FwaS9maWVsZF9pbmZvLnBy",
+            "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiZnb29nbGUvY2xvdWQv",
+            "ZGF0YXBsZXgvdjEvc2VydmljZS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5n",
+            "L29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90",
+            "bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aHGdvb2dsZS9w",
+            "cm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8i0w0KCkFzcGVjdFR5cGUSOAoEbmFtZRgBIAEoCUIq4EED+kEk",
+            "CiJkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9Bc3BlY3RUeXBlEhAKA3VpZBgC",
+            "IAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhgKC2Rlc2NyaXB0aW9uGAUg",
+            "ASgJQgPgQQESGQoMZGlzcGxheV9uYW1lGAYgASgJQgPgQQESRQoGbGFiZWxz",
+            "GAcgAygLMjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkFzcGVjdFR5cGUu",
+            "TGFiZWxzRW50cnlCA+BBARIMCgRldGFnGAggASgJEk4KDWF1dGhvcml6YXRp",
+            "b24YNCABKAsyMi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNwZWN0VHlw",
+            "ZS5BdXRob3JpemF0aW9uQgPgQQUSVQoRbWV0YWRhdGFfdGVtcGxhdGUYNSAB",
+            "KAsyNS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNwZWN0VHlwZS5NZXRh",
+            "ZGF0YVRlbXBsYXRlQgPgQQISRwoPdHJhbnNmZXJfc3RhdHVzGMoBIAEoDjIo",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5UcmFuc2ZlclN0YXR1c0ID4EED",
+            "GjYKDUF1dGhvcml6YXRpb24SJQoYYWx0ZXJuYXRlX3VzZV9wZXJtaXNzaW9u",
+            "GAEgASgJQgPgQQUapAcKEE1ldGFkYXRhVGVtcGxhdGUSEgoFaW5kZXgYASAB",
+            "KAVCA+BBARIRCgRuYW1lGAIgASgJQgPgQQISEQoEdHlwZRgFIAEoCUID4EEC",
+            "ElEKDXJlY29yZF9maWVsZHMYBiADKAsyNS5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuQXNwZWN0VHlwZS5NZXRhZGF0YVRlbXBsYXRlQgPgQQESWQoLZW51",
+            "bV92YWx1ZXMYCCADKAsyPy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNw",
+            "ZWN0VHlwZS5NZXRhZGF0YVRlbXBsYXRlLkVudW1WYWx1ZUID4EEBEk0KCW1h",
+            "cF9pdGVtcxgKIAEoCzI1Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5Bc3Bl",
+            "Y3RUeXBlLk1ldGFkYXRhVGVtcGxhdGVCA+BBARJPCgthcnJheV9pdGVtcxgL",
+            "IAEoCzI1Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5Bc3BlY3RUeXBlLk1l",
+            "dGFkYXRhVGVtcGxhdGVCA+BBARIUCgd0eXBlX2lkGAwgASgJQgPgQQESFQoI",
+            "dHlwZV9yZWYYDSABKAlCA+BBARJbCgtjb25zdHJhaW50cxgyIAEoCzJBLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5Bc3BlY3RUeXBlLk1ldGFkYXRhVGVt",
+            "cGxhdGUuQ29uc3RyYWludHNCA+BBARJbCgthbm5vdGF0aW9ucxgzIAEoCzJB",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5Bc3BlY3RUeXBlLk1ldGFkYXRh",
+            "VGVtcGxhdGUuQW5ub3RhdGlvbnNCA+BBARpLCglFbnVtVmFsdWUSEgoFaW5k",
+            "ZXgYASABKAVCA+BBAhIRCgRuYW1lGAIgASgJQgPgQQISFwoKZGVwcmVjYXRl",
+            "ZBgDIAEoCUID4EEBGiQKC0NvbnN0cmFpbnRzEhUKCHJlcXVpcmVkGAEgASgI",
+            "QgPgQQEarQEKC0Fubm90YXRpb25zEhcKCmRlcHJlY2F0ZWQYASABKAlCA+BB",
+            "ARIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBARIYCgtkZXNjcmlwdGlvbhgD",
+            "IAEoCUID4EEBEhoKDWRpc3BsYXlfb3JkZXIYBCABKAVCA+BBARIYCgtzdHJp",
+            "bmdfdHlwZRgGIAEoCUID4EEBEhoKDXN0cmluZ192YWx1ZXMYByADKAlCA+BB",
+            "ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBOoQB6kGAAQoiZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vQXNwZWN0VHlw",
+            "ZRJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Fz",
+            "cGVjdFR5cGVzL3thc3BlY3RfdHlwZX0qC2FzcGVjdFR5cGVzMgphc3BlY3RU",
+            "eXBlIs0ECgpFbnRyeUdyb3VwEjgKBG5hbWUYASABKAlCKuBBA/pBJAoiZGF0",
+            "YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50cnlHcm91cBIQCgN1aWQYAiABKAlC",
+            "A+BBAxI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIYCgtkZXNjcmlwdGlvbhgFIAEoCUID",
+            "4EEBEhkKDGRpc3BsYXlfbmFtZRgGIAEoCUID4EEBEkUKBmxhYmVscxgHIAMo",
+            "CzIwLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeUdyb3VwLkxhYmVs",
+            "c0VudHJ5QgPgQQESDAoEZXRhZxgIIAEoCRJHCg90cmFuc2Zlcl9zdGF0dXMY",
+            "ygEgASgOMiguZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlRyYW5zZmVyU3Rh",
+            "dHVzQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ATqEAepBgAEKImRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0Vu",
+            "dHJ5R3JvdXASQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9lbnRyeUdyb3Vwcy97ZW50cnlfZ3JvdXB9KgtlbnRyeUdyb3VwczIK",
+            "ZW50cnlHcm91cCLcBgoJRW50cnlUeXBlEjcKBG5hbWUYASABKAlCKeBBA/pB",
+            "IwohZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50cnlUeXBlEhAKA3VpZBgC",
+            "IAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhgKC2Rlc2NyaXB0aW9uGAUg",
+            "ASgJQgPgQQESGQoMZGlzcGxheV9uYW1lGAYgASgJQgPgQQESRAoGbGFiZWxz",
+            "GAcgAygLMi8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5VHlwZS5M",
+            "YWJlbHNFbnRyeUID4EEBEhEKBGV0YWcYCCABKAlCA+BBARIZCgx0eXBlX2Fs",
+            "aWFzZXMYCSADKAlCA+BBARIVCghwbGF0Zm9ybRgKIAEoCUID4EEBEhMKBnN5",
+            "c3RlbRgLIAEoCUID4EEBEkgKEHJlcXVpcmVkX2FzcGVjdHMYMiADKAsyLi5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlUeXBlLkFzcGVjdEluZm8S",
+            "TQoNYXV0aG9yaXphdGlvbhgzIAEoCzIxLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5FbnRyeVR5cGUuQXV0aG9yaXphdGlvbkID4EEFGkMKCkFzcGVjdElu",
+            "Zm8SNQoEdHlwZRgBIAEoCUIn+kEkCiJkYXRhcGxleC5nb29nbGVhcGlzLmNv",
+            "bS9Bc3BlY3RUeXBlGjYKDUF1dGhvcml6YXRpb24SJQoYYWx0ZXJuYXRlX3Vz",
+            "ZV9wZXJtaXNzaW9uGAEgASgJQgPgQQUaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp+6kF7CiFkYXRhcGxleC5nb29n",
+            "bGVhcGlzLmNvbS9FbnRyeVR5cGUSP3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9lbnRyeVR5cGVzL3tlbnRyeV90eXBlfSoKZW50",
+            "cnlUeXBlczIJZW50cnlUeXBlIpECCgZBc3BlY3QSGAoLYXNwZWN0X3R5cGUY",
+            "ASABKAlCA+BBAxIRCgRwYXRoGAIgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUY",
+            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
+            "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSKgoEZGF0YRgIIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BB",
+            "AhJCCg1hc3BlY3Rfc291cmNlGAkgASgLMiYuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkFzcGVjdFNvdXJjZUID4EEBIoYBCgxBc3BlY3RTb3VyY2USLwoL",
+            "Y3JlYXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "Ei8KC3VwZGF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIUCgxkYXRhX3ZlcnNpb24YDCABKAkixAQKBUVudHJ5EhEKBG5hbWUY",
+            "ASABKAlCA+BBCBIaCgplbnRyeV90eXBlGAQgASgJQgbgQQLgQQUSNAoLY3Jl",
+            "YXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSQgoHYXNwZWN0cxgJIAMoCzIsLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5FbnRyeS5Bc3BlY3RzRW50cnlCA+BBARIcCgxwYXJlbnRf",
+            "ZW50cnkYCiABKAlCBuBBAeBBBRIhChRmdWxseV9xdWFsaWZpZWRfbmFtZRgM",
+            "IAEoCUID4EEBEkAKDGVudHJ5X3NvdXJjZRgPIAEoCzIlLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MS5FbnRyeVNvdXJjZUID4EEBGlAKDEFzcGVjdHNFbnRy",
+            "eRILCgNrZXkYASABKAkSLwoFdmFsdWUYAiABKAsyIC5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuQXNwZWN0OgI4ATqGAepBggEKHWRhdGFwbGV4Lmdvb2ds",
+            "ZWFwaXMuY29tL0VudHJ5ElFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vZW50cnlHcm91cHMve2VudHJ5X2dyb3VwfS9lbnRyaWVz",
+            "L3tlbnRyeX0qB2VudHJpZXMyBWVudHJ5ItEDCgtFbnRyeVNvdXJjZRIQCghy",
+            "ZXNvdXJjZRgBIAEoCRIOCgZzeXN0ZW0YAiABKAkSEAoIcGxhdGZvcm0YAyAB",
+            "KAkSFAoMZGlzcGxheV9uYW1lGAUgASgJEhMKC2Rlc2NyaXB0aW9uGAYgASgJ",
+            "EkEKBmxhYmVscxgHIAMoCzIxLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5F",
+            "bnRyeVNvdXJjZS5MYWJlbHNFbnRyeRJGCglhbmNlc3RvcnMYCSADKAsyLi5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlTb3VyY2UuQW5jZXN0b3JC",
+            "A+BBBRIvCgtjcmVhdGVfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEhUKCGxvY2F0aW9uGAwgASgJQgPgQQMaMAoIQW5jZXN0",
+            "b3ISEQoEbmFtZRgBIAEoCUID4EEBEhEKBHR5cGUYAiABKAlCA+BBARotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIs0B",
+            "ChdDcmVhdGVFbnRyeUdyb3VwUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBB",
+            "AvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhsKDmVu",
+            "dHJ5X2dyb3VwX2lkGAIgASgJQgPgQQISPgoLZW50cnlfZ3JvdXAYAyABKAsy",
+            "JC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlHcm91cEID4EECEhoK",
+            "DXZhbGlkYXRlX29ubHkYBCABKAhCA+BBASKrAQoXVXBkYXRlRW50cnlHcm91",
+            "cFJlcXVlc3QSPgoLZW50cnlfZ3JvdXAYASABKAsyJC5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuRW50cnlHcm91cEID4EECEjQKC3VwZGF0ZV9tYXNrGAIg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEhoKDXZhbGlk",
+            "YXRlX29ubHkYAyABKAhCA+BBASJmChdEZWxldGVFbnRyeUdyb3VwUmVxdWVz",
+            "dBI4CgRuYW1lGAEgASgJQirgQQL6QSQKImRhdGFwbGV4Lmdvb2dsZWFwaXMu",
+            "Y29tL0VudHJ5R3JvdXASEQoEZXRhZxgCIAEoCUID4EEBIrABChZMaXN0RW50",
+            "cnlHcm91cHNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2Nh",
+            "dGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SFgoJcGFnZV9zaXplGAIg",
+            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgE",
+            "IAEoCUID4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEijQEKF0xpc3RFbnRy",
+            "eUdyb3Vwc1Jlc3BvbnNlEjoKDGVudHJ5X2dyb3VwcxgBIAMoCzIkLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeUdyb3VwEhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCRIdChV1bnJlYWNoYWJsZV9sb2NhdGlvbnMYAyADKAkiUAoU",
+            "R2V0RW50cnlHcm91cFJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC+kEkCiJk",
+            "YXRhcGxleC5nb29nbGVhcGlzLmNvbS9FbnRyeUdyb3VwIskBChZDcmVhdGVF",
+            "bnRyeVR5cGVSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2Nh",
+            "dGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SGgoNZW50cnlfdHlwZV9p",
+            "ZBgCIAEoCUID4EECEjwKCmVudHJ5X3R5cGUYAyABKAsyIy5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuRW50cnlUeXBlQgPgQQISGgoNdmFsaWRhdGVfb25s",
+            "eRgEIAEoCEID4EEBIqgBChZVcGRhdGVFbnRyeVR5cGVSZXF1ZXN0EjwKCmVu",
+            "dHJ5X3R5cGUYASABKAsyIy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50",
+            "cnlUeXBlQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrQgPgQQISGgoNdmFsaWRhdGVfb25seRgDIAEoCEID",
+            "4EEBImQKFkRlbGV0ZUVudHJ5VHlwZVJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp",
+            "4EEC+kEjCiFkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9FbnRyeVR5cGUSEQoE",
+            "ZXRhZxgCIAEoCUID4EEBIq8BChVMaXN0RW50cnlUeXBlc1JlcXVlc3QSOQoG",
+            "cGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNv",
+            "bS9Mb2NhdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rv",
+            "a2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJf",
+            "YnkYBSABKAlCA+BBASKKAQoWTGlzdEVudHJ5VHlwZXNSZXNwb25zZRI4Cgtl",
+            "bnRyeV90eXBlcxgBIAMoCzIjLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5F",
+            "bnRyeVR5cGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEh0KFXVucmVhY2hh",
+            "YmxlX2xvY2F0aW9ucxgDIAMoCSJOChNHZXRFbnRyeVR5cGVSZXF1ZXN0EjcK",
+            "BG5hbWUYASABKAlCKeBBAvpBIwohZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20v",
+            "RW50cnlUeXBlIs0BChdDcmVhdGVBc3BlY3RUeXBlUmVxdWVzdBI5CgZwYXJl",
+            "bnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xv",
+            "Y2F0aW9uEhsKDmFzcGVjdF90eXBlX2lkGAIgASgJQgPgQQISPgoLYXNwZWN0",
+            "X3R5cGUYAyABKAsyJC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNwZWN0",
+            "VHlwZUID4EECEhoKDXZhbGlkYXRlX29ubHkYBCABKAhCA+BBASKrAQoXVXBk",
+            "YXRlQXNwZWN0VHlwZVJlcXVlc3QSPgoLYXNwZWN0X3R5cGUYASABKAsyJC5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNwZWN0VHlwZUID4EECEjQKC3Vw",
+            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID",
+            "4EECEhoKDXZhbGlkYXRlX29ubHkYAyABKAhCA+BBASJmChdEZWxldGVBc3Bl",
+            "Y3RUeXBlUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6QSQKImRhdGFwbGV4",
+            "Lmdvb2dsZWFwaXMuY29tL0FzcGVjdFR5cGUSEQoEZXRhZxgCIAEoCUID4EEB",
+            "IrABChZMaXN0QXNwZWN0VHlwZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp",
+            "4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SFgoJ",
+            "cGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEB",
+            "EhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEi",
+            "jQEKF0xpc3RBc3BlY3RUeXBlc1Jlc3BvbnNlEjoKDGFzcGVjdF90eXBlcxgB",
+            "IAMoCzIkLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5Bc3BlY3RUeXBlEhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCRIdChV1bnJlYWNoYWJsZV9sb2NhdGlv",
+            "bnMYAyADKAkiUAoUR2V0QXNwZWN0VHlwZVJlcXVlc3QSOAoEbmFtZRgBIAEo",
+            "CUIq4EEC+kEkCiJkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9Bc3BlY3RUeXBl",
+            "IpwBChJDcmVhdGVFbnRyeVJlcXVlc3QSOgoGcGFyZW50GAEgASgJQirgQQL6",
+            "QSQKImRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudHJ5R3JvdXASFQoIZW50",
+            "cnlfaWQYAiABKAlCA+BBAhIzCgVlbnRyeRgDIAEoCzIfLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MS5FbnRyeUID4EECItoBChJVcGRhdGVFbnRyeVJlcXVl",
+            "c3QSMwoFZW50cnkYASABKAsyHy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "RW50cnlCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5GaWVsZE1hc2tCA+BBARIaCg1hbGxvd19taXNzaW5nGAMgASgIQgPg",
+            "QQESIwoWZGVsZXRlX21pc3NpbmdfYXNwZWN0cxgEIAEoCEID4EEBEhgKC2Fz",
+            "cGVjdF9rZXlzGAUgAygJQgPgQQEiSQoSRGVsZXRlRW50cnlSZXF1ZXN0EjMK",
+            "BG5hbWUYASABKAlCJeBBAvpBHwodZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20v",
+            "RW50cnkilgEKEkxpc3RFbnRyaWVzUmVxdWVzdBI6CgZwYXJlbnQYASABKAlC",
+            "KuBBAvpBJAoiZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50cnlHcm91cBIW",
+            "CglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPg",
+            "QQESEwoGZmlsdGVyGAQgASgJQgPgQQEiYAoTTGlzdEVudHJpZXNSZXNwb25z",
+            "ZRIwCgdlbnRyaWVzGAEgAygLMh8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
+            "LkVudHJ5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKtAQoPR2V0RW50cnlS",
+            "ZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwodZGF0YXBsZXguZ29vZ2xl",
+            "YXBpcy5jb20vRW50cnkSNgoEdmlldxgCIAEoDjIjLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5FbnRyeVZpZXdCA+BBARIZCgxhc3BlY3RfdHlwZXMYAyAD",
+            "KAlCA+BBARISCgVwYXRocxgEIAMoCUID4EEBIsQBChJMb29rdXBFbnRyeVJl",
+            "cXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEjYKBHZpZXcYAiABKA4yIy5nb29n",
+            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlWaWV3QgPgQQESGQoMYXNwZWN0",
+            "X3R5cGVzGAMgAygJQgPgQQESEgoFcGF0aHMYBCADKAlCA+BBARI0CgVlbnRy",
+            "eRgFIAEoCUIl4EEC+kEfCh1kYXRhcGxleC5nb29nbGVhcGlzLmNvbS9FbnRy",
+            "eSK/AQoUU2VhcmNoRW50cmllc1JlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC",
+            "+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEgoFcXVl",
             "cnkYAiABKAlCA+BBAhIWCglwYWdlX3NpemUYAyABKAVCA+BBARIXCgpwYWdl",
             "X3Rva2VuGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBARISCgVz",
             "Y29wZRgHIAEoCUID4EEBIoYCChNTZWFyY2hFbnRyaWVzUmVzdWx0EhsKD2xp",
@@ -231,118 +233,201 @@ namespace Google.Cloud.Dataplex.V1 {
             "cnlCAhgBOgIYASKZAQoVU2VhcmNoRW50cmllc1Jlc3BvbnNlEj4KB3Jlc3Vs",
             "dHMYASADKAsyLS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2VhcmNoRW50",
             "cmllc1Jlc3VsdBISCgp0b3RhbF9zaXplGAIgASgFEhcKD25leHRfcGFnZV90",
-            "b2tlbhgDIAEoCRITCgt1bnJlYWNoYWJsZRgEIAMoCSpRCglFbnRyeVZpZXcS",
-            "GgoWRU5UUllfVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERlVM",
-            "TBACEgoKBkNVU1RPTRADEgcKA0FMTBAEKnAKDlRyYW5zZmVyU3RhdHVzEh8K",
-            "G1RSQU5TRkVSX1NUQVRVU19VTlNQRUNJRklFRBAAEhwKGFRSQU5TRkVSX1NU",
-            "QVRVU19NSUdSQVRFRBABEh8KG1RSQU5TRkVSX1NUQVRVU19UUkFOU0ZFUlJF",
-            "RBACMoIjCg5DYXRhbG9nU2VydmljZRLqAQoPQ3JlYXRlRW50cnlUeXBlEjAu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNyZWF0ZUVudHJ5VHlwZVJlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoUBykEeCglFbnRy",
-            "eVR5cGUSEU9wZXJhdGlvbk1ldGFkYXRh2kEfcGFyZW50LGVudHJ5X3R5cGUs",
-            "ZW50cnlfdHlwZV9pZILT5JMCPCIuL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vZW50cnlUeXBlczoKZW50cnlfdHlwZRLsAQoPVXBkYXRl",
-            "RW50cnlUeXBlEjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlVwZGF0ZUVu",
-            "dHJ5VHlwZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "IocBykEeCglFbnRyeVR5cGUSEU9wZXJhdGlvbk1ldGFkYXRh2kEWZW50cnlf",
-            "dHlwZSx1cGRhdGVfbWFza4LT5JMCRzI5L3YxL3tlbnRyeV90eXBlLm5hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeVR5cGVzLyp9OgplbnRyeV90",
-            "eXBlEs4BCg9EZWxldGVFbnRyeVR5cGUSMC5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuRGVsZXRlRW50cnlUeXBlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24iaspBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFP",
-            "cGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjAqLi92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5VHlwZXMvKn0StAEKDkxpc3RFbnRy",
-            "eVR5cGVzEi8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RFbnRyeVR5",
-            "cGVzUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0RW50",
-            "cnlUeXBlc1Jlc3BvbnNlIj/aQQZwYXJlbnSC0+STAjASLi92MS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2VudHJ5VHlwZXMSoQEKDEdldEVu",
-            "dHJ5VHlwZRItLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5HZXRFbnRyeVR5",
-            "cGVSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5VHlw",
-            "ZSI92kEEbmFtZYLT5JMCMBIuL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovZW50cnlUeXBlcy8qfRLxAQoQQ3JlYXRlQXNwZWN0VHlwZRIxLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5DcmVhdGVBc3BlY3RUeXBlUmVxdWVz",
-            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iigHKQR8KCkFzcGVj",
-            "dFR5cGUSEU9wZXJhdGlvbk1ldGFkYXRh2kEhcGFyZW50LGFzcGVjdF90eXBl",
-            "LGFzcGVjdF90eXBlX2lkgtPkkwI+Ii8vdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qfS9hc3BlY3RUeXBlczoLYXNwZWN0X3R5cGUS8wEKEFVw",
-            "ZGF0ZUFzcGVjdFR5cGUSMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVXBk",
-            "YXRlQXNwZWN0VHlwZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIowBykEfCgpBc3BlY3RUeXBlEhFPcGVyYXRpb25NZXRhZGF0YdpB",
-            "F2FzcGVjdF90eXBlLHVwZGF0ZV9tYXNrgtPkkwJKMjsvdjEve2FzcGVjdF90",
-            "eXBlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hc3BlY3RUeXBlcy8q",
-            "fToLYXNwZWN0X3R5cGUS0QEKEERlbGV0ZUFzcGVjdFR5cGUSMS5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuRGVsZXRlQXNwZWN0VHlwZVJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImvKQSoKFWdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwIxKi8v",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hc3BlY3RUeXBlcy8q",
-            "fRK4AQoPTGlzdEFzcGVjdFR5cGVzEjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLkxpc3RBc3BlY3RUeXBlc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjEuTGlzdEFzcGVjdFR5cGVzUmVzcG9uc2UiQNpBBnBhcmVudILT",
-            "5JMCMRIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXNw",
-            "ZWN0VHlwZXMSpQEKDUdldEFzcGVjdFR5cGUSLi5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjEuR2V0QXNwZWN0VHlwZVJlcXVlc3QaJC5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuQXNwZWN0VHlwZSI+2kEEbmFtZYLT5JMCMRIvL3YxL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYXNwZWN0VHlwZXMvKn0S8QEK",
-            "EENyZWF0ZUVudHJ5R3JvdXASMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "Q3JlYXRlRW50cnlHcm91cFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uIooBykEfCgpFbnRyeUdyb3VwEhFPcGVyYXRpb25NZXRhZGF0",
-            "YdpBIXBhcmVudCxlbnRyeV9ncm91cCxlbnRyeV9ncm91cF9pZILT5JMCPiIv",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZW50cnlHcm91",
-            "cHM6C2VudHJ5X2dyb3VwEvMBChBVcGRhdGVFbnRyeUdyb3VwEjEuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLlVwZGF0ZUVudHJ5R3JvdXBSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKMAcpBHwoKRW50cnlHcm91",
-            "cBIRT3BlcmF0aW9uTWV0YWRhdGHaQRdlbnRyeV9ncm91cCx1cGRhdGVfbWFz",
-            "a4LT5JMCSjI7L3YxL3tlbnRyeV9ncm91cC5uYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZW50cnlHcm91cHMvKn06C2VudHJ5X2dyb3VwEtEBChBEZWxl",
-            "dGVFbnRyeUdyb3VwEjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRlbGV0",
-            "ZUVudHJ5R3JvdXBSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJrykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1l",
-            "dGFkYXRh2kEEbmFtZYLT5JMCMSovL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZW50cnlHcm91cHMvKn0SuAEKD0xpc3RFbnRyeUdyb3VwcxIw",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0RW50cnlHcm91cHNSZXF1",
-            "ZXN0GjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RFbnRyeUdyb3Vw",
-            "c1Jlc3BvbnNlIkDaQQZwYXJlbnSC0+STAjESLy92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L2VudHJ5R3JvdXBzEqUBCg1HZXRFbnRyeUdy",
-            "b3VwEi4uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldEVudHJ5R3JvdXBS",
-            "ZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5R3JvdXAi",
-            "PtpBBG5hbWWC0+STAjESLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2VudHJ5R3JvdXBzLyp9Er4BCgtDcmVhdGVFbnRyeRIsLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5DcmVhdGVFbnRyeVJlcXVlc3QaHy5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuRW50cnkiYNpBFXBhcmVudCxlbnRyeSxlbnRy",
-            "eV9pZILT5JMCQiI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9lbnRyeUdyb3Vwcy8qfS9lbnRyaWVzOgVlbnRyeRLBAQoLVXBkYXRlRW50",
-            "cnkSLC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVXBkYXRlRW50cnlSZXF1",
-            "ZXN0Gh8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5ImPaQRFlbnRy",
-            "eSx1cGRhdGVfbWFza4LT5JMCSTJAL3YxL3tlbnRyeS5uYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovZW50cnlHcm91cHMvKi9lbnRyaWVzLyoqfToFZW50",
-            "cnkSpwEKC0RlbGV0ZUVudHJ5EiwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "LkRlbGV0ZUVudHJ5UmVxdWVzdBofLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
-            "MS5FbnRyeSJJ2kEEbmFtZYLT5JMCPCo6L3YxL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovZW50cnlHcm91cHMvKi9lbnRyaWVzLyoqfRK2AQoLTGlz",
-            "dEVudHJpZXMSLC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdEVudHJp",
-            "ZXNSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RFbnRy",
-            "aWVzUmVzcG9uc2UiStpBBnBhcmVudILT5JMCOxI5L3YxL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qfS9lbnRyaWVzEqEB",
-            "CghHZXRFbnRyeRIpLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5HZXRFbnRy",
-            "eVJlcXVlc3QaHy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnkiSdpB",
-            "BG5hbWWC0+STAjwSOi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2VudHJ5R3JvdXBzLyovZW50cmllcy8qKn0SkwEKC0xvb2t1cEVudHJ5Eiwu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxvb2t1cEVudHJ5UmVxdWVzdBof",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeSI1gtPkkwIvEi0vdjEv",
-            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06bG9va3VwRW50cnkStgEK",
-            "DVNlYXJjaEVudHJpZXMSLi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2Vh",
-            "cmNoRW50cmllc1JlcXVlc3QaLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "U2VhcmNoRW50cmllc1Jlc3BvbnNlIkTaQQpuYW1lLHF1ZXJ5gtPkkwIxIi8v",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06c2VhcmNoRW50cmll",
-            "cxpLykEXZGF0YXBsZXguZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrwBChxjb20uZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxQgxDYXRhbG9nUHJvdG9QAVo4Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9kYXRhcGxleC9hcGl2MS9kYXRhcGxleHBiO2RhdGFw",
-            "bGV4cGKqAhhHb29nbGUuQ2xvdWQuRGF0YXBsZXguVjHKAhhHb29nbGVcQ2xv",
-            "dWRcRGF0YXBsZXhcVjHqAhtHb29nbGU6OkNsb3VkOjpEYXRhcGxleDo6VjFi",
-            "BnByb3RvMw=="));
+            "b2tlbhgDIAEoCRITCgt1bnJlYWNoYWJsZRgEIAMoCSKCAQoKSW1wb3J0SXRl",
+            "bRIuCgVlbnRyeRgBIAEoCzIfLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5F",
+            "bnRyeRIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
+            "aWVsZE1hc2sSEwoLYXNwZWN0X2tleXMYAyADKAki0QEKGENyZWF0ZU1ldGFk",
+            "YXRhSm9iUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRp",
+            "b25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEkAKDG1ldGFkYXRhX2pvYhgC",
+            "IAEoCzIlLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYkID",
+            "4EECEhwKD21ldGFkYXRhX2pvYl9pZBgDIAEoCUID4EEBEhoKDXZhbGlkYXRl",
+            "X29ubHkYBCABKAhCA+BBASJSChVHZXRNZXRhZGF0YUpvYlJlcXVlc3QSOQoE",
+            "bmFtZRgBIAEoCUIr4EEC+kElCiNkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9N",
+            "ZXRhZGF0YUpvYiKxAQoXTGlzdE1ldGFkYXRhSm9ic1JlcXVlc3QSOQoGcGFy",
+            "ZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9M",
+            "b2NhdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2Vu",
+            "GAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkY",
+            "BSABKAlCA+BBASKQAQoYTGlzdE1ldGFkYXRhSm9ic1Jlc3BvbnNlEjwKDW1l",
+            "dGFkYXRhX2pvYnMYASADKAsyJS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "TWV0YWRhdGFKb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEh0KFXVucmVh",
+            "Y2hhYmxlX2xvY2F0aW9ucxgDIAMoCSJVChhDYW5jZWxNZXRhZGF0YUpvYlJl",
+            "cXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNkYXRhcGxleC5nb29nbGVh",
+            "cGlzLmNvbS9NZXRhZGF0YUpvYiLLEAoLTWV0YWRhdGFKb2ISFAoEbmFtZRgB",
+            "IAEoCUIG4EED4EEIEhgKA3VpZBgCIAEoCUIL4EED4ozP1wgCCAESNAoLY3Jl",
+            "YXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSRgoGbGFiZWxzGAUgAygLMjEuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwbGV4LnYxLk1ldGFkYXRhSm9iLkxhYmVsc0VudHJ5QgPgQQESPQoEdHlw",
+            "ZRgGIAEoDjIqLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpv",
+            "Yi5UeXBlQgPgQQISSgoLaW1wb3J0X3NwZWMYZCABKAsyMy5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuTWV0YWRhdGFKb2IuSW1wb3J0Sm9iU3BlY0gAElQK",
+            "DWltcG9ydF9yZXN1bHQYyAEgASgLMjUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxLk1ldGFkYXRhSm9iLkltcG9ydEpvYlJlc3VsdEID4EEDSAESQQoGc3Rh",
+            "dHVzGAcgASgLMiwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLk1ldGFkYXRh",
+            "Sm9iLlN0YXR1c0ID4EEDGuEBCg9JbXBvcnRKb2JSZXN1bHQSHAoPZGVsZXRl",
+            "ZF9lbnRyaWVzGAEgASgDQgPgQQMSHAoPdXBkYXRlZF9lbnRyaWVzGAIgASgD",
+            "QgPgQQMSHAoPY3JlYXRlZF9lbnRyaWVzGAMgASgDQgPgQQMSHgoRdW5jaGFu",
+            "Z2VkX2VudHJpZXMYBCABKANCA+BBAxIeChFyZWNyZWF0ZWRfZW50cmllcxgG",
+            "IAEoA0ID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDGqkGCg1JbXBvcnRKb2JTcGVjEh8KEnNvdXJj",
+            "ZV9zdG9yYWdlX3VyaRgBIAEoCUID4EEBEjsKEnNvdXJjZV9jcmVhdGVfdGlt",
+            "ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARJWCgVz",
+            "Y29wZRgCIAEoCzJCLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0",
+            "YUpvYi5JbXBvcnRKb2JTcGVjLkltcG9ydEpvYlNjb3BlQgPgQQISWgoPZW50",
+            "cnlfc3luY19tb2RlGAMgASgOMjwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
+            "Lk1ldGFkYXRhSm9iLkltcG9ydEpvYlNwZWMuU3luY01vZGVCA+BBAhJbChBh",
+            "c3BlY3Rfc3luY19tb2RlGAQgASgOMjwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxLk1ldGFkYXRhSm9iLkltcG9ydEpvYlNwZWMuU3luY01vZGVCA+BBAhJU",
+            "Cglsb2dfbGV2ZWwYBiABKA4yPC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "TWV0YWRhdGFKb2IuSW1wb3J0Sm9iU3BlYy5Mb2dMZXZlbEID4EEBGtQBCg5J",
+            "bXBvcnRKb2JTY29wZRJACgxlbnRyeV9ncm91cHMYASADKAlCKuBBAvpBJAoi",
+            "ZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50cnlHcm91cBI+CgtlbnRyeV90",
+            "eXBlcxgCIAMoCUIp4EEC+kEjCiFkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9F",
+            "bnRyeVR5cGUSQAoMYXNwZWN0X3R5cGVzGAMgAygJQirgQQH6QSQKImRhdGFw",
+            "bGV4Lmdvb2dsZWFwaXMuY29tL0FzcGVjdFR5cGUiQAoIU3luY01vZGUSGQoV",
+            "U1lOQ19NT0RFX1VOU1BFQ0lGSUVEEAASCAoERlVMTBABEg8KC0lOQ1JFTUVO",
+            "VEFMEAIiOgoITG9nTGV2ZWwSGQoVTE9HX0xFVkVMX1VOU1BFQ0lGSUVEEAAS",
+            "CQoFREVCVUcQARIICgRJTkZPEAIaygIKBlN0YXR1cxJGCgVzdGF0ZRgBIAEo",
+            "DjIyLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYi5TdGF0",
+            "dXMuU3RhdGVCA+BBAxIUCgdtZXNzYWdlGAIgASgJQgPgQQMSHwoSY29tcGxl",
+            "dGlvbl9wZXJjZW50GAMgASgFQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMiigEKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGUVVFVUVEEAESCwoHUlVOTklORxAC",
+            "Eg0KCUNBTkNFTElORxADEgwKCENBTkNFTEVEEAQSDQoJU1VDQ0VFREVEEAUS",
+            "CgoGRkFJTEVEEAYSGQoVU1VDQ0VFREVEX1dJVEhfRVJST1JTEAcaLQoLTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASIoCgRU",
+            "eXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIKCgZJTVBPUlQQATps6kFpCiNk",
+            "YXRhcGxleC5nb29nbGVhcGlzLmNvbS9NZXRhZGF0YUpvYhJCcHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21ldGFkYXRhSm9icy97",
+            "bWV0YWRhdGFKb2J9QgYKBHNwZWNCCAoGcmVzdWx0KlEKCUVudHJ5VmlldxIa",
+            "ChZFTlRSWV9WSUVXX1VOU1BFQ0lGSUVEEAASCQoFQkFTSUMQARIICgRGVUxM",
+            "EAISCgoGQ1VTVE9NEAMSBwoDQUxMEAQqcAoOVHJhbnNmZXJTdGF0dXMSHwob",
+            "VFJBTlNGRVJfU1RBVFVTX1VOU1BFQ0lGSUVEEAASHAoYVFJBTlNGRVJfU1RB",
+            "VFVTX01JR1JBVEVEEAESHwobVFJBTlNGRVJfU1RBVFVTX1RSQU5TRkVSUkVE",
+            "EAIylSkKDkNhdGFsb2dTZXJ2aWNlEuoBCg9DcmVhdGVFbnRyeVR5cGUSMC5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQ3JlYXRlRW50cnlUeXBlUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ihQHKQR4KCUVudHJ5",
+            "VHlwZRIRT3BlcmF0aW9uTWV0YWRhdGHaQR9wYXJlbnQsZW50cnlfdHlwZSxl",
+            "bnRyeV90eXBlX2lkgtPkkwI8Ii4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfS9lbnRyeVR5cGVzOgplbnRyeV90eXBlEuwBCg9VcGRhdGVF",
+            "bnRyeVR5cGUSMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVXBkYXRlRW50",
+            "cnlUeXBlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "hwHKQR4KCUVudHJ5VHlwZRIRT3BlcmF0aW9uTWV0YWRhdGHaQRZlbnRyeV90",
+            "eXBlLHVwZGF0ZV9tYXNrgtPkkwJHMjkvdjEve2VudHJ5X3R5cGUubmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5VHlwZXMvKn06CmVudHJ5X3R5",
+            "cGUSzgEKD0RlbGV0ZUVudHJ5VHlwZRIwLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5EZWxldGVFbnRyeVR5cGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiJqykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9w",
+            "ZXJhdGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCMCouL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovZW50cnlUeXBlcy8qfRK0AQoOTGlzdEVudHJ5",
+            "VHlwZXMSLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdEVudHJ5VHlw",
+            "ZXNSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RFbnRy",
+            "eVR5cGVzUmVzcG9uc2UiP9pBBnBhcmVudILT5JMCMBIuL3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZW50cnlUeXBlcxKhAQoMR2V0RW50",
+            "cnlUeXBlEi0uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldEVudHJ5VHlw",
+            "ZVJlcXVlc3QaIy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlUeXBl",
+            "Ij3aQQRuYW1lgtPkkwIwEi4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9lbnRyeVR5cGVzLyp9EvEBChBDcmVhdGVBc3BlY3RUeXBlEjEuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNyZWF0ZUFzcGVjdFR5cGVSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKKAcpBHwoKQXNwZWN0",
+            "VHlwZRIRT3BlcmF0aW9uTWV0YWRhdGHaQSFwYXJlbnQsYXNwZWN0X3R5cGUs",
+            "YXNwZWN0X3R5cGVfaWSC0+STAj4iLy92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2FzcGVjdFR5cGVzOgthc3BlY3RfdHlwZRLzAQoQVXBk",
+            "YXRlQXNwZWN0VHlwZRIxLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5VcGRh",
+            "dGVBc3BlY3RUeXBlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24ijAHKQR8KCkFzcGVjdFR5cGUSEU9wZXJhdGlvbk1ldGFkYXRh2kEX",
+            "YXNwZWN0X3R5cGUsdXBkYXRlX21hc2uC0+STAkoyOy92MS97YXNwZWN0X3R5",
+            "cGUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FzcGVjdFR5cGVzLyp9",
+            "Ogthc3BlY3RfdHlwZRLRAQoQRGVsZXRlQXNwZWN0VHlwZRIxLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcGxleC52MS5EZWxldGVBc3BlY3RUeXBlUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ia8pBKgoVZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjEqLy92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FzcGVjdFR5cGVzLyp9",
+            "ErgBCg9MaXN0QXNwZWN0VHlwZXMSMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuTGlzdEFzcGVjdFR5cGVzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5MaXN0QXNwZWN0VHlwZXNSZXNwb25zZSJA2kEGcGFyZW50gtPk",
+            "kwIxEi8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hc3Bl",
+            "Y3RUeXBlcxKlAQoNR2V0QXNwZWN0VHlwZRIuLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5HZXRBc3BlY3RUeXBlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5Bc3BlY3RUeXBlIj7aQQRuYW1lgtPkkwIxEi8vdjEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hc3BlY3RUeXBlcy8qfRLxAQoQ",
+            "Q3JlYXRlRW50cnlHcm91cBIxLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5D",
+            "cmVhdGVFbnRyeUdyb3VwUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
+            "cGVyYXRpb24iigHKQR8KCkVudHJ5R3JvdXASEU9wZXJhdGlvbk1ldGFkYXRh",
+            "2kEhcGFyZW50LGVudHJ5X2dyb3VwLGVudHJ5X2dyb3VwX2lkgtPkkwI+Ii8v",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9lbnRyeUdyb3Vw",
+            "czoLZW50cnlfZ3JvdXAS8wEKEFVwZGF0ZUVudHJ5R3JvdXASMS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXBsZXgudjEuVXBkYXRlRW50cnlHcm91cFJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIowBykEfCgpFbnRyeUdyb3Vw",
+            "EhFPcGVyYXRpb25NZXRhZGF0YdpBF2VudHJ5X2dyb3VwLHVwZGF0ZV9tYXNr",
+            "gtPkkwJKMjsvdjEve2VudHJ5X2dyb3VwLm5hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9lbnRyeUdyb3Vwcy8qfToLZW50cnlfZ3JvdXAS0QEKEERlbGV0",
+            "ZUVudHJ5R3JvdXASMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGVsZXRl",
+            "RW50cnlHcm91cFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uImvKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0",
+            "YWRhdGHaQQRuYW1lgtPkkwIxKi8vdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9lbnRyeUdyb3Vwcy8qfRK4AQoPTGlzdEVudHJ5R3JvdXBzEjAu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RFbnRyeUdyb3Vwc1JlcXVl",
+            "c3QaMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdEVudHJ5R3JvdXBz",
+            "UmVzcG9uc2UiQNpBBnBhcmVudILT5JMCMRIvL3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn0vZW50cnlHcm91cHMSpQEKDUdldEVudHJ5R3Jv",
+            "dXASLi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuR2V0RW50cnlHcm91cFJl",
+            "cXVlc3QaJC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlHcm91cCI+",
+            "2kEEbmFtZYLT5JMCMRIvL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovZW50cnlHcm91cHMvKn0SvgEKC0NyZWF0ZUVudHJ5EiwuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwbGV4LnYxLkNyZWF0ZUVudHJ5UmVxdWVzdBofLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcGxleC52MS5FbnRyeSJg2kEVcGFyZW50LGVudHJ5LGVudHJ5",
+            "X2lkgtPkkwJCIjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2VudHJ5R3JvdXBzLyp9L2VudHJpZXM6BWVudHJ5EsEBCgtVcGRhdGVFbnRy",
+            "eRIsLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5VcGRhdGVFbnRyeVJlcXVl",
+            "c3QaHy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnkiY9pBEWVudHJ5",
+            "LHVwZGF0ZV9tYXNrgtPkkwJJMkAvdjEve2VudHJ5Lm5hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJpZXMvKip9OgVlbnRy",
+            "eRKnAQoLRGVsZXRlRW50cnkSLC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "RGVsZXRlRW50cnlSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
+            "LkVudHJ5IknaQQRuYW1lgtPkkwI8KjovdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJpZXMvKip9ErYBCgtMaXN0",
+            "RW50cmllcxIsLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0RW50cmll",
+            "c1JlcXVlc3QaLS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdEVudHJp",
+            "ZXNSZXNwb25zZSJK2kEGcGFyZW50gtPkkwI7EjkvdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyp9L2VudHJpZXMSoQEK",
+            "CEdldEVudHJ5EikuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldEVudHJ5",
+            "UmVxdWVzdBofLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeSJJ2kEE",
+            "bmFtZYLT5JMCPBI6L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "ZW50cnlHcm91cHMvKi9lbnRyaWVzLyoqfRKTAQoLTG9va3VwRW50cnkSLC5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTG9va3VwRW50cnlSZXF1ZXN0Gh8u",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5IjWC0+STAi8SLS92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpsb29rdXBFbnRyeRK2AQoN",
+            "U2VhcmNoRW50cmllcxIuLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TZWFy",
+            "Y2hFbnRyaWVzUmVxdWVzdBovLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5T",
+            "ZWFyY2hFbnRyaWVzUmVzcG9uc2UiRNpBCm5hbWUscXVlcnmC0+STAjEiLy92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpzZWFyY2hFbnRyaWVz",
+            "EvgBChFDcmVhdGVNZXRhZGF0YUpvYhIyLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5DcmVhdGVNZXRhZGF0YUpvYlJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uIo8BykEgCgtNZXRhZGF0YUpvYhIRT3BlcmF0aW9u",
+            "TWV0YWRhdGHaQSNwYXJlbnQsbWV0YWRhdGFfam9iLG1ldGFkYXRhX2pvYl9p",
+            "ZILT5JMCQCIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "bWV0YWRhdGFKb2JzOgxtZXRhZGF0YV9qb2ISqQEKDkdldE1ldGFkYXRhSm9i",
+            "Ei8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldE1ldGFkYXRhSm9iUmVx",
+            "dWVzdBolLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYiI/",
+            "2kEEbmFtZYLT5JMCMhIwL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovbWV0YWRhdGFKb2JzLyp9ErwBChBMaXN0TWV0YWRhdGFKb2JzEjEuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RNZXRhZGF0YUpvYnNSZXF1ZXN0",
+            "GjIuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RNZXRhZGF0YUpvYnNS",
+            "ZXNwb25zZSJB2kEGcGFyZW50gtPkkwIyEjAvdjEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qfS9tZXRhZGF0YUpvYnMSqgEKEUNhbmNlbE1ldGFk",
+            "YXRhSm9iEjIuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNhbmNlbE1ldGFk",
+            "YXRhSm9iUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJJ2kEEbmFt",
+            "ZYLT5JMCPCI3L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbWV0",
+            "YWRhdGFKb2JzLyp9OmNhbmNlbDoBKhpLykEXZGF0YXBsZXguZ29vZ2xlYXBp",
+            "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
+            "LXBsYXRmb3JtQrwBChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxQgxD",
+            "YXRhbG9nUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcGxleC9h",
+            "cGl2MS9kYXRhcGxleHBiO2RhdGFwbGV4cGKqAhhHb29nbGUuQ2xvdWQuRGF0",
+            "YXBsZXguVjHKAhhHb29nbGVcQ2xvdWRcRGF0YXBsZXhcVjHqAhtHb29nbGU6",
+            "OkNsb3VkOjpEYXRhcGxleDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ServiceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ServiceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataplex.V1.EntryView), typeof(global::Google.Cloud.Dataplex.V1.TransferStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.AspectType), global::Google.Cloud.Dataplex.V1.AspectType.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "DisplayName", "Labels", "Etag", "Authorization", "MetadataTemplate", "TransferStatus" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.AspectType.Types.Authorization), global::Google.Cloud.Dataplex.V1.AspectType.Types.Authorization.Parser, new[]{ "AlternateUsePermission" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate), global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate.Parser, new[]{ "Index", "Name", "Type", "RecordFields", "EnumValues", "MapItems", "ArrayItems", "TypeId", "TypeRef", "Constraints", "Annotations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate.Types.EnumValue), global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate.Types.EnumValue.Parser, new[]{ "Index", "Name", "Deprecated" }, null, null, null, null),
@@ -354,7 +439,7 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.EntryType.Types.Authorization), global::Google.Cloud.Dataplex.V1.EntryType.Types.Authorization.Parser, new[]{ "AlternateUsePermission" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Aspect), global::Google.Cloud.Dataplex.V1.Aspect.Parser, new[]{ "AspectType", "Path", "CreateTime", "UpdateTime", "Data", "AspectSource" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.AspectSource), global::Google.Cloud.Dataplex.V1.AspectSource.Parser, new[]{ "CreateTime", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.AspectSource), global::Google.Cloud.Dataplex.V1.AspectSource.Parser, new[]{ "CreateTime", "UpdateTime", "DataVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Entry), global::Google.Cloud.Dataplex.V1.Entry.Parser, new[]{ "Name", "EntryType", "CreateTime", "UpdateTime", "Aspects", "ParentEntry", "FullyQualifiedName", "EntrySource" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.EntrySource), global::Google.Cloud.Dataplex.V1.EntrySource.Parser, new[]{ "Resource", "System", "Platform", "DisplayName", "Description", "Labels", "Ancestors", "CreateTime", "UpdateTime", "Location" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.EntrySource.Types.Ancestor), global::Google.Cloud.Dataplex.V1.EntrySource.Types.Ancestor.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             null, }),
@@ -385,7 +470,17 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.LookupEntryRequest), global::Google.Cloud.Dataplex.V1.LookupEntryRequest.Parser, new[]{ "Name", "View", "AspectTypes", "Paths", "Entry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesRequest), global::Google.Cloud.Dataplex.V1.SearchEntriesRequest.Parser, new[]{ "Name", "Query", "PageSize", "PageToken", "OrderBy", "Scope" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesResult), global::Google.Cloud.Dataplex.V1.SearchEntriesResult.Parser, new[]{ "LinkedResource", "DataplexEntry", "Snippets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesResult.Types.Snippets), global::Google.Cloud.Dataplex.V1.SearchEntriesResult.Types.Snippets.Parser, new[]{ "DataplexEntry" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesResponse), global::Google.Cloud.Dataplex.V1.SearchEntriesResponse.Parser, new[]{ "Results", "TotalSize", "NextPageToken", "Unreachable" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesResponse), global::Google.Cloud.Dataplex.V1.SearchEntriesResponse.Parser, new[]{ "Results", "TotalSize", "NextPageToken", "Unreachable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ImportItem), global::Google.Cloud.Dataplex.V1.ImportItem.Parser, new[]{ "Entry", "UpdateMask", "AspectKeys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest), global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest.Parser, new[]{ "Parent", "MetadataJob", "MetadataJobId", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest), global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest), global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse), global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse.Parser, new[]{ "MetadataJobs", "NextPageToken", "UnreachableLocations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest), global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob), global::Google.Cloud.Dataplex.V1.MetadataJob.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Labels", "Type", "ImportSpec", "ImportResult", "Status" }, new[]{ "Spec", "Result" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult.Parser, new[]{ "DeletedEntries", "UpdatedEntries", "CreatedEntries", "UnchangedEntries", "RecreatedEntries", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Parser, new[]{ "SourceStorageUri", "SourceCreateTime", "Scope", "EntrySyncMode", "AspectSyncMode", "LogLevel" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode), typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope.Parser, new[]{ "EntryGroups", "EntryTypes", "AspectTypes" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Parser, new[]{ "State", "Message", "CompletionPercent", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State) }, null, null),
+            null, })
           }));
     }
     #endregion
@@ -411,11 +506,11 @@ namespace Google.Cloud.Dataplex.V1 {
     [pbr::OriginalName("FULL")] Full = 2,
     /// <summary>
     /// Returns aspects matching custom fields in GetEntryRequest. If the number of
-    /// aspects would exceed 100, the first 100 will be returned.
+    /// aspects exceeds 100, the first 100 will be returned.
     /// </summary>
     [pbr::OriginalName("CUSTOM")] Custom = 3,
     /// <summary>
-    /// Returns all aspects. If the number of aspects would exceed 100, the first
+    /// Returns all aspects. If the number of aspects exceeds 100, the first
     /// 100 will be returned.
     /// </summary>
     [pbr::OriginalName("ALL")] All = 4,
@@ -448,8 +543,8 @@ namespace Google.Cloud.Dataplex.V1 {
 
   #region Messages
   /// <summary>
-  /// Aspect Type is a template for creating Aspects, and represents the
-  /// JSON-schema for a given Entry, e.g., BigQuery Table Schema.
+  /// AspectType is a template for creating Aspects, and represents the
+  /// JSON-schema for a given Entry, for example, BigQuery Table Schema.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AspectType : pb::IMessage<AspectType>
@@ -526,9 +621,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. System generated globally unique ID for the AspectType. This
-    /// ID will be different if the AspectType is deleted and re-created with the
-    /// same name.
+    /// Output only. System generated globally unique ID for the AspectType.
+    /// If you delete and recreate the AspectType with the same name, then this ID
+    /// will be different.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -617,9 +712,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// This checksum is computed by the server based on the value of other
-    /// fields, and may be sent on update and delete requests to ensure the
-    /// client has an up-to-date value before proceeding.
+    /// The service computes this checksum. The client may send it on update and
+    /// delete requests to ensure it has an up-to-date value before proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -634,7 +728,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int AuthorizationFieldNumber = 52;
     private global::Google.Cloud.Dataplex.V1.AspectType.Types.Authorization authorization_;
     /// <summary>
-    /// Immutable. Authorization defined for this type.
+    /// Immutable. Defines the Authorization for this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1079,7 +1173,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Autorization for an Aspect Type.
+      /// Autorization for an AspectType.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Authorization : pb::IMessage<Authorization>
@@ -1130,9 +1224,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int AlternateUsePermissionFieldNumber = 1;
         private string alternateUsePermission_ = "";
         /// <summary>
-        /// Immutable. The IAM permission grantable on the Entry Group to allow
-        /// access to instantiate Aspects of Dataplex owned Aspect Types, only
-        /// settable for Dataplex owned Types.
+        /// Immutable. The IAM permission grantable on the EntryGroup to allow access
+        /// to instantiate Aspects of Dataplex owned AspectTypes, only settable for
+        /// Dataplex owned Types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1277,7 +1371,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// MetadataTemplate definition for AspectType
+      /// MetadataTemplate definition for an AspectType.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MetadataTemplate : pb::IMessage<MetadataTemplate>
@@ -1374,10 +1468,22 @@ namespace Google.Cloud.Dataplex.V1 {
         private string type_ = "";
         /// <summary>
         /// Required. The datatype of this field. The following values are supported:
-        /// Primitive types (string, integer, boolean, double, datetime); datetime
-        /// must be of the format RFC3339 UTC "Zulu" (Examples:
-        /// "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z"). Complex
-        /// types (enum, array, map, record).
+        ///
+        /// Primitive types:
+        ///
+        /// * string
+        /// * integer
+        /// * boolean
+        /// * double
+        /// * datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
+        /// "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z").
+        ///
+        /// Complex types:
+        ///
+        /// * enum
+        /// * array
+        /// * map
+        /// * record
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1394,8 +1500,8 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate> recordFields_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate>();
         /// <summary>
-        /// Optional. Field definition, needs to be specified if the type is record.
-        /// Defines the nested fields.
+        /// Optional. Field definition. You must specify it if the type is record. It
+        /// defines the nested fields.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1409,7 +1515,7 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate.Types.EnumValue.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate.Types.EnumValue> enumValues_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate.Types.EnumValue>();
         /// <summary>
-        /// Optional. The list of values for an enum type. Needs to be defined if the
+        /// Optional. The list of values for an enum type. You must define it if the
         /// type is enum.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1422,11 +1528,11 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int MapItemsFieldNumber = 10;
         private global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate mapItems_;
         /// <summary>
-        /// Optional. map_items needs to be set if the type is map. map_items can
-        /// refer to a primitive field or a complex (record only) field. To specify a
-        /// primitive field, just name and type needs to be set in the nested
+        /// Optional. If the type is map, set map_items. map_items can refer to a
+        /// primitive field or a complex (record only) field. To specify a primitive
+        /// field, you only need to set name and type in the nested
         /// MetadataTemplate. The recommended value for the name field is item, as
-        /// this is not used in the actual payload.
+        /// this isn't used in the actual payload.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1441,11 +1547,11 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int ArrayItemsFieldNumber = 11;
         private global::Google.Cloud.Dataplex.V1.AspectType.Types.MetadataTemplate arrayItems_;
         /// <summary>
-        /// Optional. array_items needs to be set if the type is array. array_items
-        /// can refer to a primitive field or a complex (record only) field. To
-        /// specify a primitive field, just name and type needs to be set in the
-        /// nested MetadataTemplate. The recommended value for the name field is
-        /// item, as this is not used in the actual payload.
+        /// Optional. If the type is array, set array_items. array_items can refer
+        /// to a primitive field or a complex (record only) field. To specify a
+        /// primitive field, you only need to set name and type in the nested
+        /// MetadataTemplate. The recommended value for the name field is item, as
+        /// this isn't used in the actual payload.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1460,9 +1566,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int TypeIdFieldNumber = 12;
         private string typeId_ = "";
         /// <summary>
-        /// Optional. Id can be used if this definition of the field needs to be
-        /// reused later. Id needs to be unique across the entire template. Id can
-        /// only be specified if the field type is record.
+        /// Optional. You can use type id if this definition of the field needs to be
+        /// reused later. The type id must be unique across the entire template. You
+        /// can only specify it if the field type is record.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1477,9 +1583,9 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int TypeRefFieldNumber = 13;
         private string typeRef_ = "";
         /// <summary>
-        /// Optional. A reference to another field definition (instead of an inline
+        /// Optional. A reference to another field definition (not an inline
         /// definition). The value must be equal to the value of an id field defined
-        /// elsewhere in the MetadataTemplate. Only fields with type as record can
+        /// elsewhere in the MetadataTemplate. Only fields with record type can
         /// refer to other fields.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1914,7 +2020,7 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Definition of Enumvalue (to be used by enum fields)
+          /// Definition of Enumvalue, to be used for enum fields.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class EnumValue : pb::IMessage<EnumValue>
@@ -1967,7 +2073,7 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int IndexFieldNumber = 1;
             private int index_;
             /// <summary>
-            /// Required. Index for the enum. Cannot be modified.
+            /// Required. Index for the enum value. It can't be modified.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1983,7 +2089,7 @@ namespace Google.Cloud.Dataplex.V1 {
             private string name_ = "";
             /// <summary>
             /// Required. Name of the enumvalue. This is the actual value that the
-            /// aspect will contain.
+            /// aspect can contain.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1998,8 +2104,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int DeprecatedFieldNumber = 3;
             private string deprecated_ = "";
             /// <summary>
-            /// Optional. Optional deprecation message to be set if an enum value needs
-            /// to be deprecated.
+            /// Optional. You can set this message if you need to deprecate an enum
+            /// value.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2192,7 +2298,7 @@ namespace Google.Cloud.Dataplex.V1 {
           }
 
           /// <summary>
-          /// Definition of the constraints of a field
+          /// Definition of the constraints of a field.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Constraints : pb::IMessage<Constraints>
@@ -2243,7 +2349,7 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int RequiredFieldNumber = 1;
             private bool required_;
             /// <summary>
-            /// Optional. Marks this as an optional/required field.
+            /// Optional. Marks this field as optional or required.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2388,7 +2494,7 @@ namespace Google.Cloud.Dataplex.V1 {
           }
 
           /// <summary>
-          /// Definition of the annotations of a field
+          /// Definition of the annotations of a field.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Annotations : pb::IMessage<Annotations>
@@ -2444,8 +2550,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int DeprecatedFieldNumber = 1;
             private string deprecated_ = "";
             /// <summary>
-            /// Optional. Marks a field as deprecated, a deprecation message can be
-            /// included.
+            /// Optional. Marks a field as deprecated. You can include a deprecation
+            /// message.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2460,7 +2566,7 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int DisplayNameFieldNumber = 2;
             private string displayName_ = "";
             /// <summary>
-            /// Optional. Specify a displayname for a field.
+            /// Optional. Display name for a field.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2475,7 +2581,7 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int DescriptionFieldNumber = 3;
             private string description_ = "";
             /// <summary>
-            /// Optional. Specify a description for a field
+            /// Optional. Description for a field.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2490,8 +2596,8 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int DisplayOrderFieldNumber = 4;
             private int displayOrder_;
             /// <summary>
-            /// Optional. Specify a display order for a field. Display order can be
-            /// used to reorder where a field is rendered
+            /// Optional. Display order for a field. You can use this to reorder where
+            /// a field is rendered.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2506,10 +2612,12 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int StringTypeFieldNumber = 6;
             private string stringType_ = "";
             /// <summary>
-            /// Optional. String Type annotations can be used to specify special
-            /// meaning to string fields. The following values are supported: richText:
-            /// The field must be interpreted as a rich text field. url: A fully
-            /// qualified url link. resource: A service qualified resource reference.
+            /// Optional. You can use String Type annotations to specify special
+            /// meaning to string fields. The following values are supported:
+            ///
+            /// * richText: The field must be interpreted as a rich text field.
+            /// * url: A fully qualified URL link.
+            /// * resource: A service qualified resource reference.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2526,8 +2634,8 @@ namespace Google.Cloud.Dataplex.V1 {
                 = pb::FieldCodec.ForString(58);
             private readonly pbc::RepeatedField<string> stringValues_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// Optional. Suggested hints for string fields. These can be used to
-            /// suggest values to users, through an UI for example.
+            /// Optional. Suggested hints for string fields. You can use them to
+            /// suggest values to users through console.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2848,8 +2956,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The relative resource name of the EntryGroup, of the form:
-    /// projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+    /// Output only. The relative resource name of the EntryGroup, in the format
+    /// projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2864,9 +2972,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. System generated globally unique ID for the EntryGroup. This
-    /// ID will be different if the EntryGroup is deleted and re-created with the
-    /// same name.
+    /// Output only. System generated globally unique ID for the EntryGroup. If you
+    /// delete and recreate the EntryGroup with the same name, this ID will be
+    /// different.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2955,9 +3063,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// This checksum is computed by the server based on the value of other
-    /// fields, and may be sent on update and delete requests to ensure the
-    /// client has an up-to-date value before proceeding.
+    /// This checksum is computed by the service, and might be sent on update and
+    /// delete requests to ensure the client has an up-to-date value before
+    /// proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3488,9 +3596,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. This checksum is computed by the server based on the value of
-    /// other fields, and may be sent on update and delete requests to ensure the
-    /// client has an up-to-date value before proceeding.
+    /// Optional. This checksum is computed by the service, and might be sent on
+    /// update and delete requests to ensure the client has an up-to-date value
+    /// before proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3507,7 +3615,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForString(74);
     private readonly pbc::RepeatedField<string> typeAliases_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. Indicates the class this Entry Type belongs to, for example,
+    /// Optional. Indicates the classes this Entry Type belongs to, for example,
     /// TABLE, DATABASE, MODEL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4511,7 +4619,6 @@ namespace Google.Cloud.Dataplex.V1 {
     private global::Google.Protobuf.WellKnownTypes.Struct data_;
     /// <summary>
     /// Required. The content of the aspect, according to its aspect type schema.
-    /// This will replace `content`.
     /// The maximum size of the field is 120KB (encoded as UTF-8).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4526,6 +4633,9 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Field number for the "aspect_source" field.</summary>
     public const int AspectSourceFieldNumber = 9;
     private global::Google.Cloud.Dataplex.V1.AspectSource aspectSource_;
+    /// <summary>
+    /// Optional. Information related to the source system of the aspect.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataplex.V1.AspectSource AspectSource {
@@ -4825,8 +4935,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// AspectSource contains source system related information for the
-  /// aspect.
+  /// Information related to the source system of the aspect.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AspectSource : pb::IMessage<AspectSource>
@@ -4865,6 +4974,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public AspectSource(AspectSource other) : this() {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      dataVersion_ = other.dataVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4878,7 +4988,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int CreateTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// The create time of the aspect in the source system.
+    /// The time the aspect was created in the source system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4893,7 +5003,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UpdateTimeFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// The update time of the aspect in the source system.
+    /// The time the aspect was last updated in the source system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4901,6 +5011,23 @@ namespace Google.Cloud.Dataplex.V1 {
       get { return updateTime_; }
       set {
         updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_version" field.</summary>
+    public const int DataVersionFieldNumber = 12;
+    private string dataVersion_ = "";
+    /// <summary>
+    /// The version of the data format used to produce this data. This field is
+    /// used to indicated when the underlying data format changes (e.g., schema
+    /// modifications, changes to the source URL format definition, etc).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataVersion {
+      get { return dataVersion_; }
+      set {
+        dataVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4921,6 +5048,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (DataVersion != other.DataVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4930,6 +5058,7 @@ namespace Google.Cloud.Dataplex.V1 {
       int hash = 1;
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (DataVersion.Length != 0) hash ^= DataVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4956,6 +5085,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(UpdateTime);
       }
+      if (DataVersion.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(DataVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4974,6 +5107,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(UpdateTime);
       }
+      if (DataVersion.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(DataVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4989,6 +5126,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (DataVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5013,6 +5153,9 @@ namespace Google.Cloud.Dataplex.V1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.DataVersion.Length != 0) {
+        DataVersion = other.DataVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5041,6 +5184,10 @@ namespace Google.Cloud.Dataplex.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 98: {
+            DataVersion = input.ReadString();
             break;
           }
         }
@@ -5072,6 +5219,10 @@ namespace Google.Cloud.Dataplex.V1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 98: {
+            DataVersion = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -5080,7 +5231,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// An entry is a representation of a data asset which can be described by
+  /// An entry is a representation of a data resource that can be described by
   /// various metadata.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -5139,8 +5290,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The relative resource name of the Entry, of the form:
-    /// projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+    /// Identifier. The relative resource name of the entry, in the format
+    /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5155,8 +5306,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EntryTypeFieldNumber = 4;
     private string entryType_ = "";
     /// <summary>
-    /// Required. Immutable. The resource name of the EntryType used to create this
-    /// Entry.
+    /// Required. Immutable. The relative resource name of the entry type that was
+    /// used to create this entry, in the format
+    /// `projects/{project_id_or_number}/locations/{location_id}/entryTypes/{entry_type_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5171,7 +5323,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int CreateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time when the Entry was created.
+    /// Output only. The time when the entry was created in Dataplex.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5186,7 +5338,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UpdateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time when the Entry was last updated.
+    /// Output only. The time when the entry was last updated in Dataplex.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5203,12 +5355,14 @@ namespace Google.Cloud.Dataplex.V1 {
         = new pbc::MapField<string, global::Google.Cloud.Dataplex.V1.Aspect>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dataplex.V1.Aspect.Parser), 74);
     private readonly pbc::MapField<string, global::Google.Cloud.Dataplex.V1.Aspect> aspects_ = new pbc::MapField<string, global::Google.Cloud.Dataplex.V1.Aspect>();
     /// <summary>
-    /// Optional. The Aspects attached to the Entry.
-    /// The format for the key can be one of the following:
-    /// 1. {projectId}.{locationId}.{aspectTypeId} (if the aspect is attached
-    /// directly to the entry)
-    /// 2. {projectId}.{locationId}.{aspectTypeId}@{path} (if the aspect is
-    /// attached to an entry's path)
+    /// Optional. The aspects that are attached to the entry. Depending on how the
+    /// aspect is attached to the entry, the format of the aspect key can be one of
+    /// the following:
+    ///
+    /// * If the aspect is attached directly to the entry:
+    /// `{project_id_or_number}.{location_id}.{aspect_type_id}`
+    /// * If the aspect is attached to an entry's path:
+    /// `{project_id_or_number}.{location_id}.{aspect_type_id}@{path}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5235,7 +5389,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int FullyQualifiedNameFieldNumber = 12;
     private string fullyQualifiedName_ = "";
     /// <summary>
-    /// Optional. A name for the entry that can reference it in an external system.
+    /// Optional. A name for the entry that can be referenced by an external
+    /// system. For more information, see [Fully qualified
+    /// names](https://cloud.google.com/data-catalog/docs/fully-qualified-names).
     /// The maximum size of the field is 4000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5251,7 +5407,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EntrySourceFieldNumber = 15;
     private global::Google.Cloud.Dataplex.V1.EntrySource entrySource_;
     /// <summary>
-    /// Optional. Source system related information for an entry.
+    /// Optional. Information related to the source system of the data resource
+    /// that is represented by the entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5581,8 +5738,8 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// EntrySource contains source system related information for the
-  /// entry.
+  /// Information related to the source system of the data resource that is
+  /// represented by the entry.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntrySource : pb::IMessage<EntrySource>
@@ -5643,7 +5800,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string resource_ = "";
     /// <summary>
     /// The name of the resource in the source system.
-    /// The maximum size of the field is 4000 characters.
+    /// Maximum length is 4,000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5659,7 +5816,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string system_ = "";
     /// <summary>
     /// The name of the source system.
-    /// The maximum size of the field is 64 characters.
+    /// Maximum length is 64 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5675,7 +5832,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string platform_ = "";
     /// <summary>
     /// The platform containing the source system.
-    /// The maximum size of the field is 64 characters.
+    /// Maximum length is 64 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5690,8 +5847,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DisplayNameFieldNumber = 5;
     private string displayName_ = "";
     /// <summary>
-    /// User friendly display name.
-    /// The maximum size of the field is 500 characters.
+    /// A user-friendly display name.
+    /// Maximum length is 500 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5706,8 +5863,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DescriptionFieldNumber = 6;
     private string description_ = "";
     /// <summary>
-    /// Description of the Entry.
-    /// The maximum size of the field is 2000 characters.
+    /// A description of the data resource.
+    /// Maximum length is 2,000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5739,7 +5896,8 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Dataplex.V1.EntrySource.Types.Ancestor.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntrySource.Types.Ancestor> ancestors_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntrySource.Types.Ancestor>();
     /// <summary>
-    /// Immutable. The ancestors of the Entry in the source system.
+    /// Immutable. The entries representing the ancestors of the data resource in
+    /// the source system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5751,7 +5909,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int CreateTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// The create time of the resource in the source system.
+    /// The time when the resource was created in the source system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5766,7 +5924,10 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UpdateTimeFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// The update time of the resource in the source system.
+    /// The time when the resource was last updated in the source system. If the
+    /// entry exists in the system and its `EntrySource` has `update_time`
+    /// populated, further updates to the `EntrySource` of the entry must provide
+    /// incremental updates to its `update_time`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5781,10 +5942,10 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int LocationFieldNumber = 12;
     private string location_ = "";
     /// <summary>
-    /// Output only. Location of the resource in the source system. Entry will be
-    /// searchable by this location. By default, this should match the location of
-    /// the EntryGroup containing this entry. A different value allows capturing
-    /// source location for data external to GCP.
+    /// Output only. Location of the resource in the source system. You can search
+    /// the entry by this location. By default, this should match the location of
+    /// the entry group containing this entry. A different value allows capturing
+    /// the source location for data external to Google Cloud.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6146,8 +6307,8 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Ancestor contains information about individual items in the hierarchy of
-      /// an Entry.
+      /// Information about individual items in the hierarchy that is associated with
+      /// the data resource.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Ancestor : pb::IMessage<Ancestor>
@@ -6388,7 +6549,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Create EntryGroup Request
+  /// Create EntryGroup Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEntryGroupRequest : pb::IMessage<CreateEntryGroupRequest>
@@ -6474,7 +6635,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EntryGroupFieldNumber = 3;
     private global::Google.Cloud.Dataplex.V1.EntryGroup entryGroup_;
     /// <summary>
-    /// Required. EntryGroup Resource
+    /// Required. EntryGroup Resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6489,8 +6650,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ValidateOnlyFieldNumber = 4;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Only validate the request, but do not perform mutations.
-    /// The default is false.
+    /// Optional. The service validates the request without performing any
+    /// mutations. The default is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6716,7 +6877,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Update EntryGroup Request
+  /// Update EntryGroup Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEntryGroupRequest : pb::IMessage<UpdateEntryGroupRequest>
@@ -6769,7 +6930,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EntryGroupFieldNumber = 1;
     private global::Google.Cloud.Dataplex.V1.EntryGroup entryGroup_;
     /// <summary>
-    /// Required. EntryGroup Resource
+    /// Required. EntryGroup Resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6799,8 +6960,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ValidateOnlyFieldNumber = 3;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Only validate the request, but do not perform mutations.
-    /// The default is false.
+    /// Optional. The service validates the request, without performing any
+    /// mutations. The default is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7011,7 +7172,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Delele EntryGroup Request
+  /// Delete EntryGroup Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEntryGroupRequest : pb::IMessage<DeleteEntryGroupRequest>
@@ -7080,7 +7241,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string etag_ = "";
     /// <summary>
     /// Optional. If the client provided etag value does not match the current etag
-    /// value, the DeleteEntryGroupRequest method returns an ABORTED error response
+    /// value, the DeleteEntryGroupRequest method returns an ABORTED error
+    /// response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7306,7 +7468,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. The resource name of the entryGroup location, of the form:
     /// `projects/{project_number}/locations/{location_id}`
-    /// where `location_id` refers to a GCP region.
+    /// where `location_id` refers to a Google Cloud region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7322,9 +7484,9 @@ namespace Google.Cloud.Dataplex.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Maximum number of EntryGroups to return. The service may return
-    /// fewer than this value. If unspecified, at most 10 EntryGroups will be
-    /// returned. The maximum value is 1000; values above 1000 will be coerced to
-    /// 1000.
+    /// fewer than this value. If unspecified, the service returns at most 10
+    /// EntryGroups. The maximum value is 1000; values above 1000 will be coerced
+    /// to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7341,8 +7503,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Optional. Page token received from a previous `ListEntryGroups` call.
     /// Provide this to retrieve the subsequent page. When paginating, all other
-    /// parameters provided to `ListEntryGroups` must match the call that provided
-    /// the page token.
+    /// parameters you provide to `ListEntryGroups` must match the call that
+    /// provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7613,7 +7775,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// List ListEntryGroups response.
+  /// List entry groups response.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntryGroupsResponse : pb::IMessage<ListEntryGroupsResponse>
@@ -7668,7 +7830,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataplex.V1.EntryGroup.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntryGroup> entryGroups_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntryGroup>();
     /// <summary>
-    /// ListEntryGroups under the given parent location.
+    /// Entry groups under the given parent location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7698,7 +7860,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> unreachableLocations_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Locations that could not be reached.
+    /// Locations that the service couldn't reach.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8065,7 +8227,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Create EntryType Request
+  /// Create EntryType Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEntryTypeRequest : pb::IMessage<CreateEntryTypeRequest>
@@ -8121,7 +8283,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. The resource name of the EntryType, of the form:
     /// projects/{project_number}/locations/{location_id}
-    /// where `location_id` refers to a GCP region.
+    /// where `location_id` refers to a Google Cloud region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8151,7 +8313,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EntryTypeFieldNumber = 3;
     private global::Google.Cloud.Dataplex.V1.EntryType entryType_;
     /// <summary>
-    /// Required. EntryType Resource
+    /// Required. EntryType Resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8166,8 +8328,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ValidateOnlyFieldNumber = 4;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Only validate the request, but do not perform mutations.
-    /// The default is false.
+    /// Optional. The service validates the request without performing any
+    /// mutations. The default is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8393,7 +8555,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Update EntryType Request
+  /// Update EntryType Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEntryTypeRequest : pb::IMessage<UpdateEntryTypeRequest>
@@ -8446,7 +8608,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EntryTypeFieldNumber = 1;
     private global::Google.Cloud.Dataplex.V1.EntryType entryType_;
     /// <summary>
-    /// Required. EntryType Resource
+    /// Required. EntryType Resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8476,8 +8638,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ValidateOnlyFieldNumber = 3;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Only validate the request, but do not perform mutations.
-    /// The default is false.
+    /// Optional. The service validates the request without performing any
+    /// mutations. The default is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8688,7 +8850,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Delele EntryType Request
+  /// Delele EntryType Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEntryTypeRequest : pb::IMessage<DeleteEntryTypeRequest>
@@ -8757,7 +8919,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string etag_ = "";
     /// <summary>
     /// Optional. If the client provided etag value does not match the current etag
-    /// value, the DeleteEntryTypeRequest method returns an ABORTED error response
+    /// value, the DeleteEntryTypeRequest method returns an ABORTED error response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8983,7 +9145,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. The resource name of the EntryType location, of the form:
     /// `projects/{project_number}/locations/{location_id}`
-    /// where `location_id` refers to a GCP region.
+    /// where `location_id` refers to a Google Cloud region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8999,8 +9161,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Maximum number of EntryTypes to return. The service may return
-    /// fewer than this value. If unspecified, at most 10 EntryTypes will be
-    /// returned. The maximum value is 1000; values above 1000 will be coerced to
+    /// fewer than this value. If unspecified, the service returns at most 10
+    /// EntryTypes. The maximum value is 1000; values above 1000 will be coerced to
     /// 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9018,8 +9180,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Optional. Page token received from a previous `ListEntryTypes` call.
     /// Provide this to retrieve the subsequent page. When paginating, all other
-    /// parameters provided to `ListEntryTypes` must match the call that provided
-    /// the page token.
+    /// parameters you provided to `ListEntryTypes` must match the call that
+    /// provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9035,12 +9197,13 @@ namespace Google.Cloud.Dataplex.V1 {
     private string filter_ = "";
     /// <summary>
     /// Optional. Filter request. Filters are case-sensitive.
-    /// The following formats are supported:
+    /// The service supports the following formats:
     ///
-    /// labels.key1 = "value1"
-    /// labels:key1
-    /// name = "value"
-    /// These restrictions can be coinjoined with AND, OR and NOT conjunctions.
+    /// * labels.key1 = "value1"
+    /// * labels:key1
+    /// * name = "value"
+    ///
+    /// These restrictions can be conjoined with AND, OR, and NOT conjunctions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9055,7 +9218,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. Order by fields (`name` or `create_time`) for the result.
+    /// Optional. Orders the result by `name` or `create_time` fields.
     /// If not specified, the ordering is undefined.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9297,7 +9460,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// List EntryTypes response
+  /// List EntryTypes response.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntryTypesResponse : pb::IMessage<ListEntryTypesResponse>
@@ -9352,7 +9515,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataplex.V1.EntryType.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntryType> entryTypes_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntryType>();
     /// <summary>
-    /// ListEntryTypes under the given parent location.
+    /// EntryTypes under the given parent location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9382,7 +9545,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> unreachableLocations_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Locations that could not be reached.
+    /// Locations that the service couldn't reach.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9552,7 +9715,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Get EntryType request
+  /// Get EntryType request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEntryTypeRequest : pb::IMessage<GetEntryTypeRequest>
@@ -9749,7 +9912,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Create AspectType Request
+  /// Create AspectType Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAspectTypeRequest : pb::IMessage<CreateAspectTypeRequest>
@@ -9805,7 +9968,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. The resource name of the AspectType, of the form:
     /// projects/{project_number}/locations/{location_id}
-    /// where `location_id` refers to a GCP region.
+    /// where `location_id` refers to a Google Cloud region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9835,7 +9998,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int AspectTypeFieldNumber = 3;
     private global::Google.Cloud.Dataplex.V1.AspectType aspectType_;
     /// <summary>
-    /// Required. AspectType Resource
+    /// Required. AspectType Resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9850,8 +10013,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ValidateOnlyFieldNumber = 4;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Only validate the request, but do not perform mutations.
-    /// The default is false.
+    /// Optional. The service validates the request without performing any
+    /// mutations. The default is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10372,7 +10535,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Delele AspectType Request
+  /// Delele AspectType Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAspectTypeRequest : pb::IMessage<DeleteAspectTypeRequest>
@@ -10441,7 +10604,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string etag_ = "";
     /// <summary>
     /// Optional. If the client provided etag value does not match the current etag
-    /// value, the DeleteAspectTypeRequest method returns an ABORTED error response
+    /// value, the DeleteAspectTypeRequest method returns an ABORTED error
+    /// response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10610,7 +10774,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// List AspectTypes request
+  /// List AspectTypes request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAspectTypesRequest : pb::IMessage<ListAspectTypesRequest>
@@ -10667,7 +10831,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. The resource name of the AspectType location, of the form:
     /// `projects/{project_number}/locations/{location_id}`
-    /// where `location_id` refers to a GCP region.
+    /// where `location_id` refers to a Google Cloud region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10683,9 +10847,9 @@ namespace Google.Cloud.Dataplex.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Maximum number of AspectTypes to return. The service may return
-    /// fewer than this value. If unspecified, at most 10 AspectTypes will be
-    /// returned. The maximum value is 1000; values above 1000 will be coerced to
-    /// 1000.
+    /// fewer than this value. If unspecified, the service returns at most 10
+    /// AspectTypes. The maximum value is 1000; values above 1000 will be coerced
+    /// to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10702,8 +10866,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Optional. Page token received from a previous `ListAspectTypes` call.
     /// Provide this to retrieve the subsequent page. When paginating, all other
-    /// parameters provided to `ListAspectTypes` must match the call that provided
-    /// the page token.
+    /// parameters you provide to `ListAspectTypes` must match the call that
+    /// provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10719,12 +10883,13 @@ namespace Google.Cloud.Dataplex.V1 {
     private string filter_ = "";
     /// <summary>
     /// Optional. Filter request. Filters are case-sensitive.
-    /// The following formats are supported:
+    /// The service supports the following formats:
     ///
-    /// labels.key1 = "value1"
-    /// labels:key1
-    /// name = "value"
-    /// These restrictions can be coinjoined with AND, OR and NOT conjunctions.
+    /// * labels.key1 = "value1"
+    /// * labels:key1
+    /// * name = "value"
+    ///
+    /// These restrictions can be conjoined with AND, OR, and NOT conjunctions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10739,7 +10904,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. Order by fields (`name` or `create_time`) for the result.
+    /// Optional. Orders the result by `name` or `create_time` fields.
     /// If not specified, the ordering is undefined.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10981,7 +11146,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// List AspectTypes response
+  /// List AspectTypes response.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAspectTypesResponse : pb::IMessage<ListAspectTypesResponse>
@@ -11036,7 +11201,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataplex.V1.AspectType.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.AspectType> aspectTypes_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.AspectType>();
     /// <summary>
-    /// ListAspectTypes under the given parent location.
+    /// AspectTypes under the given parent location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11066,7 +11231,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> unreachableLocations_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Locations that could not be reached.
+    /// Locations that the service couldn't reach.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11236,7 +11401,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Get AspectType request
+  /// Get AspectType request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAspectTypeRequest : pb::IMessage<GetAspectTypeRequest>
@@ -11432,6 +11597,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
   }
 
+  /// <summary>
+  /// Create Entry request.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEntryRequest : pb::IMessage<CreateEntryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11501,20 +11669,21 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. Entry identifier. It has to be unique within an Entry Group.
     ///
-    /// Entries corresponding to Google Cloud resources use Entry ID format based
-    /// on Full Resource Names
-    /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
-    /// The format is a Full Resource Name of the resource without the
-    /// prefix double slashes in the API Service Name part of Full Resource Name.
-    /// This allows retrieval of entries using their associated resource name.
+    /// Entries corresponding to Google Cloud resources use an Entry ID format
+    /// based on [full resource
+    /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name).
+    /// The format is a full resource name of the resource without the
+    /// prefix double slashes in the API service name part of the full resource
+    /// name. This allows retrieval of entries using their associated resource
+    /// name.
     ///
-    /// For example if the Full Resource Name of a resource is
+    /// For example, if the full resource name of a resource is
     /// `//library.googleapis.com/shelves/shelf1/books/book2`,
     /// then the suggested entry_id is
     /// `library.googleapis.com/shelves/shelf1/books/book2`.
     ///
     /// It is also suggested to follow the same convention for entries
-    /// corresponding to resources from other providers or systems than Google
+    /// corresponding to resources from providers or systems other than Google
     /// Cloud.
     ///
     /// The maximum size of the field is 4000 characters.
@@ -11733,6 +11902,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
   }
 
+  /// <summary>
+  /// Update Entry request.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEntryRequest : pb::IMessage<UpdateEntryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11804,8 +11976,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// Optional. Mask of fields to update. To update Aspects, the update_mask must
     /// contain the value "aspects".
     ///
-    /// If the update_mask is empty, all modifiable fields present in the request
-    /// will be updated.
+    /// If the update_mask is empty, the service will update all modifiable fields
+    /// present in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11820,7 +11992,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// Optional. If set to true and the entry does not exist, it will be created.
+    /// Optional. If set to true and the entry doesn't exist, the service will
+    /// create it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11835,9 +12008,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DeleteMissingAspectsFieldNumber = 4;
     private bool deleteMissingAspects_;
     /// <summary>
-    /// Optional. If set to true and the aspect_keys specify aspect ranges, any
-    /// existing aspects from that range not provided in the request will be
-    /// deleted.
+    /// Optional. If set to true and the aspect_keys specify aspect ranges, the
+    /// service deletes any existing aspects from that range that weren't provided
+    /// in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11854,19 +12027,24 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> aspectKeys_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The map keys of the Aspects which should be modified. Supports
-    /// the following syntaxes:
-    /// * &lt;aspect_type_reference> - matches aspect on given type and empty path
-    /// * &lt;aspect_type_reference>@path - matches aspect on given type and specified
-    /// path
-    /// * &lt;aspect_type_reference>* - matches aspects on given type for all paths
-    /// * *@path - matches aspects of all types on the given path
+    /// Optional. The map keys of the Aspects which the service should modify. It
+    /// supports the following syntaxes:
     ///
-    /// Existing aspects matching the syntax will not be removed unless
+    /// * `&lt;aspect_type_reference>` - matches an aspect of the given type and empty
+    /// path.
+    /// * `&lt;aspect_type_reference>@path` - matches an aspect of the given type and
+    /// specified path. For example, to attach an aspect to a field that is
+    /// specified by the `schema` aspect, the path should have the format
+    /// `Schema.&lt;field_name>`.
+    /// * `&lt;aspect_type_reference>*` - matches aspects of the given type for all
+    /// paths.
+    /// * `*@path` - matches aspects of all types on the given path.
+    ///
+    /// The service will not remove existing aspects matching the syntax unless
     /// `delete_missing_aspects` is set to true.
     ///
-    /// If this field is left empty, it will be treated as specifying exactly those
-    /// Aspects present in the request.
+    /// If this field is left empty, the service treats it as specifying
+    /// exactly those Aspects present in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12111,6 +12289,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
   }
 
+  /// <summary>
+  /// Delete Entry request.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEntryRequest : pb::IMessage<DeleteEntryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12305,6 +12486,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
   }
 
+  /// <summary>
+  /// List Entries request.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntriesRequest : pb::IMessage<ListEntriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12372,6 +12556,12 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
+    /// <summary>
+    /// Optional. Number of items to return per page. If there are remaining
+    /// results, the service returns a next_page_token. If unspecified, the service
+    /// returns at most 10 Entries. The maximum value is 100; values above 100 will
+    /// be coerced to 100.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
@@ -12385,7 +12575,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The pagination token returned by a previous request.
+    /// Optional. Page token received from a previous `ListEntries` call. Provide
+    /// this to retrieve the subsequent page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12400,20 +12591,27 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. A filter on the entries to return.
-    /// Filters are case-sensitive.
-    /// The request can be filtered by the following fields:
-    /// entry_type, entry_source.display_name.
-    /// The comparison operators are =, !=, &lt;, >, &lt;=, >= (strings are compared
-    /// according to lexical order)
-    /// The logical operators AND, OR, NOT can be used
-    /// in the filter. Wildcard "*" can be used, but for entry_type the full
-    /// project id or number needs to be provided. Example filter expressions:
-    /// "entry_source.display_name=AnExampleDisplayName"
-    /// "entry_type=projects/example-project/locations/global/entryTypes/example-entry_type"
-    /// "entry_type=projects/example-project/locations/us/entryTypes/a* OR
-    ///  entry_type=projects/another-project/locations/*"
-    /// "NOT entry_source.display_name=AnotherExampleDisplayName"
+    /// Optional. A filter on the entries to return. Filters are case-sensitive.
+    /// You can filter the request by the following fields:
+    ///
+    /// * entry_type
+    /// * entry_source.display_name
+    ///
+    /// The comparison operators are =, !=, &lt;, >, &lt;=, >=. The service compares
+    /// strings according to lexical order.
+    ///
+    /// You can use the logical operators AND, OR, NOT in the filter.
+    ///
+    /// You can use Wildcard "*", but for entry_type you need to provide the
+    /// full project id or number.
+    ///
+    /// Example filter expressions:
+    ///
+    /// * "entry_source.display_name=AnExampleDisplayName"
+    /// * "entry_type=projects/example-project/locations/global/entryTypes/example-entry_type"
+    /// * "entry_type=projects/example-project/locations/us/entryTypes/a* OR
+    /// entry_type=projects/another-project/locations/*"
+    /// * "NOT entry_source.display_name=AnotherExampleDisplayName"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12629,6 +12827,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
   }
 
+  /// <summary>
+  /// List Entries response.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntriesResponse : pb::IMessage<ListEntriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12681,7 +12882,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataplex.V1.Entry.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.Entry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.Entry>();
     /// <summary>
-    /// The list of entries.
+    /// The list of entries under the given parent location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12693,7 +12894,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Pagination token.
+    /// Token to retrieve the next page of results, or empty if there are no more
+    /// results in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12851,6 +13053,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
   }
 
+  /// <summary>
+  /// Get Entry request.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEntryRequest : pb::IMessage<GetEntryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12919,7 +13124,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ViewFieldNumber = 2;
     private global::Google.Cloud.Dataplex.V1.EntryView view_ = global::Google.Cloud.Dataplex.V1.EntryView.Unspecified;
     /// <summary>
-    /// Optional. View for controlling which parts of an entry are to be returned.
+    /// Optional. View to control which parts of an entry the service should
+    /// return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12937,7 +13143,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private readonly pbc::RepeatedField<string> aspectTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. Limits the aspects returned to the provided aspect types.
-    /// Only works if the CUSTOM view is selected.
+    /// It only works for CUSTOM view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12952,7 +13158,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private readonly pbc::RepeatedField<string> paths_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. Limits the aspects returned to those associated with the provided
-    /// paths within the Entry. Only works if the CUSTOM view is selected.
+    /// paths within the Entry. It only works for CUSTOM view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13145,6 +13351,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
   }
 
+  /// <summary>
+  /// Lookup Entry request using permissions in the source system.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupEntryRequest : pb::IMessage<LookupEntryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -13214,7 +13423,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ViewFieldNumber = 2;
     private global::Google.Cloud.Dataplex.V1.EntryView view_ = global::Google.Cloud.Dataplex.V1.EntryView.Unspecified;
     /// <summary>
-    /// Optional. View for controlling which parts of an entry are to be returned.
+    /// Optional. View to control which parts of an entry the service should
+    /// return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13232,7 +13442,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private readonly pbc::RepeatedField<string> aspectTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. Limits the aspects returned to the provided aspect types.
-    /// Only works if the CUSTOM view is selected.
+    /// It only works for CUSTOM view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13247,7 +13457,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private readonly pbc::RepeatedField<string> paths_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. Limits the aspects returned to those associated with the provided
-    /// paths within the Entry. Only works if the CUSTOM view is selected.
+    /// paths within the Entry. It only works for CUSTOM view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13565,7 +13775,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional. Pagination.
+    /// Optional. Number of results in the search page. If &lt;=0, then defaults
+    /// to 10. Max limit for page_size is 1000. Throws an invalid argument for
+    /// page_size > 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13579,6 +13791,10 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Field number for the "page_token" field.</summary>
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
+    /// <summary>
+    /// Optional. Page token received from a previous `SearchEntries` call. Provide
+    /// this to retrieve the subsequent page.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
@@ -13592,7 +13808,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. Ordering of the results. Supported options to be added later.
+    /// Optional. Specifies the ordering of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13607,10 +13823,10 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ScopeFieldNumber = 7;
     private string scope_ = "";
     /// <summary>
-    /// Optional. The scope under which the search should be operating. Should
-    /// either be organizations/&lt;org_id> or projects/&lt;project_ref>. If left
-    /// unspecified, it will default to the organization where the project provided
-    /// in `name` is located.
+    /// Optional. The scope under which the search should be operating. It must
+    /// either be `organizations/&lt;org_id>` or `projects/&lt;project_ref>`. If it is
+    /// unspecified, it defaults to the organization where the project provided in
+    /// `name` is located.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14449,8 +14665,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int TotalSizeFieldNumber = 2;
     private int totalSize_;
     /// <summary>
-    /// The estimated total number of matching entries. Not guaranteed to be
-    /// accurate.
+    /// The estimated total number of matching entries. This number isn't
+    /// guaranteed to be accurate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14465,7 +14681,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int NextPageTokenFieldNumber = 3;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Pagination token.
+    /// Token to retrieve the next page of results, or empty if there are no more
+    /// results in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14482,8 +14699,8 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Unreachable locations. Search results don't include data from those
-    /// locations.
+    /// Locations that the service couldn't reach. Search results don't include
+    /// data from these locations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14673,6 +14890,3873 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// An object that describes the values that you want to set for an entry and its
+  /// attached aspects when you import metadata. Used when you run a metadata
+  /// import job. See
+  /// [CreateMetadataJob][google.cloud.dataplex.v1.CatalogService.CreateMetadataJob].
+  ///
+  /// You provide a collection of import items in a metadata import file. For more
+  /// information about how to create a metadata import file, see [Metadata import
+  /// file](https://cloud.google.com/dataplex/docs/import-metadata#metadata-import-file).
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImportItem : pb::IMessage<ImportItem>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImportItem> _parser = new pb::MessageParser<ImportItem>(() => new ImportItem());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImportItem> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[35]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportItem() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportItem(ImportItem other) : this() {
+      entry_ = other.entry_ != null ? other.entry_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      aspectKeys_ = other.aspectKeys_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportItem Clone() {
+      return new ImportItem(this);
+    }
+
+    /// <summary>Field number for the "entry" field.</summary>
+    public const int EntryFieldNumber = 1;
+    private global::Google.Cloud.Dataplex.V1.Entry entry_;
+    /// <summary>
+    /// Information about an entry and its attached aspects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.Entry Entry {
+      get { return entry_; }
+      set {
+        entry_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// The fields to update, in paths that are relative to the `Entry` resource.
+    /// Separate each field with a comma.
+    ///
+    /// In `FULL` entry sync mode, Dataplex includes the paths of all of the fields
+    /// for an entry that can be modified, including aspects. This means that
+    /// Dataplex replaces the existing entry with the entry in the metadata import
+    /// file. All modifiable fields are updated, regardless of the fields that are
+    /// listed in the update mask, and regardless of whether a field is present
+    /// in the `entry` object.
+    ///
+    /// The `update_mask` field is ignored when an entry is created or re-created.
+    ///
+    /// Dataplex also determines which entries and aspects to modify by comparing
+    /// the values and timestamps that you provide in the metadata import file with
+    /// the values and timestamps that exist in your project. For more information,
+    /// see [Comparison
+    /// logic](https://cloud.google.com/dataplex/docs/import-metadata#data-modification-logic).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "aspect_keys" field.</summary>
+    public const int AspectKeysFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_aspectKeys_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> aspectKeys_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The aspects to modify. Supports the following syntaxes:
+    ///
+    /// * `{aspect_type_reference}`: matches aspects that belong to the specified
+    /// aspect type and are attached directly to the entry.
+    /// * `{aspect_type_reference}@{path}`: matches aspects that belong to the
+    /// specified aspect type and path.
+    /// * `{aspect_type_reference}@*`: matches aspects that belong to the specified
+    /// aspect type for all paths.
+    ///
+    /// Replace `{aspect_type_reference}` with a reference to the aspect type, in
+    /// the format
+    /// `{project_id_or_number}.{location_id}.{aspect_type_id}`.
+    ///
+    /// If you leave this field empty, it is treated as specifying exactly those
+    /// aspects that are present within the specified entry.
+    ///
+    /// In `FULL` entry sync mode, Dataplex implicitly adds the keys for all of the
+    /// required aspects of an entry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AspectKeys {
+      get { return aspectKeys_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImportItem);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImportItem other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Entry, other.Entry)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if(!aspectKeys_.Equals(other.aspectKeys_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (entry_ != null) hash ^= Entry.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      hash ^= aspectKeys_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (entry_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Entry);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      aspectKeys_.WriteTo(output, _repeated_aspectKeys_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (entry_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Entry);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      aspectKeys_.WriteTo(ref output, _repeated_aspectKeys_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (entry_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Entry);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      size += aspectKeys_.CalculateSize(_repeated_aspectKeys_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImportItem other) {
+      if (other == null) {
+        return;
+      }
+      if (other.entry_ != null) {
+        if (entry_ == null) {
+          Entry = new global::Google.Cloud.Dataplex.V1.Entry();
+        }
+        Entry.MergeFrom(other.Entry);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      aspectKeys_.Add(other.aspectKeys_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (entry_ == null) {
+              Entry = new global::Google.Cloud.Dataplex.V1.Entry();
+            }
+            input.ReadMessage(Entry);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            aspectKeys_.AddEntriesFrom(input, _repeated_aspectKeys_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (entry_ == null) {
+              Entry = new global::Google.Cloud.Dataplex.V1.Entry();
+            }
+            input.ReadMessage(Entry);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            aspectKeys_.AddEntriesFrom(ref input, _repeated_aspectKeys_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Create metadata job request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateMetadataJobRequest : pb::IMessage<CreateMetadataJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateMetadataJobRequest> _parser = new pb::MessageParser<CreateMetadataJobRequest>(() => new CreateMetadataJobRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateMetadataJobRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[36]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMetadataJobRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMetadataJobRequest(CreateMetadataJobRequest other) : this() {
+      parent_ = other.parent_;
+      metadataJob_ = other.metadataJob_ != null ? other.metadataJob_.Clone() : null;
+      metadataJobId_ = other.metadataJobId_;
+      validateOnly_ = other.validateOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMetadataJobRequest Clone() {
+      return new CreateMetadataJobRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The resource name of the parent location, in the format
+    /// `projects/{project_id_or_number}/locations/{location_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "metadata_job" field.</summary>
+    public const int MetadataJobFieldNumber = 2;
+    private global::Google.Cloud.Dataplex.V1.MetadataJob metadataJob_;
+    /// <summary>
+    /// Required. The metadata job resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.MetadataJob MetadataJob {
+      get { return metadataJob_; }
+      set {
+        metadataJob_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "metadata_job_id" field.</summary>
+    public const int MetadataJobIdFieldNumber = 3;
+    private string metadataJobId_ = "";
+    /// <summary>
+    /// Optional. The metadata job ID. If not provided, a unique ID is generated
+    /// with the prefix `metadata-job-`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MetadataJobId {
+      get { return metadataJobId_; }
+      set {
+        metadataJobId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. The service validates the request without performing any
+    /// mutations. The default is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateMetadataJobRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateMetadataJobRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(MetadataJob, other.MetadataJob)) return false;
+      if (MetadataJobId != other.MetadataJobId) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (metadataJob_ != null) hash ^= MetadataJob.GetHashCode();
+      if (MetadataJobId.Length != 0) hash ^= MetadataJobId.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (metadataJob_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MetadataJob);
+      }
+      if (MetadataJobId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MetadataJobId);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (metadataJob_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MetadataJob);
+      }
+      if (MetadataJobId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MetadataJobId);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (metadataJob_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MetadataJob);
+      }
+      if (MetadataJobId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MetadataJobId);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateMetadataJobRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.metadataJob_ != null) {
+        if (metadataJob_ == null) {
+          MetadataJob = new global::Google.Cloud.Dataplex.V1.MetadataJob();
+        }
+        MetadataJob.MergeFrom(other.MetadataJob);
+      }
+      if (other.MetadataJobId.Length != 0) {
+        MetadataJobId = other.MetadataJobId;
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (metadataJob_ == null) {
+              MetadataJob = new global::Google.Cloud.Dataplex.V1.MetadataJob();
+            }
+            input.ReadMessage(MetadataJob);
+            break;
+          }
+          case 26: {
+            MetadataJobId = input.ReadString();
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (metadataJob_ == null) {
+              MetadataJob = new global::Google.Cloud.Dataplex.V1.MetadataJob();
+            }
+            input.ReadMessage(MetadataJob);
+            break;
+          }
+          case 26: {
+            MetadataJobId = input.ReadString();
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Get metadata job request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetMetadataJobRequest : pb::IMessage<GetMetadataJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetMetadataJobRequest> _parser = new pb::MessageParser<GetMetadataJobRequest>(() => new GetMetadataJobRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetMetadataJobRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[37]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetMetadataJobRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetMetadataJobRequest(GetMetadataJobRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetMetadataJobRequest Clone() {
+      return new GetMetadataJobRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the metadata job, in the format
+    /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetMetadataJobRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetMetadataJobRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetMetadataJobRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// List metadata jobs request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListMetadataJobsRequest : pb::IMessage<ListMetadataJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListMetadataJobsRequest> _parser = new pb::MessageParser<ListMetadataJobsRequest>(() => new ListMetadataJobsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListMetadataJobsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[38]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListMetadataJobsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListMetadataJobsRequest(ListMetadataJobsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListMetadataJobsRequest Clone() {
+      return new ListMetadataJobsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The resource name of the parent location, in the format
+    /// `projects/{project_id_or_number}/locations/{location_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of metadata jobs to return. The service might
+    /// return fewer jobs than this value. If unspecified, at most 10 jobs are
+    /// returned. The maximum value is 1,000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. The page token received from a previous `ListMetadataJobs` call.
+    /// Provide this token to retrieve the subsequent page of results. When
+    /// paginating, all other parameters that are provided to the
+    /// `ListMetadataJobs` request must match the call that provided the page
+    /// token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Filter request. Filters are case-sensitive.
+    /// The service supports the following formats:
+    ///
+    /// * `labels.key1 = "value1"`
+    /// * `labels:key1`
+    /// * `name = "value"`
+    ///
+    /// You can combine filters with `AND`, `OR`, and `NOT` operators.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. The field to sort the results by, either `name` or `create_time`.
+    /// If not specified, the ordering is undefined.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListMetadataJobsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListMetadataJobsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListMetadataJobsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// List metadata jobs response.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListMetadataJobsResponse : pb::IMessage<ListMetadataJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListMetadataJobsResponse> _parser = new pb::MessageParser<ListMetadataJobsResponse>(() => new ListMetadataJobsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListMetadataJobsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[39]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListMetadataJobsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListMetadataJobsResponse(ListMetadataJobsResponse other) : this() {
+      metadataJobs_ = other.metadataJobs_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachableLocations_ = other.unreachableLocations_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListMetadataJobsResponse Clone() {
+      return new ListMetadataJobsResponse(this);
+    }
+
+    /// <summary>Field number for the "metadata_jobs" field.</summary>
+    public const int MetadataJobsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataplex.V1.MetadataJob> _repeated_metadataJobs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataplex.V1.MetadataJob.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.MetadataJob> metadataJobs_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.MetadataJob>();
+    /// <summary>
+    /// Metadata jobs under the specified parent location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.MetadataJob> MetadataJobs {
+      get { return metadataJobs_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token to retrieve the next page of results. If there are no more results
+    /// in the list, the value is empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable_locations" field.</summary>
+    public const int UnreachableLocationsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachableLocations_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachableLocations_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that the service couldn't reach.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> UnreachableLocations {
+      get { return unreachableLocations_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListMetadataJobsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListMetadataJobsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!metadataJobs_.Equals(other.metadataJobs_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachableLocations_.Equals(other.unreachableLocations_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= metadataJobs_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachableLocations_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      metadataJobs_.WriteTo(output, _repeated_metadataJobs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachableLocations_.WriteTo(output, _repeated_unreachableLocations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      metadataJobs_.WriteTo(ref output, _repeated_metadataJobs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachableLocations_.WriteTo(ref output, _repeated_unreachableLocations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += metadataJobs_.CalculateSize(_repeated_metadataJobs_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachableLocations_.CalculateSize(_repeated_unreachableLocations_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListMetadataJobsResponse other) {
+      if (other == null) {
+        return;
+      }
+      metadataJobs_.Add(other.metadataJobs_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachableLocations_.Add(other.unreachableLocations_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            metadataJobs_.AddEntriesFrom(input, _repeated_metadataJobs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachableLocations_.AddEntriesFrom(input, _repeated_unreachableLocations_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            metadataJobs_.AddEntriesFrom(ref input, _repeated_metadataJobs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachableLocations_.AddEntriesFrom(ref input, _repeated_unreachableLocations_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Cancel metadata job request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CancelMetadataJobRequest : pb::IMessage<CancelMetadataJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CancelMetadataJobRequest> _parser = new pb::MessageParser<CancelMetadataJobRequest>(() => new CancelMetadataJobRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CancelMetadataJobRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[40]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelMetadataJobRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelMetadataJobRequest(CancelMetadataJobRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelMetadataJobRequest Clone() {
+      return new CancelMetadataJobRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the job, in the format
+    /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CancelMetadataJobRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CancelMetadataJobRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CancelMetadataJobRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A metadata job resource.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MetadataJob : pb::IMessage<MetadataJob>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MetadataJob> _parser = new pb::MessageParser<MetadataJob>(() => new MetadataJob());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MetadataJob> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[41]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MetadataJob() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MetadataJob(MetadataJob other) : this() {
+      name_ = other.name_;
+      uid_ = other.uid_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      labels_ = other.labels_.Clone();
+      type_ = other.type_;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
+      switch (other.SpecCase) {
+        case SpecOneofCase.ImportSpec:
+          ImportSpec = other.ImportSpec.Clone();
+          break;
+      }
+
+      switch (other.ResultCase) {
+        case ResultOneofCase.ImportResult:
+          ImportResult = other.ImportResult.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MetadataJob Clone() {
+      return new MetadataJob(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Identifier. The name of the resource that the configuration is
+    /// applied to, in the format
+    /// `projects/{project_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 2;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. A system-generated, globally unique ID for the metadata job.
+    /// If the metadata job is deleted and then re-created with the same name, this
+    /// ID is different.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The time when the metadata job was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The time when the metadata job was updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. User-defined labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 6;
+    private global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type type_ = global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type.Unspecified;
+    /// <summary>
+    /// Required. Metadata job type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "import_spec" field.</summary>
+    public const int ImportSpecFieldNumber = 100;
+    /// <summary>
+    /// Import job specification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec ImportSpec {
+      get { return specCase_ == SpecOneofCase.ImportSpec ? (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec) spec_ : null; }
+      set {
+        spec_ = value;
+        specCase_ = value == null ? SpecOneofCase.None : SpecOneofCase.ImportSpec;
+      }
+    }
+
+    /// <summary>Field number for the "import_result" field.</summary>
+    public const int ImportResultFieldNumber = 200;
+    /// <summary>
+    /// Output only. Import job result.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult ImportResult {
+      get { return resultCase_ == ResultOneofCase.ImportResult ? (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.ImportResult;
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 7;
+    private global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status status_;
+    /// <summary>
+    /// Output only. Metadata job status.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    private object spec_;
+    /// <summary>Enum of possible cases for the "spec" oneof.</summary>
+    public enum SpecOneofCase {
+      None = 0,
+      ImportSpec = 100,
+    }
+    private SpecOneofCase specCase_ = SpecOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SpecOneofCase SpecCase {
+      get { return specCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSpec() {
+      specCase_ = SpecOneofCase.None;
+      spec_ = null;
+    }
+
+    private object result_;
+    /// <summary>Enum of possible cases for the "result" oneof.</summary>
+    public enum ResultOneofCase {
+      None = 0,
+      ImportResult = 200,
+    }
+    private ResultOneofCase resultCase_ = ResultOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResultOneofCase ResultCase {
+      get { return resultCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearResult() {
+      resultCase_ = ResultOneofCase.None;
+      result_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MetadataJob);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MetadataJob other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Uid != other.Uid) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      if (Type != other.Type) return false;
+      if (!object.Equals(ImportSpec, other.ImportSpec)) return false;
+      if (!object.Equals(ImportResult, other.ImportResult)) return false;
+      if (!object.Equals(Status, other.Status)) return false;
+      if (SpecCase != other.SpecCase) return false;
+      if (ResultCase != other.ResultCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      if (Type != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (specCase_ == SpecOneofCase.ImportSpec) hash ^= ImportSpec.GetHashCode();
+      if (resultCase_ == ResultOneofCase.ImportResult) hash ^= ImportResult.GetHashCode();
+      if (status_ != null) hash ^= Status.GetHashCode();
+      hash ^= (int) specCase_;
+      hash ^= (int) resultCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Uid);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
+      if (Type != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Type);
+      }
+      if (status_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Status);
+      }
+      if (specCase_ == SpecOneofCase.ImportSpec) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(ImportSpec);
+      }
+      if (resultCase_ == ResultOneofCase.ImportResult) {
+        output.WriteRawTag(194, 12);
+        output.WriteMessage(ImportResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Uid);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (Type != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Type);
+      }
+      if (status_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Status);
+      }
+      if (specCase_ == SpecOneofCase.ImportSpec) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(ImportSpec);
+      }
+      if (resultCase_ == ResultOneofCase.ImportResult) {
+        output.WriteRawTag(194, 12);
+        output.WriteMessage(ImportResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
+      if (Type != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (specCase_ == SpecOneofCase.ImportSpec) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ImportSpec);
+      }
+      if (resultCase_ == ResultOneofCase.ImportResult) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ImportResult);
+      }
+      if (status_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MetadataJob other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      labels_.MergeFrom(other.labels_);
+      if (other.Type != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.status_ != null) {
+        if (status_ == null) {
+          Status = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status();
+        }
+        Status.MergeFrom(other.Status);
+      }
+      switch (other.SpecCase) {
+        case SpecOneofCase.ImportSpec:
+          if (ImportSpec == null) {
+            ImportSpec = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec();
+          }
+          ImportSpec.MergeFrom(other.ImportSpec);
+          break;
+      }
+
+      switch (other.ResultCase) {
+        case ResultOneofCase.ImportResult:
+          if (ImportResult == null) {
+            ImportResult = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult();
+          }
+          ImportResult.MergeFrom(other.ImportResult);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 48: {
+            Type = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (status_ == null) {
+              Status = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 802: {
+            global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec subBuilder = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec();
+            if (specCase_ == SpecOneofCase.ImportSpec) {
+              subBuilder.MergeFrom(ImportSpec);
+            }
+            input.ReadMessage(subBuilder);
+            ImportSpec = subBuilder;
+            break;
+          }
+          case 1602: {
+            global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult subBuilder = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult();
+            if (resultCase_ == ResultOneofCase.ImportResult) {
+              subBuilder.MergeFrom(ImportResult);
+            }
+            input.ReadMessage(subBuilder);
+            ImportResult = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 48: {
+            Type = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (status_ == null) {
+              Status = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 802: {
+            global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec subBuilder = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec();
+            if (specCase_ == SpecOneofCase.ImportSpec) {
+              subBuilder.MergeFrom(ImportSpec);
+            }
+            input.ReadMessage(subBuilder);
+            ImportSpec = subBuilder;
+            break;
+          }
+          case 1602: {
+            global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult subBuilder = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult();
+            if (resultCase_ == ResultOneofCase.ImportResult) {
+              subBuilder.MergeFrom(ImportResult);
+            }
+            input.ReadMessage(subBuilder);
+            ImportResult = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MetadataJob message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Metadata job type.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Import job.
+        /// </summary>
+        [pbr::OriginalName("IMPORT")] Import = 1,
+      }
+
+      /// <summary>
+      /// Results from a metadata import job.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ImportJobResult : pb::IMessage<ImportJobResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ImportJobResult> _parser = new pb::MessageParser<ImportJobResult>(() => new ImportJobResult());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ImportJobResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.MetadataJob.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImportJobResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImportJobResult(ImportJobResult other) : this() {
+          deletedEntries_ = other.deletedEntries_;
+          updatedEntries_ = other.updatedEntries_;
+          createdEntries_ = other.createdEntries_;
+          unchangedEntries_ = other.unchangedEntries_;
+          recreatedEntries_ = other.recreatedEntries_;
+          updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImportJobResult Clone() {
+          return new ImportJobResult(this);
+        }
+
+        /// <summary>Field number for the "deleted_entries" field.</summary>
+        public const int DeletedEntriesFieldNumber = 1;
+        private long deletedEntries_;
+        /// <summary>
+        /// Output only. The total number of entries that were deleted.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long DeletedEntries {
+          get { return deletedEntries_; }
+          set {
+            deletedEntries_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "updated_entries" field.</summary>
+        public const int UpdatedEntriesFieldNumber = 2;
+        private long updatedEntries_;
+        /// <summary>
+        /// Output only. The total number of entries that were updated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long UpdatedEntries {
+          get { return updatedEntries_; }
+          set {
+            updatedEntries_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "created_entries" field.</summary>
+        public const int CreatedEntriesFieldNumber = 3;
+        private long createdEntries_;
+        /// <summary>
+        /// Output only. The total number of entries that were created.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long CreatedEntries {
+          get { return createdEntries_; }
+          set {
+            createdEntries_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unchanged_entries" field.</summary>
+        public const int UnchangedEntriesFieldNumber = 4;
+        private long unchangedEntries_;
+        /// <summary>
+        /// Output only. The total number of entries that were unchanged.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long UnchangedEntries {
+          get { return unchangedEntries_; }
+          set {
+            unchangedEntries_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "recreated_entries" field.</summary>
+        public const int RecreatedEntriesFieldNumber = 6;
+        private long recreatedEntries_;
+        /// <summary>
+        /// Output only. The total number of entries that were recreated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long RecreatedEntries {
+          get { return recreatedEntries_; }
+          set {
+            recreatedEntries_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "update_time" field.</summary>
+        public const int UpdateTimeFieldNumber = 5;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+        /// <summary>
+        /// Output only. The time when the status was updated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+          get { return updateTime_; }
+          set {
+            updateTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ImportJobResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ImportJobResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DeletedEntries != other.DeletedEntries) return false;
+          if (UpdatedEntries != other.UpdatedEntries) return false;
+          if (CreatedEntries != other.CreatedEntries) return false;
+          if (UnchangedEntries != other.UnchangedEntries) return false;
+          if (RecreatedEntries != other.RecreatedEntries) return false;
+          if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DeletedEntries != 0L) hash ^= DeletedEntries.GetHashCode();
+          if (UpdatedEntries != 0L) hash ^= UpdatedEntries.GetHashCode();
+          if (CreatedEntries != 0L) hash ^= CreatedEntries.GetHashCode();
+          if (UnchangedEntries != 0L) hash ^= UnchangedEntries.GetHashCode();
+          if (RecreatedEntries != 0L) hash ^= RecreatedEntries.GetHashCode();
+          if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DeletedEntries != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(DeletedEntries);
+          }
+          if (UpdatedEntries != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(UpdatedEntries);
+          }
+          if (CreatedEntries != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(CreatedEntries);
+          }
+          if (UnchangedEntries != 0L) {
+            output.WriteRawTag(32);
+            output.WriteInt64(UnchangedEntries);
+          }
+          if (updateTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(UpdateTime);
+          }
+          if (RecreatedEntries != 0L) {
+            output.WriteRawTag(48);
+            output.WriteInt64(RecreatedEntries);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DeletedEntries != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(DeletedEntries);
+          }
+          if (UpdatedEntries != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(UpdatedEntries);
+          }
+          if (CreatedEntries != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(CreatedEntries);
+          }
+          if (UnchangedEntries != 0L) {
+            output.WriteRawTag(32);
+            output.WriteInt64(UnchangedEntries);
+          }
+          if (updateTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(UpdateTime);
+          }
+          if (RecreatedEntries != 0L) {
+            output.WriteRawTag(48);
+            output.WriteInt64(RecreatedEntries);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (DeletedEntries != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(DeletedEntries);
+          }
+          if (UpdatedEntries != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(UpdatedEntries);
+          }
+          if (CreatedEntries != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatedEntries);
+          }
+          if (UnchangedEntries != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(UnchangedEntries);
+          }
+          if (RecreatedEntries != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(RecreatedEntries);
+          }
+          if (updateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ImportJobResult other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DeletedEntries != 0L) {
+            DeletedEntries = other.DeletedEntries;
+          }
+          if (other.UpdatedEntries != 0L) {
+            UpdatedEntries = other.UpdatedEntries;
+          }
+          if (other.CreatedEntries != 0L) {
+            CreatedEntries = other.CreatedEntries;
+          }
+          if (other.UnchangedEntries != 0L) {
+            UnchangedEntries = other.UnchangedEntries;
+          }
+          if (other.RecreatedEntries != 0L) {
+            RecreatedEntries = other.RecreatedEntries;
+          }
+          if (other.updateTime_ != null) {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            UpdateTime.MergeFrom(other.UpdateTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                DeletedEntries = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                UpdatedEntries = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                CreatedEntries = input.ReadInt64();
+                break;
+              }
+              case 32: {
+                UnchangedEntries = input.ReadInt64();
+                break;
+              }
+              case 42: {
+                if (updateTime_ == null) {
+                  UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UpdateTime);
+                break;
+              }
+              case 48: {
+                RecreatedEntries = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                DeletedEntries = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                UpdatedEntries = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                CreatedEntries = input.ReadInt64();
+                break;
+              }
+              case 32: {
+                UnchangedEntries = input.ReadInt64();
+                break;
+              }
+              case 42: {
+                if (updateTime_ == null) {
+                  UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UpdateTime);
+                break;
+              }
+              case 48: {
+                RecreatedEntries = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Job specification for a metadata import job
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ImportJobSpec : pb::IMessage<ImportJobSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ImportJobSpec> _parser = new pb::MessageParser<ImportJobSpec>(() => new ImportJobSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ImportJobSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.MetadataJob.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImportJobSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImportJobSpec(ImportJobSpec other) : this() {
+          sourceStorageUri_ = other.sourceStorageUri_;
+          sourceCreateTime_ = other.sourceCreateTime_ != null ? other.sourceCreateTime_.Clone() : null;
+          scope_ = other.scope_ != null ? other.scope_.Clone() : null;
+          entrySyncMode_ = other.entrySyncMode_;
+          aspectSyncMode_ = other.aspectSyncMode_;
+          logLevel_ = other.logLevel_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ImportJobSpec Clone() {
+          return new ImportJobSpec(this);
+        }
+
+        /// <summary>Field number for the "source_storage_uri" field.</summary>
+        public const int SourceStorageUriFieldNumber = 1;
+        private string sourceStorageUri_ = "";
+        /// <summary>
+        /// Optional. The URI of a Cloud Storage bucket or folder (beginning with
+        /// `gs://` and ending with `/`) that contains the metadata import files for
+        /// this job.
+        ///
+        /// A metadata import file defines the values to set for each of the entries
+        /// and aspects in a metadata job. For more information about how to create a
+        /// metadata import file and the file requirements, see [Metadata import
+        /// file](https://cloud.google.com/dataplex/docs/import-metadata#metadata-import-file).
+        ///
+        /// You can provide multiple metadata import files in the same metadata job.
+        /// The bucket or folder must contain at least one metadata import file, in
+        /// JSON Lines format (either `.json` or `.jsonl` file extension).
+        ///
+        /// In `FULL` entry sync mode, don't save the metadata import file in a
+        /// folder named `SOURCE_STORAGE_URI/deletions/`.
+        ///
+        /// **Caution**: If the metadata import file contains no data, all entries
+        /// and aspects that belong to the job's scope are deleted.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SourceStorageUri {
+          get { return sourceStorageUri_; }
+          set {
+            sourceStorageUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "source_create_time" field.</summary>
+        public const int SourceCreateTimeFieldNumber = 5;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp sourceCreateTime_;
+        /// <summary>
+        /// Optional. The time when the process that created the metadata import
+        /// files began.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp SourceCreateTime {
+          get { return sourceCreateTime_; }
+          set {
+            sourceCreateTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "scope" field.</summary>
+        public const int ScopeFieldNumber = 2;
+        private global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope scope_;
+        /// <summary>
+        /// Required. A boundary on the scope of impact that the metadata import job
+        /// can have.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope Scope {
+          get { return scope_; }
+          set {
+            scope_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "entry_sync_mode" field.</summary>
+        public const int EntrySyncModeFieldNumber = 3;
+        private global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode entrySyncMode_ = global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified;
+        /// <summary>
+        /// Required. The sync mode for entries.
+        /// Only `FULL` mode is supported for entries. All entries in the job's scope
+        /// are modified. If an entry exists in Dataplex but isn't included in the
+        /// metadata import file, the entry is deleted when you run the metadata job.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode EntrySyncMode {
+          get { return entrySyncMode_; }
+          set {
+            entrySyncMode_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "aspect_sync_mode" field.</summary>
+        public const int AspectSyncModeFieldNumber = 4;
+        private global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode aspectSyncMode_ = global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified;
+        /// <summary>
+        /// Required. The sync mode for aspects.
+        /// Only `INCREMENTAL` mode is supported for aspects. An aspect is modified
+        /// only if the metadata import file includes a reference to the aspect in
+        /// the `update_mask` field and the `aspect_keys` field.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode AspectSyncMode {
+          get { return aspectSyncMode_; }
+          set {
+            aspectSyncMode_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "log_level" field.</summary>
+        public const int LogLevelFieldNumber = 6;
+        private global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel logLevel_ = global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel.Unspecified;
+        /// <summary>
+        /// Optional. The level of logs to write to Cloud Logging for this job.
+        ///
+        /// Debug-level logs provide highly-detailed information for
+        /// troubleshooting, but their increased verbosity could incur [additional
+        /// costs](https://cloud.google.com/stackdriver/pricing) that might not be
+        /// merited for all jobs.
+        ///
+        /// If unspecified, defaults to `INFO`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel LogLevel {
+          get { return logLevel_; }
+          set {
+            logLevel_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ImportJobSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ImportJobSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SourceStorageUri != other.SourceStorageUri) return false;
+          if (!object.Equals(SourceCreateTime, other.SourceCreateTime)) return false;
+          if (!object.Equals(Scope, other.Scope)) return false;
+          if (EntrySyncMode != other.EntrySyncMode) return false;
+          if (AspectSyncMode != other.AspectSyncMode) return false;
+          if (LogLevel != other.LogLevel) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (SourceStorageUri.Length != 0) hash ^= SourceStorageUri.GetHashCode();
+          if (sourceCreateTime_ != null) hash ^= SourceCreateTime.GetHashCode();
+          if (scope_ != null) hash ^= Scope.GetHashCode();
+          if (EntrySyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) hash ^= EntrySyncMode.GetHashCode();
+          if (AspectSyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) hash ^= AspectSyncMode.GetHashCode();
+          if (LogLevel != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel.Unspecified) hash ^= LogLevel.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (SourceStorageUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SourceStorageUri);
+          }
+          if (scope_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Scope);
+          }
+          if (EntrySyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) EntrySyncMode);
+          }
+          if (AspectSyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) AspectSyncMode);
+          }
+          if (sourceCreateTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(SourceCreateTime);
+          }
+          if (LogLevel != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel.Unspecified) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) LogLevel);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SourceStorageUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SourceStorageUri);
+          }
+          if (scope_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Scope);
+          }
+          if (EntrySyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) EntrySyncMode);
+          }
+          if (AspectSyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) AspectSyncMode);
+          }
+          if (sourceCreateTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(SourceCreateTime);
+          }
+          if (LogLevel != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel.Unspecified) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) LogLevel);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (SourceStorageUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceStorageUri);
+          }
+          if (sourceCreateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceCreateTime);
+          }
+          if (scope_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scope);
+          }
+          if (EntrySyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntrySyncMode);
+          }
+          if (AspectSyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AspectSyncMode);
+          }
+          if (LogLevel != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LogLevel);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ImportJobSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.SourceStorageUri.Length != 0) {
+            SourceStorageUri = other.SourceStorageUri;
+          }
+          if (other.sourceCreateTime_ != null) {
+            if (sourceCreateTime_ == null) {
+              SourceCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            SourceCreateTime.MergeFrom(other.SourceCreateTime);
+          }
+          if (other.scope_ != null) {
+            if (scope_ == null) {
+              Scope = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope();
+            }
+            Scope.MergeFrom(other.Scope);
+          }
+          if (other.EntrySyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) {
+            EntrySyncMode = other.EntrySyncMode;
+          }
+          if (other.AspectSyncMode != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode.Unspecified) {
+            AspectSyncMode = other.AspectSyncMode;
+          }
+          if (other.LogLevel != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel.Unspecified) {
+            LogLevel = other.LogLevel;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                SourceStorageUri = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (scope_ == null) {
+                  Scope = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope();
+                }
+                input.ReadMessage(Scope);
+                break;
+              }
+              case 24: {
+                EntrySyncMode = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode) input.ReadEnum();
+                break;
+              }
+              case 32: {
+                AspectSyncMode = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                if (sourceCreateTime_ == null) {
+                  SourceCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(SourceCreateTime);
+                break;
+              }
+              case 48: {
+                LogLevel = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                SourceStorageUri = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (scope_ == null) {
+                  Scope = new global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope();
+                }
+                input.ReadMessage(Scope);
+                break;
+              }
+              case 24: {
+                EntrySyncMode = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode) input.ReadEnum();
+                break;
+              }
+              case 32: {
+                AspectSyncMode = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                if (sourceCreateTime_ == null) {
+                  SourceCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(SourceCreateTime);
+                break;
+              }
+              case 48: {
+                LogLevel = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ImportJobSpec message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Specifies how the entries and aspects in a metadata job are updated.
+          /// </summary>
+          public enum SyncMode {
+            /// <summary>
+            /// Sync mode unspecified.
+            /// </summary>
+            [pbr::OriginalName("SYNC_MODE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// All resources in the job's scope are modified. If a resource exists in
+            /// Dataplex but isn't included in the metadata import file, the resource
+            /// is deleted when you run the metadata job. Use this mode to perform a
+            /// full sync of the set of entries in the job scope.
+            /// </summary>
+            [pbr::OriginalName("FULL")] Full = 1,
+            /// <summary>
+            /// Only the entries and aspects that are explicitly included in the
+            /// metadata import file are modified. Use this mode to modify a subset of
+            /// resources while leaving unreferenced resources unchanged.
+            /// </summary>
+            [pbr::OriginalName("INCREMENTAL")] Incremental = 2,
+          }
+
+          /// <summary>
+          /// The level of logs to write to Cloud Logging for this job.
+          /// </summary>
+          public enum LogLevel {
+            /// <summary>
+            /// Log level unspecified.
+            /// </summary>
+            [pbr::OriginalName("LOG_LEVEL_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Debug-level logging. Captures detailed logs for each import item. Use
+            /// debug-level logging to troubleshoot issues with specific import items.
+            /// For example, use debug-level logging to identify resources that are
+            /// missing from the job scope, entries or aspects that don't conform to
+            /// the associated entry type or aspect type, or other misconfigurations
+            /// with the metadata import file.
+            ///
+            /// Depending on the size of your metadata job and the number of logs that
+            /// are generated, debug-level logging might incur
+            /// [additional costs](https://cloud.google.com/stackdriver/pricing).
+            /// </summary>
+            [pbr::OriginalName("DEBUG")] Debug = 1,
+            /// <summary>
+            /// Info-level logging. Captures logs at the overall job level. Includes
+            /// aggregate logs about import items, but doesn't specify which import
+            /// item has an error.
+            /// </summary>
+            [pbr::OriginalName("INFO")] Info = 2,
+          }
+
+          /// <summary>
+          /// A boundary on the scope of impact that the metadata import job can have.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class ImportJobScope : pb::IMessage<ImportJobScope>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ImportJobScope> _parser = new pb::MessageParser<ImportJobScope>(() => new ImportJobScope());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ImportJobScope> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ImportJobScope() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ImportJobScope(ImportJobScope other) : this() {
+              entryGroups_ = other.entryGroups_.Clone();
+              entryTypes_ = other.entryTypes_.Clone();
+              aspectTypes_ = other.aspectTypes_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ImportJobScope Clone() {
+              return new ImportJobScope(this);
+            }
+
+            /// <summary>Field number for the "entry_groups" field.</summary>
+            public const int EntryGroupsFieldNumber = 1;
+            private static readonly pb::FieldCodec<string> _repeated_entryGroups_codec
+                = pb::FieldCodec.ForString(10);
+            private readonly pbc::RepeatedField<string> entryGroups_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Required. The entry group that is in scope for the import job,
+            /// specified as a relative resource name in the format
+            /// `projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}`.
+            /// Only entries that belong to the specified entry group are affected by
+            /// the job.
+            ///
+            /// Must contain exactly one element. The entry group and the job
+            /// must be in the same location.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> EntryGroups {
+              get { return entryGroups_; }
+            }
+
+            /// <summary>Field number for the "entry_types" field.</summary>
+            public const int EntryTypesFieldNumber = 2;
+            private static readonly pb::FieldCodec<string> _repeated_entryTypes_codec
+                = pb::FieldCodec.ForString(18);
+            private readonly pbc::RepeatedField<string> entryTypes_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Required. The entry types that are in scope for the import job,
+            /// specified as relative resource names in the format
+            /// `projects/{project_number_or_id}/locations/{location_id}/entryTypes/{entry_type_id}`.
+            /// The job modifies only the entries that belong to these entry types.
+            ///
+            /// If the metadata import file attempts to modify an entry whose type
+            /// isn't included in this list, the import job is halted before modifying
+            /// any entries or aspects.
+            ///
+            /// The location of an entry type must either match the location of the
+            /// job, or the entry type must be global.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> EntryTypes {
+              get { return entryTypes_; }
+            }
+
+            /// <summary>Field number for the "aspect_types" field.</summary>
+            public const int AspectTypesFieldNumber = 3;
+            private static readonly pb::FieldCodec<string> _repeated_aspectTypes_codec
+                = pb::FieldCodec.ForString(26);
+            private readonly pbc::RepeatedField<string> aspectTypes_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. The aspect types that are in scope for the import job,
+            /// specified as relative resource names in the format
+            /// `projects/{project_number_or_id}/locations/{location_id}/aspectTypes/{aspect_type_id}`.
+            /// The job modifies only the aspects that belong to these aspect types.
+            ///
+            /// If the metadata import file attempts to modify an aspect whose type
+            /// isn't included in this list, the import job is halted before modifying
+            /// any entries or aspects.
+            ///
+            /// The location of an aspect type must either match the location of the
+            /// job, or the aspect type must be global.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> AspectTypes {
+              get { return aspectTypes_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ImportJobScope);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ImportJobScope other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!entryGroups_.Equals(other.entryGroups_)) return false;
+              if(!entryTypes_.Equals(other.entryTypes_)) return false;
+              if(!aspectTypes_.Equals(other.aspectTypes_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= entryGroups_.GetHashCode();
+              hash ^= entryTypes_.GetHashCode();
+              hash ^= aspectTypes_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              entryGroups_.WriteTo(output, _repeated_entryGroups_codec);
+              entryTypes_.WriteTo(output, _repeated_entryTypes_codec);
+              aspectTypes_.WriteTo(output, _repeated_aspectTypes_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              entryGroups_.WriteTo(ref output, _repeated_entryGroups_codec);
+              entryTypes_.WriteTo(ref output, _repeated_entryTypes_codec);
+              aspectTypes_.WriteTo(ref output, _repeated_aspectTypes_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += entryGroups_.CalculateSize(_repeated_entryGroups_codec);
+              size += entryTypes_.CalculateSize(_repeated_entryTypes_codec);
+              size += aspectTypes_.CalculateSize(_repeated_aspectTypes_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ImportJobScope other) {
+              if (other == null) {
+                return;
+              }
+              entryGroups_.Add(other.entryGroups_);
+              entryTypes_.Add(other.entryTypes_);
+              aspectTypes_.Add(other.aspectTypes_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    entryGroups_.AddEntriesFrom(input, _repeated_entryGroups_codec);
+                    break;
+                  }
+                  case 18: {
+                    entryTypes_.AddEntriesFrom(input, _repeated_entryTypes_codec);
+                    break;
+                  }
+                  case 26: {
+                    aspectTypes_.AddEntriesFrom(input, _repeated_aspectTypes_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    entryGroups_.AddEntriesFrom(ref input, _repeated_entryGroups_codec);
+                    break;
+                  }
+                  case 18: {
+                    entryTypes_.AddEntriesFrom(ref input, _repeated_entryTypes_codec);
+                    break;
+                  }
+                  case 26: {
+                    aspectTypes_.AddEntriesFrom(ref input, _repeated_aspectTypes_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Metadata job status.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Status : pb::IMessage<Status>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Status> _parser = new pb::MessageParser<Status>(() => new Status());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Status> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.MetadataJob.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status(Status other) : this() {
+          state_ = other.state_;
+          message_ = other.message_;
+          completionPercent_ = other.completionPercent_;
+          updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status Clone() {
+          return new Status(this);
+        }
+
+        /// <summary>Field number for the "state" field.</summary>
+        public const int StateFieldNumber = 1;
+        private global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State state_ = global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State.Unspecified;
+        /// <summary>
+        /// Output only. State of the metadata job.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State State {
+          get { return state_; }
+          set {
+            state_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "message" field.</summary>
+        public const int MessageFieldNumber = 2;
+        private string message_ = "";
+        /// <summary>
+        /// Output only. Message relating to the progression of a metadata job.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Message {
+          get { return message_; }
+          set {
+            message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "completion_percent" field.</summary>
+        public const int CompletionPercentFieldNumber = 3;
+        private int completionPercent_;
+        /// <summary>
+        /// Output only. Progress tracking.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CompletionPercent {
+          get { return completionPercent_; }
+          set {
+            completionPercent_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "update_time" field.</summary>
+        public const int UpdateTimeFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+        /// <summary>
+        /// Output only. The time when the status was updated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+          get { return updateTime_; }
+          set {
+            updateTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Status);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Status other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (State != other.State) return false;
+          if (Message != other.Message) return false;
+          if (CompletionPercent != other.CompletionPercent) return false;
+          if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (State != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State.Unspecified) hash ^= State.GetHashCode();
+          if (Message.Length != 0) hash ^= Message.GetHashCode();
+          if (CompletionPercent != 0) hash ^= CompletionPercent.GetHashCode();
+          if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (State != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) State);
+          }
+          if (Message.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Message);
+          }
+          if (CompletionPercent != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(CompletionPercent);
+          }
+          if (updateTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(UpdateTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (State != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) State);
+          }
+          if (Message.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Message);
+          }
+          if (CompletionPercent != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(CompletionPercent);
+          }
+          if (updateTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(UpdateTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (State != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+          }
+          if (Message.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+          }
+          if (CompletionPercent != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(CompletionPercent);
+          }
+          if (updateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Status other) {
+          if (other == null) {
+            return;
+          }
+          if (other.State != global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State.Unspecified) {
+            State = other.State;
+          }
+          if (other.Message.Length != 0) {
+            Message = other.Message;
+          }
+          if (other.CompletionPercent != 0) {
+            CompletionPercent = other.CompletionPercent;
+          }
+          if (other.updateTime_ != null) {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            UpdateTime.MergeFrom(other.UpdateTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                State = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                Message = input.ReadString();
+                break;
+              }
+              case 24: {
+                CompletionPercent = input.ReadInt32();
+                break;
+              }
+              case 34: {
+                if (updateTime_ == null) {
+                  UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UpdateTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                State = (global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                Message = input.ReadString();
+                break;
+              }
+              case 24: {
+                CompletionPercent = input.ReadInt32();
+                break;
+              }
+              case 34: {
+                if (updateTime_ == null) {
+                  UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UpdateTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Status message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// State of a metadata job.
+          /// </summary>
+          public enum State {
+            /// <summary>
+            /// State unspecified.
+            /// </summary>
+            [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The job is queued.
+            /// </summary>
+            [pbr::OriginalName("QUEUED")] Queued = 1,
+            /// <summary>
+            /// The job is running.
+            /// </summary>
+            [pbr::OriginalName("RUNNING")] Running = 2,
+            /// <summary>
+            /// The job is being canceled.
+            /// </summary>
+            [pbr::OriginalName("CANCELING")] Canceling = 3,
+            /// <summary>
+            /// The job is canceled.
+            /// </summary>
+            [pbr::OriginalName("CANCELED")] Canceled = 4,
+            /// <summary>
+            /// The job succeeded.
+            /// </summary>
+            [pbr::OriginalName("SUCCEEDED")] Succeeded = 5,
+            /// <summary>
+            /// The job failed.
+            /// </summary>
+            [pbr::OriginalName("FAILED")] Failed = 6,
+            /// <summary>
+            /// The job completed with some errors.
+            /// </summary>
+            [pbr::OriginalName("SUCCEEDED_WITH_ERRORS")] SucceededWithErrors = 7,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 

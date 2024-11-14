@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_CatalogService_SearchEntries_sync]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Dataplex.V1;
     using System;
 
@@ -38,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             SearchEntriesRequest request = new SearchEntriesRequest
             {
-                Name = "",
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Query = "",
                 OrderBy = "",
                 Scope = "",
