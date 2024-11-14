@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -52,6 +53,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             yield return ContactCenterInsightsReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

@@ -166,6 +166,20 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateAnalysisRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> __Marshaller_google_cloud_contactcenterinsights_v1_AnalysisRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetAnalysisRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListAnalysisRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListAnalysisRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateAnalysisRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteAnalysisRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetEncryptionSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec> __Marshaller_google_cloud_contactcenterinsights_v1_EncryptionSpec = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec.Parser));
@@ -185,6 +199,76 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_QueryMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateQaQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> __Marshaller_google_cloud_contactcenterinsights_v1_QaQuestion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetQaQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateQaQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteQaQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListQaQuestionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListQaQuestionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateQaScorecardRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecard = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetQaScorecardRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateQaScorecardRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteQaScorecardRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListQaScorecardsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListQaScorecardsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateQaScorecardRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecardRevision = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetQaScorecardRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_TuneQaScorecardRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeployQaScorecardRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UndeployQaScorecardRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteQaScorecardRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListQaScorecardRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListQaScorecardRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateFeedbackLabelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> __Marshaller_google_cloud_contactcenterinsights_v1_FeedbackLabel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListFeedbackLabelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListFeedbackLabelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetFeedbackLabelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateFeedbackLabelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteFeedbackLabelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListAllFeedbackLabelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListAllFeedbackLabelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_BulkUploadFeedbackLabelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_BulkDownloadFeedbackLabelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation> __Method_CreateConversation = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(
@@ -475,6 +559,46 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_Settings);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> __Method_CreateAnalysisRule = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAnalysisRule",
+        __Marshaller_google_cloud_contactcenterinsights_v1_CreateAnalysisRuleRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_AnalysisRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> __Method_GetAnalysisRule = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAnalysisRule",
+        __Marshaller_google_cloud_contactcenterinsights_v1_GetAnalysisRuleRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_AnalysisRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse> __Method_ListAnalysisRules = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAnalysisRules",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListAnalysisRulesRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListAnalysisRulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> __Method_UpdateAnalysisRule = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAnalysisRule",
+        __Marshaller_google_cloud_contactcenterinsights_v1_UpdateAnalysisRuleRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_AnalysisRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAnalysisRule = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAnalysisRule",
+        __Marshaller_google_cloud_contactcenterinsights_v1_DeleteAnalysisRuleRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest, global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec> __Method_GetEncryptionSpec = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest, global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -529,6 +653,214 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         "DeleteView",
         __Marshaller_google_cloud_contactcenterinsights_v1_DeleteViewRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest, global::Google.LongRunning.Operation> __Method_QueryMetrics = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "QueryMetrics",
+        __Marshaller_google_cloud_contactcenterinsights_v1_QueryMetricsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> __Method_CreateQaQuestion = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateQaQuestion",
+        __Marshaller_google_cloud_contactcenterinsights_v1_CreateQaQuestionRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaQuestion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> __Method_GetQaQuestion = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetQaQuestion",
+        __Marshaller_google_cloud_contactcenterinsights_v1_GetQaQuestionRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaQuestion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> __Method_UpdateQaQuestion = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateQaQuestion",
+        __Marshaller_google_cloud_contactcenterinsights_v1_UpdateQaQuestionRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaQuestion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteQaQuestion = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteQaQuestion",
+        __Marshaller_google_cloud_contactcenterinsights_v1_DeleteQaQuestionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse> __Method_ListQaQuestions = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListQaQuestions",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListQaQuestionsRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListQaQuestionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> __Method_CreateQaScorecard = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateQaScorecard",
+        __Marshaller_google_cloud_contactcenterinsights_v1_CreateQaScorecardRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecard);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> __Method_GetQaScorecard = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetQaScorecard",
+        __Marshaller_google_cloud_contactcenterinsights_v1_GetQaScorecardRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecard);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> __Method_UpdateQaScorecard = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateQaScorecard",
+        __Marshaller_google_cloud_contactcenterinsights_v1_UpdateQaScorecardRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecard);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteQaScorecard = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteQaScorecard",
+        __Marshaller_google_cloud_contactcenterinsights_v1_DeleteQaScorecardRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse> __Method_ListQaScorecards = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListQaScorecards",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListQaScorecardsRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListQaScorecardsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> __Method_CreateQaScorecardRevision = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateQaScorecardRevision",
+        __Marshaller_google_cloud_contactcenterinsights_v1_CreateQaScorecardRevisionRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecardRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> __Method_GetQaScorecardRevision = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetQaScorecardRevision",
+        __Marshaller_google_cloud_contactcenterinsights_v1_GetQaScorecardRevisionRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecardRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest, global::Google.LongRunning.Operation> __Method_TuneQaScorecardRevision = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TuneQaScorecardRevision",
+        __Marshaller_google_cloud_contactcenterinsights_v1_TuneQaScorecardRevisionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> __Method_DeployQaScorecardRevision = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeployQaScorecardRevision",
+        __Marshaller_google_cloud_contactcenterinsights_v1_DeployQaScorecardRevisionRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecardRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> __Method_UndeployQaScorecardRevision = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UndeployQaScorecardRevision",
+        __Marshaller_google_cloud_contactcenterinsights_v1_UndeployQaScorecardRevisionRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_QaScorecardRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteQaScorecardRevision = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteQaScorecardRevision",
+        __Marshaller_google_cloud_contactcenterinsights_v1_DeleteQaScorecardRevisionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse> __Method_ListQaScorecardRevisions = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListQaScorecardRevisions",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListQaScorecardRevisionsRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListQaScorecardRevisionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> __Method_CreateFeedbackLabel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateFeedbackLabel",
+        __Marshaller_google_cloud_contactcenterinsights_v1_CreateFeedbackLabelRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_FeedbackLabel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse> __Method_ListFeedbackLabels = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListFeedbackLabels",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListFeedbackLabelsRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListFeedbackLabelsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> __Method_GetFeedbackLabel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetFeedbackLabel",
+        __Marshaller_google_cloud_contactcenterinsights_v1_GetFeedbackLabelRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_FeedbackLabel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> __Method_UpdateFeedbackLabel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateFeedbackLabel",
+        __Marshaller_google_cloud_contactcenterinsights_v1_UpdateFeedbackLabelRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_FeedbackLabel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteFeedbackLabel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFeedbackLabel",
+        __Marshaller_google_cloud_contactcenterinsights_v1_DeleteFeedbackLabelRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse> __Method_ListAllFeedbackLabels = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAllFeedbackLabels",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListAllFeedbackLabelsRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListAllFeedbackLabelsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest, global::Google.LongRunning.Operation> __Method_BulkUploadFeedbackLabels = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BulkUploadFeedbackLabels",
+        __Marshaller_google_cloud_contactcenterinsights_v1_BulkUploadFeedbackLabelsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest, global::Google.LongRunning.Operation> __Method_BulkDownloadFeedbackLabels = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BulkDownloadFeedbackLabels",
+        __Marshaller_google_cloud_contactcenterinsights_v1_BulkDownloadFeedbackLabelsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -981,6 +1313,66 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       }
 
       /// <summary>
+      /// Creates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> CreateAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a analysis rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> GetAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists analysis rules.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse> ListAnalysisRules(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> UpdateAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a analysis rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets location-level encryption key specification.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -993,9 +1385,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       }
 
       /// <summary>
-      /// Initializes a location-level encryption key specification.  An error will
-      /// be thrown if the location has resources already created before the
-      /// initialization. Once the encryption specification is initialized at a
+      /// Initializes a location-level encryption key specification. An error will
+      /// result if the location has resources already created before the
+      /// initialization. After the encryption specification is initialized at a
       /// location, it is immutable and all newly created resources under the
       /// location will be encrypted with the existing specification.
       /// </summary>
@@ -1064,6 +1456,318 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteView(global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Query metrics.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> QueryMetrics(global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> CreateQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> GetQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> UpdateQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists QaQuestions.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse> ListQaQuestions(global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> CreateQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> GetQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> UpdateQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists QaScorecards.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse> ListQaScorecards(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> CreateQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> GetQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fine tune one or more QaModels.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TuneQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> DeployQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Undeploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> UndeployQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all revisions under the parent QaScorecard.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse> ListQaScorecardRevisions(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create feedback label.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> CreateFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List feedback labels.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse> ListFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get feedback label.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> GetFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update feedback label.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> UpdateFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete feedback label.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all feedback labels by project number.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse> ListAllFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Upload feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BulkUploadFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Download feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BulkDownloadFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2858,6 +3562,246 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSettings, null, options, request);
       }
       /// <summary>
+      /// Creates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule CreateAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAnalysisRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule CreateAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAnalysisRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> CreateAnalysisRuleAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAnalysisRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> CreateAnalysisRuleAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAnalysisRule, null, options, request);
+      }
+      /// <summary>
+      /// Get a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule GetAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAnalysisRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule GetAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAnalysisRule, null, options, request);
+      }
+      /// <summary>
+      /// Get a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> GetAnalysisRuleAsync(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAnalysisRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> GetAnalysisRuleAsync(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAnalysisRule, null, options, request);
+      }
+      /// <summary>
+      /// Lists analysis rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse ListAnalysisRules(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAnalysisRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists analysis rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse ListAnalysisRules(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAnalysisRules, null, options, request);
+      }
+      /// <summary>
+      /// Lists analysis rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse> ListAnalysisRulesAsync(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAnalysisRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists analysis rules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse> ListAnalysisRulesAsync(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAnalysisRules, null, options, request);
+      }
+      /// <summary>
+      /// Updates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule UpdateAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAnalysisRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule UpdateAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAnalysisRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> UpdateAnalysisRuleAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAnalysisRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule> UpdateAnalysisRuleAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAnalysisRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAnalysisRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAnalysisRule(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAnalysisRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnalysisRuleAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAnalysisRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a analysis rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnalysisRuleAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAnalysisRule, null, options, request);
+      }
+      /// <summary>
       /// Gets location-level encryption key specification.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2906,9 +3850,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEncryptionSpec, null, options, request);
       }
       /// <summary>
-      /// Initializes a location-level encryption key specification.  An error will
-      /// be thrown if the location has resources already created before the
-      /// initialization. Once the encryption specification is initialized at a
+      /// Initializes a location-level encryption key specification. An error will
+      /// result if the location has resources already created before the
+      /// initialization. After the encryption specification is initialized at a
       /// location, it is immutable and all newly created resources under the
       /// location will be encrypted with the existing specification.
       /// </summary>
@@ -2923,9 +3867,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return InitializeEncryptionSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initializes a location-level encryption key specification.  An error will
-      /// be thrown if the location has resources already created before the
-      /// initialization. Once the encryption specification is initialized at a
+      /// Initializes a location-level encryption key specification. An error will
+      /// result if the location has resources already created before the
+      /// initialization. After the encryption specification is initialized at a
       /// location, it is immutable and all newly created resources under the
       /// location will be encrypted with the existing specification.
       /// </summary>
@@ -2938,9 +3882,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_InitializeEncryptionSpec, null, options, request);
       }
       /// <summary>
-      /// Initializes a location-level encryption key specification.  An error will
-      /// be thrown if the location has resources already created before the
-      /// initialization. Once the encryption specification is initialized at a
+      /// Initializes a location-level encryption key specification. An error will
+      /// result if the location has resources already created before the
+      /// initialization. After the encryption specification is initialized at a
       /// location, it is immutable and all newly created resources under the
       /// location will be encrypted with the existing specification.
       /// </summary>
@@ -2955,9 +3899,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         return InitializeEncryptionSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initializes a location-level encryption key specification.  An error will
-      /// be thrown if the location has resources already created before the
-      /// initialization. Once the encryption specification is initialized at a
+      /// Initializes a location-level encryption key specification. An error will
+      /// result if the location has resources already created before the
+      /// initialization. After the encryption specification is initialized at a
       /// location, it is immutable and all newly created resources under the
       /// location will be encrypted with the existing specification.
       /// </summary>
@@ -3209,6 +4153,1254 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteView, null, options, request);
       }
+      /// <summary>
+      /// Query metrics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation QueryMetrics(global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryMetrics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Query metrics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation QueryMetrics(global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_QueryMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Query metrics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> QueryMetricsAsync(global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryMetricsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Query metrics.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> QueryMetricsAsync(global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_QueryMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Create a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaQuestion CreateQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQaQuestion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaQuestion CreateQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateQaQuestion, null, options, request);
+      }
+      /// <summary>
+      /// Create a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> CreateQaQuestionAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQaQuestionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> CreateQaQuestionAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateQaQuestion, null, options, request);
+      }
+      /// <summary>
+      /// Gets a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaQuestion GetQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQaQuestion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaQuestion GetQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetQaQuestion, null, options, request);
+      }
+      /// <summary>
+      /// Gets a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> GetQaQuestionAsync(global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQaQuestionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> GetQaQuestionAsync(global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetQaQuestion, null, options, request);
+      }
+      /// <summary>
+      /// Updates a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaQuestion UpdateQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateQaQuestion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaQuestion UpdateQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateQaQuestion, null, options, request);
+      }
+      /// <summary>
+      /// Updates a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> UpdateQaQuestionAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateQaQuestionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaQuestion> UpdateQaQuestionAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateQaQuestion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQaQuestion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQaQuestion(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteQaQuestion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaQuestionAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQaQuestionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a QaQuestion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaQuestionAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteQaQuestion, null, options, request);
+      }
+      /// <summary>
+      /// Lists QaQuestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse ListQaQuestions(global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQaQuestions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists QaQuestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse ListQaQuestions(global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListQaQuestions, null, options, request);
+      }
+      /// <summary>
+      /// Lists QaQuestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse> ListQaQuestionsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQaQuestionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists QaQuestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse> ListQaQuestionsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListQaQuestions, null, options, request);
+      }
+      /// <summary>
+      /// Create a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecard CreateQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQaScorecard(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecard CreateQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateQaScorecard, null, options, request);
+      }
+      /// <summary>
+      /// Create a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> CreateQaScorecardAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQaScorecardAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> CreateQaScorecardAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateQaScorecard, null, options, request);
+      }
+      /// <summary>
+      /// Gets a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecard GetQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQaScorecard(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecard GetQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetQaScorecard, null, options, request);
+      }
+      /// <summary>
+      /// Gets a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> GetQaScorecardAsync(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQaScorecardAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> GetQaScorecardAsync(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetQaScorecard, null, options, request);
+      }
+      /// <summary>
+      /// Updates a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecard UpdateQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateQaScorecard(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecard UpdateQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateQaScorecard, null, options, request);
+      }
+      /// <summary>
+      /// Updates a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> UpdateQaScorecardAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateQaScorecardAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecard> UpdateQaScorecardAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateQaScorecard, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQaScorecard(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQaScorecard(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteQaScorecard, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaScorecardAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQaScorecardAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaScorecardAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteQaScorecard, null, options, request);
+      }
+      /// <summary>
+      /// Lists QaScorecards.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse ListQaScorecards(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQaScorecards(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists QaScorecards.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse ListQaScorecards(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListQaScorecards, null, options, request);
+      }
+      /// <summary>
+      /// Lists QaScorecards.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse> ListQaScorecardsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQaScorecardsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists QaScorecards.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse> ListQaScorecardsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListQaScorecards, null, options, request);
+      }
+      /// <summary>
+      /// Creates a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision CreateQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQaScorecardRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision CreateQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Creates a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> CreateQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQaScorecardRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> CreateQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision GetQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQaScorecardRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision GetQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> GetQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQaScorecardRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> GetQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Fine tune one or more QaModels.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TuneQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TuneQaScorecardRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fine tune one or more QaModels.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TuneQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TuneQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Fine tune one or more QaModels.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TuneQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TuneQaScorecardRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fine tune one or more QaModels.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TuneQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TuneQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Deploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision DeployQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeployQaScorecardRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision DeployQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeployQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Deploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> DeployQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeployQaScorecardRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> DeployQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeployQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Undeploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision UndeployQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UndeployQaScorecardRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Undeploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision UndeployQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UndeployQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Undeploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> UndeployQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UndeployQaScorecardRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Undeploy a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision> UndeployQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UndeployQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQaScorecardRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQaScorecardRevision(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQaScorecardRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a QaScorecardRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQaScorecardRevisionAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteQaScorecardRevision, null, options, request);
+      }
+      /// <summary>
+      /// Lists all revisions under the parent QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse ListQaScorecardRevisions(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQaScorecardRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all revisions under the parent QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse ListQaScorecardRevisions(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListQaScorecardRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all revisions under the parent QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse> ListQaScorecardRevisionsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQaScorecardRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all revisions under the parent QaScorecard.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse> ListQaScorecardRevisionsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListQaScorecardRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Create feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel CreateFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateFeedbackLabel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel CreateFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateFeedbackLabel, null, options, request);
+      }
+      /// <summary>
+      /// Create feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> CreateFeedbackLabelAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateFeedbackLabelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> CreateFeedbackLabelAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateFeedbackLabel, null, options, request);
+      }
+      /// <summary>
+      /// List feedback labels.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse ListFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFeedbackLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List feedback labels.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse ListFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListFeedbackLabels, null, options, request);
+      }
+      /// <summary>
+      /// List feedback labels.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse> ListFeedbackLabelsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFeedbackLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List feedback labels.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse> ListFeedbackLabelsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListFeedbackLabels, null, options, request);
+      }
+      /// <summary>
+      /// Get feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel GetFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFeedbackLabel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel GetFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetFeedbackLabel, null, options, request);
+      }
+      /// <summary>
+      /// Get feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> GetFeedbackLabelAsync(global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFeedbackLabelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> GetFeedbackLabelAsync(global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetFeedbackLabel, null, options, request);
+      }
+      /// <summary>
+      /// Update feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel UpdateFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFeedbackLabel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel UpdateFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateFeedbackLabel, null, options, request);
+      }
+      /// <summary>
+      /// Update feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> UpdateFeedbackLabelAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFeedbackLabelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel> UpdateFeedbackLabelAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateFeedbackLabel, null, options, request);
+      }
+      /// <summary>
+      /// Delete feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFeedbackLabel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFeedbackLabel(global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFeedbackLabel, null, options, request);
+      }
+      /// <summary>
+      /// Delete feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeedbackLabelAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFeedbackLabelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete feedback label.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeedbackLabelAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFeedbackLabel, null, options, request);
+      }
+      /// <summary>
+      /// List all feedback labels by project number.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse ListAllFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAllFeedbackLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all feedback labels by project number.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse ListAllFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAllFeedbackLabels, null, options, request);
+      }
+      /// <summary>
+      /// List all feedback labels by project number.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse> ListAllFeedbackLabelsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAllFeedbackLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all feedback labels by project number.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse> ListAllFeedbackLabelsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAllFeedbackLabels, null, options, request);
+      }
+      /// <summary>
+      /// Upload feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BulkUploadFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BulkUploadFeedbackLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upload feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BulkUploadFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BulkUploadFeedbackLabels, null, options, request);
+      }
+      /// <summary>
+      /// Upload feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkUploadFeedbackLabelsAsync(global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BulkUploadFeedbackLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upload feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkUploadFeedbackLabelsAsync(global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BulkUploadFeedbackLabels, null, options, request);
+      }
+      /// <summary>
+      /// Download feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BulkDownloadFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BulkDownloadFeedbackLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Download feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BulkDownloadFeedbackLabels(global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BulkDownloadFeedbackLabels, null, options, request);
+      }
+      /// <summary>
+      /// Download feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkDownloadFeedbackLabelsAsync(global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BulkDownloadFeedbackLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Download feedback labels in bulk.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkDownloadFeedbackLabelsAsync(global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BulkDownloadFeedbackLabels, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ContactCenterInsightsClient NewInstance(ClientBaseConfiguration configuration)
@@ -3259,13 +5451,44 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
           .AddMethod(__Method_CalculateStats, serviceImpl.CalculateStats)
           .AddMethod(__Method_GetSettings, serviceImpl.GetSettings)
           .AddMethod(__Method_UpdateSettings, serviceImpl.UpdateSettings)
+          .AddMethod(__Method_CreateAnalysisRule, serviceImpl.CreateAnalysisRule)
+          .AddMethod(__Method_GetAnalysisRule, serviceImpl.GetAnalysisRule)
+          .AddMethod(__Method_ListAnalysisRules, serviceImpl.ListAnalysisRules)
+          .AddMethod(__Method_UpdateAnalysisRule, serviceImpl.UpdateAnalysisRule)
+          .AddMethod(__Method_DeleteAnalysisRule, serviceImpl.DeleteAnalysisRule)
           .AddMethod(__Method_GetEncryptionSpec, serviceImpl.GetEncryptionSpec)
           .AddMethod(__Method_InitializeEncryptionSpec, serviceImpl.InitializeEncryptionSpec)
           .AddMethod(__Method_CreateView, serviceImpl.CreateView)
           .AddMethod(__Method_GetView, serviceImpl.GetView)
           .AddMethod(__Method_ListViews, serviceImpl.ListViews)
           .AddMethod(__Method_UpdateView, serviceImpl.UpdateView)
-          .AddMethod(__Method_DeleteView, serviceImpl.DeleteView).Build();
+          .AddMethod(__Method_DeleteView, serviceImpl.DeleteView)
+          .AddMethod(__Method_QueryMetrics, serviceImpl.QueryMetrics)
+          .AddMethod(__Method_CreateQaQuestion, serviceImpl.CreateQaQuestion)
+          .AddMethod(__Method_GetQaQuestion, serviceImpl.GetQaQuestion)
+          .AddMethod(__Method_UpdateQaQuestion, serviceImpl.UpdateQaQuestion)
+          .AddMethod(__Method_DeleteQaQuestion, serviceImpl.DeleteQaQuestion)
+          .AddMethod(__Method_ListQaQuestions, serviceImpl.ListQaQuestions)
+          .AddMethod(__Method_CreateQaScorecard, serviceImpl.CreateQaScorecard)
+          .AddMethod(__Method_GetQaScorecard, serviceImpl.GetQaScorecard)
+          .AddMethod(__Method_UpdateQaScorecard, serviceImpl.UpdateQaScorecard)
+          .AddMethod(__Method_DeleteQaScorecard, serviceImpl.DeleteQaScorecard)
+          .AddMethod(__Method_ListQaScorecards, serviceImpl.ListQaScorecards)
+          .AddMethod(__Method_CreateQaScorecardRevision, serviceImpl.CreateQaScorecardRevision)
+          .AddMethod(__Method_GetQaScorecardRevision, serviceImpl.GetQaScorecardRevision)
+          .AddMethod(__Method_TuneQaScorecardRevision, serviceImpl.TuneQaScorecardRevision)
+          .AddMethod(__Method_DeployQaScorecardRevision, serviceImpl.DeployQaScorecardRevision)
+          .AddMethod(__Method_UndeployQaScorecardRevision, serviceImpl.UndeployQaScorecardRevision)
+          .AddMethod(__Method_DeleteQaScorecardRevision, serviceImpl.DeleteQaScorecardRevision)
+          .AddMethod(__Method_ListQaScorecardRevisions, serviceImpl.ListQaScorecardRevisions)
+          .AddMethod(__Method_CreateFeedbackLabel, serviceImpl.CreateFeedbackLabel)
+          .AddMethod(__Method_ListFeedbackLabels, serviceImpl.ListFeedbackLabels)
+          .AddMethod(__Method_GetFeedbackLabel, serviceImpl.GetFeedbackLabel)
+          .AddMethod(__Method_UpdateFeedbackLabel, serviceImpl.UpdateFeedbackLabel)
+          .AddMethod(__Method_DeleteFeedbackLabel, serviceImpl.DeleteFeedbackLabel)
+          .AddMethod(__Method_ListAllFeedbackLabels, serviceImpl.ListAllFeedbackLabels)
+          .AddMethod(__Method_BulkUploadFeedbackLabels, serviceImpl.BulkUploadFeedbackLabels)
+          .AddMethod(__Method_BulkDownloadFeedbackLabels, serviceImpl.BulkDownloadFeedbackLabels).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3311,6 +5534,11 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       serviceBinder.AddMethod(__Method_CalculateStats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest, global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse>(serviceImpl.CalculateStats));
       serviceBinder.AddMethod(__Method_GetSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings>(serviceImpl.GetSettings));
       serviceBinder.AddMethod(__Method_UpdateSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings>(serviceImpl.UpdateSettings));
+      serviceBinder.AddMethod(__Method_CreateAnalysisRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule>(serviceImpl.CreateAnalysisRule));
+      serviceBinder.AddMethod(__Method_GetAnalysisRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule>(serviceImpl.GetAnalysisRule));
+      serviceBinder.AddMethod(__Method_ListAnalysisRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesRequest, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysisRulesResponse>(serviceImpl.ListAnalysisRules));
+      serviceBinder.AddMethod(__Method_UpdateAnalysisRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateAnalysisRuleRequest, global::Google.Cloud.ContactCenterInsights.V1.AnalysisRule>(serviceImpl.UpdateAnalysisRule));
+      serviceBinder.AddMethod(__Method_DeleteAnalysisRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAnalysisRule));
       serviceBinder.AddMethod(__Method_GetEncryptionSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetEncryptionSpecRequest, global::Google.Cloud.ContactCenterInsights.V1.EncryptionSpec>(serviceImpl.GetEncryptionSpec));
       serviceBinder.AddMethod(__Method_InitializeEncryptionSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.InitializeEncryptionSpecRequest, global::Google.LongRunning.Operation>(serviceImpl.InitializeEncryptionSpec));
       serviceBinder.AddMethod(__Method_CreateView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(serviceImpl.CreateView));
@@ -3318,6 +5546,32 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       serviceBinder.AddMethod(__Method_ListViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse>(serviceImpl.ListViews));
       serviceBinder.AddMethod(__Method_UpdateView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(serviceImpl.UpdateView));
       serviceBinder.AddMethod(__Method_DeleteView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteView));
+      serviceBinder.AddMethod(__Method_QueryMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.QueryMetricsRequest, global::Google.LongRunning.Operation>(serviceImpl.QueryMetrics));
+      serviceBinder.AddMethod(__Method_CreateQaQuestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion>(serviceImpl.CreateQaQuestion));
+      serviceBinder.AddMethod(__Method_GetQaQuestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion>(serviceImpl.GetQaQuestion));
+      serviceBinder.AddMethod(__Method_UpdateQaQuestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateQaQuestionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaQuestion>(serviceImpl.UpdateQaQuestion));
+      serviceBinder.AddMethod(__Method_DeleteQaQuestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaQuestionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteQaQuestion));
+      serviceBinder.AddMethod(__Method_ListQaQuestions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaQuestionsResponse>(serviceImpl.ListQaQuestions));
+      serviceBinder.AddMethod(__Method_CreateQaScorecard, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard>(serviceImpl.CreateQaScorecard));
+      serviceBinder.AddMethod(__Method_GetQaScorecard, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard>(serviceImpl.GetQaScorecard));
+      serviceBinder.AddMethod(__Method_UpdateQaScorecard, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateQaScorecardRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecard>(serviceImpl.UpdateQaScorecard));
+      serviceBinder.AddMethod(__Method_DeleteQaScorecard, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteQaScorecard));
+      serviceBinder.AddMethod(__Method_ListQaScorecards, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardsResponse>(serviceImpl.ListQaScorecards));
+      serviceBinder.AddMethod(__Method_CreateQaScorecardRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision>(serviceImpl.CreateQaScorecardRevision));
+      serviceBinder.AddMethod(__Method_GetQaScorecardRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision>(serviceImpl.GetQaScorecardRevision));
+      serviceBinder.AddMethod(__Method_TuneQaScorecardRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.TuneQaScorecardRevisionRequest, global::Google.LongRunning.Operation>(serviceImpl.TuneQaScorecardRevision));
+      serviceBinder.AddMethod(__Method_DeployQaScorecardRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeployQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision>(serviceImpl.DeployQaScorecardRevision));
+      serviceBinder.AddMethod(__Method_UndeployQaScorecardRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UndeployQaScorecardRevisionRequest, global::Google.Cloud.ContactCenterInsights.V1.QaScorecardRevision>(serviceImpl.UndeployQaScorecardRevision));
+      serviceBinder.AddMethod(__Method_DeleteQaScorecardRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeleteQaScorecardRevisionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteQaScorecardRevision));
+      serviceBinder.AddMethod(__Method_ListQaScorecardRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListQaScorecardRevisionsResponse>(serviceImpl.ListQaScorecardRevisions));
+      serviceBinder.AddMethod(__Method_CreateFeedbackLabel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel>(serviceImpl.CreateFeedbackLabel));
+      serviceBinder.AddMethod(__Method_ListFeedbackLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListFeedbackLabelsResponse>(serviceImpl.ListFeedbackLabels));
+      serviceBinder.AddMethod(__Method_GetFeedbackLabel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel>(serviceImpl.GetFeedbackLabel));
+      serviceBinder.AddMethod(__Method_UpdateFeedbackLabel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateFeedbackLabelRequest, global::Google.Cloud.ContactCenterInsights.V1.FeedbackLabel>(serviceImpl.UpdateFeedbackLabel));
+      serviceBinder.AddMethod(__Method_DeleteFeedbackLabel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeleteFeedbackLabelRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFeedbackLabel));
+      serviceBinder.AddMethod(__Method_ListAllFeedbackLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListAllFeedbackLabelsResponse>(serviceImpl.ListAllFeedbackLabels));
+      serviceBinder.AddMethod(__Method_BulkUploadFeedbackLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.BulkUploadFeedbackLabelsRequest, global::Google.LongRunning.Operation>(serviceImpl.BulkUploadFeedbackLabels));
+      serviceBinder.AddMethod(__Method_BulkDownloadFeedbackLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.BulkDownloadFeedbackLabelsRequest, global::Google.LongRunning.Operation>(serviceImpl.BulkDownloadFeedbackLabels));
     }
 
   }
