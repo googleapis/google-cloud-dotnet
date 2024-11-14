@@ -990,8 +990,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   ///   phase.
   ///
   /// The client provides this configuration in terms of the durations of those
-  /// two phases. The durations are measured in terms of the audio length from
-  /// the start of the input audio.
+  /// two phases. The durations are measured in terms of the audio length from the
+  /// start of the input audio.
   ///
   /// The flow goes like below:
   ///
