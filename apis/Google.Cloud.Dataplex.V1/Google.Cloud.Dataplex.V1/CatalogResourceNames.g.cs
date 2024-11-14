@@ -1042,6 +1042,257 @@ namespace Google.Cloud.Dataplex.V1
         public static bool operator !=(EntryName a, EntryName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>MetadataJob</c> resource.</summary>
+    public sealed partial class MetadataJobName : gax::IResourceName, sys::IEquatable<MetadataJobName>
+    {
+        /// <summary>The possible contents of <see cref="MetadataJobName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c>.
+            /// </summary>
+            ProjectLocationMetadataJob = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationMetadataJob = new gax::PathTemplate("projects/{project}/locations/{location}/metadataJobs/{metadataJob}");
+
+        /// <summary>Creates a <see cref="MetadataJobName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="MetadataJobName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static MetadataJobName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new MetadataJobName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="MetadataJobName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="metadataJobId">The <c>MetadataJob</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="MetadataJobName"/> constructed from the provided ids.</returns>
+        public static MetadataJobName FromProjectLocationMetadataJob(string projectId, string locationId, string metadataJobId) =>
+            new MetadataJobName(ResourceNameType.ProjectLocationMetadataJob, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), metadataJobId: gax::GaxPreconditions.CheckNotNullOrEmpty(metadataJobId, nameof(metadataJobId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MetadataJobName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="metadataJobId">The <c>MetadataJob</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MetadataJobName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string metadataJobId) =>
+            FormatProjectLocationMetadataJob(projectId, locationId, metadataJobId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MetadataJobName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="metadataJobId">The <c>MetadataJob</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MetadataJobName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c>.
+        /// </returns>
+        public static string FormatProjectLocationMetadataJob(string projectId, string locationId, string metadataJobId) =>
+            s_projectLocationMetadataJob.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(metadataJobId, nameof(metadataJobId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="MetadataJobName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="metadataJobName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="MetadataJobName"/> if successful.</returns>
+        public static MetadataJobName Parse(string metadataJobName) => Parse(metadataJobName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MetadataJobName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="metadataJobName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="MetadataJobName"/> if successful.</returns>
+        public static MetadataJobName Parse(string metadataJobName, bool allowUnparsed) =>
+            TryParse(metadataJobName, allowUnparsed, out MetadataJobName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MetadataJobName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="metadataJobName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MetadataJobName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string metadataJobName, out MetadataJobName result) =>
+            TryParse(metadataJobName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MetadataJobName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="metadataJobName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MetadataJobName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string metadataJobName, bool allowUnparsed, out MetadataJobName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(metadataJobName, nameof(metadataJobName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationMetadataJob.TryParseName(metadataJobName, out resourceName))
+            {
+                result = FromProjectLocationMetadataJob(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(metadataJobName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private MetadataJobName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string metadataJobId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            MetadataJobId = metadataJobId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="MetadataJobName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/metadataJobs/{metadataJob}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="metadataJobId">The <c>MetadataJob</c> ID. Must not be <c>null</c> or empty.</param>
+        public MetadataJobName(string projectId, string locationId, string metadataJobId) : this(ResourceNameType.ProjectLocationMetadataJob, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), metadataJobId: gax::GaxPreconditions.CheckNotNullOrEmpty(metadataJobId, nameof(metadataJobId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>MetadataJob</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string MetadataJobId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationMetadataJob: return s_projectLocationMetadataJob.Expand(ProjectId, LocationId, MetadataJobId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as MetadataJobName);
+
+        /// <inheritdoc/>
+        public bool Equals(MetadataJobName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(MetadataJobName a, MetadataJobName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(MetadataJobName a, MetadataJobName b) => !(a == b);
+    }
+
     public partial class AspectType
     {
         /// <summary>
@@ -1304,6 +1555,117 @@ namespace Google.Cloud.Dataplex.V1
         {
             get => string.IsNullOrEmpty(Entry) ? null : EntryName.Parse(Entry, allowUnparsed: true);
             set => Entry = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchEntriesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gagr::LocationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateMetadataJobRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMetadataJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::MetadataJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::MetadataJobName MetadataJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::MetadataJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMetadataJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CancelMetadataJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::MetadataJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::MetadataJobName MetadataJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::MetadataJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MetadataJob
+    {
+        /// <summary>
+        /// <see cref="gcdv::MetadataJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::MetadataJobName MetadataJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::MetadataJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class ImportJobSpec
+            {
+                public partial class Types
+                {
+                    public partial class ImportJobScope
+                    {
+                        /// <summary>
+                        /// <see cref="EntryGroupName"/>-typed view over the <see cref="EntryGroups"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<EntryGroupName> EntryGroupsAsEntryGroupNames
+                        {
+                            get => new gax::ResourceNameList<EntryGroupName>(EntryGroups, s => string.IsNullOrEmpty(s) ? null : EntryGroupName.Parse(s, allowUnparsed: true));
+                        }
+
+                        /// <summary>
+                        /// <see cref="EntryTypeName"/>-typed view over the <see cref="EntryTypes"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<EntryTypeName> EntryTypesAsEntryTypeNames
+                        {
+                            get => new gax::ResourceNameList<EntryTypeName>(EntryTypes, s => string.IsNullOrEmpty(s) ? null : EntryTypeName.Parse(s, allowUnparsed: true));
+                        }
+
+                        /// <summary>
+                        /// <see cref="AspectTypeName"/>-typed view over the <see cref="AspectTypes"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<AspectTypeName> AspectTypesAsAspectTypeNames
+                        {
+                            get => new gax::ResourceNameList<AspectTypeName>(AspectTypes, s => string.IsNullOrEmpty(s) ? null : AspectTypeName.Parse(s, allowUnparsed: true));
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -81,6 +81,11 @@ namespace Google.Cloud.Dataplex.V1
             GetEntrySettings = existing.GetEntrySettings;
             LookupEntrySettings = existing.LookupEntrySettings;
             SearchEntriesSettings = existing.SearchEntriesSettings;
+            CreateMetadataJobSettings = existing.CreateMetadataJobSettings;
+            CreateMetadataJobOperationsSettings = existing.CreateMetadataJobOperationsSettings.Clone();
+            GetMetadataJobSettings = existing.GetMetadataJobSettings;
+            ListMetadataJobsSettings = existing.ListMetadataJobsSettings;
+            CancelMetadataJobSettings = existing.CancelMetadataJobSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -614,6 +619,72 @@ namespace Google.Cloud.Dataplex.V1
         public gaxgrpc::CallSettings SearchEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.CreateMetadataJob</c> and <c>CatalogServiceClient.CreateMetadataJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateMetadataJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CatalogServiceClient.CreateMetadataJob</c> and
+        /// <c>CatalogServiceClient.CreateMetadataJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateMetadataJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.GetMetadataJob</c> and <c>CatalogServiceClient.GetMetadataJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMetadataJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.ListMetadataJobs</c> and <c>CatalogServiceClient.ListMetadataJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMetadataJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.CancelMetadataJob</c> and <c>CatalogServiceClient.CancelMetadataJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelMetadataJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -683,10 +754,10 @@ namespace Google.Cloud.Dataplex.V1
     /// <summary>CatalogService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// The primary resources offered by this service are EntryGroups, EntryTypes,
-    /// AspectTypes, Entry and Aspect which collectively allow a data administrator
-    /// to organize, manage, secure and catalog data across their organization
-    /// located across cloud projects in a variety of storage systems including Cloud
-    /// Storage and BigQuery.
+    /// AspectTypes, and Entries. They collectively let data administrators organize,
+    /// manage, secure, and catalog data located across cloud projects in their
+    /// organization in a variety of storage systems, including Cloud Storage and
+    /// BigQuery.
     /// </remarks>
     public abstract partial class CatalogServiceClient
     {
@@ -775,7 +846,7 @@ namespace Google.Cloud.Dataplex.V1
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -784,7 +855,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -793,7 +864,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -828,15 +899,15 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<EntryType, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateEntryTypeOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the EntryType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="entryTypeId">
         /// Required. EntryType identifier.
@@ -852,15 +923,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the EntryType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="entryTypeId">
         /// Required. EntryType identifier.
@@ -876,15 +947,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the EntryType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="entryTypeId">
         /// Required. EntryType identifier.
@@ -895,15 +966,15 @@ namespace Google.Cloud.Dataplex.V1
             CreateEntryTypeAsync(parent, entryType, entryTypeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the EntryType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="entryTypeId">
         /// Required. EntryType identifier.
@@ -919,15 +990,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the EntryType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="entryTypeId">
         /// Required. EntryType identifier.
@@ -943,15 +1014,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the EntryType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="entryTypeId">
         /// Required. EntryType identifier.
@@ -962,7 +1033,7 @@ namespace Google.Cloud.Dataplex.V1
             CreateEntryTypeAsync(parent, entryType, entryTypeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a EntryType resource.
+        /// Updates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -971,7 +1042,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a EntryType resource.
+        /// Updates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -980,7 +1051,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a EntryType resource.
+        /// Updates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1015,10 +1086,10 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<EntryType, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEntryTypeOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates a EntryType resource.
+        /// Updates an EntryType.
         /// </summary>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
@@ -1033,10 +1104,10 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a EntryType resource.
+        /// Updates an EntryType.
         /// </summary>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
@@ -1051,10 +1122,10 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a EntryType resource.
+        /// Updates an EntryType.
         /// </summary>
         /// <param name="entryType">
-        /// Required. EntryType Resource
+        /// Required. EntryType Resource.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
@@ -1065,7 +1136,7 @@ namespace Google.Cloud.Dataplex.V1
             UpdateEntryTypeAsync(entryType, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1074,7 +1145,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1083,7 +1154,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1118,7 +1189,7 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteEntryTypeOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1133,7 +1204,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1148,7 +1219,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1160,7 +1231,7 @@ namespace Google.Cloud.Dataplex.V1
             DeleteEntryTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1175,7 +1246,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1190,7 +1261,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1225,7 +1296,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the EntryType location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1260,7 +1331,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the EntryType location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1295,7 +1366,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the EntryType location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1330,7 +1401,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the EntryType location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1360,7 +1431,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1369,7 +1440,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1378,7 +1449,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1387,7 +1458,7 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1402,7 +1473,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1417,7 +1488,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1429,7 +1500,7 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1444,7 +1515,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1459,7 +1530,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryType:
@@ -1471,7 +1542,7 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1480,7 +1551,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1489,7 +1560,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1524,15 +1595,15 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<AspectType, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAspectTypeOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the AspectType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="aspectType">
-        /// Required. AspectType Resource
+        /// Required. AspectType Resource.
         /// </param>
         /// <param name="aspectTypeId">
         /// Required. AspectType identifier.
@@ -1548,15 +1619,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the AspectType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="aspectType">
-        /// Required. AspectType Resource
+        /// Required. AspectType Resource.
         /// </param>
         /// <param name="aspectTypeId">
         /// Required. AspectType identifier.
@@ -1572,15 +1643,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the AspectType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="aspectType">
-        /// Required. AspectType Resource
+        /// Required. AspectType Resource.
         /// </param>
         /// <param name="aspectTypeId">
         /// Required. AspectType identifier.
@@ -1591,15 +1662,15 @@ namespace Google.Cloud.Dataplex.V1
             CreateAspectTypeAsync(parent, aspectType, aspectTypeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the AspectType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="aspectType">
-        /// Required. AspectType Resource
+        /// Required. AspectType Resource.
         /// </param>
         /// <param name="aspectTypeId">
         /// Required. AspectType identifier.
@@ -1615,15 +1686,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the AspectType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="aspectType">
-        /// Required. AspectType Resource
+        /// Required. AspectType Resource.
         /// </param>
         /// <param name="aspectTypeId">
         /// Required. AspectType identifier.
@@ -1639,15 +1710,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the AspectType, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="aspectType">
-        /// Required. AspectType Resource
+        /// Required. AspectType Resource.
         /// </param>
         /// <param name="aspectTypeId">
         /// Required. AspectType identifier.
@@ -1658,7 +1729,7 @@ namespace Google.Cloud.Dataplex.V1
             CreateAspectTypeAsync(parent, aspectType, aspectTypeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a AspectType resource.
+        /// Updates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1667,7 +1738,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a AspectType resource.
+        /// Updates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1676,7 +1747,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a AspectType resource.
+        /// Updates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1711,7 +1782,7 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<AspectType, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAspectTypeOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates a AspectType resource.
+        /// Updates an AspectType.
         /// </summary>
         /// <param name="aspectType">
         /// Required. AspectType Resource
@@ -1729,7 +1800,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a AspectType resource.
+        /// Updates an AspectType.
         /// </summary>
         /// <param name="aspectType">
         /// Required. AspectType Resource
@@ -1747,7 +1818,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a AspectType resource.
+        /// Updates an AspectType.
         /// </summary>
         /// <param name="aspectType">
         /// Required. AspectType Resource
@@ -1761,7 +1832,7 @@ namespace Google.Cloud.Dataplex.V1
             UpdateAspectTypeAsync(aspectType, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1770,7 +1841,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1779,7 +1850,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1814,7 +1885,7 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAspectTypeOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -1829,7 +1900,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -1844,7 +1915,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -1856,7 +1927,7 @@ namespace Google.Cloud.Dataplex.V1
             DeleteAspectTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -1871,7 +1942,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -1886,7 +1957,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -1921,7 +1992,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the AspectType location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1956,7 +2027,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the AspectType location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1991,7 +2062,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the AspectType location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2026,7 +2097,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the AspectType location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2056,7 +2127,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2065,7 +2136,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2074,7 +2145,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2083,7 +2154,7 @@ namespace Google.Cloud.Dataplex.V1
             GetAspectTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -2098,7 +2169,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -2113,7 +2184,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -2125,7 +2196,7 @@ namespace Google.Cloud.Dataplex.V1
             GetAspectTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -2140,7 +2211,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -2155,7 +2226,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AspectType:
@@ -2167,7 +2238,7 @@ namespace Google.Cloud.Dataplex.V1
             GetAspectTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2176,7 +2247,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2185,7 +2256,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2220,7 +2291,7 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<EntryGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateEntryGroupOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
@@ -2228,7 +2299,7 @@ namespace Google.Cloud.Dataplex.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="entryGroupId">
         /// Required. EntryGroup identifier.
@@ -2244,7 +2315,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
@@ -2252,7 +2323,7 @@ namespace Google.Cloud.Dataplex.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="entryGroupId">
         /// Required. EntryGroup identifier.
@@ -2268,7 +2339,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
@@ -2276,7 +2347,7 @@ namespace Google.Cloud.Dataplex.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="entryGroupId">
         /// Required. EntryGroup identifier.
@@ -2287,7 +2358,7 @@ namespace Google.Cloud.Dataplex.V1
             CreateEntryGroupAsync(parent, entryGroup, entryGroupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
@@ -2295,7 +2366,7 @@ namespace Google.Cloud.Dataplex.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="entryGroupId">
         /// Required. EntryGroup identifier.
@@ -2311,7 +2382,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
@@ -2319,7 +2390,7 @@ namespace Google.Cloud.Dataplex.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="entryGroupId">
         /// Required. EntryGroup identifier.
@@ -2335,7 +2406,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
@@ -2343,7 +2414,7 @@ namespace Google.Cloud.Dataplex.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="entryGroupId">
         /// Required. EntryGroup identifier.
@@ -2354,7 +2425,7 @@ namespace Google.Cloud.Dataplex.V1
             CreateEntryGroupAsync(parent, entryGroup, entryGroupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a EntryGroup resource.
+        /// Updates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2363,7 +2434,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a EntryGroup resource.
+        /// Updates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2372,7 +2443,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a EntryGroup resource.
+        /// Updates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2407,10 +2478,10 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<EntryGroup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEntryGroupOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates a EntryGroup resource.
+        /// Updates an EntryGroup.
         /// </summary>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
@@ -2425,10 +2496,10 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a EntryGroup resource.
+        /// Updates an EntryGroup.
         /// </summary>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
@@ -2443,10 +2514,10 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a EntryGroup resource.
+        /// Updates an EntryGroup.
         /// </summary>
         /// <param name="entryGroup">
-        /// Required. EntryGroup Resource
+        /// Required. EntryGroup Resource.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
@@ -2457,7 +2528,7 @@ namespace Google.Cloud.Dataplex.V1
             UpdateEntryGroupAsync(entryGroup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2466,7 +2537,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2475,7 +2546,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2510,7 +2581,7 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteEntryGroupOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2525,7 +2596,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2540,7 +2611,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2552,7 +2623,7 @@ namespace Google.Cloud.Dataplex.V1
             DeleteEntryGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2567,7 +2638,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2582,7 +2653,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2617,7 +2688,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2652,7 +2723,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2687,7 +2758,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2722,7 +2793,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2752,7 +2823,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2761,7 +2832,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2770,7 +2841,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2779,7 +2850,7 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2794,7 +2865,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2809,7 +2880,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2821,7 +2892,7 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2836,7 +2907,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2851,7 +2922,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntryGroup:
@@ -2902,20 +2973,21 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="entryId">
         /// Required. Entry identifier. It has to be unique within an Entry Group.
         /// 
-        /// Entries corresponding to Google Cloud resources use Entry ID format based
-        /// on Full Resource Names
-        /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
-        /// The format is a Full Resource Name of the resource without the
-        /// prefix double slashes in the API Service Name part of Full Resource Name.
-        /// This allows retrieval of entries using their associated resource name.
+        /// Entries corresponding to Google Cloud resources use an Entry ID format
+        /// based on [full resource
+        /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name).
+        /// The format is a full resource name of the resource without the
+        /// prefix double slashes in the API service name part of the full resource
+        /// name. This allows retrieval of entries using their associated resource
+        /// name.
         /// 
-        /// For example if the Full Resource Name of a resource is
+        /// For example, if the full resource name of a resource is
         /// `//library.googleapis.com/shelves/shelf1/books/book2`,
         /// then the suggested entry_id is
         /// `library.googleapis.com/shelves/shelf1/books/book2`.
         /// 
         /// It is also suggested to follow the same convention for entries
-        /// corresponding to resources from other providers or systems than Google
+        /// corresponding to resources from providers or systems other than Google
         /// Cloud.
         /// 
         /// The maximum size of the field is 4000 characters.
@@ -2943,20 +3015,21 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="entryId">
         /// Required. Entry identifier. It has to be unique within an Entry Group.
         /// 
-        /// Entries corresponding to Google Cloud resources use Entry ID format based
-        /// on Full Resource Names
-        /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
-        /// The format is a Full Resource Name of the resource without the
-        /// prefix double slashes in the API Service Name part of Full Resource Name.
-        /// This allows retrieval of entries using their associated resource name.
+        /// Entries corresponding to Google Cloud resources use an Entry ID format
+        /// based on [full resource
+        /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name).
+        /// The format is a full resource name of the resource without the
+        /// prefix double slashes in the API service name part of the full resource
+        /// name. This allows retrieval of entries using their associated resource
+        /// name.
         /// 
-        /// For example if the Full Resource Name of a resource is
+        /// For example, if the full resource name of a resource is
         /// `//library.googleapis.com/shelves/shelf1/books/book2`,
         /// then the suggested entry_id is
         /// `library.googleapis.com/shelves/shelf1/books/book2`.
         /// 
         /// It is also suggested to follow the same convention for entries
-        /// corresponding to resources from other providers or systems than Google
+        /// corresponding to resources from providers or systems other than Google
         /// Cloud.
         /// 
         /// The maximum size of the field is 4000 characters.
@@ -2984,20 +3057,21 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="entryId">
         /// Required. Entry identifier. It has to be unique within an Entry Group.
         /// 
-        /// Entries corresponding to Google Cloud resources use Entry ID format based
-        /// on Full Resource Names
-        /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
-        /// The format is a Full Resource Name of the resource without the
-        /// prefix double slashes in the API Service Name part of Full Resource Name.
-        /// This allows retrieval of entries using their associated resource name.
+        /// Entries corresponding to Google Cloud resources use an Entry ID format
+        /// based on [full resource
+        /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name).
+        /// The format is a full resource name of the resource without the
+        /// prefix double slashes in the API service name part of the full resource
+        /// name. This allows retrieval of entries using their associated resource
+        /// name.
         /// 
-        /// For example if the Full Resource Name of a resource is
+        /// For example, if the full resource name of a resource is
         /// `//library.googleapis.com/shelves/shelf1/books/book2`,
         /// then the suggested entry_id is
         /// `library.googleapis.com/shelves/shelf1/books/book2`.
         /// 
         /// It is also suggested to follow the same convention for entries
-        /// corresponding to resources from other providers or systems than Google
+        /// corresponding to resources from providers or systems other than Google
         /// Cloud.
         /// 
         /// The maximum size of the field is 4000 characters.
@@ -3020,20 +3094,21 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="entryId">
         /// Required. Entry identifier. It has to be unique within an Entry Group.
         /// 
-        /// Entries corresponding to Google Cloud resources use Entry ID format based
-        /// on Full Resource Names
-        /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
-        /// The format is a Full Resource Name of the resource without the
-        /// prefix double slashes in the API Service Name part of Full Resource Name.
-        /// This allows retrieval of entries using their associated resource name.
+        /// Entries corresponding to Google Cloud resources use an Entry ID format
+        /// based on [full resource
+        /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name).
+        /// The format is a full resource name of the resource without the
+        /// prefix double slashes in the API service name part of the full resource
+        /// name. This allows retrieval of entries using their associated resource
+        /// name.
         /// 
-        /// For example if the Full Resource Name of a resource is
+        /// For example, if the full resource name of a resource is
         /// `//library.googleapis.com/shelves/shelf1/books/book2`,
         /// then the suggested entry_id is
         /// `library.googleapis.com/shelves/shelf1/books/book2`.
         /// 
         /// It is also suggested to follow the same convention for entries
-        /// corresponding to resources from other providers or systems than Google
+        /// corresponding to resources from providers or systems other than Google
         /// Cloud.
         /// 
         /// The maximum size of the field is 4000 characters.
@@ -3061,20 +3136,21 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="entryId">
         /// Required. Entry identifier. It has to be unique within an Entry Group.
         /// 
-        /// Entries corresponding to Google Cloud resources use Entry ID format based
-        /// on Full Resource Names
-        /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
-        /// The format is a Full Resource Name of the resource without the
-        /// prefix double slashes in the API Service Name part of Full Resource Name.
-        /// This allows retrieval of entries using their associated resource name.
+        /// Entries corresponding to Google Cloud resources use an Entry ID format
+        /// based on [full resource
+        /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name).
+        /// The format is a full resource name of the resource without the
+        /// prefix double slashes in the API service name part of the full resource
+        /// name. This allows retrieval of entries using their associated resource
+        /// name.
         /// 
-        /// For example if the Full Resource Name of a resource is
+        /// For example, if the full resource name of a resource is
         /// `//library.googleapis.com/shelves/shelf1/books/book2`,
         /// then the suggested entry_id is
         /// `library.googleapis.com/shelves/shelf1/books/book2`.
         /// 
         /// It is also suggested to follow the same convention for entries
-        /// corresponding to resources from other providers or systems than Google
+        /// corresponding to resources from providers or systems other than Google
         /// Cloud.
         /// 
         /// The maximum size of the field is 4000 characters.
@@ -3102,20 +3178,21 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="entryId">
         /// Required. Entry identifier. It has to be unique within an Entry Group.
         /// 
-        /// Entries corresponding to Google Cloud resources use Entry ID format based
-        /// on Full Resource Names
-        /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
-        /// The format is a Full Resource Name of the resource without the
-        /// prefix double slashes in the API Service Name part of Full Resource Name.
-        /// This allows retrieval of entries using their associated resource name.
+        /// Entries corresponding to Google Cloud resources use an Entry ID format
+        /// based on [full resource
+        /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name).
+        /// The format is a full resource name of the resource without the
+        /// prefix double slashes in the API service name part of the full resource
+        /// name. This allows retrieval of entries using their associated resource
+        /// name.
         /// 
-        /// For example if the Full Resource Name of a resource is
+        /// For example, if the full resource name of a resource is
         /// `//library.googleapis.com/shelves/shelf1/books/book2`,
         /// then the suggested entry_id is
         /// `library.googleapis.com/shelves/shelf1/books/book2`.
         /// 
         /// It is also suggested to follow the same convention for entries
-        /// corresponding to resources from other providers or systems than Google
+        /// corresponding to resources from providers or systems other than Google
         /// Cloud.
         /// 
         /// The maximum size of the field is 4000 characters.
@@ -3162,8 +3239,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Optional. Mask of fields to update. To update Aspects, the update_mask must
         /// contain the value "aspects".
         /// 
-        /// If the update_mask is empty, all modifiable fields present in the request
-        /// will be updated.
+        /// If the update_mask is empty, the service will update all modifiable fields
+        /// present in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3184,8 +3261,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Optional. Mask of fields to update. To update Aspects, the update_mask must
         /// contain the value "aspects".
         /// 
-        /// If the update_mask is empty, all modifiable fields present in the request
-        /// will be updated.
+        /// If the update_mask is empty, the service will update all modifiable fields
+        /// present in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3206,8 +3283,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Optional. Mask of fields to update. To update Aspects, the update_mask must
         /// contain the value "aspects".
         /// 
-        /// If the update_mask is empty, all modifiable fields present in the request
-        /// will be updated.
+        /// If the update_mask is empty, the service will update all modifiable fields
+        /// present in the request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3326,7 +3403,7 @@ namespace Google.Cloud.Dataplex.V1
             DeleteEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists entries within an entry group.
+        /// Lists Entries within an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3335,7 +3412,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists entries within an entry group.
+        /// Lists Entries within an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3344,7 +3421,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists entries within an entry group.
+        /// Lists Entries within an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3378,7 +3455,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists entries within an entry group.
+        /// Lists Entries within an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3412,7 +3489,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists entries within an entry group.
+        /// Lists Entries within an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3446,7 +3523,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists entries within an entry group.
+        /// Lists Entries within an EntryGroup.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3480,7 +3557,12 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3489,7 +3571,12 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3498,7 +3585,12 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3507,7 +3599,12 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3522,7 +3619,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3537,7 +3639,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3549,7 +3656,12 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3564,7 +3676,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3579,7 +3696,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3591,7 +3713,12 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Looks up a single entry.
+        /// Looks up a single Entry by name using the permission on the source system.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3600,7 +3727,12 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Looks up a single entry.
+        /// Looks up a single Entry by name using the permission on the source system.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3609,7 +3741,12 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Looks up a single entry.
+        /// Looks up a single Entry by name using the permission on the source system.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3618,7 +3755,7 @@ namespace Google.Cloud.Dataplex.V1
             LookupEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Searches for entries matching given query and scope.
+        /// Searches for Entries matching the given query and scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3627,7 +3764,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Searches for entries matching given query and scope.
+        /// Searches for Entries matching the given query and scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3636,7 +3773,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Searches for entries matching given query and scope.
+        /// Searches for Entries matching the given query and scope.
         /// </summary>
         /// <param name="name">
         /// Required. The project to which the request should be attributed in the
@@ -3674,7 +3811,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Searches for entries matching given query and scope.
+        /// Searches for Entries matching the given query and scope.
         /// </summary>
         /// <param name="name">
         /// Required. The project to which the request should be attributed in the
@@ -3710,15 +3847,709 @@ namespace Google.Cloud.Dataplex.V1
             }
             return SearchEntriesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Searches for Entries matching the given query and scope.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The project to which the request should be attributed in the
+        /// following form: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. The query against which entries in scope should be matched.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchEntriesResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchEntriesResponse, SearchEntriesResult> SearchEntries(gagr::LocationName name, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchEntriesRequest request = new SearchEntriesRequest
+            {
+                LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchEntries(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for Entries matching the given query and scope.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The project to which the request should be attributed in the
+        /// following form: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="query">
+        /// Required. The query against which entries in scope should be matched.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchEntriesResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchEntriesResponse, SearchEntriesResult> SearchEntriesAsync(gagr::LocationName name, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchEntriesRequest request = new SearchEntriesRequest
+            {
+                LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchEntriesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataJob, OperationMetadata> CreateMetadataJob(CreateMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataJob, OperationMetadata>> CreateMetadataJobAsync(CreateMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataJob, OperationMetadata>> CreateMetadataJobAsync(CreateMetadataJobRequest request, st::CancellationToken cancellationToken) =>
+            CreateMetadataJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateMetadataJob</c>.</summary>
+        public virtual lro::OperationsClient CreateMetadataJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateMetadataJob</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MetadataJob, OperationMetadata> PollOnceCreateMetadataJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MetadataJob, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMetadataJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateMetadataJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MetadataJob, OperationMetadata>> PollOnceCreateMetadataJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MetadataJob, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMetadataJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataJob">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataJobId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataJob, OperationMetadata> CreateMetadataJob(string parent, MetadataJob metadataJob, string metadataJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMetadataJob(new CreateMetadataJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MetadataJob = gax::GaxPreconditions.CheckNotNull(metadataJob, nameof(metadataJob)),
+                MetadataJobId = metadataJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataJob">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataJobId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataJob, OperationMetadata>> CreateMetadataJobAsync(string parent, MetadataJob metadataJob, string metadataJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMetadataJobAsync(new CreateMetadataJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MetadataJob = gax::GaxPreconditions.CheckNotNull(metadataJob, nameof(metadataJob)),
+                MetadataJobId = metadataJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataJob">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataJobId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataJob, OperationMetadata>> CreateMetadataJobAsync(string parent, MetadataJob metadataJob, string metadataJobId, st::CancellationToken cancellationToken) =>
+            CreateMetadataJobAsync(parent, metadataJob, metadataJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataJob">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataJobId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataJob, OperationMetadata> CreateMetadataJob(gagr::LocationName parent, MetadataJob metadataJob, string metadataJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMetadataJob(new CreateMetadataJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MetadataJob = gax::GaxPreconditions.CheckNotNull(metadataJob, nameof(metadataJob)),
+                MetadataJobId = metadataJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataJob">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataJobId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataJob, OperationMetadata>> CreateMetadataJobAsync(gagr::LocationName parent, MetadataJob metadataJob, string metadataJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMetadataJobAsync(new CreateMetadataJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MetadataJob = gax::GaxPreconditions.CheckNotNull(metadataJob, nameof(metadataJob)),
+                MetadataJobId = metadataJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="metadataJob">
+        /// Required. The metadata job resource.
+        /// </param>
+        /// <param name="metadataJobId">
+        /// Optional. The metadata job ID. If not provided, a unique ID is generated
+        /// with the prefix `metadata-job-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataJob, OperationMetadata>> CreateMetadataJobAsync(gagr::LocationName parent, MetadataJob metadataJob, string metadataJobId, st::CancellationToken cancellationToken) =>
+            CreateMetadataJobAsync(parent, metadataJob, metadataJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MetadataJob GetMetadataJob(GetMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataJob> GetMetadataJobAsync(GetMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataJob> GetMetadataJobAsync(GetMetadataJobRequest request, st::CancellationToken cancellationToken) =>
+            GetMetadataJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MetadataJob GetMetadataJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataJob(new GetMetadataJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataJob> GetMetadataJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataJobAsync(new GetMetadataJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataJob> GetMetadataJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMetadataJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MetadataJob GetMetadataJob(MetadataJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataJob(new GetMetadataJobRequest
+            {
+                MetadataJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataJob> GetMetadataJobAsync(MetadataJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataJobAsync(new GetMetadataJobRequest
+            {
+                MetadataJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MetadataJob> GetMetadataJobAsync(MetadataJobName name, st::CancellationToken cancellationToken) =>
+            GetMetadataJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists metadata jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MetadataJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMetadataJobsResponse, MetadataJob> ListMetadataJobs(ListMetadataJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists metadata jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MetadataJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMetadataJobsResponse, MetadataJob> ListMetadataJobsAsync(ListMetadataJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists metadata jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MetadataJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMetadataJobsResponse, MetadataJob> ListMetadataJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataJobsRequest request = new ListMetadataJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists metadata jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MetadataJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMetadataJobsResponse, MetadataJob> ListMetadataJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataJobsRequest request = new ListMetadataJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists metadata jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MetadataJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMetadataJobsResponse, MetadataJob> ListMetadataJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataJobsRequest request = new ListMetadataJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists metadata jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent location, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MetadataJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMetadataJobsResponse, MetadataJob> ListMetadataJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataJobsRequest request = new ListMetadataJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelMetadataJob(CancelMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelMetadataJobAsync(CancelMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelMetadataJobAsync(CancelMetadataJobRequest request, st::CancellationToken cancellationToken) =>
+            CancelMetadataJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelMetadataJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelMetadataJob(new CancelMetadataJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelMetadataJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelMetadataJobAsync(new CancelMetadataJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelMetadataJobAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelMetadataJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelMetadataJob(MetadataJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelMetadataJob(new CancelMetadataJobRequest
+            {
+                MetadataJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelMetadataJobAsync(MetadataJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelMetadataJobAsync(new CancelMetadataJobRequest
+            {
+                MetadataJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the job, in the format
+        /// `projects/{project_id_or_number}/locations/{location_id}/metadataJobs/{metadata_job_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelMetadataJobAsync(MetadataJobName name, st::CancellationToken cancellationToken) =>
+            CancelMetadataJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CatalogService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// The primary resources offered by this service are EntryGroups, EntryTypes,
-    /// AspectTypes, Entry and Aspect which collectively allow a data administrator
-    /// to organize, manage, secure and catalog data across their organization
-    /// located across cloud projects in a variety of storage systems including Cloud
-    /// Storage and BigQuery.
+    /// AspectTypes, and Entries. They collectively let data administrators organize,
+    /// manage, secure, and catalog data located across cloud projects in their
+    /// organization in a variety of storage systems, including Cloud Storage and
+    /// BigQuery.
     /// </remarks>
     public sealed partial class CatalogServiceClientImpl : CatalogServiceClient
     {
@@ -3766,6 +4597,14 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<SearchEntriesRequest, SearchEntriesResponse> _callSearchEntries;
 
+        private readonly gaxgrpc::ApiCall<CreateMetadataJobRequest, lro::Operation> _callCreateMetadataJob;
+
+        private readonly gaxgrpc::ApiCall<GetMetadataJobRequest, MetadataJob> _callGetMetadataJob;
+
+        private readonly gaxgrpc::ApiCall<ListMetadataJobsRequest, ListMetadataJobsResponse> _callListMetadataJobs;
+
+        private readonly gaxgrpc::ApiCall<CancelMetadataJobRequest, wkt::Empty> _callCancelMetadataJob;
+
         /// <summary>
         /// Constructs a client wrapper for the CatalogService service, with the specified gRPC client and settings.
         /// </summary>
@@ -3790,6 +4629,7 @@ namespace Google.Cloud.Dataplex.V1
             CreateEntryGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEntryGroupOperationsSettings, logger);
             UpdateEntryGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEntryGroupOperationsSettings, logger);
             DeleteEntryGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEntryGroupOperationsSettings, logger);
+            CreateMetadataJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataJobOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateEntryType = clientHelper.BuildApiCall<CreateEntryTypeRequest, lro::Operation>("CreateEntryType", grpcClient.CreateEntryTypeAsync, grpcClient.CreateEntryType, effectiveSettings.CreateEntryTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -3858,6 +4698,18 @@ namespace Google.Cloud.Dataplex.V1
             _callSearchEntries = clientHelper.BuildApiCall<SearchEntriesRequest, SearchEntriesResponse>("SearchEntries", grpcClient.SearchEntriesAsync, grpcClient.SearchEntries, effectiveSettings.SearchEntriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSearchEntries);
             Modify_SearchEntriesApiCall(ref _callSearchEntries);
+            _callCreateMetadataJob = clientHelper.BuildApiCall<CreateMetadataJobRequest, lro::Operation>("CreateMetadataJob", grpcClient.CreateMetadataJobAsync, grpcClient.CreateMetadataJob, effectiveSettings.CreateMetadataJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateMetadataJob);
+            Modify_CreateMetadataJobApiCall(ref _callCreateMetadataJob);
+            _callGetMetadataJob = clientHelper.BuildApiCall<GetMetadataJobRequest, MetadataJob>("GetMetadataJob", grpcClient.GetMetadataJobAsync, grpcClient.GetMetadataJob, effectiveSettings.GetMetadataJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMetadataJob);
+            Modify_GetMetadataJobApiCall(ref _callGetMetadataJob);
+            _callListMetadataJobs = clientHelper.BuildApiCall<ListMetadataJobsRequest, ListMetadataJobsResponse>("ListMetadataJobs", grpcClient.ListMetadataJobsAsync, grpcClient.ListMetadataJobs, effectiveSettings.ListMetadataJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMetadataJobs);
+            Modify_ListMetadataJobsApiCall(ref _callListMetadataJobs);
+            _callCancelMetadataJob = clientHelper.BuildApiCall<CancelMetadataJobRequest, wkt::Empty>("CancelMetadataJob", grpcClient.CancelMetadataJobAsync, grpcClient.CancelMetadataJob, effectiveSettings.CancelMetadataJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelMetadataJob);
+            Modify_CancelMetadataJobApiCall(ref _callCancelMetadataJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3906,6 +4758,14 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_LookupEntryApiCall(ref gaxgrpc::ApiCall<LookupEntryRequest, Entry> call);
 
         partial void Modify_SearchEntriesApiCall(ref gaxgrpc::ApiCall<SearchEntriesRequest, SearchEntriesResponse> call);
+
+        partial void Modify_CreateMetadataJobApiCall(ref gaxgrpc::ApiCall<CreateMetadataJobRequest, lro::Operation> call);
+
+        partial void Modify_GetMetadataJobApiCall(ref gaxgrpc::ApiCall<GetMetadataJobRequest, MetadataJob> call);
+
+        partial void Modify_ListMetadataJobsApiCall(ref gaxgrpc::ApiCall<ListMetadataJobsRequest, ListMetadataJobsResponse> call);
+
+        partial void Modify_CancelMetadataJobApiCall(ref gaxgrpc::ApiCall<CancelMetadataJobRequest, wkt::Empty> call);
 
         partial void OnConstruction(CatalogService.CatalogServiceClient grpcClient, CatalogServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3962,11 +4822,19 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_SearchEntriesRequest(ref SearchEntriesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateMetadataJobRequest(ref CreateMetadataJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMetadataJobRequest(ref GetMetadataJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMetadataJobsRequest(ref ListMetadataJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelMetadataJobRequest(ref CancelMetadataJobRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>The long-running operations client for <c>CreateEntryType</c>.</summary>
         public override lro::OperationsClient CreateEntryTypeOperationsClient { get; }
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3978,7 +4846,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Creates an EntryType
+        /// Creates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3993,7 +4861,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient UpdateEntryTypeOperationsClient { get; }
 
         /// <summary>
-        /// Updates a EntryType resource.
+        /// Updates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4005,7 +4873,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Updates a EntryType resource.
+        /// Updates an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4020,7 +4888,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient DeleteEntryTypeOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4032,7 +4900,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Deletes a EntryType resource.
+        /// Deletes an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4068,7 +4936,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4080,7 +4948,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a EntryType resource.
+        /// Gets an EntryType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4095,7 +4963,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient CreateAspectTypeOperationsClient { get; }
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4107,7 +4975,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Creates an AspectType
+        /// Creates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4122,7 +4990,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient UpdateAspectTypeOperationsClient { get; }
 
         /// <summary>
-        /// Updates a AspectType resource.
+        /// Updates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4134,7 +5002,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Updates a AspectType resource.
+        /// Updates an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4149,7 +5017,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient DeleteAspectTypeOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4161,7 +5029,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Deletes a AspectType resource.
+        /// Deletes an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4197,7 +5065,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4209,7 +5077,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a AspectType resource.
+        /// Gets an AspectType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4224,7 +5092,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient CreateEntryGroupOperationsClient { get; }
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4236,7 +5104,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Creates an EntryGroup
+        /// Creates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4251,7 +5119,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient UpdateEntryGroupOperationsClient { get; }
 
         /// <summary>
-        /// Updates a EntryGroup resource.
+        /// Updates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4263,7 +5131,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Updates a EntryGroup resource.
+        /// Updates an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4278,7 +5146,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient DeleteEntryGroupOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4290,7 +5158,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Deletes a EntryGroup resource.
+        /// Deletes an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4326,7 +5194,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4338,7 +5206,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Retrieves a EntryGroup resource.
+        /// Gets an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4422,7 +5290,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists entries within an entry group.
+        /// Lists Entries within an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4434,7 +5302,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists entries within an entry group.
+        /// Lists Entries within an EntryGroup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4446,7 +5314,12 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4458,7 +5331,12 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Gets a single entry.
+        /// Gets an Entry.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4470,7 +5348,12 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Looks up a single entry.
+        /// Looks up a single Entry by name using the permission on the source system.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4482,7 +5365,12 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Looks up a single entry.
+        /// Looks up a single Entry by name using the permission on the source system.
+        /// 
+        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+        /// changing. For more information, see [Changes to BigQuery metadata stored in
+        /// Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4494,7 +5382,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Searches for entries matching given query and scope.
+        /// Searches for Entries matching the given query and scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4506,7 +5394,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Searches for entries matching given query and scope.
+        /// Searches for Entries matching the given query and scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4515,6 +5403,117 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_SearchEntriesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchEntriesRequest, SearchEntriesResponse, SearchEntriesResult>(_callSearchEntries, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateMetadataJob</c>.</summary>
+        public override lro::OperationsClient CreateMetadataJobOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MetadataJob, OperationMetadata> CreateMetadataJob(CreateMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMetadataJobRequest(ref request, ref callSettings);
+            return new lro::Operation<MetadataJob, OperationMetadata>(_callCreateMetadataJob.Sync(request, callSettings), CreateMetadataJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a metadata job. For example, use a metadata job to import Dataplex
+        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MetadataJob, OperationMetadata>> CreateMetadataJobAsync(CreateMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMetadataJobRequest(ref request, ref callSettings);
+            return new lro::Operation<MetadataJob, OperationMetadata>(await _callCreateMetadataJob.Async(request, callSettings).ConfigureAwait(false), CreateMetadataJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MetadataJob GetMetadataJob(GetMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMetadataJobRequest(ref request, ref callSettings);
+            return _callGetMetadataJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a metadata job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MetadataJob> GetMetadataJobAsync(GetMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMetadataJobRequest(ref request, ref callSettings);
+            return _callGetMetadataJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists metadata jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MetadataJob"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMetadataJobsResponse, MetadataJob> ListMetadataJobs(ListMetadataJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMetadataJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMetadataJobsRequest, ListMetadataJobsResponse, MetadataJob>(_callListMetadataJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists metadata jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MetadataJob"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMetadataJobsResponse, MetadataJob> ListMetadataJobsAsync(ListMetadataJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMetadataJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMetadataJobsRequest, ListMetadataJobsResponse, MetadataJob>(_callListMetadataJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void CancelMetadataJob(CancelMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelMetadataJobRequest(ref request, ref callSettings);
+            _callCancelMetadataJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a metadata job.
+        /// 
+        /// If you cancel a metadata import job that is in progress, the changes in the
+        /// job might be partially applied. We recommend that you reset the state of
+        /// the entry groups in your project by running another metadata job that
+        /// reverts the changes from the canceled job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task CancelMetadataJobAsync(CancelMetadataJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelMetadataJobRequest(ref request, ref callSettings);
+            return _callCancelMetadataJob.Async(request, callSettings);
         }
     }
 
@@ -4535,6 +5534,10 @@ namespace Google.Cloud.Dataplex.V1
     }
 
     public partial class SearchEntriesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListMetadataJobsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4574,6 +5577,14 @@ namespace Google.Cloud.Dataplex.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<SearchEntriesResult> GetEnumerator() => Results.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListMetadataJobsResponse : gaxgrpc::IPageResponse<MetadataJob>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<MetadataJob> GetEnumerator() => MetadataJobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

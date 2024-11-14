@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "CatalogServiceClient",
           "rpcs": {
+            "CancelMetadataJob": {
+              "methods": [
+                "CancelMetadataJob",
+                "CancelMetadataJobAsync"
+              ]
+            },
             "CreateAspectType": {
               "methods": [
                 "CreateAspectType",
@@ -32,6 +38,12 @@
               "methods": [
                 "CreateEntryType",
                 "CreateEntryTypeAsync"
+              ]
+            },
+            "CreateMetadataJob": {
+              "methods": [
+                "CreateMetadataJob",
+                "CreateMetadataJobAsync"
               ]
             },
             "DeleteAspectType": {
@@ -82,6 +94,12 @@
                 "GetEntryTypeAsync"
               ]
             },
+            "GetMetadataJob": {
+              "methods": [
+                "GetMetadataJob",
+                "GetMetadataJobAsync"
+              ]
+            },
             "ListAspectTypes": {
               "methods": [
                 "ListAspectTypes",
@@ -104,6 +122,12 @@
               "methods": [
                 "ListEntryTypes",
                 "ListEntryTypesAsync"
+              ]
+            },
+            "ListMetadataJobs": {
+              "methods": [
+                "ListMetadataJobs",
+                "ListMetadataJobsAsync"
               ]
             },
             "LookupEntry": {

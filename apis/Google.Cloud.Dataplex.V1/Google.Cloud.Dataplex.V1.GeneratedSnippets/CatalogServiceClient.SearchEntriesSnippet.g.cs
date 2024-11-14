@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
             string query = "";
             // Make the request
             PagedEnumerable<SearchEntriesResponse, SearchEntriesResult> response = catalogServiceClient.SearchEntries(name, query);

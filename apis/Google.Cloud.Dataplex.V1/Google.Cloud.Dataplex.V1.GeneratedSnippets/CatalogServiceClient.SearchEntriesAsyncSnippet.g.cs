@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Create client
             gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
             string query = "";
             // Make the request
             PagedAsyncEnumerable<gcdv::SearchEntriesResponse, gcdv::SearchEntriesResult> response = catalogServiceClient.SearchEntriesAsync(name, query);

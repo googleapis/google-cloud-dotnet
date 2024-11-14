@@ -3164,10 +3164,9 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "sql_script_file" field.</summary>
         public const int SqlScriptFileFieldNumber = 104;
         /// <summary>
-        /// A reference to a query file. This can be the Cloud Storage URI of the
-        /// query file or it can the path to a SqlScript Content. The execution
-        /// args are used to declare a set of script variables
-        /// (`set key="value";`).
+        /// A reference to a query file. This should be the Cloud Storage URI of
+        /// the query file. The execution args are used to declare a set of script
+        /// variables (`set key="value";`).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

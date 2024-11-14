@@ -3344,7 +3344,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             gcdv::SearchEntriesRequest request = new gcdv::SearchEntriesRequest
             {
-                Name = "",
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Query = "",
                 OrderBy = "",
                 Scope = "",
@@ -3395,7 +3395,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             gcdv::SearchEntriesRequest request = new gcdv::SearchEntriesRequest
             {
-                Name = "",
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Query = "",
                 OrderBy = "",
                 Scope = "",
@@ -3444,7 +3444,7 @@ namespace GoogleCSharpSnippets
             // Create client
             gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
             string query = "";
             // Make the request
             PagedEnumerable<gcdv::SearchEntriesResponse, gcdv::SearchEntriesResult> response = catalogServiceClient.SearchEntries(name, query);
@@ -3490,7 +3490,7 @@ namespace GoogleCSharpSnippets
             // Create client
             gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
             string query = "";
             // Make the request
             PagedAsyncEnumerable<gcdv::SearchEntriesResponse, gcdv::SearchEntriesResult> response = catalogServiceClient.SearchEntriesAsync(name, query);
@@ -3526,6 +3526,749 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchEntries</summary>
+        public void SearchEntriesResourceNames()
+        {
+            // Snippet: SearchEntries(LocationName, string, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName name = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string query = "";
+            // Make the request
+            PagedEnumerable<gcdv::SearchEntriesResponse, gcdv::SearchEntriesResult> response = catalogServiceClient.SearchEntries(name, query);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::SearchEntriesResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::SearchEntriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::SearchEntriesResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::SearchEntriesResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::SearchEntriesResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchEntriesAsync</summary>
+        public async Task SearchEntriesResourceNamesAsync()
+        {
+            // Snippet: SearchEntriesAsync(LocationName, string, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName name = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string query = "";
+            // Make the request
+            PagedAsyncEnumerable<gcdv::SearchEntriesResponse, gcdv::SearchEntriesResult> response = catalogServiceClient.SearchEntriesAsync(name, query);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcdv::SearchEntriesResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcdv::SearchEntriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::SearchEntriesResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::SearchEntriesResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::SearchEntriesResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataJob</summary>
+        public void CreateMetadataJobRequestObject()
+        {
+            // Snippet: CreateMetadataJob(CreateMetadataJobRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::CreateMetadataJobRequest request = new gcdv::CreateMetadataJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                MetadataJob = new gcdv::MetadataJob(),
+                MetadataJobId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> response = catalogServiceClient.CreateMetadataJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::MetadataJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceCreateMetadataJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataJobAsync</summary>
+        public async Task CreateMetadataJobRequestObjectAsync()
+        {
+            // Snippet: CreateMetadataJobAsync(CreateMetadataJobRequest, CallSettings)
+            // Additional: CreateMetadataJobAsync(CreateMetadataJobRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CreateMetadataJobRequest request = new gcdv::CreateMetadataJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                MetadataJob = new gcdv::MetadataJob(),
+                MetadataJobId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> response = await catalogServiceClient.CreateMetadataJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::MetadataJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceCreateMetadataJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataJob</summary>
+        public void CreateMetadataJob()
+        {
+            // Snippet: CreateMetadataJob(string, MetadataJob, string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcdv::MetadataJob metadataJob = new gcdv::MetadataJob();
+            string metadataJobId = "";
+            // Make the request
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> response = catalogServiceClient.CreateMetadataJob(parent, metadataJob, metadataJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::MetadataJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceCreateMetadataJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataJobAsync</summary>
+        public async Task CreateMetadataJobAsync()
+        {
+            // Snippet: CreateMetadataJobAsync(string, MetadataJob, string, CallSettings)
+            // Additional: CreateMetadataJobAsync(string, MetadataJob, string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcdv::MetadataJob metadataJob = new gcdv::MetadataJob();
+            string metadataJobId = "";
+            // Make the request
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> response = await catalogServiceClient.CreateMetadataJobAsync(parent, metadataJob, metadataJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::MetadataJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceCreateMetadataJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataJob</summary>
+        public void CreateMetadataJobResourceNames()
+        {
+            // Snippet: CreateMetadataJob(LocationName, MetadataJob, string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::MetadataJob metadataJob = new gcdv::MetadataJob();
+            string metadataJobId = "";
+            // Make the request
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> response = catalogServiceClient.CreateMetadataJob(parent, metadataJob, metadataJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::MetadataJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> retrievedResponse = catalogServiceClient.PollOnceCreateMetadataJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMetadataJobAsync</summary>
+        public async Task CreateMetadataJobResourceNamesAsync()
+        {
+            // Snippet: CreateMetadataJobAsync(LocationName, MetadataJob, string, CallSettings)
+            // Additional: CreateMetadataJobAsync(LocationName, MetadataJob, string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcdv::MetadataJob metadataJob = new gcdv::MetadataJob();
+            string metadataJobId = "";
+            // Make the request
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> response = await catalogServiceClient.CreateMetadataJobAsync(parent, metadataJob, metadataJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::MetadataJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::MetadataJob, gcdv::OperationMetadata> retrievedResponse = await catalogServiceClient.PollOnceCreateMetadataJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::MetadataJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataJob</summary>
+        public void GetMetadataJobRequestObject()
+        {
+            // Snippet: GetMetadataJob(GetMetadataJobRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::GetMetadataJobRequest request = new gcdv::GetMetadataJobRequest
+            {
+                MetadataJobName = gcdv::MetadataJobName.FromProjectLocationMetadataJob("[PROJECT]", "[LOCATION]", "[METADATAJOB]"),
+            };
+            // Make the request
+            gcdv::MetadataJob response = catalogServiceClient.GetMetadataJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataJobAsync</summary>
+        public async Task GetMetadataJobRequestObjectAsync()
+        {
+            // Snippet: GetMetadataJobAsync(GetMetadataJobRequest, CallSettings)
+            // Additional: GetMetadataJobAsync(GetMetadataJobRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::GetMetadataJobRequest request = new gcdv::GetMetadataJobRequest
+            {
+                MetadataJobName = gcdv::MetadataJobName.FromProjectLocationMetadataJob("[PROJECT]", "[LOCATION]", "[METADATAJOB]"),
+            };
+            // Make the request
+            gcdv::MetadataJob response = await catalogServiceClient.GetMetadataJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataJob</summary>
+        public void GetMetadataJob()
+        {
+            // Snippet: GetMetadataJob(string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/metadataJobs/[METADATAJOB]";
+            // Make the request
+            gcdv::MetadataJob response = catalogServiceClient.GetMetadataJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataJobAsync</summary>
+        public async Task GetMetadataJobAsync()
+        {
+            // Snippet: GetMetadataJobAsync(string, CallSettings)
+            // Additional: GetMetadataJobAsync(string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/metadataJobs/[METADATAJOB]";
+            // Make the request
+            gcdv::MetadataJob response = await catalogServiceClient.GetMetadataJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataJob</summary>
+        public void GetMetadataJobResourceNames()
+        {
+            // Snippet: GetMetadataJob(MetadataJobName, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::MetadataJobName name = gcdv::MetadataJobName.FromProjectLocationMetadataJob("[PROJECT]", "[LOCATION]", "[METADATAJOB]");
+            // Make the request
+            gcdv::MetadataJob response = catalogServiceClient.GetMetadataJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataJobAsync</summary>
+        public async Task GetMetadataJobResourceNamesAsync()
+        {
+            // Snippet: GetMetadataJobAsync(MetadataJobName, CallSettings)
+            // Additional: GetMetadataJobAsync(MetadataJobName, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::MetadataJobName name = gcdv::MetadataJobName.FromProjectLocationMetadataJob("[PROJECT]", "[LOCATION]", "[METADATAJOB]");
+            // Make the request
+            gcdv::MetadataJob response = await catalogServiceClient.GetMetadataJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataJobs</summary>
+        public void ListMetadataJobsRequestObject()
+        {
+            // Snippet: ListMetadataJobs(ListMetadataJobsRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::ListMetadataJobsRequest request = new gcdv::ListMetadataJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<gcdv::ListMetadataJobsResponse, gcdv::MetadataJob> response = catalogServiceClient.ListMetadataJobs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::MetadataJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::ListMetadataJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataJobsAsync</summary>
+        public async Task ListMetadataJobsRequestObjectAsync()
+        {
+            // Snippet: ListMetadataJobsAsync(ListMetadataJobsRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::ListMetadataJobsRequest request = new gcdv::ListMetadataJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::ListMetadataJobsResponse, gcdv::MetadataJob> response = catalogServiceClient.ListMetadataJobsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcdv::MetadataJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcdv::ListMetadataJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataJobs</summary>
+        public void ListMetadataJobs()
+        {
+            // Snippet: ListMetadataJobs(string, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<gcdv::ListMetadataJobsResponse, gcdv::MetadataJob> response = catalogServiceClient.ListMetadataJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::MetadataJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::ListMetadataJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataJobsAsync</summary>
+        public async Task ListMetadataJobsAsync()
+        {
+            // Snippet: ListMetadataJobsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<gcdv::ListMetadataJobsResponse, gcdv::MetadataJob> response = catalogServiceClient.ListMetadataJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcdv::MetadataJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcdv::ListMetadataJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataJobs</summary>
+        public void ListMetadataJobsResourceNames()
+        {
+            // Snippet: ListMetadataJobs(LocationName, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<gcdv::ListMetadataJobsResponse, gcdv::MetadataJob> response = catalogServiceClient.ListMetadataJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::MetadataJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::ListMetadataJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMetadataJobsAsync</summary>
+        public async Task ListMetadataJobsResourceNamesAsync()
+        {
+            // Snippet: ListMetadataJobsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<gcdv::ListMetadataJobsResponse, gcdv::MetadataJob> response = catalogServiceClient.ListMetadataJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcdv::MetadataJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcdv::ListMetadataJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::MetadataJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::MetadataJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::MetadataJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelMetadataJob</summary>
+        public void CancelMetadataJobRequestObject()
+        {
+            // Snippet: CancelMetadataJob(CancelMetadataJobRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::CancelMetadataJobRequest request = new gcdv::CancelMetadataJobRequest
+            {
+                MetadataJobName = gcdv::MetadataJobName.FromProjectLocationMetadataJob("[PROJECT]", "[LOCATION]", "[METADATAJOB]"),
+            };
+            // Make the request
+            catalogServiceClient.CancelMetadataJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelMetadataJobAsync</summary>
+        public async Task CancelMetadataJobRequestObjectAsync()
+        {
+            // Snippet: CancelMetadataJobAsync(CancelMetadataJobRequest, CallSettings)
+            // Additional: CancelMetadataJobAsync(CancelMetadataJobRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CancelMetadataJobRequest request = new gcdv::CancelMetadataJobRequest
+            {
+                MetadataJobName = gcdv::MetadataJobName.FromProjectLocationMetadataJob("[PROJECT]", "[LOCATION]", "[METADATAJOB]"),
+            };
+            // Make the request
+            await catalogServiceClient.CancelMetadataJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelMetadataJob</summary>
+        public void CancelMetadataJob()
+        {
+            // Snippet: CancelMetadataJob(string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/metadataJobs/[METADATAJOB]";
+            // Make the request
+            catalogServiceClient.CancelMetadataJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelMetadataJobAsync</summary>
+        public async Task CancelMetadataJobAsync()
+        {
+            // Snippet: CancelMetadataJobAsync(string, CallSettings)
+            // Additional: CancelMetadataJobAsync(string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/metadataJobs/[METADATAJOB]";
+            // Make the request
+            await catalogServiceClient.CancelMetadataJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelMetadataJob</summary>
+        public void CancelMetadataJobResourceNames()
+        {
+            // Snippet: CancelMetadataJob(MetadataJobName, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::MetadataJobName name = gcdv::MetadataJobName.FromProjectLocationMetadataJob("[PROJECT]", "[LOCATION]", "[METADATAJOB]");
+            // Make the request
+            catalogServiceClient.CancelMetadataJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelMetadataJobAsync</summary>
+        public async Task CancelMetadataJobResourceNamesAsync()
+        {
+            // Snippet: CancelMetadataJobAsync(MetadataJobName, CallSettings)
+            // Additional: CancelMetadataJobAsync(MetadataJobName, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::MetadataJobName name = gcdv::MetadataJobName.FromProjectLocationMetadataJob("[PROJECT]", "[LOCATION]", "[METADATAJOB]");
+            // Make the request
+            await catalogServiceClient.CancelMetadataJobAsync(name);
             // End snippet
         }
     }

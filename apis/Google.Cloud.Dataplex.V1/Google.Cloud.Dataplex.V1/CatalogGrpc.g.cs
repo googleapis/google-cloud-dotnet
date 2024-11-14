@@ -25,10 +25,10 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// The primary resources offered by this service are EntryGroups, EntryTypes,
-  /// AspectTypes, Entry and Aspect which collectively allow a data administrator
-  /// to organize, manage, secure and catalog data across their organization
-  /// located across cloud projects in a variety of storage systems including Cloud
-  /// Storage and BigQuery.
+  /// AspectTypes, and Entries. They collectively let data administrators organize,
+  /// manage, secure, and catalog data located across cloud projects in their
+  /// organization in a variety of storage systems, including Cloud Storage and
+  /// BigQuery.
   /// </summary>
   public static partial class CatalogService
   {
@@ -131,6 +131,20 @@ namespace Google.Cloud.Dataplex.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.SearchEntriesRequest> __Marshaller_google_cloud_dataplex_v1_SearchEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.SearchEntriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.SearchEntriesResponse> __Marshaller_google_cloud_dataplex_v1_SearchEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.SearchEntriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest> __Marshaller_google_cloud_dataplex_v1_CreateMetadataJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest> __Marshaller_google_cloud_dataplex_v1_GetMetadataJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.MetadataJob> __Marshaller_google_cloud_dataplex_v1_MetadataJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.MetadataJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest> __Marshaller_google_cloud_dataplex_v1_ListMetadataJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse> __Marshaller_google_cloud_dataplex_v1_ListMetadataJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest> __Marshaller_google_cloud_dataplex_v1_CancelMetadataJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.CreateEntryTypeRequest, global::Google.LongRunning.Operation> __Method_CreateEntryType = new grpc::Method<global::Google.Cloud.Dataplex.V1.CreateEntryTypeRequest, global::Google.LongRunning.Operation>(
@@ -308,6 +322,38 @@ namespace Google.Cloud.Dataplex.V1 {
         __Marshaller_google_cloud_dataplex_v1_SearchEntriesRequest,
         __Marshaller_google_cloud_dataplex_v1_SearchEntriesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest, global::Google.LongRunning.Operation> __Method_CreateMetadataJob = new grpc::Method<global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateMetadataJob",
+        __Marshaller_google_cloud_dataplex_v1_CreateMetadataJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest, global::Google.Cloud.Dataplex.V1.MetadataJob> __Method_GetMetadataJob = new grpc::Method<global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest, global::Google.Cloud.Dataplex.V1.MetadataJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMetadataJob",
+        __Marshaller_google_cloud_dataplex_v1_GetMetadataJobRequest,
+        __Marshaller_google_cloud_dataplex_v1_MetadataJob);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest, global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse> __Method_ListMetadataJobs = new grpc::Method<global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest, global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMetadataJobs",
+        __Marshaller_google_cloud_dataplex_v1_ListMetadataJobsRequest,
+        __Marshaller_google_cloud_dataplex_v1_ListMetadataJobsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelMetadataJob = new grpc::Method<global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelMetadataJob",
+        __Marshaller_google_cloud_dataplex_v1_CancelMetadataJobRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -319,7 +365,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public abstract partial class CatalogServiceBase
     {
       /// <summary>
-      /// Creates an EntryType
+      /// Creates an EntryType.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -331,7 +377,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Updates a EntryType resource.
+      /// Updates an EntryType.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -343,7 +389,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Deletes a EntryType resource.
+      /// Deletes an EntryType.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -367,7 +413,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Retrieves a EntryType resource.
+      /// Gets an EntryType.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -379,7 +425,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Creates an AspectType
+      /// Creates an AspectType.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -391,7 +437,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Updates a AspectType resource.
+      /// Updates an AspectType.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -403,7 +449,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Deletes a AspectType resource.
+      /// Deletes an AspectType.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -427,7 +473,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Retrieves a AspectType resource.
+      /// Gets an AspectType.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -439,7 +485,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Creates an EntryGroup
+      /// Creates an EntryGroup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -451,7 +497,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Updates a EntryGroup resource.
+      /// Updates an EntryGroup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -463,7 +509,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Deletes a EntryGroup resource.
+      /// Deletes an EntryGroup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -487,7 +533,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Retrieves a EntryGroup resource.
+      /// Gets an EntryGroup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -535,7 +581,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Lists entries within an entry group.
+      /// Lists Entries within an EntryGroup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -547,7 +593,12 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Gets a single entry.
+      /// Gets an Entry.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -559,7 +610,12 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Looks up a single entry.
+      /// Looks up a single Entry by name using the permission on the source system.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -571,13 +627,67 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Searches for entries matching given query and scope.
+      /// Searches for Entries matching the given query and scope.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.SearchEntriesResponse> SearchEntries(global::Google.Cloud.Dataplex.V1.SearchEntriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a metadata job. For example, use a metadata job to import Dataplex
+      /// Catalog entries and aspects from a third-party system into Dataplex.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateMetadataJob(global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a metadata job.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.MetadataJob> GetMetadataJob(global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists metadata jobs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse> ListMetadataJobs(global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels a metadata job.
+      ///
+      /// If you cancel a metadata import job that is in progress, the changes in the
+      /// job might be partially applied. We recommend that you reset the state of
+      /// the entry groups in your project by running another metadata job that
+      /// reverts the changes from the canceled job.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelMetadataJob(global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -612,7 +722,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Creates an EntryType
+      /// Creates an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -625,7 +735,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CreateEntryType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an EntryType
+      /// Creates an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -636,7 +746,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEntryType, null, options, request);
       }
       /// <summary>
-      /// Creates an EntryType
+      /// Creates an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -649,7 +759,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CreateEntryTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an EntryType
+      /// Creates an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -660,7 +770,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEntryType, null, options, request);
       }
       /// <summary>
-      /// Updates a EntryType resource.
+      /// Updates an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -673,7 +783,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return UpdateEntryType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a EntryType resource.
+      /// Updates an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -684,7 +794,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateEntryType, null, options, request);
       }
       /// <summary>
-      /// Updates a EntryType resource.
+      /// Updates an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -697,7 +807,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return UpdateEntryTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a EntryType resource.
+      /// Updates an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -708,7 +818,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEntryType, null, options, request);
       }
       /// <summary>
-      /// Deletes a EntryType resource.
+      /// Deletes an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -721,7 +831,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return DeleteEntryType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a EntryType resource.
+      /// Deletes an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -732,7 +842,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEntryType, null, options, request);
       }
       /// <summary>
-      /// Deletes a EntryType resource.
+      /// Deletes an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -745,7 +855,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return DeleteEntryTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a EntryType resource.
+      /// Deletes an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -804,7 +914,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntryTypes, null, options, request);
       }
       /// <summary>
-      /// Retrieves a EntryType resource.
+      /// Gets an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -817,7 +927,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetEntryType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a EntryType resource.
+      /// Gets an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -828,7 +938,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEntryType, null, options, request);
       }
       /// <summary>
-      /// Retrieves a EntryType resource.
+      /// Gets an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -841,7 +951,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetEntryTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a EntryType resource.
+      /// Gets an EntryType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -852,7 +962,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEntryType, null, options, request);
       }
       /// <summary>
-      /// Creates an AspectType
+      /// Creates an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -865,7 +975,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CreateAspectType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an AspectType
+      /// Creates an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -876,7 +986,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAspectType, null, options, request);
       }
       /// <summary>
-      /// Creates an AspectType
+      /// Creates an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -889,7 +999,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CreateAspectTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an AspectType
+      /// Creates an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -900,7 +1010,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAspectType, null, options, request);
       }
       /// <summary>
-      /// Updates a AspectType resource.
+      /// Updates an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -913,7 +1023,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return UpdateAspectType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a AspectType resource.
+      /// Updates an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -924,7 +1034,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateAspectType, null, options, request);
       }
       /// <summary>
-      /// Updates a AspectType resource.
+      /// Updates an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -937,7 +1047,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return UpdateAspectTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a AspectType resource.
+      /// Updates an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -948,7 +1058,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAspectType, null, options, request);
       }
       /// <summary>
-      /// Deletes a AspectType resource.
+      /// Deletes an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -961,7 +1071,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return DeleteAspectType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a AspectType resource.
+      /// Deletes an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -972,7 +1082,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAspectType, null, options, request);
       }
       /// <summary>
-      /// Deletes a AspectType resource.
+      /// Deletes an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -985,7 +1095,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return DeleteAspectTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a AspectType resource.
+      /// Deletes an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1044,7 +1154,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAspectTypes, null, options, request);
       }
       /// <summary>
-      /// Retrieves a AspectType resource.
+      /// Gets an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1057,7 +1167,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetAspectType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a AspectType resource.
+      /// Gets an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1068,7 +1178,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAspectType, null, options, request);
       }
       /// <summary>
-      /// Retrieves a AspectType resource.
+      /// Gets an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1081,7 +1191,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetAspectTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a AspectType resource.
+      /// Gets an AspectType.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1092,7 +1202,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAspectType, null, options, request);
       }
       /// <summary>
-      /// Creates an EntryGroup
+      /// Creates an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1105,7 +1215,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CreateEntryGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an EntryGroup
+      /// Creates an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1116,7 +1226,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEntryGroup, null, options, request);
       }
       /// <summary>
-      /// Creates an EntryGroup
+      /// Creates an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1129,7 +1239,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CreateEntryGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an EntryGroup
+      /// Creates an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1140,7 +1250,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEntryGroup, null, options, request);
       }
       /// <summary>
-      /// Updates a EntryGroup resource.
+      /// Updates an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1153,7 +1263,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return UpdateEntryGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a EntryGroup resource.
+      /// Updates an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1164,7 +1274,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateEntryGroup, null, options, request);
       }
       /// <summary>
-      /// Updates a EntryGroup resource.
+      /// Updates an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1177,7 +1287,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return UpdateEntryGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a EntryGroup resource.
+      /// Updates an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1188,7 +1298,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEntryGroup, null, options, request);
       }
       /// <summary>
-      /// Deletes a EntryGroup resource.
+      /// Deletes an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1201,7 +1311,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return DeleteEntryGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a EntryGroup resource.
+      /// Deletes an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1212,7 +1322,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEntryGroup, null, options, request);
       }
       /// <summary>
-      /// Deletes a EntryGroup resource.
+      /// Deletes an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1225,7 +1335,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return DeleteEntryGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a EntryGroup resource.
+      /// Deletes an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1284,7 +1394,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntryGroups, null, options, request);
       }
       /// <summary>
-      /// Retrieves a EntryGroup resource.
+      /// Gets an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1297,7 +1407,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetEntryGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a EntryGroup resource.
+      /// Gets an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1308,7 +1418,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEntryGroup, null, options, request);
       }
       /// <summary>
-      /// Retrieves a EntryGroup resource.
+      /// Gets an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1321,7 +1431,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetEntryGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a EntryGroup resource.
+      /// Gets an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1476,7 +1586,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEntry, null, options, request);
       }
       /// <summary>
-      /// Lists entries within an entry group.
+      /// Lists Entries within an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1489,7 +1599,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return ListEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists entries within an entry group.
+      /// Lists Entries within an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1500,7 +1610,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEntries, null, options, request);
       }
       /// <summary>
-      /// Lists entries within an entry group.
+      /// Lists Entries within an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1513,7 +1623,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return ListEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists entries within an entry group.
+      /// Lists Entries within an EntryGroup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1524,7 +1634,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntries, null, options, request);
       }
       /// <summary>
-      /// Gets a single entry.
+      /// Gets an Entry.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1537,7 +1652,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a single entry.
+      /// Gets an Entry.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1548,7 +1668,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEntry, null, options, request);
       }
       /// <summary>
-      /// Gets a single entry.
+      /// Gets an Entry.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1561,7 +1686,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a single entry.
+      /// Gets an Entry.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1572,7 +1702,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEntry, null, options, request);
       }
       /// <summary>
-      /// Looks up a single entry.
+      /// Looks up a single Entry by name using the permission on the source system.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1585,7 +1720,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return LookupEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up a single entry.
+      /// Looks up a single Entry by name using the permission on the source system.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1596,7 +1736,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_LookupEntry, null, options, request);
       }
       /// <summary>
-      /// Looks up a single entry.
+      /// Looks up a single Entry by name using the permission on the source system.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1609,7 +1754,12 @@ namespace Google.Cloud.Dataplex.V1 {
         return LookupEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up a single entry.
+      /// Looks up a single Entry by name using the permission on the source system.
+      ///
+      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
+      /// changing. For more information, see [Changes to BigQuery metadata stored in
+      /// Dataplex
+      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1620,7 +1770,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_LookupEntry, null, options, request);
       }
       /// <summary>
-      /// Searches for entries matching given query and scope.
+      /// Searches for Entries matching the given query and scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1633,7 +1783,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return SearchEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches for entries matching given query and scope.
+      /// Searches for Entries matching the given query and scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1644,7 +1794,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchEntries, null, options, request);
       }
       /// <summary>
-      /// Searches for entries matching given query and scope.
+      /// Searches for Entries matching the given query and scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1657,7 +1807,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return SearchEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches for entries matching given query and scope.
+      /// Searches for Entries matching the given query and scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1666,6 +1816,222 @@ namespace Google.Cloud.Dataplex.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.SearchEntriesResponse> SearchEntriesAsync(global::Google.Cloud.Dataplex.V1.SearchEntriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchEntries, null, options, request);
+      }
+      /// <summary>
+      /// Creates a metadata job. For example, use a metadata job to import Dataplex
+      /// Catalog entries and aspects from a third-party system into Dataplex.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateMetadataJob(global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMetadataJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a metadata job. For example, use a metadata job to import Dataplex
+      /// Catalog entries and aspects from a third-party system into Dataplex.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateMetadataJob(global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateMetadataJob, null, options, request);
+      }
+      /// <summary>
+      /// Creates a metadata job. For example, use a metadata job to import Dataplex
+      /// Catalog entries and aspects from a third-party system into Dataplex.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMetadataJobAsync(global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMetadataJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a metadata job. For example, use a metadata job to import Dataplex
+      /// Catalog entries and aspects from a third-party system into Dataplex.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMetadataJobAsync(global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateMetadataJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets a metadata job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.MetadataJob GetMetadataJob(global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMetadataJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a metadata job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.MetadataJob GetMetadataJob(global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMetadataJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets a metadata job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.MetadataJob> GetMetadataJobAsync(global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMetadataJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a metadata job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.MetadataJob> GetMetadataJobAsync(global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMetadataJob, null, options, request);
+      }
+      /// <summary>
+      /// Lists metadata jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse ListMetadataJobs(global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMetadataJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists metadata jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse ListMetadataJobs(global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMetadataJobs, null, options, request);
+      }
+      /// <summary>
+      /// Lists metadata jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse> ListMetadataJobsAsync(global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMetadataJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists metadata jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse> ListMetadataJobsAsync(global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMetadataJobs, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a metadata job.
+      ///
+      /// If you cancel a metadata import job that is in progress, the changes in the
+      /// job might be partially applied. We recommend that you reset the state of
+      /// the entry groups in your project by running another metadata job that
+      /// reverts the changes from the canceled job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelMetadataJob(global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelMetadataJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a metadata job.
+      ///
+      /// If you cancel a metadata import job that is in progress, the changes in the
+      /// job might be partially applied. We recommend that you reset the state of
+      /// the entry groups in your project by running another metadata job that
+      /// reverts the changes from the canceled job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelMetadataJob(global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelMetadataJob, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a metadata job.
+      ///
+      /// If you cancel a metadata import job that is in progress, the changes in the
+      /// job might be partially applied. We recommend that you reset the state of
+      /// the entry groups in your project by running another metadata job that
+      /// reverts the changes from the canceled job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelMetadataJobAsync(global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelMetadataJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a metadata job.
+      ///
+      /// If you cancel a metadata import job that is in progress, the changes in the
+      /// job might be partially applied. We recommend that you reset the state of
+      /// the entry groups in your project by running another metadata job that
+      /// reverts the changes from the canceled job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelMetadataJobAsync(global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelMetadataJob, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1702,7 +2068,11 @@ namespace Google.Cloud.Dataplex.V1 {
           .AddMethod(__Method_ListEntries, serviceImpl.ListEntries)
           .AddMethod(__Method_GetEntry, serviceImpl.GetEntry)
           .AddMethod(__Method_LookupEntry, serviceImpl.LookupEntry)
-          .AddMethod(__Method_SearchEntries, serviceImpl.SearchEntries).Build();
+          .AddMethod(__Method_SearchEntries, serviceImpl.SearchEntries)
+          .AddMethod(__Method_CreateMetadataJob, serviceImpl.CreateMetadataJob)
+          .AddMethod(__Method_GetMetadataJob, serviceImpl.GetMetadataJob)
+          .AddMethod(__Method_ListMetadataJobs, serviceImpl.ListMetadataJobs)
+          .AddMethod(__Method_CancelMetadataJob, serviceImpl.CancelMetadataJob).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1734,6 +2104,10 @@ namespace Google.Cloud.Dataplex.V1 {
       serviceBinder.AddMethod(__Method_GetEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GetEntryRequest, global::Google.Cloud.Dataplex.V1.Entry>(serviceImpl.GetEntry));
       serviceBinder.AddMethod(__Method_LookupEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.LookupEntryRequest, global::Google.Cloud.Dataplex.V1.Entry>(serviceImpl.LookupEntry));
       serviceBinder.AddMethod(__Method_SearchEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.SearchEntriesRequest, global::Google.Cloud.Dataplex.V1.SearchEntriesResponse>(serviceImpl.SearchEntries));
+      serviceBinder.AddMethod(__Method_CreateMetadataJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateMetadataJob));
+      serviceBinder.AddMethod(__Method_GetMetadataJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest, global::Google.Cloud.Dataplex.V1.MetadataJob>(serviceImpl.GetMetadataJob));
+      serviceBinder.AddMethod(__Method_ListMetadataJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest, global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse>(serviceImpl.ListMetadataJobs));
+      serviceBinder.AddMethod(__Method_CancelMetadataJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelMetadataJob));
     }
 
   }
