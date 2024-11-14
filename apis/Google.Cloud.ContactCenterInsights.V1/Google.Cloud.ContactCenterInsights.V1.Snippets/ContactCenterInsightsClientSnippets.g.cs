@@ -4750,6 +4750,613 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateAnalysisRule</summary>
+        public void CreateAnalysisRuleRequestObject()
+        {
+            // Snippet: CreateAnalysisRule(CreateAnalysisRuleRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            CreateAnalysisRuleRequest request = new CreateAnalysisRuleRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AnalysisRule = new AnalysisRule(),
+            };
+            // Make the request
+            AnalysisRule response = contactCenterInsightsClient.CreateAnalysisRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnalysisRuleAsync</summary>
+        public async Task CreateAnalysisRuleRequestObjectAsync()
+        {
+            // Snippet: CreateAnalysisRuleAsync(CreateAnalysisRuleRequest, CallSettings)
+            // Additional: CreateAnalysisRuleAsync(CreateAnalysisRuleRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAnalysisRuleRequest request = new CreateAnalysisRuleRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AnalysisRule = new AnalysisRule(),
+            };
+            // Make the request
+            AnalysisRule response = await contactCenterInsightsClient.CreateAnalysisRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnalysisRule</summary>
+        public void CreateAnalysisRule()
+        {
+            // Snippet: CreateAnalysisRule(string, AnalysisRule, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AnalysisRule analysisRule = new AnalysisRule();
+            // Make the request
+            AnalysisRule response = contactCenterInsightsClient.CreateAnalysisRule(parent, analysisRule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnalysisRuleAsync</summary>
+        public async Task CreateAnalysisRuleAsync()
+        {
+            // Snippet: CreateAnalysisRuleAsync(string, AnalysisRule, CallSettings)
+            // Additional: CreateAnalysisRuleAsync(string, AnalysisRule, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AnalysisRule analysisRule = new AnalysisRule();
+            // Make the request
+            AnalysisRule response = await contactCenterInsightsClient.CreateAnalysisRuleAsync(parent, analysisRule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnalysisRule</summary>
+        public void CreateAnalysisRuleResourceNames()
+        {
+            // Snippet: CreateAnalysisRule(LocationName, AnalysisRule, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AnalysisRule analysisRule = new AnalysisRule();
+            // Make the request
+            AnalysisRule response = contactCenterInsightsClient.CreateAnalysisRule(parent, analysisRule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnalysisRuleAsync</summary>
+        public async Task CreateAnalysisRuleResourceNamesAsync()
+        {
+            // Snippet: CreateAnalysisRuleAsync(LocationName, AnalysisRule, CallSettings)
+            // Additional: CreateAnalysisRuleAsync(LocationName, AnalysisRule, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AnalysisRule analysisRule = new AnalysisRule();
+            // Make the request
+            AnalysisRule response = await contactCenterInsightsClient.CreateAnalysisRuleAsync(parent, analysisRule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnalysisRule</summary>
+        public void GetAnalysisRuleRequestObject()
+        {
+            // Snippet: GetAnalysisRule(GetAnalysisRuleRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            GetAnalysisRuleRequest request = new GetAnalysisRuleRequest
+            {
+                AnalysisRuleName = AnalysisRuleName.FromProjectLocationAnalysisRule("[PROJECT]", "[LOCATION]", "[ANALYSIS_RULE]"),
+            };
+            // Make the request
+            AnalysisRule response = contactCenterInsightsClient.GetAnalysisRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnalysisRuleAsync</summary>
+        public async Task GetAnalysisRuleRequestObjectAsync()
+        {
+            // Snippet: GetAnalysisRuleAsync(GetAnalysisRuleRequest, CallSettings)
+            // Additional: GetAnalysisRuleAsync(GetAnalysisRuleRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAnalysisRuleRequest request = new GetAnalysisRuleRequest
+            {
+                AnalysisRuleName = AnalysisRuleName.FromProjectLocationAnalysisRule("[PROJECT]", "[LOCATION]", "[ANALYSIS_RULE]"),
+            };
+            // Make the request
+            AnalysisRule response = await contactCenterInsightsClient.GetAnalysisRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnalysisRule</summary>
+        public void GetAnalysisRule()
+        {
+            // Snippet: GetAnalysisRule(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/analysisRules/[ANALYSIS_RULE]";
+            // Make the request
+            AnalysisRule response = contactCenterInsightsClient.GetAnalysisRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnalysisRuleAsync</summary>
+        public async Task GetAnalysisRuleAsync()
+        {
+            // Snippet: GetAnalysisRuleAsync(string, CallSettings)
+            // Additional: GetAnalysisRuleAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/analysisRules/[ANALYSIS_RULE]";
+            // Make the request
+            AnalysisRule response = await contactCenterInsightsClient.GetAnalysisRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnalysisRule</summary>
+        public void GetAnalysisRuleResourceNames()
+        {
+            // Snippet: GetAnalysisRule(AnalysisRuleName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            AnalysisRuleName name = AnalysisRuleName.FromProjectLocationAnalysisRule("[PROJECT]", "[LOCATION]", "[ANALYSIS_RULE]");
+            // Make the request
+            AnalysisRule response = contactCenterInsightsClient.GetAnalysisRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnalysisRuleAsync</summary>
+        public async Task GetAnalysisRuleResourceNamesAsync()
+        {
+            // Snippet: GetAnalysisRuleAsync(AnalysisRuleName, CallSettings)
+            // Additional: GetAnalysisRuleAsync(AnalysisRuleName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalysisRuleName name = AnalysisRuleName.FromProjectLocationAnalysisRule("[PROJECT]", "[LOCATION]", "[ANALYSIS_RULE]");
+            // Make the request
+            AnalysisRule response = await contactCenterInsightsClient.GetAnalysisRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnalysisRules</summary>
+        public void ListAnalysisRulesRequestObject()
+        {
+            // Snippet: ListAnalysisRules(ListAnalysisRulesRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ListAnalysisRulesRequest request = new ListAnalysisRulesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAnalysisRulesResponse, AnalysisRule> response = contactCenterInsightsClient.ListAnalysisRules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalysisRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAnalysisRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalysisRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalysisRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalysisRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnalysisRulesAsync</summary>
+        public async Task ListAnalysisRulesRequestObjectAsync()
+        {
+            // Snippet: ListAnalysisRulesAsync(ListAnalysisRulesRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAnalysisRulesRequest request = new ListAnalysisRulesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAnalysisRulesResponse, AnalysisRule> response = contactCenterInsightsClient.ListAnalysisRulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalysisRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAnalysisRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalysisRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalysisRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalysisRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnalysisRules</summary>
+        public void ListAnalysisRules()
+        {
+            // Snippet: ListAnalysisRules(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAnalysisRulesResponse, AnalysisRule> response = contactCenterInsightsClient.ListAnalysisRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalysisRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAnalysisRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalysisRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalysisRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalysisRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnalysisRulesAsync</summary>
+        public async Task ListAnalysisRulesAsync()
+        {
+            // Snippet: ListAnalysisRulesAsync(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAnalysisRulesResponse, AnalysisRule> response = contactCenterInsightsClient.ListAnalysisRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalysisRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAnalysisRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalysisRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalysisRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalysisRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnalysisRules</summary>
+        public void ListAnalysisRulesResourceNames()
+        {
+            // Snippet: ListAnalysisRules(LocationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAnalysisRulesResponse, AnalysisRule> response = contactCenterInsightsClient.ListAnalysisRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalysisRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAnalysisRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalysisRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalysisRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalysisRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnalysisRulesAsync</summary>
+        public async Task ListAnalysisRulesResourceNamesAsync()
+        {
+            // Snippet: ListAnalysisRulesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAnalysisRulesResponse, AnalysisRule> response = contactCenterInsightsClient.ListAnalysisRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalysisRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAnalysisRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalysisRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalysisRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalysisRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAnalysisRule</summary>
+        public void UpdateAnalysisRuleRequestObject()
+        {
+            // Snippet: UpdateAnalysisRule(UpdateAnalysisRuleRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdateAnalysisRuleRequest request = new UpdateAnalysisRuleRequest
+            {
+                AnalysisRule = new AnalysisRule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AnalysisRule response = contactCenterInsightsClient.UpdateAnalysisRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAnalysisRuleAsync</summary>
+        public async Task UpdateAnalysisRuleRequestObjectAsync()
+        {
+            // Snippet: UpdateAnalysisRuleAsync(UpdateAnalysisRuleRequest, CallSettings)
+            // Additional: UpdateAnalysisRuleAsync(UpdateAnalysisRuleRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAnalysisRuleRequest request = new UpdateAnalysisRuleRequest
+            {
+                AnalysisRule = new AnalysisRule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AnalysisRule response = await contactCenterInsightsClient.UpdateAnalysisRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAnalysisRule</summary>
+        public void UpdateAnalysisRule()
+        {
+            // Snippet: UpdateAnalysisRule(AnalysisRule, FieldMask, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            AnalysisRule analysisRule = new AnalysisRule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AnalysisRule response = contactCenterInsightsClient.UpdateAnalysisRule(analysisRule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAnalysisRuleAsync</summary>
+        public async Task UpdateAnalysisRuleAsync()
+        {
+            // Snippet: UpdateAnalysisRuleAsync(AnalysisRule, FieldMask, CallSettings)
+            // Additional: UpdateAnalysisRuleAsync(AnalysisRule, FieldMask, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalysisRule analysisRule = new AnalysisRule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AnalysisRule response = await contactCenterInsightsClient.UpdateAnalysisRuleAsync(analysisRule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAnalysisRule</summary>
+        public void DeleteAnalysisRuleRequestObject()
+        {
+            // Snippet: DeleteAnalysisRule(DeleteAnalysisRuleRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteAnalysisRuleRequest request = new DeleteAnalysisRuleRequest
+            {
+                AnalysisRuleName = AnalysisRuleName.FromProjectLocationAnalysisRule("[PROJECT]", "[LOCATION]", "[ANALYSIS_RULE]"),
+            };
+            // Make the request
+            contactCenterInsightsClient.DeleteAnalysisRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAnalysisRuleAsync</summary>
+        public async Task DeleteAnalysisRuleRequestObjectAsync()
+        {
+            // Snippet: DeleteAnalysisRuleAsync(DeleteAnalysisRuleRequest, CallSettings)
+            // Additional: DeleteAnalysisRuleAsync(DeleteAnalysisRuleRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAnalysisRuleRequest request = new DeleteAnalysisRuleRequest
+            {
+                AnalysisRuleName = AnalysisRuleName.FromProjectLocationAnalysisRule("[PROJECT]", "[LOCATION]", "[ANALYSIS_RULE]"),
+            };
+            // Make the request
+            await contactCenterInsightsClient.DeleteAnalysisRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAnalysisRule</summary>
+        public void DeleteAnalysisRule()
+        {
+            // Snippet: DeleteAnalysisRule(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/analysisRules/[ANALYSIS_RULE]";
+            // Make the request
+            contactCenterInsightsClient.DeleteAnalysisRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAnalysisRuleAsync</summary>
+        public async Task DeleteAnalysisRuleAsync()
+        {
+            // Snippet: DeleteAnalysisRuleAsync(string, CallSettings)
+            // Additional: DeleteAnalysisRuleAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/analysisRules/[ANALYSIS_RULE]";
+            // Make the request
+            await contactCenterInsightsClient.DeleteAnalysisRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAnalysisRule</summary>
+        public void DeleteAnalysisRuleResourceNames()
+        {
+            // Snippet: DeleteAnalysisRule(AnalysisRuleName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            AnalysisRuleName name = AnalysisRuleName.FromProjectLocationAnalysisRule("[PROJECT]", "[LOCATION]", "[ANALYSIS_RULE]");
+            // Make the request
+            contactCenterInsightsClient.DeleteAnalysisRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAnalysisRuleAsync</summary>
+        public async Task DeleteAnalysisRuleResourceNamesAsync()
+        {
+            // Snippet: DeleteAnalysisRuleAsync(AnalysisRuleName, CallSettings)
+            // Additional: DeleteAnalysisRuleAsync(AnalysisRuleName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalysisRuleName name = AnalysisRuleName.FromProjectLocationAnalysisRule("[PROJECT]", "[LOCATION]", "[ANALYSIS_RULE]");
+            // Make the request
+            await contactCenterInsightsClient.DeleteAnalysisRuleAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetEncryptionSpec</summary>
         public void GetEncryptionSpecRequestObject()
         {
@@ -5565,6 +6172,3396 @@ namespace GoogleCSharpSnippets
             ViewName name = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]");
             // Make the request
             await contactCenterInsightsClient.DeleteViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryMetrics</summary>
+        public void QueryMetricsRequestObject()
+        {
+            // Snippet: QueryMetrics(QueryMetricsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QueryMetricsRequest request = new QueryMetricsRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                TimeGranularity = QueryMetricsRequest.Types.TimeGranularity.Unspecified,
+                Dimensions = { new Dimension(), },
+                MeasureMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<QueryMetricsResponse, QueryMetricsMetadata> response = contactCenterInsightsClient.QueryMetrics(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QueryMetricsResponse, QueryMetricsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            QueryMetricsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QueryMetricsResponse, QueryMetricsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceQueryMetrics(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QueryMetricsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryMetricsAsync</summary>
+        public async Task QueryMetricsRequestObjectAsync()
+        {
+            // Snippet: QueryMetricsAsync(QueryMetricsRequest, CallSettings)
+            // Additional: QueryMetricsAsync(QueryMetricsRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryMetricsRequest request = new QueryMetricsRequest
+            {
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                TimeGranularity = QueryMetricsRequest.Types.TimeGranularity.Unspecified,
+                Dimensions = { new Dimension(), },
+                MeasureMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<QueryMetricsResponse, QueryMetricsMetadata> response = await contactCenterInsightsClient.QueryMetricsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QueryMetricsResponse, QueryMetricsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            QueryMetricsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QueryMetricsResponse, QueryMetricsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceQueryMetricsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QueryMetricsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaQuestion</summary>
+        public void CreateQaQuestionRequestObject()
+        {
+            // Snippet: CreateQaQuestion(CreateQaQuestionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            CreateQaQuestionRequest request = new CreateQaQuestionRequest
+            {
+                ParentAsQaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+                QaQuestion = new QaQuestion(),
+                QaQuestionId = "",
+            };
+            // Make the request
+            QaQuestion response = contactCenterInsightsClient.CreateQaQuestion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaQuestionAsync</summary>
+        public async Task CreateQaQuestionRequestObjectAsync()
+        {
+            // Snippet: CreateQaQuestionAsync(CreateQaQuestionRequest, CallSettings)
+            // Additional: CreateQaQuestionAsync(CreateQaQuestionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateQaQuestionRequest request = new CreateQaQuestionRequest
+            {
+                ParentAsQaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+                QaQuestion = new QaQuestion(),
+                QaQuestionId = "",
+            };
+            // Make the request
+            QaQuestion response = await contactCenterInsightsClient.CreateQaQuestionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaQuestion</summary>
+        public void CreateQaQuestion()
+        {
+            // Snippet: CreateQaQuestion(string, QaQuestion, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            QaQuestion qaQuestion = new QaQuestion();
+            string qaQuestionId = "";
+            // Make the request
+            QaQuestion response = contactCenterInsightsClient.CreateQaQuestion(parent, qaQuestion, qaQuestionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaQuestionAsync</summary>
+        public async Task CreateQaQuestionAsync()
+        {
+            // Snippet: CreateQaQuestionAsync(string, QaQuestion, string, CallSettings)
+            // Additional: CreateQaQuestionAsync(string, QaQuestion, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            QaQuestion qaQuestion = new QaQuestion();
+            string qaQuestionId = "";
+            // Make the request
+            QaQuestion response = await contactCenterInsightsClient.CreateQaQuestionAsync(parent, qaQuestion, qaQuestionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaQuestion</summary>
+        public void CreateQaQuestionResourceNames()
+        {
+            // Snippet: CreateQaQuestion(QaScorecardRevisionName, QaQuestion, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardRevisionName parent = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            QaQuestion qaQuestion = new QaQuestion();
+            string qaQuestionId = "";
+            // Make the request
+            QaQuestion response = contactCenterInsightsClient.CreateQaQuestion(parent, qaQuestion, qaQuestionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaQuestionAsync</summary>
+        public async Task CreateQaQuestionResourceNamesAsync()
+        {
+            // Snippet: CreateQaQuestionAsync(QaScorecardRevisionName, QaQuestion, string, CallSettings)
+            // Additional: CreateQaQuestionAsync(QaScorecardRevisionName, QaQuestion, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardRevisionName parent = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            QaQuestion qaQuestion = new QaQuestion();
+            string qaQuestionId = "";
+            // Make the request
+            QaQuestion response = await contactCenterInsightsClient.CreateQaQuestionAsync(parent, qaQuestion, qaQuestionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaQuestion</summary>
+        public void GetQaQuestionRequestObject()
+        {
+            // Snippet: GetQaQuestion(GetQaQuestionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            GetQaQuestionRequest request = new GetQaQuestionRequest
+            {
+                QaQuestionName = QaQuestionName.FromProjectLocationQaScorecardRevisionQaQuestion("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]", "[QA_QUESTION]"),
+            };
+            // Make the request
+            QaQuestion response = contactCenterInsightsClient.GetQaQuestion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaQuestionAsync</summary>
+        public async Task GetQaQuestionRequestObjectAsync()
+        {
+            // Snippet: GetQaQuestionAsync(GetQaQuestionRequest, CallSettings)
+            // Additional: GetQaQuestionAsync(GetQaQuestionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetQaQuestionRequest request = new GetQaQuestionRequest
+            {
+                QaQuestionName = QaQuestionName.FromProjectLocationQaScorecardRevisionQaQuestion("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]", "[QA_QUESTION]"),
+            };
+            // Make the request
+            QaQuestion response = await contactCenterInsightsClient.GetQaQuestionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaQuestion</summary>
+        public void GetQaQuestion()
+        {
+            // Snippet: GetQaQuestion(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]/qaQuestions/[QA_QUESTION]";
+            // Make the request
+            QaQuestion response = contactCenterInsightsClient.GetQaQuestion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaQuestionAsync</summary>
+        public async Task GetQaQuestionAsync()
+        {
+            // Snippet: GetQaQuestionAsync(string, CallSettings)
+            // Additional: GetQaQuestionAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]/qaQuestions/[QA_QUESTION]";
+            // Make the request
+            QaQuestion response = await contactCenterInsightsClient.GetQaQuestionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaQuestion</summary>
+        public void GetQaQuestionResourceNames()
+        {
+            // Snippet: GetQaQuestion(QaQuestionName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaQuestionName name = QaQuestionName.FromProjectLocationQaScorecardRevisionQaQuestion("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]", "[QA_QUESTION]");
+            // Make the request
+            QaQuestion response = contactCenterInsightsClient.GetQaQuestion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaQuestionAsync</summary>
+        public async Task GetQaQuestionResourceNamesAsync()
+        {
+            // Snippet: GetQaQuestionAsync(QaQuestionName, CallSettings)
+            // Additional: GetQaQuestionAsync(QaQuestionName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaQuestionName name = QaQuestionName.FromProjectLocationQaScorecardRevisionQaQuestion("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]", "[QA_QUESTION]");
+            // Make the request
+            QaQuestion response = await contactCenterInsightsClient.GetQaQuestionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQaQuestion</summary>
+        public void UpdateQaQuestionRequestObject()
+        {
+            // Snippet: UpdateQaQuestion(UpdateQaQuestionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdateQaQuestionRequest request = new UpdateQaQuestionRequest
+            {
+                QaQuestion = new QaQuestion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            QaQuestion response = contactCenterInsightsClient.UpdateQaQuestion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQaQuestionAsync</summary>
+        public async Task UpdateQaQuestionRequestObjectAsync()
+        {
+            // Snippet: UpdateQaQuestionAsync(UpdateQaQuestionRequest, CallSettings)
+            // Additional: UpdateQaQuestionAsync(UpdateQaQuestionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateQaQuestionRequest request = new UpdateQaQuestionRequest
+            {
+                QaQuestion = new QaQuestion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            QaQuestion response = await contactCenterInsightsClient.UpdateQaQuestionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQaQuestion</summary>
+        public void UpdateQaQuestion()
+        {
+            // Snippet: UpdateQaQuestion(QaQuestion, FieldMask, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaQuestion qaQuestion = new QaQuestion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            QaQuestion response = contactCenterInsightsClient.UpdateQaQuestion(qaQuestion, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQaQuestionAsync</summary>
+        public async Task UpdateQaQuestionAsync()
+        {
+            // Snippet: UpdateQaQuestionAsync(QaQuestion, FieldMask, CallSettings)
+            // Additional: UpdateQaQuestionAsync(QaQuestion, FieldMask, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaQuestion qaQuestion = new QaQuestion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            QaQuestion response = await contactCenterInsightsClient.UpdateQaQuestionAsync(qaQuestion, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaQuestion</summary>
+        public void DeleteQaQuestionRequestObject()
+        {
+            // Snippet: DeleteQaQuestion(DeleteQaQuestionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteQaQuestionRequest request = new DeleteQaQuestionRequest
+            {
+                QaQuestionName = QaQuestionName.FromProjectLocationQaScorecardRevisionQaQuestion("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]", "[QA_QUESTION]"),
+            };
+            // Make the request
+            contactCenterInsightsClient.DeleteQaQuestion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaQuestionAsync</summary>
+        public async Task DeleteQaQuestionRequestObjectAsync()
+        {
+            // Snippet: DeleteQaQuestionAsync(DeleteQaQuestionRequest, CallSettings)
+            // Additional: DeleteQaQuestionAsync(DeleteQaQuestionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteQaQuestionRequest request = new DeleteQaQuestionRequest
+            {
+                QaQuestionName = QaQuestionName.FromProjectLocationQaScorecardRevisionQaQuestion("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]", "[QA_QUESTION]"),
+            };
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaQuestionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaQuestion</summary>
+        public void DeleteQaQuestion()
+        {
+            // Snippet: DeleteQaQuestion(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]/qaQuestions/[QA_QUESTION]";
+            // Make the request
+            contactCenterInsightsClient.DeleteQaQuestion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaQuestionAsync</summary>
+        public async Task DeleteQaQuestionAsync()
+        {
+            // Snippet: DeleteQaQuestionAsync(string, CallSettings)
+            // Additional: DeleteQaQuestionAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]/qaQuestions/[QA_QUESTION]";
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaQuestionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaQuestion</summary>
+        public void DeleteQaQuestionResourceNames()
+        {
+            // Snippet: DeleteQaQuestion(QaQuestionName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaQuestionName name = QaQuestionName.FromProjectLocationQaScorecardRevisionQaQuestion("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]", "[QA_QUESTION]");
+            // Make the request
+            contactCenterInsightsClient.DeleteQaQuestion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaQuestionAsync</summary>
+        public async Task DeleteQaQuestionResourceNamesAsync()
+        {
+            // Snippet: DeleteQaQuestionAsync(QaQuestionName, CallSettings)
+            // Additional: DeleteQaQuestionAsync(QaQuestionName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaQuestionName name = QaQuestionName.FromProjectLocationQaScorecardRevisionQaQuestion("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]", "[QA_QUESTION]");
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaQuestionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaQuestions</summary>
+        public void ListQaQuestionsRequestObject()
+        {
+            // Snippet: ListQaQuestions(ListQaQuestionsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ListQaQuestionsRequest request = new ListQaQuestionsRequest
+            {
+                ParentAsQaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListQaQuestionsResponse, QaQuestion> response = contactCenterInsightsClient.ListQaQuestions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaQuestion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaQuestionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaQuestion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaQuestion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaQuestion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaQuestionsAsync</summary>
+        public async Task ListQaQuestionsRequestObjectAsync()
+        {
+            // Snippet: ListQaQuestionsAsync(ListQaQuestionsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListQaQuestionsRequest request = new ListQaQuestionsRequest
+            {
+                ParentAsQaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListQaQuestionsResponse, QaQuestion> response = contactCenterInsightsClient.ListQaQuestionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaQuestion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaQuestionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaQuestion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaQuestion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaQuestion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaQuestions</summary>
+        public void ListQaQuestions()
+        {
+            // Snippet: ListQaQuestions(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            // Make the request
+            PagedEnumerable<ListQaQuestionsResponse, QaQuestion> response = contactCenterInsightsClient.ListQaQuestions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaQuestion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaQuestionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaQuestion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaQuestion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaQuestion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaQuestionsAsync</summary>
+        public async Task ListQaQuestionsAsync()
+        {
+            // Snippet: ListQaQuestionsAsync(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            // Make the request
+            PagedAsyncEnumerable<ListQaQuestionsResponse, QaQuestion> response = contactCenterInsightsClient.ListQaQuestionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaQuestion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaQuestionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaQuestion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaQuestion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaQuestion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaQuestions</summary>
+        public void ListQaQuestionsResourceNames()
+        {
+            // Snippet: ListQaQuestions(QaScorecardRevisionName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardRevisionName parent = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            // Make the request
+            PagedEnumerable<ListQaQuestionsResponse, QaQuestion> response = contactCenterInsightsClient.ListQaQuestions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaQuestion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaQuestionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaQuestion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaQuestion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaQuestion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaQuestionsAsync</summary>
+        public async Task ListQaQuestionsResourceNamesAsync()
+        {
+            // Snippet: ListQaQuestionsAsync(QaScorecardRevisionName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardRevisionName parent = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            // Make the request
+            PagedAsyncEnumerable<ListQaQuestionsResponse, QaQuestion> response = contactCenterInsightsClient.ListQaQuestionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaQuestion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaQuestionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaQuestion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaQuestion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaQuestion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecard</summary>
+        public void CreateQaScorecardRequestObject()
+        {
+            // Snippet: CreateQaScorecard(CreateQaScorecardRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            CreateQaScorecardRequest request = new CreateQaScorecardRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                QaScorecard = new QaScorecard(),
+                QaScorecardId = "",
+            };
+            // Make the request
+            QaScorecard response = contactCenterInsightsClient.CreateQaScorecard(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardAsync</summary>
+        public async Task CreateQaScorecardRequestObjectAsync()
+        {
+            // Snippet: CreateQaScorecardAsync(CreateQaScorecardRequest, CallSettings)
+            // Additional: CreateQaScorecardAsync(CreateQaScorecardRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateQaScorecardRequest request = new CreateQaScorecardRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                QaScorecard = new QaScorecard(),
+                QaScorecardId = "",
+            };
+            // Make the request
+            QaScorecard response = await contactCenterInsightsClient.CreateQaScorecardAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecard</summary>
+        public void CreateQaScorecard()
+        {
+            // Snippet: CreateQaScorecard(string, QaScorecard, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            QaScorecard qaScorecard = new QaScorecard();
+            string qaScorecardId = "";
+            // Make the request
+            QaScorecard response = contactCenterInsightsClient.CreateQaScorecard(parent, qaScorecard, qaScorecardId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardAsync</summary>
+        public async Task CreateQaScorecardAsync()
+        {
+            // Snippet: CreateQaScorecardAsync(string, QaScorecard, string, CallSettings)
+            // Additional: CreateQaScorecardAsync(string, QaScorecard, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            QaScorecard qaScorecard = new QaScorecard();
+            string qaScorecardId = "";
+            // Make the request
+            QaScorecard response = await contactCenterInsightsClient.CreateQaScorecardAsync(parent, qaScorecard, qaScorecardId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecard</summary>
+        public void CreateQaScorecardResourceNames()
+        {
+            // Snippet: CreateQaScorecard(LocationName, QaScorecard, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            QaScorecard qaScorecard = new QaScorecard();
+            string qaScorecardId = "";
+            // Make the request
+            QaScorecard response = contactCenterInsightsClient.CreateQaScorecard(parent, qaScorecard, qaScorecardId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardAsync</summary>
+        public async Task CreateQaScorecardResourceNamesAsync()
+        {
+            // Snippet: CreateQaScorecardAsync(LocationName, QaScorecard, string, CallSettings)
+            // Additional: CreateQaScorecardAsync(LocationName, QaScorecard, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            QaScorecard qaScorecard = new QaScorecard();
+            string qaScorecardId = "";
+            // Make the request
+            QaScorecard response = await contactCenterInsightsClient.CreateQaScorecardAsync(parent, qaScorecard, qaScorecardId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecard</summary>
+        public void GetQaScorecardRequestObject()
+        {
+            // Snippet: GetQaScorecard(GetQaScorecardRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            GetQaScorecardRequest request = new GetQaScorecardRequest
+            {
+                QaScorecardName = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]"),
+            };
+            // Make the request
+            QaScorecard response = contactCenterInsightsClient.GetQaScorecard(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardAsync</summary>
+        public async Task GetQaScorecardRequestObjectAsync()
+        {
+            // Snippet: GetQaScorecardAsync(GetQaScorecardRequest, CallSettings)
+            // Additional: GetQaScorecardAsync(GetQaScorecardRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetQaScorecardRequest request = new GetQaScorecardRequest
+            {
+                QaScorecardName = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]"),
+            };
+            // Make the request
+            QaScorecard response = await contactCenterInsightsClient.GetQaScorecardAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecard</summary>
+        public void GetQaScorecard()
+        {
+            // Snippet: GetQaScorecard(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]";
+            // Make the request
+            QaScorecard response = contactCenterInsightsClient.GetQaScorecard(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardAsync</summary>
+        public async Task GetQaScorecardAsync()
+        {
+            // Snippet: GetQaScorecardAsync(string, CallSettings)
+            // Additional: GetQaScorecardAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]";
+            // Make the request
+            QaScorecard response = await contactCenterInsightsClient.GetQaScorecardAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecard</summary>
+        public void GetQaScorecardResourceNames()
+        {
+            // Snippet: GetQaScorecard(QaScorecardName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardName name = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]");
+            // Make the request
+            QaScorecard response = contactCenterInsightsClient.GetQaScorecard(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardAsync</summary>
+        public async Task GetQaScorecardResourceNamesAsync()
+        {
+            // Snippet: GetQaScorecardAsync(QaScorecardName, CallSettings)
+            // Additional: GetQaScorecardAsync(QaScorecardName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardName name = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]");
+            // Make the request
+            QaScorecard response = await contactCenterInsightsClient.GetQaScorecardAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQaScorecard</summary>
+        public void UpdateQaScorecardRequestObject()
+        {
+            // Snippet: UpdateQaScorecard(UpdateQaScorecardRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdateQaScorecardRequest request = new UpdateQaScorecardRequest
+            {
+                QaScorecard = new QaScorecard(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            QaScorecard response = contactCenterInsightsClient.UpdateQaScorecard(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQaScorecardAsync</summary>
+        public async Task UpdateQaScorecardRequestObjectAsync()
+        {
+            // Snippet: UpdateQaScorecardAsync(UpdateQaScorecardRequest, CallSettings)
+            // Additional: UpdateQaScorecardAsync(UpdateQaScorecardRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateQaScorecardRequest request = new UpdateQaScorecardRequest
+            {
+                QaScorecard = new QaScorecard(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            QaScorecard response = await contactCenterInsightsClient.UpdateQaScorecardAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQaScorecard</summary>
+        public void UpdateQaScorecard()
+        {
+            // Snippet: UpdateQaScorecard(QaScorecard, FieldMask, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecard qaScorecard = new QaScorecard();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            QaScorecard response = contactCenterInsightsClient.UpdateQaScorecard(qaScorecard, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQaScorecardAsync</summary>
+        public async Task UpdateQaScorecardAsync()
+        {
+            // Snippet: UpdateQaScorecardAsync(QaScorecard, FieldMask, CallSettings)
+            // Additional: UpdateQaScorecardAsync(QaScorecard, FieldMask, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecard qaScorecard = new QaScorecard();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            QaScorecard response = await contactCenterInsightsClient.UpdateQaScorecardAsync(qaScorecard, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecard</summary>
+        public void DeleteQaScorecardRequestObject()
+        {
+            // Snippet: DeleteQaScorecard(DeleteQaScorecardRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteQaScorecardRequest request = new DeleteQaScorecardRequest
+            {
+                QaScorecardName = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]"),
+                Force = false,
+            };
+            // Make the request
+            contactCenterInsightsClient.DeleteQaScorecard(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardAsync</summary>
+        public async Task DeleteQaScorecardRequestObjectAsync()
+        {
+            // Snippet: DeleteQaScorecardAsync(DeleteQaScorecardRequest, CallSettings)
+            // Additional: DeleteQaScorecardAsync(DeleteQaScorecardRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteQaScorecardRequest request = new DeleteQaScorecardRequest
+            {
+                QaScorecardName = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]"),
+                Force = false,
+            };
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaScorecardAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecard</summary>
+        public void DeleteQaScorecard()
+        {
+            // Snippet: DeleteQaScorecard(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]";
+            // Make the request
+            contactCenterInsightsClient.DeleteQaScorecard(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardAsync</summary>
+        public async Task DeleteQaScorecardAsync()
+        {
+            // Snippet: DeleteQaScorecardAsync(string, CallSettings)
+            // Additional: DeleteQaScorecardAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]";
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaScorecardAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecard</summary>
+        public void DeleteQaScorecardResourceNames()
+        {
+            // Snippet: DeleteQaScorecard(QaScorecardName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardName name = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]");
+            // Make the request
+            contactCenterInsightsClient.DeleteQaScorecard(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardAsync</summary>
+        public async Task DeleteQaScorecardResourceNamesAsync()
+        {
+            // Snippet: DeleteQaScorecardAsync(QaScorecardName, CallSettings)
+            // Additional: DeleteQaScorecardAsync(QaScorecardName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardName name = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]");
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaScorecardAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecards</summary>
+        public void ListQaScorecardsRequestObject()
+        {
+            // Snippet: ListQaScorecards(ListQaScorecardsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ListQaScorecardsRequest request = new ListQaScorecardsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListQaScorecardsResponse, QaScorecard> response = contactCenterInsightsClient.ListQaScorecards(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaScorecard item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaScorecardsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecard item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecard> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecard item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardsAsync</summary>
+        public async Task ListQaScorecardsRequestObjectAsync()
+        {
+            // Snippet: ListQaScorecardsAsync(ListQaScorecardsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListQaScorecardsRequest request = new ListQaScorecardsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListQaScorecardsResponse, QaScorecard> response = contactCenterInsightsClient.ListQaScorecardsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaScorecard item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaScorecardsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecard item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecard> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecard item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecards</summary>
+        public void ListQaScorecards()
+        {
+            // Snippet: ListQaScorecards(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListQaScorecardsResponse, QaScorecard> response = contactCenterInsightsClient.ListQaScorecards(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaScorecard item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaScorecardsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecard item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecard> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecard item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardsAsync</summary>
+        public async Task ListQaScorecardsAsync()
+        {
+            // Snippet: ListQaScorecardsAsync(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListQaScorecardsResponse, QaScorecard> response = contactCenterInsightsClient.ListQaScorecardsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaScorecard item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaScorecardsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecard item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecard> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecard item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecards</summary>
+        public void ListQaScorecardsResourceNames()
+        {
+            // Snippet: ListQaScorecards(LocationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListQaScorecardsResponse, QaScorecard> response = contactCenterInsightsClient.ListQaScorecards(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaScorecard item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaScorecardsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecard item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecard> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecard item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardsAsync</summary>
+        public async Task ListQaScorecardsResourceNamesAsync()
+        {
+            // Snippet: ListQaScorecardsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListQaScorecardsResponse, QaScorecard> response = contactCenterInsightsClient.ListQaScorecardsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaScorecard item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaScorecardsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecard item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecard> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecard item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardRevision</summary>
+        public void CreateQaScorecardRevisionRequestObject()
+        {
+            // Snippet: CreateQaScorecardRevision(CreateQaScorecardRevisionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            CreateQaScorecardRevisionRequest request = new CreateQaScorecardRevisionRequest
+            {
+                ParentAsQaScorecardName = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]"),
+                QaScorecardRevision = new QaScorecardRevision(),
+                QaScorecardRevisionId = "",
+            };
+            // Make the request
+            QaScorecardRevision response = contactCenterInsightsClient.CreateQaScorecardRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardRevisionAsync</summary>
+        public async Task CreateQaScorecardRevisionRequestObjectAsync()
+        {
+            // Snippet: CreateQaScorecardRevisionAsync(CreateQaScorecardRevisionRequest, CallSettings)
+            // Additional: CreateQaScorecardRevisionAsync(CreateQaScorecardRevisionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateQaScorecardRevisionRequest request = new CreateQaScorecardRevisionRequest
+            {
+                ParentAsQaScorecardName = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]"),
+                QaScorecardRevision = new QaScorecardRevision(),
+                QaScorecardRevisionId = "",
+            };
+            // Make the request
+            QaScorecardRevision response = await contactCenterInsightsClient.CreateQaScorecardRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardRevision</summary>
+        public void CreateQaScorecardRevision()
+        {
+            // Snippet: CreateQaScorecardRevision(string, QaScorecardRevision, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]";
+            QaScorecardRevision qaScorecardRevision = new QaScorecardRevision();
+            string qaScorecardRevisionId = "";
+            // Make the request
+            QaScorecardRevision response = contactCenterInsightsClient.CreateQaScorecardRevision(parent, qaScorecardRevision, qaScorecardRevisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardRevisionAsync</summary>
+        public async Task CreateQaScorecardRevisionAsync()
+        {
+            // Snippet: CreateQaScorecardRevisionAsync(string, QaScorecardRevision, string, CallSettings)
+            // Additional: CreateQaScorecardRevisionAsync(string, QaScorecardRevision, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]";
+            QaScorecardRevision qaScorecardRevision = new QaScorecardRevision();
+            string qaScorecardRevisionId = "";
+            // Make the request
+            QaScorecardRevision response = await contactCenterInsightsClient.CreateQaScorecardRevisionAsync(parent, qaScorecardRevision, qaScorecardRevisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardRevision</summary>
+        public void CreateQaScorecardRevisionResourceNames()
+        {
+            // Snippet: CreateQaScorecardRevision(QaScorecardName, QaScorecardRevision, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardName parent = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]");
+            QaScorecardRevision qaScorecardRevision = new QaScorecardRevision();
+            string qaScorecardRevisionId = "";
+            // Make the request
+            QaScorecardRevision response = contactCenterInsightsClient.CreateQaScorecardRevision(parent, qaScorecardRevision, qaScorecardRevisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQaScorecardRevisionAsync</summary>
+        public async Task CreateQaScorecardRevisionResourceNamesAsync()
+        {
+            // Snippet: CreateQaScorecardRevisionAsync(QaScorecardName, QaScorecardRevision, string, CallSettings)
+            // Additional: CreateQaScorecardRevisionAsync(QaScorecardName, QaScorecardRevision, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardName parent = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]");
+            QaScorecardRevision qaScorecardRevision = new QaScorecardRevision();
+            string qaScorecardRevisionId = "";
+            // Make the request
+            QaScorecardRevision response = await contactCenterInsightsClient.CreateQaScorecardRevisionAsync(parent, qaScorecardRevision, qaScorecardRevisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardRevision</summary>
+        public void GetQaScorecardRevisionRequestObject()
+        {
+            // Snippet: GetQaScorecardRevision(GetQaScorecardRevisionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            GetQaScorecardRevisionRequest request = new GetQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+            };
+            // Make the request
+            QaScorecardRevision response = contactCenterInsightsClient.GetQaScorecardRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardRevisionAsync</summary>
+        public async Task GetQaScorecardRevisionRequestObjectAsync()
+        {
+            // Snippet: GetQaScorecardRevisionAsync(GetQaScorecardRevisionRequest, CallSettings)
+            // Additional: GetQaScorecardRevisionAsync(GetQaScorecardRevisionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetQaScorecardRevisionRequest request = new GetQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+            };
+            // Make the request
+            QaScorecardRevision response = await contactCenterInsightsClient.GetQaScorecardRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardRevision</summary>
+        public void GetQaScorecardRevision()
+        {
+            // Snippet: GetQaScorecardRevision(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            // Make the request
+            QaScorecardRevision response = contactCenterInsightsClient.GetQaScorecardRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardRevisionAsync</summary>
+        public async Task GetQaScorecardRevisionAsync()
+        {
+            // Snippet: GetQaScorecardRevisionAsync(string, CallSettings)
+            // Additional: GetQaScorecardRevisionAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            // Make the request
+            QaScorecardRevision response = await contactCenterInsightsClient.GetQaScorecardRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardRevision</summary>
+        public void GetQaScorecardRevisionResourceNames()
+        {
+            // Snippet: GetQaScorecardRevision(QaScorecardRevisionName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardRevisionName name = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            // Make the request
+            QaScorecardRevision response = contactCenterInsightsClient.GetQaScorecardRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQaScorecardRevisionAsync</summary>
+        public async Task GetQaScorecardRevisionResourceNamesAsync()
+        {
+            // Snippet: GetQaScorecardRevisionAsync(QaScorecardRevisionName, CallSettings)
+            // Additional: GetQaScorecardRevisionAsync(QaScorecardRevisionName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardRevisionName name = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            // Make the request
+            QaScorecardRevision response = await contactCenterInsightsClient.GetQaScorecardRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneQaScorecardRevision</summary>
+        public void TuneQaScorecardRevisionRequestObject()
+        {
+            // Snippet: TuneQaScorecardRevision(TuneQaScorecardRevisionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            TuneQaScorecardRevisionRequest request = new TuneQaScorecardRevisionRequest
+            {
+                ParentAsQaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+                Filter = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> response = contactCenterInsightsClient.TuneQaScorecardRevision(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuneQaScorecardRevisionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceTuneQaScorecardRevision(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneQaScorecardRevisionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneQaScorecardRevisionAsync</summary>
+        public async Task TuneQaScorecardRevisionRequestObjectAsync()
+        {
+            // Snippet: TuneQaScorecardRevisionAsync(TuneQaScorecardRevisionRequest, CallSettings)
+            // Additional: TuneQaScorecardRevisionAsync(TuneQaScorecardRevisionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            TuneQaScorecardRevisionRequest request = new TuneQaScorecardRevisionRequest
+            {
+                ParentAsQaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+                Filter = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> response = await contactCenterInsightsClient.TuneQaScorecardRevisionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuneQaScorecardRevisionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceTuneQaScorecardRevisionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneQaScorecardRevisionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneQaScorecardRevision</summary>
+        public void TuneQaScorecardRevision()
+        {
+            // Snippet: TuneQaScorecardRevision(string, string, bool, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            string filter = "";
+            bool validateOnly = false;
+            // Make the request
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> response = contactCenterInsightsClient.TuneQaScorecardRevision(parent, filter, validateOnly);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuneQaScorecardRevisionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceTuneQaScorecardRevision(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneQaScorecardRevisionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneQaScorecardRevisionAsync</summary>
+        public async Task TuneQaScorecardRevisionAsync()
+        {
+            // Snippet: TuneQaScorecardRevisionAsync(string, string, bool, CallSettings)
+            // Additional: TuneQaScorecardRevisionAsync(string, string, bool, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            string filter = "";
+            bool validateOnly = false;
+            // Make the request
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> response = await contactCenterInsightsClient.TuneQaScorecardRevisionAsync(parent, filter, validateOnly);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuneQaScorecardRevisionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceTuneQaScorecardRevisionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneQaScorecardRevisionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneQaScorecardRevision</summary>
+        public void TuneQaScorecardRevisionResourceNames()
+        {
+            // Snippet: TuneQaScorecardRevision(QaScorecardRevisionName, string, bool, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardRevisionName parent = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            string filter = "";
+            bool validateOnly = false;
+            // Make the request
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> response = contactCenterInsightsClient.TuneQaScorecardRevision(parent, filter, validateOnly);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuneQaScorecardRevisionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceTuneQaScorecardRevision(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneQaScorecardRevisionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneQaScorecardRevisionAsync</summary>
+        public async Task TuneQaScorecardRevisionResourceNamesAsync()
+        {
+            // Snippet: TuneQaScorecardRevisionAsync(QaScorecardRevisionName, string, bool, CallSettings)
+            // Additional: TuneQaScorecardRevisionAsync(QaScorecardRevisionName, string, bool, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardRevisionName parent = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            string filter = "";
+            bool validateOnly = false;
+            // Make the request
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> response = await contactCenterInsightsClient.TuneQaScorecardRevisionAsync(parent, filter, validateOnly);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuneQaScorecardRevisionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceTuneQaScorecardRevisionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneQaScorecardRevisionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployQaScorecardRevision</summary>
+        public void DeployQaScorecardRevisionRequestObject()
+        {
+            // Snippet: DeployQaScorecardRevision(DeployQaScorecardRevisionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeployQaScorecardRevisionRequest request = new DeployQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+            };
+            // Make the request
+            QaScorecardRevision response = contactCenterInsightsClient.DeployQaScorecardRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployQaScorecardRevisionAsync</summary>
+        public async Task DeployQaScorecardRevisionRequestObjectAsync()
+        {
+            // Snippet: DeployQaScorecardRevisionAsync(DeployQaScorecardRevisionRequest, CallSettings)
+            // Additional: DeployQaScorecardRevisionAsync(DeployQaScorecardRevisionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeployQaScorecardRevisionRequest request = new DeployQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+            };
+            // Make the request
+            QaScorecardRevision response = await contactCenterInsightsClient.DeployQaScorecardRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployQaScorecardRevision</summary>
+        public void UndeployQaScorecardRevisionRequestObject()
+        {
+            // Snippet: UndeployQaScorecardRevision(UndeployQaScorecardRevisionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UndeployQaScorecardRevisionRequest request = new UndeployQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+            };
+            // Make the request
+            QaScorecardRevision response = contactCenterInsightsClient.UndeployQaScorecardRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployQaScorecardRevisionAsync</summary>
+        public async Task UndeployQaScorecardRevisionRequestObjectAsync()
+        {
+            // Snippet: UndeployQaScorecardRevisionAsync(UndeployQaScorecardRevisionRequest, CallSettings)
+            // Additional: UndeployQaScorecardRevisionAsync(UndeployQaScorecardRevisionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UndeployQaScorecardRevisionRequest request = new UndeployQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+            };
+            // Make the request
+            QaScorecardRevision response = await contactCenterInsightsClient.UndeployQaScorecardRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardRevision</summary>
+        public void DeleteQaScorecardRevisionRequestObject()
+        {
+            // Snippet: DeleteQaScorecardRevision(DeleteQaScorecardRevisionRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteQaScorecardRevisionRequest request = new DeleteQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+                Force = false,
+            };
+            // Make the request
+            contactCenterInsightsClient.DeleteQaScorecardRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardRevisionAsync</summary>
+        public async Task DeleteQaScorecardRevisionRequestObjectAsync()
+        {
+            // Snippet: DeleteQaScorecardRevisionAsync(DeleteQaScorecardRevisionRequest, CallSettings)
+            // Additional: DeleteQaScorecardRevisionAsync(DeleteQaScorecardRevisionRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteQaScorecardRevisionRequest request = new DeleteQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]"),
+                Force = false,
+            };
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaScorecardRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardRevision</summary>
+        public void DeleteQaScorecardRevision()
+        {
+            // Snippet: DeleteQaScorecardRevision(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            // Make the request
+            contactCenterInsightsClient.DeleteQaScorecardRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardRevisionAsync</summary>
+        public async Task DeleteQaScorecardRevisionAsync()
+        {
+            // Snippet: DeleteQaScorecardRevisionAsync(string, CallSettings)
+            // Additional: DeleteQaScorecardRevisionAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]/revisions/[REVISION]";
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaScorecardRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardRevision</summary>
+        public void DeleteQaScorecardRevisionResourceNames()
+        {
+            // Snippet: DeleteQaScorecardRevision(QaScorecardRevisionName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardRevisionName name = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            // Make the request
+            contactCenterInsightsClient.DeleteQaScorecardRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQaScorecardRevisionAsync</summary>
+        public async Task DeleteQaScorecardRevisionResourceNamesAsync()
+        {
+            // Snippet: DeleteQaScorecardRevisionAsync(QaScorecardRevisionName, CallSettings)
+            // Additional: DeleteQaScorecardRevisionAsync(QaScorecardRevisionName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardRevisionName name = QaScorecardRevisionName.FromProjectLocationQaScorecardRevision("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]", "[REVISION]");
+            // Make the request
+            await contactCenterInsightsClient.DeleteQaScorecardRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardRevisions</summary>
+        public void ListQaScorecardRevisionsRequestObject()
+        {
+            // Snippet: ListQaScorecardRevisions(ListQaScorecardRevisionsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ListQaScorecardRevisionsRequest request = new ListQaScorecardRevisionsRequest
+            {
+                ParentAsQaScorecardName = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> response = contactCenterInsightsClient.ListQaScorecardRevisions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaScorecardRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaScorecardRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecardRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecardRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecardRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardRevisionsAsync</summary>
+        public async Task ListQaScorecardRevisionsRequestObjectAsync()
+        {
+            // Snippet: ListQaScorecardRevisionsAsync(ListQaScorecardRevisionsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListQaScorecardRevisionsRequest request = new ListQaScorecardRevisionsRequest
+            {
+                ParentAsQaScorecardName = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> response = contactCenterInsightsClient.ListQaScorecardRevisionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaScorecardRevision item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaScorecardRevisionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecardRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecardRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecardRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardRevisions</summary>
+        public void ListQaScorecardRevisions()
+        {
+            // Snippet: ListQaScorecardRevisions(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]";
+            // Make the request
+            PagedEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> response = contactCenterInsightsClient.ListQaScorecardRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaScorecardRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaScorecardRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecardRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecardRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecardRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardRevisionsAsync</summary>
+        public async Task ListQaScorecardRevisionsAsync()
+        {
+            // Snippet: ListQaScorecardRevisionsAsync(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/qaScorecards/[QA_SCORECARD]";
+            // Make the request
+            PagedAsyncEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> response = contactCenterInsightsClient.ListQaScorecardRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaScorecardRevision item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaScorecardRevisionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecardRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecardRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecardRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardRevisions</summary>
+        public void ListQaScorecardRevisionsResourceNames()
+        {
+            // Snippet: ListQaScorecardRevisions(QaScorecardName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            QaScorecardName parent = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]");
+            // Make the request
+            PagedEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> response = contactCenterInsightsClient.ListQaScorecardRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QaScorecardRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQaScorecardRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecardRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecardRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecardRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQaScorecardRevisionsAsync</summary>
+        public async Task ListQaScorecardRevisionsResourceNamesAsync()
+        {
+            // Snippet: ListQaScorecardRevisionsAsync(QaScorecardName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            QaScorecardName parent = QaScorecardName.FromProjectLocationQaScorecard("[PROJECT]", "[LOCATION]", "[QA_SCORECARD]");
+            // Make the request
+            PagedAsyncEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> response = contactCenterInsightsClient.ListQaScorecardRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QaScorecardRevision item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQaScorecardRevisionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QaScorecardRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QaScorecardRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QaScorecardRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeedbackLabel</summary>
+        public void CreateFeedbackLabelRequestObject()
+        {
+            // Snippet: CreateFeedbackLabel(CreateFeedbackLabelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            CreateFeedbackLabelRequest request = new CreateFeedbackLabelRequest
+            {
+                ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
+                FeedbackLabelId = "",
+                FeedbackLabel = new FeedbackLabel(),
+            };
+            // Make the request
+            FeedbackLabel response = contactCenterInsightsClient.CreateFeedbackLabel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeedbackLabelAsync</summary>
+        public async Task CreateFeedbackLabelRequestObjectAsync()
+        {
+            // Snippet: CreateFeedbackLabelAsync(CreateFeedbackLabelRequest, CallSettings)
+            // Additional: CreateFeedbackLabelAsync(CreateFeedbackLabelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateFeedbackLabelRequest request = new CreateFeedbackLabelRequest
+            {
+                ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
+                FeedbackLabelId = "",
+                FeedbackLabel = new FeedbackLabel(),
+            };
+            // Make the request
+            FeedbackLabel response = await contactCenterInsightsClient.CreateFeedbackLabelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeedbackLabel</summary>
+        public void CreateFeedbackLabel()
+        {
+            // Snippet: CreateFeedbackLabel(string, FeedbackLabel, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]";
+            FeedbackLabel feedbackLabel = new FeedbackLabel();
+            string feedbackLabelId = "";
+            // Make the request
+            FeedbackLabel response = contactCenterInsightsClient.CreateFeedbackLabel(parent, feedbackLabel, feedbackLabelId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeedbackLabelAsync</summary>
+        public async Task CreateFeedbackLabelAsync()
+        {
+            // Snippet: CreateFeedbackLabelAsync(string, FeedbackLabel, string, CallSettings)
+            // Additional: CreateFeedbackLabelAsync(string, FeedbackLabel, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]";
+            FeedbackLabel feedbackLabel = new FeedbackLabel();
+            string feedbackLabelId = "";
+            // Make the request
+            FeedbackLabel response = await contactCenterInsightsClient.CreateFeedbackLabelAsync(parent, feedbackLabel, feedbackLabelId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeedbackLabel</summary>
+        public void CreateFeedbackLabelResourceNames()
+        {
+            // Snippet: CreateFeedbackLabel(ConversationName, FeedbackLabel, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ConversationName parent = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]");
+            FeedbackLabel feedbackLabel = new FeedbackLabel();
+            string feedbackLabelId = "";
+            // Make the request
+            FeedbackLabel response = contactCenterInsightsClient.CreateFeedbackLabel(parent, feedbackLabel, feedbackLabelId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeedbackLabelAsync</summary>
+        public async Task CreateFeedbackLabelResourceNamesAsync()
+        {
+            // Snippet: CreateFeedbackLabelAsync(ConversationName, FeedbackLabel, string, CallSettings)
+            // Additional: CreateFeedbackLabelAsync(ConversationName, FeedbackLabel, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversationName parent = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]");
+            FeedbackLabel feedbackLabel = new FeedbackLabel();
+            string feedbackLabelId = "";
+            // Make the request
+            FeedbackLabel response = await contactCenterInsightsClient.CreateFeedbackLabelAsync(parent, feedbackLabel, feedbackLabelId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeedbackLabels</summary>
+        public void ListFeedbackLabelsRequestObject()
+        {
+            // Snippet: ListFeedbackLabels(ListFeedbackLabelsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ListFeedbackLabelsRequest request = new ListFeedbackLabelsRequest
+            {
+                ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListFeedbackLabels(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeedbackLabel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeedbackLabelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeedbackLabelsAsync</summary>
+        public async Task ListFeedbackLabelsRequestObjectAsync()
+        {
+            // Snippet: ListFeedbackLabelsAsync(ListFeedbackLabelsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFeedbackLabelsRequest request = new ListFeedbackLabelsRequest
+            {
+                ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListFeedbackLabelsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeedbackLabel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeedbackLabelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeedbackLabels</summary>
+        public void ListFeedbackLabels()
+        {
+            // Snippet: ListFeedbackLabels(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]";
+            // Make the request
+            PagedEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListFeedbackLabels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeedbackLabel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeedbackLabelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeedbackLabelsAsync</summary>
+        public async Task ListFeedbackLabelsAsync()
+        {
+            // Snippet: ListFeedbackLabelsAsync(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListFeedbackLabelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeedbackLabel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeedbackLabelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeedbackLabels</summary>
+        public void ListFeedbackLabelsResourceNames()
+        {
+            // Snippet: ListFeedbackLabels(ConversationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ConversationName parent = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]");
+            // Make the request
+            PagedEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListFeedbackLabels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeedbackLabel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeedbackLabelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeedbackLabelsAsync</summary>
+        public async Task ListFeedbackLabelsResourceNamesAsync()
+        {
+            // Snippet: ListFeedbackLabelsAsync(ConversationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversationName parent = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListFeedbackLabelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeedbackLabel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeedbackLabelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedbackLabel</summary>
+        public void GetFeedbackLabelRequestObject()
+        {
+            // Snippet: GetFeedbackLabel(GetFeedbackLabelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            GetFeedbackLabelRequest request = new GetFeedbackLabelRequest
+            {
+                FeedbackLabelName = FeedbackLabelName.FromProjectLocationConversationFeedbackLabel("[PROJECT]", "[LOCATION]", "[CONVERSATION]", "[FEEDBACK_LABEL]"),
+            };
+            // Make the request
+            FeedbackLabel response = contactCenterInsightsClient.GetFeedbackLabel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedbackLabelAsync</summary>
+        public async Task GetFeedbackLabelRequestObjectAsync()
+        {
+            // Snippet: GetFeedbackLabelAsync(GetFeedbackLabelRequest, CallSettings)
+            // Additional: GetFeedbackLabelAsync(GetFeedbackLabelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFeedbackLabelRequest request = new GetFeedbackLabelRequest
+            {
+                FeedbackLabelName = FeedbackLabelName.FromProjectLocationConversationFeedbackLabel("[PROJECT]", "[LOCATION]", "[CONVERSATION]", "[FEEDBACK_LABEL]"),
+            };
+            // Make the request
+            FeedbackLabel response = await contactCenterInsightsClient.GetFeedbackLabelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedbackLabel</summary>
+        public void GetFeedbackLabel()
+        {
+            // Snippet: GetFeedbackLabel(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]/feedbackLabels/[FEEDBACK_LABEL]";
+            // Make the request
+            FeedbackLabel response = contactCenterInsightsClient.GetFeedbackLabel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedbackLabelAsync</summary>
+        public async Task GetFeedbackLabelAsync()
+        {
+            // Snippet: GetFeedbackLabelAsync(string, CallSettings)
+            // Additional: GetFeedbackLabelAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]/feedbackLabels/[FEEDBACK_LABEL]";
+            // Make the request
+            FeedbackLabel response = await contactCenterInsightsClient.GetFeedbackLabelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedbackLabel</summary>
+        public void GetFeedbackLabelResourceNames()
+        {
+            // Snippet: GetFeedbackLabel(FeedbackLabelName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            FeedbackLabelName name = FeedbackLabelName.FromProjectLocationConversationFeedbackLabel("[PROJECT]", "[LOCATION]", "[CONVERSATION]", "[FEEDBACK_LABEL]");
+            // Make the request
+            FeedbackLabel response = contactCenterInsightsClient.GetFeedbackLabel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeedbackLabelAsync</summary>
+        public async Task GetFeedbackLabelResourceNamesAsync()
+        {
+            // Snippet: GetFeedbackLabelAsync(FeedbackLabelName, CallSettings)
+            // Additional: GetFeedbackLabelAsync(FeedbackLabelName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            FeedbackLabelName name = FeedbackLabelName.FromProjectLocationConversationFeedbackLabel("[PROJECT]", "[LOCATION]", "[CONVERSATION]", "[FEEDBACK_LABEL]");
+            // Make the request
+            FeedbackLabel response = await contactCenterInsightsClient.GetFeedbackLabelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeedbackLabel</summary>
+        public void UpdateFeedbackLabelRequestObject()
+        {
+            // Snippet: UpdateFeedbackLabel(UpdateFeedbackLabelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdateFeedbackLabelRequest request = new UpdateFeedbackLabelRequest
+            {
+                FeedbackLabel = new FeedbackLabel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            FeedbackLabel response = contactCenterInsightsClient.UpdateFeedbackLabel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeedbackLabelAsync</summary>
+        public async Task UpdateFeedbackLabelRequestObjectAsync()
+        {
+            // Snippet: UpdateFeedbackLabelAsync(UpdateFeedbackLabelRequest, CallSettings)
+            // Additional: UpdateFeedbackLabelAsync(UpdateFeedbackLabelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateFeedbackLabelRequest request = new UpdateFeedbackLabelRequest
+            {
+                FeedbackLabel = new FeedbackLabel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            FeedbackLabel response = await contactCenterInsightsClient.UpdateFeedbackLabelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeedbackLabel</summary>
+        public void UpdateFeedbackLabel()
+        {
+            // Snippet: UpdateFeedbackLabel(FeedbackLabel, FieldMask, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            FeedbackLabel feedbackLabel = new FeedbackLabel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            FeedbackLabel response = contactCenterInsightsClient.UpdateFeedbackLabel(feedbackLabel, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeedbackLabelAsync</summary>
+        public async Task UpdateFeedbackLabelAsync()
+        {
+            // Snippet: UpdateFeedbackLabelAsync(FeedbackLabel, FieldMask, CallSettings)
+            // Additional: UpdateFeedbackLabelAsync(FeedbackLabel, FieldMask, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            FeedbackLabel feedbackLabel = new FeedbackLabel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            FeedbackLabel response = await contactCenterInsightsClient.UpdateFeedbackLabelAsync(feedbackLabel, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedbackLabel</summary>
+        public void DeleteFeedbackLabelRequestObject()
+        {
+            // Snippet: DeleteFeedbackLabel(DeleteFeedbackLabelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteFeedbackLabelRequest request = new DeleteFeedbackLabelRequest
+            {
+                FeedbackLabelName = FeedbackLabelName.FromProjectLocationConversationFeedbackLabel("[PROJECT]", "[LOCATION]", "[CONVERSATION]", "[FEEDBACK_LABEL]"),
+            };
+            // Make the request
+            contactCenterInsightsClient.DeleteFeedbackLabel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedbackLabelAsync</summary>
+        public async Task DeleteFeedbackLabelRequestObjectAsync()
+        {
+            // Snippet: DeleteFeedbackLabelAsync(DeleteFeedbackLabelRequest, CallSettings)
+            // Additional: DeleteFeedbackLabelAsync(DeleteFeedbackLabelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteFeedbackLabelRequest request = new DeleteFeedbackLabelRequest
+            {
+                FeedbackLabelName = FeedbackLabelName.FromProjectLocationConversationFeedbackLabel("[PROJECT]", "[LOCATION]", "[CONVERSATION]", "[FEEDBACK_LABEL]"),
+            };
+            // Make the request
+            await contactCenterInsightsClient.DeleteFeedbackLabelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedbackLabel</summary>
+        public void DeleteFeedbackLabel()
+        {
+            // Snippet: DeleteFeedbackLabel(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]/feedbackLabels/[FEEDBACK_LABEL]";
+            // Make the request
+            contactCenterInsightsClient.DeleteFeedbackLabel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedbackLabelAsync</summary>
+        public async Task DeleteFeedbackLabelAsync()
+        {
+            // Snippet: DeleteFeedbackLabelAsync(string, CallSettings)
+            // Additional: DeleteFeedbackLabelAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]/feedbackLabels/[FEEDBACK_LABEL]";
+            // Make the request
+            await contactCenterInsightsClient.DeleteFeedbackLabelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedbackLabel</summary>
+        public void DeleteFeedbackLabelResourceNames()
+        {
+            // Snippet: DeleteFeedbackLabel(FeedbackLabelName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            FeedbackLabelName name = FeedbackLabelName.FromProjectLocationConversationFeedbackLabel("[PROJECT]", "[LOCATION]", "[CONVERSATION]", "[FEEDBACK_LABEL]");
+            // Make the request
+            contactCenterInsightsClient.DeleteFeedbackLabel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeedbackLabelAsync</summary>
+        public async Task DeleteFeedbackLabelResourceNamesAsync()
+        {
+            // Snippet: DeleteFeedbackLabelAsync(FeedbackLabelName, CallSettings)
+            // Additional: DeleteFeedbackLabelAsync(FeedbackLabelName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            FeedbackLabelName name = FeedbackLabelName.FromProjectLocationConversationFeedbackLabel("[PROJECT]", "[LOCATION]", "[CONVERSATION]", "[FEEDBACK_LABEL]");
+            // Make the request
+            await contactCenterInsightsClient.DeleteFeedbackLabelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAllFeedbackLabels</summary>
+        public void ListAllFeedbackLabelsRequestObject()
+        {
+            // Snippet: ListAllFeedbackLabels(ListAllFeedbackLabelsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ListAllFeedbackLabelsRequest request = new ListAllFeedbackLabelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListAllFeedbackLabels(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeedbackLabel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAllFeedbackLabelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAllFeedbackLabelsAsync</summary>
+        public async Task ListAllFeedbackLabelsRequestObjectAsync()
+        {
+            // Snippet: ListAllFeedbackLabelsAsync(ListAllFeedbackLabelsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAllFeedbackLabelsRequest request = new ListAllFeedbackLabelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListAllFeedbackLabelsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeedbackLabel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAllFeedbackLabelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAllFeedbackLabels</summary>
+        public void ListAllFeedbackLabels()
+        {
+            // Snippet: ListAllFeedbackLabels(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListAllFeedbackLabels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeedbackLabel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAllFeedbackLabelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAllFeedbackLabelsAsync</summary>
+        public async Task ListAllFeedbackLabelsAsync()
+        {
+            // Snippet: ListAllFeedbackLabelsAsync(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListAllFeedbackLabelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeedbackLabel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAllFeedbackLabelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAllFeedbackLabels</summary>
+        public void ListAllFeedbackLabelsResourceNames()
+        {
+            // Snippet: ListAllFeedbackLabels(LocationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListAllFeedbackLabels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FeedbackLabel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAllFeedbackLabelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAllFeedbackLabelsAsync</summary>
+        public async Task ListAllFeedbackLabelsResourceNamesAsync()
+        {
+            // Snippet: ListAllFeedbackLabelsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> response = contactCenterInsightsClient.ListAllFeedbackLabelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FeedbackLabel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAllFeedbackLabelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FeedbackLabel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FeedbackLabel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FeedbackLabel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkUploadFeedbackLabels</summary>
+        public void BulkUploadFeedbackLabelsRequestObject()
+        {
+            // Snippet: BulkUploadFeedbackLabels(BulkUploadFeedbackLabelsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            BulkUploadFeedbackLabelsRequest request = new BulkUploadFeedbackLabelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GcsSource = new BulkUploadFeedbackLabelsRequest.Types.GcsSource(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> response = contactCenterInsightsClient.BulkUploadFeedbackLabels(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkUploadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkUploadFeedbackLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkUploadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkUploadFeedbackLabelsAsync</summary>
+        public async Task BulkUploadFeedbackLabelsRequestObjectAsync()
+        {
+            // Snippet: BulkUploadFeedbackLabelsAsync(BulkUploadFeedbackLabelsRequest, CallSettings)
+            // Additional: BulkUploadFeedbackLabelsAsync(BulkUploadFeedbackLabelsRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            BulkUploadFeedbackLabelsRequest request = new BulkUploadFeedbackLabelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GcsSource = new BulkUploadFeedbackLabelsRequest.Types.GcsSource(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> response = await contactCenterInsightsClient.BulkUploadFeedbackLabelsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkUploadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkUploadFeedbackLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkUploadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkUploadFeedbackLabels</summary>
+        public void BulkUploadFeedbackLabels()
+        {
+            // Snippet: BulkUploadFeedbackLabels(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> response = contactCenterInsightsClient.BulkUploadFeedbackLabels(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkUploadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkUploadFeedbackLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkUploadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkUploadFeedbackLabelsAsync</summary>
+        public async Task BulkUploadFeedbackLabelsAsync()
+        {
+            // Snippet: BulkUploadFeedbackLabelsAsync(string, CallSettings)
+            // Additional: BulkUploadFeedbackLabelsAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> response = await contactCenterInsightsClient.BulkUploadFeedbackLabelsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkUploadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkUploadFeedbackLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkUploadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkUploadFeedbackLabels</summary>
+        public void BulkUploadFeedbackLabelsResourceNames()
+        {
+            // Snippet: BulkUploadFeedbackLabels(LocationName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> response = contactCenterInsightsClient.BulkUploadFeedbackLabels(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkUploadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkUploadFeedbackLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkUploadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkUploadFeedbackLabelsAsync</summary>
+        public async Task BulkUploadFeedbackLabelsResourceNamesAsync()
+        {
+            // Snippet: BulkUploadFeedbackLabelsAsync(LocationName, CallSettings)
+            // Additional: BulkUploadFeedbackLabelsAsync(LocationName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> response = await contactCenterInsightsClient.BulkUploadFeedbackLabelsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkUploadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkUploadFeedbackLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkUploadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDownloadFeedbackLabels</summary>
+        public void BulkDownloadFeedbackLabelsRequestObject()
+        {
+            // Snippet: BulkDownloadFeedbackLabels(BulkDownloadFeedbackLabelsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            BulkDownloadFeedbackLabelsRequest request = new BulkDownloadFeedbackLabelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                GcsDestination = new BulkDownloadFeedbackLabelsRequest.Types.GcsDestination(),
+                MaxDownloadCount = 0,
+                FeedbackLabelType = BulkDownloadFeedbackLabelsRequest.Types.FeedbackLabelType.Unspecified,
+                ConversationFilter = "",
+                TemplateQaScorecardId = { "", },
+            };
+            // Make the request
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> response = contactCenterInsightsClient.BulkDownloadFeedbackLabels(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkDownloadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkDownloadFeedbackLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDownloadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDownloadFeedbackLabelsAsync</summary>
+        public async Task BulkDownloadFeedbackLabelsRequestObjectAsync()
+        {
+            // Snippet: BulkDownloadFeedbackLabelsAsync(BulkDownloadFeedbackLabelsRequest, CallSettings)
+            // Additional: BulkDownloadFeedbackLabelsAsync(BulkDownloadFeedbackLabelsRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            BulkDownloadFeedbackLabelsRequest request = new BulkDownloadFeedbackLabelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                GcsDestination = new BulkDownloadFeedbackLabelsRequest.Types.GcsDestination(),
+                MaxDownloadCount = 0,
+                FeedbackLabelType = BulkDownloadFeedbackLabelsRequest.Types.FeedbackLabelType.Unspecified,
+                ConversationFilter = "",
+                TemplateQaScorecardId = { "", },
+            };
+            // Make the request
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> response = await contactCenterInsightsClient.BulkDownloadFeedbackLabelsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkDownloadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkDownloadFeedbackLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDownloadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDownloadFeedbackLabels</summary>
+        public void BulkDownloadFeedbackLabels()
+        {
+            // Snippet: BulkDownloadFeedbackLabels(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> response = contactCenterInsightsClient.BulkDownloadFeedbackLabels(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkDownloadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkDownloadFeedbackLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDownloadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDownloadFeedbackLabelsAsync</summary>
+        public async Task BulkDownloadFeedbackLabelsAsync()
+        {
+            // Snippet: BulkDownloadFeedbackLabelsAsync(string, CallSettings)
+            // Additional: BulkDownloadFeedbackLabelsAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> response = await contactCenterInsightsClient.BulkDownloadFeedbackLabelsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkDownloadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkDownloadFeedbackLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDownloadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDownloadFeedbackLabels</summary>
+        public void BulkDownloadFeedbackLabelsResourceNames()
+        {
+            // Snippet: BulkDownloadFeedbackLabels(LocationName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> response = contactCenterInsightsClient.BulkDownloadFeedbackLabels(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkDownloadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkDownloadFeedbackLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDownloadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDownloadFeedbackLabelsAsync</summary>
+        public async Task BulkDownloadFeedbackLabelsResourceNamesAsync()
+        {
+            // Snippet: BulkDownloadFeedbackLabelsAsync(LocationName, CallSettings)
+            // Additional: BulkDownloadFeedbackLabelsAsync(LocationName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> response = await contactCenterInsightsClient.BulkDownloadFeedbackLabelsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkDownloadFeedbackLabelsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkDownloadFeedbackLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDownloadFeedbackLabelsResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

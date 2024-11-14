@@ -404,6 +404,54 @@ namespace Google.Cloud.ContactCenterInsights.V1
         }
     }
 
+    public partial class CreateAnalysisRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAnalysisRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::AnalysisRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::AnalysisRuleName AnalysisRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::AnalysisRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAnalysisRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::AnalysisRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::AnalysisRuleName AnalysisRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::AnalysisRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAnalysisRulesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetEncryptionSpecRequest
     {
         /// <summary>
@@ -461,6 +509,351 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::ViewName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Dimension
+    {
+        public partial class Types
+        {
+            public partial class IssueDimensionMetadata
+            {
+                /// <summary>
+                /// <see cref="IssueName"/>-typed view over the <see cref="IssueId"/> resource name property.
+                /// </summary>
+                public IssueName IssueIdAsIssueName
+                {
+                    get => string.IsNullOrEmpty(IssueId) ? null : IssueName.Parse(IssueId, allowUnparsed: true);
+                    set => IssueId = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="IssueModelName"/>-typed view over the <see cref="IssueModelId"/> resource name property.
+                /// </summary>
+                public IssueModelName IssueModelIdAsIssueModelName
+                {
+                    get => string.IsNullOrEmpty(IssueModelId) ? null : IssueModelName.Parse(IssueModelId, allowUnparsed: true);
+                    set => IssueModelId = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
+    public partial class QueryMetricsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
+            set => Location = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class QueryMetricsResponse
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
+            set => Location = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateQaQuestionRequest
+    {
+        /// <summary>
+        /// <see cref="QaScorecardRevisionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public QaScorecardRevisionName ParentAsQaScorecardRevisionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : QaScorecardRevisionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetQaQuestionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::QaQuestionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::QaQuestionName QaQuestionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::QaQuestionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListQaQuestionsRequest
+    {
+        /// <summary>
+        /// <see cref="QaScorecardRevisionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public QaScorecardRevisionName ParentAsQaScorecardRevisionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : QaScorecardRevisionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteQaQuestionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::QaQuestionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::QaQuestionName QaQuestionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::QaQuestionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateQaScorecardRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetQaScorecardRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::QaScorecardName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::QaScorecardName QaScorecardName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::QaScorecardName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteQaScorecardRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::QaScorecardName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::QaScorecardName QaScorecardName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::QaScorecardName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateQaScorecardRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="QaScorecardName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public QaScorecardName ParentAsQaScorecardName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : QaScorecardName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetQaScorecardRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::QaScorecardRevisionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::QaScorecardRevisionName QaScorecardRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::QaScorecardRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TuneQaScorecardRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="QaScorecardRevisionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public QaScorecardRevisionName ParentAsQaScorecardRevisionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : QaScorecardRevisionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TuneQaScorecardRevisionMetadata
+    {
+        public partial class Types
+        {
+            public partial class QaQuestionDatasetValidationResult
+            {
+                /// <summary>
+                /// <see cref="QaQuestionName"/>-typed view over the <see cref="Question"/> resource name property.
+                /// </summary>
+                public QaQuestionName QuestionAsQaQuestionName
+                {
+                    get => string.IsNullOrEmpty(Question) ? null : QaQuestionName.Parse(Question, allowUnparsed: true);
+                    set => Question = value?.ToString() ?? "";
+                }
+            }
+
+            public partial class QaQuestionDatasetTuningMetrics
+            {
+                /// <summary>
+                /// <see cref="QaQuestionName"/>-typed view over the <see cref="Question"/> resource name property.
+                /// </summary>
+                public QaQuestionName QuestionAsQaQuestionName
+                {
+                    get => string.IsNullOrEmpty(Question) ? null : QaQuestionName.Parse(Question, allowUnparsed: true);
+                    set => Question = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
+    public partial class DeployQaScorecardRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::QaScorecardRevisionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::QaScorecardRevisionName QaScorecardRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::QaScorecardRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UndeployQaScorecardRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::QaScorecardRevisionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::QaScorecardRevisionName QaScorecardRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::QaScorecardRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteQaScorecardRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::QaScorecardRevisionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::QaScorecardRevisionName QaScorecardRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::QaScorecardRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListQaScorecardsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListQaScorecardRevisionsRequest
+    {
+        /// <summary>
+        /// <see cref="QaScorecardName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public QaScorecardName ParentAsQaScorecardName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : QaScorecardName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateFeedbackLabelRequest
+    {
+        /// <summary>
+        /// <see cref="ConversationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ConversationName ParentAsConversationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ConversationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListFeedbackLabelsRequest
+    {
+        /// <summary>
+        /// <see cref="ConversationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ConversationName ParentAsConversationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ConversationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetFeedbackLabelRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::FeedbackLabelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::FeedbackLabelName FeedbackLabelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::FeedbackLabelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteFeedbackLabelRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::FeedbackLabelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::FeedbackLabelName FeedbackLabelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::FeedbackLabelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAllFeedbackLabelsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BulkUploadFeedbackLabelsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BulkDownloadFeedbackLabelsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }

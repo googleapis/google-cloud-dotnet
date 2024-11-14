@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gccv = Google.Cloud.ContactCenterInsights.V1;
+using gciv = Google.Cloud.Iam.V1;
 using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
