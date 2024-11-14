@@ -250,7 +250,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
     public abstract partial class PrivilegedAccessManagerBase
     {
       /// <summary>
-      /// CheckOnboardingStatus reports the onboarding status for a
+      /// `CheckOnboardingStatus` reports the onboarding status for a
       /// project/folder/organization. Any findings reported by this API need to be
       /// fixed before PAM can be used on the resource.
       /// </summary>
@@ -315,7 +315,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
 
       /// <summary>
       /// Deletes a single entitlement. This method can only be called when there
-      /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+      /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
       /// entitlement.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -396,7 +396,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
       }
 
       /// <summary>
-      /// Creates a new grant in a given project and location.
+      /// Creates a new grant in a given project/folder/organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -478,7 +479,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
       }
 
       /// <summary>
-      /// CheckOnboardingStatus reports the onboarding status for a
+      /// `CheckOnboardingStatus` reports the onboarding status for a
       /// project/folder/organization. Any findings reported by this API need to be
       /// fixed before PAM can be used on the resource.
       /// </summary>
@@ -493,7 +494,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
         return CheckOnboardingStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CheckOnboardingStatus reports the onboarding status for a
+      /// `CheckOnboardingStatus` reports the onboarding status for a
       /// project/folder/organization. Any findings reported by this API need to be
       /// fixed before PAM can be used on the resource.
       /// </summary>
@@ -506,7 +507,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CheckOnboardingStatus, null, options, request);
       }
       /// <summary>
-      /// CheckOnboardingStatus reports the onboarding status for a
+      /// `CheckOnboardingStatus` reports the onboarding status for a
       /// project/folder/organization. Any findings reported by this API need to be
       /// fixed before PAM can be used on the resource.
       /// </summary>
@@ -521,7 +522,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
         return CheckOnboardingStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// CheckOnboardingStatus reports the onboarding status for a
+      /// `CheckOnboardingStatus` reports the onboarding status for a
       /// project/folder/organization. Any findings reported by this API need to be
       /// fixed before PAM can be used on the resource.
       /// </summary>
@@ -735,7 +736,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
       }
       /// <summary>
       /// Deletes a single entitlement. This method can only be called when there
-      /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+      /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
       /// entitlement.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -750,7 +751,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
       }
       /// <summary>
       /// Deletes a single entitlement. This method can only be called when there
-      /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+      /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
       /// entitlement.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -763,7 +764,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
       }
       /// <summary>
       /// Deletes a single entitlement. This method can only be called when there
-      /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+      /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
       /// entitlement.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -778,7 +779,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
       }
       /// <summary>
       /// Deletes a single entitlement. This method can only be called when there
-      /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+      /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
       /// entitlement.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1062,7 +1063,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetGrant, null, options, request);
       }
       /// <summary>
-      /// Creates a new grant in a given project and location.
+      /// Creates a new grant in a given project/folder/organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1075,7 +1077,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
         return CreateGrant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new grant in a given project and location.
+      /// Creates a new grant in a given project/folder/organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1086,7 +1089,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateGrant, null, options, request);
       }
       /// <summary>
-      /// Creates a new grant in a given project and location.
+      /// Creates a new grant in a given project/folder/organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1099,7 +1103,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
         return CreateGrantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new grant in a given project and location.
+      /// Creates a new grant in a given project/folder/organization and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

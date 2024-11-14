@@ -496,7 +496,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// CheckOnboardingStatus reports the onboarding status for a
+        /// `CheckOnboardingStatus` reports the onboarding status for a
         /// project/folder/organization. Any findings reported by this API need to be
         /// fixed before PAM can be used on the resource.
         /// </summary>
@@ -507,7 +507,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// CheckOnboardingStatus reports the onboarding status for a
+        /// `CheckOnboardingStatus` reports the onboarding status for a
         /// project/folder/organization. Any findings reported by this API need to be
         /// fixed before PAM can be used on the resource.
         /// </summary>
@@ -518,7 +518,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// CheckOnboardingStatus reports the onboarding status for a
+        /// `CheckOnboardingStatus` reports the onboarding status for a
         /// project/folder/organization. Any findings reported by this API need to be
         /// fixed before PAM can be used on the resource.
         /// </summary>
@@ -1394,7 +1394,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1405,7 +1405,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1416,7 +1416,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1454,7 +1454,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="name">
@@ -1470,7 +1470,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="name">
@@ -1486,7 +1486,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="name">
@@ -1499,7 +1499,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="name">
@@ -1515,7 +1515,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="name">
@@ -1531,7 +1531,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="name">
@@ -2060,7 +2060,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             GetGrantAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2069,7 +2070,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2078,7 +2080,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2087,7 +2090,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             CreateGrantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent entitlement for which this grant is being
@@ -2106,7 +2110,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent entitlement for which this grant is being
@@ -2125,7 +2130,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent entitlement for which this grant is being
@@ -2140,7 +2146,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             CreateGrantAsync(parent, grant, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent entitlement for which this grant is being
@@ -2159,7 +2166,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent entitlement for which this grant is being
@@ -2178,7 +2186,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the parent entitlement for which this grant is being
@@ -2503,7 +2512,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         partial void Modify_RevokeGrantRequest(ref RevokeGrantRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// CheckOnboardingStatus reports the onboarding status for a
+        /// `CheckOnboardingStatus` reports the onboarding status for a
         /// project/folder/organization. Any findings reported by this API need to be
         /// fixed before PAM can be used on the resource.
         /// </summary>
@@ -2517,7 +2526,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         }
 
         /// <summary>
-        /// CheckOnboardingStatus reports the onboarding status for a
+        /// `CheckOnboardingStatus` reports the onboarding status for a
         /// project/folder/organization. Any findings reported by this API need to be
         /// fixed before PAM can be used on the resource.
         /// </summary>
@@ -2638,7 +2647,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2652,7 +2661,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
 
         /// <summary>
         /// Deletes a single entitlement. This method can only be called when there
-        /// are no in-progress (ACTIVE/ACTIVATING/REVOKING) grants under the
+        /// are no in-progress (`ACTIVE`/`ACTIVATING`/`REVOKING`) grants under the
         /// entitlement.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2804,7 +2813,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         }
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2816,7 +2826,8 @@ namespace Google.Cloud.PrivilegedAccessManager.V1
         }
 
         /// <summary>
-        /// Creates a new grant in a given project and location.
+        /// Creates a new grant in a given project/folder/organization and
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

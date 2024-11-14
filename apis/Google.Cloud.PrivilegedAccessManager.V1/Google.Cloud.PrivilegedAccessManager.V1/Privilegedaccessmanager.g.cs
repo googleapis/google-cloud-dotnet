@@ -2599,7 +2599,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
       }
 
       /// <summary>
-      /// AdditionalNotificationTargets includes email addresses to be notified.
+      /// `AdditionalNotificationTargets` includes email addresses to be notified.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AdditionalNotificationTargets : pb::IMessage<AdditionalNotificationTargets>
@@ -2820,7 +2820,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
   }
 
   /// <summary>
-  /// AccessControlEntry is used to control who can do some operation.
+  /// `AccessControlEntry` is used to control who can do some operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessControlEntry : pb::IMessage<AccessControlEntry>
@@ -3997,7 +3997,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// GcpIamAccess represents IAM based access control on a Google Cloud
+      /// `GcpIamAccess` represents IAM based access control on a Google Cloud
       /// resource. Refer to https://cloud.google.com/iam/docs to understand more
       /// about IAM.
       /// </summary>
@@ -4267,7 +4267,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// IAM Role bindings that are created after a successful grant.
+          /// IAM role bindings that are created after a successful grant.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class RoleBinding : pb::IMessage<RoleBinding>
@@ -6060,7 +6060,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
     /// ID, the server can check if original operation with the same request ID
     /// was received, and if so, ignores the second request and returns the
     /// previous operation's response. This prevents clients from accidentally
-    /// creating duplicate commitments.
+    /// creating duplicate entitlements.
     ///
     /// The request ID must be a valid UUID with the exception that zero UUID is
     /// not supported (00000000-0000-0000-0000-000000000000).
@@ -6365,8 +6365,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
     /// For example, consider a situation where you make an initial request and the
     /// request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
-    /// was received, and if so, ignores the second request. This prevents
-    /// clients from accidentally creating duplicate commitments.
+    /// was received, and if so, ignores the second request.
     ///
     /// The request ID must be a valid UUID with the exception that zero UUID is
     /// not supported (00000000-0000-0000-0000-000000000000).
@@ -6841,8 +6840,6 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
   }
 
   /// <summary>
-  /// This is to ensure that the `Grants` and `ProducerGrants` proto are byte
-  /// compatible.
   /// A grant represents a request from a user for obtaining the access specified
   /// in an entitlement they are eligible for.
   /// </summary>
@@ -13286,7 +13283,7 @@ namespace Google.Cloud.PrivilegedAccessManager.V1 {
     /// request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
     /// was received, and if so, ignores the second request. This prevents
-    /// clients from accidentally creating duplicate commitments.
+    /// clients from accidentally creating duplicate grants.
     ///
     /// The request ID must be a valid UUID with the exception that zero UUID is
     /// not supported (00000000-0000-0000-0000-000000000000).
