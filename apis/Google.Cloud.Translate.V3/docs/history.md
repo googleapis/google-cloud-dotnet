@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.9.0, released 2024-11-18
+
+### New features
+
+- Adds Contextual Glossary support for Translation and AdaptiveMt ([commit 72051d3](https://github.com/googleapis/google-cloud-dotnet/commit/72051d33175df07abcda54e621712efe7d143afd))
+
 ## Version 3.8.0, released 2024-08-13
 
 ### New features
