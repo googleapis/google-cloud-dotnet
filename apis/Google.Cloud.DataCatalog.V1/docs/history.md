@@ -1,5 +1,28 @@
 # Version history
 
+## Version 2.13.0, released 2024-11-18
+
+### New features
+
+- A new field `feature_online_store_spec` is added to message `.google.cloud.datacatalog.v1.Entry` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `GENIE` is added to enum `ModelSourceType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `CUSTOM_TEXT_EMBEDDING` is added to enum `ModelSourceType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `MARKETPLACE` is added to enum `ModelSourceType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new message `FeatureOnlineStoreSpec` is added ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `FEATURE_ONLINE_STORE` is added to enum `EntryType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `FEATURE_VIEW` is added to enum `EntryType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `FEATURE_GROUP` is added to enum `EntryType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new enum `DataplexTransferStatus` is added ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new field `dataplex_transfer_status` is added to message `.google.cloud.datacatalog.v1.TagTemplate` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.Entry` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.EntryGroup` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.Tag` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.TagTemplate` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.TagTemplateField` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+
 ## Version 2.12.0, released 2024-05-13
 
 ### New features
