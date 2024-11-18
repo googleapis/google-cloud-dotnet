@@ -1,5 +1,58 @@
 # Version history
 
+## Version 3.11.0, released 2024-11-18
+
+### New features
+
+- Add fast_tryout_enabled to FasterDeploymentConfig v1 proto ([commit 25d598b](https://github.com/googleapis/google-cloud-dotnet/commit/25d598b66734afa0e1a390f4ced86b76f3f6bd15))
+- COMET added to evaluation service proto ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- MetricX added to evaluation service proto ([commit ed0bd17](https://github.com/googleapis/google-cloud-dotnet/commit/ed0bd176aaaa1a542a6f55eac0a7583a6242b4f9))
+- Add BYOSA field to tuning_job ([commit f223db7](https://github.com/googleapis/google-cloud-dotnet/commit/f223db7a4c84b46e59eb13f47f2f081981ff39a6))
+- Added support for specifying function response type in FunctionDeclaration ([commit feb4c6f](https://github.com/googleapis/google-cloud-dotnet/commit/feb4c6f65f6ea97d5a0558ab03202d28537f3866))
+- Add BatchCreateFeatures rpc to feature_registry_service.proto ([commit 319b9ab](https://github.com/googleapis/google-cloud-dotnet/commit/319b9ab8b26a4e38c292d5daf6fed58d4de01036))
+- Add system labels field to model garden deployments ([commit 7329429](https://github.com/googleapis/google-cloud-dotnet/commit/73294293202ded12bfb8595d196bae1dcc55a09a))
+- Add StopNotebookRuntime method ([commit d01775a](https://github.com/googleapis/google-cloud-dotnet/commit/d01775adf7c31fb526857f96074ac6717799c8e0))
+
+### Documentation improvements
+
+- A comment for field `saved_query_id` in message `.google.cloud.aiplatform.v1.ExportDataConfig` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `annotation_schema_uri` in message `.google.cloud.aiplatform.v1.ExportDataConfig` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `predictions` in message `.google.cloud.aiplatform.v1.EvaluatedAnnotation` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `attributions` in message `.google.cloud.aiplatform.v1.Explanation` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for message `DeleteFeatureViewRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `page_token` in message `.google.cloud.aiplatform.v1.ListFeatureGroupsRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for message `StreamingReadFeatureValuesRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for message `DeleteEntityTypeRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `page_token` in message `.google.cloud.aiplatform.v1.ListTuningJobsRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `deployed_index` in message `.google.cloud.aiplatform.v1.MutateDeployedIndexRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `request` in message `.google.cloud.aiplatform.v1.BatchMigrateResourcesOperationMetadata` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `data_stats` in message `.google.cloud.aiplatform.v1.Model` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `enable_logging` in message `.google.cloud.aiplatform.v1.ModelMonitoringAlertConfig` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `page_token` in message `.google.cloud.aiplatform.v1.ListNotebookExecutionJobsRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `next_page_token` in message `.google.cloud.aiplatform.v1.ListNotebookExecutionJobsResponse` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for message `ListPersistentResourcesRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `page_token` in message `.google.cloud.aiplatform.v1.ListPersistentResourcesRequest` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for method `ResumeSchedule` in service `ScheduleService` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `bool_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `string_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `bytes_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `float_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `double_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `int_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `int64_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `uint_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `uint64_val` in message `.google.cloud.aiplatform.v1.Tensor` is changed ([commit 02fa803](https://github.com/googleapis/google-cloud-dotnet/commit/02fa8030f6a38fa1a07c42fb2c35e0bdcd8f2678))
+- A comment for field `timeout` in message `.google.cloud.aiplatform.v1.Scheduling` is changed ([commit ed0bd17](https://github.com/googleapis/google-cloud-dotnet/commit/ed0bd176aaaa1a542a6f55eac0a7583a6242b4f9))
+- A comment for field `restart_job_on_worker_restart` in message `.google.cloud.aiplatform.v1.Scheduling` is changed ([commit ed0bd17](https://github.com/googleapis/google-cloud-dotnet/commit/ed0bd176aaaa1a542a6f55eac0a7583a6242b4f9))
+- A comment for method `ListAnnotations` in service `DatasetService` is changed ([commit ed0bd17](https://github.com/googleapis/google-cloud-dotnet/commit/ed0bd176aaaa1a542a6f55eac0a7583a6242b4f9))
+- A comment for message `GetDatasetRequest` is changed ([commit ed0bd17](https://github.com/googleapis/google-cloud-dotnet/commit/ed0bd176aaaa1a542a6f55eac0a7583a6242b4f9))
+- A comment for message `GetDatasetVersionRequest` is changed ([commit ed0bd17](https://github.com/googleapis/google-cloud-dotnet/commit/ed0bd176aaaa1a542a6f55eac0a7583a6242b4f9))
+- A comment for field `update_mask` in message `.google.cloud.aiplatform.v1.UpdateFeatureViewRequest` is changed ([commit ed0bd17](https://github.com/googleapis/google-cloud-dotnet/commit/ed0bd176aaaa1a542a6f55eac0a7583a6242b4f9))
+- A comment for method `RebaseTunedModel` in service `GenAiTuningService` is changed ([commit ed0bd17](https://github.com/googleapis/google-cloud-dotnet/commit/ed0bd176aaaa1a542a6f55eac0a7583a6242b4f9))
+- Updated the maximum number of function declarations from 64 to 128 ([commit feb4c6f](https://github.com/googleapis/google-cloud-dotnet/commit/feb4c6f65f6ea97d5a0558ab03202d28537f3866))
+- A comment for field `feature_group_id` in message `.google.cloud.aiplatform.v1.CreateFeatureGroupRequest` is changed ([commit 319b9ab](https://github.com/googleapis/google-cloud-dotnet/commit/319b9ab8b26a4e38c292d5daf6fed58d4de01036))
+- A comment for message `BatchCreateFeaturesRequest` is modified to call out BatchCreateFeatures ([commit 319b9ab](https://github.com/googleapis/google-cloud-dotnet/commit/319b9ab8b26a4e38c292d5daf6fed58d4de01036))
+
 ## Version 3.10.0, released 2024-10-29
 
 ### New features
