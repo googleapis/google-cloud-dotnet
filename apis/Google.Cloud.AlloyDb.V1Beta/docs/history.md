@@ -1,5 +1,30 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2024-11-18
+
+### Bug fixes
+
+- **BREAKING CHANGE** Deprecated various PSC instance configuration fields ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+
+### New features
+
+- Add new PSC instance configuration setting and output the PSC DNS name ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add new API to upgrade a cluster ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add new API to execute SQL statements ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add new cluster and instance level configurations to interact with Gemini ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add support for Free Trials ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add support to schedule maintenance ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Additional field to set tags on a backup or cluster ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add more observability options on the Instance level ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add new API to perform a promotion or switchover on secondary instances ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add new CloudSQL backup resource ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Support for obtaining the public ip addresses of an instance and enabling outbound public ip ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+- Add optional field to keep extra roles on a user if it already exists ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+
+### Documentation improvements
+
+- Various typo fixes, correcting the formatting, and clarifications on the request_id and validate_only fields in API requests and on the page_size when listing the database ([commit 8af4d47](https://github.com/googleapis/google-cloud-dotnet/commit/8af4d47005f38b2859c35889e4c4066d5f3546ef))
+
 ## Version 1.0.0-beta08, released 2024-09-09
 
 ### New features
