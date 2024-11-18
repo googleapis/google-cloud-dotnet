@@ -1,5 +1,25 @@
 # Version history
 
+## Version 2.18.0, released 2024-11-18
+
+### New features
+
+- Add FeedbackLabel resource and APIs ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- Add QueryMetrics API ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- Add Quality AI resources and APIs ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- Add AnalysisRules resource and APIs ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+
+### Documentation improvements
+
+- A comment for method `InitializeEncryptionSpec` in service `ContactCenterInsights` is changed ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- A comment for field `custom_metadata_keys` in message `.google.cloud.contactcenterinsights.v1.IngestConversationsRequest` is changed ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- A comment for field `encryption_spec` in message `.google.cloud.contactcenterinsights.v1.InitializeEncryptionSpecRequest` is changed ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- A comment for field `partial_errors` in message `.google.cloud.contactcenterinsights.v1.InitializeEncryptionSpecMetadata` is changed ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- A comment for field `labels` in message `.google.cloud.contactcenterinsights.v1.Conversation` is changed ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- A comment for field `metadata_json` in message `.google.cloud.contactcenterinsights.v1.Conversation` is changed ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- A comment for message `EncryptionSpec` is changed ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+- A comment for field `kms_key` in message `.google.cloud.contactcenterinsights.v1.EncryptionSpec` is changed ([commit fc735ad](https://github.com/googleapis/google-cloud-dotnet/commit/fc735add3c94e539818b5adfcf1137750e682099))
+
 ## Version 2.17.0, released 2024-10-14
 
 ### New features
