@@ -1935,7 +1935,7 @@
     },
     {
       "id": "Google.Cloud.Deploy.V1",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "grpc",
       "productName": "Google Cloud Deploy",
       "productUrl": "https://cloud.google.com/deploy/",

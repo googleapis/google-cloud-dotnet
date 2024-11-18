@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.3.0, released 2024-11-18
+
+### New features
+
+- A new field `timed_promote_release_rule` is added to message `.google.cloud.deploy.v1.AutomationRule` ([commit 3b31b09](https://github.com/googleapis/google-cloud-dotnet/commit/3b31b09fdd5ce3e59804634386339e282cf6d2d6))
+- A new message `TimedPromoteReleaseRule` is added ([commit 3b31b09](https://github.com/googleapis/google-cloud-dotnet/commit/3b31b09fdd5ce3e59804634386339e282cf6d2d6))
+- A new field `timed_promote_release_condition` is added to message `.google.cloud.deploy.v1.AutomationRuleCondition` ([commit 3b31b09](https://github.com/googleapis/google-cloud-dotnet/commit/3b31b09fdd5ce3e59804634386339e282cf6d2d6))
+- A new message `TimedPromoteReleaseCondition` is added ([commit 3b31b09](https://github.com/googleapis/google-cloud-dotnet/commit/3b31b09fdd5ce3e59804634386339e282cf6d2d6))
+- A new field `timed_promote_release_operation` is added to message `.google.cloud.deploy.v1.AutomationRun` ([commit 3b31b09](https://github.com/googleapis/google-cloud-dotnet/commit/3b31b09fdd5ce3e59804634386339e282cf6d2d6))
+- A new message `TimedPromoteReleaseOperation` is added ([commit 3b31b09](https://github.com/googleapis/google-cloud-dotnet/commit/3b31b09fdd5ce3e59804634386339e282cf6d2d6))
+
+### Documentation improvements
+
+- A comment for field `target_id` in message `.google.cloud.deploy.v1.AutomationRun` is changed ([commit 3b31b09](https://github.com/googleapis/google-cloud-dotnet/commit/3b31b09fdd5ce3e59804634386339e282cf6d2d6))
+
 ## Version 3.2.0, released 2024-10-29
 
 ### New features
