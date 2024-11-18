@@ -1,5 +1,14 @@
 # Version history
 
+## Version 4.23.0, released 2024-11-18
+
+### New features
+
+- Add options of query_source, search_config, end_user_metadata and exact_search ([commit a08e4da](https://github.com/googleapis/google-cloud-dotnet/commit/a08e4da2ff37af2a1097ff51e91c694f4b445515))
+- Expose metadata in AnswerSource ([commit a08e4da](https://github.com/googleapis/google-cloud-dotnet/commit/a08e4da2ff37af2a1097ff51e91c694f4b445515))
+- Added support for ALAW encoding ([commit b206f21](https://github.com/googleapis/google-cloud-dotnet/commit/b206f2191e4dcf31df81e2d540ab4ed3bc5c8fb7))
+- Add options of query_source, search_config and context_size ([commit b206f21](https://github.com/googleapis/google-cloud-dotnet/commit/b206f2191e4dcf31df81e2d540ab4ed3bc5c8fb7))
+
 ## Version 4.22.0, released 2024-09-26
 
 ### New features
