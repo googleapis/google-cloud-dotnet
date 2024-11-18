@@ -1,5 +1,44 @@
 # Version history
 
+## Version 3.4.0, released 2024-11-18
+
+### New features
+
+- Update Go Datastore import path ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Update Go Bigtable import path ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Release MetadataJob APIs and related resources in GA ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Expose create time in DataScanJobAPI ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Release metadata export in private preview ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add data_version field to AspectSource ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add annotations in CreateMetadataJob, GetMetadataJob, ListMetaDataJobs and CancelMetadataJob for cloud audit logging ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add new Data Discovery scan type in Datascan ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new field `suspended` is added to DataScans ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Expose create time to customers ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a TABLE_PUBLISHED field in DiscoveryEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a TABLE_UPDATED field in DiscoveryEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a TABLE_IGNORED field in DiscoveryEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a TABLE_DELETED field in DiscoveryEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a DATA_DISCOVERY enum type in DataScanEvent ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add a DataDiscoveryAppliedConfigs message ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add an Issue field to DiscoveryEvent.ActionDetails to output the action message in Cloud Logs ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new enum `TableType` is added ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new message `TableDetails` is added ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new field `datascan_id` is added to message `.google.cloud.dataplex.v1.DiscoveryEvent` ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A new field `table` is added to message `.google.cloud.dataplex.v1.DiscoveryEvent` ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+
+### Documentation improvements
+
+- Correct API documentation ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add info about schema changes for BigQuery metadata in Dataplex Catalog ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add Identifier for `name` in message `.google.cloud.dataplex.v1.MetadataJob` per https://google.aip.dev/cloud/2510 ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add comment for field `type` in message `.google.cloud.dataplex.v1.MetadataJob` per https://linter.aip.dev/192/has-comments ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add comment for field `status` in message `.google.cloud.dataplex.v1.MetadataJob` per https://linter.aip.dev/192/has-comments ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Add link to fully qualified names documentation ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Scrub descriptions for standalone discovery scans ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Correct the dimensions for data quality rules ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- A comment for message `DataScanEvent` is changed ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+- Dataplex Tasks do not support Dataplex Content path as a direct input anymore ([commit a711ad2](https://github.com/googleapis/google-cloud-dotnet/commit/a711ad29cfc780b98ea4b820ea930e8251ce610f))
+
 ## Version 3.3.0, released 2024-07-08
 
 ### New features
