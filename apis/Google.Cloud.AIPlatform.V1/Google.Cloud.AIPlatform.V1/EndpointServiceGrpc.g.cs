@@ -78,6 +78,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateEndpointRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateEndpointRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateEndpointRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateEndpointLongRunningRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteEndpointRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteEndpointRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteEndpointRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeployModelRequest> __Marshaller_google_cloud_aiplatform_v1_DeployModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeployModelRequest.Parser));
@@ -117,6 +119,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "UpdateEndpoint",
         __Marshaller_google_cloud_aiplatform_v1_UpdateEndpointRequest,
         __Marshaller_google_cloud_aiplatform_v1_Endpoint);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest, global::Google.LongRunning.Operation> __Method_UpdateEndpointLongRunning = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateEndpointLongRunning",
+        __Marshaller_google_cloud_aiplatform_v1_UpdateEndpointLongRunningRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteEndpointRequest, global::Google.LongRunning.Operation> __Method_DeleteEndpoint = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteEndpointRequest, global::Google.LongRunning.Operation>(
@@ -204,6 +214,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Endpoint> UpdateEndpoint(global::Google.Cloud.AIPlatform.V1.UpdateEndpointRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an Endpoint with a long running operation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateEndpointLongRunning(global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -482,6 +504,54 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEndpoint, null, options, request);
       }
       /// <summary>
+      /// Updates an Endpoint with a long running operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateEndpointLongRunning(global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEndpointLongRunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an Endpoint with a long running operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateEndpointLongRunning(global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateEndpointLongRunning, null, options, request);
+      }
+      /// <summary>
+      /// Updates an Endpoint with a long running operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateEndpointLongRunningAsync(global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEndpointLongRunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an Endpoint with a long running operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateEndpointLongRunningAsync(global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateEndpointLongRunning, null, options, request);
+      }
+      /// <summary>
       /// Deletes an Endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -707,6 +777,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_GetEndpoint, serviceImpl.GetEndpoint)
           .AddMethod(__Method_ListEndpoints, serviceImpl.ListEndpoints)
           .AddMethod(__Method_UpdateEndpoint, serviceImpl.UpdateEndpoint)
+          .AddMethod(__Method_UpdateEndpointLongRunning, serviceImpl.UpdateEndpointLongRunning)
           .AddMethod(__Method_DeleteEndpoint, serviceImpl.DeleteEndpoint)
           .AddMethod(__Method_DeployModel, serviceImpl.DeployModel)
           .AddMethod(__Method_UndeployModel, serviceImpl.UndeployModel)
@@ -724,6 +795,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_GetEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetEndpointRequest, global::Google.Cloud.AIPlatform.V1.Endpoint>(serviceImpl.GetEndpoint));
       serviceBinder.AddMethod(__Method_ListEndpoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListEndpointsRequest, global::Google.Cloud.AIPlatform.V1.ListEndpointsResponse>(serviceImpl.ListEndpoints));
       serviceBinder.AddMethod(__Method_UpdateEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateEndpointRequest, global::Google.Cloud.AIPlatform.V1.Endpoint>(serviceImpl.UpdateEndpoint));
+      serviceBinder.AddMethod(__Method_UpdateEndpointLongRunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateEndpointLongRunning));
       serviceBinder.AddMethod(__Method_DeleteEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteEndpointRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteEndpoint));
       serviceBinder.AddMethod(__Method_DeployModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeployModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeployModel));
       serviceBinder.AddMethod(__Method_UndeployModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UndeployModelRequest, global::Google.LongRunning.Operation>(serviceImpl.UndeployModel));

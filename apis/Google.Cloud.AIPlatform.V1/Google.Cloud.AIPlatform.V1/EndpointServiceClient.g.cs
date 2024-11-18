@@ -55,6 +55,8 @@ namespace Google.Cloud.AIPlatform.V1
             GetEndpointSettings = existing.GetEndpointSettings;
             ListEndpointsSettings = existing.ListEndpointsSettings;
             UpdateEndpointSettings = existing.UpdateEndpointSettings;
+            UpdateEndpointLongRunningSettings = existing.UpdateEndpointLongRunningSettings;
+            UpdateEndpointLongRunningOperationsSettings = existing.UpdateEndpointLongRunningOperationsSettings.Clone();
             DeleteEndpointSettings = existing.DeleteEndpointSettings;
             DeleteEndpointOperationsSettings = existing.DeleteEndpointOperationsSettings.Clone();
             DeployModelSettings = existing.DeployModelSettings;
@@ -135,6 +137,37 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EndpointServiceClient.UpdateEndpointLongRunning</c> and
+        /// <c>EndpointServiceClient.UpdateEndpointLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEndpointLongRunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EndpointServiceClient.UpdateEndpointLongRunning</c> and
+        /// <c>EndpointServiceClient.UpdateEndpointLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateEndpointLongRunningOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1130,6 +1163,105 @@ namespace Google.Cloud.AIPlatform.V1
             UpdateEndpointAsync(endpoint, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates an Endpoint with a long running operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Endpoint, UpdateEndpointOperationMetadata> UpdateEndpointLongRunning(UpdateEndpointLongRunningRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Endpoint with a long running operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, UpdateEndpointOperationMetadata>> UpdateEndpointLongRunningAsync(UpdateEndpointLongRunningRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Endpoint with a long running operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, UpdateEndpointOperationMetadata>> UpdateEndpointLongRunningAsync(UpdateEndpointLongRunningRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEndpointLongRunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateEndpointLongRunning</c>.</summary>
+        public virtual lro::OperationsClient UpdateEndpointLongRunningOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateEndpointLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Endpoint, UpdateEndpointOperationMetadata> PollOnceUpdateEndpointLongRunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Endpoint, UpdateEndpointOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEndpointLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateEndpointLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, UpdateEndpointOperationMetadata>> PollOnceUpdateEndpointLongRunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Endpoint, UpdateEndpointOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEndpointLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an Endpoint with a long running operation.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The Endpoint which replaces the resource on the server. Currently
+        /// we only support updating the `client_connection_config` field, all the
+        /// other fields' update will be blocked.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Endpoint, UpdateEndpointOperationMetadata> UpdateEndpointLongRunning(Endpoint endpoint, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEndpointLongRunning(new UpdateEndpointLongRunningRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Endpoint with a long running operation.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The Endpoint which replaces the resource on the server. Currently
+        /// we only support updating the `client_connection_config` field, all the
+        /// other fields' update will be blocked.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, UpdateEndpointOperationMetadata>> UpdateEndpointLongRunningAsync(Endpoint endpoint, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEndpointLongRunningAsync(new UpdateEndpointLongRunningRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Endpoint with a long running operation.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The Endpoint which replaces the resource on the server. Currently
+        /// we only support updating the `client_connection_config` field, all the
+        /// other fields' update will be blocked.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, UpdateEndpointOperationMetadata>> UpdateEndpointLongRunningAsync(Endpoint endpoint, st::CancellationToken cancellationToken) =>
+            UpdateEndpointLongRunningAsync(endpoint, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes an Endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2113,6 +2245,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<UpdateEndpointRequest, Endpoint> _callUpdateEndpoint;
 
+        private readonly gaxgrpc::ApiCall<UpdateEndpointLongRunningRequest, lro::Operation> _callUpdateEndpointLongRunning;
+
         private readonly gaxgrpc::ApiCall<DeleteEndpointRequest, lro::Operation> _callDeleteEndpoint;
 
         private readonly gaxgrpc::ApiCall<DeployModelRequest, lro::Operation> _callDeployModel;
@@ -2137,6 +2271,7 @@ namespace Google.Cloud.AIPlatform.V1
                 Logger = logger,
             });
             CreateEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEndpointOperationsSettings, logger);
+            UpdateEndpointLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEndpointLongRunningOperationsSettings, logger);
             DeleteEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEndpointOperationsSettings, logger);
             DeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployModelOperationsSettings, logger);
             UndeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployModelOperationsSettings, logger);
@@ -2155,6 +2290,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callUpdateEndpoint = clientHelper.BuildApiCall<UpdateEndpointRequest, Endpoint>("UpdateEndpoint", grpcClient.UpdateEndpointAsync, grpcClient.UpdateEndpoint, effectiveSettings.UpdateEndpointSettings).WithGoogleRequestParam("endpoint.name", request => request.Endpoint?.Name);
             Modify_ApiCall(ref _callUpdateEndpoint);
             Modify_UpdateEndpointApiCall(ref _callUpdateEndpoint);
+            _callUpdateEndpointLongRunning = clientHelper.BuildApiCall<UpdateEndpointLongRunningRequest, lro::Operation>("UpdateEndpointLongRunning", grpcClient.UpdateEndpointLongRunningAsync, grpcClient.UpdateEndpointLongRunning, effectiveSettings.UpdateEndpointLongRunningSettings).WithGoogleRequestParam("endpoint.name", request => request.Endpoint?.Name);
+            Modify_ApiCall(ref _callUpdateEndpointLongRunning);
+            Modify_UpdateEndpointLongRunningApiCall(ref _callUpdateEndpointLongRunning);
             _callDeleteEndpoint = clientHelper.BuildApiCall<DeleteEndpointRequest, lro::Operation>("DeleteEndpoint", grpcClient.DeleteEndpointAsync, grpcClient.DeleteEndpoint, effectiveSettings.DeleteEndpointSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEndpoint);
             Modify_DeleteEndpointApiCall(ref _callDeleteEndpoint);
@@ -2179,6 +2317,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ListEndpointsApiCall(ref gaxgrpc::ApiCall<ListEndpointsRequest, ListEndpointsResponse> call);
 
         partial void Modify_UpdateEndpointApiCall(ref gaxgrpc::ApiCall<UpdateEndpointRequest, Endpoint> call);
+
+        partial void Modify_UpdateEndpointLongRunningApiCall(ref gaxgrpc::ApiCall<UpdateEndpointLongRunningRequest, lro::Operation> call);
 
         partial void Modify_DeleteEndpointApiCall(ref gaxgrpc::ApiCall<DeleteEndpointRequest, lro::Operation> call);
 
@@ -2206,6 +2346,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ListEndpointsRequest(ref ListEndpointsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateEndpointRequest(ref UpdateEndpointRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateEndpointLongRunningRequest(ref UpdateEndpointLongRunningRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteEndpointRequest(ref DeleteEndpointRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2312,6 +2454,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_UpdateEndpointRequest(ref request, ref callSettings);
             return _callUpdateEndpoint.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateEndpointLongRunning</c>.</summary>
+        public override lro::OperationsClient UpdateEndpointLongRunningOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an Endpoint with a long running operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Endpoint, UpdateEndpointOperationMetadata> UpdateEndpointLongRunning(UpdateEndpointLongRunningRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEndpointLongRunningRequest(ref request, ref callSettings);
+            return new lro::Operation<Endpoint, UpdateEndpointOperationMetadata>(_callUpdateEndpointLongRunning.Sync(request, callSettings), UpdateEndpointLongRunningOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an Endpoint with a long running operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Endpoint, UpdateEndpointOperationMetadata>> UpdateEndpointLongRunningAsync(UpdateEndpointLongRunningRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEndpointLongRunningRequest(ref request, ref callSettings);
+            return new lro::Operation<Endpoint, UpdateEndpointOperationMetadata>(await _callUpdateEndpointLongRunning.Async(request, callSettings).ConfigureAwait(false), UpdateEndpointLongRunningOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteEndpoint</c>.</summary>
