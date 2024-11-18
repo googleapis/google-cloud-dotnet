@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-alpha04, released 2024-11-18
+
+### New features
+
+- Add DNS address, Kubernetes primary VLAN ID, and provisioning state to the Zone resource ([commit 9180676](https://github.com/googleapis/google-cloud-dotnet/commit/918067697f16a57916593566858e5bac33709c10))
+- Add MAC address-associated IP address to the Hardware resource ([commit 9180676](https://github.com/googleapis/google-cloud-dotnet/commit/918067697f16a57916593566858e5bac33709c10))
+- Add provisioning_state_signal field in SignalZoneState method request ([commit 9180676](https://github.com/googleapis/google-cloud-dotnet/commit/918067697f16a57916593566858e5bac33709c10))
+
+### Documentation improvements
+
+- Change state_signal field in SignalZoneState method request as optional ([commit 9180676](https://github.com/googleapis/google-cloud-dotnet/commit/918067697f16a57916593566858e5bac33709c10))
+
 ## Version 1.0.0-alpha03, released 2024-10-29
 
 ### New features
