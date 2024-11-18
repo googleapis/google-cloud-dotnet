@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.21.0, released 2024-11-18
+
+### New features
+
+- Add options of client_certificate_settings, bigquery_export_settings, bearer_token_config and boost_control_spec; add support of ALAW encoding ([commit 5f708d8](https://github.com/googleapis/google-cloud-dotnet/commit/5f708d833e320527b225017042e40f8e129a2ce4))
+
 ## Version 2.20.0, released 2024-07-29
 
 ### New features
