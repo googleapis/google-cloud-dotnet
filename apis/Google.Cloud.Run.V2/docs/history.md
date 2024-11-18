@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.11.0, released 2024-11-18
+
+### New features
+
+- Add EncryptionKeyRevocationAction and shutdown duration configuration to Services ([commit 6963dfd](https://github.com/googleapis/google-cloud-dotnet/commit/6963dfdb09d8947ff414d6cb15b33c5edc049a50))
+- Support advanced configurations options for cloud storage volumes by setting mount_options in the GCSVolumeSource configuration ([commit f8a46b8](https://github.com/googleapis/google-cloud-dotnet/commit/f8a46b8760b14817434b7da6734a3208c2751a0b))
+
+### Documentation improvements
+
+- Fixed formatting of some documentation ([commit 6963dfd](https://github.com/googleapis/google-cloud-dotnet/commit/6963dfdb09d8947ff414d6cb15b33c5edc049a50))
+- Update docs for field `value` in message `.google.cloud.run.v2.EnvVar` to reflect Cloud Run product capabilities ([commit f8a46b8](https://github.com/googleapis/google-cloud-dotnet/commit/f8a46b8760b14817434b7da6734a3208c2751a0b))
+- A comment for field `max_instance_request_concurrency` in message `.google.cloud.run.v2.RevisionTemplate` is changed ([commit f8a46b8](https://github.com/googleapis/google-cloud-dotnet/commit/f8a46b8760b14817434b7da6734a3208c2751a0b))
+- For field `invoker_iam_disabled` in message `.google.cloud.run.v2.Service`, clarify that feature is available by invitation only ([commit f8a46b8](https://github.com/googleapis/google-cloud-dotnet/commit/f8a46b8760b14817434b7da6734a3208c2751a0b))
+
 ## Version 2.10.0, released 2024-10-07
 
 ### New features
