@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.12.0, released 2024-11-18
+
+### New features
+
+- Add round-trip mode ([commit 7f285c1](https://github.com/googleapis/google-cloud-dotnet/commit/7f285c165cb943640033385786f9e8f02476e2a9))
+- Add DNS endpoint of Google Kubernetes Engine cluster control plane ([commit 14d1507](https://github.com/googleapis/google-cloud-dotnet/commit/14d150726ba94347602efaa9db115f1da1228aa2))
+- Add more detailed drop causes to corresponding enum ([commit 14d1507](https://github.com/googleapis/google-cloud-dotnet/commit/14d150726ba94347602efaa9db115f1da1228aa2))
+
+### Documentation improvements
+
+- Update outdated comments ([commit 14d1507](https://github.com/googleapis/google-cloud-dotnet/commit/14d150726ba94347602efaa9db115f1da1228aa2))
+
 ## Version 2.11.0, released 2024-10-21
 
 ### New features
