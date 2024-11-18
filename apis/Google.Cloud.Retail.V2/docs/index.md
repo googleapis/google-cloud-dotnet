@@ -4,7 +4,7 @@
 
 ## Note: early access users only
 
-This package is currently protected by an allow-list, and will not
+Some features exposed by this package are currently protected by an allow-list, and will not
 work for customers who are not registered in the early access programme.
 
 Please use the [contact page](https://cloud.google.com/contact) to
