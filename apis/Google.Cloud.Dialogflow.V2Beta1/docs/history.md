@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta19, released 2024-11-18
+
+### New features
+
+- Add options of query_source, search_config, end_user_metadata and exact_search ([commit 5c57238](https://github.com/googleapis/google-cloud-dotnet/commit/5c5723801ab467482cdeb0a0302ddb963da21c07))
+- Expose metadata in AnswerSource ([commit 5c57238](https://github.com/googleapis/google-cloud-dotnet/commit/5c5723801ab467482cdeb0a0302ddb963da21c07))
+- Added support for ALAW encoding ([commit 8b8a0d4](https://github.com/googleapis/google-cloud-dotnet/commit/8b8a0d4046b9f82d0ad20d3031f571dd0c463c44))
+- Add options of query_source, search_config and context_size ([commit 8b8a0d4](https://github.com/googleapis/google-cloud-dotnet/commit/8b8a0d4046b9f82d0ad20d3031f571dd0c463c44))
+- Add SipTrunks service ([commit 8b8a0d4](https://github.com/googleapis/google-cloud-dotnet/commit/8b8a0d4046b9f82d0ad20d3031f571dd0c463c44))
+
 ## Version 1.0.0-beta18, released 2024-08-05
 
 ### Bug fixes
