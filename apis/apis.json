@@ -1649,6 +1649,7 @@
         "feedback"
       ],
       "dependencies": {
+        "Google.Cloud.Iam.V1": "3.3.0",
         "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
