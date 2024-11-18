@@ -8275,6 +8275,198 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_EndpointService_UpdateEndpointLongRunning_sync",
+      "title": "UpdateEndpointLongRunningRequestObject",
+      "description": "Snippet for UpdateEndpointLongRunning",
+      "file": "EndpointServiceClient.UpdateEndpointLongRunningRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEndpointLongRunning",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.UpdateEndpointLongRunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.Endpoint, Google.Cloud.AIPlatform.V1.UpdateEndpointOperationMetadata>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEndpointLongRunning",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.UpdateEndpointLongRunning",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_EndpointService_UpdateEndpointLongRunning_async",
+      "title": "UpdateEndpointLongRunningRequestObjectAsync",
+      "description": "Snippet for UpdateEndpointLongRunningAsync",
+      "file": "EndpointServiceClient.UpdateEndpointLongRunningRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEndpointLongRunningAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.UpdateEndpointLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateEndpointLongRunningRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.Endpoint, Google.Cloud.AIPlatform.V1.UpdateEndpointOperationMetadata>>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEndpointLongRunning",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.UpdateEndpointLongRunning",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_EndpointService_UpdateEndpointLongRunning_sync_flattened",
+      "title": "UpdateEndpointLongRunning",
+      "description": "Snippet for UpdateEndpointLongRunning",
+      "file": "EndpointServiceClient.UpdateEndpointLongRunningSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEndpointLongRunning",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.UpdateEndpointLongRunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Endpoint",
+            "name": "endpoint"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.Endpoint, Google.Cloud.AIPlatform.V1.UpdateEndpointOperationMetadata>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEndpointLongRunning",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.UpdateEndpointLongRunning",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_EndpointService_UpdateEndpointLongRunning_async_flattened",
+      "title": "UpdateEndpointLongRunningAsync",
+      "description": "Snippet for UpdateEndpointLongRunningAsync",
+      "file": "EndpointServiceClient.UpdateEndpointLongRunningAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEndpointLongRunningAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.UpdateEndpointLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Endpoint",
+            "name": "endpoint"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.Endpoint, Google.Cloud.AIPlatform.V1.UpdateEndpointOperationMetadata>>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEndpointLongRunning",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.UpdateEndpointLongRunning",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_EndpointService_DeleteEndpoint_sync",
       "title": "DeleteEndpointRequestObject",
       "description": "Snippet for DeleteEndpoint",
