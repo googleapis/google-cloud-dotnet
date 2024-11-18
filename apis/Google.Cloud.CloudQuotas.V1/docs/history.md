@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.1.0, released 2024-11-18
+
+### New features
+
+- A new value `NOT_SUPPORTED` is added to enum `IneligibilityReason` ([commit 84c20bc](https://github.com/googleapis/google-cloud-dotnet/commit/84c20bc934998a46adec407c26d58734391cf8d0))
+- A new value `NOT_ENOUGH_USAGE_HISTORY` is added to enum `IneligibilityReason` ([commit 84c20bc](https://github.com/googleapis/google-cloud-dotnet/commit/84c20bc934998a46adec407c26d58734391cf8d0))
+
 ## Version 1.0.0, released 2024-05-24
 
 No API surface changes; just dependency updates and promotion to GA.
