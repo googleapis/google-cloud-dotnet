@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.3.1, released 2024-11-18
+
+No API surface changes, just an update of the Microsoft.Extensions.Logging.Console dependency. This transitively updates System.Text.Json, addressing a security vulnerability in the earlier version.
+
 ## Version 1.3.0, released 2024-03-26
 
 ### New features
