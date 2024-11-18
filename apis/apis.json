@@ -3077,7 +3077,7 @@
         "Console"
       ],
       "dependencies": {
-        "Microsoft.Extensions.Logging.Console": "6.0.0"
+        "Microsoft.Extensions.Logging.Console": "6.0.1"
       }
     },
     {
