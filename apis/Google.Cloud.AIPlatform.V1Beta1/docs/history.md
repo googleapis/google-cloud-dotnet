@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2024-11-18
+
+### New features
+
+- Add a `nfs_mounts` to RaySpec in PersistentResource API ([commit 33bbebd](https://github.com/googleapis/google-cloud-dotnet/commit/33bbebd77f62bf877e16d6c09747f1f6d3051bd4))
+- Add BYOSA field to tuning_job ([commit ce4d5a1](https://github.com/googleapis/google-cloud-dotnet/commit/ce4d5a18873dc350b95d283a69f2debbc337d140))
+- Add BatchCreateFeatures rpc to feature_registry_service.proto ([commit d17404c](https://github.com/googleapis/google-cloud-dotnet/commit/d17404c51f29526d3c3af4c43caad3ab948232e7))
+- Add OptimizedConfig for feature_view ([commit d17404c](https://github.com/googleapis/google-cloud-dotnet/commit/d17404c51f29526d3c3af4c43caad3ab948232e7))
+- Add Feature Monitoring API to Feature Store ([commit e986f24](https://github.com/googleapis/google-cloud-dotnet/commit/e986f247bdfbb86b91747dc6cc60708c229e5517))
+- Add StopNotebookRuntime method ([commit efa9ded](https://github.com/googleapis/google-cloud-dotnet/commit/efa9ded7476d9c5732449fe22d6e6ec6820921ea))
+
+### Documentation improvements
+
+- Update feature creation message commentary ([commit e986f24](https://github.com/googleapis/google-cloud-dotnet/commit/e986f247bdfbb86b91747dc6cc60708c229e5517))
+
 ## Version 1.0.0-beta09, released 2024-10-30
 
 ### New features
