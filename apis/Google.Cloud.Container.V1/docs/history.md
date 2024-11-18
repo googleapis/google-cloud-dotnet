@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.33.0, released 2024-11-18
+
+### New features
+
+- Add LocalSsdEncryptionMode in NodeConfig ([commit c51e9ee](https://github.com/googleapis/google-cloud-dotnet/commit/c51e9eef33ccad6b436c839c85ba2d9e220f6ce0))
+- Add LinuxNodeConfig in NodePoolAutoConfig ([commit c51e9ee](https://github.com/googleapis/google-cloud-dotnet/commit/c51e9eef33ccad6b436c839c85ba2d9e220f6ce0))
+- Add DesiredEnterpriseConfig proto message ([commit c51e9ee](https://github.com/googleapis/google-cloud-dotnet/commit/c51e9eef33ccad6b436c839c85ba2d9e220f6ce0))
+- Add desired_enterprise_config,desired_node_pool_auto_config_linux_node_config to ClusterUpdate. ([commit c51e9ee](https://github.com/googleapis/google-cloud-dotnet/commit/c51e9eef33ccad6b436c839c85ba2d9e220f6ce0))
+- Add UpgradeInfoEvent proto message ([commit c51e9ee](https://github.com/googleapis/google-cloud-dotnet/commit/c51e9eef33ccad6b436c839c85ba2d9e220f6ce0))
+- Add desired_tier to EnterpriseConfig. ([commit c51e9ee](https://github.com/googleapis/google-cloud-dotnet/commit/c51e9eef33ccad6b436c839c85ba2d9e220f6ce0))
+
+### Documentation improvements
+
+- Minor documentation updates ([commit c51e9ee](https://github.com/googleapis/google-cloud-dotnet/commit/c51e9eef33ccad6b436c839c85ba2d9e220f6ce0))
+
 ## Version 3.32.0, released 2024-10-14
 
 ### New features
