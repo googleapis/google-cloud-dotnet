@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2024-11-18
+
+### New features
+
+- Update attributes in Places API ([commit 482e2dc](https://github.com/googleapis/google-cloud-dotnet/commit/482e2dc7932e573fae02e29531fe66e76d9c4635))
+
 ## Version 1.0.0-beta09, released 2024-09-26
 
 ### New features
