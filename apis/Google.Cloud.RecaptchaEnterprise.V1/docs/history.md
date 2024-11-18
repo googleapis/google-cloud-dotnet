@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.17.0, released 2024-11-18
+
+### New features
+
+- A new enum `Challenge` is added ([commit 3080dfc](https://github.com/googleapis/google-cloud-dotnet/commit/3080dfc1247a9714a9d5b4fbc1c4a4a3db0f444b))
+- A new field `challenge` is added to message `.google.cloud.recaptchaenterprise.v1.RiskAnalysis` ([commit 3080dfc](https://github.com/googleapis/google-cloud-dotnet/commit/3080dfc1247a9714a9d5b4fbc1c4a4a3db0f444b))
+
 ## Version 2.16.0, released 2024-10-30
 
 ### New features
