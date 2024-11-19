@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListClusters",
+    "client": "ManagedKafkaClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
