@@ -4810,7 +4810,6 @@
         "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
       },
       "testDependencies": {
-        "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
         "Google.Api.Gax.Grpc.Testing": "default",
         "Google.Api.Gax.Testing": "default",
         "Microsoft.Extensions.Configuration": "6.0.1",
