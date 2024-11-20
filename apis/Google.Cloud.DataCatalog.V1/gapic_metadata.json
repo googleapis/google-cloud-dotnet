@@ -154,10 +154,28 @@
                 "RenameTagTemplateFieldEnumValueAsync"
               ]
             },
+            "RetrieveConfig": {
+              "methods": [
+                "RetrieveConfig",
+                "RetrieveConfigAsync"
+              ]
+            },
+            "RetrieveEffectiveConfig": {
+              "methods": [
+                "RetrieveEffectiveConfig",
+                "RetrieveEffectiveConfigAsync"
+              ]
+            },
             "SearchCatalog": {
               "methods": [
                 "SearchCatalog",
                 "SearchCatalogAsync"
+              ]
+            },
+            "SetConfig": {
+              "methods": [
+                "SetConfig",
+                "SetConfigAsync"
               ]
             },
             "SetIamPolicy": {

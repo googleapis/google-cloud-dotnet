@@ -9339,6 +9339,297 @@
       ]
     },
     {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_SetConfig_sync",
+      "title": "SetConfigRequestObject",
+      "description": "Snippet for SetConfig",
+      "file": "DataCatalogClient.SetConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetConfig",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.SetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.V1.MigrationConfig",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "SetConfig",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.SetConfig",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_SetConfig_async",
+      "title": "SetConfigRequestObjectAsync",
+      "description": "Snippet for SetConfigAsync",
+      "file": "DataCatalogClient.SetConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetConfigAsync",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.SetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.MigrationConfig>",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "SetConfig",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.SetConfig",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_RetrieveConfig_sync",
+      "title": "RetrieveConfigRequestObject",
+      "description": "Snippet for RetrieveConfig",
+      "file": "DataCatalogClient.RetrieveConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveConfig",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RetrieveConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.RetrieveConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.V1.OrganizationConfig",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "RetrieveConfig",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.RetrieveConfig",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_RetrieveConfig_async",
+      "title": "RetrieveConfigRequestObjectAsync",
+      "description": "Snippet for RetrieveConfigAsync",
+      "file": "DataCatalogClient.RetrieveConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveConfigAsync",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RetrieveConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.RetrieveConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.OrganizationConfig>",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "RetrieveConfig",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.RetrieveConfig",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_RetrieveEffectiveConfig_sync",
+      "title": "RetrieveEffectiveConfigRequestObject",
+      "description": "Snippet for RetrieveEffectiveConfig",
+      "file": "DataCatalogClient.RetrieveEffectiveConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveEffectiveConfig",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RetrieveEffectiveConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.V1.MigrationConfig",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "RetrieveEffectiveConfig",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.RetrieveEffectiveConfig",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_RetrieveEffectiveConfig_async",
+      "title": "RetrieveEffectiveConfigRequestObjectAsync",
+      "description": "Snippet for RetrieveEffectiveConfigAsync",
+      "file": "DataCatalogClient.RetrieveEffectiveConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveEffectiveConfigAsync",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RetrieveEffectiveConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.MigrationConfig>",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "RetrieveEffectiveConfig",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.RetrieveEffectiveConfig",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "datacatalog_v1_generated_PolicyTagManager_CreateTaxonomy_sync",
       "title": "CreateTaxonomyRequestObject",
       "description": "Snippet for CreateTaxonomy",
