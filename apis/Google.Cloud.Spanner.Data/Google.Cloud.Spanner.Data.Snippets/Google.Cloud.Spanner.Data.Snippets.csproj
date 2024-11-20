@@ -7,7 +7,6 @@
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CoreCompat.EnterpriseLibrary.TransientFaultHandling" VersionOverride="6.0.1304-r3" />
     <PackageReference Include="Google.Api.Gax.Grpc.Testing" VersionOverride="[4.9.0, 5.0.0)" />
     <PackageReference Include="Google.Api.Gax.Testing" VersionOverride="[4.9.0, 5.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
@@ -23,9 +22,6 @@
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
-    <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj" />
