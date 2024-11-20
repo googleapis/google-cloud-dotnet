@@ -166,6 +166,16 @@ namespace Google.Cloud.DataCatalog.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest> __Marshaller_google_cloud_datacatalog_v1_ImportEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.SetConfigRequest> __Marshaller_google_cloud_datacatalog_v1_SetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.SetConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.MigrationConfig> __Marshaller_google_cloud_datacatalog_v1_MigrationConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.MigrationConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest> __Marshaller_google_cloud_datacatalog_v1_RetrieveConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.OrganizationConfig> __Marshaller_google_cloud_datacatalog_v1_OrganizationConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.OrganizationConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest> __Marshaller_google_cloud_datacatalog_v1_RetrieveEffectiveConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest, global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse> __Method_SearchCatalog = new grpc::Method<global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest, global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse>(
@@ -438,6 +448,30 @@ namespace Google.Cloud.DataCatalog.V1 {
         "ImportEntries",
         __Marshaller_google_cloud_datacatalog_v1_ImportEntriesRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.SetConfigRequest, global::Google.Cloud.DataCatalog.V1.MigrationConfig> __Method_SetConfig = new grpc::Method<global::Google.Cloud.DataCatalog.V1.SetConfigRequest, global::Google.Cloud.DataCatalog.V1.MigrationConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetConfig",
+        __Marshaller_google_cloud_datacatalog_v1_SetConfigRequest,
+        __Marshaller_google_cloud_datacatalog_v1_MigrationConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest, global::Google.Cloud.DataCatalog.V1.OrganizationConfig> __Method_RetrieveConfig = new grpc::Method<global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest, global::Google.Cloud.DataCatalog.V1.OrganizationConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RetrieveConfig",
+        __Marshaller_google_cloud_datacatalog_v1_RetrieveConfigRequest,
+        __Marshaller_google_cloud_datacatalog_v1_OrganizationConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest, global::Google.Cloud.DataCatalog.V1.MigrationConfig> __Method_RetrieveEffectiveConfig = new grpc::Method<global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest, global::Google.Cloud.DataCatalog.V1.MigrationConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RetrieveEffectiveConfig",
+        __Marshaller_google_cloud_datacatalog_v1_RetrieveEffectiveConfigRequest,
+        __Marshaller_google_cloud_datacatalog_v1_MigrationConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1073,6 +1107,49 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportEntries(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Sets the configuration related to the migration to Dataplex for an
+      /// organization or project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.MigrationConfig> SetConfig(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the configuration related to the migration from Data Catalog to
+      /// Dataplex for a specific organization, including all the projects under it
+      /// which have a separate configuration set.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.OrganizationConfig> RetrieveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the effective configuration related to the migration from Data
+      /// Catalog to Dataplex for a specific organization or project. If there is no
+      /// specific configuration set for the resource, the setting is checked
+      /// hierarchicahlly through the ancestors of the resource, starting from the
+      /// resource itself.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.MigrationConfig> RetrieveEffectiveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3618,6 +3695,178 @@ namespace Google.Cloud.DataCatalog.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportEntries, null, options, request);
       }
+      /// <summary>
+      /// Sets the configuration related to the migration to Dataplex for an
+      /// organization or project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.MigrationConfig SetConfig(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets the configuration related to the migration to Dataplex for an
+      /// organization or project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.MigrationConfig SetConfig(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Sets the configuration related to the migration to Dataplex for an
+      /// organization or project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.MigrationConfig> SetConfigAsync(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets the configuration related to the migration to Dataplex for an
+      /// organization or project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.MigrationConfig> SetConfigAsync(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the configuration related to the migration from Data Catalog to
+      /// Dataplex for a specific organization, including all the projects under it
+      /// which have a separate configuration set.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.OrganizationConfig RetrieveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the configuration related to the migration from Data Catalog to
+      /// Dataplex for a specific organization, including all the projects under it
+      /// which have a separate configuration set.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.OrganizationConfig RetrieveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RetrieveConfig, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the configuration related to the migration from Data Catalog to
+      /// Dataplex for a specific organization, including all the projects under it
+      /// which have a separate configuration set.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.OrganizationConfig> RetrieveConfigAsync(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the configuration related to the migration from Data Catalog to
+      /// Dataplex for a specific organization, including all the projects under it
+      /// which have a separate configuration set.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.OrganizationConfig> RetrieveConfigAsync(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RetrieveConfig, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the effective configuration related to the migration from Data
+      /// Catalog to Dataplex for a specific organization or project. If there is no
+      /// specific configuration set for the resource, the setting is checked
+      /// hierarchicahlly through the ancestors of the resource, starting from the
+      /// resource itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.MigrationConfig RetrieveEffectiveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveEffectiveConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the effective configuration related to the migration from Data
+      /// Catalog to Dataplex for a specific organization or project. If there is no
+      /// specific configuration set for the resource, the setting is checked
+      /// hierarchicahlly through the ancestors of the resource, starting from the
+      /// resource itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.MigrationConfig RetrieveEffectiveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RetrieveEffectiveConfig, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the effective configuration related to the migration from Data
+      /// Catalog to Dataplex for a specific organization or project. If there is no
+      /// specific configuration set for the resource, the setting is checked
+      /// hierarchicahlly through the ancestors of the resource, starting from the
+      /// resource itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.MigrationConfig> RetrieveEffectiveConfigAsync(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveEffectiveConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the effective configuration related to the migration from Data
+      /// Catalog to Dataplex for a specific organization or project. If there is no
+      /// specific configuration set for the resource, the setting is checked
+      /// hierarchicahlly through the ancestors of the resource, starting from the
+      /// resource itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.MigrationConfig> RetrieveEffectiveConfigAsync(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RetrieveEffectiveConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataCatalogClient NewInstance(ClientBaseConfiguration configuration)
@@ -3665,7 +3914,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
-          .AddMethod(__Method_ImportEntries, serviceImpl.ImportEntries).Build();
+          .AddMethod(__Method_ImportEntries, serviceImpl.ImportEntries)
+          .AddMethod(__Method_SetConfig, serviceImpl.SetConfig)
+          .AddMethod(__Method_RetrieveConfig, serviceImpl.RetrieveConfig)
+          .AddMethod(__Method_RetrieveEffectiveConfig, serviceImpl.RetrieveEffectiveConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3709,6 +3961,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
       serviceBinder.AddMethod(__Method_ImportEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportEntries));
+      serviceBinder.AddMethod(__Method_SetConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.SetConfigRequest, global::Google.Cloud.DataCatalog.V1.MigrationConfig>(serviceImpl.SetConfig));
+      serviceBinder.AddMethod(__Method_RetrieveConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest, global::Google.Cloud.DataCatalog.V1.OrganizationConfig>(serviceImpl.RetrieveConfig));
+      serviceBinder.AddMethod(__Method_RetrieveEffectiveConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest, global::Google.Cloud.DataCatalog.V1.MigrationConfig>(serviceImpl.RetrieveEffectiveConfig));
     }
 
   }

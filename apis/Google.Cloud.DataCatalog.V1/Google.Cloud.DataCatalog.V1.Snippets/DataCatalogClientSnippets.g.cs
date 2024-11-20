@@ -3658,5 +3658,94 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for SetConfig</summary>
+        public void SetConfigRequestObject()
+        {
+            // Snippet: SetConfig(SetConfigRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            SetConfigRequest request = new SetConfigRequest
+            {
+                Name = "",
+                TagTemplateMigration = TagTemplateMigration.Unspecified,
+            };
+            // Make the request
+            MigrationConfig response = dataCatalogClient.SetConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetConfigAsync</summary>
+        public async Task SetConfigRequestObjectAsync()
+        {
+            // Snippet: SetConfigAsync(SetConfigRequest, CallSettings)
+            // Additional: SetConfigAsync(SetConfigRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            SetConfigRequest request = new SetConfigRequest
+            {
+                Name = "",
+                TagTemplateMigration = TagTemplateMigration.Unspecified,
+            };
+            // Make the request
+            MigrationConfig response = await dataCatalogClient.SetConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveConfig</summary>
+        public void RetrieveConfigRequestObject()
+        {
+            // Snippet: RetrieveConfig(RetrieveConfigRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            RetrieveConfigRequest request = new RetrieveConfigRequest { Name = "", };
+            // Make the request
+            OrganizationConfig response = dataCatalogClient.RetrieveConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveConfigAsync</summary>
+        public async Task RetrieveConfigRequestObjectAsync()
+        {
+            // Snippet: RetrieveConfigAsync(RetrieveConfigRequest, CallSettings)
+            // Additional: RetrieveConfigAsync(RetrieveConfigRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            RetrieveConfigRequest request = new RetrieveConfigRequest { Name = "", };
+            // Make the request
+            OrganizationConfig response = await dataCatalogClient.RetrieveConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveEffectiveConfig</summary>
+        public void RetrieveEffectiveConfigRequestObject()
+        {
+            // Snippet: RetrieveEffectiveConfig(RetrieveEffectiveConfigRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            RetrieveEffectiveConfigRequest request = new RetrieveEffectiveConfigRequest { Name = "", };
+            // Make the request
+            MigrationConfig response = dataCatalogClient.RetrieveEffectiveConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveEffectiveConfigAsync</summary>
+        public async Task RetrieveEffectiveConfigRequestObjectAsync()
+        {
+            // Snippet: RetrieveEffectiveConfigAsync(RetrieveEffectiveConfigRequest, CallSettings)
+            // Additional: RetrieveEffectiveConfigAsync(RetrieveEffectiveConfigRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            RetrieveEffectiveConfigRequest request = new RetrieveEffectiveConfigRequest { Name = "", };
+            // Make the request
+            MigrationConfig response = await dataCatalogClient.RetrieveEffectiveConfigAsync(request);
+            // End snippet
+        }
     }
 }

@@ -27,61 +27,63 @@ namespace Google.Cloud.DataCatalog.V1 {
             "CiZnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvdGFncy5wcm90bxIbZ29v",
             "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIosDCgNUYWcSEQoEbmFtZRgB",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvMDCgNUYWcSEQoEbmFtZRgB",
             "IAEoCUID4EEIEhUKCHRlbXBsYXRlGAIgASgJQgPgQQISIgoVdGVtcGxhdGVf",
             "ZGlzcGxheV9uYW1lGAUgASgJQgPgQQMSEAoGY29sdW1uGAQgASgJSAASQQoG",
             "ZmllbGRzGAMgAygLMiwuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRh",
-            "Zy5GaWVsZHNFbnRyeUID4EECGlQKC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRI0CgV2YWx1ZRgCIAEoCzIlLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
-            "MS5UYWdGaWVsZDoCOAE6gQHqQX4KHmRhdGFjYXRhbG9nLmdvb2dsZWFwaXMu",
-            "Y29tL1RhZxJccHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2VudHJ5R3JvdXBzL3tlbnRyeV9ncm91cH0vZW50cmllcy97ZW50cnl9",
-            "L3RhZ3Mve3RhZ31CBwoFc2NvcGUiwgIKCFRhZ0ZpZWxkEhkKDGRpc3BsYXlf",
-            "bmFtZRgBIAEoCUID4EEDEhYKDGRvdWJsZV92YWx1ZRgCIAEoAUgAEhYKDHN0",
-            "cmluZ192YWx1ZRgDIAEoCUgAEhQKCmJvb2xfdmFsdWUYBCABKAhIABI1Cg90",
-            "aW1lc3RhbXBfdmFsdWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wSAASRQoKZW51bV92YWx1ZRgGIAEoCzIvLmdvb2dsZS5jbG91ZC5kYXRh",
-            "Y2F0YWxvZy52MS5UYWdGaWVsZC5FbnVtVmFsdWVIABIYCg5yaWNodGV4dF92",
-            "YWx1ZRgIIAEoCUgAEhIKBW9yZGVyGAcgASgFQgPgQQMaIQoJRW51bVZhbHVl",
-            "EhQKDGRpc3BsYXlfbmFtZRgBIAEoCUIGCgRraW5kIq0ECgtUYWdUZW1wbGF0",
-            "ZRIRCgRuYW1lGAEgASgJQgPgQQgSFAoMZGlzcGxheV9uYW1lGAIgASgJEhwK",
-            "FGlzX3B1YmxpY2x5X3JlYWRhYmxlGAUgASgIEkkKBmZpZWxkcxgDIAMoCzI0",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1wbGF0ZS5GaWVs",
-            "ZHNFbnRyeUID4EECEmYKGGRhdGFwbGV4X3RyYW5zZmVyX3N0YXR1cxgHIAEo",
-            "DjI/Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1wbGF0ZS5E",
-            "YXRhcGxleFRyYW5zZmVyU3RhdHVzQgPgQQEaXAoLRmllbGRzRW50cnkSCwoD",
-            "a2V5GAEgASgJEjwKBXZhbHVlGAIgASgLMi0uZ29vZ2xlLmNsb3VkLmRhdGFj",
-            "YXRhbG9nLnYxLlRhZ1RlbXBsYXRlRmllbGQ6AjgBIlQKFkRhdGFwbGV4VHJh",
-            "bnNmZXJTdGF0dXMSKAokREFUQVBMRVhfVFJBTlNGRVJfU1RBVFVTX1VOU1BF",
-            "Q0lGSUVEEAASEAoITUlHUkFURUQQARoCCAE6cOpBbQomZGF0YWNhdGFsb2cu",
-            "Z29vZ2xlYXBpcy5jb20vVGFnVGVtcGxhdGUSQ3Byb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90YWdUZW1wbGF0ZXMve3RhZ190ZW1w",
-            "bGF0ZX0itwIKEFRhZ1RlbXBsYXRlRmllbGQSEQoEbmFtZRgGIAEoCUID4EEI",
-            "EhQKDGRpc3BsYXlfbmFtZRgBIAEoCRI5CgR0eXBlGAIgASgLMiYuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxLkZpZWxkVHlwZUID4EECEhMKC2lzX3Jl",
-            "cXVpcmVkGAMgASgIEhMKC2Rlc2NyaXB0aW9uGAQgASgJEg0KBW9yZGVyGAUg",
-            "ASgFOoUB6kGBAQorZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnVGVt",
-            "cGxhdGVGaWVsZBJScHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3RhZ1RlbXBsYXRlcy97dGFnX3RlbXBsYXRlfS9maWVsZHMve2Zp",
-            "ZWxkfSKmAwoJRmllbGRUeXBlEk4KDnByaW1pdGl2ZV90eXBlGAEgASgOMjQu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkZpZWxkVHlwZS5QcmltaXRp",
-            "dmVUeXBlSAASRAoJZW51bV90eXBlGAIgASgLMi8uZ29vZ2xlLmNsb3VkLmRh",
-            "dGFjYXRhbG9nLnYxLkZpZWxkVHlwZS5FbnVtVHlwZUgAGoUBCghFbnVtVHlw",
-            "ZRJRCg5hbGxvd2VkX3ZhbHVlcxgBIAMoCzI5Lmdvb2dsZS5jbG91ZC5kYXRh",
-            "Y2F0YWxvZy52MS5GaWVsZFR5cGUuRW51bVR5cGUuRW51bVZhbHVlGiYKCUVu",
-            "dW1WYWx1ZRIZCgxkaXNwbGF5X25hbWUYASABKAlCA+BBAiJuCg1QcmltaXRp",
-            "dmVUeXBlEh4KGlBSSU1JVElWRV9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGRE9V",
-            "QkxFEAESCgoGU1RSSU5HEAISCAoEQk9PTBADEg0KCVRJTUVTVEFNUBAEEgwK",
-            "CFJJQ0hURVhUEAVCCwoJdHlwZV9kZWNsQsYBCh9jb20uZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFjYXRhbG9nLnYxUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YWNh",
-            "dGFsb2cvYXBpdjEvZGF0YWNhdGFsb2dwYjtkYXRhY2F0YWxvZ3Bi+AEBqgIb",
-            "R29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIbR29vZ2xlXENsb3VkXERh",
-            "dGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6RGF0YUNhdGFsb2c6OlYx",
-            "YgZwcm90bzM="));
+            "Zy5GaWVsZHNFbnRyeUID4EECEmYKGGRhdGFwbGV4X3RyYW5zZmVyX3N0YXR1",
+            "cxgHIAEoDjI/Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1w",
+            "bGF0ZS5EYXRhcGxleFRyYW5zZmVyU3RhdHVzQgPgQQMaVAoLRmllbGRzRW50",
+            "cnkSCwoDa2V5GAEgASgJEjQKBXZhbHVlGAIgASgLMiUuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFjYXRhbG9nLnYxLlRhZ0ZpZWxkOgI4ATqBAepBfgoeZGF0YWNhdGFs",
+            "b2cuZ29vZ2xlYXBpcy5jb20vVGFnElxwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vZW50cnlHcm91cHMve2VudHJ5X2dyb3VwfS9l",
+            "bnRyaWVzL3tlbnRyeX0vdGFncy97dGFnfUIHCgVzY29wZSLCAgoIVGFnRmll",
+            "bGQSGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQMSFgoMZG91YmxlX3ZhbHVl",
+            "GAIgASgBSAASFgoMc3RyaW5nX3ZhbHVlGAMgASgJSAASFAoKYm9vbF92YWx1",
+            "ZRgEIAEoCEgAEjUKD3RpbWVzdGFtcF92YWx1ZRgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBIABJFCgplbnVtX3ZhbHVlGAYgASgLMi8uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ0ZpZWxkLkVudW1WYWx1ZUgA",
+            "EhgKDnJpY2h0ZXh0X3ZhbHVlGAggASgJSAASEgoFb3JkZXIYByABKAVCA+BB",
+            "AxohCglFbnVtVmFsdWUSFAoMZGlzcGxheV9uYW1lGAEgASgJQgYKBGtpbmQi",
+            "vgQKC1RhZ1RlbXBsYXRlEhEKBG5hbWUYASABKAlCA+BBCBIUCgxkaXNwbGF5",
+            "X25hbWUYAiABKAkSHAoUaXNfcHVibGljbHlfcmVhZGFibGUYBSABKAgSSQoG",
+            "ZmllbGRzGAMgAygLMjQuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRh",
+            "Z1RlbXBsYXRlLkZpZWxkc0VudHJ5QgPgQQISZgoYZGF0YXBsZXhfdHJhbnNm",
+            "ZXJfc3RhdHVzGAcgASgOMj8uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYx",
+            "LlRhZ1RlbXBsYXRlLkRhdGFwbGV4VHJhbnNmZXJTdGF0dXNCA+BBARpcCgtG",
+            "aWVsZHNFbnRyeRILCgNrZXkYASABKAkSPAoFdmFsdWUYAiABKAsyLS5nb29n",
+            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFnVGVtcGxhdGVGaWVsZDoCOAEi",
+            "ZQoWRGF0YXBsZXhUcmFuc2ZlclN0YXR1cxIoCiREQVRBUExFWF9UUkFOU0ZF",
+            "Ul9TVEFUVVNfVU5TUEVDSUZJRUQQABIQCghNSUdSQVRFRBABGgIIARIPCgtU",
+            "UkFOU0ZFUlJFRBACOnDqQW0KJmRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29t",
+            "L1RhZ1RlbXBsYXRlEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vdGFnVGVtcGxhdGVzL3t0YWdfdGVtcGxhdGV9IrcCChBUYWdU",
+            "ZW1wbGF0ZUZpZWxkEhEKBG5hbWUYBiABKAlCA+BBCBIUCgxkaXNwbGF5X25h",
+            "bWUYASABKAkSOQoEdHlwZRgCIAEoCzImLmdvb2dsZS5jbG91ZC5kYXRhY2F0",
+            "YWxvZy52MS5GaWVsZFR5cGVCA+BBAhITCgtpc19yZXF1aXJlZBgDIAEoCBIT",
+            "CgtkZXNjcmlwdGlvbhgEIAEoCRINCgVvcmRlchgFIAEoBTqFAepBgQEKK2Rh",
+            "dGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1RhZ1RlbXBsYXRlRmllbGQSUnBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90YWdUZW1w",
+            "bGF0ZXMve3RhZ190ZW1wbGF0ZX0vZmllbGRzL3tmaWVsZH0ipgMKCUZpZWxk",
+            "VHlwZRJOCg5wcmltaXRpdmVfdHlwZRgBIAEoDjI0Lmdvb2dsZS5jbG91ZC5k",
+            "YXRhY2F0YWxvZy52MS5GaWVsZFR5cGUuUHJpbWl0aXZlVHlwZUgAEkQKCWVu",
+            "dW1fdHlwZRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5G",
+            "aWVsZFR5cGUuRW51bVR5cGVIABqFAQoIRW51bVR5cGUSUQoOYWxsb3dlZF92",
+            "YWx1ZXMYASADKAsyOS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmll",
+            "bGRUeXBlLkVudW1UeXBlLkVudW1WYWx1ZRomCglFbnVtVmFsdWUSGQoMZGlz",
+            "cGxheV9uYW1lGAEgASgJQgPgQQIibgoNUHJpbWl0aXZlVHlwZRIeChpQUklN",
+            "SVRJVkVfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkRPVUJMRRABEgoKBlNUUklO",
+            "RxACEggKBEJPT0wQAxINCglUSU1FU1RBTVAQBBIMCghSSUNIVEVYVBAFQgsK",
+            "CXR5cGVfZGVjbELDAQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
+            "MVABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYxL2Rh",
+            "dGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYqoCG0dvb2dsZS5DbG91ZC5EYXRh",
+            "Q2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdv",
+            "b2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Tag), global::Google.Cloud.DataCatalog.V1.Tag.Parser, new[]{ "Name", "Template", "TemplateDisplayName", "Column", "Fields" }, new[]{ "Scope" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Tag), global::Google.Cloud.DataCatalog.V1.Tag.Parser, new[]{ "Name", "Template", "TemplateDisplayName", "Column", "Fields", "DataplexTransferStatus" }, new[]{ "Scope" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField), global::Google.Cloud.DataCatalog.V1.TagField.Parser, new[]{ "DisplayName", "DoubleValue", "StringValue", "BoolValue", "TimestampValue", "EnumValue", "RichtextValue", "Order" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue), global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue.Parser, new[]{ "DisplayName" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplate), global::Google.Cloud.DataCatalog.V1.TagTemplate.Parser, new[]{ "Name", "DisplayName", "IsPubliclyReadable", "Fields", "DataplexTransferStatus" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplateField), global::Google.Cloud.DataCatalog.V1.TagTemplateField.Parser, new[]{ "Name", "DisplayName", "Type", "IsRequired", "Description", "Order" }, null, null, null, null),
@@ -139,6 +141,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       template_ = other.template_;
       templateDisplayName_ = other.templateDisplayName_;
       fields_ = other.fields_.Clone();
+      dataplexTransferStatus_ = other.dataplexTransferStatus_;
       switch (other.ScopeCase) {
         case ScopeOneofCase.Column:
           Column = other.Column;
@@ -258,6 +261,21 @@ namespace Google.Cloud.DataCatalog.V1 {
       get { return fields_; }
     }
 
+    /// <summary>Field number for the "dataplex_transfer_status" field.</summary>
+    public const int DataplexTransferStatusFieldNumber = 7;
+    private global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus dataplexTransferStatus_ = global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified;
+    /// <summary>
+    /// Output only. Denotes the transfer status of the Tag Template.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus DataplexTransferStatus {
+      get { return dataplexTransferStatus_; }
+      set {
+        dataplexTransferStatus_ = value;
+      }
+    }
+
     private object scope_;
     /// <summary>Enum of possible cases for the "scope" oneof.</summary>
     public enum ScopeOneofCase {
@@ -298,6 +316,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (TemplateDisplayName != other.TemplateDisplayName) return false;
       if (Column != other.Column) return false;
       if (!Fields.Equals(other.Fields)) return false;
+      if (DataplexTransferStatus != other.DataplexTransferStatus) return false;
       if (ScopeCase != other.ScopeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -311,6 +330,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (TemplateDisplayName.Length != 0) hash ^= TemplateDisplayName.GetHashCode();
       if (HasColumn) hash ^= Column.GetHashCode();
       hash ^= Fields.GetHashCode();
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) hash ^= DataplexTransferStatus.GetHashCode();
       hash ^= (int) scopeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -347,6 +367,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(42);
         output.WriteString(TemplateDisplayName);
       }
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) DataplexTransferStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -374,6 +398,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(42);
         output.WriteString(TemplateDisplayName);
       }
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) DataplexTransferStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -397,6 +425,9 @@ namespace Google.Cloud.DataCatalog.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Column);
       }
       size += fields_.CalculateSize(_map_fields_codec);
+      if (DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataplexTransferStatus);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -419,6 +450,9 @@ namespace Google.Cloud.DataCatalog.V1 {
         TemplateDisplayName = other.TemplateDisplayName;
       }
       fields_.MergeFrom(other.fields_);
+      if (other.DataplexTransferStatus != global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus.Unspecified) {
+        DataplexTransferStatus = other.DataplexTransferStatus;
+      }
       switch (other.ScopeCase) {
         case ScopeOneofCase.Column:
           Column = other.Column;
@@ -460,6 +494,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             TemplateDisplayName = input.ReadString();
             break;
           }
+          case 56: {
+            DataplexTransferStatus = (global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -493,6 +531,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 42: {
             TemplateDisplayName = input.ReadString();
+            break;
+          }
+          case 56: {
+            DataplexTransferStatus = (global::Google.Cloud.DataCatalog.V1.TagTemplate.Types.DataplexTransferStatus) input.ReadEnum();
             break;
           }
         }
@@ -1719,6 +1761,11 @@ namespace Google.Cloud.DataCatalog.V1 {
         /// </summary>
         [global::System.ObsoleteAttribute]
         [pbr::OriginalName("MIGRATED")] Migrated = 1,
+        /// <summary>
+        /// TagTemplate and its tags are auto-copied to Dataplex service.
+        /// Visible in both services. Editable in Dataplex, read-only in DataCatalog.
+        /// </summary>
+        [pbr::OriginalName("TRANSFERRED")] Transferred = 2,
       }
 
     }
