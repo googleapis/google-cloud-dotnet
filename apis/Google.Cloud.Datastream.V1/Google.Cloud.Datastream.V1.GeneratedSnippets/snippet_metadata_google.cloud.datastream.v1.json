@@ -2932,6 +2932,103 @@
       ]
     },
     {
+      "regionTag": "datastream_v1_generated_Datastream_RunStream_sync",
+      "title": "RunStreamRequestObject",
+      "description": "Snippet for RunStream",
+      "file": "DatastreamClient.RunStreamRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunStream",
+        "fullName": "Google.Cloud.Datastream.V1.DatastreamClient.RunStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastream.V1.RunStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastream.V1.Stream, Google.Cloud.Datastream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DatastreamClient",
+          "fullName": "Google.Cloud.Datastream.V1.DatastreamClient"
+        },
+        "method": {
+          "shortName": "RunStream",
+          "fullName": "google.cloud.datastream.v1.Datastream.RunStream",
+          "service": {
+            "shortName": "Datastream",
+            "fullName": "google.cloud.datastream.v1.Datastream"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastream_v1_generated_Datastream_RunStream_async",
+      "title": "RunStreamRequestObjectAsync",
+      "description": "Snippet for RunStreamAsync",
+      "file": "DatastreamClient.RunStreamRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunStreamAsync",
+        "fullName": "Google.Cloud.Datastream.V1.DatastreamClient.RunStreamAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastream.V1.RunStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastream.V1.Stream, Google.Cloud.Datastream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DatastreamClient",
+          "fullName": "Google.Cloud.Datastream.V1.DatastreamClient"
+        },
+        "method": {
+          "shortName": "RunStream",
+          "fullName": "google.cloud.datastream.v1.Datastream.RunStream",
+          "service": {
+            "shortName": "Datastream",
+            "fullName": "google.cloud.datastream.v1.Datastream"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "datastream_v1_generated_Datastream_GetStreamObject_sync",
       "title": "GetStreamObjectRequestObject",
       "description": "Snippet for GetStreamObject",

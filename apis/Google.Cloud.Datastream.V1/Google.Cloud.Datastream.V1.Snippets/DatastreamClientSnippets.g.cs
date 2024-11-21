@@ -1841,6 +1841,75 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for RunStream</summary>
+        public void RunStreamRequestObject()
+        {
+            // Snippet: RunStream(RunStreamRequest, CallSettings)
+            // Create client
+            DatastreamClient datastreamClient = DatastreamClient.Create();
+            // Initialize request argument(s)
+            RunStreamRequest request = new RunStreamRequest
+            {
+                StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
+                CdcStrategy = new CdcStrategy(),
+                Force = false,
+            };
+            // Make the request
+            Operation<Stream, OperationMetadata> response = datastreamClient.RunStream(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Stream, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Stream result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Stream, OperationMetadata> retrievedResponse = datastreamClient.PollOnceRunStream(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Stream retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunStreamAsync</summary>
+        public async Task RunStreamRequestObjectAsync()
+        {
+            // Snippet: RunStreamAsync(RunStreamRequest, CallSettings)
+            // Additional: RunStreamAsync(RunStreamRequest, CancellationToken)
+            // Create client
+            DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
+            // Initialize request argument(s)
+            RunStreamRequest request = new RunStreamRequest
+            {
+                StreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
+                CdcStrategy = new CdcStrategy(),
+                Force = false,
+            };
+            // Make the request
+            Operation<Stream, OperationMetadata> response = await datastreamClient.RunStreamAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Stream, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Stream result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Stream, OperationMetadata> retrievedResponse = await datastreamClient.PollOnceRunStreamAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Stream retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetStreamObject</summary>
         public void GetStreamObjectRequestObject()
         {

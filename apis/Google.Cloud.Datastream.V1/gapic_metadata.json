@@ -136,6 +136,12 @@
                 "LookupStreamObjectAsync"
               ]
             },
+            "RunStream": {
+              "methods": [
+                "RunStream",
+                "RunStreamAsync"
+              ]
+            },
             "StartBackfillJob": {
               "methods": [
                 "StartBackfillJob",

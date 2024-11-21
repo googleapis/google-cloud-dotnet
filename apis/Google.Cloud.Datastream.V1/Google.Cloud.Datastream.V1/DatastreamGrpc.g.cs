@@ -98,6 +98,8 @@ namespace Google.Cloud.Datastream.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1.DeleteStreamRequest> __Marshaller_google_cloud_datastream_v1_DeleteStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1.DeleteStreamRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1.RunStreamRequest> __Marshaller_google_cloud_datastream_v1_RunStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1.RunStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1.GetStreamObjectRequest> __Marshaller_google_cloud_datastream_v1_GetStreamObjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1.GetStreamObjectRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1.StreamObject> __Marshaller_google_cloud_datastream_v1_StreamObject = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1.StreamObject.Parser));
@@ -230,6 +232,14 @@ namespace Google.Cloud.Datastream.V1 {
         __ServiceName,
         "DeleteStream",
         __Marshaller_google_cloud_datastream_v1_DeleteStreamRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Datastream.V1.RunStreamRequest, global::Google.LongRunning.Operation> __Method_RunStream = new grpc::Method<global::Google.Cloud.Datastream.V1.RunStreamRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunStream",
+        __Marshaller_google_cloud_datastream_v1_RunStreamRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -486,6 +496,19 @@ namespace Google.Cloud.Datastream.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteStream(global::Google.Cloud.Datastream.V1.DeleteStreamRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Use this method to start, resume or recover a stream with a non default CDC
+      /// strategy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunStream(global::Google.Cloud.Datastream.V1.RunStreamRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1236,6 +1259,58 @@ namespace Google.Cloud.Datastream.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteStream, null, options, request);
       }
       /// <summary>
+      /// Use this method to start, resume or recover a stream with a non default CDC
+      /// strategy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RunStream(global::Google.Cloud.Datastream.V1.RunStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Use this method to start, resume or recover a stream with a non default CDC
+      /// strategy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RunStream(global::Google.Cloud.Datastream.V1.RunStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunStream, null, options, request);
+      }
+      /// <summary>
+      /// Use this method to start, resume or recover a stream with a non default CDC
+      /// strategy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunStreamAsync(global::Google.Cloud.Datastream.V1.RunStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Use this method to start, resume or recover a stream with a non default CDC
+      /// strategy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunStreamAsync(global::Google.Cloud.Datastream.V1.RunStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunStream, null, options, request);
+      }
+      /// <summary>
       /// Use this method to get details about a stream object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1948,6 +2023,7 @@ namespace Google.Cloud.Datastream.V1 {
           .AddMethod(__Method_CreateStream, serviceImpl.CreateStream)
           .AddMethod(__Method_UpdateStream, serviceImpl.UpdateStream)
           .AddMethod(__Method_DeleteStream, serviceImpl.DeleteStream)
+          .AddMethod(__Method_RunStream, serviceImpl.RunStream)
           .AddMethod(__Method_GetStreamObject, serviceImpl.GetStreamObject)
           .AddMethod(__Method_LookupStreamObject, serviceImpl.LookupStreamObject)
           .AddMethod(__Method_ListStreamObjects, serviceImpl.ListStreamObjects)
@@ -1982,6 +2058,7 @@ namespace Google.Cloud.Datastream.V1 {
       serviceBinder.AddMethod(__Method_CreateStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastream.V1.CreateStreamRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateStream));
       serviceBinder.AddMethod(__Method_UpdateStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastream.V1.UpdateStreamRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateStream));
       serviceBinder.AddMethod(__Method_DeleteStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastream.V1.DeleteStreamRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteStream));
+      serviceBinder.AddMethod(__Method_RunStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastream.V1.RunStreamRequest, global::Google.LongRunning.Operation>(serviceImpl.RunStream));
       serviceBinder.AddMethod(__Method_GetStreamObject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastream.V1.GetStreamObjectRequest, global::Google.Cloud.Datastream.V1.StreamObject>(serviceImpl.GetStreamObject));
       serviceBinder.AddMethod(__Method_LookupStreamObject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastream.V1.LookupStreamObjectRequest, global::Google.Cloud.Datastream.V1.StreamObject>(serviceImpl.LookupStreamObject));
       serviceBinder.AddMethod(__Method_ListStreamObjects, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastream.V1.ListStreamObjectsRequest, global::Google.Cloud.Datastream.V1.ListStreamObjectsResponse>(serviceImpl.ListStreamObjects));
