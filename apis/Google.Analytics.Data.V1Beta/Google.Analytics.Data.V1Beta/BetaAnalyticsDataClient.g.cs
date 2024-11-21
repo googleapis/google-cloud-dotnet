@@ -475,7 +475,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -485,7 +485,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -495,7 +495,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -505,7 +505,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple pivot reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -515,7 +515,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple pivot reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -525,7 +525,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple pivot reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -536,7 +536,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -554,7 +554,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -572,7 +572,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -590,7 +590,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -602,7 +602,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// Google Analytics property identifier. To learn more, see [where to find
         /// your Property
         /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
@@ -623,7 +623,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -635,7 +635,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// Google Analytics property identifier. To learn more, see [where to find
         /// your Property
         /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
@@ -656,7 +656,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -668,7 +668,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// Google Analytics property identifier. To learn more, see [where to find
         /// your Property
         /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
@@ -686,7 +686,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -698,7 +698,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// Google Analytics property identifier. To learn more, see [where to find
         /// your Property
         /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
@@ -719,7 +719,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -731,7 +731,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// Google Analytics property identifier. To learn more, see [where to find
         /// your Property
         /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
@@ -752,7 +752,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -764,7 +764,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// Google Analytics property identifier. To learn more, see [where to find
         /// your Property
         /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
@@ -2095,7 +2095,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2108,7 +2108,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2121,7 +2121,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple pivot reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2134,7 +2134,7 @@ namespace Google.Analytics.Data.V1Beta
 
         /// <summary>
         /// Returns multiple pivot reports in a batch. All reports must be for the same
-        /// GA4 Property.
+        /// Google Analytics property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2148,7 +2148,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -2169,7 +2169,7 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics GA4 Property Identifier is specified in the request, and
+        /// Analytics property identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
