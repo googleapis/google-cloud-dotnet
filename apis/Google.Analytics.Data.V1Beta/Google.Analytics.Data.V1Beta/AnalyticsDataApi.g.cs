@@ -331,7 +331,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyFieldNumber = 1;
     private string property_ = "";
     /// <summary>
-    /// A Google Analytics GA4 property identifier whose events are tracked. To
+    /// A Google Analytics property identifier whose events are tracked. To
     /// learn more, see [where to find your Property
     /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
     /// `property` should be the same value as in your `runReport` request.
@@ -1241,7 +1241,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyFieldNumber = 1;
     private string property_ = "";
     /// <summary>
-    /// A Google Analytics GA4 property identifier whose events are tracked.
+    /// A Google Analytics property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
     /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
@@ -1396,6 +1396,8 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// Aggregation of metrics. Aggregated metric values will be shown in rows
     /// where the dimension_values are set to "RESERVED_(MetricAggregation)".
+    /// Aggregates including both comparisons and multiple date ranges will
+    /// be aggregated based on the date ranges.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1410,6 +1412,8 @@ namespace Google.Analytics.Data.V1Beta {
     private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.OrderBy> orderBys_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.OrderBy>();
     /// <summary>
     /// Specifies how rows are ordered in the response.
+    /// Requests including both comparisons and multiple date ranges will
+    /// have order bys applied on the comparisons.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1458,7 +1462,7 @@ namespace Google.Analytics.Data.V1Beta {
     /// removed by a filter.
     ///
     /// Regardless of this `keep_empty_rows` setting, only data recorded by the
-    /// Google Analytics (GA4) property can be displayed in a report.
+    /// Google Analytics property can be displayed in a report.
     ///
     /// For example if a property never logs a `purchase` event, then a query for
     /// the `eventName` dimension and  `eventCount` metric will not have a row
@@ -1477,8 +1481,8 @@ namespace Google.Analytics.Data.V1Beta {
     public const int ReturnPropertyQuotaFieldNumber = 14;
     private bool returnPropertyQuota_;
     /// <summary>
-    /// Toggles whether to return the current state of this Analytics Property's
-    /// quota. Quota is returned in [PropertyQuota](#PropertyQuota).
+    /// Toggles whether to return the current state of this Google Analytics
+    /// property's quota. Quota is returned in [PropertyQuota](#PropertyQuota).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2127,7 +2131,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyQuotaFieldNumber = 9;
     private global::Google.Analytics.Data.V1Beta.PropertyQuota propertyQuota_;
     /// <summary>
-    /// This Analytics Property's quota state including this request.
+    /// This Google Analytics property's quota state including this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2525,7 +2529,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyFieldNumber = 1;
     private string property_ = "";
     /// <summary>
-    /// A Google Analytics GA4 property identifier whose events are tracked.
+    /// A Google Analytics property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
     /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
@@ -2683,7 +2687,7 @@ namespace Google.Analytics.Data.V1Beta {
     /// removed by a filter.
     ///
     /// Regardless of this `keep_empty_rows` setting, only data recorded by the
-    /// Google Analytics (GA4) property can be displayed in a report.
+    /// Google Analytics property can be displayed in a report.
     ///
     /// For example if a property never logs a `purchase` event, then a query for
     /// the `eventName` dimension and  `eventCount` metric will not have a row
@@ -2702,8 +2706,8 @@ namespace Google.Analytics.Data.V1Beta {
     public const int ReturnPropertyQuotaFieldNumber = 11;
     private bool returnPropertyQuota_;
     /// <summary>
-    /// Toggles whether to return the current state of this Analytics Property's
-    /// quota. Quota is returned in [PropertyQuota](#PropertyQuota).
+    /// Toggles whether to return the current state of this Google Analytics
+    /// property's quota. Quota is returned in [PropertyQuota](#PropertyQuota).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3288,7 +3292,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyQuotaFieldNumber = 7;
     private global::Google.Analytics.Data.V1Beta.PropertyQuota propertyQuota_;
     /// <summary>
-    /// This Analytics Property's quota state including this request.
+    /// This Google Analytics property's quota state including this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3638,7 +3642,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyFieldNumber = 1;
     private string property_ = "";
     /// <summary>
-    /// A Google Analytics GA4 property identifier whose events are tracked.
+    /// A Google Analytics property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
     /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
@@ -4099,7 +4103,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyFieldNumber = 1;
     private string property_ = "";
     /// <summary>
-    /// A Google Analytics GA4 property identifier whose events are tracked.
+    /// A Google Analytics property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
     /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
@@ -4561,7 +4565,7 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// Required. The resource name of the metadata to retrieve. This name field is
     /// specified in the URL path and not URL parameters. Property is a numeric
-    /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+    /// Google Analytics property identifier. To learn more, see [where to find
     /// your Property
     /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
     ///
@@ -4774,7 +4778,7 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyFieldNumber = 1;
     private string property_ = "";
     /// <summary>
-    /// A Google Analytics GA4 property identifier whose events are tracked.
+    /// A Google Analytics property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
     /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
@@ -4905,8 +4909,9 @@ namespace Google.Analytics.Data.V1Beta {
     public const int ReturnPropertyQuotaFieldNumber = 9;
     private bool returnPropertyQuota_;
     /// <summary>
-    /// Toggles whether to return the current state of this Analytics Property's
-    /// Realtime quota. Quota is returned in [PropertyQuota](#PropertyQuota).
+    /// Toggles whether to return the current state of this Google Analytics
+    /// property's Realtime quota. Quota is returned in
+    /// [PropertyQuota](#PropertyQuota).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5419,7 +5424,8 @@ namespace Google.Analytics.Data.V1Beta {
     public const int PropertyQuotaFieldNumber = 8;
     private global::Google.Analytics.Data.V1Beta.PropertyQuota propertyQuota_;
     /// <summary>
-    /// This Analytics Property's Realtime quota state including this request.
+    /// This Google Analytics property's Realtime quota state including this
+    /// request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
