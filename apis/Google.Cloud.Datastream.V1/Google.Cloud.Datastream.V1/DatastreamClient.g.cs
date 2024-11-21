@@ -67,6 +67,8 @@ namespace Google.Cloud.Datastream.V1
             UpdateStreamOperationsSettings = existing.UpdateStreamOperationsSettings.Clone();
             DeleteStreamSettings = existing.DeleteStreamSettings;
             DeleteStreamOperationsSettings = existing.DeleteStreamOperationsSettings.Clone();
+            RunStreamSettings = existing.RunStreamSettings;
+            RunStreamOperationsSettings = existing.RunStreamOperationsSettings.Clone();
             GetStreamObjectSettings = existing.GetStreamObjectSettings;
             LookupStreamObjectSettings = existing.LookupStreamObjectSettings;
             ListStreamObjectsSettings = existing.ListStreamObjectsSettings;
@@ -359,6 +361,42 @@ namespace Google.Cloud.Datastream.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteStreamOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DatastreamClient.RunStream</c>
+        ///  and <c>DatastreamClient.RunStreamAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RunStreamSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatastreamClient.RunStream</c> and
+        /// <c>DatastreamClient.RunStreamAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RunStreamOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2217,6 +2255,62 @@ namespace Google.Cloud.Datastream.V1
             DeleteStreamAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Use this method to start, resume or recover a stream with a non default CDC
+        /// strategy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Stream, OperationMetadata> RunStream(RunStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Use this method to start, resume or recover a stream with a non default CDC
+        /// strategy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Stream, OperationMetadata>> RunStreamAsync(RunStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Use this method to start, resume or recover a stream with a non default CDC
+        /// strategy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Stream, OperationMetadata>> RunStreamAsync(RunStreamRequest request, st::CancellationToken cancellationToken) =>
+            RunStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RunStream</c>.</summary>
+        public virtual lro::OperationsClient RunStreamOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RunStream</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Stream, OperationMetadata> PollOnceRunStream(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Stream, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunStreamOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RunStream</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Stream, OperationMetadata>> PollOnceRunStreamAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Stream, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunStreamOperationsClient, callSettings);
+
+        /// <summary>
         /// Use this method to get details about a stream object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4058,6 +4152,8 @@ namespace Google.Cloud.Datastream.V1
 
         private readonly gaxgrpc::ApiCall<DeleteStreamRequest, lro::Operation> _callDeleteStream;
 
+        private readonly gaxgrpc::ApiCall<RunStreamRequest, lro::Operation> _callRunStream;
+
         private readonly gaxgrpc::ApiCall<GetStreamObjectRequest, StreamObject> _callGetStreamObject;
 
         private readonly gaxgrpc::ApiCall<LookupStreamObjectRequest, StreamObject> _callLookupStreamObject;
@@ -4107,6 +4203,7 @@ namespace Google.Cloud.Datastream.V1
             CreateStreamOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateStreamOperationsSettings, logger);
             UpdateStreamOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateStreamOperationsSettings, logger);
             DeleteStreamOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteStreamOperationsSettings, logger);
+            RunStreamOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunStreamOperationsSettings, logger);
             CreatePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePrivateConnectionOperationsSettings, logger);
             DeletePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePrivateConnectionOperationsSettings, logger);
             CreateRouteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRouteOperationsSettings, logger);
@@ -4146,6 +4243,9 @@ namespace Google.Cloud.Datastream.V1
             _callDeleteStream = clientHelper.BuildApiCall<DeleteStreamRequest, lro::Operation>("DeleteStream", grpcClient.DeleteStreamAsync, grpcClient.DeleteStream, effectiveSettings.DeleteStreamSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteStream);
             Modify_DeleteStreamApiCall(ref _callDeleteStream);
+            _callRunStream = clientHelper.BuildApiCall<RunStreamRequest, lro::Operation>("RunStream", grpcClient.RunStreamAsync, grpcClient.RunStream, effectiveSettings.RunStreamSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRunStream);
+            Modify_RunStreamApiCall(ref _callRunStream);
             _callGetStreamObject = clientHelper.BuildApiCall<GetStreamObjectRequest, StreamObject>("GetStreamObject", grpcClient.GetStreamObjectAsync, grpcClient.GetStreamObject, effectiveSettings.GetStreamObjectSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetStreamObject);
             Modify_GetStreamObjectApiCall(ref _callGetStreamObject);
@@ -4215,6 +4315,8 @@ namespace Google.Cloud.Datastream.V1
 
         partial void Modify_DeleteStreamApiCall(ref gaxgrpc::ApiCall<DeleteStreamRequest, lro::Operation> call);
 
+        partial void Modify_RunStreamApiCall(ref gaxgrpc::ApiCall<RunStreamRequest, lro::Operation> call);
+
         partial void Modify_GetStreamObjectApiCall(ref gaxgrpc::ApiCall<GetStreamObjectRequest, StreamObject> call);
 
         partial void Modify_LookupStreamObjectApiCall(ref gaxgrpc::ApiCall<LookupStreamObjectRequest, StreamObject> call);
@@ -4275,6 +4377,8 @@ namespace Google.Cloud.Datastream.V1
         partial void Modify_UpdateStreamRequest(ref UpdateStreamRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteStreamRequest(ref DeleteStreamRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunStreamRequest(ref RunStreamRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetStreamObjectRequest(ref GetStreamObjectRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4592,6 +4696,35 @@ namespace Google.Cloud.Datastream.V1
         {
             Modify_DeleteStreamRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteStream.Async(request, callSettings).ConfigureAwait(false), DeleteStreamOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RunStream</c>.</summary>
+        public override lro::OperationsClient RunStreamOperationsClient { get; }
+
+        /// <summary>
+        /// Use this method to start, resume or recover a stream with a non default CDC
+        /// strategy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Stream, OperationMetadata> RunStream(RunStreamRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunStreamRequest(ref request, ref callSettings);
+            return new lro::Operation<Stream, OperationMetadata>(_callRunStream.Sync(request, callSettings), RunStreamOperationsClient);
+        }
+
+        /// <summary>
+        /// Use this method to start, resume or recover a stream with a non default CDC
+        /// strategy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Stream, OperationMetadata>> RunStreamAsync(RunStreamRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunStreamRequest(ref request, ref callSettings);
+            return new lro::Operation<Stream, OperationMetadata>(await _callRunStream.Async(request, callSettings).ConfigureAwait(false), RunStreamOperationsClient);
         }
 
         /// <summary>

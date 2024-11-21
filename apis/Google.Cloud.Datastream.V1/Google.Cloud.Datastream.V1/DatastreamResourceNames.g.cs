@@ -140,6 +140,18 @@ namespace Google.Cloud.Datastream.V1
         }
     }
 
+    public partial class RunStreamRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::StreamName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::StreamName StreamName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::StreamName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetStreamObjectRequest
     {
         /// <summary>
