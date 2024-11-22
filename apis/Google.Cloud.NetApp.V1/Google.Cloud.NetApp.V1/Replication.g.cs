@@ -26,102 +26,127 @@ namespace Google.Cloud.NetApp.V1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvbmV0YXBwL3YxL3JlcGxpY2F0aW9uLnByb3RvEhZn",
             "b29nbGUuY2xvdWQubmV0YXBwLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
-            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
-            "ZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "ItQECg1UcmFuc2ZlclN0YXRzEhsKDnRyYW5zZmVyX2J5dGVzGAEgASgDSACI",
-            "AQESPwoXdG90YWxfdHJhbnNmZXJfZHVyYXRpb24YAiABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb25IAYgBARIgChNsYXN0X3RyYW5zZmVyX2J5dGVz",
-            "GAMgASgDSAKIAQESPgoWbGFzdF90cmFuc2Zlcl9kdXJhdGlvbhgEIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgDiAEBEjQKDGxhZ19kdXJhdGlv",
-            "bhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgEiAEBEjQKC3Vw",
-            "ZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgF",
-            "iAEBEj8KFmxhc3RfdHJhbnNmZXJfZW5kX3RpbWUYByABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wSAaIAQESIAoTbGFzdF90cmFuc2Zlcl9lcnJv",
-            "chgIIAEoCUgHiAEBQhEKD190cmFuc2Zlcl9ieXRlc0IaChhfdG90YWxfdHJh",
-            "bnNmZXJfZHVyYXRpb25CFgoUX2xhc3RfdHJhbnNmZXJfYnl0ZXNCGQoXX2xh",
-            "c3RfdHJhbnNmZXJfZHVyYXRpb25CDwoNX2xhZ19kdXJhdGlvbkIOCgxfdXBk",
-            "YXRlX3RpbWVCGQoXX2xhc3RfdHJhbnNmZXJfZW5kX3RpbWVCFgoUX2xhc3Rf",
-            "dHJhbnNmZXJfZXJyb3IiqAsKC1JlcGxpY2F0aW9uEhEKBG5hbWUYASABKAlC",
-            "A+BBCBI9CgVzdGF0ZRgCIAEoDjIpLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEu",
-            "UmVwbGljYXRpb24uU3RhdGVCA+BBAxIaCg1zdGF0ZV9kZXRhaWxzGAMgASgJ",
-            "QgPgQQMSRgoEcm9sZRgEIAEoDjIzLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEu",
-            "UmVwbGljYXRpb24uUmVwbGljYXRpb25Sb2xlQgPgQQMSWgoUcmVwbGljYXRp",
-            "b25fc2NoZWR1bGUYBSABKA4yNy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlJl",
-            "cGxpY2F0aW9uLlJlcGxpY2F0aW9uU2NoZWR1bGVCA+BBAhJKCgxtaXJyb3Jf",
-            "c3RhdGUYBiABKA4yLy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0",
-            "aW9uLk1pcnJvclN0YXRlQgPgQQMSGQoHaGVhbHRoeRgIIAEoCEID4EEDSACI",
-            "AQESNAoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSQAoSZGVzdGluYXRpb25fdm9sdW1lGAogASgJQiTgQQP6",
-            "QR4KHG5ldGFwcC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSQgoOdHJhbnNmZXJf",
-            "c3RhdHMYCyABKAsyJS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlRyYW5zZmVy",
-            "U3RhdHNCA+BBAxI/CgZsYWJlbHMYDCADKAsyLy5nb29nbGUuY2xvdWQubmV0",
-            "YXBwLnYxLlJlcGxpY2F0aW9uLkxhYmVsc0VudHJ5EhgKC2Rlc2NyaXB0aW9u",
-            "GA0gASgJSAGIAQESYgodZGVzdGluYXRpb25fdm9sdW1lX3BhcmFtZXRlcnMY",
-            "DiABKAsyMy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkRlc3RpbmF0aW9uVm9s",
-            "dW1lUGFyYW1ldGVyc0IG4EEE4EECEjsKDXNvdXJjZV92b2x1bWUYDyABKAlC",
-            "JOBBA/pBHgocbmV0YXBwLmdvb2dsZWFwaXMuY29tL1ZvbHVtZRotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIl4KBVN0",
-            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVS",
-            "RUFEWRACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJTkcQBRIJCgVFUlJPUhAG",
-            "IlAKD1JlcGxpY2F0aW9uUm9sZRIgChxSRVBMSUNBVElPTl9ST0xFX1VOU1BF",
-            "Q0lGSUVEEAASCgoGU09VUkNFEAESDwoLREVTVElOQVRJT04QAiJoChNSZXBs",
-            "aWNhdGlvblNjaGVkdWxlEiQKIFJFUExJQ0FUSU9OX1NDSEVEVUxFX1VOU1BF",
-            "Q0lGSUVEEAASFAoQRVZFUllfMTBfTUlOVVRFUxABEgoKBkhPVVJMWRACEgkK",
-            "BURBSUxZEAMiZwoLTWlycm9yU3RhdGUSHAoYTUlSUk9SX1NUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASDQoJUFJFUEFSSU5HEAESDAoITUlSUk9SRUQQAhILCgdTVE9Q",
-            "UEVEEAMSEAoMVFJBTlNGRVJSSU5HEAQ6lwHqQZMBCiFuZXRhcHAuZ29vZ2xl",
-            "YXBpcy5jb20vUmVwbGljYXRpb24SU3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS92b2x1bWVzL3t2b2x1bWV9L3JlcGxpY2F0aW9u",
-            "cy97cmVwbGljYXRpb259KgxyZXBsaWNhdGlvbnMyC3JlcGxpY2F0aW9uQgoK",
-            "CF9oZWFsdGh5Qg4KDF9kZXNjcmlwdGlvbiKdAQoXTGlzdFJlcGxpY2F0aW9u",
-            "c1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMSIW5ldGFwcC5nb29n",
-            "bGVhcGlzLmNvbS9SZXBsaWNhdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoK",
-            "cGFnZV90b2tlbhgDIAEoCRIQCghvcmRlcl9ieRgEIAEoCRIOCgZmaWx0ZXIY",
-            "BSABKAkigwEKGExpc3RSZXBsaWNhdGlvbnNSZXNwb25zZRI5CgxyZXBsaWNh",
-            "dGlvbnMYASADKAsyIy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0",
-            "aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgD",
-            "IAMoCSJQChVHZXRSZXBsaWNhdGlvblJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp",
-            "4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGljYXRpb24irwEK",
-            "G0Rlc3RpbmF0aW9uVm9sdW1lUGFyYW1ldGVycxI/CgxzdG9yYWdlX3Bvb2wY",
-            "ASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2dsZWFwaXMuY29tL1N0b3JhZ2VQ",
-            "b29sEhEKCXZvbHVtZV9pZBgCIAEoCRISCgpzaGFyZV9uYW1lGAMgASgJEhgK",
-            "C2Rlc2NyaXB0aW9uGAQgASgJSACIAQFCDgoMX2Rlc2NyaXB0aW9uIrEBChhD",
-            "cmVhdGVSZXBsaWNhdGlvblJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6",
-            "QSMSIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbhI9CgtyZXBs",
-            "aWNhdGlvbhgCIAEoCzIjLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuUmVwbGlj",
-            "YXRpb25CA+BBAhIbCg5yZXBsaWNhdGlvbl9pZBgDIAEoCUID4EECIlMKGERl",
-            "bGV0ZVJlcGxpY2F0aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMK",
-            "IW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbiKPAQoYVXBkYXRl",
-            "UmVwbGljYXRpb25SZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEj0KC3JlcGxpY2F0aW9uGAIg",
-            "ASgLMiMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlvbkID4EEC",
-            "ImAKFlN0b3BSZXBsaWNhdGlvblJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC",
-            "+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGljYXRpb24SDQoFZm9y",
-            "Y2UYAiABKAgiUwoYUmVzdW1lUmVwbGljYXRpb25SZXF1ZXN0EjcKBG5hbWUY",
-            "ASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2dsZWFwaXMuY29tL1JlcGxpY2F0",
-            "aW9uIl0KIlJldmVyc2VSZXBsaWNhdGlvbkRpcmVjdGlvblJlcXVlc3QSNwoE",
-            "bmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVw",
-            "bGljYXRpb25CsgEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQhBSZXBs",
-            "aWNhdGlvblByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2Fw",
-            "aXYxL25ldGFwcHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5W",
-            "McoCFkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpO",
-            "ZXRBcHA6OlYxYgZwcm90bzM="));
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUv",
+            "Y2xvdWQvbmV0YXBwL3YxL3ZvbHVtZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
+            "L2R1cmF0aW9uLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5w",
+            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLUBAoNVHJh",
+            "bnNmZXJTdGF0cxIbCg50cmFuc2Zlcl9ieXRlcxgBIAEoA0gAiAEBEj8KF3Rv",
+            "dGFsX3RyYW5zZmVyX2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uSAGIAQESIAoTbGFzdF90cmFuc2Zlcl9ieXRlcxgDIAEoA0gC",
+            "iAEBEj4KFmxhc3RfdHJhbnNmZXJfZHVyYXRpb24YBCABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25IA4gBARI0CgxsYWdfZHVyYXRpb24YBSABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IBIgBARI0Cgt1cGRhdGVfdGlt",
+            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBYgBARI/ChZs",
+            "YXN0X3RyYW5zZmVyX2VuZF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEgGiAEBEiAKE2xhc3RfdHJhbnNmZXJfZXJyb3IYCCABKAlI",
+            "B4gBAUIRCg9fdHJhbnNmZXJfYnl0ZXNCGgoYX3RvdGFsX3RyYW5zZmVyX2R1",
+            "cmF0aW9uQhYKFF9sYXN0X3RyYW5zZmVyX2J5dGVzQhkKF19sYXN0X3RyYW5z",
+            "ZmVyX2R1cmF0aW9uQg8KDV9sYWdfZHVyYXRpb25CDgoMX3VwZGF0ZV90aW1l",
+            "QhkKF19sYXN0X3RyYW5zZmVyX2VuZF90aW1lQhYKFF9sYXN0X3RyYW5zZmVy",
+            "X2Vycm9yIsgOCgtSZXBsaWNhdGlvbhIRCgRuYW1lGAEgASgJQgPgQQgSPQoF",
+            "c3RhdGUYAiABKA4yKS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0",
+            "aW9uLlN0YXRlQgPgQQMSGgoNc3RhdGVfZGV0YWlscxgDIAEoCUID4EEDEkYK",
+            "BHJvbGUYBCABKA4yMy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0",
+            "aW9uLlJlcGxpY2F0aW9uUm9sZUID4EEDEloKFHJlcGxpY2F0aW9uX3NjaGVk",
+            "dWxlGAUgASgOMjcuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlv",
+            "bi5SZXBsaWNhdGlvblNjaGVkdWxlQgPgQQISSgoMbWlycm9yX3N0YXRlGAYg",
+            "ASgOMi8uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlvbi5NaXJy",
+            "b3JTdGF0ZUID4EEDEhkKB2hlYWx0aHkYCCABKAhCA+BBA0gAiAEBEjQKC2Ny",
+            "ZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEkAKEmRlc3RpbmF0aW9uX3ZvbHVtZRgKIAEoCUIk4EED+kEeChxuZXRh",
+            "cHAuZ29vZ2xlYXBpcy5jb20vVm9sdW1lEkIKDnRyYW5zZmVyX3N0YXRzGAsg",
+            "ASgLMiUuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5UcmFuc2ZlclN0YXRzQgPg",
+            "QQMSPwoGbGFiZWxzGAwgAygLMi8uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5S",
+            "ZXBsaWNhdGlvbi5MYWJlbHNFbnRyeRIYCgtkZXNjcmlwdGlvbhgNIAEoCUgB",
+            "iAEBEmIKHWRlc3RpbmF0aW9uX3ZvbHVtZV9wYXJhbWV0ZXJzGA4gASgLMjMu",
+            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MS5EZXN0aW5hdGlvblZvbHVtZVBhcmFt",
+            "ZXRlcnNCBuBBBOBBAhI7Cg1zb3VyY2Vfdm9sdW1lGA8gASgJQiTgQQP6QR4K",
+            "HG5ldGFwcC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSUQoWaHlicmlkX3BlZXJp",
+            "bmdfZGV0YWlscxgQIAEoCzIsLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuSHli",
+            "cmlkUGVlcmluZ0RldGFpbHNCA+BBAxIdChBjbHVzdGVyX2xvY2F0aW9uGBIg",
+            "ASgJQgPgQQESXwoXaHlicmlkX3JlcGxpY2F0aW9uX3R5cGUYEyABKA4yOS5n",
+            "b29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0aW9uLkh5YnJpZFJlcGxp",
+            "Y2F0aW9uVHlwZUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEilAEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFUSU5HEAMS",
+            "DAoIREVMRVRJTkcQBRIJCgVFUlJPUhAGEhsKF1BFTkRJTkdfQ0xVU1RFUl9Q",
+            "RUVSSU5HEAgSFwoTUEVORElOR19TVk1fUEVFUklORxAJIlAKD1JlcGxpY2F0",
+            "aW9uUm9sZRIgChxSRVBMSUNBVElPTl9ST0xFX1VOU1BFQ0lGSUVEEAASCgoG",
+            "U09VUkNFEAESDwoLREVTVElOQVRJT04QAiJoChNSZXBsaWNhdGlvblNjaGVk",
+            "dWxlEiQKIFJFUExJQ0FUSU9OX1NDSEVEVUxFX1VOU1BFQ0lGSUVEEAASFAoQ",
+            "RVZFUllfMTBfTUlOVVRFUxABEgoKBkhPVVJMWRACEgkKBURBSUxZEAMijwEK",
+            "C01pcnJvclN0YXRlEhwKGE1JUlJPUl9TVEFURV9VTlNQRUNJRklFRBAAEg0K",
+            "CVBSRVBBUklORxABEgwKCE1JUlJPUkVEEAISCwoHU1RPUFBFRBADEhAKDFRS",
+            "QU5TRkVSUklORxAEEhkKFUJBU0VMSU5FX1RSQU5TRkVSUklORxAFEgsKB0FC",
+            "T1JURUQQBiJrChVIeWJyaWRSZXBsaWNhdGlvblR5cGUSJwojSFlCUklEX1JF",
+            "UExJQ0FUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABINCglNSUdSQVRJT04QARIa",
+            "ChZDT05USU5VT1VTX1JFUExJQ0FUSU9OEAI6lwHqQZMBCiFuZXRhcHAuZ29v",
+            "Z2xlYXBpcy5jb20vUmVwbGljYXRpb24SU3Byb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS92b2x1bWVzL3t2b2x1bWV9L3JlcGxpY2F0",
+            "aW9ucy97cmVwbGljYXRpb259KgxyZXBsaWNhdGlvbnMyC3JlcGxpY2F0aW9u",
+            "QgoKCF9oZWFsdGh5Qg4KDF9kZXNjcmlwdGlvbiKbAQoUSHlicmlkUGVlcmlu",
+            "Z0RldGFpbHMSFgoJc3VibmV0X2lwGAEgASgJQgPgQQESFAoHY29tbWFuZBgC",
+            "IAEoCUID4EEBEjwKE2NvbW1hbmRfZXhwaXJ5X3RpbWUYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESFwoKcGFzc3BocmFzZRgEIAEo",
+            "CUID4EEBIp0BChdMaXN0UmVwbGljYXRpb25zUmVxdWVzdBI5CgZwYXJlbnQY",
+            "ASABKAlCKeBBAvpBIxIhbmV0YXBwLmdvb2dsZWFwaXMuY29tL1JlcGxpY2F0",
+            "aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhAK",
+            "CG9yZGVyX2J5GAQgASgJEg4KBmZpbHRlchgFIAEoCSKDAQoYTGlzdFJlcGxp",
+            "Y2F0aW9uc1Jlc3BvbnNlEjkKDHJlcGxpY2F0aW9ucxgBIAMoCzIjLmdvb2ds",
+            "ZS5jbG91ZC5uZXRhcHAudjEuUmVwbGljYXRpb24SFwoPbmV4dF9wYWdlX3Rv",
+            "a2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIlAKFUdldFJlcGxpY2F0",
+            "aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29n",
+            "bGVhcGlzLmNvbS9SZXBsaWNhdGlvbiKLAgobRGVzdGluYXRpb25Wb2x1bWVQ",
+            "YXJhbWV0ZXJzEj8KDHN0b3JhZ2VfcG9vbBgBIAEoCUIp4EEC+kEjCiFuZXRh",
+            "cHAuZ29vZ2xlYXBpcy5jb20vU3RvcmFnZVBvb2wSEQoJdm9sdW1lX2lkGAIg",
+            "ASgJEhIKCnNoYXJlX25hbWUYAyABKAkSGAoLZGVzY3JpcHRpb24YBCABKAlI",
+            "AIgBARJHCg50aWVyaW5nX3BvbGljeRgFIAEoCzIlLmdvb2dsZS5jbG91ZC5u",
+            "ZXRhcHAudjEuVGllcmluZ1BvbGljeUID4EEBSAGIAQFCDgoMX2Rlc2NyaXB0",
+            "aW9uQhEKD190aWVyaW5nX3BvbGljeSKxAQoYQ3JlYXRlUmVwbGljYXRpb25S",
+            "ZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjEiFuZXRhcHAuZ29vZ2xl",
+            "YXBpcy5jb20vUmVwbGljYXRpb24SPQoLcmVwbGljYXRpb24YAiABKAsyIy5n",
+            "b29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0aW9uQgPgQQISGwoOcmVw",
+            "bGljYXRpb25faWQYAyABKAlCA+BBAiJTChhEZWxldGVSZXBsaWNhdGlvblJl",
+            "cXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBp",
+            "cy5jb20vUmVwbGljYXRpb24ijwEKGFVwZGF0ZVJlcGxpY2F0aW9uUmVxdWVz",
+            "dBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2tCA+BBAhI9CgtyZXBsaWNhdGlvbhgCIAEoCzIjLmdvb2dsZS5jbG91",
+            "ZC5uZXRhcHAudjEuUmVwbGljYXRpb25CA+BBAiJgChZTdG9wUmVwbGljYXRp",
+            "b25SZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2ds",
+            "ZWFwaXMuY29tL1JlcGxpY2F0aW9uEg0KBWZvcmNlGAIgASgIIlMKGFJlc3Vt",
+            "ZVJlcGxpY2F0aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5l",
+            "dGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbiJdCiJSZXZlcnNlUmVw",
+            "bGljYXRpb25EaXJlY3Rpb25SZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpB",
+            "IwohbmV0YXBwLmdvb2dsZWFwaXMuY29tL1JlcGxpY2F0aW9uIs0BChdFc3Rh",
+            "Ymxpc2hQZWVyaW5nUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5l",
+            "dGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbhIeChFwZWVyX2NsdXN0",
+            "ZXJfbmFtZRgCIAEoCUID4EECEhoKDXBlZXJfc3ZtX25hbWUYAyABKAlCA+BB",
+            "AhIeChFwZWVyX2lwX2FkZHJlc3NlcxgEIAMoCUID4EEBEh0KEHBlZXJfdm9s",
+            "dW1lX25hbWUYBSABKAlCA+BBAiJRChZTeW5jUmVwbGljYXRpb25SZXF1ZXN0",
+            "EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2dsZWFwaXMuY29t",
+            "L1JlcGxpY2F0aW9uQrIBChpjb20uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MUIQ",
+            "UmVwbGljYXRpb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFw",
+            "cC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRB",
+            "cHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91",
+            "ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.TransferStats), global::Google.Cloud.NetApp.V1.TransferStats.Parser, new[]{ "TransferBytes", "TotalTransferDuration", "LastTransferBytes", "LastTransferDuration", "LagDuration", "UpdateTime", "LastTransferEndTime", "LastTransferError" }, new[]{ "TransferBytes", "TotalTransferDuration", "LastTransferBytes", "LastTransferDuration", "LagDuration", "UpdateTime", "LastTransferEndTime", "LastTransferError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Replication), global::Google.Cloud.NetApp.V1.Replication.Parser, new[]{ "Name", "State", "StateDetails", "Role", "ReplicationSchedule", "MirrorState", "Healthy", "CreateTime", "DestinationVolume", "TransferStats", "Labels", "Description", "DestinationVolumeParameters", "SourceVolume" }, new[]{ "Healthy", "Description" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Replication.Types.State), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationRole), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.MirrorState) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Replication), global::Google.Cloud.NetApp.V1.Replication.Parser, new[]{ "Name", "State", "StateDetails", "Role", "ReplicationSchedule", "MirrorState", "Healthy", "CreateTime", "DestinationVolume", "TransferStats", "Labels", "Description", "DestinationVolumeParameters", "SourceVolume", "HybridPeeringDetails", "ClusterLocation", "HybridReplicationType" }, new[]{ "Healthy", "Description" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Replication.Types.State), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationRole), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.MirrorState), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.HybridPeeringDetails), global::Google.Cloud.NetApp.V1.HybridPeeringDetails.Parser, new[]{ "SubnetIp", "Command", "CommandExpiryTime", "Passphrase" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListReplicationsRequest), global::Google.Cloud.NetApp.V1.ListReplicationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListReplicationsResponse), global::Google.Cloud.NetApp.V1.ListReplicationsResponse.Parser, new[]{ "Replications", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.GetReplicationRequest), global::Google.Cloud.NetApp.V1.GetReplicationRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DestinationVolumeParameters), global::Google.Cloud.NetApp.V1.DestinationVolumeParameters.Parser, new[]{ "StoragePool", "VolumeId", "ShareName", "Description" }, new[]{ "Description" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DestinationVolumeParameters), global::Google.Cloud.NetApp.V1.DestinationVolumeParameters.Parser, new[]{ "StoragePool", "VolumeId", "ShareName", "Description", "TieringPolicy" }, new[]{ "Description", "TieringPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.CreateReplicationRequest), global::Google.Cloud.NetApp.V1.CreateReplicationRequest.Parser, new[]{ "Parent", "Replication", "ReplicationId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteReplicationRequest), global::Google.Cloud.NetApp.V1.DeleteReplicationRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateReplicationRequest), global::Google.Cloud.NetApp.V1.UpdateReplicationRequest.Parser, new[]{ "UpdateMask", "Replication" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StopReplicationRequest), global::Google.Cloud.NetApp.V1.StopReplicationRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ResumeReplicationRequest), global::Google.Cloud.NetApp.V1.ResumeReplicationRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest), global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest), global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.EstablishPeeringRequest), global::Google.Cloud.NetApp.V1.EstablishPeeringRequest.Parser, new[]{ "Name", "PeerClusterName", "PeerSvmName", "PeerIpAddresses", "PeerVolumeName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SyncReplicationRequest), global::Google.Cloud.NetApp.V1.SyncReplicationRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -753,6 +778,9 @@ namespace Google.Cloud.NetApp.V1 {
       description_ = other.description_;
       destinationVolumeParameters_ = other.destinationVolumeParameters_ != null ? other.destinationVolumeParameters_.Clone() : null;
       sourceVolume_ = other.sourceVolume_;
+      hybridPeeringDetails_ = other.hybridPeeringDetails_ != null ? other.hybridPeeringDetails_.Clone() : null;
+      clusterLocation_ = other.clusterLocation_;
+      hybridReplicationType_ = other.hybridReplicationType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1008,6 +1036,51 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "hybrid_peering_details" field.</summary>
+    public const int HybridPeeringDetailsFieldNumber = 16;
+    private global::Google.Cloud.NetApp.V1.HybridPeeringDetails hybridPeeringDetails_;
+    /// <summary>
+    /// Output only. Hybrid peering details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.HybridPeeringDetails HybridPeeringDetails {
+      get { return hybridPeeringDetails_; }
+      set {
+        hybridPeeringDetails_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cluster_location" field.</summary>
+    public const int ClusterLocationFieldNumber = 18;
+    private string clusterLocation_ = "";
+    /// <summary>
+    /// Optional. Location of the user cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClusterLocation {
+      get { return clusterLocation_; }
+      set {
+        clusterLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "hybrid_replication_type" field.</summary>
+    public const int HybridReplicationTypeFieldNumber = 19;
+    private global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType hybridReplicationType_ = global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified;
+    /// <summary>
+    /// Output only. Type of the hybrid replication.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType HybridReplicationType {
+      get { return hybridReplicationType_; }
+      set {
+        hybridReplicationType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1037,6 +1110,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (Description != other.Description) return false;
       if (!object.Equals(DestinationVolumeParameters, other.DestinationVolumeParameters)) return false;
       if (SourceVolume != other.SourceVolume) return false;
+      if (!object.Equals(HybridPeeringDetails, other.HybridPeeringDetails)) return false;
+      if (ClusterLocation != other.ClusterLocation) return false;
+      if (HybridReplicationType != other.HybridReplicationType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1058,6 +1134,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (HasDescription) hash ^= Description.GetHashCode();
       if (destinationVolumeParameters_ != null) hash ^= DestinationVolumeParameters.GetHashCode();
       if (SourceVolume.Length != 0) hash ^= SourceVolume.GetHashCode();
+      if (hybridPeeringDetails_ != null) hash ^= HybridPeeringDetails.GetHashCode();
+      if (ClusterLocation.Length != 0) hash ^= ClusterLocation.GetHashCode();
+      if (HybridReplicationType != global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified) hash ^= HybridReplicationType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1129,6 +1208,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(122);
         output.WriteString(SourceVolume);
       }
+      if (hybridPeeringDetails_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(HybridPeeringDetails);
+      }
+      if (ClusterLocation.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(ClusterLocation);
+      }
+      if (HybridReplicationType != global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) HybridReplicationType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1192,6 +1283,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(122);
         output.WriteString(SourceVolume);
       }
+      if (hybridPeeringDetails_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(HybridPeeringDetails);
+      }
+      if (ClusterLocation.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(ClusterLocation);
+      }
+      if (HybridReplicationType != global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) HybridReplicationType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1241,6 +1344,15 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (SourceVolume.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceVolume);
+      }
+      if (hybridPeeringDetails_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HybridPeeringDetails);
+      }
+      if (ClusterLocation.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ClusterLocation);
+      }
+      if (HybridReplicationType != global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) HybridReplicationType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1302,6 +1414,18 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.SourceVolume.Length != 0) {
         SourceVolume = other.SourceVolume;
+      }
+      if (other.hybridPeeringDetails_ != null) {
+        if (hybridPeeringDetails_ == null) {
+          HybridPeeringDetails = new global::Google.Cloud.NetApp.V1.HybridPeeringDetails();
+        }
+        HybridPeeringDetails.MergeFrom(other.HybridPeeringDetails);
+      }
+      if (other.ClusterLocation.Length != 0) {
+        ClusterLocation = other.ClusterLocation;
+      }
+      if (other.HybridReplicationType != global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified) {
+        HybridReplicationType = other.HybridReplicationType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1381,6 +1505,21 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 122: {
             SourceVolume = input.ReadString();
+            break;
+          }
+          case 130: {
+            if (hybridPeeringDetails_ == null) {
+              HybridPeeringDetails = new global::Google.Cloud.NetApp.V1.HybridPeeringDetails();
+            }
+            input.ReadMessage(HybridPeeringDetails);
+            break;
+          }
+          case 146: {
+            ClusterLocation = input.ReadString();
+            break;
+          }
+          case 152: {
+            HybridReplicationType = (global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType) input.ReadEnum();
             break;
           }
         }
@@ -1463,6 +1602,21 @@ namespace Google.Cloud.NetApp.V1 {
             SourceVolume = input.ReadString();
             break;
           }
+          case 130: {
+            if (hybridPeeringDetails_ == null) {
+              HybridPeeringDetails = new global::Google.Cloud.NetApp.V1.HybridPeeringDetails();
+            }
+            input.ReadMessage(HybridPeeringDetails);
+            break;
+          }
+          case 146: {
+            ClusterLocation = input.ReadString();
+            break;
+          }
+          case 152: {
+            HybridReplicationType = (global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1502,6 +1656,14 @@ namespace Google.Cloud.NetApp.V1 {
         /// Replication is in error state.
         /// </summary>
         [pbr::OriginalName("ERROR")] Error = 6,
+        /// <summary>
+        /// Replication is waiting for cluster peering to be established.
+        /// </summary>
+        [pbr::OriginalName("PENDING_CLUSTER_PEERING")] PendingClusterPeering = 8,
+        /// <summary>
+        /// Replication is waiting for SVM peering to be established.
+        /// </summary>
+        [pbr::OriginalName("PENDING_SVM_PEERING")] PendingSvmPeering = 9,
       }
 
       /// <summary>
@@ -1573,10 +1735,363 @@ namespace Google.Cloud.NetApp.V1 {
         /// Incremental replication is in progress.
         /// </summary>
         [pbr::OriginalName("TRANSFERRING")] Transferring = 4,
+        /// <summary>
+        /// Baseline replication is in progress.
+        /// </summary>
+        [pbr::OriginalName("BASELINE_TRANSFERRING")] BaselineTransferring = 5,
+        /// <summary>
+        /// Replication is aborted.
+        /// </summary>
+        [pbr::OriginalName("ABORTED")] Aborted = 6,
+      }
+
+      /// <summary>
+      /// Hybrid replication type.
+      /// </summary>
+      public enum HybridReplicationType {
+        /// <summary>
+        /// Unspecified hybrid replication type.
+        /// </summary>
+        [pbr::OriginalName("HYBRID_REPLICATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Hybrid replication type for migration.
+        /// </summary>
+        [pbr::OriginalName("MIGRATION")] Migration = 1,
+        /// <summary>
+        /// Hybrid replication type for continuous replication.
+        /// </summary>
+        [pbr::OriginalName("CONTINUOUS_REPLICATION")] ContinuousReplication = 2,
       }
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// HybridPeeringDetails contains details about the hybrid peering.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class HybridPeeringDetails : pb::IMessage<HybridPeeringDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<HybridPeeringDetails> _parser = new pb::MessageParser<HybridPeeringDetails>(() => new HybridPeeringDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<HybridPeeringDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HybridPeeringDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HybridPeeringDetails(HybridPeeringDetails other) : this() {
+      subnetIp_ = other.subnetIp_;
+      command_ = other.command_;
+      commandExpiryTime_ = other.commandExpiryTime_ != null ? other.commandExpiryTime_.Clone() : null;
+      passphrase_ = other.passphrase_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HybridPeeringDetails Clone() {
+      return new HybridPeeringDetails(this);
+    }
+
+    /// <summary>Field number for the "subnet_ip" field.</summary>
+    public const int SubnetIpFieldNumber = 1;
+    private string subnetIp_ = "";
+    /// <summary>
+    /// Optional. IP address of the subnet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SubnetIp {
+      get { return subnetIp_; }
+      set {
+        subnetIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "command" field.</summary>
+    public const int CommandFieldNumber = 2;
+    private string command_ = "";
+    /// <summary>
+    /// Optional. Copy-paste-able commands to be used on user's ONTAP to accept
+    /// peering requests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Command {
+      get { return command_; }
+      set {
+        command_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "command_expiry_time" field.</summary>
+    public const int CommandExpiryTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp commandExpiryTime_;
+    /// <summary>
+    /// Optional. Expiration time for the peering command to be executed on user's
+    /// ONTAP.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CommandExpiryTime {
+      get { return commandExpiryTime_; }
+      set {
+        commandExpiryTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "passphrase" field.</summary>
+    public const int PassphraseFieldNumber = 4;
+    private string passphrase_ = "";
+    /// <summary>
+    /// Optional. Temporary passphrase generated to accept cluster peering command.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Passphrase {
+      get { return passphrase_; }
+      set {
+        passphrase_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as HybridPeeringDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(HybridPeeringDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SubnetIp != other.SubnetIp) return false;
+      if (Command != other.Command) return false;
+      if (!object.Equals(CommandExpiryTime, other.CommandExpiryTime)) return false;
+      if (Passphrase != other.Passphrase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SubnetIp.Length != 0) hash ^= SubnetIp.GetHashCode();
+      if (Command.Length != 0) hash ^= Command.GetHashCode();
+      if (commandExpiryTime_ != null) hash ^= CommandExpiryTime.GetHashCode();
+      if (Passphrase.Length != 0) hash ^= Passphrase.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SubnetIp.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SubnetIp);
+      }
+      if (Command.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Command);
+      }
+      if (commandExpiryTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CommandExpiryTime);
+      }
+      if (Passphrase.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Passphrase);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SubnetIp.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SubnetIp);
+      }
+      if (Command.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Command);
+      }
+      if (commandExpiryTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CommandExpiryTime);
+      }
+      if (Passphrase.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Passphrase);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SubnetIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SubnetIp);
+      }
+      if (Command.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Command);
+      }
+      if (commandExpiryTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommandExpiryTime);
+      }
+      if (Passphrase.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Passphrase);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(HybridPeeringDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SubnetIp.Length != 0) {
+        SubnetIp = other.SubnetIp;
+      }
+      if (other.Command.Length != 0) {
+        Command = other.Command;
+      }
+      if (other.commandExpiryTime_ != null) {
+        if (commandExpiryTime_ == null) {
+          CommandExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CommandExpiryTime.MergeFrom(other.CommandExpiryTime);
+      }
+      if (other.Passphrase.Length != 0) {
+        Passphrase = other.Passphrase;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SubnetIp = input.ReadString();
+            break;
+          }
+          case 18: {
+            Command = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (commandExpiryTime_ == null) {
+              CommandExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CommandExpiryTime);
+            break;
+          }
+          case 34: {
+            Passphrase = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SubnetIp = input.ReadString();
+            break;
+          }
+          case 18: {
+            Command = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (commandExpiryTime_ == null) {
+              CommandExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CommandExpiryTime);
+            break;
+          }
+          case 34: {
+            Passphrase = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1598,7 +2113,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1957,7 +2472,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2212,7 +2727,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2410,7 +2925,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2434,6 +2949,7 @@ namespace Google.Cloud.NetApp.V1 {
       volumeId_ = other.volumeId_;
       shareName_ = other.shareName_;
       description_ = other.description_;
+      tieringPolicy_ = other.tieringPolicy_ != null ? other.tieringPolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2521,6 +3037,21 @@ namespace Google.Cloud.NetApp.V1 {
       description_ = null;
     }
 
+    /// <summary>Field number for the "tiering_policy" field.</summary>
+    public const int TieringPolicyFieldNumber = 5;
+    private global::Google.Cloud.NetApp.V1.TieringPolicy tieringPolicy_;
+    /// <summary>
+    /// Optional. Tiering policy for the volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.TieringPolicy TieringPolicy {
+      get { return tieringPolicy_; }
+      set {
+        tieringPolicy_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2540,6 +3071,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (VolumeId != other.VolumeId) return false;
       if (ShareName != other.ShareName) return false;
       if (Description != other.Description) return false;
+      if (!object.Equals(TieringPolicy, other.TieringPolicy)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2551,6 +3083,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (VolumeId.Length != 0) hash ^= VolumeId.GetHashCode();
       if (ShareName.Length != 0) hash ^= ShareName.GetHashCode();
       if (HasDescription) hash ^= Description.GetHashCode();
+      if (tieringPolicy_ != null) hash ^= TieringPolicy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2585,6 +3118,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(34);
         output.WriteString(Description);
       }
+      if (tieringPolicy_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TieringPolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2611,6 +3148,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(34);
         output.WriteString(Description);
       }
+      if (tieringPolicy_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TieringPolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2632,6 +3173,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HasDescription) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (tieringPolicy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TieringPolicy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2656,6 +3200,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasDescription) {
         Description = other.Description;
+      }
+      if (other.tieringPolicy_ != null) {
+        if (tieringPolicy_ == null) {
+          TieringPolicy = new global::Google.Cloud.NetApp.V1.TieringPolicy();
+        }
+        TieringPolicy.MergeFrom(other.TieringPolicy);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2686,6 +3236,13 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 34: {
             Description = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (tieringPolicy_ == null) {
+              TieringPolicy = new global::Google.Cloud.NetApp.V1.TieringPolicy();
+            }
+            input.ReadMessage(TieringPolicy);
             break;
           }
         }
@@ -2719,6 +3276,13 @@ namespace Google.Cloud.NetApp.V1 {
             Description = input.ReadString();
             break;
           }
+          case 42: {
+            if (tieringPolicy_ == null) {
+              TieringPolicy = new global::Google.Cloud.NetApp.V1.TieringPolicy();
+            }
+            input.ReadMessage(TieringPolicy);
+            break;
+          }
         }
       }
     }
@@ -2744,7 +3308,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2812,9 +3376,9 @@ namespace Google.Cloud.NetApp.V1 {
     private string replicationId_ = "";
     /// <summary>
     /// Required. ID of the replication to create. Must be unique within the parent
-    /// resource. Must contain only letters, numbers, underscore and hyphen, with
-    /// the first character a letter or underscore, the last a letter or underscore
-    /// or a number, and a 63 character maximum.
+    /// resource. Must contain only letters, numbers and hyphen, with the first
+    /// character a letter, the last a letter or a
+    /// number, and a 63 character maximum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3033,7 +3597,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3230,7 +3794,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3485,7 +4049,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3727,7 +4291,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3925,7 +4489,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4053,6 +4617,553 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ReverseReplicationDirectionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// EstablishPeeringRequest establishes cluster and svm peerings between the
+  /// source and the destination replications.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EstablishPeeringRequest : pb::IMessage<EstablishPeeringRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EstablishPeeringRequest> _parser = new pb::MessageParser<EstablishPeeringRequest>(() => new EstablishPeeringRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EstablishPeeringRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EstablishPeeringRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EstablishPeeringRequest(EstablishPeeringRequest other) : this() {
+      name_ = other.name_;
+      peerClusterName_ = other.peerClusterName_;
+      peerSvmName_ = other.peerSvmName_;
+      peerIpAddresses_ = other.peerIpAddresses_.Clone();
+      peerVolumeName_ = other.peerVolumeName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EstablishPeeringRequest Clone() {
+      return new EstablishPeeringRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the replication, in the format of
+    /// projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_id}.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "peer_cluster_name" field.</summary>
+    public const int PeerClusterNameFieldNumber = 2;
+    private string peerClusterName_ = "";
+    /// <summary>
+    /// Required. Name of the user's local source cluster to be peered with the
+    /// destination cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerClusterName {
+      get { return peerClusterName_; }
+      set {
+        peerClusterName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "peer_svm_name" field.</summary>
+    public const int PeerSvmNameFieldNumber = 3;
+    private string peerSvmName_ = "";
+    /// <summary>
+    /// Required. Name of the user's local source vserver svm to be peered with the
+    /// destination vserver svm.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerSvmName {
+      get { return peerSvmName_; }
+      set {
+        peerSvmName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "peer_ip_addresses" field.</summary>
+    public const int PeerIpAddressesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_peerIpAddresses_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> peerIpAddresses_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. List of IPv4 ip addresses to be used for peering.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> PeerIpAddresses {
+      get { return peerIpAddresses_; }
+    }
+
+    /// <summary>Field number for the "peer_volume_name" field.</summary>
+    public const int PeerVolumeNameFieldNumber = 5;
+    private string peerVolumeName_ = "";
+    /// <summary>
+    /// Required. Name of the user's local source volume to be peered with the
+    /// destination volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerVolumeName {
+      get { return peerVolumeName_; }
+      set {
+        peerVolumeName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EstablishPeeringRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EstablishPeeringRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (PeerClusterName != other.PeerClusterName) return false;
+      if (PeerSvmName != other.PeerSvmName) return false;
+      if(!peerIpAddresses_.Equals(other.peerIpAddresses_)) return false;
+      if (PeerVolumeName != other.PeerVolumeName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (PeerClusterName.Length != 0) hash ^= PeerClusterName.GetHashCode();
+      if (PeerSvmName.Length != 0) hash ^= PeerSvmName.GetHashCode();
+      hash ^= peerIpAddresses_.GetHashCode();
+      if (PeerVolumeName.Length != 0) hash ^= PeerVolumeName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (PeerClusterName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PeerClusterName);
+      }
+      if (PeerSvmName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PeerSvmName);
+      }
+      peerIpAddresses_.WriteTo(output, _repeated_peerIpAddresses_codec);
+      if (PeerVolumeName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PeerVolumeName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (PeerClusterName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PeerClusterName);
+      }
+      if (PeerSvmName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PeerSvmName);
+      }
+      peerIpAddresses_.WriteTo(ref output, _repeated_peerIpAddresses_codec);
+      if (PeerVolumeName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PeerVolumeName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (PeerClusterName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerClusterName);
+      }
+      if (PeerSvmName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerSvmName);
+      }
+      size += peerIpAddresses_.CalculateSize(_repeated_peerIpAddresses_codec);
+      if (PeerVolumeName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerVolumeName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EstablishPeeringRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.PeerClusterName.Length != 0) {
+        PeerClusterName = other.PeerClusterName;
+      }
+      if (other.PeerSvmName.Length != 0) {
+        PeerSvmName = other.PeerSvmName;
+      }
+      peerIpAddresses_.Add(other.peerIpAddresses_);
+      if (other.PeerVolumeName.Length != 0) {
+        PeerVolumeName = other.PeerVolumeName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            PeerClusterName = input.ReadString();
+            break;
+          }
+          case 26: {
+            PeerSvmName = input.ReadString();
+            break;
+          }
+          case 34: {
+            peerIpAddresses_.AddEntriesFrom(input, _repeated_peerIpAddresses_codec);
+            break;
+          }
+          case 42: {
+            PeerVolumeName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            PeerClusterName = input.ReadString();
+            break;
+          }
+          case 26: {
+            PeerSvmName = input.ReadString();
+            break;
+          }
+          case 34: {
+            peerIpAddresses_.AddEntriesFrom(ref input, _repeated_peerIpAddresses_codec);
+            break;
+          }
+          case 42: {
+            PeerVolumeName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// SyncReplicationRequest syncs the replication from source to destination.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SyncReplicationRequest : pb::IMessage<SyncReplicationRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SyncReplicationRequest> _parser = new pb::MessageParser<SyncReplicationRequest>(() => new SyncReplicationRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SyncReplicationRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetApp.V1.ReplicationReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SyncReplicationRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SyncReplicationRequest(SyncReplicationRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SyncReplicationRequest Clone() {
+      return new SyncReplicationRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the replication, in the format of
+    /// projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_id}.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SyncReplicationRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SyncReplicationRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SyncReplicationRequest other) {
       if (other == null) {
         return;
       }

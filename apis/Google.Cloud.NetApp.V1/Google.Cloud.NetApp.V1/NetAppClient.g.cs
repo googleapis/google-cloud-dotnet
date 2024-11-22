@@ -110,6 +110,10 @@ namespace Google.Cloud.NetApp.V1
             ResumeReplicationOperationsSettings = existing.ResumeReplicationOperationsSettings.Clone();
             ReverseReplicationDirectionSettings = existing.ReverseReplicationDirectionSettings;
             ReverseReplicationDirectionOperationsSettings = existing.ReverseReplicationDirectionOperationsSettings.Clone();
+            EstablishPeeringSettings = existing.EstablishPeeringSettings;
+            EstablishPeeringOperationsSettings = existing.EstablishPeeringOperationsSettings.Clone();
+            SyncReplicationSettings = existing.SyncReplicationSettings;
+            SyncReplicationOperationsSettings = existing.SyncReplicationOperationsSettings.Clone();
             CreateBackupVaultSettings = existing.CreateBackupVaultSettings;
             CreateBackupVaultOperationsSettings = existing.CreateBackupVaultOperationsSettings.Clone();
             GetBackupVaultSettings = existing.GetBackupVaultSettings;
@@ -1090,6 +1094,66 @@ namespace Google.Cloud.NetApp.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.EstablishPeering</c> and <c>NetAppClient.EstablishPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EstablishPeeringSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.EstablishPeering</c> and
+        /// <c>NetAppClient.EstablishPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings EstablishPeeringOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.SyncReplication</c> and <c>NetAppClient.SyncReplicationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SyncReplicationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.SyncReplication</c> and
+        /// <c>NetAppClient.SyncReplicationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SyncReplicationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NetAppClient.CreateBackupVault</c> and <c>NetAppClient.CreateBackupVaultAsync</c>.
         /// </summary>
         /// <remarks>
@@ -1828,9 +1892,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="storagePoolId">
         /// Required. Id of the requesting storage pool. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1853,9 +1917,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="storagePoolId">
         /// Required. Id of the requesting storage pool. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1878,9 +1942,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="storagePoolId">
         /// Required. Id of the requesting storage pool. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1898,9 +1962,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="storagePoolId">
         /// Required. Id of the requesting storage pool. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1923,9 +1987,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="storagePoolId">
         /// Required. Id of the requesting storage pool. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1948,9 +2012,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="storagePoolId">
         /// Required. Id of the requesting storage pool. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter, the last a letter or a number, and a 63 character
+        /// maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2686,9 +2750,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="volumeId">
         /// Required. Id of the requesting volume. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a number,
+        /// and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2711,9 +2775,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="volumeId">
         /// Required. Id of the requesting volume. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a number,
+        /// and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2736,9 +2800,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="volumeId">
         /// Required. Id of the requesting volume. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a number,
+        /// and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2756,9 +2820,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="volumeId">
         /// Required. Id of the requesting volume. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a number,
+        /// and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2781,9 +2845,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="volumeId">
         /// Required. Id of the requesting volume. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a number,
+        /// and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2806,9 +2870,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="volumeId">
         /// Required. Id of the requesting volume. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a number,
+        /// and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3454,9 +3518,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="snapshotId">
         /// Required. ID of the snapshot to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3480,9 +3544,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="snapshotId">
         /// Required. ID of the snapshot to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3506,9 +3570,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="snapshotId">
         /// Required. ID of the snapshot to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3527,9 +3591,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="snapshotId">
         /// Required. ID of the snapshot to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3553,9 +3617,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="snapshotId">
         /// Required. ID of the snapshot to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3579,9 +3643,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="snapshotId">
         /// Required. ID of the snapshot to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4155,9 +4219,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="activeDirectoryId">
         /// Required. ID of the active directory to create. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter , the last a letter or a number, and a 63
+        /// character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4181,9 +4245,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="activeDirectoryId">
         /// Required. ID of the active directory to create. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter , the last a letter or a number, and a 63
+        /// character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4207,9 +4271,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="activeDirectoryId">
         /// Required. ID of the active directory to create. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter , the last a letter or a number, and a 63
+        /// character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4228,9 +4292,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="activeDirectoryId">
         /// Required. ID of the active directory to create. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter , the last a letter or a number, and a 63
+        /// character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4254,9 +4318,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="activeDirectoryId">
         /// Required. ID of the active directory to create. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter , the last a letter or a number, and a 63
+        /// character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4280,9 +4344,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="activeDirectoryId">
         /// Required. ID of the active directory to create. Must be unique within the
-        /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-        /// with the first character a letter or underscore, the last a letter or
-        /// underscore or a number, and a 63 character maximum.
+        /// parent resource. Must contain only letters, numbers and hyphen, with the
+        /// first character a letter , the last a letter or a number, and a 63
+        /// character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4751,9 +4815,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="kmsConfigId">
         /// Required. Id of the requesting KmsConfig. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4776,9 +4840,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="kmsConfigId">
         /// Required. Id of the requesting KmsConfig. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4801,9 +4865,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="kmsConfigId">
         /// Required. Id of the requesting KmsConfig. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4821,9 +4885,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="kmsConfigId">
         /// Required. Id of the requesting KmsConfig. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4846,9 +4910,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="kmsConfigId">
         /// Required. Id of the requesting KmsConfig. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4871,9 +4935,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="kmsConfigId">
         /// Required. Id of the requesting KmsConfig. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5649,9 +5713,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="replicationId">
         /// Required. ID of the replication to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5675,9 +5739,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="replicationId">
         /// Required. ID of the replication to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5701,9 +5765,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="replicationId">
         /// Required. ID of the replication to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5722,9 +5786,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="replicationId">
         /// Required. ID of the replication to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5748,9 +5812,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="replicationId">
         /// Required. ID of the replication to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5774,9 +5838,9 @@ namespace Google.Cloud.NetApp.V1
         /// </param>
         /// <param name="replicationId">
         /// Required. ID of the replication to create. Must be unique within the parent
-        /// resource. Must contain only letters, numbers, underscore and hyphen, with
-        /// the first character a letter or underscore, the last a letter or underscore
-        /// or a number, and a 63 character maximum.
+        /// resource. Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
+        /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6193,6 +6257,115 @@ namespace Google.Cloud.NetApp.V1
             lro::Operation<Replication, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReverseReplicationDirectionOperationsClient, callSettings);
 
         /// <summary>
+        /// Establish replication peering.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Replication, OperationMetadata> EstablishPeering(EstablishPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Establish replication peering.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Replication, OperationMetadata>> EstablishPeeringAsync(EstablishPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Establish replication peering.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Replication, OperationMetadata>> EstablishPeeringAsync(EstablishPeeringRequest request, st::CancellationToken cancellationToken) =>
+            EstablishPeeringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>EstablishPeering</c>.</summary>
+        public virtual lro::OperationsClient EstablishPeeringOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>EstablishPeering</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Replication, OperationMetadata> PollOnceEstablishPeering(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Replication, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EstablishPeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EstablishPeering</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Replication, OperationMetadata>> PollOnceEstablishPeeringAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Replication, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EstablishPeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Syncs the replication. This will invoke one time volume data transfer from
+        /// source to destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Replication, OperationMetadata> SyncReplication(SyncReplicationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Syncs the replication. This will invoke one time volume data transfer from
+        /// source to destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Replication, OperationMetadata>> SyncReplicationAsync(SyncReplicationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Syncs the replication. This will invoke one time volume data transfer from
+        /// source to destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Replication, OperationMetadata>> SyncReplicationAsync(SyncReplicationRequest request, st::CancellationToken cancellationToken) =>
+            SyncReplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SyncReplication</c>.</summary>
+        public virtual lro::OperationsClient SyncReplicationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SyncReplication</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Replication, OperationMetadata> PollOnceSyncReplication(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Replication, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SyncReplicationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SyncReplication</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Replication, OperationMetadata>> PollOnceSyncReplicationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Replication, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SyncReplicationOperationsClient, callSettings);
+
+        /// <summary>
         /// Creates new backup vault
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6259,8 +6432,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6286,8 +6459,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6313,8 +6486,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6335,8 +6508,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6362,8 +6535,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6389,8 +6562,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupVaultId">
         /// Required. The ID to use for the backupVault.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6999,8 +7172,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7029,8 +7202,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7059,8 +7232,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7084,8 +7257,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7114,8 +7287,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7144,8 +7317,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupId">
         /// Required. The ID to use for the backup.
         /// The ID must be unique within the specified backupVault.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7765,8 +7938,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7792,8 +7965,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7819,8 +7992,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7841,8 +8014,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7868,8 +8041,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7895,8 +8068,8 @@ namespace Google.Cloud.NetApp.V1
         /// <param name="backupPolicyId">
         /// Required. The ID to use for the backup policy.
         /// The ID must be unique within the specified location.
-        /// Must contain only letters, numbers, underscore and hyphen, with the first
-        /// character a letter or underscore, the last a letter or underscore or a
+        /// Must contain only letters, numbers and hyphen, with the first
+        /// character a letter, the last a letter or a
         /// number, and a 63 character maximum.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -8500,6 +8673,10 @@ namespace Google.Cloud.NetApp.V1
 
         private readonly gaxgrpc::ApiCall<ReverseReplicationDirectionRequest, lro::Operation> _callReverseReplicationDirection;
 
+        private readonly gaxgrpc::ApiCall<EstablishPeeringRequest, lro::Operation> _callEstablishPeering;
+
+        private readonly gaxgrpc::ApiCall<SyncReplicationRequest, lro::Operation> _callSyncReplication;
+
         private readonly gaxgrpc::ApiCall<CreateBackupVaultRequest, lro::Operation> _callCreateBackupVault;
 
         private readonly gaxgrpc::ApiCall<GetBackupVaultRequest, BackupVault> _callGetBackupVault;
@@ -8569,6 +8746,8 @@ namespace Google.Cloud.NetApp.V1
             StopReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopReplicationOperationsSettings, logger);
             ResumeReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResumeReplicationOperationsSettings, logger);
             ReverseReplicationDirectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReverseReplicationDirectionOperationsSettings, logger);
+            EstablishPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EstablishPeeringOperationsSettings, logger);
+            SyncReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SyncReplicationOperationsSettings, logger);
             CreateBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupVaultOperationsSettings, logger);
             UpdateBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupVaultOperationsSettings, logger);
             DeleteBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupVaultOperationsSettings, logger);
@@ -8690,6 +8869,12 @@ namespace Google.Cloud.NetApp.V1
             _callReverseReplicationDirection = clientHelper.BuildApiCall<ReverseReplicationDirectionRequest, lro::Operation>("ReverseReplicationDirection", grpcClient.ReverseReplicationDirectionAsync, grpcClient.ReverseReplicationDirection, effectiveSettings.ReverseReplicationDirectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReverseReplicationDirection);
             Modify_ReverseReplicationDirectionApiCall(ref _callReverseReplicationDirection);
+            _callEstablishPeering = clientHelper.BuildApiCall<EstablishPeeringRequest, lro::Operation>("EstablishPeering", grpcClient.EstablishPeeringAsync, grpcClient.EstablishPeering, effectiveSettings.EstablishPeeringSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callEstablishPeering);
+            Modify_EstablishPeeringApiCall(ref _callEstablishPeering);
+            _callSyncReplication = clientHelper.BuildApiCall<SyncReplicationRequest, lro::Operation>("SyncReplication", grpcClient.SyncReplicationAsync, grpcClient.SyncReplication, effectiveSettings.SyncReplicationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callSyncReplication);
+            Modify_SyncReplicationApiCall(ref _callSyncReplication);
             _callCreateBackupVault = clientHelper.BuildApiCall<CreateBackupVaultRequest, lro::Operation>("CreateBackupVault", grpcClient.CreateBackupVaultAsync, grpcClient.CreateBackupVault, effectiveSettings.CreateBackupVaultSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackupVault);
             Modify_CreateBackupVaultApiCall(ref _callCreateBackupVault);
@@ -8814,6 +8999,10 @@ namespace Google.Cloud.NetApp.V1
 
         partial void Modify_ReverseReplicationDirectionApiCall(ref gaxgrpc::ApiCall<ReverseReplicationDirectionRequest, lro::Operation> call);
 
+        partial void Modify_EstablishPeeringApiCall(ref gaxgrpc::ApiCall<EstablishPeeringRequest, lro::Operation> call);
+
+        partial void Modify_SyncReplicationApiCall(ref gaxgrpc::ApiCall<SyncReplicationRequest, lro::Operation> call);
+
         partial void Modify_CreateBackupVaultApiCall(ref gaxgrpc::ApiCall<CreateBackupVaultRequest, lro::Operation> call);
 
         partial void Modify_GetBackupVaultApiCall(ref gaxgrpc::ApiCall<GetBackupVaultRequest, BackupVault> call);
@@ -8925,6 +9114,10 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_ResumeReplicationRequest(ref ResumeReplicationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReverseReplicationDirectionRequest(ref ReverseReplicationDirectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_EstablishPeeringRequest(ref EstablishPeeringRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SyncReplicationRequest(ref SyncReplicationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateBackupVaultRequest(ref CreateBackupVaultRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -9926,6 +10119,62 @@ namespace Google.Cloud.NetApp.V1
         {
             Modify_ReverseReplicationDirectionRequest(ref request, ref callSettings);
             return new lro::Operation<Replication, OperationMetadata>(await _callReverseReplicationDirection.Async(request, callSettings).ConfigureAwait(false), ReverseReplicationDirectionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>EstablishPeering</c>.</summary>
+        public override lro::OperationsClient EstablishPeeringOperationsClient { get; }
+
+        /// <summary>
+        /// Establish replication peering.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Replication, OperationMetadata> EstablishPeering(EstablishPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EstablishPeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<Replication, OperationMetadata>(_callEstablishPeering.Sync(request, callSettings), EstablishPeeringOperationsClient);
+        }
+
+        /// <summary>
+        /// Establish replication peering.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Replication, OperationMetadata>> EstablishPeeringAsync(EstablishPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EstablishPeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<Replication, OperationMetadata>(await _callEstablishPeering.Async(request, callSettings).ConfigureAwait(false), EstablishPeeringOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SyncReplication</c>.</summary>
+        public override lro::OperationsClient SyncReplicationOperationsClient { get; }
+
+        /// <summary>
+        /// Syncs the replication. This will invoke one time volume data transfer from
+        /// source to destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Replication, OperationMetadata> SyncReplication(SyncReplicationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SyncReplicationRequest(ref request, ref callSettings);
+            return new lro::Operation<Replication, OperationMetadata>(_callSyncReplication.Sync(request, callSettings), SyncReplicationOperationsClient);
+        }
+
+        /// <summary>
+        /// Syncs the replication. This will invoke one time volume data transfer from
+        /// source to destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Replication, OperationMetadata>> SyncReplicationAsync(SyncReplicationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SyncReplicationRequest(ref request, ref callSettings);
+            return new lro::Operation<Replication, OperationMetadata>(await _callSyncReplication.Async(request, callSettings).ConfigureAwait(false), SyncReplicationOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>CreateBackupVault</c>.</summary>

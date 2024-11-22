@@ -47,7 +47,7 @@ namespace Google.Cloud.NetApp.V1 {
             "Y3RpdmVfZGlyZWN0b3J5GAIgASgLMicuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
             "MS5BY3RpdmVEaXJlY3RvcnlCA+BBAiJbChxEZWxldGVBY3RpdmVEaXJlY3Rv",
             "cnlSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwolbmV0YXBwLmdvb2ds",
-            "ZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeSLaBwoPQWN0aXZlRGlyZWN0b3J5",
+            "ZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeSLqBwoPQWN0aXZlRGlyZWN0b3J5",
             "EhEKBG5hbWUYASABKAlCA+BBCBI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJBCgVzdGF0ZRgDIAEoDjIt",
             "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQWN0aXZlRGlyZWN0b3J5LlN0YXRl",
@@ -63,17 +63,18 @@ namespace Google.Cloud.NetApp.V1 {
             "Y29ubmVjdGlvbnMYEyABKAgSQwoGbGFiZWxzGBQgAygLMjMuZ29vZ2xlLmNs",
             "b3VkLm5ldGFwcC52MS5BY3RpdmVEaXJlY3RvcnkuTGFiZWxzRW50cnkSGgoN",
             "c3RhdGVfZGV0YWlscxgVIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiagoFU3RhdGUSFQoRU1RBVEVf",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiegoFU3RhdGUSFQoRU1RBVEVf",
             "VU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAISDAoIVVBE",
-            "QVRJTkcQAxIKCgZJTl9VU0UQBBIMCghERUxFVElORxAFEgkKBUVSUk9SEAY6",
-            "nQHqQZkBCiVuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQWN0aXZlRGlyZWN0b3J5",
-            "Ekxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWN0",
-            "aXZlRGlyZWN0b3JpZXMve2FjdGl2ZV9kaXJlY3Rvcnl9KhFhY3RpdmVEaXJl",
-            "Y3RvcmllczIPYWN0aXZlRGlyZWN0b3J5QrYBChpjb20uZ29vZ2xlLmNsb3Vk",
-            "Lm5ldGFwcC52MUIUQWN0aXZlRGlyZWN0b3J5UHJvdG9QAVoyY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZH",
-            "b29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxW",
-            "MeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "QVRJTkcQAxIKCgZJTl9VU0UQBBIMCghERUxFVElORxAFEgkKBUVSUk9SEAYS",
+            "DgoKRElBR05PU0lORxAHOp0B6kGZAQolbmV0YXBwLmdvb2dsZWFwaXMuY29t",
+            "L0FjdGl2ZURpcmVjdG9yeRJMcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2FjdGl2ZURpcmVjdG9yaWVzL3thY3RpdmVfZGlyZWN0",
+            "b3J5fSoRYWN0aXZlRGlyZWN0b3JpZXMyD2FjdGl2ZURpcmVjdG9yeUK2AQoa",
+            "Y29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCFEFjdGl2ZURpcmVjdG9yeVBy",
+            "b3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFw",
+            "cHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2ds",
+            "ZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -982,9 +983,9 @@ namespace Google.Cloud.NetApp.V1 {
     private string activeDirectoryId_ = "";
     /// <summary>
     /// Required. ID of the active directory to create. Must be unique within the
-    /// parent resource. Must contain only letters, numbers, underscore and hyphen,
-    /// with the first character a letter or underscore, the last a letter or
-    /// underscore or a number, and a 63 character maximum.
+    /// parent resource. Must contain only letters, numbers and hyphen, with the
+    /// first character a letter , the last a letter or a number, and a 63
+    /// character maximum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2684,6 +2685,10 @@ namespace Google.Cloud.NetApp.V1 {
         /// Active Directory State is Error
         /// </summary>
         [pbr::OriginalName("ERROR")] Error = 6,
+        /// <summary>
+        /// Active Directory State is Diagnosing.
+        /// </summary>
+        [pbr::OriginalName("DIAGNOSING")] Diagnosing = 7,
       }
 
     }

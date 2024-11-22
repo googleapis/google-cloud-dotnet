@@ -390,4 +390,16 @@ namespace Google.Cloud.NetApp.V1
             set => BackupVault = value?.ToString() ?? "";
         }
     }
+
+    public partial class HybridReplicationParameters
+    {
+        /// <summary>
+        /// <see cref="ReplicationName"/>-typed view over the <see cref="Replication"/> resource name property.
+        /// </summary>
+        public ReplicationName ReplicationAsReplicationName
+        {
+            get => string.IsNullOrEmpty(Replication) ? null : ReplicationName.Parse(Replication, allowUnparsed: true);
+            set => Replication = value?.ToString() ?? "";
+        }
+    }
 }
