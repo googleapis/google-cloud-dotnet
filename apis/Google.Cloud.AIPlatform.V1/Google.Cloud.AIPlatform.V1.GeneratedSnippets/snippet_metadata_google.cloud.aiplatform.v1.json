@@ -81725,6 +81725,3850 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_CreateRagCorpus_sync",
+      "title": "CreateRagCorpusRequestObject",
+      "description": "Snippet for CreateRagCorpus",
+      "file": "VertexRagDataServiceClient.CreateRagCorpusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.CreateRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.CreateRagCorpusOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.CreateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_CreateRagCorpus_async",
+      "title": "CreateRagCorpusRequestObjectAsync",
+      "description": "Snippet for CreateRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.CreateRagCorpusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.CreateRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.CreateRagCorpusOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.CreateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_CreateRagCorpus_sync_flattened",
+      "title": "CreateRagCorpus",
+      "description": "Snippet for CreateRagCorpus",
+      "file": "VertexRagDataServiceClient.CreateRagCorpusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.CreateRagCorpus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpus",
+            "name": "ragCorpus"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.CreateRagCorpusOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.CreateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_CreateRagCorpus_async_flattened",
+      "title": "CreateRagCorpusAsync",
+      "description": "Snippet for CreateRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.CreateRagCorpusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.CreateRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpus",
+            "name": "ragCorpus"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.CreateRagCorpusOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.CreateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_CreateRagCorpus_sync_flattened_resourceNames",
+      "title": "CreateRagCorpusResourceNames",
+      "description": "Snippet for CreateRagCorpus",
+      "file": "VertexRagDataServiceClient.CreateRagCorpusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.CreateRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpus",
+            "name": "ragCorpus"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.CreateRagCorpusOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.CreateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_CreateRagCorpus_async_flattened_resourceNames",
+      "title": "CreateRagCorpusResourceNamesAsync",
+      "description": "Snippet for CreateRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.CreateRagCorpusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.CreateRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpus",
+            "name": "ragCorpus"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.CreateRagCorpusOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.CreateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UpdateRagCorpus_sync",
+      "title": "UpdateRagCorpusRequestObject",
+      "description": "Snippet for UpdateRagCorpus",
+      "file": "VertexRagDataServiceClient.UpdateRagCorpusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UpdateRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.UpdateRagCorpusOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UpdateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UpdateRagCorpus_async",
+      "title": "UpdateRagCorpusRequestObjectAsync",
+      "description": "Snippet for UpdateRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.UpdateRagCorpusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UpdateRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.UpdateRagCorpusOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UpdateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UpdateRagCorpus_sync_flattened",
+      "title": "UpdateRagCorpus",
+      "description": "Snippet for UpdateRagCorpus",
+      "file": "VertexRagDataServiceClient.UpdateRagCorpusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UpdateRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpus",
+            "name": "ragCorpus"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.UpdateRagCorpusOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UpdateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UpdateRagCorpus_async_flattened",
+      "title": "UpdateRagCorpusAsync",
+      "description": "Snippet for UpdateRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.UpdateRagCorpusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UpdateRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpus",
+            "name": "ragCorpus"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.RagCorpus, Google.Cloud.AIPlatform.V1.UpdateRagCorpusOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UpdateRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagCorpus_sync",
+      "title": "GetRagCorpusRequestObject",
+      "description": "Snippet for GetRagCorpus",
+      "file": "VertexRagDataServiceClient.GetRagCorpusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RagCorpus",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagCorpus_async",
+      "title": "GetRagCorpusRequestObjectAsync",
+      "description": "Snippet for GetRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.GetRagCorpusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagCorpus_sync_flattened",
+      "title": "GetRagCorpus",
+      "description": "Snippet for GetRagCorpus",
+      "file": "VertexRagDataServiceClient.GetRagCorpusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagCorpus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RagCorpus",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagCorpus_async_flattened",
+      "title": "GetRagCorpusAsync",
+      "description": "Snippet for GetRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.GetRagCorpusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagCorpus_sync_flattened_resourceNames",
+      "title": "GetRagCorpusResourceNames",
+      "description": "Snippet for GetRagCorpus",
+      "file": "VertexRagDataServiceClient.GetRagCorpusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RagCorpus",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagCorpus_async_flattened_resourceNames",
+      "title": "GetRagCorpusResourceNamesAsync",
+      "description": "Snippet for GetRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.GetRagCorpusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagCorpora_sync",
+      "title": "ListRagCorporaRequestObject",
+      "description": "Snippet for ListRagCorpora",
+      "file": "VertexRagDataServiceClient.ListRagCorporaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagCorpora",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagCorpora",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListRagCorporaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListRagCorporaResponse, Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagCorpora",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagCorpora",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagCorpora_async",
+      "title": "ListRagCorporaRequestObjectAsync",
+      "description": "Snippet for ListRagCorporaAsync",
+      "file": "VertexRagDataServiceClient.ListRagCorporaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagCorporaAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagCorporaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListRagCorporaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListRagCorporaResponse, Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagCorpora",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagCorpora",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagCorpora_sync_flattened",
+      "title": "ListRagCorpora",
+      "description": "Snippet for ListRagCorpora",
+      "file": "VertexRagDataServiceClient.ListRagCorporaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagCorpora",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagCorpora",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListRagCorporaResponse, Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagCorpora",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagCorpora",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagCorpora_async_flattened",
+      "title": "ListRagCorporaAsync",
+      "description": "Snippet for ListRagCorporaAsync",
+      "file": "VertexRagDataServiceClient.ListRagCorporaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagCorporaAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagCorporaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListRagCorporaResponse, Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagCorpora",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagCorpora",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagCorpora_sync_flattened_resourceNames",
+      "title": "ListRagCorporaResourceNames",
+      "description": "Snippet for ListRagCorpora",
+      "file": "VertexRagDataServiceClient.ListRagCorporaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagCorpora",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagCorpora",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListRagCorporaResponse, Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagCorpora",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagCorpora",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagCorpora_async_flattened_resourceNames",
+      "title": "ListRagCorporaResourceNamesAsync",
+      "description": "Snippet for ListRagCorporaAsync",
+      "file": "VertexRagDataServiceClient.ListRagCorporaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagCorporaAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagCorporaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListRagCorporaResponse, Google.Cloud.AIPlatform.V1.RagCorpus>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagCorpora",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagCorpora",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagCorpus_sync",
+      "title": "DeleteRagCorpusRequestObject",
+      "description": "Snippet for DeleteRagCorpus",
+      "file": "VertexRagDataServiceClient.DeleteRagCorpusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagCorpus_async",
+      "title": "DeleteRagCorpusRequestObjectAsync",
+      "description": "Snippet for DeleteRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.DeleteRagCorpusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteRagCorpusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagCorpus_sync_flattened",
+      "title": "DeleteRagCorpus",
+      "description": "Snippet for DeleteRagCorpus",
+      "file": "VertexRagDataServiceClient.DeleteRagCorpusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagCorpus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagCorpus_async_flattened",
+      "title": "DeleteRagCorpusAsync",
+      "description": "Snippet for DeleteRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.DeleteRagCorpusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagCorpus_sync_flattened_resourceNames",
+      "title": "DeleteRagCorpusResourceNames",
+      "description": "Snippet for DeleteRagCorpus",
+      "file": "VertexRagDataServiceClient.DeleteRagCorpusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagCorpus",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagCorpus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagCorpus_async_flattened_resourceNames",
+      "title": "DeleteRagCorpusResourceNamesAsync",
+      "description": "Snippet for DeleteRagCorpusAsync",
+      "file": "VertexRagDataServiceClient.DeleteRagCorpusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagCorpusAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagCorpusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagCorpus",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagCorpus",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UploadRagFile_sync",
+      "title": "UploadRagFileRequestObject",
+      "description": "Snippet for UploadRagFile",
+      "file": "VertexRagDataServiceClient.UploadRagFileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UploadRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UploadRagFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UploadRagFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.UploadRagFileResponse",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UploadRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UploadRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UploadRagFile_async",
+      "title": "UploadRagFileRequestObjectAsync",
+      "description": "Snippet for UploadRagFileAsync",
+      "file": "VertexRagDataServiceClient.UploadRagFileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UploadRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UploadRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UploadRagFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.UploadRagFileResponse>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UploadRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UploadRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UploadRagFile_sync_flattened",
+      "title": "UploadRagFile",
+      "description": "Snippet for UploadRagFile",
+      "file": "VertexRagDataServiceClient.UploadRagFileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UploadRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UploadRagFile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagFile",
+            "name": "ragFile"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UploadRagFileConfig",
+            "name": "uploadRagFileConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.UploadRagFileResponse",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UploadRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UploadRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UploadRagFile_async_flattened",
+      "title": "UploadRagFileAsync",
+      "description": "Snippet for UploadRagFileAsync",
+      "file": "VertexRagDataServiceClient.UploadRagFileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UploadRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UploadRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagFile",
+            "name": "ragFile"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UploadRagFileConfig",
+            "name": "uploadRagFileConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.UploadRagFileResponse>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UploadRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UploadRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UploadRagFile_sync_flattened_resourceNames",
+      "title": "UploadRagFileResourceNames",
+      "description": "Snippet for UploadRagFile",
+      "file": "VertexRagDataServiceClient.UploadRagFileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UploadRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UploadRagFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagFile",
+            "name": "ragFile"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UploadRagFileConfig",
+            "name": "uploadRagFileConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.UploadRagFileResponse",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UploadRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UploadRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_UploadRagFile_async_flattened_resourceNames",
+      "title": "UploadRagFileResourceNamesAsync",
+      "description": "Snippet for UploadRagFileAsync",
+      "file": "VertexRagDataServiceClient.UploadRagFileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UploadRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.UploadRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagFile",
+            "name": "ragFile"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UploadRagFileConfig",
+            "name": "uploadRagFileConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.UploadRagFileResponse>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "UploadRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.UploadRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ImportRagFiles_sync",
+      "title": "ImportRagFilesRequestObject",
+      "description": "Snippet for ImportRagFiles",
+      "file": "VertexRagDataServiceClient.ImportRagFilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportRagFiles",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ImportRagFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ImportRagFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ImportRagFilesResponse, Google.Cloud.AIPlatform.V1.ImportRagFilesOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ImportRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ImportRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ImportRagFiles_async",
+      "title": "ImportRagFilesRequestObjectAsync",
+      "description": "Snippet for ImportRagFilesAsync",
+      "file": "VertexRagDataServiceClient.ImportRagFilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportRagFilesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ImportRagFilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ImportRagFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ImportRagFilesResponse, Google.Cloud.AIPlatform.V1.ImportRagFilesOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ImportRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ImportRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ImportRagFiles_sync_flattened",
+      "title": "ImportRagFiles",
+      "description": "Snippet for ImportRagFiles",
+      "file": "VertexRagDataServiceClient.ImportRagFilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportRagFiles",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ImportRagFiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ImportRagFilesConfig",
+            "name": "importRagFilesConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ImportRagFilesResponse, Google.Cloud.AIPlatform.V1.ImportRagFilesOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ImportRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ImportRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ImportRagFiles_async_flattened",
+      "title": "ImportRagFilesAsync",
+      "description": "Snippet for ImportRagFilesAsync",
+      "file": "VertexRagDataServiceClient.ImportRagFilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportRagFilesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ImportRagFilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ImportRagFilesConfig",
+            "name": "importRagFilesConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ImportRagFilesResponse, Google.Cloud.AIPlatform.V1.ImportRagFilesOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ImportRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ImportRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ImportRagFiles_sync_flattened_resourceNames",
+      "title": "ImportRagFilesResourceNames",
+      "description": "Snippet for ImportRagFiles",
+      "file": "VertexRagDataServiceClient.ImportRagFilesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportRagFiles",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ImportRagFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ImportRagFilesConfig",
+            "name": "importRagFilesConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ImportRagFilesResponse, Google.Cloud.AIPlatform.V1.ImportRagFilesOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ImportRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ImportRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ImportRagFiles_async_flattened_resourceNames",
+      "title": "ImportRagFilesResourceNamesAsync",
+      "description": "Snippet for ImportRagFilesAsync",
+      "file": "VertexRagDataServiceClient.ImportRagFilesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportRagFilesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ImportRagFilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ImportRagFilesConfig",
+            "name": "importRagFilesConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ImportRagFilesResponse, Google.Cloud.AIPlatform.V1.ImportRagFilesOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ImportRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ImportRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagFile_sync",
+      "title": "GetRagFileRequestObject",
+      "description": "Snippet for GetRagFile",
+      "file": "VertexRagDataServiceClient.GetRagFileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetRagFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RagFile",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagFile_async",
+      "title": "GetRagFileRequestObjectAsync",
+      "description": "Snippet for GetRagFileAsync",
+      "file": "VertexRagDataServiceClient.GetRagFileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetRagFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagFile_sync_flattened",
+      "title": "GetRagFile",
+      "description": "Snippet for GetRagFile",
+      "file": "VertexRagDataServiceClient.GetRagFileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagFile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RagFile",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagFile_async_flattened",
+      "title": "GetRagFileAsync",
+      "description": "Snippet for GetRagFileAsync",
+      "file": "VertexRagDataServiceClient.GetRagFileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagFile_sync_flattened_resourceNames",
+      "title": "GetRagFileResourceNames",
+      "description": "Snippet for GetRagFile",
+      "file": "VertexRagDataServiceClient.GetRagFileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagFileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RagFile",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_GetRagFile_async_flattened_resourceNames",
+      "title": "GetRagFileResourceNamesAsync",
+      "description": "Snippet for GetRagFileAsync",
+      "file": "VertexRagDataServiceClient.GetRagFileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.GetRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagFileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "GetRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.GetRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagFiles_sync",
+      "title": "ListRagFilesRequestObject",
+      "description": "Snippet for ListRagFiles",
+      "file": "VertexRagDataServiceClient.ListRagFilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagFiles",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListRagFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListRagFilesResponse, Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagFiles_async",
+      "title": "ListRagFilesRequestObjectAsync",
+      "description": "Snippet for ListRagFilesAsync",
+      "file": "VertexRagDataServiceClient.ListRagFilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagFilesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagFilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListRagFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListRagFilesResponse, Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagFiles_sync_flattened",
+      "title": "ListRagFiles",
+      "description": "Snippet for ListRagFiles",
+      "file": "VertexRagDataServiceClient.ListRagFilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagFiles",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagFiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListRagFilesResponse, Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagFiles_async_flattened",
+      "title": "ListRagFilesAsync",
+      "description": "Snippet for ListRagFilesAsync",
+      "file": "VertexRagDataServiceClient.ListRagFilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagFilesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagFilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListRagFilesResponse, Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagFiles_sync_flattened_resourceNames",
+      "title": "ListRagFilesResourceNames",
+      "description": "Snippet for ListRagFiles",
+      "file": "VertexRagDataServiceClient.ListRagFilesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagFiles",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListRagFilesResponse, Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_ListRagFiles_async_flattened_resourceNames",
+      "title": "ListRagFilesResourceNamesAsync",
+      "description": "Snippet for ListRagFilesAsync",
+      "file": "VertexRagDataServiceClient.ListRagFilesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRagFilesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.ListRagFilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagCorpusName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListRagFilesResponse, Google.Cloud.AIPlatform.V1.RagFile>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "ListRagFiles",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.ListRagFiles",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagFile_sync",
+      "title": "DeleteRagFileRequestObject",
+      "description": "Snippet for DeleteRagFile",
+      "file": "VertexRagDataServiceClient.DeleteRagFileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteRagFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagFile_async",
+      "title": "DeleteRagFileRequestObjectAsync",
+      "description": "Snippet for DeleteRagFileAsync",
+      "file": "VertexRagDataServiceClient.DeleteRagFileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteRagFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagFile_sync_flattened",
+      "title": "DeleteRagFile",
+      "description": "Snippet for DeleteRagFile",
+      "file": "VertexRagDataServiceClient.DeleteRagFileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagFile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagFile_async_flattened",
+      "title": "DeleteRagFileAsync",
+      "description": "Snippet for DeleteRagFileAsync",
+      "file": "VertexRagDataServiceClient.DeleteRagFileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagFile_sync_flattened_resourceNames",
+      "title": "DeleteRagFileResourceNames",
+      "description": "Snippet for DeleteRagFile",
+      "file": "VertexRagDataServiceClient.DeleteRagFileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagFile",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagFileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagDataService_DeleteRagFile_async_flattened_resourceNames",
+      "title": "DeleteRagFileResourceNamesAsync",
+      "description": "Snippet for DeleteRagFileAsync",
+      "file": "VertexRagDataServiceClient.DeleteRagFileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRagFileAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient.DeleteRagFileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagFileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "VertexRagDataServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagDataServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRagFile",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagDataService.DeleteRagFile",
+          "service": {
+            "shortName": "VertexRagDataService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagDataService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_RetrieveContexts_sync",
+      "title": "RetrieveContextsRequestObject",
+      "description": "Snippet for RetrieveContexts",
+      "file": "VertexRagServiceClient.RetrieveContextsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.RetrieveContexts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RetrieveContextsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RetrieveContextsResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.RetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_RetrieveContexts_async",
+      "title": "RetrieveContextsRequestObjectAsync",
+      "description": "Snippet for RetrieveContextsAsync",
+      "file": "VertexRagServiceClient.RetrieveContextsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.RetrieveContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RetrieveContextsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RetrieveContextsResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.RetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_RetrieveContexts_sync_flattened",
+      "title": "RetrieveContexts",
+      "description": "Snippet for RetrieveContexts",
+      "file": "VertexRagServiceClient.RetrieveContextsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.RetrieveContexts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RetrieveContextsResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.RetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_RetrieveContexts_async_flattened",
+      "title": "RetrieveContextsAsync",
+      "description": "Snippet for RetrieveContextsAsync",
+      "file": "VertexRagServiceClient.RetrieveContextsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.RetrieveContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RetrieveContextsResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.RetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_RetrieveContexts_sync_flattened_resourceNames",
+      "title": "RetrieveContextsResourceNames",
+      "description": "Snippet for RetrieveContexts",
+      "file": "VertexRagServiceClient.RetrieveContextsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveContexts",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.RetrieveContexts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.RetrieveContextsResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.RetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_RetrieveContexts_async_flattened_resourceNames",
+      "title": "RetrieveContextsResourceNamesAsync",
+      "description": "Snippet for RetrieveContextsAsync",
+      "file": "VertexRagServiceClient.RetrieveContextsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveContextsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.RetrieveContextsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RagQuery",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.RetrieveContextsResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveContexts",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.RetrieveContexts",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_AugmentPrompt_sync",
+      "title": "AugmentPromptRequestObject",
+      "description": "Snippet for AugmentPrompt",
+      "file": "VertexRagServiceClient.AugmentPromptRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AugmentPrompt",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.AugmentPrompt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AugmentPromptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AugmentPromptResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AugmentPrompt",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.AugmentPrompt",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_AugmentPrompt_async",
+      "title": "AugmentPromptRequestObjectAsync",
+      "description": "Snippet for AugmentPromptAsync",
+      "file": "VertexRagServiceClient.AugmentPromptRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AugmentPromptAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.AugmentPromptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AugmentPromptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AugmentPromptResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AugmentPrompt",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.AugmentPrompt",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_AugmentPrompt_sync_flattened",
+      "title": "AugmentPrompt",
+      "description": "Snippet for AugmentPrompt",
+      "file": "VertexRagServiceClient.AugmentPromptSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AugmentPrompt",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.AugmentPrompt",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AugmentPromptRequest+Types+Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.VertexRagStore",
+            "name": "vertexRagStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AugmentPromptResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AugmentPrompt",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.AugmentPrompt",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_AugmentPrompt_async_flattened",
+      "title": "AugmentPromptAsync",
+      "description": "Snippet for AugmentPromptAsync",
+      "file": "VertexRagServiceClient.AugmentPromptAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AugmentPromptAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.AugmentPromptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AugmentPromptRequest+Types+Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.VertexRagStore",
+            "name": "vertexRagStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AugmentPromptResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AugmentPrompt",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.AugmentPrompt",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_AugmentPrompt_sync_flattened_resourceNames",
+      "title": "AugmentPromptResourceNames",
+      "description": "Snippet for AugmentPrompt",
+      "file": "VertexRagServiceClient.AugmentPromptResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AugmentPrompt",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.AugmentPrompt",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AugmentPromptRequest+Types+Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.VertexRagStore",
+            "name": "vertexRagStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AugmentPromptResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AugmentPrompt",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.AugmentPrompt",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_AugmentPrompt_async_flattened_resourceNames",
+      "title": "AugmentPromptResourceNamesAsync",
+      "description": "Snippet for AugmentPromptAsync",
+      "file": "VertexRagServiceClient.AugmentPromptResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AugmentPromptAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.AugmentPromptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AugmentPromptRequest+Types+Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.VertexRagStore",
+            "name": "vertexRagStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AugmentPromptResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "AugmentPrompt",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.AugmentPrompt",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_CorroborateContent_sync",
+      "title": "CorroborateContentRequestObject",
+      "description": "Snippet for CorroborateContent",
+      "file": "VertexRagServiceClient.CorroborateContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CorroborateContent",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.CorroborateContent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CorroborateContentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.CorroborateContentResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "CorroborateContent",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.CorroborateContent",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_CorroborateContent_async",
+      "title": "CorroborateContentRequestObjectAsync",
+      "description": "Snippet for CorroborateContentAsync",
+      "file": "VertexRagServiceClient.CorroborateContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CorroborateContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.CorroborateContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CorroborateContentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.CorroborateContentResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "CorroborateContent",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.CorroborateContent",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_CorroborateContent_sync_flattened",
+      "title": "CorroborateContent",
+      "description": "Snippet for CorroborateContent",
+      "file": "VertexRagServiceClient.CorroborateContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CorroborateContent",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.CorroborateContent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Content",
+            "name": "content"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.Fact>",
+            "name": "facts"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.CorroborateContentResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "CorroborateContent",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.CorroborateContent",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_CorroborateContent_async_flattened",
+      "title": "CorroborateContentAsync",
+      "description": "Snippet for CorroborateContentAsync",
+      "file": "VertexRagServiceClient.CorroborateContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CorroborateContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.CorroborateContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Content",
+            "name": "content"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.Fact>",
+            "name": "facts"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.CorroborateContentResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "CorroborateContent",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.CorroborateContent",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_CorroborateContent_sync_flattened_resourceNames",
+      "title": "CorroborateContentResourceNames",
+      "description": "Snippet for CorroborateContent",
+      "file": "VertexRagServiceClient.CorroborateContentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CorroborateContent",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.CorroborateContent",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Content",
+            "name": "content"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.Fact>",
+            "name": "facts"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.CorroborateContentResponse",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "CorroborateContent",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.CorroborateContent",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_VertexRagService_CorroborateContent_async_flattened_resourceNames",
+      "title": "CorroborateContentResourceNamesAsync",
+      "description": "Snippet for CorroborateContentAsync",
+      "file": "VertexRagServiceClient.CorroborateContentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CorroborateContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient.CorroborateContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Content",
+            "name": "content"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.AIPlatform.V1.Fact>",
+            "name": "facts"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.CorroborateContentResponse>",
+        "client": {
+          "shortName": "VertexRagServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.VertexRagServiceClient"
+        },
+        "method": {
+          "shortName": "CorroborateContent",
+          "fullName": "google.cloud.aiplatform.v1.VertexRagService.CorroborateContent",
+          "service": {
+            "shortName": "VertexRagService",
+            "fullName": "google.cloud.aiplatform.v1.VertexRagService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_VizierService_CreateStudy_sync",
       "title": "CreateStudyRequestObject",
       "description": "Snippet for CreateStudy",

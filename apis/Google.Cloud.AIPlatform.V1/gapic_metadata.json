@@ -1955,6 +1955,102 @@
         }
       }
     },
+    "VertexRagDataService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VertexRagDataServiceClient",
+          "rpcs": {
+            "CreateRagCorpus": {
+              "methods": [
+                "CreateRagCorpus",
+                "CreateRagCorpusAsync"
+              ]
+            },
+            "DeleteRagCorpus": {
+              "methods": [
+                "DeleteRagCorpus",
+                "DeleteRagCorpusAsync"
+              ]
+            },
+            "DeleteRagFile": {
+              "methods": [
+                "DeleteRagFile",
+                "DeleteRagFileAsync"
+              ]
+            },
+            "GetRagCorpus": {
+              "methods": [
+                "GetRagCorpus",
+                "GetRagCorpusAsync"
+              ]
+            },
+            "GetRagFile": {
+              "methods": [
+                "GetRagFile",
+                "GetRagFileAsync"
+              ]
+            },
+            "ImportRagFiles": {
+              "methods": [
+                "ImportRagFiles",
+                "ImportRagFilesAsync"
+              ]
+            },
+            "ListRagCorpora": {
+              "methods": [
+                "ListRagCorpora",
+                "ListRagCorporaAsync"
+              ]
+            },
+            "ListRagFiles": {
+              "methods": [
+                "ListRagFiles",
+                "ListRagFilesAsync"
+              ]
+            },
+            "UpdateRagCorpus": {
+              "methods": [
+                "UpdateRagCorpus",
+                "UpdateRagCorpusAsync"
+              ]
+            },
+            "UploadRagFile": {
+              "methods": [
+                "UploadRagFile",
+                "UploadRagFileAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "VertexRagService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VertexRagServiceClient",
+          "rpcs": {
+            "AugmentPrompt": {
+              "methods": [
+                "AugmentPrompt",
+                "AugmentPromptAsync"
+              ]
+            },
+            "CorroborateContent": {
+              "methods": [
+                "CorroborateContent",
+                "CorroborateContentAsync"
+              ]
+            },
+            "RetrieveContexts": {
+              "methods": [
+                "RetrieveContexts",
+                "RetrieveContextsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "VizierService": {
       "clients": {
         "grpc": {
