@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 },
                 Seqno = 0L,
                 RequestOptions = new RequestOptions(),
+                LastStatements = false,
             };
             // Make the request
             ExecuteBatchDmlResponse response = spannerClient.ExecuteBatchDml(request);

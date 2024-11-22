@@ -696,6 +696,7 @@ namespace GoogleCSharpSnippets
                 RequestOptions = new gcsv::RequestOptions(),
                 DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
+                LastStatement = false,
             };
             // Make the request
             gcsv::ResultSet response = spannerClient.ExecuteSql(request);
@@ -731,6 +732,7 @@ namespace GoogleCSharpSnippets
                 RequestOptions = new gcsv::RequestOptions(),
                 DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
+                LastStatement = false,
             };
             // Make the request
             gcsv::ResultSet response = await spannerClient.ExecuteSqlAsync(request);
@@ -765,6 +767,7 @@ namespace GoogleCSharpSnippets
                 RequestOptions = new gcsv::RequestOptions(),
                 DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
+                LastStatement = false,
             };
             // Make the request, returning a streaming response
             using gcsv::SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
@@ -798,6 +801,7 @@ namespace GoogleCSharpSnippets
                 },
                 Seqno = 0L,
                 RequestOptions = new gcsv::RequestOptions(),
+                LastStatements = false,
             };
             // Make the request
             gcsv::ExecuteBatchDmlResponse response = spannerClient.ExecuteBatchDml(request);
@@ -822,6 +826,7 @@ namespace GoogleCSharpSnippets
                 },
                 Seqno = 0L,
                 RequestOptions = new gcsv::RequestOptions(),
+                LastStatements = false,
             };
             // Make the request
             gcsv::ExecuteBatchDmlResponse response = await spannerClient.ExecuteBatchDmlAsync(request);
