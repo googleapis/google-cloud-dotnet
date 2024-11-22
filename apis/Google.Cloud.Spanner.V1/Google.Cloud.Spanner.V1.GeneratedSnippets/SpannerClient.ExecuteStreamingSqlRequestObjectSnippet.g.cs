@@ -61,6 +61,7 @@ namespace GoogleCSharpSnippets
                 RequestOptions = new gcsv::RequestOptions(),
                 DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
+                LastStatement = false,
             };
             // Make the request, returning a streaming response
             using gcsv::SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);

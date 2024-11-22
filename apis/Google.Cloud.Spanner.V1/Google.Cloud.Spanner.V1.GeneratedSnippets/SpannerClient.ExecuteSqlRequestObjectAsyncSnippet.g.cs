@@ -60,6 +60,7 @@ namespace GoogleCSharpSnippets
                 RequestOptions = new gcsv::RequestOptions(),
                 DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
+                LastStatement = false,
             };
             // Make the request
             gcsv::ResultSet response = await spannerClient.ExecuteSqlAsync(request);
