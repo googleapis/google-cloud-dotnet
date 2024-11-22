@@ -32,6 +32,7 @@ namespace Google.Cloud.Iam.V1
             yield return IamPolicyReflection.Descriptor;
             yield return OptionsReflection.Descriptor;
             yield return PolicyReflection.Descriptor;
+            yield return ResourcePolicyMemberReflection.Descriptor;
         }
     }
 }
