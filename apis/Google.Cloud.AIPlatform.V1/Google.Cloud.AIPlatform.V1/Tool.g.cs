@@ -42,29 +42,46 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ASgJQgPgQQISKgoEYXJncxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
             "Y3RCA+BBASJVChBGdW5jdGlvblJlc3BvbnNlEhEKBG5hbWUYASABKAlCA+BB",
             "AhIuCghyZXNwb25zZRgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
-            "A+BBAiKBAQoJUmV0cmlldmFsEkYKEHZlcnRleF9haV9zZWFyY2gYAiABKAsy",
+            "A+BBAiLJAQoJUmV0cmlldmFsEkYKEHZlcnRleF9haV9zZWFyY2gYAiABKAsy",
             "Ki5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5WZXJ0ZXhBSVNlYXJjaEgA",
-            "EiIKE2Rpc2FibGVfYXR0cmlidXRpb24YAyABKAhCBRgB4EEBQggKBnNvdXJj",
-            "ZSIoCg5WZXJ0ZXhBSVNlYXJjaBIWCglkYXRhc3RvcmUYASABKAlCA+BBAiJt",
-            "ChVHb29nbGVTZWFyY2hSZXRyaWV2YWwSVAoYZHluYW1pY19yZXRyaWV2YWxf",
-            "Y29uZmlnGAIgASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRHlu",
-            "YW1pY1JldHJpZXZhbENvbmZpZyLKAQoWRHluYW1pY1JldHJpZXZhbENvbmZp",
-            "ZxJFCgRtb2RlGAEgASgOMjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "RHluYW1pY1JldHJpZXZhbENvbmZpZy5Nb2RlEiMKEWR5bmFtaWNfdGhyZXNo",
-            "b2xkGAIgASgCQgPgQQFIAIgBASIuCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJ",
-            "RUQQABIQCgxNT0RFX0RZTkFNSUMQAUIUChJfZHluYW1pY190aHJlc2hvbGQi",
-            "ZQoKVG9vbENvbmZpZxJXChdmdW5jdGlvbl9jYWxsaW5nX2NvbmZpZxgBIAEo",
-            "CzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9uQ2FsbGlu",
-            "Z0NvbmZpZ0ID4EEBIsIBChVGdW5jdGlvbkNhbGxpbmdDb25maWcSSQoEbW9k",
-            "ZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9u",
-            "Q2FsbGluZ0NvbmZpZy5Nb2RlQgPgQQESIwoWYWxsb3dlZF9mdW5jdGlvbl9u",
-            "YW1lcxgCIAMoCUID4EEBIjkKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAA",
-            "EggKBEFVVE8QARIHCgNBTlkQAhIICgROT05FEANCxwEKHmNvbS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIJVG9vbFByb3RvUAFaPmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0",
-            "Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVc",
-            "Q2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZv",
-            "cm06OlYxYgZwcm90bzM="));
+            "EkYKEHZlcnRleF9yYWdfc3RvcmUYBCABKAsyKi5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5WZXJ0ZXhSYWdTdG9yZUgAEiIKE2Rpc2FibGVfYXR0cmli",
+            "dXRpb24YAyABKAhCBRgB4EEBQggKBnNvdXJjZSKqAwoOVmVydGV4UmFnU3Rv",
+            "cmUSUgoNcmFnX3Jlc291cmNlcxgEIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlZlcnRleFJhZ1N0b3JlLlJhZ1Jlc291cmNlQgPgQQESJAoQ",
+            "c2ltaWxhcml0eV90b3BfaxgCIAEoBUIFGAHgQQFIAIgBARItChl2ZWN0b3Jf",
+            "ZGlzdGFuY2VfdGhyZXNob2xkGAMgASgBQgUYAeBBAUgBiAEBElEKFHJhZ19y",
+            "ZXRyaWV2YWxfY29uZmlnGAYgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuUmFnUmV0cmlldmFsQ29uZmlnQgPgQQEaaQoLUmFnUmVzb3VyY2US",
+            "PwoKcmFnX2NvcnB1cxgBIAEoCUIr4EEB+kElCiNhaXBsYXRmb3JtLmdvb2ds",
+            "ZWFwaXMuY29tL1JhZ0NvcnB1cxIZCgxyYWdfZmlsZV9pZHMYAiADKAlCA+BB",
+            "AUITChFfc2ltaWxhcml0eV90b3Bfa0IcChpfdmVjdG9yX2Rpc3RhbmNlX3Ro",
+            "cmVzaG9sZCIoCg5WZXJ0ZXhBSVNlYXJjaBIWCglkYXRhc3RvcmUYASABKAlC",
+            "A+BBAiJtChVHb29nbGVTZWFyY2hSZXRyaWV2YWwSVAoYZHluYW1pY19yZXRy",
+            "aWV2YWxfY29uZmlnGAIgASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuRHluYW1pY1JldHJpZXZhbENvbmZpZyLKAQoWRHluYW1pY1JldHJpZXZh",
+            "bENvbmZpZxJFCgRtb2RlGAEgASgOMjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuRHluYW1pY1JldHJpZXZhbENvbmZpZy5Nb2RlEiMKEWR5bmFtaWNf",
+            "dGhyZXNob2xkGAIgASgCQgPgQQFIAIgBASIuCgRNb2RlEhQKEE1PREVfVU5T",
+            "UEVDSUZJRUQQABIQCgxNT0RFX0RZTkFNSUMQAUIUChJfZHluYW1pY190aHJl",
+            "c2hvbGQiZQoKVG9vbENvbmZpZxJXChdmdW5jdGlvbl9jYWxsaW5nX2NvbmZp",
+            "ZxgBIAEoCzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9u",
+            "Q2FsbGluZ0NvbmZpZ0ID4EEBIsIBChVGdW5jdGlvbkNhbGxpbmdDb25maWcS",
+            "SQoEbW9kZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1",
+            "bmN0aW9uQ2FsbGluZ0NvbmZpZy5Nb2RlQgPgQQESIwoWYWxsb3dlZF9mdW5j",
+            "dGlvbl9uYW1lcxgCIAMoCUID4EEBIjkKBE1vZGUSFAoQTU9ERV9VTlNQRUNJ",
+            "RklFRBAAEggKBEFVVE8QARIHCgNBTlkQAhIICgROT05FEAMiigIKElJhZ1Jl",
+            "dHJpZXZhbENvbmZpZxISCgV0b3BfaxgBIAEoBUID4EEBEkoKBmZpbHRlchgD",
+            "IAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJhZ1JldHJpZXZh",
+            "bENvbmZpZy5GaWx0ZXJCA+BBARqTAQoGRmlsdGVyEigKGXZlY3Rvcl9kaXN0",
+            "YW5jZV90aHJlc2hvbGQYAyABKAFCA+BBAUgAEioKG3ZlY3Rvcl9zaW1pbGFy",
+            "aXR5X3RocmVzaG9sZBgEIAEoAUID4EEBSAASHAoPbWV0YWRhdGFfZmlsdGVy",
+            "GAIgASgJQgPgQQFCFQoTdmVjdG9yX2RiX3RocmVzaG9sZELHAQoeY29tLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQglUb29sUHJvdG9QAVo+Y2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjth",
+            "aXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
+            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
+            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -72,12 +89,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionDeclaration), global::Google.Cloud.AIPlatform.V1.FunctionDeclaration.Parser, new[]{ "Name", "Description", "Parameters", "Response" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionCall), global::Google.Cloud.AIPlatform.V1.FunctionCall.Parser, new[]{ "Name", "Args" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionResponse), global::Google.Cloud.AIPlatform.V1.FunctionResponse.Parser, new[]{ "Name", "Response" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Retrieval), global::Google.Cloud.AIPlatform.V1.Retrieval.Parser, new[]{ "VertexAiSearch", "DisableAttribution" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Retrieval), global::Google.Cloud.AIPlatform.V1.Retrieval.Parser, new[]{ "VertexAiSearch", "VertexRagStore", "DisableAttribution" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexRagStore), global::Google.Cloud.AIPlatform.V1.VertexRagStore.Parser, new[]{ "RagResources", "SimilarityTopK", "VectorDistanceThreshold", "RagRetrievalConfig" }, new[]{ "SimilarityTopK", "VectorDistanceThreshold" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource), global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource.Parser, new[]{ "RagCorpus", "RagFileIds" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexAISearch), global::Google.Cloud.AIPlatform.V1.VertexAISearch.Parser, new[]{ "Datastore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GoogleSearchRetrieval), global::Google.Cloud.AIPlatform.V1.GoogleSearchRetrieval.Parser, new[]{ "DynamicRetrievalConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DynamicRetrievalConfig), global::Google.Cloud.AIPlatform.V1.DynamicRetrievalConfig.Parser, new[]{ "Mode", "DynamicThreshold" }, new[]{ "DynamicThreshold" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.DynamicRetrievalConfig.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ToolConfig), global::Google.Cloud.AIPlatform.V1.ToolConfig.Parser, new[]{ "FunctionCallingConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig), global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Parser, new[]{ "Mode", "AllowedFunctionNames" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig), global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Parser, new[]{ "Mode", "AllowedFunctionNames" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FunctionCallingConfig.Types.Mode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig), global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Parser, new[]{ "TopK", "Filter" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Types.Filter), global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Types.Filter.Parser, new[]{ "VectorDistanceThreshold", "VectorSimilarityThreshold", "MetadataFilter" }, new[]{ "VectorDbThreshold" }, null, null, null)})
           }));
     }
     #endregion
@@ -1285,6 +1304,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         case SourceOneofCase.VertexAiSearch:
           VertexAiSearch = other.VertexAiSearch.Clone();
           break;
+        case SourceOneofCase.VertexRagStore:
+          VertexRagStore = other.VertexRagStore.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1311,6 +1333,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "vertex_rag_store" field.</summary>
+    public const int VertexRagStoreFieldNumber = 4;
+    /// <summary>
+    /// Set to use data source powered by Vertex RAG store.
+    /// User data is uploaded via the VertexRagDataService.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.VertexRagStore VertexRagStore {
+      get { return sourceCase_ == SourceOneofCase.VertexRagStore ? (global::Google.Cloud.AIPlatform.V1.VertexRagStore) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.VertexRagStore;
+      }
+    }
+
     /// <summary>Field number for the "disable_attribution" field.</summary>
     public const int DisableAttributionFieldNumber = 3;
     private bool disableAttribution_;
@@ -1332,6 +1370,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public enum SourceOneofCase {
       None = 0,
       VertexAiSearch = 2,
+      VertexRagStore = 4,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1363,6 +1402,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (!object.Equals(VertexAiSearch, other.VertexAiSearch)) return false;
+      if (!object.Equals(VertexRagStore, other.VertexRagStore)) return false;
       if (DisableAttribution != other.DisableAttribution) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1373,6 +1413,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (sourceCase_ == SourceOneofCase.VertexAiSearch) hash ^= VertexAiSearch.GetHashCode();
+      if (sourceCase_ == SourceOneofCase.VertexRagStore) hash ^= VertexRagStore.GetHashCode();
       if (DisableAttribution != false) hash ^= DisableAttribution.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
@@ -1401,6 +1442,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteBool(DisableAttribution);
       }
+      if (sourceCase_ == SourceOneofCase.VertexRagStore) {
+        output.WriteRawTag(34);
+        output.WriteMessage(VertexRagStore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1419,6 +1464,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteBool(DisableAttribution);
       }
+      if (sourceCase_ == SourceOneofCase.VertexRagStore) {
+        output.WriteRawTag(34);
+        output.WriteMessage(VertexRagStore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1431,6 +1480,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int size = 0;
       if (sourceCase_ == SourceOneofCase.VertexAiSearch) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VertexAiSearch);
+      }
+      if (sourceCase_ == SourceOneofCase.VertexRagStore) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VertexRagStore);
       }
       if (DisableAttribution != false) {
         size += 1 + 1;
@@ -1456,6 +1508,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             VertexAiSearch = new global::Google.Cloud.AIPlatform.V1.VertexAISearch();
           }
           VertexAiSearch.MergeFrom(other.VertexAiSearch);
+          break;
+        case SourceOneofCase.VertexRagStore:
+          if (VertexRagStore == null) {
+            VertexRagStore = new global::Google.Cloud.AIPlatform.V1.VertexRagStore();
+          }
+          VertexRagStore.MergeFrom(other.VertexRagStore);
           break;
       }
 
@@ -1487,6 +1545,15 @@ namespace Google.Cloud.AIPlatform.V1 {
             DisableAttribution = input.ReadBool();
             break;
           }
+          case 34: {
+            global::Google.Cloud.AIPlatform.V1.VertexRagStore subBuilder = new global::Google.Cloud.AIPlatform.V1.VertexRagStore();
+            if (sourceCase_ == SourceOneofCase.VertexRagStore) {
+              subBuilder.MergeFrom(VertexRagStore);
+            }
+            input.ReadMessage(subBuilder);
+            VertexRagStore = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1515,10 +1582,611 @@ namespace Google.Cloud.AIPlatform.V1 {
             DisableAttribution = input.ReadBool();
             break;
           }
+          case 34: {
+            global::Google.Cloud.AIPlatform.V1.VertexRagStore subBuilder = new global::Google.Cloud.AIPlatform.V1.VertexRagStore();
+            if (sourceCase_ == SourceOneofCase.VertexRagStore) {
+              subBuilder.MergeFrom(VertexRagStore);
+            }
+            input.ReadMessage(subBuilder);
+            VertexRagStore = subBuilder;
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Retrieve from Vertex RAG Store for grounding.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VertexRagStore : pb::IMessage<VertexRagStore>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VertexRagStore> _parser = new pb::MessageParser<VertexRagStore>(() => new VertexRagStore());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VertexRagStore> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexRagStore() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexRagStore(VertexRagStore other) : this() {
+      _hasBits0 = other._hasBits0;
+      ragResources_ = other.ragResources_.Clone();
+      similarityTopK_ = other.similarityTopK_;
+      vectorDistanceThreshold_ = other.vectorDistanceThreshold_;
+      ragRetrievalConfig_ = other.ragRetrievalConfig_ != null ? other.ragRetrievalConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexRagStore Clone() {
+      return new VertexRagStore(this);
+    }
+
+    /// <summary>Field number for the "rag_resources" field.</summary>
+    public const int RagResourcesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource> _repeated_ragResources_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource> ragResources_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource>();
+    /// <summary>
+    /// Optional. The representation of the rag source. It can be used to specify
+    /// corpus only or ragfiles. Currently only support one corpus or multiple
+    /// files from one corpus. In the future we may open up multiple corpora
+    /// support.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource> RagResources {
+      get { return ragResources_; }
+    }
+
+    /// <summary>Field number for the "similarity_top_k" field.</summary>
+    public const int SimilarityTopKFieldNumber = 2;
+    private readonly static int SimilarityTopKDefaultValue = 0;
+
+    private int similarityTopK_;
+    /// <summary>
+    /// Optional. Number of top k results to return from the selected corpora.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SimilarityTopK {
+      get { if ((_hasBits0 & 1) != 0) { return similarityTopK_; } else { return SimilarityTopKDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        similarityTopK_ = value;
+      }
+    }
+    /// <summary>Gets whether the "similarity_top_k" field is set</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSimilarityTopK {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "similarity_top_k" field</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSimilarityTopK() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "vector_distance_threshold" field.</summary>
+    public const int VectorDistanceThresholdFieldNumber = 3;
+    private readonly static double VectorDistanceThresholdDefaultValue = 0D;
+
+    private double vectorDistanceThreshold_;
+    /// <summary>
+    /// Optional. Only return results with vector distance smaller than the
+    /// threshold.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double VectorDistanceThreshold {
+      get { if ((_hasBits0 & 2) != 0) { return vectorDistanceThreshold_; } else { return VectorDistanceThresholdDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        vectorDistanceThreshold_ = value;
+      }
+    }
+    /// <summary>Gets whether the "vector_distance_threshold" field is set</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVectorDistanceThreshold {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "vector_distance_threshold" field</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVectorDistanceThreshold() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "rag_retrieval_config" field.</summary>
+    public const int RagRetrievalConfigFieldNumber = 6;
+    private global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig ragRetrievalConfig_;
+    /// <summary>
+    /// Optional. The retrieval config for the Rag query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig RagRetrievalConfig {
+      get { return ragRetrievalConfig_; }
+      set {
+        ragRetrievalConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VertexRagStore);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VertexRagStore other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!ragResources_.Equals(other.ragResources_)) return false;
+      if (SimilarityTopK != other.SimilarityTopK) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(VectorDistanceThreshold, other.VectorDistanceThreshold)) return false;
+      if (!object.Equals(RagRetrievalConfig, other.RagRetrievalConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= ragResources_.GetHashCode();
+      if (HasSimilarityTopK) hash ^= SimilarityTopK.GetHashCode();
+      if (HasVectorDistanceThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(VectorDistanceThreshold);
+      if (ragRetrievalConfig_ != null) hash ^= RagRetrievalConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasSimilarityTopK) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SimilarityTopK);
+      }
+      if (HasVectorDistanceThreshold) {
+        output.WriteRawTag(25);
+        output.WriteDouble(VectorDistanceThreshold);
+      }
+      ragResources_.WriteTo(output, _repeated_ragResources_codec);
+      if (ragRetrievalConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RagRetrievalConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasSimilarityTopK) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SimilarityTopK);
+      }
+      if (HasVectorDistanceThreshold) {
+        output.WriteRawTag(25);
+        output.WriteDouble(VectorDistanceThreshold);
+      }
+      ragResources_.WriteTo(ref output, _repeated_ragResources_codec);
+      if (ragRetrievalConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RagRetrievalConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += ragResources_.CalculateSize(_repeated_ragResources_codec);
+      if (HasSimilarityTopK) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SimilarityTopK);
+      }
+      if (HasVectorDistanceThreshold) {
+        size += 1 + 8;
+      }
+      if (ragRetrievalConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagRetrievalConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VertexRagStore other) {
+      if (other == null) {
+        return;
+      }
+      ragResources_.Add(other.ragResources_);
+      if (other.HasSimilarityTopK) {
+        SimilarityTopK = other.SimilarityTopK;
+      }
+      if (other.HasVectorDistanceThreshold) {
+        VectorDistanceThreshold = other.VectorDistanceThreshold;
+      }
+      if (other.ragRetrievalConfig_ != null) {
+        if (ragRetrievalConfig_ == null) {
+          RagRetrievalConfig = new global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig();
+        }
+        RagRetrievalConfig.MergeFrom(other.RagRetrievalConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            SimilarityTopK = input.ReadInt32();
+            break;
+          }
+          case 25: {
+            VectorDistanceThreshold = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            ragResources_.AddEntriesFrom(input, _repeated_ragResources_codec);
+            break;
+          }
+          case 50: {
+            if (ragRetrievalConfig_ == null) {
+              RagRetrievalConfig = new global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig();
+            }
+            input.ReadMessage(RagRetrievalConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            SimilarityTopK = input.ReadInt32();
+            break;
+          }
+          case 25: {
+            VectorDistanceThreshold = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            ragResources_.AddEntriesFrom(ref input, _repeated_ragResources_codec);
+            break;
+          }
+          case 50: {
+            if (ragRetrievalConfig_ == null) {
+              RagRetrievalConfig = new global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig();
+            }
+            input.ReadMessage(RagRetrievalConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VertexRagStore message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The definition of the Rag resource.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RagResource : pb::IMessage<RagResource>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RagResource> _parser = new pb::MessageParser<RagResource>(() => new RagResource());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RagResource> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.VertexRagStore.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RagResource() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RagResource(RagResource other) : this() {
+          ragCorpus_ = other.ragCorpus_;
+          ragFileIds_ = other.ragFileIds_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RagResource Clone() {
+          return new RagResource(this);
+        }
+
+        /// <summary>Field number for the "rag_corpus" field.</summary>
+        public const int RagCorpusFieldNumber = 1;
+        private string ragCorpus_ = "";
+        /// <summary>
+        /// Optional. RagCorpora resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string RagCorpus {
+          get { return ragCorpus_; }
+          set {
+            ragCorpus_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "rag_file_ids" field.</summary>
+        public const int RagFileIdsFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_ragFileIds_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> ragFileIds_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. rag_file_id. The files should be in the same rag_corpus set in
+        /// rag_corpus field.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> RagFileIds {
+          get { return ragFileIds_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RagResource);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RagResource other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RagCorpus != other.RagCorpus) return false;
+          if(!ragFileIds_.Equals(other.ragFileIds_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RagCorpus.Length != 0) hash ^= RagCorpus.GetHashCode();
+          hash ^= ragFileIds_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RagCorpus.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(RagCorpus);
+          }
+          ragFileIds_.WriteTo(output, _repeated_ragFileIds_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RagCorpus.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(RagCorpus);
+          }
+          ragFileIds_.WriteTo(ref output, _repeated_ragFileIds_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RagCorpus.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(RagCorpus);
+          }
+          size += ragFileIds_.CalculateSize(_repeated_ragFileIds_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RagResource other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RagCorpus.Length != 0) {
+            RagCorpus = other.RagCorpus;
+          }
+          ragFileIds_.Add(other.ragFileIds_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                RagCorpus = input.ReadString();
+                break;
+              }
+              case 18: {
+                ragFileIds_.AddEntriesFrom(input, _repeated_ragFileIds_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                RagCorpus = input.ReadString();
+                break;
+              }
+              case 18: {
+                ragFileIds_.AddEntriesFrom(ref input, _repeated_ragFileIds_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -1541,7 +2209,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1739,7 +2407,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1945,7 +2613,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2220,7 +2888,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2425,7 +3093,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2662,6 +3330,598 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// not passing any function declarations.
         /// </summary>
         [pbr::OriginalName("NONE")] None = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Specifies the context retrieval config.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RagRetrievalConfig : pb::IMessage<RagRetrievalConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RagRetrievalConfig> _parser = new pb::MessageParser<RagRetrievalConfig>(() => new RagRetrievalConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RagRetrievalConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagRetrievalConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagRetrievalConfig(RagRetrievalConfig other) : this() {
+      topK_ = other.topK_;
+      filter_ = other.filter_ != null ? other.filter_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagRetrievalConfig Clone() {
+      return new RagRetrievalConfig(this);
+    }
+
+    /// <summary>Field number for the "top_k" field.</summary>
+    public const int TopKFieldNumber = 1;
+    private int topK_;
+    /// <summary>
+    /// Optional. The number of contexts to retrieve.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TopK {
+      get { return topK_; }
+      set {
+        topK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 3;
+    private global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Types.Filter filter_;
+    /// <summary>
+    /// Optional. Config for filters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Types.Filter Filter {
+      get { return filter_; }
+      set {
+        filter_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RagRetrievalConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RagRetrievalConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TopK != other.TopK) return false;
+      if (!object.Equals(Filter, other.Filter)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TopK != 0) hash ^= TopK.GetHashCode();
+      if (filter_ != null) hash ^= Filter.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TopK != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TopK);
+      }
+      if (filter_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TopK != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TopK);
+      }
+      if (filter_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TopK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TopK);
+      }
+      if (filter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Filter);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RagRetrievalConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TopK != 0) {
+        TopK = other.TopK;
+      }
+      if (other.filter_ != null) {
+        if (filter_ == null) {
+          Filter = new global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Types.Filter();
+        }
+        Filter.MergeFrom(other.Filter);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TopK = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            if (filter_ == null) {
+              Filter = new global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Types.Filter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TopK = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            if (filter_ == null) {
+              Filter = new global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Types.Filter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RagRetrievalConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Config for filters.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Filter : pb::IMessage<Filter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Filter> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.RagRetrievalConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Filter() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Filter(Filter other) : this() {
+          metadataFilter_ = other.metadataFilter_;
+          switch (other.VectorDbThresholdCase) {
+            case VectorDbThresholdOneofCase.VectorDistanceThreshold:
+              VectorDistanceThreshold = other.VectorDistanceThreshold;
+              break;
+            case VectorDbThresholdOneofCase.VectorSimilarityThreshold:
+              VectorSimilarityThreshold = other.VectorSimilarityThreshold;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Filter Clone() {
+          return new Filter(this);
+        }
+
+        /// <summary>Field number for the "vector_distance_threshold" field.</summary>
+        public const int VectorDistanceThresholdFieldNumber = 3;
+        /// <summary>
+        /// Optional. Only returns contexts with vector distance smaller than the
+        /// threshold.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double VectorDistanceThreshold {
+          get { return HasVectorDistanceThreshold ? (double) vectorDbThreshold_ : 0D; }
+          set {
+            vectorDbThreshold_ = value;
+            vectorDbThresholdCase_ = VectorDbThresholdOneofCase.VectorDistanceThreshold;
+          }
+        }
+        /// <summary>Gets whether the "vector_distance_threshold" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasVectorDistanceThreshold {
+          get { return vectorDbThresholdCase_ == VectorDbThresholdOneofCase.VectorDistanceThreshold; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "vector_distance_threshold" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearVectorDistanceThreshold() {
+          if (HasVectorDistanceThreshold) {
+            ClearVectorDbThreshold();
+          }
+        }
+
+        /// <summary>Field number for the "vector_similarity_threshold" field.</summary>
+        public const int VectorSimilarityThresholdFieldNumber = 4;
+        /// <summary>
+        /// Optional. Only returns contexts with vector similarity larger than the
+        /// threshold.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double VectorSimilarityThreshold {
+          get { return HasVectorSimilarityThreshold ? (double) vectorDbThreshold_ : 0D; }
+          set {
+            vectorDbThreshold_ = value;
+            vectorDbThresholdCase_ = VectorDbThresholdOneofCase.VectorSimilarityThreshold;
+          }
+        }
+        /// <summary>Gets whether the "vector_similarity_threshold" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasVectorSimilarityThreshold {
+          get { return vectorDbThresholdCase_ == VectorDbThresholdOneofCase.VectorSimilarityThreshold; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "vector_similarity_threshold" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearVectorSimilarityThreshold() {
+          if (HasVectorSimilarityThreshold) {
+            ClearVectorDbThreshold();
+          }
+        }
+
+        /// <summary>Field number for the "metadata_filter" field.</summary>
+        public const int MetadataFilterFieldNumber = 2;
+        private string metadataFilter_ = "";
+        /// <summary>
+        /// Optional. String for metadata filtering.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string MetadataFilter {
+          get { return metadataFilter_; }
+          set {
+            metadataFilter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        private object vectorDbThreshold_;
+        /// <summary>Enum of possible cases for the "vector_db_threshold" oneof.</summary>
+        public enum VectorDbThresholdOneofCase {
+          None = 0,
+          VectorDistanceThreshold = 3,
+          VectorSimilarityThreshold = 4,
+        }
+        private VectorDbThresholdOneofCase vectorDbThresholdCase_ = VectorDbThresholdOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VectorDbThresholdOneofCase VectorDbThresholdCase {
+          get { return vectorDbThresholdCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearVectorDbThreshold() {
+          vectorDbThresholdCase_ = VectorDbThresholdOneofCase.None;
+          vectorDbThreshold_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Filter);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Filter other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(VectorDistanceThreshold, other.VectorDistanceThreshold)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(VectorSimilarityThreshold, other.VectorSimilarityThreshold)) return false;
+          if (MetadataFilter != other.MetadataFilter) return false;
+          if (VectorDbThresholdCase != other.VectorDbThresholdCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasVectorDistanceThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(VectorDistanceThreshold);
+          if (HasVectorSimilarityThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(VectorSimilarityThreshold);
+          if (MetadataFilter.Length != 0) hash ^= MetadataFilter.GetHashCode();
+          hash ^= (int) vectorDbThresholdCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MetadataFilter.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(MetadataFilter);
+          }
+          if (HasVectorDistanceThreshold) {
+            output.WriteRawTag(25);
+            output.WriteDouble(VectorDistanceThreshold);
+          }
+          if (HasVectorSimilarityThreshold) {
+            output.WriteRawTag(33);
+            output.WriteDouble(VectorSimilarityThreshold);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MetadataFilter.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(MetadataFilter);
+          }
+          if (HasVectorDistanceThreshold) {
+            output.WriteRawTag(25);
+            output.WriteDouble(VectorDistanceThreshold);
+          }
+          if (HasVectorSimilarityThreshold) {
+            output.WriteRawTag(33);
+            output.WriteDouble(VectorSimilarityThreshold);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasVectorDistanceThreshold) {
+            size += 1 + 8;
+          }
+          if (HasVectorSimilarityThreshold) {
+            size += 1 + 8;
+          }
+          if (MetadataFilter.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MetadataFilter);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Filter other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MetadataFilter.Length != 0) {
+            MetadataFilter = other.MetadataFilter;
+          }
+          switch (other.VectorDbThresholdCase) {
+            case VectorDbThresholdOneofCase.VectorDistanceThreshold:
+              VectorDistanceThreshold = other.VectorDistanceThreshold;
+              break;
+            case VectorDbThresholdOneofCase.VectorSimilarityThreshold:
+              VectorSimilarityThreshold = other.VectorSimilarityThreshold;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                MetadataFilter = input.ReadString();
+                break;
+              }
+              case 25: {
+                VectorDistanceThreshold = input.ReadDouble();
+                break;
+              }
+              case 33: {
+                VectorSimilarityThreshold = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 18: {
+                MetadataFilter = input.ReadString();
+                break;
+              }
+              case 25: {
+                VectorDistanceThreshold = input.ReadDouble();
+                break;
+              }
+              case 33: {
+                VectorSimilarityThreshold = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }

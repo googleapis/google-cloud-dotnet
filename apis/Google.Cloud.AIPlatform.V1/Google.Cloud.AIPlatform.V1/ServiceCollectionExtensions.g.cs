@@ -946,6 +946,78 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::VertexRagDataServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddVertexRagDataServiceClient(this IServiceCollection services, sys::Action<gcav::VertexRagDataServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::VertexRagDataServiceClientBuilder builder = new gcav::VertexRagDataServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::VertexRagDataServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddVertexRagDataServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::VertexRagDataServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::VertexRagDataServiceClientBuilder builder = new gcav::VertexRagDataServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::VertexRagServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddVertexRagServiceClient(this IServiceCollection services, sys::Action<gcav::VertexRagServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::VertexRagServiceClientBuilder builder = new gcav::VertexRagServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::VertexRagServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddVertexRagServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::VertexRagServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::VertexRagServiceClientBuilder builder = new gcav::VertexRagServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcav::VizierServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
