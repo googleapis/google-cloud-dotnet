@@ -166,6 +166,10 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest> __Marshaller_google_cloud_netapp_v1_ReverseReplicationDirectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.EstablishPeeringRequest> __Marshaller_google_cloud_netapp_v1_EstablishPeeringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.EstablishPeeringRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.SyncReplicationRequest> __Marshaller_google_cloud_netapp_v1_SyncReplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.SyncReplicationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest> __Marshaller_google_cloud_netapp_v1_CreateBackupVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.GetBackupVaultRequest> __Marshaller_google_cloud_netapp_v1_GetBackupVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.GetBackupVaultRequest.Parser));
@@ -502,6 +506,22 @@ namespace Google.Cloud.NetApp.V1 {
         __ServiceName,
         "ReverseReplicationDirection",
         __Marshaller_google_cloud_netapp_v1_ReverseReplicationDirectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.EstablishPeeringRequest, global::Google.LongRunning.Operation> __Method_EstablishPeering = new grpc::Method<global::Google.Cloud.NetApp.V1.EstablishPeeringRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EstablishPeering",
+        __Marshaller_google_cloud_netapp_v1_EstablishPeeringRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.SyncReplicationRequest, global::Google.LongRunning.Operation> __Method_SyncReplication = new grpc::Method<global::Google.Cloud.NetApp.V1.SyncReplicationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SyncReplication",
+        __Marshaller_google_cloud_netapp_v1_SyncReplicationRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1080,6 +1100,31 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReverseReplicationDirection(global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Establish replication peering.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EstablishPeering(global::Google.Cloud.NetApp.V1.EstablishPeeringRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Syncs the replication. This will invoke one time volume data transfer from
+      /// source to destination.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SyncReplication(global::Google.Cloud.NetApp.V1.SyncReplicationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3097,6 +3142,106 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ReverseReplicationDirection, null, options, request);
       }
       /// <summary>
+      /// Establish replication peering.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EstablishPeering(global::Google.Cloud.NetApp.V1.EstablishPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EstablishPeering(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Establish replication peering.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EstablishPeering(global::Google.Cloud.NetApp.V1.EstablishPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EstablishPeering, null, options, request);
+      }
+      /// <summary>
+      /// Establish replication peering.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EstablishPeeringAsync(global::Google.Cloud.NetApp.V1.EstablishPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EstablishPeeringAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Establish replication peering.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EstablishPeeringAsync(global::Google.Cloud.NetApp.V1.EstablishPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EstablishPeering, null, options, request);
+      }
+      /// <summary>
+      /// Syncs the replication. This will invoke one time volume data transfer from
+      /// source to destination.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SyncReplication(global::Google.Cloud.NetApp.V1.SyncReplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SyncReplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Syncs the replication. This will invoke one time volume data transfer from
+      /// source to destination.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SyncReplication(global::Google.Cloud.NetApp.V1.SyncReplicationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SyncReplication, null, options, request);
+      }
+      /// <summary>
+      /// Syncs the replication. This will invoke one time volume data transfer from
+      /// source to destination.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SyncReplicationAsync(global::Google.Cloud.NetApp.V1.SyncReplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SyncReplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Syncs the replication. This will invoke one time volume data transfer from
+      /// source to destination.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SyncReplicationAsync(global::Google.Cloud.NetApp.V1.SyncReplicationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SyncReplication, null, options, request);
+      }
+      /// <summary>
       /// Creates new backup vault
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -3879,6 +4024,8 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_StopReplication, serviceImpl.StopReplication)
           .AddMethod(__Method_ResumeReplication, serviceImpl.ResumeReplication)
           .AddMethod(__Method_ReverseReplicationDirection, serviceImpl.ReverseReplicationDirection)
+          .AddMethod(__Method_EstablishPeering, serviceImpl.EstablishPeering)
+          .AddMethod(__Method_SyncReplication, serviceImpl.SyncReplication)
           .AddMethod(__Method_CreateBackupVault, serviceImpl.CreateBackupVault)
           .AddMethod(__Method_GetBackupVault, serviceImpl.GetBackupVault)
           .AddMethod(__Method_ListBackupVaults, serviceImpl.ListBackupVaults)
@@ -3940,6 +4087,8 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_StopReplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.StopReplicationRequest, global::Google.LongRunning.Operation>(serviceImpl.StopReplication));
       serviceBinder.AddMethod(__Method_ResumeReplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ResumeReplicationRequest, global::Google.LongRunning.Operation>(serviceImpl.ResumeReplication));
       serviceBinder.AddMethod(__Method_ReverseReplicationDirection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest, global::Google.LongRunning.Operation>(serviceImpl.ReverseReplicationDirection));
+      serviceBinder.AddMethod(__Method_EstablishPeering, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.EstablishPeeringRequest, global::Google.LongRunning.Operation>(serviceImpl.EstablishPeering));
+      serviceBinder.AddMethod(__Method_SyncReplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.SyncReplicationRequest, global::Google.LongRunning.Operation>(serviceImpl.SyncReplication));
       serviceBinder.AddMethod(__Method_CreateBackupVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackupVault));
       serviceBinder.AddMethod(__Method_GetBackupVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetBackupVaultRequest, global::Google.Cloud.NetApp.V1.BackupVault>(serviceImpl.GetBackupVault));
       serviceBinder.AddMethod(__Method_ListBackupVaults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest, global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse>(serviceImpl.ListBackupVaults));

@@ -412,4 +412,28 @@ namespace Google.Cloud.NetApp.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class EstablishPeeringRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::ReplicationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::ReplicationName ReplicationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::ReplicationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SyncReplicationRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::ReplicationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::ReplicationName ReplicationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::ReplicationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

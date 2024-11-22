@@ -9162,6 +9162,200 @@
       ]
     },
     {
+      "regionTag": "netapp_v1_generated_NetApp_EstablishPeering_sync",
+      "title": "EstablishPeeringRequestObject",
+      "description": "Snippet for EstablishPeering",
+      "file": "NetAppClient.EstablishPeeringRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EstablishPeering",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.EstablishPeering",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.EstablishPeeringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Replication, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "EstablishPeering",
+          "fullName": "google.cloud.netapp.v1.NetApp.EstablishPeering",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_EstablishPeering_async",
+      "title": "EstablishPeeringRequestObjectAsync",
+      "description": "Snippet for EstablishPeeringAsync",
+      "file": "NetAppClient.EstablishPeeringRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EstablishPeeringAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.EstablishPeeringAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.EstablishPeeringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Replication, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "EstablishPeering",
+          "fullName": "google.cloud.netapp.v1.NetApp.EstablishPeering",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_SyncReplication_sync",
+      "title": "SyncReplicationRequestObject",
+      "description": "Snippet for SyncReplication",
+      "file": "NetAppClient.SyncReplicationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SyncReplication",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.SyncReplication",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.SyncReplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Replication, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "SyncReplication",
+          "fullName": "google.cloud.netapp.v1.NetApp.SyncReplication",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_SyncReplication_async",
+      "title": "SyncReplicationRequestObjectAsync",
+      "description": "Snippet for SyncReplicationAsync",
+      "file": "NetAppClient.SyncReplicationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SyncReplicationAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.SyncReplicationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.SyncReplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Replication, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "SyncReplication",
+          "fullName": "google.cloud.netapp.v1.NetApp.SyncReplication",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "netapp_v1_generated_NetApp_CreateBackupVault_sync",
       "title": "CreateBackupVaultRequestObject",
       "description": "Snippet for CreateBackupVault",

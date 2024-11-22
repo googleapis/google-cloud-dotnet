@@ -5695,6 +5695,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for EstablishPeering</summary>
+        public void EstablishPeeringRequestObject()
+        {
+            // Snippet: EstablishPeering(EstablishPeeringRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            EstablishPeeringRequest request = new EstablishPeeringRequest
+            {
+                ReplicationName = ReplicationName.FromProjectLocationVolumeReplication("[PROJECT]", "[LOCATION]", "[VOLUME]", "[REPLICATION]"),
+                PeerClusterName = "",
+                PeerSvmName = "",
+                PeerIpAddresses = { "", },
+                PeerVolumeName = "",
+            };
+            // Make the request
+            Operation<Replication, OperationMetadata> response = netAppClient.EstablishPeering(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Replication, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Replication result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Replication, OperationMetadata> retrievedResponse = netAppClient.PollOnceEstablishPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Replication retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EstablishPeeringAsync</summary>
+        public async Task EstablishPeeringRequestObjectAsync()
+        {
+            // Snippet: EstablishPeeringAsync(EstablishPeeringRequest, CallSettings)
+            // Additional: EstablishPeeringAsync(EstablishPeeringRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            EstablishPeeringRequest request = new EstablishPeeringRequest
+            {
+                ReplicationName = ReplicationName.FromProjectLocationVolumeReplication("[PROJECT]", "[LOCATION]", "[VOLUME]", "[REPLICATION]"),
+                PeerClusterName = "",
+                PeerSvmName = "",
+                PeerIpAddresses = { "", },
+                PeerVolumeName = "",
+            };
+            // Make the request
+            Operation<Replication, OperationMetadata> response = await netAppClient.EstablishPeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Replication, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Replication result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Replication, OperationMetadata> retrievedResponse = await netAppClient.PollOnceEstablishPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Replication retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SyncReplication</summary>
+        public void SyncReplicationRequestObject()
+        {
+            // Snippet: SyncReplication(SyncReplicationRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            SyncReplicationRequest request = new SyncReplicationRequest
+            {
+                ReplicationName = ReplicationName.FromProjectLocationVolumeReplication("[PROJECT]", "[LOCATION]", "[VOLUME]", "[REPLICATION]"),
+            };
+            // Make the request
+            Operation<Replication, OperationMetadata> response = netAppClient.SyncReplication(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Replication, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Replication result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Replication, OperationMetadata> retrievedResponse = netAppClient.PollOnceSyncReplication(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Replication retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SyncReplicationAsync</summary>
+        public async Task SyncReplicationRequestObjectAsync()
+        {
+            // Snippet: SyncReplicationAsync(SyncReplicationRequest, CallSettings)
+            // Additional: SyncReplicationAsync(SyncReplicationRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            SyncReplicationRequest request = new SyncReplicationRequest
+            {
+                ReplicationName = ReplicationName.FromProjectLocationVolumeReplication("[PROJECT]", "[LOCATION]", "[VOLUME]", "[REPLICATION]"),
+            };
+            // Make the request
+            Operation<Replication, OperationMetadata> response = await netAppClient.SyncReplicationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Replication, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Replication result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Replication, OperationMetadata> retrievedResponse = await netAppClient.PollOnceSyncReplicationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Replication retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateBackupVault</summary>
         public void CreateBackupVaultRequestObject()
         {
