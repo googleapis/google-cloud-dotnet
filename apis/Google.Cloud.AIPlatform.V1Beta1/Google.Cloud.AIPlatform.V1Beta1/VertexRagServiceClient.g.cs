@@ -22,6 +22,7 @@ using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
@@ -48,6 +49,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             RetrieveContextsSettings = existing.RetrieveContextsSettings;
+            AugmentPromptSettings = existing.AugmentPromptSettings;
+            CorroborateContentSettings = existing.CorroborateContentSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -66,6 +69,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RetrieveContextsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagServiceClient.AugmentPrompt</c> and <c>VertexRagServiceClient.AugmentPromptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AugmentPromptSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagServiceClient.CorroborateContent</c> and <c>VertexRagServiceClient.CorroborateContentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CorroborateContentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -368,6 +395,391 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<RetrieveContextsResponse> RetrieveContextsAsync(gagr::LocationName parent, RagQuery query, st::CancellationToken cancellationToken) =>
             RetrieveContextsAsync(parent, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AugmentPromptResponse AugmentPrompt(AugmentPromptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AugmentPromptResponse> AugmentPromptAsync(AugmentPromptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AugmentPromptResponse> AugmentPromptAsync(AugmentPromptRequest request, st::CancellationToken cancellationToken) =>
+            AugmentPromptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to augment prompt.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Metadata of the backend deployed model.
+        /// </param>
+        /// <param name="vertexRagStore">
+        /// Optional. Retrieves contexts from the Vertex RagStore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AugmentPromptResponse AugmentPrompt(string parent, AugmentPromptRequest.Types.Model model, VertexRagStore vertexRagStore, gaxgrpc::CallSettings callSettings = null) =>
+            AugmentPrompt(new AugmentPromptRequest
+            {
+                VertexRagStore = vertexRagStore,
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Model = model,
+            }, callSettings);
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to augment prompt.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Metadata of the backend deployed model.
+        /// </param>
+        /// <param name="vertexRagStore">
+        /// Optional. Retrieves contexts from the Vertex RagStore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AugmentPromptResponse> AugmentPromptAsync(string parent, AugmentPromptRequest.Types.Model model, VertexRagStore vertexRagStore, gaxgrpc::CallSettings callSettings = null) =>
+            AugmentPromptAsync(new AugmentPromptRequest
+            {
+                VertexRagStore = vertexRagStore,
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Model = model,
+            }, callSettings);
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to augment prompt.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Metadata of the backend deployed model.
+        /// </param>
+        /// <param name="vertexRagStore">
+        /// Optional. Retrieves contexts from the Vertex RagStore.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AugmentPromptResponse> AugmentPromptAsync(string parent, AugmentPromptRequest.Types.Model model, VertexRagStore vertexRagStore, st::CancellationToken cancellationToken) =>
+            AugmentPromptAsync(parent, model, vertexRagStore, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to augment prompt.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Metadata of the backend deployed model.
+        /// </param>
+        /// <param name="vertexRagStore">
+        /// Optional. Retrieves contexts from the Vertex RagStore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AugmentPromptResponse AugmentPrompt(gagr::LocationName parent, AugmentPromptRequest.Types.Model model, VertexRagStore vertexRagStore, gaxgrpc::CallSettings callSettings = null) =>
+            AugmentPrompt(new AugmentPromptRequest
+            {
+                VertexRagStore = vertexRagStore,
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Model = model,
+            }, callSettings);
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to augment prompt.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Metadata of the backend deployed model.
+        /// </param>
+        /// <param name="vertexRagStore">
+        /// Optional. Retrieves contexts from the Vertex RagStore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AugmentPromptResponse> AugmentPromptAsync(gagr::LocationName parent, AugmentPromptRequest.Types.Model model, VertexRagStore vertexRagStore, gaxgrpc::CallSettings callSettings = null) =>
+            AugmentPromptAsync(new AugmentPromptRequest
+            {
+                VertexRagStore = vertexRagStore,
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Model = model,
+            }, callSettings);
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to augment prompt.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="model">
+        /// Optional. Metadata of the backend deployed model.
+        /// </param>
+        /// <param name="vertexRagStore">
+        /// Optional. Retrieves contexts from the Vertex RagStore.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AugmentPromptResponse> AugmentPromptAsync(gagr::LocationName parent, AugmentPromptRequest.Types.Model model, VertexRagStore vertexRagStore, st::CancellationToken cancellationToken) =>
+            AugmentPromptAsync(parent, model, vertexRagStore, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CorroborateContentResponse CorroborateContent(CorroborateContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CorroborateContentResponse> CorroborateContentAsync(CorroborateContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CorroborateContentResponse> CorroborateContentAsync(CorroborateContentRequest request, st::CancellationToken cancellationToken) =>
+            CorroborateContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to corroborate text.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="content">
+        /// Optional. Input content to corroborate, only text format is supported for
+        /// now.
+        /// </param>
+        /// <param name="facts">
+        /// Optional. Facts used to generate the text can also be used to corroborate
+        /// the text.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CorroborateContentResponse CorroborateContent(string parent, Content content, scg::IEnumerable<Fact> facts, gaxgrpc::CallSettings callSettings = null) =>
+            CorroborateContent(new CorroborateContentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Content = content,
+                Facts =
+                {
+                    facts ?? linq::Enumerable.Empty<Fact>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to corroborate text.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="content">
+        /// Optional. Input content to corroborate, only text format is supported for
+        /// now.
+        /// </param>
+        /// <param name="facts">
+        /// Optional. Facts used to generate the text can also be used to corroborate
+        /// the text.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CorroborateContentResponse> CorroborateContentAsync(string parent, Content content, scg::IEnumerable<Fact> facts, gaxgrpc::CallSettings callSettings = null) =>
+            CorroborateContentAsync(new CorroborateContentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Content = content,
+                Facts =
+                {
+                    facts ?? linq::Enumerable.Empty<Fact>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to corroborate text.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="content">
+        /// Optional. Input content to corroborate, only text format is supported for
+        /// now.
+        /// </param>
+        /// <param name="facts">
+        /// Optional. Facts used to generate the text can also be used to corroborate
+        /// the text.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CorroborateContentResponse> CorroborateContentAsync(string parent, Content content, scg::IEnumerable<Fact> facts, st::CancellationToken cancellationToken) =>
+            CorroborateContentAsync(parent, content, facts, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to corroborate text.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="content">
+        /// Optional. Input content to corroborate, only text format is supported for
+        /// now.
+        /// </param>
+        /// <param name="facts">
+        /// Optional. Facts used to generate the text can also be used to corroborate
+        /// the text.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CorroborateContentResponse CorroborateContent(gagr::LocationName parent, Content content, scg::IEnumerable<Fact> facts, gaxgrpc::CallSettings callSettings = null) =>
+            CorroborateContent(new CorroborateContentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Content = content,
+                Facts =
+                {
+                    facts ?? linq::Enumerable.Empty<Fact>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to corroborate text.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="content">
+        /// Optional. Input content to corroborate, only text format is supported for
+        /// now.
+        /// </param>
+        /// <param name="facts">
+        /// Optional. Facts used to generate the text can also be used to corroborate
+        /// the text.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CorroborateContentResponse> CorroborateContentAsync(gagr::LocationName parent, Content content, scg::IEnumerable<Fact> facts, gaxgrpc::CallSettings callSettings = null) =>
+            CorroborateContentAsync(new CorroborateContentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Content = content,
+                Facts =
+                {
+                    facts ?? linq::Enumerable.Empty<Fact>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location from which to corroborate text.
+        /// The users must have permission to make a call in the project.
+        /// Format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="content">
+        /// Optional. Input content to corroborate, only text format is supported for
+        /// now.
+        /// </param>
+        /// <param name="facts">
+        /// Optional. Facts used to generate the text can also be used to corroborate
+        /// the text.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CorroborateContentResponse> CorroborateContentAsync(gagr::LocationName parent, Content content, scg::IEnumerable<Fact> facts, st::CancellationToken cancellationToken) =>
+            CorroborateContentAsync(parent, content, facts, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>VertexRagService client wrapper implementation, for convenient use.</summary>
@@ -377,6 +789,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     public sealed partial class VertexRagServiceClientImpl : VertexRagServiceClient
     {
         private readonly gaxgrpc::ApiCall<RetrieveContextsRequest, RetrieveContextsResponse> _callRetrieveContexts;
+
+        private readonly gaxgrpc::ApiCall<AugmentPromptRequest, AugmentPromptResponse> _callAugmentPrompt;
+
+        private readonly gaxgrpc::ApiCall<CorroborateContentRequest, CorroborateContentResponse> _callCorroborateContent;
 
         /// <summary>
         /// Constructs a client wrapper for the VertexRagService service, with the specified gRPC client and settings.
@@ -398,12 +814,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callRetrieveContexts = clientHelper.BuildApiCall<RetrieveContextsRequest, RetrieveContextsResponse>("RetrieveContexts", grpcClient.RetrieveContextsAsync, grpcClient.RetrieveContexts, effectiveSettings.RetrieveContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRetrieveContexts);
             Modify_RetrieveContextsApiCall(ref _callRetrieveContexts);
+            _callAugmentPrompt = clientHelper.BuildApiCall<AugmentPromptRequest, AugmentPromptResponse>("AugmentPrompt", grpcClient.AugmentPromptAsync, grpcClient.AugmentPrompt, effectiveSettings.AugmentPromptSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callAugmentPrompt);
+            Modify_AugmentPromptApiCall(ref _callAugmentPrompt);
+            _callCorroborateContent = clientHelper.BuildApiCall<CorroborateContentRequest, CorroborateContentResponse>("CorroborateContent", grpcClient.CorroborateContentAsync, grpcClient.CorroborateContent, effectiveSettings.CorroborateContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCorroborateContent);
+            Modify_CorroborateContentApiCall(ref _callCorroborateContent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_RetrieveContextsApiCall(ref gaxgrpc::ApiCall<RetrieveContextsRequest, RetrieveContextsResponse> call);
+
+        partial void Modify_AugmentPromptApiCall(ref gaxgrpc::ApiCall<AugmentPromptRequest, AugmentPromptResponse> call);
+
+        partial void Modify_CorroborateContentApiCall(ref gaxgrpc::ApiCall<CorroborateContentRequest, CorroborateContentResponse> call);
 
         partial void OnConstruction(VertexRagService.VertexRagServiceClient grpcClient, VertexRagServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -417,6 +843,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_RetrieveContextsRequest(ref RetrieveContextsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AugmentPromptRequest(ref AugmentPromptRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CorroborateContentRequest(ref CorroborateContentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves relevant contexts for a query.
@@ -440,6 +870,60 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_RetrieveContextsRequest(ref request, ref callSettings);
             return _callRetrieveContexts.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AugmentPromptResponse AugmentPrompt(AugmentPromptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AugmentPromptRequest(ref request, ref callSettings);
+            return _callAugmentPrompt.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Given an input prompt, it returns augmented prompt from vertex rag store
+        /// to guide LLM towards generating grounded responses.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AugmentPromptResponse> AugmentPromptAsync(AugmentPromptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AugmentPromptRequest(ref request, ref callSettings);
+            return _callAugmentPrompt.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CorroborateContentResponse CorroborateContent(CorroborateContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CorroborateContentRequest(ref request, ref callSettings);
+            return _callCorroborateContent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Given an input text, it returns a score that evaluates the factuality of
+        /// the text. It also extracts and returns claims from the text and provides
+        /// supporting facts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CorroborateContentResponse> CorroborateContentAsync(CorroborateContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CorroborateContentRequest(ref request, ref callSettings);
+            return _callCorroborateContent.Async(request, callSettings);
         }
     }
 

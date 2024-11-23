@@ -51,7 +51,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZGVuc2VfZW1iZWRkaW5nX21vZGVsX3ByZWRpY3Rpb25fZW5kcG9pbnQYAiAB",
             "KAsyUS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0VtYmVk",
             "ZGluZ01vZGVsQ29uZmlnLlZlcnRleFByZWRpY3Rpb25FbmRwb2ludEID4EEC",
-            "Qg4KDG1vZGVsX2NvbmZpZyKKBgoRUmFnVmVjdG9yRGJDb25maWcSWQoOcmFn",
+            "Qg4KDG1vZGVsX2NvbmZpZyLwBgoRUmFnVmVjdG9yRGJDb25maWcSWQoOcmFn",
             "X21hbmFnZWRfZGIYASABKAsyPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
             "MWJldGExLlJhZ1ZlY3RvckRiQ29uZmlnLlJhZ01hbmFnZWREYkgAEk8KCHdl",
             "YXZpYXRlGAIgASgLMjsuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
@@ -63,106 +63,136 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "dmVjdG9yX3NlYXJjaBgGIAEoCzJFLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
             "LnYxYmV0YTEuUmFnVmVjdG9yRGJDb25maWcuVmVydGV4VmVjdG9yU2VhcmNo",
             "SAASOgoIYXBpX2F1dGgYBSABKAsyKC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExLkFwaUF1dGgaDgoMUmFnTWFuYWdlZERiGjoKCFdlYXZpYXRl",
-            "EhUKDWh0dHBfZW5kcG9pbnQYASABKAkSFwoPY29sbGVjdGlvbl9uYW1lGAIg",
-            "ASgJGh4KCFBpbmVjb25lEhIKCmluZGV4X25hbWUYASABKAkaOAoSVmVydGV4",
-            "RmVhdHVyZVN0b3JlEiIKGmZlYXR1cmVfdmlld19yZXNvdXJjZV9uYW1lGAEg",
-            "ASgJGjsKElZlcnRleFZlY3RvclNlYXJjaBIWCg5pbmRleF9lbmRwb2ludBgB",
-            "IAEoCRINCgVpbmRleBgCIAEoCUILCgl2ZWN0b3JfZGIipQEKCkZpbGVTdGF0",
-            "dXMSRQoFc3RhdGUYASABKA4yMS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkZpbGVTdGF0dXMuU3RhdGVCA+BBAxIZCgxlcnJvcl9zdGF0dXMY",
-            "AiABKAlCA+BBAyI1CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoK",
-            "BkFDVElWRRABEgkKBUVSUk9SEAIisAEKDENvcnB1c1N0YXR1cxJHCgVzdGF0",
-            "ZRgBIAEoDjIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQ29y",
-            "cHVzU3RhdHVzLlN0YXRlQgPgQQMSGQoMZXJyb3Jfc3RhdHVzGAIgASgJQgPg",
-            "QQMiPAoFU3RhdGUSCwoHVU5LTk9XThAAEg8KC0lOSVRJQUxJWkVEEAESCgoG",
-            "QUNUSVZFEAISCQoFRVJST1IQAyLNBAoJUmFnQ29ycHVzEhEKBG5hbWUYASAB",
-            "KAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhIYCgtkZXNjcmlw",
-            "dGlvbhgDIAEoCUID4EEBEmQKGnJhZ19lbWJlZGRpbmdfbW9kZWxfY29uZmln",
-            "GAYgASgLMjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdF",
-            "bWJlZGRpbmdNb2RlbENvbmZpZ0IG4EEB4EEFElgKFHJhZ192ZWN0b3JfZGJf",
-            "Y29uZmlnGAcgASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MS5SYWdWZWN0b3JEYkNvbmZpZ0IG4EEB4EEFEjQKC2NyZWF0ZV90aW1lGAQg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
-            "ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EkkKDWNvcnB1c19zdGF0dXMYCCABKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLkNvcnB1c1N0YXR1c0ID4EEDOoAB6kF9CiNhaXBsYXRm",
-            "b3JtLmdvb2dsZWFwaXMuY29tL1JhZ0NvcnB1cxI/cHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JhZ0NvcnBvcmEve3JhZ19jb3Jw",
-            "dXN9KgpyYWdDb3Jwb3JhMglyYWdDb3JwdXMixggKB1JhZ0ZpbGUSRQoKZ2Nz",
-            "X3NvdXJjZRgIIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuR2NzU291cmNlQgPgQQNIABJWChNnb29nbGVfZHJpdmVfc291cmNlGAkg",
-            "ASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Hb29nbGVE",
-            "cml2ZVNvdXJjZUID4EEDSAASWAoUZGlyZWN0X3VwbG9hZF9zb3VyY2UYCiAB",
-            "KAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRpcmVjdFVw",
-            "bG9hZFNvdXJjZUID4EEDSAASRAoMc2xhY2tfc291cmNlGAsgASgLMiwuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TbGFja1NvdXJjZUgAEkIK",
-            "C2ppcmFfc291cmNlGAwgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMS5KaXJhU291cmNlSAASUQoTc2hhcmVfcG9pbnRfc291cmNlcxgO",
-            "IAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU2hhcmVQ",
-            "b2ludFNvdXJjZXNIABIRCgRuYW1lGAEgASgJQgPgQQMSGQoMZGlzcGxheV9u",
-            "YW1lGAIgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARIXCgpz",
-            "aXplX2J5dGVzGAQgASgDQgPgQQMSUAoNcmFnX2ZpbGVfdHlwZRgFIAEoDjI0",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZS5SYWdG",
-            "aWxlVHlwZUID4EEDEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkUKC2ZpbGVfc3RhdHVz",
-            "GA0gASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5GaWxl",
-            "U3RhdHVzQgPgQQMiWgoLUmFnRmlsZVR5cGUSHQoZUkFHX0ZJTEVfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEhUKEVJBR19GSUxFX1RZUEVfVFhUEAESFQoRUkFHX0ZJ",
-            "TEVfVFlQRV9QREYQAjqPAepBiwEKIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
-            "b20vUmFnRmlsZRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3JhZ0NvcnBvcmEve3JhZ19jb3JwdXN9L3JhZ0ZpbGVzL3tyYWdf",
-            "ZmlsZX0qCHJhZ0ZpbGVzMgdyYWdGaWxlQhEKD3JhZ19maWxlX3NvdXJjZSJC",
-            "ChVSYWdGaWxlQ2h1bmtpbmdDb25maWcSEgoKY2h1bmtfc2l6ZRgBIAEoBRIV",
-            "Cg1jaHVua19vdmVybGFwGAIgASgFIjgKFFJhZ0ZpbGVQYXJzaW5nQ29uZmln",
-            "EiAKGHVzZV9hZHZhbmNlZF9wZGZfcGFyc2luZxgCIAEoCCJvChNVcGxvYWRS",
-            "YWdGaWxlQ29uZmlnElgKGHJhZ19maWxlX2NodW5raW5nX2NvbmZpZxgBIAEo",
-            "CzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZUNo",
-            "dW5raW5nQ29uZmlnIsQGChRJbXBvcnRSYWdGaWxlc0NvbmZpZxJACgpnY3Nf",
-            "c291cmNlGAIgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MS5HY3NTb3VyY2VIABJRChNnb29nbGVfZHJpdmVfc291cmNlGAMgASgLMjIu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Hb29nbGVEcml2ZVNv",
-            "dXJjZUgAEkQKDHNsYWNrX3NvdXJjZRgGIAEoCzIsLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxYmV0YTEuU2xhY2tTb3VyY2VIABJCCgtqaXJhX3NvdXJj",
-            "ZRgHIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuSmly",
-            "YVNvdXJjZUgAElEKE3NoYXJlX3BvaW50X3NvdXJjZXMYDSABKAsyMi5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNoYXJlUG9pbnRTb3VyY2Vz",
-            "SAASUwoYcGFydGlhbF9mYWlsdXJlX2djc19zaW5rGAsgASgLMi8uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HY3NEZXN0aW5hdGlvbkgBEl0K",
-            "HXBhcnRpYWxfZmFpbHVyZV9iaWdxdWVyeV9zaW5rGAwgASgLMjQuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5CaWdRdWVyeURlc3RpbmF0aW9u",
-            "SAESWAoYcmFnX2ZpbGVfY2h1bmtpbmdfY29uZmlnGAQgASgLMjYuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlQ2h1bmtpbmdDb25m",
-            "aWcSVgoXcmFnX2ZpbGVfcGFyc2luZ19jb25maWcYCCABKAsyNS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVQYXJzaW5nQ29uZmln",
-            "EisKHm1heF9lbWJlZGRpbmdfcmVxdWVzdHNfcGVyX21pbhgFIAEoBUID4EEB",
-            "Qg8KDWltcG9ydF9zb3VyY2VCFgoUcGFydGlhbF9mYWlsdXJlX3NpbmtC6QEK",
-            "I2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhJWZXJ0ZXhS",
-            "YWdEYXRhUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
-            "L2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2ds",
-            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQ",
-            "bGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
-            "VjFiZXRhMWIGcHJvdG8z"));
+            "bS52MWJldGExLkFwaUF1dGgSZAoacmFnX2VtYmVkZGluZ19tb2RlbF9jb25m",
+            "aWcYByABKAsyOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJh",
+            "Z0VtYmVkZGluZ01vZGVsQ29uZmlnQgbgQQHgQQUaDgoMUmFnTWFuYWdlZERi",
+            "GjoKCFdlYXZpYXRlEhUKDWh0dHBfZW5kcG9pbnQYASABKAkSFwoPY29sbGVj",
+            "dGlvbl9uYW1lGAIgASgJGh4KCFBpbmVjb25lEhIKCmluZGV4X25hbWUYASAB",
+            "KAkaOAoSVmVydGV4RmVhdHVyZVN0b3JlEiIKGmZlYXR1cmVfdmlld19yZXNv",
+            "dXJjZV9uYW1lGAEgASgJGjsKElZlcnRleFZlY3RvclNlYXJjaBIWCg5pbmRl",
+            "eF9lbmRwb2ludBgBIAEoCRINCgVpbmRleBgCIAEoCUILCgl2ZWN0b3JfZGIi",
+            "pQEKCkZpbGVTdGF0dXMSRQoFc3RhdGUYASABKA4yMS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLkZpbGVTdGF0dXMuU3RhdGVCA+BBAxIZCgxl",
+            "cnJvcl9zdGF0dXMYAiABKAlCA+BBAyI1CgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgoKBkFDVElWRRABEgkKBUVSUk9SEAIiLgoUVmVydGV4QWlT",
+            "ZWFyY2hDb25maWcSFgoOc2VydmluZ19jb25maWcYASABKAkisAEKDENvcnB1",
+            "c1N0YXR1cxJHCgVzdGF0ZRgBIAEoDjIzLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuQ29ycHVzU3RhdHVzLlN0YXRlQgPgQQMSGQoMZXJyb3Jf",
+            "c3RhdHVzGAIgASgJQgPgQQMiPAoFU3RhdGUSCwoHVU5LTk9XThAAEg8KC0lO",
+            "SVRJQUxJWkVEEAESCgoGQUNUSVZFEAISCQoFRVJST1IQAyKdBgoJUmFnQ29y",
+            "cHVzEhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlC",
+            "A+BBAhIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBEmYKGnJhZ19lbWJlZGRp",
+            "bmdfbW9kZWxfY29uZmlnGAYgASgLMjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMS5SYWdFbWJlZGRpbmdNb2RlbENvbmZpZ0IIGAHgQQHgQQUS",
+            "WgoUcmFnX3ZlY3Rvcl9kYl9jb25maWcYByABKAsyMi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlJhZ1ZlY3RvckRiQ29uZmlnQggYAeBBAeBB",
+            "BRI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxJJCg1jb3JwdXNfc3RhdHVzGAggASgLMi0u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Db3JwdXNTdGF0dXNC",
+            "A+BBAxJWChB2ZWN0b3JfZGJfY29uZmlnGAkgASgLMjIuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMS5SYWdWZWN0b3JEYkNvbmZpZ0IG4EEB4EEF",
+            "SAASYAoXdmVydGV4X2FpX3NlYXJjaF9jb25maWcYCiABKAsyNS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlZlcnRleEFpU2VhcmNoQ29uZmln",
+            "QgbgQQHgQQVIADqAAepBfQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9S",
+            "YWdDb3JwdXMSP3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9yYWdDb3Jwb3JhL3tyYWdfY29ycHVzfSoKcmFnQ29ycG9yYTIJcmFn",
+            "Q29ycHVzQhAKDmJhY2tlbmRfY29uZmlnIsYICgdSYWdGaWxlEkUKCmdjc19z",
+            "b3VyY2UYCCABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "Lkdjc1NvdXJjZUID4EEDSAASVgoTZ29vZ2xlX2RyaXZlX3NvdXJjZRgJIAEo",
+            "CzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR29vZ2xlRHJp",
+            "dmVTb3VyY2VCA+BBA0gAElgKFGRpcmVjdF91cGxvYWRfc291cmNlGAogASgL",
+            "MjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EaXJlY3RVcGxv",
+            "YWRTb3VyY2VCA+BBA0gAEkQKDHNsYWNrX3NvdXJjZRgLIAEoCzIsLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU2xhY2tTb3VyY2VIABJCCgtq",
+            "aXJhX3NvdXJjZRgMIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuSmlyYVNvdXJjZUgAElEKE3NoYXJlX3BvaW50X3NvdXJjZXMYDiAB",
+            "KAsyMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNoYXJlUG9p",
+            "bnRTb3VyY2VzSAASEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFt",
+            "ZRgCIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPgQQESFwoKc2l6",
+            "ZV9ieXRlcxgEIAEoA0ID4EEDElAKDXJhZ19maWxlX3R5cGUYBSABKA4yNC5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGUuUmFnRmls",
+            "ZVR5cGVCA+BBAxI0CgtjcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgHIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJFCgtmaWxlX3N0YXR1cxgN",
+            "IAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRmlsZVN0",
+            "YXR1c0ID4EEDIloKC1JhZ0ZpbGVUeXBlEh0KGVJBR19GSUxFX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIVChFSQUdfRklMRV9UWVBFX1RYVBABEhUKEVJBR19GSUxF",
+            "X1RZUEVfUERGEAI6jwHqQYsBCiFhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
+            "L1JhZ0ZpbGUSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9yYWdDb3Jwb3JhL3tyYWdfY29ycHVzfS9yYWdGaWxlcy97cmFnX2Zp",
+            "bGV9KghyYWdGaWxlczIHcmFnRmlsZUIRCg9yYWdfZmlsZV9zb3VyY2UijAIK",
+            "FVJhZ0ZpbGVDaHVua2luZ0NvbmZpZxJrChVmaXhlZF9sZW5ndGhfY2h1bmtp",
+            "bmcYAyABKAsySi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJh",
+            "Z0ZpbGVDaHVua2luZ0NvbmZpZy5GaXhlZExlbmd0aENodW5raW5nSAASFgoK",
+            "Y2h1bmtfc2l6ZRgBIAEoBUICGAESGQoNY2h1bmtfb3ZlcmxhcBgCIAEoBUIC",
+            "GAEaQAoTRml4ZWRMZW5ndGhDaHVua2luZxISCgpjaHVua19zaXplGAEgASgF",
+            "EhUKDWNodW5rX292ZXJsYXAYAiABKAVCEQoPY2h1bmtpbmdfY29uZmlnIncK",
+            "G1JhZ0ZpbGVUcmFuc2Zvcm1hdGlvbkNvbmZpZxJYChhyYWdfZmlsZV9jaHVu",
+            "a2luZ19jb25maWcYASABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLlJhZ0ZpbGVDaHVua2luZ0NvbmZpZyKGAwoUUmFnRmlsZVBhcnNp",
+            "bmdDb25maWcSXwoPYWR2YW5jZWRfcGFyc2VyGAMgASgLMkQuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlUGFyc2luZ0NvbmZpZy5B",
+            "ZHZhbmNlZFBhcnNlckgAElsKDWxheW91dF9wYXJzZXIYBCABKAsyQi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVQYXJzaW5nQ29u",
+            "ZmlnLkxheW91dFBhcnNlckgAEiQKGHVzZV9hZHZhbmNlZF9wZGZfcGFyc2lu",
+            "ZxgCIAEoCEICGAEaMgoOQWR2YW5jZWRQYXJzZXISIAoYdXNlX2FkdmFuY2Vk",
+            "X3BkZl9wYXJzaW5nGAEgASgIGkwKDExheW91dFBhcnNlchIWCg5wcm9jZXNz",
+            "b3JfbmFtZRgBIAEoCRIkChxtYXhfcGFyc2luZ19yZXF1ZXN0c19wZXJfbWlu",
+            "GAIgASgFQggKBnBhcnNlciLZAQoTVXBsb2FkUmFnRmlsZUNvbmZpZxJcChhy",
+            "YWdfZmlsZV9jaHVua2luZ19jb25maWcYASABKAsyNi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVDaHVua2luZ0NvbmZpZ0ICGAES",
+            "ZAoecmFnX2ZpbGVfdHJhbnNmb3JtYXRpb25fY29uZmlnGAMgASgLMjwuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlVHJhbnNmb3Jt",
+            "YXRpb25Db25maWciuwcKFEltcG9ydFJhZ0ZpbGVzQ29uZmlnEkAKCmdjc19z",
+            "b3VyY2UYAiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "Lkdjc1NvdXJjZUgAElEKE2dvb2dsZV9kcml2ZV9zb3VyY2UYAyABKAsyMi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdvb2dsZURyaXZlU291",
+            "cmNlSAASRAoMc2xhY2tfc291cmNlGAYgASgLMiwuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFiZXRhMS5TbGFja1NvdXJjZUgAEkIKC2ppcmFfc291cmNl",
+            "GAcgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5KaXJh",
+            "U291cmNlSAASUQoTc2hhcmVfcG9pbnRfc291cmNlcxgNIAEoCzIyLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU2hhcmVQb2ludFNvdXJjZXNI",
+            "ABJXChhwYXJ0aWFsX2ZhaWx1cmVfZ2NzX3NpbmsYCyABKAsyLy5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdjc0Rlc3RpbmF0aW9uQgIYAUgB",
+            "EmEKHXBhcnRpYWxfZmFpbHVyZV9iaWdxdWVyeV9zaW5rGAwgASgLMjQuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5CaWdRdWVyeURlc3RpbmF0",
+            "aW9uQgIYAUgBElwKGHJhZ19maWxlX2NodW5raW5nX2NvbmZpZxgEIAEoCzI2",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZUNodW5r",
+            "aW5nQ29uZmlnQgIYARJkCh5yYWdfZmlsZV90cmFuc2Zvcm1hdGlvbl9jb25m",
+            "aWcYECABKAsyPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJh",
+            "Z0ZpbGVUcmFuc2Zvcm1hdGlvbkNvbmZpZxJbChdyYWdfZmlsZV9wYXJzaW5n",
+            "X2NvbmZpZxgIIAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTEuUmFnRmlsZVBhcnNpbmdDb25maWdCA+BBARIrCh5tYXhfZW1iZWRkaW5n",
+            "X3JlcXVlc3RzX3Blcl9taW4YBSABKAVCA+BBAUIPCg1pbXBvcnRfc291cmNl",
+            "QhYKFHBhcnRpYWxfZmFpbHVyZV9zaW5rQukBCiNjb20uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMUISVmVydGV4UmFnRGF0YVByb3RvUAFaQ2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
+            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
+            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
+            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ApiAuthReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Parser, new[]{ "VertexPredictionEndpoint", "HybridSearchConfig" }, new[]{ "ModelConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Types.VertexPredictionEndpoint), global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Types.VertexPredictionEndpoint.Parser, new[]{ "Endpoint", "Model", "ModelVersionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Types.SparseEmbeddingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Types.SparseEmbeddingConfig.Parser, new[]{ "Bm25" }, new[]{ "Model" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Types.SparseEmbeddingConfig.Types.Bm25), global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Types.SparseEmbeddingConfig.Types.Bm25.Parser, new[]{ "Multilingual", "K1", "B" }, new[]{ "K1", "B" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Types.HybridSearchConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig.Types.HybridSearchConfig.Parser, new[]{ "SparseEmbeddingConfig", "DenseEmbeddingModelPredictionEndpoint" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Parser, new[]{ "RagManagedDb", "Weaviate", "Pinecone", "VertexFeatureStore", "VertexVectorSearch", "ApiAuth" }, new[]{ "VectorDb" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.RagManagedDb), global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.RagManagedDb.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Parser, new[]{ "RagManagedDb", "Weaviate", "Pinecone", "VertexFeatureStore", "VertexVectorSearch", "ApiAuth", "RagEmbeddingModelConfig" }, new[]{ "VectorDb" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.RagManagedDb), global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.RagManagedDb.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.Weaviate), global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.Weaviate.Parser, new[]{ "HttpEndpoint", "CollectionName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.Pinecone), global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.Pinecone.Parser, new[]{ "IndexName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.VertexFeatureStore), global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.VertexFeatureStore.Parser, new[]{ "FeatureViewResourceName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.VertexVectorSearch), global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig.Types.VertexVectorSearch.Parser, new[]{ "IndexEndpoint", "Index" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FileStatus), global::Google.Cloud.AIPlatform.V1Beta1.FileStatus.Parser, new[]{ "State", "ErrorStatus" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.FileStatus.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig), global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig.Parser, new[]{ "ServingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus), global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus.Parser, new[]{ "State", "ErrorStatus" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus), global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Parser, new[]{ "Name", "DisplayName", "Description", "RagEmbeddingModelConfig", "RagVectorDbConfig", "CreateTime", "UpdateTime", "CorpusStatus" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus), global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Parser, new[]{ "Name", "DisplayName", "Description", "RagEmbeddingModelConfig", "RagVectorDbConfig", "CreateTime", "UpdateTime", "CorpusStatus", "VectorDbConfig", "VertexAiSearchConfig" }, new[]{ "BackendConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile), global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Parser, new[]{ "GcsSource", "GoogleDriveSource", "DirectUploadSource", "SlackSource", "JiraSource", "SharePointSources", "Name", "DisplayName", "Description", "SizeBytes", "RagFileType", "CreateTime", "UpdateTime", "FileStatus" }, new[]{ "RagFileSource" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Types.RagFileType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Parser, new[]{ "ChunkSize", "ChunkOverlap" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Parser, new[]{ "UseAdvancedPdfParsing" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig), global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig.Parser, new[]{ "RagFileChunkingConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "RagFileChunkingConfig", "RagFileParsingConfig", "MaxEmbeddingRequestsPerMin" }, new[]{ "ImportSource", "PartialFailureSink" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Parser, new[]{ "FixedLengthChunking", "ChunkSize", "ChunkOverlap" }, new[]{ "ChunkingConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking.Parser, new[]{ "ChunkSize", "ChunkOverlap" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig.Parser, new[]{ "RagFileChunkingConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Parser, new[]{ "AdvancedParser", "LayoutParser", "UseAdvancedPdfParsing" }, new[]{ "Parser" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser.Parser, new[]{ "UseAdvancedPdfParsing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser.Parser, new[]{ "ProcessorName", "MaxParsingRequestsPerMin" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig), global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig.Parser, new[]{ "RagFileChunkingConfig", "RagFileTransformationConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "RagFileChunkingConfig", "RagFileTransformationConfig", "RagFileParsingConfig", "MaxEmbeddingRequestsPerMin" }, new[]{ "ImportSource", "PartialFailureSink" }, null, null, null)
           }));
     }
     #endregion
@@ -1615,6 +1645,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RagVectorDbConfig(RagVectorDbConfig other) : this() {
       apiAuth_ = other.apiAuth_ != null ? other.apiAuth_.Clone() : null;
+      ragEmbeddingModelConfig_ = other.ragEmbeddingModelConfig_ != null ? other.ragEmbeddingModelConfig_.Clone() : null;
       switch (other.VectorDbCase) {
         case VectorDbOneofCase.RagManagedDb:
           RagManagedDb = other.RagManagedDb.Clone();
@@ -1732,6 +1763,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "rag_embedding_model_config" field.</summary>
+    public const int RagEmbeddingModelConfigFieldNumber = 7;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig ragEmbeddingModelConfig_;
+    /// <summary>
+    /// Optional. Immutable. The embedding model config of the Vector DB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig RagEmbeddingModelConfig {
+      get { return ragEmbeddingModelConfig_; }
+      set {
+        ragEmbeddingModelConfig_ = value;
+      }
+    }
+
     private object vectorDb_;
     /// <summary>Enum of possible cases for the "vector_db" oneof.</summary>
     public enum VectorDbOneofCase {
@@ -1777,6 +1823,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(VertexFeatureStore, other.VertexFeatureStore)) return false;
       if (!object.Equals(VertexVectorSearch, other.VertexVectorSearch)) return false;
       if (!object.Equals(ApiAuth, other.ApiAuth)) return false;
+      if (!object.Equals(RagEmbeddingModelConfig, other.RagEmbeddingModelConfig)) return false;
       if (VectorDbCase != other.VectorDbCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1791,6 +1838,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (vectorDbCase_ == VectorDbOneofCase.VertexFeatureStore) hash ^= VertexFeatureStore.GetHashCode();
       if (vectorDbCase_ == VectorDbOneofCase.VertexVectorSearch) hash ^= VertexVectorSearch.GetHashCode();
       if (apiAuth_ != null) hash ^= ApiAuth.GetHashCode();
+      if (ragEmbeddingModelConfig_ != null) hash ^= RagEmbeddingModelConfig.GetHashCode();
       hash ^= (int) vectorDbCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1834,6 +1882,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(50);
         output.WriteMessage(VertexVectorSearch);
       }
+      if (ragEmbeddingModelConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RagEmbeddingModelConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1868,6 +1920,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(50);
         output.WriteMessage(VertexVectorSearch);
       }
+      if (ragEmbeddingModelConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RagEmbeddingModelConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1896,6 +1952,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (apiAuth_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApiAuth);
       }
+      if (ragEmbeddingModelConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagEmbeddingModelConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1913,6 +1972,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           ApiAuth = new global::Google.Cloud.AIPlatform.V1Beta1.ApiAuth();
         }
         ApiAuth.MergeFrom(other.ApiAuth);
+      }
+      if (other.ragEmbeddingModelConfig_ != null) {
+        if (ragEmbeddingModelConfig_ == null) {
+          RagEmbeddingModelConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig();
+        }
+        RagEmbeddingModelConfig.MergeFrom(other.RagEmbeddingModelConfig);
       }
       switch (other.VectorDbCase) {
         case VectorDbOneofCase.RagManagedDb:
@@ -2014,6 +2079,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             VertexVectorSearch = subBuilder;
             break;
           }
+          case 58: {
+            if (ragEmbeddingModelConfig_ == null) {
+              RagEmbeddingModelConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig();
+            }
+            input.ReadMessage(RagEmbeddingModelConfig);
+            break;
+          }
         }
       }
     #endif
@@ -2079,6 +2151,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             }
             input.ReadMessage(subBuilder);
             VertexVectorSearch = subBuilder;
+            break;
+          }
+          case 58: {
+            if (ragEmbeddingModelConfig_ == null) {
+              RagEmbeddingModelConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig();
+            }
+            input.ReadMessage(RagEmbeddingModelConfig);
             break;
           }
         }
@@ -3390,6 +3469,205 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
 
   /// <summary>
+  /// Config for the Vertex AI Search.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VertexAiSearchConfig : pb::IMessage<VertexAiSearchConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VertexAiSearchConfig> _parser = new pb::MessageParser<VertexAiSearchConfig>(() => new VertexAiSearchConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VertexAiSearchConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexAiSearchConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexAiSearchConfig(VertexAiSearchConfig other) : this() {
+      servingConfig_ = other.servingConfig_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexAiSearchConfig Clone() {
+      return new VertexAiSearchConfig(this);
+    }
+
+    /// <summary>Field number for the "serving_config" field.</summary>
+    public const int ServingConfigFieldNumber = 1;
+    private string servingConfig_ = "";
+    /// <summary>
+    /// Vertex AI Search Serving Config resource full name. For example,
+    /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
+    /// or
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServingConfig {
+      get { return servingConfig_; }
+      set {
+        servingConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VertexAiSearchConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VertexAiSearchConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ServingConfig != other.ServingConfig) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ServingConfig.Length != 0) hash ^= ServingConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ServingConfig.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServingConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ServingConfig.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServingConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ServingConfig.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServingConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VertexAiSearchConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ServingConfig.Length != 0) {
+        ServingConfig = other.ServingConfig;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ServingConfig = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ServingConfig = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// RagCorpus status.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3407,7 +3685,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3675,7 +3953,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3703,6 +3981,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       corpusStatus_ = other.corpusStatus_ != null ? other.corpusStatus_.Clone() : null;
+      switch (other.BackendConfigCase) {
+        case BackendConfigOneofCase.VectorDbConfig:
+          VectorDbConfig = other.VectorDbConfig.Clone();
+          break;
+        case BackendConfigOneofCase.VertexAiSearchConfig:
+          VertexAiSearchConfig = other.VertexAiSearchConfig.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3765,6 +4052,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>
     /// Optional. Immutable. The embedding model config of the RagCorpus.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1Beta1.RagEmbeddingModelConfig RagEmbeddingModelConfig {
@@ -3780,6 +4068,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>
     /// Optional. Immutable. The Vector DB config of the RagCorpus.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig RagVectorDbConfig {
@@ -3834,6 +4123,57 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "vector_db_config" field.</summary>
+    public const int VectorDbConfigFieldNumber = 9;
+    /// <summary>
+    /// Optional. Immutable. The config for the Vector DBs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig VectorDbConfig {
+      get { return backendConfigCase_ == BackendConfigOneofCase.VectorDbConfig ? (global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig) backendConfig_ : null; }
+      set {
+        backendConfig_ = value;
+        backendConfigCase_ = value == null ? BackendConfigOneofCase.None : BackendConfigOneofCase.VectorDbConfig;
+      }
+    }
+
+    /// <summary>Field number for the "vertex_ai_search_config" field.</summary>
+    public const int VertexAiSearchConfigFieldNumber = 10;
+    /// <summary>
+    /// Optional. Immutable. The config for the Vertex AI Search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig VertexAiSearchConfig {
+      get { return backendConfigCase_ == BackendConfigOneofCase.VertexAiSearchConfig ? (global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig) backendConfig_ : null; }
+      set {
+        backendConfig_ = value;
+        backendConfigCase_ = value == null ? BackendConfigOneofCase.None : BackendConfigOneofCase.VertexAiSearchConfig;
+      }
+    }
+
+    private object backendConfig_;
+    /// <summary>Enum of possible cases for the "backend_config" oneof.</summary>
+    public enum BackendConfigOneofCase {
+      None = 0,
+      VectorDbConfig = 9,
+      VertexAiSearchConfig = 10,
+    }
+    private BackendConfigOneofCase backendConfigCase_ = BackendConfigOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BackendConfigOneofCase BackendConfigCase {
+      get { return backendConfigCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBackendConfig() {
+      backendConfigCase_ = BackendConfigOneofCase.None;
+      backendConfig_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3857,6 +4197,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(CorpusStatus, other.CorpusStatus)) return false;
+      if (!object.Equals(VectorDbConfig, other.VectorDbConfig)) return false;
+      if (!object.Equals(VertexAiSearchConfig, other.VertexAiSearchConfig)) return false;
+      if (BackendConfigCase != other.BackendConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3872,6 +4215,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (corpusStatus_ != null) hash ^= CorpusStatus.GetHashCode();
+      if (backendConfigCase_ == BackendConfigOneofCase.VectorDbConfig) hash ^= VectorDbConfig.GetHashCode();
+      if (backendConfigCase_ == BackendConfigOneofCase.VertexAiSearchConfig) hash ^= VertexAiSearchConfig.GetHashCode();
+      hash ^= (int) backendConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3922,6 +4268,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(CorpusStatus);
       }
+      if (backendConfigCase_ == BackendConfigOneofCase.VectorDbConfig) {
+        output.WriteRawTag(74);
+        output.WriteMessage(VectorDbConfig);
+      }
+      if (backendConfigCase_ == BackendConfigOneofCase.VertexAiSearchConfig) {
+        output.WriteRawTag(82);
+        output.WriteMessage(VertexAiSearchConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3964,6 +4318,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(CorpusStatus);
       }
+      if (backendConfigCase_ == BackendConfigOneofCase.VectorDbConfig) {
+        output.WriteRawTag(74);
+        output.WriteMessage(VectorDbConfig);
+      }
+      if (backendConfigCase_ == BackendConfigOneofCase.VertexAiSearchConfig) {
+        output.WriteRawTag(82);
+        output.WriteMessage(VertexAiSearchConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3997,6 +4359,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (corpusStatus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CorpusStatus);
+      }
+      if (backendConfigCase_ == BackendConfigOneofCase.VectorDbConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VectorDbConfig);
+      }
+      if (backendConfigCase_ == BackendConfigOneofCase.VertexAiSearchConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VertexAiSearchConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4049,6 +4417,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         }
         CorpusStatus.MergeFrom(other.CorpusStatus);
       }
+      switch (other.BackendConfigCase) {
+        case BackendConfigOneofCase.VectorDbConfig:
+          if (VectorDbConfig == null) {
+            VectorDbConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig();
+          }
+          VectorDbConfig.MergeFrom(other.VectorDbConfig);
+          break;
+        case BackendConfigOneofCase.VertexAiSearchConfig:
+          if (VertexAiSearchConfig == null) {
+            VertexAiSearchConfig = new global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig();
+          }
+          VertexAiSearchConfig.MergeFrom(other.VertexAiSearchConfig);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4109,6 +4492,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               CorpusStatus = new global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus();
             }
             input.ReadMessage(CorpusStatus);
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig();
+            if (backendConfigCase_ == BackendConfigOneofCase.VectorDbConfig) {
+              subBuilder.MergeFrom(VectorDbConfig);
+            }
+            input.ReadMessage(subBuilder);
+            VectorDbConfig = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig();
+            if (backendConfigCase_ == BackendConfigOneofCase.VertexAiSearchConfig) {
+              subBuilder.MergeFrom(VertexAiSearchConfig);
+            }
+            input.ReadMessage(subBuilder);
+            VertexAiSearchConfig = subBuilder;
             break;
           }
         }
@@ -4173,6 +4574,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(CorpusStatus);
             break;
           }
+          case 74: {
+            global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.RagVectorDbConfig();
+            if (backendConfigCase_ == BackendConfigOneofCase.VectorDbConfig) {
+              subBuilder.MergeFrom(VectorDbConfig);
+            }
+            input.ReadMessage(subBuilder);
+            VectorDbConfig = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.VertexAiSearchConfig();
+            if (backendConfigCase_ == BackendConfigOneofCase.VertexAiSearchConfig) {
+              subBuilder.MergeFrom(VertexAiSearchConfig);
+            }
+            input.ReadMessage(subBuilder);
+            VertexAiSearchConfig = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -4198,7 +4617,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5095,7 +5514,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5117,6 +5536,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public RagFileChunkingConfig(RagFileChunkingConfig other) : this() {
       chunkSize_ = other.chunkSize_;
       chunkOverlap_ = other.chunkOverlap_;
+      switch (other.ChunkingConfigCase) {
+        case ChunkingConfigOneofCase.FixedLengthChunking:
+          FixedLengthChunking = other.FixedLengthChunking.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5126,12 +5551,28 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       return new RagFileChunkingConfig(this);
     }
 
+    /// <summary>Field number for the "fixed_length_chunking" field.</summary>
+    public const int FixedLengthChunkingFieldNumber = 3;
+    /// <summary>
+    /// Specifies the fixed length chunking config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking FixedLengthChunking {
+      get { return chunkingConfigCase_ == ChunkingConfigOneofCase.FixedLengthChunking ? (global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking) chunkingConfig_ : null; }
+      set {
+        chunkingConfig_ = value;
+        chunkingConfigCase_ = value == null ? ChunkingConfigOneofCase.None : ChunkingConfigOneofCase.FixedLengthChunking;
+      }
+    }
+
     /// <summary>Field number for the "chunk_size" field.</summary>
     public const int ChunkSizeFieldNumber = 1;
     private int chunkSize_;
     /// <summary>
     /// The size of the chunks.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ChunkSize {
@@ -5147,6 +5588,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>
     /// The overlap between chunks.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ChunkOverlap {
@@ -5154,6 +5596,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       set {
         chunkOverlap_ = value;
       }
+    }
+
+    private object chunkingConfig_;
+    /// <summary>Enum of possible cases for the "chunking_config" oneof.</summary>
+    public enum ChunkingConfigOneofCase {
+      None = 0,
+      FixedLengthChunking = 3,
+    }
+    private ChunkingConfigOneofCase chunkingConfigCase_ = ChunkingConfigOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChunkingConfigOneofCase ChunkingConfigCase {
+      get { return chunkingConfigCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearChunkingConfig() {
+      chunkingConfigCase_ = ChunkingConfigOneofCase.None;
+      chunkingConfig_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5171,8 +5633,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(FixedLengthChunking, other.FixedLengthChunking)) return false;
       if (ChunkSize != other.ChunkSize) return false;
       if (ChunkOverlap != other.ChunkOverlap) return false;
+      if (ChunkingConfigCase != other.ChunkingConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5180,8 +5644,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (chunkingConfigCase_ == ChunkingConfigOneofCase.FixedLengthChunking) hash ^= FixedLengthChunking.GetHashCode();
       if (ChunkSize != 0) hash ^= ChunkSize.GetHashCode();
       if (ChunkOverlap != 0) hash ^= ChunkOverlap.GetHashCode();
+      hash ^= (int) chunkingConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5208,6 +5674,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(16);
         output.WriteInt32(ChunkOverlap);
       }
+      if (chunkingConfigCase_ == ChunkingConfigOneofCase.FixedLengthChunking) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FixedLengthChunking);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5226,6 +5696,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(16);
         output.WriteInt32(ChunkOverlap);
       }
+      if (chunkingConfigCase_ == ChunkingConfigOneofCase.FixedLengthChunking) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FixedLengthChunking);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5236,6 +5710,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (chunkingConfigCase_ == ChunkingConfigOneofCase.FixedLengthChunking) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FixedLengthChunking);
+      }
       if (ChunkSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ChunkSize);
       }
@@ -5260,6 +5737,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.ChunkOverlap != 0) {
         ChunkOverlap = other.ChunkOverlap;
       }
+      switch (other.ChunkingConfigCase) {
+        case ChunkingConfigOneofCase.FixedLengthChunking:
+          if (FixedLengthChunking == null) {
+            FixedLengthChunking = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking();
+          }
+          FixedLengthChunking.MergeFrom(other.FixedLengthChunking);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5281,6 +5767,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 16: {
             ChunkOverlap = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking();
+            if (chunkingConfigCase_ == ChunkingConfigOneofCase.FixedLengthChunking) {
+              subBuilder.MergeFrom(FixedLengthChunking);
+            }
+            input.ReadMessage(subBuilder);
+            FixedLengthChunking = subBuilder;
             break;
           }
         }
@@ -5306,200 +5801,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             ChunkOverlap = input.ReadInt32();
             break;
           }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Specifies the parsing config for RagFiles.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class RagFileParsingConfig : pb::IMessage<RagFileParsingConfig>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<RagFileParsingConfig> _parser = new pb::MessageParser<RagFileParsingConfig>(() => new RagFileParsingConfig());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<RagFileParsingConfig> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[7]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RagFileParsingConfig() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RagFileParsingConfig(RagFileParsingConfig other) : this() {
-      useAdvancedPdfParsing_ = other.useAdvancedPdfParsing_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RagFileParsingConfig Clone() {
-      return new RagFileParsingConfig(this);
-    }
-
-    /// <summary>Field number for the "use_advanced_pdf_parsing" field.</summary>
-    public const int UseAdvancedPdfParsingFieldNumber = 2;
-    private bool useAdvancedPdfParsing_;
-    /// <summary>
-    /// Whether to use advanced PDF parsing.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool UseAdvancedPdfParsing {
-      get { return useAdvancedPdfParsing_; }
-      set {
-        useAdvancedPdfParsing_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as RagFileParsingConfig);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(RagFileParsingConfig other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (UseAdvancedPdfParsing != other.UseAdvancedPdfParsing) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (UseAdvancedPdfParsing != false) hash ^= UseAdvancedPdfParsing.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (UseAdvancedPdfParsing != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(UseAdvancedPdfParsing);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UseAdvancedPdfParsing != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(UseAdvancedPdfParsing);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (UseAdvancedPdfParsing != false) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(RagFileParsingConfig other) {
-      if (other == null) {
-        return;
-      }
-      if (other.UseAdvancedPdfParsing != false) {
-        UseAdvancedPdfParsing = other.UseAdvancedPdfParsing;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 16: {
-            UseAdvancedPdfParsing = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 16: {
-            UseAdvancedPdfParsing = input.ReadBool();
+          case 26: {
+            global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking();
+            if (chunkingConfigCase_ == ChunkingConfigOneofCase.FixedLengthChunking) {
+              subBuilder.MergeFrom(FixedLengthChunking);
+            }
+            input.ReadMessage(subBuilder);
+            FixedLengthChunking = subBuilder;
             break;
           }
         }
@@ -5507,22 +5815,266 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     }
     #endif
 
+    #region Nested types
+    /// <summary>Container for nested types declared in the RagFileChunkingConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specifies the fixed length chunking config.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FixedLengthChunking : pb::IMessage<FixedLengthChunking>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FixedLengthChunking> _parser = new pb::MessageParser<FixedLengthChunking>(() => new FixedLengthChunking());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FixedLengthChunking> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FixedLengthChunking() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FixedLengthChunking(FixedLengthChunking other) : this() {
+          chunkSize_ = other.chunkSize_;
+          chunkOverlap_ = other.chunkOverlap_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FixedLengthChunking Clone() {
+          return new FixedLengthChunking(this);
+        }
+
+        /// <summary>Field number for the "chunk_size" field.</summary>
+        public const int ChunkSizeFieldNumber = 1;
+        private int chunkSize_;
+        /// <summary>
+        /// The size of the chunks.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ChunkSize {
+          get { return chunkSize_; }
+          set {
+            chunkSize_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "chunk_overlap" field.</summary>
+        public const int ChunkOverlapFieldNumber = 2;
+        private int chunkOverlap_;
+        /// <summary>
+        /// The overlap between chunks.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ChunkOverlap {
+          get { return chunkOverlap_; }
+          set {
+            chunkOverlap_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FixedLengthChunking);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FixedLengthChunking other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ChunkSize != other.ChunkSize) return false;
+          if (ChunkOverlap != other.ChunkOverlap) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ChunkSize != 0) hash ^= ChunkSize.GetHashCode();
+          if (ChunkOverlap != 0) hash ^= ChunkOverlap.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ChunkSize != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(ChunkSize);
+          }
+          if (ChunkOverlap != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(ChunkOverlap);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ChunkSize != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(ChunkSize);
+          }
+          if (ChunkOverlap != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(ChunkOverlap);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ChunkSize != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ChunkSize);
+          }
+          if (ChunkOverlap != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ChunkOverlap);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FixedLengthChunking other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ChunkSize != 0) {
+            ChunkSize = other.ChunkSize;
+          }
+          if (other.ChunkOverlap != 0) {
+            ChunkOverlap = other.ChunkOverlap;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ChunkSize = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                ChunkOverlap = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ChunkSize = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                ChunkOverlap = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
   }
 
   /// <summary>
-  /// Config for uploading RagFile.
+  /// Specifies the transformation config for RagFiles.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class UploadRagFileConfig : pb::IMessage<UploadRagFileConfig>
+  public sealed partial class RagFileTransformationConfig : pb::IMessage<RagFileTransformationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<UploadRagFileConfig> _parser = new pb::MessageParser<UploadRagFileConfig>(() => new UploadRagFileConfig());
+    private static readonly pb::MessageParser<RagFileTransformationConfig> _parser = new pb::MessageParser<RagFileTransformationConfig>(() => new RagFileTransformationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<UploadRagFileConfig> Parser { get { return _parser; } }
+    public static pb::MessageParser<RagFileTransformationConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5538,7 +6090,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UploadRagFileConfig() {
+    public RagFileTransformationConfig() {
       OnConstruction();
     }
 
@@ -5546,22 +6098,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UploadRagFileConfig(UploadRagFileConfig other) : this() {
+    public RagFileTransformationConfig(RagFileTransformationConfig other) : this() {
       ragFileChunkingConfig_ = other.ragFileChunkingConfig_ != null ? other.ragFileChunkingConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UploadRagFileConfig Clone() {
-      return new UploadRagFileConfig(this);
+    public RagFileTransformationConfig Clone() {
+      return new RagFileTransformationConfig(this);
     }
 
     /// <summary>Field number for the "rag_file_chunking_config" field.</summary>
     public const int RagFileChunkingConfigFieldNumber = 1;
     private global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig ragFileChunkingConfig_;
     /// <summary>
-    /// Specifies the size and overlap of chunks after uploading RagFile.
+    /// Specifies the chunking config for RagFiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5575,12 +6127,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as UploadRagFileConfig);
+      return Equals(other as RagFileTransformationConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(UploadRagFileConfig other) {
+    public bool Equals(RagFileTransformationConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -5653,7 +6205,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(UploadRagFileConfig other) {
+    public void MergeFrom(RagFileTransformationConfig other) {
       if (other == null) {
         return;
       }
@@ -5715,6 +6267,1046 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
 
   /// <summary>
+  /// Specifies the parsing config for RagFiles.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RagFileParsingConfig : pb::IMessage<RagFileParsingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RagFileParsingConfig> _parser = new pb::MessageParser<RagFileParsingConfig>(() => new RagFileParsingConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RagFileParsingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileParsingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileParsingConfig(RagFileParsingConfig other) : this() {
+      useAdvancedPdfParsing_ = other.useAdvancedPdfParsing_;
+      switch (other.ParserCase) {
+        case ParserOneofCase.AdvancedParser:
+          AdvancedParser = other.AdvancedParser.Clone();
+          break;
+        case ParserOneofCase.LayoutParser:
+          LayoutParser = other.LayoutParser.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileParsingConfig Clone() {
+      return new RagFileParsingConfig(this);
+    }
+
+    /// <summary>Field number for the "advanced_parser" field.</summary>
+    public const int AdvancedParserFieldNumber = 3;
+    /// <summary>
+    /// The Advanced Parser to use for RagFiles.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser AdvancedParser {
+      get { return parserCase_ == ParserOneofCase.AdvancedParser ? (global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser) parser_ : null; }
+      set {
+        parser_ = value;
+        parserCase_ = value == null ? ParserOneofCase.None : ParserOneofCase.AdvancedParser;
+      }
+    }
+
+    /// <summary>Field number for the "layout_parser" field.</summary>
+    public const int LayoutParserFieldNumber = 4;
+    /// <summary>
+    /// The Layout Parser to use for RagFiles.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser LayoutParser {
+      get { return parserCase_ == ParserOneofCase.LayoutParser ? (global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser) parser_ : null; }
+      set {
+        parser_ = value;
+        parserCase_ = value == null ? ParserOneofCase.None : ParserOneofCase.LayoutParser;
+      }
+    }
+
+    /// <summary>Field number for the "use_advanced_pdf_parsing" field.</summary>
+    public const int UseAdvancedPdfParsingFieldNumber = 2;
+    private bool useAdvancedPdfParsing_;
+    /// <summary>
+    /// Whether to use advanced PDF parsing.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseAdvancedPdfParsing {
+      get { return useAdvancedPdfParsing_; }
+      set {
+        useAdvancedPdfParsing_ = value;
+      }
+    }
+
+    private object parser_;
+    /// <summary>Enum of possible cases for the "parser" oneof.</summary>
+    public enum ParserOneofCase {
+      None = 0,
+      AdvancedParser = 3,
+      LayoutParser = 4,
+    }
+    private ParserOneofCase parserCase_ = ParserOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParserOneofCase ParserCase {
+      get { return parserCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParser() {
+      parserCase_ = ParserOneofCase.None;
+      parser_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RagFileParsingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RagFileParsingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AdvancedParser, other.AdvancedParser)) return false;
+      if (!object.Equals(LayoutParser, other.LayoutParser)) return false;
+      if (UseAdvancedPdfParsing != other.UseAdvancedPdfParsing) return false;
+      if (ParserCase != other.ParserCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (parserCase_ == ParserOneofCase.AdvancedParser) hash ^= AdvancedParser.GetHashCode();
+      if (parserCase_ == ParserOneofCase.LayoutParser) hash ^= LayoutParser.GetHashCode();
+      if (UseAdvancedPdfParsing != false) hash ^= UseAdvancedPdfParsing.GetHashCode();
+      hash ^= (int) parserCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UseAdvancedPdfParsing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(UseAdvancedPdfParsing);
+      }
+      if (parserCase_ == ParserOneofCase.AdvancedParser) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AdvancedParser);
+      }
+      if (parserCase_ == ParserOneofCase.LayoutParser) {
+        output.WriteRawTag(34);
+        output.WriteMessage(LayoutParser);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UseAdvancedPdfParsing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(UseAdvancedPdfParsing);
+      }
+      if (parserCase_ == ParserOneofCase.AdvancedParser) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AdvancedParser);
+      }
+      if (parserCase_ == ParserOneofCase.LayoutParser) {
+        output.WriteRawTag(34);
+        output.WriteMessage(LayoutParser);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (parserCase_ == ParserOneofCase.AdvancedParser) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdvancedParser);
+      }
+      if (parserCase_ == ParserOneofCase.LayoutParser) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LayoutParser);
+      }
+      if (UseAdvancedPdfParsing != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RagFileParsingConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UseAdvancedPdfParsing != false) {
+        UseAdvancedPdfParsing = other.UseAdvancedPdfParsing;
+      }
+      switch (other.ParserCase) {
+        case ParserOneofCase.AdvancedParser:
+          if (AdvancedParser == null) {
+            AdvancedParser = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser();
+          }
+          AdvancedParser.MergeFrom(other.AdvancedParser);
+          break;
+        case ParserOneofCase.LayoutParser:
+          if (LayoutParser == null) {
+            LayoutParser = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser();
+          }
+          LayoutParser.MergeFrom(other.LayoutParser);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            UseAdvancedPdfParsing = input.ReadBool();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser();
+            if (parserCase_ == ParserOneofCase.AdvancedParser) {
+              subBuilder.MergeFrom(AdvancedParser);
+            }
+            input.ReadMessage(subBuilder);
+            AdvancedParser = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser();
+            if (parserCase_ == ParserOneofCase.LayoutParser) {
+              subBuilder.MergeFrom(LayoutParser);
+            }
+            input.ReadMessage(subBuilder);
+            LayoutParser = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            UseAdvancedPdfParsing = input.ReadBool();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser();
+            if (parserCase_ == ParserOneofCase.AdvancedParser) {
+              subBuilder.MergeFrom(AdvancedParser);
+            }
+            input.ReadMessage(subBuilder);
+            AdvancedParser = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser();
+            if (parserCase_ == ParserOneofCase.LayoutParser) {
+              subBuilder.MergeFrom(LayoutParser);
+            }
+            input.ReadMessage(subBuilder);
+            LayoutParser = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RagFileParsingConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specifies the advanced parsing for RagFiles.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AdvancedParser : pb::IMessage<AdvancedParser>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AdvancedParser> _parser = new pb::MessageParser<AdvancedParser>(() => new AdvancedParser());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AdvancedParser> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AdvancedParser() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AdvancedParser(AdvancedParser other) : this() {
+          useAdvancedPdfParsing_ = other.useAdvancedPdfParsing_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AdvancedParser Clone() {
+          return new AdvancedParser(this);
+        }
+
+        /// <summary>Field number for the "use_advanced_pdf_parsing" field.</summary>
+        public const int UseAdvancedPdfParsingFieldNumber = 1;
+        private bool useAdvancedPdfParsing_;
+        /// <summary>
+        /// Whether to use advanced PDF parsing.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool UseAdvancedPdfParsing {
+          get { return useAdvancedPdfParsing_; }
+          set {
+            useAdvancedPdfParsing_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AdvancedParser);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AdvancedParser other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (UseAdvancedPdfParsing != other.UseAdvancedPdfParsing) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (UseAdvancedPdfParsing != false) hash ^= UseAdvancedPdfParsing.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (UseAdvancedPdfParsing != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(UseAdvancedPdfParsing);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (UseAdvancedPdfParsing != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(UseAdvancedPdfParsing);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (UseAdvancedPdfParsing != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AdvancedParser other) {
+          if (other == null) {
+            return;
+          }
+          if (other.UseAdvancedPdfParsing != false) {
+            UseAdvancedPdfParsing = other.UseAdvancedPdfParsing;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                UseAdvancedPdfParsing = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                UseAdvancedPdfParsing = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Document AI Layout Parser config.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class LayoutParser : pb::IMessage<LayoutParser>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<LayoutParser> _parser = new pb::MessageParser<LayoutParser>(() => new LayoutParser());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<LayoutParser> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LayoutParser() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LayoutParser(LayoutParser other) : this() {
+          processorName_ = other.processorName_;
+          maxParsingRequestsPerMin_ = other.maxParsingRequestsPerMin_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LayoutParser Clone() {
+          return new LayoutParser(this);
+        }
+
+        /// <summary>Field number for the "processor_name" field.</summary>
+        public const int ProcessorNameFieldNumber = 1;
+        private string processorName_ = "";
+        /// <summary>
+        /// The full resource name of a Document AI processor or processor version.
+        /// The processor must have type `LAYOUT_PARSER_PROCESSOR`. If specified, the
+        /// `additional_config.parse_as_scanned_pdf` field must be false.
+        /// Format:
+        /// * `projects/{project_id}/locations/{location}/processors/{processor_id}`
+        /// * `projects/{project_id}/locations/{location}/processors/{processor_id}/processorVersions/{processor_version_id}`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ProcessorName {
+          get { return processorName_; }
+          set {
+            processorName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "max_parsing_requests_per_min" field.</summary>
+        public const int MaxParsingRequestsPerMinFieldNumber = 2;
+        private int maxParsingRequestsPerMin_;
+        /// <summary>
+        /// The maximum number of requests the job is allowed to make to the Document
+        /// AI processor per minute. Consult
+        /// https://cloud.google.com/document-ai/quotas and the Quota page for your
+        /// project to set an appropriate value here. If unspecified, a default value
+        /// of 120 QPM would be used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxParsingRequestsPerMin {
+          get { return maxParsingRequestsPerMin_; }
+          set {
+            maxParsingRequestsPerMin_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as LayoutParser);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(LayoutParser other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ProcessorName != other.ProcessorName) return false;
+          if (MaxParsingRequestsPerMin != other.MaxParsingRequestsPerMin) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ProcessorName.Length != 0) hash ^= ProcessorName.GetHashCode();
+          if (MaxParsingRequestsPerMin != 0) hash ^= MaxParsingRequestsPerMin.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ProcessorName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProcessorName);
+          }
+          if (MaxParsingRequestsPerMin != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MaxParsingRequestsPerMin);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ProcessorName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProcessorName);
+          }
+          if (MaxParsingRequestsPerMin != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MaxParsingRequestsPerMin);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ProcessorName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ProcessorName);
+          }
+          if (MaxParsingRequestsPerMin != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxParsingRequestsPerMin);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(LayoutParser other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ProcessorName.Length != 0) {
+            ProcessorName = other.ProcessorName;
+          }
+          if (other.MaxParsingRequestsPerMin != 0) {
+            MaxParsingRequestsPerMin = other.MaxParsingRequestsPerMin;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ProcessorName = input.ReadString();
+                break;
+              }
+              case 16: {
+                MaxParsingRequestsPerMin = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ProcessorName = input.ReadString();
+                break;
+              }
+              case 16: {
+                MaxParsingRequestsPerMin = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Config for uploading RagFile.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UploadRagFileConfig : pb::IMessage<UploadRagFileConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UploadRagFileConfig> _parser = new pb::MessageParser<UploadRagFileConfig>(() => new UploadRagFileConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UploadRagFileConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UploadRagFileConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UploadRagFileConfig(UploadRagFileConfig other) : this() {
+      ragFileChunkingConfig_ = other.ragFileChunkingConfig_ != null ? other.ragFileChunkingConfig_.Clone() : null;
+      ragFileTransformationConfig_ = other.ragFileTransformationConfig_ != null ? other.ragFileTransformationConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UploadRagFileConfig Clone() {
+      return new UploadRagFileConfig(this);
+    }
+
+    /// <summary>Field number for the "rag_file_chunking_config" field.</summary>
+    public const int RagFileChunkingConfigFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig ragFileChunkingConfig_;
+    /// <summary>
+    /// Specifies the size and overlap of chunks after uploading RagFile.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig RagFileChunkingConfig {
+      get { return ragFileChunkingConfig_; }
+      set {
+        ragFileChunkingConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rag_file_transformation_config" field.</summary>
+    public const int RagFileTransformationConfigFieldNumber = 3;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig ragFileTransformationConfig_;
+    /// <summary>
+    /// Specifies the transformation config for RagFiles.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig RagFileTransformationConfig {
+      get { return ragFileTransformationConfig_; }
+      set {
+        ragFileTransformationConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UploadRagFileConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UploadRagFileConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(RagFileChunkingConfig, other.RagFileChunkingConfig)) return false;
+      if (!object.Equals(RagFileTransformationConfig, other.RagFileTransformationConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ragFileChunkingConfig_ != null) hash ^= RagFileChunkingConfig.GetHashCode();
+      if (ragFileTransformationConfig_ != null) hash ^= RagFileTransformationConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ragFileChunkingConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RagFileChunkingConfig);
+      }
+      if (ragFileTransformationConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RagFileTransformationConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ragFileChunkingConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RagFileChunkingConfig);
+      }
+      if (ragFileTransformationConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RagFileTransformationConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ragFileChunkingConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileChunkingConfig);
+      }
+      if (ragFileTransformationConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileTransformationConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UploadRagFileConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ragFileChunkingConfig_ != null) {
+        if (ragFileChunkingConfig_ == null) {
+          RagFileChunkingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig();
+        }
+        RagFileChunkingConfig.MergeFrom(other.RagFileChunkingConfig);
+      }
+      if (other.ragFileTransformationConfig_ != null) {
+        if (ragFileTransformationConfig_ == null) {
+          RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
+        }
+        RagFileTransformationConfig.MergeFrom(other.RagFileTransformationConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (ragFileChunkingConfig_ == null) {
+              RagFileChunkingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig();
+            }
+            input.ReadMessage(RagFileChunkingConfig);
+            break;
+          }
+          case 26: {
+            if (ragFileTransformationConfig_ == null) {
+              RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
+            }
+            input.ReadMessage(RagFileTransformationConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (ragFileChunkingConfig_ == null) {
+              RagFileChunkingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig();
+            }
+            input.ReadMessage(RagFileChunkingConfig);
+            break;
+          }
+          case 26: {
+            if (ragFileTransformationConfig_ == null) {
+              RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
+            }
+            input.ReadMessage(RagFileTransformationConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Config for importing RagFiles.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -5732,7 +7324,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5753,6 +7345,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportRagFilesConfig(ImportRagFilesConfig other) : this() {
       ragFileChunkingConfig_ = other.ragFileChunkingConfig_ != null ? other.ragFileChunkingConfig_.Clone() : null;
+      ragFileTransformationConfig_ = other.ragFileTransformationConfig_ != null ? other.ragFileTransformationConfig_.Clone() : null;
       ragFileParsingConfig_ = other.ragFileParsingConfig_ != null ? other.ragFileParsingConfig_.Clone() : null;
       maxEmbeddingRequestsPerMin_ = other.maxEmbeddingRequestsPerMin_;
       switch (other.ImportSourceCase) {
@@ -5874,7 +7467,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int PartialFailureGcsSinkFieldNumber = 11;
     /// <summary>
     /// The Cloud Storage path to write partial failures to.
+    /// Deprecated. Prefer to use `import_result_gcs_sink`.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1Beta1.GcsDestination PartialFailureGcsSink {
@@ -5890,11 +7485,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>
     /// The BigQuery destination to write partial failures to. It should be a
     /// bigquery table resource name (e.g.
-    /// "bq://projectId.bqDatasetId.bqTableId"). If the dataset id does not
-    /// exist, it will be created. If the table does not exist, it will be
-    /// created with the expected schema. If the table exists, the schema will be
-    /// validated and data will be added to this existing table.
+    /// "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the
+    /// table does not exist, it will be created with the expected schema. If the
+    /// table exists, the schema will be validated and data will be added to this
+    /// existing table.
+    /// Deprecated. Prefer to use `import_result_bq_sink`.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination PartialFailureBigquerySink {
@@ -5911,6 +7508,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>
     /// Specifies the size and overlap of chunks after importing RagFiles.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig RagFileChunkingConfig {
@@ -5920,11 +7518,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "rag_file_transformation_config" field.</summary>
+    public const int RagFileTransformationConfigFieldNumber = 16;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig ragFileTransformationConfig_;
+    /// <summary>
+    /// Specifies the transformation config for RagFiles.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig RagFileTransformationConfig {
+      get { return ragFileTransformationConfig_; }
+      set {
+        ragFileTransformationConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "rag_file_parsing_config" field.</summary>
     public const int RagFileParsingConfigFieldNumber = 8;
     private global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig ragFileParsingConfig_;
     /// <summary>
-    /// Specifies the parsing config for RagFiles.
+    /// Optional. Specifies the parsing config for RagFiles.
+    /// RAG will use the default parser if this field is not set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6022,6 +7636,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(PartialFailureGcsSink, other.PartialFailureGcsSink)) return false;
       if (!object.Equals(PartialFailureBigquerySink, other.PartialFailureBigquerySink)) return false;
       if (!object.Equals(RagFileChunkingConfig, other.RagFileChunkingConfig)) return false;
+      if (!object.Equals(RagFileTransformationConfig, other.RagFileTransformationConfig)) return false;
       if (!object.Equals(RagFileParsingConfig, other.RagFileParsingConfig)) return false;
       if (MaxEmbeddingRequestsPerMin != other.MaxEmbeddingRequestsPerMin) return false;
       if (ImportSourceCase != other.ImportSourceCase) return false;
@@ -6041,6 +7656,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) hash ^= PartialFailureGcsSink.GetHashCode();
       if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink) hash ^= PartialFailureBigquerySink.GetHashCode();
       if (ragFileChunkingConfig_ != null) hash ^= RagFileChunkingConfig.GetHashCode();
+      if (ragFileTransformationConfig_ != null) hash ^= RagFileTransformationConfig.GetHashCode();
       if (ragFileParsingConfig_ != null) hash ^= RagFileParsingConfig.GetHashCode();
       if (MaxEmbeddingRequestsPerMin != 0) hash ^= MaxEmbeddingRequestsPerMin.GetHashCode();
       hash ^= (int) importSourceCase_;
@@ -6103,6 +7719,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(106);
         output.WriteMessage(SharePointSources);
       }
+      if (ragFileTransformationConfig_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(RagFileTransformationConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6153,6 +7773,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(106);
         output.WriteMessage(SharePointSources);
       }
+      if (ragFileTransformationConfig_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(RagFileTransformationConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6187,6 +7811,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ragFileChunkingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileChunkingConfig);
       }
+      if (ragFileTransformationConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RagFileTransformationConfig);
+      }
       if (ragFileParsingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileParsingConfig);
       }
@@ -6210,6 +7837,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           RagFileChunkingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig();
         }
         RagFileChunkingConfig.MergeFrom(other.RagFileChunkingConfig);
+      }
+      if (other.ragFileTransformationConfig_ != null) {
+        if (ragFileTransformationConfig_ == null) {
+          RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
+        }
+        RagFileTransformationConfig.MergeFrom(other.RagFileTransformationConfig);
       }
       if (other.ragFileParsingConfig_ != null) {
         if (ragFileParsingConfig_ == null) {
@@ -6364,6 +7997,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             SharePointSources = subBuilder;
             break;
           }
+          case 130: {
+            if (ragFileTransformationConfig_ == null) {
+              RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
+            }
+            input.ReadMessage(RagFileTransformationConfig);
+            break;
+          }
         }
       }
     #endif
@@ -6458,6 +8098,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             }
             input.ReadMessage(subBuilder);
             SharePointSources = subBuilder;
+            break;
+          }
+          case 130: {
+            if (ragFileTransformationConfig_ == null) {
+              RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
+            }
+            input.ReadMessage(RagFileTransformationConfig);
             break;
           }
         }
