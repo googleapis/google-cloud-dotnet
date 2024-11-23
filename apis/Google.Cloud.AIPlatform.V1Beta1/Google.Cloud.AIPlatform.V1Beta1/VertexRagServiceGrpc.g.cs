@@ -67,6 +67,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest> __Marshaller_google_cloud_aiplatform_v1beta1_RetrieveContextsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse> __Marshaller_google_cloud_aiplatform_v1beta1_RetrieveContextsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest> __Marshaller_google_cloud_aiplatform_v1beta1_AugmentPromptRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse> __Marshaller_google_cloud_aiplatform_v1beta1_AugmentPromptResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest> __Marshaller_google_cloud_aiplatform_v1beta1_CorroborateContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse> __Marshaller_google_cloud_aiplatform_v1beta1_CorroborateContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse> __Method_RetrieveContexts = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse>(
@@ -75,6 +83,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "RetrieveContexts",
         __Marshaller_google_cloud_aiplatform_v1beta1_RetrieveContextsRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_RetrieveContextsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest, global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse> __Method_AugmentPrompt = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest, global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AugmentPrompt",
+        __Marshaller_google_cloud_aiplatform_v1beta1_AugmentPromptRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_AugmentPromptResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse> __Method_CorroborateContent = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CorroborateContent",
+        __Marshaller_google_cloud_aiplatform_v1beta1_CorroborateContentRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_CorroborateContentResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -94,6 +118,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse> RetrieveContexts(global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Given an input prompt, it returns augmented prompt from vertex rag store
+      ///  to guide LLM towards generating grounded responses.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse> AugmentPrompt(global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Given an input text, it returns a score that evaluates the factuality of
+      /// the text. It also extracts and returns claims from the text and provides
+      /// supporting facts.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse> CorroborateContent(global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -175,6 +226,114 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RetrieveContexts, null, options, request);
       }
+      /// <summary>
+      /// Given an input prompt, it returns augmented prompt from vertex rag store
+      ///  to guide LLM towards generating grounded responses.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse AugmentPrompt(global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AugmentPrompt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Given an input prompt, it returns augmented prompt from vertex rag store
+      ///  to guide LLM towards generating grounded responses.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse AugmentPrompt(global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AugmentPrompt, null, options, request);
+      }
+      /// <summary>
+      /// Given an input prompt, it returns augmented prompt from vertex rag store
+      ///  to guide LLM towards generating grounded responses.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse> AugmentPromptAsync(global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AugmentPromptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Given an input prompt, it returns augmented prompt from vertex rag store
+      ///  to guide LLM towards generating grounded responses.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse> AugmentPromptAsync(global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AugmentPrompt, null, options, request);
+      }
+      /// <summary>
+      /// Given an input text, it returns a score that evaluates the factuality of
+      /// the text. It also extracts and returns claims from the text and provides
+      /// supporting facts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse CorroborateContent(global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CorroborateContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Given an input text, it returns a score that evaluates the factuality of
+      /// the text. It also extracts and returns claims from the text and provides
+      /// supporting facts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse CorroborateContent(global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CorroborateContent, null, options, request);
+      }
+      /// <summary>
+      /// Given an input text, it returns a score that evaluates the factuality of
+      /// the text. It also extracts and returns claims from the text and provides
+      /// supporting facts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse> CorroborateContentAsync(global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CorroborateContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Given an input text, it returns a score that evaluates the factuality of
+      /// the text. It also extracts and returns claims from the text and provides
+      /// supporting facts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse> CorroborateContentAsync(global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CorroborateContent, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VertexRagServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -189,7 +348,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public static grpc::ServerServiceDefinition BindService(VertexRagServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_RetrieveContexts, serviceImpl.RetrieveContexts).Build();
+          .AddMethod(__Method_RetrieveContexts, serviceImpl.RetrieveContexts)
+          .AddMethod(__Method_AugmentPrompt, serviceImpl.AugmentPrompt)
+          .AddMethod(__Method_CorroborateContent, serviceImpl.CorroborateContent).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -200,6 +361,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, VertexRagServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_RetrieveContexts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsRequest, global::Google.Cloud.AIPlatform.V1Beta1.RetrieveContextsResponse>(serviceImpl.RetrieveContexts));
+      serviceBinder.AddMethod(__Method_AugmentPrompt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptRequest, global::Google.Cloud.AIPlatform.V1Beta1.AugmentPromptResponse>(serviceImpl.AugmentPrompt));
+      serviceBinder.AddMethod(__Method_CorroborateContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.CorroborateContentResponse>(serviceImpl.CorroborateContent));
     }
 
   }

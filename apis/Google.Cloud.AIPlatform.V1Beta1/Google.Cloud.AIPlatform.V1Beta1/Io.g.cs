@@ -3571,8 +3571,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         /// <summary>
         /// Required. The SecretManager secret version resource name (e.g.
         /// projects/{project}/secrets/{secret}/versions/{version}) storing the
-        /// Jira API key
-        /// (https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+        /// Jira API key. See [Manage API tokens for your Atlassian
+        /// account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
