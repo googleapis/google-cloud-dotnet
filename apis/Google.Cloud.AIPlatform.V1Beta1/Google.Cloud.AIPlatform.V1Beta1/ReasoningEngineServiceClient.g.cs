@@ -838,7 +838,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ReasoningEngine which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask specifying which fields to update.
+        /// Optional. Mask specifying which fields to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -846,7 +846,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             UpdateReasoningEngine(new UpdateReasoningEngineRequest
             {
                 ReasoningEngine = gax::GaxPreconditions.CheckNotNull(reasoningEngine, nameof(reasoningEngine)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -856,7 +856,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ReasoningEngine which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask specifying which fields to update.
+        /// Optional. Mask specifying which fields to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -864,7 +864,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             UpdateReasoningEngineAsync(new UpdateReasoningEngineRequest
             {
                 ReasoningEngine = gax::GaxPreconditions.CheckNotNull(reasoningEngine, nameof(reasoningEngine)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -874,7 +874,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// Required. The ReasoningEngine which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask specifying which fields to update.
+        /// Optional. Mask specifying which fields to update.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

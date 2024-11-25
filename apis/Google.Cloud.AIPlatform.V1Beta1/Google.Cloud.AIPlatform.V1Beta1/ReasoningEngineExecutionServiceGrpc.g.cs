@@ -67,6 +67,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest> __Marshaller_google_cloud_aiplatform_v1beta1_QueryReasoningEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse> __Marshaller_google_cloud_aiplatform_v1beta1_QueryReasoningEngineResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest> __Marshaller_google_cloud_aiplatform_v1beta1_StreamQueryReasoningEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.HttpBody.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest, global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse> __Method_QueryReasoningEngine = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest, global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse>(
@@ -75,6 +79,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "QueryReasoningEngine",
         __Marshaller_google_cloud_aiplatform_v1beta1_QueryReasoningEngineRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_QueryReasoningEngineResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest, global::Google.Api.HttpBody> __Method_StreamQueryReasoningEngine = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest, global::Google.Api.HttpBody>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "StreamQueryReasoningEngine",
+        __Marshaller_google_cloud_aiplatform_v1beta1_StreamQueryReasoningEngineRequest,
+        __Marshaller_google_api_HttpBody);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -94,6 +106,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse> QueryReasoningEngine(global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Streams queries using a reasoning engine.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamQueryReasoningEngine(global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest request, grpc::IServerStreamWriter<global::Google.Api.HttpBody> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -175,6 +200,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryReasoningEngine, null, options, request);
       }
+      /// <summary>
+      /// Streams queries using a reasoning engine.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Api.HttpBody> StreamQueryReasoningEngine(global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamQueryReasoningEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Streams queries using a reasoning engine.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Api.HttpBody> StreamQueryReasoningEngine(global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_StreamQueryReasoningEngine, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ReasoningEngineExecutionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -189,7 +238,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public static grpc::ServerServiceDefinition BindService(ReasoningEngineExecutionServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_QueryReasoningEngine, serviceImpl.QueryReasoningEngine).Build();
+          .AddMethod(__Method_QueryReasoningEngine, serviceImpl.QueryReasoningEngine)
+          .AddMethod(__Method_StreamQueryReasoningEngine, serviceImpl.StreamQueryReasoningEngine).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -200,6 +250,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ReasoningEngineExecutionServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_QueryReasoningEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest, global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse>(serviceImpl.QueryReasoningEngine));
+      serviceBinder.AddMethod(__Method_StreamQueryReasoningEngine, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest, global::Google.Api.HttpBody>(serviceImpl.StreamQueryReasoningEngine));
     }
 
   }

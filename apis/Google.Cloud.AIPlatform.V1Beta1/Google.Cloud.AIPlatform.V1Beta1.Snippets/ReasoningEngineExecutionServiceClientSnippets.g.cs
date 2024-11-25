@@ -16,6 +16,8 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Api;
+    using Google.Api.Gax.Grpc;
     using Google.Cloud.AIPlatform.V1Beta1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -34,6 +36,7 @@ namespace GoogleCSharpSnippets
             {
                 ReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Input = new Struct(),
+                ClassMethod = "",
             };
             // Make the request
             QueryReasoningEngineResponse response = reasoningEngineExecutionServiceClient.QueryReasoningEngine(request);
@@ -52,9 +55,38 @@ namespace GoogleCSharpSnippets
             {
                 ReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Input = new Struct(),
+                ClassMethod = "",
             };
             // Make the request
             QueryReasoningEngineResponse response = await reasoningEngineExecutionServiceClient.QueryReasoningEngineAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamQueryReasoningEngine</summary>
+        public async Task StreamQueryReasoningEngineRequestObject()
+        {
+            // Snippet: StreamQueryReasoningEngine(StreamQueryReasoningEngineRequest, CallSettings)
+            // Create client
+            ReasoningEngineExecutionServiceClient reasoningEngineExecutionServiceClient = ReasoningEngineExecutionServiceClient.Create();
+            // Initialize request argument(s)
+            StreamQueryReasoningEngineRequest request = new StreamQueryReasoningEngineRequest
+            {
+                ReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
+                Input = new Struct(),
+                ClassMethod = "",
+            };
+            // Make the request, returning a streaming response
+            using ReasoningEngineExecutionServiceClient.StreamQueryReasoningEngineStream response = reasoningEngineExecutionServiceClient.StreamQueryReasoningEngine(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<HttpBody> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                HttpBody responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
             // End snippet
         }
     }

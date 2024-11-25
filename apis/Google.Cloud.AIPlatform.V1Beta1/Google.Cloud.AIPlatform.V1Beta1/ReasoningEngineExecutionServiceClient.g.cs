@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
@@ -49,6 +50,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             QueryReasoningEngineSettings = existing.QueryReasoningEngineSettings;
+            StreamQueryReasoningEngineSettings = existing.StreamQueryReasoningEngineSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -68,6 +70,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings QueryReasoningEngineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReasoningEngineExecutionServiceClient.StreamQueryReasoningEngine</c> and
+        /// <c>ReasoningEngineExecutionServiceClient.StreamQueryReasoningEngineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StreamQueryReasoningEngineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -256,6 +271,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<QueryReasoningEngineResponse> QueryReasoningEngineAsync(QueryReasoningEngineRequest request, st::CancellationToken cancellationToken) =>
             QueryReasoningEngineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Server streaming methods for
+        /// <see cref="StreamQueryReasoningEngine(StreamQueryReasoningEngineRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamQueryReasoningEngineStream : gaxgrpc::ServerStreamingBase<ga::HttpBody>
+        {
+        }
+
+        /// <summary>
+        /// Streams queries using a reasoning engine.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual StreamQueryReasoningEngineStream StreamQueryReasoningEngine(StreamQueryReasoningEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>ReasoningEngineExecutionService client wrapper implementation, for convenient use.</summary>
@@ -265,6 +297,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     public sealed partial class ReasoningEngineExecutionServiceClientImpl : ReasoningEngineExecutionServiceClient
     {
         private readonly gaxgrpc::ApiCall<QueryReasoningEngineRequest, QueryReasoningEngineResponse> _callQueryReasoningEngine;
+
+        private readonly gaxgrpc::ApiServerStreamingCall<StreamQueryReasoningEngineRequest, ga::HttpBody> _callStreamQueryReasoningEngine;
 
         /// <summary>
         /// Constructs a client wrapper for the ReasoningEngineExecutionService service, with the specified gRPC client
@@ -289,12 +323,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callQueryReasoningEngine = clientHelper.BuildApiCall<QueryReasoningEngineRequest, QueryReasoningEngineResponse>("QueryReasoningEngine", grpcClient.QueryReasoningEngineAsync, grpcClient.QueryReasoningEngine, effectiveSettings.QueryReasoningEngineSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callQueryReasoningEngine);
             Modify_QueryReasoningEngineApiCall(ref _callQueryReasoningEngine);
+            _callStreamQueryReasoningEngine = clientHelper.BuildApiCall<StreamQueryReasoningEngineRequest, ga::HttpBody>("StreamQueryReasoningEngine", grpcClient.StreamQueryReasoningEngine, effectiveSettings.StreamQueryReasoningEngineSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStreamQueryReasoningEngine);
+            Modify_StreamQueryReasoningEngineApiCall(ref _callStreamQueryReasoningEngine);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
         partial void Modify_QueryReasoningEngineApiCall(ref gaxgrpc::ApiCall<QueryReasoningEngineRequest, QueryReasoningEngineResponse> call);
+
+        partial void Modify_StreamQueryReasoningEngineApiCall(ref gaxgrpc::ApiServerStreamingCall<StreamQueryReasoningEngineRequest, ga::HttpBody> call);
 
         partial void OnConstruction(ReasoningEngineExecutionService.ReasoningEngineExecutionServiceClient grpcClient, ReasoningEngineExecutionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -308,6 +349,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_QueryReasoningEngineRequest(ref QueryReasoningEngineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamQueryReasoningEngineRequest(ref StreamQueryReasoningEngineRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Queries using a reasoning engine.
@@ -331,6 +374,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_QueryReasoningEngineRequest(ref request, ref callSettings);
             return _callQueryReasoningEngine.Async(request, callSettings);
+        }
+
+        internal sealed partial class StreamQueryReasoningEngineStreamImpl : StreamQueryReasoningEngineStream
+        {
+            /// <summary>Construct the server streaming method for <c>StreamQueryReasoningEngine</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public StreamQueryReasoningEngineStreamImpl(grpccore::AsyncServerStreamingCall<ga::HttpBody> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<ga::HttpBody> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Streams queries using a reasoning engine.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override ReasoningEngineExecutionServiceClient.StreamQueryReasoningEngineStream StreamQueryReasoningEngine(StreamQueryReasoningEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StreamQueryReasoningEngineRequest(ref request, ref callSettings);
+            return new StreamQueryReasoningEngineStreamImpl(_callStreamQueryReasoningEngine.Call(request, callSettings));
         }
     }
 

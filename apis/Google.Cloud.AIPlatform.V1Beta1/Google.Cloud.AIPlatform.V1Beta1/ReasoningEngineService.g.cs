@@ -45,7 +45,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZSKlAQocVXBkYXRlUmVhc29uaW5nRW5naW5lUmVxdWVzdBJPChByZWFzb25p",
             "bmdfZW5naW5lGAEgASgLMjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
             "ZXRhMS5SZWFzb25pbmdFbmdpbmVCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJ9CiZVcGRhdGVS",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBASJ9CiZVcGRhdGVS",
             "ZWFzb25pbmdFbmdpbmVPcGVyYXRpb25NZXRhZGF0YRJTChBnZW5lcmljX21l",
             "dGFkYXRhGAEgASgLMjkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
             "MS5HZW5lcmljT3BlcmF0aW9uTWV0YWRhdGEingEKG0xpc3RSZWFzb25pbmdF",
@@ -833,7 +833,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. Mask specifying which fields to update.
+    /// Optional. Mask specifying which fields to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

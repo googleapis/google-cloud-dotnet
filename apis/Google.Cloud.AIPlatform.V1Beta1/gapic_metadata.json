@@ -1920,6 +1920,12 @@
                 "QueryReasoningEngine",
                 "QueryReasoningEngineAsync"
               ]
+            },
+            "StreamQueryReasoningEngine": {
+              "methods": [
+                "StreamQueryReasoningEngine",
+                "StreamQueryReasoningEngineAsync"
+              ]
             }
           }
         }

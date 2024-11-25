@@ -28,31 +28,42 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "bmdpbmVfZXhlY3V0aW9uX3NlcnZpY2UucHJvdG8SH2dvb2dsZS5jbG91ZC5h",
             "aXBsYXRmb3JtLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
             "dG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGhxn",
-            "b29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIosBChtRdWVyeVJlYXNvbmlu",
-            "Z0VuZ2luZVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4EEC+kErCilhaXBsYXRm",
-            "b3JtLmdvb2dsZWFwaXMuY29tL1JlYXNvbmluZ0VuZ2luZRIrCgVpbnB1dBgC",
-            "IAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBASJGChxRdWVyeVJl",
-            "YXNvbmluZ0VuZ2luZVJlc3BvbnNlEiYKBm91dHB1dBgBIAEoCzIWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5WYWx1ZTLSAgofUmVhc29uaW5nRW5naW5lRXhlY3V0aW9u",
-            "U2VydmljZRLfAQoUUXVlcnlSZWFzb25pbmdFbmdpbmUSPC5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlF1ZXJ5UmVhc29uaW5nRW5naW5lUmVx",
-            "dWVzdBo9Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUXVlcnlS",
-            "ZWFzb25pbmdFbmdpbmVSZXNwb25zZSJKgtPkkwJEIj8vdjFiZXRhMS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlYXNvbmluZ0VuZ2luZXMvKn06",
-            "cXVlcnk6ASoaTcpBGWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQvsB",
-            "CiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIkUmVhc29u",
-            "aW5nRW5naW5lRXhlY3V0aW9uU2VydmljZVByb3RvUAFaQ2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjth",
-            "aXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGEx",
-            "ygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6",
-            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL2h0dHBib2R5LnByb3RvGhln",
+            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3Ry",
+            "dWN0LnByb3RvIqYBChtRdWVyeVJlYXNvbmluZ0VuZ2luZVJlcXVlc3QSPwoE",
+            "bmFtZRgBIAEoCUIx4EEC+kErCilhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
+            "L1JlYXNvbmluZ0VuZ2luZRIrCgVpbnB1dBgCIAEoCzIXLmdvb2dsZS5wcm90",
+            "b2J1Zi5TdHJ1Y3RCA+BBARIZCgxjbGFzc19tZXRob2QYAyABKAlCA+BBASJG",
+            "ChxRdWVyeVJlYXNvbmluZ0VuZ2luZVJlc3BvbnNlEiYKBm91dHB1dBgBIAEo",
+            "CzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZSKsAQohU3RyZWFtUXVlcnlSZWFz",
+            "b25pbmdFbmdpbmVSZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopYWlw",
+            "bGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SZWFzb25pbmdFbmdpbmUSKwoFaW5w",
+            "dXQYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQESGQoMY2xh",
+            "c3NfbWV0aG9kGAMgASgJQgPgQQEynwQKH1JlYXNvbmluZ0VuZ2luZUV4ZWN1",
+            "dGlvblNlcnZpY2US3wEKFFF1ZXJ5UmVhc29uaW5nRW5naW5lEjwuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5RdWVyeVJlYXNvbmluZ0VuZ2lu",
+            "ZVJlcXVlc3QaPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlF1",
+            "ZXJ5UmVhc29uaW5nRW5naW5lUmVzcG9uc2UiSoLT5JMCRCI/L3YxYmV0YTEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZWFzb25pbmdFbmdpbmVz",
+            "Lyp9OnF1ZXJ5OgEqEsoBChpTdHJlYW1RdWVyeVJlYXNvbmluZ0VuZ2luZRJC",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU3RyZWFtUXVlcnlS",
+            "ZWFzb25pbmdFbmdpbmVSZXF1ZXN0GhQuZ29vZ2xlLmFwaS5IdHRwQm9keSJQ",
+            "gtPkkwJKIkUvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L3JlYXNvbmluZ0VuZ2luZXMvKn06c3RyZWFtUXVlcnk6ASowARpNykEZYWlw",
+            "bGF0Zm9ybS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C+wEKI2NvbS5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExQiRSZWFzb25pbmdFbmdpbmVFeGVjdXRp",
+            "b25TZXJ2aWNlUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRm",
+            "b3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dv",
+            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRc",
+            "QUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9y",
+            "bTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest), global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest.Parser, new[]{ "Name", "Input" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse), global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse.Parser, new[]{ "Output" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest), global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineRequest.Parser, new[]{ "Name", "Input", "ClassMethod" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse), global::Google.Cloud.AIPlatform.V1Beta1.QueryReasoningEngineResponse.Parser, new[]{ "Output" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest), global::Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest.Parser, new[]{ "Name", "Input", "ClassMethod" }, null, null, null, null)
           }));
     }
     #endregion
@@ -99,6 +110,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public QueryReasoningEngineRequest(QueryReasoningEngineRequest other) : this() {
       name_ = other.name_;
       input_ = other.input_ != null ? other.input_.Clone() : null;
+      classMethod_ = other.classMethod_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -141,6 +153,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "class_method" field.</summary>
+    public const int ClassMethodFieldNumber = 3;
+    private string classMethod_ = "";
+    /// <summary>
+    /// Optional. Class method to be used for the query.
+    /// It is optional and defaults to "query" if unspecified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClassMethod {
+      get { return classMethod_; }
+      set {
+        classMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -158,6 +186,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(Input, other.Input)) return false;
+      if (ClassMethod != other.ClassMethod) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -167,6 +196,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (input_ != null) hash ^= Input.GetHashCode();
+      if (ClassMethod.Length != 0) hash ^= ClassMethod.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -193,6 +223,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteMessage(Input);
       }
+      if (ClassMethod.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ClassMethod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -211,6 +245,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteMessage(Input);
       }
+      if (ClassMethod.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ClassMethod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -226,6 +264,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (input_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
+      }
+      if (ClassMethod.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClassMethod);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -247,6 +288,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           Input = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Input.MergeFrom(other.Input);
+      }
+      if (other.ClassMethod.Length != 0) {
+        ClassMethod = other.ClassMethod;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -274,6 +318,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(Input);
             break;
           }
+          case 26: {
+            ClassMethod = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -298,6 +346,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               Input = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
             input.ReadMessage(Input);
+            break;
+          }
+          case 26: {
+            ClassMethod = input.ReadString();
             break;
           }
         }
@@ -503,6 +555,295 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               Output = new global::Google.Protobuf.WellKnownTypes.Value();
             }
             input.ReadMessage(Output);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for [ReasoningEngineExecutionService.StreamQuery][].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamQueryReasoningEngineRequest : pb::IMessage<StreamQueryReasoningEngineRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamQueryReasoningEngineRequest> _parser = new pb::MessageParser<StreamQueryReasoningEngineRequest>(() => new StreamQueryReasoningEngineRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamQueryReasoningEngineRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineExecutionServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamQueryReasoningEngineRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamQueryReasoningEngineRequest(StreamQueryReasoningEngineRequest other) : this() {
+      name_ = other.name_;
+      input_ = other.input_ != null ? other.input_.Clone() : null;
+      classMethod_ = other.classMethod_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamQueryReasoningEngineRequest Clone() {
+      return new StreamQueryReasoningEngineRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the ReasoningEngine resource to use.
+    /// Format:
+    /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "input" field.</summary>
+    public const int InputFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Struct input_;
+    /// <summary>
+    /// Optional. Input content provided by users in JSON object format. Examples
+    /// include text query, function calling parameters, media bytes, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Struct Input {
+      get { return input_; }
+      set {
+        input_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "class_method" field.</summary>
+    public const int ClassMethodFieldNumber = 3;
+    private string classMethod_ = "";
+    /// <summary>
+    /// Optional. Class method to be used for the stream query.
+    /// It is optional and defaults to "steam_query" if unspecified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClassMethod {
+      get { return classMethod_; }
+      set {
+        classMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamQueryReasoningEngineRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamQueryReasoningEngineRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(Input, other.Input)) return false;
+      if (ClassMethod != other.ClassMethod) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (input_ != null) hash ^= Input.GetHashCode();
+      if (ClassMethod.Length != 0) hash ^= ClassMethod.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (input_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Input);
+      }
+      if (ClassMethod.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ClassMethod);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (input_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Input);
+      }
+      if (ClassMethod.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ClassMethod);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (input_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
+      }
+      if (ClassMethod.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClassMethod);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamQueryReasoningEngineRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.input_ != null) {
+        if (input_ == null) {
+          Input = new global::Google.Protobuf.WellKnownTypes.Struct();
+        }
+        Input.MergeFrom(other.Input);
+      }
+      if (other.ClassMethod.Length != 0) {
+        ClassMethod = other.ClassMethod;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (input_ == null) {
+              Input = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Input);
+            break;
+          }
+          case 26: {
+            ClassMethod = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (input_ == null) {
+              Input = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Input);
+            break;
+          }
+          case 26: {
+            ClassMethod = input.ReadString();
             break;
           }
         }
