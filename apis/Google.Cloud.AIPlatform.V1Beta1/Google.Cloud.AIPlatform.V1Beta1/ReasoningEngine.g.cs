@@ -133,7 +133,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Protobuf.WellKnownTypes.Struct.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct> classMethods_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct>();
     /// <summary>
-    /// Optional. Declarations for object class methods.
+    /// Optional. Declarations for object class methods in OpenAPI specification
+    /// format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

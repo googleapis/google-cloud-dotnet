@@ -30,4 +30,16 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class StreamQueryReasoningEngineRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ReasoningEngineName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ReasoningEngineName ReasoningEngineName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ReasoningEngineName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

@@ -78929,12 +78929,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -78978,12 +78978,60 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 45,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineExecutionService_StreamQueryReasoningEngine_sync",
+      "title": "StreamQueryReasoningEngineRequestObject",
+      "description": "Snippet for StreamQueryReasoningEngine",
+      "file": "ReasoningEngineExecutionServiceClient.StreamQueryReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamQueryReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineExecutionServiceClient.StreamQueryReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.StreamQueryReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineExecutionServiceClient+StreamQueryReasoningEngineStream",
+        "client": {
+          "shortName": "ReasoningEngineExecutionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineExecutionServiceClient"
+        },
+        "method": {
+          "shortName": "StreamQueryReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineExecutionService.StreamQueryReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineExecutionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineExecutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 58,
           "type": "SHORT"
         }
       ]
