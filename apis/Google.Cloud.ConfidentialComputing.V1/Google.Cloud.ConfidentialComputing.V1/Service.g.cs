@@ -62,52 +62,65 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "VmVyaWZ5QXR0ZXN0YXRpb25SZXNwb25zZRIeChFvaWRjX2NsYWltc190b2tl",
             "bhgCIAEoCUID4EEDEi8KDnBhcnRpYWxfZXJyb3JzGAMgAygLMhIuZ29vZ2xl",
             "LnJwYy5TdGF0dXNCA+BBAyIzCg5HY3BDcmVkZW50aWFscxIhChlzZXJ2aWNl",
-            "X2FjY291bnRfaWRfdG9rZW5zGAIgAygJIoQBCgxUb2tlbk9wdGlvbnMSFQoI",
-            "YXVkaWVuY2UYASABKAlCA+BBARISCgVub25jZRgCIAMoCUID4EEBEkkKCnRv",
-            "a2VuX3R5cGUYAyABKA4yMC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29t",
-            "cHV0aW5nLnYxLlRva2VuVHlwZUID4EEBIo8DCg5UcG1BdHRlc3RhdGlvbhJL",
-            "CgZxdW90ZXMYASADKAsyOy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29t",
-            "cHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uLlF1b3RlEhUKDXRjZ19ldmVudF9s",
-            "b2cYAiABKAwSGwoTY2Fub25pY2FsX2V2ZW50X2xvZxgDIAEoDBIPCgdha19j",
-            "ZXJ0GAQgASgMEhIKCmNlcnRfY2hhaW4YBSADKAwa1gEKBVF1b3RlEhEKCWhh",
-            "c2hfYWxnbxgBIAEoBRJeCgpwY3JfdmFsdWVzGAIgAygLMkouZ29vZ2xlLmNs",
-            "b3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5UcG1BdHRlc3RhdGlvbi5R",
-            "dW90ZS5QY3JWYWx1ZXNFbnRyeRIRCglyYXdfcXVvdGUYAyABKAwSFQoNcmF3",
-            "X3NpZ25hdHVyZRgEIAEoDBowCg5QY3JWYWx1ZXNFbnRyeRILCgNrZXkYASAB",
-            "KAUSDQoFdmFsdWUYAiABKAw6AjgBImoKFUNvbmZpZGVudGlhbFNwYWNlSW5m",
-            "bxJRCg9zaWduZWRfZW50aXRpZXMYASADKAsyMy5nb29nbGUuY2xvdWQuY29u",
-            "ZmlkZW50aWFsY29tcHV0aW5nLnYxLlNpZ25lZEVudGl0eUID4EEBIncKDFNp",
-            "Z25lZEVudGl0eRJnChpjb250YWluZXJfaW1hZ2Vfc2lnbmF0dXJlcxgBIAMo",
-            "CzI+Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuQ29u",
-            "dGFpbmVySW1hZ2VTaWduYXR1cmVCA+BBASKvAQoXQ29udGFpbmVySW1hZ2VT",
-            "aWduYXR1cmUSFAoHcGF5bG9hZBgBIAEoDEID4EEBEhYKCXNpZ25hdHVyZRgC",
-            "IAEoDEID4EEBEhcKCnB1YmxpY19rZXkYAyABKAxCA+BBARJNCgdzaWdfYWxn",
-            "GAQgASgOMjcuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52",
-            "MS5TaWduaW5nQWxnb3JpdGhtQgPgQQEqfwoQU2lnbmluZ0FsZ29yaXRobRIh",
-            "Ch1TSUdOSU5HX0FMR09SSVRITV9VTlNQRUNJRklFRBAAEhUKEVJTQVNTQV9Q",
-            "U1NfU0hBMjU2EAESGgoWUlNBU1NBX1BLQ1MxVjE1X1NIQTI1NhACEhUKEUVD",
-            "RFNBX1AyNTZfU0hBMjU2EAMqbAoJVG9rZW5UeXBlEhoKFlRPS0VOX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABITCg9UT0tFTl9UWVBFX09JREMQARISCg5UT0tFTl9U",
-            "WVBFX1BLSRACEhoKFlRPS0VOX1RZUEVfTElNSVRFRF9BV1MQAzK3BAoVQ29u",
-            "ZmlkZW50aWFsQ29tcHV0aW5nEtgBCg9DcmVhdGVDaGFsbGVuZ2USPS5nb29n",
-            "bGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNyZWF0ZUNoYWxs",
-            "ZW5nZVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0",
-            "aW5nLnYxLkNoYWxsZW5nZSJU2kEQcGFyZW50LGNoYWxsZW5nZYLT5JMCOyIu",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vY2hhbGxlbmdl",
-            "czoJY2hhbGxlbmdlEugBChFWZXJpZnlBdHRlc3RhdGlvbhI/Lmdvb2dsZS5j",
-            "bG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5QXR0ZXN0YXRp",
-            "b25SZXF1ZXN0GkAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGlu",
-            "Zy52MS5WZXJpZnlBdHRlc3RhdGlvblJlc3BvbnNlIlCC0+STAkoiRS92MS97",
-            "Y2hhbGxlbmdlPXByb2plY3RzLyovbG9jYXRpb25zLyovY2hhbGxlbmdlcy8q",
-            "fTp2ZXJpZnlBdHRlc3RhdGlvbjoBKhpYykEkY29uZmlkZW50aWFsY29tcHV0",
-            "aW5nLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKXAgopY29tLmdvb2dsZS5jbG91ZC5j",
-            "b25maWRlbnRpYWxjb21wdXRpbmcudjFCDFNlcnZpY2VQcm90b1ABWl9jbG91",
-            "ZC5nb29nbGUuY29tL2dvL2NvbmZpZGVudGlhbGNvbXB1dGluZy9hcGl2MS9j",
-            "b25maWRlbnRpYWxjb21wdXRpbmdwYjtjb25maWRlbnRpYWxjb21wdXRpbmdw",
-            "YqoCJUdvb2dsZS5DbG91ZC5Db25maWRlbnRpYWxDb21wdXRpbmcuVjHKAiVH",
-            "b29nbGVcQ2xvdWRcQ29uZmlkZW50aWFsQ29tcHV0aW5nXFYx6gIoR29vZ2xl",
-            "OjpDbG91ZDo6Q29uZmlkZW50aWFsQ29tcHV0aW5nOjpWMWIGcHJvdG8z"));
+            "X2FjY291bnRfaWRfdG9rZW5zGAIgAygJIqYFCgxUb2tlbk9wdGlvbnMSdgoa",
+            "YXdzX3ByaW5jaXBhbF90YWdzX29wdGlvbnMYBCABKAsySy5nb29nbGUuY2xv",
+            "dWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRva2VuT3B0aW9ucy5Bd3NQ",
+            "cmluY2lwYWxUYWdzT3B0aW9uc0ID4EEBSAASFQoIYXVkaWVuY2UYASABKAlC",
+            "A+BBARISCgVub25jZRgCIAMoCUID4EEBEkkKCnRva2VuX3R5cGUYAyABKA4y",
+            "MC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRva2Vu",
+            "VHlwZUID4EEBGpEDChdBd3NQcmluY2lwYWxUYWdzT3B0aW9ucxKFAQoWYWxs",
+            "b3dlZF9wcmluY2lwYWxfdGFncxgBIAEoCzJgLmdvb2dsZS5jbG91ZC5jb25m",
+            "aWRlbnRpYWxjb21wdXRpbmcudjEuVG9rZW5PcHRpb25zLkF3c1ByaW5jaXBh",
+            "bFRhZ3NPcHRpb25zLkFsbG93ZWRQcmluY2lwYWxUYWdzQgPgQQEa7QEKFEFs",
+            "bG93ZWRQcmluY2lwYWxUYWdzEqIBChpjb250YWluZXJfaW1hZ2Vfc2lnbmF0",
+            "dXJlcxgBIAEoCzJ5Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
+            "bmcudjEuVG9rZW5PcHRpb25zLkF3c1ByaW5jaXBhbFRhZ3NPcHRpb25zLkFs",
+            "bG93ZWRQcmluY2lwYWxUYWdzLkNvbnRhaW5lckltYWdlU2lnbmF0dXJlc0ID",
+            "4EEBGjAKGENvbnRhaW5lckltYWdlU2lnbmF0dXJlcxIUCgdrZXlfaWRzGAEg",
+            "AygJQgPgQQFCFAoSdG9rZW5fdHlwZV9vcHRpb25zIo8DCg5UcG1BdHRlc3Rh",
+            "dGlvbhJLCgZxdW90ZXMYASADKAsyOy5nb29nbGUuY2xvdWQuY29uZmlkZW50",
+            "aWFsY29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uLlF1b3RlEhUKDXRjZ19l",
+            "dmVudF9sb2cYAiABKAwSGwoTY2Fub25pY2FsX2V2ZW50X2xvZxgDIAEoDBIP",
+            "Cgdha19jZXJ0GAQgASgMEhIKCmNlcnRfY2hhaW4YBSADKAwa1gEKBVF1b3Rl",
+            "EhEKCWhhc2hfYWxnbxgBIAEoBRJeCgpwY3JfdmFsdWVzGAIgAygLMkouZ29v",
+            "Z2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5UcG1BdHRlc3Rh",
+            "dGlvbi5RdW90ZS5QY3JWYWx1ZXNFbnRyeRIRCglyYXdfcXVvdGUYAyABKAwS",
+            "FQoNcmF3X3NpZ25hdHVyZRgEIAEoDBowCg5QY3JWYWx1ZXNFbnRyeRILCgNr",
+            "ZXkYASABKAUSDQoFdmFsdWUYAiABKAw6AjgBImoKFUNvbmZpZGVudGlhbFNw",
+            "YWNlSW5mbxJRCg9zaWduZWRfZW50aXRpZXMYASADKAsyMy5nb29nbGUuY2xv",
+            "dWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlNpZ25lZEVudGl0eUID4EEB",
+            "IncKDFNpZ25lZEVudGl0eRJnChpjb250YWluZXJfaW1hZ2Vfc2lnbmF0dXJl",
+            "cxgBIAMoCzI+Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcu",
+            "djEuQ29udGFpbmVySW1hZ2VTaWduYXR1cmVCA+BBASKvAQoXQ29udGFpbmVy",
+            "SW1hZ2VTaWduYXR1cmUSFAoHcGF5bG9hZBgBIAEoDEID4EEBEhYKCXNpZ25h",
+            "dHVyZRgCIAEoDEID4EEBEhcKCnB1YmxpY19rZXkYAyABKAxCA+BBARJNCgdz",
+            "aWdfYWxnGAQgASgOMjcuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1",
+            "dGluZy52MS5TaWduaW5nQWxnb3JpdGhtQgPgQQEqfwoQU2lnbmluZ0FsZ29y",
+            "aXRobRIhCh1TSUdOSU5HX0FMR09SSVRITV9VTlNQRUNJRklFRBAAEhUKEVJT",
+            "QVNTQV9QU1NfU0hBMjU2EAESGgoWUlNBU1NBX1BLQ1MxVjE1X1NIQTI1NhAC",
+            "EhUKEUVDRFNBX1AyNTZfU0hBMjU2EAMqjgEKCVRva2VuVHlwZRIaChZUT0tF",
+            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPVE9LRU5fVFlQRV9PSURDEAESEgoO",
+            "VE9LRU5fVFlQRV9QS0kQAhIaChZUT0tFTl9UWVBFX0xJTUlURURfQVdTEAMS",
+            "IAocVE9LRU5fVFlQRV9BV1NfUFJJTkNJUEFMVEFHUxAEMrcEChVDb25maWRl",
+            "bnRpYWxDb21wdXRpbmcS2AEKD0NyZWF0ZUNoYWxsZW5nZRI9Lmdvb2dsZS5j",
+            "bG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuQ3JlYXRlQ2hhbGxlbmdl",
+            "UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcu",
+            "djEuQ2hhbGxlbmdlIlTaQRBwYXJlbnQsY2hhbGxlbmdlgtPkkwI7Ii4vdjEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jaGFsbGVuZ2VzOglj",
+            "aGFsbGVuZ2US6AEKEVZlcmlmeUF0dGVzdGF0aW9uEj8uZ29vZ2xlLmNsb3Vk",
+            "LmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5WZXJpZnlBdHRlc3RhdGlvblJl",
+            "cXVlc3QaQC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYx",
+            "LlZlcmlmeUF0dGVzdGF0aW9uUmVzcG9uc2UiUILT5JMCSiJFL3YxL3tjaGFs",
+            "bGVuZ2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jaGFsbGVuZ2VzLyp9OnZl",
+            "cmlmeUF0dGVzdGF0aW9uOgEqGljKQSRjb25maWRlbnRpYWxjb21wdXRpbmcu",
+            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtQpcCCiljb20uZ29vZ2xlLmNsb3VkLmNvbmZp",
+            "ZGVudGlhbGNvbXB1dGluZy52MUIMU2VydmljZVByb3RvUAFaX2Nsb3VkLmdv",
+            "b2dsZS5jb20vZ28vY29uZmlkZW50aWFsY29tcHV0aW5nL2FwaXYxL2NvbmZp",
+            "ZGVudGlhbGNvbXB1dGluZ3BiO2NvbmZpZGVudGlhbGNvbXB1dGluZ3BiqgIl",
+            "R29vZ2xlLkNsb3VkLkNvbmZpZGVudGlhbENvbXB1dGluZy5WMcoCJUdvb2ds",
+            "ZVxDbG91ZFxDb25maWRlbnRpYWxDb21wdXRpbmdcVjHqAihHb29nbGU6OkNs",
+            "b3VkOjpDb25maWRlbnRpYWxDb21wdXRpbmc6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -118,7 +131,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.SevSnpAttestation), global::Google.Cloud.ConfidentialComputing.V1.SevSnpAttestation.Parser, new[]{ "Report", "AuxBlob" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse.Parser, new[]{ "OidcClaimsToken", "PartialErrors" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials), global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials.Parser, new[]{ "ServiceAccountIdTokens" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Parser, new[]{ "Audience", "Nonce", "TokenType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Parser, new[]{ "AwsPrincipalTagsOptions", "Audience", "Nonce", "TokenType" }, new[]{ "TokenTypeOptions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Parser, new[]{ "AllowedPrincipalTags" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Parser, new[]{ "ContainerImageSignatures" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures.Parser, new[]{ "KeyIds" }, null, null, null, null)})})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation), global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Parser, new[]{ "Quotes", "TcgEventLog", "CanonicalEventLog", "AkCert", "CertChain" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Types.Quote), global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Types.Quote.Parser, new[]{ "HashAlgo", "PcrValues", "RawQuote", "RawSignature" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo), global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo.Parser, new[]{ "SignedEntities" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.SignedEntity), global::Google.Cloud.ConfidentialComputing.V1.SignedEntity.Parser, new[]{ "ContainerImageSignatures" }, null, null, null, null),
@@ -172,6 +185,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     /// Limited claim token type for AWS integration
     /// </summary>
     [pbr::OriginalName("TOKEN_TYPE_LIMITED_AWS")] LimitedAws = 3,
+    /// <summary>
+    /// Principal-tag-based token for AWS integration
+    /// </summary>
+    [pbr::OriginalName("TOKEN_TYPE_AWS_PRINCIPALTAGS")] AwsPrincipaltags = 4,
   }
 
   #endregion
@@ -2354,6 +2371,12 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       audience_ = other.audience_;
       nonce_ = other.nonce_.Clone();
       tokenType_ = other.tokenType_;
+      switch (other.TokenTypeOptionsCase) {
+        case TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions:
+          AwsPrincipalTagsOptions = other.AwsPrincipalTagsOptions.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2361,6 +2384,21 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TokenOptions Clone() {
       return new TokenOptions(this);
+    }
+
+    /// <summary>Field number for the "aws_principal_tags_options" field.</summary>
+    public const int AwsPrincipalTagsOptionsFieldNumber = 4;
+    /// <summary>
+    /// Optional. Options for the Limited AWS token type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions AwsPrincipalTagsOptions {
+      get { return tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions ? (global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions) tokenTypeOptions_ : null; }
+      set {
+        tokenTypeOptions_ = value;
+        tokenTypeOptionsCase_ = value == null ? TokenTypeOptionsOneofCase.None : TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions;
+      }
     }
 
     /// <summary>Field number for the "audience" field.</summary>
@@ -2410,6 +2448,26 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
     }
 
+    private object tokenTypeOptions_;
+    /// <summary>Enum of possible cases for the "token_type_options" oneof.</summary>
+    public enum TokenTypeOptionsOneofCase {
+      None = 0,
+      AwsPrincipalTagsOptions = 4,
+    }
+    private TokenTypeOptionsOneofCase tokenTypeOptionsCase_ = TokenTypeOptionsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokenTypeOptionsOneofCase TokenTypeOptionsCase {
+      get { return tokenTypeOptionsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTokenTypeOptions() {
+      tokenTypeOptionsCase_ = TokenTypeOptionsOneofCase.None;
+      tokenTypeOptions_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2425,9 +2483,11 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(AwsPrincipalTagsOptions, other.AwsPrincipalTagsOptions)) return false;
       if (Audience != other.Audience) return false;
       if(!nonce_.Equals(other.nonce_)) return false;
       if (TokenType != other.TokenType) return false;
+      if (TokenTypeOptionsCase != other.TokenTypeOptionsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2435,9 +2495,11 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions) hash ^= AwsPrincipalTagsOptions.GetHashCode();
       if (Audience.Length != 0) hash ^= Audience.GetHashCode();
       hash ^= nonce_.GetHashCode();
       if (TokenType != global::Google.Cloud.ConfidentialComputing.V1.TokenType.Unspecified) hash ^= TokenType.GetHashCode();
+      hash ^= (int) tokenTypeOptionsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2465,6 +2527,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) TokenType);
       }
+      if (tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AwsPrincipalTagsOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2484,6 +2550,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) TokenType);
       }
+      if (tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AwsPrincipalTagsOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2494,6 +2564,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AwsPrincipalTagsOptions);
+      }
       if (Audience.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Audience);
       }
@@ -2520,6 +2593,15 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (other.TokenType != global::Google.Cloud.ConfidentialComputing.V1.TokenType.Unspecified) {
         TokenType = other.TokenType;
       }
+      switch (other.TokenTypeOptionsCase) {
+        case TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions:
+          if (AwsPrincipalTagsOptions == null) {
+            AwsPrincipalTagsOptions = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions();
+          }
+          AwsPrincipalTagsOptions.MergeFrom(other.AwsPrincipalTagsOptions);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2545,6 +2627,15 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           }
           case 24: {
             TokenType = (global::Google.Cloud.ConfidentialComputing.V1.TokenType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions();
+            if (tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions) {
+              subBuilder.MergeFrom(AwsPrincipalTagsOptions);
+            }
+            input.ReadMessage(subBuilder);
+            AwsPrincipalTagsOptions = subBuilder;
             break;
           }
         }
@@ -2574,10 +2665,642 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             TokenType = (global::Google.Cloud.ConfidentialComputing.V1.TokenType) input.ReadEnum();
             break;
           }
+          case 34: {
+            global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions();
+            if (tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions) {
+              subBuilder.MergeFrom(AwsPrincipalTagsOptions);
+            }
+            input.ReadMessage(subBuilder);
+            AwsPrincipalTagsOptions = subBuilder;
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TokenOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Token options that only apply to the AWS Principal Tags token type.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AwsPrincipalTagsOptions : pb::IMessage<AwsPrincipalTagsOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AwsPrincipalTagsOptions> _parser = new pb::MessageParser<AwsPrincipalTagsOptions>(() => new AwsPrincipalTagsOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AwsPrincipalTagsOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AwsPrincipalTagsOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AwsPrincipalTagsOptions(AwsPrincipalTagsOptions other) : this() {
+          allowedPrincipalTags_ = other.allowedPrincipalTags_ != null ? other.allowedPrincipalTags_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AwsPrincipalTagsOptions Clone() {
+          return new AwsPrincipalTagsOptions(this);
+        }
+
+        /// <summary>Field number for the "allowed_principal_tags" field.</summary>
+        public const int AllowedPrincipalTagsFieldNumber = 1;
+        private global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags allowedPrincipalTags_;
+        /// <summary>
+        /// Optional. Principal tags to allow in the token.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags AllowedPrincipalTags {
+          get { return allowedPrincipalTags_; }
+          set {
+            allowedPrincipalTags_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AwsPrincipalTagsOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AwsPrincipalTagsOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(AllowedPrincipalTags, other.AllowedPrincipalTags)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (allowedPrincipalTags_ != null) hash ^= AllowedPrincipalTags.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (allowedPrincipalTags_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AllowedPrincipalTags);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (allowedPrincipalTags_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AllowedPrincipalTags);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (allowedPrincipalTags_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AllowedPrincipalTags);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AwsPrincipalTagsOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.allowedPrincipalTags_ != null) {
+            if (allowedPrincipalTags_ == null) {
+              AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+            }
+            AllowedPrincipalTags.MergeFrom(other.AllowedPrincipalTags);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (allowedPrincipalTags_ == null) {
+                  AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+                }
+                input.ReadMessage(AllowedPrincipalTags);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (allowedPrincipalTags_ == null) {
+                  AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+                }
+                input.ReadMessage(AllowedPrincipalTags);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the AwsPrincipalTagsOptions message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Allowed principal tags is used to define what principal tags will be
+          /// placed in the token.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class AllowedPrincipalTags : pb::IMessage<AllowedPrincipalTags>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<AllowedPrincipalTags> _parser = new pb::MessageParser<AllowedPrincipalTags>(() => new AllowedPrincipalTags());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<AllowedPrincipalTags> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AllowedPrincipalTags() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AllowedPrincipalTags(AllowedPrincipalTags other) : this() {
+              containerImageSignatures_ = other.containerImageSignatures_ != null ? other.containerImageSignatures_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AllowedPrincipalTags Clone() {
+              return new AllowedPrincipalTags(this);
+            }
+
+            /// <summary>Field number for the "container_image_signatures" field.</summary>
+            public const int ContainerImageSignaturesFieldNumber = 1;
+            private global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures containerImageSignatures_;
+            /// <summary>
+            /// Optional. Container image signatures allowed in the token.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures ContainerImageSignatures {
+              get { return containerImageSignatures_; }
+              set {
+                containerImageSignatures_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as AllowedPrincipalTags);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(AllowedPrincipalTags other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(ContainerImageSignatures, other.ContainerImageSignatures)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (containerImageSignatures_ != null) hash ^= ContainerImageSignatures.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (containerImageSignatures_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(ContainerImageSignatures);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (containerImageSignatures_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(ContainerImageSignatures);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (containerImageSignatures_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContainerImageSignatures);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(AllowedPrincipalTags other) {
+              if (other == null) {
+                return;
+              }
+              if (other.containerImageSignatures_ != null) {
+                if (containerImageSignatures_ == null) {
+                  ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
+                }
+                ContainerImageSignatures.MergeFrom(other.ContainerImageSignatures);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (containerImageSignatures_ == null) {
+                      ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
+                    }
+                    input.ReadMessage(ContainerImageSignatures);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (containerImageSignatures_ == null) {
+                      ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
+                    }
+                    input.ReadMessage(ContainerImageSignatures);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the AllowedPrincipalTags message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Allowed Container Image Signatures. Key IDs are required to allow this
+              /// claim to fit within the narrow AWS IAM restrictions.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class ContainerImageSignatures : pb::IMessage<ContainerImageSignatures>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<ContainerImageSignatures> _parser = new pb::MessageParser<ContainerImageSignatures>(() => new ContainerImageSignatures());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<ContainerImageSignatures> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ContainerImageSignatures() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ContainerImageSignatures(ContainerImageSignatures other) : this() {
+                  keyIds_ = other.keyIds_.Clone();
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ContainerImageSignatures Clone() {
+                  return new ContainerImageSignatures(this);
+                }
+
+                /// <summary>Field number for the "key_ids" field.</summary>
+                public const int KeyIdsFieldNumber = 1;
+                private static readonly pb::FieldCodec<string> _repeated_keyIds_codec
+                    = pb::FieldCodec.ForString(10);
+                private readonly pbc::RepeatedField<string> keyIds_ = new pbc::RepeatedField<string>();
+                /// <summary>
+                /// Optional. List of key ids to filter into the Principal tags. Only
+                /// keys that have been validated and added to the token will be filtered
+                /// into principal tags. Unrecognized key ids will be ignored.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public pbc::RepeatedField<string> KeyIds {
+                  get { return keyIds_; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as ContainerImageSignatures);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(ContainerImageSignatures other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if(!keyIds_.Equals(other.keyIds_)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  hash ^= keyIds_.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  keyIds_.WriteTo(output, _repeated_keyIds_codec);
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  keyIds_.WriteTo(ref output, _repeated_keyIds_codec);
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  size += keyIds_.CalculateSize(_repeated_keyIds_codec);
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(ContainerImageSignatures other) {
+                  if (other == null) {
+                    return;
+                  }
+                  keyIds_.Add(other.keyIds_);
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        keyIds_.AddEntriesFrom(input, _repeated_keyIds_codec);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        keyIds_.AddEntriesFrom(ref input, _repeated_keyIds_codec);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 
