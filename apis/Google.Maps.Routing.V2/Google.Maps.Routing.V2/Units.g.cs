@@ -26,12 +26,12 @@ namespace Google.Maps.Routing.V2 {
           string.Concat(
             "CiJnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3VuaXRzLnByb3RvEhZnb29nbGUu",
             "bWFwcy5yb3V0aW5nLnYyKjgKBVVuaXRzEhUKEVVOSVRTX1VOU1BFQ0lGSUVE",
-            "EAASCgoGTUVUUklDEAESDAoISU1QRVJJQUwQAkK/AQoaY29tLmdvb2dsZS5t",
+            "EAASCgoGTUVUUklDEAESDAoISU1QRVJJQUwQAkK8AQoaY29tLmdvb2dsZS5t",
             "YXBzLnJvdXRpbmcudjJCClVuaXRzUHJvdG9QAVo6Y2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91dGluZ3BiO3JvdXRpbmdwYvgB",
-            "AaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxN",
-            "YXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZw",
-            "cm90bzM="));
+            "bS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91dGluZ3BiO3JvdXRpbmdwYqIC",
+            "BUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxNYXBz",
+            "XFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.Units), }, null, null));

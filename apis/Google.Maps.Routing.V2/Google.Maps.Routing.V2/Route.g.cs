@@ -128,11 +128,11 @@ namespace Google.Maps.Routing.V2 {
             "c0xvY2FsaXplZFZhbHVlcxI7CgxhcnJpdmFsX3RpbWUYASABKAsyJS5nb29n",
             "bGUubWFwcy5yb3V0aW5nLnYyLkxvY2FsaXplZFRpbWUSPQoOZGVwYXJ0dXJl",
             "X3RpbWUYAiABKAsyJS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkxvY2FsaXpl",
-            "ZFRpbWVCvwEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQgpSb3V0ZVBy",
+            "ZFRpbWVCvAEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQgpSb3V0ZVBy",
             "b3RvUAFaOmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9yb3V0aW5nL2FwaXYy",
-            "L3JvdXRpbmdwYjtyb3V0aW5ncGL4AQGiAgVHTVJWMqoCFkdvb2dsZS5NYXBz",
-            "LlJvdXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xl",
-            "OjpNYXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
+            "L3JvdXRpbmdwYjtyb3V0aW5ncGKiAgVHTVJWMqoCFkdvb2dsZS5NYXBzLlJv",
+            "dXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xlOjpN",
+            "YXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Routing.V2.LocalizedTimeReflection.Descriptor, global::Google.Maps.Routing.V2.LocationReflection.Descriptor, global::Google.Maps.Routing.V2.NavigationInstructionReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteLabelReflection.Descriptor, global::Google.Maps.Routing.V2.RouteTravelModeReflection.Descriptor, global::Google.Maps.Routing.V2.SpeedReadingIntervalReflection.Descriptor, global::Google.Maps.Routing.V2.TollInfoReflection.Descriptor, global::Google.Maps.Routing.V2.TransitReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -413,11 +413,13 @@ namespace Google.Maps.Routing.V2 {
     public const int RouteTokenFieldNumber = 12;
     private string routeToken_ = "";
     /// <summary>
-    /// A web-safe, base64-encoded route token that can be passed to the Navigation
-    /// SDK, that allows the Navigation SDK to reconstruct the route during
-    /// navigation, and, in the event of rerouting, honor the original intention
-    /// when you created the route by calling ComputeRoutes. Customers should treat
-    /// this token as an opaque blob. It is not meant for reading or mutating.
+    /// An opaque token that can be passed to [Navigation
+    /// SDK](https://developers.google.com/maps/documentation/navigation) to
+    /// reconstruct the route during navigation, and, in the event of rerouting,
+    /// honor the original intention when the route was created. Treat this token
+    /// as an opaque blob.  Don't compare its value across requests as its value
+    /// may change even if the service returns the exact same route.
+    ///
     /// NOTE: `Route.route_token` is only available for requests that have set
     /// `ComputeRoutesRequest.routing_preference` to `TRAFFIC_AWARE` or
     /// `TRAFFIC_AWARE_OPTIMAL`. `Route.route_token` is not supported for requests
@@ -944,9 +946,10 @@ namespace Google.Maps.Routing.V2 {
         public const int DurationFieldNumber = 2;
         private global::Google.Type.LocalizedText duration_;
         /// <summary>
-        /// Duration taking traffic conditions into consideration, represented in
-        /// text form. Note: If you did not request traffic information, this value
-        /// will be the same value as `static_duration`.
+        /// Duration, represented in text form and localized to the region of the
+        /// query. Takes traffic conditions into consideration. Note: If you did not
+        /// request traffic information, this value is the same value as
+        /// `static_duration`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2751,9 +2754,10 @@ namespace Google.Maps.Routing.V2 {
         public const int DurationFieldNumber = 2;
         private global::Google.Type.LocalizedText duration_;
         /// <summary>
-        /// Duration taking traffic conditions into consideration represented in text
-        /// form. Note: If you did not request traffic information, this value will
-        /// be the same value as static_duration.
+        /// Duration, represented in text form and localized to the region of the
+        /// query. Takes traffic conditions into consideration. Note: If you did not
+        /// request traffic information, this value is the same value as
+        /// static_duration.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4588,7 +4592,7 @@ namespace Google.Maps.Routing.V2 {
     /// The number of stops from the departure to the arrival stop. This count
     /// includes the arrival stop, but excludes the departure stop. For example, if
     /// your route leaves from Stop A, passes through stops B and C, and arrives at
-    /// stop D, stop_count will return 3.
+    /// stop D, &lt;code>stop_count&lt;/code> returns 3.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
