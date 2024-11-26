@@ -25,14 +25,14 @@ namespace Google.Maps.Routing.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlX2xhYmVsLnByb3RvEhZn",
-            "b29nbGUubWFwcy5yb3V0aW5nLnYyKm0KClJvdXRlTGFiZWwSGwoXUk9VVEVf",
-            "TEFCRUxfVU5TUEVDSUZJRUQQABIRCg1ERUZBVUxUX1JPVVRFEAESGwoXREVG",
-            "QVVMVF9ST1VURV9BTFRFUk5BVEUQAhISCg5GVUVMX0VGRklDSUVOVBADQsQB",
-            "Chpjb20uZ29vZ2xlLm1hcHMucm91dGluZy52MkIPUm91dGVMYWJlbFByb3Rv",
-            "UAFaOmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9yb3V0aW5nL2FwaXYyL3Jv",
-            "dXRpbmdwYjtyb3V0aW5ncGL4AQGiAgVHTVJWMqoCFkdvb2dsZS5NYXBzLlJv",
-            "dXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xlOjpN",
-            "YXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
+            "b29nbGUubWFwcy5yb3V0aW5nLnYyKoMBCgpSb3V0ZUxhYmVsEhsKF1JPVVRF",
+            "X0xBQkVMX1VOU1BFQ0lGSUVEEAASEQoNREVGQVVMVF9ST1VURRABEhsKF0RF",
+            "RkFVTFRfUk9VVEVfQUxURVJOQVRFEAISEgoORlVFTF9FRkZJQ0lFTlQQAxIU",
+            "ChBTSE9SVEVSX0RJU1RBTkNFEARCwQEKGmNvbS5nb29nbGUubWFwcy5yb3V0",
+            "aW5nLnYyQg9Sb3V0ZUxhYmVsUHJvdG9QAVo6Y2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9tYXBzL3JvdXRpbmcvYXBpdjIvcm91dGluZ3BiO3JvdXRpbmdwYqICBUdN",
+            "UlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJv",
+            "dXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteLabel), }, null, null));
@@ -66,6 +66,10 @@ namespace Google.Maps.Routing.V2 {
     /// optimized for Eco parameters such as fuel consumption.
     /// </summary>
     [pbr::OriginalName("FUEL_EFFICIENT")] FuelEfficient = 3,
+    /// <summary>
+    /// Shorter travel distance route. This is an experimental feature.
+    /// </summary>
+    [pbr::OriginalName("SHORTER_DISTANCE")] ShorterDistance = 4,
   }
 
   #endregion
