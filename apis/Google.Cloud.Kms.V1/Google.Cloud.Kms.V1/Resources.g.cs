@@ -174,10 +174,10 @@ namespace Google.Cloud.Kms.V1 {
             "Q0VTUxAIEi4KKk1PRElGSUVEX0dPT0dMRV9JTklUSUFURURfU1lTVEVNX09Q",
             "RVJBVElPThAJEicKI0dPT0dMRV9SRVNQT05TRV9UT19QUk9EVUNUSU9OX0FM",
             "RVJUEAoSKgomQ1VTVE9NRVJfQVVUSE9SSVpFRF9XT1JLRkxPV19TRVJWSUNJ",
-            "TkcQC0KIAQoXY29tLmdvb2dsZS5jbG91ZC5rbXMudjFCEUttc1Jlc291cmNl",
+            "TkcQC0KFAQoXY29tLmdvb2dsZS5jbG91ZC5rbXMudjFCEUttc1Jlc291cmNl",
             "c1Byb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28va21zL2FwaXYxL2ttc3Bi",
-            "O2ttc3Bi+AEBqgITR29vZ2xlLkNsb3VkLkttcy5WMcoCE0dvb2dsZVxDbG91",
-            "ZFxLbXNcVjFiBnByb3RvMw=="));
+            "O2ttc3BiqgITR29vZ2xlLkNsb3VkLkttcy5WMcoCE0dvb2dsZVxDbG91ZFxL",
+            "bXNcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.V1.ProtectionLevel), typeof(global::Google.Cloud.Kms.V1.AccessReason), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -3183,6 +3183,8 @@ namespace Google.Cloud.Kms.V1 {
       ///
       /// The suffix following `HMAC_` corresponds to the hash algorithm being used
       /// (eg. SHA256).
+      ///
+      /// Algorithms beginning with `PQ_` are post-quantum.
       ///
       /// For more information, see [Key purposes and algorithms]
       /// (https://cloud.google.com/kms/docs/algorithms).
