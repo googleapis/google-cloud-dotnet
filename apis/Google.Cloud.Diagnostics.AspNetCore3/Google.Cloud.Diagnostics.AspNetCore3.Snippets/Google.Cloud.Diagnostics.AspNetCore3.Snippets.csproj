@@ -6,10 +6,6 @@
     <IsPackable>false</IsPackable>
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013</NoWarn>
   </PropertyGroup>
-  <PropertyGroup>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNetCore3\Google.Cloud.Diagnostics.AspNetCore3.csproj" />
@@ -23,6 +19,10 @@
     <PackageReference Include="xunit.runner.visualstudio" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
+  <PropertyGroup>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.csproj" />
   </ItemGroup>
