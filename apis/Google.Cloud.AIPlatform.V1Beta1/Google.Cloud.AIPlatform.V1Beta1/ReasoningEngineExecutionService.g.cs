@@ -652,7 +652,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     private string classMethod_ = "";
     /// <summary>
     /// Optional. Class method to be used for the stream query.
-    /// It is optional and defaults to "steam_query" if unspecified.
+    /// It is optional and defaults to "stream_query" if unspecified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
