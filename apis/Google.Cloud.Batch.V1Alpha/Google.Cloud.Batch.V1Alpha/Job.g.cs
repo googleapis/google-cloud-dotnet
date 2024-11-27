@@ -5595,10 +5595,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int ReservationFieldNumber = 7;
         private string reservation_ = "";
         /// <summary>
-        /// Optional. If specified, VMs will consume only the specified reservation.
-        /// If not specified (default), VMs will consume any applicable reservation.
-        /// Additionally, VMs will not consume any reservation if "NO_RESERVATION"
-        /// is specified.
+        /// Optional. If not specified (default), VMs will consume any applicable
+        /// reservation. If "NO_RESERVATION" is specified, VMs will not consume any
+        /// reservation. Otherwise, if specified, VMs will consume only the specified
+        /// reservation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
