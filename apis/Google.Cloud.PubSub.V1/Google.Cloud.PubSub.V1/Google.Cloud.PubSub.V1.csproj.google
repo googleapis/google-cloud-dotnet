@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Compile Update="PublisherClient.*.cs">
+      <DependentUpon>PublisherClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="PublisherClientImpl.*.cs">
+      <DependentUpon>PublisherClientImpl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SubscriberClient.*.cs">
+      <DependentUpon>SubscriberClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SubscriberClientImpl.*.cs">
+      <DependentUpon>SubscriberClientImpl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

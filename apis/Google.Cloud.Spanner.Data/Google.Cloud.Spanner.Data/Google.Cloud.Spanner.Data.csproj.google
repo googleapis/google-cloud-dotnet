@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="SpannerCommand.*.cs">
+      <DependentUpon>SpannerCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SpannerBatchCommand.*.cs">
+      <DependentUpon>SpannerBatchCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SpannerDbType.*.cs">
+      <DependentUpon>SpannerDbType.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SpannerCommandTextBuilder.*.cs">
+      <DependentUpon>SpannerCommandTextBuilder.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

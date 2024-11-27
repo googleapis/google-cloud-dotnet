@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <EmbeddedResource Include="after_schema_update.avro" />
+    <EmbeddedResource Include="before_schema_update.avro" />
+    <EmbeddedResource Include="personsData.json" />
+    <EmbeddedResource Include="one_complex.avro" />
+    <EmbeddedResource Include="*.parquet" />
+    <EmbeddedResource Include="*.orc" />
+  </ItemGroup>
+</Project>

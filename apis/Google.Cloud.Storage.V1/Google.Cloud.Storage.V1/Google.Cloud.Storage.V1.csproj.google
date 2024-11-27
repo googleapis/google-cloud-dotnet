@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Compile Update="StorageClient.*.cs">
+      <DependentUpon>StorageClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="StorageClientImpl.*.cs">
+      <DependentUpon>StorageClientImpl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UrlSigner.*.cs">
+      <DependentUpon>UrlSigner.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

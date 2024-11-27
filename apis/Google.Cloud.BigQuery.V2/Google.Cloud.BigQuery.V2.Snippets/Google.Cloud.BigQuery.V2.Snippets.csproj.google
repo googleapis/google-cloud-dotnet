@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- For BigQueryTableExtensions -->
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.BigQuery.V2.IntegrationTests\Google.Cloud.BigQuery.V2.IntegrationTests.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="one_complex.avro" />
+    <EmbeddedResource Include="*.parquet" />
+    <EmbeddedResource Include="*.orc" />
+  </ItemGroup>
+</Project>

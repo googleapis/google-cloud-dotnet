@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="SpannerEF-8dfc036f6000.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj" />
+    <Compile Update="V1\SessionPoolTests.*.cs">
+      <DependentUpon>SessionPoolTests.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SpannerDbTypeTests.*.cs">
+      <DependentUpon>SpannerDbTypeTests.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SpannerConnectionTests.*.cs">
+      <DependentUpon>SpannerConnectionTests.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
