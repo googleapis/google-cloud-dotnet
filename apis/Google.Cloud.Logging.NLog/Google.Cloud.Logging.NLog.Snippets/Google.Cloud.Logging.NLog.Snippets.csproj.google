@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <EmbeddedResource Include="nlog-jsonTemplate.xml" />
+    <EmbeddedResource Include="nlog-template.xml" />
+  </ItemGroup>
+</Project>

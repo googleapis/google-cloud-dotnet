@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Make sure we get suitable stack traces for tests -->
+    <DebugType>pdbonly</DebugType>
+    <DebugType Condition="'$(TargetFramework)' == 'net6.0'">portable</DebugType>
+  </PropertyGroup>
+</Project>

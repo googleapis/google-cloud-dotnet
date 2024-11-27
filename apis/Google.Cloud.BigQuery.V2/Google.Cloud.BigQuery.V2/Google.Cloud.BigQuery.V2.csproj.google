@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Compile Update="BigQueryClient.*.cs">
+      <DependentUpon>BigQueryClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BigQueryClientImpl.*.cs">
+      <DependentUpon>BigQueryClientImpl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
