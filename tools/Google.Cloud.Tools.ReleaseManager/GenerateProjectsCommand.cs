@@ -725,21 +725,19 @@ api-name: {api.Id}
         {
             var file = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj");
             string beforeHash = GetFileHash(file);
-            XElement doc;
-            // If the file already exists, load it and replace the elements (leaving any further PropertyGroup and ItemGroup elements).
-            if (File.Exists(file))
-            {
-                doc = XElement.Load(file);
-                doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
-                doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
-            }
-            // Otherwise, create a new one
-            else
-            {
-                doc = new XElement("Project",
+            var doc = new XElement("Project",
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
                     dependenciesItemGroup);
+
+            // To keep generator inputs and outputs cleanly separated, we look for an augmentation file
+            // with a ".csproj.google" extension. If this exists, it's expected to be an XML file, and any elements under the root
+            // are included in the generated .csproj file.
+            var augmentationFile = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj.google");
+            if (File.Exists(augmentationFile))
+            {
+                var augmentationDoc = XDocument.Load(augmentationFile);
+                doc.Add(augmentationDoc.Root.Elements());
             }
 
             // Don't use File.CreateText as that omits the byte order mark.
