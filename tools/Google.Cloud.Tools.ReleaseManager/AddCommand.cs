@@ -155,7 +155,10 @@ namespace Google.Cloud.Tools.ReleaseManager
             return 0;
         }
 
-        private static Api.Service ParseServiceConfigYaml(string path)
+        // This is internal so that it's available to GenerateApisCommand, for unconfigured
+        // APIs. This is somewhat experimental - if we want this long-term, we should probably
+        // move it elsewhere.
+        internal static Api.Service ParseServiceConfigYaml(string path)
         {
             if (path is null)
             {

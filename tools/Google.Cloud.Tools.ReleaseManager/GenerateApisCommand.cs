@@ -13,11 +13,13 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Google.Protobuf.Reflection;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace Google.Cloud.Tools.ReleaseManager;
 
@@ -45,7 +47,7 @@ internal class GenerateApisCommand : ICommand
 
     public string Command => "generate-apis";
 
-    public string ExpectedArguments => $"[id...] (defaults to all APIs)";
+    public string ExpectedArguments => $"[--unconfigured] [id...] (defaults to all APIs)";
 
     public GenerateApisCommand()
     {
@@ -60,6 +62,12 @@ internal class GenerateApisCommand : ICommand
     public int Execute(string[] args)
     {
         ValidateEnvironment();
+
+        if (args.FirstOrDefault() == "--unconfigured")
+        {
+            return ExecuteForUnconfigured(args.Skip(1).ToArray());
+        }
+
         var catalog = ApiCatalog.Load();
         var apis = new List<ApiMetadata>();
 
@@ -341,4 +349,230 @@ internal class GenerateApisCommand : ICommand
     private static string GetBashExecutable() =>
         BashLocations.FirstOrDefault(File.Exists) ??
         throw new UserErrorException("Bash does not exist in any default location");
+
+    // All code below here is for "unconfigured" generation. We may want to separate this from the code above
+    // at some point, but this is a convenient location for prototyping.
+    private int ExecuteForUnconfigured(string[] args)
+    {
+        // TODO: Maybe have another way of specifying this, eventually.
+        var root = DirectoryLayout.DetermineRootDirectory();
+
+        var outputRoot = Path.Combine(root, "unconfigured-generation");
+        if (Directory.Exists(outputRoot))
+        {
+            Directory.Delete(outputRoot, true);
+        }
+        Directory.CreateDirectory(outputRoot);
+
+
+        if (args.Length == 0)
+        {
+            args = DetectApiDirectories();
+        }
+
+        if (Directory.Exists(TempDir))
+        {
+            Directory.Delete(TempDir, true);
+        }
+        Directory.CreateDirectory(TempDir);
+
+        foreach (var arg in args)
+        {
+            GenerateUnconfigured(arg, outputRoot);
+        }
+        return 1;
+    }
+
+    private void GenerateUnconfigured(string arg, string outputRoot)
+    {
+        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Generating {arg}");
+        var apiDirectory = Path.Combine(googleApisDirectory, arg);
+        var configFiles = GetServiceConfigFiles(apiDirectory);
+        if (configFiles.Count != 1)
+        {
+            throw new UserErrorException($"{configFiles.Count} service config files detected in {arg}");
+        }
+        var serviceConfig = AddCommand.ParseServiceConfigYaml(configFiles[0]);
+
+        // Copied from GenerateGapicApi and modified
+
+        // First figure out the C# namespace, which we'd normally use as the ID.
+        // We need to use a mixture of C# options and the protobuf package, just like the API Index does.
+        // That means we first need to generate a descriptor file set.
+        var descriptorFile = Path.Combine(TempDir, "descriptor.pb");
+        try
+        {
+            RunProtoc(apiDirectory,
+                $"--descriptor_set_out={descriptorFile}");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z API {arg} failed during initial FileDescriptorSet generation: {e.Message}");
+            return;
+        }
+
+        FileDescriptorSet descriptorSet = FileDescriptorSet.Parser.ParseFrom(File.ReadAllBytes(descriptorFile));
+        var expectedPackage = arg.Replace('/', '.');
+        var namespaces = descriptorSet.File
+            .Where(f => f.Package == expectedPackage) // Basically "only top-level protos"
+            .Select(DeriveCSharpNamespace)
+            .Distinct()
+            .ToList();
+
+        if (namespaces.Count != 1)
+        {
+            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z API {arg} failed: Inconsistent namespaces: {string.Join(", ", namespaces.Select(ns => $"'{ns}'"))}");
+            return;
+        }
+
+        var id = namespaces[0];
+
+        var sourceDirectory = Path.Combine(outputRoot, id);
+        var productionDirectory = Path.Combine(sourceDirectory, id);
+        Directory.CreateDirectory(productionDirectory);
+
+        // Message and service generation. This doesn't need the common resources,
+        // and we don't want to pass in the common resources proto because we don't
+        // want to generate it.
+        try
+        {
+        RunProtoc(apiDirectory,
+            $"--csharp_out={productionDirectory}",
+            $"--csharp_opt=base_namespace={id}",
+            "--csharp_opt=file_extension=.g.cs",
+            $"--grpc_out={productionDirectory}",
+            $"--grpc_opt=base_namespace={id}",
+            "--grpc_opt=file_suffix=Grpc.g.cs",
+            $"--plugin=protoc-gen-grpc={grpcGeneratorBinary}");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z API {arg} failed during message/service generation: {e.Message}");
+            return;
+        }
+
+        // GAPIC generation, which requires rather more configuration.
+        var allGapicArguments = new List<string>
+        {
+            $"--gapic_out={sourceDirectory}",
+            "--plugin",
+            $"protoc-gen-gapic={gapicGeneratorBinary}"
+        };
+
+        foreach (var (name, value) in GetGapicPluginOptions())
+        {
+            allGapicArguments.Add($"--gapic_opt={name}={value}");
+        }
+
+        // Include Cloud Common protos so that operation result/metadata types can use the messages in them.
+        // Nothing will be generated for these protos though.
+        foreach (var proto in Directory.GetFiles(Path.Combine(googleApisDirectory, "google", "cloud", "common"), "*.proto"))
+        {
+            allGapicArguments.Add(proto);
+        }
+
+        // TODO: use heuristics/block-lists to make more APIs generate cleanly.
+        bool includeCommonResourcesProto = true;
+
+        // Conditionally include Cloud common resources.
+        if (includeCommonResourcesProto)
+        {
+            allGapicArguments.Add($"{googleApisDirectory}/google/cloud/common_resources.proto");
+        }
+
+        try
+        {
+            RunProtoc(apiDirectory, allGapicArguments.ToArray());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z API {arg} failed during GAPIC generation: {e.Message}");
+            return;
+        }
+
+        IEnumerable<(string name, string value)> GetGapicPluginOptions()
+        {
+            // Mostly hard-coded values, as we don't have the relevant configuration.
+            yield return ("log", Path.Combine(sourceDirectory, "generator-log.txt"));
+            yield return ("transport", "grpc");
+            yield return ("rest-numeric-enums", "True");
+            yield return ("service-config", configFiles[0]);
+            yield return ("common-resources-config", "CommonResourcesConfig.json");
+        }
+
+    }
+
+    private string[] DetectApiDirectories()
+    {
+        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Detecting API directories.");
+        List<string> apiDirectories = new();
+        var pending = new Queue<string>();
+        Enqueue(Directory.GetDirectories(googleApisDirectory).Where(d => !d.EndsWith(".git")));
+        while (pending.Count > 0)
+        {
+            var candidate = pending.Dequeue();
+            var configFiles = GetServiceConfigFiles(candidate);
+            switch (configFiles.Count)
+            {
+                // We've found an API: ignore child directories, but use this.
+                case 1:
+                    apiDirectories.Add(Path.GetRelativePath(googleApisDirectory, candidate).Replace('\\', '/'));
+                    break;
+                // Nothing: assume there may be child directories containing APIs.
+                case 0:
+                    Enqueue(Directory.GetDirectories(candidate));
+                    break;
+                // More than 1: warn, then ignore child directories.
+                default:
+                    Console.WriteLine($"WARNING: Directory '{candidate}' contains multiple service configs. Ignoring.");
+                    break;
+            }
+        }
+        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Found {apiDirectories.Count} APIs.");
+        return apiDirectories.OrderBy(x => x, StringComparer.Ordinal).ToArray();
+
+        void Enqueue(IEnumerable<string> candidates)
+        {
+            foreach (var candidate in candidates)
+            {
+                pending.Enqueue(candidate);
+            }
+        }
+    }
+
+    private List<string> GetServiceConfigFiles(string directory)
+    {
+        return Directory.GetFiles(directory, "*.yaml")
+            // Note: this assumes no leading or trailing whitespace. That's probably okay.
+            .Where(f => File.ReadAllLines(f).Contains("type: google.api.Service"))
+            .Where(HasApis)
+            .ToList();
+
+        // This is slow, but avoids directories with a service config but no APIs.
+        bool HasApis(string file)
+        {
+            var config = AddCommand.ParseServiceConfigYaml(file);
+            return config.Apis.Count > 0;
+        }
+    }
+
+    public string DeriveCSharpNamespace(FileDescriptorProto file) =>
+        file.Options?.CsharpNamespace is string ns && ns != ""
+            ? ns
+            : string.Join('.', file.Package.Split('.').Select(bit => ToUpperCamelCase(bit)));
+
+    // Copied from https://github.com/googleapis/gapic-generator-csharp/blob/main/Google.Api.Generator/Utils/SystemExtensions.cs.
+    // We can move it somewhere more common if we need to...
+    private static char MaybeForceCase(char c, bool? toUpper) =>
+        toUpper is bool upper ? upper ? char.ToUpperInvariant(c) : char.ToLowerInvariant(c) : c;
+
+    private static string Camelizer(string s, bool firstUpper, bool forceAllChars) =>
+        s.Aggregate((upper: (bool?) firstUpper, prev: '\0', sb: new StringBuilder()), (acc, c) =>
+            !char.IsLetterOrDigit(c) ?
+                (acc.sb.Length > 0 ? true : firstUpper, c, acc.sb) :
+                (char.IsDigit(c) ? true : forceAllChars ? (bool?) false : null, c,
+                    acc.sb.Append(MaybeForceCase(c, char.IsLower(acc.prev) && char.IsUpper(c) ? true : acc.upper))),
+            acc => acc.sb.ToString());
+
+    private static string ToUpperCamelCase(string input, bool forceAllChars = false) => Camelizer(input, firstUpper: true, forceAllChars);
 }
