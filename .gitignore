@@ -55,3 +55,6 @@ build_timing_log.txt
 
 # Temporary local GAX
 gax-dotnet
+
+# Generated code for "unconfigured" APIs (generateapis.sh --unconfigured)
+unconfigured-generation
