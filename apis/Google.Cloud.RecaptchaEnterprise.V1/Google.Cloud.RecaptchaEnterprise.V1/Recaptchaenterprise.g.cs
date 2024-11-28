@@ -7550,7 +7550,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     public const int ChallengeFieldNumber = 4;
     private global::Google.Cloud.RecaptchaEnterprise.V1.RiskAnalysis.Types.Challenge challenge_ = global::Google.Cloud.RecaptchaEnterprise.V1.RiskAnalysis.Types.Challenge.Unspecified;
     /// <summary>
-    /// Output only. Challenge information for SCORE_AND_CHALLENGE keys
+    /// Output only. Challenge information for SCORE_AND_CHALLENGE and INVISIBLE
+    /// keys
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7792,7 +7793,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
 
       /// <summary>
-      /// Challenge information for SCORE_AND_CHALLENGE keys
+      /// Challenge information for SCORE_AND_CHALLENGE and INVISIBLE keys
       /// </summary>
       public enum Challenge {
         /// <summary>
@@ -22306,7 +22307,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
   }
 
   /// <summary>
-  /// The removeIpOverride request message.
+  /// The RemoveIpOverride request message.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemoveIpOverrideRequest : pb::IMessage<RemoveIpOverrideRequest>
