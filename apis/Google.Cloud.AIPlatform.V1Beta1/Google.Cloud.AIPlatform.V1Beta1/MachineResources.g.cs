@@ -35,37 +35,38 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "4EEFEhkKEWFjY2VsZXJhdG9yX2NvdW50GAMgASgFEhkKDHRwdV90b3BvbG9n",
             "eRgEIAEoCUID4EEFEloKFHJlc2VydmF0aW9uX2FmZmluaXR5GAUgASgLMjQu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZXNlcnZhdGlvbkFm",
-            "ZmluaXR5QgbgQQXgQQEilQIKEkRlZGljYXRlZFJlc291cmNlcxJKCgxtYWNo",
+            "ZmluaXR5QgbgQQXgQQEiugIKEkRlZGljYXRlZFJlc291cmNlcxJKCgxtYWNo",
             "aW5lX3NwZWMYASABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
             "dGExLk1hY2hpbmVTcGVjQgbgQQLgQQUSIQoRbWluX3JlcGxpY2FfY291bnQY",
             "AiABKAVCBuBBAuBBBRIeChFtYXhfcmVwbGljYV9jb3VudBgDIAEoBUID4EEF",
-            "El0KGGF1dG9zY2FsaW5nX21ldHJpY19zcGVjcxgEIAMoCzI2Lmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQXV0b3NjYWxpbmdNZXRyaWNTcGVj",
-            "QgPgQQUSEQoEc3BvdBgFIAEoCEID4EEBIlQKEkF1dG9tYXRpY1Jlc291cmNl",
-            "cxIeChFtaW5fcmVwbGljYV9jb3VudBgBIAEoBUID4EEFEh4KEW1heF9yZXBs",
-            "aWNhX2NvdW50GAIgASgFQgPgQQUiqgEKF0JhdGNoRGVkaWNhdGVkUmVzb3Vy",
-            "Y2VzEkoKDG1hY2hpbmVfc3BlYxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxYmV0YTEuTWFjaGluZVNwZWNCBuBBAuBBBRIjChZzdGFydGlu",
-            "Z19yZXBsaWNhX2NvdW50GAIgASgFQgPgQQUSHgoRbWF4X3JlcGxpY2FfY291",
-            "bnQYAyABKAVCA+BBBSIvChFSZXNvdXJjZXNDb25zdW1lZBIaCg1yZXBsaWNh",
-            "X2hvdXJzGAEgASgBQgPgQQMiPQoIRGlza1NwZWMSFgoOYm9vdF9kaXNrX3R5",
-            "cGUYASABKAkSGQoRYm9vdF9kaXNrX3NpemVfZ2IYAiABKAUiPQoSUGVyc2lz",
-            "dGVudERpc2tTcGVjEhEKCWRpc2tfdHlwZRgBIAEoCRIUCgxkaXNrX3NpemVf",
-            "Z2IYAiABKAMiTAoITmZzTW91bnQSEwoGc2VydmVyGAEgASgJQgPgQQISEQoE",
-            "cGF0aBgCIAEoCUID4EECEhgKC21vdW50X3BvaW50GAMgASgJQgPgQQIiQQoV",
-            "QXV0b3NjYWxpbmdNZXRyaWNTcGVjEhgKC21ldHJpY19uYW1lGAEgASgJQgPg",
-            "QQISDgoGdGFyZ2V0GAIgASgFIi4KEFNoaWVsZGVkVm1Db25maWcSGgoSZW5h",
-            "YmxlX3NlY3VyZV9ib290GAEgASgIQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMUIVTWFjaGluZVJlc291cmNlc1Byb3RvUAFaQ2Ns",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
-            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
-            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
-            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "EiMKFnJlcXVpcmVkX3JlcGxpY2FfY291bnQYCSABKAVCA+BBARJdChhhdXRv",
+            "c2NhbGluZ19tZXRyaWNfc3BlY3MYBCADKAsyNi5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MWJldGExLkF1dG9zY2FsaW5nTWV0cmljU3BlY0ID4EEFEhEK",
+            "BHNwb3QYBSABKAhCA+BBASJUChJBdXRvbWF0aWNSZXNvdXJjZXMSHgoRbWlu",
+            "X3JlcGxpY2FfY291bnQYASABKAVCA+BBBRIeChFtYXhfcmVwbGljYV9jb3Vu",
+            "dBgCIAEoBUID4EEFIqoBChdCYXRjaERlZGljYXRlZFJlc291cmNlcxJKCgxt",
+            "YWNoaW5lX3NwZWMYASABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLk1hY2hpbmVTcGVjQgbgQQLgQQUSIwoWc3RhcnRpbmdfcmVwbGlj",
+            "YV9jb3VudBgCIAEoBUID4EEFEh4KEW1heF9yZXBsaWNhX2NvdW50GAMgASgF",
+            "QgPgQQUiLwoRUmVzb3VyY2VzQ29uc3VtZWQSGgoNcmVwbGljYV9ob3VycxgB",
+            "IAEoAUID4EEDIj0KCERpc2tTcGVjEhYKDmJvb3RfZGlza190eXBlGAEgASgJ",
+            "EhkKEWJvb3RfZGlza19zaXplX2diGAIgASgFIj0KElBlcnNpc3RlbnREaXNr",
+            "U3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19zaXplX2diGAIgASgD",
+            "IkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EECEhEKBHBhdGgYAiAB",
+            "KAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EECIkEKFUF1dG9zY2Fs",
+            "aW5nTWV0cmljU3BlYxIYCgttZXRyaWNfbmFtZRgBIAEoCUID4EECEg4KBnRh",
+            "cmdldBgCIAEoBSIuChBTaGllbGRlZFZtQ29uZmlnEhoKEmVuYWJsZV9zZWN1",
+            "cmVfYm9vdBgBIAEoCELsAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTFCFU1hY2hpbmVSZXNvdXJjZXNQcm90b1ABWkNjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7",
+            "YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRh",
+            "McoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6",
+            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReservationAffinityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec), global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount", "TpuTopology", "ReservationAffinity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "AutoscalingMetricSpecs", "Spot" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "RequiredReplicaCount", "AutoscalingMetricSpecs", "Spot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources), global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed), global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed.Parser, new[]{ "ReplicaHours" }, null, null, null, null),
@@ -503,6 +504,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       machineSpec_ = other.machineSpec_ != null ? other.machineSpec_.Clone() : null;
       minReplicaCount_ = other.minReplicaCount_;
       maxReplicaCount_ = other.maxReplicaCount_;
+      requiredReplicaCount_ = other.requiredReplicaCount_;
       autoscalingMetricSpecs_ = other.autoscalingMetricSpecs_.Clone();
       spot_ = other.spot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -579,6 +581,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "required_replica_count" field.</summary>
+    public const int RequiredReplicaCountFieldNumber = 9;
+    private int requiredReplicaCount_;
+    /// <summary>
+    /// Optional. Number of required available replicas for the deployment to
+    /// succeed. This field is only needed when partial model deployment/mutation
+    /// is desired. If set, the model deploy/mutate operation will succeed once
+    /// available_replica_count reaches required_replica_count, and the rest of
+    /// the replicas will be retried. If not set, the default
+    /// required_replica_count will be min_replica_count.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RequiredReplicaCount {
+      get { return requiredReplicaCount_; }
+      set {
+        requiredReplicaCount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "autoscaling_metric_specs" field.</summary>
     public const int AutoscalingMetricSpecsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec> _repeated_autoscalingMetricSpecs_codec
@@ -649,6 +671,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(MachineSpec, other.MachineSpec)) return false;
       if (MinReplicaCount != other.MinReplicaCount) return false;
       if (MaxReplicaCount != other.MaxReplicaCount) return false;
+      if (RequiredReplicaCount != other.RequiredReplicaCount) return false;
       if(!autoscalingMetricSpecs_.Equals(other.autoscalingMetricSpecs_)) return false;
       if (Spot != other.Spot) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -661,6 +684,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (machineSpec_ != null) hash ^= MachineSpec.GetHashCode();
       if (MinReplicaCount != 0) hash ^= MinReplicaCount.GetHashCode();
       if (MaxReplicaCount != 0) hash ^= MaxReplicaCount.GetHashCode();
+      if (RequiredReplicaCount != 0) hash ^= RequiredReplicaCount.GetHashCode();
       hash ^= autoscalingMetricSpecs_.GetHashCode();
       if (Spot != false) hash ^= Spot.GetHashCode();
       if (_unknownFields != null) {
@@ -698,6 +722,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(40);
         output.WriteBool(Spot);
       }
+      if (RequiredReplicaCount != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(RequiredReplicaCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -725,6 +753,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(40);
         output.WriteBool(Spot);
       }
+      if (RequiredReplicaCount != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(RequiredReplicaCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -743,6 +775,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (MaxReplicaCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxReplicaCount);
+      }
+      if (RequiredReplicaCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RequiredReplicaCount);
       }
       size += autoscalingMetricSpecs_.CalculateSize(_repeated_autoscalingMetricSpecs_codec);
       if (Spot != false) {
@@ -771,6 +806,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.MaxReplicaCount != 0) {
         MaxReplicaCount = other.MaxReplicaCount;
+      }
+      if (other.RequiredReplicaCount != 0) {
+        RequiredReplicaCount = other.RequiredReplicaCount;
       }
       autoscalingMetricSpecs_.Add(other.autoscalingMetricSpecs_);
       if (other.Spot != false) {
@@ -814,6 +852,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             Spot = input.ReadBool();
             break;
           }
+          case 72: {
+            RequiredReplicaCount = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -850,6 +892,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 40: {
             Spot = input.ReadBool();
+            break;
+          }
+          case 72: {
+            RequiredReplicaCount = input.ReadInt32();
             break;
           }
         }
