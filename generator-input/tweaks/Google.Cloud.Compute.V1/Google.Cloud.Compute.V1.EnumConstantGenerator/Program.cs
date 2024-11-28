@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using System;
+using System.Reflection;
+using Google.Protobuf.Reflection;
 
 namespace Google.Cloud.Compute.V1.EnumConstantGenerator
 {
@@ -20,11 +22,18 @@ namespace Google.Cloud.Compute.V1.EnumConstantGenerator
     /// Generates (to stdout) a static class (with nested static classes) to provide
     /// string constants for the wire representations of enum values.
     /// </summary>
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static int Main(string[] args)
         {
-            var descriptor = ComputeReflection.Descriptor;
+            if (args.Length != 1)
+            {
+                Console.WriteLine("Required argument: path to Compute DLL");
+                return 1;
+            }
+            var asm = Assembly.LoadFile(args[0]);
+            var type = asm.GetType("Google.Cloud.Compute.V1.ComputeReflection");
+            var descriptor = (FileDescriptor) type.GetProperty("Descriptor").GetValue(null);
 
             var rootContainer = new EnumContainer(null, descriptor.EnumTypes, descriptor.MessageTypes);
 
@@ -46,8 +55,9 @@ $@"// Copyright {DateTime.UtcNow.Year} Google LLC
 
 namespace Google.Cloud.Compute.V1
 {{");
-            rootContainer.Generate(writer, "    ");
+            rootContainer.Generate(writer, "    ", asm.GetType("Google.Cloud.Compute.V1.ComputeEnumHelpers"));
             writer.WriteLine("}");
+            return 0;
         }
     }
 }

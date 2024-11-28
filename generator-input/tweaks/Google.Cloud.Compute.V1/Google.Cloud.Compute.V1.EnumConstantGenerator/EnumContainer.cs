@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ namespace Google.Cloud.Compute.V1.EnumConstantGenerator
             NestedContainers = messages.Select(message => new EnumContainer(message, message.EnumTypes, message.NestedTypes)).ToList();
         }
 
-        public void Generate(TextWriter writer, string indentation)
+        public void Generate(TextWriter writer, string indentation, System.Type computeEnumHelpersType)
         {
             if (Descriptor is object)
             {
@@ -60,24 +60,24 @@ namespace Google.Cloud.Compute.V1.EnumConstantGenerator
             foreach (var enumDescriptor in Enums.OrderBy(d => d.ClrType.Name, StringComparer.Ordinal))
             {
                 MaybeWriteLineBetweenElements(writer, ref first);
-                GenerateEnumConstants(writer, enumDescriptor, moreIndentation);
+                GenerateEnumConstants(writer, enumDescriptor, moreIndentation, computeEnumHelpersType);
             }
             foreach (var container in NestedContainers.Where(nc => nc.ShouldGenerate).OrderBy(nc => nc.Descriptor.Name, StringComparer.Ordinal))
             {
                 MaybeWriteLineBetweenElements(writer, ref first);
-                container.Generate(writer, moreIndentation);
+                container.Generate(writer, moreIndentation, computeEnumHelpersType);
             }
             writer.WriteLine($"{indentation}}}");
         }
 
-        private static void GenerateEnumConstants(TextWriter writer, EnumDescriptor descriptor, string indentation)
+        private static void GenerateEnumConstants(TextWriter writer, EnumDescriptor descriptor, string indentation, System.Type computeEnumHelpersType)
         {
             var enumType = descriptor.ClrType;
             writer.WriteLine($"{indentation}/// <summary>Constants for wire representations of the <see cref=\"global::{enumType.FullName.Replace("+", ".")}\"/> enum.</summary>");
             writer.WriteLine($"{indentation}public static class {descriptor.ClrType.Name}");
             writer.WriteLine($"{indentation}{{");
             string moreIndentation = indentation + "    ";
-            var formatMethod = typeof(ComputeEnumHelpers).GetMethod("Format").MakeGenericMethod(enumType);
+            var formatMethod = computeEnumHelpersType.GetMethod("Format").MakeGenericMethod(enumType);
             bool first = true;
             foreach (var field in enumType.GetFields(BindingFlags.Static | BindingFlags.Public))
             {
