@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Tools.Common;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,27 +26,33 @@ namespace Grafeas.V1.FixGeneratedCode
     /// </summary>
     public class Program
     {
-        public static void Main(string[] args)
+        public static int Main(string[] args)
         {
-            var layout = DirectoryLayout.ForApi("Grafeas.V1");
+            if (args.Length != 1)
+            {
+                Console.WriteLine("Required argument: Grafeas.V1 output directory");
+                return 1;
+            }
+            string sourceDirectory = args[0];
 
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1", "GrafeasClient.g.cs"))
+            SourceFile.Load(Path.Combine(sourceDirectory, "Grafeas.V1", "GrafeasClient.g.cs"))
                 .RemoveProperty("GrafeasClient", "DefaultEndpoint")
                 .RemoveMethod("GrafeasClientBuilder", "GetChannelPool")
                 // When constructing the ServiceMetadata, just use a null endpoint.
                 .RewriteIdentifierName("DefaultEndpoint", "null")
                 .Save();
 
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1.Snippets", "GrafeasClientSnippets.g.cs"))
+            SourceFile.Load(Path.Combine(sourceDirectory, "Grafeas.V1.Snippets", "GrafeasClientSnippets.g.cs"))
                 .Rewrite(new SnippetRewriter())
                 .Save();
 
-            foreach (string file in Directory.GetFiles(Path.Combine(layout.SourceDirectory, "Grafeas.V1.GeneratedSnippets"), "*Snippet.g.cs"))
+            foreach (string file in Directory.GetFiles(Path.Combine(sourceDirectory, "Grafeas.V1.GeneratedSnippets"), "*Snippet.g.cs"))
             {
                 SourceFile.Load(file)
                     .Rewrite(new SnippetRewriter())
                     .Save();
             }
+            return 0;
         }
 
         /// <summary>

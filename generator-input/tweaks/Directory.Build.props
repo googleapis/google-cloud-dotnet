@@ -1,0 +1,8 @@
+<Project>
+
+  <!-- Allow Directory.Packages.props to do its magic -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+</Project>
