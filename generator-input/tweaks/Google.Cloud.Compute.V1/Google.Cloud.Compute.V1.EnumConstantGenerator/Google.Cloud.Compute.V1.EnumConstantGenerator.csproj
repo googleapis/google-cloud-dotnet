@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="2.16.0" />
+    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="4.9.0" />
+    <PackageReference Include="Google.LongRunning" VersionOverride="3.3.0" />
+    <PackageReference Include="Google.Protobuf" />
+  </ItemGroup>
+
+</Project>

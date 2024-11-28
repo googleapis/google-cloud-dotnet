@@ -3,37 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1", "Google.Cloud.Compute.V1\Google.Cloud.Compute.V1.csproj", "{438E5E5F-C2CB-4F5C-8523-62BE1CFE41DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1", "Google.Cloud.Compute.V1\Google.Cloud.Compute.V1.csproj", "{438E5E5F-C2CB-4F5C-8523-62BE1CFE41DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.EnumConstantGenerator", "Google.Cloud.Compute.V1.EnumConstantGenerator\Google.Cloud.Compute.V1.EnumConstantGenerator.csproj", "{1446E916-3409-4866-80D3-D8C0FC9FD187}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1.GeneratedSnippets", "Google.Cloud.Compute.V1.GeneratedSnippets\Google.Cloud.Compute.V1.GeneratedSnippets.csproj", "{08ABA4A4-7AE0-4230-9CB4-03E1928172EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.GeneratedSnippets", "Google.Cloud.Compute.V1.GeneratedSnippets\Google.Cloud.Compute.V1.GeneratedSnippets.csproj", "{08ABA4A4-7AE0-4230-9CB4-03E1928172EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{8792AB02-7816-4ECF-A83D-E850000C15E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{8792AB02-7816-4ECF-A83D-E850000C15E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1.IntegrationTests", "Google.Cloud.Compute.V1.IntegrationTests\Google.Cloud.Compute.V1.IntegrationTests.csproj", "{40E31B04-1EC5-4286-BF34-EFDEBD5F49AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.IntegrationTests", "Google.Cloud.Compute.V1.IntegrationTests\Google.Cloud.Compute.V1.IntegrationTests.csproj", "{40E31B04-1EC5-4286-BF34-EFDEBD5F49AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1.Snippets", "Google.Cloud.Compute.V1.Snippets\Google.Cloud.Compute.V1.Snippets.csproj", "{0C9E2B53-925A-4B13-AFCB-2F8792306B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.Snippets", "Google.Cloud.Compute.V1.Snippets\Google.Cloud.Compute.V1.Snippets.csproj", "{0C9E2B53-925A-4B13-AFCB-2F8792306B10}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.Tests", "Google.Cloud.Compute.V1.Tests\Google.Cloud.Compute.V1.Tests.csproj", "{230540CC-9171-4F3A-92AF-81477E70A2D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1.Tests", "Google.Cloud.Compute.V1.Tests\Google.Cloud.Compute.V1.Tests.csproj", "{230540CC-9171-4F3A-92AF-81477E70A2D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{438E5E5F-C2CB-4F5C-8523-62BE1CFE41DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{438E5E5F-C2CB-4F5C-8523-62BE1CFE41DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{438E5E5F-C2CB-4F5C-8523-62BE1CFE41DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{438E5E5F-C2CB-4F5C-8523-62BE1CFE41DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1446E916-3409-4866-80D3-D8C0FC9FD187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1446E916-3409-4866-80D3-D8C0FC9FD187}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1446E916-3409-4866-80D3-D8C0FC9FD187}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1446E916-3409-4866-80D3-D8C0FC9FD187}.Release|Any CPU.Build.0 = Release|Any CPU
 		{08ABA4A4-7AE0-4230-9CB4-03E1928172EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{08ABA4A4-7AE0-4230-9CB4-03E1928172EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08ABA4A4-7AE0-4230-9CB4-03E1928172EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,5 +45,8 @@ Global
 		{230540CC-9171-4F3A-92AF-81477E70A2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{230540CC-9171-4F3A-92AF-81477E70A2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{230540CC-9171-4F3A-92AF-81477E70A2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
