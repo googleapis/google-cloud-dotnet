@@ -32,6 +32,7 @@ copy_one_api() {
   PACKAGE=$1
   STAGING_DIR=owl-bot-staging/$1
   PACKAGE_DIR=apis/$1
+  TWEAKS_DIR=generator-input/tweaks/$1
 
   # Determine the commit for googleapis to use based on the first Source-Link in
   # the comment from the last commit in the local directory.
@@ -99,10 +100,10 @@ copy_one_api() {
   rm -rf "$STAGING_DIR"
 
   # The following code was copied from generate_api().
-  if [[ -f $PACKAGE_DIR/postgeneration.sh ]]
+  if [[ -f $TWEAKS_DIR/postgeneration.sh ]]
   then    
     echo "Running post-generation script for $PACKAGE"
-    (cd $PACKAGE_DIR; ./postgeneration.sh)
+    (cd $TWEAKS_DIR; ./postgeneration.sh)
   fi
 
   if [[ $(grep -E "^namespace" apis/$1/$1/*.cs | grep -v "namespace Microsoft.Extensions.DependencyInjection" | grep -Ev "namespace ${1}[[:space:]{]*;?\$") ]]
