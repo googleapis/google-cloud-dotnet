@@ -296,7 +296,8 @@
       "shortName": "alloydb",
       "serviceConfigFile": "alloydb_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.AlloyDb.V1Alpha",
@@ -320,7 +321,8 @@
       "shortName": "alloydb",
       "serviceConfigFile": "alloydb_v1alpha.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.AlloyDb.V1Beta",
@@ -344,7 +346,8 @@
       "shortName": "alloydb",
       "serviceConfigFile": "alloydb_v1beta.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ApiGateway.V1",
@@ -389,7 +392,8 @@
       "shortName": "aiplatform",
       "serviceConfigFile": "aiplatform_v1beta1.yaml",
       "includeCommonResourcesProto": true,
-      "transport": "grpc+rest"
+      "transport": "grpc+rest",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
@@ -412,7 +416,8 @@
       "shortName": "aiplatform",
       "serviceConfigFile": "aiplatform_v1.yaml",
       "includeCommonResourcesProto": true,
-      "transport": "grpc+rest"
+      "transport": "grpc+rest",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.ApiHub.V1",
@@ -1077,7 +1082,8 @@
       "protoPath": "google/cloud/bigquery/migration/v2",
       "shortName": "bigquerymigration",
       "serviceConfigFile": "bigquerymigration_v2.yaml",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BigQuery.Reservation.V1",
@@ -1504,7 +1510,8 @@
       "shortName": "cloudcommerceconsumerprocurement",
       "serviceConfigFile": "cloudcommerceconsumerprocurement_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Common",
@@ -2697,7 +2704,7 @@
       "includeCommonResourcesProto": true,
       "shortName": "connectgateway",
       "serviceConfigFile": "connectgateway_v1.yaml",
-      "transport": "grpc+rest",
+      "transport": "rest",
       "restNumericEnums": true
     },
     {
@@ -4403,7 +4410,8 @@
       "serviceConfigFile": "securesourcemanager_v1.yaml",
       "restNumericEnums": true,
       "includeCommonResourcesProto": true,
-      "blockRelease": "See b/305053862"
+      "blockRelease": "See b/305053862",
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1",
