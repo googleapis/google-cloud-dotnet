@@ -5,7 +5,7 @@ set -e
 # Generate an additional proto file containing annotations for
 # LROs. Ideally this would be in a common protos directory (or
 # google.longrunning) but it's too late to fix that now.
-cd ../..
+cd ../../..
 source toolversions.sh
 install_protoc
 declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
