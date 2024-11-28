@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.GenerateClient", "Google.Cloud.Bigtable.V2.GenerateClient\Google.Cloud.Bigtable.V2.GenerateClient.csproj", "{C3C7C096-3C1B-46C6-BCD2-B1D80310731C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3C7C096-3C1B-46C6-BCD2-B1D80310731C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C7C096-3C1B-46C6-BCD2-B1D80310731C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C7C096-3C1B-46C6-BCD2-B1D80310731C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C7C096-3C1B-46C6-BCD2-B1D80310731C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
