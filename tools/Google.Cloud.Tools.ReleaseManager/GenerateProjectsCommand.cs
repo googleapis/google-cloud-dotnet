@@ -635,7 +635,7 @@ api-name: {api.Id}
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" })))
             );
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.StructuredVersion, testProject: false, apiNames: apiNames);
-            WriteProjectFile(directory, propertyGroup, dependenciesElement);
+            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
         }
 
         private static string GetTestTargetFrameworks(ApiMetadata api) =>
@@ -677,7 +677,7 @@ api-name: {api.Id}
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.StructuredVersion, testProject: true, apiNames: apiNames);
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
             dependenciesElement.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
-            WriteProjectFile(directory, propertyGroup, dependenciesElement);
+            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
         }
 
         private static void GenerateCoverageFile(ApiMetadata api, string directory)
@@ -720,7 +720,7 @@ api-name: {api.Id}
             }
         }
 
-        private static void WriteProjectFile(string directory, XElement propertyGroup, XElement dependenciesItemGroup)
+        private static void WriteProjectFile(ApiMetadata api, string directory, XElement propertyGroup, XElement dependenciesItemGroup)
         {
             var file = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj");
             string beforeHash = GetFileHash(file);
@@ -730,9 +730,10 @@ api-name: {api.Id}
                     dependenciesItemGroup);
 
             // To keep generator inputs and outputs cleanly separated, we look for an augmentation file
-            // with a ".csproj.google" extension. If this exists, it's expected to be an XML file, and any elements under the root
+            // with a ".csproj.google" extension in the API-specific "tweaks" directory (under generator-input/tweaks).
+            // If this exists, it's expected to be an XML file, and any elements under the root
             // are included in the generated .csproj file.
-            var augmentationFile = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj.google");
+            var augmentationFile = Path.Combine(DirectoryLayout.ForApi(api.Id).TweaksDirectory, $"{Path.GetFileName(directory)}.csproj.google");
             if (File.Exists(augmentationFile))
             {
                 var augmentationDoc = XDocument.Load(augmentationFile);

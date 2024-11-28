@@ -32,14 +32,16 @@ namespace Google.Cloud.Tools.Common
         public string DocfxMetadataDirectory { get; }
         public string SnippetOutputDirectory { get; }
         public string DocsSourceDirectory { get; }
+        public string TweaksDirectory { get; }
 
-        private DirectoryLayout(string source, string docsOutput, string metadata, string snippetOutput, string docsSource)
+        private DirectoryLayout(string source, string docsOutput, string metadata, string snippetOutput, string docsSource, string tweaks)
         {
             SourceDirectory = source;
             DocsOutputDirectory = docsOutput;
             DocfxMetadataDirectory = metadata;
             SnippetOutputDirectory = snippetOutput;
             DocsSourceDirectory = docsSource;
+            TweaksDirectory = tweaks;
         }
 
         public static DirectoryLayout ForHelpSnippets()
@@ -50,7 +52,8 @@ namespace Google.Cloud.Tools.Common
                 docsOutput: null,
                 metadata: null,
                 snippetOutput: Path.Combine(root, "docs", "output", "help", "obj", "snippets"),
-                docsSource: null
+                docsSource: null,
+                tweaks: null
                 );
         }
 
@@ -62,7 +65,8 @@ namespace Google.Cloud.Tools.Common
                 docsOutput: Path.Combine(root, "docs", "output", api),
                 metadata: Path.Combine(root, "docs", "output", api, "obj", "api"),
                 snippetOutput: Path.Combine(root, "docs", "output", api, "obj", "snippets"),
-                docsSource: Path.Combine(root, "apis", api, "docs")
+                docsSource: Path.Combine(root, "apis", api, "docs"),
+                tweaks: Path.Combine(root, "generator-input", "tweaks", api)
                 );
         }
 
