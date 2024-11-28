@@ -66,7 +66,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZWFwaXMuY29tL0VuZHBvaW50Ejxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
             "b25zL3tsb2NhdGlvbn0vZW5kcG9pbnRzL3tlbmRwb2ludH0STXByb2plY3Rz",
             "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wdWJsaXNoZXJzL3tw",
-            "dWJsaXNoZXJ9L21vZGVscy97bW9kZWx9ItYHCg1EZXBsb3llZE1vZGVsElIK",
+            "dWJsaXNoZXJ9L21vZGVscy97bW9kZWx9IqMJCg1EZXBsb3llZE1vZGVsElIK",
             "E2RlZGljYXRlZF9yZXNvdXJjZXMYByABKAsyMy5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MWJldGExLkRlZGljYXRlZFJlc291cmNlc0gAElIKE2F1dG9t",
             "YXRpY19yZXNvdXJjZXMYCCABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
@@ -84,35 +84,41 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "aXZhdGVfZW5kcG9pbnRzGA4gASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
             "cm0udjFiZXRhMS5Qcml2YXRlRW5kcG9pbnRzQgPgQQMSWQoYZmFzdGVyX2Rl",
             "cGxveW1lbnRfY29uZmlnGBcgASgLMjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5GYXN0ZXJEZXBsb3ltZW50Q29uZmlnElcKDXN5c3RlbV9s",
-            "YWJlbHMYHCADKAsyQC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "LkRlcGxveWVkTW9kZWwuU3lzdGVtTGFiZWxzRW50cnkaMwoRU3lzdGVtTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIWChRw",
-            "cmVkaWN0aW9uX3Jlc291cmNlcyKPAQoQUHJpdmF0ZUVuZHBvaW50cxIdChBw",
-            "cmVkaWN0X2h0dHBfdXJpGAEgASgJQgPgQQMSHQoQZXhwbGFpbl9odHRwX3Vy",
-            "aRgCIAEoCUID4EEDEhwKD2hlYWx0aF9odHRwX3VyaRgDIAEoCUID4EEDEh8K",
-            "EnNlcnZpY2VfYXR0YWNobWVudBgEIAEoCUID4EEDIqEBCiNQcmVkaWN0UmVx",
-            "dWVzdFJlc3BvbnNlTG9nZ2luZ0NvbmZpZxIPCgdlbmFibGVkGAEgASgIEhUK",
-            "DXNhbXBsaW5nX3JhdGUYAiABKAESUgoUYmlncXVlcnlfZGVzdGluYXRpb24Y",
-            "AyABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkJpZ1F1",
-            "ZXJ5RGVzdGluYXRpb24iNQoWRmFzdGVyRGVwbG95bWVudENvbmZpZxIbChNm",
-            "YXN0X3RyeW91dF9lbmFibGVkGAIgASgIIk4KFkNsaWVudENvbm5lY3Rpb25D",
-            "b25maWcSNAoRaW5mZXJlbmNlX3RpbWVvdXQYASABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb25C5AEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExQg1FbmRwb2ludFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
-            "Z28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRm",
-            "b3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29v",
-            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6",
-            "OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "cm0udjFiZXRhMS5GYXN0ZXJEZXBsb3ltZW50Q29uZmlnEkoKBnN0YXR1cxga",
+            "IAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRGVwbG95",
+            "ZWRNb2RlbC5TdGF0dXNCA+BBAxJXCg1zeXN0ZW1fbGFiZWxzGBwgAygLMkAu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EZXBsb3llZE1vZGVs",
+            "LlN5c3RlbUxhYmVsc0VudHJ5Gn8KBlN0YXR1cxIUCgdtZXNzYWdlGAEgASgJ",
+            "QgPgQQMSOQoQbGFzdF91cGRhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIkChdhdmFpbGFibGVfcmVwbGljYV9jb3Vu",
+            "dBgDIAEoBUID4EEDGjMKEVN5c3RlbUxhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAFCFgoUcHJlZGljdGlvbl9yZXNvdXJjZXMi",
+            "jwEKEFByaXZhdGVFbmRwb2ludHMSHQoQcHJlZGljdF9odHRwX3VyaRgBIAEo",
+            "CUID4EEDEh0KEGV4cGxhaW5faHR0cF91cmkYAiABKAlCA+BBAxIcCg9oZWFs",
+            "dGhfaHR0cF91cmkYAyABKAlCA+BBAxIfChJzZXJ2aWNlX2F0dGFjaG1lbnQY",
+            "BCABKAlCA+BBAyKhAQojUHJlZGljdFJlcXVlc3RSZXNwb25zZUxvZ2dpbmdD",
+            "b25maWcSDwoHZW5hYmxlZBgBIAEoCBIVCg1zYW1wbGluZ19yYXRlGAIgASgB",
+            "ElIKFGJpZ3F1ZXJ5X2Rlc3RpbmF0aW9uGAMgASgLMjQuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMS5CaWdRdWVyeURlc3RpbmF0aW9uIk4KFkNs",
+            "aWVudENvbm5lY3Rpb25Db25maWcSNAoRaW5mZXJlbmNlX3RpbWVvdXQYASAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iNQoWRmFzdGVyRGVwbG95",
+            "bWVudENvbmZpZxIbChNmYXN0X3RyeW91dF9lbmFibGVkGAIgASgIQuQBCiNj",
+            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUINRW5kcG9pbnRQ",
+            "cm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFi",
+            "ZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3Vk",
+            "LkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3Jt",
+            "XFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGEx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Endpoint), global::Google.Cloud.AIPlatform.V1Beta1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig", "DedicatedEndpointEnabled", "DedicatedEndpointDns", "ClientConnectionConfig", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "EnableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "EnableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "Status", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig), global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig.Parser, new[]{ "FastTryoutEnabled" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig), global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig.Parser, new[]{ "InferenceTimeout" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig), global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig.Parser, new[]{ "InferenceTimeout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig), global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig.Parser, new[]{ "FastTryoutEnabled" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1208,6 +1214,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       enableAccessLogging_ = other.enableAccessLogging_;
       privateEndpoints_ = other.privateEndpoints_ != null ? other.privateEndpoints_.Clone() : null;
       fasterDeploymentConfig_ = other.fasterDeploymentConfig_ != null ? other.fasterDeploymentConfig_.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
       systemLabels_ = other.systemLabels_.Clone();
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
@@ -1525,6 +1532,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 26;
+    private global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status status_;
+    /// <summary>
+    /// Output only. Runtime status of the deployed model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
     /// <summary>Field number for the "system_labels" field.</summary>
     public const int SystemLabelsFieldNumber = 28;
     private static readonly pbc::MapField<string, string>.Codec _map_systemLabels_codec
@@ -1592,6 +1614,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (EnableAccessLogging != other.EnableAccessLogging) return false;
       if (!object.Equals(PrivateEndpoints, other.PrivateEndpoints)) return false;
       if (!object.Equals(FasterDeploymentConfig, other.FasterDeploymentConfig)) return false;
+      if (!object.Equals(Status, other.Status)) return false;
       if (!SystemLabels.Equals(other.SystemLabels)) return false;
       if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1616,6 +1639,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (EnableAccessLogging != false) hash ^= EnableAccessLogging.GetHashCode();
       if (privateEndpoints_ != null) hash ^= PrivateEndpoints.GetHashCode();
       if (fasterDeploymentConfig_ != null) hash ^= FasterDeploymentConfig.GetHashCode();
+      if (status_ != null) hash ^= Status.GetHashCode();
       hash ^= SystemLabels.GetHashCode();
       hash ^= (int) predictionResourcesCase_;
       if (_unknownFields != null) {
@@ -1696,6 +1720,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(186, 1);
         output.WriteMessage(FasterDeploymentConfig);
       }
+      if (status_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(Status);
+      }
       systemLabels_.WriteTo(output, _map_systemLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1767,6 +1795,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(186, 1);
         output.WriteMessage(FasterDeploymentConfig);
       }
+      if (status_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(Status);
+      }
       systemLabels_.WriteTo(ref output, _map_systemLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1822,6 +1854,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (fasterDeploymentConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(FasterDeploymentConfig);
+      }
+      if (status_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Status);
       }
       size += systemLabels_.CalculateSize(_map_systemLabels_codec);
       if (_unknownFields != null) {
@@ -1883,6 +1918,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           FasterDeploymentConfig = new global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig();
         }
         FasterDeploymentConfig.MergeFrom(other.FasterDeploymentConfig);
+      }
+      if (other.status_ != null) {
+        if (status_ == null) {
+          Status = new global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status();
+        }
+        Status.MergeFrom(other.Status);
       }
       systemLabels_.MergeFrom(other.systemLabels_);
       switch (other.PredictionResourcesCase) {
@@ -2000,6 +2041,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(FasterDeploymentConfig);
             break;
           }
+          case 210: {
+            if (status_ == null) {
+              Status = new global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
           case 226: {
             systemLabels_.AddEntriesFrom(input, _map_systemLabels_codec);
             break;
@@ -2101,6 +2149,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(FasterDeploymentConfig);
             break;
           }
+          case 210: {
+            if (status_ == null) {
+              Status = new global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
           case 226: {
             systemLabels_.AddEntriesFrom(ref input, _map_systemLabels_codec);
             break;
@@ -2109,6 +2164,299 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DeployedModel message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Runtime status of the deployed model.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Status : pb::IMessage<Status>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Status> _parser = new pb::MessageParser<Status>(() => new Status());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Status> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status(Status other) : this() {
+          message_ = other.message_;
+          lastUpdateTime_ = other.lastUpdateTime_ != null ? other.lastUpdateTime_.Clone() : null;
+          availableReplicaCount_ = other.availableReplicaCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status Clone() {
+          return new Status(this);
+        }
+
+        /// <summary>Field number for the "message" field.</summary>
+        public const int MessageFieldNumber = 1;
+        private string message_ = "";
+        /// <summary>
+        /// Output only. The latest deployed model's status message (if any).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Message {
+          get { return message_; }
+          set {
+            message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "last_update_time" field.</summary>
+        public const int LastUpdateTimeFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
+        /// <summary>
+        /// Output only. The time at which the status was last updated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdateTime {
+          get { return lastUpdateTime_; }
+          set {
+            lastUpdateTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "available_replica_count" field.</summary>
+        public const int AvailableReplicaCountFieldNumber = 3;
+        private int availableReplicaCount_;
+        /// <summary>
+        /// Output only. The number of available replicas of the deployed model.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int AvailableReplicaCount {
+          get { return availableReplicaCount_; }
+          set {
+            availableReplicaCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Status);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Status other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Message != other.Message) return false;
+          if (!object.Equals(LastUpdateTime, other.LastUpdateTime)) return false;
+          if (AvailableReplicaCount != other.AvailableReplicaCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Message.Length != 0) hash ^= Message.GetHashCode();
+          if (lastUpdateTime_ != null) hash ^= LastUpdateTime.GetHashCode();
+          if (AvailableReplicaCount != 0) hash ^= AvailableReplicaCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Message.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Message);
+          }
+          if (lastUpdateTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(LastUpdateTime);
+          }
+          if (AvailableReplicaCount != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(AvailableReplicaCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Message.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Message);
+          }
+          if (lastUpdateTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(LastUpdateTime);
+          }
+          if (AvailableReplicaCount != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(AvailableReplicaCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Message.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+          }
+          if (lastUpdateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUpdateTime);
+          }
+          if (AvailableReplicaCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(AvailableReplicaCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Status other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Message.Length != 0) {
+            Message = other.Message;
+          }
+          if (other.lastUpdateTime_ != null) {
+            if (lastUpdateTime_ == null) {
+              LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            LastUpdateTime.MergeFrom(other.LastUpdateTime);
+          }
+          if (other.AvailableReplicaCount != 0) {
+            AvailableReplicaCount = other.AvailableReplicaCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Message = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (lastUpdateTime_ == null) {
+                  LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LastUpdateTime);
+                break;
+              }
+              case 24: {
+                AvailableReplicaCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Message = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (lastUpdateTime_ == null) {
+                  LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(LastUpdateTime);
+                break;
+              }
+              case 24: {
+                AvailableReplicaCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -2725,202 +3073,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
 
   /// <summary>
-  /// Configuration for faster model deployment.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class FasterDeploymentConfig : pb::IMessage<FasterDeploymentConfig>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<FasterDeploymentConfig> _parser = new pb::MessageParser<FasterDeploymentConfig>(() => new FasterDeploymentConfig());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<FasterDeploymentConfig> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FasterDeploymentConfig() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FasterDeploymentConfig(FasterDeploymentConfig other) : this() {
-      fastTryoutEnabled_ = other.fastTryoutEnabled_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FasterDeploymentConfig Clone() {
-      return new FasterDeploymentConfig(this);
-    }
-
-    /// <summary>Field number for the "fast_tryout_enabled" field.</summary>
-    public const int FastTryoutEnabledFieldNumber = 2;
-    private bool fastTryoutEnabled_;
-    /// <summary>
-    /// If true, enable fast tryout feature for this deployed model.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool FastTryoutEnabled {
-      get { return fastTryoutEnabled_; }
-      set {
-        fastTryoutEnabled_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as FasterDeploymentConfig);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(FasterDeploymentConfig other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (FastTryoutEnabled != other.FastTryoutEnabled) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (FastTryoutEnabled != false) hash ^= FastTryoutEnabled.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (FastTryoutEnabled != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(FastTryoutEnabled);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FastTryoutEnabled != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(FastTryoutEnabled);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (FastTryoutEnabled != false) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(FasterDeploymentConfig other) {
-      if (other == null) {
-        return;
-      }
-      if (other.FastTryoutEnabled != false) {
-        FastTryoutEnabled = other.FastTryoutEnabled;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 16: {
-            FastTryoutEnabled = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 16: {
-            FastTryoutEnabled = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
   /// Configurations (e.g. inference timeout) that are applied on your endpoints.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2938,7 +3090,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3116,6 +3268,202 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               InferenceTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(InferenceTimeout);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for faster model deployment.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FasterDeploymentConfig : pb::IMessage<FasterDeploymentConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FasterDeploymentConfig> _parser = new pb::MessageParser<FasterDeploymentConfig>(() => new FasterDeploymentConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FasterDeploymentConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FasterDeploymentConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FasterDeploymentConfig(FasterDeploymentConfig other) : this() {
+      fastTryoutEnabled_ = other.fastTryoutEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FasterDeploymentConfig Clone() {
+      return new FasterDeploymentConfig(this);
+    }
+
+    /// <summary>Field number for the "fast_tryout_enabled" field.</summary>
+    public const int FastTryoutEnabledFieldNumber = 2;
+    private bool fastTryoutEnabled_;
+    /// <summary>
+    /// If true, enable fast tryout feature for this deployed model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool FastTryoutEnabled {
+      get { return fastTryoutEnabled_; }
+      set {
+        fastTryoutEnabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FasterDeploymentConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FasterDeploymentConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FastTryoutEnabled != other.FastTryoutEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FastTryoutEnabled != false) hash ^= FastTryoutEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FastTryoutEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(FastTryoutEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FastTryoutEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(FastTryoutEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FastTryoutEnabled != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FasterDeploymentConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FastTryoutEnabled != false) {
+        FastTryoutEnabled = other.FastTryoutEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            FastTryoutEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            FastTryoutEnabled = input.ReadBool();
             break;
           }
         }
