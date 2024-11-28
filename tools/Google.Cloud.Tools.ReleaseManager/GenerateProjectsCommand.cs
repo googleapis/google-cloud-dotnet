@@ -547,7 +547,7 @@ api-name: {api.Id}
             File.WriteAllText(owlBotConfigFile, content);
 
             var forceRegenerationReasons = new List<string>();
-            if (File.Exists(Path.Combine(apiRoot, "pregeneration.sh")))
+            if (File.Exists(Path.Combine(DirectoryLayout.ForApi(api.Id).TweaksDirectory, "pregeneration.sh")))
             {
                 forceRegenerationReasons.Add("API requires pre-generation tweaks.");
             }

@@ -126,7 +126,7 @@ internal class GenerateApisCommand : ICommand
 
         void MaybeRunScript(string script)
         {
-            var fullScript = Path.Combine(layout.SourceDirectory, script);
+            var fullScript = Path.Combine(layout.TweaksDirectory, script);
             if (!File.Exists(fullScript))
             {
                 return;
@@ -135,7 +135,7 @@ internal class GenerateApisCommand : ICommand
             var psi = new ProcessStartInfo
             {
                 FileName = GetBashExecutable(),
-                WorkingDirectory = layout.SourceDirectory,
+                WorkingDirectory = layout.TweaksDirectory,
                 ArgumentList = { script }
             };
             Processes.RunAndPropagateOutput(psi, script);
