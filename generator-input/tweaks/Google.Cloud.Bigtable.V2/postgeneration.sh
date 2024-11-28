@@ -2,11 +2,12 @@
 
 set -e
 
-# TODO: Remove this when we move the client generator code
-cd ../../../apis/Google.Cloud.Bigtable.V2
+# TODO: Use the right output directory
+GENERATOR_OUTPUT=../../..
+BIGTABLE_OUTPUT=$GENERATOR_OUTPUT/apis/Google.Cloud.Bigtable.V2
 
 # Generate BigtableClient
-dotnet run --project Google.Cloud.Bigtable.V2.GenerateClient \
-  Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.csproj \
+dotnet run --project Google.Cloud.Bigtable.V2.GenerateClient -- \
+  $BIGTABLE_OUTPUT/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.csproj \
   BigtableServiceApiClient \
   BigtableClient

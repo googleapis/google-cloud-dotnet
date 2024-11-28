@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2", "Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj", "{3591B1CE-A56A-44BA-B30B-82CF991ADFF1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.GenerateClient", "Google.Cloud.Bigtable.V2.GenerateClient\Google.Cloud.Bigtable.V2.GenerateClient.csproj", "{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.GeneratedSnippets", "Google.Cloud.Bigtable.V2.GeneratedSnippets\Google.Cloud.Bigtable.V2.GeneratedSnippets.csproj", "{7861EF40-D2C9-4413-85E1-A877F87BC7A5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.Admin.V2", "..\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2.csproj", "{E119DA5E-4786-4B35-A988-BA8EB3A4BB6A}"
@@ -29,10 +27,6 @@ Global
 		{3591B1CE-A56A-44BA-B30B-82CF991ADFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3591B1CE-A56A-44BA-B30B-82CF991ADFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3591B1CE-A56A-44BA-B30B-82CF991ADFF1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7861EF40-D2C9-4413-85E1-A877F87BC7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7861EF40-D2C9-4413-85E1-A877F87BC7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7861EF40-D2C9-4413-85E1-A877F87BC7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU

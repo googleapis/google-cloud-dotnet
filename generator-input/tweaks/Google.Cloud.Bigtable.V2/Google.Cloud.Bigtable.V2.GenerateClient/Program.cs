@@ -99,8 +99,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         private static async Task<int> Main(string[] args)
         {
-            // TODO: Figure out why `dotnet run` from generateapis.sh is sending 6 args instead of 3 as in: arg1 arg2 arg3 arg1 arg2 arg3
-            if (args.Length < 3)
+            if (args.Length != 3)
             {
                 Console.WriteLine("Arguments: <project file> <api client name> <user client name>");
                 return 1;
