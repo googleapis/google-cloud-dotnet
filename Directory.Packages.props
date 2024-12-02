@@ -21,7 +21,7 @@
     <PackageVersion Include="System.Collections.Immutable" Version="6.0.0" />
     <PackageVersion Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
     <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
-    <PackageVersion Include="Google.Protobuf" Version="3.28.2" />
+    <PackageVersion Include="Google.Protobuf" Version="3.29.0" />
     <PackageVersion Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" />
     <PackageVersion Include="BenchmarkDotNet" Version="0.13.12" />
     <PackageVersion Include="Xunit.Combinatorial" Version="1.6.24" />
