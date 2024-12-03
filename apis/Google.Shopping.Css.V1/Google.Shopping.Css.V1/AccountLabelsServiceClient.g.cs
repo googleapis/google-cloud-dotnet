@@ -256,7 +256,7 @@ namespace Google.Shopping.Css.V1
         public virtual AccountLabelsService.AccountLabelsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the labels assigned to an account.
+        /// Lists the labels owned by an account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -265,7 +265,7 @@ namespace Google.Shopping.Css.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the labels assigned to an account.
+        /// Lists the labels owned by an account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -274,7 +274,7 @@ namespace Google.Shopping.Css.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the labels assigned to an account.
+        /// Lists the labels owned by an account.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent account.
@@ -308,7 +308,7 @@ namespace Google.Shopping.Css.V1
         }
 
         /// <summary>
-        /// Lists the labels assigned to an account.
+        /// Lists the labels owned by an account.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent account.
@@ -342,7 +342,7 @@ namespace Google.Shopping.Css.V1
         }
 
         /// <summary>
-        /// Lists the labels assigned to an account.
+        /// Lists the labels owned by an account.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent account.
@@ -376,7 +376,7 @@ namespace Google.Shopping.Css.V1
         }
 
         /// <summary>
-        /// Lists the labels assigned to an account.
+        /// Lists the labels owned by an account.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent account.
@@ -789,7 +789,7 @@ namespace Google.Shopping.Css.V1
         partial void Modify_DeleteAccountLabelRequest(ref DeleteAccountLabelRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists the labels assigned to an account.
+        /// Lists the labels owned by an account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -801,7 +801,7 @@ namespace Google.Shopping.Css.V1
         }
 
         /// <summary>
-        /// Lists the labels assigned to an account.
+        /// Lists the labels owned by an account.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
