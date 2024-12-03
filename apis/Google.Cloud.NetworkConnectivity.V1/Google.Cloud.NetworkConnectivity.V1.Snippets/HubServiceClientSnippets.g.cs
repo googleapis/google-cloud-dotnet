@@ -1191,6 +1191,288 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for QueryHubStatus</summary>
+        public void QueryHubStatusRequestObject()
+        {
+            // Snippet: QueryHubStatus(QueryHubStatusRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            QueryHubStatusRequest request = new QueryHubStatusRequest
+            {
+                HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
+                Filter = "",
+                OrderBy = "",
+                GroupBy = "",
+            };
+            // Make the request
+            PagedEnumerable<QueryHubStatusResponse, HubStatusEntry> response = hubServiceClient.QueryHubStatus(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (HubStatusEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (QueryHubStatusResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HubStatusEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HubStatusEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HubStatusEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryHubStatusAsync</summary>
+        public async Task QueryHubStatusRequestObjectAsync()
+        {
+            // Snippet: QueryHubStatusAsync(QueryHubStatusRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryHubStatusRequest request = new QueryHubStatusRequest
+            {
+                HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
+                Filter = "",
+                OrderBy = "",
+                GroupBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<QueryHubStatusResponse, HubStatusEntry> response = hubServiceClient.QueryHubStatusAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((HubStatusEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((QueryHubStatusResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HubStatusEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HubStatusEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HubStatusEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryHubStatus</summary>
+        public void QueryHubStatus()
+        {
+            // Snippet: QueryHubStatus(string, string, int?, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/global/hubs/[HUB]";
+            // Make the request
+            PagedEnumerable<QueryHubStatusResponse, HubStatusEntry> response = hubServiceClient.QueryHubStatus(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (HubStatusEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (QueryHubStatusResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HubStatusEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HubStatusEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HubStatusEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryHubStatusAsync</summary>
+        public async Task QueryHubStatusAsync()
+        {
+            // Snippet: QueryHubStatusAsync(string, string, int?, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/global/hubs/[HUB]";
+            // Make the request
+            PagedAsyncEnumerable<QueryHubStatusResponse, HubStatusEntry> response = hubServiceClient.QueryHubStatusAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((HubStatusEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((QueryHubStatusResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HubStatusEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HubStatusEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HubStatusEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryHubStatus</summary>
+        public void QueryHubStatusResourceNames()
+        {
+            // Snippet: QueryHubStatus(HubName, string, int?, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            HubName name = HubName.FromProjectHub("[PROJECT]", "[HUB]");
+            // Make the request
+            PagedEnumerable<QueryHubStatusResponse, HubStatusEntry> response = hubServiceClient.QueryHubStatus(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (HubStatusEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (QueryHubStatusResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HubStatusEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HubStatusEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HubStatusEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryHubStatusAsync</summary>
+        public async Task QueryHubStatusResourceNamesAsync()
+        {
+            // Snippet: QueryHubStatusAsync(HubName, string, int?, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            HubName name = HubName.FromProjectHub("[PROJECT]", "[HUB]");
+            // Make the request
+            PagedAsyncEnumerable<QueryHubStatusResponse, HubStatusEntry> response = hubServiceClient.QueryHubStatusAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((HubStatusEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((QueryHubStatusResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (HubStatusEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<HubStatusEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (HubStatusEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for ListSpokes</summary>
         public void ListSpokesRequestObject()
         {
@@ -3552,6 +3834,136 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGroup</summary>
+        public void UpdateGroupRequestObject()
+        {
+            // Snippet: UpdateGroup(UpdateGroupRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                UpdateMask = new FieldMask(),
+                Group = new Group(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Group, OperationMetadata> response = hubServiceClient.UpdateGroup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Group, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Group result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Group, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceUpdateGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Group retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGroupAsync</summary>
+        public async Task UpdateGroupRequestObjectAsync()
+        {
+            // Snippet: UpdateGroupAsync(UpdateGroupRequest, CallSettings)
+            // Additional: UpdateGroupAsync(UpdateGroupRequest, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                UpdateMask = new FieldMask(),
+                Group = new Group(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Group, OperationMetadata> response = await hubServiceClient.UpdateGroupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Group, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Group result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Group, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceUpdateGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Group retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGroup</summary>
+        public void UpdateGroup()
+        {
+            // Snippet: UpdateGroup(Group, FieldMask, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            Group group = new Group();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Group, OperationMetadata> response = hubServiceClient.UpdateGroup(group, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Group, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Group result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Group, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceUpdateGroup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Group retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGroupAsync</summary>
+        public async Task UpdateGroupAsync()
+        {
+            // Snippet: UpdateGroupAsync(Group, FieldMask, CallSettings)
+            // Additional: UpdateGroupAsync(Group, FieldMask, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Group group = new Group();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Group, OperationMetadata> response = await hubServiceClient.UpdateGroupAsync(group, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Group, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Group result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Group, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceUpdateGroupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Group retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

@@ -106,10 +106,22 @@
                 "ListSpokesAsync"
               ]
             },
+            "QueryHubStatus": {
+              "methods": [
+                "QueryHubStatus",
+                "QueryHubStatusAsync"
+              ]
+            },
             "RejectHubSpoke": {
               "methods": [
                 "RejectHubSpoke",
                 "RejectHubSpokeAsync"
+              ]
+            },
+            "UpdateGroup": {
+              "methods": [
+                "UpdateGroup",
+                "UpdateGroupAsync"
               ]
             },
             "UpdateHub": {
