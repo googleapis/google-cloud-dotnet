@@ -1742,6 +1742,325 @@
       ]
     },
     {
+      "regionTag": "networkconnectivity_v1_generated_HubService_QueryHubStatus_sync",
+      "title": "QueryHubStatusRequestObject",
+      "description": "Snippet for QueryHubStatus",
+      "file": "HubServiceClient.QueryHubStatusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryHubStatus",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.QueryHubStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.QueryHubStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.QueryHubStatusResponse, Google.Cloud.NetworkConnectivity.V1.HubStatusEntry>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "QueryHubStatus",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.QueryHubStatus",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_QueryHubStatus_async",
+      "title": "QueryHubStatusRequestObjectAsync",
+      "description": "Snippet for QueryHubStatusAsync",
+      "file": "HubServiceClient.QueryHubStatusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryHubStatusAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.QueryHubStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.QueryHubStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.QueryHubStatusResponse, Google.Cloud.NetworkConnectivity.V1.HubStatusEntry>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "QueryHubStatus",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.QueryHubStatus",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_QueryHubStatus_sync_flattened",
+      "title": "QueryHubStatus",
+      "description": "Snippet for QueryHubStatus",
+      "file": "HubServiceClient.QueryHubStatusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryHubStatus",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.QueryHubStatus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.QueryHubStatusResponse, Google.Cloud.NetworkConnectivity.V1.HubStatusEntry>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "QueryHubStatus",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.QueryHubStatus",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_QueryHubStatus_async_flattened",
+      "title": "QueryHubStatusAsync",
+      "description": "Snippet for QueryHubStatusAsync",
+      "file": "HubServiceClient.QueryHubStatusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryHubStatusAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.QueryHubStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.QueryHubStatusResponse, Google.Cloud.NetworkConnectivity.V1.HubStatusEntry>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "QueryHubStatus",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.QueryHubStatus",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_QueryHubStatus_sync_flattened_resourceNames",
+      "title": "QueryHubStatusResourceNames",
+      "description": "Snippet for QueryHubStatus",
+      "file": "HubServiceClient.QueryHubStatusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryHubStatus",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.QueryHubStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.HubName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.QueryHubStatusResponse, Google.Cloud.NetworkConnectivity.V1.HubStatusEntry>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "QueryHubStatus",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.QueryHubStatus",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_QueryHubStatus_async_flattened_resourceNames",
+      "title": "QueryHubStatusResourceNamesAsync",
+      "description": "Snippet for QueryHubStatusAsync",
+      "file": "HubServiceClient.QueryHubStatusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryHubStatusAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.QueryHubStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.HubName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.QueryHubStatusResponse, Google.Cloud.NetworkConnectivity.V1.HubStatusEntry>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "QueryHubStatus",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.QueryHubStatus",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkconnectivity_v1_generated_HubService_ListSpokes_sync",
       "title": "ListSpokesRequestObject",
       "description": "Snippet for ListSpokes",
@@ -5573,6 +5892,206 @@
         {
           "start": 38,
           "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_UpdateGroup_sync",
+      "title": "UpdateGroupRequestObject",
+      "description": "Snippet for UpdateGroup",
+      "file": "HubServiceClient.UpdateGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGroup",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Group, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGroup",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.UpdateGroup",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_UpdateGroup_async",
+      "title": "UpdateGroupRequestObjectAsync",
+      "description": "Snippet for UpdateGroupAsync",
+      "file": "HubServiceClient.UpdateGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGroupAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Group, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGroup",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.UpdateGroup",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_UpdateGroup_sync_flattened",
+      "title": "UpdateGroup",
+      "description": "Snippet for UpdateGroup",
+      "file": "HubServiceClient.UpdateGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGroup",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Group",
+            "name": "group"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Group, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGroup",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.UpdateGroup",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_UpdateGroup_async_flattened",
+      "title": "UpdateGroupAsync",
+      "description": "Snippet for UpdateGroupAsync",
+      "file": "HubServiceClient.UpdateGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGroupAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Group",
+            "name": "group"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Group, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGroup",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.UpdateGroup",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
           "type": "SHORT"
         }
       ]

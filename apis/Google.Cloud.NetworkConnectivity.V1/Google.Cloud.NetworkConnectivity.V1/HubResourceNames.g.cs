@@ -1893,6 +1893,18 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
     }
 
+    public partial class QueryHubStatusRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::HubName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::HubName HubName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::HubName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListSpokesRequest
     {
         /// <summary>
@@ -2099,6 +2111,44 @@ namespace Google.Cloud.NetworkConnectivity.V1
             get => string.IsNullOrEmpty(Uri) ? null : NetworkName.Parse(Uri, allowUnparsed: true);
             set => Uri = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="SpokeName"/>-typed view over the <see cref="ProducerVpcSpokes"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<SpokeName> ProducerVpcSpokesAsSpokeNames
+        {
+            get => new gax::ResourceNameList<SpokeName>(ProducerVpcSpokes, s => string.IsNullOrEmpty(s) ? null : SpokeName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class LinkedProducerVpcNetwork
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Network"/> resource name property.
+        /// </summary>
+        public NetworkName NetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
+            set => Network = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="ProducerNetwork"/> resource name property.
+        /// </summary>
+        public NetworkName ProducerNetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(ProducerNetwork) ? null : NetworkName.Parse(ProducerNetwork, allowUnparsed: true);
+            set => ProducerNetwork = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SpokeName"/>-typed view over the <see cref="ServiceConsumerVpcSpoke"/> resource name property.
+        /// </summary>
+        public SpokeName ServiceConsumerVpcSpokeAsSpokeName
+        {
+            get => string.IsNullOrEmpty(ServiceConsumerVpcSpoke) ? null : SpokeName.Parse(ServiceConsumerVpcSpoke, allowUnparsed: true);
+            set => ServiceConsumerVpcSpoke = value?.ToString() ?? "";
+        }
     }
 
     public partial class RouterApplianceInstance
@@ -2120,6 +2170,65 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             get => string.IsNullOrEmpty(Uri) ? null : NetworkName.Parse(Uri, allowUnparsed: true);
             set => Uri = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class NextHopVPNTunnel
+    {
+        /// <summary><see cref="VpnTunnelName"/>-typed view over the <see cref="Uri"/> resource name property.</summary>
+        public VpnTunnelName UriAsVpnTunnelName
+        {
+            get => string.IsNullOrEmpty(Uri) ? null : VpnTunnelName.Parse(Uri, allowUnparsed: true);
+            set => Uri = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="VpcNetwork"/> resource name property.
+        /// </summary>
+        public NetworkName VpcNetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(VpcNetwork) ? null : NetworkName.Parse(VpcNetwork, allowUnparsed: true);
+            set => VpcNetwork = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class NextHopRouterApplianceInstance
+    {
+        /// <summary><see cref="InstanceName"/>-typed view over the <see cref="Uri"/> resource name property.</summary>
+        public InstanceName UriAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Uri) ? null : InstanceName.Parse(Uri, allowUnparsed: true);
+            set => Uri = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="VpcNetwork"/> resource name property.
+        /// </summary>
+        public NetworkName VpcNetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(VpcNetwork) ? null : NetworkName.Parse(VpcNetwork, allowUnparsed: true);
+            set => VpcNetwork = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class NextHopInterconnectAttachment
+    {
+        /// <summary>
+        /// <see cref="InterconnectAttachmentName"/>-typed view over the <see cref="Uri"/> resource name property.
+        /// </summary>
+        public InterconnectAttachmentName UriAsInterconnectAttachmentName
+        {
+            get => string.IsNullOrEmpty(Uri) ? null : InterconnectAttachmentName.Parse(Uri, allowUnparsed: true);
+            set => Uri = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="VpcNetwork"/> resource name property.
+        /// </summary>
+        public NetworkName VpcNetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(VpcNetwork) ? null : NetworkName.Parse(VpcNetwork, allowUnparsed: true);
+            set => VpcNetwork = value?.ToString() ?? "";
         }
     }
 

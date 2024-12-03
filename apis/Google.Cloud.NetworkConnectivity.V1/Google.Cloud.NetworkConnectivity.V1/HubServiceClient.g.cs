@@ -59,6 +59,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             DeleteHubSettings = existing.DeleteHubSettings;
             DeleteHubOperationsSettings = existing.DeleteHubOperationsSettings.Clone();
             ListHubSpokesSettings = existing.ListHubSpokesSettings;
+            QueryHubStatusSettings = existing.QueryHubStatusSettings;
             ListSpokesSettings = existing.ListSpokesSettings;
             GetSpokeSettings = existing.GetSpokeSettings;
             CreateSpokeSettings = existing.CreateSpokeSettings;
@@ -77,6 +78,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             ListRouteTablesSettings = existing.ListRouteTablesSettings;
             GetGroupSettings = existing.GetGroupSettings;
             ListGroupsSettings = existing.ListGroupsSettings;
+            UpdateGroupSettings = existing.UpdateGroupSettings;
+            UpdateGroupOperationsSettings = existing.UpdateGroupOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -227,6 +230,24 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListHubSpokesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.QueryHubStatus</c> and <c>HubServiceClient.QueryHubStatusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryHubStatusSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>HubServiceClient.ListSpokes</c>
@@ -533,6 +554,42 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListGroupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.UpdateGroup</c> and <c>HubServiceClient.UpdateGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>HubServiceClient.UpdateGroup</c> and
+        /// <c>HubServiceClient.UpdateGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1534,6 +1591,162 @@ namespace Google.Cloud.NetworkConnectivity.V1
                 request.PageSize = pageSize.Value;
             }
             return ListHubSpokesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Query the Private Service Connect propagation status of a Network
+        /// Connectivity Center hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HubStatusEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryHubStatusResponse, HubStatusEntry> QueryHubStatus(QueryHubStatusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Query the Private Service Connect propagation status of a Network
+        /// Connectivity Center hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HubStatusEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryHubStatusResponse, HubStatusEntry> QueryHubStatusAsync(QueryHubStatusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Query the Private Service Connect propagation status of a Network
+        /// Connectivity Center hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HubStatusEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryHubStatusResponse, HubStatusEntry> QueryHubStatus(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryHubStatusRequest request = new QueryHubStatusRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryHubStatus(request, callSettings);
+        }
+
+        /// <summary>
+        /// Query the Private Service Connect propagation status of a Network
+        /// Connectivity Center hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HubStatusEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryHubStatusResponse, HubStatusEntry> QueryHubStatusAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryHubStatusRequest request = new QueryHubStatusRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryHubStatusAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Query the Private Service Connect propagation status of a Network
+        /// Connectivity Center hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HubStatusEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryHubStatusResponse, HubStatusEntry> QueryHubStatus(HubName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryHubStatusRequest request = new QueryHubStatusRequest
+            {
+                HubName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryHubStatus(request, callSettings);
+        }
+
+        /// <summary>
+        /// Query the Private Service Connect propagation status of a Network
+        /// Connectivity Center hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HubStatusEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryHubStatusResponse, HubStatusEntry> QueryHubStatusAsync(HubName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            QueryHubStatusRequest request = new QueryHubStatusRequest
+            {
+                HubName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return QueryHubStatusAsync(request, callSettings);
         }
 
         /// <summary>
@@ -2771,7 +2984,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists routes in a given project.
+        /// Lists routes in a given route table.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2780,7 +2993,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists routes in a given project.
+        /// Lists routes in a given route table.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2789,7 +3002,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists routes in a given project.
+        /// Lists routes in a given route table.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -2822,7 +3035,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists routes in a given project.
+        /// Lists routes in a given route table.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -2855,7 +3068,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists routes in a given project.
+        /// Lists routes in a given route table.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -2888,7 +3101,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists routes in a given project.
+        /// Lists routes in a given route table.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -2921,7 +3134,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists route tables in a given project.
+        /// Lists route tables in a given hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2930,7 +3143,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists route tables in a given project.
+        /// Lists route tables in a given hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2939,7 +3152,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists route tables in a given project.
+        /// Lists route tables in a given hub.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -2972,7 +3185,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists route tables in a given project.
+        /// Lists route tables in a given hub.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -3005,7 +3218,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists route tables in a given project.
+        /// Lists route tables in a given hub.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -3038,7 +3251,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists route tables in a given project.
+        /// Lists route tables in a given hub.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -3324,6 +3537,121 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }
             return ListGroupsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Updates the parameters of a Network Connectivity Center group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Group, OperationMetadata> UpdateGroup(UpdateGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a Network Connectivity Center group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Group, OperationMetadata>> UpdateGroupAsync(UpdateGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a Network Connectivity Center group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Group, OperationMetadata>> UpdateGroupAsync(UpdateGroupRequest request, st::CancellationToken cancellationToken) =>
+            UpdateGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateGroup</c>.</summary>
+        public virtual lro::OperationsClient UpdateGroupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Group, OperationMetadata> PollOnceUpdateGroup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Group, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGroup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Group, OperationMetadata>> PollOnceUpdateGroupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Group, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGroupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a Network Connectivity Center group.
+        /// </summary>
+        /// <param name="group">
+        /// Required. The state that the group should be in after the update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. In the case of an update to an existing group, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Group, OperationMetadata> UpdateGroup(Group group, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGroup(new UpdateGroupRequest
+            {
+                UpdateMask = updateMask,
+                Group = gax::GaxPreconditions.CheckNotNull(group, nameof(group)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a Network Connectivity Center group.
+        /// </summary>
+        /// <param name="group">
+        /// Required. The state that the group should be in after the update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. In the case of an update to an existing group, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Group, OperationMetadata>> UpdateGroupAsync(Group group, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGroupAsync(new UpdateGroupRequest
+            {
+                UpdateMask = updateMask,
+                Group = gax::GaxPreconditions.CheckNotNull(group, nameof(group)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a Network Connectivity Center group.
+        /// </summary>
+        /// <param name="group">
+        /// Required. The state that the group should be in after the update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. In the case of an update to an existing group, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Group, OperationMetadata>> UpdateGroupAsync(Group group, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateGroupAsync(group, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>HubService client wrapper implementation, for convenient use.</summary>
@@ -3345,6 +3673,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         private readonly gaxgrpc::ApiCall<DeleteHubRequest, lro::Operation> _callDeleteHub;
 
         private readonly gaxgrpc::ApiCall<ListHubSpokesRequest, ListHubSpokesResponse> _callListHubSpokes;
+
+        private readonly gaxgrpc::ApiCall<QueryHubStatusRequest, QueryHubStatusResponse> _callQueryHubStatus;
 
         private readonly gaxgrpc::ApiCall<ListSpokesRequest, ListSpokesResponse> _callListSpokes;
 
@@ -3372,6 +3702,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
 
         private readonly gaxgrpc::ApiCall<ListGroupsRequest, ListGroupsResponse> _callListGroups;
 
+        private readonly gaxgrpc::ApiCall<UpdateGroupRequest, lro::Operation> _callUpdateGroup;
+
         /// <summary>
         /// Constructs a client wrapper for the HubService service, with the specified gRPC client and settings.
         /// </summary>
@@ -3395,6 +3727,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             RejectHubSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RejectHubSpokeOperationsSettings, logger);
             AcceptHubSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AcceptHubSpokeOperationsSettings, logger);
             DeleteSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpokeOperationsSettings, logger);
+            UpdateGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGroupOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListHubs = clientHelper.BuildApiCall<ListHubsRequest, ListHubsResponse>("ListHubs", grpcClient.ListHubsAsync, grpcClient.ListHubs, effectiveSettings.ListHubsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -3415,6 +3748,9 @@ namespace Google.Cloud.NetworkConnectivity.V1
             _callListHubSpokes = clientHelper.BuildApiCall<ListHubSpokesRequest, ListHubSpokesResponse>("ListHubSpokes", grpcClient.ListHubSpokesAsync, grpcClient.ListHubSpokes, effectiveSettings.ListHubSpokesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListHubSpokes);
             Modify_ListHubSpokesApiCall(ref _callListHubSpokes);
+            _callQueryHubStatus = clientHelper.BuildApiCall<QueryHubStatusRequest, QueryHubStatusResponse>("QueryHubStatus", grpcClient.QueryHubStatusAsync, grpcClient.QueryHubStatus, effectiveSettings.QueryHubStatusSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callQueryHubStatus);
+            Modify_QueryHubStatusApiCall(ref _callQueryHubStatus);
             _callListSpokes = clientHelper.BuildApiCall<ListSpokesRequest, ListSpokesResponse>("ListSpokes", grpcClient.ListSpokesAsync, grpcClient.ListSpokes, effectiveSettings.ListSpokesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSpokes);
             Modify_ListSpokesApiCall(ref _callListSpokes);
@@ -3454,6 +3790,9 @@ namespace Google.Cloud.NetworkConnectivity.V1
             _callListGroups = clientHelper.BuildApiCall<ListGroupsRequest, ListGroupsResponse>("ListGroups", grpcClient.ListGroupsAsync, grpcClient.ListGroups, effectiveSettings.ListGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGroups);
             Modify_ListGroupsApiCall(ref _callListGroups);
+            _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, lro::Operation>("UpdateGroup", grpcClient.UpdateGroupAsync, grpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings).WithGoogleRequestParam("group.name", request => request.Group?.Name);
+            Modify_ApiCall(ref _callUpdateGroup);
+            Modify_UpdateGroupApiCall(ref _callUpdateGroup);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3470,6 +3809,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_DeleteHubApiCall(ref gaxgrpc::ApiCall<DeleteHubRequest, lro::Operation> call);
 
         partial void Modify_ListHubSpokesApiCall(ref gaxgrpc::ApiCall<ListHubSpokesRequest, ListHubSpokesResponse> call);
+
+        partial void Modify_QueryHubStatusApiCall(ref gaxgrpc::ApiCall<QueryHubStatusRequest, QueryHubStatusResponse> call);
 
         partial void Modify_ListSpokesApiCall(ref gaxgrpc::ApiCall<ListSpokesRequest, ListSpokesResponse> call);
 
@@ -3497,6 +3838,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
 
         partial void Modify_ListGroupsApiCall(ref gaxgrpc::ApiCall<ListGroupsRequest, ListGroupsResponse> call);
 
+        partial void Modify_UpdateGroupApiCall(ref gaxgrpc::ApiCall<UpdateGroupRequest, lro::Operation> call);
+
         partial void OnConstruction(HubService.HubServiceClient grpcClient, HubServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC HubService client</summary>
@@ -3519,6 +3862,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_DeleteHubRequest(ref DeleteHubRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListHubSpokesRequest(ref ListHubSpokesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryHubStatusRequest(ref QueryHubStatusRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSpokesRequest(ref ListSpokesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3545,6 +3890,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_GetGroupRequest(ref GetGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListGroupsRequest(ref ListGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateGroupRequest(ref UpdateGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the Network Connectivity Center hubs associated with a given project.
@@ -3703,6 +4050,32 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             Modify_ListHubSpokesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListHubSpokesRequest, ListHubSpokesResponse, Spoke>(_callListHubSpokes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Query the Private Service Connect propagation status of a Network
+        /// Connectivity Center hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="HubStatusEntry"/> resources.</returns>
+        public override gax::PagedEnumerable<QueryHubStatusResponse, HubStatusEntry> QueryHubStatus(QueryHubStatusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryHubStatusRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryHubStatusRequest, QueryHubStatusResponse, HubStatusEntry>(_callQueryHubStatus, request, callSettings);
+        }
+
+        /// <summary>
+        /// Query the Private Service Connect propagation status of a Network
+        /// Connectivity Center hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="HubStatusEntry"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<QueryHubStatusResponse, HubStatusEntry> QueryHubStatusAsync(QueryHubStatusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryHubStatusRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryHubStatusRequest, QueryHubStatusResponse, HubStatusEntry>(_callQueryHubStatus, request, callSettings);
         }
 
         /// <summary>
@@ -3947,7 +4320,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists routes in a given project.
+        /// Lists routes in a given route table.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3959,7 +4332,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists routes in a given project.
+        /// Lists routes in a given route table.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3971,7 +4344,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists route tables in a given project.
+        /// Lists route tables in a given hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3983,7 +4356,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists route tables in a given project.
+        /// Lists route tables in a given hub.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4041,6 +4414,33 @@ namespace Google.Cloud.NetworkConnectivity.V1
             Modify_ListGroupsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGroupsRequest, ListGroupsResponse, Group>(_callListGroups, request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>UpdateGroup</c>.</summary>
+        public override lro::OperationsClient UpdateGroupOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a Network Connectivity Center group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Group, OperationMetadata> UpdateGroup(UpdateGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<Group, OperationMetadata>(_callUpdateGroup.Sync(request, callSettings), UpdateGroupOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a Network Connectivity Center group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Group, OperationMetadata>> UpdateGroupAsync(UpdateGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGroupRequest(ref request, ref callSettings);
+            return new lro::Operation<Group, OperationMetadata>(await _callUpdateGroup.Async(request, callSettings).ConfigureAwait(false), UpdateGroupOperationsClient);
+        }
     }
 
     public partial class ListHubsRequest : gaxgrpc::IPageRequest
@@ -4048,6 +4448,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
     }
 
     public partial class ListHubSpokesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class QueryHubStatusRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4079,6 +4483,14 @@ namespace Google.Cloud.NetworkConnectivity.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Spoke> GetEnumerator() => Spokes.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class QueryHubStatusResponse : gaxgrpc::IPageResponse<HubStatusEntry>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<HubStatusEntry> GetEnumerator() => HubStatusEntries.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
