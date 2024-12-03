@@ -41,7 +41,7 @@ namespace Google.Cloud.Compute.V1.EnumConstantGenerator
             NestedContainers = messages.Select(message => new EnumContainer(message, message.EnumTypes, message.NestedTypes)).ToList();
         }
 
-        public void Generate(TextWriter writer, string indentation, System.Type computeEnumHelpersType)
+        public void Generate(TextWriter writer, string indentation)
         {
             if (Descriptor is object)
             {
@@ -60,29 +60,29 @@ namespace Google.Cloud.Compute.V1.EnumConstantGenerator
             foreach (var enumDescriptor in Enums.OrderBy(d => d.ClrType.Name, StringComparer.Ordinal))
             {
                 MaybeWriteLineBetweenElements(writer, ref first);
-                GenerateEnumConstants(writer, enumDescriptor, moreIndentation, computeEnumHelpersType);
+                GenerateEnumConstants(writer, enumDescriptor, moreIndentation);
             }
             foreach (var container in NestedContainers.Where(nc => nc.ShouldGenerate).OrderBy(nc => nc.Descriptor.Name, StringComparer.Ordinal))
             {
                 MaybeWriteLineBetweenElements(writer, ref first);
-                container.Generate(writer, moreIndentation, computeEnumHelpersType);
+                container.Generate(writer, moreIndentation);
             }
             writer.WriteLine($"{indentation}}}");
         }
 
-        private static void GenerateEnumConstants(TextWriter writer, EnumDescriptor descriptor, string indentation, System.Type computeEnumHelpersType)
+        private static void GenerateEnumConstants(TextWriter writer, EnumDescriptor descriptor, string indentation)
         {
             var enumType = descriptor.ClrType;
             writer.WriteLine($"{indentation}/// <summary>Constants for wire representations of the <see cref=\"global::{enumType.FullName.Replace("+", ".")}\"/> enum.</summary>");
             writer.WriteLine($"{indentation}public static class {descriptor.ClrType.Name}");
             writer.WriteLine($"{indentation}{{");
             string moreIndentation = indentation + "    ";
-            var formatMethod = computeEnumHelpersType.GetMethod("Format").MakeGenericMethod(enumType);
             bool first = true;
             foreach (var field in enumType.GetFields(BindingFlags.Static | BindingFlags.Public))
             {
                 MaybeWriteLineBetweenElements(writer, ref first);
-                var wireValue = formatMethod.Invoke(null, new object[] { field.GetValue(null) });
+                // This is effectively what ComputeEnumHelpers.Format does (with lots of caching etc).
+                var wireValue = field.GetCustomAttributes<OriginalNameAttribute>().Single().Name;
                 // TODO: It would be nice to generate the comment for the enum value as well, but that's quite tricky.
                 writer.WriteLine($"{moreIndentation}/// <summary>Wire representation of <see cref=\"global::{enumType.FullName.Replace("+", ".")}.{field.Name}\"/>.</summary>");
                 string maybeUnderscore = NeedsUnderscore(field.Name) ? "_" : "";

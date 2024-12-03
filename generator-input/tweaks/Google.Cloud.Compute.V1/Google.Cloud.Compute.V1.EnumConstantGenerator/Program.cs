@@ -55,7 +55,7 @@ $@"// Copyright {DateTime.UtcNow.Year} Google LLC
 
 namespace Google.Cloud.Compute.V1
 {{");
-            rootContainer.Generate(writer, "    ", asm.GetType("Google.Cloud.Compute.V1.ComputeEnumHelpers"));
+            rootContainer.Generate(writer, "    ");
             writer.WriteLine("}");
             return 0;
         }

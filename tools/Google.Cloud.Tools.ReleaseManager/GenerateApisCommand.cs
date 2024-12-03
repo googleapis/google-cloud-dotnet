@@ -35,6 +35,7 @@ internal class GenerateApisCommand : ICommand
     private const string GapicGeneratorEnvironmentVariable = "GAPIC_PLUGIN";
     private const string GrpcGeneratorEnvironmentVariable = "GRPC_PLUGIN";
     private const string GoogleApisDirectoryEnvironmentVariable = "GOOGLEAPIS";
+    private const string GeneratorOutputDirectoryEnvironmentVariable = "GENERATOR_OUTPUT_DIR";
     private const string TempDir = "tmp";
 
     private readonly string protocBinary;
@@ -42,6 +43,7 @@ internal class GenerateApisCommand : ICommand
     private readonly string grpcGeneratorBinary;
     private readonly string googleApisDirectory;
     private readonly string protobufToolsRootDirectory;
+    private readonly string generatorOutputDirectory;
 
     public string Description => "Generates APIs (used by generateapis.sh)";
 
@@ -57,6 +59,7 @@ internal class GenerateApisCommand : ICommand
         grpcGeneratorBinary = Environment.GetEnvironmentVariable(GrpcGeneratorEnvironmentVariable);
         googleApisDirectory = Environment.GetEnvironmentVariable(GoogleApisDirectoryEnvironmentVariable);
         protobufToolsRootDirectory = Environment.GetEnvironmentVariable(ProtobufToolsRootEnvironmentVariable);
+        generatorOutputDirectory = Environment.GetEnvironmentVariable(GeneratorOutputDirectoryEnvironmentVariable);
     }
 
     public int Execute(string[] args)
@@ -107,7 +110,7 @@ internal class GenerateApisCommand : ICommand
 
     private void Generate(ApiMetadata api)
     {
-        var layout = DirectoryLayout.ForApi(api.Id);
+        var layout = DirectoryLayout.ForApi(api.Id, generatorOutputDirectory);
         Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Generating {api.Id}");
         MaybeRunScript("pregeneration.sh");
         switch (api.Generator)
@@ -172,7 +175,7 @@ internal class GenerateApisCommand : ICommand
 
     private void GenerateGapicApi(ApiMetadata api)
     {
-        var layout = DirectoryLayout.ForApi(api.Id);
+        var layout = DirectoryLayout.ForApi(api.Id, generatorOutputDirectory);
         string productionDirectory = Path.Combine(layout.SourceDirectory, api.Id);
         Directory.CreateDirectory(productionDirectory);
         DeleteGeneratedFiles(productionDirectory);
@@ -260,7 +263,7 @@ internal class GenerateApisCommand : ICommand
 
     private void GenerateProtoApi(ApiMetadata api)
     {
-        var layout = DirectoryLayout.ForApi(api.Id);
+        var layout = DirectoryLayout.ForApi(api.Id, generatorOutputDirectory);
         string productionDirectory = Path.Combine(layout.SourceDirectory, api.Id);
         Directory.CreateDirectory(productionDirectory);
         DeleteGeneratedFiles(productionDirectory);
@@ -316,6 +319,7 @@ internal class GenerateApisCommand : ICommand
         ValidateFile(grpcGeneratorBinary, "gRPC generator");
         ValidateDirectory(googleApisDirectory, "googleapis");
         ValidateDirectory(protobufToolsRootDirectory, "protobuf tools root");
+        ValidateDirectory(generatorOutputDirectory, "generator output");
         // This will throw if we can't detect bash.
         GetBashExecutable();
 
@@ -355,6 +359,7 @@ internal class GenerateApisCommand : ICommand
     private int ExecuteForUnconfigured(string[] args)
     {
         // TODO: Maybe have another way of specifying this, eventually.
+        // (Potentially just use generatorOutputDirectory.)
         var root = DirectoryLayout.DetermineRootDirectory();
 
         var outputRoot = Path.Combine(root, "unconfigured-generation");

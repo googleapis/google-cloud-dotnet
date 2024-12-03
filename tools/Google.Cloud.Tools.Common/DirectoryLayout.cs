@@ -57,18 +57,19 @@ namespace Google.Cloud.Tools.Common
                 );
         }
 
-        public static DirectoryLayout ForApi(string api)
-        {
-            var root = DetermineRootDirectory();
-            return new DirectoryLayout(
-                source: Path.Combine(root, "apis", api),
-                docsOutput: Path.Combine(root, "docs", "output", api),
-                metadata: Path.Combine(root, "docs", "output", api, "obj", "api"),
-                snippetOutput: Path.Combine(root, "docs", "output", api, "obj", "snippets"),
-                docsSource: Path.Combine(root, "apis", api, "docs"),
-                tweaks: Path.Combine(root, "generator-input", "tweaks", api)
+        public static DirectoryLayout ForApi(string api, string outputRoot) =>
+            new DirectoryLayout(
+                source: Path.Combine(outputRoot, "apis", api),
+                docsOutput: Path.Combine(outputRoot, "docs", "output", api),
+                metadata: Path.Combine(outputRoot, "docs", "output", api, "obj", "api"),
+                snippetOutput: Path.Combine(outputRoot, "docs", "output", api, "obj", "snippets"),
+                docsSource: Path.Combine(outputRoot, "apis", api, "docs"),
+                // TODO: Maybe accept the root directory for inputs as another parameter?
+                // We don't need to do this at the moment.
+                tweaks: Path.Combine(DetermineRootDirectory(), "generator-input", "tweaks", api)
                 );
-        }
+
+        public static DirectoryLayout ForApi(string api) => ForApi(api, DetermineRootDirectory());
 
         /// <summary>
         /// Find the root directory of the project. We expect this to contain "apis" and "LICENSE".
