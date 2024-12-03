@@ -1058,6 +1058,34 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             get => string.IsNullOrEmpty(Name) ? null : gcbrv::ReservationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="PrimaryLocation"/> resource name property.
+        /// </summary>
+        public gagr::LocationName PrimaryLocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(PrimaryLocation) ? null : gagr::LocationName.Parse(PrimaryLocation, allowUnparsed: true);
+            set => PrimaryLocation = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="SecondaryLocation"/> resource name property.
+        /// </summary>
+        public gagr::LocationName SecondaryLocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(SecondaryLocation) ? null : gagr::LocationName.Parse(SecondaryLocation, allowUnparsed: true);
+            set => SecondaryLocation = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="OriginalPrimaryLocation"/> resource name
+        /// property.
+        /// </summary>
+        public gagr::LocationName OriginalPrimaryLocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(OriginalPrimaryLocation) ? null : gagr::LocationName.Parse(OriginalPrimaryLocation, allowUnparsed: true);
+            set => OriginalPrimaryLocation = value?.ToString() ?? "";
+        }
     }
 
     public partial class CapacityCommitment
@@ -1109,6 +1137,18 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     }
 
     public partial class DeleteReservationRequest
+    {
+        /// <summary>
+        /// <see cref="gcbrv::ReservationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbrv::ReservationName ReservationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbrv::ReservationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FailoverReservationRequest
     {
         /// <summary>
         /// <see cref="gcbrv::ReservationName"/>-typed view over the <see cref="Name"/> resource name property.

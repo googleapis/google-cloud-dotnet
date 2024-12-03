@@ -46,6 +46,12 @@
                 "DeleteReservationAsync"
               ]
             },
+            "FailoverReservation": {
+              "methods": [
+                "FailoverReservation",
+                "FailoverReservationAsync"
+              ]
+            },
             "GetBiReservation": {
               "methods": [
                 "GetBiReservation",

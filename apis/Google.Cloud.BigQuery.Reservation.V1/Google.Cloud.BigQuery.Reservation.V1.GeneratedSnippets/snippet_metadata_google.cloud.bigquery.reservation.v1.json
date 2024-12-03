@@ -1420,6 +1420,103 @@
       ]
     },
     {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_FailoverReservation_sync",
+      "title": "FailoverReservationRequestObject",
+      "description": "Snippet for FailoverReservation",
+      "file": "ReservationServiceClient.FailoverReservationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FailoverReservation",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.FailoverReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.FailoverReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "FailoverReservation",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.FailoverReservation",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_FailoverReservation_async",
+      "title": "FailoverReservationRequestObjectAsync",
+      "description": "Snippet for FailoverReservationAsync",
+      "file": "ReservationServiceClient.FailoverReservationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FailoverReservationAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.FailoverReservationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.FailoverReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "FailoverReservation",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.FailoverReservation",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "bigqueryreservation_v1_generated_ReservationService_CreateCapacityCommitment_sync",
       "title": "CreateCapacityCommitmentRequestObject",
       "description": "Snippet for CreateCapacityCommitment",

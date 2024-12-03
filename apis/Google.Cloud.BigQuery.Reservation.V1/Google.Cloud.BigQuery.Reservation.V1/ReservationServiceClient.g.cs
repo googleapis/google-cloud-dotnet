@@ -53,6 +53,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             GetReservationSettings = existing.GetReservationSettings;
             DeleteReservationSettings = existing.DeleteReservationSettings;
             UpdateReservationSettings = existing.UpdateReservationSettings;
+            FailoverReservationSettings = existing.FailoverReservationSettings;
             CreateCapacityCommitmentSettings = existing.CreateCapacityCommitmentSettings;
             ListCapacityCommitmentsSettings = existing.ListCapacityCommitmentsSettings;
             GetCapacityCommitmentSettings = existing.GetCapacityCommitmentSettings;
@@ -163,6 +164,19 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.FailoverReservation</c> and <c>ReservationServiceClient.FailoverReservationAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FailoverReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1226,6 +1240,45 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Reservation> UpdateReservationAsync(Reservation reservation, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateReservationAsync(reservation, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Reservation FailoverReservation(FailoverReservationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Reservation> FailoverReservationAsync(FailoverReservationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Reservation> FailoverReservationAsync(FailoverReservationRequest request, st::CancellationToken cancellationToken) =>
+            FailoverReservationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new capacity commitment resource.
@@ -4435,6 +4488,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         private readonly gaxgrpc::ApiCall<UpdateReservationRequest, Reservation> _callUpdateReservation;
 
+        private readonly gaxgrpc::ApiCall<FailoverReservationRequest, Reservation> _callFailoverReservation;
+
         private readonly gaxgrpc::ApiCall<CreateCapacityCommitmentRequest, CapacityCommitment> _callCreateCapacityCommitment;
 
         private readonly gaxgrpc::ApiCall<ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse> _callListCapacityCommitments;
@@ -4497,6 +4552,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             _callUpdateReservation = clientHelper.BuildApiCall<UpdateReservationRequest, Reservation>("UpdateReservation", grpcClient.UpdateReservationAsync, grpcClient.UpdateReservation, effectiveSettings.UpdateReservationSettings).WithGoogleRequestParam("reservation.name", request => request.Reservation?.Name);
             Modify_ApiCall(ref _callUpdateReservation);
             Modify_UpdateReservationApiCall(ref _callUpdateReservation);
+            _callFailoverReservation = clientHelper.BuildApiCall<FailoverReservationRequest, Reservation>("FailoverReservation", grpcClient.FailoverReservationAsync, grpcClient.FailoverReservation, effectiveSettings.FailoverReservationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFailoverReservation);
+            Modify_FailoverReservationApiCall(ref _callFailoverReservation);
             _callCreateCapacityCommitment = clientHelper.BuildApiCall<CreateCapacityCommitmentRequest, CapacityCommitment>("CreateCapacityCommitment", grpcClient.CreateCapacityCommitmentAsync, grpcClient.CreateCapacityCommitment, effectiveSettings.CreateCapacityCommitmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCapacityCommitment);
             Modify_CreateCapacityCommitmentApiCall(ref _callCreateCapacityCommitment);
@@ -4562,6 +4620,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         partial void Modify_UpdateReservationApiCall(ref gaxgrpc::ApiCall<UpdateReservationRequest, Reservation> call);
 
+        partial void Modify_FailoverReservationApiCall(ref gaxgrpc::ApiCall<FailoverReservationRequest, Reservation> call);
+
         partial void Modify_CreateCapacityCommitmentApiCall(ref gaxgrpc::ApiCall<CreateCapacityCommitmentRequest, CapacityCommitment> call);
 
         partial void Modify_ListCapacityCommitmentsApiCall(ref gaxgrpc::ApiCall<ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse> call);
@@ -4608,6 +4668,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         partial void Modify_DeleteReservationRequest(ref DeleteReservationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateReservationRequest(ref UpdateReservationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FailoverReservationRequest(ref FailoverReservationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateCapacityCommitmentRequest(ref CreateCapacityCommitmentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4763,6 +4825,38 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             Modify_UpdateReservationRequest(ref request, ref callSettings);
             return _callUpdateReservation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Reservation FailoverReservation(FailoverReservationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FailoverReservationRequest(ref request, ref callSettings);
+            return _callFailoverReservation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Reservation> FailoverReservationAsync(FailoverReservationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FailoverReservationRequest(ref request, ref callSettings);
+            return _callFailoverReservation.Async(request, callSettings);
         }
 
         /// <summary>
