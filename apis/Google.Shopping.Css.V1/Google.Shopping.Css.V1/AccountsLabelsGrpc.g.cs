@@ -121,7 +121,7 @@ namespace Google.Shopping.Css.V1 {
     public abstract partial class AccountLabelsServiceBase
     {
       /// <summary>
-      /// Lists the labels assigned to an account.
+      /// Lists the labels owned by an account.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -198,7 +198,7 @@ namespace Google.Shopping.Css.V1 {
       }
 
       /// <summary>
-      /// Lists the labels assigned to an account.
+      /// Lists the labels owned by an account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -211,7 +211,7 @@ namespace Google.Shopping.Css.V1 {
         return ListAccountLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the labels assigned to an account.
+      /// Lists the labels owned by an account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -222,7 +222,7 @@ namespace Google.Shopping.Css.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAccountLabels, null, options, request);
       }
       /// <summary>
-      /// Lists the labels assigned to an account.
+      /// Lists the labels owned by an account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -235,7 +235,7 @@ namespace Google.Shopping.Css.V1 {
         return ListAccountLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the labels assigned to an account.
+      /// Lists the labels owned by an account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
