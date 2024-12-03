@@ -27,7 +27,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
             "Cixnb29nbGUvY2xvdWQvbWFuYWdlZGthZmthL3YxL3Jlc291cmNlcy5wcm90",
             "bxIcZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MRofZ29vZ2xlL2FwaS9m",
             "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLyBQoHQ2x1c3Rl",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLYBgoHQ2x1c3Rl",
             "chJCCgpnY3BfY29uZmlnGAkgASgLMicuZ29vZ2xlLmNsb3VkLm1hbmFnZWRr",
             "YWZrYS52MS5HY3BDb25maWdCA+BBAkgAEhEKBG5hbWUYASABKAlCA+BBCBI0",
             "CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
@@ -38,65 +38,67 @@ namespace Google.Cloud.ManagedKafka.V1 {
             "ZGthZmthLnYxLkNhcGFjaXR5Q29uZmlnQgPgQQISTAoQcmViYWxhbmNlX2Nv",
             "bmZpZxgIIAEoCzItLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuUmVi",
             "YWxhbmNlQ29uZmlnQgPgQQESPwoFc3RhdGUYCiABKA4yKy5nb29nbGUuY2xv",
-            "dWQubWFuYWdlZGthZmthLnYxLkNsdXN0ZXIuU3RhdGVCA+BBAxotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIkYKBVN0",
-            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIKCgZB",
-            "Q1RJVkUQAhIMCghERUxFVElORxADOnfqQXQKI21hbmFnZWRrYWZrYS5nb29n",
-            "bGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0ZXJ9KghjbHVzdGVyczIH",
-            "Y2x1c3RlckIRCg9wbGF0Zm9ybV9jb25maWciRAoOQ2FwYWNpdHlDb25maWcS",
-            "FwoKdmNwdV9jb3VudBgBIAEoA0ID4EECEhkKDG1lbW9yeV9ieXRlcxgCIAEo",
-            "A0ID4EECIqgBCg9SZWJhbGFuY2VDb25maWcSRQoEbW9kZRgBIAEoDjIyLmdv",
-            "b2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuUmViYWxhbmNlQ29uZmlnLk1v",
-            "ZGVCA+BBASJOCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIQCgxOT19S",
-            "RUJBTEFOQ0UQARIeChpBVVRPX1JFQkFMQU5DRV9PTl9TQ0FMRV9VUBACIiQK",
-            "DU5ldHdvcmtDb25maWcSEwoGc3VibmV0GAIgASgJQgPgQQIiWQoMQWNjZXNz",
-            "Q29uZmlnEkkKD25ldHdvcmtfY29uZmlncxgBIAMoCzIrLmdvb2dsZS5jbG91",
-            "ZC5tYW5hZ2Vka2Fma2EudjEuTmV0d29ya0NvbmZpZ0ID4EECIpIBCglHY3BD",
-            "b25maWcSRgoNYWNjZXNzX2NvbmZpZxgDIAEoCzIqLmdvb2dsZS5jbG91ZC5t",
-            "YW5hZ2Vka2Fma2EudjEuQWNjZXNzQ29uZmlnQgPgQQISPQoHa21zX2tleRgC",
-            "IAEoCUIs4EEB4EEF+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9Dcnlw",
-            "dG9LZXki1wIKBVRvcGljEhEKBG5hbWUYASABKAlCA+BBCBIcCg9wYXJ0aXRp",
-            "b25fY291bnQYAiABKAVCA+BBAhIiChJyZXBsaWNhdGlvbl9mYWN0b3IYAyAB",
-            "KAVCBuBBAuBBBRJGCgdjb25maWdzGAQgAygLMjAuZ29vZ2xlLmNsb3VkLm1h",
-            "bmFnZWRrYWZrYS52MS5Ub3BpYy5Db25maWdzRW50cnlCA+BBARouCgxDb25m",
-            "aWdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqAAepB",
-            "fQohbWFuYWdlZGthZmthLmdvb2dsZWFwaXMuY29tL1RvcGljEklwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2Ns",
-            "dXN0ZXJ9L3RvcGljcy97dG9waWN9KgZ0b3BpY3MyBXRvcGljIuEBChVDb25z",
-            "dW1lclRvcGljTWV0YWRhdGESXAoKcGFydGl0aW9ucxgBIAMoCzJDLmdvb2ds",
-            "ZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuQ29uc3VtZXJUb3BpY01ldGFkYXRh",
-            "LlBhcnRpdGlvbnNFbnRyeUID4EEBGmoKD1BhcnRpdGlvbnNFbnRyeRILCgNr",
-            "ZXkYASABKAUSRgoFdmFsdWUYAiABKAsyNy5nb29nbGUuY2xvdWQubWFuYWdl",
-            "ZGthZmthLnYxLkNvbnN1bWVyUGFydGl0aW9uTWV0YWRhdGE6AjgBIkcKGUNv",
-            "bnN1bWVyUGFydGl0aW9uTWV0YWRhdGESEwoGb2Zmc2V0GAEgASgDQgPgQQIS",
-            "FQoIbWV0YWRhdGEYAiABKAlCA+BBASKBAwoNQ29uc3VtZXJHcm91cBIRCgRu",
-            "YW1lGAEgASgJQgPgQQgSTAoGdG9waWNzGAIgAygLMjcuZ29vZ2xlLmNsb3Vk",
-            "Lm1hbmFnZWRrYWZrYS52MS5Db25zdW1lckdyb3VwLlRvcGljc0VudHJ5QgPg",
-            "QQEaYgoLVG9waWNzRW50cnkSCwoDa2V5GAEgASgJEkIKBXZhbHVlGAIgASgL",
-            "MjMuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5Db25zdW1lclRvcGlj",
-            "TWV0YWRhdGE6AjgBOqoB6kGmAQopbWFuYWdlZGthZmthLmdvb2dsZWFwaXMu",
-            "Y29tL0NvbnN1bWVyR3JvdXASWnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn0vY29uc3VtZXJHcm91",
-            "cHMve2NvbnN1bWVyX2dyb3VwfSoOY29uc3VtZXJHcm91cHMyDWNvbnN1bWVy",
-            "R3JvdXAigAIKEU9wZXJhdGlvbk1ldGFkYXRhEjQKC2NyZWF0ZV90aW1lGAEg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90",
-            "aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhMK",
-            "BnRhcmdldBgDIAEoCUID4EEDEhEKBHZlcmIYBCABKAlCA+BBAxIbCg5zdGF0",
-            "dXNfbWVzc2FnZRgFIAEoCUID4EEDEiMKFnJlcXVlc3RlZF9jYW5jZWxsYXRp",
-            "b24YBiABKAhCA+BBAxIYCgthcGlfdmVyc2lvbhgHIAEoCUID4EEDQtUCCiBj",
-            "b20uZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MUIOUmVzb3VyY2VzUHJv",
-            "dG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby9tYW5hZ2Vka2Fma2EvYXBpdjEv",
-            "bWFuYWdlZGthZmthcGI7bWFuYWdlZGthZmthcGKqAhxHb29nbGUuQ2xvdWQu",
-            "TWFuYWdlZEthZmthLlYxygIcR29vZ2xlXENsb3VkXE1hbmFnZWRLYWZrYVxW",
-            "MeoCH0dvb2dsZTo6Q2xvdWQ6Ok1hbmFnZWRLYWZrYTo6VjHqQXgKIWNsb3Vk",
-            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJTcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30v",
-            "Y3J5cHRvS2V5cy97Y3J5cHRvX2tleX1iBnByb3RvMw=="));
+            "dWQubWFuYWdlZGthZmthLnYxLkNsdXN0ZXIuU3RhdGVCA+BBAxIfCg1zYXRp",
+            "c2ZpZXNfcHppGAsgASgIQgPgQQNIAYgBARIfCg1zYXRpc2ZpZXNfcHpzGAwg",
+            "ASgIQgPgQQNIAogBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBIkYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJVkUQAhIMCghERUxFVElORxADOnfq",
+            "QXQKI21hbmFnZWRrYWZrYS5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3RlcnMv",
+            "e2NsdXN0ZXJ9KghjbHVzdGVyczIHY2x1c3RlckIRCg9wbGF0Zm9ybV9jb25m",
+            "aWdCEAoOX3NhdGlzZmllc19wemlCEAoOX3NhdGlzZmllc19wenMiRAoOQ2Fw",
+            "YWNpdHlDb25maWcSFwoKdmNwdV9jb3VudBgBIAEoA0ID4EECEhkKDG1lbW9y",
+            "eV9ieXRlcxgCIAEoA0ID4EECIqgBCg9SZWJhbGFuY2VDb25maWcSRQoEbW9k",
+            "ZRgBIAEoDjIyLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuUmViYWxh",
+            "bmNlQ29uZmlnLk1vZGVCA+BBASJOCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJ",
+            "RUQQABIQCgxOT19SRUJBTEFOQ0UQARIeChpBVVRPX1JFQkFMQU5DRV9PTl9T",
+            "Q0FMRV9VUBACIiQKDU5ldHdvcmtDb25maWcSEwoGc3VibmV0GAIgASgJQgPg",
+            "QQIiWQoMQWNjZXNzQ29uZmlnEkkKD25ldHdvcmtfY29uZmlncxgBIAMoCzIr",
+            "Lmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuTmV0d29ya0NvbmZpZ0ID",
+            "4EECIpIBCglHY3BDb25maWcSRgoNYWNjZXNzX2NvbmZpZxgDIAEoCzIqLmdv",
+            "b2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuQWNjZXNzQ29uZmlnQgPgQQIS",
+            "PQoHa21zX2tleRgCIAEoCUIs4EEB4EEF+kEjCiFjbG91ZGttcy5nb29nbGVh",
+            "cGlzLmNvbS9DcnlwdG9LZXki1wIKBVRvcGljEhEKBG5hbWUYASABKAlCA+BB",
+            "CBIcCg9wYXJ0aXRpb25fY291bnQYAiABKAVCA+BBAhIiChJyZXBsaWNhdGlv",
+            "bl9mYWN0b3IYAyABKAVCBuBBAuBBBRJGCgdjb25maWdzGAQgAygLMjAuZ29v",
+            "Z2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5Ub3BpYy5Db25maWdzRW50cnlC",
+            "A+BBARouCgxDb25maWdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ATqAAepBfQohbWFuYWdlZGthZmthLmdvb2dsZWFwaXMuY29tL1Rv",
+            "cGljEklwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "Y2x1c3RlcnMve2NsdXN0ZXJ9L3RvcGljcy97dG9waWN9KgZ0b3BpY3MyBXRv",
+            "cGljIuEBChVDb25zdW1lclRvcGljTWV0YWRhdGESXAoKcGFydGl0aW9ucxgB",
+            "IAMoCzJDLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuQ29uc3VtZXJU",
+            "b3BpY01ldGFkYXRhLlBhcnRpdGlvbnNFbnRyeUID4EEBGmoKD1BhcnRpdGlv",
+            "bnNFbnRyeRILCgNrZXkYASABKAUSRgoFdmFsdWUYAiABKAsyNy5nb29nbGUu",
+            "Y2xvdWQubWFuYWdlZGthZmthLnYxLkNvbnN1bWVyUGFydGl0aW9uTWV0YWRh",
+            "dGE6AjgBIkcKGUNvbnN1bWVyUGFydGl0aW9uTWV0YWRhdGESEwoGb2Zmc2V0",
+            "GAEgASgDQgPgQQISFQoIbWV0YWRhdGEYAiABKAlCA+BBASKBAwoNQ29uc3Vt",
+            "ZXJHcm91cBIRCgRuYW1lGAEgASgJQgPgQQgSTAoGdG9waWNzGAIgAygLMjcu",
+            "Z29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5Db25zdW1lckdyb3VwLlRv",
+            "cGljc0VudHJ5QgPgQQEaYgoLVG9waWNzRW50cnkSCwoDa2V5GAEgASgJEkIK",
+            "BXZhbHVlGAIgASgLMjMuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5D",
+            "b25zdW1lclRvcGljTWV0YWRhdGE6AjgBOqoB6kGmAQopbWFuYWdlZGthZmth",
+            "Lmdvb2dsZWFwaXMuY29tL0NvbnN1bWVyR3JvdXASWnByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn0v",
+            "Y29uc3VtZXJHcm91cHMve2NvbnN1bWVyX2dyb3VwfSoOY29uc3VtZXJHcm91",
+            "cHMyDWNvbnN1bWVyR3JvdXAigAIKEU9wZXJhdGlvbk1ldGFkYXRhEjQKC2Ny",
+            "ZWF0ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEjEKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEhMKBnRhcmdldBgDIAEoCUID4EEDEhEKBHZlcmIYBCABKAlC",
+            "A+BBAxIbCg5zdGF0dXNfbWVzc2FnZRgFIAEoCUID4EEDEiMKFnJlcXVlc3Rl",
+            "ZF9jYW5jZWxsYXRpb24YBiABKAhCA+BBAxIYCgthcGlfdmVyc2lvbhgHIAEo",
+            "CUID4EEDQtUCCiBjb20uZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MUIO",
+            "UmVzb3VyY2VzUHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby9tYW5hZ2Vk",
+            "a2Fma2EvYXBpdjEvbWFuYWdlZGthZmthcGI7bWFuYWdlZGthZmthcGKqAhxH",
+            "b29nbGUuQ2xvdWQuTWFuYWdlZEthZmthLlYxygIcR29vZ2xlXENsb3VkXE1h",
+            "bmFnZWRLYWZrYVxWMeoCH0dvb2dsZTo6Q2xvdWQ6Ok1hbmFnZWRLYWZrYTo6",
+            "VjHqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJTcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdz",
+            "L3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.Cluster), global::Google.Cloud.ManagedKafka.V1.Cluster.Parser, new[]{ "GcpConfig", "Name", "CreateTime", "UpdateTime", "Labels", "CapacityConfig", "RebalanceConfig", "State" }, new[]{ "PlatformConfig" }, new[]{ typeof(global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.Cluster), global::Google.Cloud.ManagedKafka.V1.Cluster.Parser, new[]{ "GcpConfig", "Name", "CreateTime", "UpdateTime", "Labels", "CapacityConfig", "RebalanceConfig", "State", "SatisfiesPzi", "SatisfiesPzs" }, new[]{ "PlatformConfig", "SatisfiesPzi", "SatisfiesPzs" }, new[]{ typeof(global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.CapacityConfig), global::Google.Cloud.ManagedKafka.V1.CapacityConfig.Parser, new[]{ "VcpuCount", "MemoryBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.RebalanceConfig), global::Google.Cloud.ManagedKafka.V1.RebalanceConfig.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.ManagedKafka.V1.RebalanceConfig.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.NetworkConfig), global::Google.Cloud.ManagedKafka.V1.NetworkConfig.Parser, new[]{ "Subnet" }, null, null, null, null),
@@ -124,6 +126,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
   {
     private static readonly pb::MessageParser<Cluster> _parser = new pb::MessageParser<Cluster>(() => new Cluster());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Cluster> Parser { get { return _parser; } }
@@ -151,6 +154,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Cluster(Cluster other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
@@ -158,6 +162,8 @@ namespace Google.Cloud.ManagedKafka.V1 {
       capacityConfig_ = other.capacityConfig_ != null ? other.capacityConfig_.Clone() : null;
       rebalanceConfig_ = other.rebalanceConfig_ != null ? other.rebalanceConfig_.Clone() : null;
       state_ = other.state_;
+      satisfiesPzi_ = other.satisfiesPzi_;
+      satisfiesPzs_ = other.satisfiesPzs_;
       switch (other.PlatformConfigCase) {
         case PlatformConfigOneofCase.GcpConfig:
           GcpConfig = other.GcpConfig.Clone();
@@ -294,6 +300,66 @@ namespace Google.Cloud.ManagedKafka.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 11;
+    private readonly static bool SatisfiesPziDefaultValue = false;
+
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { if ((_hasBits0 & 1) != 0) { return satisfiesPzi_; } else { return SatisfiesPziDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        satisfiesPzi_ = value;
+      }
+    }
+    /// <summary>Gets whether the "satisfies_pzi" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSatisfiesPzi {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "satisfies_pzi" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSatisfiesPzi() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 12;
+    private readonly static bool SatisfiesPzsDefaultValue = false;
+
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { if ((_hasBits0 & 2) != 0) { return satisfiesPzs_; } else { return SatisfiesPzsDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        satisfiesPzs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "satisfies_pzs" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSatisfiesPzs {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "satisfies_pzs" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSatisfiesPzs() {
+      _hasBits0 &= ~2;
+    }
+
     private object platformConfig_;
     /// <summary>Enum of possible cases for the "platform_config" oneof.</summary>
     public enum PlatformConfigOneofCase {
@@ -337,6 +403,8 @@ namespace Google.Cloud.ManagedKafka.V1 {
       if (!object.Equals(CapacityConfig, other.CapacityConfig)) return false;
       if (!object.Equals(RebalanceConfig, other.RebalanceConfig)) return false;
       if (State != other.State) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (PlatformConfigCase != other.PlatformConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -353,6 +421,8 @@ namespace Google.Cloud.ManagedKafka.V1 {
       if (capacityConfig_ != null) hash ^= CapacityConfig.GetHashCode();
       if (rebalanceConfig_ != null) hash ^= RebalanceConfig.GetHashCode();
       if (State != global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (HasSatisfiesPzi) hash ^= SatisfiesPzi.GetHashCode();
+      if (HasSatisfiesPzs) hash ^= SatisfiesPzs.GetHashCode();
       hash ^= (int) platformConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -401,6 +471,14 @@ namespace Google.Cloud.ManagedKafka.V1 {
         output.WriteRawTag(80);
         output.WriteEnum((int) State);
       }
+      if (HasSatisfiesPzi) {
+        output.WriteRawTag(88);
+        output.WriteBool(SatisfiesPzi);
+      }
+      if (HasSatisfiesPzs) {
+        output.WriteRawTag(96);
+        output.WriteBool(SatisfiesPzs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -440,6 +518,14 @@ namespace Google.Cloud.ManagedKafka.V1 {
         output.WriteRawTag(80);
         output.WriteEnum((int) State);
       }
+      if (HasSatisfiesPzi) {
+        output.WriteRawTag(88);
+        output.WriteBool(SatisfiesPzi);
+      }
+      if (HasSatisfiesPzs) {
+        output.WriteRawTag(96);
+        output.WriteBool(SatisfiesPzs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -471,6 +557,12 @@ namespace Google.Cloud.ManagedKafka.V1 {
       }
       if (State != global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (HasSatisfiesPzi) {
+        size += 1 + 1;
+      }
+      if (HasSatisfiesPzs) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -514,6 +606,12 @@ namespace Google.Cloud.ManagedKafka.V1 {
       }
       if (other.State != global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.HasSatisfiesPzi) {
+        SatisfiesPzi = other.SatisfiesPzi;
+      }
+      if (other.HasSatisfiesPzs) {
+        SatisfiesPzs = other.SatisfiesPzs;
       }
       switch (other.PlatformConfigCase) {
         case PlatformConfigOneofCase.GcpConfig:
@@ -588,6 +686,14 @@ namespace Google.Cloud.ManagedKafka.V1 {
             State = (global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State) input.ReadEnum();
             break;
           }
+          case 88: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -650,6 +756,14 @@ namespace Google.Cloud.ManagedKafka.V1 {
           }
           case 80: {
             State = (global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SatisfiesPzs = input.ReadBool();
             break;
           }
         }
