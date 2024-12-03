@@ -2,5 +2,4 @@
 
 set -e
 
-# TODO: Use the specified output directory
-dotnet run --project Grafeas.V1.FixGeneratedCode ../../../apis/Grafeas.V1
+dotnet run --project Grafeas.V1.FixGeneratedCode $GENERATOR_OUTPUT_DIR/apis/Grafeas.V1

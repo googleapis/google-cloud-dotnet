@@ -2,9 +2,7 @@
 
 set -e
 
-# TODO: Use the right output directory
-GENERATOR_OUTPUT=../../..
-BIGTABLE_OUTPUT=$GENERATOR_OUTPUT/apis/Google.Cloud.Bigtable.V2
+BIGTABLE_OUTPUT=$GENERATOR_OUTPUT_DIR/apis/Google.Cloud.Bigtable.V2
 
 # Generate BigtableClient
 dotnet run --project Google.Cloud.Bigtable.V2.GenerateClient -- \
