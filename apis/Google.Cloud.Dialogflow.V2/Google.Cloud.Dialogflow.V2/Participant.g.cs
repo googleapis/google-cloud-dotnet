@@ -477,9 +477,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     ///    Dialogflow adds the obfuscated user id with the participant.
     ///
     /// 2. If you set this field in
-    ///    [AnalyzeContent][google.cloud.dialogflow.v2.AnalyzeContentRequest.obfuscated_external_user_id]
+    ///    [AnalyzeContent][google.cloud.dialogflow.v2.AnalyzeContentRequest.participant]
     ///    or
-    ///    [StreamingAnalyzeContent][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.obfuscated_external_user_id],
+    ///    [StreamingAnalyzeContent][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.participant],
     ///    Dialogflow will update
     ///    [Participant.obfuscated_external_user_id][google.cloud.dialogflow.v2.Participant.obfuscated_external_user_id].
     ///
@@ -3493,8 +3493,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     private global::Google.Cloud.Dialogflow.V2.AutomatedAgentReply automatedAgentReply_;
     /// <summary>
     /// Only set if a Dialogflow automated agent has responded.
-    /// Note that: [AutomatedAgentReply.detect_intent_response.output_audio][]
-    /// and [AutomatedAgentReply.detect_intent_response.output_audio_config][]
+    /// Note that in [AutomatedAgentReply.DetectIntentResponse][],
+    /// [Sessions.DetectIntentResponse.output_audio][]
+    /// and [Sessions.DetectIntentResponse.output_audio_config][]
     /// are always empty, use
     /// [reply_audio][google.cloud.dialogflow.v2.AnalyzeContentResponse.reply_audio]
     /// instead.
@@ -4202,7 +4203,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// and
     /// [AudioEncoding.AUDIO_ENCODING_MULAW][google.cloud.dialogflow.v2.AudioEncoding.AUDIO_ENCODING_MULAW]
     /// - Lifecycle: conversation should be in `Assist Stage`, go to
-    ///   [Conversation.CreateConversation][] for more information.
+    ///   [Conversations.CreateConversation][google.cloud.dialogflow.v2.Conversations.CreateConversation]
+    ///   for more information.
     ///
     /// InvalidArgument Error will be returned if the one of restriction checks
     /// failed.
@@ -4939,9 +4941,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int AutomatedAgentReplyFieldNumber = 4;
     private global::Google.Cloud.Dialogflow.V2.AutomatedAgentReply automatedAgentReply_;
     /// <summary>
-    /// Only set if a Dialogflow automated agent has responded.
-    /// Note that: [AutomatedAgentReply.detect_intent_response.output_audio][]
-    /// and [AutomatedAgentReply.detect_intent_response.output_audio_config][]
+    /// Note that in [AutomatedAgentReply.DetectIntentResponse][],
+    /// [Sessions.DetectIntentResponse.output_audio][]
+    /// and [Sessions.DetectIntentResponse.output_audio_config][]
     /// are always empty, use
     /// [reply_audio][google.cloud.dialogflow.v2.StreamingAnalyzeContentResponse.reply_audio]
     /// instead.

@@ -3247,9 +3247,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private int contextSize_;
     /// <summary>
     /// Number of messages prior to and including
-    /// [last_conversation_message][] used to compile the suggestion. It may be
-    /// smaller than the [SuggestSummaryRequest.context_size][] field in the
-    /// request if there weren't that many messages in the conversation.
+    /// [latest_message][google.cloud.dialogflow.v2.SuggestConversationSummaryResponse.latest_message]
+    /// used to compile the suggestion. It may be smaller than the
+    /// [SuggestConversationSummaryRequest.context_size][google.cloud.dialogflow.v2.SuggestConversationSummaryRequest.context_size]
+    /// field in the request if there weren't that many messages in the
+    /// conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4437,9 +4439,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     private int contextSize_;
     /// <summary>
     /// Number of messages prior to and including
-    /// [last_conversation_message][] used to compile the suggestion. It may be
-    /// smaller than the [GenerateStatelessSummaryRequest.context_size][] field in
-    /// the request if there weren't that many messages in the conversation.
+    /// [latest_message][google.cloud.dialogflow.v2.GenerateStatelessSummaryResponse.latest_message]
+    /// used to compile the suggestion. It may be smaller than the
+    /// [GenerateStatelessSummaryRequest.max_context_size][google.cloud.dialogflow.v2.GenerateStatelessSummaryRequest.max_context_size]
+    /// field in the request if there weren't that many messages in the
+    /// conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -272,8 +272,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// </summary>
     [pbr::OriginalName("SPEECH_MODEL_VARIANT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Use the best available variant of the [Speech
-    /// model][InputAudioConfig.model] that the caller is eligible for.
+    /// Use the best available variant of the [Speech model][model] that the caller
+    /// is eligible for.
     ///
     /// Please see the [Dialogflow
     /// docs](https://cloud.google.com/dialogflow/docs/data-logging) for
