@@ -28,7 +28,7 @@ namespace Google.Apps.Chat.V1 {
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aImdvb2dsZS9jaGF0L3YxL2hpc3Rvcnlfc3RhdGUu",
             "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrQUCgVTcGFjZRIMCgRuYW1l",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvYUCgVTcGFjZRIMCgRuYW1l",
             "GAEgASgJEi8KBHR5cGUYAiABKA4yGi5nb29nbGUuY2hhdC52MS5TcGFjZS5U",
             "eXBlQgUYAeBBAxIzCgpzcGFjZV90eXBlGAogASgOMh8uZ29vZ2xlLmNoYXQu",
             "djEuU3BhY2UuU3BhY2VUeXBlEh8KEnNpbmdsZV91c2VyX2JvdF9kbRgEIAEo",
@@ -49,75 +49,77 @@ namespace Google.Apps.Chat.V1 {
             "aW5lZF9wZXJtaXNzaW9uX3NldHRpbmdzGBogASgOMjIuZ29vZ2xlLmNoYXQu",
             "djEuU3BhY2UuUHJlZGVmaW5lZFBlcm1pc3Npb25TZXR0aW5nc0IG4EEE4EEB",
             "SAASTAoTcGVybWlzc2lvbl9zZXR0aW5ncxgbIAEoCzIoLmdvb2dsZS5jaGF0",
-            "LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nc0ID4EEBSAAaNwoMU3BhY2VE",
-            "ZXRhaWxzEhMKC2Rlc2NyaXB0aW9uGAEgASgJEhIKCmd1aWRlbGluZXMYAiAB",
-            "KAkaVQoPTWVtYmVyc2hpcENvdW50EiYKHmpvaW5lZF9kaXJlY3RfaHVtYW5f",
-            "dXNlcl9jb3VudBgEIAEoBRIaChJqb2luZWRfZ3JvdXBfY291bnQYBSABKAUa",
-            "wAEKDkFjY2Vzc1NldHRpbmdzEksKDGFjY2Vzc19zdGF0ZRgBIAEoDjIwLmdv",
-            "b2dsZS5jaGF0LnYxLlNwYWNlLkFjY2Vzc1NldHRpbmdzLkFjY2Vzc1N0YXRl",
-            "QgPgQQMSFQoIYXVkaWVuY2UYAyABKAlCA+BBASJKCgtBY2Nlc3NTdGF0ZRIc",
-            "ChhBQ0NFU1NfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQUklWQVRFEAESEAoM",
-            "RElTQ09WRVJBQkxFEAIahQYKElBlcm1pc3Npb25TZXR0aW5ncxJPChltYW5h",
-            "Z2VfbWVtYmVyc19hbmRfZ3JvdXBzGAEgASgLMicuZ29vZ2xlLmNoYXQudjEu",
-            "U3BhY2UuUGVybWlzc2lvblNldHRpbmdIAIgBARJKChRtb2RpZnlfc3BhY2Vf",
-            "ZGV0YWlscxgCIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Np",
-            "b25TZXR0aW5nSAGIAQESRAoOdG9nZ2xlX2hpc3RvcnkYAyABKAsyJy5nb29n",
-            "bGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0gCiAEBEkgKEnVz",
-            "ZV9hdF9tZW50aW9uX2FsbBgEIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNl",
-            "LlBlcm1pc3Npb25TZXR0aW5nSAOIAQESQQoLbWFuYWdlX2FwcHMYBSABKAsy",
-            "Jy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0gEiAEB",
-            "EkUKD21hbmFnZV93ZWJob29rcxgGIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNw",
-            "YWNlLlBlcm1pc3Npb25TZXR0aW5nSAWIAQESSAoNcG9zdF9tZXNzYWdlcxgH",
-            "IAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5n",
-            "QgPgQQNIBogBARJECg5yZXBseV9tZXNzYWdlcxgIIAEoCzInLmdvb2dsZS5j",
-            "aGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nSAeIAQFCHAoaX21hbmFn",
-            "ZV9tZW1iZXJzX2FuZF9ncm91cHNCFwoVX21vZGlmeV9zcGFjZV9kZXRhaWxz",
-            "QhEKD190b2dnbGVfaGlzdG9yeUIVChNfdXNlX2F0X21lbnRpb25fYWxsQg4K",
-            "DF9tYW5hZ2VfYXBwc0ISChBfbWFuYWdlX3dlYmhvb2tzQhAKDl9wb3N0X21l",
-            "c3NhZ2VzQhEKD19yZXBseV9tZXNzYWdlcxpGChFQZXJtaXNzaW9uU2V0dGlu",
-            "ZxIYChBtYW5hZ2Vyc19hbGxvd2VkGAEgASgIEhcKD21lbWJlcnNfYWxsb3dl",
-            "ZBgCIAEoCCIuCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIICgRST09N",
-            "EAESBgoCRE0QAiJWCglTcGFjZVR5cGUSGgoWU1BBQ0VfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEgkKBVNQQUNFEAESDgoKR1JPVVBfQ0hBVBACEhIKDkRJUkVDVF9N",
-            "RVNTQUdFEAMiggEKE1NwYWNlVGhyZWFkaW5nU3RhdGUSJQohU1BBQ0VfVEhS",
-            "RUFESU5HX1NUQVRFX1VOU1BFQ0lGSUVEEAASFQoRVEhSRUFERURfTUVTU0FH",
-            "RVMQAhIUChBHUk9VUEVEX01FU1NBR0VTEAMSFwoTVU5USFJFQURFRF9NRVNT",
-            "QUdFUxAEIn8KHFByZWRlZmluZWRQZXJtaXNzaW9uU2V0dGluZ3MSLgoqUFJF",
-            "REVGSU5FRF9QRVJNSVNTSU9OX1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASFwoT",
-            "Q09MTEFCT1JBVElPTl9TUEFDRRABEhYKEkFOTk9VTkNFTUVOVF9TUEFDRRAC",
-            "Oi7qQSsKGWNoYXQuZ29vZ2xlYXBpcy5jb20vU3BhY2USDnNwYWNlcy97c3Bh",
-            "Y2V9QhsKGXNwYWNlX3Blcm1pc3Npb25fc2V0dGluZ3MiWAoSQ3JlYXRlU3Bh",
-            "Y2VSZXF1ZXN0EikKBXNwYWNlGAEgASgLMhUuZ29vZ2xlLmNoYXQudjEuU3Bh",
-            "Y2VCA+BBAhIXCgpyZXF1ZXN0X2lkGAIgASgJQgPgQQEiWQoRTGlzdFNwYWNl",
-            "c1JlcXVlc3QSFgoJcGFnZV9zaXplGAEgASgFQgPgQQESFwoKcGFnZV90b2tl",
-            "bhgCIAEoCUID4EEBEhMKBmZpbHRlchgDIAEoCUID4EEBIlQKEkxpc3RTcGFj",
-            "ZXNSZXNwb25zZRIlCgZzcGFjZXMYASADKAsyFS5nb29nbGUuY2hhdC52MS5T",
-            "cGFjZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiXAoPR2V0U3BhY2VSZXF1",
-            "ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpBGwoZY2hhdC5nb29nbGVhcGlzLmNv",
-            "bS9TcGFjZRIYChB1c2VfYWRtaW5fYWNjZXNzGAIgASgIIi0KGEZpbmREaXJl",
-            "Y3RNZXNzYWdlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIiigEKElVwZGF0",
-            "ZVNwYWNlUmVxdWVzdBIpCgVzcGFjZRgBIAEoCzIVLmdvb2dsZS5jaGF0LnYx",
-            "LlNwYWNlQgPgQQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuRmllbGRNYXNrEhgKEHVzZV9hZG1pbl9hY2Nlc3MYAyABKAgigQEK",
-            "E1NlYXJjaFNwYWNlc1JlcXVlc3QSGAoQdXNlX2FkbWluX2FjY2VzcxgBIAEo",
-            "CBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRISCgVx",
-            "dWVyeRgEIAEoCUID4EECEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEiagoUU2Vh",
-            "cmNoU3BhY2VzUmVzcG9uc2USJQoGc3BhY2VzGAEgAygLMhUuZ29vZ2xlLmNo",
-            "YXQudjEuU3BhY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFs",
-            "X3NpemUYAyABKAUiXwoSRGVsZXRlU3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASAB",
-            "KAlCIeBBAvpBGwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIYChB1c2Vf",
-            "YWRtaW5fYWNjZXNzGAIgASgIIk0KGkNvbXBsZXRlSW1wb3J0U3BhY2VSZXF1",
-            "ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpBGwoZY2hhdC5nb29nbGVhcGlzLmNv",
-            "bS9TcGFjZSJDChtDb21wbGV0ZUltcG9ydFNwYWNlUmVzcG9uc2USJAoFc3Bh",
-            "Y2UYASABKAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZUKjAQoSY29tLmdvb2ds",
-            "ZS5jaGF0LnYxQgpTcGFjZVByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "Y2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29n",
-            "bGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2ds",
-            "ZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
+            "LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nc0ID4EEBSAASQAoXaW1wb3J0",
+            "X21vZGVfZXhwaXJlX3RpbWUYHCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMaNwoMU3BhY2VEZXRhaWxzEhMKC2Rlc2NyaXB0aW9uGAEg",
+            "ASgJEhIKCmd1aWRlbGluZXMYAiABKAkaVQoPTWVtYmVyc2hpcENvdW50EiYK",
+            "HmpvaW5lZF9kaXJlY3RfaHVtYW5fdXNlcl9jb3VudBgEIAEoBRIaChJqb2lu",
+            "ZWRfZ3JvdXBfY291bnQYBSABKAUawAEKDkFjY2Vzc1NldHRpbmdzEksKDGFj",
+            "Y2Vzc19zdGF0ZRgBIAEoDjIwLmdvb2dsZS5jaGF0LnYxLlNwYWNlLkFjY2Vz",
+            "c1NldHRpbmdzLkFjY2Vzc1N0YXRlQgPgQQMSFQoIYXVkaWVuY2UYAyABKAlC",
+            "A+BBASJKCgtBY2Nlc3NTdGF0ZRIcChhBQ0NFU1NfU1RBVEVfVU5TUEVDSUZJ",
+            "RUQQABILCgdQUklWQVRFEAESEAoMRElTQ09WRVJBQkxFEAIahQYKElBlcm1p",
+            "c3Npb25TZXR0aW5ncxJPChltYW5hZ2VfbWVtYmVyc19hbmRfZ3JvdXBzGAEg",
+            "ASgLMicuZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lvblNldHRpbmdI",
+            "AIgBARJKChRtb2RpZnlfc3BhY2VfZGV0YWlscxgCIAEoCzInLmdvb2dsZS5j",
+            "aGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nSAGIAQESRAoOdG9nZ2xl",
+            "X2hpc3RvcnkYAyABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNz",
+            "aW9uU2V0dGluZ0gCiAEBEkgKEnVzZV9hdF9tZW50aW9uX2FsbBgEIAEoCzIn",
+            "Lmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nSAOIAQES",
+            "QQoLbWFuYWdlX2FwcHMYBSABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5Q",
+            "ZXJtaXNzaW9uU2V0dGluZ0gEiAEBEkUKD21hbmFnZV93ZWJob29rcxgGIAEo",
+            "CzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nSAWI",
+            "AQESSAoNcG9zdF9tZXNzYWdlcxgHIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNw",
+            "YWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQNIBogBARJECg5yZXBseV9tZXNz",
+            "YWdlcxgIIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25T",
+            "ZXR0aW5nSAeIAQFCHAoaX21hbmFnZV9tZW1iZXJzX2FuZF9ncm91cHNCFwoV",
+            "X21vZGlmeV9zcGFjZV9kZXRhaWxzQhEKD190b2dnbGVfaGlzdG9yeUIVChNf",
+            "dXNlX2F0X21lbnRpb25fYWxsQg4KDF9tYW5hZ2VfYXBwc0ISChBfbWFuYWdl",
+            "X3dlYmhvb2tzQhAKDl9wb3N0X21lc3NhZ2VzQhEKD19yZXBseV9tZXNzYWdl",
+            "cxpGChFQZXJtaXNzaW9uU2V0dGluZxIYChBtYW5hZ2Vyc19hbGxvd2VkGAEg",
+            "ASgIEhcKD21lbWJlcnNfYWxsb3dlZBgCIAEoCCIuCgRUeXBlEhQKEFRZUEVf",
+            "VU5TUEVDSUZJRUQQABIICgRST09NEAESBgoCRE0QAiJWCglTcGFjZVR5cGUS",
+            "GgoWU1BBQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgkKBVNQQUNFEAESDgoKR1JP",
+            "VVBfQ0hBVBACEhIKDkRJUkVDVF9NRVNTQUdFEAMiggEKE1NwYWNlVGhyZWFk",
+            "aW5nU3RhdGUSJQohU1BBQ0VfVEhSRUFESU5HX1NUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASFQoRVEhSRUFERURfTUVTU0FHRVMQAhIUChBHUk9VUEVEX01FU1NBR0VT",
+            "EAMSFwoTVU5USFJFQURFRF9NRVNTQUdFUxAEIn8KHFByZWRlZmluZWRQZXJt",
+            "aXNzaW9uU2V0dGluZ3MSLgoqUFJFREVGSU5FRF9QRVJNSVNTSU9OX1NFVFRJ",
+            "TkdTX1VOU1BFQ0lGSUVEEAASFwoTQ09MTEFCT1JBVElPTl9TUEFDRRABEhYK",
+            "EkFOTk9VTkNFTUVOVF9TUEFDRRACOi7qQSsKGWNoYXQuZ29vZ2xlYXBpcy5j",
+            "b20vU3BhY2USDnNwYWNlcy97c3BhY2V9QhsKGXNwYWNlX3Blcm1pc3Npb25f",
+            "c2V0dGluZ3MiWAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EikKBXNwYWNlGAEgASgL",
+            "MhUuZ29vZ2xlLmNoYXQudjEuU3BhY2VCA+BBAhIXCgpyZXF1ZXN0X2lkGAIg",
+            "ASgJQgPgQQEiWQoRTGlzdFNwYWNlc1JlcXVlc3QSFgoJcGFnZV9zaXplGAEg",
+            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgCIAEoCUID4EEBEhMKBmZpbHRlchgD",
+            "IAEoCUID4EEBIlQKEkxpc3RTcGFjZXNSZXNwb25zZRIlCgZzcGFjZXMYASAD",
+            "KAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkiXAoPR2V0U3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpB",
+            "GwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIYChB1c2VfYWRtaW5fYWNj",
+            "ZXNzGAIgASgIIi0KGEZpbmREaXJlY3RNZXNzYWdlUmVxdWVzdBIRCgRuYW1l",
+            "GAEgASgJQgPgQQIiigEKElVwZGF0ZVNwYWNlUmVxdWVzdBIpCgVzcGFjZRgB",
+            "IAEoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlQgPgQQISLwoLdXBkYXRlX21h",
+            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhgKEHVzZV9h",
+            "ZG1pbl9hY2Nlc3MYAyABKAgigQEKE1NlYXJjaFNwYWNlc1JlcXVlc3QSGAoQ",
+            "dXNlX2FkbWluX2FjY2VzcxgBIAEoCBIRCglwYWdlX3NpemUYAiABKAUSEgoK",
+            "cGFnZV90b2tlbhgDIAEoCRISCgVxdWVyeRgEIAEoCUID4EECEhUKCG9yZGVy",
+            "X2J5GAUgASgJQgPgQQEiagoUU2VhcmNoU3BhY2VzUmVzcG9uc2USJQoGc3Bh",
+            "Y2VzGAEgAygLMhUuZ29vZ2xlLmNoYXQudjEuU3BhY2USFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUiXwoSRGVsZXRlU3Bh",
+            "Y2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpBGwoZY2hhdC5nb29nbGVh",
+            "cGlzLmNvbS9TcGFjZRIYChB1c2VfYWRtaW5fYWNjZXNzGAIgASgIIk0KGkNv",
+            "bXBsZXRlSW1wb3J0U3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpB",
+            "GwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZSJDChtDb21wbGV0ZUltcG9y",
+            "dFNwYWNlUmVzcG9uc2USJAoFc3BhY2UYASABKAsyFS5nb29nbGUuY2hhdC52",
+            "MS5TcGFjZUKjAQoSY29tLmdvb2dsZS5jaGF0LnYxQgpTcGFjZVByb3RvUAFa",
+            "LGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBi",
+            "ogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0LlYxygITR29vZ2xl",
+            "XEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.HistoryStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space), global::Google.Apps.Chat.V1.Space.Parser, new[]{ "Name", "Type", "SpaceType", "SingleUserBotDm", "Threaded", "DisplayName", "ExternalUserAllowed", "SpaceThreadingState", "SpaceDetails", "SpaceHistoryState", "ImportMode", "CreateTime", "LastActiveTime", "AdminInstalled", "MembershipCount", "AccessSettings", "SpaceUri", "PredefinedPermissionSettings", "PermissionSettings" }, new[]{ "SpacePermissionSettings" }, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.Type), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceType), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceThreadingState), typeof(global::Google.Apps.Chat.V1.Space.Types.PredefinedPermissionSettings) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceDetails), global::Google.Apps.Chat.V1.Space.Types.SpaceDetails.Parser, new[]{ "Description", "Guidelines" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space), global::Google.Apps.Chat.V1.Space.Parser, new[]{ "Name", "Type", "SpaceType", "SingleUserBotDm", "Threaded", "DisplayName", "ExternalUserAllowed", "SpaceThreadingState", "SpaceDetails", "SpaceHistoryState", "ImportMode", "CreateTime", "LastActiveTime", "AdminInstalled", "MembershipCount", "AccessSettings", "SpaceUri", "PredefinedPermissionSettings", "PermissionSettings", "ImportModeExpireTime" }, new[]{ "SpacePermissionSettings" }, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.Type), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceType), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceThreadingState), typeof(global::Google.Apps.Chat.V1.Space.Types.PredefinedPermissionSettings) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceDetails), global::Google.Apps.Chat.V1.Space.Types.SpaceDetails.Parser, new[]{ "Description", "Guidelines" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.MembershipCount), global::Google.Apps.Chat.V1.Space.Types.MembershipCount.Parser, new[]{ "JoinedDirectHumanUserCount", "JoinedGroupCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings), global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Parser, new[]{ "AccessState", "Audience" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.PermissionSettings), global::Google.Apps.Chat.V1.Space.Types.PermissionSettings.Parser, new[]{ "ManageMembersAndGroups", "ModifySpaceDetails", "ToggleHistory", "UseAtMentionAll", "ManageApps", "ManageWebhooks", "PostMessages", "ReplyMessages" }, new[]{ "ManageMembersAndGroups", "ModifySpaceDetails", "ToggleHistory", "UseAtMentionAll", "ManageApps", "ManageWebhooks", "PostMessages", "ReplyMessages" }, null, null, null),
@@ -195,6 +197,7 @@ namespace Google.Apps.Chat.V1 {
       membershipCount_ = other.membershipCount_ != null ? other.membershipCount_.Clone() : null;
       accessSettings_ = other.accessSettings_ != null ? other.accessSettings_.Clone() : null;
       spaceUri_ = other.spaceUri_;
+      importModeExpireTime_ = other.importModeExpireTime_ != null ? other.importModeExpireTime_.Clone() : null;
       switch (other.SpacePermissionSettingsCase) {
         case SpacePermissionSettingsOneofCase.PredefinedPermissionSettings:
           PredefinedPermissionSettings = other.PredefinedPermissionSettings;
@@ -567,6 +570,27 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "import_mode_expire_time" field.</summary>
+    public const int ImportModeExpireTimeFieldNumber = 28;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp importModeExpireTime_;
+    /// <summary>
+    /// Output only. The time when the space will be automatically deleted by the
+    /// system if it remains in import mode.
+    ///
+    /// Each space created in import mode must exit this mode before this expire
+    /// time using `spaces.completeImport`.
+    ///
+    /// This field is only populated for spaces that were created with import mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ImportModeExpireTime {
+      get { return importModeExpireTime_; }
+      set {
+        importModeExpireTime_ = value;
+      }
+    }
+
     private object spacePermissionSettings_;
     /// <summary>Enum of possible cases for the "space_permission_settings" oneof.</summary>
     public enum SpacePermissionSettingsOneofCase {
@@ -622,6 +646,7 @@ namespace Google.Apps.Chat.V1 {
       if (SpaceUri != other.SpaceUri) return false;
       if (PredefinedPermissionSettings != other.PredefinedPermissionSettings) return false;
       if (!object.Equals(PermissionSettings, other.PermissionSettings)) return false;
+      if (!object.Equals(ImportModeExpireTime, other.ImportModeExpireTime)) return false;
       if (SpacePermissionSettingsCase != other.SpacePermissionSettingsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -649,6 +674,7 @@ namespace Google.Apps.Chat.V1 {
       if (SpaceUri.Length != 0) hash ^= SpaceUri.GetHashCode();
       if (HasPredefinedPermissionSettings) hash ^= PredefinedPermissionSettings.GetHashCode();
       if (spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings) hash ^= PermissionSettings.GetHashCode();
+      if (importModeExpireTime_ != null) hash ^= ImportModeExpireTime.GetHashCode();
       hash ^= (int) spacePermissionSettingsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -744,6 +770,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(218, 1);
         output.WriteMessage(PermissionSettings);
       }
+      if (importModeExpireTime_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(ImportModeExpireTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -830,6 +860,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(218, 1);
         output.WriteMessage(PermissionSettings);
       }
+      if (importModeExpireTime_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(ImportModeExpireTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -896,6 +930,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (spacePermissionSettingsCase_ == SpacePermissionSettingsOneofCase.PermissionSettings) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(PermissionSettings);
+      }
+      if (importModeExpireTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ImportModeExpireTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -974,6 +1011,12 @@ namespace Google.Apps.Chat.V1 {
       }
       if (other.SpaceUri.Length != 0) {
         SpaceUri = other.SpaceUri;
+      }
+      if (other.importModeExpireTime_ != null) {
+        if (importModeExpireTime_ == null) {
+          ImportModeExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ImportModeExpireTime.MergeFrom(other.ImportModeExpireTime);
       }
       switch (other.SpacePermissionSettingsCase) {
         case SpacePermissionSettingsOneofCase.PredefinedPermissionSettings:
@@ -1099,6 +1142,13 @@ namespace Google.Apps.Chat.V1 {
             PermissionSettings = subBuilder;
             break;
           }
+          case 226: {
+            if (importModeExpireTime_ == null) {
+              ImportModeExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ImportModeExpireTime);
+            break;
+          }
         }
       }
     #endif
@@ -1209,6 +1259,13 @@ namespace Google.Apps.Chat.V1 {
             }
             input.ReadMessage(subBuilder);
             PermissionSettings = subBuilder;
+            break;
+          }
+          case 226: {
+            if (importModeExpireTime_ == null) {
+              ImportModeExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ImportModeExpireTime);
             break;
           }
         }
