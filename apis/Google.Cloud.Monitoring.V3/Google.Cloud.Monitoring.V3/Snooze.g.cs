@@ -28,7 +28,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "b25pdG9yaW5nLnYzGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
             "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUvbW9uaXRvcmlu",
             "Zy92My9jb21tb24ucHJvdG8ixQIKBlNub296ZRIRCgRuYW1lGAEgASgJQgPg",
-            "QQISPAoIY3JpdGVyaWEYAyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5T",
+            "QQgSPAoIY3JpdGVyaWEYAyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5T",
             "bm9vemUuQ3JpdGVyaWFCA+BBAhI5CghpbnRlcnZhbBgEIAEoCzIiLmdvb2ds",
             "ZS5tb25pdG9yaW5nLnYzLlRpbWVJbnRlcnZhbEID4EECEhkKDGRpc3BsYXlf",
             "bmFtZRgFIAEoCUID4EECGkgKCENyaXRlcmlhEjwKCHBvbGljaWVzGAEgAygJ",
@@ -108,7 +108,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the `Snooze`. The format is:
+    /// Required. Identifier. The name of the `Snooze`. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
     ///

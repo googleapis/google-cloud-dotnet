@@ -30,114 +30,118 @@ namespace Google.Cloud.Monitoring.V3 {
             "L3YzL2NvbW1vbi5wcm90bxoqZ29vZ2xlL21vbml0b3JpbmcvdjMvbXV0YXRp",
             "b25fcmVjb3JkLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
             "dG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoXZ29vZ2xlL3Jw",
-            "Yy9zdGF0dXMucHJvdG8ijCQKC0FsZXJ0UG9saWN5EgwKBG5hbWUYASABKAkS",
-            "FAoMZGlzcGxheV9uYW1lGAIgASgJEkYKDWRvY3VtZW50YXRpb24YDSABKAsy",
-            "Ly5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Eb2N1bWVudGF0",
-            "aW9uEkYKC3VzZXJfbGFiZWxzGBAgAygLMjEuZ29vZ2xlLm1vbml0b3Jpbmcu",
-            "djMuQWxlcnRQb2xpY3kuVXNlckxhYmVsc0VudHJ5Ej8KCmNvbmRpdGlvbnMY",
-            "DCADKAsyKy5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25k",
-            "aXRpb24SSQoIY29tYmluZXIYBiABKA4yNy5nb29nbGUubW9uaXRvcmluZy52",
-            "My5BbGVydFBvbGljeS5Db25kaXRpb25Db21iaW5lclR5cGUSKwoHZW5hYmxl",
-            "ZBgRIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSJAoIdmFsaWRp",
-            "dHkYEiABKAsyEi5nb29nbGUucnBjLlN0YXR1cxIdChVub3RpZmljYXRpb25f",
-            "Y2hhbm5lbHMYDiADKAkSPQoPY3JlYXRpb25fcmVjb3JkGAogASgLMiQuZ29v",
-            "Z2xlLm1vbml0b3JpbmcudjMuTXV0YXRpb25SZWNvcmQSPQoPbXV0YXRpb25f",
-            "cmVjb3JkGAsgASgLMiQuZ29vZ2xlLm1vbml0b3JpbmcudjMuTXV0YXRpb25S",
-            "ZWNvcmQSRwoOYWxlcnRfc3RyYXRlZ3kYFSABKAsyLy5nb29nbGUubW9uaXRv",
-            "cmluZy52My5BbGVydFBvbGljeS5BbGVydFN0cmF0ZWd5EkEKCHNldmVyaXR5",
-            "GBYgASgOMiouZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuU2V2",
-            "ZXJpdHlCA+BBARq+AQoNRG9jdW1lbnRhdGlvbhIPCgdjb250ZW50GAEgASgJ",
-            "EhEKCW1pbWVfdHlwZRgCIAEoCRIUCgdzdWJqZWN0GAMgASgJQgPgQQESSAoF",
-            "bGlua3MYBCADKAsyNC5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
-            "eS5Eb2N1bWVudGF0aW9uLkxpbmtCA+BBARopCgRMaW5rEhQKDGRpc3BsYXlf",
-            "bmFtZRgBIAEoCRILCgN1cmwYAiABKAka9xUKCUNvbmRpdGlvbhIMCgRuYW1l",
-            "GAwgASgJEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRJaChNjb25kaXRpb25fdGhy",
-            "ZXNob2xkGAEgASgLMjsuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xp",
-            "Y3kuQ29uZGl0aW9uLk1ldHJpY1RocmVzaG9sZEgAElUKEGNvbmRpdGlvbl9h",
-            "YnNlbnQYAiABKAsyOS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
-            "eS5Db25kaXRpb24uTWV0cmljQWJzZW5jZUgAElUKFWNvbmRpdGlvbl9tYXRj",
-            "aGVkX2xvZxgUIAEoCzI0Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9s",
-            "aWN5LkNvbmRpdGlvbi5Mb2dNYXRjaEgAEnsKI2NvbmRpdGlvbl9tb25pdG9y",
-            "aW5nX3F1ZXJ5X2xhbmd1YWdlGBMgASgLMkwuZ29vZ2xlLm1vbml0b3Jpbmcu",
-            "djMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLk1vbml0b3JpbmdRdWVyeUxhbmd1",
-            "YWdlQ29uZGl0aW9uSAASewojY29uZGl0aW9uX3Byb21ldGhldXNfcXVlcnlf",
-            "bGFuZ3VhZ2UYFSABKAsyTC5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBv",
-            "bGljeS5Db25kaXRpb24uUHJvbWV0aGV1c1F1ZXJ5TGFuZ3VhZ2VDb25kaXRp",
-            "b25IABo1CgdUcmlnZ2VyEg8KBWNvdW50GAEgASgFSAASEQoHcGVyY2VudBgC",
-            "IAEoAUgAQgYKBHR5cGUangUKD01ldHJpY1RocmVzaG9sZBITCgZmaWx0ZXIY",
-            "AiABKAlCA+BBAhI3CgxhZ2dyZWdhdGlvbnMYCCADKAsyIS5nb29nbGUubW9u",
-            "aXRvcmluZy52My5BZ2dyZWdhdGlvbhIaChJkZW5vbWluYXRvcl9maWx0ZXIY",
-            "CSABKAkSQwoYZGVub21pbmF0b3JfYWdncmVnYXRpb25zGAogAygLMiEuZ29v",
-            "Z2xlLm1vbml0b3JpbmcudjMuQWdncmVnYXRpb24SZQoQZm9yZWNhc3Rfb3B0",
-            "aW9ucxgMIAEoCzJLLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5",
-            "LkNvbmRpdGlvbi5NZXRyaWNUaHJlc2hvbGQuRm9yZWNhc3RPcHRpb25zEjgK",
-            "CmNvbXBhcmlzb24YBCABKA4yJC5nb29nbGUubW9uaXRvcmluZy52My5Db21w",
-            "YXJpc29uVHlwZRIXCg90aHJlc2hvbGRfdmFsdWUYBSABKAESKwoIZHVyYXRp",
-            "b24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SRAoHdHJpZ2dl",
-            "chgHIAEoCzIzLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNv",
-            "bmRpdGlvbi5UcmlnZ2VyEmIKF2V2YWx1YXRpb25fbWlzc2luZ19kYXRhGAsg",
-            "ASgOMkEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0",
-            "aW9uLkV2YWx1YXRpb25NaXNzaW5nRGF0YRpLCg9Gb3JlY2FzdE9wdGlvbnMS",
-            "OAoQZm9yZWNhc3RfaG9yaXpvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
-            "dXJhdGlvbkID4EECGtABCg1NZXRyaWNBYnNlbmNlEhMKBmZpbHRlchgBIAEo",
-            "CUID4EECEjcKDGFnZ3JlZ2F0aW9ucxgFIAMoCzIhLmdvb2dsZS5tb25pdG9y",
-            "aW5nLnYzLkFnZ3JlZ2F0aW9uEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uEkQKB3RyaWdnZXIYAyABKAsyMy5nb29nbGUu",
-            "bW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uVHJpZ2dlchq8",
-            "AQoITG9nTWF0Y2gSEwoGZmlsdGVyGAEgASgJQgPgQQISYwoQbGFiZWxfZXh0",
-            "cmFjdG9ycxgCIAMoCzJJLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9s",
-            "aWN5LkNvbmRpdGlvbi5Mb2dNYXRjaC5MYWJlbEV4dHJhY3RvcnNFbnRyeRo2",
-            "ChRMYWJlbEV4dHJhY3RvcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBGogCCiBNb25pdG9yaW5nUXVlcnlMYW5ndWFnZUNvbmRpdGlv",
-            "bhINCgVxdWVyeRgBIAEoCRIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbhJECgd0cmlnZ2VyGAMgASgLMjMuZ29vZ2xlLm1v",
-            "bml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLlRyaWdnZXISYgoX",
-            "ZXZhbHVhdGlvbl9taXNzaW5nX2RhdGEYBCABKA4yQS5nb29nbGUubW9uaXRv",
-            "cmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uRXZhbHVhdGlvbk1pc3Np",
-            "bmdEYXRhGvUCCiBQcm9tZXRoZXVzUXVlcnlMYW5ndWFnZUNvbmRpdGlvbhIS",
-            "CgVxdWVyeRgBIAEoCUID4EECEjAKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uQgPgQQESOwoTZXZhbHVhdGlvbl9pbnRlcnZh",
-            "bBgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEm0KBmxh",
-            "YmVscxgEIAMoCzJYLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5",
-            "LkNvbmRpdGlvbi5Qcm9tZXRoZXVzUXVlcnlMYW5ndWFnZUNvbmRpdGlvbi5M",
-            "YWJlbHNFbnRyeUID4EEBEhcKCnJ1bGVfZ3JvdXAYBSABKAlCA+BBARIXCgph",
-            "bGVydF9ydWxlGAYgASgJQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASKtAQoVRXZhbHVhdGlvbk1pc3NpbmdE",
-            "YXRhEicKI0VWQUxVQVRJT05fTUlTU0lOR19EQVRBX1VOU1BFQ0lGSUVEEAAS",
-            "JAogRVZBTFVBVElPTl9NSVNTSU5HX0RBVEFfSU5BQ1RJVkUQARIiCh5FVkFM",
-            "VUFUSU9OX01JU1NJTkdfREFUQV9BQ1RJVkUQAhIhCh1FVkFMVUFUSU9OX01J",
-            "U1NJTkdfREFUQV9OT19PUBADOpcC6kGTAgoubW9uaXRvcmluZy5nb29nbGVh",
-            "cGlzLmNvbS9BbGVydFBvbGljeUNvbmRpdGlvbhJGcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0vY29uZGl0aW9ucy97",
-            "Y29uZGl0aW9ufRJQb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9hbGVy",
-            "dFBvbGljaWVzL3thbGVydF9wb2xpY3l9L2NvbmRpdGlvbnMve2NvbmRpdGlv",
-            "bn0SRGZvbGRlcnMve2ZvbGRlcn0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9s",
-            "aWN5fS9jb25kaXRpb25zL3tjb25kaXRpb259EgEqQgsKCWNvbmRpdGlvbhrX",
-            "AwoNQWxlcnRTdHJhdGVneRJmChdub3RpZmljYXRpb25fcmF0ZV9saW1pdBgB",
-            "IAEoCzJFLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkFsZXJ0",
-            "U3RyYXRlZ3kuTm90aWZpY2F0aW9uUmF0ZUxpbWl0Ei0KCmF1dG9fY2xvc2UY",
-            "AyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24Scgodbm90aWZpY2F0",
-            "aW9uX2NoYW5uZWxfc3RyYXRlZ3kYBCADKAsySy5nb29nbGUubW9uaXRvcmlu",
-            "Zy52My5BbGVydFBvbGljeS5BbGVydFN0cmF0ZWd5Lk5vdGlmaWNhdGlvbkNo",
-            "YW5uZWxTdHJhdGVneRpCChVOb3RpZmljYXRpb25SYXRlTGltaXQSKQoGcGVy",
-            "aW9kGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGncKG05vdGlm",
-            "aWNhdGlvbkNoYW5uZWxTdHJhdGVneRIiChpub3RpZmljYXRpb25fY2hhbm5l",
-            "bF9uYW1lcxgBIAMoCRI0ChFyZW5vdGlmeV9pbnRlcnZhbBgCIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhoxCg9Vc2VyTGFiZWxzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhChVDb25kaXRpb25Db21i",
-            "aW5lclR5cGUSFwoTQ09NQklORV9VTlNQRUNJRklFRBAAEgcKA0FORBABEgYK",
-            "Ak9SEAISHgoaQU5EX1dJVEhfTUFUQ0hJTkdfUkVTT1VSQ0UQAyJKCghTZXZl",
-            "cml0eRIYChRTRVZFUklUWV9VTlNQRUNJRklFRBAAEgwKCENSSVRJQ0FMEAES",
-            "CQoFRVJST1IQAhILCgdXQVJOSU5HEAM6yQHqQcUBCiVtb25pdG9yaW5nLmdv",
-            "b2dsZWFwaXMuY29tL0FsZXJ0UG9saWN5Ei9wcm9qZWN0cy97cHJvamVjdH0v",
-            "YWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fRI5b3JnYW5pemF0aW9ucy97",
-            "b3JnYW5pemF0aW9ufS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9Ei1m",
-            "b2xkZXJzL3tmb2xkZXJ9L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0S",
-            "ASpCxQEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IKQWxlcnRQcm90b1AB",
-            "WkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3JpbmcvYXBpdjMvdjIvbW9u",
-            "aXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5DbG91ZC5Nb25pdG9y",
-            "aW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1Hb29nbGU6",
-            "OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
+            "Yy9zdGF0dXMucHJvdG8ixiUKC0FsZXJ0UG9saWN5EhEKBG5hbWUYASABKAlC",
+            "A+BBCBIUCgxkaXNwbGF5X25hbWUYAiABKAkSRgoNZG9jdW1lbnRhdGlvbhgN",
+            "IAEoCzIvLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkRvY3Vt",
+            "ZW50YXRpb24SRgoLdXNlcl9sYWJlbHMYECADKAsyMS5nb29nbGUubW9uaXRv",
+            "cmluZy52My5BbGVydFBvbGljeS5Vc2VyTGFiZWxzRW50cnkSPwoKY29uZGl0",
+            "aW9ucxgMIAMoCzIrLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5",
+            "LkNvbmRpdGlvbhJJCghjb21iaW5lchgGIAEoDjI3Lmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbkNvbWJpbmVyVHlwZRIrCgdl",
+            "bmFibGVkGBEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZRIkCgh2",
+            "YWxpZGl0eRgSIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEh0KFW5vdGlmaWNh",
+            "dGlvbl9jaGFubmVscxgOIAMoCRI9Cg9jcmVhdGlvbl9yZWNvcmQYCiABKAsy",
+            "JC5nb29nbGUubW9uaXRvcmluZy52My5NdXRhdGlvblJlY29yZBI9Cg9tdXRh",
+            "dGlvbl9yZWNvcmQYCyABKAsyJC5nb29nbGUubW9uaXRvcmluZy52My5NdXRh",
+            "dGlvblJlY29yZBJHCg5hbGVydF9zdHJhdGVneRgVIAEoCzIvLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkFsZXJ0U3RyYXRlZ3kSQQoIc2V2",
+            "ZXJpdHkYFiABKA4yKi5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
+            "eS5TZXZlcml0eUID4EEBGr4BCg1Eb2N1bWVudGF0aW9uEg8KB2NvbnRlbnQY",
+            "ASABKAkSEQoJbWltZV90eXBlGAIgASgJEhQKB3N1YmplY3QYAyABKAlCA+BB",
+            "ARJICgVsaW5rcxgEIAMoCzI0Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
+            "UG9saWN5LkRvY3VtZW50YXRpb24uTGlua0ID4EEBGikKBExpbmsSFAoMZGlz",
+            "cGxheV9uYW1lGAEgASgJEgsKA3VybBgCIAEoCRr3FQoJQ29uZGl0aW9uEgwK",
+            "BG5hbWUYDCABKAkSFAoMZGlzcGxheV9uYW1lGAYgASgJEloKE2NvbmRpdGlv",
+            "bl90aHJlc2hvbGQYASABKAsyOy5nb29nbGUubW9uaXRvcmluZy52My5BbGVy",
+            "dFBvbGljeS5Db25kaXRpb24uTWV0cmljVGhyZXNob2xkSAASVQoQY29uZGl0",
+            "aW9uX2Fic2VudBgCIAEoCzI5Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
+            "UG9saWN5LkNvbmRpdGlvbi5NZXRyaWNBYnNlbmNlSAASVQoVY29uZGl0aW9u",
+            "X21hdGNoZWRfbG9nGBQgASgLMjQuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
+            "cnRQb2xpY3kuQ29uZGl0aW9uLkxvZ01hdGNoSAASewojY29uZGl0aW9uX21v",
+            "bml0b3JpbmdfcXVlcnlfbGFuZ3VhZ2UYEyABKAsyTC5nb29nbGUubW9uaXRv",
+            "cmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uTW9uaXRvcmluZ1F1ZXJ5",
+            "TGFuZ3VhZ2VDb25kaXRpb25IABJ7CiNjb25kaXRpb25fcHJvbWV0aGV1c19x",
+            "dWVyeV9sYW5ndWFnZRgVIAEoCzJMLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFs",
+            "ZXJ0UG9saWN5LkNvbmRpdGlvbi5Qcm9tZXRoZXVzUXVlcnlMYW5ndWFnZUNv",
+            "bmRpdGlvbkgAGjUKB1RyaWdnZXISDwoFY291bnQYASABKAVIABIRCgdwZXJj",
+            "ZW50GAIgASgBSABCBgoEdHlwZRqeBQoPTWV0cmljVGhyZXNob2xkEhMKBmZp",
+            "bHRlchgCIAEoCUID4EECEjcKDGFnZ3JlZ2F0aW9ucxgIIAMoCzIhLmdvb2ds",
+            "ZS5tb25pdG9yaW5nLnYzLkFnZ3JlZ2F0aW9uEhoKEmRlbm9taW5hdG9yX2Zp",
+            "bHRlchgJIAEoCRJDChhkZW5vbWluYXRvcl9hZ2dyZWdhdGlvbnMYCiADKAsy",
+            "IS5nb29nbGUubW9uaXRvcmluZy52My5BZ2dyZWdhdGlvbhJlChBmb3JlY2Fz",
+            "dF9vcHRpb25zGAwgASgLMksuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQ",
+            "b2xpY3kuQ29uZGl0aW9uLk1ldHJpY1RocmVzaG9sZC5Gb3JlY2FzdE9wdGlv",
+            "bnMSOAoKY29tcGFyaXNvbhgEIAEoDjIkLmdvb2dsZS5tb25pdG9yaW5nLnYz",
+            "LkNvbXBhcmlzb25UeXBlEhcKD3RocmVzaG9sZF92YWx1ZRgFIAEoARIrCghk",
+            "dXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJECgd0",
+            "cmlnZ2VyGAcgASgLMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xp",
+            "Y3kuQ29uZGl0aW9uLlRyaWdnZXISYgoXZXZhbHVhdGlvbl9taXNzaW5nX2Rh",
+            "dGEYCyABKA4yQS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5D",
+            "b25kaXRpb24uRXZhbHVhdGlvbk1pc3NpbmdEYXRhGksKD0ZvcmVjYXN0T3B0",
+            "aW9ucxI4ChBmb3JlY2FzdF9ob3Jpem9uGAEgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uQgPgQQIa0AEKDU1ldHJpY0Fic2VuY2USEwoGZmlsdGVy",
+            "GAEgASgJQgPgQQISNwoMYWdncmVnYXRpb25zGAUgAygLMiEuZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjMuQWdncmVnYXRpb24SKwoIZHVyYXRpb24YAiABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb24SRAoHdHJpZ2dlchgDIAEoCzIzLmdv",
+            "b2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5Ucmln",
+            "Z2VyGrwBCghMb2dNYXRjaBITCgZmaWx0ZXIYASABKAlCA+BBAhJjChBsYWJl",
+            "bF9leHRyYWN0b3JzGAIgAygLMkkuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
+            "cnRQb2xpY3kuQ29uZGl0aW9uLkxvZ01hdGNoLkxhYmVsRXh0cmFjdG9yc0Vu",
+            "dHJ5GjYKFExhYmVsRXh0cmFjdG9yc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEaiAIKIE1vbml0b3JpbmdRdWVyeUxhbmd1YWdlQ29u",
+            "ZGl0aW9uEg0KBXF1ZXJ5GAEgASgJEisKCGR1cmF0aW9uGAIgASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEkQKB3RyaWdnZXIYAyABKAsyMy5nb29n",
+            "bGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uVHJpZ2dl",
+            "chJiChdldmFsdWF0aW9uX21pc3NpbmdfZGF0YRgEIAEoDjJBLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5FdmFsdWF0aW9u",
+            "TWlzc2luZ0RhdGEa9QIKIFByb21ldGhldXNRdWVyeUxhbmd1YWdlQ29uZGl0",
+            "aW9uEhIKBXF1ZXJ5GAEgASgJQgPgQQISMAoIZHVyYXRpb24YAiABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARI7ChNldmFsdWF0aW9uX2lu",
+            "dGVydmFsGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQES",
+            "bQoGbGFiZWxzGAQgAygLMlguZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQ",
+            "b2xpY3kuQ29uZGl0aW9uLlByb21ldGhldXNRdWVyeUxhbmd1YWdlQ29uZGl0",
+            "aW9uLkxhYmVsc0VudHJ5QgPgQQESFwoKcnVsZV9ncm91cBgFIAEoCUID4EEB",
+            "EhcKCmFsZXJ0X3J1bGUYBiABKAlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIq0BChVFdmFsdWF0aW9uTWlz",
+            "c2luZ0RhdGESJwojRVZBTFVBVElPTl9NSVNTSU5HX0RBVEFfVU5TUEVDSUZJ",
+            "RUQQABIkCiBFVkFMVUFUSU9OX01JU1NJTkdfREFUQV9JTkFDVElWRRABEiIK",
+            "HkVWQUxVQVRJT05fTUlTU0lOR19EQVRBX0FDVElWRRACEiEKHUVWQUxVQVRJ",
+            "T05fTUlTU0lOR19EQVRBX05PX09QEAM6lwLqQZMCCi5tb25pdG9yaW5nLmdv",
+            "b2dsZWFwaXMuY29tL0FsZXJ0UG9saWN5Q29uZGl0aW9uEkZwcm9qZWN0cy97",
+            "cHJvamVjdH0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fS9jb25kaXRp",
+            "b25zL3tjb25kaXRpb259ElBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259",
+            "L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0vY29uZGl0aW9ucy97Y29u",
+            "ZGl0aW9ufRJEZm9sZGVycy97Zm9sZGVyfS9hbGVydFBvbGljaWVzL3thbGVy",
+            "dF9wb2xpY3l9L2NvbmRpdGlvbnMve2NvbmRpdGlvbn0SASpCCwoJY29uZGl0",
+            "aW9uGowFCg1BbGVydFN0cmF0ZWd5EmYKF25vdGlmaWNhdGlvbl9yYXRlX2xp",
+            "bWl0GAEgASgLMkUuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3ku",
+            "QWxlcnRTdHJhdGVneS5Ob3RpZmljYXRpb25SYXRlTGltaXQSYAoUbm90aWZp",
+            "Y2F0aW9uX3Byb21wdHMYAiADKA4yQi5nb29nbGUubW9uaXRvcmluZy52My5B",
+            "bGVydFBvbGljeS5BbGVydFN0cmF0ZWd5Lk5vdGlmaWNhdGlvblByb21wdBIt",
+            "CgphdXRvX2Nsb3NlGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "EnIKHW5vdGlmaWNhdGlvbl9jaGFubmVsX3N0cmF0ZWd5GAQgAygLMksuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQWxlcnRTdHJhdGVneS5O",
+            "b3RpZmljYXRpb25DaGFubmVsU3RyYXRlZ3kaQgoVTm90aWZpY2F0aW9uUmF0",
+            "ZUxpbWl0EikKBnBlcmlvZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhp3ChtOb3RpZmljYXRpb25DaGFubmVsU3RyYXRlZ3kSIgoabm90aWZp",
+            "Y2F0aW9uX2NoYW5uZWxfbmFtZXMYASADKAkSNAoRcmVub3RpZnlfaW50ZXJ2",
+            "YWwYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iUQoSTm90aWZp",
+            "Y2F0aW9uUHJvbXB0EiMKH05PVElGSUNBVElPTl9QUk9NUFRfVU5TUEVDSUZJ",
+            "RUQQABIKCgZPUEVORUQQARIKCgZDTE9TRUQQAxoxCg9Vc2VyTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhChVDb25kaXRp",
+            "b25Db21iaW5lclR5cGUSFwoTQ09NQklORV9VTlNQRUNJRklFRBAAEgcKA0FO",
+            "RBABEgYKAk9SEAISHgoaQU5EX1dJVEhfTUFUQ0hJTkdfUkVTT1VSQ0UQAyJK",
+            "CghTZXZlcml0eRIYChRTRVZFUklUWV9VTlNQRUNJRklFRBAAEgwKCENSSVRJ",
+            "Q0FMEAESCQoFRVJST1IQAhILCgdXQVJOSU5HEAM6yQHqQcUBCiVtb25pdG9y",
+            "aW5nLmdvb2dsZWFwaXMuY29tL0FsZXJ0UG9saWN5Ei9wcm9qZWN0cy97cHJv",
+            "amVjdH0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fRI5b3JnYW5pemF0",
+            "aW9ucy97b3JnYW5pemF0aW9ufS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xp",
+            "Y3l9Ei1mb2xkZXJzL3tmb2xkZXJ9L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3Bv",
+            "bGljeX0SASpCxQEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IKQWxlcnRQ",
+            "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3JpbmcvYXBpdjMv",
+            "djIvbW9uaXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5DbG91ZC5N",
+            "b25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1H",
+            "b29nbGU6OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MutationRecordReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -148,7 +152,7 @@ namespace Google.Cloud.Monitoring.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch.Parser, new[]{ "Filter", "LabelExtractors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "EvaluationInterval", "Labels", "RuleGroup", "AlertRule" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Parser, new[]{ "NotificationRateLimit", "AutoClose", "NotificationChannelStrategy" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit.Parser, new[]{ "Period" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Parser, new[]{ "NotificationRateLimit", "NotificationPrompts", "AutoClose", "NotificationChannelStrategy" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationPrompt) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit.Parser, new[]{ "Period" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy.Parser, new[]{ "NotificationChannelNames", "RenotifyInterval" }, null, null, null, null)}),
             null, })
           }));
@@ -160,7 +164,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A description of the conditions under which some aspect of your system is
   /// considered to be "unhealthy" and the ways to notify people or services about
-  /// this state. For an overview of alert policies, see
+  /// this state. For an overview of alerting policies, see
   /// [Introduction to Alerting](https://cloud.google.com/monitoring/alerts/).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -224,8 +228,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required if the policy exists. The resource name for this policy. The
-    /// format is:
+    /// Identifier. Required if the policy exists. The resource name for this
+    /// policy. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
     ///
@@ -378,9 +382,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ValidityFieldNumber = 18;
     private global::Google.Rpc.Status validity_;
     /// <summary>
-    /// Read-only description of how the alert policy is invalid. This field is
-    /// only set when the alert policy is invalid. An invalid alert policy will not
-    /// generate incidents.
+    /// Read-only description of how the alerting policy is invalid. This field is
+    /// only set when the alerting policy is invalid. An invalid alerting policy
+    /// will not generate incidents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -450,7 +454,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int AlertStrategyFieldNumber = 21;
     private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy alertStrategy_;
     /// <summary>
-    /// Control over how this alert policy's notification channels are notified.
+    /// Control over how this alerting policy's notification channels are notified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -465,9 +469,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int SeverityFieldNumber = 22;
     private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Severity severity_ = global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Severity.Unspecified;
     /// <summary>
-    /// Optional. The severity of an alert policy indicates how important incidents
-    /// generated by that policy are. The severity level will be displayed on the
-    /// Incident detail page and in notifications.
+    /// Optional. The severity of an alerting policy indicates how important
+    /// incidents generated by that policy are. The severity level will be
+    /// displayed on the Incident detail page and in notifications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -952,7 +956,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// An enumeration of possible severity level for an Alert Policy.
+      /// An enumeration of possible severity level for an alerting policy.
       /// </summary>
       public enum Severity {
         /// <summary>
@@ -1037,7 +1041,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// The content may not exceed 8,192 Unicode characters and may not exceed
         /// more than 10,240 bytes when encoded in UTF-8 format, whichever is
         /// smaller. This text can be [templatized by using
-        /// variables](https://cloud.google.com/monitoring/alerts/doc-variables).
+        /// variables](https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1079,7 +1083,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// it is common to define textual fields in databases as VARCHAR(255).
         ///
         /// The contents of the subject line can be [templatized by using
-        /// variables](https://cloud.google.com/monitoring/alerts/doc-variables).
+        /// variables](https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars).
         /// If this field is missing or empty, a default subject line will be
         /// generated.
         /// </summary>
@@ -3895,7 +3899,7 @@ namespace Google.Cloud.Monitoring.V3 {
           }
 
           /// <summary>
-          /// A condition type that allows alert policies to be defined using
+          /// A condition type that allows alerting policies to be defined using
           /// [Monitoring Query Language](https://cloud.google.com/monitoring/mql).
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -4246,7 +4250,7 @@ namespace Google.Cloud.Monitoring.V3 {
           }
 
           /// <summary>
-          /// A condition type that allows alert policies to be defined using
+          /// A condition type that allows alerting policies to be defined using
           /// [Prometheus Query Language
           /// (PromQL)](https://prometheus.io/docs/prometheus/latest/querying/basics/).
           ///
@@ -4395,7 +4399,7 @@ namespace Google.Cloud.Monitoring.V3 {
             /// Label names [must be
             /// valid](https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels).
             /// Label values can be [templatized by using
-            /// variables](https://cloud.google.com/monitoring/alerts/doc-variables).
+            /// variables](https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars).
             /// The only available variable names are the names of the labels in the
             /// PromQL result, including "__name__" and "value". "labels" may be empty.
             /// </summary>
@@ -4764,6 +4768,7 @@ namespace Google.Cloud.Monitoring.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AlertStrategy(AlertStrategy other) : this() {
           notificationRateLimit_ = other.notificationRateLimit_ != null ? other.notificationRateLimit_.Clone() : null;
+          notificationPrompts_ = other.notificationPrompts_.Clone();
           autoClose_ = other.autoClose_ != null ? other.autoClose_.Clone() : null;
           notificationChannelStrategy_ = other.notificationChannelStrategy_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4779,9 +4784,11 @@ namespace Google.Cloud.Monitoring.V3 {
         public const int NotificationRateLimitFieldNumber = 1;
         private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit notificationRateLimit_;
         /// <summary>
-        /// Required for alert policies with a `LogMatch` condition.
+        /// Required for log-based alerting policies, i.e. policies with a `LogMatch`
+        /// condition.
         ///
-        /// This limit is not implemented for alert policies that are not log-based.
+        /// This limit is not implemented for alerting policies that do not have
+        /// a LogMatch condition.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4792,11 +4799,27 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "notification_prompts" field.</summary>
+        public const int NotificationPromptsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationPrompt> _repeated_notificationPrompts_codec
+            = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationPrompt) x);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationPrompt> notificationPrompts_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationPrompt>();
+        /// <summary>
+        /// For log-based alert policies, the notification prompts is always
+        /// [OPENED]. For non log-based alert policies, the notification prompts can
+        /// be [OPENED] or [OPENED, CLOSED].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationPrompt> NotificationPrompts {
+          get { return notificationPrompts_; }
+        }
+
         /// <summary>Field number for the "auto_close" field.</summary>
         public const int AutoCloseFieldNumber = 3;
         private global::Google.Protobuf.WellKnownTypes.Duration autoClose_;
         /// <summary>
-        /// If an alert policy that was active has no data for this long, any open
+        /// If an alerting policy that was active has no data for this long, any open
         /// incidents will close
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4838,6 +4861,7 @@ namespace Google.Cloud.Monitoring.V3 {
             return true;
           }
           if (!object.Equals(NotificationRateLimit, other.NotificationRateLimit)) return false;
+          if(!notificationPrompts_.Equals(other.notificationPrompts_)) return false;
           if (!object.Equals(AutoClose, other.AutoClose)) return false;
           if(!notificationChannelStrategy_.Equals(other.notificationChannelStrategy_)) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -4848,6 +4872,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public override int GetHashCode() {
           int hash = 1;
           if (notificationRateLimit_ != null) hash ^= NotificationRateLimit.GetHashCode();
+          hash ^= notificationPrompts_.GetHashCode();
           if (autoClose_ != null) hash ^= AutoClose.GetHashCode();
           hash ^= notificationChannelStrategy_.GetHashCode();
           if (_unknownFields != null) {
@@ -4872,6 +4897,7 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(10);
             output.WriteMessage(NotificationRateLimit);
           }
+          notificationPrompts_.WriteTo(output, _repeated_notificationPrompts_codec);
           if (autoClose_ != null) {
             output.WriteRawTag(26);
             output.WriteMessage(AutoClose);
@@ -4891,6 +4917,7 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(10);
             output.WriteMessage(NotificationRateLimit);
           }
+          notificationPrompts_.WriteTo(ref output, _repeated_notificationPrompts_codec);
           if (autoClose_ != null) {
             output.WriteRawTag(26);
             output.WriteMessage(AutoClose);
@@ -4909,6 +4936,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (notificationRateLimit_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(NotificationRateLimit);
           }
+          size += notificationPrompts_.CalculateSize(_repeated_notificationPrompts_codec);
           if (autoClose_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoClose);
           }
@@ -4931,6 +4959,7 @@ namespace Google.Cloud.Monitoring.V3 {
             }
             NotificationRateLimit.MergeFrom(other.NotificationRateLimit);
           }
+          notificationPrompts_.Add(other.notificationPrompts_);
           if (other.autoClose_ != null) {
             if (autoClose_ == null) {
               AutoClose = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -4958,6 +4987,11 @@ namespace Google.Cloud.Monitoring.V3 {
                   NotificationRateLimit = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit();
                 }
                 input.ReadMessage(NotificationRateLimit);
+                break;
+              }
+              case 18:
+              case 16: {
+                notificationPrompts_.AddEntriesFrom(input, _repeated_notificationPrompts_codec);
                 break;
               }
               case 26: {
@@ -4993,6 +5027,11 @@ namespace Google.Cloud.Monitoring.V3 {
                 input.ReadMessage(NotificationRateLimit);
                 break;
               }
+              case 18:
+              case 16: {
+                notificationPrompts_.AddEntriesFrom(ref input, _repeated_notificationPrompts_codec);
+                break;
+              }
               case 26: {
                 if (autoClose_ == null) {
                   AutoClose = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -5015,7 +5054,25 @@ namespace Google.Cloud.Monitoring.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Control over the rate of notifications sent to this alert policy's
+          /// Control when notifications will be sent out.
+          /// </summary>
+          public enum NotificationPrompt {
+            /// <summary>
+            /// No strategy specified. Treated as error.
+            /// </summary>
+            [pbr::OriginalName("NOTIFICATION_PROMPT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Notify when an incident is opened.
+            /// </summary>
+            [pbr::OriginalName("OPENED")] Opened = 1,
+            /// <summary>
+            /// Notify when an incident is closed.
+            /// </summary>
+            [pbr::OriginalName("CLOSED")] Closed = 3,
+          }
+
+          /// <summary>
+          /// Control over the rate of notifications sent to this alerting policy's
           /// notification channels.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]

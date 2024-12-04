@@ -2298,7 +2298,7 @@ namespace Google.Cloud.Monitoring.V3
         /// UpdateNotificationChannel.
         /// </summary>
         /// <param name="updateMask">
-        /// The fields to update.
+        /// Optional. The fields to update.
         /// </param>
         /// <param name="notificationChannel">
         /// Required. A description of the changes to be applied to the specified
@@ -2325,7 +2325,7 @@ namespace Google.Cloud.Monitoring.V3
         /// UpdateNotificationChannel.
         /// </summary>
         /// <param name="updateMask">
-        /// The fields to update.
+        /// Optional. The fields to update.
         /// </param>
         /// <param name="notificationChannel">
         /// Required. A description of the changes to be applied to the specified
@@ -2352,7 +2352,7 @@ namespace Google.Cloud.Monitoring.V3
         /// UpdateNotificationChannel.
         /// </summary>
         /// <param name="updateMask">
-        /// The fields to update.
+        /// Optional. The fields to update.
         /// </param>
         /// <param name="notificationChannel">
         /// Required. A description of the changes to be applied to the specified
@@ -2423,8 +2423,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2451,8 +2451,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2479,8 +2479,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2503,8 +2503,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2531,8 +2531,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2559,8 +2559,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2583,8 +2583,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2611,8 +2611,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2639,8 +2639,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="force">
         /// If true, the notification channel will be deleted regardless of its
         /// use in alert policies (the policies will be updated to remove the
-        /// channel). If false, channels that are still referenced by an existing
-        /// alerting policy will fail to be deleted in a delete operation.
+        /// channel). If false, this operation will fail if the notification channel
+        /// is referenced by existing alerting policies.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
