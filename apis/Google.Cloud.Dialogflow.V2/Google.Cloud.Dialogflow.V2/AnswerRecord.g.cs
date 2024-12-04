@@ -161,8 +161,9 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///    returned to the customers.
   /// 2. The customer uses the
   /// [AnswerRecord.name][google.cloud.dialogflow.v2.AnswerRecord.name] to call the
-  ///    [UpdateAnswerRecord][] method to send feedback about a specific answer
-  ///    that they believe is wrong.
+  ///    [AnswerRecords.UpdateAnswerRecord][google.cloud.dialogflow.v2.AnswerRecords.UpdateAnswerRecord]
+  ///    method to send feedback about a specific answer that they believe is
+  ///    wrong.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnswerRecord : pb::IMessage<AnswerRecord>

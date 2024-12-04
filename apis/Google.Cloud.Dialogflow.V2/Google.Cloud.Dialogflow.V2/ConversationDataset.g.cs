@@ -3083,7 +3083,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Metadata for [ConversationDatasets][CreateConversationDataset].
+  /// Metadata for [CreateConversationDataset][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateConversationDatasetOperationMetadata : pb::IMessage<CreateConversationDatasetOperationMetadata>
@@ -3281,7 +3281,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Metadata for [ConversationDatasets][DeleteConversationDataset].
+  /// Metadata for [DeleteConversationDataset][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteConversationDatasetOperationMetadata : pb::IMessage<DeleteConversationDatasetOperationMetadata>

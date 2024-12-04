@@ -8574,7 +8574,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   /// <summary>
   /// The request message for
-  /// [ConversationProfiles.SetSuggestionFeature][].
+  /// [ConversationProfiles.SetSuggestionFeatureConfig][google.cloud.dialogflow.v2.ConversationProfiles.SetSuggestionFeatureConfig].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetSuggestionFeatureConfigRequest : pb::IMessage<SetSuggestionFeatureConfigRequest>
@@ -8862,7 +8862,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [ConversationProfiles.ClearFeature][].
+  /// The request message for
+  /// [ConversationProfiles.ClearSuggestionFeatureConfig][google.cloud.dialogflow.v2.ConversationProfiles.ClearSuggestionFeatureConfig].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClearSuggestionFeatureConfigRequest : pb::IMessage<ClearSuggestionFeatureConfigRequest>
@@ -9141,7 +9142,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Metadata for a [ConversationProfile.SetSuggestionFeatureConfig][]
+  /// Metadata for a
+  /// [ConversationProfiles.SetSuggestionFeatureConfig][google.cloud.dialogflow.v2.ConversationProfiles.SetSuggestionFeatureConfig]
   /// operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -9470,7 +9472,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Metadata for a [ConversationProfile.ClearSuggestionFeatureConfig][]
+  /// Metadata for a
+  /// [ConversationProfiles.ClearSuggestionFeatureConfig][google.cloud.dialogflow.v2.ConversationProfiles.ClearSuggestionFeatureConfig]
   /// operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
