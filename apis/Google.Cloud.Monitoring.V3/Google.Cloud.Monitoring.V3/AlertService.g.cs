@@ -35,47 +35,47 @@ namespace Google.Cloud.Monitoring.V3 {
             "UG9saWN5EjwKDGFsZXJ0X3BvbGljeRgCIAEoCzIhLmdvb2dsZS5tb25pdG9y",
             "aW5nLnYzLkFsZXJ0UG9saWN5QgPgQQIiVAoVR2V0QWxlcnRQb2xpY3lSZXF1",
             "ZXN0EjsKBG5hbWUYAyABKAlCLeBBAvpBJwolbW9uaXRvcmluZy5nb29nbGVh",
-            "cGlzLmNvbS9BbGVydFBvbGljeSKgAQoYTGlzdEFsZXJ0UG9saWNpZXNSZXF1",
+            "cGlzLmNvbS9BbGVydFBvbGljeSK0AQoYTGlzdEFsZXJ0UG9saWNpZXNSZXF1",
             "ZXN0EjsKBG5hbWUYBCABKAlCLeBBAvpBJxIlbW9uaXRvcmluZy5nb29nbGVh",
-            "cGlzLmNvbS9BbGVydFBvbGljeRIOCgZmaWx0ZXIYBSABKAkSEAoIb3JkZXJf",
-            "YnkYBiABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkigwEKGUxpc3RBbGVydFBvbGljaWVzUmVzcG9uc2USOQoOYWxlcnRfcG9s",
-            "aWNpZXMYAyADKAsyIS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
-            "eRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgEIAEo",
-            "BSKJAQoYVXBkYXRlQWxlcnRQb2xpY3lSZXF1ZXN0Ei8KC3VwZGF0ZV9tYXNr",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxI8CgxhbGVydF9w",
-            "b2xpY3kYAyABKAsyIS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
-            "eUID4EECIlcKGERlbGV0ZUFsZXJ0UG9saWN5UmVxdWVzdBI7CgRuYW1lGAMg",
-            "ASgJQi3gQQL6QScKJW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQ",
-            "b2xpY3kynggKEkFsZXJ0UG9saWN5U2VydmljZRKoAQoRTGlzdEFsZXJ0UG9s",
-            "aWNpZXMSLi5nb29nbGUubW9uaXRvcmluZy52My5MaXN0QWxlcnRQb2xpY2ll",
-            "c1JlcXVlc3QaLy5nb29nbGUubW9uaXRvcmluZy52My5MaXN0QWxlcnRQb2xp",
-            "Y2llc1Jlc3BvbnNlIjLaQQRuYW1lgtPkkwIlEiMvdjMve25hbWU9cHJvamVj",
-            "dHMvKn0vYWxlcnRQb2xpY2llcxKWAQoOR2V0QWxlcnRQb2xpY3kSKy5nb29n",
-            "bGUubW9uaXRvcmluZy52My5HZXRBbGVydFBvbGljeVJlcXVlc3QaIS5nb29n",
-            "bGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeSI02kEEbmFtZYLT5JMCJxIl",
-            "L3YzL3tuYW1lPXByb2plY3RzLyovYWxlcnRQb2xpY2llcy8qfRK1AQoRQ3Jl",
-            "YXRlQWxlcnRQb2xpY3kSLi5nb29nbGUubW9uaXRvcmluZy52My5DcmVhdGVB",
-            "bGVydFBvbGljeVJlcXVlc3QaIS5nb29nbGUubW9uaXRvcmluZy52My5BbGVy",
-            "dFBvbGljeSJN2kERbmFtZSxhbGVydF9wb2xpY3mC0+STAjMiIy92My97bmFt",
-            "ZT1wcm9qZWN0cy8qfS9hbGVydFBvbGljaWVzOgxhbGVydF9wb2xpY3kSkQEK",
-            "EURlbGV0ZUFsZXJ0UG9saWN5Ei4uZ29vZ2xlLm1vbml0b3JpbmcudjMuRGVs",
-            "ZXRlQWxlcnRQb2xpY3lSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "IjTaQQRuYW1lgtPkkwInKiUvdjMve25hbWU9cHJvamVjdHMvKi9hbGVydFBv",
-            "bGljaWVzLyp9EssBChFVcGRhdGVBbGVydFBvbGljeRIuLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLlVwZGF0ZUFsZXJ0UG9saWN5UmVxdWVzdBohLmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5ImPaQRh1cGRhdGVfbWFzayxhbGVy",
-            "dF9wb2xpY3mC0+STAkIyMi92My97YWxlcnRfcG9saWN5Lm5hbWU9cHJvamVj",
-            "dHMvKi9hbGVydFBvbGljaWVzLyp9OgxhbGVydF9wb2xpY3kaqQHKQRltb25p",
-            "dG9yaW5nLmdvb2dsZWFwaXMuY29t0kGJAWh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9tb25pdG9yaW5nLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvbW9uaXRvcmluZy5yZWFkQswBChhjb20uZ29vZ2xlLm1v",
-            "bml0b3JpbmcudjNCEUFsZXJ0U2VydmljZVByb3RvUAFaQWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbW9uaXRvcmluZy9hcGl2My92Mi9tb25pdG9yaW5ncGI7bW9u",
-            "aXRvcmluZ3BiqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29n",
-            "bGVcQ2xvdWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0",
-            "b3Jpbmc6OlYzYgZwcm90bzM="));
+            "cGlzLmNvbS9BbGVydFBvbGljeRITCgZmaWx0ZXIYBSABKAlCA+BBARIVCghv",
+            "cmRlcl9ieRgGIAEoCUID4EEBEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcK",
+            "CnBhZ2VfdG9rZW4YAyABKAlCA+BBASKDAQoZTGlzdEFsZXJ0UG9saWNpZXNS",
+            "ZXNwb25zZRI5Cg5hbGVydF9wb2xpY2llcxgDIAMoCzIhLmdvb2dsZS5tb25p",
+            "dG9yaW5nLnYzLkFsZXJ0UG9saWN5EhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CRISCgp0b3RhbF9zaXplGAQgASgFIo4BChhVcGRhdGVBbGVydFBvbGljeVJl",
+            "cXVlc3QSNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "RmllbGRNYXNrQgPgQQESPAoMYWxlcnRfcG9saWN5GAMgASgLMiEuZ29vZ2xl",
+            "Lm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3lCA+BBAiJXChhEZWxldGVBbGVy",
+            "dFBvbGljeVJlcXVlc3QSOwoEbmFtZRgDIAEoCUIt4EEC+kEnCiVtb25pdG9y",
+            "aW5nLmdvb2dsZWFwaXMuY29tL0FsZXJ0UG9saWN5Mp4IChJBbGVydFBvbGlj",
+            "eVNlcnZpY2USqAEKEUxpc3RBbGVydFBvbGljaWVzEi4uZ29vZ2xlLm1vbml0",
+            "b3JpbmcudjMuTGlzdEFsZXJ0UG9saWNpZXNSZXF1ZXN0Gi8uZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjMuTGlzdEFsZXJ0UG9saWNpZXNSZXNwb25zZSIy2kEEbmFt",
+            "ZYLT5JMCJRIjL3YzL3tuYW1lPXByb2plY3RzLyp9L2FsZXJ0UG9saWNpZXMS",
+            "lgEKDkdldEFsZXJ0UG9saWN5EisuZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0",
+            "QWxlcnRQb2xpY3lSZXF1ZXN0GiEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
+            "cnRQb2xpY3kiNNpBBG5hbWWC0+STAicSJS92My97bmFtZT1wcm9qZWN0cy8q",
+            "L2FsZXJ0UG9saWNpZXMvKn0StQEKEUNyZWF0ZUFsZXJ0UG9saWN5Ei4uZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuQ3JlYXRlQWxlcnRQb2xpY3lSZXF1ZXN0GiEu",
+            "Z29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kiTdpBEW5hbWUsYWxl",
+            "cnRfcG9saWN5gtPkkwIzIiMvdjMve25hbWU9cHJvamVjdHMvKn0vYWxlcnRQ",
+            "b2xpY2llczoMYWxlcnRfcG9saWN5EpEBChFEZWxldGVBbGVydFBvbGljeRIu",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkRlbGV0ZUFsZXJ0UG9saWN5UmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI02kEEbmFtZYLT5JMCJyolL3Yz",
+            "L3tuYW1lPXByb2plY3RzLyovYWxlcnRQb2xpY2llcy8qfRLLAQoRVXBkYXRl",
+            "QWxlcnRQb2xpY3kSLi5nb29nbGUubW9uaXRvcmluZy52My5VcGRhdGVBbGVy",
+            "dFBvbGljeVJlcXVlc3QaIS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBv",
+            "bGljeSJj2kEYdXBkYXRlX21hc2ssYWxlcnRfcG9saWN5gtPkkwJCMjIvdjMv",
+            "e2FsZXJ0X3BvbGljeS5uYW1lPXByb2plY3RzLyovYWxlcnRQb2xpY2llcy8q",
+            "fToMYWxlcnRfcG9saWN5GqkBykEZbW9uaXRvcmluZy5nb29nbGVhcGlzLmNv",
+            "bdJBiQFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
+            "YXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRv",
+            "cmluZyxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL21vbml0b3Jp",
+            "bmcucmVhZELMAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhFBbGVydFNl",
+            "cnZpY2VQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3Jpbmcv",
+            "YXBpdjMvdjIvbW9uaXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5D",
+            "bG91ZC5Nb25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3Jpbmdc",
+            "VjPqAh1Hb29nbGU6OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.AlertReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -629,8 +629,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// If provided, this field specifies the criteria that must be met by
-    /// alert policies to be included in the response.
+    /// Optional. If provided, this field specifies the criteria that must be met
+    /// by alert policies to be included in the response.
     ///
     /// For more details, see [sorting and
     /// filtering](https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
@@ -648,9 +648,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int OrderByFieldNumber = 6;
     private string orderBy_ = "";
     /// <summary>
-    /// A comma-separated list of fields by which to sort the result. Supports
-    /// the same set of field references as the `filter` field. Entries can be
-    /// prefixed with a minus sign to sort by the field in descending order.
+    /// Optional. A comma-separated list of fields by which to sort the result.
+    /// Supports the same set of field references as the `filter` field. Entries
+    /// can be prefixed with a minus sign to sort by the field in descending order.
     ///
     /// For more details, see [sorting and
     /// filtering](https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
@@ -668,7 +668,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of results to return in a single response.
+    /// Optional. The maximum number of results to return in a single response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -683,9 +683,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// If this field is not empty then it must contain the `nextPageToken` value
-    /// returned by a previous call to this method.  Using this field causes the
-    /// method to return more results from the previous method call.
+    /// Optional. If this field is not empty then it must contain the
+    /// `nextPageToken` value returned by a previous call to this method.  Using
+    /// this field causes the method to return more results from the previous
+    /// method call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
