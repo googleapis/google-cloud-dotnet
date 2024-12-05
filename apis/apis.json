@@ -3813,7 +3813,7 @@
     },
     {
       "id": "Google.Cloud.Parallelstore.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Parallelstore",
       "productUrl": "https://cloud.google.com/parallelstore?hl=en",
