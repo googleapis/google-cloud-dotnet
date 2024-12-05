@@ -27,11 +27,6 @@ namespace Google.Cloud.Tools.ReleaseManager
 {
     public class GenerateProjectsCommand : CommandBase
     {
-        private static readonly Dictionary<string, string> s_centralledVersionedProjects =
-            XDocument.Load(Path.Combine(DirectoryLayout.DetermineRootDirectory(), "Directory.Packages.props"))
-                .Root.Element("ItemGroup").Elements("PackageVersion")
-                .ToDictionary(p => p.Attribute("Include").Value, p => p.Attribute("Version").Value);
-
         private const string ProductDocumentationStub = @"{{title}}
 
 {{description}}
@@ -93,19 +88,19 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string DefaultVersionValue = "default";
         private const string GrpcCorePackage = "Grpc.Core";
         private const string GrpcCorePackageConditionFramework = "net462";
-        private const string DefaultGaxVersion = "4.9.0";
-        private const string GrpcCoreVersion = "2.46.6";
-        private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
+
+        // These are the packages where in "new major version mode" we ignore overrides, and always use the defaults.
+        private static readonly HashSet<string> NewMajorVersionDefaultPackages = new()
         {
-            { "Google.Api.Gax", DefaultGaxVersion },
-            { "Google.Api.Gax.Rest", DefaultGaxVersion },
-            { "Google.Api.Gax.Grpc", DefaultGaxVersion },
-            { "Google.Api.Gax.Testing", DefaultGaxVersion },
-            { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
-            { GrpcCorePackage, GrpcCoreVersion },
-            { "Grpc.Core.Testing", GrpcCoreVersion },
-            { "Google.Api.CommonProtos", "2.16.0" },
-            { "Google.Protobuf", "3.28.2" }
+            "Google.Api.Gax",
+            "Google.Api.Gax.Rest",
+            "Google.Api.Gax.Grpc",
+            "Google.Api.Gax.Testing",
+            "Google.Api.Gax.Grpc.Testing",
+            GrpcCorePackage,
+            "Grpc.Core.Testing",
+            "Google.Api.CommonProtos",
+            "Google.Protobuf",
         };
 
         // Hard-coded versions for all test packages. These can be defaulted even for stable packages, whereas
@@ -141,6 +136,11 @@ namespace Google.Cloud.Tools.ReleaseManager
             { ConfigureAwaitAnalyzer, "All" },
             { CSharpWorkspacesPackage, "All" }
         };
+
+        /// <summary>
+        /// Packages which are okay to keep using defaults even in patch versions, as they don't affect the released library.
+        /// </summary>
+        private static readonly HashSet<string> PermittedPatchDefaultDependencies = new() { ConfigureAwaitAnalyzer };
 
         private static readonly IReadOnlyList<string> RenovateIgnorePaths = new List<string>
         {
@@ -330,15 +330,15 @@ namespace Google.Cloud.Tools.ReleaseManager
                     return;
                 }
 
-                // We want to update any dependencies to "external" packages as listed in DefaultPackageVersions,
-                // but also "internal" packages such as Google.LongRunning.
-                Dictionary<string, string> allDefaultPackageVersions = DefaultPackageVersions
-                    .Concat(catalog.Apis.Select(api => new KeyValuePair<string, string>(api.Id, api.Version)))
-                    .ToDictionary(pair => pair.Key, pair => pair.Value);
+                // We want to update any dependencies to "internal" packages such as Google.LongRunning.
+                Dictionary<string, string> allInternalPackageVersions =
+                    catalog.Apis
+                        .Select(api => new KeyValuePair<string, string>(api.Id, api.Version))
+                        .ToDictionary(pair => pair.Key, pair => pair.Value);
 
                 foreach (var package in dependencies.Keys.ToList())
                 {
-                    if (allDefaultPackageVersions.TryGetValue(package, out var defaultVersion))
+                    if (allInternalPackageVersions.TryGetValue(package, out var defaultVersion))
                     {
                         var currentVersion = dependencies[package];
                         if (currentVersion == DefaultVersionValue ||
@@ -617,11 +617,10 @@ api-name: {api.Id}
             }
 
             // Deliberately not using Add, so that a project can override the defaults.
-            // In particular, stable releases *must* override versions of GRPC and GAX.
             foreach (var dependency in api.Dependencies)
             {
                 dependencies[dependency.Key] = !NewMajorVersionMode ? dependency.Value
-                    : DefaultPackageVersions.TryGetValue(dependency.Key, out var defaultVersion) ? defaultVersion
+                    : NewMajorVersionDefaultPackages.Contains(dependency.Key) ? DefaultVersionValue
                     : apiNames.Contains(dependency.Key) ? ProjectVersionValue
                     : dependency.Value;
             }
@@ -656,7 +655,7 @@ api-name: {api.Id}
             foreach (var dependency in api.TestDependencies)
             {
                 dependencies[dependency.Key] = !NewMajorVersionMode ? dependency.Value
-                        : DefaultPackageVersions.TryGetValue(dependency.Key, out var defaultVersion) ? defaultVersion
+                        : NewMajorVersionDefaultPackages.Contains(dependency.Key) ? DefaultVersionValue
                         : apiNames.Contains(dependency.Key) ? ProjectVersionValue
                         : dependency.Value;
             }
@@ -798,34 +797,29 @@ api-name: {api.Id}
                 return new XElement("ProjectReference", new XAttribute("Include", path));
             }
 
-            // "Default" version can refer to the centrally-managed version.
-            if (dependencyVersion == DefaultVersionValue && s_centralledVersionedProjects.TryGetValue(package, out var centralVersion))
+            // TODO: Maybe remove this requirement, if it becomes too onerous and we don't see much benefit.
+            // If we improved our diffing to include dependency versions, that might give a better way of guarding
+            // against accidentally updating dependency versions in patches (which is what this is for).
+            if (dependencyVersion == DefaultVersionValue && projectVersion.IsStable && projectVersion.Patch > 0 &&
+                !testProject && !PermittedPatchDefaultDependencies.Contains(package))
             {
-                dependencyVersion = centralVersion;
-            }
-
-            if (dependencyVersion == DefaultVersionValue)
-            {
-                if (projectVersion.IsStable && projectVersion.Patch > 0)
-                {
-                    throw new UserErrorException($"Project {project} cannot use the default version for {package}. (Stable patch releases must list dependencies explicitly.)");
-                }
-                if (!DefaultPackageVersions.TryGetValue(package, out dependencyVersion))
-                {
-                    throw new UserErrorException($"Project {project} depends on default version of unknown package {package}");
-                }
+                throw new UserErrorException($"Project {project} cannot use the default version for {package}. (Stable patch releases must list dependencies explicitly.)");
             }
 
             PrivateAssets.TryGetValue(package, out string privateAssetValue);
 
-            if (!IsValidVersion())
+            // Extra validation for overrides
+            if (dependencyVersion != DefaultVersionValue)
             {
-                throw new UserErrorException($"Project {project} has invalid version '{dependencyVersion}' for package {package}");
-            }
-            // Dependencies from production projects, other than "hidden" packages, must be stable
-            if (projectVersion.IsStable && !testProject && !StructuredVersion.FromString(dependencyVersion).IsStable && privateAssetValue != "All")
-            {
-                throw new UserErrorException($"Project {project} uses prerelease version '{dependencyVersion}' for package {package}");
+                if (!IsValidVersion())
+                {
+                    throw new UserErrorException($"Project {project} has invalid version '{dependencyVersion}' for package {package}");
+                }
+                // Dependencies from production projects, other than "hidden" packages, must be stable
+                if (projectVersion.IsStable && !testProject && !StructuredVersion.FromString(dependencyVersion).IsStable && privateAssetValue != "All")
+                {
+                    throw new UserErrorException($"Project {project} uses prerelease version '{dependencyVersion}' for package {package}");
+                }
             }
             var element = new XElement("PackageReference", new XAttribute("Include", package), MaybeGetVersionOverrideAttribute(package, dependencyVersion));
             if (privateAssetValue != null)
@@ -845,9 +839,11 @@ api-name: {api.Id}
 
             bool IsValidVersion() => AnyVersionPattern.IsMatch(dependencyVersion);
 
-            // We only need a VersionOverride for packages that aren't centrally managed or where we're targeting a different version.
+            // We only need a VersionOverride for packages that aren't overriding the version in the API catalog.
+            // (We don't detect if the "override" is actually just to use the default version from Directory.Packages.props -
+            // that could be checked for in a different tool though.)
             static XAttribute MaybeGetVersionOverrideAttribute(string package, string version) =>
-                s_centralledVersionedProjects.TryGetValue(package, out var centralVersion) && centralVersion == version
+                version == DefaultVersionValue
                 ? null
                 : new XAttribute("VersionOverride", GetDependencyVersionRange(package, version));
         }
