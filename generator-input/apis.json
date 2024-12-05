@@ -417,7 +417,10 @@
       "serviceConfigFile": "aiplatform_v1.yaml",
       "includeCommonResourcesProto": true,
       "transport": "grpc+rest",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.ApiHub.V1",
@@ -1123,7 +1126,16 @@
       "tags": [
         "BigQuery"
       ],
-      "shortName": "bigquery"
+      "shortName": "bigquery",
+      "projects": [
+        "Benchmarks",
+        "CleanTestData",
+        "GenerateOverloads",
+        "IntegrationTests",
+        "PerformanceTests",
+        "Snippets",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.BigQuery.Storage.V1",
@@ -1166,7 +1178,10 @@
       "shortName": "bigtableadmin",
       "serviceConfigFile": "bigtableadmin_v2.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Bigtable.Common.V2",
@@ -1205,7 +1220,11 @@
       "shortName": "bigtable",
       "serviceConfigFile": "bigtable_v2.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "IntegrationTests",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Billing.Budgets.V1",
@@ -1543,7 +1562,11 @@
       "shortName": "compute",
       "serviceConfigFile": "compute_v1.yaml",
       "transport": "rest",
-      "includeCommonResourcesProto": false
+      "includeCommonResourcesProto": false,
+      "projects": [
+        "IntegrationTests",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.ConfidentialComputing.V1",
@@ -1892,7 +1915,11 @@
       "serviceConfigFile": "datastore_v1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "IntegrationTests",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Datastream.V1",
@@ -1978,7 +2005,10 @@
       ],
       "dependencies": {
         "Google.Api.CommonProtos": "default"
-      }
+      },
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.DevTools.ContainerAnalysis.V1",
@@ -2052,7 +2082,12 @@
       "testDependencies": {
         "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
         "Google.Cloud.Diagnostics.Common.Tests": "project"
-      }
+      },
+      "projects": [
+        "IntegrationTests",
+        "Snippets",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Diagnostics.Common",
@@ -2079,7 +2114,12 @@
         "Google.Api.Gax.Testing": "default",
         "Google.Cloud.ErrorReporting.V1Beta1": "3.0.0-beta03",
         "Microsoft.Extensions.Hosting": "6.0.1"
-      }
+      },
+      "projects": [
+        "IntegrationTests",
+        "Snippets",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Dialogflow.Cx.V3",
@@ -2517,7 +2557,14 @@
         "System.ValueTuple": "default",
         "Xunit.Combinatorial": "default"
       },
-      "shortName": "firestore"
+      "shortName": "firestore",
+      "projects": [
+        "Benchmarks",
+        "CleanTestData",
+        "IntegrationTests",
+        "Snippets",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Firestore.V1",
@@ -2542,7 +2589,10 @@
       "shortName": "firestore",
       "serviceConfigFile": "firestore_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Functions.V1",
@@ -2845,7 +2895,10 @@
       },
       "forceOwlBotRegeneration": "AuditData proto is generated in the wrong place.",
       "serviceConfigFile": "iam_meta_api.yaml",
-      "includeCommonResourcesProto": false
+      "includeCommonResourcesProto": false,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Iam.V2",
@@ -2985,7 +3038,10 @@
       "serviceConfigFile": "language_v1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Language.V2",
@@ -3068,7 +3124,12 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "default"
-      }
+      },
+      "projects": [
+        "IntegrationTests",
+        "Snippets",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Logging.Console",
@@ -3086,7 +3147,11 @@
       ],
       "dependencies": {
         "Microsoft.Extensions.Logging.Console": "6.0.1"
-      }
+      },
+      "projects": [
+        "Tests",
+        "^SampleApp"
+      ]
     },
     {
       "id": "Google.Cloud.Logging.NLog",
@@ -3108,7 +3173,12 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "default"
-      }
+      },
+      "projects": [
+        "IntegrationTests",
+        "Snippets",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Logging.Type",
@@ -4036,7 +4106,12 @@
       "shortName": "pubsub",
       "serviceConfigFile": "pubsub_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "IntegrationTests",
+        "OrderingKeyTester",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.RapidMigrationAssessment.V1",
@@ -4771,7 +4846,10 @@
       "serviceConfigFile": "spanner.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Spanner.Admin.Instance.V1",
@@ -4796,7 +4874,10 @@
       "serviceConfigFile": "spanner_admin_instance.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Spanner.Data",
@@ -4824,7 +4905,15 @@
         "Microsoft.Extensions.DependencyInjection": "6.0.1",
         "System.ValueTuple": "default",
         "Xunit.Combinatorial": "default"
-      }
+      },
+      "projects": [
+        "CleanTestData",
+        "CommonTesting",
+        "IntegrationTests",
+        "Snippets",
+        "Tests",
+        "Ycsb"
+      ]
     },
     {
       "id": "Google.Cloud.Spanner.Common.V1",
@@ -4863,7 +4952,10 @@
       "shortName": "spanner",
       "serviceConfigFile": "spanner.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Speech.V1",
@@ -4885,7 +4977,11 @@
       "serviceConfigFile": "speech_v1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "LanguageCodeGenerator",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Speech.V1P1Beta1",
@@ -4977,7 +5073,17 @@
       "tags": [
         "Storage"
       ],
-      "shortName": "storage"
+      "shortName": "storage",
+      "projects": [
+        "BenchmarkingTool",
+        "CleanTestData",
+        "CreateCommonTestBucket",
+        "IntegrationTests",
+        "RetryConformanceTests",
+        "Snippets",
+        "Tests",
+        "ThroughputTool"
+      ]
     },
     {
       "id": "Google.Cloud.Storage.V2",
@@ -5002,7 +5108,10 @@
       "serviceConfigFile": "storage_v2.yaml",
       "transport": "grpc",
       "includeCommonResourcesProto": true,
-      "blockRelease": "Storage v2 is not supported for .NET yet"
+      "blockRelease": "Storage v2 is not supported for .NET yet",
+      "projects": [
+        "IntegrationTests"
+      ]
     },
     {
       "id": "Google.Cloud.StorageInsights.V1",
@@ -5113,7 +5222,10 @@
       "serviceConfigFile": "jobs_v4beta1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "CleanTestData"
+      ]
     },
     {
       "id": "Google.Cloud.Tasks.V2",
@@ -5328,7 +5440,13 @@
         "Translate",
         "Translation"
       ],
-      "shortName": "translate"
+      "shortName": "translate",
+      "projects": [
+        "IntegrationTests",
+        "LanguageCodeGenerator",
+        "Snippets",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.VMMigration.V1",
@@ -5442,7 +5560,10 @@
       "serviceConfigFile": "videointelligence_v1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.Vision.V1",
@@ -5464,7 +5585,12 @@
       "serviceConfigFile": "vision_v1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "projects": [
+        "IntegrationTests",
+        "PopulateProductSearchTestSet",
+        "Tests"
+      ]
     },
     {
       "id": "Google.Cloud.VisionAI.V1",
@@ -5818,7 +5944,10 @@
       },
       "forceOwlBotRegeneration": "Post-processor requires googleapis repo.",
       "serviceConfigFile": "longrunning.yaml",
-      "includeCommonResourcesProto": false
+      "includeCommonResourcesProto": false,
+      "projects": [
+        "Tests"
+      ]
     },
     {
       "id": "Google.Maps.AddressValidation.V1",
