@@ -9,11 +9,11 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="[4.9.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc" />
     <ProjectReference Include="..\..\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1.csproj" />
-    <PackageReference Include="Grpc.Core" VersionOverride="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+    <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" VersionOverride="6.0.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
