@@ -262,7 +262,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
             try
             {
-                var resultPath = Path.Combine(Path.GetDirectoryName(projectFile), $"{userClientName}.cs");
+                var resultPath = Path.Combine(Path.GetDirectoryName(projectFile), $"{userClientName}.g.cs");
                 File.WriteAllText(resultPath, resultText);
             }
             catch (Exception e)
