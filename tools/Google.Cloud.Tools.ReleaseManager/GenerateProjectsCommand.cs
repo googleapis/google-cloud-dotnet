@@ -505,7 +505,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var owlBotForceRegenerationFile = Path.Combine(apiRoot, ".OwlBot-ForceRegeneration.txt");
             // We will recreate this if necessary.
             File.Delete(owlBotForceRegenerationFile);
-            if (api.DetermineAutoGeneratorType() != AutoGeneratorType.OwlBot)
+            if (api.Generator == GeneratorType.None)
             {
                 // Clean up any previous OwlBot configuration
                 File.Delete(owlBotConfigFile);
