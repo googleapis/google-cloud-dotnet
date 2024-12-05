@@ -48,6 +48,20 @@ public class CreateClientsCommand : CommandBase
         return 0;
     }
 
+    /// <summary>
+    /// Returns the tfm (e.g. netstandard2.0 or netstandard2.1) to build/load for tools
+    /// that need to load the library with reflection, e.g. for smoke tests.
+    /// </summary>
+    internal static string GetTargetForReflectionLoad(string id)
+    {
+        // Work out the TFM to publish, based on specified target frameworks.
+        var api = ApiCatalog.Load()[id];
+        return api.TargetFrameworks?
+            .Split(';')
+            .FirstOrDefault(candidate => candidate.StartsWith("netstandard"))
+            ?? NonSourceGenerator.DefaultNetstandardTarget;
+    }
+
     // Note: a lot of code from here on is copied/modified from SmokeTest and SuggestSmokeTestsCommand.
     // We could consider refactoring later, if we find this is a problem.
     private Assembly PublishAndLoadAssembly(string id)
@@ -55,7 +69,7 @@ public class CreateClientsCommand : CommandBase
         var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
 
         // Work out the TFM to publish, based on specified target frameworks.
-        string tfm = GenerateProjectsCommand.GetTargetForReflectionLoad(id);
+        string tfm = GetTargetForReflectionLoad(id);
 
         // Note: we explicitly don't build here, as this code is normally run from a build script which has
         // has already built. Avoiding the rebuild saves a lot of time.
