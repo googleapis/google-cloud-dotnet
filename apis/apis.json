@@ -2686,7 +2686,7 @@
     },
     {
       "id": "Google.Cloud.GkeConnect.Gateway.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Connect Gateway",
       "productUrl": "https://cloud.google.com/kubernetes-engine/enterprise/multicluster-management/gateway",
