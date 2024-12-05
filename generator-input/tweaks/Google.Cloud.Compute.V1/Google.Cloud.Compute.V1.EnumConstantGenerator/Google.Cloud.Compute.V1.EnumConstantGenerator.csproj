@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="2.16.0" />
-    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="4.9.0" />
-    <PackageReference Include="Google.LongRunning" VersionOverride="3.3.0" />
+    <PackageReference Include="Google.Api.CommonProtos" />
+    <PackageReference Include="Google.Api.Gax.Grpc" />
+    <PackageReference Include="Google.LongRunning" />
     <PackageReference Include="Google.Protobuf" />
   </ItemGroup>
 
