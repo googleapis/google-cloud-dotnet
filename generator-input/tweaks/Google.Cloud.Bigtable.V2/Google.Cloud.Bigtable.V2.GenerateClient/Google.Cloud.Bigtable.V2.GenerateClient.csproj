@@ -7,23 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Grpc" VersionOverride="4.9.0" />
-    <PackageReference Include="Microsoft.Build.Locator" VersionOverride="1.7.8" />
+    <PackageReference Include="Google.Api.Gax.Grpc" />
+    <PackageReference Include="Microsoft.Build.Locator" />
     
     <!-- 
       - Note: do not upgrade 4.8.0 until we're using .NET SDK v8
       - or https://github.com/dotnet/roslyn/issues/71784 is fixed.
       - See b/328172159 as an example of the failure.
       -->
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" VersionOverride="4.8.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" VersionOverride="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" />
 
     <!--
       - For some reason, the above packages introduce a dependency somewhere on version 3.0.3
       - of Microsoft.Extensions.Logging.Abstractions, so MSBuild gets confused. It's simplest
       - to just specify v6 ourselves.
       -->
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" VersionOverride="6.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
   </ItemGroup>
 
 </Project>
