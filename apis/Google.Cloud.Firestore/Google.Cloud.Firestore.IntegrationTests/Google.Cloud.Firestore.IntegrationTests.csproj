@@ -7,8 +7,8 @@
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Grpc.Testing" VersionOverride="[4.9.0, 5.0.0)" />
-    <PackageReference Include="Google.Api.Gax.Testing" VersionOverride="[4.9.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc.Testing" />
+    <PackageReference Include="Google.Api.Gax.Testing" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
     <PackageReference Include="Google.Cloud.Firestore.Admin.V1" VersionOverride="[3.11.0, 4.0.0)" />
