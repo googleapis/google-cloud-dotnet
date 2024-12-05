@@ -130,28 +130,6 @@ namespace Google.Cloud.Tools.Common
         /// The type of generator used to generate source code for this API.
         /// </summary>
         public GeneratorType Generator { get; set; }
-
-        /// <summary>
-        /// The autogenerator type used to maintain this API, when specified explicitly.
-        /// </summary>
-        public AutoGeneratorType? AutoGenerator { get; set; }
-
-        /// <summary>
-        /// Determines the autogenerator type for this API based on what's explicitly configured,
-        /// and sensible defaults otherwise.
-        /// </summary>
-        public AutoGeneratorType DetermineAutoGeneratorType()
-        {
-            if (AutoGenerator != null)
-            {
-                return AutoGenerator.Value;
-            }
-
-            // Default to OwlBot, now that almost everything supports it.
-            // Anything else should be specified explicitly.
-            // (This only applies to generated APIs, however.)
-            return Generator == GeneratorType.None ? AutoGeneratorType.None : AutoGeneratorType.OwlBot;
-        }
         
         /// <summary>
         /// The path within googleapis for the API protos.
