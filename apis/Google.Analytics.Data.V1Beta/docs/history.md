@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0-beta09, released 2024-12-05
+
+### New features
+
+- Add `EmptyFilter` type to the Data API v1beta ([commit 1f4a8b3](https://github.com/googleapis/google-cloud-dotnet/commit/1f4a8b3dd4bc8fd91be21f5a270e88af1a1c6c5d))
+- Add the `empty_filter` field to the `Filter` type ([commit 1f4a8b3](https://github.com/googleapis/google-cloud-dotnet/commit/1f4a8b3dd4bc8fd91be21f5a270e88af1a1c6c5d))
+
+### Documentation improvements
+
+- Update documentation for the`RunReport` method ([commit 1f4a8b3](https://github.com/googleapis/google-cloud-dotnet/commit/1f4a8b3dd4bc8fd91be21f5a270e88af1a1c6c5d))
+- Remove all references to 'GA4' in documentation ([commit 1f4a8b3](https://github.com/googleapis/google-cloud-dotnet/commit/1f4a8b3dd4bc8fd91be21f5a270e88af1a1c6c5d))
+
 ## Version 2.0.0-beta08, released 2024-08-05
 
 ### New features
