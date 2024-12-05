@@ -62,7 +62,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             Console.WriteLine($"Publishing release version of library");
 
-            string tfm = GenerateProjectsCommand.GetTargetForReflectionLoad(id);
+            string tfm = CreateClientsCommand.GetTargetForReflectionLoad(id);
             // Publish the assembly.
             var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;            
             Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", tfm);

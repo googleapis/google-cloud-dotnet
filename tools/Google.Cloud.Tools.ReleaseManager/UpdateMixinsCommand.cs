@@ -65,7 +65,8 @@ public sealed class UpdateMixinsCommand : CommandBase
         api.Json["dependencies"] = new JObject(api.Dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
         var layout = DirectoryLayout.ForApi(api.Id);
         var apiNames = catalog.CreateIdHashSet();
-        GenerateProjectsCommand.GenerateProjects(layout.SourceDirectory, api, apiNames);
+        var nonSourceGenerator = new NonSourceGenerator(catalog);
+        nonSourceGenerator.GenerateApiFiles(api);
         string formatted = catalog.FormatJson();
         File.WriteAllText(ApiCatalog.CatalogPath, formatted);
         Console.WriteLine("Updated apis.json and project files");

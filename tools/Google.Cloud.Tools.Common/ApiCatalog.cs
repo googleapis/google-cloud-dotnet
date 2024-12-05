@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -71,13 +71,9 @@ namespace Google.Cloud.Tools.Common
 
         /// <summary>
         /// The path to the API catalog (apis.json).
+        /// Note: this shouldn't be used when the generator input directory is non-standard.
         /// </summary>
-        public static string CatalogPath => Path.Combine(DirectoryLayout.DetermineRootDirectory(), RelativeCatalogPath);
-
-        /// <summary>
-        /// The relative path to the catalog path, e.g. for use when fetching from GitHub.
-        /// </summary>
-        public static string RelativeCatalogPath => "apis/apis.json";
+        public static string CatalogPath => Path.Combine(DirectoryLayout.DetermineRootDirectory(), DirectoryLayout.GeneratorInput, "apis.json");
 
         /// <summary>
         /// Creates a hash set of the IDs of all the APIs in the catalog.
@@ -94,7 +90,9 @@ namespace Google.Cloud.Tools.Common
         /// Loads the API catalog from the local disk, automatically determining the location.
         /// </summary>
         /// <returns></returns>
-        public static ApiCatalog Load() => FromJson(File.ReadAllText(CatalogPath));
+        public static ApiCatalog Load() => LoadFromGeneratorInput(Path.Combine(DirectoryLayout.DetermineRootDirectory(), DirectoryLayout.GeneratorInput));
+
+        public static ApiCatalog LoadFromGeneratorInput(string generatorInputDirectory) => FromJson(File.ReadAllText(Path.Combine(generatorInputDirectory, "apis.json")));
 
         /// <summary>
         /// Loads the API catalog from the given JSON.

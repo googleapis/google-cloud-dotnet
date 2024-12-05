@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -49,13 +50,13 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
             }
 
+            var nonSourceGenerator = new NonSourceGenerator(catalog);
             foreach (var api in apisToUpdate)
             {
-                GenerateProjectsCommand.UpdateDependencies(catalog, api);
-                var layout = DirectoryLayout.ForApi(api.Id);
-                GenerateProjectsCommand.GenerateMetadataFile(layout.SourceDirectory, api);
-                GenerateProjectsCommand.GenerateProjects(layout.SourceDirectory, api, apiNames);
+                UpdateDependencies(catalog, api);
+                nonSourceGenerator.GenerateApiFiles(api);
             }
+            nonSourceGenerator.GenerateNonApiFiles();
             string formatted = catalog.FormatJson();
             string currentFileContent = File.ReadAllText(ApiCatalog.CatalogPath);
             if (currentFileContent == formatted)
@@ -104,6 +105,60 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
             }
             return apisToUpdate;
+        }
+
+        /// <summary>
+        /// Updates the dependencies in an API for known packages, but only if the default
+        /// version is later than the current one, with the same major version number.
+        /// </summary>
+        public static void UpdateDependencies(ApiCatalog catalog, ApiMetadata api)
+        {
+            bool stableOnly = api.StructuredVersion.IsStable;
+            UpdateDependencyDictionary(api.Dependencies, "dependencies");
+            UpdateDependencyDictionary(api.TestDependencies, "testDependencies");
+
+            void UpdateDependencyDictionary(SortedDictionary<string, string> dependencies, string jsonName)
+            {
+                if (dependencies.Count == 0)
+                {
+                    return;
+                }
+
+                // We want to update any dependencies to "internal" packages such as Google.LongRunning.
+                Dictionary<string, string> allInternalPackageVersions =
+                    catalog.Apis
+                        .Select(api => new KeyValuePair<string, string>(api.Id, api.Version))
+                        .ToDictionary(pair => pair.Key, pair => pair.Value);
+
+                foreach (var package in dependencies.Keys.ToList())
+                {
+                    if (allInternalPackageVersions.TryGetValue(package, out var defaultVersion))
+                    {
+                        var currentVersion = dependencies[package];
+                        if (currentVersion == NonSourceGenerator.DefaultVersionValue ||
+                            currentVersion == NonSourceGenerator.ProjectVersionValue ||
+                            defaultVersion == currentVersion ||
+                            currentVersion.StartsWith('$') ||
+                            defaultVersion.StartsWith('$'))
+                        {
+                            continue;
+                        }
+                        var structuredDefaultVersion = StructuredVersion.FromString(defaultVersion);
+                        var structuredCurrentVersion = StructuredVersion.FromString(currentVersion);
+                        if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0 &&
+                            structuredDefaultVersion.Major == structuredCurrentVersion.Major &&
+                            (structuredDefaultVersion.IsStable || !stableOnly))
+                        {
+                            dependencies[package] = defaultVersion;
+                        }
+                    }
+                }
+
+                if (api.Json is object)
+                {
+                    api.Json[jsonName] = new JObject(dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
+                }
+            }
         }
     }
 }

@@ -13,7 +13,6 @@
 // limitations under the License.
 using System;
 using System.IO;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Google.Cloud.Tools.Common
 {
@@ -22,6 +21,11 @@ namespace Google.Cloud.Tools.Common
     /// </summary>
     public class DirectoryLayout
     {
+        /// <summary>
+        /// Directory for generator input, relative to the root.
+        /// </summary>
+        public const string GeneratorInput = "generator-input";
+
         private static string cachedRoot;
 
         /// <summary>
@@ -57,19 +61,18 @@ namespace Google.Cloud.Tools.Common
                 );
         }
 
-        public static DirectoryLayout ForApi(string api, string outputRoot) =>
+        public static DirectoryLayout ForApi(string api, string outputRoot, string generatorInput) =>
             new DirectoryLayout(
                 source: Path.Combine(outputRoot, "apis", api),
                 docsOutput: Path.Combine(outputRoot, "docs", "output", api),
                 metadata: Path.Combine(outputRoot, "docs", "output", api, "obj", "api"),
                 snippetOutput: Path.Combine(outputRoot, "docs", "output", api, "obj", "snippets"),
                 docsSource: Path.Combine(outputRoot, "apis", api, "docs"),
-                // TODO: Maybe accept the root directory for inputs as another parameter?
-                // We don't need to do this at the moment.
-                tweaks: Path.Combine(DetermineRootDirectory(), "generator-input", "tweaks", api)
+                tweaks: Path.Combine(generatorInput, "tweaks", api)
                 );
 
-        public static DirectoryLayout ForApi(string api) => ForApi(api, DetermineRootDirectory());
+        public static DirectoryLayout ForApi(string api) =>
+            ForApi(api, DetermineRootDirectory(), Path.Combine(DetermineRootDirectory(), GeneratorInput));
 
         /// <summary>
         /// Find the root directory of the project. We expect this to contain "apis" and "LICENSE".

@@ -23,6 +23,13 @@ else
   declare -r GENERATOR_OUTPUT_DIR="$PWD"
 fi
 
+if [[ "$GENERATOR_INPUT" != "" ]]
+then
+  declare -r GENERATOR_INPUT_DIR="$GENERATOR_INPUT"
+else
+  declare -r GENERATOR_INPUT_DIR="$PWD/generator-input"
+fi
+
 fetch_github_repos() {
   # We assume that if the directory has been explicitly specified, we don't need
   # to fetch it.
@@ -55,5 +62,6 @@ export PROTOBUF_TOOLS_ROOT
 export GAPIC_PLUGIN
 export PROTOC
 export GENERATOR_OUTPUT_DIR
+export GENERATOR_INPUT_DIR
 
 dotnet run --project tools/Google.Cloud.Tools.ReleaseManager -- generate-apis $*

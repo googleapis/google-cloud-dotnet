@@ -1,0 +1,74 @@
+{
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard"
+  ],
+  "ignorePresets": [
+    ":ignoreModulesAndTests"
+  ],
+  "ignorePaths": [
+    "issues/**"
+  ],
+  "ignoreDeps": [
+    "Grpc.Core",
+    "Microsoft.CodeAnalysis.CSharp.Workspaces",
+    "Microsoft.CodeAnalysis.Workspaces.MSBuild",
+    "dotnet-sdk"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePrefixes": [
+        "Microsoft.Extensions.",
+        "mcr.microsoft.com/dotnet/"
+      ],
+      "allowedVersions": "<7.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "System.Collections.Immutable",
+        "dotnet-sdk"
+      ],
+      "allowedVersions": "<7.0.0"
+    },
+    {
+      "matchPaths": [
+        "apis/Google.Cloud.Diagnostics.AspNetCore3/**"
+      ],
+      "matchPackagePrefixes": [
+        "Microsoft.AspNetCore."
+      ],
+      "allowedVersions": "<3.2.0"
+    },
+    {
+      "matchPaths": [
+        "apis/Google.Cloud.Dialogflow.V2/**"
+      ],
+      "matchPackagePrefixes": [
+        "Microsoft.AspNetCore."
+      ],
+      "allowedVersions": "<2.2.0"
+    },
+    {
+      "matchPackageNames": [
+        "log4net"
+      ],
+      "allowedVersions": "<3.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "NLog"
+      ],
+      "allowedVersions": "<6.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "BenchmarkDotNet"
+      ],
+      "allowedVersions": "<0.14.0"
+    }
+  ],
+  "schedule": [
+    "before 8am"
+  ],
+  "timezone": "Europe/London"
+}

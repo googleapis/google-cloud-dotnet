@@ -160,6 +160,37 @@ namespace Google.Cloud.Tools.Common
         public StructuredVersion StructuredVersion => StructuredVersion.FromString(Version);
 
         /// <summary>
+        /// Projects that exist in a non-predictable fashion.
+        /// Only the suffix is required - so for "Google.Cloud.Storage.V2.IntegrationTests" in "Google.Cloud.Storage.V2", this
+        /// would just have "IntegrationTests". Where the suffix doesn't match, a leading caret (^) is used to indicate this.
+        /// </summary>
+        public string[] Projects { get; set; }
+
+        /// <summary>
+        /// Derives the expected list of projects for the API. The full project names are returned.
+        /// Exmaples: "Google.Cloud.Storage.V2", "Google.Cloud.Storage.V2.IntegrationTests".
+        /// </summary>
+        /// <remarks>
+        /// We always expect a library with the same name as <see cref="Id">.
+        /// GAPIC libraries always have Snippets and GeneratedSnippets. Any other projects must be specified in <see cref="Projects"/>.
+        /// </remarks>
+        public IEnumerable<string> DeriveProjects()
+        {
+            yield return Id;
+            if (Generator == GeneratorType.Micro)
+            {
+                yield return $"{Id}.Snippets";
+                yield return $"{Id}.GeneratedSnippets";
+            }
+            foreach (var explicitProject in Projects ?? new string[0])
+            {
+                yield return explicitProject.StartsWith("^")
+                    ? explicitProject[1..]
+                    : $"{Id}.{explicitProject}";
+            }
+        }
+
+        /// <summary>
         /// The release level to record in .repo-metadata.json, if this differs from the one
         /// inferred from the JSON. (For example, we will have 2.0.0-alpha00 versions that didn't
         /// have a 1.0.0.)
