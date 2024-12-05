@@ -69,7 +69,8 @@ namespace Google.Cloud.AutoML.V1 {
   }
   #region Messages
   /// <summary>
-  /// Input configuration for [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData] action.
+  /// Input configuration for
+  /// [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData] action.
   ///
   /// The format of input depends on dataset_metadata the Dataset into which
   /// the import is happening has. As input source the
@@ -85,9 +86,9 @@ namespace Google.Cloud.AutoML.V1 {
   /// The formats are represented in EBNF with commas being literal and with
   /// non-terminal symbols defined near the end of this comment. The formats are:
   ///
-  /// &lt;h4>AutoML Vision&lt;/h4>
+  /// #### AutoML Vision
   ///
-  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  /// ##### Classification
   ///
   /// See [Preparing your training
   /// data](https://cloud.google.com/vision/automl/docs/prepare) for more
@@ -123,7 +124,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///     UNASSIGNED,gs://folder/image3.jpg,daisy
   ///     UNASSIGNED,gs://folder/image4.jpg
   ///
-  /// &lt;/section>&lt;section>&lt;h5>Object Detection&lt;/h5>
+  /// ##### Object Detection
   /// See [Preparing your training
   /// data](https://cloud.google.com/vision/automl/object-detection/docs/prepare)
   /// for more information.
@@ -164,9 +165,9 @@ namespace Google.Cloud.AutoML.V1 {
   ///   &lt;/section>
   /// &lt;/div>
   ///
-  /// &lt;h4>AutoML Video Intelligence&lt;/h4>
+  /// #### AutoML Video Intelligence
   ///
-  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  /// ##### Classification
   ///
   /// See [Preparing your training
   /// data](https://cloud.google.com/video-intelligence/automl/docs/prepare) for
@@ -207,7 +208,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///     gs://folder/vid2.avi,car,0,60.5
   ///     gs://folder/vid3.avi,,,
   ///
-  /// &lt;/section>&lt;section>&lt;h5>Object Tracking&lt;/h5>
+  /// ##### Object Tracking
   ///
   /// See [Preparing your training
   /// data](/video-intelligence/automl/object-tracking/docs/prepare) for more
@@ -258,12 +259,10 @@ namespace Google.Cloud.AutoML.V1 {
   ///      gs://folder/video1.avi,bike,,12.50,.45,.45,,,.55,.55,,
   ///      gs://folder/video2.avi,car,1,0,.1,.9,,,.9,.1,,
   ///      gs://folder/video2.avi,,,,,,,,,,,
-  ///   &lt;/section>
-  /// &lt;/div>
   ///
-  /// &lt;h4>AutoML Natural Language&lt;/h4>
+  /// #### AutoML Natural Language
   ///
-  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Entity Extraction&lt;/h5>
+  /// ##### Entity Extraction
   ///
   /// See [Preparing your training
   /// data](/natural-language/automl/entity-analysis/docs/prepare) for more
@@ -443,7 +442,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///               },
   ///             ],
   ///
-  /// &lt;/section>&lt;section>&lt;h5>Classification&lt;/h5>
+  /// ##### Classification
   ///
   /// See [Preparing your training
   /// data](https://cloud.google.com/natural-language/automl/docs/prepare) for more
@@ -488,7 +487,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///     TEST,gs://folder/document.pdf
   ///     VALIDATE,gs://folder/text_files.zip,BadFood
   ///
-  /// &lt;/section>&lt;section>&lt;h5>Sentiment Analysis&lt;/h5>
+  /// ##### Sentiment Analysis
   ///
   /// See [Preparing your training
   /// data](https://cloud.google.com/natural-language/automl/docs/prepare) for more
@@ -545,11 +544,8 @@ namespace Google.Cloud.AutoML.V1 {
   ///     gs://folder/content.txt,3
   ///     TEST,gs://folder/document.pdf
   ///     VALIDATE,gs://folder/text_files.zip,2
-  ///   &lt;/section>
-  /// &lt;/div>
   ///
-  /// &lt;h4>AutoML Tables&lt;/h4>&lt;div class="ui-datasection-main">&lt;section
-  /// class="selected">
+  /// #### AutoML Tables
   ///
   /// See [Preparing your training
   /// data](https://cloud.google.com/automl-tables/docs/prepare) for more
@@ -587,9 +583,6 @@ namespace Google.Cloud.AutoML.V1 {
   /// An imported table must have between 2 and 1,000 columns, inclusive,
   /// and between 1000 and 100,000,000 rows, inclusive. There are at most 5
   /// import data running in parallel.
-  ///
-  ///   &lt;/section>
-  /// &lt;/div>
   ///
   /// **Input field definitions:**
   ///
@@ -719,8 +712,9 @@ namespace Google.Cloud.AutoML.V1 {
     public const int GcsSourceFieldNumber = 1;
     /// <summary>
     /// The Google Cloud Storage location for the input content.
-    /// For [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData], `gcs_source` points to a CSV file with
-    /// a structure described in [InputConfig][google.cloud.automl.v1.InputConfig].
+    /// For [AutoMl.ImportData][google.cloud.automl.v1.AutoMl.ImportData],
+    /// `gcs_source` points to a CSV file with a structure described in
+    /// [InputConfig][google.cloud.automl.v1.InputConfig].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -742,7 +736,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// imported data, any string must be up to 25000
     /// characters long.
     ///
-    /// &lt;h4>AutoML Tables&lt;/h4>
+    /// #### AutoML Tables
     ///
     /// `schema_inference_version`
     /// : (integer) This value must be supplied.
@@ -953,8 +947,8 @@ namespace Google.Cloud.AutoML.V1 {
   /// non-terminal symbols defined near the end of this comment. The formats
   /// are:
   ///
-  /// &lt;h4>AutoML Vision&lt;/h4>
-  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  /// #### AutoML Vision
+  /// ##### Classification
   ///
   /// One or more CSV files where each line is a single column:
   ///
@@ -970,7 +964,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///     gs://folder/image2.gif
   ///     gs://folder/image3.png
   ///
-  /// &lt;/section>&lt;section>&lt;h5>Object Detection&lt;/h5>
+  /// ##### Object Detection
   ///
   /// One or more CSV files where each line is a single column:
   ///
@@ -985,11 +979,9 @@ namespace Google.Cloud.AutoML.V1 {
   ///     gs://folder/image1.jpeg
   ///     gs://folder/image2.gif
   ///     gs://folder/image3.png
-  ///   &lt;/section>
-  /// &lt;/div>
   ///
-  /// &lt;h4>AutoML Video Intelligence&lt;/h4>
-  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  /// #### AutoML Video Intelligence
+  /// ##### Classification
   ///
   /// One or more CSV files where each line is a single column:
   ///
@@ -1008,7 +1000,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///     gs://folder/video1.mp4,20,60
   ///     gs://folder/vid2.mov,0,inf
   ///
-  /// &lt;/section>&lt;section>&lt;h5>Object Tracking&lt;/h5>
+  /// ##### Object Tracking
   ///
   /// One or more CSV files where each line is a single column:
   ///
@@ -1026,11 +1018,9 @@ namespace Google.Cloud.AutoML.V1 {
   ///     gs://folder/video1.mp4,10,40
   ///     gs://folder/video1.mp4,20,60
   ///     gs://folder/vid2.mov,0,inf
-  ///   &lt;/section>
-  /// &lt;/div>
   ///
-  /// &lt;h4>AutoML Natural Language&lt;/h4>
-  /// &lt;div class="ds-selector-tabs">&lt;section>&lt;h5>Classification&lt;/h5>
+  /// #### AutoML Natural Language
+  /// ##### Classification
   ///
   /// One or more CSV files where each line is a single column:
   ///
@@ -1047,7 +1037,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///     gs://folder/text2.pdf
   ///     gs://folder/text3.tif
   ///
-  /// &lt;/section>&lt;section>&lt;h5>Sentiment Analysis&lt;/h5>
+  /// ##### Sentiment Analysis
   /// One or more CSV files where each line is a single column:
   ///
   ///     GCS_FILE_PATH
@@ -1063,7 +1053,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///     gs://folder/text2.pdf
   ///     gs://folder/text3.tif
   ///
-  /// &lt;/section>&lt;section>&lt;h5>Entity Extraction&lt;/h5>
+  /// ##### Entity Extraction
   ///
   /// One or more JSONL (JSON Lines) files that either provide inline text or
   /// documents. You can only use one format, either inline text or documents,
@@ -1133,11 +1123,8 @@ namespace Google.Cloud.AutoML.V1 {
   ///          }
   ///        }
   ///      }
-  ///   &lt;/section>
-  /// &lt;/div>
   ///
-  /// &lt;h4>AutoML Tables&lt;/h4>&lt;div class="ui-datasection-main">&lt;section
-  /// class="selected">
+  /// #### AutoML Tables
   ///
   /// See [Preparing your training
   /// data](https://cloud.google.com/automl-tables/docs/predict-batch) for more
@@ -1182,8 +1169,6 @@ namespace Google.Cloud.AutoML.V1 {
   /// input feature column specs must contain values compatible with the
   /// column spec's data types. Prediction on all the rows of the table
   /// will be attempted.
-  ///   &lt;/section>
-  /// &lt;/div>
   ///
   /// **Input field definitions:**
   ///
@@ -1745,9 +1730,10 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "gcs_destination" field.</summary>
     public const int GcsDestinationFieldNumber = 1;
     /// <summary>
-    /// Required. The Google Cloud Storage location where the output is to be written to.
-    /// For Image Object Detection, Text Extraction, Video Classification and
-    /// Tables, in the given directory a new directory will be created with name:
+    /// Required. The Google Cloud Storage location where the output is to be
+    /// written to. For Image Object Detection, Text Extraction, Video
+    /// Classification and Tables, in the given directory a new directory will be
+    /// created with name:
     /// export_data-&lt;dataset-display-name>-&lt;timestamp-of-export-call> where
     /// timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. All export
     /// output will be written into that directory.
@@ -2237,8 +2223,8 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "gcs_destination" field.</summary>
     public const int GcsDestinationFieldNumber = 1;
     /// <summary>
-    /// Required. The Google Cloud Storage location of the directory where the output is to
-    /// be written to.
+    /// Required. The Google Cloud Storage location of the directory where the
+    /// output is to be written to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2479,8 +2465,9 @@ namespace Google.Cloud.AutoML.V1 {
     /// <summary>Field number for the "gcs_destination" field.</summary>
     public const int GcsDestinationFieldNumber = 1;
     /// <summary>
-    /// Required. The Google Cloud Storage location where the model is to be written to.
-    /// This location may only be set for the following model formats:
+    /// Required. The Google Cloud Storage location where the model is to be
+    /// written to. This location may only be set for the following model
+    /// formats:
     ///   "tflite", "edgetpu_tflite", "tf_saved_model", "tf_js", "core_ml".
     ///
     ///  Under the directory given as the destination a new one with name
