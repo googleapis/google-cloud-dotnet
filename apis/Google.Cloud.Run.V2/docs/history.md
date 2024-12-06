@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.12.0, released 2024-12-06
+
+### New features
+
+- Support manual instance count in Cloud Run for manual scaling feature ([commit aa9150c](https://github.com/googleapis/google-cloud-dotnet/commit/aa9150cacc8005f1c2923220561c9c0c9b9c58f9))
+
 ## Version 2.11.0, released 2024-11-18
 
 ### New features
