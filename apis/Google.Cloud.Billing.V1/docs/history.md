@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.9.0, released 2024-12-06
+
+### New features
+
+- Added currency field to billing account message ([commit 0089a68](https://github.com/googleapis/google-cloud-dotnet/commit/0089a686e6934b7c32b54dea46f778f7b3c3043b))
+
+### Documentation improvements
+
+- Genereal documentation improvements ([commit fb61eae](https://github.com/googleapis/google-cloud-dotnet/commit/fb61eaee81d1ba2b125f7370890755e1412cfde2))
+
 ## Version 3.8.0, released 2024-05-13
 
 ### New features

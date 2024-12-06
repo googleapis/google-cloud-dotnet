@@ -1254,11 +1254,11 @@
       "protoPath": "google/cloud/billing/v1",
       "productName": "Google Cloud Billing",
       "productUrl": "https://cloud.google.com/billing/docs/",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Billing API, which allows you to define a budget plan and the rules to execute as spend is tracked against that plan.",
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0"
+        "Google.Cloud.Iam.V1": "3.3.0"
       },
       "tags": [
         "Billing"
