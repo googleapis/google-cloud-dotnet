@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.12.0, released 2024-12-06
+
+### New features
+
+- Added support for notification prompts in AlertPolicy ([commit 4541241](https://github.com/googleapis/google-cloud-dotnet/commit/454124189453710c8fd2a0aef225865c6b64bad2))
+- Added support for PromQL metric validation opt-out in AlertPolicy ([commit 4541241](https://github.com/googleapis/google-cloud-dotnet/commit/454124189453710c8fd2a0aef225865c6b64bad2))
+
 ## Version 3.11.0, released 2024-06-24
 
 ### New features
