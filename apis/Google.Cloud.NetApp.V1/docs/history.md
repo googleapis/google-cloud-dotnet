@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.6.0, released 2024-12-06
+
+### New features
+
+- Enable creation of Onprem Migration in CreateVolume ([commit a72756b](https://github.com/googleapis/google-cloud-dotnet/commit/a72756bdd8ad47c4cf1533e0a70869d42c59f211))
+- Add EstablishPeering API for Onprem Migration ([commit a72756b](https://github.com/googleapis/google-cloud-dotnet/commit/a72756bdd8ad47c4cf1533e0a70869d42c59f211))
+- Add Sync API for Replications ([commit a72756b](https://github.com/googleapis/google-cloud-dotnet/commit/a72756bdd8ad47c4cf1533e0a70869d42c59f211))
+- Add new Active Directory state for AD Diagnostics support ([commit a72756b](https://github.com/googleapis/google-cloud-dotnet/commit/a72756bdd8ad47c4cf1533e0a70869d42c59f211))
+
+### Documentation improvements
+
+- Docs now do not allow underscore in IDs of various Resources ([commit a72756b](https://github.com/googleapis/google-cloud-dotnet/commit/a72756bdd8ad47c4cf1533e0a70869d42c59f211))
+
 ## Version 1.5.0, released 2024-09-16
 
 ### New features
