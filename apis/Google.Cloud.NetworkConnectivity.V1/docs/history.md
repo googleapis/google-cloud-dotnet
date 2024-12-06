@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.9.0, released 2024-12-06
+
+### New features
+
+- Add Network Connectivity Center APIs for PSC connection propagation through NCC ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for star topology ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for producer VPC spokes ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for dynamic route exchange ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for include export filters ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for include import ranges on hybrid spokes ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+
+### Documentation improvements
+
+- Update comment for `ListRoutes` method in service `HubService` to clarify that it lists routes in a route table ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Update comment for `ListRouteTables` method in service `HubService` to clarify that it lists route tables in a hub ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Update comment for field `location` in message `.google.cloud.networkconnectivity.v1.Route` to clarify that it's the origin location ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+
 ## Version 2.8.0, released 2024-05-14
 
 ### New features
