@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta15, released 2024-12-06
+
+### New features
+
+- Add API for experimental flyover and narrow road polyline details ([commit bfd5a3b](https://github.com/googleapis/google-cloud-dotnet/commit/bfd5a3b5d8ae03239a0148b356035905b6a0506b))
+- Add API for shorter distance reference routes ([commit be57837](https://github.com/googleapis/google-cloud-dotnet/commit/be578371af3db0375bc2dc6991033d6b93c8b911))
+
 ## Version 1.0.0-beta14, released 2024-05-08
 
 ### New features
