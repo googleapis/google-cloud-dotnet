@@ -134,6 +134,7 @@ namespace GoogleCSharpSnippets
                 View = PublisherModelView.Unspecified,
                 OrderBy = "",
                 LanguageCode = "",
+                ListAllVersions = false,
             };
             // Make the request
             PagedEnumerable<ListPublisherModelsResponse, PublisherModel> response = modelGardenServiceClient.ListPublisherModels(request);
@@ -186,6 +187,7 @@ namespace GoogleCSharpSnippets
                 View = PublisherModelView.Unspecified,
                 OrderBy = "",
                 LanguageCode = "",
+                ListAllVersions = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListPublisherModelsResponse, PublisherModel> response = modelGardenServiceClient.ListPublisherModelsAsync(request);
