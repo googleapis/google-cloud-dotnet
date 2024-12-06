@@ -4618,7 +4618,7 @@
     },
     {
       "id": "Google.Cloud.ServiceDirectory.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Service Directory",
       "productUrl": "https://cloud.google.com/service-directory/",
@@ -4627,8 +4627,8 @@
         "services"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.Location": "2.2.0"
+        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Location": "2.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/servicedirectory/v1",
