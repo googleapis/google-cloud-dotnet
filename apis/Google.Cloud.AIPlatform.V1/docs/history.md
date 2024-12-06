@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.12.0, released 2024-12-06
+
+### New features
+
+- Add workbench_runtime and kernel_name to NotebookExecutionJob ([commit 5835c7c](https://github.com/googleapis/google-cloud-dotnet/commit/5835c7cc3e9ed46f05a7c9d19a69de19c4aaf334))
+- Add new `Status` field to DeployedModel in Endpoint ([commit 4226ced](https://github.com/googleapis/google-cloud-dotnet/commit/4226ced8c84e3f401404225b46a0708cb34250f6))
+- Add new `RequiredReplicaCount` field to DedicatedResources in MachineResources ([commit 4226ced](https://github.com/googleapis/google-cloud-dotnet/commit/4226ced8c84e3f401404225b46a0708cb34250f6))
+- Add Vertex RAG service proto to v1 ([commit ebf9b3f](https://github.com/googleapis/google-cloud-dotnet/commit/ebf9b3fb51cfe13b68fd35c467c57125523c1ddf))
+- Add a v1 UpdateEndpointLongRunning API ([commit 69c07c0](https://github.com/googleapis/google-cloud-dotnet/commit/69c07c0d7ae57a1e045affd11300246b81108e6e))
+- Add CustomEnvironmentSpec to NotebookExecutionJob ([commit 39afa50](https://github.com/googleapis/google-cloud-dotnet/commit/39afa501f82de87c2b2149f2e9d6d3d6703272b3))
+
+### Documentation improvements
+
+- A comment for field `encryption_spec` in message `.google.cloud.aiplatform.v1.NotebookExecutionJob` is changed ([commit 5835c7c](https://github.com/googleapis/google-cloud-dotnet/commit/5835c7cc3e9ed46f05a7c9d19a69de19c4aaf334))
+
 ## Version 3.11.0, released 2024-11-18
 
 ### New features
