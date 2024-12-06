@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.6.0, released 2024-12-06
+
+### New features
+
+- Add the managed disaster recovery API(https://cloud.google.com/bigquery/docs/managed-disaster-recovery) ([commit 54897cb](https://github.com/googleapis/google-cloud-dotnet/commit/54897cbd2d99c298ee5f2e7b58b85b042e64e296))
+- Add a new field `is_flat_rate` to `.google.cloud.bigquery.reservation.v1.CapacityCommitment` to distinguish between flat rate and edition commitments ([commit 54897cb](https://github.com/googleapis/google-cloud-dotnet/commit/54897cbd2d99c298ee5f2e7b58b85b042e64e296))
+
+### Documentation improvements
+
+- Clarify that `Autoscale.current_slots` in message `.google.cloud.bigquery.reservation.v1.Reservation` can temporarily be larger than `Autoscale.max_slots` if users reduce `Autoscale.max_slots` ([commit 54897cb](https://github.com/googleapis/google-cloud-dotnet/commit/54897cbd2d99c298ee5f2e7b58b85b042e64e296))
+- Update comment for `slot_capacity` in message `.google.cloud.bigquery.reservation.v1.Reservation` to provide more clarity about reservation baselines, committed slots and autoscaler SKU charges when the baseline exceeds committed slots ([commit 54897cb](https://github.com/googleapis/google-cloud-dotnet/commit/54897cbd2d99c298ee5f2e7b58b85b042e64e296))
+- Update comments for `commitment_start_time` and `commitment_end_time` in message `.google.cloud.bigquery.reservation.v1.CapacityCommitment` to provide details on how these values are affected by commitment renewal ([commit 54897cb](https://github.com/googleapis/google-cloud-dotnet/commit/54897cbd2d99c298ee5f2e7b58b85b042e64e296))
+
 ## Version 2.5.0, released 2024-05-13
 
 ### New features
