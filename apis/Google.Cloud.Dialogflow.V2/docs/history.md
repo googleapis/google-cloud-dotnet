@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.24.0, released 2024-12-06
+
+### New features
+
+- Properly mark TrainingPhrase name field output-only ([commit d336935](https://github.com/googleapis/google-cloud-dotnet/commit/d336935d53910959377f0437f88cee1f1577ebf9))
+
+### Documentation improvements
+
+- Fixed the references to proto method / fields ([commit d336935](https://github.com/googleapis/google-cloud-dotnet/commit/d336935d53910959377f0437f88cee1f1577ebf9))
+
 ## Version 4.23.0, released 2024-11-18
 
 ### New features
