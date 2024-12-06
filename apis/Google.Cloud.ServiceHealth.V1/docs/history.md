@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2024-12-06
+
+### New features
+
+- A new field `id` is added to message `.google.cloud.servicehealth.v1.Product` ([commit 301a0ac](https://github.com/googleapis/google-cloud-dotnet/commit/301a0ac27f7ae2344669304defd742e6cf972ace))
+
+### Documentation improvements
+
+- Add missing doc comments ([commit 50a2121](https://github.com/googleapis/google-cloud-dotnet/commit/50a212138886f95eccbe68beb8aa6a0ca462dc48))
+
 ## Version 1.2.0, released 2024-05-14
 
 ### New features
