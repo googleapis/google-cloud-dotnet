@@ -11,4 +11,4 @@ jobs:
     - uses: actions/checkout@v4
         
     - name: Validate API catalog
-      run: python -c 'import json; json.load(open("apis/apis.json", "r"))'
+      run: python -c 'import json; json.load(open("generator-input/apis.json", "r"))'
