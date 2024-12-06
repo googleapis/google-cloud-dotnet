@@ -1,5 +1,27 @@
 # Version history
 
+## Version 2.14.0, released 2024-12-06
+
+### New features
+
+- A new method `SetConfig` is added to service `DataCatalog` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new method `RetrieveConfig` is added to service `DataCatalog` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new method `RetrieveEffectiveConfig` is added to service `DataCatalog` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new field `transferred_to_dataplex` is added to message `.google.cloud.datacatalog.v1.EntryGroup` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `SetConfigRequest` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `RetrieveConfigRequest` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `RetrieveEffectiveConfigRequest` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new enum `TagTemplateMigration` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new enum `CatalogUIExperience` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `OrganizationConfig` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `MigrationConfig` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new field `dataplex_transfer_status` is added to message `.google.cloud.datacatalog.v1.Tag` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new value `TRANSFERRED` is added to enum `DataplexTransferStatus` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+
+### Documentation improvements
+
+- A comment for message `EntryGroup` is changed ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+
 ## Version 2.13.0, released 2024-11-18
 
 ### New features
