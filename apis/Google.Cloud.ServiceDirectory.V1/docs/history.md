@@ -1,5 +1,8 @@
 # Version history
 
+## Version 2.6.0, released 2024-12-06
+
+No API changes, just dependency updates.
 ## Version 2.5.0, released 2024-05-14
 
 ### New features
