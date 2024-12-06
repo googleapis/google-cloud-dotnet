@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2024-12-06
+
+### New features
+
+- A new enum `DeploymentType` is added ([commit f4bafc0](https://github.com/googleapis/google-cloud-dotnet/commit/f4bafc09b48c55492edbccd21defeb11eac7f7b4))
+- A new field `deployment_type` is added to message `.google.cloud.parallelstore.v1beta.Instance` ([commit f4bafc0](https://github.com/googleapis/google-cloud-dotnet/commit/f4bafc09b48c55492edbccd21defeb11eac7f7b4))
+
+### Documentation improvements
+
+- Minor documentation formatting fix for Parallelstore ([commit d348b3a](https://github.com/googleapis/google-cloud-dotnet/commit/d348b3a29f3139e176c8323d5c79a18aa0a9903a))
+- Minor documentation formatting fix for Parallelstore ([commit ff699f3](https://github.com/googleapis/google-cloud-dotnet/commit/ff699f3eed396ca7f80c1c3646ebbb47021b5a8e))
+
 ## Version 1.0.0-beta06, released 2024-09-26
 
 ### New features
