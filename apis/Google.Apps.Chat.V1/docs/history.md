@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2024-12-06
+
+### New features
+
+- Chat Apps can now retrieve the import mode expire time information to know when to complete the import mode properly ([commit 84cf136](https://github.com/googleapis/google-cloud-dotnet/commit/84cf1362823ea53928baf9fef663c439b07b93e9))
+
+### Documentation improvements
+
+- Update reference documentation to include import_mode_expire_time field ([commit 84cf136](https://github.com/googleapis/google-cloud-dotnet/commit/84cf1362823ea53928baf9fef663c439b07b93e9))
+
 ## Version 1.0.0-beta08, released 2024-10-07
 
 ### New features
