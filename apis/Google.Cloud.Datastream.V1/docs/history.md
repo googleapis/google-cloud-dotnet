@@ -1,5 +1,63 @@
 # Version history
 
+## Version 2.8.0, released 2024-12-06
+
+### New features
+
+- A new method `RunStream` is added to service `Datastream` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `sql_server_rdbms` is added to message `.google.cloud.datastream.v1.DiscoverConnectionProfileRequest` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `sql_server_rdbms` is added to message `.google.cloud.datastream.v1.DiscoverConnectionProfileResponse` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `RunStreamRequest` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `oracle_ssl_config` is added to message `.google.cloud.datastream.v1.OracleProfile` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `oracle_asm_config` is added to message `.google.cloud.datastream.v1.OracleProfile` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `secret_manager_stored_password` is added to message `.google.cloud.datastream.v1.OracleProfile` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `OracleAsmConfig` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerProfile` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `OracleSslConfig` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `sql_server_profile` is added to message `.google.cloud.datastream.v1.ConnectionProfile` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `LogMiner` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `BinaryLogParser` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `log_miner` is added to message `.google.cloud.datastream.v1.OracleSourceConfig` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `binary_log_parser` is added to message `.google.cloud.datastream.v1.OracleSourceConfig` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerColumn` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerTable` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerSchema` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerRdbms` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerSourceConfig` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerTransactionLogs` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerChangeTables` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `BinaryLogPosition` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `Gtid` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `binary_log_position` is added to message `.google.cloud.datastream.v1.MysqlSourceConfig` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `gtid` is added to message `.google.cloud.datastream.v1.MysqlSourceConfig` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `sql_server_source_config` is added to message `.google.cloud.datastream.v1.SourceConfig` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `AppendOnly` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `Merge` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `merge` is added to message `.google.cloud.datastream.v1.BigQueryDestinationConfig` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `append_only` is added to message `.google.cloud.datastream.v1.BigQueryDestinationConfig` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `sql_server_excluded_objects` is added to message `.google.cloud.datastream.v1.Stream` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `last_recovery_time` is added to message `.google.cloud.datastream.v1.Stream` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerObjectIdentifier` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new field `sql_server_identifier` is added to message `.google.cloud.datastream.v1.SourceObjectIdentifier` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new value `WARNING` is added to enum `State` ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `CdcStrategy` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `SqlServerLsnPosition` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `OracleScnPosition` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A new message `MysqlLogPosition` is added ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+
+### Documentation improvements
+
+- A comment for field `requested_cancellation` in message `.google.cloud.datastream.v1.OperationMetadata` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for message `OracleProfile` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for field `password` in message `.google.cloud.datastream.v1.OracleProfile` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for message `MysqlProfile` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for field `password` in message `.google.cloud.datastream.v1.MysqlProfile` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for field `password` in message `.google.cloud.datastream.v1.PostgresqlProfile` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for field `stream_large_objects` in message `.google.cloud.datastream.v1.OracleSourceConfig` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for field `dataset_id` in message `.google.cloud.datastream.v1.BigQueryDestinationConfig` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for field `state` in message `.google.cloud.datastream.v1.BackfillJob` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+- A comment for field `state` in message `.google.cloud.datastream.v1.Validation` is changed ([commit 2ff6786](https://github.com/googleapis/google-cloud-dotnet/commit/2ff67860f6818465bcacacddefc2238f9fc5ac6b))
+
 ## Version 2.7.0, released 2024-05-13
 
 ### New features
