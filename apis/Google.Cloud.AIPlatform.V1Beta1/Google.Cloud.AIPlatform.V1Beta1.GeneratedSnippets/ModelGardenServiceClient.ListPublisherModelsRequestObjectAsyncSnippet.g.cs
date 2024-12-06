@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 View = PublisherModelView.Unspecified,
                 OrderBy = "",
                 LanguageCode = "",
+                ListAllVersions = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListPublisherModelsResponse, PublisherModel> response = modelGardenServiceClient.ListPublisherModelsAsync(request);
