@@ -1,5 +1,31 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2024-12-06
+
+### New features
+
+- Add workbench_runtime and kernel_name to NotebookExecutionJob ([commit 83da91f](https://github.com/googleapis/google-cloud-dotnet/commit/83da91f15cab2187154bfac773124db526c1331e))
+- Add new `Status` field to DeployedModel in Endpoint ([commit 5846fb6](https://github.com/googleapis/google-cloud-dotnet/commit/5846fb6f2ace37bae6ac601f24ea6d1066eaa299))
+- Add new `RequiredReplicaCount` field to DedicatedResources in MachineResources ([commit 5846fb6](https://github.com/googleapis/google-cloud-dotnet/commit/5846fb6f2ace37bae6ac601f24ea6d1066eaa299))
+- Support streaming and multi class methods in Reasoning Engine v1beta1 API ([commit 6bbb600](https://github.com/googleapis/google-cloud-dotnet/commit/6bbb60019830f09c06232d7388f9da86303edaae))
+- Introduce HybridSearch and Ranking configuration for RAG ([commit 15ac66e](https://github.com/googleapis/google-cloud-dotnet/commit/15ac66e002b904c88f0d0026812b2d8521b92fe6))
+- Introduce VertexAiSearch integration for RAG ([commit 15ac66e](https://github.com/googleapis/google-cloud-dotnet/commit/15ac66e002b904c88f0d0026812b2d8521b92fe6))
+- Trajectory eval metrics added to evaluation service proto ([commit 1c70f59](https://github.com/googleapis/google-cloud-dotnet/commit/1c70f59263847378163534b32b95b82f1da3256d))
+- Add CustomEnvironmentSpec to NotebookExecutionJob ([commit 92e884c](https://github.com/googleapis/google-cloud-dotnet/commit/92e884cfb7432915923e0ff27fa918cb5b173ab5))
+
+### Documentation improvements
+
+- A comment for field `encryption_spec` in message `.google.cloud.aiplatform.v1beta1.NotebookExecutionJob` is changed ([commit 83da91f](https://github.com/googleapis/google-cloud-dotnet/commit/83da91f15cab2187154bfac773124db526c1331e))
+- A comment for field `class_method` in message `.google.cloud.aiplatform.v1beta1.StreamQueryReasoningEngineRequest` is changed (from steam_query to stream_query) ([commit d2f716f](https://github.com/googleapis/google-cloud-dotnet/commit/d2f716fe8691d4c2f79cffb692a5e197620a3c6b))
+- Added support for multiple `class_methods` in QueryReasoningEngine ([commit 6bbb600](https://github.com/googleapis/google-cloud-dotnet/commit/6bbb60019830f09c06232d7388f9da86303edaae))
+- Added support for StreamQueryReasoningEngine ([commit 6bbb600](https://github.com/googleapis/google-cloud-dotnet/commit/6bbb60019830f09c06232d7388f9da86303edaae))
+- A comment for field `api_key_config` in message `.google.cloud.aiplatform.v1beta1.JiraSource` is changed ([commit 15ac66e](https://github.com/googleapis/google-cloud-dotnet/commit/15ac66e002b904c88f0d0026812b2d8521b92fe6))
+- A comment for field `partial_failure_gcs_sink` in message `.google.cloud.aiplatform.v1beta1.ImportRagFilesConfig` is changed ([commit 15ac66e](https://github.com/googleapis/google-cloud-dotnet/commit/15ac66e002b904c88f0d0026812b2d8521b92fe6))
+- A comment for field `partial_failure_bigquery_sink` in message `.google.cloud.aiplatform.v1beta1.ImportRagFilesConfig` is changed ([commit 15ac66e](https://github.com/googleapis/google-cloud-dotnet/commit/15ac66e002b904c88f0d0026812b2d8521b92fe6))
+- A comment for field `rag_file_parsing_config` in message `.google.cloud.aiplatform.v1beta1.ImportRagFilesConfig` is changed ([commit 15ac66e](https://github.com/googleapis/google-cloud-dotnet/commit/15ac66e002b904c88f0d0026812b2d8521b92fe6))
+- A comment for field `source_uri` in message `.google.cloud.aiplatform.v1beta1.RagContexts` is changed ([commit 15ac66e](https://github.com/googleapis/google-cloud-dotnet/commit/15ac66e002b904c88f0d0026812b2d8521b92fe6))
+- Fixed typo for field `use_strict_string_match` in message `.google.cloud.aiplatform.v1beta1.ToolParameterKVMatchSpec` ([commit 1c70f59](https://github.com/googleapis/google-cloud-dotnet/commit/1c70f59263847378163534b32b95b82f1da3256d))
+
 ## Version 1.0.0-beta10, released 2024-11-18
 
 ### New features
