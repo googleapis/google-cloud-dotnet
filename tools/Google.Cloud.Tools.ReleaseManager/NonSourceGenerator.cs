@@ -13,12 +13,16 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Google.Protobuf.WellKnownTypes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
@@ -186,7 +190,7 @@ internal sealed class NonSourceGenerator
         HashSet<string> apiNames = _catalog.CreateIdHashSet();
 
         GenerateProjects(api, apiNames);
-        GenerateSolutionFiles(api);
+        GenerateSolutionFile(api);
         GenerateOwlBotConfiguration(api);
         GenerateMetadataFile(api);
     }
@@ -431,60 +435,66 @@ internal sealed class NonSourceGenerator
         }
     }
 
-    private void GenerateSolutionFiles(ApiMetadata api)
+    // Note: we generate the solution file from scratch so that
+    // we get consistent project IDs (hashed from the project name).
+    // This also means we don't need the project files to exist before we
+    // create the solution file (as they may be handwritten projects).
+    // Currently this is really ugly - it will be a lot cleaner with slnx files.
+    private void GenerateSolutionFile(ApiMetadata api)
     {
         string apiRoot = GetApiDirectory(api);
-        var projectDirectories = Directory.GetDirectories(apiRoot)
-            .Where(pd => Path.GetFileName(pd).StartsWith(api.Id))
-            .ToList();
 
         // TODO: Add projects referred to via project references as well.
         List<string> projects = api.DeriveProjects().ToList();
+        string solutionFile = Path.Combine(apiRoot, $"{api.Id}.sln");
 
-        var solutionFileName = $"{api.Id}.sln";
-        string fullFile = Path.Combine(apiRoot, solutionFileName);
-        if (!File.Exists(fullFile))
+        string[] prefixLines =
         {
-            Processes.RunDotnet(apiRoot, "new", "sln", "-n", api.Id);
-        }
-        else
+            "\uFEFF", // Byte order mark (on a line on its own), not written by File.WriteAllLines
+            "Microsoft Visual Studio Solution File, Format Version 12.00",
+            "# Visual Studio Version 17",
+            "VisualStudioVersion = 17.2.32516.85",
+            "MinimumVisualStudioVersion = 10.0.40219.1"
+        };
+        List<string> projectLines = new();
+        string[] betweenLines =
         {
-            // Optimization: don't run "dotnet sln add" if we can find project entries for all the relevant project
-            // references already. This is crude, but speeds up the overall process significantly.
-            var projectLines = File.ReadAllLines(fullFile).Where(line => line.StartsWith("Project(")).ToList();
-            if (projects.Select(p => $"\"{p.Replace("/", "\\")}\"")
-                        .All(expectedProject => projectLines.Any(pl => pl.Contains(expectedProject))))
-            {
-                return;
-            }
-        }
+            "Global",
+            "    GlobalSection(SolutionConfigurationPlatforms) = preSolution",
+            "        Debug|Any CPU = Debug|Any CPU",
+            "        Release|Any CPU = Release|Any CPU",
+            "    EndGlobalSection",
+            "    GlobalSection(ProjectConfigurationPlatforms) = postSolution"
+        };
+        List<string> postSolutionLines = new();
+        string[] suffixLines =
+        {
+            "    EndGlobalSection",
+            "EndGlobal"
+        };
 
-        // Hack until we have slnx files (which will be easily generated directly):
-        // If there are project files that we need in the solution, but which don't exist,
-        // we need to create them first, then delete them after adding them to the solution.
-        var directoriesToDelete = new List<string>();
-        var filesToDelete = new List<string>();
         foreach (var project in projects)
         {
-            var directory = Path.Combine(apiRoot, project);
-            if (!Directory.Exists(directory))
-            {
-                Directory.CreateDirectory(directory);
-                directoriesToDelete.Add(directory);
-            }
-            var file = Path.Combine(directory, $"{project}.csproj");
-            if (!File.Exists(file))
-            {
-                File.WriteAllText(file, "<Project Sdk=\"Microsoft.NET.Sdk\"/>");
-                filesToDelete.Add(file);
-            }
+            var guid = GenerateGuid(project).ToString().ToUpperInvariant();
+            projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{project}\", \"{project}\\{project}.csproj\", \"{{{guid}}}\"");
+            projectLines.Add("EndProject");
+            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU");
+            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.Build = Debug|Any CPU");
+            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
+            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
         }
 
-        // It's much faster to run a single process than to run it once per project.
-        Processes.RunDotnet(apiRoot, new[] { "sln", solutionFileName, "add" }.Concat(projects).ToArray());
+        Guid GenerateGuid(string name)
+        {
+            // Note: We're using MD5 to get 16 bytes for the GUID.
+            // This is only meant to be unique - it doesn't need to be cryptographically secure at all.
+            var bytes = MD5.HashData(Encoding.UTF8.GetBytes(name));
+            return new Guid(bytes);
+        }
 
-        filesToDelete.ForEach(File.Delete);
-        directoriesToDelete.ForEach(Directory.Delete);
+        var allLines = prefixLines.Concat(projectLines).Concat(betweenLines).Concat(postSolutionLines).Concat(suffixLines);
+        string text = string.Join("\r\n", allLines);
+        File.WriteAllText(solutionFile, text);
     }
 
     private void GenerateOwlBotConfiguration(ApiMetadata api)
