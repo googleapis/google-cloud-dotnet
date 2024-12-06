@@ -248,10 +248,10 @@ internal class GenerateApisCommand : ICommand
                 yield return ("grpc-service-config", serviceConfigFiles[0]);
             }
 
-            yield return ("common-resources-config", "CommonResourcesConfig.json");
+            yield return ("common-resources-config", Path.Combine(generatorInputDirectory, "CommonResourcesConfig.json"));
             if (api.CommonResourcesConfig is string config)
             {
-                yield return ("common-resources-config", config);
+                yield return ("common-resources-config", Path.Combine(generatorInputDirectory, config));
             }
         }
     }
