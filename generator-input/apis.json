@@ -1161,7 +1161,7 @@
       "productName": "Google Cloud Bigtable Administration",
       "productUrl": "https://cloud.google.com/bigtable/",
       "version": "3.21.0",
-      "commonResourcesConfig": "apis/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
       "tags": [
@@ -1203,7 +1203,7 @@
       "productName": "Google Bigtable",
       "productUrl": "https://cloud.google.com/bigtable/",
       "version": "3.15.0",
-      "commonResourcesConfig": "apis/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
@@ -4830,7 +4830,7 @@
       "productName": "Google Cloud Spanner Database Administration",
       "productUrl": "https://cloud.google.com/spanner/",
       "version": "5.0.0-beta05",
-      "commonResourcesConfig": "apis/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
       "tags": [
@@ -4858,7 +4858,7 @@
       "productName": "Google Cloud Spanner Instance Administration",
       "productUrl": "https://cloud.google.com/spanner/",
       "version": "5.0.0-beta05",
-      "commonResourcesConfig": "apis/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
       "tags": [
@@ -4935,7 +4935,7 @@
       "productName": "Google Cloud Spanner",
       "productUrl": "https://cloud.google.com/spanner/",
       "version": "5.0.0-beta05",
-      "commonResourcesConfig": "apis/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
@@ -5763,7 +5763,7 @@
     {
       "id": "Google.Cloud.Workflows.Executions.V1",
       "version": "2.6.0",
-      "commonResourcesConfig": "apis/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflow Executions",
       "productUrl": "https://cloud.google.com/workflows/docs/apis",
@@ -5783,7 +5783,7 @@
     {
       "id": "Google.Cloud.Workflows.Executions.V1Beta",
       "version": "2.0.0-beta05",
-      "commonResourcesConfig": "apis/Google.Cloud.Workflows.Common.V1Beta/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Workflows.Common.V1Beta/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflow Executions",
       "productUrl": "https://cloud.google.com/workflows/docs/apis",
@@ -5803,7 +5803,7 @@
     {
       "id": "Google.Cloud.Workflows.V1",
       "version": "2.5.0",
-      "commonResourcesConfig": "apis/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflows",
       "productUrl": "https://cloud.google.com/workflows/docs/apis",
@@ -5827,7 +5827,7 @@
     {
       "id": "Google.Cloud.Workflows.V1Beta",
       "version": "2.0.0-beta05",
-      "commonResourcesConfig": "apis/Google.Cloud.Workflows.Common.V1Beta/CommonResourcesConfig.json",
+      "commonResourcesConfig": "tweaks/Google.Cloud.Workflows.Common.V1Beta/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflows",
       "productUrl": "https://cloud.google.com/workflows/docs/apis",
