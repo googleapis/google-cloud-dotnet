@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta20, released 2024-12-06
+
+### New features
+
+- Make TrainingPhrase name field output-only ([commit 0436b0d](https://github.com/googleapis/google-cloud-dotnet/commit/0436b0df581bee719f71512c5913c1f38026d47b))
+
 ## Version 1.0.0-beta19, released 2024-11-18
 
 ### New features
