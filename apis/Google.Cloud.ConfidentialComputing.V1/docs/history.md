@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.7.0, released 2024-12-06
+
+### New features
+
+- Add a token_type options proto to allow for customization of specific token types. Added the first token type option to hold principal tag token options ([commit 4bf271b](https://github.com/googleapis/google-cloud-dotnet/commit/4bf271b8ae073fb8915a01e4f58be3647a20a49a))
+
 ## Version 1.6.0, released 2024-07-22
 
 ### New features
