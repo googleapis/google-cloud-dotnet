@@ -26,19 +26,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           string.Concat(
             "CjZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL2FjY2VsZXJhdG9y",
             "X3R5cGUucHJvdG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEq",
-            "swIKD0FjY2VsZXJhdG9yVHlwZRIgChxBQ0NFTEVSQVRPUl9UWVBFX1VOU1BF",
+            "zgIKD0FjY2VsZXJhdG9yVHlwZRIgChxBQ0NFTEVSQVRPUl9UWVBFX1VOU1BF",
             "Q0lGSUVEEAASGAoQTlZJRElBX1RFU0xBX0s4MBABGgIIARIVChFOVklESUFf",
             "VEVTTEFfUDEwMBACEhUKEU5WSURJQV9URVNMQV9WMTAwEAMSEwoPTlZJRElB",
             "X1RFU0xBX1A0EAQSEwoPTlZJRElBX1RFU0xBX1Q0EAUSFQoRTlZJRElBX1RF",
             "U0xBX0ExMDAQCBIUChBOVklESUFfQTEwMF84MEdCEAkSDQoJTlZJRElBX0w0",
-            "EAsSFAoQTlZJRElBX0gxMDBfODBHQhANEgoKBlRQVV9WMhAGEgoKBlRQVV9W",
-            "MxAHEg4KClRQVV9WNF9QT0QQChISCg5UUFVfVjVfTElURVBPRBAMQusBCiNj",
-            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIUQWNjZWxlcmF0",
-            "b3JUeXBlUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
-            "L2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2ds",
-            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQ",
-            "bGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
-            "VjFiZXRhMWIGcHJvdG8z"));
+            "EAsSFAoQTlZJRElBX0gxMDBfODBHQhANEhkKFU5WSURJQV9IMTAwX01FR0Ff",
+            "ODBHQhAOEgoKBlRQVV9WMhAGEgoKBlRQVV9WMxAHEg4KClRQVV9WNF9QT0QQ",
+            "ChISCg5UUFVfVjVfTElURVBPRBAMQusBCiNjb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFiZXRhMUIUQWNjZWxlcmF0b3JUeXBlUHJvdG9QAVpDY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0",
+            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
+            "LlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIi",
+            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorType), }, null, null));
@@ -93,6 +93,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// Nvidia H100 80Gb GPU.
     /// </summary>
     [pbr::OriginalName("NVIDIA_H100_80GB")] NvidiaH10080Gb = 13,
+    /// <summary>
+    /// Nvidia H100 Mega 80Gb GPU.
+    /// </summary>
+    [pbr::OriginalName("NVIDIA_H100_MEGA_80GB")] NvidiaH100Mega80Gb = 14,
     /// <summary>
     /// TPU v2.
     /// </summary>
